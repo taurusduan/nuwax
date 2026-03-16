@@ -173,7 +173,7 @@ const CreateIMRobot: React.FC<CreateIMRobotProps> = ({
     mode === CreateUpdateModeEnum.Create &&
     ((platform === IMPlatformEnum.Feishu &&
       robotType === IMRobotTypeEnum.Bot) ||
-      (platform === IMPlatformEnum.Dingding &&
+      (platform === IMPlatformEnum.Dingtalk &&
         robotType === IMRobotTypeEnum.Bot) ||
       (platform === IMPlatformEnum.Wework &&
         robotType === IMRobotTypeEnum.App));

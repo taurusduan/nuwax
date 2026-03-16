@@ -41,7 +41,7 @@ const IMRobot: React.FC = () => {
   // 平台过滤
   const [platform, setPlatform] = useState<PlatformType>(IMPlatformEnum.Feishu);
   const [counts, setCounts] = useState<Record<string, number>>({
-    [IMPlatformEnum.Dingding]: 0,
+    [IMPlatformEnum.Dingtalk]: 0,
     [IMPlatformEnum.Feishu]: 0,
     [IMPlatformEnum.Wework]: 0,
   });
@@ -52,7 +52,7 @@ const IMRobot: React.FC = () => {
 
     const platforms = [
       IMPlatformEnum.Feishu,
-      IMPlatformEnum.Dingding,
+      IMPlatformEnum.Dingtalk,
       IMPlatformEnum.Wework,
     ];
 
