@@ -263,6 +263,8 @@ const MentionEditor = React.forwardRef<MentionEditorHandle, MentionEditorProps>(
       className,
       onMentionSelect,
       onSkillIdsChange,
+      // 是否启用 @ 提及功能，默认启用
+      enableMention = true,
       minRows = 2,
       maxRows = 6,
     },
@@ -639,6 +641,15 @@ const MentionEditor = React.forwardRef<MentionEditorHandle, MentionEditorProps>(
      * 检测 @ 符号并控制弹窗显示
      */
     const handleInput = useCallback(() => {
+      // 关闭 @ 提及功能时，仅作为普通输入框同步内容，不做 @ 检测和弹窗处理
+      if (!enableMention) {
+        if (!editorRef.current) return;
+        const text = getTextContent();
+        setIsEditorEmpty(text.trim().length === 0);
+        onChange?.(text);
+        return;
+      }
+
       // 如果正在输入中文，跳过处理
       if (!editorRef.current || isComposingRef.current) return;
 
@@ -679,7 +690,7 @@ const MentionEditor = React.forwardRef<MentionEditorHandle, MentionEditorProps>(
         // 没有有效的 @ 提及，关闭弹窗
         closeMentionPopup();
       }
-    }, [getTextContent, onChange, closeMentionPopup]);
+    }, [enableMention, getTextContent, onChange, closeMentionPopup]);
 
     /**
      * 处理键盘按下事件
@@ -691,8 +702,8 @@ const MentionEditor = React.forwardRef<MentionEditorHandle, MentionEditorProps>(
         // 中文输入时跳过
         if (isComposingRef.current) return;
 
-        // 弹窗显示时的键盘处理
-        if (showMentionPopup) {
+        // 弹窗显示时的键盘处理（仅在启用 @ 功能时生效）
+        if (enableMention && showMentionPopup) {
           switch (e.key) {
             case 'ArrowUp':
               e.preventDefault();
@@ -760,6 +771,7 @@ const MentionEditor = React.forwardRef<MentionEditorHandle, MentionEditorProps>(
         }
       },
       [
+        enableMention,
         showMentionPopup,
         closeMentionPopup,
         onPressEnter,
@@ -821,6 +833,12 @@ const MentionEditor = React.forwardRef<MentionEditorHandle, MentionEditorProps>(
      */
     const handleClick = useCallback(() => {
       if (!editorRef.current || disabled) return;
+
+      // 关闭 @ 提及功能时，点击只负责光标定位，不触发弹窗
+      if (!enableMention) {
+        closeMentionPopup();
+        return;
+      }
 
       // 延迟执行以确保光标位置已更新
       setTimeout(() => {
@@ -890,7 +908,7 @@ const MentionEditor = React.forwardRef<MentionEditorHandle, MentionEditorProps>(
           }
         }
       }, 0);
-    }, [disabled, closeMentionPopup]);
+    }, [disabled, enableMention, closeMentionPopup]);
 
     // ==================== Effects ====================
 

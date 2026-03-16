@@ -130,6 +130,8 @@ export interface MentionEditorProps {
   disabled?: boolean;
   /** 自定义类名 */
   className?: string;
+  /** 是否启用 @ 提及功能，默认 true */
+  enableMention?: boolean;
   /** 选择提及项时的回调 */
   onMentionSelect?: (item: MentionItem) => void;
   /** 当前已选技能 ID 列表变化时的回调 */

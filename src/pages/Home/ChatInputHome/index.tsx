@@ -66,6 +66,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
   autoSelectComputer,
   saveComputerOnSelect,
   isPersonalComputer,
+  enableMention = true,
 }) => {
   // 获取停止会话相关的方法和状态
   const {
@@ -393,6 +394,8 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
           value={messageInfo}
           onChange={setMessageInfo}
           onSkillIdsChange={setSkillIds}
+          // 是否启用 @ 提及功能，默认启用
+          enableMention={enableMention}
           // 回车事件处理
           onPressEnter={handlePressEnter}
           // 粘贴事件处理
