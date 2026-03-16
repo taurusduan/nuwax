@@ -38,10 +38,10 @@ const PlatformList: React.FC<PlatformListProps> = ({
         icon: IM_PLATFORM_ICON_MAP[IMPlatformEnum.Feishu],
       },
       {
-        id: IMPlatformEnum.Dingding,
-        name: IM_PLATFORM_LABEL_MAP[IMPlatformEnum.Dingding],
-        count: counts.dingding || 0,
-        icon: IM_PLATFORM_ICON_MAP[IMPlatformEnum.Dingding],
+        id: IMPlatformEnum.Dingtalk,
+        name: IM_PLATFORM_LABEL_MAP[IMPlatformEnum.Dingtalk],
+        count: counts.dingtalk || 0,
+        icon: IM_PLATFORM_ICON_MAP[IMPlatformEnum.Dingtalk],
       },
       {
         id: IMPlatformEnum.Wework,

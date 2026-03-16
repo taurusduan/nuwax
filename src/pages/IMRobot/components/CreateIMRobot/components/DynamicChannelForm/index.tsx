@@ -50,7 +50,7 @@ const DynamicChannelForm: React.FC<DynamicChannelFormProps> = ({
   }
 
   // 钉钉机器人
-  if (platform === IMPlatformEnum.Dingding) {
+  if (platform === IMPlatformEnum.Dingtalk) {
     return (
       <>
         <ProFormText

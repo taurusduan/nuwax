@@ -54,7 +54,7 @@ export interface FeishuConfig {
 /**
  * 钉钉机器人配置
  */
-export interface DingdingConfig {
+export interface DingtalkConfig {
   clientId: string;
   clientSecret: string;
   robotCode: string;
@@ -86,7 +86,7 @@ export interface WeworkAppConfig {
  */
 export interface AddIMChannelParams {
   id?: number;
-  channel: string; // feishu/dingding/wework
+  channel: string; // feishu/dingtalk/wework
   targetType: string;
   agentId: number;
   enabled: boolean;
