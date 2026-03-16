@@ -27,11 +27,11 @@ import {
   SquarePublishedListParams,
   SquareSearchParams,
 } from '@/types/interfaces/square';
-import { Empty, Input, Select } from 'antd';
+import { Empty, Input, message, Select } from 'antd';
 import { SearchProps } from 'antd/es/input';
 import classNames from 'classnames';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { useLocation, useModel, useRequest } from 'umi';
+import { history, useLocation, useModel, useRequest } from 'umi';
 import styles from './index.less';
 import SingleAgent from './SingleAgent';
 import SquareComponentInfo from './SquareComponentInfo';
@@ -100,10 +100,18 @@ const Square: React.FC = () => {
   } = useSpaceSquare();
   // 获取租户配置信息
 
-  const handleClickSkill = (id: number) => {
-    console.log(id);
-    // defaultTaskAgentId
-    console.log('defaultTaskAgentId:', tenantConfigInfo?.defaultTaskAgentId);
+  const handleClickSkill = (item: SquarePublishedItemInfo) => {
+    const agentId = tenantConfigInfo?.defaultTaskAgentId;
+    if (!agentId) {
+      // 站点默认通用型智能体未配置
+      message.warning('站点默认通用型智能体未配置');
+      return;
+    }
+    history.push(
+      `/agent/${agentId}?skillId=${
+        item.targetId
+      }&skillName=${encodeURIComponent(item.name)}`,
+    );
   };
 
   // 查询列表成功后处理数据
@@ -466,7 +474,7 @@ const Square: React.FC = () => {
                         onToggleCollectSuccess={handleToggleCollectSuccess}
                         collectApi={apiPublishedSkillCollect}
                         unCollectApi={apiPublishedSkillUnCollect}
-                        onClick={() => handleClickSkill(item.targetId)}
+                        onClick={() => handleClickSkill(item)}
                       />
                     );
                   }
