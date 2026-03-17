@@ -69,7 +69,10 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
   enableMention = true,
   // @ 提及弹窗展示方向：auto | up | down，默认 auto
   mentionPlacement = 'auto',
+  /** 占位符文本 */
   placeholder,
+  /** 默认提及项列表（需同时传入 value 文本） */
+  defaultMentions,
 }) => {
   // 获取停止会话相关的方法和状态
   const {
@@ -406,6 +409,8 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
           // 粘贴事件处理
           onPaste={handlePaste}
           placeholder={placeholder}
+          // 默认提及项列表
+          defaultMentions={defaultMentions}
         />
         <footer className={cx('flex', 'flex-1', styles.footer)}>
           {!!messageList?.filter((item: MessageInfo) => item.id)?.length && (
