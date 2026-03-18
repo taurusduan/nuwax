@@ -167,11 +167,20 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
      */
     /**
      * 计算当前显示的列表项
-     * 根据当前 Tab 和搜索文本过滤
+     * - All Tab：直接使用接口返回的列表（后端搜索）
+     * - 最近使用 / 我的收藏：仅做本地过滤，不因 searchText 请求后端
      */
     const currentItems = useMemo(() => {
-      return tabDataMap[activeTab].items;
-    }, [activeTab, tabDataMap]);
+      const items = tabDataMap[activeTab].items;
+      if (activeTab === 'all') return items;
+      const kw = (searchText ?? '').trim().toLowerCase();
+      if (!kw) return items;
+      return items.filter(
+        (item) =>
+          item.name.toLowerCase().includes(kw) ||
+          (item.description?.toLowerCase().includes(kw) ?? false),
+      );
+    }, [activeTab, tabDataMap, searchText]);
 
     const activeTabData = useMemo(() => {
       return tabDataMap[activeTab];
@@ -338,6 +347,12 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
 
     /**
      * 处理 Tab 切换（点击时）
+     *
+     * 行为：
+     * - 总是切换激活 Tab，并重置选中项与滚动位置
+     * - 仅当目标 Tab 还未初始化（initialized === false）时才加载第一页数据
+     *   - 已加载过的 Tab 再次切换过去时直接使用本地缓存，不重复请求
+     * - All Tab 的滚动分页能力不受影响，仍由 handleListScroll + hasMore 控制
      */
     const handleTabChange = useCallback(
       (tab: TabType) => {
@@ -347,10 +362,12 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
           listRef.current.scrollTop = 0;
         }
 
-        // 每次切换 Tab 都重新加载当前 Tab 的第一页数据
-        loadTabData(tab, 1);
+        const tabState = tabDataMap[tab];
+        if (!tabState || !tabState.initialized) {
+          loadTabData(tab, 1);
+        }
       },
-      [loadTabData],
+      [loadTabData, tabDataMap],
     );
 
     // ==================== Effects ====================
@@ -383,14 +400,18 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
     }, [activeTab, loadTabData, visible]);
 
     /**
-     * 弹窗已打开后：搜索关键字变化时仅刷新当前 Tab 第一页
+     * 弹窗已打开后：搜索关键字变化时
+     * - 当前为 All Tab：请求后端搜索（刷新当前 Tab 第一页）
+     * - 当前为最近使用 / 我的收藏：不请求后端，仅依赖 currentItems 的本地过滤
      */
     useEffect(() => {
       if (!visible || !hasInitTabsRef.current) return;
       const currentSearch = searchText ?? '';
       if (currentSearch === lastSearchTextRef.current) return;
       lastSearchTextRef.current = currentSearch;
-      loadTabData(activeTab, 1);
+      if (activeTab === 'all') {
+        loadTabData('all', 1);
+      }
     }, [visible, searchText, activeTab, loadTabData]);
 
     /**
