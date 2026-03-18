@@ -126,9 +126,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
   const confirmSendMessage = (value: string) => {
     // 如果输入框内容不为空 或者 附件文件列表不为空
     if (!!value.trim() || !!files?.length) {
-      // 去重技能ID列表
-      const uniqueSkillIds = skillIds ? Array.from(new Set(skillIds)) : [];
-      onEnter(value, files, uniqueSkillIds);
+      onEnter(value, files, skillIds);
       // 如果需要清空输入框
       if (isClearInput) {
         // 清空附件文件列表

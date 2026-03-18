@@ -393,8 +393,9 @@ const MentionEditor = React.forwardRef<MentionEditorHandle, MentionEditorProps>(
      * 统一从 selectedMentions 派生，确保新增、删除、清空都能自动同步
      */
     useEffect(() => {
+      // 去重技能ID列表
       const nextSkillIds = Array.from(
-        new Set(selectedMentions.map((item) => item.id as number)),
+        new Set(selectedMentions?.map((item) => item.id as number)),
       );
       onSkillIdsChange?.(nextSkillIds);
     }, [onSkillIdsChange, selectedMentions]);
