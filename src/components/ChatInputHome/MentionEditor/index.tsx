@@ -28,6 +28,7 @@ import React, {
   useCallback,
   useEffect,
   useImperativeHandle,
+  useMemo,
   useRef,
   useState,
 } from 'react';
@@ -298,7 +299,7 @@ const MentionEditor = React.forwardRef<MentionEditorHandle, MentionEditorProps>(
       onChange,
       onPressEnter,
       onPaste,
-      placeholder = '直接输入指令, 可通过Shift+Enter换行, 通过回车发送消息；支持输入@唤起技能；支持粘贴图片',
+      placeholder: defaultPlaceholder,
       autoFocus = true,
       disabled = false,
       className,
@@ -397,6 +398,18 @@ const MentionEditor = React.forwardRef<MentionEditorHandle, MentionEditorProps>(
       );
       onSkillIdsChange?.(nextSkillIds);
     }, [onSkillIdsChange, selectedMentions]);
+
+    // 占位符文本
+    const placeholderText = useMemo(() => {
+      if (!!defaultPlaceholder) {
+        return defaultPlaceholder;
+      }
+      // 如果启用 @ 提及功能，则显示默认占位符文本
+      if (enableMention) {
+        return '直接输入指令, 可通过Shift+Enter换行, 通过回车发送消息；支持输入@唤起技能；支持粘贴图片';
+      }
+      return '直接输入指令, 可通过Shift+Enter换行, 通过回车发送消息；支持粘贴图片';
+    }, [enableMention, defaultPlaceholder]);
 
     /**
      * 刷新 MentionPopup 的位置，使其尽量跟随当前光标
@@ -1170,7 +1183,7 @@ const MentionEditor = React.forwardRef<MentionEditorHandle, MentionEditorProps>(
             minHeight: `${minHeight}px`,
             maxHeight: `${maxHeight}px`,
           }}
-          data-placeholder={placeholder}
+          data-placeholder={placeholderText}
           suppressContentEditableWarning
         />
 
