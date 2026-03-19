@@ -144,6 +144,8 @@ export interface MentionPopupProps {
   maxHeight?: number;
   /** 弹窗内容高度变化时的回调（用于外部重新定位弹窗） */
   onHeightChange?: (height: number) => void;
+  /** 是否在 Tab 标签栏下方显示搜索输入框；为 true 时使用输入框关键字搜索列表，打开弹窗时自动聚焦 */
+  showSearchInput?: boolean;
 }
 
 /**

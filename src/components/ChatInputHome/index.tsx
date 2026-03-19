@@ -612,17 +612,18 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
                 @
               </span>
             </Tooltip>
-          </ConditionRender>
 
-          {/* @提及技能选择弹窗 */}
-          <MentionPopup
-            visible={atIconShowMentionPopup}
-            position={atIconMentionPosition}
-            onSelect={handleAtIconMentionSelect}
-            onClose={closeAtIconMentionPopup}
-            maxHeight={mentionPopupMaxHeight}
-            onHeightChange={handlePopupHeightChange}
-          />
+            {/* @提及技能选择弹窗 */}
+            <MentionPopup
+              visible={atIconShowMentionPopup}
+              position={atIconMentionPosition}
+              onSelect={handleAtIconMentionSelect}
+              onClose={closeAtIconMentionPopup}
+              maxHeight={mentionPopupMaxHeight}
+              onHeightChange={handlePopupHeightChange}
+              showSearchInput={true}
+            />
+          </ConditionRender>
 
           {/* 清空会话记录 */}
           {!!messageList?.filter((item: MessageInfo) => item.id)?.length && (
