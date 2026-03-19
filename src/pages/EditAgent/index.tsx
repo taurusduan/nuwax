@@ -13,6 +13,7 @@ import useUnifiedTheme from '@/hooks/useUnifiedTheme';
 import AnalyzeStatistics from '@/pages/SpaceDevelop/AnalyzeStatistics';
 import CreateTempChatModal from '@/pages/SpaceDevelop/CreateTempChatModal';
 import {
+  apiAgentComponentModelUpdate,
   apiAgentConfigInfo,
   apiAgentConfigUpdate,
 } from '@/services/agentConfig';
@@ -832,7 +833,7 @@ const EditAgent: React.FC = () => {
     }
   };
 
-  const handleOpenPreview = () => {
+  const handleOpenPreview = useCallback(() => {
     // 判断是否默认展示页面首页
     if (
       agentConfigInfo &&
@@ -847,7 +848,11 @@ const EditAgent: React.FC = () => {
     } else {
       showPagePreview(null);
     }
-  };
+  }, [
+    agentConfigInfo?.expandPageArea,
+    agentConfigInfo?.pageHomeIndex,
+    showPagePreview,
+  ]);
 
   useEffect(() => {
     handleOpenPreview();
@@ -950,6 +955,24 @@ const EditAgent: React.FC = () => {
             icon={agentConfigInfo?.modelComponentConfig?.icon}
             modelName={agentConfigInfo?.modelComponentConfig?.name}
             onClick={() => setOpenAgentModel(true)}
+            onModelChange={async (modelId, name) => {
+              // 通用智能体直接切换模型，无需弹窗
+              const componentId = agentConfigInfo?.modelComponentConfig?.id;
+              if (!componentId) return;
+              const bindConfig = agentConfigInfo?.modelComponentConfig
+                ?.bindConfig as ComponentModelBindConfig;
+              await apiAgentComponentModelUpdate({
+                id: componentId,
+                targetId: modelId,
+                bindConfig,
+              });
+              const _agentConfigInfo = cloneDeep(
+                agentConfigInfo,
+              ) as AgentConfigInfo;
+              _agentConfigInfo.modelComponentConfig.targetId = modelId;
+              _agentConfigInfo.modelComponentConfig.name = name;
+              setAgentConfigInfo(_agentConfigInfo);
+            }}
           />
           <div
             className={cx(
