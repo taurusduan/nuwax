@@ -713,7 +713,6 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
           // 阻止点击弹窗其余内容时让编辑器失焦
           e.preventDefault();
         }}
-        onKeyDown={handleKeyDown}
       >
         {/* 搜索输入框（由 showSearchInput 控制，置于 Tabs 上方；data-mention-search 便于点击清除图标时不触发容器 preventDefault） */}
         {showSearchInput && (
@@ -725,11 +724,7 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
               allowClear
               value={searchInputValue}
               onChange={(e) => setSearchInputValue(e.target.value)}
-              onKeyDown={(e) => {
-                if (['ArrowUp', 'ArrowDown', 'Enter'].includes(e.key)) {
-                  e.stopPropagation();
-                }
-              }}
+              onKeyDown={handleKeyDown}
               prefix={
                 <SearchOutlined className={styles['mention-search-icon']} />
               }
