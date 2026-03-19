@@ -77,6 +77,8 @@ interface TabDataState {
   loading: boolean;
   initialized: boolean;
   hasMore: boolean;
+  /** 「全部」Tab 当前数据是用哪个 searchText 加载的，用于切回全部时判断是否需要按最新关键字重新加载 */
+  loadedWithSearchText?: string;
 }
 
 /**
@@ -187,27 +189,19 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
     }, [activeTab, tabDataMap]);
 
     /**
-     * 通用的 Tab 数据处理方法
-     * 根据传入的原始记录数组和目标 Tab，完成映射、分页切片和状态更新
+     * 最近使用 / 我的收藏 Tab 的数据处理方法
+     * 不做分页，直接使用接口返回的全部数据渲染
      */
     const handleTabDataResponse = useCallback(
-      (
-        tab: Exclude<TabType, 'all'>,
-        page: number,
-        records: SkillInfoForAt[],
-      ) => {
-        const startIndex = (page - 1) * PAGE_SIZE;
-        const endIndex = startIndex + PAGE_SIZE;
-        const pageItems = records.slice(startIndex, endIndex);
-
+      (tab: Exclude<TabType, 'all'>, records: SkillInfoForAt[]) => {
         updateTabDataState(tab, (prev) => ({
           ...prev,
-          items: page === 1 ? pageItems : [...prev.items, ...pageItems],
-          page,
+          items: records,
+          page: 1,
           total: records.length,
           loading: false,
           initialized: true,
-          hasMore: endIndex < records.length,
+          hasMore: false,
         }));
       },
       [updateTabDataState],
@@ -239,37 +233,29 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
 
     /**
      * 加载最近使用 Tab 的数据
-     * 使用 apiSkillRecentlyUsedListForAt 由接口根据关键字完成过滤，这里只做分页切片
+     * 一次性拉取全部，不分页，直接全部渲染
      */
-    const loadRecentTabData = useCallback(
-      async (page: number) => {
-        const response = await runRecentTabData({
-          kw: searchText,
-          targetType: AgentComponentTypeEnum.Skill,
-        });
-        const records = (response?.data || []) as SkillInfoForAt[];
+    const loadRecentTabData = useCallback(async () => {
+      const response = await runRecentTabData({
+        targetType: AgentComponentTypeEnum.Skill,
+      });
+      const records = (response?.data || []) as SkillInfoForAt[];
 
-        handleTabDataResponse('recent', page, records);
-      },
-      [searchText, handleTabDataResponse],
-    );
+      handleTabDataResponse('recent', records);
+    }, [handleTabDataResponse]);
 
     /**
      * 加载「我的收藏」 Tab 数据
-     * 使用 apiSkillCollectListForAt 一次性返回全部数据，由接口根据关键字完成过滤，这里只做分页切片
+     * 一次性拉取全部，不分页，直接全部渲染
      */
-    const loadFavoriteTabData = useCallback(
-      async (page: number) => {
-        const response = await runFavoriteTabData({
-          kw: searchText,
-          targetType: AgentComponentTypeEnum.Skill,
-        });
-        const records = (response?.data || []) as SkillInfoForAt[];
+    const loadFavoriteTabData = useCallback(async () => {
+      const response = await runFavoriteTabData({
+        targetType: AgentComponentTypeEnum.Skill,
+      });
+      const records = (response?.data || []) as SkillInfoForAt[];
 
-        handleTabDataResponse('favorite', page, records);
-      },
-      [searchText, handleTabDataResponse],
-    );
+      handleTabDataResponse('favorite', records);
+    }, [handleTabDataResponse]);
 
     /**
      * 加载「全部」 Tab 数据
@@ -298,6 +284,7 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
           initialized: true,
           hasMore:
             total > 0 ? page * PAGE_SIZE < total : records.length >= PAGE_SIZE,
+          loadedWithSearchText: searchText ?? '',
         }));
       },
       [searchText, updateTabDataState],
@@ -318,9 +305,9 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
 
         try {
           if (tab === 'recent') {
-            await loadRecentTabData(page);
+            await loadRecentTabData();
           } else if (tab === 'favorite') {
-            await loadFavoriteTabData(page);
+            await loadFavoriteTabData();
           } else {
             await loadAllTabData(page);
           }
@@ -350,9 +337,7 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
      *
      * 行为：
      * - 总是切换激活 Tab，并重置选中项与滚动位置
-     * - 仅当目标 Tab 还未初始化（initialized === false）时才加载第一页数据
-     *   - 已加载过的 Tab 再次切换过去时直接使用本地缓存，不重复请求
-     * - All Tab 的滚动分页能力不受影响，仍由 handleListScroll + hasMore 控制
+     * - 以下情况会加载：目标 Tab 未初始化，或切回「全部」时当前关键字与当时加载用的不一致（在非全部 Tab 下改过关键字后切回全部需按最新关键字重载）
      */
     const handleTabChange = useCallback(
       (tab: TabType) => {
@@ -363,11 +348,16 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
         }
 
         const tabState = tabDataMap[tab];
-        if (!tabState || !tabState.initialized) {
+        const currentSearch = searchText ?? '';
+        const needLoad =
+          !tabState ||
+          !tabState.initialized ||
+          (tab === 'all' && tabState.loadedWithSearchText !== currentSearch);
+        if (needLoad) {
           loadTabData(tab, 1);
         }
       },
-      [loadTabData, tabDataMap],
+      [loadTabData, tabDataMap, searchText],
     );
 
     // ==================== Effects ====================
@@ -662,6 +652,7 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
     return (
       <div
         ref={containerRef}
+        data-mention-popup
         className={styles['mention-popup']}
         style={{
           position: 'fixed',

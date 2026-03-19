@@ -216,14 +216,8 @@ export interface MentionEditorProps {
  * 用于父组件控制编辑器
  */
 export interface MentionEditorHandle {
-  /** 聚焦编辑器 */
-  focus: () => void;
-  /** 移除编辑器焦点 */
-  blur: () => void;
   /** 清空编辑器内容 */
   clear: () => void;
-  /** 获取编辑器纯文本内容 */
-  getTextContent: () => string;
-  /** 获取所有已选中的提及项 */
-  getMentions: () => MentionItem[];
+  /** 处理从弹窗中选择提及项 */
+  handleAtIconMentionSelect: (item: MentionItem) => void;
 }
