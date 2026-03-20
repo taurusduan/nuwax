@@ -206,6 +206,7 @@ const CreateIMChannel: React.FC<CreateIMChannelProps> = ({
         form={form}
         name="target"
         label="智能体"
+        tooltip="通用智能体将使用你的沙箱（电脑）环境执行任务，切勿将对应的机器人分享给他人使用。"
         hideTop={[
           AgentComponentTypeEnum.Knowledge,
           AgentComponentTypeEnum.Table,
