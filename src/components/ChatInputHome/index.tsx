@@ -397,6 +397,50 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
   }>({ top: 0, left: 0 });
 
   /**
+   * 根据 @ 图标位置计算 MentionPopup 的 top/bottom/left，并写入 state
+   */
+  const calcAndSetAtIconMentionPosition = useCallback(() => {
+    // 以 @ 图标作为锚点，向下用 top 定位，向上用 bottom 定位（与 MentionEditor 一致，高度变化时不闪动）
+    const iconEl = mentionIconRef.current;
+    if (iconEl) {
+      const rect = iconEl.getBoundingClientRect();
+      const viewportHeight =
+        window.innerHeight || document.documentElement.clientHeight || 0;
+      const viewportWidth =
+        window.innerWidth || document.documentElement.clientWidth || 0;
+
+      // 这里使用估算高度即可；如需更精确再接回 onHeightChange + maxHeight
+      const POPUP_ESTIMATED_HEIGHT = 320;
+      const POPUP_WIDTH = 280;
+      const margin = 8;
+
+      let finalPlacement: 'up' | 'down' = 'down';
+      if (mentionPlacement === 'auto') {
+        const spaceBelow = viewportHeight - rect.bottom;
+        finalPlacement = spaceBelow >= POPUP_ESTIMATED_HEIGHT ? 'down' : 'up';
+      } else {
+        finalPlacement = mentionPlacement;
+      }
+
+      const left = Math.min(
+        Math.max(4, rect.left),
+        viewportWidth - POPUP_WIDTH - margin,
+      );
+
+      if (finalPlacement === 'down') {
+        let top = rect.bottom + 4;
+        const maxTop = viewportHeight - POPUP_ESTIMATED_HEIGHT - 4;
+        if (top > maxTop) top = Math.max(4, maxTop);
+        setAtIconMentionPosition({ left, top });
+      } else {
+        // up：固定弹窗底边贴近图标上方 4px（与打开时逻辑一致）
+        const bottomCss = viewportHeight - (rect.top - 4);
+        setAtIconMentionPosition({ left, bottom: bottomCss });
+      }
+    }
+  }, [mentionPlacement]);
+
+  /**
    * 处理从弹窗中选择提及项
    * 将选中的提及插入到编辑器中，替换 @ 和搜索文本
    *
@@ -438,45 +482,11 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
       setHasUsedMentionIcon(true);
 
       // 以 @ 图标作为锚点，向下用 top 定位，向上用 bottom 定位（与 MentionEditor 一致，高度变化时不闪动）
-      const iconEl = mentionIconRef.current;
-      if (iconEl) {
-        const rect = iconEl.getBoundingClientRect();
-        const viewportHeight =
-          window.innerHeight || document.documentElement.clientHeight || 0;
-        const viewportWidth =
-          window.innerWidth || document.documentElement.clientWidth || 0;
-
-        const POPUP_ESTIMATED_HEIGHT = 320;
-        const POPUP_WIDTH = 280;
-        const margin = 8;
-
-        let finalPlacement: 'up' | 'down';
-        if (mentionPlacement === 'auto') {
-          const spaceBelow = viewportHeight - rect.bottom;
-          finalPlacement = spaceBelow >= POPUP_ESTIMATED_HEIGHT ? 'down' : 'up';
-        } else {
-          finalPlacement = mentionPlacement;
-        }
-
-        const left = Math.min(
-          Math.max(4, rect.left),
-          viewportWidth - POPUP_WIDTH - margin,
-        );
-
-        if (finalPlacement === 'down') {
-          let top = rect.bottom + 4;
-          const maxTop = viewportHeight - POPUP_ESTIMATED_HEIGHT - 4;
-          if (top > maxTop) top = Math.max(4, maxTop);
-          setAtIconMentionPosition({ left, top });
-        } else {
-          const bottomCss = viewportHeight - (rect.top - 4);
-          setAtIconMentionPosition({ left, bottom: bottomCss });
-        }
-      }
+      calcAndSetAtIconMentionPosition();
 
       setAtIconShowMentionPopup(true);
     },
-    [enableMention, mentionPlacement, closeAtIconMentionPopup],
+    [enableMention, calcAndSetAtIconMentionPosition, closeAtIconMentionPopup],
   );
 
   /**
@@ -503,11 +513,33 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
       closeAtIconMentionPopup();
     };
 
+    // 当浏览器窗口大小变化时，重新计算底部 @ 弹窗位置。
+    const handleResize = () => {
+      if (!atIconShowMentionPopup) {
+        return;
+      }
+
+      calcAndSetAtIconMentionPosition();
+    };
+
     document.addEventListener('mousedown', handleClickOutside);
+
+    /**
+     * 当浏览器窗口大小变化时，重新计算底部 @ 弹窗位置。
+     * 行为与 MentionEditor 一致：向上用 bottom，向下用 top，并在 auto 模式下根据
+     * “图标下方空间 vs 弹窗真实高度”决定最终展开方向。
+     */
+    window.addEventListener('resize', handleResize);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener('resize', handleResize);
     };
-  }, [atIconShowMentionPopup, closeAtIconMentionPopup, enableMention]);
+  }, [
+    atIconShowMentionPopup,
+    closeAtIconMentionPopup,
+    enableMention,
+    calcAndSetAtIconMentionPosition,
+  ]);
 
   return (
     <div className={cx('w-full', 'relative', className)}>
