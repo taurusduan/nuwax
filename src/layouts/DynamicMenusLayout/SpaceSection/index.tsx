@@ -3,6 +3,7 @@ import ConditionRender from '@/components/ConditionRender';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
 import { SPACE_ID } from '@/constants/home.constants';
 import { apiGetSpaceDetail } from '@/services/teamSetting';
+import { TeamStatusEnum } from '@/types/enums/teamSetting';
 import type { AgentInfo } from '@/types/interfaces/agent';
 import { SpaceInfo } from '@/types/interfaces/workspace';
 import classNames from 'classnames';
@@ -10,7 +11,6 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { history, useModel, useParams } from 'umi';
 import DynamicSecondMenu from '../DynamicSecondMenu';
 import { updatePathUrlToLocalStorage } from '../utils';
-// import DevCollect from './DevCollect';
 import styles from './index.less';
 import SpaceTitle from './SpaceTitle';
 
@@ -53,8 +53,12 @@ const SpaceSection: React.FC<{
       apiGetSpaceDetail(finalSpaceId)
         .then((res) => {
           if (res.code === SUCCESS_CODE && res.data) {
-            const { creatorName, name } = res.data;
-            const display = creatorName ? `${creatorName} - ${name}` : name;
+            const { creatorName, name, currentUserRole } = res.data;
+            // 如果当前用户不是空间所有者，则显示空间所有者名称 （当前登录用户在空间的角色,可用值:Owner,Admin,User）
+            const display =
+              currentUserRole !== TeamStatusEnum.Owner && creatorName
+                ? `${creatorName} - ${name}`
+                : name;
             setDynamicTitle(display || '个人空间');
           } else {
             setDynamicTitle('个人空间');
