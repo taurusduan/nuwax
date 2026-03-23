@@ -157,8 +157,15 @@ const ConversationList = React.forwardRef<
                 </Space>
               </div>
             </div>
-            <div className={styles.summary}>
-              {item.summary || '暂无内容摘要'}
+            <div className={styles['summary-wrapper']}>
+              <div className={styles.summary}>
+                {item.summary || '暂无内容摘要'}
+              </div>
+              {item.agent?.name && (
+                <div className={styles['agent-tag-bottom']}>
+                  {item.agent.name}
+                </div>
+              )}
             </div>
           </div>
         ))}
