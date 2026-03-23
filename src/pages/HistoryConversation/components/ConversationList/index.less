@@ -145,21 +145,28 @@
       word-break: break-all;
     }
 
-    .agent-tag-bottom {
+    .tag-wrapper {
       flex-shrink: 0;
-      font-size: 11px;
-      color: rgba(0, 0, 0, 45%);
-      background-color: rgba(0, 0, 0, 4%);
-      padding: 2px 8px;
-      border-radius: 4px;
-      max-width: 160px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      transition: background-color 0.2s;
+      width: 145px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
 
-      &:hover {
-        background-color: rgba(0, 0, 0, 8%);
+      .agent-tag-bottom {
+        font-size: 11px;
+        color: rgba(0, 0, 0, 45%);
+        background-color: rgba(0, 0, 0, 4%);
+        padding: 2px 8px;
+        border-radius: 4px;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 8%);
+        }
       }
     }
   }

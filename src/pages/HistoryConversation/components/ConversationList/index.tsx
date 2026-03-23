@@ -161,11 +161,11 @@ const ConversationList = React.forwardRef<
               <div className={styles.summary}>
                 {item.summary || '暂无内容摘要'}
               </div>
-              {item.agent?.name && (
+              <div className={styles['tag-wrapper']}>
                 <div className={styles['agent-tag-bottom']}>
-                  {item.agent.name}
+                  {item.agent?.name || '智能体'}
                 </div>
-              )}
+              </div>
             </div>
           </div>
         ))}
