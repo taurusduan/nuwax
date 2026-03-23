@@ -88,6 +88,10 @@ const ConversationList = React.forwardRef<
       setList((prev) => prev.filter((item) => item.id !== id));
     },
     refresh: () => {
+      if (containerRef.current) {
+        containerRef.current.scrollTop = 0;
+      }
+      setList([]);
       loadData(true);
     },
   }));

@@ -7,7 +7,7 @@ import { useDebounceFn } from 'ahooks';
 import { Input, message, Modal } from 'antd';
 import classNames from 'classnames';
 import React, { useRef, useState } from 'react';
-import { history, useModel, useSearchParams } from 'umi';
+import { history, useLocation, useModel, useSearchParams } from 'umi';
 import ConversationList, {
   ConversationListRef,
 } from './components/ConversationList';
@@ -18,6 +18,7 @@ const cx = classNames.bind(styles);
 const HistoryConversation: React.FC = () => {
   const { runHistory } = useModel('conversationHistory');
   const [searchParams] = useSearchParams();
+  const location = useLocation();
   const agentIdParam = searchParams.get('agentId');
   const agentId =
     agentIdParam && !isNaN(Number(agentIdParam)) ? Number(agentIdParam) : null;
@@ -40,6 +41,16 @@ const HistoryConversation: React.FC = () => {
       wait: 500,
     },
   );
+
+  // 监听菜单点击刷新（类似查看全部）推送的 _t 状态
+  React.useEffect(() => {
+    const state = location.state as any;
+    if (state?._t) {
+      setKeyword('');
+      setActiveKeyword('');
+      listRef.current?.refresh();
+    }
+  }, [location.state]);
 
   const onStartSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value;
@@ -134,7 +145,6 @@ const HistoryConversation: React.FC = () => {
             placeholder="搜索历史会话"
             value={keyword}
             onChange={onStartSearch}
-            bordered={false}
             className={cx(styles['search-input-field'])}
             allowClear
           />

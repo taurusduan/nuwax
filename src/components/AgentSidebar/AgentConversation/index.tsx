@@ -31,7 +31,9 @@ const AgentConversation: React.FC<AgentConversationProps> = ({ agentId }) => {
   const handleMore = useCallback(() => {
     // 这里不再需要设置本地状态，因为使用 model 中的状态
     // openHistoryConversation();
-    history.push(`/history-conversation?agentId=${agentId}`);
+    history.push(`/history-conversation?agentId=${agentId}`, {
+      _t: Date.now(),
+    });
   }, []);
 
   return (
