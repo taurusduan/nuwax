@@ -31,6 +31,12 @@ import User from './User';
 import UserOperateArea from './UserOperateArea';
 // 复用原有样式
 import { PATH_URL } from '@/constants/home.constants';
+import {
+  MENU_CODE_DOCUMENTS,
+  MENU_CODE_MORE_PAGE,
+  MENU_CODE_MY_COMPUTER,
+  MENU_CODE_NOTIFICATION,
+} from '@/constants/menus.constants';
 import useConversation from '@/hooks/useConversation';
 import EcosystemMarketSection from './EcosystemMarketSection';
 import HomeSection from './HomeSection';
@@ -500,13 +506,13 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
       // 是否点击了一级菜单
       isClickMenu.current = false;
       switch (code) {
-        case 'documents':
+        case MENU_CODE_DOCUMENTS:
           handleOpenUrl(menu);
           break;
-        case 'notification':
+        case MENU_CODE_NOTIFICATION:
           setOpenMessage(true);
           break;
-        case 'my_computer':
+        case MENU_CODE_MY_COMPUTER:
           {
             setActiveTab(code || '');
             history.push('/my-computer-manage', {
@@ -514,6 +520,12 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
               menuCode: menu.code,
             });
           }
+          break;
+        case MENU_CODE_MORE_PAGE:
+          // 需要定义更多菜单的路由
+          history.push('/more-page', {
+            _t: Date.now(),
+          });
           break;
       }
     },
