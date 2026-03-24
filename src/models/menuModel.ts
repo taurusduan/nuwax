@@ -111,7 +111,7 @@ export default function useMenuModel() {
    */
 
   /**
-   * 一级菜单列表（排除 documents、notification、my_computer）
+   * 一级菜单列表（排除 documents、notification、my_computer、more_page）
    */
   const firstLevelMenus = useMemo(
     () =>
@@ -124,7 +124,7 @@ export default function useMenuModel() {
   );
 
   /**
-   * 其他菜单列表（只包含 documents、notification、my_computer）
+   * 其他菜单列表（只包含 documents、notification、my_computer、more_page）
    */
   const otherMenus = useMemo(() => {
     const menu = menuTree?.filter(
