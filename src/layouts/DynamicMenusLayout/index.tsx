@@ -352,6 +352,9 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
         );
       }
 
+      console.log('menuCode', menuCode);
+      console.log('firstLevelCode', firstLevelCode);
+
       // 存在第一级菜单的 code 且不是新对话菜单，则设置为第一级菜单的 code
       if (firstLevelCode && firstLevelCode !== 'new_conversation') {
         setActiveTab(firstLevelCode);
@@ -521,10 +524,14 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
             });
           }
           break;
+        // 更多页面
         case MENU_CODE_MORE_PAGE:
+          console.log('handleUserClick', code);
+          setActiveTab(code || '');
           // 需要定义更多菜单的路由
           history.push('/more-page', {
             _t: Date.now(),
+            menuCode: menu.code,
           });
           break;
       }
@@ -608,6 +615,7 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
    * 渲染二级菜单
    */
   const renderSecondMenu = useMemo(() => {
+    console.log('activeTab', activeTab);
     /**
      * 渲染特殊内容区域
      */

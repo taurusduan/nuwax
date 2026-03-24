@@ -130,10 +130,3 @@ export const OTHER_MENU_CODES = [
   MENU_CODE_MY_COMPUTER,
   MENU_CODE_MORE_PAGE,
 ];
-
-// 更多菜单配置
-export const MORE_PAGE = {
-  name: '更多页面',
-  code: MENU_CODE_MORE_PAGE,
-  icon: 'icons-common-more',
-};

@@ -9,7 +9,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useModel } from 'umi';
 
 import { SUCCESS_CODE } from '@/constants/codes.constants';
-import { MORE_PAGE, OTHER_MENU_CODES } from '@/constants/menus.constants';
+import { OTHER_MENU_CODES } from '@/constants/menus.constants';
 import { MenuEnabledEnum } from '@/pages/SystemManagement/MenuPermission/types/menu-manage';
 import { extractAllMenuCodes, extractAllPermissions } from '@/utils/permission';
 
@@ -132,7 +132,7 @@ export default function useMenuModel() {
         menu.status === MenuEnabledEnum.Enabled &&
         OTHER_MENU_CODES.includes(menu.code || ''),
     );
-    return [...menu, MORE_PAGE];
+    return [...menu];
   }, [menuTree]);
 
   /**
