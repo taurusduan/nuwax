@@ -43,6 +43,7 @@ function compactRoundCounterIfNeeded(): void {
 }
 
 function getBridgePerf(): NuwaPerfBridge | undefined {
+  if (typeof window === 'undefined') return undefined;
   return (window as any).NuwaClawBridge?.perf;
 }
 
