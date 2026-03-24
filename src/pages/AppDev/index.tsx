@@ -923,6 +923,16 @@ const AppDev: React.FC = () => {
       return;
     }
 
+    // 检查文件大小是否超过最大上传文件大小
+    const { isExceedLimitSize, maxFileSize } = checkFileSizeExceedLimit([
+      selectedFile,
+    ]);
+    // 如果超过最大上传文件大小，则提示错误
+    if (isExceedLimitSize) {
+      message.error(`上传文件总大小不能超过${maxFileSize}MB`);
+      return;
+    }
+
     try {
       setIsProjectUploading(true);
 
