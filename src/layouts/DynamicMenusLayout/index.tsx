@@ -533,12 +533,18 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
           break;
         // 更多页面
         case MENU_CODE_MORE_PAGE:
-          setActiveTab(code || '');
-          // 需要定义更多菜单的路由
-          history.push('/more-page', {
-            _t: Date.now(),
-            menuCode: menu.code,
-          });
+          {
+            if (!menu?.children?.length) {
+              return;
+            }
+            const path = menu?.children[0]?.path;
+            setActiveTab(code || '');
+            // 需要定义更多菜单的路由
+            history.push(path, {
+              _t: Date.now(),
+              menuCode: menu.code,
+            });
+          }
           break;
       }
     },
@@ -552,7 +558,7 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
     if (isClickNewConversation) {
       return '新对话';
     }
-    if (activeTab === 'my_computer') {
+    if (activeTab === 'my_computer' || activeTab === 'documents') {
       return '主页';
     }
     const current = firstLevelMenus.find(
@@ -629,7 +635,8 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
     if (
       activeTab === 'homepage' ||
       activeTab === 'new_conversation' ||
-      activeTab === 'my_computer'
+      activeTab === 'my_computer' ||
+      activeTab === 'documents'
     ) {
       return <HomeSection style={overrideContainerStyle} />;
     }
