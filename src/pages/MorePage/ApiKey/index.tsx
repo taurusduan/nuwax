@@ -155,7 +155,7 @@ const ApiKeyPage: React.FC = () => {
   ];
 
   return (
-    <WorkspaceLayout title="API KEY 管理">
+    <WorkspaceLayout title="API 密钥管理" tips="管理您的API密钥与访问权限">
       <div className={styles.container}>
         <Card className={styles['glass-card']}>
           <div
