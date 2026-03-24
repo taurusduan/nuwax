@@ -307,6 +307,12 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
       return;
     }
 
+    // 更多页面特殊处理，如果路径是/more-page，则设置为更多页面
+    if (location.pathname.startsWith('/more-page')) {
+      setActiveTab('more_page');
+      return;
+    }
+
     // 如果点击了一级菜单，并且没有悬浮菜单，则不触发刷新
     // if (isClickMenu.current && !showHoverMenu) {
     if (isClickMenu.current) {
@@ -352,9 +358,6 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
           location.pathname,
         );
       }
-
-      console.log('menuCode', menuCode);
-      console.log('firstLevelCode', firstLevelCode);
 
       // 存在第一级菜单的 code 且不是新对话菜单，则设置为第一级菜单的 code
       if (firstLevelCode && firstLevelCode !== 'new_conversation') {
@@ -530,7 +533,6 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
           break;
         // 更多页面
         case MENU_CODE_MORE_PAGE:
-          console.log('handleUserClick', code);
           setActiveTab(code || '');
           // 需要定义更多菜单的路由
           history.push('/more-page', {
@@ -619,7 +621,6 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
    * 渲染二级菜单
    */
   const renderSecondMenu = useMemo(() => {
-    console.log('activeTab', activeTab);
     /**
      * 渲染特殊内容区域
      */
