@@ -36,6 +36,7 @@ import {
   MENU_CODE_MORE_PAGE,
   MENU_CODE_MY_COMPUTER,
   MENU_CODE_NOTIFICATION,
+  OTHER_MENU_CODES,
 } from '@/constants/menus.constants';
 import useConversation from '@/hooks/useConversation';
 import EcosystemMarketSection from './EcosystemMarketSection';
@@ -361,6 +362,9 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
       // 存在第一级菜单的 code 且不是新对话菜单，则设置为第一级菜单的 code
       if (firstLevelCode && firstLevelCode !== 'new_conversation') {
         setActiveTab(firstLevelCode);
+      } else if (OTHER_MENU_CODES.includes(menuCode || '')) {
+        // 其它需要单独分离的菜单（如我的电脑、更多页面）直接设置为当前 code
+        setActiveTab(menuCode as string);
       }
       // 新对话菜单特殊处理：如果第一级菜单的 code 是 new_conversation，则设置为 new_conversation
       else if (firstLevelCode === 'new_conversation') {
