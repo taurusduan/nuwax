@@ -561,6 +561,9 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
     if (activeTab === 'my_computer' || activeTab === 'documents') {
       return '主页';
     }
+    if (activeTab === 'more_page') {
+      return '更多页面';
+    }
     const current = firstLevelMenus.find(
       (m: MenuItemDto) => m.code === activeTab,
     );
