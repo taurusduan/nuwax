@@ -1,4 +1,3 @@
-@import '@/styles/color.less';
 @import '@/styles/token.less';
 
 .operation-btn-container {
@@ -14,7 +13,7 @@
     height: @controlHeight;
     padding: @paddingXxs;
     font-size: @fontSizeLg;
-    color: @GRAY28; // 默认灰色
+    color: @colorTextSecondary; // 默认灰色
     border: none;
     background: transparent;
     cursor: pointer;
@@ -22,13 +21,13 @@
     border-radius: @borderRadius;
 
     &:hover:not(:disabled) {
-      color: @BLUE04; // 品牌色
-      background-color: @WHITE08; // 稍微加深的背景色
+      color: @colorPrimary; // 品牌色
+      background-color: @colorBgTextHover; // 交互背景色
     }
 
     &.operation-btn-danger:hover:not(:disabled) {
-      color: @RED01;
-      background-color: @RED01_P10;
+      color: @colorError;
+      background-color: @colorErrorBg;
     }
 
     &.operation-btn-link {
@@ -52,12 +51,12 @@
       background: transparent !important;
 
       &.operation-btn-danger {
-        color: @RED01;
+        color: @colorError;
       }
     }
 
     &:disabled {
-      color: @GRAY04;
+      color: @colorTextDisabled;
       cursor: not-allowed;
       background: transparent;
     }
