@@ -1,0 +1,70 @@
+@import '@/styles/color.less';
+@import '@/styles/token.less';
+
+.operation-btn-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  .operation-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: @controlHeight;
+    height: @controlHeight;
+    padding: @paddingXxs;
+    font-size: @fontSizeLg;
+    color: @GRAY28; // 默认灰色
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all @motionDurationMid @motionEaseInOut;
+    border-radius: @borderRadius;
+
+    &:hover:not(:disabled) {
+      color: @BLUE04; // 品牌色
+      background-color: @WHITE08; // 稍微加深的背景色
+    }
+
+    &.operation-btn-danger:hover:not(:disabled) {
+      color: @RED01;
+      background-color: @RED01_P10;
+    }
+
+    &.operation-btn-link {
+      width: auto;
+      height: auto;
+      min-width: 0;
+      padding: 0 @paddingXxs;
+      font-size: @fontSize;
+      background: transparent !important;
+
+      &:hover:not(:disabled) {
+        background: transparent !important;
+        text-decoration: underline;
+      }
+    }
+
+    &.operation-btn-plain {
+      font-size: @fontSize;
+      line-height: @lineHeight;
+      color: inherit;
+      background: transparent !important;
+
+      &.operation-btn-danger {
+        color: @RED01;
+      }
+    }
+
+    &:disabled {
+      color: @GRAY04;
+      cursor: not-allowed;
+      background: transparent;
+    }
+
+    // 处理 loading 态
+    :global(.ant-btn-loading-icon) {
+      transition: all @motionDurationMid;
+    }
+  }
+}
