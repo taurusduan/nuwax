@@ -1,5 +1,6 @@
 import { TableActions, XProTable } from '@/components/ProComponents';
 import WorkspaceLayout from '@/components/WorkspaceLayout';
+import { copyTextToClipboard } from '@/utils/clipboard';
 import {
   CopyOutlined,
   DeleteOutlined,
@@ -46,8 +47,9 @@ const ApiKeyPage: React.FC = () => {
   };
 
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-    message.success('API KEY 已成功复制到剪贴板');
+    copyTextToClipboard(text, () => {
+      message.success('API KEY 已成功复制到剪贴板');
+    });
   };
 
   // 脱敏处理
