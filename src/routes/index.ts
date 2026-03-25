@@ -355,6 +355,26 @@ const routes = [
     layout: false,
   },
   {
+    path: '/agent',
+    component: '@/agentLayouts',
+    wrappers: ['@/wrappers/authWithLoading'],
+    layout: false,
+    routes: [
+      {
+        path: 'homepage/:agentId',
+        component: '@/pages/Agent/AgentHomepage',
+      },
+      {
+        path: 'chatpage/:id/:agentId',
+        component: '@/pages/Agent/AgentChatpage',
+      },
+      {
+        path: 'history-conversation/:agentId',
+        component: '@/pages/Agent/AgentHistoryConversation',
+      },
+    ],
+  },
+  {
     path: '/license-expired',
     component: '@/pages/403',
     layout: false,
