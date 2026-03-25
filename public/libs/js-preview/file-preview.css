@@ -169,19 +169,17 @@ body {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1) !important;
     margin: 0 auto 20px !important;
     background: #fff !important;
-    /* 强制覆盖内联中设置的宽度 (如 595.2pt) */
+    /* 允许 A4 原生 pt 宽度生效，但在窄屏下限制最大宽度 */
     max-width: 100% !important;
-    width: auto !important;
     min-height: auto !important;
     overflow-x: auto !important;
     box-sizing: border-box !important;
 }
 
-/* 核心修复：针对内联样式中带有宽度的图片、容器 div 和 span */
+/* 仅限制最大宽度而不强制设置 width: auto，以保持原生宽高比 */
 .docx-wrapper section.docx img,
 .docx-wrapper section.docx [style*="width"] {
     max-width: 100% !important;
-    width: auto !important; /* 覆盖 pt 宽度 */
     height: auto !important;
 }
 
