@@ -141,10 +141,7 @@ function TableActions<T extends object>({
   const moreActions = visibleActions.slice(visibleCount);
 
   return (
-    <div
-      ref={containerRef}
-      style={{ display: 'inline-flex', alignItems: 'center' }}
-    >
+    <div ref={containerRef} className={styles.container}>
       <Space size={gap} wrap={false}>
         {primaryActions.map(({ key, ...action }) => {
           if (type === 'button') {
@@ -184,7 +181,7 @@ function TableActions<T extends object>({
                     label={action.label}
                     type="link"
                     variant="plain"
-                    style={{ padding: 0, height: 'auto', width: 'auto' }}
+                    className={styles['dropdown-btn']}
                   >
                     {action.label}
                   </OperationBtn>
@@ -195,22 +192,11 @@ function TableActions<T extends object>({
             <Button
               type={type === 'button' ? 'text' : 'link'}
               size="small"
-              className={classNames({
-                [styles['more-btn']]: type === 'button',
+              className={classNames(styles['more-btn'], {
+                [styles['more-btn-button']]: type === 'button',
+                [styles['more-btn-link']]: type === 'link',
               })}
               icon={moreText ? undefined : <ICON_MORE />}
-              style={
-                type === 'link'
-                  ? { padding: '0 4px', width: 'auto', height: 'auto' }
-                  : {
-                      borderRadius: 8,
-                      width: 32,
-                      height: 32,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }
-              }
             >
               {moreText}
             </Button>
