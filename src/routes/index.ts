@@ -355,7 +355,7 @@ const routes = [
     layout: false,
   },
   {
-    path: '/open-app',
+    path: '/app',
     component: '@/pages/open-app/BaseTemplate',
     wrappers: ['@/wrappers/authWithLoading'],
     layout: false,

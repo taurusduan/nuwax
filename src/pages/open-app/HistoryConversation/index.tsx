@@ -10,7 +10,7 @@ const HistoryConversation: React.FC = () => {
   const agentId = Number(params.agentId);
 
   const handleLink = (id: number, agentId: number) => {
-    history.push(`/open-app/chat/${id}/${agentId}`);
+    history.push(`/app/chat/${id}/${agentId}`);
   };
 
   return <HistoryConversationPage agentId={agentId} onClickLink={handleLink} />;

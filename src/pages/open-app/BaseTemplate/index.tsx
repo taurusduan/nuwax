@@ -150,17 +150,17 @@ const BaseTemplate: React.FC = () => {
 
   // 新建会话
   const handleNewSession = () => {
-    history.push(`/open-app/details/${agentId}`);
+    history.push(`/app/details/${agentId}`);
   };
 
   // 查看全部历史会话
   const handleViewAllHistory = () => {
-    history.push(`/open-app/history/conversation/${agentId}`);
+    history.push(`/app/history/conversation/${agentId}`);
   };
 
   // 会话跳转
   const handleLink = (id: number, agentId: number) => {
-    history.push(`/open-app/chat/${id}/${agentId}`);
+    history.push(`/app/chat/${id}/${agentId}`);
   };
 
   return (
