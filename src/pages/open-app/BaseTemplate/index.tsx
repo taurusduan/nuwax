@@ -1,16 +1,20 @@
+import avatarImage from '@/assets/images/avatar.png';
+import ConditionRender from '@/components/ConditionRender';
 import { MOBILE_BREAKPOINT } from '@/constants/layout.constants';
 import { useUnifiedTheme } from '@/hooks/useUnifiedTheme';
+import ConversationItem from '@/layouts/DynamicMenusLayout/HomeSection/ConversationItem';
 import User from '@/layouts/DynamicMenusLayout/User';
-import UserAvatar from '@/layouts/DynamicMenusLayout/User/UserAvatar';
 import Setting from '@/layouts/Setting';
+import { ConversationInfo } from '@/types/interfaces/conversationInfo';
 import {
   ClockCircleOutlined,
   EllipsisOutlined,
   PlusCircleOutlined,
+  RightOutlined,
 } from '@ant-design/icons';
 import classNames from 'classnames';
 import React, { useCallback, useEffect, useMemo } from 'react';
-import { history, Outlet, useModel } from 'umi';
+import { history, Outlet, useModel, useParams } from 'umi';
 import styles from './index.less';
 
 // 绑定 classNames，便于动态样式组合
@@ -21,15 +25,18 @@ const cx = classNames.bind(styles);
  * 负责响应式菜单、历史会话、消息、设置弹窗的布局与展示
  */
 const BaseTemplate: React.FC = () => {
+  const { id: cId, agentId } = useParams();
   // 导航风格管理（使用统一主题系统）
   const { navigationStyle, layoutStyle } = useUnifiedTheme();
   const { isSecondMenuCollapsed, setOpenAdmin, setIsMobile } =
     useModel('layout');
   // 状态管理
-  const { userInfo } = useModel('userInfo');
+  const { userInfo, getUserInfo } = useModel('userInfo');
 
   const { runTenantConfig } = useModel('tenantConfigInfo');
-  const { loadMenus } = useModel('menuModel');
+
+  // 查询会话记录
+  const { conversationList, runHistory } = useModel('conversationHistory');
 
   /**
    * 检查是否为移动端设备
@@ -40,11 +47,17 @@ const BaseTemplate: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    // 初始化加载菜单数据
-    loadMenus();
+    // 获取用户信息
+    getUserInfo();
     // 租户配置信息查询接口
     runTenantConfig();
-  }, []);
+
+    // 查询会话记录
+    runHistory({
+      agentId,
+      limit: 20,
+    });
+  }, [agentId]);
 
   /**
    * 监听窗口尺寸变化，判断是否为移动端
@@ -101,17 +114,6 @@ const BaseTemplate: React.FC = () => {
     [layoutStyle, navigationStyle, isSecondMenuCollapsed],
   );
 
-  const historyItems = useMemo(
-    () => [
-      'Trae中Git同步更改操作...',
-      'umi.js中 如何实现动态layo...',
-      '腾讯云大模型API 配置模型...',
-      '块自下向上伸展',
-      '邮箱与JS方法',
-    ],
-    [],
-  );
-
   // 新建会话
   const handleNewSession = () => {
     history.push(`/open-app/details/934`);
@@ -120,6 +122,11 @@ const BaseTemplate: React.FC = () => {
   // 查看全部历史会话
   const handleViewAllHistory = () => {
     history.push(`/open-app/history/conversation/934`);
+  };
+
+  // 会话跳转
+  const handleLink = (id: number, agentId: number) => {
+    history.push(`/open-app/chat/${id}/${agentId}`);
   };
 
   return (
@@ -145,41 +152,83 @@ const BaseTemplate: React.FC = () => {
           <span className={styles.shortcutTag}>K</span>
         </button>
 
-        <div className={'flex-1'}>
-          <div className={styles.historyTitle}>
-            <ClockCircleOutlined />
-            历史会话
+        <div className={cx('flex', 'flex-col', 'overflow-hide')}>
+          <div className={cx(styles['history-title'])}>
+            <span className={cx(styles.title)}>
+              <ClockCircleOutlined />
+              历史会话
+            </span>
+
+            <ConditionRender condition={conversationList?.length}>
+              <span
+                className={cx(styles['more-conversation'])}
+                onClick={handleViewAllHistory}
+              >
+                查看全部 <RightOutlined />
+              </span>
+            </ConditionRender>
           </div>
-          <div className={styles.historyList}>
+
+          {/* 历史会话列表 */}
+          <div className={cx('flex-1', 'overflow-y')}>
+            {conversationList?.length ? (
+              conversationList.map((item: ConversationInfo, index: number) => (
+                <ConversationItem
+                  key={item.id}
+                  isActive={cId === item.id?.toString()}
+                  isFirst={index === 0}
+                  onClick={() => handleLink(item.id, item.agentId)}
+                  name={item.topic}
+                  taskStatus={item.taskStatus}
+                />
+              ))
+            ) : (
+              <>
+                <div className={cx(styles['no-used'])}>右边看👉</div>
+                <div className={cx(styles['no-used'])}>
+                  在会话框中输入指令开始你的第一次会话吧～
+                </div>
+              </>
+            )}
+          </div>
+
+          {/* <div className={styles.historyList}>
             {historyItems.map((item) => (
               <button key={item} className={styles.historyItem} type="button">
                 {item}
               </button>
             ))}
-          </div>
-          <button
+          </div> */}
+          {/* <button
             className={styles.viewAllBtn}
             type="button"
             onClick={handleViewAllHistory}
           >
             查看全部
-          </button>
+          </button> */}
         </div>
 
-        <div className={styles.userArea}>
-          <UserAvatar
-            avatar={userInfo?.avatar}
-            onClick={() => setOpenAdmin(true)}
-          />
-          <span className={styles.userName}>
+        {/* 用户区域，固定在底部 */}
+        <footer
+          className={cx(
+            'flex',
+            'items-center',
+            'justify-between',
+            'gap-4',
+            styles['user-area'],
+          )}
+          onClick={() => setOpenAdmin(true)}
+        >
+          <div className={cx('cursor-pointer', styles['user-avatar'])}>
+            <img src={userInfo?.avatar || (avatarImage as string)} alt="" />
+          </div>
+          <span className={cx('flex-1', 'text-ellipsis', styles['user-name'])}>
             {userInfo?.nickName || userInfo?.userName}
           </span>
           <User>
-            <span className={styles.userMoreRight}>
-              <EllipsisOutlined className={styles.moreIcon} />
-            </span>
+            <EllipsisOutlined className={styles.moreIcon} />
           </User>
-        </div>
+        </footer>
       </div>
 
       {/* 主内容区 */}
