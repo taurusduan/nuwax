@@ -48,10 +48,19 @@ const BaseTemplate: React.FC = () => {
   const { conversationList, runHistory, loadingHistory, loadingHistoryEnd } =
     useModel('conversationHistory');
 
-  // ======= footer 渐变 =======
+  // =========================== footer 渐变 ===========================
   const historyListRef = useRef<HTMLDivElement | null>(null);
+  // 底部渐变显示状态
   const [showFooterTopGradient, setShowFooterTopGradient] =
     useState<boolean>(true);
+
+  // 是否为 Mac 系统（用于快捷键文案和按键组合判断）
+  const isMacSystem = useMemo(() => {
+    if (typeof navigator === 'undefined') return false;
+    return /Mac|iPhone|iPad|iPod/i.test(
+      navigator.platform || navigator.userAgent,
+    );
+  }, []);
 
   /**
    * 判断历史列表是否滚动到底部：
@@ -149,9 +158,9 @@ const BaseTemplate: React.FC = () => {
   );
 
   // 新建会话
-  const handleNewSession = () => {
+  const handleNewSession = useCallback(() => {
     history.push(`/app/details/${agentId}`);
-  };
+  }, [agentId]);
 
   // 查看全部历史会话
   const handleViewAllHistory = () => {
@@ -162,6 +171,29 @@ const BaseTemplate: React.FC = () => {
   const handleLink = (id: number, agentId: number) => {
     history.push(`/app/chat/${id}/${agentId}`);
   };
+
+  /**
+   * 监听新建会话快捷键：
+   * - Mac: ⌘ + J
+   * - Windows: Ctrl + J
+   */
+  useEffect(() => {
+    const handleKeydown = (event: KeyboardEvent) => {
+      const isNKey = event.key.toLowerCase() === 'j';
+      if (!isNKey) return;
+
+      const isShortcutPressed = isMacSystem ? event.metaKey : event.ctrlKey;
+      if (!isShortcutPressed) return;
+
+      event.preventDefault();
+      handleNewSession();
+    };
+
+    window.addEventListener('keydown', handleKeydown);
+    return () => {
+      window.removeEventListener('keydown', handleKeydown);
+    };
+  }, [handleNewSession, isMacSystem]);
 
   return (
     <div className={mainContainerClassName}>
@@ -193,8 +225,10 @@ const BaseTemplate: React.FC = () => {
             新建会话
           </span>
           <div className={cx('flex', 'items-center', 'gap-4')}>
-            <span className={styles.shortcutTag}>⌘</span>
-            <span className={styles.shortcutTag}>k</span>
+            <span className={styles.shortcutTag}>
+              {isMacSystem ? '⌘' : 'ctrl'}
+            </span>
+            <span className={styles.shortcutTag}>J</span>
           </div>
         </button>
 
