@@ -3,20 +3,19 @@ import React from 'react';
 import { history, useParams } from 'umi';
 
 /**
- * 智能体首页
- * @returns
+ * 开放授权应用详情页面
  */
-const AgentHomepage: React.FC = () => {
+const AppDetails: React.FC = () => {
   // 智能体ID
   const params = useParams();
   const agentId = Number(params.agentId);
 
   // 会话发起后跳转的页面URL
-  const conversationUrl = '/agent/chatpage/:id/:agentId';
+  const conversationUrl = '/open-app/chat/:id/:agentId';
 
   // 查看智能体会话记录更多回调, 跳转到历史会话页面
   const handleViewMore = () => {
-    history.push(`/agent/history-conversation/${agentId}`);
+    history.push(`/open-app/history/conversation/${agentId}`);
   };
 
   return (
@@ -28,4 +27,4 @@ const AgentHomepage: React.FC = () => {
   );
 };
 
-export default AgentHomepage;
+export default AppDetails;

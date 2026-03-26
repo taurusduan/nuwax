@@ -20,7 +20,7 @@ const cx = classNames.bind(styles);
  * Layout 主布局组件
  * 负责响应式菜单、历史会话、消息、设置弹窗的布局与展示
  */
-const AgentLayout: React.FC = () => {
+const BaseTemplate: React.FC = () => {
   // 导航风格管理（使用统一主题系统）
   const { navigationStyle, layoutStyle } = useUnifiedTheme();
   const { isSecondMenuCollapsed, setOpenAdmin, setIsMobile } =
@@ -114,12 +114,12 @@ const AgentLayout: React.FC = () => {
 
   // 新建会话
   const handleNewSession = () => {
-    history.push(`/agent/homepage/934`);
+    history.push(`/open-app/details/934`);
   };
 
   // 查看全部历史会话
   const handleViewAllHistory = () => {
-    history.push(`/agent/history-conversation/934`);
+    history.push(`/open-app/history/conversation/934`);
   };
 
   return (
@@ -196,4 +196,4 @@ const AgentLayout: React.FC = () => {
   );
 };
 
-export default AgentLayout;
+export default BaseTemplate;

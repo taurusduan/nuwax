@@ -355,22 +355,22 @@ const routes = [
     layout: false,
   },
   {
-    path: '/agent',
-    component: '@/agentLayouts',
+    path: '/open-app',
+    component: '@/pages/open-app/BaseTemplate',
     wrappers: ['@/wrappers/authWithLoading'],
     layout: false,
     routes: [
       {
-        path: 'homepage/:agentId',
-        component: '@/pages/Agent/AgentHomepage',
+        path: 'details/:agentId',
+        component: '@/pages/open-app/AppDetails',
       },
       {
-        path: 'chatpage/:id/:agentId',
-        component: '@/pages/Agent/AgentChatpage',
+        path: 'chat/:id/:agentId',
+        component: '@/pages/open-app/ChatConversation',
       },
       {
-        path: 'history-conversation/:agentId',
-        component: '@/pages/Agent/AgentHistoryConversation',
+        path: 'history/conversation/:agentId',
+        component: '@/pages/open-app/HistoryConversation',
       },
     ],
   },
