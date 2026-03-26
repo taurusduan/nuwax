@@ -1,4 +1,5 @@
 import avatarImage from '@/assets/images/avatar.png';
+import SvgIcon from '@/components/base/SvgIcon';
 import ConditionRender from '@/components/ConditionRender';
 import { MOBILE_BREAKPOINT } from '@/constants/layout.constants';
 import { useUnifiedTheme } from '@/hooks/useUnifiedTheme';
@@ -9,11 +10,18 @@ import { ConversationInfo } from '@/types/interfaces/conversationInfo';
 import {
   ClockCircleOutlined,
   EllipsisOutlined,
+  LoadingOutlined,
   PlusCircleOutlined,
   RightOutlined,
 } from '@ant-design/icons';
 import classNames from 'classnames';
-import React, { useCallback, useEffect, useMemo } from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { history, Outlet, useModel, useParams } from 'umi';
 import styles from './index.less';
 
@@ -33,10 +41,36 @@ const BaseTemplate: React.FC = () => {
   // 状态管理
   const { userInfo, getUserInfo } = useModel('userInfo');
 
-  const { runTenantConfig } = useModel('tenantConfigInfo');
+  // 租户配置信息查询接口
+  const { runTenantConfig, tenantConfigInfo } = useModel('tenantConfigInfo');
 
   // 查询会话记录
-  const { conversationList, runHistory } = useModel('conversationHistory');
+  const { conversationList, runHistory, loadingHistory, loadingHistoryEnd } =
+    useModel('conversationHistory');
+
+  // ======= footer 渐变 =======
+  const historyListRef = useRef<HTMLDivElement | null>(null);
+  const [showFooterTopGradient, setShowFooterTopGradient] =
+    useState<boolean>(true);
+
+  /**
+   * 判断历史列表是否滚动到底部：
+   * - 距离底部 <= threshold => 不显示底部渐变
+   * - 否则显示渐变，提示还有内容可向上浏览
+   */
+  const handleHistoryScroll = useCallback(() => {
+    if (loadingHistory) {
+      setShowFooterTopGradient(false);
+      return;
+    }
+
+    const el = historyListRef.current;
+    if (!el) return;
+
+    const threshold = 2;
+    const distanceFromBottom = el.scrollHeight - el.scrollTop - el.clientHeight;
+    setShowFooterTopGradient(distanceFromBottom > threshold);
+  }, [loadingHistory]);
 
   /**
    * 检查是否为移动端设备
@@ -116,12 +150,12 @@ const BaseTemplate: React.FC = () => {
 
   // 新建会话
   const handleNewSession = () => {
-    history.push(`/open-app/details/934`);
+    history.push(`/open-app/details/${agentId}`);
   };
 
   // 查看全部历史会话
   const handleViewAllHistory = () => {
-    history.push(`/open-app/history/conversation/934`);
+    history.push(`/open-app/history/conversation/${agentId}`);
   };
 
   // 会话跳转
@@ -134,12 +168,21 @@ const BaseTemplate: React.FC = () => {
       {/* 侧边菜单栏区域 */}
       <div className={styles.agentSidebarContainer}>
         <div className={styles.sidebarTop}>
-          <div className={styles.logo}>K</div>
-          <button className={styles.collapseBtn} type="button">
-            <span />
-          </button>
+          <ConditionRender condition={!!tenantConfigInfo?.siteLogo}>
+            <div className={cx(styles['logo-container'])}>
+              <img
+                src={tenantConfigInfo?.siteLogo}
+                className={cx(styles.logo)}
+                alt=""
+              />
+            </div>
+          </ConditionRender>
+          <span className={styles.collapseBtn}>
+            <SvgIcon name="icons-nav-sidebar" style={{ fontSize: 16 }} />
+          </span>
         </div>
 
+        {/* 新建会话按钮 */}
         <button
           className={styles.newSessionBtn}
           type="button"
@@ -149,63 +192,80 @@ const BaseTemplate: React.FC = () => {
             <PlusCircleOutlined />
             新建会话
           </span>
-          <span className={styles.shortcutTag}>K</span>
+          <div className={cx('flex', 'items-center', 'gap-4')}>
+            <span className={styles.shortcutTag}>⌘</span>
+            <span className={styles.shortcutTag}>k</span>
+          </div>
         </button>
 
-        <div className={cx('flex', 'flex-col', 'overflow-hide')}>
-          <div className={cx(styles['history-title'])}>
-            <span className={cx(styles.title)}>
-              <ClockCircleOutlined />
-              历史会话
-            </span>
+        <div
+          className={cx(
+            'relative',
+            'flex-1',
+            'flex',
+            'flex-col',
+            'overflow-hide',
+          )}
+        >
+          {loadingHistory ? (
+            <div
+              className={cx('flex', 'items-center', 'content-center', 'h-full')}
+            >
+              <LoadingOutlined />
+            </div>
+          ) : (
+            <>
+              <div className={cx(styles['history-title'])}>
+                <span className={cx(styles.title)}>
+                  <ClockCircleOutlined />
+                  历史会话
+                </span>
 
-            <ConditionRender condition={conversationList?.length}>
-              <span
-                className={cx(styles['more-conversation'])}
-                onClick={handleViewAllHistory}
+                <ConditionRender condition={conversationList?.length}>
+                  <span
+                    className={cx(styles['more-conversation'])}
+                    onClick={handleViewAllHistory}
+                  >
+                    查看全部 <RightOutlined />
+                  </span>
+                </ConditionRender>
+              </div>
+
+              {/* 历史会话列表 */}
+              <div
+                ref={historyListRef}
+                className={cx('flex-1', 'overflow-y')}
+                onScroll={handleHistoryScroll}
               >
-                查看全部 <RightOutlined />
-              </span>
-            </ConditionRender>
-          </div>
+                {conversationList?.length
+                  ? conversationList.map(
+                      (item: ConversationInfo, index: number) => (
+                        <ConversationItem
+                          key={item.id}
+                          isActive={cId === item.id?.toString()}
+                          isFirst={index === 0}
+                          onClick={() => handleLink(item.id, item.agentId)}
+                          name={item.topic}
+                          taskStatus={item.taskStatus}
+                        />
+                      ),
+                    )
+                  : loadingHistoryEnd && (
+                      <>
+                        <div className={cx(styles['no-used'])}>右边看👉</div>
+                        <div className={cx(styles['no-used'])}>
+                          在会话框中输入指令开始你的第一次会话吧～
+                        </div>
+                      </>
+                    )}
+              </div>
+            </>
+          )}
 
-          {/* 历史会话列表 */}
-          <div className={cx('flex-1', 'overflow-y')}>
-            {conversationList?.length ? (
-              conversationList.map((item: ConversationInfo, index: number) => (
-                <ConversationItem
-                  key={item.id}
-                  isActive={cId === item.id?.toString()}
-                  isFirst={index === 0}
-                  onClick={() => handleLink(item.id, item.agentId)}
-                  name={item.topic}
-                  taskStatus={item.taskStatus}
-                />
-              ))
-            ) : (
-              <>
-                <div className={cx(styles['no-used'])}>右边看👉</div>
-                <div className={cx(styles['no-used'])}>
-                  在会话框中输入指令开始你的第一次会话吧～
-                </div>
-              </>
-            )}
-          </div>
-
-          {/* <div className={styles.historyList}>
-            {historyItems.map((item) => (
-              <button key={item} className={styles.historyItem} type="button">
-                {item}
-              </button>
-            ))}
-          </div> */}
-          {/* <button
-            className={styles.viewAllBtn}
-            type="button"
-            onClick={handleViewAllHistory}
-          >
-            查看全部
-          </button> */}
+          {/* 底部渐变 */}
+          <ConditionRender condition={showFooterTopGradient}>
+            <div className={cx(styles['footer-top-gradient'])} />
+          </ConditionRender>
         </div>
 
         {/* 用户区域，固定在底部 */}

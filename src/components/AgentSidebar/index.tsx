@@ -30,7 +30,6 @@ const AgentSidebar = forwardRef<AgentSidebarRef, AgentSidebarProps>(
       agentDetail,
       onToggleCollectSuccess,
       onVisibleChange,
-      onViewMore,
     },
     ref,
   ) => {
@@ -111,10 +110,7 @@ const AgentSidebar = forwardRef<AgentSidebarRef, AgentSidebarProps>(
                       onToggleCollectSuccess={onToggleCollectSuccess}
                     />
                     {/* 智能体相关会话 */}
-                    <AgentConversation
-                      agentId={agentId}
-                      onViewMore={onViewMore}
-                    />
+                    <AgentConversation agentId={agentId} />
                     {/* 定时任务 */}
                     {agentDetail?.openScheduledTask === OpenCloseEnum.Open && (
                       <TimedTask agentId={agentId} />

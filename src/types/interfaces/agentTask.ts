@@ -15,8 +15,6 @@ export interface AgentSidebarProps {
   onToggleCollectSuccess: (isCollect: boolean) => void;
   // 可见性变化回调
   onVisibleChange?: (visible: boolean) => void;
-  // 查看更多回调, 默认跳转到历史会话页面, 如果传入该回调, 则跳转到该回调的页面
-  onViewMore?: () => void;
 }
 
 // 定时任务组件属性
@@ -62,8 +60,6 @@ export interface StatisticsInfoProps {
 // 智能体相关会话组件
 export interface AgentConversationProps {
   agentId: number;
-  // 查看更多回调, 默认跳转到历史会话页面, 如果传入该回调, 则跳转到该回调的页面
-  onViewMore?: () => void;
 }
 
 // 创建定时会话添加或更新请求参数

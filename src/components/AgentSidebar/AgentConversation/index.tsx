@@ -12,10 +12,7 @@ import styles from './index.less';
 const cx = classNames.bind(styles);
 
 // 智能体相关会话
-const AgentConversation: React.FC<AgentConversationProps> = ({
-  agentId,
-  onViewMore,
-}) => {
+const AgentConversation: React.FC<AgentConversationProps> = ({ agentId }) => {
   // 使用 model 中的历史会话弹窗状态，而不是本地状态
   const {
     isHistoryConversationOpen,
@@ -32,15 +29,11 @@ const AgentConversation: React.FC<AgentConversationProps> = ({
 
   // 查看更多 打开历史会话弹窗 - 现在通过 model 状态管理
   const handleMore = useCallback(() => {
-    if (onViewMore) {
-      onViewMore();
-    } else {
-      // 这里不再需要设置本地状态，因为使用 model 中的状态
-      // openHistoryConversation();
-      history.push(`/history-conversation?agentId=${agentId}`, {
-        _t: Date.now(),
-      });
-    }
+    // 这里不再需要设置本地状态，因为使用 model 中的状态
+    // openHistoryConversation();
+    history.push(`/history-conversation?agentId=${agentId}`, {
+      _t: Date.now(),
+    });
   }, []);
 
   return (

@@ -61,8 +61,6 @@ interface AgentDetailsPageProps {
     // 技能名称
     name: string;
   } | null;
-  // 查看更多回调, 默认跳转到历史会话页面, 如果传入该回调, 则跳转到该回调的页面
-  onViewMore?: () => void;
 }
 
 /**
@@ -72,7 +70,6 @@ const AgentDetailsPage: React.FC<AgentDetailsPageProps> = ({
   agentId,
   conversationUrl,
   skillInfo,
-  onViewMore,
 }) => {
   const [form] = Form.useForm();
   const { isMobile } = useModel('layout');
@@ -612,7 +609,6 @@ const AgentDetailsPage: React.FC<AgentDetailsPageProps> = ({
         agentDetail={agentDetail}
         onToggleCollectSuccess={handleToggleCollectSuccess}
         onVisibleChange={setIsSidebarVisible}
-        onViewMore={onViewMore}
       />
     </div>
   );
