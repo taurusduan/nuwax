@@ -5,6 +5,7 @@
   height: 100%;
 }
 
+// 应用智能体侧边栏容器
 .agentSidebarContainer {
   width: 280px;
   height: 100%;
@@ -14,46 +15,46 @@
   display: flex;
   flex-direction: column;
   gap: @paddingSm;
+  overflow: hidden;
+  transition: padding 0.3s ease, border-color 0.2s ease, opacity 0.3s ease;
+
+  &.agentSidebarContainerCollapsed {
+    width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-right-color: transparent;
+    opacity: 0.35;
+  }
 }
 
 .sidebarTop {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
 
-.logo-container {
-  width: 32px;
-  height: 32px;
-  border-radius: @borderRadius;
-  background-color: @colorBgContainer;
-  overflow: hidden;
+  .logo-container {
+    width: 32px;
+    height: 32px;
+    border-radius: @borderRadius;
+    background-color: @colorBgContainer;
+    overflow: hidden;
 
-  .logo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    .logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .collapseBtn {
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    border-radius: 50%;
   }
 }
 
-.collapseBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  color: @colorTextPlaceholder;
-  transition: background-color 0.2s ease-in-out;
-
-  &:hover {
-    background-color: @colorFillSecondary;
-  }
-}
-
+// 新建会话按钮
 .newSessionBtn {
   width: 100%;
   height: @controlHeightLg;
@@ -70,27 +71,27 @@
   &:hover {
     box-shadow: @boxShadowSecondary;
   }
-}
 
-.newSessionText {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: @colorText;
-  font-size: @fontSize;
-  font-weight: 500;
-}
+  .newSessionText {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: @colorText;
+    font-size: @fontSize;
+    font-weight: 500;
+  }
 
-.shortcutTag {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  border-radius: @borderRadiusOuter;
-  background: @colorBgLayout;
-  color: #8a8e99;
-  font-size: @fontSizeSm;
+  .shortcutTag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: @borderRadiusOuter;
+    background: @colorBgLayout;
+    color: @colorTextDescription;
+    font-size: @fontSizeSm;
+  }
 }
 
 // 历史会话标题

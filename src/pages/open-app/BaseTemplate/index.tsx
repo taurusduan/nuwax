@@ -1,6 +1,8 @@
+import agentImage from '@/assets/images/agent_image.png';
 import avatarImage from '@/assets/images/avatar.png';
 import SvgIcon from '@/components/base/SvgIcon';
 import ConditionRender from '@/components/ConditionRender';
+import TooltipIcon from '@/components/custom/TooltipIcon';
 import { MOBILE_BREAKPOINT } from '@/constants/layout.constants';
 import { useUnifiedTheme } from '@/hooks/useUnifiedTheme';
 import ConversationItem from '@/layouts/DynamicMenusLayout/HomeSection/ConversationItem';
@@ -41,18 +43,23 @@ const BaseTemplate: React.FC = () => {
   // 状态管理
   const { userInfo, getUserInfo } = useModel('userInfo');
 
-  // 租户配置信息查询接口
-  const { runTenantConfig, tenantConfigInfo } = useModel('tenantConfigInfo');
-
   // 查询会话记录
   const { conversationList, runHistory, loadingHistory, loadingHistoryEnd } =
     useModel('conversationHistory');
+
+  const {
+    isAppSidebarVisible,
+    toggleAppSidebarVisible,
+    setIsAppSidebarMode,
+    appAgentDetail,
+  } = useModel('useOpenApp');
 
   // =========================== footer 渐变 ===========================
   const historyListRef = useRef<HTMLDivElement | null>(null);
   // 底部渐变显示状态
   const [showFooterTopGradient, setShowFooterTopGradient] =
     useState<boolean>(true);
+  // const [isSidebarVisible, setIsSidebarVisible] = useState<boolean>(true);
 
   // 是否为 Mac 系统（用于快捷键文案和按键组合判断）
   const isMacSystem = useMemo(() => {
@@ -92,8 +99,6 @@ const BaseTemplate: React.FC = () => {
   useEffect(() => {
     // 获取用户信息
     getUserInfo();
-    // 租户配置信息查询接口
-    runTenantConfig();
 
     // 查询会话记录
     runHistory({
@@ -172,6 +177,11 @@ const BaseTemplate: React.FC = () => {
     history.push(`/app/chat/${id}/${agentId}`);
   };
 
+  // 设置为初始化应用侧边栏模式（默认是关闭的）
+  useEffect(() => {
+    setIsAppSidebarMode(true);
+  }, []);
+
   /**
    * 监听新建会话快捷键：
    * - Mac: ⌘ + J
@@ -195,23 +205,46 @@ const BaseTemplate: React.FC = () => {
     };
   }, [handleNewSession, isMacSystem]);
 
+  // 图片错误处理
+  const handleError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    e.currentTarget.onerror = null;
+    e.currentTarget.src = agentImage;
+  };
+
   return (
     <div className={mainContainerClassName}>
       {/* 侧边菜单栏区域 */}
-      <div className={styles.agentSidebarContainer}>
+      <div
+        className={cx(styles.agentSidebarContainer, {
+          [styles.agentSidebarContainerCollapsed]: !isAppSidebarVisible,
+        })}
+      >
+        {/* 智能体图标 + 收起导航按钮 */}
         <div className={styles.sidebarTop}>
-          <ConditionRender condition={!!tenantConfigInfo?.siteLogo}>
+          {/* 智能体图标 */}
+          <ConditionRender condition={appAgentDetail}>
             <div className={cx(styles['logo-container'])}>
               <img
-                src={tenantConfigInfo?.siteLogo}
+                src={appAgentDetail?.icon || agentImage}
                 className={cx(styles.logo)}
                 alt=""
+                onError={handleError}
               />
             </div>
           </ConditionRender>
-          <span className={styles.collapseBtn}>
-            <SvgIcon name="icons-nav-sidebar" style={{ fontSize: 16 }} />
-          </span>
+          {/* 收起导航按钮 */}
+          <TooltipIcon
+            title="收起导航"
+            className={styles.collapseBtn}
+            icon={
+              <SvgIcon
+                name="icons-nav-sidebar"
+                style={{ fontSize: 16 }}
+                onClick={toggleAppSidebarVisible}
+              />
+            }
+            placement="right"
+          />
         </div>
 
         {/* 新建会话按钮 */}
@@ -232,6 +265,7 @@ const BaseTemplate: React.FC = () => {
           </div>
         </button>
 
+        {/* 历史会话列表区域 */}
         <div
           className={cx(
             'relative',
@@ -330,6 +364,32 @@ const BaseTemplate: React.FC = () => {
         className={`${pageContainerClassName} scroll-container`}
         id="page-container-selector"
       >
+        {/* <header
+          className={cx(styles.contentHeader, {
+            [styles.contentHeaderVisible]: !isSidebarVisible,
+          })}
+        >
+          <div className={styles.contentHeaderLeft}>
+            <ConditionRender condition={!!tenantConfigInfo?.siteLogo}>
+              <div className={cx(styles['logo-container'])}>
+                <img
+                  src={tenantConfigInfo?.siteLogo}
+                  className={cx(styles.logo)}
+                  alt=""
+                />
+              </div>
+            </ConditionRender>
+          </div>
+          <Tooltip title="展开导航" placement="bottom">
+            <button
+              type="button"
+              className={styles.expandBtn}
+              onClick={toggleSidebarVisible}
+            >
+              <SvgIcon name="icons-nav-sidebar" style={{ fontSize: 16 }} />
+            </button>
+          </Tooltip>
+        </header> */}
         <Outlet />
       </div>
 

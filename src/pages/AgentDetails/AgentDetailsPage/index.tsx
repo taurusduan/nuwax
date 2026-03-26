@@ -7,6 +7,7 @@ import {
 } from '@/components/business-component';
 import ChatInputHome from '@/components/ChatInputHome';
 import ChatView from '@/components/ChatView';
+import ConditionRender from '@/components/ConditionRender';
 import TooltipIcon from '@/components/custom/TooltipIcon';
 import FileTreeView from '@/components/FileTreeView';
 import NewConversationSet from '@/components/NewConversationSet';
@@ -74,6 +75,12 @@ const AgentDetailsPage: React.FC<AgentDetailsPageProps> = ({
   const [form] = Form.useForm();
   const { isMobile } = useModel('layout');
   const { runHistoryItem } = useModel('conversationHistory');
+  const {
+    handleSetAppAgentDetail,
+    isAppSidebarMode,
+    isAppSidebarVisible,
+    toggleAppSidebarVisible,
+  } = useModel('useOpenApp');
   // 获取 chat model 中的页面预览状态
   const { pagePreviewData, hidePagePreview, showPagePreview } =
     useModel('chat');
@@ -188,6 +195,8 @@ const AgentDetailsPage: React.FC<AgentDetailsPageProps> = ({
     onSuccess: (result: AgentDetailDto) => {
       setLoading(false);
       setAgentDetail(result);
+      // 设置应用智能体详情
+      handleSetAppAgentDetail(result);
       handleOpenPreview(result);
       setConversationId(result?.conversationId || null);
       // 会话问题建议
@@ -376,9 +385,32 @@ const AgentDetailsPage: React.FC<AgentDetailsPageProps> = ({
             >
               {cachedAgentName ? `和${cachedAgentName}开始会话` : ''}
             </Typography.Title>
+
+            {/* 右侧按钮区域 */}
             <div className={cx('flex', 'items-center', 'gap-4')}>
+              {/* 应用智能体模式下，显示内容导航按钮 */}
+              <ConditionRender condition={isAppSidebarMode}>
+                <div
+                  className={cx(styles['nav-icon'], {
+                    [styles['nav-icon-visible']]: !isAppSidebarVisible,
+                  })}
+                >
+                  <TooltipIcon
+                    title="展开导航"
+                    className={cx(styles['icon-box'])}
+                    icon={
+                      <SvgIcon
+                        name="icons-nav-sidebar"
+                        style={{ fontSize: 16 }}
+                        onClick={toggleAppSidebarVisible}
+                      />
+                    }
+                  />
+                </div>
+              </ConditionRender>
+
               {/* 这里放可以展开 AgentSidebar 的控制按钮 在AgentSidebar 展示的时候隐藏 反之显示 */}
-              {!isSidebarVisible && !isMobile && (
+              {!isAppSidebarMode && !isSidebarVisible && !isMobile && (
                 <TooltipIcon
                   title="查看智能体详情"
                   className={cx(styles['icon-box'])}
@@ -598,18 +630,22 @@ const AgentDetailsPage: React.FC<AgentDetailsPageProps> = ({
             : null
         }
       />
-      {/*智能体详情*/}
-      <AgentSidebar
-        ref={sidebarRef}
-        className={cx(
-          styles[isSidebarVisible ? 'agent-sidebar-w' : 'agent-sidebar'],
-        )}
-        agentId={agentId}
-        loading={loading}
-        agentDetail={agentDetail}
-        onToggleCollectSuccess={handleToggleCollectSuccess}
-        onVisibleChange={setIsSidebarVisible}
-      />
+
+      {/* 非应用智能体模式下，显示智能体详情侧边栏 */}
+      <ConditionRender condition={!isAppSidebarMode}>
+        {/*智能体详情*/}
+        <AgentSidebar
+          ref={sidebarRef}
+          className={cx(
+            styles[isSidebarVisible ? 'agent-sidebar-w' : 'agent-sidebar'],
+          )}
+          agentId={agentId}
+          loading={loading}
+          agentDetail={agentDetail}
+          onToggleCollectSuccess={handleToggleCollectSuccess}
+          onVisibleChange={setIsSidebarVisible}
+        />
+      </ConditionRender>
     </div>
   );
 };
