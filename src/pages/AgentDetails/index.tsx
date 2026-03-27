@@ -1,6 +1,6 @@
+import ConversationDetails from '@/components/business-component/ConversationDetails';
 import React from 'react';
 import { useParams } from 'umi';
-import AgentDetailsPage from './AgentDetailsPage';
 import useSkillInfo from './useSkillInfo';
 
 /**
@@ -14,7 +14,7 @@ const AgentDetails: React.FC = () => {
   // 技能信息
   const { skillInfo } = useSkillInfo();
 
-  return <AgentDetailsPage agentId={agentId} skillInfo={skillInfo} />;
+  return <ConversationDetails agentId={agentId} skillInfo={skillInfo} />;
 };
 
 export default AgentDetails;

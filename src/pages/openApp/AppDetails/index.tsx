@@ -1,4 +1,4 @@
-import AgentDetailsPage from '@/pages/AgentDetails/AgentDetailsPage';
+import ConversationDetails from '@/components/business-component/ConversationDetails';
 import React from 'react';
 import { useParams } from 'umi';
 
@@ -14,7 +14,7 @@ const AppDetails: React.FC = () => {
   const conversationUrl = '/app/chat/:id/:agentId';
 
   return (
-    <AgentDetailsPage agentId={agentId} conversationUrl={conversationUrl} />
+    <ConversationDetails agentId={agentId} conversationUrl={conversationUrl} />
   );
 };
 

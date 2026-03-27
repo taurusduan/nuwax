@@ -259,7 +259,7 @@ const BaseTemplate: React.FC = () => {
           </span>
           <div className={cx('flex', 'items-center', 'gap-4')}>
             <span className={styles.shortcutTag}>
-              {isMacSystem ? '⌘' : 'ctrl'}
+              {!isMacSystem ? '⌘' : 'ctrl'}
             </span>
             <span className={styles.shortcutTag}>J</span>
           </div>

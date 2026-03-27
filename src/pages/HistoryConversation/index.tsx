@@ -1,6 +1,6 @@
+import HistoryConversationList from '@/components/business-component/HistoryConversationList';
 import React from 'react';
 import { history, useSearchParams } from 'umi';
-import HistoryConversationPage from './components/HistoryConversationPage';
 
 /**
  * 历史会话页面 (用于带菜单layouts的页面)
@@ -15,7 +15,7 @@ const HistoryConversation: React.FC = () => {
     history.push(`/home/chat/${id}/${agentId}`);
   };
 
-  return <HistoryConversationPage agentId={agentId} onClickLink={handleLink} />;
+  return <HistoryConversationList agentId={agentId} onClickLink={handleLink} />;
 };
 
 export default HistoryConversation;

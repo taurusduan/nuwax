@@ -1,4 +1,4 @@
-import HistoryConversationPage from '@/pages/HistoryConversation/components/HistoryConversationPage';
+import HistoryConversationList from '@/components/business-component/HistoryConversationList';
 import React from 'react';
 import { history, useParams } from 'umi';
 
@@ -13,7 +13,7 @@ const HistoryConversation: React.FC = () => {
     history.push(`/app/chat/${id}/${agentId}`);
   };
 
-  return <HistoryConversationPage agentId={agentId} onClickLink={handleLink} />;
+  return <HistoryConversationList agentId={agentId} onClickLink={handleLink} />;
 };
 
 export default HistoryConversation;

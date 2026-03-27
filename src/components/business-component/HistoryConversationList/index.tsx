@@ -8,21 +8,22 @@ import { Input, message, Modal } from 'antd';
 import classNames from 'classnames';
 import React, { useEffect, useRef, useState } from 'react';
 import { history, useLocation, useModel } from 'umi';
-import ConversationList, { ConversationListRef } from '../ConversationList';
+import ConversationList, { ConversationListRef } from './ConversationList';
 import styles from './index.less';
 
 const cx = classNames.bind(styles);
 
 // 历史会话页面组件Props
-export interface HistoryConversationPageProps {
+export interface HistoryConversationListProps {
   agentId?: number | null;
   onClickLink: (id: number, agentId: number) => void;
 }
 
 /**
  * 历史会话页面组件
+ * 该组件用于展示历史会话列表和应用智能体历史会话列表页面
  */
-const HistoryConversationPage: React.FC<HistoryConversationPageProps> = ({
+const HistoryConversationList: React.FC<HistoryConversationListProps> = ({
   agentId,
   onClickLink,
 }) => {
@@ -218,4 +219,4 @@ const HistoryConversationPage: React.FC<HistoryConversationPageProps> = ({
   );
 };
 
-export default HistoryConversationPage;
+export default HistoryConversationList;

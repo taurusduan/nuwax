@@ -356,21 +356,21 @@ const routes = [
   },
   {
     path: '/app',
-    component: '@/pages/open-app/BaseTemplate',
+    component: '@/pages/openApp/BaseTemplate',
     wrappers: ['@/wrappers/authWithLoading'],
     layout: false,
     routes: [
       {
         path: 'details/:agentId',
-        component: '@/pages/open-app/AppDetails',
+        component: '@/pages/openApp/AppDetails',
       },
       {
         path: 'chat/:id/:agentId',
-        component: '@/pages/open-app/ChatConversation',
+        component: '@/pages/openApp/ChatConversation',
       },
       {
         path: 'history/conversation/:agentId',
-        component: '@/pages/open-app/HistoryConversation',
+        component: '@/pages/openApp/HistoryConversation',
       },
     ],
   },

@@ -50,7 +50,7 @@ const cx = classNames.bind(styles);
 /**
  * 主页咨询聊天组件Props
  */
-interface AgentDetailsPageProps {
+interface ConversationDetailsProps {
   // 智能体ID
   agentId: number;
   // 会话发起后跳转的页面URL，如果传入了该参数，则会在会话结束后跳转到该页面
@@ -66,8 +66,9 @@ interface AgentDetailsPageProps {
 
 /**
  * 主页咨询聊天组件
+ * 该组件用于展示智能体主页咨询聊天页面和应用智能体聊天页面
  */
-const AgentDetailsPage: React.FC<AgentDetailsPageProps> = ({
+const ConversationDetails: React.FC<ConversationDetailsProps> = ({
   agentId,
   conversationUrl,
   skillInfo,
@@ -650,4 +651,4 @@ const AgentDetailsPage: React.FC<AgentDetailsPageProps> = ({
   );
 };
 
-export default AgentDetailsPage;
+export default ConversationDetails;
