@@ -87,6 +87,8 @@ export default () => {
   // 历史记录
   const { runHistory, runHistoryItem } = useModel('conversationHistory');
   const { showPagePreview, handleChatProcessingList } = useModel('chat');
+  // 是否是应用智能体模式
+  const { isAppSidebarMode } = useModel('useOpenApp');
   // 会话信息
   const [conversationInfo, setConversationInfo] =
     useState<ConversationInfo | null>();
@@ -472,17 +474,26 @@ export default () => {
             topic: result.data?.topic,
           });
 
-          // 如果是会话聊天页（chat页），同步更新会话记录
-          runHistory({
-            agentId: null,
-            limit: 20,
-          });
+          // 如果是应用智能体模式，则同步更新当前智能体的会话记录
+          if (isAppSidebarMode) {
+            // 如果是会话聊天页（chat页），同步更新会话记录
+            runHistory({
+              agentId: currentInfo.agentId,
+              limit: 20,
+            });
+          } else {
+            // 如果是会话聊天页（chat页），同步更新会话记录
+            runHistory({
+              agentId: null,
+              limit: 20,
+            });
 
-          // 获取当前智能体的历史记录
-          runHistoryItem({
-            agentId: currentInfo.agentId,
-            limit: 20,
-          });
+            // 获取当前智能体的历史记录
+            runHistoryItem({
+              agentId: currentInfo.agentId,
+              limit: 20,
+            });
+          }
         } catch (error) {
           console.error('更新会话主题失败:', error);
           // 更新失败时重置标志，允许下次重试
@@ -490,7 +501,7 @@ export default () => {
         }
       }
     },
-    [runUpdateTopic, runHistory, runHistoryItem],
+    [runUpdateTopic, runHistory, runHistoryItem, isAppSidebarMode],
   );
 
   // 处理变量参数
