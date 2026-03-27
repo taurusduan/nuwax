@@ -79,6 +79,7 @@ import { adjustScrollPositionAfterDOMUpdate } from '@/utils/scrollUtils';
 import { useRequest } from 'ahooks';
 import { message } from 'antd';
 import dayjs from 'dayjs';
+import { throttle } from 'lodash';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useModel } from 'umi';
 import { v4 as uuidv4 } from 'uuid';
@@ -264,14 +265,21 @@ export default () => {
     },
   );
 
-  // 处理文件列表刷新事件
+  // 处理文件列表刷新事件（在 useCallback 中直接节流， 3秒内只执行一次）
   const handleRefreshFileList = useCallback(
-    async (conversationId?: number) => {
-      if (conversationId) {
+    throttle(
+      async (conversationId?: number) => {
+        if (!conversationId) {
+          return;
+        }
+        // 设置文件树数据加载状态
         setFileTreeDataLoading(true);
+        // 查询文件列表
         await runGetStaticFileList(conversationId);
-      }
-    },
+      },
+      3000,
+      { leading: true, trailing: true },
+    ),
     [runGetStaticFileList],
   );
 
