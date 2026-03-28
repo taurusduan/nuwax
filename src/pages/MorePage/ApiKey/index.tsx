@@ -1,5 +1,7 @@
 import { TableActions, XProTable } from '@/components/ProComponents';
 import WorkspaceLayout from '@/components/WorkspaceLayout';
+import { apiApiKeyList } from '@/services/account';
+import type { ApiKeyInfo } from '@/types/interfaces/account';
 import { copyTextToClipboard } from '@/utils/clipboard';
 import {
   CopyOutlined,
@@ -8,38 +10,22 @@ import {
   EyeInvisibleOutlined,
   EyeOutlined,
 } from '@ant-design/icons';
-import type { ProColumns } from '@ant-design/pro-components';
+import type { ActionType, ProColumns } from '@ant-design/pro-components';
 import { Button, message, Space, Tag, Tooltip, Typography } from 'antd';
-import React, { useState } from 'react';
-import { MOCK_API_KEYS } from './mock';
+import React, { useRef, useState } from 'react';
 
-export interface ApiKeyItem {
-  id: string;
-  name: string;
-  description: string;
-  apiKey: string;
-  status: 'active' | 'inactive' | 'expired';
-  createTime: string;
-  expireTime: string;
-}
-
-export const STATUS_MAP: Record<
-  ApiKeyItem['status'],
-  { color: string; text: string }
-> = {
-  active: { color: 'green', text: '活跃' },
-  expired: { color: 'orange', text: '已过期' },
-  inactive: { color: 'red', text: '停用' },
+export const STATUS_MAP: Record<number, { color: string; text: string }> = {
+  1: { color: 'green', text: '活跃' },
+  0: { color: 'red', text: '停用' },
 };
 
 const { Text } = Typography;
 
 const ApiKeyPage: React.FC = () => {
   const [showKeys, setShowKeys] = useState<Record<string, boolean>>({});
+  const actionRef = useRef<ActionType>();
 
-  const [apiKeys, setApiKeys] = useState<ApiKeyItem[]>(MOCK_API_KEYS);
-
-  const toggleShowKey = (id: string) => {
+  const toggleShowKey = (id: string | number) => {
     setShowKeys((prev) => ({
       ...prev,
       [id]: !prev[id],
@@ -58,31 +44,26 @@ const ApiKeyPage: React.FC = () => {
     return `${key.slice(0, 10)}••••••••••••••••••••${key.slice(-4)}`;
   };
 
-  const columns: ProColumns<ApiKeyItem>[] = [
+  const columns: ProColumns<ApiKeyInfo>[] = [
     {
       title: '名称',
       dataIndex: 'name',
       key: 'name',
-      ellipsis: true,
-    },
-    {
-      title: '描述',
-      dataIndex: 'description',
-      key: 'description',
-      ellipsis: true,
       search: false,
+      ellipsis: true,
     },
     {
       title: 'API KEY',
-      dataIndex: 'apiKey',
-      key: 'apiKey',
+      dataIndex: 'accessKey',
+      key: 'accessKey',
+      search: false,
       width: 320,
       render: (_, record) => {
         const visible = showKeys[record.id];
         return (
           <Space size={8}>
             <Text className="font-mono">
-              {visible ? record.apiKey : maskApiKey(record.apiKey)}
+              {visible ? record.accessKey : maskApiKey(record.accessKey)}
             </Text>
             <Tooltip title={visible ? '隐藏' : '显示'}>
               <Button
@@ -97,7 +78,7 @@ const ApiKeyPage: React.FC = () => {
                 type="text"
                 size="small"
                 icon={<CopyOutlined />}
-                onClick={() => copyToClipboard(record.apiKey)}
+                onClick={() => copyToClipboard(record.accessKey)}
               />
             </Tooltip>
           </Space>
@@ -106,26 +87,34 @@ const ApiKeyPage: React.FC = () => {
     },
     {
       title: '创建时间',
-      dataIndex: 'createTime',
-      key: 'createTime',
+      dataIndex: 'created',
+      key: 'created',
       search: false,
+      valueType: 'dateTime',
     },
     {
       title: '过期时间',
-      dataIndex: 'expireTime',
-      key: 'expireTime',
+      dataIndex: 'expire',
+      key: 'expire',
       search: false,
-      render: (_, record) => (
-        <Text type={record.expireTime === '永不过期' ? 'success' : undefined}>
-          {record.expireTime}
-        </Text>
-      ),
+      render: (_, record) => {
+        const isNever =
+          !record.expire ||
+          record.expire === '永不过期' ||
+          record.expire === '0000-00-00 00:00:00';
+        return (
+          <Text type={isNever ? 'success' : undefined}>
+            {isNever ? '永不过期' : record.expire}
+          </Text>
+        );
+      },
     },
     {
       title: '状态',
       dataIndex: 'status',
       key: 'status',
       search: false,
+      valueEnum: STATUS_MAP,
       render: (_, record) => {
         const { color = 'default', text = '未知' } =
           STATUS_MAP[record.status] || {};
@@ -161,11 +150,11 @@ const ApiKeyPage: React.FC = () => {
                 title: (r) => `确认删除密钥 "${r.name}" 吗？`,
                 description: '删除后将无法恢复，请谨慎操作。',
               },
-              onClick: async (r) => {
+              onClick: async () => {
                 await new Promise((resolve) => {
-                  setTimeout(resolve, 2000);
+                  setTimeout(resolve, 1000);
                 });
-                setApiKeys((prev) => prev.filter((item) => item.id !== r.id));
+                actionRef.current?.reload();
                 message.success('删除成功');
               },
             },
@@ -177,8 +166,15 @@ const ApiKeyPage: React.FC = () => {
 
   return (
     <WorkspaceLayout title="API 密钥管理" tips="管理您的API密钥与访问权限">
-      <XProTable<ApiKeyItem>
-        dataSource={apiKeys}
+      <XProTable<ApiKeyInfo>
+        actionRef={actionRef}
+        request={async () => {
+          const result = await apiApiKeyList();
+          return {
+            data: result.data || [],
+            success: result.success,
+          };
+        }}
         columns={columns}
         rowKey="id"
       />

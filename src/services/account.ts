@@ -1,3 +1,4 @@
+import type { ApiKeyInfo } from '@/types/interfaces/account';
 import type {
   BindEmailParams,
   CodeLogin,
@@ -158,6 +159,15 @@ export async function apiGetUserMetricUsage(): Promise<
   RequestResponse<UserMetricUsageInfo>
 > {
   return request('/api/user/metric/usage', {
+    method: 'GET',
+  });
+}
+
+/**
+ * 查询用户 API KEY 列表
+ */
+export async function apiApiKeyList(): Promise<RequestResponse<ApiKeyInfo[]>> {
+  return request('/api/user/api-key/list', {
     method: 'GET',
   });
 }
