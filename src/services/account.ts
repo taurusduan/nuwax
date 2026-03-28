@@ -1,4 +1,8 @@
-import type { ApiKeyInfo } from '@/types/interfaces/account';
+import type {
+  ApiKeyCreateParams,
+  ApiKeyInfo,
+  ApiKeyUpdateParams,
+} from '@/types/interfaces/account';
 import type {
   BindEmailParams,
   CodeLogin,
@@ -169,5 +173,29 @@ export async function apiGetUserMetricUsage(): Promise<
 export async function apiApiKeyList(): Promise<RequestResponse<ApiKeyInfo[]>> {
   return request('/api/user/api-key/list', {
     method: 'GET',
+  });
+}
+
+/**
+ * 新增创建 API KEY
+ */
+export async function apiApiKeyCreate(
+  data: ApiKeyCreateParams,
+): Promise<RequestResponse<ApiKeyInfo>> {
+  return request('/api/user/api-key/create', {
+    method: 'POST',
+    data,
+  });
+}
+
+/**
+ * 更新 API KEY
+ */
+export async function apiApiKeyUpdate(
+  data: ApiKeyUpdateParams,
+): Promise<RequestResponse<null>> {
+  return request('/api/user/api-key/update', {
+    method: 'POST',
+    data,
   });
 }

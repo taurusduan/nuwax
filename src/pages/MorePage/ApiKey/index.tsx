@@ -9,13 +9,16 @@ import {
   EditOutlined,
   EyeInvisibleOutlined,
   EyeOutlined,
+  PlusOutlined,
 } from '@ant-design/icons';
 import type { ActionType, ProColumns } from '@ant-design/pro-components';
 import { Button, message, Space, Tag, Tooltip, Typography } from 'antd';
+import dayjs from 'dayjs';
 import React, { useRef, useState } from 'react';
+import ApiKeyFormModal from './components/ApiKeyFormModal';
 
 export const STATUS_MAP: Record<number, { color: string; text: string }> = {
-  1: { color: 'green', text: '活跃' },
+  1: { color: 'green', text: '启用' },
   0: { color: 'red', text: '停用' },
 };
 
@@ -24,6 +27,8 @@ const { Text } = Typography;
 const ApiKeyPage: React.FC = () => {
   const [showKeys, setShowKeys] = useState<Record<string, boolean>>({});
   const actionRef = useRef<ActionType>();
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentRecord, setCurrentRecord] = useState<ApiKeyInfo | undefined>();
 
   const toggleShowKey = (id: string | number) => {
     setShowKeys((prev) => ({
@@ -46,7 +51,7 @@ const ApiKeyPage: React.FC = () => {
 
   const columns: ProColumns<ApiKeyInfo>[] = [
     {
-      title: '名称',
+      title: '密钥名称',
       dataIndex: 'name',
       key: 'name',
       search: false,
@@ -98,13 +103,16 @@ const ApiKeyPage: React.FC = () => {
       key: 'expire',
       search: false,
       render: (_, record) => {
+        const val = record.expire;
         const isNever =
-          !record.expire ||
-          record.expire === '永不过期' ||
-          record.expire === '0000-00-00 00:00:00';
+          !val || val === '永不过期' || val === '0000-00-00 00:00:00';
+
+        // 如果后端返回的是 ISO 格式字符串，使用 dayjs 格式化显示成标准的日期时间
+        const display = val && !isNever ? dayjs(val).format('YYYY-MM-DD') : val;
+
         return (
           <Text type={isNever ? 'success' : undefined}>
-            {isNever ? '永不过期' : record.expire}
+            {isNever ? '永不过期' : display}
           </Text>
         );
       },
@@ -138,7 +146,8 @@ const ApiKeyPage: React.FC = () => {
               label: '编辑',
               icon: <EditOutlined />,
               onClick: (r) => {
-                message.info(`正在编辑: ${r.name}`);
+                setCurrentRecord(r);
+                setModalOpen(true);
               },
             },
             {
@@ -165,7 +174,23 @@ const ApiKeyPage: React.FC = () => {
   ];
 
   return (
-    <WorkspaceLayout title="API 密钥管理" tips="管理您的API密钥与访问权限">
+    <WorkspaceLayout
+      title="API 密钥管理"
+      tips="管理您的API密钥与访问权限"
+      rightSlot={
+        <Button
+          key="add"
+          type="primary"
+          icon={<PlusOutlined />}
+          onClick={() => {
+            setCurrentRecord(undefined);
+            setModalOpen(true);
+          }}
+        >
+          新增密钥
+        </Button>
+      }
+    >
       <XProTable<ApiKeyInfo>
         actionRef={actionRef}
         request={async () => {
@@ -177,6 +202,15 @@ const ApiKeyPage: React.FC = () => {
         }}
         columns={columns}
         rowKey="id"
+      />
+      <ApiKeyFormModal
+        open={modalOpen}
+        onOpenChange={setModalOpen}
+        record={currentRecord}
+        onSuccess={() => {
+          setModalOpen(false);
+          actionRef.current?.reload();
+        }}
       />
     </WorkspaceLayout>
   );

@@ -39,3 +39,27 @@ export interface ApiKeyInfo {
   /** 创建时间 */
   created: string;
 }
+
+/**
+ * 创建 API KEY 参数
+ */
+export interface ApiKeyCreateParams {
+  /** 名称 */
+  name: string;
+  /** 过期时间（时间戳，当天 23:59:59） */
+  expire?: number | null;
+}
+
+/**
+ * 更新 API KEY 参数
+ */
+export interface ApiKeyUpdateParams {
+  /** API Key */
+  accessKey: string;
+  /** 状态 0 停用; 1 启用 */
+  status: number;
+  /** 名称 */
+  name: string;
+  /** 过期时间（时间戳，当天 23:59:59） */
+  expire?: number | null;
+}
