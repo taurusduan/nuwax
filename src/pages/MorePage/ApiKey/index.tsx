@@ -4,6 +4,7 @@ import { apiApiKeyDelete, apiApiKeyList } from '@/services/account';
 import type { ApiKeyInfo } from '@/types/interfaces/account';
 import { copyTextToClipboard } from '@/utils/clipboard';
 import {
+  BarChartOutlined,
   CopyOutlined,
   DeleteOutlined,
   EditOutlined,
@@ -17,6 +18,7 @@ import dayjs from 'dayjs';
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'umi';
 import ApiKeyFormModal from './ApiKeyFormModal';
+import ApiKeyStatsModal from './ApiKeyStatsModal';
 
 export const STATUS_MAP: Record<number, { color: string; text: string }> = {
   1: { color: 'green', text: '启用' },
@@ -30,6 +32,8 @@ const ApiKeyPage: React.FC = () => {
   const actionRef = useRef<ActionType>();
   const [modalOpen, setModalOpen] = useState(false);
   const [currentRecord, setCurrentRecord] = useState<ApiKeyInfo | undefined>();
+  const [statsOpen, setStatsOpen] = useState(false);
+  const [statsRecord, setStatsRecord] = useState<ApiKeyInfo | undefined>();
   const location: any = useLocation();
   const [pageSize, setPageSize] = useState(15);
 
@@ -142,7 +146,7 @@ const ApiKeyPage: React.FC = () => {
     {
       title: '操作',
       key: 'action',
-      width: 120,
+      width: 220,
       search: false,
       fixed: 'right',
       align: 'center',
@@ -151,6 +155,15 @@ const ApiKeyPage: React.FC = () => {
           type="button"
           record={record}
           actions={[
+            {
+              key: 'stats',
+              label: '调用统计',
+              icon: <BarChartOutlined />,
+              onClick: (r) => {
+                setStatsRecord(r);
+                setStatsOpen(true);
+              },
+            },
             {
               key: 'edit',
               label: '编辑',
@@ -224,6 +237,11 @@ const ApiKeyPage: React.FC = () => {
           setModalOpen(false);
           actionRef.current?.reload();
         }}
+      />
+      <ApiKeyStatsModal
+        open={statsOpen}
+        onOpenChange={setStatsOpen}
+        record={statsRecord}
       />
     </WorkspaceLayout>
   );

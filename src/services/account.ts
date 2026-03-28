@@ -1,6 +1,7 @@
 import type {
   ApiKeyCreateParams,
   ApiKeyInfo,
+  ApiKeyStatsInfo,
   ApiKeyUpdateParams,
 } from '@/types/interfaces/account';
 import type {
@@ -208,5 +209,17 @@ export async function apiApiKeyDelete(
 ): Promise<RequestResponse<any>> {
   return request(`/api/user/api-key/delete/${apiKey}`, {
     method: 'POST',
+  });
+}
+
+/**
+ * 查询用户 API KEY 调用统计数据
+ */
+export async function apiApiKeyStats(
+  apiKey: string,
+): Promise<RequestResponse<ApiKeyStatsInfo[]>> {
+  return request('/api/user/api-key/stats', {
+    method: 'GET',
+    params: { apiKey },
   });
 }

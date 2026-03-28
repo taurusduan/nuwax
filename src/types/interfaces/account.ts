@@ -63,3 +63,37 @@ export interface ApiKeyUpdateParams {
   /** 过期时间（时间戳，当天 23:59:59） */
   expire?: number | null;
 }
+
+/**
+ * API KEY 统计数值项
+ */
+export interface ApiKeyStatsCount {
+  /** 总次数 */
+  totalCount: number;
+  /** 成功次数 */
+  successCount: number;
+  /** 失败次数 */
+  failCount: number;
+}
+
+/**
+ * API KEY 接口调用统计信息
+ */
+export interface ApiKeyStatsInfo {
+  /** 密钥名称 */
+  name: string;
+  /** 接口地址 */
+  path: string;
+  /** 密钥内容 */
+  key: string;
+  /** 总计 */
+  total: ApiKeyStatsCount;
+  /** 今日 */
+  today: ApiKeyStatsCount;
+  /** 昨天 */
+  yesterday: ApiKeyStatsCount;
+  /** 本周 */
+  week: ApiKeyStatsCount;
+  /** 本月 */
+  month: ApiKeyStatsCount;
+}
