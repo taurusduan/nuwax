@@ -62,6 +62,11 @@ export interface ApiKeyUpdateParams {
   name: string;
   /** 过期时间（时间戳，当天 23:59:59） */
   expire?: number | null;
+  /** API 权限配置 */
+  apiConfigs?: {
+    key: string;
+    rpm: number;
+  }[];
 }
 
 /**
@@ -96,4 +101,20 @@ export interface ApiKeyStatsInfo {
   week: ApiKeyStatsCount;
   /** 本月 */
   month: ApiKeyStatsCount;
+}
+
+/**
+ * API 权限项定义
+ */
+export interface OpenApiDefinition {
+  /** 权限名称 */
+  name: string;
+  /** 权限key */
+  key: string;
+  /** 权限角色 */
+  role: string;
+  /** 权限路径 */
+  path: string;
+  /** 子权限列表 */
+  apiList?: OpenApiDefinition[];
 }

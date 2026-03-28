@@ -3,6 +3,7 @@ import type {
   ApiKeyInfo,
   ApiKeyStatsInfo,
   ApiKeyUpdateParams,
+  OpenApiDefinition,
 } from '@/types/interfaces/account';
 import type {
   BindEmailParams,
@@ -221,5 +222,16 @@ export async function apiApiKeyStats(
   return request('/api/user/api-key/stats', {
     method: 'GET',
     params: { apiKey },
+  });
+}
+
+/**
+ * 获取 API 权限项列表
+ */
+export async function apiGetOpenApiDefinitions(): Promise<
+  RequestResponse<OpenApiDefinition[]>
+> {
+  return request('/api/user/api-key/open-api-definitions', {
+    method: 'GET',
   });
 }

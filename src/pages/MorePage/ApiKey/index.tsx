@@ -11,6 +11,7 @@ import {
   EyeInvisibleOutlined,
   EyeOutlined,
   PlusOutlined,
+  SafetyCertificateOutlined,
 } from '@ant-design/icons';
 import type { ActionType, ProColumns } from '@ant-design/pro-components';
 import { Button, message, Space, Tag, Tooltip, Typography } from 'antd';
@@ -18,6 +19,7 @@ import dayjs from 'dayjs';
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'umi';
 import ApiKeyFormModal from './ApiKeyFormModal';
+import ApiKeyPermissionModal from './ApiKeyPermissionModal';
 import ApiKeyStatsModal from './ApiKeyStatsModal';
 
 export const STATUS_MAP: Record<number, { color: string; text: string }> = {
@@ -34,6 +36,10 @@ const ApiKeyPage: React.FC = () => {
   const [currentRecord, setCurrentRecord] = useState<ApiKeyInfo | undefined>();
   const [statsOpen, setStatsOpen] = useState(false);
   const [statsRecord, setStatsRecord] = useState<ApiKeyInfo | undefined>();
+  const [permissionOpen, setPermissionOpen] = useState(false);
+  const [permissionRecord, setPermissionRecord] = useState<
+    ApiKeyInfo | undefined
+  >();
   const location: any = useLocation();
   const [pageSize, setPageSize] = useState(15);
 
@@ -165,6 +171,15 @@ const ApiKeyPage: React.FC = () => {
               },
             },
             {
+              key: 'permission',
+              label: '权限配置',
+              icon: <SafetyCertificateOutlined />,
+              onClick: (r) => {
+                setPermissionRecord(r);
+                setPermissionOpen(true);
+              },
+            },
+            {
               key: 'edit',
               label: '编辑',
               icon: <EditOutlined />,
@@ -242,6 +257,12 @@ const ApiKeyPage: React.FC = () => {
         open={statsOpen}
         onOpenChange={setStatsOpen}
         record={statsRecord}
+      />
+      <ApiKeyPermissionModal
+        open={permissionOpen}
+        onOpenChange={setPermissionOpen}
+        record={permissionRecord}
+        onSuccess={() => actionRef.current?.reload()}
       />
     </WorkspaceLayout>
   );
