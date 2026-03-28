@@ -1,6 +1,6 @@
 import { TableActions, XProTable } from '@/components/ProComponents';
 import WorkspaceLayout from '@/components/WorkspaceLayout';
-import { apiApiKeyList } from '@/services/account';
+import { apiApiKeyDelete, apiApiKeyList } from '@/services/account';
 import type { ApiKeyInfo } from '@/types/interfaces/account';
 import { copyTextToClipboard } from '@/utils/clipboard';
 import {
@@ -14,7 +14,8 @@ import {
 import type { ActionType, ProColumns } from '@ant-design/pro-components';
 import { Button, message, Space, Tag, Tooltip, Typography } from 'antd';
 import dayjs from 'dayjs';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useLocation } from 'umi';
 import ApiKeyFormModal from './components/ApiKeyFormModal';
 
 export const STATUS_MAP: Record<number, { color: string; text: string }> = {
@@ -29,6 +30,15 @@ const ApiKeyPage: React.FC = () => {
   const actionRef = useRef<ActionType>();
   const [modalOpen, setModalOpen] = useState(false);
   const [currentRecord, setCurrentRecord] = useState<ApiKeyInfo | undefined>();
+  const location: any = useLocation();
+  const [pageSize, setPageSize] = useState(15);
+
+  useEffect(() => {
+    if (location.state?._t) {
+      setPageSize(15);
+      actionRef.current?.reloadAndRest?.();
+    }
+  }, [location.state?._t]);
 
   const toggleShowKey = (id: string | number) => {
     setShowKeys((prev) => ({
@@ -160,9 +170,7 @@ const ApiKeyPage: React.FC = () => {
                 description: '删除后将无法恢复，请谨慎操作。',
               },
               onClick: async () => {
-                await new Promise((resolve) => {
-                  setTimeout(resolve, 1000);
-                });
+                await apiApiKeyDelete(record.accessKey);
                 actionRef.current?.reload();
                 message.success('删除成功');
               },
@@ -192,6 +200,7 @@ const ApiKeyPage: React.FC = () => {
       }
     >
       <XProTable<ApiKeyInfo>
+        key={location.state?._t || 'api-key-table'}
         actionRef={actionRef}
         request={async () => {
           const result = await apiApiKeyList();
@@ -202,6 +211,10 @@ const ApiKeyPage: React.FC = () => {
         }}
         columns={columns}
         rowKey="id"
+        pagination={{
+          pageSize,
+          onChange: (_, size) => setPageSize(size),
+        }}
       />
       <ApiKeyFormModal
         open={modalOpen}

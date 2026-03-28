@@ -199,3 +199,14 @@ export async function apiApiKeyUpdate(
     data,
   });
 }
+
+/**
+ * 删除 API KEY
+ */
+export async function apiApiKeyDelete(
+  apiKey: string,
+): Promise<RequestResponse<any>> {
+  return request(`/api/user/api-key/delete/${apiKey}`, {
+    method: 'POST',
+  });
+}
