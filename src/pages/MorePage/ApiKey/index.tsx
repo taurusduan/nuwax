@@ -16,7 +16,7 @@ import { Button, message, Space, Tag, Tooltip, Typography } from 'antd';
 import dayjs from 'dayjs';
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'umi';
-import ApiKeyFormModal from './components/ApiKeyFormModal';
+import ApiKeyFormModal from './ApiKeyFormModal';
 
 export const STATUS_MAP: Record<number, { color: string; text: string }> = {
   1: { color: 'green', text: '启用' },
