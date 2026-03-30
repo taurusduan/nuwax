@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-30T10:59:01.375Z
+- 生成时间：2026-03-30T11:02:38.350Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：3573
-- hardcoded 中文：3573
+- 总问题数：3570
+- hardcoded 中文：3570
 - legacy System key：0
 - invalid dict key：0
 
@@ -16,7 +16,7 @@
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
 | src/pages/Antv-X6 | 523 | 0 | 0 | 523 |
-| src/pages/SystemManagement | 285 | 0 | 0 | 285 |
+| src/pages/SystemManagement | 282 | 0 | 0 | 282 |
 | src/pages/EditAgent | 265 | 0 | 0 | 265 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
@@ -205,9 +205,6 @@
 
 ## src/pages/SystemManagement
 
-- [hardcoded_chinese] src/pages/SystemManagement/LogQuery/RunningLog/LogDetailDrawer/index.tsx:149 -> `复制成功`
-- [hardcoded_chinese] src/pages/SystemManagement/LogQuery/RunningLog/LogDetailDrawer/index.tsx:181 -> `日志详情`
-- [hardcoded_chinese] src/pages/SystemManagement/LogQuery/RunningLog/LogDetailDrawer/index.tsx:314 -> `暂无数据`
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:130 -> `查询角色列表失败`
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:160 -> `删除成功`
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:208 -> `删除角色`
@@ -285,7 +282,10 @@
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:158 -> `添加成功`
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:169 -> `未搜索到相关用户`
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:413 -> `绑定用户 - ${name}`
-- ... 省略 205 条
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:431 -> `输入用户名、邮箱或手机号码，回车搜索`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:450 -> `通过关键字搜索已绑定成员`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:485 -> `暂无数据`
+- ... 省略 202 条
 
 ## src/pages/EditAgent
 

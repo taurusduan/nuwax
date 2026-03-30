@@ -192,6 +192,17 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.SystemRoleFormModal.description': 'Description',
   'NuwaxPC.Pages.SystemRoleFormModal.descriptionPlaceholder':
     'Please enter role description',
+  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.title': 'Log Details',
+  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.duration': 'Duration',
+  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.messageId': 'Message ID:',
+  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.calledComponents':
+    'Called Components',
+  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.nodeDetails': 'Node Details',
+  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.input': 'Input',
+  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.output': 'Output',
+  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.executionProcess':
+    'Execution Process',
+  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.empty': 'No data',
   'NuwaxPC.Pages.SystemContentAgent.view': 'View',
   'NuwaxPC.Pages.SystemContentAgent.authorize': 'Authorize',
   'NuwaxPC.Pages.SystemContentAgent.delete': 'Delete',

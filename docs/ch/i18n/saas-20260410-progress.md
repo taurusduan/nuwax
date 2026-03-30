@@ -558,3 +558,24 @@
 - 风险/阻塞：
   - `SystemManagement` 仍存在日志详情、运行日志等高存量中文文案
 - 下一步：继续推进 `RunningLog/LogDetailDrawer` 与 `RunningLog/LogProTable` 余量文件
+
+### 里程碑：Top 模块第二十批实改（SystemManagement LogDetailDrawer）
+
+- 时间：2026-03-30 19:03
+- 任务：补齐 `SystemManagement/LogQuery/RunningLog/LogDetailDrawer` 的详情抽屉文案与复制提示 i18n 接入
+- 执行命令：
+  - `pnpm prettier --write src/pages/SystemManagement/LogQuery/RunningLog/LogDetailDrawer/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/LogQuery/RunningLog/LogDetailDrawer/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - 抽屉标题、耗时、消息ID、调用组件、节点详情、输入/输出、执行过程、空态全部接入 `t(...)`
+  - 复制成功提示切换为全局通用 key
+  - 中文注释和说明文案转为英文
+  - inventory 问题总量从 `3573` 下降至 `3570`
+- 风险/阻塞：
+  - `SystemManagement` 仍有大头存量分布在 `RunningLog/LogProTable` 等文件
+- 下一步：继续推进 `RunningLog/LogProTable` 与 `AppDev` 余量
