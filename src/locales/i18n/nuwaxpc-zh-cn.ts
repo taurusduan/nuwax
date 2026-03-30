@@ -994,6 +994,19 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6Database.table': '数据表',
   'NuwaxPC.Pages.AntvX6Database.updateCondition': '更新条件',
   'NuwaxPC.Pages.AntvX6Database.variableValue': '变量值',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.noDescription': '暂无描述',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.noUpstreamNodeOrParams':
+    '未添加上级节点连线或上级节点无参数',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.selectVariable': '选择变量',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.groupNamePlaceholder': '分组名称',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.emptyGroupInputHint':
+    '点击 + 添加变量引用',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.strategyFirstNonNull':
+    '返回每个分组中第一个非空的值',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.strategyTitle': '聚合策略',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.groupConfigTitle': '分组配置',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.emptyGroupHint': '点击 + 添加分组',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.outputTitle': '输出',
   'NuwaxPC.Pages.AntvX6NodeItem.add': '添加',
   'NuwaxPC.Pages.AntvX6NodeItem.addGroup': '新增分组',
   'NuwaxPC.Pages.AntvX6NodeItem.aggregationStrategy': '聚合策略',

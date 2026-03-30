@@ -690,3 +690,47 @@
 - 风险/阻塞：
   - `Antv-X6` 仍是最高存量模块，`complexNode.tsx`、`database.tsx`、`v3/constants/node.constants.ts` 仍有明显中文集中
 - 下一步：继续推进 `Antv-X6/v3/component/complexNode.tsx` 与 `Antv-X6/v3/component/database.tsx`
+
+### 里程碑：Top 模块第二十六批实改（Antv-X6 Database + VariableAggregation）
+
+- 时间：2026-03-31 01:30
+- 任务：改造 `Antv-X6/v3/component/database.tsx` 与 `VariableAggregation` 子模块，覆盖数据节点与变量聚合节点多语言接入
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/v3/component/database.tsx src/pages/Antv-X6/v3/component/VariableAggregation/index.tsx src/pages/Antv-X6/v3/component/VariableAggregation/VariableGroupItem.tsx src/pages/Antv-X6/v3/component/VariableAggregation/VariableSelector.tsx src/pages/Antv-X6/v3/component/VariableAggregation/useVariableAggregation.ts src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/v3/component/database.tsx`
+    - `src/pages/Antv-X6/v3/component/VariableAggregation/index.tsx`
+    - `src/pages/Antv-X6/v3/component/VariableAggregation/VariableGroupItem.tsx`
+    - `src/pages/Antv-X6/v3/component/VariableAggregation/VariableSelector.tsx`
+    - `src/pages/Antv-X6/v3/component/VariableAggregation/useVariableAggregation.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `database.tsx` 里的条件标题、AND/OR、下拉 placeholder、空态、按钮文案、查询上限、数据表、SQL placeholder、输出标题、生成 SQL 标题全部切换为 `t(...)`
+  - `VariableAggregation` 三个组件（`index.tsx`/`VariableGroupItem.tsx`/`VariableSelector.tsx`）接入 `t(...)`，包含策略、分组配置、选择变量、空态提示、分组名称占位符
+  - `useVariableAggregation.ts` 中文注释清理为英文，降低治理噪音
+  - 新增默认词典 key：`NuwaxPC.Pages.AntvX6VariableAggregation.*`（10 个）
+  - inventory 问题总量从 `3348` 下降至 `3330`
+- 风险/阻塞：
+  - `Antv-X6/index.tsx`、`v3/component/graph.tsx`、`v3/indexV3.tsx` 仍有较多中文残量
+- 下一步：继续推进 `Antv-X6/v3/component/graph.tsx` 与 `Antv-X6/v3/indexV3.tsx`
+
+### 里程碑：Top 模块第二十七批实改（Antv-X6 NewSkillV3 收尾）
+
+- 时间：2026-03-31 01:34
+- 任务：补齐 `Antv-X6/v3/component/NewSkillV3/index.tsx` 的残留 tooltip 文案与注释 i18n
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/v3/component/NewSkillV3/index.tsx src/pages/Antv-X6/v3/component/database.tsx src/pages/Antv-X6/v3/component/VariableAggregation/index.tsx src/pages/Antv-X6/v3/component/VariableAggregation/VariableGroupItem.tsx src/pages/Antv-X6/v3/component/VariableAggregation/VariableSelector.tsx src/pages/Antv-X6/v3/component/VariableAggregation/useVariableAggregation.ts src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/v3/component/NewSkillV3/index.tsx`
+- 结果摘要：
+  - `NewSkillV3` 的“编辑参数/移除”tooltip 切换为 `t(...)`
+  - 残留中文注释改为英文
+  - 复跑治理后，inventory 问题总量从 `3330` 下降至 `3328`
+- 风险/阻塞：
+  - Antv-X6 仍有重度存量集中在 `index.tsx`、`v3/component/graph.tsx`、`v3/indexV3.tsx`
+- 下一步：继续按 Top 清单推进 `v3/component/graph.tsx` 和 `v3/indexV3.tsx`

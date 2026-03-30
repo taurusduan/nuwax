@@ -434,3 +434,33 @@
   - `src/pages/Antv-X6/v3/component/commonNode.tsx`
   - `src/locales/i18n/nuwaxpc-en-us.ts`
   - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+
+### 新增验证（Top 模块第二十六批）
+
+- 命令：`pnpm prettier --write src/pages/Antv-X6/v3/component/database.tsx src/pages/Antv-X6/v3/component/VariableAggregation/index.tsx src/pages/Antv-X6/v3/component/VariableAggregation/VariableGroupItem.tsx src/pages/Antv-X6/v3/component/VariableAggregation/VariableSelector.tsx src/pages/Antv-X6/v3/component/VariableAggregation/useVariableAggregation.ts src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `3348` 下降至 `3330`
+- 覆盖文件：
+  - `src/pages/Antv-X6/v3/component/database.tsx`
+  - `src/pages/Antv-X6/v3/component/VariableAggregation/index.tsx`
+  - `src/pages/Antv-X6/v3/component/VariableAggregation/VariableGroupItem.tsx`
+  - `src/pages/Antv-X6/v3/component/VariableAggregation/VariableSelector.tsx`
+  - `src/pages/Antv-X6/v3/component/VariableAggregation/useVariableAggregation.ts`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+
+### 新增验证（Top 模块第二十七批）
+
+- 命令：`pnpm prettier --write src/pages/Antv-X6/v3/component/NewSkillV3/index.tsx src/pages/Antv-X6/v3/component/database.tsx src/pages/Antv-X6/v3/component/VariableAggregation/index.tsx src/pages/Antv-X6/v3/component/VariableAggregation/VariableGroupItem.tsx src/pages/Antv-X6/v3/component/VariableAggregation/VariableSelector.tsx src/pages/Antv-X6/v3/component/VariableAggregation/useVariableAggregation.ts src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `3330` 下降至 `3328`
+- 覆盖文件：
+  - `src/pages/Antv-X6/v3/component/NewSkillV3/index.tsx`

@@ -1113,6 +1113,22 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6Database.table': 'Data Table',
   'NuwaxPC.Pages.AntvX6Database.updateCondition': 'Update Condition',
   'NuwaxPC.Pages.AntvX6Database.variableValue': 'Variable Value',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.noDescription': 'No description',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.noUpstreamNodeOrParams':
+    'No upstream node linked or upstream node has no parameters',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.selectVariable': 'Select variable',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.groupNamePlaceholder': 'Group name',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.emptyGroupInputHint':
+    'Click + to add variable reference',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.strategyFirstNonNull':
+    'Return the first non-null value in each group',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.strategyTitle':
+    'Aggregation Strategy',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.groupConfigTitle':
+    'Group Configuration',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.emptyGroupHint':
+    'Click + to add group',
+  'NuwaxPC.Pages.AntvX6VariableAggregation.outputTitle': 'Output',
   'NuwaxPC.Pages.AntvX6NodeItem.add': 'Add',
   'NuwaxPC.Pages.AntvX6NodeItem.addGroup': 'Add Group',
   'NuwaxPC.Pages.AntvX6NodeItem.aggregationStrategy': 'Aggregation Strategy',

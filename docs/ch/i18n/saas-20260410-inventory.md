@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-30T17:20:41.855Z
+- 生成时间：2026-03-30T17:34:26.854Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：3348
-- hardcoded 中文：3348
+- 总问题数：3328
+- hardcoded 中文：3328
 - legacy System key：0
 - invalid dict key：0
 
@@ -15,7 +15,7 @@
 
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
-| src/pages/Antv-X6 | 375 | 0 | 0 | 375 |
+| src/pages/Antv-X6 | 355 | 0 | 0 | 355 |
 | src/pages/EditAgent | 265 | 0 | 0 | 265 |
 | src/pages/SystemManagement | 208 | 0 | 0 | 208 |
 | src/hooks | 186 | 0 | 0 | 186 |
@@ -124,11 +124,6 @@
 - [hardcoded_chinese] src/pages/Antv-X6/component/graph.tsx:227 -> `, // 或者 `
 - [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1285 -> `发布成功`
 - [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1474 -> `连线不完整`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/NewSkillV3/index.tsx:170 -> `编辑参数`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/NewSkillV3/index.tsx:180 -> `移除`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/VariableAggregation/VariableGroupItem.tsx:56 -> `分组名称`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/VariableAggregation/VariableSelector.tsx:89 -> `暂无描述`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/VariableAggregation/index.tsx:18 -> `返回每个分组中第一个非空的值`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/complexNode.tsx:53 -> `无`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/complexNode.tsx:244 -> `输入`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/complexNode.tsx:257 -> `为对话提供系统级指导，如设定人设和回复逻辑。`
@@ -158,21 +153,6 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/condition.tsx:176 -> `且`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/condition.tsx:180 -> `或`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/condition.tsx:252 -> `请引用参数`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:78 -> `输入`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:90 -> `删除条件`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:92 -> `更新条件`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:93 -> `查询条件`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:120 -> `且`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:124 -> `或`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:176 -> `请选择`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:226 -> `当前查询数据为空`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:254 -> `输入`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:254 -> `选择更新字段`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:260 -> `变量值`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:270 -> `请输入查询上限`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:302 -> `可以使用{{变量名}}、{{变量名.子变量名}}、 {{变量名[数组索引]}}的方式引用输出参数中的变量`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:320 -> `输出`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:341 -> `生成sql语句`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/eventHandlers.tsx:52 -> `该节点类型不支持复制`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/eventHandlers.tsx:63 -> `已复制节点`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/eventHandlers.tsx:88 -> `不能粘贴循环节点`
@@ -201,7 +181,27 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:92 -> `返回文本`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:120 -> `输出变量`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:136 -> `可以在以下输入框中重新组织输出内容，大模型将优先使用输入框中的内容。`
-- ... 省略 295 条
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:148 -> `可以使用{{变量名}}、{{变量名.子变量名}}、{{变量名[数组 索引]}}的方式引用输出参数中的变量`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:178 -> `如果引用数组，循环次数为数组的长度；如果指定次数，循环次数为指定的次数；如果选择无限循环，需配合“终止循环”节点完成循环流程。`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:207 -> `请输入循环次数，并且值为正整数`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:218 -> `循环数组`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:235 -> `变量可在多次循环中实现共享，可用于在多次循环中传递变量。`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:248 -> `输出`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:277 -> `设置变量`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:290 -> `输出变量`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:331 -> `字符串拼接`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:332 -> `字符串分割`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:336 -> `换行 (\\n)`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:337 -> `制表符 (\\t)`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:338 -> `句号 (。)`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:339 -> `逗号 (,)`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:340 -> `分号 (;)`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:341 -> `空格 ( )`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:394 -> `输入`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:417 -> `请选择连接符号`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:429 -> `选项名称`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/nodeItem.tsx:440 -> `选项值`
+- ... 省略 275 条
 
 ## src/pages/EditAgent
 
