@@ -11,7 +11,7 @@ import type {
   SpaceLogQueryFilter,
 } from '@/types/interfaces/agent';
 import type { RequestResponse } from '@/types/interfaces/request';
-import { getIntegerOnlyFieldProps } from '@/utils/inputValidation';
+// import { getIntegerOnlyFieldProps } from '@/utils/inputValidation';
 import type {
   ActionType,
   FormInstance,
@@ -108,16 +108,16 @@ const LogProTable: React.FC = () => {
         initialValue: requestIdFromUrl,
         fieldProps: { placeholder: '请输入请求ID' },
       },
-      {
-        title: '用户ID',
-        dataIndex: 'userId',
-        width: 100,
-        ellipsis: true,
-        fieldProps: getIntegerOnlyFieldProps(
-          '请输入用户ID，仅支持输入整数',
-          18,
-        ),
-      },
+      // {
+      //   title: '用户ID',
+      //   dataIndex: 'userId',
+      //   width: 100,
+      //   ellipsis: true,
+      //   fieldProps: getIntegerOnlyFieldProps(
+      //     '请输入用户ID，仅支持输入整数',
+      //     18,
+      //   ),
+      // },
 
       {
         title: '会话ID',
