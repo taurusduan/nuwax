@@ -731,8 +731,13 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6ExceptionItem.timeoutRequired': '请输入超时时间',
   'NuwaxPC.Pages.AntvX6ExceptionItem.retryCountLabel': '重试次数',
   'NuwaxPC.Pages.AntvX6ExceptionItem.noRetry': '不重试',
+  'NuwaxPC.Pages.AntvX6ExceptionItem.retryOnce': '1次',
+  'NuwaxPC.Pages.AntvX6ExceptionItem.retryTwice': '2次',
+  'NuwaxPC.Pages.AntvX6ExceptionItem.retryThrice': '3次',
   'NuwaxPC.Pages.AntvX6ExceptionItem.handleTypeLabel': '异常处理方式',
   'NuwaxPC.Pages.AntvX6ExceptionItem.interruptFlow': '中断流程',
+  'NuwaxPC.Pages.AntvX6ExceptionItem.returnSpecificContent': '返回特定内容',
+  'NuwaxPC.Pages.AntvX6ExceptionItem.executeExceptionFlow': '执行异常流程',
   'NuwaxPC.Pages.AntvX6ExceptionItem.customReturnContent': '自定义返回内容',
   'NuwaxPC.Pages.AntvX6ExceptionItem.customReturnContentRequired':
     '请输入自定义返回内容',
@@ -795,6 +800,7 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6CommonNode.fieldVariableName': '变量名',
   'NuwaxPC.Pages.AntvX6CommonNode.placeholderParamValue': '请输入参数值',
   'NuwaxPC.Pages.AntvX6CommonNode.columnParamValue': '参数值',
+  'NuwaxPC.Pages.AntvX6CommonNode.noDescription': '暂无描述',
   'NuwaxPC.Pages.AntvX6CommonNode.otherBranchHint':
     '此选项用户不可见，用户回复无关内容时走此分支',
   'NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeAgent': '智能体',

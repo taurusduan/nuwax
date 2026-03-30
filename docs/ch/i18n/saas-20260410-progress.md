@@ -665,3 +665,28 @@
 - 风险/阻塞：
   - `Antv-X6` 仍有高密度存量，尤其 `v3/component/*` 与 `header.tsx`
 - 下一步：继续推进 `Antv-X6` Top 清单（优先 `header.tsx`、`v3/component/CondNodeConfig.tsx`、`v3/component/OutputNodeConfig.tsx`）
+
+### 里程碑：Top 模块第二十五批实改（Antv-X6 Header + ExceptionItem + CommonNode）
+
+- 时间：2026-03-31 01:20
+- 任务：批量改造 `Antv-X6` 关键组件文案（`header.tsx`、`v3/component/ExceptionItem.tsx`、`v3/component/commonNode.tsx`）并统一使用 `t(...)`
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/header.tsx src/pages/Antv-X6/v3/component/ExceptionItem.tsx src/pages/Antv-X6/v3/component/commonNode.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/header.tsx`
+    - `src/pages/Antv-X6/v3/component/ExceptionItem.tsx`
+    - `src/pages/Antv-X6/v3/component/commonNode.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `header.tsx` 完成 `dict(...) -> t(...)`，并清理残留中文注释文案
+  - `ExceptionItem.tsx` 的标题、提示、表单项、校验、placeholder 全量接入 `t(...)`
+  - `ExceptionItem.tsx` 的异常处理方式与重试次数选项改为组件内 i18n 化配置，不再依赖中文常量标签
+  - `commonNode.tsx` 的参数列头、字段标签、placeholder、空描述、分支提示判断全部切换为 key
+  - 新增默认词典 key：`NuwaxPC.Pages.AntvX6ExceptionItem.returnSpecificContent/executeExceptionFlow/retryOnce/retryTwice/retryThrice`、`NuwaxPC.Pages.AntvX6CommonNode.noDescription`
+  - inventory 问题总量从 `3373` 下降至 `3348`
+- 风险/阻塞：
+  - `Antv-X6` 仍是最高存量模块，`complexNode.tsx`、`database.tsx`、`v3/constants/node.constants.ts` 仍有明显中文集中
+- 下一步：继续推进 `Antv-X6/v3/component/complexNode.tsx` 与 `Antv-X6/v3/component/database.tsx`

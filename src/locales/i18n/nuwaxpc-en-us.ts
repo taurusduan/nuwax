@@ -819,9 +819,16 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6ExceptionItem.timeoutRequired': 'Please enter timeout',
   'NuwaxPC.Pages.AntvX6ExceptionItem.retryCountLabel': 'Retry Count',
   'NuwaxPC.Pages.AntvX6ExceptionItem.noRetry': 'No Retry',
+  'NuwaxPC.Pages.AntvX6ExceptionItem.retryOnce': '1 time',
+  'NuwaxPC.Pages.AntvX6ExceptionItem.retryTwice': '2 times',
+  'NuwaxPC.Pages.AntvX6ExceptionItem.retryThrice': '3 times',
   'NuwaxPC.Pages.AntvX6ExceptionItem.handleTypeLabel':
     'Exception Handling Mode',
   'NuwaxPC.Pages.AntvX6ExceptionItem.interruptFlow': 'Interrupt Flow',
+  'NuwaxPC.Pages.AntvX6ExceptionItem.returnSpecificContent':
+    'Return Specific Content',
+  'NuwaxPC.Pages.AntvX6ExceptionItem.executeExceptionFlow':
+    'Execute Exception Flow',
   'NuwaxPC.Pages.AntvX6ExceptionItem.customReturnContent':
     'Custom Return Content',
   'NuwaxPC.Pages.AntvX6ExceptionItem.customReturnContentRequired':
@@ -892,6 +899,7 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6CommonNode.placeholderParamValue':
     'Please enter parameter value',
   'NuwaxPC.Pages.AntvX6CommonNode.columnParamValue': 'Parameter Value',
+  'NuwaxPC.Pages.AntvX6CommonNode.noDescription': 'No description',
   'NuwaxPC.Pages.AntvX6CommonNode.otherBranchHint':
     'This option is hidden from users and is used when user replies are unrelated',
   'NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeAgent': 'Agent',

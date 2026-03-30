@@ -1,4 +1,4 @@
-import { dict } from '@/services/i18nRuntime';
+import { t } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import { PermissionsEnum } from '@/types/enums/common';
 import { getTime } from '@/utils';
@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProp> = ({
   const { name, icon, publishStatus, modified, description, publishDate } =
     info;
 
-  // 发布按钮是否禁用
+  // Whether publish button is disabled.
   const disabledBtn = useMemo(() => {
     if (info) {
       return !info?.permissions?.includes(PermissionsEnum.Publish);
@@ -75,7 +75,7 @@ const Header: React.FC<HeaderProp> = ({
               />
             </Popover>
             {publishStatus === 'Published' && (
-              <Popover content={dict('NuwaxPC.Pages.AntvX6Header.published')}>
+              <Popover content={t('NuwaxPC.Pages.AntvX6Header.published')}>
                 <CheckCircleFilled
                   className="mr-6"
                   style={{ color: '#00B23C', fontSize: '16px' }}
@@ -91,11 +91,8 @@ const Header: React.FC<HeaderProp> = ({
       </div>
 
       <div className="header-tag-style">
-        {/* <Tag color="#C9CDD4">
-              {publishStatus === 'Published' ? '已发布' : '未发布'}
-            </Tag> */}
         <Tag color="default" bordered={false}>
-          {dict(
+          {t(
             'NuwaxPC.Pages.AntvX6Header.autoSavedAt',
             getTime(modified ?? new Date().toString()),
           )}
@@ -103,13 +100,13 @@ const Header: React.FC<HeaderProp> = ({
 
         {publishDate === null && (
           <Tag color="#EBECF5" style={{ color: 'rgba(15,21,40,0.82)' }}>
-            {dict('NuwaxPC.Pages.AntvX6Header.unpublished')}
+            {t('NuwaxPC.Pages.AntvX6Header.unpublished')}
           </Tag>
         )}
 
         {publishDate !== null && publishDate !== modified && (
           <Tag bordered={false} color="volcano">
-            {dict('NuwaxPC.Pages.AntvX6Header.updatedNotPublished')}
+            {t('NuwaxPC.Pages.AntvX6Header.updatedNotPublished')}
           </Tag>
         )}
       </div>
@@ -124,8 +121,8 @@ const Header: React.FC<HeaderProp> = ({
         loading={isValidLoading}
       >
         {isValidLoading
-          ? dict('NuwaxPC.Pages.AntvX6Header.validating')
-          : dict('NuwaxPC.Pages.AntvX6Header.publish')}
+          ? t('NuwaxPC.Pages.AntvX6Header.validating')
+          : t('NuwaxPC.Pages.AntvX6Header.publish')}
       </Button>
     </div>
   );
