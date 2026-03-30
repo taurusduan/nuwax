@@ -1,4 +1,5 @@
 import CustomFormModal from '@/components/CustomFormModal';
+import { t } from '@/services/i18nRuntime';
 import { customizeRequiredMark } from '@/utils/form';
 import { InfoCircleOutlined } from '@ant-design/icons';
 import {
@@ -30,67 +31,76 @@ const { TextArea } = Input;
 const cx = classNames.bind(styles);
 
 interface UserGroupFormModalProps {
-  /** 是否打开 */
+  /** Whether modal is open. */
   open: boolean;
-  /** 是否为编辑模式 */
+  /** Whether edit mode is enabled. */
   isEdit?: boolean;
-  /** 新增时，默认排序索引，默认1 */
+  /** Default sort index for create mode. */
   defaultSortIndex?: number;
-  /** 编辑时的用户组数据 */
+  /** User-group info for edit mode. */
   userGroupInfo?: UserGroupInfo | null;
-  /** 取消回调 */
+  /** Cancel callback. */
   onCancel: () => void;
-  /** 成功回调 */
+  /** Success callback. */
   onSuccess: () => void;
 }
 
-// 用户组来源选项 来源 1:系统内置 2:用户自定义
+// User-group source options. 1: System built-in, 2: User-defined.
 const USER_GROUP_SOURCE_OPTIONS = [
-  { label: '系统内置', value: UserGroupSourceEnum.SystemBuiltIn },
-  { label: '用户自定义', value: UserGroupSourceEnum.UserDefined },
+  {
+    label: t('NuwaxPC.Pages.SystemUserGroupFormModal.sourceSystemBuiltIn'),
+    value: UserGroupSourceEnum.SystemBuiltIn,
+  },
+  {
+    label: t('NuwaxPC.Pages.SystemUserGroupFormModal.sourceUserDefined'),
+    value: UserGroupSourceEnum.UserDefined,
+  },
 ];
 
 /**
- * 用户组表单Modal组件
- * 用于新增或编辑用户组信息
+ * User-group create/edit modal.
  */
 const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
   open,
   isEdit = false,
-  /** 新增时，默认排序索引，默认1 */
+  /** Default sort index for create mode. */
   defaultSortIndex = 1,
-  /** 编辑时的用户组数据 */
+  /** User-group info for edit mode. */
   userGroupInfo,
   onCancel,
   onSuccess,
 }) => {
   const [form] = Form.useForm();
 
-  // 新增
+  // Create.
   const { run: runAddUserGroup, loading: addLoading } = useRequest(
     apiAddUserGroup,
     {
       manual: true,
       onSuccess: () => {
-        message.success('新增用户组成功');
+        message.success(
+          t('NuwaxPC.Toast.SystemUserGroupFormModal.createSuccess'),
+        );
         onSuccess();
       },
     },
   );
 
-  // 更新用户组
+  // Update user group.
   const { run: runUpdateUserGroup, loading: updateLoading } = useRequest(
     apiUpdateUserGroup,
     {
       manual: true,
       onSuccess: () => {
-        message.success('更新用户组成功');
+        message.success(
+          t('NuwaxPC.Toast.SystemUserGroupFormModal.updateSuccess'),
+        );
         onSuccess();
       },
     },
   );
 
-  // 根据ID查询用户组
+  // Query user group by ID.
   const { run: runGetUserGroupById } = useRequest(apiGetUserGroupById, {
     manual: true,
     onSuccess: (data: UserGroupInfo) => {
@@ -107,14 +117,14 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
 
   const loading = addLoading || updateLoading;
 
-  // 初始化表单数据
+  // Initialize form values.
   useEffect(() => {
     if (open) {
       if (isEdit && userGroupInfo) {
-        // 编辑模式：通过接口查询用户组信息
+        // Edit mode: load detail from API.
         runGetUserGroupById(userGroupInfo.id);
       } else {
-        // 新增模式：重置表单
+        // Create mode: reset form.
         form.resetFields();
         form.setFieldsValue({
           source: UserGroupSourceEnum.UserDefined,
@@ -126,7 +136,7 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
     }
   }, [open, isEdit, userGroupInfo, defaultSortIndex]);
 
-  // 处理提交
+  // Submit form.
   const handleSubmit = async () => {
     try {
       const values = await form.validateFields();
@@ -147,17 +157,28 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
         await runAddUserGroup(formData);
       }
     } catch (error) {
-      console.error('表单验证失败:', error);
+      console.error(
+        `${t('NuwaxPC.Pages.SystemUserGroupFormModal.formValidateFailed')}:`,
+        error,
+      );
     }
   };
 
   return (
     <CustomFormModal
       form={form}
-      title={isEdit ? '编辑用户组' : '新增用户组'}
+      title={
+        isEdit
+          ? t('NuwaxPC.Pages.SystemUserGroupFormModal.editTitle')
+          : t('NuwaxPC.Pages.SystemUserGroupFormModal.createTitle')
+      }
       open={open}
       loading={loading}
-      okText={isEdit ? '保存' : '创建'}
+      okText={
+        isEdit
+          ? t('NuwaxPC.Pages.SystemUserGroupFormModal.save')
+          : t('NuwaxPC.Pages.SystemUserGroupFormModal.create')
+      }
       width={650}
       onCancel={onCancel}
       onConfirm={handleSubmit}
@@ -171,30 +192,52 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
         requiredMark={customizeRequiredMark}
         className={cx(styles.form)}
       >
-        {/* 基本信息 */}
+        {/* Basic information */}
         <Row gutter={16}>
           <Col span={12}>
             <Form.Item
-              label="用户组名称"
+              label={t('NuwaxPC.Pages.SystemUserGroupFormModal.name')}
               name="name"
-              rules={[{ required: true, message: '请输入用户组名称' }]}
+              rules={[
+                {
+                  required: true,
+                  message: t(
+                    'NuwaxPC.Pages.SystemUserGroupFormModal.nameRequired',
+                  ),
+                },
+              ]}
             >
-              <Input placeholder="请输入用户组名称" maxLength={50} showCount />
+              <Input
+                placeholder={t(
+                  'NuwaxPC.Pages.SystemUserGroupFormModal.namePlaceholder',
+                )}
+                maxLength={50}
+                showCount
+              />
             </Form.Item>
           </Col>
 
           <Col span={12}>
             <Form.Item
-              label="最大用户数"
+              label={t('NuwaxPC.Pages.SystemUserGroupFormModal.maxUserCount')}
               name="maxUserCount"
-              rules={[{ required: true, message: '请输入最大用户数' }]}
+              rules={[
+                {
+                  required: true,
+                  message: t(
+                    'NuwaxPC.Pages.SystemUserGroupFormModal.maxUserCountRequired',
+                  ),
+                },
+              ]}
               tooltip={{
-                title: '最大值为2147483647',
+                title: t('NuwaxPC.Pages.SystemUserGroupFormModal.maxValueTip'),
                 icon: <InfoCircleOutlined />,
               }}
             >
               <InputNumber
-                placeholder="请输入最大用户数"
+                placeholder={t(
+                  'NuwaxPC.Pages.SystemUserGroupFormModal.maxUserCountPlaceholder',
+                )}
                 className={cx('w-full')}
                 min={1}
                 max={2147483647}
@@ -203,9 +246,14 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
           </Col>
 
           <Col span={12}>
-            <Form.Item label="来源" name="source">
+            <Form.Item
+              label={t('NuwaxPC.Pages.SystemUserGroupFormModal.source')}
+              name="source"
+            >
               <Select
-                placeholder="请选择来源"
+                placeholder={t(
+                  'NuwaxPC.Pages.SystemUserGroupFormModal.sourcePlaceholder',
+                )}
                 disabled
                 options={USER_GROUP_SOURCE_OPTIONS}
               />
@@ -214,12 +262,14 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
 
           <Col span={12}>
             <Form.Item
-              label="排序"
+              label={t('NuwaxPC.Pages.SystemUserGroupFormModal.sort')}
               name="sortIndex"
               className={cx(styles.fieldItem)}
             >
               <InputNumber
-                placeholder="请输入排序"
+                placeholder={t(
+                  'NuwaxPC.Pages.SystemUserGroupFormModal.sortPlaceholder',
+                )}
                 className={cx('w-full')}
                 min={1}
                 max={10000}
@@ -229,22 +279,34 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
 
           <Col span={12}>
             <Form.Item
-              label="状态"
+              label={t('NuwaxPC.Pages.SystemUserGroupFormModal.status')}
               name="status"
               valuePropName="checked"
               tooltip={{
-                title: '启用或禁用此用户组',
+                title: t('NuwaxPC.Pages.SystemUserGroupFormModal.statusTip'),
                 icon: <InfoCircleOutlined />,
               }}
             >
-              <Switch checkedChildren="启用" unCheckedChildren="禁用" />
+              <Switch
+                checkedChildren={t(
+                  'NuwaxPC.Pages.SystemUserGroupFormModal.enabled',
+                )}
+                unCheckedChildren={t(
+                  'NuwaxPC.Pages.SystemUserGroupFormModal.disabled',
+                )}
+              />
             </Form.Item>
           </Col>
         </Row>
 
-        <Form.Item label="描述" name="description">
+        <Form.Item
+          label={t('NuwaxPC.Pages.SystemUserGroupFormModal.description')}
+          name="description"
+        >
           <TextArea
-            placeholder="请输入用户组描述"
+            placeholder={t(
+              'NuwaxPC.Pages.SystemUserGroupFormModal.descriptionPlaceholder',
+            )}
             className="dispose-textarea-count"
             autoSize={{ minRows: 3, maxRows: 5 }}
             showCount

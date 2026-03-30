@@ -234,6 +234,77 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.SystemRoleManage.pageTitle': 'Role Management',
   'NuwaxPC.Pages.SystemRoleManage.addRole': 'Add Role',
   'NuwaxPC.Pages.SystemRoleManage.emptyData': 'No role data',
+  'NuwaxPC.Toast.SystemUserGroupFormModal.createSuccess':
+    'User group created successfully',
+  'NuwaxPC.Toast.SystemUserGroupFormModal.updateSuccess':
+    'User group updated successfully',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.sourceSystemBuiltIn':
+    'System Built-in',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.sourceUserDefined': 'User Defined',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.formValidateFailed':
+    'Form validation failed',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.editTitle': 'Edit User Group',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.createTitle': 'Create User Group',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.save': 'Save',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.create': 'Create',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.name': 'User Group Name',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.nameRequired':
+    'Please enter user group name',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.namePlaceholder':
+    'Please enter user group name',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.maxUserCount': 'Max User Count',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.maxUserCountRequired':
+    'Please enter max user count',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.maxValueTip':
+    'Maximum value is 2147483647',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.maxUserCountPlaceholder':
+    'Please enter max user count',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.source': 'Source',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.sourcePlaceholder':
+    'Please select source',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.sort': 'Sort',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.sortPlaceholder':
+    'Please enter sort order',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.status': 'Status',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.statusTip':
+    'Enable or disable this user group',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.enabled': 'Enabled',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.disabled': 'Disabled',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.description': 'Description',
+  'NuwaxPC.Pages.SystemUserGroupFormModal.descriptionPlaceholder':
+    'Please enter user group description',
+  'NuwaxPC.Pages.SystemUserGroupManage.deleteSuccess': 'Deleted successfully',
+  'NuwaxPC.Pages.SystemUserGroupManage.deleteTitle': 'Delete User Group',
+  'NuwaxPC.Pages.SystemUserGroupManage.deleteConfirm':
+    'Are you sure to delete user group "{0}"?',
+  'NuwaxPC.Pages.SystemUserGroupManage.sortUpdated':
+    'Sort order updated successfully',
+  'NuwaxPC.Pages.SystemUserGroupManage.columnSort': 'Sort',
+  'NuwaxPC.Pages.SystemUserGroupManage.columnName': 'User Group Name',
+  'NuwaxPC.Pages.SystemUserGroupManage.columnCode': 'Code',
+  'NuwaxPC.Pages.SystemUserGroupManage.columnDescription': 'Description',
+  'NuwaxPC.Pages.SystemUserGroupManage.columnStatus': 'Status',
+  'NuwaxPC.Pages.SystemUserGroupManage.statusTip':
+    'Enable or disable this user group',
+  'NuwaxPC.Pages.SystemUserGroupManage.builtInCannotDisable':
+    'System built-in user groups cannot be disabled',
+  'NuwaxPC.Pages.SystemUserGroupManage.enabled': 'Enabled',
+  'NuwaxPC.Pages.SystemUserGroupManage.disabled': 'Disabled',
+  'NuwaxPC.Pages.SystemUserGroupManage.columnAction': 'Action',
+  'NuwaxPC.Pages.SystemUserGroupManage.builtInCannotEdit':
+    'System built-in user groups cannot be edited',
+  'NuwaxPC.Pages.SystemUserGroupManage.noPermission':
+    'No permission for this resource',
+  'NuwaxPC.Pages.SystemUserGroupManage.builtInCannotDelete':
+    'System built-in user groups cannot be deleted',
+  'NuwaxPC.Pages.SystemUserGroupManage.edit': 'Edit',
+  'NuwaxPC.Pages.SystemUserGroupManage.delete': 'Delete',
+  'NuwaxPC.Pages.SystemUserGroupManage.bindUser': 'Bind User',
+  'NuwaxPC.Pages.SystemUserGroupManage.menuPermission': 'Menu Permission',
+  'NuwaxPC.Pages.SystemUserGroupManage.dataPermission': 'Data Permission',
+  'NuwaxPC.Pages.SystemUserGroupManage.pageTitle': 'User Group Management',
+  'NuwaxPC.Pages.SystemUserGroupManage.add': 'Add User Group',
+  'NuwaxPC.Pages.SystemUserGroupManage.empty': 'No user-group data',
   'NuwaxPC.Pages.SystemContentAgent.view': 'View',
   'NuwaxPC.Pages.SystemContentAgent.authorize': 'Authorize',
   'NuwaxPC.Pages.SystemContentAgent.delete': 'Delete',

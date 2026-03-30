@@ -642,3 +642,26 @@
 - 风险/阻塞：
   - `Antv-X6/index.tsx` 仍有大量中文注释，后续可继续按批次清理
 - 下一步：继续推进 `SystemManagement/RunningLog/LogProTable` 或 `Antv-X6/index.tsx` 注释清理批次
+
+### 里程碑：Top 模块第二十四批实改（SystemManagement UserGroupManage）
+
+- 时间：2026-03-31 00:35
+- 任务：改造 `SystemManagement/MenuPermission/UserGroupManage` 主页面与表单弹窗，补齐用户组管理主链路 i18n
+- 执行命令：
+  - `pnpm prettier --write src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx`
+    - `src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - 用户组表单（标题、按钮、校验、placeholder、状态/来源/描述）全面切换为 `t(...)`
+  - 用户组列表页（列头、操作、权限提示、删除确认、空态、页面标题）全面切换为 `t(...)`
+  - 相关中文注释与错误日志描述切换为英文，降低治理噪音
+  - 新增 `NuwaxPC.Pages.SystemUserGroupFormModal.*`、`NuwaxPC.Toast.SystemUserGroupFormModal.*`、`NuwaxPC.Pages.SystemUserGroupManage.*` 默认中英文词典
+  - inventory 问题总量从 `3423` 下降至 `3373`
+- 风险/阻塞：
+  - `Antv-X6` 仍有高密度存量，尤其 `v3/component/*` 与 `header.tsx`
+- 下一步：继续推进 `Antv-X6` Top 清单（优先 `header.tsx`、`v3/component/CondNodeConfig.tsx`、`v3/component/OutputNodeConfig.tsx`）

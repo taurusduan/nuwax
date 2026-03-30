@@ -403,3 +403,18 @@
   - `src/pages/Antv-X6/index.tsx`
   - `src/locales/i18n/nuwaxpc-en-us.ts`
   - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+
+### 新增验证（Top 模块第二十四批）
+
+- 命令：`pnpm prettier --write src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `3423` 下降至 `3373`
+- 覆盖文件：
+  - `src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx`
+  - `src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
