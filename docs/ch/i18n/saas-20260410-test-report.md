@@ -113,3 +113,74 @@
   - `src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx`
   - `src/pages/SystemManagement/Content/Agent/index.tsx`
   - `src/pages/Antv-X6/Published.tsx`
+
+### 新增验证（Top 模块第六批）
+
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+  - 说明：`ToolCallProcess` 中 `总计` 识别改为 unicode 字面量并兼容 `total`
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `4397` 下降至 `4339`
+- 覆盖文件：
+  - `src/pages/SystemManagement/Content/DataTable/index.tsx`
+  - `src/pages/SystemManagement/Content/KnowledgeBase/index.tsx`
+  - `src/pages/SystemManagement/Content/Mcp/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/components/ToolCallProcess/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/components/MessageAttachment/index.tsx`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+
+### 新增验证（`t()` 命名收敛 + ChatInputHome 补充）
+
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `4339` 下降至 `4328`
+- 覆盖文件：
+  - `src/services/i18nRuntime.ts`（新增 `t()` 导出，`dict` 兼容保留）
+  - `src/pages/AppDev/components/ChatArea/components/ChatInputHome/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/components/ToolCallProcess/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/components/MessageAttachment/index.tsx`
+  - `src/pages/SystemManagement/Content/DataTable/index.tsx`
+  - `src/pages/SystemManagement/Content/KnowledgeBase/index.tsx`
+  - `src/pages/SystemManagement/Content/Mcp/index.tsx`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+
+### 新增验证（Top 模块第七批）
+
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `4255` 下降至 `4082`
+- 覆盖文件：
+  - `src/pages/SystemManagement/Content/WebApplication/index.tsx`
+  - `src/pages/SystemManagement/Dashboard/index.tsx`
+  - `src/pages/SystemManagement/LogQuery/OperationLog/LogProTable/index.tsx`
+  - `src/pages/SystemManagement/LogQuery/OperationLog/LogDetailDrawer/index.tsx`
+  - `src/pages/AppDev/components/ContentViewer/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/index.tsx`
+  - `src/pages/AppDev/components/DesignViewer/index.tsx`
+  - `src/pages/Antv-X6/component/ExceptionItem.tsx`
+  - `src/pages/Antv-X6/component/commonNode.tsx`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+
+### 新增验证（Top 模块第八批）
+
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `4082` 下降至 `4050`
+- 覆盖文件：
+  - `src/pages/SystemManagement/LogQuery/RunningLog/LogProTable/index.tsx`
+  - `src/pages/SystemManagement/LogQuery/RunningLog/NodeDetails/index.tsx`
+  - `src/pages/AppDev/components/EditorHeaderRight/index.tsx`
+  - `src/pages/AppDev/components/FileTreePanel/DataResourceList/index.tsx`
+  - `src/pages/Antv-X6/component/eventHandlers.tsx`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`

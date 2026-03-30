@@ -4,6 +4,7 @@ import {
   apiOperationLogList,
   apiOperationLogSystemCodeOptions,
 } from '@/services/agentDev';
+import { t } from '@/services/i18nRuntime';
 import type {
   OperationLogInfo,
   OperationLogQueryFilter,
@@ -48,19 +49,19 @@ const LogProTable: React.FC = () => {
   const columns: ProColumns<OperationLogInfo>[] = useMemo(
     () => [
       {
-        title: '类型',
+        title: t('NuwaxPC.Pages.SystemOperationLog.columnType'),
         dataIndex: 'systemCode',
         width: 140,
         valueType: 'select',
         request: createOptionsRequest(apiOperationLogSystemCodeOptions),
         hideInTable: false,
         fieldProps: {
-          placeholder: '请选择类型',
+          placeholder: t('NuwaxPC.Pages.SystemOperationLog.placeholderType'),
           allowClear: true,
         },
       },
       {
-        title: '操作方式',
+        title: t('NuwaxPC.Pages.SystemOperationLog.columnActionType'),
         dataIndex: 'action',
         width: 140,
         valueType: 'select',
@@ -68,28 +69,36 @@ const LogProTable: React.FC = () => {
           d.map((i) => ({ label: i.label, value: i.label })),
         ),
         fieldProps: {
-          placeholder: '请选择操作方式',
+          placeholder: t(
+            'NuwaxPC.Pages.SystemOperationLog.placeholderActionType',
+          ),
           allowClear: true,
         },
       },
       {
-        title: '对象名称',
+        title: t('NuwaxPC.Pages.SystemOperationLog.columnObjectName'),
         dataIndex: 'object',
         width: 140,
         ellipsis: true,
         fieldProps: {
-          placeholder: '请输入对象名称',
+          placeholder: t(
+            'NuwaxPC.Pages.SystemOperationLog.placeholderObjectName',
+          ),
         },
       },
       {
-        title: '对象子类',
+        title: t('NuwaxPC.Pages.SystemOperationLog.columnObjectSubtype'),
         dataIndex: 'operateContent',
         width: 140,
         ellipsis: true,
-        fieldProps: { placeholder: '请输入对象名称' },
+        fieldProps: {
+          placeholder: t(
+            'NuwaxPC.Pages.SystemOperationLog.placeholderObjectSubtype',
+          ),
+        },
       },
       {
-        title: '请求参数',
+        title: t('NuwaxPC.Pages.SystemOperationLog.columnRequestParams'),
         dataIndex: 'extraContent',
         minWidth: 150,
         width: 220,
@@ -98,23 +107,29 @@ const LogProTable: React.FC = () => {
         render: (_: any, record: OperationLogInfo) => (
           <LimitedTooltip formatJson>{record?.extraContent}</LimitedTooltip>
         ),
-        fieldProps: { placeholder: '多个关键字以空格分隔，请输入内容' },
+        fieldProps: {
+          placeholder: t(
+            'NuwaxPC.Pages.SystemOperationLog.placeholderRequestParams',
+          ),
+        },
       },
       {
-        title: '创建人',
+        title: t('NuwaxPC.Pages.SystemOperationLog.columnCreator'),
         dataIndex: 'creator',
         width: 180,
         ellipsis: true,
-        fieldProps: { placeholder: '请输入用户名' },
+        fieldProps: {
+          placeholder: t('NuwaxPC.Pages.SystemOperationLog.placeholderCreator'),
+        },
       },
       {
-        title: '时间范围',
+        title: t('NuwaxPC.Pages.SystemOperationLog.columnTimeRange'),
         dataIndex: 'createTimeRange',
         valueType: 'dateTimeRange',
         hideInTable: true,
       },
       {
-        title: '创建时间',
+        title: t('NuwaxPC.Pages.SystemOperationLog.columnCreated'),
         dataIndex: 'created',
         width: 170,
         valueType: 'dateTime',
@@ -187,7 +202,9 @@ const LogProTable: React.FC = () => {
         'success' in resp &&
         !resp.success
       ) {
-        message.error(resp.message || '查询失败');
+        message.error(
+          resp.message || t('NuwaxPC.Pages.SystemOperationLog.queryFailed'),
+        );
         return { data: [], total: 0, success: false };
       }
 
@@ -200,7 +217,7 @@ const LogProTable: React.FC = () => {
       return { data: records, total, success: true };
     } catch (e) {
       // eslint-disable-next-line no-console
-      console.error('查询日志失败', e);
+      console.error('[OperationLog] query failed', e);
       return { data: [], total: 0, success: false };
     }
   }, []);
@@ -211,7 +228,9 @@ const LogProTable: React.FC = () => {
    */
   const handleOpenDetails = useCallback((record: OperationLogInfo) => {
     if (!record?.id) {
-      message.warning('该条记录缺少 requestId，无法查看详情');
+      message.warning(
+        t('NuwaxPC.Pages.SystemOperationLog.missingRequestIdForDetail'),
+      );
       return;
     }
 
@@ -223,7 +242,7 @@ const LogProTable: React.FC = () => {
     return [
       ...columns,
       {
-        title: '操作',
+        title: t('NuwaxPC.Pages.SystemOperationLog.columnAction'),
         valueType: 'option',
         width: 90,
         fixed: 'right',
@@ -238,7 +257,7 @@ const LogProTable: React.FC = () => {
                 handleOpenDetails(record);
               }}
             >
-              详情
+              {t('NuwaxPC.Pages.SystemOperationLog.detail')}
             </Button>
           );
         },

@@ -216,3 +216,95 @@
   - inventory 问题总量继续下降
 - 风险/阻塞：`AppDev ChatInputHome`、`Antv-X6 complexNode/commonNode`、`SystemManagement Content` 其余子页仍是存量大头
 - 下一步：继续按“高频页面 + 中小文件 + 低风险交互”策略推进批量替换
+
+### 里程碑：Top 模块第六批实改（AppDev / SystemManagement）
+
+- 时间：2026-03-30 16:xx
+- 任务：继续推进内容管理子页与 ChatArea 组件的显式 `dict` 改造
+- 执行命令：通过 `apply_patch` 修改以下文件
+  - `src/pages/SystemManagement/Content/DataTable/index.tsx`
+  - `src/pages/SystemManagement/Content/KnowledgeBase/index.tsx`
+  - `src/pages/SystemManagement/Content/Mcp/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/components/ToolCallProcess/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/components/MessageAttachment/index.tsx`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `SystemManagement/Content` 的 DataTable、KnowledgeBase、Mcp 三个页面完成可见文案替换
+  - AppDev `ToolCallProcess` 与 `MessageAttachment` 的状态、类型与提示文案完成替换
+  - `ToolCallProcess` 文件列表识别兼容 `total` 与 `总计`，避免不同语言环境下识别失效
+- 风险/阻塞：`AppDev ChatInputHome` 与 `MentionSelector` 仍有较大量存量文案
+- 下一步：继续处理 `AppDev` 高频输入区与 `Antv-X6` 复杂节点面板文案
+
+### 里程碑：`t()` 命名收敛与第六批补充改造
+
+- 时间：2026-03-30 17:xx
+- 任务：按约定将本批新增调用统一为 `t(...)`，并补充 `ChatInputHome` 可见文案接入
+- 执行命令：通过 `apply_patch` 修改以下文件
+  - `src/services/i18nRuntime.ts`
+  - `src/pages/AppDev/components/ChatArea/components/ChatInputHome/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/components/ToolCallProcess/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/components/MessageAttachment/index.tsx`
+  - `src/pages/SystemManagement/Content/DataTable/index.tsx`
+  - `src/pages/SystemManagement/Content/KnowledgeBase/index.tsx`
+  - `src/pages/SystemManagement/Content/Mcp/index.tsx`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - 运行时新增 `t()`（`dict()` 兼容保留），本批代码调用统一为 `t(...)`
+  - `ChatInputHome` 的占位轮播、模型区、上传区、发送限制提示等文案完成接入
+  - inventory 问题总量继续下降
+- 风险/阻塞：全仓仍存在大量历史 `dict(...)` 与硬编码文案，需滚动收敛
+- 下一步：继续按 Top 模块批量推进，并逐批把新改造代码统一到 `t(...)`
+
+### 里程碑：Top 模块第七批实改（SystemManagement / AppDev / Antv-X6）
+
+- 时间：2026-03-30 18:xx
+- 任务：继续补齐 Top 模块存量页面，覆盖系统内容管理、日志查询、AppDev 主交互区、Antv 异常配置与通用节点
+- 执行命令：
+  - `pnpm prettier --write ...`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/Content/WebApplication/index.tsx`
+    - `src/pages/SystemManagement/Dashboard/index.tsx`
+    - `src/pages/SystemManagement/LogQuery/OperationLog/LogProTable/index.tsx`
+    - `src/pages/SystemManagement/LogQuery/OperationLog/LogDetailDrawer/index.tsx`
+    - `src/pages/AppDev/components/ContentViewer/index.tsx`
+    - `src/pages/AppDev/components/ChatArea/index.tsx`
+    - `src/pages/AppDev/components/DesignViewer/index.tsx`
+    - `src/pages/Antv-X6/component/ExceptionItem.tsx`
+    - `src/pages/Antv-X6/component/commonNode.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - 新增并落地 `SystemContentWebApplication`、`SystemOperationLog`、`AppDevContentViewer`、`AppDevChatArea`、`AppDevDesignViewer`、`AntvX6ExceptionItem`、`AntvX6CommonNode` 等 key 域
+  - AppDev 与 SystemManagement 多个高频页面已统一 `t('NuwaxPC.*')`
+  - inventory 问题总量从 `4255` 降至 `4082`
+- 风险/阻塞：
+  - `Antv-X6/complexNode`、`SystemManagement/MenuPermission`、`AppDev/Preview` 仍是存量大头
+  - `i18n-governance-report` 当前仅校验 `dict()` key 格式，未覆盖 `t()`（需后续脚本补强）
+- 下一步：继续按 Top 文件滚动治理 `RunningLog/NodeDetails`、`DataResourceList`、`eventHandlers` 与 `MenuPermission`
+
+### 里程碑：Top 模块第八批实改（RunningLog / DataResource / Antv 事件）
+
+- 时间：2026-03-30 18:xx
+- 任务：继续清理 System/AppDev/Antv Top 文件存量
+- 执行命令：
+  - `pnpm prettier --write ...`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/LogQuery/RunningLog/LogProTable/index.tsx`
+    - `src/pages/SystemManagement/LogQuery/RunningLog/NodeDetails/index.tsx`
+    - `src/pages/AppDev/components/EditorHeaderRight/index.tsx`
+    - `src/pages/AppDev/components/FileTreePanel/DataResourceList/index.tsx`
+    - `src/pages/Antv-X6/component/eventHandlers.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - RunningLog 表格/节点详情与 AppDev 右上工具区、数据资源列表完成 `t(...)` 替换
+  - Antv 事件提示/确认弹窗完成多语言 key 化
+  - inventory 问题总量从 `4082` 降至 `4050`
+- 风险/阻塞：`SystemManagement/MenuPermission` 与 `Antv-X6/complexNode` 仍为后续高优先治理点
+- 下一步：继续按 inventory Top 文件逐批推进，保持“小批量 + 验证 + 留痕”节奏

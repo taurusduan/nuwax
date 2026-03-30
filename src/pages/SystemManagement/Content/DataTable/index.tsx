@@ -5,6 +5,7 @@ import { TableActions, XProTable } from '@/components/ProComponents';
 import type { ActionItem } from '@/components/ProComponents/TableActions';
 import WorkspaceLayout from '@/components/WorkspaceLayout';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
+import { t } from '@/services/i18nRuntime';
 import {
   apiSystemResourceDataTableDelete,
   apiSystemResourceDataTableList,
@@ -57,10 +58,13 @@ const DataTable: React.FC = () => {
   const handleDelete = useCallback(async (record: SystemDataTableInfo) => {
     const response = await apiSystemResourceDataTableDelete({ id: record.id });
     if (response.code === SUCCESS_CODE) {
-      message.success('删除成功');
+      message.success(t('NuwaxPC.Pages.SystemContentDataTable.deleteSuccess'));
       actionRef.current?.reload();
     } else {
-      message.error(response.message || '删除失败');
+      message.error(
+        response.message ||
+          t('NuwaxPC.Pages.SystemContentDataTable.deleteFailed'),
+      );
     }
   }, []);
 
@@ -71,20 +75,21 @@ const DataTable: React.FC = () => {
     (record: SystemDataTableInfo): ActionItem<SystemDataTableInfo>[] => [
       {
         key: 'view',
-        label: '查看',
+        label: t('NuwaxPC.Pages.SystemContentDataTable.view'),
         disabled: !hasPermission('content_datatable_query_detail'),
         onClick: handleView,
       },
       {
         key: 'delete',
-        label: '删除',
+        label: t('NuwaxPC.Pages.SystemContentDataTable.delete'),
         confirm: {
-          title: (
-            <span>
-              确定要删除 <b>{record.name}</b> 吗？
-            </span>
+          title: t(
+            'NuwaxPC.Pages.SystemContentDataTable.deleteConfirmTitle',
+            record.name,
           ),
-          description: '此操作无法撤销，所有相关数据将被永久删除。',
+          description: t(
+            'NuwaxPC.Pages.SystemContentDataTable.deleteConfirmDescription',
+          ),
         },
         disabled: !hasPermission('content_datatable_delete'),
         onClick: handleDelete,
@@ -98,31 +103,31 @@ const DataTable: React.FC = () => {
    */
   const columns: ProColumns<SystemDataTableInfo>[] = [
     {
-      title: '名称',
+      title: t('NuwaxPC.Pages.SystemContentDataTable.columnName'),
       dataIndex: 'name',
       width: 180,
       ellipsis: true,
       fieldProps: {
-        placeholder: '请输入数据表名称',
+        placeholder: t('NuwaxPC.Pages.SystemContentDataTable.searchName'),
         allowClear: true,
       },
     },
     {
-      title: '描述',
+      title: t('NuwaxPC.Pages.SystemContentDataTable.columnDescription'),
       dataIndex: 'description',
       width: 250,
       ellipsis: true,
       hideInSearch: true,
     },
     {
-      title: '创建人',
+      title: t('NuwaxPC.Pages.SystemContentDataTable.columnCreator'),
       dataIndex: 'creatorName',
       width: 120,
       ellipsis: true,
       hideInSearch: false,
     },
     {
-      title: '创建时间',
+      title: t('NuwaxPC.Pages.SystemContentDataTable.columnCreated'),
       dataIndex: 'created',
       align: 'center',
       width: 170,
@@ -130,7 +135,7 @@ const DataTable: React.FC = () => {
       valueType: 'dateTime',
     },
     {
-      title: '操作',
+      title: t('NuwaxPC.Pages.SystemContentDataTable.columnAction'),
       valueType: 'option',
       fixed: 'right',
       align: 'center',
@@ -168,7 +173,10 @@ const DataTable: React.FC = () => {
   };
 
   return (
-    <WorkspaceLayout title="数据表管理" hideScroll>
+    <WorkspaceLayout
+      title={t('NuwaxPC.Pages.SystemContentDataTable.pageTitle')}
+      hideScroll
+    >
       <XProTable<SystemDataTableInfo>
         actionRef={actionRef}
         formRef={formRef}

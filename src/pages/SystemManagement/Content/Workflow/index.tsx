@@ -5,6 +5,7 @@ import { TableActions, XProTable } from '@/components/ProComponents';
 import type { ActionItem } from '@/components/ProComponents/TableActions';
 import WorkspaceLayout from '@/components/WorkspaceLayout';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
+import { t } from '@/services/i18nRuntime';
 import {
   apiSystemResourceWorkflowDelete,
   apiSystemResourceWorkflowList,
@@ -57,10 +58,13 @@ const Workflow: React.FC = () => {
   const handleDelete = useCallback(async (record: SystemWorkflowInfo) => {
     const response = await apiSystemResourceWorkflowDelete({ id: record.id });
     if (response.code === SUCCESS_CODE) {
-      message.success('删除成功');
+      message.success(t('NuwaxPC.Pages.SystemContentWorkflow.deleteSuccess'));
       actionRef.current?.reload();
     } else {
-      message.error(response.message || '删除失败');
+      message.error(
+        response.message ||
+          t('NuwaxPC.Pages.SystemContentWorkflow.deleteFailed'),
+      );
     }
   }, []);
 
@@ -71,20 +75,21 @@ const Workflow: React.FC = () => {
     (record: SystemWorkflowInfo): ActionItem<SystemWorkflowInfo>[] => [
       {
         key: 'view',
-        label: '查看',
+        label: t('NuwaxPC.Pages.SystemContentWorkflow.view'),
         disabled: !hasPermission('content_workflow_query_detail'),
         onClick: handleView,
       },
       {
         key: 'delete',
-        label: '删除',
+        label: t('NuwaxPC.Pages.SystemContentWorkflow.delete'),
         confirm: {
-          title: (
-            <span>
-              确定要删除 <b>{record.name}</b> 吗？
-            </span>
+          title: t(
+            'NuwaxPC.Pages.SystemContentWorkflow.deleteConfirmTitle',
+            record.name,
           ),
-          description: '此操作无法撤销，所有相关数据将被永久删除。',
+          description: t(
+            'NuwaxPC.Pages.SystemContentWorkflow.deleteConfirmDescription',
+          ),
         },
         disabled: !hasPermission('content_workflow_delete'),
         onClick: handleDelete,
@@ -98,31 +103,31 @@ const Workflow: React.FC = () => {
    */
   const columns: ProColumns<SystemWorkflowInfo>[] = [
     {
-      title: '名称',
+      title: t('NuwaxPC.Pages.SystemContentWorkflow.columnName'),
       dataIndex: 'name',
       width: 180,
       ellipsis: true,
       fieldProps: {
-        placeholder: '请输入工作流名称',
+        placeholder: t('NuwaxPC.Pages.SystemContentWorkflow.searchName'),
         allowClear: true,
       },
     },
     {
-      title: '描述',
+      title: t('NuwaxPC.Pages.SystemContentWorkflow.columnDescription'),
       dataIndex: 'description',
       width: 250,
       ellipsis: true,
       hideInSearch: true,
     },
     {
-      title: '创建人',
+      title: t('NuwaxPC.Pages.SystemContentWorkflow.columnCreator'),
       dataIndex: 'creatorName',
       width: 120,
       ellipsis: true,
       hideInSearch: false,
     },
     {
-      title: '创建时间',
+      title: t('NuwaxPC.Pages.SystemContentWorkflow.columnCreated'),
       dataIndex: 'created',
       align: 'center',
       width: 170,
@@ -130,7 +135,7 @@ const Workflow: React.FC = () => {
       valueType: 'dateTime',
     },
     {
-      title: '操作',
+      title: t('NuwaxPC.Pages.SystemContentWorkflow.columnAction'),
       valueType: 'option',
       fixed: 'right',
       align: 'center',
@@ -168,7 +173,10 @@ const Workflow: React.FC = () => {
   };
 
   return (
-    <WorkspaceLayout title="工作流管理" hideScroll>
+    <WorkspaceLayout
+      title={t('NuwaxPC.Pages.SystemContentWorkflow.pageTitle')}
+      hideScroll
+    >
       <XProTable<SystemWorkflowInfo>
         actionRef={actionRef}
         formRef={formRef}

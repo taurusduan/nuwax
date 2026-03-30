@@ -225,6 +225,9 @@ export const dict = (key: string, ...values: string[]): string => {
   return formatText(template, values);
 };
 
+export const t = (key: string, ...values: string[]): string =>
+  dict(key, ...values);
+
 export const translateLiteralText = (rawText: string): string => {
   const originalText = String(rawText || '');
   const trimmedText = originalText.trim();

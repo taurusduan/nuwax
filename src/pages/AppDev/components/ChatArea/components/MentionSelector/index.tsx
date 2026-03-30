@@ -4,6 +4,7 @@
  * 支持多层级视图：主视图、文件列表、数据源分类、数据源列表
  */
 
+import { t } from '@/services/i18nRuntime';
 import type { FileNode } from '@/types/interfaces/appDev';
 import type { DataResource } from '@/types/interfaces/dataResource';
 import {
@@ -322,8 +323,16 @@ const MentionSelector = React.forwardRef<
       switch (viewType) {
         case 'main': {
           const mainItems = [
-            { type: 'action', key: 'files', label: '文件/目录' },
-            { type: 'action', key: 'datasources', label: '数据资源' },
+            {
+              type: 'action',
+              key: 'files',
+              label: t('NuwaxPC.Pages.AppDevMentionSelector.filesAndFolders'),
+            },
+            {
+              type: 'action',
+              key: 'datasources',
+              label: t('NuwaxPC.Pages.AppDevMentionSelector.dataSources'),
+            },
           ];
           return [...recentItems, ...mainItems];
         }
@@ -856,7 +865,9 @@ const MentionSelector = React.forwardRef<
       return (
         <>
           <div className={styles['mention-section-title']}>
-            {hasRealRecentItems ? '最近使用' : '推荐'}
+            {hasRealRecentItems
+              ? t('NuwaxPC.Pages.AppDevMentionSelector.recent')
+              : t('NuwaxPC.Pages.AppDevMentionSelector.recommended')}
           </div>
           <div className={styles['mention-list']}>
             {recentItems.map((item, index) => (
@@ -887,7 +898,9 @@ const MentionSelector = React.forwardRef<
                       {item.description ||
                         (item.dataSource
                           ? getDefaultDescription(item.dataSource.type)
-                          : '数据资源')}
+                          : t(
+                              'NuwaxPC.Pages.AppDevMentionSelector.dataSources',
+                            ))}
                     </div>
                   ) : item.path ? (
                     <div className={styles['mention-item-desc']}>
@@ -910,17 +923,21 @@ const MentionSelector = React.forwardRef<
       const mainItems = [
         {
           key: 'files',
-          label: '文件/文件夹',
+          label: t('NuwaxPC.Pages.AppDevMentionSelector.filesAndFolders'),
           icon: <FileOutlined />,
           onClick: handleFilesClick,
-          description: '浏览项目文件',
+          description: t(
+            'NuwaxPC.Pages.AppDevMentionSelector.browseProjectFiles',
+          ),
         },
         {
           key: 'datasources',
-          label: '数据资源',
+          label: t('NuwaxPC.Pages.AppDevMentionSelector.dataSources'),
           icon: <DatabaseOutlined />,
           onClick: handleDataSourcesClick,
-          description: '工作流、插件等',
+          description: t(
+            'NuwaxPC.Pages.AppDevMentionSelector.workflowPluginEtc',
+          ),
         },
       ];
 
@@ -990,7 +1007,9 @@ const MentionSelector = React.forwardRef<
         return (
           <div className={styles['mention-content']}>
             <Empty
-              description="未找到匹配的结果"
+              description={t(
+                'NuwaxPC.Pages.AppDevMentionSelector.noMatchedResult',
+              )}
               className={styles['mention-empty']}
             />
           </div>
@@ -1002,7 +1021,9 @@ const MentionSelector = React.forwardRef<
           {/* 文件分组 */}
           {flattenedFiles.length > 0 && (
             <>
-              <div className={styles['mention-section-title']}>文件</div>
+              <div className={styles['mention-section-title']}>
+                {t('NuwaxPC.Pages.AppDevMentionSelector.files')}
+              </div>
               <div className={styles['mention-list']}>
                 {flattenedFiles.map((file, index) => (
                   <div
@@ -1034,7 +1055,9 @@ const MentionSelector = React.forwardRef<
           {/* 文件夹分组 */}
           {flattenedFolders.length > 0 && (
             <>
-              <div className={styles['mention-section-title']}>文件夹</div>
+              <div className={styles['mention-section-title']}>
+                {t('NuwaxPC.Pages.AppDevMentionSelector.folders')}
+              </div>
               <div className={styles['mention-list']}>
                 {flattenedFolders.map((folder, index) => (
                   <div
@@ -1066,7 +1089,9 @@ const MentionSelector = React.forwardRef<
           {/* 数据资源分组 */}
           {filteredDataSources.length > 0 && (
             <>
-              <div className={styles['mention-section-title']}>数据资源</div>
+              <div className={styles['mention-section-title']}>
+                {t('NuwaxPC.Pages.AppDevMentionSelector.dataSources')}
+              </div>
               <div className={styles['mention-list']}>
                 {filteredDataSources.map((ds, index) => (
                   <div
@@ -1112,12 +1137,16 @@ const MentionSelector = React.forwardRef<
                 className={styles['mention-back']}
                 onClick={handleBackToMain}
               >
-                ← 返回
+                {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
               </span>
-              <span className={styles['mention-title']}>文件列表</span>
+              <span className={styles['mention-title']}>
+                {t('NuwaxPC.Pages.AppDevMentionSelector.fileList')}
+              </span>
             </div>
             <Empty
-              description="未找到匹配的文件或目录"
+              description={t(
+                'NuwaxPC.Pages.AppDevMentionSelector.noMatchedFileOrFolder',
+              )}
               className={styles['mention-empty']}
             />
           </div>
@@ -1128,9 +1157,11 @@ const MentionSelector = React.forwardRef<
         <div className={styles['mention-content']}>
           <div className={styles['mention-header']}>
             <span className={styles['mention-back']} onClick={handleBackToMain}>
-              ← 返回
+              {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
             </span>
-            <span className={styles['mention-title']}>文件列表</span>
+            <span className={styles['mention-title']}>
+              {t('NuwaxPC.Pages.AppDevMentionSelector.fileList')}
+            </span>
           </div>
           <div className={styles['mention-list']}>
             {/* 先渲染文件 */}
@@ -1195,12 +1226,16 @@ const MentionSelector = React.forwardRef<
                 className={styles['mention-back']}
                 onClick={handleBackToMain}
               >
-                ← 返回
+                {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
               </span>
-              <span className={styles['mention-title']}>数据资源</span>
+              <span className={styles['mention-title']}>
+                {t('NuwaxPC.Pages.AppDevMentionSelector.dataSources')}
+              </span>
             </div>
             <Empty
-              description="未找到数据资源"
+              description={t(
+                'NuwaxPC.Pages.AppDevMentionSelector.noDataSourcesFound',
+              )}
               className={styles['mention-empty']}
             />
           </div>
@@ -1211,9 +1246,11 @@ const MentionSelector = React.forwardRef<
         <div className={styles['mention-content']}>
           <div className={styles['mention-header']}>
             <span className={styles['mention-back']} onClick={handleBackToMain}>
-              ← 返回
+              {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
             </span>
-            <span className={styles['mention-title']}>数据资源</span>
+            <span className={styles['mention-title']}>
+              {t('NuwaxPC.Pages.AppDevMentionSelector.dataSources')}
+            </span>
           </div>
           <div className={styles['mention-list']}>
             {categories.map((category, index) => {
@@ -1235,7 +1272,10 @@ const MentionSelector = React.forwardRef<
                       {getDataSourceTypeName(category)}
                     </div>
                     <div className={styles['mention-item-desc']}>
-                      {groupedDataSources[category].length} 项
+                      {t(
+                        'NuwaxPC.Pages.AppDevMentionSelector.categoryItemCount',
+                        String(groupedDataSources[category].length),
+                      )}
                     </div>
                   </div>
                   <RightOutlined className={styles['mention-item-arrow']} />
@@ -1259,12 +1299,16 @@ const MentionSelector = React.forwardRef<
                 className={styles['mention-back']}
                 onClick={handleBackToMain}
               >
-                ← 返回
+                {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
               </span>
-              <span className={styles['mention-title']}>数据资源</span>
+              <span className={styles['mention-title']}>
+                {t('NuwaxPC.Pages.AppDevMentionSelector.dataSources')}
+              </span>
             </div>
             <Empty
-              description="未找到数据资源"
+              description={t(
+                'NuwaxPC.Pages.AppDevMentionSelector.noDataSourcesFound',
+              )}
               className={styles['mention-empty']}
             />
           </div>
@@ -1275,9 +1319,11 @@ const MentionSelector = React.forwardRef<
         <div className={styles['mention-content']}>
           <div className={styles['mention-header']}>
             <span className={styles['mention-back']} onClick={handleBackToMain}>
-              ← 返回
+              {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
             </span>
-            <span className={styles['mention-title']}>数据资源</span>
+            <span className={styles['mention-title']}>
+              {t('NuwaxPC.Pages.AppDevMentionSelector.dataSources')}
+            </span>
           </div>
           <div className={styles['mention-list']}>
             {filteredDataSources.map((ds, index) => (
@@ -1320,14 +1366,16 @@ const MentionSelector = React.forwardRef<
                 className={styles['mention-back']}
                 onClick={() => setViewType('datasources')}
               >
-                ← 返回
+                {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
               </span>
               <span className={styles['mention-title']}>
                 {getDataSourceTypeName(selectedCategory)}
               </span>
             </div>
             <Empty
-              description="未找到数据资源"
+              description={t(
+                'NuwaxPC.Pages.AppDevMentionSelector.noDataSourcesFound',
+              )}
               className={styles['mention-empty']}
             />
           </div>
@@ -1341,7 +1389,7 @@ const MentionSelector = React.forwardRef<
               className={styles['mention-back']}
               onClick={() => setViewType('datasources')}
             >
-              ← 返回
+              {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
             </span>
             <span className={styles['mention-title']}>
               {getDataSourceTypeName(selectedCategory)}
