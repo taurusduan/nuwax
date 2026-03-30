@@ -54,3 +54,62 @@
   - `src/components/NoMoreDivider/index.tsx`
   - `src/components/WorkspaceLayout/components/WorkspaceSearch/index.tsx`
   - `src/components/UploadAvatar/index.tsx`
+
+### 新增验证（Top 模块第三批）
+
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（本批改造符合新增门禁规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `4462` 下降至 `4451`
+- 命令：`dict key 一致性校验（临时脚本）`
+  - 结果：通过（`dict` 使用 key `112` 个，词典定义 `114` 个，缺失 `0`）
+- 覆盖文件：
+  - `src/pages/AppDev/components/FileOperatingMask/index.tsx`
+  - `src/pages/AppDev/components/ImageViewer/index.tsx`
+  - `src/pages/SystemManagement/Dashboard/components/ResourceGrid/index.tsx`
+  - `src/pages/SystemManagement/LogQuery/RunningLog/index.tsx`
+  - `src/pages/SystemManagement/LogQuery/OperationLog/index.tsx`
+  - `src/pages/Antv-X6/components/VersionAction/index.tsx`
+  - `src/pages/Antv-X6/component/data.tsx`
+  - `src/pages/Antv-X6/v3/component/data.tsx`
+  - `src/pages/Antv-X6/header.tsx`
+
+### 新增验证（Top 模块第四批）
+
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `4451` 下降至 `4444`
+- 命令：`dict key 一致性校验（临时脚本）`
+  - 结果：通过（`used=127`、`defined=128`、`missing=0`）
+- 覆盖文件：
+  - `src/pages/SystemManagement/TaskManage/index.tsx`
+  - `src/pages/SystemManagement/Dashboard/components/SessionStats/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/components/ChatAreaTabs.tsx`
+  - `src/pages/AppDev/components/FilePathHeader/index.tsx`
+  - `src/pages/Antv-X6/components/NodePanelDrawer/index.tsx`
+  - `src/pages/Antv-X6/components/NewSkill/index.tsx`
+
+### 新增验证（本地默认词典 + Top 模块第五批）
+
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `4439` 下降至 `4397`
+- 关键验证点：
+  - 运行时兜底从“仅英文最小词典”升级为“按语言匹配本地中英文默认词典”
+  - 语言缓存增加 `LANG_MAP_CACHE_LANG`，避免跨语言缓存串用
+  - 服务层新增 `getI18nImportDefaults/getI18nImportDefaultMap` 作为平台维护导入默认源
+- 覆盖文件：
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+  - `src/locales/i18n/index.ts`
+  - `src/services/i18nRuntime.ts`
+  - `src/services/i18n.ts`
+  - `src/pages/AppDev/components/AppDevHeader/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx`
+  - `src/pages/SystemManagement/Content/Agent/index.tsx`
+  - `src/pages/Antv-X6/Published.tsx`

@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import type { PlanEntry } from '@/types/interfaces/appDev';
 import {
   BorderOutlined,
@@ -54,13 +55,13 @@ const PlanProcess: React.FC<PlanProcessProps> = ({
     const overallStatus = getOverallStatus();
     switch (overallStatus) {
       case 'completed':
-        return '已完成';
+        return dict('NuwaxPC.Pages.AppDevPlanProcess.completed');
       case 'in_progress':
-        return '执行中';
+        return dict('NuwaxPC.Pages.AppDevPlanProcess.inProgress');
       case 'failed':
-        return '部分失败';
+        return dict('NuwaxPC.Pages.AppDevPlanProcess.partialFailed');
       default:
-        return '待执行';
+        return dict('NuwaxPC.Pages.AppDevPlanProcess.pending');
     }
   };
 
@@ -119,7 +120,11 @@ const PlanProcess: React.FC<PlanProcessProps> = ({
 
   // 获取截取后的计划文本
   const getTruncatedPlanText = () => {
-    const fullText = `执行计划 (${stats.completed}/${stats.total} 已完成)`;
+    const fullText = dict(
+      'NuwaxPC.Pages.AppDevPlanProcess.executionPlanProgress',
+      String(stats.completed),
+      String(stats.total),
+    );
     return truncateText(fullText, textTruncateMode, maxLength);
   };
 
@@ -130,7 +135,11 @@ const PlanProcess: React.FC<PlanProcessProps> = ({
         <div className={styles.operationInfo}>
           <span className={styles[getStatusDotClass()]} />
           <Tooltip
-            title={`执行计划 (${stats.completed}/${stats.total} 已完成)`}
+            title={dict(
+              'NuwaxPC.Pages.AppDevPlanProcess.executionPlanProgress',
+              String(stats.completed),
+              String(stats.total),
+            )}
             placement="topLeft"
             mouseEnterDelay={0.5}
           >

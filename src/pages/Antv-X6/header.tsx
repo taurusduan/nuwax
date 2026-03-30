@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import { PermissionsEnum } from '@/types/enums/common';
 import { getTime } from '@/utils';
@@ -74,7 +75,7 @@ const Header: React.FC<HeaderProp> = ({
               />
             </Popover>
             {publishStatus === 'Published' && (
-              <Popover content={'已发布'}>
+              <Popover content={dict('NuwaxPC.Pages.AntvX6Header.published')}>
                 <CheckCircleFilled
                   className="mr-6"
                   style={{ color: '#00B23C', fontSize: '16px' }}
@@ -94,18 +95,21 @@ const Header: React.FC<HeaderProp> = ({
               {publishStatus === 'Published' ? '已发布' : '未发布'}
             </Tag> */}
         <Tag color="default" bordered={false}>
-          已自动保存 {getTime(modified ?? new Date().toString())}
+          {dict(
+            'NuwaxPC.Pages.AntvX6Header.autoSavedAt',
+            getTime(modified ?? new Date().toString()),
+          )}
         </Tag>
 
         {publishDate === null && (
           <Tag color="#EBECF5" style={{ color: 'rgba(15,21,40,0.82)' }}>
-            未发布
+            {dict('NuwaxPC.Pages.AntvX6Header.unpublished')}
           </Tag>
         )}
 
         {publishDate !== null && publishDate !== modified && (
           <Tag bordered={false} color="volcano">
-            有更新未发布
+            {dict('NuwaxPC.Pages.AntvX6Header.updatedNotPublished')}
           </Tag>
         )}
       </div>
@@ -119,7 +123,9 @@ const Header: React.FC<HeaderProp> = ({
         type={'primary'}
         loading={isValidLoading}
       >
-        {isValidLoading ? '校验中' : '发布'}
+        {isValidLoading
+          ? dict('NuwaxPC.Pages.AntvX6Header.validating')
+          : dict('NuwaxPC.Pages.AntvX6Header.publish')}
       </Button>
     </div>
   );

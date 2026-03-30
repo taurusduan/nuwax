@@ -5,13 +5,14 @@ import {
   I18N_MAP_CACHE_TTL,
   I18N_STORAGE_KEYS,
   MIN_EN_I18N_MAP,
+  MIN_ZH_I18N_MAP,
 } from '@/constants/i18n.constants';
 import type { I18nKeyPattern, SystemLangMap } from '@/types/interfaces/i18n';
 import { apiI18nQuery } from './i18n';
 
 let currentLang = DEFAULT_I18N_LANG;
 let langMap: SystemLangMap = { ...MIN_EN_I18N_MAP };
-let zhBaseMap: SystemLangMap = {};
+let zhBaseMap: SystemLangMap = { ...MIN_ZH_I18N_MAP };
 let zhValueToKeyMap: Record<string, string> = {};
 let initialized = false;
 const warnedLegacyKeys = new Set<string>();
@@ -20,6 +21,12 @@ const warnedMissingKeys = new Set<string>();
 
 const normalizeLang = (lang?: string | null) =>
   (lang || DEFAULT_I18N_LANG).toLowerCase();
+
+const isZhLang = (lang?: string | null): boolean =>
+  normalizeLang(lang).startsWith('zh');
+
+const getLocalDefaultMapByLang = (lang?: string | null): SystemLangMap =>
+  isZhLang(lang) ? MIN_ZH_I18N_MAP : MIN_EN_I18N_MAP;
 
 const isLegacySystemKey = (key: string): boolean => key.startsWith('System.');
 
@@ -70,11 +77,14 @@ const formatText = (template: string, values: string[]): string => {
   return text;
 };
 
-const readMapFromCache = (): SystemLangMap | null => {
+const readMapFromCache = (lang: string): SystemLangMap | null => {
   const cacheAt = Number(safeGetItem(I18N_STORAGE_KEYS.LANG_MAP_CACHE_AT));
   const cacheText = safeGetItem(I18N_STORAGE_KEYS.LANG_MAP_CACHE);
+  const cacheLangRaw = safeGetItem(I18N_STORAGE_KEYS.LANG_MAP_CACHE_LANG);
+  const cacheLang = cacheLangRaw ? normalizeLang(cacheLangRaw) : '';
   if (!cacheText || !cacheAt) return null;
   if (Date.now() - cacheAt > I18N_MAP_CACHE_TTL) return null;
+  if (cacheLang && cacheLang !== normalizeLang(lang)) return null;
   try {
     const cacheValue = JSON.parse(cacheText) as SystemLangMap;
     if (cacheValue && typeof cacheValue === 'object') {
@@ -86,9 +96,10 @@ const readMapFromCache = (): SystemLangMap | null => {
   return null;
 };
 
-const persistMapCache = (map: SystemLangMap): void => {
+const persistMapCache = (lang: string, map: SystemLangMap): void => {
   safeSetItem(I18N_STORAGE_KEYS.LANG_MAP_CACHE, JSON.stringify(map));
   safeSetItem(I18N_STORAGE_KEYS.LANG_MAP_CACHE_AT, String(Date.now()));
+  safeSetItem(I18N_STORAGE_KEYS.LANG_MAP_CACHE_LANG, normalizeLang(lang));
 };
 
 const readLangFromCache = (): string | null => {
@@ -118,15 +129,16 @@ const buildZhValueToKeyMap = (map: SystemLangMap): void => {
 };
 
 const fetchAndApplyLangMap = async (lang?: string): Promise<boolean> => {
+  const targetLang = normalizeLang(lang || currentLang);
   try {
     const result = await apiI18nQuery(lang);
     const parsedMap = parseLangMapResult(result);
     if (!parsedMap) return false;
     langMap = {
-      ...MIN_EN_I18N_MAP,
+      ...getLocalDefaultMapByLang(targetLang),
       ...parsedMap,
     };
-    persistMapCache(langMap);
+    persistMapCache(targetLang, langMap);
     return true;
   } catch {
     return false;
@@ -134,16 +146,20 @@ const fetchAndApplyLangMap = async (lang?: string): Promise<boolean> => {
 };
 
 const fetchZhBaseMap = async (): Promise<void> => {
+  zhBaseMap = { ...MIN_ZH_I18N_MAP };
   try {
     const result = await apiI18nQuery('zh-cn');
     const parsedMap = parseLangMapResult(result);
     if (parsedMap) {
-      zhBaseMap = parsedMap;
-      buildZhValueToKeyMap(parsedMap);
+      zhBaseMap = {
+        ...MIN_ZH_I18N_MAP,
+        ...parsedMap,
+      };
     }
   } catch {
     // ignore zh fallback fetch errors
   }
+  buildZhValueToKeyMap(zhBaseMap);
 };
 
 export const getCurrentLang = (): string => currentLang;
@@ -161,11 +177,14 @@ export const syncLangFromUserInfo = async (user?: {
 }): Promise<void> => {
   if (!user?.lang) return;
   const targetLang = normalizeLang(user.lang);
-  const prevLang = currentLang;
   setCurrentLang(targetLang);
   const fetched = await fetchAndApplyLangMap(targetLang);
-  if (!fetched && prevLang !== targetLang) {
-    langMap = { ...MIN_EN_I18N_MAP };
+  if (!fetched) {
+    langMap = { ...getLocalDefaultMapByLang(targetLang) };
+  }
+  if (isZhLang(targetLang)) {
+    zhBaseMap = { ...MIN_ZH_I18N_MAP };
+    buildZhValueToKeyMap(zhBaseMap);
   }
   initialized = true;
 };
@@ -192,7 +211,10 @@ export const dict = (key: string, ...values: string[]): string => {
     return normalizedKey;
   }
 
-  const template = langMap[normalizedKey] || MIN_EN_I18N_MAP[normalizedKey];
+  const template =
+    langMap[normalizedKey] ||
+    MIN_EN_I18N_MAP[normalizedKey] ||
+    MIN_ZH_I18N_MAP[normalizedKey];
   if (!template) {
     warnOnce(warnedMissingKeys, normalizedKey, (k) => {
       console.error(`[i18n] Missing translation entry for key: ${k}`);
@@ -235,30 +257,33 @@ export const initI18n = async (): Promise<void> => {
   if (initialized) return;
 
   const cachedLang = readLangFromCache();
-  setCurrentLang(cachedLang || getBrowserLang());
+  const resolvedLang = normalizeLang(cachedLang || getBrowserLang());
+  setCurrentLang(resolvedLang);
 
-  const cachedMap = readMapFromCache();
+  langMap = { ...getLocalDefaultMapByLang(resolvedLang) };
+
+  const cachedMap = readMapFromCache(resolvedLang);
   if (cachedMap) {
     langMap = {
-      ...MIN_EN_I18N_MAP,
+      ...getLocalDefaultMapByLang(resolvedLang),
       ...cachedMap,
     };
   }
 
-  const fetched = await fetchAndApplyLangMap(getCurrentLang());
-  if (getCurrentLang().startsWith('zh')) {
+  const fetched = await fetchAndApplyLangMap();
+  if (isZhLang(getCurrentLang())) {
     zhBaseMap = { ...langMap };
     buildZhValueToKeyMap(zhBaseMap);
   } else {
     await fetchZhBaseMap();
   }
 
-  if (!Object.keys(zhValueToKeyMap).length && cachedMap) {
-    buildZhValueToKeyMap(cachedMap);
+  if (!Object.keys(zhValueToKeyMap).length) {
+    buildZhValueToKeyMap(MIN_ZH_I18N_MAP);
   }
 
   if (!fetched && !cachedMap) {
-    langMap = { ...MIN_EN_I18N_MAP };
+    langMap = { ...getLocalDefaultMapByLang(resolvedLang) };
   }
   initialized = true;
 };

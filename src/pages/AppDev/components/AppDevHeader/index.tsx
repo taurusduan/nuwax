@@ -3,6 +3,7 @@ import SvgIcon from '@/components/base/SvgIcon';
 import ConditionRender from '@/components/ConditionRender';
 import CustomPopover from '@/components/CustomPopover';
 import { PAGE_DEVELOP_PUBLISH_TYPE_LIST } from '@/constants/pageDev.constants';
+import { dict } from '@/services/i18nRuntime';
 import { PageDevelopPublishTypeEnum } from '@/types/enums/pageDev';
 import { ProjectDetailData } from '@/types/interfaces/appDev';
 import { jumpBack } from '@/utils/router';
@@ -61,7 +62,10 @@ const AppDevHeader: React.FC<AppDevHeaderProps> = ({
   previewRef,
 }) => {
   // 获取项目名称，优先使用接口数据
-  const projectName = projectInfo?.name || workspace.name || '大模型三部曲';
+  const projectName =
+    projectInfo?.name ||
+    workspace.name ||
+    dict('NuwaxPC.Pages.AppDevHeader.defaultProjectName');
 
   // // 权限检查
   // const { hasPermission } = useModel('menuModel');
@@ -122,7 +126,7 @@ const AppDevHeader: React.FC<AppDevHeaderProps> = ({
           return;
         }
       } catch (error) {
-        console.warn('[AppDevHeader] 处理 iframe 回退失败:', error);
+        console.warn('[AppDevHeader] failed to handle iframe back:', error);
         // 出错时直接执行父容器回退
       }
     }
@@ -153,11 +157,14 @@ const AppDevHeader: React.FC<AppDevHeaderProps> = ({
         <div className={cx('flex', 'items-center', styles['agent-rel-info'])}>
           {workspace.projectId && (
             <span className={cx(styles['project-id'])}>
-              项目ID: {workspace.projectId}
+              {dict(
+                'NuwaxPC.Pages.AppDevHeader.projectId',
+                workspace.projectId,
+              )}
             </span>
           )}
           {deployStatus && (
-            <Popover content={'已发布'}>
+            <Popover content={dict('NuwaxPC.Pages.AppDevHeader.published')}>
               <CheckCircleFilled className={cx(styles.circle)} />
             </Popover>
           )}
@@ -168,7 +175,7 @@ const AppDevHeader: React.FC<AppDevHeaderProps> = ({
         {lastUpdateTime && (
           <div className={cx('flex', 'items-center', styles['save-time'])}>
             <span className={styles['last-update-text']}>
-              最后更新 {lastUpdateTime}
+              {dict('NuwaxPC.Pages.AppDevHeader.lastUpdated', lastUpdateTime)}
             </span>
             {/* 已发布，并存在更新 */}
             {hasUpdates && (
@@ -177,7 +184,7 @@ const AppDevHeader: React.FC<AppDevHeaderProps> = ({
                 color="volcano"
                 className={cx(styles['volcano'])}
               >
-                有更新未发布
+                {dict('NuwaxPC.Pages.AppDevHeader.updatesNotPublished')}
               </Tag>
             )}
           </div>
@@ -187,7 +194,7 @@ const AppDevHeader: React.FC<AppDevHeaderProps> = ({
             projectInfo?.publishType === PageDevelopPublishTypeEnum.AGENT
           }
         >
-          <Tooltip title="版本历史">
+          <Tooltip title={dict('NuwaxPC.Pages.AppDevHeader.versionHistory')}>
             <ClockCircleOutlined
               className={cx(
                 'ico',
@@ -208,7 +215,9 @@ const AppDevHeader: React.FC<AppDevHeaderProps> = ({
               className={cx(styles.deployButton)}
               disabled={isChatLoading} // 新增：聊天加载时禁用部署按钮
             >
-              {isDeploying ? '发布中...' : '发布'}
+              {isDeploying
+                ? dict('NuwaxPC.Pages.AppDevHeader.publishing')
+                : dict('NuwaxPC.Pages.AppDevHeader.publish')}
             </Button>
           </div>
         </CustomPopover>
@@ -220,7 +229,9 @@ const AppDevHeader: React.FC<AppDevHeaderProps> = ({
               className={cx(styles.deployButton, styles.disabled)}
               disabled={true}
             >
-              {isDeploying ? '发布中...' : '发布'}
+              {isDeploying
+                ? dict('NuwaxPC.Pages.AppDevHeader.publishing')
+                : dict('NuwaxPC.Pages.AppDevHeader.publish')}
             </Button>
           </div>
         )} */}

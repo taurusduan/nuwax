@@ -139,3 +139,80 @@
   - `System.*` 业务引用仍为 0
 - 风险/阻塞：大模块（`AppDev`/`Antv-X6`/`SystemManagement`）仍有大量存量，需继续分批
 - 下一步：按 inventory Top 模块继续滚动治理
+
+### 里程碑：Top 模块第三批实改（AppDev / SystemManagement / Antv-X6）
+
+- 时间：2026-03-30 15:xx
+- 任务：按 inventory Top 模块继续滚动替换可见文案
+- 执行命令：通过 `apply_patch` 修改以下文件
+  - `src/pages/AppDev/components/FileOperatingMask/index.tsx`
+  - `src/pages/AppDev/components/ImageViewer/index.tsx`
+  - `src/pages/SystemManagement/Dashboard/components/ResourceGrid/index.tsx`
+  - `src/pages/SystemManagement/LogQuery/RunningLog/index.tsx`
+  - `src/pages/SystemManagement/LogQuery/OperationLog/index.tsx`
+  - `src/pages/Antv-X6/components/VersionAction/index.tsx`
+  - `src/pages/Antv-X6/component/data.tsx`
+  - `src/pages/Antv-X6/v3/component/data.tsx`
+  - `src/pages/Antv-X6/header.tsx`
+  - `src/constants/i18n.constants.ts`
+- 结果摘要：
+  - 三大模块新增一批 `dict('NuwaxPC.*')` 显式改造
+  - 新增 key 已补入最小英文词典，`dict` 使用与词典定义一致（缺失 0）
+  - inventory 问题总量进一步下降
+- 风险/阻塞：`AppDev` 与 `Antv-X6` 仍存在大量存量字符串，需继续拆批降低回归风险
+- 下一步：继续按“高频页面 + 低风险字符串”策略推进下一批
+
+### 里程碑：Top 模块第四批实改（AppDev / SystemManagement / Antv-X6）
+
+- 时间：2026-03-30 15:xx
+- 任务：继续按模块 TopN 推进中小文件可见文案替换
+- 执行命令：通过 `apply_patch` 修改以下文件
+  - `src/pages/SystemManagement/TaskManage/index.tsx`
+  - `src/pages/SystemManagement/Dashboard/components/SessionStats/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/components/ChatAreaTabs.tsx`
+  - `src/pages/AppDev/components/FilePathHeader/index.tsx`
+  - `src/pages/Antv-X6/components/NodePanelDrawer/index.tsx`
+  - `src/pages/Antv-X6/components/NewSkill/index.tsx`
+  - `src/constants/i18n.constants.ts`
+- 结果摘要：
+  - `TaskManage`、`SessionStats`、`ChatAreaTabs`、`FilePathHeader`、`NodePanelDrawer`、`NewSkill` 完成显式 key 替换
+  - 本批新增 key 已全部纳入最小词典
+  - `dict` 使用 key 与词典定义一致（缺失 0）
+- 风险/阻塞：核心大文件（`AppDev/index.tsx`、`Antv-X6/index.tsx`、`SystemManagement/MenuPermission/*`）改造体量仍大
+- 下一步：以页面入口文件为主再做一批，优先处理标题、按钮、提示语
+
+### 里程碑：本地中英文默认词典落地（运行时 + 平台导入默认）
+
+- 时间：2026-03-30 16:xx
+- 任务：补齐本地 `en-us/zh-cn` 默认词典文件，并接入运行时兜底与平台导入默认源
+- 执行命令：通过 `apply_patch` 新增/修改以下文件
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+  - `src/locales/i18n/index.ts`
+  - `src/constants/i18n.constants.ts`
+  - `src/services/i18nRuntime.ts`
+  - `src/services/i18n.ts`
+- 结果摘要：
+  - 本地中英文词典从常量内联拆分为独立语言文件，作为正式默认词典
+  - 新增 `I18N_IMPORT_DEFAULTS`，可作为多语言平台维护导入默认源
+  - 运行时兜底改为“按当前语言使用本地默认词典”，并新增按语言缓存隔离字段
+- 风险/阻塞：当前平台维护页尚未接入导入 UI，本轮先提供服务层可复用默认源
+- 下一步：在多语言管理新增导入入口时复用 `getI18nImportDefaults/getI18nImportDefaultMap`
+
+### 里程碑：Top 模块第五批实改（AppDev / SystemManagement / Antv-X6）
+
+- 时间：2026-03-30 16:xx
+- 任务：继续按 inventory Top 模块推进显式 `dict` 改造
+- 执行命令：通过 `apply_patch` 修改以下文件
+  - `src/pages/AppDev/components/AppDevHeader/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx`
+  - `src/pages/SystemManagement/Content/Agent/index.tsx`
+  - `src/pages/Antv-X6/Published.tsx`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - AppDev Header、执行计划组件、系统管理-智能体页、Antv-X6 发布弹窗完成核心可见文案替换
+  - 新增 key 已同步本地中英词典，避免运行时缺 key
+  - inventory 问题总量继续下降
+- 风险/阻塞：`AppDev ChatInputHome`、`Antv-X6 complexNode/commonNode`、`SystemManagement Content` 其余子页仍是存量大头
+- 下一步：继续按“高频页面 + 中小文件 + 低风险交互”策略推进批量替换

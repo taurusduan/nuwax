@@ -1,23 +1,23 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-30T07:17:00.299Z
+- 生成时间：2026-03-30T07:46:14.049Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：4462
-- hardcoded 中文：4462
+- 总问题数：4397
+- hardcoded 中文：4397
 - legacy System key：0
 - invalid dict key：0
 
 ## 按模块统计
 
-| 模块 | hardcoded 中文 | legacyKey | invalidKey | 总计 |
-| --- | --: | --: | --: | --: |
-| src/pages/Antv-X6 | 794 | 0 | 0 | 794 |
-| src/pages/SystemManagement | 668 | 0 | 0 | 668 |
-| src/pages/AppDev | 307 | 0 | 0 | 307 |
+| 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
+| --- | ---: | ---: | ---: | ---: |
+| src/pages/Antv-X6 | 780 | 0 | 0 | 780 |
+| src/pages/SystemManagement | 636 | 0 | 0 | 636 |
+| src/pages/AppDev | 288 | 0 | 0 | 288 |
 | src/pages/EditAgent | 265 | 0 | 0 | 265 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
@@ -121,12 +121,6 @@
 
 ## src/pages/Antv-X6
 
-- [hardcoded_chinese] src/pages/Antv-X6/Published.tsx:47 -> `发布工作流`
-- [hardcoded_chinese] src/pages/Antv-X6/Published.tsx:52 -> `取消`
-- [hardcoded_chinese] src/pages/Antv-X6/Published.tsx:53 -> `确认`
-- [hardcoded_chinese] src/pages/Antv-X6/Published.tsx:59 -> `发布范围`
-- [hardcoded_chinese] src/pages/Antv-X6/Published.tsx:62 -> `发布记录`
-- [hardcoded_chinese] src/pages/Antv-X6/Published.tsx:65 -> `这里填写详细的发布记录，如果范围选择了全局，审核通过后，所有工作空间均可引用该工作流`
 - [hardcoded_chinese] src/pages/Antv-X6/component/ExceptionItem.tsx:153 -> `JSON格式无效`
 - [hardcoded_chinese] src/pages/Antv-X6/component/ExceptionItem.tsx:154 -> `JSON格式无效:`
 - [hardcoded_chinese] src/pages/Antv-X6/component/ExceptionItem.tsx:164 -> `可设置异常处理，包括超时、重试、异常处理方式。开启流式输出后，一旦开始输出数据，即使出现异常也无法重试或者跳转异常分支。`
@@ -178,7 +172,6 @@
 - [hardcoded_chinese] src/pages/Antv-X6/component/condition.tsx:176 -> `且`
 - [hardcoded_chinese] src/pages/Antv-X6/component/condition.tsx:180 -> `或`
 - [hardcoded_chinese] src/pages/Antv-X6/component/condition.tsx:252 -> `请引用参数`
-- [hardcoded_chinese] src/pages/Antv-X6/component/data.tsx:14 -> `输入`
 - [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:78 -> `输入`
 - [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:90 -> `删除条件`
 - [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:92 -> `更新条件`
@@ -201,32 +194,17 @@
 - [hardcoded_chinese] src/pages/Antv-X6/component/eventHandlers.tsx:234 -> `不能删除开始节点和结束节点`
 - [hardcoded_chinese] src/pages/Antv-X6/component/eventHandlers.tsx:246 -> `确定要删除循环节点吗？`
 - [hardcoded_chinese] src/pages/Antv-X6/component/eventHandlers.tsx:247 -> `确认`
-- ... 省略 714 条
+- [hardcoded_chinese] src/pages/Antv-X6/component/eventHandlers.tsx:248 -> `取消`
+- [hardcoded_chinese] src/pages/Antv-X6/component/graph.tsx:226 -> `, // 或者 `
+- [hardcoded_chinese] src/pages/Antv-X6/component/graph.tsx:561 -> `循环节点的开始和结束节点不能快捷添加其他节点`
+- [hardcoded_chinese] src/pages/Antv-X6/component/library.tsx:21 -> `检索关键词`
+- [hardcoded_chinese] src/pages/Antv-X6/component/library.tsx:116 -> `输入`
+- [hardcoded_chinese] src/pages/Antv-X6/component/library.tsx:154 -> `从知识库中获取知识的检索方式，不同的检索策略可以更有效地找到正确的信息，提高其生成的答案的准确性和可用性`
+- [hardcoded_chinese] src/pages/Antv-X6/component/library.tsx:162 -> `语义`
+- ... 省略 700 条
 
 ## src/pages/SystemManagement
 
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:81 -> `删除成功`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:84 -> `删除失败`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:124 -> `查看`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:138 -> `授权`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:146 -> `删除`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:153 -> `此操作无法撤销，所有相关数据将被永久删除。`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:169 -> `名称`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:174 -> `请输入智能体名称`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:179 -> `描述`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:186 -> `创建人`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:193 -> `发布状态`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:200 -> `待发布`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:201 -> `待审核`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:202 -> `已发布`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:203 -> `已拒绝`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:209 -> `创建时间`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:217 -> `管控`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:218 -> `若开启管控，发布到系统广场的智能体需授权才能使用`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:224 -> `关闭`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:225 -> `开启`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:237 -> `操作`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/Agent/index.tsx:277 -> `智能体管理`
 - [hardcoded_chinese] src/pages/SystemManagement/Content/DataTable/index.tsx:60 -> `删除成功`
 - [hardcoded_chinese] src/pages/SystemManagement/Content/DataTable/index.tsx:63 -> `删除失败`
 - [hardcoded_chinese] src/pages/SystemManagement/Content/DataTable/index.tsx:74 -> `查看`
@@ -285,20 +263,32 @@
 - [hardcoded_chinese] src/pages/SystemManagement/Content/Skill/index.tsx:111 -> `描述`
 - [hardcoded_chinese] src/pages/SystemManagement/Content/Skill/index.tsx:118 -> `创建人`
 - [hardcoded_chinese] src/pages/SystemManagement/Content/Skill/index.tsx:125 -> `创建时间`
-- ... 省略 588 条
+- [hardcoded_chinese] src/pages/SystemManagement/Content/Skill/index.tsx:133 -> `操作`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/Skill/index.tsx:171 -> `技能管理`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/Space/index.tsx:66 -> `删除成功`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/Space/index.tsx:69 -> `删除失败`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/Space/index.tsx:80 -> `查看`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/Space/index.tsx:86 -> `删除`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/Space/index.tsx:93 -> `此操作无法撤销，所有相关数据将被永久删除。`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/Space/index.tsx:107 -> `名称`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/Space/index.tsx:112 -> `请输入名称`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/Space/index.tsx:117 -> `描述`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/Space/index.tsx:124 -> `创建人`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/Space/index.tsx:131 -> `创建时间`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/Space/index.tsx:139 -> `操作`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/Space/index.tsx:177 -> `空间管理`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/WebApplication/index.tsx:81 -> `删除成功`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/WebApplication/index.tsx:84 -> `删除失败`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/WebApplication/index.tsx:126 -> `查看`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/WebApplication/index.tsx:140 -> `授权`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/WebApplication/index.tsx:148 -> `删除`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/WebApplication/index.tsx:155 -> `此操作无法撤销，所有相关数据将被永久删除。`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/WebApplication/index.tsx:171 -> `名称`
+- [hardcoded_chinese] src/pages/SystemManagement/Content/WebApplication/index.tsx:176 -> `请输入网页应用名称`
+- ... 省略 556 条
 
 ## src/pages/AppDev
 
-- [hardcoded_chinese] src/pages/AppDev/components/AppDevHeader/index.tsx:64 -> `大模型三部曲`
-- [hardcoded_chinese] src/pages/AppDev/components/AppDevHeader/index.tsx:125 -> `[AppDevHeader] 处理 iframe 回退失败:`
-- [hardcoded_chinese] src/pages/AppDev/components/AppDevHeader/index.tsx:160 -> `已发布`
-- [hardcoded_chinese] src/pages/AppDev/components/AppDevHeader/index.tsx:190 -> `版本历史`
-- [hardcoded_chinese] src/pages/AppDev/components/AppDevHeader/index.tsx:211 -> `发布中...`
-- [hardcoded_chinese] src/pages/AppDev/components/AppDevHeader/index.tsx:211 -> `发布`
-- [hardcoded_chinese] src/pages/AppDev/components/AppDevHeader/index.tsx:223 -> `发布中...`
-- [hardcoded_chinese] src/pages/AppDev/components/AppDevHeader/index.tsx:223 -> `发布`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ChatAreaTabs.tsx:87 -> `对话`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ChatAreaTabs.tsx:107 -> `数据`
 - [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ChatInputHome/index.tsx:133 -> `一句话做网站、应用、提效工具等，可选择工作流、插件等数据资源拓展多种能力`
 - [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ChatInputHome/index.tsx:134 -> `可以通过 @ 提及文件、目录、数据资源，以增强提示词的准确性`
 - [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ChatInputHome/index.tsx:410 -> `正在处理中，不能发送消息`
@@ -347,16 +337,10 @@
 - [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/MessageAttachment/index.tsx:178 -> `插件`
 - [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/MessageAttachment/index.tsx:180 -> `工作流`
 - [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/MessageAttachment/index.tsx:182 -> `数据源`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:57 -> `已完成`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:59 -> `执行中`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:61 -> `部分失败`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:63 -> `待执行`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:122 -> `执行计划 (${stats.completed}/${stats.total} 已完成)`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:133 -> `执行计划 (${stats.completed}/${stats.total} 已完成)`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:172 -> `待执行`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:173 -> `执行中`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:174 -> `已完成`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:175 -> `失败`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:181 -> `待执行`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:182 -> `执行中`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:183 -> `已完成`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:184 -> `失败`
 - [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ReactScrollToBottomContainer/index.tsx:239 -> `加载更多历史会话`
 - [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ReactScrollToBottomContainer/index.tsx:251 -> `[handleScrollTo] 滚动位置恢复:`
 - [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ReactScrollToBottomContainer/index.tsx:279 -> `[handleScrollTo] 滚动位置偏差，进行调整:`
@@ -369,7 +353,23 @@
 - [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ToolCallProcess/index.tsx:60 -> `工具调用`
 - [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ToolCallProcess/index.tsx:68 -> `已完成`
 - [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ToolCallProcess/index.tsx:70 -> `执行中`
-- ... 省略 227 条
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ToolCallProcess/index.tsx:72 -> `失败`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ToolCallProcess/index.tsx:74 -> `待执行`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ToolCallProcess/index.tsx:118 -> `总计`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ToolCallProcess/index.tsx:159 -> `总计`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/genAppDevPlugin.tsx:36 -> `❌ [genAppDevPlugin] Plan 数据解析失败:`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/genAppDevPlugin.tsx:71 -> `❌ [genAppDevPlugin] ToolCall 数据解析失败:`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/index.tsx:212 -> `Agent 任务已取消`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/index.tsx:217 -> `未知错误`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/index.tsx:221 -> `取消 Agent 任务失败`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/index.tsx:271 -> `您没有权限使用AI聊天功能`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/index.tsx:420 -> `发送消息失败`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/index.tsx:689 -> `添加数据资源`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/index.tsx:763 -> `正在加载历史会话`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/index.tsx:764 -> `请稍候...`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/index.tsx:769 -> `开始新对话`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/index.tsx:770 -> `向 AI 助手提问，开始你的项目开发`
+- ... 省略 208 条
 
 ## src/pages/EditAgent
 
@@ -1527,7 +1527,7 @@
 - [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:131 -> `状态`
 - [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:133 -> `启用`
 - [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:134 -> `停用`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:204 -> `或 ISO 字符串且非`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:204 -> ` 或 ISO 字符串且非 `
 - [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:208 -> `永不过期`
 - [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:225 -> `权限配置保存成功`
 - [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:230 -> `保存权限失败:`
