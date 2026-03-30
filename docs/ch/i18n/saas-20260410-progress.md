@@ -516,3 +516,24 @@
   - `SystemManagement` Top 文件（如 `TargetAuthModal`、`RoleFormModal`）仍有较大改造空间
   - `AppDev` 与 `Antv-X6/index.tsx` 仍有存量
 - 下一步：继续推进 `SystemManagement` Top 文件并保持每批校验与留痕
+
+### 里程碑：Top 模块第十八批实改（SystemManagement TargetAuthModal）
+
+- 时间：2026-03-30 18:55
+- 任务：补齐 `SystemManagement/Content/components/TargetAuthModal` 授权弹窗文案与提示的 i18n 接入
+- 执行命令：
+  - `pnpm prettier --write src/pages/SystemManagement/Content/components/TargetAuthModal/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/Content/components/TargetAuthModal/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - 授权成功提示、页签名、空态引导文案、弹窗标题、全选/取消全选全部接入 `t(...)`
+  - 中文注释和中文 JSDoc 转为英文，减少治理统计噪音
+  - 新增 `SystemTargetAuthModal` key 域（Pages + Toast）并补齐本地中英文默认词典
+  - inventory 问题总量从 `3600` 下降至 `3595`
+- 风险/阻塞：
+  - `SystemManagement` 仍有多个高存量文件（`RoleFormModal`、`LogDetailDrawer` 等）
+- 下一步：继续推进 `SystemManagement/MenuPermission/RoleManage/components/RoleFormModal` 与 `RunningLog/LogDetailDrawer`

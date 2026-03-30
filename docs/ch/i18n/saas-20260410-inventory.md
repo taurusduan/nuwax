@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-30T10:50:15.803Z
+- 生成时间：2026-03-30T10:54:33.685Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：3600
-- hardcoded 中文：3600
+- 总问题数：3595
+- hardcoded 中文：3595
 - legacy System key：0
 - invalid dict key：0
 
@@ -16,7 +16,7 @@
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
 | src/pages/Antv-X6 | 523 | 0 | 0 | 523 |
-| src/pages/SystemManagement | 312 | 0 | 0 | 312 |
+| src/pages/SystemManagement | 307 | 0 | 0 | 307 |
 | src/pages/EditAgent | 265 | 0 | 0 | 265 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
@@ -205,11 +205,6 @@
 
 ## src/pages/SystemManagement
 
-- [hardcoded_chinese] src/pages/SystemManagement/Content/components/TargetAuthModal/index.tsx:118 -> `授权成功`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/components/TargetAuthModal/index.tsx:200 -> `角色`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/components/TargetAuthModal/index.tsx:245 -> `用户组`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/components/TargetAuthModal/index.tsx:337 -> `取消全选`
-- [hardcoded_chinese] src/pages/SystemManagement/Content/components/TargetAuthModal/index.tsx:337 -> `全选`
 - [hardcoded_chinese] src/pages/SystemManagement/LogQuery/RunningLog/LogDetailDrawer/index.tsx:149 -> `复制成功`
 - [hardcoded_chinese] src/pages/SystemManagement/LogQuery/RunningLog/LogDetailDrawer/index.tsx:181 -> `日志详情`
 - [hardcoded_chinese] src/pages/SystemManagement/LogQuery/RunningLog/LogDetailDrawer/index.tsx:314 -> `暂无数据`
@@ -285,7 +280,12 @@
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:240 -> `禁用`
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:245 -> `描述`
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:247 -> `请输入用户组描述`
-- ... 省略 232 条
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:139 -> `查询用户组列表失败`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:169 -> `删除成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:269 -> `删除用户组`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:285 -> `排序更新成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:359 -> `排序`
+- ... 省略 227 条
 
 ## src/pages/EditAgent
 
