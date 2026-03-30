@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import { Button, Result } from 'antd';
 import classNames from 'classnames';
 import React from 'react';
@@ -16,10 +17,10 @@ const Index: React.FC = () => {
       <Result
         status="404"
         title="404"
-        subTitle="抱歉，您访问的页面不存在。"
+        subTitle={dict('NuwaxPC.Pages.Error404.pageNotFound')}
         extra={
           <Button type="primary" onClick={() => history.push('/')}>
-            返回首页
+            {dict('NuwaxPC.Common.Global.backHome')}
           </Button>
         }
       />

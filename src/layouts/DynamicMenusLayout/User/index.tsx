@@ -1,5 +1,6 @@
 import { USER_AVATAR_LIST } from '@/constants/menus.constants';
 import { apiLogout } from '@/services/account';
+import { dict } from '@/services/i18nRuntime';
 import { UserAvatarEnum } from '@/types/enums/menus';
 import { Popover } from 'antd';
 import classNames from 'classnames';
@@ -47,6 +48,23 @@ const User: React.FC<PropsWithChildren> = ({ children }) => {
         break;
     }
   };
+
+  const getMenuText = (type: UserAvatarEnum): string => {
+    switch (type) {
+      case UserAvatarEnum.User_Name:
+        return (
+          userInfo?.nickName ||
+          userInfo?.userName ||
+          dict('NuwaxPC.Components.UserMenu.defaultUserName')
+        );
+      case UserAvatarEnum.Setting:
+        return dict('NuwaxPC.Components.UserMenu.profile');
+      case UserAvatarEnum.Log_Out:
+        return dict('NuwaxPC.Components.UserMenu.logout');
+      default:
+        return '';
+    }
+  };
   return (
     <Popover
       placement="rightBottom"
@@ -61,15 +79,11 @@ const User: React.FC<PropsWithChildren> = ({ children }) => {
           {USER_AVATAR_LIST.map((item) => {
             const style =
               item.type === UserAvatarEnum.Log_Out ? styles['log-out'] : '';
-            // 显示用户名称或默认值
-            item.text =
-              item.type === UserAvatarEnum.User_Name
-                ? userInfo?.nickName || userInfo?.userName
-                : item.text;
             return (
               <UserActionItem
                 key={item.type}
                 {...item}
+                text={getMenuText(item.type)}
                 onClick={handlerClick}
                 className={style}
               />

@@ -205,6 +205,11 @@ const routes = [
                 component:
                   '@/pages/SystemManagement/SystemConfig/CategoryManage',
               },
+              {
+                path: 'i18n',
+                name: 'Language Management',
+                component: '@/pages/SystemManagement/SystemConfig/I18nManage',
+              },
             ],
           },
           {

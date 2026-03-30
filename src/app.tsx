@@ -8,6 +8,8 @@ import { darkThemeTokens, themeTokens } from './constants/theme.constants';
 import { APP_NAME, APP_VERSION } from './constants/version';
 import useEventPolling from './hooks/useEventPolling';
 import { request as requestCommon } from './services/common';
+import { startI18nDomTranslator } from './services/i18nDomTranslator';
+import { initI18n, syncLangFromUserInfo } from './services/i18nRuntime';
 import { apiQueryMenus } from './services/menuService';
 import { unifiedThemeService } from './services/unifiedThemeService';
 import { UserService } from './services/userService';
@@ -27,9 +29,12 @@ export interface InitialStateType {
  */
 export async function getInitialState(): Promise<InitialStateType> {
   try {
+    await initI18n();
+
     // 如果不是登录页面，执行获取用户信息和菜单数据
     if (history.location.pathname !== '/login') {
       const userInfo = await UserService.getUserInfo();
+      await syncLangFromUserInfo(userInfo);
 
       if (userInfo?.id) {
         const res = await apiQueryMenus();
@@ -40,7 +45,7 @@ export async function getInitialState(): Promise<InitialStateType> {
     }
     return { menuData: [] };
   } catch (error) {
-    console.error('getInitialState: 加载菜单数据失败', error);
+    console.error('getInitialState: failed to load menu data', error);
   }
   return { menuData: [] };
 }
@@ -173,7 +178,7 @@ const AppContainer: React.FC<{ children: React.ReactElement }> = ({
           emitEvent: false,
         }); //初始化挂载 layout navigation CSS 变量
       } catch (error) {
-        console.error('应用主题配置失败:', error);
+        console.error('Failed to apply theme config:', error);
       }
     };
 
@@ -203,6 +208,13 @@ const AppContainer: React.FC<{ children: React.ReactElement }> = ({
       );
     };
   }, [setAntdConfig]);
+
+  useEffect(() => {
+    const stop = startI18nDomTranslator();
+    return () => {
+      stop();
+    };
+  }, []);
 
   return (
     <>

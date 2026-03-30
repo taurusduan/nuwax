@@ -1,5 +1,6 @@
 import BasicLayout from '@/pages/Login/BasicLayout';
 import { apiSetPassword } from '@/services/account';
+import { dict } from '@/services/i18nRuntime';
 import type { SetPasswordFieldType } from '@/types/interfaces/login';
 import { validatePassword } from '@/utils/common';
 import { LeftOutlined } from '@ant-design/icons';
@@ -58,28 +59,39 @@ const SetPassword: React.FC = () => {
           onFinish={onFinish}
         >
           <Form.Item>
-            <h3 className={cx(styles.title)}>密码设置</h3>
+            <h3 className={cx(styles.title)}>
+              {dict('NuwaxPC.Pages.SetPassword.title')}
+            </h3>
             <p className={cx(styles['sub-title'])}>
-              请至少使用6个字符。请勿使用你登录其他网站的密码或容易被猜到的密码
+              {dict('NuwaxPC.Pages.SetPassword.description')}
             </p>
           </Form.Item>
           <Form.Item
             name="password"
             rules={[
-              { required: true, message: '请输入6位以上密码!' },
+              {
+                required: true,
+                message: dict('NuwaxPC.Pages.SetPassword.passwordRequired'),
+              },
               {
                 validator(_, value) {
                   if (!value || validatePassword(value)) {
                     return Promise.resolve();
                   }
-                  return Promise.reject(new Error('请输入正确格式的密码!'));
+                  return Promise.reject(
+                    new Error(
+                      dict('NuwaxPC.Pages.SetPassword.invalidPassword'),
+                    ),
+                  );
                 },
               },
             ]}
           >
             <Input.Password
               rootClassName={cx(styles.input)}
-              placeholder="请输入6位以上密码"
+              placeholder={dict(
+                'NuwaxPC.Pages.SetPassword.passwordPlaceholder',
+              )}
               autoComplete="off"
             />
           </Form.Item>
@@ -88,7 +100,9 @@ const SetPassword: React.FC = () => {
             rules={[
               {
                 required: true,
-                message: '请再次输入密码!',
+                message: dict(
+                  'NuwaxPC.Pages.SetPassword.confirmPasswordRequired',
+                ),
               },
               ({ getFieldValue }) => ({
                 validator(_, value) {
@@ -97,16 +111,26 @@ const SetPassword: React.FC = () => {
                     return Promise.resolve();
                   }
                   if (_password && _password !== value) {
-                    return Promise.reject(new Error('两次密码不一致!'));
+                    return Promise.reject(
+                      new Error(
+                        dict('NuwaxPC.Pages.SetPassword.passwordMismatch'),
+                      ),
+                    );
                   }
-                  return Promise.reject(new Error('请输入正确的密码!'));
+                  return Promise.reject(
+                    new Error(
+                      dict('NuwaxPC.Pages.SetPassword.confirmPasswordInvalid'),
+                    ),
+                  );
                 },
               }),
             ]}
           >
             <Input.Password
               rootClassName={cx(styles.input)}
-              placeholder="请再次输入密码"
+              placeholder={dict(
+                'NuwaxPC.Pages.SetPassword.confirmPasswordPlaceholder',
+              )}
               autoComplete="off"
             />
           </Form.Item>
@@ -118,7 +142,7 @@ const SetPassword: React.FC = () => {
               loading={loading}
               htmlType="submit"
             >
-              确定
+              {dict('NuwaxPC.Common.Global.confirm')}
             </Button>
           </Form.Item>
         </Form>
