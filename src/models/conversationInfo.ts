@@ -268,14 +268,14 @@ export default () => {
   // 处理文件列表刷新事件（在 useCallback 中直接节流， 3秒内只执行一次）
   const handleRefreshFileList = useCallback(
     throttle(
-      async (conversationId?: number) => {
-        if (!conversationId) {
+      async (cId?: number) => {
+        if (!cId) {
           return;
         }
         // 设置文件树数据加载状态
         setFileTreeDataLoading(true);
         // 查询文件列表
-        await runGetStaticFileList(conversationId);
+        await runGetStaticFileList(cId);
       },
       3000,
       { leading: true, trailing: true },

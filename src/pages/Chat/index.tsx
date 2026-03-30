@@ -622,15 +622,20 @@ const Chat: React.FC = () => {
     // conversationInfo 会无缝接管加载显示，不会出现 AgentChatEmpty 闪现
     setClearLoading(false);
 
+    // 用于绑定刷新文件列表事件的回调函数
+    const refreshFileList = () => {
+      handleRefreshFileList(id);
+    };
+
     // 监听新消息事件
     eventBus.on(EVENT_TYPE.RefreshChatMessage, handleConversationUpdate);
     // 订阅文件列表刷新事件
-    eventBus.on(EVENT_TYPE.RefreshFileList, () => handleRefreshFileList(id));
+    eventBus.on(EVENT_TYPE.RefreshFileList, refreshFileList);
 
     return () => {
       eventBus.off(EVENT_TYPE.RefreshChatMessage, handleConversationUpdate);
       // 组件卸载时取消订阅
-      eventBus.off(EVENT_TYPE.RefreshFileList, () => handleRefreshFileList(id));
+      eventBus.off(EVENT_TYPE.RefreshFileList, refreshFileList);
 
       // 组件卸载时重置全局会话状态，防止污染其他页面
       resetInit();
