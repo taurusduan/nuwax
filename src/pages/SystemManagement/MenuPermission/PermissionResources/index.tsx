@@ -1,6 +1,7 @@
 import { XProTable } from '@/components/ProComponents';
 import WorkspaceLayout from '@/components/WorkspaceLayout';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
+import { t } from '@/services/i18nRuntime';
 import { modalConfirm } from '@/utils/ant-custom';
 import { DownOutlined, PlusOutlined } from '@ant-design/icons';
 import type {
@@ -134,7 +135,7 @@ const PermissionResources: React.FC = () => {
         success: true,
       };
     } catch (error) {
-      console.error('查询权限资源列表失败', error);
+      console.error('[PermissionResources] query resource list failed', error);
       // 发生错误时也清空 draggableData
       setDraggableData([]);
       return {
@@ -164,7 +165,9 @@ const PermissionResources: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success('删除成功');
+      message.success(
+        t('NuwaxPC.Pages.SystemPermissionResources.deleteSuccess'),
+      );
       actionRef.current?.reload();
     },
   });
@@ -212,12 +215,19 @@ const PermissionResources: React.FC = () => {
 
   // 处理删除确认
   const handleDeleteConfirm = (resource: ResourceTreeNode) => {
-    modalConfirm('删除资源', `确认删除资源 "${resource.name}" 吗？`, () => {
-      runDelete(resource?.id);
-      return new Promise((resolve) => {
-        setTimeout(resolve, 300);
-      });
-    });
+    modalConfirm(
+      t('NuwaxPC.Pages.SystemPermissionResources.deleteResourceTitle'),
+      t(
+        'NuwaxPC.Pages.SystemPermissionResources.deleteResourceConfirm',
+        resource.name,
+      ),
+      () => {
+        runDelete(resource?.id);
+        return new Promise((resolve) => {
+          setTimeout(resolve, 300);
+        });
+      },
+    );
   };
 
   // 处理新增
@@ -255,9 +265,9 @@ const PermissionResources: React.FC = () => {
   // 获取资源类型显示文本
   const getResourceTypeText = (type?: ResourceTypeEnum): string => {
     if (type === ResourceTypeEnum.Module) {
-      return '模块';
+      return t('NuwaxPC.Pages.SystemPermissionResources.typeModule');
     } else {
-      return '组件';
+      return t('NuwaxPC.Pages.SystemPermissionResources.typeComponent');
     }
   };
 
@@ -281,7 +291,9 @@ const PermissionResources: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success('排序更新成功');
+      message.success(
+        t('NuwaxPC.Pages.SystemPermissionResources.sortUpdateSuccess'),
+      );
       // 标记拖拽完成，允许 postData 正常同步数据
       isDraggingRef.current = false;
       // 清空原始数据引用
@@ -714,7 +726,9 @@ const PermissionResources: React.FC = () => {
 
     if (!hasActive) {
       // 如果节点没有被正确插入，恢复原数据并提示错误
-      message.error('拖拽失败，请重试');
+      message.error(
+        t('NuwaxPC.Pages.SystemPermissionResources.dragFailedRetry'),
+      );
       isDraggingRef.current = false;
       originalDataRef.current = null;
       return;
@@ -808,7 +822,7 @@ const PermissionResources: React.FC = () => {
   // 定义表格列
   const columns: ProColumns<ResourceTreeNode & { key: number }>[] = [
     {
-      title: '排序',
+      title: t('NuwaxPC.Pages.SystemPermissionResources.columnSort'),
       key: 'sort',
       align: 'center',
       width: 80,
@@ -817,7 +831,7 @@ const PermissionResources: React.FC = () => {
       render: () => <DragHandle />,
     },
     {
-      title: '资源名称',
+      title: t('NuwaxPC.Pages.SystemPermissionResources.columnResourceName'),
       dataIndex: 'name',
       key: 'name',
       width: 200,
@@ -859,7 +873,7 @@ const PermissionResources: React.FC = () => {
       },
     },
     {
-      title: '类型',
+      title: t('NuwaxPC.Pages.SystemPermissionResources.columnType'),
       dataIndex: 'type',
       key: 'type',
       width: 100,
@@ -885,7 +899,7 @@ const PermissionResources: React.FC = () => {
       },
     },
     {
-      title: '编码',
+      title: t('NuwaxPC.Pages.SystemPermissionResources.columnCode'),
       dataIndex: 'code',
       key: 'code',
       width: 200,
@@ -893,7 +907,7 @@ const PermissionResources: React.FC = () => {
       ellipsis: true,
     },
     {
-      title: '路由路径',
+      title: t('NuwaxPC.Pages.SystemPermissionResources.columnRoutePath'),
       dataIndex: 'path',
       key: 'path',
       hideInSearch: true,
@@ -901,7 +915,7 @@ const PermissionResources: React.FC = () => {
         record.path || '--',
     },
     {
-      title: '描述',
+      title: t('NuwaxPC.Pages.SystemPermissionResources.columnDescription'),
       dataIndex: 'description',
       key: 'description',
       ellipsis: true,
@@ -909,7 +923,7 @@ const PermissionResources: React.FC = () => {
       hideInSearch: true,
     },
     {
-      title: '是否启用',
+      title: t('NuwaxPC.Pages.SystemPermissionResources.columnEnabled'),
       dataIndex: 'status',
       key: 'status',
       align: 'center',
@@ -920,7 +934,9 @@ const PermissionResources: React.FC = () => {
         <Tooltip
           title={
             record.source === ResourceSourceEnum.SystemBuiltIn
-              ? '系统内置资源不能禁用'
+              ? t(
+                  'NuwaxPC.Pages.SystemPermissionResources.systemBuiltinDisableDenied',
+                )
               : ''
           }
         >
@@ -928,8 +944,12 @@ const PermissionResources: React.FC = () => {
             checked={record.status === ResourceEnabledEnum.Enabled}
             disabled={record.source === ResourceSourceEnum.SystemBuiltIn}
             loading={updateVisibleLoadingMap[record.id] || false}
-            checkedChildren="启用"
-            unCheckedChildren="禁用"
+            checkedChildren={t(
+              'NuwaxPC.Pages.SystemPermissionResources.enabled',
+            )}
+            unCheckedChildren={t(
+              'NuwaxPC.Pages.SystemPermissionResources.disabled',
+            )}
             onChange={(checked) => {
               const newStatus = checked
                 ? ResourceEnabledEnum.Enabled
@@ -944,7 +964,7 @@ const PermissionResources: React.FC = () => {
       ),
     },
     {
-      title: '操作',
+      title: t('NuwaxPC.Pages.SystemPermissionResources.columnAction'),
       key: 'action',
       align: 'center',
       width: 200,
@@ -959,7 +979,7 @@ const PermissionResources: React.FC = () => {
                   'resource_manage',
                   'resource_manage_add',
                 )
-                  ? '无此资源权限'
+                  ? t('NuwaxPC.Pages.SystemPermissionResources.noPermission')
                   : ''
               }
             >
@@ -974,7 +994,7 @@ const PermissionResources: React.FC = () => {
                 }
                 onClick={() => handleAddChild(record)}
               >
-                新增
+                {t('NuwaxPC.Pages.SystemPermissionResources.actionAdd')}
               </Button>
             </Tooltip>
           )}
@@ -982,12 +1002,14 @@ const PermissionResources: React.FC = () => {
           <Tooltip
             title={
               record.source === ResourceSourceEnum.SystemBuiltIn
-                ? '系统内置的资源不能编辑'
+                ? t(
+                    'NuwaxPC.Pages.SystemPermissionResources.systemBuiltinEditDenied',
+                  )
                 : !hasPermissionByMenuCode(
                     'resource_manage',
                     'resource_manage_modify',
                   )
-                ? '无此资源权限'
+                ? t('NuwaxPC.Pages.SystemPermissionResources.noPermission')
                 : ''
             }
           >
@@ -1003,18 +1025,20 @@ const PermissionResources: React.FC = () => {
               }
               onClick={() => handleEdit(record)}
             >
-              编辑
+              {t('NuwaxPC.Pages.SystemPermissionResources.actionEdit')}
             </Button>
           </Tooltip>
           <Tooltip
             title={
               record.source === ResourceSourceEnum.SystemBuiltIn
-                ? '系统内置的资源不能删除'
+                ? t(
+                    'NuwaxPC.Pages.SystemPermissionResources.systemBuiltinDeleteDenied',
+                  )
                 : !hasPermissionByMenuCode(
                     'resource_manage',
                     'resource_manage_delete',
                   )
-                ? '无此资源权限'
+                ? t('NuwaxPC.Pages.SystemPermissionResources.noPermission')
                 : ''
             }
           >
@@ -1029,7 +1053,7 @@ const PermissionResources: React.FC = () => {
               }
               onClick={() => handleDeleteConfirm(record)}
             >
-              删除
+              {t('NuwaxPC.Pages.SystemPermissionResources.actionDelete')}
             </Button>
           </Tooltip>
         </Space>
@@ -1039,7 +1063,7 @@ const PermissionResources: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title="权限资源管理"
+      title={t('NuwaxPC.Pages.SystemPermissionResources.pageTitle')}
       hideScroll
       rightSlot={
         hasPermissionByMenuCode('resource_manage', 'resource_manage_add') && (
@@ -1049,7 +1073,7 @@ const PermissionResources: React.FC = () => {
             icon={<PlusOutlined />}
             onClick={handleAdd}
           >
-            新增资源
+            {t('NuwaxPC.Pages.SystemPermissionResources.addResource')}
           </Button>
         )
       }
@@ -1113,7 +1137,9 @@ const PermissionResources: React.FC = () => {
             locale={{
               emptyText: (
                 <Empty
-                  description="暂无资源数据"
+                  description={t(
+                    'NuwaxPC.Pages.SystemPermissionResources.noResourceData',
+                  )}
                   image={Empty.PRESENTED_IMAGE_SIMPLE}
                   className={cx(styles.empty)}
                 />

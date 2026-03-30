@@ -308,3 +308,100 @@
   - inventory 问题总量从 `4082` 降至 `4050`
 - 风险/阻塞：`SystemManagement/MenuPermission` 与 `Antv-X6/complexNode` 仍为后续高优先治理点
 - 下一步：继续按 inventory Top 文件逐批推进，保持“小批量 + 验证 + 留痕”节奏
+
+### 里程碑：Top 模块第九批实改（MenuPermission / AppDev Preview）
+
+- 时间：2026-03-30 19:xx
+- 任务：清理系统菜单管理链路与 AppDev 预览链路中的硬编码文案
+- 执行命令：
+  - `pnpm prettier --write ...`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx`
+    - `src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx`
+    - `src/pages/AppDev/components/Preview/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `MenuFormModal` 与 `MenuManage` 标题、表单、列头、按钮、Tooltip、成功提示统一改为 `t(...)`
+  - `Preview` 的错误提示、按钮文案、保存提示、空态“查看完整错误信息”等文案完成 key 化
+  - `Preview` 与 `MenuManage` 中被扫描命中的中文日志/注释文本已替换为英文描述
+  - inventory 问题总量从 `4050` 下降至 `3948`
+- 风险/阻塞：
+  - `Antv-X6/complexNode` 与 `nodeItem/database` 仍为 Antv 模块主要存量
+  - `AppDev` 剩余集中在 `PageEditModal/Preview` 关联子逻辑与少量工具文件
+- 下一步：继续按 Top 文件推进 `Antv-X6/complexNode`、`SystemManagement/MenuPermission` 余量、`AppDev/PageEditModal`
+
+### 里程碑：Top 模块第十批实改（Antv complexNode + MenuPermission 补齐）
+
+- 时间：2026-03-30 19:xx
+- 任务：继续压缩 Top 文件存量，重点处理 `Antv-X6/complexNode` 及菜单管理链路未覆盖文案
+- 执行命令：
+  - `pnpm prettier --write ...`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/component/complexNode.tsx`
+    - `src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx`
+    - `src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx`
+    - `src/pages/AppDev/components/Preview/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `complexNode` 的输入/提示词/问答/http 工具节点等 26 处硬编码完成 `t(...)` 接入
+  - 菜单管理与预览链路剩余提示文案统一接入 key
+  - `SystemMenuFormModal/SystemMenuManage/AppDevPreview/AntvX6ComplexNode` 中英词典已补齐
+  - inventory 问题总量从 `3948` 下降至 `3922`
+- 风险/阻塞：
+  - `Antv-X6/nodeItem` 与 `database` 仍为 Antv 下一轮重点
+  - `AppDev/PageEditModal`、`SystemManagement/MenuPermission` 仍有小批量存量
+- 下一步：继续按 inventory Top 文件推进，保持每批“改造 + 校验 + 文档留痕”
+
+### 里程碑：Top 模块第十一批实改（PermissionResources + Antv database/nodeItem）
+
+- 时间：2026-03-30 17:31
+- 任务：补齐 `SystemManagement/MenuPermission/PermissionResources` 与 `Antv-X6/database/nodeItem` 的可见文案 i18n 接入
+- 执行命令：
+  - `pnpm prettier --write ...`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/MenuPermission/PermissionResources/components/ResourceFormModal/index.tsx`
+    - `src/pages/SystemManagement/MenuPermission/PermissionResources/index.tsx`
+    - `src/pages/Antv-X6/component/database.tsx`
+    - `src/pages/Antv-X6/component/nodeItem.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `ResourceFormModal` 与 `PermissionResources` 的标题、表单、列头、按钮、Tooltip、空态、消息提示统一改为 `t(...)`
+  - `database.tsx` 与 `nodeItem.tsx` 的输入/输出、循环、变量、文本处理、SQL 生成相关可见文案完成 key 化
+  - 新增 key 已同步本地中英文默认词典，保证离线兜底与平台默认导入源一致
+  - inventory 问题总量从 `3922` 下降至 `3811`
+- 风险/阻塞：
+  - `SystemManagement/MenuPermission/PermissionResources/index.tsx` 仍存在较多中文注释（不影响运行，但会进入治理统计）
+  - `Antv-X6` 与 `AppDev` 仍有大量存量页面待持续收敛
+- 下一步：继续按 inventory Top 文件推进 `AppDev/index.tsx`、`PageEditModal` 与 `Antv-X6/library/graph/registerCustomNodes` 等大头文件
+
+### 里程碑：Top 模块第十二批实改（Antv library/registerCustomNodes）
+
+- 时间：2026-03-30 17:38
+- 任务：继续清理 `Antv-X6` 核心节点渲染文件中的可见文案与中文日志
+- 执行命令：
+  - `pnpm prettier --write ...`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/component/library.tsx`
+    - `src/pages/Antv-X6/component/registerCustomNodes.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `library.tsx` 的“知识库/搜索策略/召回数量/匹配度/输出”等文案已统一接入 `t(...)`
+  - `registerCustomNodes.tsx` 的问答节点文案、运行状态文案、异常标题、未配置提示与中文日志已完成替换
+  - 新增 `AntvX6Library` 与 `AntvX6RegisterNodes` key 域已补齐中英文默认词典
+  - inventory 问题总量从 `3811` 下降至 `3792`
+- 风险/阻塞：
+  - `AppDev/index.tsx`、`AppDev/components/PageEditModal` 仍有大量硬编码文案
+  - `Antv-X6/graph.tsx`、`runResult.tsx`、`pluginNode.tsx` 仍存在较多存量
+- 下一步：继续批量推进 `AppDev/index.tsx` 与 `PageEditModal` 的按钮/弹窗/提示语接入

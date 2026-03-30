@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-30T08:53:33.538Z
+- 生成时间：2026-03-30T09:38:14.535Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：4050
-- hardcoded 中文：4050
+- 总问题数：3792
+- hardcoded 中文：3792
 - legacy System key：0
 - invalid dict key：0
 
@@ -15,12 +15,12 @@
 
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
-| src/pages/Antv-X6 | 750 | 0 | 0 | 750 |
-| src/pages/SystemManagement | 434 | 0 | 0 | 434 |
+| src/pages/Antv-X6 | 657 | 0 | 0 | 657 |
+| src/pages/SystemManagement | 312 | 0 | 0 | 312 |
 | src/pages/EditAgent | 265 | 0 | 0 | 265 |
 | src/hooks | 186 | 0 | 0 | 186 |
-| src/pages/AppDev | 173 | 0 | 0 | 173 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
+| src/pages/AppDev | 130 | 0 | 0 | 130 |
 | src/services | 110 | 0 | 0 | 110 |
 | src/components/FileTreeView | 97 | 0 | 0 | 97 |
 | src/pages/SpaceKnowledge | 82 | 0 | 0 | 82 |
@@ -121,87 +121,87 @@
 
 ## src/pages/Antv-X6
 
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:51 -> `无`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:246 -> `输入`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:259 -> `为对话提供系统级指导，如设定人设和回复逻辑。`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:268 -> `系统提示词，可以使用{{变量名}}、{{变量名.子变量名}}、 {{变量名[数组索引]}}的方式引用输入参数中的变量`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:283 -> `向模型提供用户指令，如查询或任何基于文本输入的提问。`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:292 -> `用户提示词，可以使用{{变量名}}、{{变量名.子变量名}}、 {{变量名[数组索引]}}的方式引用输入参数中的变量`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:304 -> `输出`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:321 -> `提示词优化`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:357 -> `输入`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:366 -> `意图匹配`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:378 -> `补充提示词`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:382 -> `支持额外的系统提示词，如对意图选项做更详细的例子以增 强用户输出与意图匹配的成功率。`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:435 -> `此选项用户不可见，用户回复无关内容时走此分支`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:464 -> `输入`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:473 -> `提问问题`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:476 -> `可使用{{变量名}}的方式引用输入参数中的变量`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:493 -> `回答类型`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:513 -> `输出`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:527 -> `设置选项内容`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:555 -> `请求方法与路径`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:561 -> `请求方法`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:565 -> `请输入url地址`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:571 -> `请求内容格式`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:579 -> `请求超时配置`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:580 -> `请输入超时配置时长`
-- [hardcoded_chinese] src/pages/Antv-X6/component/complexNode.tsx:617 -> `出参`
 - [hardcoded_chinese] src/pages/Antv-X6/component/condition.tsx:176 -> `且`
 - [hardcoded_chinese] src/pages/Antv-X6/component/condition.tsx:180 -> `或`
 - [hardcoded_chinese] src/pages/Antv-X6/component/condition.tsx:252 -> `请引用参数`
-- [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:78 -> `输入`
-- [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:90 -> `删除条件`
-- [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:92 -> `更新条件`
-- [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:93 -> `查询条件`
-- [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:120 -> `且`
-- [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:124 -> `或`
-- [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:176 -> `请选择`
-- [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:226 -> `当前查询数据为空`
-- [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:254 -> `输入`
-- [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:254 -> `选择更新字段`
-- [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:260 -> `变量值`
-- [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:270 -> `请输入查询上限`
-- [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:302 -> `可以使用{{变量名}}、{{变量名.子变量名}}、 {{变量名[数组索引]}}的方式引用输出参数中的变量`
-- [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:320 -> `输出`
-- [hardcoded_chinese] src/pages/Antv-X6/component/database.tsx:341 -> `生成sql语句`
 - [hardcoded_chinese] src/pages/Antv-X6/component/graph.tsx:226 -> `, // 或者 `
 - [hardcoded_chinese] src/pages/Antv-X6/component/graph.tsx:561 -> `循环节点的开始和结束节点不能快捷添加其他节点`
-- [hardcoded_chinese] src/pages/Antv-X6/component/library.tsx:21 -> `检索关键词`
-- [hardcoded_chinese] src/pages/Antv-X6/component/library.tsx:116 -> `输入`
-- [hardcoded_chinese] src/pages/Antv-X6/component/library.tsx:154 -> `从知识库中获取知识的检索方式，不同的检索策略可以更有效地找到正确的信息，提高其生成的答案的准确性和可用性`
-- [hardcoded_chinese] src/pages/Antv-X6/component/library.tsx:162 -> `语义`
-- [hardcoded_chinese] src/pages/Antv-X6/component/library.tsx:163 -> `混合`
-- [hardcoded_chinese] src/pages/Antv-X6/component/library.tsx:164 -> `全文`
-- [hardcoded_chinese] src/pages/Antv-X6/component/library.tsx:173 -> `从知识库中返回给大模型的最大段落数，数值越大返回的内容越多`
-- [hardcoded_chinese] src/pages/Antv-X6/component/library.tsx:191 -> `根据设置的匹配度选取段落返回给大模型，低于设定匹配度的内容不会被召回`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:53 -> `输入`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:68 -> `输入`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:95 -> `返回变量`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:96 -> `返回文本`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:124 -> `输出变量`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:140 -> `可以在以下输入框中重新组织输出内容，大模型将优先使用输入框中的内容。`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:152 -> `可以使用{{变量名}}、{{变量名.子变量名}}、{{变量名[数组 索引]}}的方式引用输出参数中的变量`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:182 -> `如果引用数组，循环次数为数组的长度；如果指定次数，循环次数为指定的次数；如果选择无限循环，需配合“终止循环”节点完成循环流程。`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:211 -> `请输入循环次数，并且值为正整数`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:222 -> `循环数组`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:239 -> `变量可在多次循环中实现共享，可用于在多次循环中传递变量。`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:252 -> `输出`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:281 -> `设置变量`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:294 -> `输出变量`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:331 -> `返回每个分组中第一个非空的值`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:500 -> `字符串拼接`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:501 -> `字符串分割`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:505 -> `换行 (\\n)`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:506 -> `制表符 (\\t)`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:507 -> `句号 (。)`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:508 -> `逗号 (,)`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:509 -> `分号 (;)`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:510 -> `空格 ( )`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:563 -> `输入`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:586 -> `请选择连接符号`
-- [hardcoded_chinese] src/pages/Antv-X6/component/nodeItem.tsx:598 -> `选项名称`
-- ... 省略 670 条
+- [hardcoded_chinese] src/pages/Antv-X6/component/pluginNode.tsx:19 -> `输入`
+- [hardcoded_chinese] src/pages/Antv-X6/component/runResult.tsx:167 -> `复制`
+- [hardcoded_chinese] src/pages/Antv-X6/component/runResult.tsx:198 -> `运行中`
+- [hardcoded_chinese] src/pages/Antv-X6/component/runResult.tsx:198 -> `运行成功`
+- [hardcoded_chinese] src/pages/Antv-X6/component/runResult.tsx:198 -> `运行失败`
+- [hardcoded_chinese] src/pages/Antv-X6/component/runResult.tsx:233 -> `复制`
+- [hardcoded_chinese] src/pages/Antv-X6/component/runResult.tsx:242 -> `输入`
+- [hardcoded_chinese] src/pages/Antv-X6/component/runResult.tsx:243 -> `输出`
+- [hardcoded_chinese] src/pages/Antv-X6/component/stencil.tsx:56 -> `搜索`
+- [hardcoded_chinese] src/pages/Antv-X6/config.ts:187 -> `[Config] 当前使用方案:`
+- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:33 -> `放大 10%`
+- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:34 -> `缩小 10%`
+- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:35 -> `缩放到适配画布`
+- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:53 -> `缩放到 50%`
+- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:54 -> `缩放到 100%`
+- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:55 -> `缩放到 150%`
+- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:56 -> `缩放到 200%`
+- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:128 -> `缩放到适配画布`
+- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:169 -> `调试`
+- [hardcoded_chinese] src/pages/Antv-X6/errorList.tsx:86 -> `暂无`
+- [hardcoded_chinese] src/pages/Antv-X6/header.tsx:95 -> `已发布`
+- [hardcoded_chinese] src/pages/Antv-X6/header.tsx:95 -> `未发布`
+- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:476 -> `表单提交失败:`
+- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:974 -> `处理节点连接时发生错误:`
+- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1016 -> `循环体里请不要再添加循环体`
+- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1051 -> `处理节点创建成功后的操作失败:`
+- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1179 -> `暂不支持该类型组件`
+- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1282 -> `发布成功`
+- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1362 -> `流式请求异常:`
+- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1366 -> `连接已建立`
+- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1458 -> `流式请求异常:`
+- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1462 -> `连接已建立`
+- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1471 -> `连线不完整`
+- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1489 -> `试运行所有节点失败:`
+- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:2003 -> `加载 V3 版本...`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:67 -> `大模型`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:72 -> `调用大语言模型，使用变量和提示词生成回复`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:75 -> `插件`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:80 -> `必应搜索引擎。当你需要搜索你不知道的信息，比如天气...`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:83 -> `工作流`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:88 -> `必应搜索引擎。当你需要搜索你不知道的信息，比如天气...`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:96 -> `MCP 组件`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:101 -> `业务逻辑`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:105 -> `代码`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:110 -> `编写代码，处理输入变量来生成返回值`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:113 -> `条件分支`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:119 -> `连接多个下游分支，若设定的条件成立则仅运行对应的分支，若 均不成立则只运行“否则”分支`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:122 -> `意图识别`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:127 -> `用于用户输入的意图识别，并将其与预设意图选项进行匹配。`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:130 -> `循环`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:135 -> `用于通过设定循环次数和逻辑，重复执行一系列任务。`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:138 -> `继续循环`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:146 -> `终止循环`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:156 -> `知识&数据`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:160 -> `知识库`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:165 -> `在选定的知识中，根据输入变量召回最匹配的信息`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:168 -> `数据库`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:173 -> `可支持对数据表放开读写控制，用户可读写其他用户提交的数据， 由开发者控制`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:176 -> `变量`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:182 -> `用于读取和写入项目中的变量，变量名须与项目中的变量名相匹配`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:186 -> `长期记忆`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:191 -> `用于调用长期记忆，获取用户的个性化信息`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:196 -> `数据表`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:200 -> `数据新增`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:205 -> `对选定的数据表进行数据写入`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:208 -> `数据删除`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:213 -> `对选定的数据表根据指定ID进行数据删除`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:216 -> `数据更新`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:221 -> `对选定的数据表根据指定条件进行数据更新`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:224 -> `数据查询`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:229 -> `对选定的数据表根据指定条件进行数据查询`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:232 -> `SQL自定义`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:238 -> `可支持对数据表的查询控制，用户可查询其他用户提交的数据，由开发者控制`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:243 -> `组件&工具`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:247 -> `问答`
+- ... 省略 577 条
 
 ## src/pages/SystemManagement
 
@@ -213,79 +213,79 @@
 - [hardcoded_chinese] src/pages/SystemManagement/LogQuery/RunningLog/LogDetailDrawer/index.tsx:149 -> `复制成功`
 - [hardcoded_chinese] src/pages/SystemManagement/LogQuery/RunningLog/LogDetailDrawer/index.tsx:181 -> `日志详情`
 - [hardcoded_chinese] src/pages/SystemManagement/LogQuery/RunningLog/LogDetailDrawer/index.tsx:314 -> `暂无数据`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:63 -> `系统内置`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:64 -> `用户自定义`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:69 -> `应用内打开`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:70 -> `新标签页打开`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:104 -> `新增菜单成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:116 -> `更新菜单成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:403 -> `表单验证失败:`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:416 -> `请上传 JPG、JPEG、PNG、SVG 类型图片文件!`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:420 -> `图片大小不能超过2MB!`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:428 -> `编辑菜单`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:428 -> `新增菜单`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:431 -> `保存`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:431 -> `创建`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:446 -> `图标`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:457 -> `菜单名称`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:459 -> `请输入菜单名称`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:461 -> `请输入菜单名称`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:466 -> `父菜单`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:468 -> `请选择父菜单（无）`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:484 -> `路由路径`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:490 -> `路由路径/URL地址只能包含英文字母、数字、斜杠和URL常见特殊字符（?、#、&、=、.、_、-、:、%、@、+、空格），例如 /system/menu 或 https://example.com`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:494 -> `路由路径长度不能超过500个字符`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:508 -> `请输入路由路径，例如：/system/menu`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:513 -> `外链打开方式`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:515 -> `请选择打开方式`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:522 -> `来源`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:525 -> `请选择来源`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:532 -> `排序`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:534 -> `请输入排序`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:544 -> `是否启用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:548 -> `启用或禁用此菜单`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:552 -> `启用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:552 -> `禁用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:557 -> `描述`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:559 -> `请输入描述`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:569 -> `关联资源码`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/components/MenuFormModal/index.tsx:571 -> `选择该菜单可以访问的资源权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:134 -> `查询菜单列表失败`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:164 -> `删除成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:199 -> `删除菜单`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:291 -> `排序更新成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:724 -> `拖拽失败，请重试`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:789 -> `排序`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:798 -> `图标`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:807 -> `菜单图标`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:817 -> `菜单名称`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:859 -> `编码`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:867 -> `路由路径`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:877 -> `描述`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:885 -> `是否启用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:897 -> `启用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:898 -> `禁用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:912 -> `操作`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:923 -> `无此资源权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:943 -> `无此资源权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:962 -> `系统内置的菜单不能删除`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:964 -> `无此资源权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:987 -> `菜单管理`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/MenuManage/index.tsx:1061 -> `暂无菜单数据`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/PermissionResources/components/ResourceFormModal/index.tsx:55 -> `模块`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/PermissionResources/components/ResourceFormModal/index.tsx:56 -> `组件`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/PermissionResources/components/ResourceFormModal/index.tsx:61 -> `系统内置`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/PermissionResources/components/ResourceFormModal/index.tsx:62 -> `用户自定义`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/PermissionResources/components/ResourceFormModal/index.tsx:91 -> `新增资源成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/PermissionResources/components/ResourceFormModal/index.tsx:103 -> `更新资源成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/PermissionResources/components/ResourceFormModal/index.tsx:231 -> `表单验证失败:`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/PermissionResources/components/ResourceFormModal/index.tsx:238 -> `编辑资源`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/PermissionResources/components/ResourceFormModal/index.tsx:238 -> `新增资源`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/PermissionResources/components/ResourceFormModal/index.tsx:241 -> `保存`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/PermissionResources/components/ResourceFormModal/index.tsx:241 -> `创建`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/PermissionResources/components/ResourceFormModal/index.tsx:259 -> `资源码`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/PermissionResources/components/ResourceFormModal/index.tsx:265 -> `资源码必须以英文字母开头，只能包含字母、数字和下划线`
-- ... 省略 354 条
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:49 -> `系统内置`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:50 -> `用户自定义`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:87 -> `角色创建成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:98 -> `角色编辑成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:144 -> `表单验证失败:`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:151 -> `编辑角色`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:151 -> `新增角色`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:154 -> `保存`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:154 -> `创建`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:172 -> `角色名称`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:174 -> `请输入角色名称`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:176 -> `请输入角色名称`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:181 -> `来源`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:183 -> `请选择来源`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:191 -> `排序`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:193 -> `请输入排序`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:203 -> `状态`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:207 -> `启用或禁用此角色`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:211 -> `启用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:211 -> `禁用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:215 -> `描述`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:217 -> `请输入角色描述`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:130 -> `查询角色列表失败`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:160 -> `删除成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:208 -> `删除角色`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:268 -> `排序更新成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:340 -> `排序`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:349 -> `角色名称`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:357 -> `编码`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:364 -> `描述`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:375 -> `启用或禁用此角色`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:392 -> `系统内置的角色不能禁用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:399 -> `启用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:400 -> `禁用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:408 -> `操作`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:423 -> `系统内置的角色不能编辑`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:425 -> `无此资源权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:433 -> `系统内置的角色不能删除`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:435 -> `无此资源权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:442 -> `编辑`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:448 -> `删除`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:471 -> `无此资源权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:492 -> `无此资源权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:513 -> `无此资源权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:545 -> `角色管理`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:605 -> `暂无角色数据`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:49 -> `系统内置`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:50 -> `用户自定义`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:75 -> `新增用户组成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:87 -> `更新用户组成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:150 -> `表单验证失败:`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:157 -> `编辑用户组`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:157 -> `新增用户组`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:160 -> `保存`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:160 -> `创建`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:178 -> `用户组名称`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:180 -> `请输入用户组名称`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:182 -> `请输入用户组名称`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:188 -> `最大用户数`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:190 -> `请输入最大用户数`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:192 -> `最大值为2147483647`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:197 -> `请输入最大用户数`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:206 -> `来源`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:208 -> `请选择来源`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:217 -> `排序`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:222 -> `请输入排序`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:232 -> `状态`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:236 -> `启用或禁用此用户组`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:240 -> `启用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:240 -> `禁用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:245 -> `描述`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:247 -> `请输入用户组描述`
+- ... 省略 232 条
 
 ## src/pages/EditAgent
 
@@ -455,90 +455,6 @@
 - [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:95 -> `数据资源创建成功`
 - ... 省略 106 条
 
-## src/pages/AppDev
-
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ChatInputHome/index.tsx:411 -> `正在处理中，不能发送消息`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ChatInputHome/index.tsx:660 -> `上传图片失败:`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:181 -> `待执行`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:182 -> `执行中`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:183 -> `已完成`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:184 -> `失败`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ReactScrollToBottomContainer/index.tsx:239 -> `加载更多历史会话`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ReactScrollToBottomContainer/index.tsx:251 -> `[handleScrollTo] 滚动位置恢复:`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ReactScrollToBottomContainer/index.tsx:279 -> `[handleScrollTo] 滚动位置偏差，进行调整:`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ReactScrollToBottomContainer/index.tsx:428 -> `[ScrollController] atBottom 状态:`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/genAppDevPlugin.tsx:36 -> `❌ [genAppDevPlugin] Plan 数据解析失败:`
-- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/genAppDevPlugin.tsx:71 -> `❌ [genAppDevPlugin] ToolCall 数据解析失败:`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-border.ts:117 -> `; // border 默认是 1px，返回 Tailwind 边框宽度值 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-letterSpacing.ts:39 -> ` } 或 { label: `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-lineHeight.ts:42 -> ` } 或 { label: `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:30 -> ` 可能对应 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:30 -> ` 或 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:30 -> `，优先返回 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:33 -> ` 比 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:30 -> ` 可能对应 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:30 -> ` 或 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:30 -> `，优先返回 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:33 -> ` 比 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-space.ts:214 -> ` 中的 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:28 -> `重置`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:33 -> `靠左`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:38 -> `居中`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:43 -> `靠右`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:48 -> `两端对齐`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:76 -> ` } 或 { label: `
-- [hardcoded_chinese] src/pages/AppDev/components/DevLogConsole/index.tsx:125 -> `点击添加到聊天框`
-- [hardcoded_chinese] src/pages/AppDev/components/DevLogConsole/index.tsx:263 -> `最新日志包含错误`
-- [hardcoded_chinese] src/pages/AppDev/components/DevLogConsole/index.tsx:286 -> `刷新日志`
-- [hardcoded_chinese] src/pages/AppDev/components/DevLogConsole/index.tsx:294 -> `清空日志`
-- [hardcoded_chinese] src/pages/AppDev/components/DevLogConsole/index.tsx:302 -> `关闭日志控制台`
-- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/AppDevFileTree/index.tsx:68 -> `重命名失败:`
-- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/FileContextMenu/index.tsx:124 -> `重命名`
-- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/FileContextMenu/index.tsx:131 -> `上传文件`
-- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/FileContextMenu/index.tsx:142 -> `删除`
-- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/FileContextMenu/index.tsx:152 -> `导入项目`
-- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/FileContextMenu/index.tsx:159 -> `上传文件`
-- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/index.tsx:172 -> `展开文件树`
-- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/index.tsx:172 -> `收起文件树`
-- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/index.tsx:206 -> `正在加载...`
-- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/index.tsx:207 -> `请稍候`
-- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/index.tsx:216 -> `导入项目`
-- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:39 -> `编辑成功`
-- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:108 -> `编辑应用`
-- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:128 -> `名称`
-- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:129 -> `请输入名称`
-- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:131 -> `请输入名称`
-- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:135 -> `描述`
-- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:136 -> `请输入描述`
-- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:139 -> `图标`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:205 -> `开发服务器URL不可用`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:235 -> `开发服务器URL不可用`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:238 -> `重试失败，请检查网络连接`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:304 -> `服务器错误 (${formatErrorCode(serverErrorCode)})`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:306 -> `开发服务器启动失败 (${formatErrorCode(serverErrorCode)})`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:308 -> `启动中`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:319 -> `正在导入项目并重启开发服务器，请稍候...`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:321 -> `正在启动开发环境，请稍候...`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:323 -> `正在生成，请稍候...`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:345 -> `刷新中...`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:345 -> `刷新`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:356 -> `重启服务器`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:369 -> `重启中...`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:369 -> `重启服务`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:409 -> `请先保存或重置修改, 再刷新预览`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:418 -> `开发服务器URL不可用`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:422 -> `iframeRef.current 为空，无法刷新`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:452 -> `[Preview] iframe 内部回退失败（可能是跨域限制）:`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:465 -> `截图 iframe 内容55555`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:481 -> `[Preview] 创建新的 iframe 元素进行截图`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:495 -> `[Preview] iframe 加载完成，开始截图`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:507 -> `[Preview] 无法访问 iframe 文档`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:532 -> `[Preview] 无法生成图片 blob`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:566 -> `[Preview] 图片上传过程中发生错误:`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:575 -> `[Preview] 截图失败:`
-- [hardcoded_chinese] src/pages/AppDev/components/Preview/index.tsx:586 -> `[Preview] iframe 加载失败`
-- ... 省略 93 条
-
 ## src/components/business-component
 
 - [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:134 -> `查看完整内容`
@@ -622,6 +538,90 @@
 - [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:94 -> `复制模板`
 - [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:265 -> `[PagePreviewIframe] popstate 事件：找不到目标 URL，已添加到历史记录`
 - ... 省略 64 条
+
+## src/pages/AppDev
+
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ChatInputHome/index.tsx:411 -> `正在处理中，不能发送消息`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ChatInputHome/index.tsx:660 -> `上传图片失败:`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:181 -> `待执行`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:182 -> `执行中`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:183 -> `已完成`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx:184 -> `失败`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ReactScrollToBottomContainer/index.tsx:239 -> `加载更多历史会话`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ReactScrollToBottomContainer/index.tsx:251 -> `[handleScrollTo] 滚动位置恢复:`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ReactScrollToBottomContainer/index.tsx:279 -> `[handleScrollTo] 滚动位置偏差，进行调整:`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/components/ReactScrollToBottomContainer/index.tsx:428 -> `[ScrollController] atBottom 状态:`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/genAppDevPlugin.tsx:36 -> `❌ [genAppDevPlugin] Plan 数据解析失败:`
+- [hardcoded_chinese] src/pages/AppDev/components/ChatArea/genAppDevPlugin.tsx:71 -> `❌ [genAppDevPlugin] ToolCall 数据解析失败:`
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-border.ts:117 -> `; // border 默认是 1px，返回 Tailwind 边框宽度值 `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-letterSpacing.ts:39 -> ` } 或 { label: `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-lineHeight.ts:42 -> ` } 或 { label: `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:30 -> ` 可能对应 `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:30 -> ` 或 `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:30 -> `，优先返回 `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:33 -> ` 比 `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:30 -> ` 可能对应 `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:30 -> ` 或 `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:30 -> `，优先返回 `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:33 -> ` 比 `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-space.ts:214 -> ` 中的 `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:28 -> `重置`
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:33 -> `靠左`
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:38 -> `居中`
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:43 -> `靠右`
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:48 -> `两端对齐`
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:76 -> ` } 或 { label: `
+- [hardcoded_chinese] src/pages/AppDev/components/DevLogConsole/index.tsx:125 -> `点击添加到聊天框`
+- [hardcoded_chinese] src/pages/AppDev/components/DevLogConsole/index.tsx:263 -> `最新日志包含错误`
+- [hardcoded_chinese] src/pages/AppDev/components/DevLogConsole/index.tsx:286 -> `刷新日志`
+- [hardcoded_chinese] src/pages/AppDev/components/DevLogConsole/index.tsx:294 -> `清空日志`
+- [hardcoded_chinese] src/pages/AppDev/components/DevLogConsole/index.tsx:302 -> `关闭日志控制台`
+- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/AppDevFileTree/index.tsx:68 -> `重命名失败:`
+- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/FileContextMenu/index.tsx:124 -> `重命名`
+- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/FileContextMenu/index.tsx:131 -> `上传文件`
+- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/FileContextMenu/index.tsx:142 -> `删除`
+- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/FileContextMenu/index.tsx:152 -> `导入项目`
+- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/FileContextMenu/index.tsx:159 -> `上传文件`
+- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/index.tsx:172 -> `展开文件树`
+- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/index.tsx:172 -> `收起文件树`
+- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/index.tsx:206 -> `正在加载...`
+- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/index.tsx:207 -> `请稍候`
+- [hardcoded_chinese] src/pages/AppDev/components/FileTreePanel/index.tsx:216 -> `导入项目`
+- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:39 -> `编辑成功`
+- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:108 -> `编辑应用`
+- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:128 -> `名称`
+- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:129 -> `请输入名称`
+- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:131 -> `请输入名称`
+- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:135 -> `描述`
+- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:136 -> `请输入描述`
+- [hardcoded_chinese] src/pages/AppDev/components/PageEditModal/index.tsx:139 -> `图标`
+- [hardcoded_chinese] src/pages/AppDev/hooks/useDevLogs.ts:209 -> `获取日志失败`
+- [hardcoded_chinese] src/pages/AppDev/hooks/useDevLogs.ts:231 -> `取消轮询时出错:`
+- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:140 -> `[useReactScrollToBottom] 滚动到底部失败:`
+- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:152 -> `[useReactScrollToBottom] 检查是否在底部`
+- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:155 -> `[useReactScrollToBottom] 检查滚动位置失败:`
+- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:167 -> `[useReactScrollToBottom] 检查滚动位置失败:`
+- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:214 -> `[useReactScrollToBottom] 处理用户滚动事件失败:`
+- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:298 -> `[useReactScrollToBottom] 处理新消息失败:`
+- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:503 -> `[ScrollPositionObserver] 未找到滚动容器`
+- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:557 -> `[ScrollPositionObserver] 备用监听器未找到滚动容器`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:403 -> `输入内容为空`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:413 -> `[AppDev] ⚠️ 自动发送已在处理中，忽略重复调用`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:438 -> `[AppDev] ✅ 自动发送消息事件已触发，requestId: ${currentRequestIdRef.current}`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:444 -> `[AppDev] ⚠️ 聊天正在加载中，取消自动发送`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:459 -> `日志已添加,等待发送`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:626 -> `[AppDev] 截图上传过程中发生错误:`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:636 -> `项目ID不存在或无效，无法部署`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:655 -> `成功发布成组件`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:676 -> `发布失败`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:680 -> `发布失败,先尝试解决错误后重试`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:700 -> `项目ID不存在或无效，无法部署`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:731 -> `项目ID不存在或无效，无法导出`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:742 -> `导出失败`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:776 -> `项目导出成功！`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:782 -> `导出过程中发生未知错误`
+- [hardcoded_chinese] src/pages/AppDev/index.tsx:784 -> `导出失败: ${errorMessage}`
+- ... 省略 50 条
 
 ## src/services
 

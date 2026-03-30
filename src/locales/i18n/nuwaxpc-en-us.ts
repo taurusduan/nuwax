@@ -630,4 +630,344 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Are you sure you want to delete the loop node?',
   'NuwaxPC.Pages.AntvX6EventHandlers.confirm': 'Confirm',
   'NuwaxPC.Pages.AntvX6EventHandlers.cancel': 'Cancel',
+  'NuwaxPC.Pages.SystemMenuFormModal.addSuccess': 'Menu created successfully',
+  'NuwaxPC.Pages.SystemMenuFormModal.updateSuccess':
+    'Menu updated successfully',
+  'NuwaxPC.Pages.SystemMenuFormModal.sourceSystemBuiltIn': 'System Built-in',
+  'NuwaxPC.Pages.SystemMenuFormModal.sourceUserDefined': 'User Defined',
+  'NuwaxPC.Pages.SystemMenuFormModal.openInCurrentTab': 'Open in App',
+  'NuwaxPC.Pages.SystemMenuFormModal.openInNewTab': 'Open in New Tab',
+  'NuwaxPC.Pages.SystemMenuFormModal.imageTypeInvalid':
+    'Please upload JPG, JPEG, PNG, or SVG image files',
+  'NuwaxPC.Pages.SystemMenuFormModal.imageSizeInvalid':
+    'Image size cannot exceed 2MB',
+  'NuwaxPC.Pages.SystemMenuFormModal.editTitle': 'Edit Menu',
+  'NuwaxPC.Pages.SystemMenuFormModal.createTitle': 'Create Menu',
+  'NuwaxPC.Pages.SystemMenuFormModal.save': 'Save',
+  'NuwaxPC.Pages.SystemMenuFormModal.create': 'Create',
+  'NuwaxPC.Pages.SystemMenuFormModal.icon': 'Icon',
+  'NuwaxPC.Pages.SystemMenuFormModal.menuName': 'Menu Name',
+  'NuwaxPC.Pages.SystemMenuFormModal.menuNameRequired':
+    'Please enter menu name',
+  'NuwaxPC.Pages.SystemMenuFormModal.menuNamePlaceholder':
+    'Please enter menu name',
+  'NuwaxPC.Pages.SystemMenuFormModal.parentMenu': 'Parent Menu',
+  'NuwaxPC.Pages.SystemMenuFormModal.parentMenuPlaceholder':
+    'Please select parent menu (None)',
+  'NuwaxPC.Pages.SystemMenuFormModal.routePath': 'Route Path',
+  'NuwaxPC.Pages.SystemMenuFormModal.routePathPatternInvalid':
+    'Route path/URL can only contain letters, numbers, slashes, and common URL symbols (? # & = . _ - : % @ + space), e.g. /system/menu or https://example.com',
+  'NuwaxPC.Pages.SystemMenuFormModal.routePathLengthInvalid':
+    'Route path length cannot exceed 500 characters',
+  'NuwaxPC.Pages.SystemMenuFormModal.routePathTipStatic':
+    'Static route, e.g. /system/menu',
+  'NuwaxPC.Pages.SystemMenuFormModal.routePathTipDynamic':
+    'Dynamic route, e.g. /space/:spaceId/develop',
+  'NuwaxPC.Pages.SystemMenuFormModal.routePathTipExternal':
+    'External URL, e.g. https://example.com',
+  'NuwaxPC.Pages.SystemMenuFormModal.routePathPlaceholder':
+    'Please enter route path, e.g. /system/menu',
+  'NuwaxPC.Pages.SystemMenuFormModal.externalOpenType':
+    'External Link Open Type',
+  'NuwaxPC.Pages.SystemMenuFormModal.openTypePlaceholder':
+    'Please select open type',
+  'NuwaxPC.Pages.SystemMenuFormModal.source': 'Source',
+  'NuwaxPC.Pages.SystemMenuFormModal.sourcePlaceholder': 'Please select source',
+  'NuwaxPC.Pages.SystemMenuFormModal.sort': 'Sort',
+  'NuwaxPC.Pages.SystemMenuFormModal.sortPlaceholder': 'Please enter sort',
+  'NuwaxPC.Pages.SystemMenuFormModal.enable': 'Enable',
+  'NuwaxPC.Pages.SystemMenuFormModal.enableTooltip':
+    'Enable or disable this menu',
+  'NuwaxPC.Pages.SystemMenuFormModal.enabled': 'Enabled',
+  'NuwaxPC.Pages.SystemMenuFormModal.disabled': 'Disabled',
+  'NuwaxPC.Pages.SystemMenuFormModal.description': 'Description',
+  'NuwaxPC.Pages.SystemMenuFormModal.descriptionPlaceholder':
+    'Please enter description',
+  'NuwaxPC.Pages.SystemMenuFormModal.bindResourceCode': 'Bind Resource Codes',
+  'NuwaxPC.Pages.SystemMenuFormModal.bindResourceCodeTooltip':
+    'Select resource permissions accessible by this menu',
+  'NuwaxPC.Pages.SystemMenuManage.deleteSuccess': 'Deleted successfully',
+  'NuwaxPC.Pages.SystemMenuManage.deleteMenuTitle': 'Delete Menu',
+  'NuwaxPC.Pages.SystemMenuManage.deleteMenuConfirm':
+    'Are you sure to delete menu "{0}"?',
+  'NuwaxPC.Pages.SystemMenuManage.sortUpdateSuccess':
+    'Sort updated successfully',
+  'NuwaxPC.Pages.SystemMenuManage.dragFailedRetry': 'Drag failed, please retry',
+  'NuwaxPC.Pages.SystemMenuManage.columnSort': 'Sort',
+  'NuwaxPC.Pages.SystemMenuManage.columnMenuName': 'Menu Name',
+  'NuwaxPC.Pages.SystemMenuManage.columnCode': 'Code',
+  'NuwaxPC.Pages.SystemMenuManage.columnRoutePath': 'Route Path',
+  'NuwaxPC.Pages.SystemMenuManage.columnDescription': 'Description',
+  'NuwaxPC.Pages.SystemMenuManage.columnEnabled': 'Enabled',
+  'NuwaxPC.Pages.SystemMenuManage.enabled': 'Enable',
+  'NuwaxPC.Pages.SystemMenuManage.disabled': 'Disable',
+  'NuwaxPC.Pages.SystemMenuManage.columnAction': 'Action',
+  'NuwaxPC.Pages.SystemMenuManage.noPermission': 'No permission',
+  'NuwaxPC.Pages.SystemMenuManage.actionAdd': 'Add',
+  'NuwaxPC.Pages.SystemMenuManage.actionEdit': 'Edit',
+  'NuwaxPC.Pages.SystemMenuManage.actionDelete': 'Delete',
+  'NuwaxPC.Pages.SystemMenuManage.systemBuiltinDeleteDisabled':
+    'System built-in menus cannot be deleted',
+  'NuwaxPC.Pages.SystemMenuManage.pageTitle': 'Menu Management',
+  'NuwaxPC.Pages.SystemMenuManage.addMenu': 'Add Menu',
+  'NuwaxPC.Pages.SystemMenuManage.noMenuData': 'No menu data',
+  'NuwaxPC.Pages.AppDevPreview.devServerUrlUnavailable':
+    'Development server URL is unavailable',
+  'NuwaxPC.Pages.AppDevPreview.retryFailedCheckNetwork':
+    'Retry failed, please check network connection',
+  'NuwaxPC.Pages.AppDevPreview.serverErrorWithCode': 'Server Error ({0})',
+  'NuwaxPC.Pages.AppDevPreview.serverStartFailedWithCode':
+    'Development server start failed ({0})',
+  'NuwaxPC.Pages.AppDevPreview.starting': 'Starting',
+  'NuwaxPC.Pages.AppDevPreview.importingAndRestarting':
+    'Importing project and restarting development server, please wait...',
+  'NuwaxPC.Pages.AppDevPreview.startingEnvironment':
+    'Starting development environment, please wait...',
+  'NuwaxPC.Pages.AppDevPreview.developingPleaseWait':
+    'Generating, please wait...',
+  'NuwaxPC.Pages.AppDevPreview.refreshing': 'Refreshing...',
+  'NuwaxPC.Pages.AppDevPreview.refresh': 'Refresh',
+  'NuwaxPC.Pages.AppDevPreview.restartServer': 'Restart Server',
+  'NuwaxPC.Pages.AppDevPreview.restarting': 'Restarting...',
+  'NuwaxPC.Pages.AppDevPreview.restartService': 'Restart Service',
+  'NuwaxPC.Pages.AppDevPreview.saveOrResetBeforeRefresh':
+    'Please save or reset changes before refreshing preview',
+  'NuwaxPC.Pages.AppDevPreview.previewLoadFailedCheckServerNetwork':
+    'Preview failed to load, please check development server status or network connection',
+  'NuwaxPC.Pages.AppDevPreview.projectIdMissingCannotSave':
+    'Missing project ID, unable to save',
+  'NuwaxPC.Pages.AppDevPreview.noPendingChanges': 'No pending changes',
+  'NuwaxPC.Pages.AppDevPreview.processFileError': 'Error processing file {0}',
+  'NuwaxPC.Pages.AppDevPreview.saveSuccess': 'Saved successfully',
+  'NuwaxPC.Pages.AppDevPreview.saveFailedCheckConsole':
+    'Save failed, please check console error messages',
+  'NuwaxPC.Pages.AppDevPreview.viewFullErrorInfo': 'View full error details',
+  'NuwaxPC.Pages.AppDevPreview.unsavedChanges': 'Unsaved changes',
+  'NuwaxPC.Pages.AppDevPreview.reset': 'Reset',
+  'NuwaxPC.Pages.AppDevPreview.save': 'Save',
+  'NuwaxPC.Pages.AntvX6ComplexNode.none': 'None',
+  'NuwaxPC.Pages.AntvX6ComplexNode.skills': 'Skills',
+  'NuwaxPC.Pages.AntvX6ComplexNode.input': 'Input',
+  'NuwaxPC.Pages.AntvX6ComplexNode.systemPromptTooltip':
+    'Provide system-level instructions for the conversation, such as role setting and response logic.',
+  'NuwaxPC.Pages.AntvX6ComplexNode.systemPromptPlaceholder':
+    'System prompt can reference input variables with {{var}}, {{var.child}}, or {{var[index]}}.',
+  'NuwaxPC.Pages.AntvX6ComplexNode.userPromptTooltip':
+    'Provide user instructions to the model, such as queries or text-based questions.',
+  'NuwaxPC.Pages.AntvX6ComplexNode.userPromptPlaceholder':
+    'User prompt can reference input variables with {{var}}, {{var.child}}, or {{var[index]}}.',
+  'NuwaxPC.Pages.AntvX6ComplexNode.output': 'Output',
+  'NuwaxPC.Pages.AntvX6ComplexNode.promptOptimizeTitle': 'Prompt Optimization',
+  'NuwaxPC.Pages.AntvX6ComplexNode.intentMatchTitle': 'Intent Match',
+  'NuwaxPC.Pages.AntvX6ComplexNode.extraPromptTitle': 'Extra Prompt',
+  'NuwaxPC.Pages.AntvX6ComplexNode.extraPromptPlaceholder':
+    'Support additional system prompts, for example, adding detailed examples for intent options to improve matching success.',
+  'NuwaxPC.Pages.AntvX6ComplexNode.questionTitle': 'Question',
+  'NuwaxPC.Pages.AntvX6ComplexNode.questionPlaceholder':
+    'You can reference input variables with {{var}}.',
+  'NuwaxPC.Pages.AntvX6ComplexNode.answerTypeLabel': 'Answer Type',
+  'NuwaxPC.Pages.AntvX6ComplexNode.answerTypeText': 'Direct Answer',
+  'NuwaxPC.Pages.AntvX6ComplexNode.answerTypeSelect': 'Option Answer',
+  'NuwaxPC.Pages.AntvX6ComplexNode.optionContentTitle': 'Set Option Content',
+  'NuwaxPC.Pages.AntvX6ComplexNode.requestMethodAndPath':
+    'Request Method and Path',
+  'NuwaxPC.Pages.AntvX6ComplexNode.requestMethodPlaceholder': 'Request Method',
+  'NuwaxPC.Pages.AntvX6ComplexNode.urlPlaceholder': 'Please enter URL',
+  'NuwaxPC.Pages.AntvX6ComplexNode.requestContentTypeLabel':
+    'Request Content Type',
+  'NuwaxPC.Pages.AntvX6ComplexNode.requestTimeoutLabel': 'Request Timeout',
+  'NuwaxPC.Pages.AntvX6ComplexNode.requestTimeoutPlaceholder':
+    'Please enter timeout duration',
+  'NuwaxPC.Pages.AntvX6ComplexNode.inputParams': 'Input Params',
+  'NuwaxPC.Pages.AntvX6ComplexNode.outputParams': 'Output Params',
+  'NuwaxPC.Pages.AntvX6Database.addCondition': 'Add Condition',
+  'NuwaxPC.Pages.AntvX6Database.and': 'AND',
+  'NuwaxPC.Pages.AntvX6Database.deleteCondition': 'Delete Condition',
+  'NuwaxPC.Pages.AntvX6Database.emptyConditionData':
+    'Current query data is empty',
+  'NuwaxPC.Pages.AntvX6Database.generateSqlTitle': 'Generate SQL Statement',
+  'NuwaxPC.Pages.AntvX6Database.or': 'OR',
+  'NuwaxPC.Pages.AntvX6Database.queryCondition': 'Query Condition',
+  'NuwaxPC.Pages.AntvX6Database.queryLimit': 'Query Limit',
+  'NuwaxPC.Pages.AntvX6Database.queryLimitPlaceholder':
+    'Please enter query limit',
+  'NuwaxPC.Pages.AntvX6Database.selectPlaceholder': 'Please select',
+  'NuwaxPC.Pages.AntvX6Database.selectUpdateFields': 'Select Update Fields',
+  'NuwaxPC.Pages.AntvX6Database.sqlPlaceholder':
+    'You can reference output variables with {{var}}, {{var.child}}, and {{var[index]}}.',
+  'NuwaxPC.Pages.AntvX6Database.table': 'Data Table',
+  'NuwaxPC.Pages.AntvX6Database.updateCondition': 'Update Condition',
+  'NuwaxPC.Pages.AntvX6Database.variableValue': 'Variable Value',
+  'NuwaxPC.Pages.AntvX6NodeItem.add': 'Add',
+  'NuwaxPC.Pages.AntvX6NodeItem.addGroup': 'Add Group',
+  'NuwaxPC.Pages.AntvX6NodeItem.aggregationStrategy': 'Aggregation Strategy',
+  'NuwaxPC.Pages.AntvX6NodeItem.arrayJoinSymbolDescription':
+    'Use symbols below to auto-join each item in an array.',
+  'NuwaxPC.Pages.AntvX6NodeItem.arrayJoinSymbolSetting':
+    'Array Join Symbol Settings',
+  'NuwaxPC.Pages.AntvX6NodeItem.code': 'Code',
+  'NuwaxPC.Pages.AntvX6NodeItem.comma': 'Comma (,)',
+  'NuwaxPC.Pages.AntvX6NodeItem.delimiter': 'Delimiter',
+  'NuwaxPC.Pages.AntvX6NodeItem.firstNonNullOfEachGroup':
+    'Return the first non-null value in each group',
+  'NuwaxPC.Pages.AntvX6NodeItem.fullStop': 'Full Stop (.)',
+  'NuwaxPC.Pages.AntvX6NodeItem.groupConfig': 'Group Configuration',
+  'NuwaxPC.Pages.AntvX6NodeItem.inputVariablePlaceholder':
+    'You can reference input variables with {{var}}.',
+  'NuwaxPC.Pages.AntvX6NodeItem.intermediateVariable': 'Intermediate Variable',
+  'NuwaxPC.Pages.AntvX6NodeItem.intermediateVariableTooltip':
+    'Variables can be shared across loop iterations and used to pass values between iterations.',
+  'NuwaxPC.Pages.AntvX6NodeItem.joinSymbol': 'Join Symbol',
+  'NuwaxPC.Pages.AntvX6NodeItem.loopArray': 'Loop Array',
+  'NuwaxPC.Pages.AntvX6NodeItem.loopSetting': 'Loop Settings',
+  'NuwaxPC.Pages.AntvX6NodeItem.loopSettingTooltip':
+    'If an array is referenced, loop count equals the array length; if a fixed count is set, it uses that count; for infinite loop, combine with the "Break Loop" node.',
+  'NuwaxPC.Pages.AntvX6NodeItem.loopTimes': 'Loop Times',
+  'NuwaxPC.Pages.AntvX6NodeItem.loopTimesPlaceholder':
+    'Please enter loop times as a positive integer',
+  'NuwaxPC.Pages.AntvX6NodeItem.newline': 'Newline (\\n)',
+  'NuwaxPC.Pages.AntvX6NodeItem.optionNamePlaceholder': 'Option Name',
+  'NuwaxPC.Pages.AntvX6NodeItem.optionValuePlaceholder': 'Option Value',
+  'NuwaxPC.Pages.AntvX6NodeItem.outputContent': 'Output Content',
+  'NuwaxPC.Pages.AntvX6NodeItem.outputContentPlaceholder':
+    'You can reference output variables with {{var}}, {{var.child}}, and {{var[index]}}.',
+  'NuwaxPC.Pages.AntvX6NodeItem.outputContentTooltip':
+    'You can reorganize output content in the input below. The model will prioritize this content.',
+  'NuwaxPC.Pages.AntvX6NodeItem.outputVariable': 'Output Variable',
+  'NuwaxPC.Pages.AntvX6NodeItem.returnText': 'Return Text',
+  'NuwaxPC.Pages.AntvX6NodeItem.returnVariable': 'Return Variable',
+  'NuwaxPC.Pages.AntvX6NodeItem.selectJoinSymbol': 'Please select join symbol',
+  'NuwaxPC.Pages.AntvX6NodeItem.selectSplitSymbol':
+    'Please select split symbol',
+  'NuwaxPC.Pages.AntvX6NodeItem.semicolon': 'Semicolon (;)',
+  'NuwaxPC.Pages.AntvX6NodeItem.setVariable': 'Set Variable',
+  'NuwaxPC.Pages.AntvX6NodeItem.space': 'Space ( )',
+  'NuwaxPC.Pages.AntvX6NodeItem.stringConcat': 'String Concat',
+  'NuwaxPC.Pages.AntvX6NodeItem.stringSplit': 'String Split',
+  'NuwaxPC.Pages.AntvX6NodeItem.tab': 'Tab (\\t)',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.addSuccess':
+    'Resource created successfully',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.code': 'Resource Code',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.codePatternInvalid':
+    'Resource code must start with a letter and can only contain letters, numbers, and underscores',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.codePlaceholder':
+    'Please enter resource code',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.codeTooltip':
+    'Resource code identifies a resource. It can be empty and will be auto-generated by system. Only letters, numbers, and underscores are allowed.',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.create': 'Create',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.createTitle':
+    'Create Resource',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.description': 'Description',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.descriptionPlaceholder':
+    'Please enter description',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.editTitle': 'Edit Resource',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.enabled': 'Enabled',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.enabledTooltip':
+    'Whether to enable this resource',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.name': 'Resource Name',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.namePlaceholder':
+    'Please enter resource name',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.nameRequired':
+    'Please enter resource name',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.parentNode': 'Parent Node',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.parentNodePlaceholder':
+    'Please select parent node (None)',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.routePath': 'Route Path',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.routePathLengthInvalid':
+    'Route path length cannot exceed 500 characters',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.routePathPatternInvalid':
+    'Route path must start with a slash and can only contain letters, numbers, slashes, and common URL special characters (? # & = . _ - : % @ + space)',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.routePathPlaceholder':
+    'Please enter route path, e.g. /system/menu',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.routePathTooltip':
+    'Static route e.g. /system/menu; dynamic route e.g. /system/menu/:id',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.save': 'Save',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.sort': 'Sort',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.sortPlaceholder':
+    'Please enter sort',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.source': 'Source',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.sourcePlaceholder':
+    'Please select source',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.sourceSystemBuiltIn':
+    'System Built-in',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.sourceUserDefined':
+    'User Defined',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.switchDisabled': 'Disabled',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.switchEnabled': 'Enabled',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.type': 'Resource Type',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.typeComponent': 'Component',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.typeModule': 'Module',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.typePlaceholder':
+    'Please select resource type',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.typeRequired':
+    'Please select resource type',
+  'NuwaxPC.Pages.SystemPermissionResourceFormModal.updateSuccess':
+    'Resource updated successfully',
+  'NuwaxPC.Pages.SystemPermissionResources.actionAdd': 'Add',
+  'NuwaxPC.Pages.SystemPermissionResources.actionDelete': 'Delete',
+  'NuwaxPC.Pages.SystemPermissionResources.actionEdit': 'Edit',
+  'NuwaxPC.Pages.SystemPermissionResources.addResource': 'Add Resource',
+  'NuwaxPC.Pages.SystemPermissionResources.columnAction': 'Action',
+  'NuwaxPC.Pages.SystemPermissionResources.columnCode': 'Code',
+  'NuwaxPC.Pages.SystemPermissionResources.columnDescription': 'Description',
+  'NuwaxPC.Pages.SystemPermissionResources.columnEnabled': 'Enabled',
+  'NuwaxPC.Pages.SystemPermissionResources.columnResourceName': 'Resource Name',
+  'NuwaxPC.Pages.SystemPermissionResources.columnRoutePath': 'Route Path',
+  'NuwaxPC.Pages.SystemPermissionResources.columnSort': 'Sort',
+  'NuwaxPC.Pages.SystemPermissionResources.columnType': 'Type',
+  'NuwaxPC.Pages.SystemPermissionResources.deleteResourceConfirm':
+    'Are you sure to delete resource "{0}"?',
+  'NuwaxPC.Pages.SystemPermissionResources.deleteResourceTitle':
+    'Delete Resource',
+  'NuwaxPC.Pages.SystemPermissionResources.deleteSuccess':
+    'Deleted successfully',
+  'NuwaxPC.Pages.SystemPermissionResources.disabled': 'Disable',
+  'NuwaxPC.Pages.SystemPermissionResources.dragFailedRetry':
+    'Drag failed, please retry',
+  'NuwaxPC.Pages.SystemPermissionResources.enabled': 'Enable',
+  'NuwaxPC.Pages.SystemPermissionResources.noPermission': 'No permission',
+  'NuwaxPC.Pages.SystemPermissionResources.noResourceData': 'No resource data',
+  'NuwaxPC.Pages.SystemPermissionResources.pageTitle':
+    'Permission Resource Management',
+  'NuwaxPC.Pages.SystemPermissionResources.sortUpdateSuccess':
+    'Sort updated successfully',
+  'NuwaxPC.Pages.SystemPermissionResources.systemBuiltinDeleteDenied':
+    'System built-in resources cannot be deleted',
+  'NuwaxPC.Pages.SystemPermissionResources.systemBuiltinDisableDenied':
+    'System built-in resources cannot be disabled',
+  'NuwaxPC.Pages.SystemPermissionResources.systemBuiltinEditDenied':
+    'System built-in resources cannot be edited',
+  'NuwaxPC.Pages.SystemPermissionResources.typeComponent': 'Component',
+  'NuwaxPC.Pages.SystemPermissionResources.typeModule': 'Module',
+  'NuwaxPC.Pages.AntvX6Library.defaultInputArgsDesc': 'Retrieval Keyword',
+  'NuwaxPC.Pages.AntvX6Library.knowledgeBase': 'Knowledge Base',
+  'NuwaxPC.Pages.AntvX6Library.maxRecallCount': 'Max Recall Count',
+  'NuwaxPC.Pages.AntvX6Library.maxRecallCountTooltip':
+    'Maximum number of paragraphs returned from the knowledge base to the model. Higher values return more content.',
+  'NuwaxPC.Pages.AntvX6Library.minMatchScore': 'Min Match Score',
+  'NuwaxPC.Pages.AntvX6Library.minMatchScoreTooltip':
+    'Paragraphs are returned based on the configured matching score. Content below threshold is not recalled.',
+  'NuwaxPC.Pages.AntvX6Library.searchStrategy': 'Search Strategy',
+  'NuwaxPC.Pages.AntvX6Library.searchStrategyFullText': 'Full Text',
+  'NuwaxPC.Pages.AntvX6Library.searchStrategyMixed': 'Mixed',
+  'NuwaxPC.Pages.AntvX6Library.searchStrategySemantic': 'Semantic',
+  'NuwaxPC.Pages.AntvX6Library.searchStrategyTooltip':
+    'Retrieval strategy for obtaining knowledge from the knowledge base. Different strategies can improve answer accuracy and usability.',
+  'NuwaxPC.Pages.AntvX6RegisterNodes.exceptionWhen': 'On Exception',
+  'NuwaxPC.Pages.AntvX6RegisterNodes.failed': 'Run Failed',
+  'NuwaxPC.Pages.AntvX6RegisterNodes.input': 'Input',
+  'NuwaxPC.Pages.AntvX6RegisterNodes.optionLabel': 'Option {0}',
+  'NuwaxPC.Pages.AntvX6RegisterNodes.qaType': 'QA Type',
+  'NuwaxPC.Pages.AntvX6RegisterNodes.questionContent': 'Question Content',
+  'NuwaxPC.Pages.AntvX6RegisterNodes.replyQuestion':
+    'Please answer the question',
+  'NuwaxPC.Pages.AntvX6RegisterNodes.running': 'Running',
+  'NuwaxPC.Pages.AntvX6RegisterNodes.success': 'Run Succeeded',
+  'NuwaxPC.Pages.AntvX6RegisterNodes.unconfiguredContent':
+    'Content not configured',
+  'NuwaxPC.Pages.AntvX6RegisterNodes.unconfiguredInput': 'Input not configured',
+  'NuwaxPC.Pages.AntvX6RegisterNodes.unconfiguredIntent':
+    'Intent not configured',
+  'NuwaxPC.Pages.AntvX6RegisterNodes.unconfiguredQuestion':
+    'Question not configured',
 };
