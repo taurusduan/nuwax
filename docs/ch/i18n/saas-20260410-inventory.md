@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-30T12:06:28.058Z
+- 生成时间：2026-03-30T12:09:50.072Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：3434
-- hardcoded 中文：3434
+- 总问题数：3423
+- hardcoded 中文：3423
 - legacy System key：0
 - invalid dict key：0
 
@@ -15,7 +15,7 @@
 
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
-| src/pages/Antv-X6 | 411 | 0 | 0 | 411 |
+| src/pages/Antv-X6 | 400 | 0 | 0 | 400 |
 | src/pages/EditAgent | 265 | 0 | 0 | 265 |
 | src/pages/SystemManagement | 258 | 0 | 0 | 258 |
 | src/hooks | 186 | 0 | 0 | 186 |
@@ -124,19 +124,8 @@
 - [hardcoded_chinese] src/pages/Antv-X6/component/graph.tsx:227 -> `, // 或者 `
 - [hardcoded_chinese] src/pages/Antv-X6/header.tsx:95 -> `已发布`
 - [hardcoded_chinese] src/pages/Antv-X6/header.tsx:95 -> `未发布`
-- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:476 -> `表单提交失败:`
-- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:974 -> `处理节点连接时发生错误:`
-- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1016 -> `循环体里请不要再添加循环体`
-- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1051 -> `处理节点创建成功后的操作失败:`
-- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1179 -> `暂不支持该类型组件`
-- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1282 -> `发布成功`
-- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1362 -> `流式请求异常:`
-- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1366 -> `连接已建立`
-- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1458 -> `流式请求异常:`
-- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1462 -> `连接已建立`
-- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1471 -> `连线不完整`
-- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1489 -> `试运行所有节点失败:`
-- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:2003 -> `加载 V3 版本...`
+- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1285 -> `发布成功`
+- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1474 -> `连线不完整`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/ExceptionItem.tsx:153 -> `JSON格式无效`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/ExceptionItem.tsx:154 -> `JSON格式无效:`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/ExceptionItem.tsx:164 -> `可设置异常处理，包括超时、重试、异常处理方式。开启流式输出后，一旦开始输出数据，即使出现异常也无法重试或者跳转异常分支。`
@@ -201,7 +190,18 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:120 -> `且`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:124 -> `或`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:176 -> `请选择`
-- ... 省略 331 条
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:226 -> `当前查询数据为空`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:254 -> `输入`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:254 -> `选择更新字段`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:260 -> `变量值`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:270 -> `请输入查询上限`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:302 -> `可以使用{{变量名}}、{{变量名.子变量名}}、 {{变量名[数组索引]}}的方式引用输出参数中的变量`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:320 -> `输出`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/database.tsx:341 -> `生成sql语句`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/eventHandlers.tsx:52 -> `该节点类型不支持复制`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/eventHandlers.tsx:63 -> `已复制节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/component/eventHandlers.tsx:88 -> `不能粘贴循环节点`
+- ... 省略 320 条
 
 ## src/pages/EditAgent
 

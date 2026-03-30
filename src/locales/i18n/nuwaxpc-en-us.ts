@@ -491,6 +491,11 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6ErrorList.empty': 'N/A',
   'NuwaxPC.Pages.AntvX6Graph.cannotQuickAddNodeForLoopBoundary':
     'Loop start and end nodes do not support quick add for downstream nodes',
+  'NuwaxPC.Pages.AntvX6Workflow.cannotNestLoop':
+    'Do not add nested loop nodes inside a loop body',
+  'NuwaxPC.Pages.AntvX6Workflow.unsupportedComponentType':
+    'This component type is not supported yet',
+  'NuwaxPC.Pages.AntvX6Workflow.loadingV3Version': 'Loading V3 version...',
   'NuwaxPC.Pages.AntvX6Params.nodeLlmName': 'Large Language Model',
   'NuwaxPC.Pages.AntvX6Params.nodeLlmDescription':
     'Call the large language model and generate responses with variables and prompts',

@@ -442,6 +442,9 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6ErrorList.empty': '暂无',
   'NuwaxPC.Pages.AntvX6Graph.cannotQuickAddNodeForLoopBoundary':
     '循环节点的开始和结束节点不能快捷添加其他节点',
+  'NuwaxPC.Pages.AntvX6Workflow.cannotNestLoop': '循环体里请不要再添加循环体',
+  'NuwaxPC.Pages.AntvX6Workflow.unsupportedComponentType': '暂不支持该类型组件',
+  'NuwaxPC.Pages.AntvX6Workflow.loadingV3Version': '加载 V3 版本...',
   'NuwaxPC.Pages.AntvX6Params.nodeLlmName': '大模型',
   'NuwaxPC.Pages.AntvX6Params.nodeLlmDescription':
     '调用大语言模型，使用变量和提示词生成回复',

@@ -621,3 +621,24 @@
 - 风险/阻塞：
   - `Antv-X6/index.tsx` 仍有高密度存量文案（错误提示、发布提示、流式日志文案）
 - 下一步：继续推进 `Antv-X6/index.tsx` 与 `SystemManagement/RunningLog/LogProTable`
+
+### 里程碑：Top 模块第二十三批实改（Antv-X6 index 关键提示）
+
+- 时间：2026-03-30 20:10
+- 任务：补齐 `Antv-X6/index.tsx` 关键提示文案（循环限制、不支持组件、V3 loading）并收敛中文日志
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `message.warning` 文案改为 `t(...)`（循环嵌套限制、不支持组件类型）
+  - V3 懒加载 `Spin` 文案改为 i18n key
+  - 多处中文 `console.error/console.log` 日志改为英文描述
+  - inventory 问题总量从 `3434` 下降至 `3423`
+- 风险/阻塞：
+  - `Antv-X6/index.tsx` 仍有大量中文注释，后续可继续按批次清理
+- 下一步：继续推进 `SystemManagement/RunningLog/LogProTable` 或 `Antv-X6/index.tsx` 注释清理批次

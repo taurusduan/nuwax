@@ -27,6 +27,7 @@ import useDisableSaveShortcut from '@/hooks/useDisableSaveShortcut';
 import useDrawerScroll from '@/hooks/useDrawerScroll';
 import useModifiedSaveUpdate from '@/hooks/useModifiedSaveUpdate';
 import { useThrottledCallback } from '@/hooks/useThrottledCallback';
+import { t } from '@/services/i18nRuntime';
 import type { AddNodeResponse } from '@/services/workflow';
 import service, {
   IgetDetails,
@@ -473,7 +474,7 @@ const Workflow: React.FC = () => {
         }
         result = await autoSaveNodeConfig(updateFormConfig);
       } catch (error) {
-        console.error('表单提交失败:', error);
+        console.error('[Workflow] form submit failed:', error);
         result = false;
       }
       return result;
@@ -971,7 +972,7 @@ const Workflow: React.FC = () => {
 
         await getReference(getWorkflow('drawerForm').id);
       } catch (error) {
-        console.error('处理节点连接时发生错误:', error);
+        console.error('[Workflow] node connection handling failed:', error);
         throw error;
       } finally {
         // 清空当前节点引用
@@ -1013,7 +1014,7 @@ const Workflow: React.FC = () => {
     // 如果当前选择的是循环节点或者循环内部的子节点，那么就要将他的位置放置于循环内部
     if (foldWrapItem.type === NodeTypeEnum.Loop || foldWrapItem.loopNodeId) {
       if (_params.type === NodeTypeEnum.Loop) {
-        message.warning('循环体里请不要再添加循环体');
+        message.warning(t('NuwaxPC.Pages.AntvX6Workflow.cannotNestLoop'));
         return false;
       }
       _params.loopNodeId =
@@ -1048,7 +1049,7 @@ const Workflow: React.FC = () => {
       try {
         await handleNodeCreationSuccess(_res.data, child);
       } catch (error) {
-        console.error('处理节点创建成功后的操作失败:', error);
+        console.error('[Workflow] post-create node handling failed:', error);
         // 可以添加用户友好的错误提示
       }
     }
@@ -1176,7 +1177,9 @@ const Workflow: React.FC = () => {
         },
       };
     } else {
-      message.warning('暂不支持该类型组件');
+      message.warning(
+        t('NuwaxPC.Pages.AntvX6Workflow.unsupportedComponentType'),
+      );
       return;
     }
 
@@ -1359,11 +1362,11 @@ const Workflow: React.FC = () => {
         // 更新UI状态...
       },
       onError: (error) => {
-        console.error('流式请求异常:', error);
+        console.error('[Workflow] streaming request error:', error);
         // 显示错误提示...
       },
       onOpen: (response) => {
-        console.log('连接已建立', response.status);
+        console.log('[Workflow] connection established', response.status);
       },
       onClose: () => {
         setLoading(false);
@@ -1455,11 +1458,11 @@ const Workflow: React.FC = () => {
         // 更新UI状态...
       },
       onError: (error) => {
-        console.error('流式请求异常:', error);
+        console.error('[Workflow] streaming request error:', error);
         // 显示错误提示...
       },
       onOpen: (response) => {
-        console.log('连接已建立', response.status);
+        console.log('[Workflow] connection established', response.status);
       },
       onClose: () => {
         setLoading(false);
@@ -1486,7 +1489,7 @@ const Workflow: React.FC = () => {
         setTestRun(true);
       }
     } catch (error) {
-      console.error('试运行所有节点失败:', error);
+      console.error('[Workflow] run-all test failed:', error);
     } finally {
       clearTimeout(loadingTimer);
       setTestRunLoading(false);
@@ -2000,7 +2003,10 @@ const WorkflowEntry: React.FC = () => {
               height: '100vh',
             }}
           >
-            <Spin size="large" tip="加载 V3 版本..." />
+            <Spin
+              size="large"
+              tip={t('NuwaxPC.Pages.AntvX6Workflow.loadingV3Version')}
+            />
           </div>
         }
       >
