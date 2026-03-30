@@ -286,3 +286,22 @@
   - 汇总：问题总量从 `3727` 下降至 `3726`
 - 覆盖文件：
   - `src/pages/Antv-X6/component/pluginNode.tsx`
+
+### 新增验证（Top 模块第十六批）
+
+- 命令：`pnpm prettier --write src/pages/Antv-X6/component/condition.tsx src/pages/Antv-X6/component/stencil.tsx src/pages/Antv-X6/controlPanel.tsx src/pages/Antv-X6/errorList.tsx src/pages/Antv-X6/component/graph.tsx src/pages/Antv-X6/config.ts src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `3726` 下降至 `3710`
+- 覆盖文件：
+  - `src/pages/Antv-X6/component/condition.tsx`
+  - `src/pages/Antv-X6/component/stencil.tsx`
+  - `src/pages/Antv-X6/controlPanel.tsx`
+  - `src/pages/Antv-X6/errorList.tsx`
+  - `src/pages/Antv-X6/component/graph.tsx`
+  - `src/pages/Antv-X6/config.ts`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`

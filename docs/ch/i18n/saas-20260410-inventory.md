@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-30T10:28:44.161Z
+- 生成时间：2026-03-30T10:41:36.032Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：3726
-- hardcoded 中文：3726
+- 总问题数：3710
+- hardcoded 中文：3710
 - legacy System key：0
 - invalid dict key：0
 
@@ -15,7 +15,7 @@
 
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
-| src/pages/Antv-X6 | 649 | 0 | 0 | 649 |
+| src/pages/Antv-X6 | 633 | 0 | 0 | 633 |
 | src/pages/SystemManagement | 312 | 0 | 0 | 312 |
 | src/pages/EditAgent | 265 | 0 | 0 | 265 |
 | src/hooks | 186 | 0 | 0 | 186 |
@@ -121,23 +121,7 @@
 
 ## src/pages/Antv-X6
 
-- [hardcoded_chinese] src/pages/Antv-X6/component/condition.tsx:176 -> `且`
-- [hardcoded_chinese] src/pages/Antv-X6/component/condition.tsx:180 -> `或`
-- [hardcoded_chinese] src/pages/Antv-X6/component/condition.tsx:252 -> `请引用参数`
-- [hardcoded_chinese] src/pages/Antv-X6/component/graph.tsx:226 -> `, // 或者 `
-- [hardcoded_chinese] src/pages/Antv-X6/component/graph.tsx:561 -> `循环节点的开始和结束节点不能快捷添加其他节点`
-- [hardcoded_chinese] src/pages/Antv-X6/component/stencil.tsx:56 -> `搜索`
-- [hardcoded_chinese] src/pages/Antv-X6/config.ts:187 -> `[Config] 当前使用方案:`
-- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:33 -> `放大 10%`
-- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:34 -> `缩小 10%`
-- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:35 -> `缩放到适配画布`
-- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:53 -> `缩放到 50%`
-- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:54 -> `缩放到 100%`
-- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:55 -> `缩放到 150%`
-- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:56 -> `缩放到 200%`
-- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:128 -> `缩放到适配画布`
-- [hardcoded_chinese] src/pages/Antv-X6/controlPanel.tsx:169 -> `调试`
-- [hardcoded_chinese] src/pages/Antv-X6/errorList.tsx:86 -> `暂无`
+- [hardcoded_chinese] src/pages/Antv-X6/component/graph.tsx:227 -> `, // 或者 `
 - [hardcoded_chinese] src/pages/Antv-X6/header.tsx:95 -> `已发布`
 - [hardcoded_chinese] src/pages/Antv-X6/header.tsx:95 -> `未发布`
 - [hardcoded_chinese] src/pages/Antv-X6/index.tsx:476 -> `表单提交失败:`
@@ -201,7 +185,23 @@
 - [hardcoded_chinese] src/pages/Antv-X6/params.tsx:272 -> `http请求`
 - [hardcoded_chinese] src/pages/Antv-X6/params.tsx:277 -> `用于配置http请求调用已有的服务`
 - [hardcoded_chinese] src/pages/Antv-X6/params.tsx:282 -> `输出`
-- ... 省略 569 条
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:286 -> `过程输出`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:291 -> `支持中间过程的消息输出，支持流式和非流式两种方式`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:404 -> ` 对应 `
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:432 -> ` 对应 `
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:441 -> `标题生成`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:443 -> `标题生成`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:461 -> `使用数组循环`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:462 -> `指定次数循环`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:463 -> `无限循环`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:468 -> `变量名`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:469 -> `变量名`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:470 -> `请输入变量名`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:476 -> `选择类型`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:477 -> `变量类型`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:478 -> `请选择变量类型`
+- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:485 -> `描述`
+- ... 省略 553 条
 
 ## src/pages/SystemManagement
 

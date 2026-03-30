@@ -12,6 +12,7 @@ import { Selection } from '@antv/x6-plugin-selection';
 import { Snapline } from '@antv/x6-plugin-snapline';
 // 变换插件，支持缩放和平移操作
 // import { Transform } from '@antv/x6-plugin-transform';
+import { t } from '@/services/i18nRuntime';
 import { ChildNode, StencilChildNode } from '@/types/interfaces/graph';
 import {
   adjustParentSize,
@@ -558,7 +559,9 @@ const initGraph = ({
       const isEndNode = node.getData()?.id === parentNode.innerEndNodeId;
 
       if ((isStartNode && isIn) || (isEndNode && !isIn)) {
-        message.warning('循环节点的开始和结束节点不能快捷添加其他节点');
+        message.warning(
+          t('NuwaxPC.Pages.AntvX6Graph.cannotQuickAddNodeForLoopBoundary'),
+        );
         return;
       }
     }

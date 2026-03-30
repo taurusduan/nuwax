@@ -467,3 +467,30 @@
 - 风险/阻塞：
   - 主要存量仍集中在 `Antv-X6/graph.tsx` 与 `AppDev/index.tsx` 的注释/文案
 - 下一步：继续推进 `Antv-X6/graph.tsx` 与 `AppDev` 剩余弹窗/提示链路
+
+### 里程碑：Top 模块第十六批实改（Antv condition/controlPanel/errorList/graph）
+
+- 时间：2026-03-30 18:42
+- 任务：继续推进 `Antv-X6` 核心交互链路文案接入，补齐条件分支、画布控制、错误列表、图编辑器提示
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/component/condition.tsx src/pages/Antv-X6/component/stencil.tsx src/pages/Antv-X6/controlPanel.tsx src/pages/Antv-X6/errorList.tsx src/pages/Antv-X6/component/graph.tsx src/pages/Antv-X6/config.ts src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/component/condition.tsx`
+    - `src/pages/Antv-X6/component/stencil.tsx`
+    - `src/pages/Antv-X6/controlPanel.tsx`
+    - `src/pages/Antv-X6/errorList.tsx`
+    - `src/pages/Antv-X6/component/graph.tsx`
+    - `src/pages/Antv-X6/config.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `condition/stencil/controlPanel/errorList/graph` 的高频可见文案统一接入 `t(...)`
+  - 新增 `AntvX6Condition/AntvX6Stencil/AntvX6ControlPanel/AntvX6ErrorList/AntvX6Graph` key 域，并补齐本地中英文默认词典
+  - `config.ts` 中开发日志与注释文本切换为英文，符合“日志英文”约定
+  - inventory 问题总量从 `3726` 下降至 `3710`
+- 风险/阻塞：
+  - `src/pages/Antv-X6/params.tsx` 仍有高密度硬编码中文（节点目录、配置项、条件选项）
+  - `SystemManagement` 与 `AppDev` 仍有大量存量文件待继续收敛
+- 下一步：继续批量推进 `Antv-X6/params.tsx` 与 `SystemManagement` Top 文件
