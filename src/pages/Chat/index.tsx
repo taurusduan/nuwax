@@ -118,7 +118,7 @@ const Chat: React.FC = () => {
   // 是否锁定电脑选择（仅在从 AgentDetails 页面带有 selectedComputerId 且为 PUSH 跳转时生效）
   const [isSelectionLocked, setIsSelectionLocked] = useState<boolean>(false);
 
-  // 当前选中的电脑 ID（任务型智能体）
+  // 当前选中的电脑 ID（通用型智能体）
   const [selectedComputerId, setSelectedComputerId] = useState<string>('');
   // 用户选择的智能体电脑名称
   // const [selectedComputerName, setSelectedComputerName] = useState<string>('');
@@ -208,9 +208,9 @@ const Chat: React.FC = () => {
     openDesktopView,
     restartVncPod,
     restartAgent,
-    // 任务智能体会话中点击选中的文件ID
+    // 通用型智能体会话中点击选中的文件ID
     taskAgentSelectedFileId,
-    // 任务智能体文件选择触发标志
+    // 通用型智能体文件选择触发标志
     taskAgentSelectTrigger,
     // 会话是否正在进行中（有消息正在处理）
     isConversationActive,

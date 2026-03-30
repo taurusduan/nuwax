@@ -1453,10 +1453,10 @@ export default () => {
     isRestartAgentLoading,
     // 远程桌面容器信息, 暂时未使用
     vncContainerInfo,
-    // 任务智能体会话中点击选中的文件ID
+    // 通用型智能体会话中点击选中的文件ID
     taskAgentSelectedFileId,
     setTaskAgentSelectedFileId,
-    // 任务智能体文件选择触发标志
+    // 通用型智能体文件选择触发标志
     taskAgentSelectTrigger,
     setTaskAgentSelectTrigger,
     isLoadingOtherInterface,
