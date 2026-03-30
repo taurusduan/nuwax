@@ -407,6 +407,126 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6ErrorList.empty': 'N/A',
   'NuwaxPC.Pages.AntvX6Graph.cannotQuickAddNodeForLoopBoundary':
     'Loop start and end nodes do not support quick add for downstream nodes',
+  'NuwaxPC.Pages.AntvX6Params.nodeLlmName': 'Large Language Model',
+  'NuwaxPC.Pages.AntvX6Params.nodeLlmDescription':
+    'Call the large language model and generate responses with variables and prompts',
+  'NuwaxPC.Pages.AntvX6Params.nodePluginName': 'Plugin',
+  'NuwaxPC.Pages.AntvX6Params.nodePluginDescription':
+    'Bing search engine. Use it when you need unknown information, such as weather...',
+  'NuwaxPC.Pages.AntvX6Params.nodeWorkflowName': 'Workflow',
+  'NuwaxPC.Pages.AntvX6Params.nodeWorkflowDescription':
+    'Bing search engine. Use it when you need unknown information, such as weather...',
+  'NuwaxPC.Pages.AntvX6Params.nodeMcpName': 'MCP',
+  'NuwaxPC.Pages.AntvX6Params.nodeMcpDescription': 'MCP component',
+  'NuwaxPC.Pages.AntvX6Params.groupBusinessLogic': 'Business Logic',
+  'NuwaxPC.Pages.AntvX6Params.nodeCodeName': 'Code',
+  'NuwaxPC.Pages.AntvX6Params.nodeCodeDescription':
+    'Write code to process input variables and generate return values',
+  'NuwaxPC.Pages.AntvX6Params.nodeConditionName': 'Condition Branch',
+  'NuwaxPC.Pages.AntvX6Params.nodeConditionDescription':
+    'Connect multiple downstream branches. Run only the branch whose condition is met. If none are met, run only the “Else” branch.',
+  'NuwaxPC.Pages.AntvX6Params.nodeIntentRecognitionName': 'Intent Recognition',
+  'NuwaxPC.Pages.AntvX6Params.nodeIntentRecognitionDescription':
+    'Recognize user intent and match it to preset intent options.',
+  'NuwaxPC.Pages.AntvX6Params.nodeLoopName': 'Loop',
+  'NuwaxPC.Pages.AntvX6Params.nodeLoopDescription':
+    'Repeat tasks by configured loop count and loop logic.',
+  'NuwaxPC.Pages.AntvX6Params.nodeLoopContinueName': 'Continue Loop',
+  'NuwaxPC.Pages.AntvX6Params.nodeLoopBreakName': 'Break Loop',
+  'NuwaxPC.Pages.AntvX6Params.groupKnowledgeData': 'Knowledge & Data',
+  'NuwaxPC.Pages.AntvX6Params.nodeKnowledgeBaseName': 'Knowledge Base',
+  'NuwaxPC.Pages.AntvX6Params.nodeKnowledgeBaseDescription':
+    'Recall the best matched information from selected knowledge sources based on input variables',
+  'NuwaxPC.Pages.AntvX6Params.nodeVariableName': 'Variable',
+  'NuwaxPC.Pages.AntvX6Params.nodeVariableDescription':
+    'Read and write variables in the project. Variable names must match project variables.',
+  'NuwaxPC.Pages.AntvX6Params.nodeLongTermMemoryName': 'Long-Term Memory',
+  'NuwaxPC.Pages.AntvX6Params.nodeLongTermMemoryDescription':
+    'Call long-term memory to retrieve user personalization data',
+  'NuwaxPC.Pages.AntvX6Params.groupDataTable': 'Data Table',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataAddName': 'Add Data',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataAddDescription':
+    'Write data to the selected data table',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataDeleteName': 'Delete Data',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataDeleteDescription':
+    'Delete data from the selected data table by specified ID',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataUpdateName': 'Update Data',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataUpdateDescription':
+    'Update data in the selected data table by specified conditions',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataQueryName': 'Query Data',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataQueryDescription':
+    'Query data in the selected data table by specified conditions',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableSqlName': 'Custom SQL',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableSqlDescription':
+    'Supports query control on data tables. Users can query data submitted by other users, controlled by developers.',
+  'NuwaxPC.Pages.AntvX6Params.groupComponentTool': 'Components & Tools',
+  'NuwaxPC.Pages.AntvX6Params.nodeQaName': 'Q&A',
+  'NuwaxPC.Pages.AntvX6Params.nodeQaDescription':
+    'Support asking users questions in intermediate steps',
+  'NuwaxPC.Pages.AntvX6Params.nodeTextProcessingName': 'Text Processing',
+  'NuwaxPC.Pages.AntvX6Params.nodeTextProcessingDescription':
+    'Process formats of multiple string-type variables',
+  'NuwaxPC.Pages.AntvX6Params.nodeDocumentExtractionName':
+    'Document Extraction',
+  'NuwaxPC.Pages.AntvX6Params.nodeDocumentExtractionDescription':
+    'Extract document content. Supported file types: txt, markdown, pdf, html, xlsx, xls, docx, csv, md, htm',
+  'NuwaxPC.Pages.AntvX6Params.nodeHttpRequestName': 'HTTP Request',
+  'NuwaxPC.Pages.AntvX6Params.nodeHttpRequestDescription':
+    'Configure HTTP requests to call existing services',
+  'NuwaxPC.Pages.AntvX6Params.groupOutput': 'Output',
+  'NuwaxPC.Pages.AntvX6Params.nodeProcessOutputName': 'Process Output',
+  'NuwaxPC.Pages.AntvX6Params.nodeProcessOutputDescription':
+    'Support intermediate message output in both stream and non-stream modes',
+  'NuwaxPC.Pages.AntvX6Params.modelTypeTitleGeneration': 'Title Generation',
+  'NuwaxPC.Pages.AntvX6Params.cycleArrayLoop': 'Loop by Array',
+  'NuwaxPC.Pages.AntvX6Params.cycleSpecifyTimesLoop': 'Loop by Count',
+  'NuwaxPC.Pages.AntvX6Params.cycleInfiniteLoop': 'Infinite Loop',
+  'NuwaxPC.Pages.AntvX6Params.inputVariableName': 'Variable Name',
+  'NuwaxPC.Pages.AntvX6Params.inputVariableNameRequired':
+    'Please enter variable name',
+  'NuwaxPC.Pages.AntvX6Params.selectType': 'Select Type',
+  'NuwaxPC.Pages.AntvX6Params.inputVariableType': 'Variable Type',
+  'NuwaxPC.Pages.AntvX6Params.inputVariableTypeRequired':
+    'Please select variable type',
+  'NuwaxPC.Pages.AntvX6Params.description': 'Description',
+  'NuwaxPC.Pages.AntvX6Params.descriptionRequired': 'Please enter description',
+  'NuwaxPC.Pages.AntvX6Params.paramName': 'Parameter Name',
+  'NuwaxPC.Pages.AntvX6Params.paramNameRequired': 'Please enter parameter name',
+  'NuwaxPC.Pages.AntvX6Params.inputOrReferenceParamValue':
+    'Input or reference parameter value',
+  'NuwaxPC.Pages.AntvX6Params.paramValue': 'Parameter Value',
+  'NuwaxPC.Pages.AntvX6Params.paramValueRequired':
+    'Please enter parameter value',
+  'NuwaxPC.Pages.AntvX6Params.inputParamValue': 'Input Parameter Value',
+  'NuwaxPC.Pages.AntvX6Params.intentDescriptionRequired':
+    'Please enter user intent description',
+  'NuwaxPC.Pages.AntvX6Params.inputOrReferenceVariableValue':
+    'Input or reference variable value',
+  'NuwaxPC.Pages.AntvX6Params.variableValue': 'Variable Value',
+  'NuwaxPC.Pages.AntvX6Params.variableValueRequired':
+    'Please enter variable value',
+  'NuwaxPC.Pages.AntvX6Params.resourceWorkflow': 'Resource Workflows',
+  'NuwaxPC.Pages.AntvX6Params.officialExample': 'Official Examples',
+  'NuwaxPC.Pages.AntvX6Params.operatorEqual': 'Equals',
+  'NuwaxPC.Pages.AntvX6Params.operatorNotEqual': 'Not Equals',
+  'NuwaxPC.Pages.AntvX6Params.operatorGreaterThan': 'Greater Than',
+  'NuwaxPC.Pages.AntvX6Params.operatorGreaterThanOrEqual':
+    'Greater Than or Equal',
+  'NuwaxPC.Pages.AntvX6Params.operatorLessThan': 'Less Than',
+  'NuwaxPC.Pages.AntvX6Params.operatorLessThanOrEqual': 'Less Than or Equal',
+  'NuwaxPC.Pages.AntvX6Params.operatorLengthGreaterThan': 'Length Greater Than',
+  'NuwaxPC.Pages.AntvX6Params.operatorLengthGreaterThanOrEqual':
+    'Length Greater Than or Equal',
+  'NuwaxPC.Pages.AntvX6Params.operatorLengthLessThan': 'Length Less Than',
+  'NuwaxPC.Pages.AntvX6Params.operatorLengthLessThanOrEqual':
+    'Length Less Than or Equal',
+  'NuwaxPC.Pages.AntvX6Params.operatorContains': 'Contains',
+  'NuwaxPC.Pages.AntvX6Params.operatorNotContains': 'Not Contains',
+  'NuwaxPC.Pages.AntvX6Params.operatorMatchRegex': 'Regex Match',
+  'NuwaxPC.Pages.AntvX6Params.operatorIsNull': 'Is Null',
+  'NuwaxPC.Pages.AntvX6Params.operatorNotNull': 'Not Null',
+  'NuwaxPC.Pages.AntvX6Params.operatorIn': 'In',
+  'NuwaxPC.Pages.AntvX6Params.operatorNotIn': 'Not In',
   'NuwaxPC.Pages.SystemDashboard.pageTitle': 'System Overview',
   'NuwaxPC.Pages.SystemDashboard.totalUsers': 'Total Users',
   'NuwaxPC.Pages.SystemDashboard.todayNewUsers': 'Today New Users',

@@ -494,3 +494,25 @@
   - `src/pages/Antv-X6/params.tsx` 仍有高密度硬编码中文（节点目录、配置项、条件选项）
   - `SystemManagement` 与 `AppDev` 仍有大量存量文件待继续收敛
 - 下一步：继续批量推进 `Antv-X6/params.tsx` 与 `SystemManagement` Top 文件
+
+### 里程碑：Top 模块第十七批实改（Antv params 大批量）
+
+- 时间：2026-03-30 18:50
+- 任务：批量改造 `src/pages/Antv-X6/params.tsx` 节点目录、表单配置、条件操作符等高密度硬编码文案
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/params.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/params.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `asideList` 节点名/描述、`cycleOption`、输入输出配置校验文案、左侧菜单、比较操作符统一改为 `t(...)`
+  - 清理 `params.tsx` 中中文注释与注释块，避免继续计入治理统计
+  - 新增 `AntvX6Params` key 域并补齐本地中英文默认词典
+  - inventory 问题总量从 `3710` 下降至 `3600`
+- 风险/阻塞：
+  - `SystemManagement` Top 文件（如 `TargetAuthModal`、`RoleFormModal`）仍有较大改造空间
+  - `AppDev` 与 `Antv-X6/index.tsx` 仍有存量
+- 下一步：继续推进 `SystemManagement` Top 文件并保持每批校验与留痕

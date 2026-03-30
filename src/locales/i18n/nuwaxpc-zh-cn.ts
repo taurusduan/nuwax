@@ -372,6 +372,116 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6ErrorList.empty': '暂无',
   'NuwaxPC.Pages.AntvX6Graph.cannotQuickAddNodeForLoopBoundary':
     '循环节点的开始和结束节点不能快捷添加其他节点',
+  'NuwaxPC.Pages.AntvX6Params.nodeLlmName': '大模型',
+  'NuwaxPC.Pages.AntvX6Params.nodeLlmDescription':
+    '调用大语言模型，使用变量和提示词生成回复',
+  'NuwaxPC.Pages.AntvX6Params.nodePluginName': '插件',
+  'NuwaxPC.Pages.AntvX6Params.nodePluginDescription':
+    '必应搜索引擎。当你需要搜索你不知道的信息，比如天气...',
+  'NuwaxPC.Pages.AntvX6Params.nodeWorkflowName': '工作流',
+  'NuwaxPC.Pages.AntvX6Params.nodeWorkflowDescription':
+    '必应搜索引擎。当你需要搜索你不知道的信息，比如天气...',
+  'NuwaxPC.Pages.AntvX6Params.nodeMcpName': 'MCP',
+  'NuwaxPC.Pages.AntvX6Params.nodeMcpDescription': 'MCP 组件',
+  'NuwaxPC.Pages.AntvX6Params.groupBusinessLogic': '业务逻辑',
+  'NuwaxPC.Pages.AntvX6Params.nodeCodeName': '代码',
+  'NuwaxPC.Pages.AntvX6Params.nodeCodeDescription':
+    '编写代码，处理输入变量来生成返回值',
+  'NuwaxPC.Pages.AntvX6Params.nodeConditionName': '条件分支',
+  'NuwaxPC.Pages.AntvX6Params.nodeConditionDescription':
+    '连接多个下游分支，若设定的条件成立则仅运行对应的分支，若均不成立则只运行“否则”分支',
+  'NuwaxPC.Pages.AntvX6Params.nodeIntentRecognitionName': '意图识别',
+  'NuwaxPC.Pages.AntvX6Params.nodeIntentRecognitionDescription':
+    '用于用户输入的意图识别，并将其与预设意图选项进行匹配。',
+  'NuwaxPC.Pages.AntvX6Params.nodeLoopName': '循环',
+  'NuwaxPC.Pages.AntvX6Params.nodeLoopDescription':
+    '用于通过设定循环次数和逻辑，重复执行一系列任务。',
+  'NuwaxPC.Pages.AntvX6Params.nodeLoopContinueName': '继续循环',
+  'NuwaxPC.Pages.AntvX6Params.nodeLoopBreakName': '终止循环',
+  'NuwaxPC.Pages.AntvX6Params.groupKnowledgeData': '知识&数据',
+  'NuwaxPC.Pages.AntvX6Params.nodeKnowledgeBaseName': '知识库',
+  'NuwaxPC.Pages.AntvX6Params.nodeKnowledgeBaseDescription':
+    '在选定的知识中，根据输入变量召回最匹配的信息',
+  'NuwaxPC.Pages.AntvX6Params.nodeVariableName': '变量',
+  'NuwaxPC.Pages.AntvX6Params.nodeVariableDescription':
+    '用于读取和写入项目中的变量，变量名须与项目中的变量名相匹配',
+  'NuwaxPC.Pages.AntvX6Params.nodeLongTermMemoryName': '长期记忆',
+  'NuwaxPC.Pages.AntvX6Params.nodeLongTermMemoryDescription':
+    '用于调用长期记忆，获取用户的个性化信息',
+  'NuwaxPC.Pages.AntvX6Params.groupDataTable': '数据表',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataAddName': '数据新增',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataAddDescription':
+    '对选定的数据表进行数据写入',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataDeleteName': '数据删除',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataDeleteDescription':
+    '对选定的数据表根据指定ID进行数据删除',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataUpdateName': '数据更新',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataUpdateDescription':
+    '对选定的数据表根据指定条件进行数据更新',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataQueryName': '数据查询',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableDataQueryDescription':
+    '对选定的数据表根据指定条件进行数据查询',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableSqlName': 'SQL自定义',
+  'NuwaxPC.Pages.AntvX6Params.nodeTableSqlDescription':
+    '可支持对数据表的查询控制，用户可查询其他用户提交的数据，由开发者控制',
+  'NuwaxPC.Pages.AntvX6Params.groupComponentTool': '组件&工具',
+  'NuwaxPC.Pages.AntvX6Params.nodeQaName': '问答',
+  'NuwaxPC.Pages.AntvX6Params.nodeQaDescription': '支持中间向用户提问问题',
+  'NuwaxPC.Pages.AntvX6Params.nodeTextProcessingName': '文本处理',
+  'NuwaxPC.Pages.AntvX6Params.nodeTextProcessingDescription':
+    '用于处理多个字符串类型变量的格式',
+  'NuwaxPC.Pages.AntvX6Params.nodeDocumentExtractionName': '文档提取',
+  'NuwaxPC.Pages.AntvX6Params.nodeDocumentExtractionDescription':
+    '用于提取文档内容，支持的文件类型: txt、markdown、pdf、html、xlsx、xls、docx、csv、md、htm',
+  'NuwaxPC.Pages.AntvX6Params.nodeHttpRequestName': 'http请求',
+  'NuwaxPC.Pages.AntvX6Params.nodeHttpRequestDescription':
+    '用于配置http请求调用已有的服务',
+  'NuwaxPC.Pages.AntvX6Params.groupOutput': '输出',
+  'NuwaxPC.Pages.AntvX6Params.nodeProcessOutputName': '过程输出',
+  'NuwaxPC.Pages.AntvX6Params.nodeProcessOutputDescription':
+    '支持中间过程的消息输出，支持流式和非流式两种方式',
+  'NuwaxPC.Pages.AntvX6Params.modelTypeTitleGeneration': '标题生成',
+  'NuwaxPC.Pages.AntvX6Params.cycleArrayLoop': '使用数组循环',
+  'NuwaxPC.Pages.AntvX6Params.cycleSpecifyTimesLoop': '指定次数循环',
+  'NuwaxPC.Pages.AntvX6Params.cycleInfiniteLoop': '无限循环',
+  'NuwaxPC.Pages.AntvX6Params.inputVariableName': '变量名',
+  'NuwaxPC.Pages.AntvX6Params.inputVariableNameRequired': '请输入变量名',
+  'NuwaxPC.Pages.AntvX6Params.selectType': '选择类型',
+  'NuwaxPC.Pages.AntvX6Params.inputVariableType': '变量类型',
+  'NuwaxPC.Pages.AntvX6Params.inputVariableTypeRequired': '请选择变量类型',
+  'NuwaxPC.Pages.AntvX6Params.description': '描述',
+  'NuwaxPC.Pages.AntvX6Params.descriptionRequired': '请输入描述',
+  'NuwaxPC.Pages.AntvX6Params.paramName': '参数名',
+  'NuwaxPC.Pages.AntvX6Params.paramNameRequired': '请输入参数名',
+  'NuwaxPC.Pages.AntvX6Params.inputOrReferenceParamValue': '输入或引用参数值',
+  'NuwaxPC.Pages.AntvX6Params.paramValue': '参数值',
+  'NuwaxPC.Pages.AntvX6Params.paramValueRequired': '请输入参数值',
+  'NuwaxPC.Pages.AntvX6Params.inputParamValue': '输入参数值',
+  'NuwaxPC.Pages.AntvX6Params.intentDescriptionRequired':
+    '请输入用户意图的描述',
+  'NuwaxPC.Pages.AntvX6Params.inputOrReferenceVariableValue':
+    '输入或引用变量值',
+  'NuwaxPC.Pages.AntvX6Params.variableValue': '变量值',
+  'NuwaxPC.Pages.AntvX6Params.variableValueRequired': '请输入变量值',
+  'NuwaxPC.Pages.AntvX6Params.resourceWorkflow': '资源库工作流',
+  'NuwaxPC.Pages.AntvX6Params.officialExample': '官方示例',
+  'NuwaxPC.Pages.AntvX6Params.operatorEqual': '等于',
+  'NuwaxPC.Pages.AntvX6Params.operatorNotEqual': '不等于',
+  'NuwaxPC.Pages.AntvX6Params.operatorGreaterThan': '大于',
+  'NuwaxPC.Pages.AntvX6Params.operatorGreaterThanOrEqual': '大于等于',
+  'NuwaxPC.Pages.AntvX6Params.operatorLessThan': '小于',
+  'NuwaxPC.Pages.AntvX6Params.operatorLessThanOrEqual': '小于等于',
+  'NuwaxPC.Pages.AntvX6Params.operatorLengthGreaterThan': '长度大于',
+  'NuwaxPC.Pages.AntvX6Params.operatorLengthGreaterThanOrEqual': '长度大于等于',
+  'NuwaxPC.Pages.AntvX6Params.operatorLengthLessThan': '长度小于',
+  'NuwaxPC.Pages.AntvX6Params.operatorLengthLessThanOrEqual': '长度小于等于',
+  'NuwaxPC.Pages.AntvX6Params.operatorContains': '包含',
+  'NuwaxPC.Pages.AntvX6Params.operatorNotContains': '不包含',
+  'NuwaxPC.Pages.AntvX6Params.operatorMatchRegex': '匹配正则表达式',
+  'NuwaxPC.Pages.AntvX6Params.operatorIsNull': '为空',
+  'NuwaxPC.Pages.AntvX6Params.operatorNotNull': '不为空',
+  'NuwaxPC.Pages.AntvX6Params.operatorIn': '属于',
+  'NuwaxPC.Pages.AntvX6Params.operatorNotIn': '不属于',
   'NuwaxPC.Pages.SystemDashboard.pageTitle': '系统概览',
   'NuwaxPC.Pages.SystemDashboard.totalUsers': '总用户数',
   'NuwaxPC.Pages.SystemDashboard.todayNewUsers': '今日新增用户',

@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-30T10:41:36.032Z
+- 生成时间：2026-03-30T10:50:15.803Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：3710
-- hardcoded 中文：3710
+- 总问题数：3600
+- hardcoded 中文：3600
 - legacy System key：0
 - invalid dict key：0
 
@@ -15,7 +15,7 @@
 
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
-| src/pages/Antv-X6 | 633 | 0 | 0 | 633 |
+| src/pages/Antv-X6 | 523 | 0 | 0 | 523 |
 | src/pages/SystemManagement | 312 | 0 | 0 | 312 |
 | src/pages/EditAgent | 265 | 0 | 0 | 265 |
 | src/hooks | 186 | 0 | 0 | 186 |
@@ -137,71 +137,71 @@
 - [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1471 -> `连线不完整`
 - [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1489 -> `试运行所有节点失败:`
 - [hardcoded_chinese] src/pages/Antv-X6/index.tsx:2003 -> `加载 V3 版本...`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:67 -> `大模型`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:72 -> `调用大语言模型，使用变量和提示词生成回复`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:75 -> `插件`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:80 -> `必应搜索引擎。当你需要搜索你不知道的信息，比如天气...`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:83 -> `工作流`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:88 -> `必应搜索引擎。当你需要搜索你不知道的信息，比如天气...`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:96 -> `MCP 组件`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:101 -> `业务逻辑`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:105 -> `代码`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:110 -> `编写代码，处理输入变量来生成返回值`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:113 -> `条件分支`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:119 -> `连接多个下游分支，若设定的条件成立则仅运行对应的分支，若 均不成立则只运行“否则”分支`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:122 -> `意图识别`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:127 -> `用于用户输入的意图识别，并将其与预设意图选项进行匹配。`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:130 -> `循环`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:135 -> `用于通过设定循环次数和逻辑，重复执行一系列任务。`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:138 -> `继续循环`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:146 -> `终止循环`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:156 -> `知识&数据`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:160 -> `知识库`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:165 -> `在选定的知识中，根据输入变量召回最匹配的信息`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:168 -> `数据库`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:173 -> `可支持对数据表放开读写控制，用户可读写其他用户提交的数据， 由开发者控制`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:176 -> `变量`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:182 -> `用于读取和写入项目中的变量，变量名须与项目中的变量名相匹配`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:186 -> `长期记忆`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:191 -> `用于调用长期记忆，获取用户的个性化信息`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:196 -> `数据表`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:200 -> `数据新增`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:205 -> `对选定的数据表进行数据写入`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:208 -> `数据删除`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:213 -> `对选定的数据表根据指定ID进行数据删除`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:216 -> `数据更新`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:221 -> `对选定的数据表根据指定条件进行数据更新`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:224 -> `数据查询`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:229 -> `对选定的数据表根据指定条件进行数据查询`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:232 -> `SQL自定义`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:238 -> `可支持对数据表的查询控制，用户可查询其他用户提交的数据，由开发者控制`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:243 -> `组件&工具`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:247 -> `问答`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:252 -> `支持中间向用户提问问题`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:255 -> `文本处理`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:260 -> `用于处理多个字符串类型变量的格式`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:263 -> `文档提取`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:269 -> `用于提取文档内容，支持的文件类型: txt、 markdown、pdf、 html、 xlsx、 xls、 docx、 csv、 md、 htm`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:272 -> `http请求`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:277 -> `用于配置http请求调用已有的服务`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:282 -> `输出`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:286 -> `过程输出`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:291 -> `支持中间过程的消息输出，支持流式和非流式两种方式`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:404 -> ` 对应 `
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:432 -> ` 对应 `
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:441 -> `标题生成`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:443 -> `标题生成`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:461 -> `使用数组循环`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:462 -> `指定次数循环`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:463 -> `无限循环`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:468 -> `变量名`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:469 -> `变量名`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:470 -> `请输入变量名`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:476 -> `选择类型`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:477 -> `变量类型`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:478 -> `请选择变量类型`
-- [hardcoded_chinese] src/pages/Antv-X6/params.tsx:485 -> `描述`
-- ... 省略 553 条
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:67 -> `大模型`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:72 -> `调用大语言模型，使用变量和提示词生成回复`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:75 -> `插件`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:80 -> `必应搜索引擎。当你需要搜索你不知道的信息，比如天气...`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:83 -> `工作流`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:88 -> `必应搜索引擎。当你需要搜索你不知道的信息，比如天气...`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:96 -> `MCP 组件`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:101 -> `业务逻辑`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:105 -> `代码`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:110 -> `编写代码，处理输入变量来生成返回值`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:113 -> `条件分支`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:119 -> `连接多个下游分支，若设定的条件成立则仅运行对应的分支，若 均不成立则只运行“否则”分支`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:122 -> `意图识别`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:127 -> `用于用户输入的意图识别，并将其与预设意图选项进行匹配。`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:130 -> `循环`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:135 -> `用于通过设定循环次数和逻辑，重复执行一系列任务。`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:138 -> `继续循环`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:146 -> `终止循环`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:156 -> `知识&数据`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:160 -> `知识库`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:165 -> `在选定的知识中，根据输入变量召回最匹配的信息`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:168 -> `数据库`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:173 -> `可支持对数据表放开读写控制，用户可读写其他用户提交的数据， 由开发者控制`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:176 -> `变量`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:182 -> `用于读取和写入项目中的变量，变量名须与项目中的变量名相匹配`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:185 -> `变量聚合`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:190 -> `将多个分支或变量聚合成分组输出`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:193 -> `长期记忆`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:198 -> `用于调用长期记忆，获取用户的个性化信息`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:203 -> `数据表`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:207 -> `数据新增`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:212 -> `对选定的数据表进行数据写入`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:215 -> `数据删除`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:220 -> `对选定的数据表根据指定ID进行数据删除`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:223 -> `数据更新`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:228 -> `对选定的数据表根据指定条件进行数据更新`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:231 -> `数据查询`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:236 -> `对选定的数据表根据指定条件进行数据查询`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:239 -> `SQL自定义`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:245 -> `可支持对数据表的查询控制，用户可查询其他用户提交的数据，由开发者控制`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:250 -> `组件&工具`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:254 -> `问答`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:259 -> `支持中间向用户提问问题`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:262 -> `文本处理`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:267 -> `用于处理多个字符串类型变量的格式`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:270 -> `文档提取`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:276 -> `用于提取文档内容，支持的文件类型: txt、 markdown、pdf、 html、 xlsx、 xls、 docx、 csv、 md、 htm`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:279 -> `http请求`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:284 -> `用于配置http请求调用已有的服务`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:289 -> `输出`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:293 -> `过程输出`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:298 -> `支持中间过程的消息输出，支持流式和非流式两种方式`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:411 -> ` 对应 `
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:439 -> ` 对应 `
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:448 -> `标题生成`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:450 -> `标题生成`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:468 -> `使用数组循环`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:469 -> `指定次数循环`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:470 -> `无限循环`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:475 -> `变量名`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:476 -> `变量名`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:477 -> `请输入变量名`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:483 -> `选择类型`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:484 -> `变量类型`
+- ... 省略 443 条
 
 ## src/pages/SystemManagement
 
