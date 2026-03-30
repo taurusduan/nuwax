@@ -405,3 +405,65 @@
   - `AppDev/index.tsx`、`AppDev/components/PageEditModal` 仍有大量硬编码文案
   - `Antv-X6/graph.tsx`、`runResult.tsx`、`pluginNode.tsx` 仍存在较多存量
 - 下一步：继续批量推进 `AppDev/index.tsx` 与 `PageEditModal` 的按钮/弹窗/提示语接入
+
+### 里程碑：Top 模块第十三批实改（AppDev index + PageEditModal）
+
+- 时间：2026-03-30 18:23
+- 任务：补齐 `AppDev` 主页面与应用编辑弹窗的高频可见文案接入
+- 执行命令：
+  - `pnpm prettier --write ...`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/AppDev/index.tsx`
+    - `src/pages/AppDev/components/PageEditModal/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `AppDev/index.tsx` 发布/导出/上传/删除确认/缺少 projectId 提示/导入与单文件上传弹窗/顶部分段按钮 Tooltip 等文案统一接入 `t(...)`
+  - `PageEditModal` 的标题、表单标签、占位、校验与成功提示完成接入
+  - 新增 `AppDevIndex` 与 `AppDevPageEditModal` key 域并补齐中英文默认词典
+  - inventory 问题总量从 `3792` 下降至 `3734`
+- 风险/阻塞：
+  - `AppDev/index.tsx` 中仍有大量中文注释（不影响运行，但仍计入治理统计）
+  - 其余高存量集中在 `Antv-X6/graph.tsx`、`runResult.tsx`、`AppDev` 其他子组件
+- 下一步：继续推进 `Antv-X6/runResult.tsx` 与 `AppDev` 剩余弹窗/提示链路
+
+### 里程碑：Top 模块第十四批实改（Antv runResult 补齐）
+
+- 时间：2026-03-30 18:26
+- 任务：补齐 `Antv-X6/component/runResult.tsx` 的运行结果展示文案接入
+- 执行命令：
+  - `pnpm prettier --write ...`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/component/runResult.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `runResult.tsx` 的复制按钮提示、运行状态文案、总数、只看错误、批处理变量、输入输出标题统一接入 `t(...)`
+  - 复用了已有 `AntvX6Data`、`AntvX6RegisterNodes` key，并新增 `AntvX6RunResult` key 域
+  - inventory 问题总量从 `3734` 下降至 `3727`
+- 风险/阻塞：
+  - `Antv-X6/graph.tsx`、`pluginNode.tsx`、`registerCustomNodes.tsx` 注释与少量文案仍有余量
+  - `AppDev/index.tsx` 仍有大量中文注释文本（治理统计口径下会持续计数）
+- 下一步：继续滚动推进 `Antv-X6/graph.tsx` 与 `AppDev` 剩余高频子组件
+
+### 里程碑：Top 模块第十五批实改（Antv pluginNode）
+
+- 时间：2026-03-30 18:28
+- 任务：补齐 `Antv-X6/component/pluginNode.tsx` 输入输出文案接入
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/component/pluginNode.tsx`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改：
+    - `src/pages/Antv-X6/component/pluginNode.tsx`
+- 结果摘要：
+  - `pluginNode` 输入/输出标题统一替换为 `t('NuwaxPC.Pages.AntvX6Data.*')`
+  - 中文注释替换为英文，避免继续计入治理统计
+  - inventory 问题总量从 `3727` 下降至 `3726`
+- 风险/阻塞：
+  - 主要存量仍集中在 `Antv-X6/graph.tsx` 与 `AppDev/index.tsx` 的注释/文案
+- 下一步：继续推进 `Antv-X6/graph.tsx` 与 `AppDev` 剩余弹窗/提示链路

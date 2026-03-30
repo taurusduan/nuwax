@@ -245,3 +245,44 @@
   - `src/pages/Antv-X6/component/registerCustomNodes.tsx`
   - `src/locales/i18n/nuwaxpc-en-us.ts`
   - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+
+### 新增验证（Top 模块第十三批）
+
+- 命令：`pnpm prettier --write src/pages/AppDev/components/PageEditModal/index.tsx src/pages/AppDev/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `3792` 下降至 `3734`
+- 覆盖文件：
+  - `src/pages/AppDev/index.tsx`
+  - `src/pages/AppDev/components/PageEditModal/index.tsx`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+
+### 新增验证（Top 模块第十四批）
+
+- 命令：`pnpm prettier --write src/pages/AppDev/index.tsx src/pages/AppDev/components/PageEditModal/index.tsx src/pages/Antv-X6/component/runResult.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `3734` 下降至 `3727`
+- 覆盖文件：
+  - `src/pages/Antv-X6/component/runResult.tsx`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+
+### 新增验证（Top 模块第十五批）
+
+- 命令：`pnpm prettier --write src/pages/Antv-X6/component/pluginNode.tsx`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `3727` 下降至 `3726`
+- 覆盖文件：
+  - `src/pages/Antv-X6/component/pluginNode.tsx`

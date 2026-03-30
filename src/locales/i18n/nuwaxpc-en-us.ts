@@ -970,4 +970,108 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Intent not configured',
   'NuwaxPC.Pages.AntvX6RegisterNodes.unconfiguredQuestion':
     'Question not configured',
+  'NuwaxPC.Pages.AppDevIndex.application': 'Application',
+  'NuwaxPC.Pages.AppDevIndex.back': 'Back',
+  'NuwaxPC.Pages.AppDevIndex.bindDataSourceFailed':
+    'Failed to bind data source',
+  'NuwaxPC.Pages.AppDevIndex.bindDataSourceSuccess':
+    'Data source bound successfully',
+  'NuwaxPC.Pages.AppDevIndex.bindDataSourceUnknownError':
+    'Unknown error occurred while binding data source',
+  'NuwaxPC.Pages.AppDevIndex.clear': 'Clear',
+  'NuwaxPC.Pages.AppDevIndex.clickToPreview': 'Click to Preview',
+  'NuwaxPC.Pages.AppDevIndex.code': 'Code',
+  'NuwaxPC.Pages.AppDevIndex.confirmDeleteContent':
+    'Are you sure you want to delete {0} "{1}"?',
+  'NuwaxPC.Pages.AppDevIndex.confirmDeleteTitle': 'Confirm Deletion',
+  'NuwaxPC.Pages.AppDevIndex.confirmImport': 'Confirm Import',
+  'NuwaxPC.Pages.AppDevIndex.currentProjectId': 'Current Project ID',
+  'NuwaxPC.Pages.AppDevIndex.delete': 'Delete',
+  'NuwaxPC.Pages.AppDevIndex.deleteFolderWarning':
+    'Warning: Deleting a folder will also delete all files and subfolders inside. This action cannot be undone.',
+  'NuwaxPC.Pages.AppDevIndex.deleteSuccessWithType':
+    'Successfully deleted {0}: {1}',
+  'NuwaxPC.Pages.AppDevIndex.deployingSubtitle':
+    'Please wait, this mask will close automatically after publishing completes',
+  'NuwaxPC.Pages.AppDevIndex.deployingTip': 'Publishing project...',
+  'NuwaxPC.Pages.AppDevIndex.exportFailed': 'Export failed',
+  'NuwaxPC.Pages.AppDevIndex.exportFailedWithError': 'Export failed: {0}',
+  'NuwaxPC.Pages.AppDevIndex.exportSuccess': 'Project exported successfully!',
+  'NuwaxPC.Pages.AppDevIndex.exportUnknownError':
+    'Unknown error occurred during export',
+  'NuwaxPC.Pages.AppDevIndex.filePath': 'File Path',
+  'NuwaxPC.Pages.AppDevIndex.filePathPlaceholder':
+    'e.g. src/components/NewComponent.tsx',
+  'NuwaxPC.Pages.AppDevIndex.filePathTip':
+    'Enter a full file path including file name and extension, for example: src/components/NewComponent.tsx',
+  'NuwaxPC.Pages.AppDevIndex.fileSize': 'File Size',
+  'NuwaxPC.Pages.AppDevIndex.fileTypeFile': 'file',
+  'NuwaxPC.Pages.AppDevIndex.fileTypeFolder': 'folder',
+  'NuwaxPC.Pages.AppDevIndex.fileUploadFailed': 'File upload failed',
+  'NuwaxPC.Pages.AppDevIndex.fileUploadFailedWithError':
+    'File upload failed: {0}',
+  'NuwaxPC.Pages.AppDevIndex.fileUploadSuccess':
+    'File uploaded successfully: {0}',
+  'NuwaxPC.Pages.AppDevIndex.importProjectSuccess':
+    'Project imported successfully',
+  'NuwaxPC.Pages.AppDevIndex.importProjectTitle': 'Import Project',
+  'NuwaxPC.Pages.AppDevIndex.inputContentEmpty': 'Input content is empty',
+  'NuwaxPC.Pages.AppDevIndex.invalidProjectIdCannotBindDataSource':
+    'Project ID is missing or invalid. Unable to bind data source.',
+  'NuwaxPC.Pages.AppDevIndex.invalidProjectIdCannotDeploy':
+    'Project ID is missing or invalid. Unable to deploy.',
+  'NuwaxPC.Pages.AppDevIndex.invalidProjectIdCannotExport':
+    'Project ID is missing or invalid. Unable to export.',
+  'NuwaxPC.Pages.AppDevIndex.logAddedWaitingSend':
+    'Log has been added, waiting to send',
+  'NuwaxPC.Pages.AppDevIndex.missingProjectIdDesc':
+    'Please append a projectId parameter in URL, for example:',
+  'NuwaxPC.Pages.AppDevIndex.missingProjectIdExample':
+    '/space/your-space-id/app-dev/your-project-id',
+  'NuwaxPC.Pages.AppDevIndex.missingProjectIdMessage':
+    'Missing projectId parameter',
+  'NuwaxPC.Pages.AppDevIndex.notSet': 'Not set',
+  'NuwaxPC.Pages.AppDevIndex.onlyPluginWorkflowSupported':
+    'Only plugin and workflow data sources are supported',
+  'NuwaxPC.Pages.AppDevIndex.preview': 'Preview',
+  'NuwaxPC.Pages.AppDevIndex.publishComponentSuccessDesc':
+    'Project has been built and published successfully!',
+  'NuwaxPC.Pages.AppDevIndex.publishComponentSuccessTitle':
+    'Published as Component Successfully',
+  'NuwaxPC.Pages.AppDevIndex.publishFailed': 'Publish failed',
+  'NuwaxPC.Pages.AppDevIndex.publishFailedRetryAfterFix':
+    'Publish failed. Please resolve errors and retry.',
+  'NuwaxPC.Pages.AppDevIndex.selectFile': 'Select File',
+  'NuwaxPC.Pages.AppDevIndex.selectFileFirst': 'Please select a file first',
+  'NuwaxPC.Pages.AppDevIndex.selectedFile': 'Selected File',
+  'NuwaxPC.Pages.AppDevIndex.selectedFileWithName': 'Selected file: {0}',
+  'NuwaxPC.Pages.AppDevIndex.singleFileUploadHint':
+    'Any file format is supported. The file will be added to the specified path.',
+  'NuwaxPC.Pages.AppDevIndex.singleFileUploadTitle': 'Upload Single File',
+  'NuwaxPC.Pages.AppDevIndex.targetPathRequired': 'Target path cannot be empty',
+  'NuwaxPC.Pages.AppDevIndex.unknownError': 'Unknown error',
+  'NuwaxPC.Pages.AppDevIndex.unnamedProject': 'Unnamed Project',
+  'NuwaxPC.Pages.AppDevIndex.upload': 'Upload',
+  'NuwaxPC.Pages.AppDevIndex.uploadDragText':
+    'Click or drag file to this area to select',
+  'NuwaxPC.Pages.AppDevIndex.uploadProject': 'Upload Project',
+  'NuwaxPC.Pages.AppDevIndex.uploadZipHint':
+    'Only .zip archives are supported (will update current project)',
+  'NuwaxPC.Pages.AppDevIndex.zipOnly': 'Only .zip archive format is supported',
+  'NuwaxPC.Pages.AppDevPageEditModal.coverImage': 'Cover Image',
+  'NuwaxPC.Pages.AppDevPageEditModal.coverImageTip':
+    'Recommended size 356px * 200px, ratio 16:9',
+  'NuwaxPC.Pages.AppDevPageEditModal.description': 'Description',
+  'NuwaxPC.Pages.AppDevPageEditModal.descriptionPlaceholder':
+    'Please enter description',
+  'NuwaxPC.Pages.AppDevPageEditModal.editSuccess': 'Edited successfully',
+  'NuwaxPC.Pages.AppDevPageEditModal.icon': 'Icon',
+  'NuwaxPC.Pages.AppDevPageEditModal.modalTitle': 'Edit Application',
+  'NuwaxPC.Pages.AppDevPageEditModal.name': 'Name',
+  'NuwaxPC.Pages.AppDevPageEditModal.namePlaceholder': 'Please enter name',
+  'NuwaxPC.Pages.AppDevPageEditModal.nameRequired': 'Please enter name',
+  'NuwaxPC.Pages.AntvX6RunResult.totalCount': 'Total: {0}',
+  'NuwaxPC.Pages.AntvX6RunResult.onlyError': 'Only Failed',
+  'NuwaxPC.Pages.AntvX6RunResult.batchVariables':
+    'Batch Variables for This Run',
 };
