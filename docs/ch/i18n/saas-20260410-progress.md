@@ -537,3 +537,24 @@
 - 风险/阻塞：
   - `SystemManagement` 仍有多个高存量文件（`RoleFormModal`、`LogDetailDrawer` 等）
 - 下一步：继续推进 `SystemManagement/MenuPermission/RoleManage/components/RoleFormModal` 与 `RunningLog/LogDetailDrawer`
+
+### 里程碑：Top 模块第十九批实改（SystemManagement RoleFormModal）
+
+- 时间：2026-03-30 18:59
+- 任务：补齐 `SystemManagement/MenuPermission/RoleManage/components/RoleFormModal` 的表单与提示文案 i18n 接入
+- 执行命令：
+  - `pnpm prettier --write src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - 角色来源、弹窗标题、确认按钮、表单标签/占位/校验、状态 tooltip、启用禁用文案全部接入 `t(...)`
+  - 成功提示与校验失败日志接入多语言 key
+  - 中文注释/JSDoc 转为英文，减少治理统计噪音
+  - inventory 问题总量从 `3595` 下降至 `3573`
+- 风险/阻塞：
+  - `SystemManagement` 仍存在日志详情、运行日志等高存量中文文案
+- 下一步：继续推进 `RunningLog/LogDetailDrawer` 与 `RunningLog/LogProTable` 余量文件

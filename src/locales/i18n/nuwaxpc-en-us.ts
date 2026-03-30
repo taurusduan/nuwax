@@ -163,6 +163,35 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.SystemTargetAuthModal.authorizeWithName': 'Authorize - {0}',
   'NuwaxPC.Pages.SystemTargetAuthModal.selectAll': 'Select All',
   'NuwaxPC.Pages.SystemTargetAuthModal.clearAll': 'Clear All',
+  'NuwaxPC.Toast.SystemRoleFormModal.createSuccess':
+    'Role created successfully',
+  'NuwaxPC.Toast.SystemRoleFormModal.editSuccess': 'Role updated successfully',
+  'NuwaxPC.Pages.SystemRoleFormModal.roleSourceSystemBuiltIn':
+    'System Built-in',
+  'NuwaxPC.Pages.SystemRoleFormModal.roleSourceUserDefined': 'User Defined',
+  'NuwaxPC.Pages.SystemRoleFormModal.formValidateFailed':
+    'Form validation failed',
+  'NuwaxPC.Pages.SystemRoleFormModal.editTitle': 'Edit Role',
+  'NuwaxPC.Pages.SystemRoleFormModal.createTitle': 'Create Role',
+  'NuwaxPC.Pages.SystemRoleFormModal.save': 'Save',
+  'NuwaxPC.Pages.SystemRoleFormModal.create': 'Create',
+  'NuwaxPC.Pages.SystemRoleFormModal.roleName': 'Role Name',
+  'NuwaxPC.Pages.SystemRoleFormModal.roleNameRequired':
+    'Please enter role name',
+  'NuwaxPC.Pages.SystemRoleFormModal.roleNamePlaceholder':
+    'Please enter role name',
+  'NuwaxPC.Pages.SystemRoleFormModal.source': 'Source',
+  'NuwaxPC.Pages.SystemRoleFormModal.sourcePlaceholder': 'Please select source',
+  'NuwaxPC.Pages.SystemRoleFormModal.sort': 'Sort',
+  'NuwaxPC.Pages.SystemRoleFormModal.sortPlaceholder':
+    'Please enter sort order',
+  'NuwaxPC.Pages.SystemRoleFormModal.status': 'Status',
+  'NuwaxPC.Pages.SystemRoleFormModal.statusTooltip': 'Enable or disable role',
+  'NuwaxPC.Pages.SystemRoleFormModal.enabled': 'Enabled',
+  'NuwaxPC.Pages.SystemRoleFormModal.disabled': 'Disabled',
+  'NuwaxPC.Pages.SystemRoleFormModal.description': 'Description',
+  'NuwaxPC.Pages.SystemRoleFormModal.descriptionPlaceholder':
+    'Please enter role description',
   'NuwaxPC.Pages.SystemContentAgent.view': 'View',
   'NuwaxPC.Pages.SystemContentAgent.authorize': 'Authorize',
   'NuwaxPC.Pages.SystemContentAgent.delete': 'Delete',

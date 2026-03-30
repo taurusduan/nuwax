@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-30T10:54:33.685Z
+- 生成时间：2026-03-30T10:59:01.375Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：3595
-- hardcoded 中文：3595
+- 总问题数：3573
+- hardcoded 中文：3573
 - legacy System key：0
 - invalid dict key：0
 
@@ -16,7 +16,7 @@
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
 | src/pages/Antv-X6 | 523 | 0 | 0 | 523 |
-| src/pages/SystemManagement | 307 | 0 | 0 | 307 |
+| src/pages/SystemManagement | 285 | 0 | 0 | 285 |
 | src/pages/EditAgent | 265 | 0 | 0 | 265 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
@@ -208,28 +208,6 @@
 - [hardcoded_chinese] src/pages/SystemManagement/LogQuery/RunningLog/LogDetailDrawer/index.tsx:149 -> `复制成功`
 - [hardcoded_chinese] src/pages/SystemManagement/LogQuery/RunningLog/LogDetailDrawer/index.tsx:181 -> `日志详情`
 - [hardcoded_chinese] src/pages/SystemManagement/LogQuery/RunningLog/LogDetailDrawer/index.tsx:314 -> `暂无数据`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:49 -> `系统内置`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:50 -> `用户自定义`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:87 -> `角色创建成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:98 -> `角色编辑成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:144 -> `表单验证失败:`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:151 -> `编辑角色`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:151 -> `新增角色`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:154 -> `保存`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:154 -> `创建`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:172 -> `角色名称`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:174 -> `请输入角色名称`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:176 -> `请输入角色名称`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:181 -> `来源`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:183 -> `请选择来源`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:191 -> `排序`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:193 -> `请输入排序`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:203 -> `状态`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:207 -> `启用或禁用此角色`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:211 -> `启用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:211 -> `禁用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:215 -> `描述`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/components/RoleFormModal/index.tsx:217 -> `请输入角色描述`
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:130 -> `查询角色列表失败`
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:160 -> `删除成功`
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:208 -> `删除角色`
@@ -285,7 +263,29 @@
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:269 -> `删除用户组`
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:285 -> `排序更新成功`
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:359 -> `排序`
-- ... 省略 227 条
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:368 -> `用户组名称`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:376 -> `编码`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:383 -> `描述`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:394 -> `启用或禁用此用户组`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:411 -> `系统内置的用户组不能禁用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:418 -> `启用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:419 -> `禁用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:427 -> `操作`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:445 -> `系统内置的用户组不能编辑`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:450 -> `无此资源权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:460 -> `系统内置的用户组不能删除`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:465 -> `无此资源权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:472 -> `编辑`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:478 -> `删除`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:504 -> `无此资源权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:528 -> `无此资源权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:552 -> `无此资源权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:584 -> `用户组管理`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:647 -> `暂无用户组数据`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:158 -> `添加成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:169 -> `未搜索到相关用户`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:413 -> `绑定用户 - ${name}`
+- ... 省略 205 条
 
 ## src/pages/EditAgent
 
