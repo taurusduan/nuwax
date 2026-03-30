@@ -475,6 +475,9 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6Params.nodeVariableName': '变量',
   'NuwaxPC.Pages.AntvX6Params.nodeVariableDescription':
     '用于读取和写入项目中的变量，变量名须与项目中的变量名相匹配',
+  'NuwaxPC.Pages.AntvX6Params.nodeVariableAggregationName': '变量聚合',
+  'NuwaxPC.Pages.AntvX6Params.nodeVariableAggregationDescription':
+    '将多个分支或变量聚合成分组输出',
   'NuwaxPC.Pages.AntvX6Params.nodeLongTermMemoryName': '长期记忆',
   'NuwaxPC.Pages.AntvX6Params.nodeLongTermMemoryDescription':
     '用于调用长期记忆，获取用户的个性化信息',

@@ -600,3 +600,24 @@
 - 风险/阻塞：
   - `SystemManagement` 仍有多文件存量（尤其 `RunningLog/LogProTable` 注释类中文）
 - 下一步：继续推进 `Antv-X6/v3/ParamsV3.tsx`（高密度硬编码）与 `SystemManagement` 余量文件
+
+### 里程碑：Top 模块第二十二批实改（Antv-X6 v3 ParamsV3）
+
+- 时间：2026-03-30 20:07
+- 任务：改造 `src/pages/Antv-X6/v3/ParamsV3.tsx`，复用已完成 i18n 的 `params.tsx` 基础配置并补齐 V3 专属节点
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/v3/ParamsV3.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 shell 重写 + `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/v3/ParamsV3.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `ParamsV3` 不再重复维护一套硬编码配置，改为复用 `../params` 的 `dataTypes/modelTypes/options` 等导出
+  - V3 仅追加“变量聚合”节点（`NodeTypeEnum.VariableAggregation`），并接入 `t(...)`
+  - 新增 `AntvX6Params.nodeVariableAggregationName/Description` 中英文默认词典
+  - inventory 问题总量从 `3546` 下降至 `3434`
+- 风险/阻塞：
+  - `Antv-X6/index.tsx` 仍有高密度存量文案（错误提示、发布提示、流式日志文案）
+- 下一步：继续推进 `Antv-X6/index.tsx` 与 `SystemManagement/RunningLog/LogProTable`

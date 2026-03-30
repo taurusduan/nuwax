@@ -524,6 +524,10 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6Params.nodeVariableName': 'Variable',
   'NuwaxPC.Pages.AntvX6Params.nodeVariableDescription':
     'Read and write variables in the project. Variable names must match project variables.',
+  'NuwaxPC.Pages.AntvX6Params.nodeVariableAggregationName':
+    'Variable Aggregation',
+  'NuwaxPC.Pages.AntvX6Params.nodeVariableAggregationDescription':
+    'Aggregate multiple branches or variables into grouped outputs',
   'NuwaxPC.Pages.AntvX6Params.nodeLongTermMemoryName': 'Long-Term Memory',
   'NuwaxPC.Pages.AntvX6Params.nodeLongTermMemoryDescription':
     'Call long-term memory to retrieve user personalization data',

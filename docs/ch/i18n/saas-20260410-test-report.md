@@ -375,3 +375,17 @@
   - `src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx`
   - `src/locales/i18n/nuwaxpc-en-us.ts`
   - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+
+### 新增验证（Top 模块第二十二批）
+
+- 命令：`pnpm prettier --write src/pages/Antv-X6/v3/ParamsV3.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `3546` 下降至 `3434`
+- 覆盖文件：
+  - `src/pages/Antv-X6/v3/ParamsV3.tsx`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
