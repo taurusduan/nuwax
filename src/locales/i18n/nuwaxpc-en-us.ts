@@ -203,6 +203,37 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.SystemRunningLogDetailDrawer.executionProcess':
     'Execution Process',
   'NuwaxPC.Pages.SystemRunningLogDetailDrawer.empty': 'No data',
+  'NuwaxPC.Pages.SystemRoleManage.deleteSuccess': 'Deleted successfully',
+  'NuwaxPC.Pages.SystemRoleManage.deleteRoleTitle': 'Delete Role',
+  'NuwaxPC.Pages.SystemRoleManage.deleteRoleConfirm':
+    'Are you sure to delete role "{0}"?',
+  'NuwaxPC.Pages.SystemRoleManage.sortUpdated':
+    'Sort order updated successfully',
+  'NuwaxPC.Pages.SystemRoleManage.columnSort': 'Sort',
+  'NuwaxPC.Pages.SystemRoleManage.columnRoleName': 'Role Name',
+  'NuwaxPC.Pages.SystemRoleManage.columnCode': 'Code',
+  'NuwaxPC.Pages.SystemRoleManage.columnDescription': 'Description',
+  'NuwaxPC.Pages.SystemRoleManage.columnStatus': 'Status',
+  'NuwaxPC.Pages.SystemRoleManage.statusTooltip': 'Enable or disable role',
+  'NuwaxPC.Pages.SystemRoleManage.builtInCannotDisable':
+    'System built-in roles cannot be disabled',
+  'NuwaxPC.Pages.SystemRoleManage.enabled': 'Enabled',
+  'NuwaxPC.Pages.SystemRoleManage.disabled': 'Disabled',
+  'NuwaxPC.Pages.SystemRoleManage.columnAction': 'Action',
+  'NuwaxPC.Pages.SystemRoleManage.builtInCannotEdit':
+    'System built-in roles cannot be edited',
+  'NuwaxPC.Pages.SystemRoleManage.noPermission':
+    'No permission for this resource',
+  'NuwaxPC.Pages.SystemRoleManage.builtInCannotDelete':
+    'System built-in roles cannot be deleted',
+  'NuwaxPC.Pages.SystemRoleManage.edit': 'Edit',
+  'NuwaxPC.Pages.SystemRoleManage.delete': 'Delete',
+  'NuwaxPC.Pages.SystemRoleManage.bindUser': 'Bind User',
+  'NuwaxPC.Pages.SystemRoleManage.menuPermission': 'Menu Permission',
+  'NuwaxPC.Pages.SystemRoleManage.dataPermission': 'Data Permission',
+  'NuwaxPC.Pages.SystemRoleManage.pageTitle': 'Role Management',
+  'NuwaxPC.Pages.SystemRoleManage.addRole': 'Add Role',
+  'NuwaxPC.Pages.SystemRoleManage.emptyData': 'No role data',
   'NuwaxPC.Pages.SystemContentAgent.view': 'View',
   'NuwaxPC.Pages.SystemContentAgent.authorize': 'Authorize',
   'NuwaxPC.Pages.SystemContentAgent.delete': 'Delete',

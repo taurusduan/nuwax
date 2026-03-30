@@ -579,3 +579,24 @@
 - 风险/阻塞：
   - `SystemManagement` 仍有大头存量分布在 `RunningLog/LogProTable` 等文件
 - 下一步：继续推进 `RunningLog/LogProTable` 与 `AppDev` 余量
+
+### 里程碑：Top 模块第二十一批实改（SystemManagement RoleManage 主页面）
+
+- 时间：2026-03-30 20:03
+- 任务：批量改造 `SystemManagement/MenuPermission/RoleManage/index.tsx`，覆盖角色主列表页关键文案
+- 执行命令：
+  - `pnpm prettier --write src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - 列头、状态提示、权限提示、操作按钮、删除确认、页面标题、新增按钮、空态文案统一接入 `t(...)`
+  - 固定提示（系统内置角色限制、无权限）全部收敛为 key
+  - 中文注释与中文日志文本切换为英文，减少治理统计噪音
+  - inventory 问题总量从 `3570` 下降至 `3546`
+- 风险/阻塞：
+  - `SystemManagement` 仍有多文件存量（尤其 `RunningLog/LogProTable` 注释类中文）
+- 下一步：继续推进 `Antv-X6/v3/ParamsV3.tsx`（高密度硬编码）与 `SystemManagement` 余量文件

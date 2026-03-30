@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-30T11:02:38.350Z
+- 生成时间：2026-03-30T12:02:30.751Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：3570
-- hardcoded 中文：3570
+- 总问题数：3546
+- hardcoded 中文：3546
 - legacy System key：0
 - invalid dict key：0
 
@@ -16,8 +16,8 @@
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
 | src/pages/Antv-X6 | 523 | 0 | 0 | 523 |
-| src/pages/SystemManagement | 282 | 0 | 0 | 282 |
 | src/pages/EditAgent | 265 | 0 | 0 | 265 |
+| src/pages/SystemManagement | 258 | 0 | 0 | 258 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
 | src/services | 110 | 0 | 0 | 110 |
@@ -203,90 +203,6 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/ParamsV3.tsx:484 -> `变量类型`
 - ... 省略 443 条
 
-## src/pages/SystemManagement
-
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:130 -> `查询角色列表失败`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:160 -> `删除成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:208 -> `删除角色`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:268 -> `排序更新成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:340 -> `排序`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:349 -> `角色名称`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:357 -> `编码`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:364 -> `描述`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:375 -> `启用或禁用此角色`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:392 -> `系统内置的角色不能禁用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:399 -> `启用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:400 -> `禁用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:408 -> `操作`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:423 -> `系统内置的角色不能编辑`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:425 -> `无此资源权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:433 -> `系统内置的角色不能删除`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:435 -> `无此资源权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:442 -> `编辑`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:448 -> `删除`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:471 -> `无此资源权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:492 -> `无此资源权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:513 -> `无此资源权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:545 -> `角色管理`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/RoleManage/index.tsx:605 -> `暂无角色数据`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:49 -> `系统内置`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:50 -> `用户自定义`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:75 -> `新增用户组成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:87 -> `更新用户组成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:150 -> `表单验证失败:`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:157 -> `编辑用户组`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:157 -> `新增用户组`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:160 -> `保存`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:160 -> `创建`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:178 -> `用户组名称`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:180 -> `请输入用户组名称`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:182 -> `请输入用户组名称`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:188 -> `最大用户数`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:190 -> `请输入最大用户数`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:192 -> `最大值为2147483647`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:197 -> `请输入最大用户数`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:206 -> `来源`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:208 -> `请选择来源`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:217 -> `排序`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:222 -> `请输入排序`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:232 -> `状态`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:236 -> `启用或禁用此用户组`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:240 -> `启用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:240 -> `禁用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:245 -> `描述`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:247 -> `请输入用户组描述`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:139 -> `查询用户组列表失败`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:169 -> `删除成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:269 -> `删除用户组`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:285 -> `排序更新成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:359 -> `排序`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:368 -> `用户组名称`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:376 -> `编码`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:383 -> `描述`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:394 -> `启用或禁用此用户组`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:411 -> `系统内置的用户组不能禁用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:418 -> `启用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:419 -> `禁用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:427 -> `操作`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:445 -> `系统内置的用户组不能编辑`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:450 -> `无此资源权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:460 -> `系统内置的用户组不能删除`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:465 -> `无此资源权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:472 -> `编辑`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:478 -> `删除`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:504 -> `无此资源权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:528 -> `无此资源权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:552 -> `无此资源权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:584 -> `用户组管理`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:647 -> `暂无用户组数据`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:158 -> `添加成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:169 -> `未搜索到相关用户`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:413 -> `绑定用户 - ${name}`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:431 -> `输入用户名、邮箱或手机号码，回车搜索`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:450 -> `通过关键字搜索已绑定成员`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:485 -> `暂无数据`
-- ... 省略 202 条
-
 ## src/pages/EditAgent
 
 - [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/AsyncRun/index.tsx:27 -> `已经开始为你处理，请耐心等待运行结果`
@@ -370,6 +286,90 @@
 - [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:113 -> `选择是否每轮对话自动召回或按需从特定知识库召回`
 - [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:130 -> `搜索策略`
 - ... 省略 185 条
+
+## src/pages/SystemManagement
+
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:49 -> `系统内置`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:50 -> `用户自定义`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:75 -> `新增用户组成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:87 -> `更新用户组成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:150 -> `表单验证失败:`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:157 -> `编辑用户组`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:157 -> `新增用户组`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:160 -> `保存`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:160 -> `创建`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:178 -> `用户组名称`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:180 -> `请输入用户组名称`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:182 -> `请输入用户组名称`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:188 -> `最大用户数`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:190 -> `请输入最大用户数`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:192 -> `最大值为2147483647`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:197 -> `请输入最大用户数`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:206 -> `来源`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:208 -> `请选择来源`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:217 -> `排序`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:222 -> `请输入排序`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:232 -> `状态`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:236 -> `启用或禁用此用户组`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:240 -> `启用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:240 -> `禁用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:245 -> `描述`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/components/UserGroupFormModal/index.tsx:247 -> `请输入用户组描述`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:139 -> `查询用户组列表失败`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:169 -> `删除成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:269 -> `删除用户组`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:285 -> `排序更新成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:359 -> `排序`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:368 -> `用户组名称`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:376 -> `编码`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:383 -> `描述`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:394 -> `启用或禁用此用户组`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:411 -> `系统内置的用户组不能禁用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:418 -> `启用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:419 -> `禁用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:427 -> `操作`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:445 -> `系统内置的用户组不能编辑`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:450 -> `无此资源权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:460 -> `系统内置的用户组不能删除`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:465 -> `无此资源权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:472 -> `编辑`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:478 -> `删除`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:504 -> `无此资源权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:528 -> `无此资源权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:552 -> `无此资源权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:584 -> `用户组管理`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/UserGroupManage/index.tsx:647 -> `暂无用户组数据`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:158 -> `添加成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:169 -> `未搜索到相关用户`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:413 -> `绑定用户 - ${name}`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:431 -> `输入用户名、邮箱或手机号码，回车搜索`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:450 -> `通过关键字搜索已绑定成员`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:485 -> `暂无数据`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/components/ResourceItem/index.tsx:74 -> `已添加`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/components/ResourceItem/index.tsx:74 -> `添加`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:74 -> `模型需要授权后才可用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:87 -> `在内容管理中开启管控并发布到系统广场后可在此处进行授权`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:100 -> `在内容管理中开启管控并发布到系统广场后可在此处进行授权`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:110 -> `开发权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:497 -> `数据权限保存成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:505 -> `ID缺失，无法保存数据权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:668 -> `搜索智能体`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:761 -> `搜索网页应用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:858 -> `每日token限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:862 -> `每日 token 限制，-1 表示不限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:866 -> `请输入每日token限制数量`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:875 -> `可创建工作空间数量`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:879 -> `可创建工作空间数量，-1 表示不限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:887 -> `可创建智能体数量`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:891 -> `可创建智能体数量，-1 表示不限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:899 -> `可创建网页应用数量`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:903 -> `可创建网页应用数量，-1 表示不限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:911 -> `可创建知识库数量`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:915 -> `可创建知识库数量，-1 表示不限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:923 -> `知识库存储空间上限 (GB)`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:928 -> `-1表示不限制, 0表示无权限, 精度为0.001GB, 1GB=1024MB, 1MB=1024KB`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:953 -> `可创建数据表数量`
+- ... 省略 178 条
 
 ## src/hooks
 
