@@ -66,19 +66,19 @@ const Header: React.FC<HeaderProp> = ({
   const undoShortcut = isMac ? 'Cmd+Z' : 'Ctrl+Z';
   const redoShortcut = isMac ? 'Cmd+Shift+Z' : 'Ctrl+Shift+Z';
 
-  // 延迟显示"保存中"状态，避免快速闪烁
-  // 只有保存时间超过 300ms 才显示"保存中"
+  // Delay the "saving" state to avoid quick flicker.
+  // Show saving state only when save duration exceeds 300ms.
   const [showSaving, setShowSaving] = React.useState(false);
   const savingTimerRef = React.useRef<NodeJS.Timeout | null>(null);
 
   React.useEffect(() => {
     if (saveStatus === SaveStatusEnum.Saving) {
-      // 延迟 300ms 后才显示"保存中"
+      // Show "saving" only after 300ms delay.
       savingTimerRef.current = setTimeout(() => {
         setShowSaving(true);
       }, 300);
     } else {
-      // 保存完成，立即清除定时器并隐藏
+      // Save completed: clear timer and hide immediately.
       if (savingTimerRef.current) {
         clearTimeout(savingTimerRef.current);
         savingTimerRef.current = null;
@@ -93,7 +93,7 @@ const Header: React.FC<HeaderProp> = ({
     };
   }, [saveStatus]);
 
-  // 发布按钮是否禁用
+  // Whether publish button should be disabled.
   const disabledBtn = useMemo(() => {
     if (info) {
       return !info?.permissions?.includes(PermissionsEnum.Publish);
@@ -102,13 +102,13 @@ const Header: React.FC<HeaderProp> = ({
     }
   }, [info]);
 
-  // 渲染保存状态标签
+  // Render save status tag.
   const renderSaveStatus = () => {
     switch (saveStatus) {
       case SaveStatusEnum.Saving:
-        // 只有超过 300ms 才显示"保存中"
+        // Show "saving" only when duration exceeds 300ms.
         if (!showSaving) {
-          // 保存中但未超过 300ms，显示上一次的状态（已保存）
+          // Within 300ms, keep showing the previous "saved" state.
           return (
             <Tag color="default" bordered={false}>
               {t(
@@ -238,7 +238,9 @@ const Header: React.FC<HeaderProp> = ({
 
       <div className="header-tag-style flex items-center gap-8">
         {/* <Tag color="#C9CDD4">
-              {publishStatus === 'Published' ? '已发布' : '未发布'}
+              {publishStatus === 'Published'
+                ? t('NuwaxPC.Pages.AntvX6Header.published')
+                : t('NuwaxPC.Pages.AntvX6Header.unpublished')}
             </Tag> */}
         {renderSaveStatus()}
 

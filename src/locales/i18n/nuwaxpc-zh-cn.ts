@@ -946,6 +946,23 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6Workflow.cannotNestLoop': '循环体里请不要再添加循环体',
   'NuwaxPC.Pages.AntvX6Workflow.unsupportedComponentType': '暂不支持该类型组件',
   'NuwaxPC.Pages.AntvX6Workflow.loadingV3Version': '加载 V3 版本...',
+  'NuwaxPC.Pages.AntvX6NodeOperations.addNodeFailed': '添加节点失败',
+  'NuwaxPC.Pages.AntvX6NodeOperations.addNodeNetworkError':
+    '网络异常，添加节点失败',
+  'NuwaxPC.Pages.AntvX6NodeOperations.copyNodeFailed': '复制失败',
+  'NuwaxPC.Pages.AntvX6NodeOperations.copyNodeNetworkError':
+    '网络异常，复制节点失败',
+  'NuwaxPC.Pages.AntvX6NodeOperations.deleteNodeFailed': '删除失败',
+  'NuwaxPC.Pages.AntvX6History.noUndoAvailable': '没有可撤销的操作',
+  'NuwaxPC.Pages.AntvX6History.noRedoAvailable': '没有可重做的操作',
+  'NuwaxPC.Pages.AntvX6Persistence.versionConflict': '版本冲突',
+  'NuwaxPC.Pages.AntvX6Persistence.versionConflictTitle': '版本冲突',
+  'NuwaxPC.Pages.AntvX6Persistence.versionConflictContent':
+    '工作流已在其他窗口修改，是否强制覆盖？',
+  'NuwaxPC.Pages.AntvX6Persistence.forceOverwrite': '强制覆盖',
+  'NuwaxPC.Pages.AntvX6Persistence.cancel': '取消',
+  'NuwaxPC.Pages.AntvX6Persistence.saveFailed': '保存失败',
+  'NuwaxPC.Pages.AntvX6Persistence.networkSaveFailed': '网络异常，保存失败',
   'NuwaxPC.Pages.AntvX6Params.nodeLlmName': '大模型',
   'NuwaxPC.Pages.AntvX6Params.nodeLlmDescription':
     '调用大语言模型，使用变量和提示词生成回复',

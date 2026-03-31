@@ -1160,3 +1160,37 @@
 - 风险/阻塞：
   - 页面与组件层仍有大量存量文案待接入，当前 inventory 主要集中在 `AppDev`、`SystemManagement`、`Antv-X6` 其余子模块
 - 下一步：按 inventory Top 模块继续批量推进页面与组件文案 key 化
+
+### 里程碑：Top 模块第四十七批实改（Antv-X6 v3 hooks/components/services 批量收敛）
+
+- 时间：2026-03-31 14:31
+- 任务：批量处理 `Antv-X6 v3` 剩余高频中文文案（提示、日志、注释文本），并补齐默认中英文词典
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/v3/hooks/useNodeOperations.ts src/pages/Antv-X6/v3/hooks/useGraphInteraction.ts src/pages/Antv-X6/v3/hooks/useSkillConfigRefresh.ts src/pages/Antv-X6/v3/hooks/useTestRun.ts src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts src/pages/Antv-X6/v3/hooks/useWorkflowHistory.ts src/pages/Antv-X6/v3/hooks/useWorkflowLifecycle.ts src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts src/pages/Antv-X6/v3/hooks/useWorkflowValidation.ts src/pages/Antv-X6/v3/services/WorkflowSaveService.ts src/pages/Antv-X6/v3/components/layout/Header.tsx src/pages/Antv-X6/v3/components/layout/Sidebar.tsx src/pages/Antv-X6/v3/constants/node.constants.ts src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/v3/hooks/useNodeOperations.ts`
+    - `src/pages/Antv-X6/v3/hooks/useGraphInteraction.ts`
+    - `src/pages/Antv-X6/v3/hooks/useSkillConfigRefresh.ts`
+    - `src/pages/Antv-X6/v3/hooks/useTestRun.ts`
+    - `src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts`
+    - `src/pages/Antv-X6/v3/hooks/useWorkflowHistory.ts`
+    - `src/pages/Antv-X6/v3/hooks/useWorkflowLifecycle.ts`
+    - `src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts`
+    - `src/pages/Antv-X6/v3/hooks/useWorkflowValidation.ts`
+    - `src/pages/Antv-X6/v3/services/WorkflowSaveService.ts`
+    - `src/pages/Antv-X6/v3/components/layout/Header.tsx`
+    - `src/pages/Antv-X6/v3/components/layout/Sidebar.tsx`
+    - `src/pages/Antv-X6/v3/constants/node.constants.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `useNodeOperations/useWorkflowHistory/useWorkflowPersistence` 的用户提示接入 `t(...)`
+  - `Header` 发布状态残留中文字面量改为 `t('NuwaxPC.Pages.AntvX6Header.*')`
+  - `useTestRun/useGraphInteraction/useSkillConfigRefresh/useWorkflowLifecycle/useWorkflowValidation/WorkflowSaveService` 中中文日志统一改为英文
+  - 补齐 `NuwaxPC.Pages.AntvX6NodeOperations.*`、`NuwaxPC.Pages.AntvX6History.*`、`NuwaxPC.Pages.AntvX6Persistence.*` 默认中英文词典
+  - 治理总量从 `2853` 下降至 `2783`（-70）
+- 风险/阻塞：
+  - `AppDev/SystemManagement` 仍有较大存量，下一批需要并行推进页面层与 hooks 层
+- 下一步：按 inventory 继续推进 `AppDev` 与 `SystemManagement` Top 清单，同时补齐 Antv-X6 剩余注释型文本

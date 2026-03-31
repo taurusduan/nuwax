@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T06:16:00.555Z
+- 生成时间：2026-03-31T06:30:27.301Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2853
-- hardcoded 中文：2853
+- 总问题数：2783
+- hardcoded 中文：2783
 - legacy System key：0
 - invalid dict key：0
 
@@ -15,9 +15,9 @@
 
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
-| src/pages/Antv-X6 | 196 | 0 | 0 | 196 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
+| src/pages/Antv-X6 | 126 | 0 | 0 | 126 |
 | src/services | 110 | 0 | 0 | 110 |
 | src/components/FileTreeView | 97 | 0 | 0 | 97 |
 | src/pages/SpaceKnowledge | 82 | 0 | 0 | 82 |
@@ -118,90 +118,6 @@
 | src/components/SubmitButton | 1 | 0 | 0 | 1 |
 | src/layouts/HoverMenu | 1 | 0 | 0 | 1 |
 | src/layouts/MobileMenu.tsx | 1 | 0 | 0 | 1 |
-
-## src/pages/Antv-X6
-
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:69 -> `保存中`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:70 -> `保存中`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:76 -> `保存中`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:109 -> `保存中`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:241 -> `已发布`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:241 -> `未发布`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Sidebar.tsx:57 -> `搜索`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:168 -> `发布`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:169 -> `拒绝`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useGraphInteraction.ts:183 -> `[V3] 节点更新失败:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:33 -> `🔄 useModifiedSaveUpdate: 节流执行保存 [第${currentSaveCount}次]`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:43 -> `⏸️ useModifiedSaveUpdate: 保存正在进行中，跳过本次调用`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:49 -> `✅ useModifiedSaveUpdate: 开始执行保存操作`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:55 -> `🎉 useModifiedSaveUpdate: 保存成功完成`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:57 -> `❌ useModifiedSaveUpdate: 保存失败`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:67 -> `🚀 useModifiedSaveUpdate: 节流函数被调用`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:79 -> `📝 useModifiedSaveUpdate: isModified 状态变化 =`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:82 -> `⚡ useModifiedSaveUpdate: 触发节流保存函数`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:91 -> `🔗 useModifiedSaveUpdate: Hook 初始化完成`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:94 -> `🧹 useModifiedSaveUpdate: 清理 Hook 状态`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:291 -> `[handleConditionalNodeConnection] sourcePortId 为空，跳过连线创建`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:488 -> `[handleTargetNodeConnection] 删除边失败:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:598 -> `处理节点连接时发生错误:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:654 -> `循环体里请不要再添加循环体`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:732 -> `添加节点失败`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:733 -> `[V3] 添加节点 API 失败:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:738 -> `网络异常，添加节点失败`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:739 -> `[V3] 添加节点 API 异常:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:812 -> `处理节点创建成功后的操作失败:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:816 -> `[V3] 添加节点代理层失败:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:872 -> `[V3] 复制节点代理层添加失败:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:875 -> `复制失败`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:878 -> `[V3] 复制节点 API 异常:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:879 -> `网络异常，复制节点失败`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:941 -> `删除失败`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:1019 -> `暂不支持该类型组件`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useSkillConfigRefresh.ts:71 -> `[useSkillConfigRefresh] 工具参数回填失败:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useTestRun.ts:137 -> `流式请求异常:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useTestRun.ts:140 -> `连接已建立`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useTestRun.ts:239 -> `流式请求异常:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useTestRun.ts:242 -> `连接已建立`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useTestRun.ts:267 -> `试运行所有节点失败:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowHistory.ts:71 -> `没有可撤销的操作`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowHistory.ts:89 -> `没有可重做的操作`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowHistory.ts:186 -> `没有可撤销的操作`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowHistory.ts:200 -> `没有可重做的操作`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowLifecycle.ts:58 -> `刷新后版本号已更新:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:74 -> `画布未初始化`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:83 -> `画布数据无效，尝试使用 workflowProxy 数据`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:86 -> `构建保存数据失败，无可用数据源`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:89 -> `使用 workflowProxy 数据保存`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:92 -> `使用单一数据源保存, 节点数:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:115 -> `版本号已更新:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:124 -> `保存成功 ✓`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:131 -> `版本冲突，工作流已被其他窗口修改`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:133 -> `版本冲突`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:142 -> `版本冲突`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:143 -> `工作流已在其他窗口修改，是否强制覆盖？`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:144 -> `强制覆盖`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:145 -> `取消`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:163 -> `工作流保存失败:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:166 -> `保存失败`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:170 -> `[V3] 工作流保存异常:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:174 -> `网络异常，保存失败`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:282 -> `[V3] 节点配置自动保存失败:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowValidation.ts:74 -> `[V3] 工作流保存失败，无法进行校验`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowValidation.ts:219 -> `先判断是否有覆盖`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/WorkflowSaveService.ts:93 -> `[SaveService] 未初始化，无法更新元数据`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/WorkflowSaveService.ts:152 -> `[SaveService] 未初始化，无法构建保存数据`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/WorkflowSaveService.ts:162 -> `[SaveService] 画布无有效节点，尝试使用 workflowProxy 数据保存`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:21 -> `测试节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:39 -> `开始`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:49 -> `大模型`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:60 -> `结束`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:81 -> `开始`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:87 -> `条件分支`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:100 -> `分支1`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:106 -> `分支2`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:112 -> `结束`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:142 -> `初始化与重置`
-- ... 省略 116 条
 
 ## src/hooks
 
@@ -370,6 +286,90 @@
 - [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:94 -> `复制模板`
 - [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:265 -> `[PagePreviewIframe] popstate 事件：找不到目标 URL，已添加到历史记录`
 - ... 省略 64 条
+
+## src/pages/Antv-X6
+
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:21 -> `测试节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:39 -> `开始`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:49 -> `大模型`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:60 -> `结束`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:81 -> `开始`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:87 -> `条件分支`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:100 -> `分支1`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:106 -> `分支2`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:112 -> `结束`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:142 -> `初始化与重置`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:170 -> `节点查询`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:178 -> `大模型`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:192 -> `开始`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:196 -> `节点添加`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:205 -> `代码节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:214 -> `代码节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:222 -> `重复节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:228 -> `已存在`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:243 -> `未初始化`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:247 -> `节点更新`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:256 -> `更新后的大模型`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:268 -> `更新后的大模型`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:276 -> `变量节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:283 -> `变量节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:287 -> `节点删除`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:316 -> `不存在`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:320 -> `节点复制`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:343 -> `节点位置更新`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:367 -> `边操作`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:378 -> `代码节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:398 -> `已存在`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:402 -> `条件分支节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:426 -> `数据一致性`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:437 -> `外部添加`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:51 -> `[WorkflowProxy] 无效的节点 ID:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:60 -> `[WorkflowProxy] 节点 ID 超出安全整数范围，精度丢失:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:116 -> `[Proxy] 节点数量:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:118 -> `边数量:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:126 -> `[Proxy] 节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:229 -> `[Proxy] 边的源节点不存在: ${edge.source}, 将移除此边`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:234 -> `[Proxy] 边的目标节点不存在: ${edge.target}, 将移除此边`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:243 -> `[Proxy] 已移除 ${invalidEdges.length} 条无效边`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:273 -> `[Proxy] 节点 ${node.id} (${node.name}) 画布有边到 ${id}，但 nextNodeIds 缺少此连接，已自动添加`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:284 -> `[Proxy] 节点 ${node.id} (${node.name}) nextNodeIds 包含 ${id}，但画布无对应边，已自动移除`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:352 -> `工作流数据未初始化`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:360 -> `[Proxy] 节点更新成功:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:364 -> `[Proxy] 节点新增（通过更新）:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:385 -> `工作流数据未初始化`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:393 -> `节点 ${node.id} 已存在`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:415 -> `工作流数据未初始化`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:422 -> `节点 ${nodeId} 不存在`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:525 -> `工作流数据未初始化`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:532 -> `节点 ${nodeId} 不存在`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:594 -> `工作流数据未初始化`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:601 -> `节点 ${nodeId} 不存在`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:703 -> ` 或 `
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:804 -> `工作流数据未初始化`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:815 -> `边已存在`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:840 -> `[Proxy] 特殊端口连线添加:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:878 -> `工作流数据未初始化`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:895 -> `边不存在`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:921 -> `[Proxy] 特殊端口连线删除:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:957 -> `工作流数据未初始化`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:964 -> `节点 ${nodeId} 不存在`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:1257 -> `[V3 Proxy] syncFromGraph 完成，处理了`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:1257 -> `条边`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/graphV3.ts:198 -> `左侧连接桩只能作为接入点，右侧连接桩只能作为输出点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/graphV3.ts:276 -> `条件分支，意图识别，问答不能作为循环的出口连接节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/graphV3.ts:281 -> `当前已有对子节点连接循环的出口，请先删除该连线`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/graphV3.ts:291 -> `当前循环已有对子节点的连线，请先删除该连线`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/graphV3.ts:327 -> `不能创建重复的边`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/graphV3.ts:340 -> `不能连接外部的节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/graphV3.ts:363 -> `不能连接外部节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts:29 -> `开始`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts:30 -> `结束`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts:31 -> `大模型`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts:32 -> `代码`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts:33 -> `条件分支`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts:34 -> `意图识别`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts:35 -> `循环`
+- ... 省略 46 条
 
 ## src/services
 

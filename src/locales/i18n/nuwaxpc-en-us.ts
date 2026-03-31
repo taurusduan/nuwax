@@ -1070,6 +1070,27 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6Workflow.unsupportedComponentType':
     'This component type is not supported yet',
   'NuwaxPC.Pages.AntvX6Workflow.loadingV3Version': 'Loading V3 version...',
+  'NuwaxPC.Pages.AntvX6NodeOperations.addNodeFailed': 'Failed to add node',
+  'NuwaxPC.Pages.AntvX6NodeOperations.addNodeNetworkError':
+    'Network error, failed to add node',
+  'NuwaxPC.Pages.AntvX6NodeOperations.copyNodeFailed': 'Failed to copy node',
+  'NuwaxPC.Pages.AntvX6NodeOperations.copyNodeNetworkError':
+    'Network error, failed to copy node',
+  'NuwaxPC.Pages.AntvX6NodeOperations.deleteNodeFailed':
+    'Failed to delete node',
+  'NuwaxPC.Pages.AntvX6History.noUndoAvailable':
+    'No operations available to undo',
+  'NuwaxPC.Pages.AntvX6History.noRedoAvailable':
+    'No operations available to redo',
+  'NuwaxPC.Pages.AntvX6Persistence.versionConflict': 'Version conflict',
+  'NuwaxPC.Pages.AntvX6Persistence.versionConflictTitle': 'Version conflict',
+  'NuwaxPC.Pages.AntvX6Persistence.versionConflictContent':
+    'Workflow was updated in another window. Force overwrite?',
+  'NuwaxPC.Pages.AntvX6Persistence.forceOverwrite': 'Force overwrite',
+  'NuwaxPC.Pages.AntvX6Persistence.cancel': 'Cancel',
+  'NuwaxPC.Pages.AntvX6Persistence.saveFailed': 'Save failed',
+  'NuwaxPC.Pages.AntvX6Persistence.networkSaveFailed':
+    'Network error, save failed',
   'NuwaxPC.Pages.AntvX6Params.nodeLlmName': 'Large Language Model',
   'NuwaxPC.Pages.AntvX6Params.nodeLlmDescription':
     'Call the large language model and generate responses with variables and prompts',

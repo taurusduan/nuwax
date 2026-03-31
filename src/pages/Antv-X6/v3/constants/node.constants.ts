@@ -162,13 +162,6 @@ export const optionsMap = [
   'Z',
 ];
 
-// export const StatusMap={
-//   Developing:"",
-//   Applying:"",
-//   Published:"发布",
-//   Rejected:'拒绝'
-// }
-
 export const DEFAULT_DRAWER_FORM: ChildNode = {
   type: NodeTypeEnum.Start,
   shape: NodeShapeEnum.General,

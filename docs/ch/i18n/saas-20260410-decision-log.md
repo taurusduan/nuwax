@@ -237,3 +237,11 @@
 - 影响：
   - 提升跨团队阅读一致性，不影响运行逻辑
   - 后续同类 hook 改造可复用该注释规范
+
+### D-033 Antv 持久化与历史提示统一 key 化
+
+- 决策：`useNodeOperations`、`useWorkflowHistory`、`useWorkflowPersistence` 的用户可见提示统一切换为 `t(...)`，并由 `NuwaxPC.Pages.AntvX6NodeOperations.* / AntvX6History.* / AntvX6Persistence.*` 承载
+- 原因：这些 Hook 中存在高频操作提示（新增/复制/删除失败、撤销/重做不可用、版本冲突确认），若保留硬编码会持续在多语言扫描中反复出现
+- 影响：
+  - 节点操作、历史操作、冲突弹窗链路进入统一词典管理
+  - 后端联调时只需补齐同名 key，不需要页面侧再写临时兼容文案

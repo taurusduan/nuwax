@@ -751,3 +751,29 @@
   - 汇总：问题总量维持 `2853`
 - 覆盖文件：
   - `src/pages/Antv-X6/v3/hooks/useBeforeUnload.ts`
+
+### 新增验证（Top 模块第四十七批）
+
+- 命令：`pnpm prettier --write src/pages/Antv-X6/v3/hooks/useNodeOperations.ts src/pages/Antv-X6/v3/hooks/useGraphInteraction.ts src/pages/Antv-X6/v3/hooks/useSkillConfigRefresh.ts src/pages/Antv-X6/v3/hooks/useTestRun.ts src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts src/pages/Antv-X6/v3/hooks/useWorkflowHistory.ts src/pages/Antv-X6/v3/hooks/useWorkflowLifecycle.ts src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts src/pages/Antv-X6/v3/hooks/useWorkflowValidation.ts src/pages/Antv-X6/v3/services/WorkflowSaveService.ts src/pages/Antv-X6/v3/components/layout/Header.tsx src/pages/Antv-X6/v3/components/layout/Sidebar.tsx src/pages/Antv-X6/v3/constants/node.constants.ts src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `2853` 下降至 `2783`
+- 覆盖文件：
+  - `src/pages/Antv-X6/v3/hooks/useNodeOperations.ts`
+  - `src/pages/Antv-X6/v3/hooks/useGraphInteraction.ts`
+  - `src/pages/Antv-X6/v3/hooks/useSkillConfigRefresh.ts`
+  - `src/pages/Antv-X6/v3/hooks/useTestRun.ts`
+  - `src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts`
+  - `src/pages/Antv-X6/v3/hooks/useWorkflowHistory.ts`
+  - `src/pages/Antv-X6/v3/hooks/useWorkflowLifecycle.ts`
+  - `src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts`
+  - `src/pages/Antv-X6/v3/hooks/useWorkflowValidation.ts`
+  - `src/pages/Antv-X6/v3/services/WorkflowSaveService.ts`
+  - `src/pages/Antv-X6/v3/components/layout/Header.tsx`
+  - `src/pages/Antv-X6/v3/components/layout/Sidebar.tsx`
+  - `src/pages/Antv-X6/v3/constants/node.constants.ts`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
