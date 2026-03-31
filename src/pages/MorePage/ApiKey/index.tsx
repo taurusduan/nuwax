@@ -41,11 +41,9 @@ const ApiKeyPage: React.FC = () => {
     ApiKeyInfo | undefined
   >();
   const location: any = useLocation();
-  const [pageSize, setPageSize] = useState(15);
 
   useEffect(() => {
     if (location.state?._t) {
-      setPageSize(15);
       actionRef.current?.reloadAndRest?.();
     }
   }, [location.state?._t]);
@@ -230,6 +228,7 @@ const ApiKeyPage: React.FC = () => {
         key={location.state?._t || 'api-key-table'}
         actionRef={actionRef}
         request={async (params) => {
+          const { current = 1, pageSize = 15 } = params;
           const result = await apiApiKeyList();
           const data = result.data || [];
 
@@ -241,17 +240,21 @@ const ApiKeyPage: React.FC = () => {
             return nameMatch;
           });
 
+          const total = filteredData.length;
+          const startIndex = (current - 1) * pageSize;
+          const slicedData = filteredData.slice(
+            startIndex,
+            startIndex + pageSize,
+          );
+
           return {
-            data: filteredData,
+            data: slicedData,
             success: true,
+            total,
           };
         }}
         columns={columns}
         rowKey="id"
-        pagination={{
-          pageSize,
-          onChange: (_, size) => setPageSize(size),
-        }}
       />
       <ApiKeyFormModal
         open={modalOpen}
