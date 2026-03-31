@@ -1349,6 +1349,86 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.SystemMenuManage.pageTitle': '菜单管理',
   'NuwaxPC.Pages.SystemMenuManage.addMenu': '新增菜单',
   'NuwaxPC.Pages.SystemMenuManage.noMenuData': '暂无菜单数据',
+  'NuwaxPC.Pages.SystemMenuPermissionModal.saveSuccess': '菜单权限保存成功',
+  'NuwaxPC.Pages.SystemMenuPermissionModal.titleWithName': '菜单权限配置-{0}',
+  'NuwaxPC.Pages.SystemMenuPermissionModal.emptyMenuData': '暂无菜单数据',
+  'NuwaxPC.Pages.SystemMenuPermissionModal.resourceLabelWithId': '资源 {0}',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tabModel': '模型',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tabModelTip':
+    '模型需要授权后才可用',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tabAgent': '智能体',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.contentMgmtTip':
+    '在内容管理中开启管控并发布到系统广场后可在此处进行授权',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tabWebApp': '网页应用',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tabDevPermission': '开发权限',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.saveSuccess': '数据权限保存成功',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.missingTargetId':
+    'ID缺失，无法保存数据权限',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.emptySelectedModel':
+    '暂无已选模型',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.searchAgentPlaceholder':
+    '搜索智能体',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.emptySelectedAgent':
+    '暂无已选智能体',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.searchWebAppPlaceholder':
+    '搜索网页应用',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.emptySelectedWebApp':
+    '暂无已选网页应用',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tokenLimitLabel':
+    '每日token限制',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tokenLimitTip':
+    '每日 token 限制，-1 表示不限制',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tokenLimitPlaceholder':
+    '请输入每日token限制数量',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxSpaceCountLabel':
+    '可创建工作空间数量',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxSpaceCountTip':
+    '可创建工作空间数量，-1 表示不限制',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxAgentCountLabel':
+    '可创建智能体数量',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxAgentCountTip':
+    '可创建智能体数量，-1 表示不限制',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxWebAppCountLabel':
+    '可创建网页应用数量',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxWebAppCountTip':
+    '可创建网页应用数量，-1 表示不限制',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountLabel':
+    '可创建知识库数量',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountTip':
+    '可创建知识库数量，-1 表示不限制',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbLabel':
+    '知识库存储空间上限 (GB)',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbTip':
+    '-1表示不限制, 0表示无权限, 精度为0.001GB, 1GB=1024MB, 1MB=1024KB',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxDataTableCountLabel':
+    '可创建数据表数量',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxDataTableCountTip':
+    '可创建数据表数量，-1 表示不限制',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountLabel':
+    '可创建定时任务数量',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountTip':
+    '可创建定时任务数量，-1 表示不限制',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentMemoryGbLabel':
+    '智能体电脑内存(GB)',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentMemoryGbTip':
+    '智能体电脑内存 (GB，留空表示使用默认值4GB)',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentCpuCoresLabel':
+    '智能体电脑 CPU 核心数',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentCpuCoresTip':
+    '智能体电脑 CPU 核心数（留空表示使用默认值）',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitLabel':
+    '通用智能体每天对话次数限制',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitTip':
+    '通用智能体每天对话次数，-1表示不限制',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitLabel':
+    '网页应用开发每天对话次数',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitTip':
+    '网页应用开发每天对话次数，-1表示不限制',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.titleWithName':
+    '数据权限设置 - {0}',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.itemAdd': '添加',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.itemAdded': '已添加',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.itemRemove': '移除',
   'NuwaxPC.Pages.AppDevPreview.devServerUrlUnavailable': '开发服务器URL不可用',
   'NuwaxPC.Pages.AppDevPreview.retryFailedCheckNetwork':
     '重试失败，请检查网络连接',

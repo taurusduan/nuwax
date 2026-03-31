@@ -1522,6 +1522,90 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.SystemMenuManage.pageTitle': 'Menu Management',
   'NuwaxPC.Pages.SystemMenuManage.addMenu': 'Add Menu',
   'NuwaxPC.Pages.SystemMenuManage.noMenuData': 'No menu data',
+  'NuwaxPC.Pages.SystemMenuPermissionModal.saveSuccess':
+    'Menu permissions saved successfully',
+  'NuwaxPC.Pages.SystemMenuPermissionModal.titleWithName':
+    'Menu Permission Config - {0}',
+  'NuwaxPC.Pages.SystemMenuPermissionModal.emptyMenuData': 'No menu data',
+  'NuwaxPC.Pages.SystemMenuPermissionModal.resourceLabelWithId': 'Resource {0}',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tabModel': 'Model',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tabModelTip':
+    'Models require authorization before use',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tabAgent': 'Agent',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.contentMgmtTip':
+    'Enable access control in content management and publish to system square before authorizing here',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tabWebApp': 'Web Application',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tabDevPermission':
+    'Development Permissions',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.saveSuccess':
+    'Data permissions saved successfully',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.missingTargetId':
+    'Missing ID. Unable to save data permissions',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.emptySelectedModel':
+    'No selected models',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.searchAgentPlaceholder':
+    'Search agents',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.emptySelectedAgent':
+    'No selected agents',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.searchWebAppPlaceholder':
+    'Search web applications',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.emptySelectedWebApp':
+    'No selected web applications',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tokenLimitLabel':
+    'Daily token limit',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tokenLimitTip':
+    'Daily token limit. -1 means no limit',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tokenLimitPlaceholder':
+    'Enter daily token limit',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxSpaceCountLabel':
+    'Max workspaces',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxSpaceCountTip':
+    'Maximum number of workspaces. -1 means no limit',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxAgentCountLabel':
+    'Max agents',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxAgentCountTip':
+    'Maximum number of agents. -1 means no limit',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxWebAppCountLabel':
+    'Max web applications',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxWebAppCountTip':
+    'Maximum number of web applications. -1 means no limit',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountLabel':
+    'Max knowledge bases',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountTip':
+    'Maximum number of knowledge bases. -1 means no limit',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbLabel':
+    'Knowledge storage limit (GB)',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbTip':
+    '-1 means no limit, 0 means no permission, precision is 0.001GB, 1GB=1024MB, 1MB=1024KB',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxDataTableCountLabel':
+    'Max data tables',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxDataTableCountTip':
+    'Maximum number of data tables. -1 means no limit',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountLabel':
+    'Max scheduled tasks',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountTip':
+    'Maximum number of scheduled tasks. -1 means no limit',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentMemoryGbLabel':
+    'Agent memory (GB)',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentMemoryGbTip':
+    'Agent memory (GB). Leave empty to use default 4GB',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentCpuCoresLabel':
+    'Agent CPU cores',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentCpuCoresTip':
+    'Agent CPU cores (leave empty to use default value)',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitLabel':
+    'General agent daily conversation limit',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitTip':
+    'General agent daily conversations. -1 means no limit',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitLabel':
+    'Web app development daily conversation limit',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitTip':
+    'Web app development daily conversations. -1 means no limit',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.titleWithName':
+    'Data Permission Settings - {0}',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.itemAdd': 'Add',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.itemAdded': 'Added',
+  'NuwaxPC.Pages.SystemMenuDataPermissionModal.itemRemove': 'Remove',
   'NuwaxPC.Pages.AppDevPreview.devServerUrlUnavailable':
     'Development server URL is unavailable',
   'NuwaxPC.Pages.AppDevPreview.retryFailedCheckNetwork':

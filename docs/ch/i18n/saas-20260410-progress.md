@@ -1005,3 +1005,29 @@
 - 风险/阻塞：
   - `MenuPermission` 仍有较多存量集中在 `DataPermissionModal` 与 `MenuPermissionModal`
 - 下一步：继续推进 `MenuPermission/components/DataPermissionModal/index.tsx`
+
+### 里程碑：Top 模块第四十批实改（MenuPermission 数据权限 + 菜单权限）
+
+- 时间：2026-03-31 12:38
+- 任务：完成 `DataPermissionModal`、`MenuPermissionModal`、`MenuPermissionTree`、`ResourceItem` 的可见文案接入 `t(...)`
+- 执行命令：
+  - `pnpm prettier --write src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/components/ResourceItem/index.tsx src/pages/SystemManagement/MenuPermission/components/MenuPermissionModal/index.tsx src/pages/SystemManagement/MenuPermission/components/MenuPermissionModal/MenuPermissionTree/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx`
+    - `src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/components/ResourceItem/index.tsx`
+    - `src/pages/SystemManagement/MenuPermission/components/MenuPermissionModal/index.tsx`
+    - `src/pages/SystemManagement/MenuPermission/components/MenuPermissionModal/MenuPermissionTree/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `DataPermissionModal` 的 tabs、搜索框 placeholder、空态、表单 label/tooltip、保存与错误消息、弹窗按钮文案全部改为 `t(...)`
+  - `ResourceItem` 的添加/已添加/移除按钮文案改为 `t(...)`
+  - `MenuPermissionModal` 的标题、成功提示、空态与取消按钮文案接入 `t(...)`
+  - `MenuPermissionTree` 资源名称兜底文案改为 `t(...)`
+  - 新增 `NuwaxPC.Pages.SystemMenuDataPermissionModal.*`、`NuwaxPC.Pages.SystemMenuPermissionModal.*` 中英文默认词典
+  - 治理总量从 `2965` 下降至 `2924`（-41）
+- 风险/阻塞：
+  - `MenuPermission` 目录仍有少量存量集中在业务逻辑与注释密集区（非本批核心可见链路）
+- 下一步：继续按 inventory 推进 `AppDev / SystemManagement / Antv-X6` Top 文件

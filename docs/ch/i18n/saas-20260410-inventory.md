@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T04:23:56.072Z
+- 生成时间：2026-03-31T04:36:59.471Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2965
-- hardcoded 中文：2965
+- 总问题数：2924
+- hardcoded 中文：2924
 - legacy System key：0
 - invalid dict key：0
 
@@ -18,11 +18,11 @@
 | src/pages/Antv-X6 | 267 | 0 | 0 | 267 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
-| src/pages/SystemManagement | 120 | 0 | 0 | 120 |
 | src/services | 110 | 0 | 0 | 110 |
 | src/components/FileTreeView | 97 | 0 | 0 | 97 |
 | src/pages/SpaceKnowledge | 82 | 0 | 0 | 82 |
 | src/pages/UserManage | 82 | 0 | 0 | 82 |
+| src/pages/SystemManagement | 79 | 0 | 0 | 79 |
 | src/pages/EditAgent | 78 | 0 | 0 | 78 |
 | src/pages/AppDev | 72 | 0 | 0 | 72 |
 | src/pages/SpacePageDevelop | 72 | 0 | 0 | 72 |
@@ -371,90 +371,6 @@
 - [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:265 -> `[PagePreviewIframe] popstate 事件：找不到目标 URL，已添加到历史记录`
 - ... 省略 64 条
 
-## src/pages/SystemManagement
-
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:159 -> `添加成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/components/ResourceItem/index.tsx:74 -> `已添加`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/components/ResourceItem/index.tsx:74 -> `添加`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:74 -> `模型需要授权后才可用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:87 -> `在内容管理中开启管控并发布到系统广场后可在此处进行授权`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:100 -> `在内容管理中开启管控并发布到系统广场后可在此处进行授权`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:110 -> `开发权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:497 -> `数据权限保存成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:505 -> `ID缺失，无法保存数据权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:668 -> `搜索智能体`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:761 -> `搜索网页应用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:858 -> `每日token限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:862 -> `每日 token 限制，-1 表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:866 -> `请输入每日token限制数量`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:875 -> `可创建工作空间数量`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:879 -> `可创建工作空间数量，-1 表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:887 -> `可创建智能体数量`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:891 -> `可创建智能体数量，-1 表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:899 -> `可创建网页应用数量`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:903 -> `可创建网页应用数量，-1 表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:911 -> `可创建知识库数量`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:915 -> `可创建知识库数量，-1 表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:923 -> `知识库存储空间上限 (GB)`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:928 -> `-1表示不限制, 0表示无权限, 精度为0.001GB, 1GB=1024MB, 1MB=1024KB`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:953 -> `可创建数据表数量`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:957 -> `可创建数据表数量，-1 表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:965 -> `可创建定时任务数量`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:969 -> `可创建定时任务数量，-1 表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:977 -> `智能体电脑内存(GB)`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:982 -> `智能体电脑内存 (GB，留空表示使用默认值4GB)`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:990 -> `智能体电脑 CPU 核心数`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:995 -> `智能体电脑 CPU 核心数（留空表示使用默认值）`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1003 -> `通用智能体每天对话次数限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1007 -> `通用智能体每天对话次数，-1表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1015 -> `网页应用开发每天对话次数`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1019 -> `网页应用开发每天对话次数，-1表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1043 -> `数据权限设置 - ${name}`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1047 -> `确定`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1048 -> `取消`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/MenuPermissionModal/MenuPermissionTree/index.tsx:320 -> `资源 ${resource.id}`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/MenuPermissionModal/index.tsx:163 -> `菜单权限保存成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/MenuPermissionModal/index.tsx:348 -> `菜单权限配置-${name}`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SystemConfig/BaseFormItem/index.tsx:118 -> `请输入域名`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SystemConfig/BaseTab/index.tsx:78 -> `保存成功`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SystemConfig/index.tsx:74 -> `系统设置`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:35 -> `保存配置`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:94 -> `预览主题色失败:`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:119 -> `预览导航风格失败:`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:137 -> `预览背景图失败:`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:147 -> `深色`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:147 -> `浅色`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:166 -> `预览布局风格失败:`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:189 -> `预览背景图失败:`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:195 -> `深色`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:195 -> `浅色`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:226 -> `主题配置保存成功`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:227 -> `保存的配置:`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:245 -> `已重置为默认配置（预览效果）`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:263 -> `已重置为默认配置（预览效果）`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:277 -> `主题配置`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:75 -> `执行中`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:81 -> `任务创建，等待执行`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:87 -> `执行成功，待下次执行`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:93 -> `执行失败，待下次执行`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:100 -> `已结束，不再执行`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:106 -> `已结束，不再执行`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:177 -> `查询任务列表失败`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:189 -> `执行任务成功`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:203 -> `启用任务成功`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:217 -> `停用任务成功`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:231 -> `删除任务成功`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:241 -> `任务类型`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:247 -> `智能体`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:248 -> `工作流`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:251 -> `请选择任务类型`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:258 -> `智能体`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:260 -> `工作流`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:266 -> `任务名称`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:271 -> `请输入任务名称`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:276 -> `任务对象`
-- ... 省略 40 条
-
 ## src/services
 
 - [hardcoded_chinese] src/services/appDev.ts:321 -> `📤 [Service] 发送聊天请求:`
@@ -790,6 +706,88 @@
 - [hardcoded_chinese] src/pages/UserManage/index.tsx:248 -> `禁用`
 - [hardcoded_chinese] src/pages/UserManage/index.tsx:254 -> `加入时间`
 - ... 省略 2 条
+
+## src/pages/SystemManagement
+
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:159 -> `添加成功`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SystemConfig/BaseFormItem/index.tsx:118 -> `请输入域名`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SystemConfig/BaseTab/index.tsx:78 -> `保存成功`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SystemConfig/index.tsx:74 -> `系统设置`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:35 -> `保存配置`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:94 -> `预览主题色失败:`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:119 -> `预览导航风格失败:`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:137 -> `预览背景图失败:`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:147 -> `深色`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:147 -> `浅色`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:166 -> `预览布局风格失败:`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:189 -> `预览背景图失败:`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:195 -> `深色`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:195 -> `浅色`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:226 -> `主题配置保存成功`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:227 -> `保存的配置:`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:245 -> `已重置为默认配置（预览效果）`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:263 -> `已重置为默认配置（预览效果）`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:277 -> `主题配置`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:75 -> `执行中`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:81 -> `任务创建，等待执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:87 -> `执行成功，待下次执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:93 -> `执行失败，待下次执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:100 -> `已结束，不再执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:106 -> `已结束，不再执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:177 -> `查询任务列表失败`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:189 -> `执行任务成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:203 -> `启用任务成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:217 -> `停用任务成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:231 -> `删除任务成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:241 -> `任务类型`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:247 -> `智能体`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:248 -> `工作流`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:251 -> `请选择任务类型`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:258 -> `智能体`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:260 -> `工作流`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:266 -> `任务名称`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:271 -> `请输入任务名称`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:276 -> `任务对象`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:291 -> `任务状态`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:301 -> `执行次数`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:307 -> `最近执行时间`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:314 -> `下次执行时间`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:321 -> `创建人`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:326 -> `请输入创建人`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:331 -> `创建时间`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:338 -> `操作`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:352 -> `手动执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:358 -> `启用`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:362 -> `确认启用该任务？`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:368 -> `停用`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:372 -> `确认停用该任务？`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:378 -> `编辑`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:384 -> `执行记录`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:397 -> `删除`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:400 -> `确认删除该任务？`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/components/SelectTarget/index.tsx:125 -> `添加${item.label}`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/components/SelectTargetFormItemTarget/index.tsx:21 -> `删除`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/components/TimedPeriodSelector/index.tsx:148 -> `请输入`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/components/TimedPeriodSelector/index.tsx:156 -> `请输入`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:59 -> `定时任务已创建成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:74 -> `定时任务更新成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:287 -> `创建定时任务`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:287 -> `更新定时任务`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:309 -> `定时周期`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:315 -> `任务名称`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:316 -> `请输入任务名称`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:318 -> `请输入任务名称`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:325 -> `任务对象`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:335 -> `保持会话`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:336 -> `选择“否”时将为每次任务执行创建一个全新的会话`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:337 -> `请选择是否保持会话`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:339 -> `是`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:339 -> `否`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:343 -> `任务内容`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:344 -> `请输入任务内容`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:347 -> `请输入你要执行的任务信息，信息提供的越详细执行成功率越高`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:361 -> `参数配置`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:365 -> `请填写参数配置`
 
 ## src/pages/EditAgent
 

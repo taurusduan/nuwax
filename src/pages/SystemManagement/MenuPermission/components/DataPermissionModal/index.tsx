@@ -8,6 +8,7 @@ import {
   apiSystemResourceAgentListByIds,
   apiSystemResourcePageListByIds,
 } from '@/pages/UserManage/user-manage';
+import { t } from '@/services/i18nRuntime';
 import { apiPublishedAgentList } from '@/services/square';
 import { apiSystemModelList } from '@/services/systemManage';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
@@ -64,14 +65,15 @@ export type DataPermissionTabKey =
   | 'page'
   | 'dataPermission';
 
-// 数据权限标签页配置（只包含标签名称）
-export const DATA_PERMISSION_TAB_ITEMS: TabsProps['items'] = [
+const getDataPermissionTabItems = (): TabsProps['items'] => [
   {
     key: 'model',
     label: (
       <span>
-        模型
-        <Tooltip title="模型需要授权后才可用">
+        {t('NuwaxPC.Pages.SystemMenuDataPermissionModal.tabModel')}
+        <Tooltip
+          title={t('NuwaxPC.Pages.SystemMenuDataPermissionModal.tabModelTip')}
+        >
           <InfoCircleOutlined
             style={{ marginLeft: 4, color: '#999', cursor: 'help' }}
           />
@@ -83,8 +85,12 @@ export const DATA_PERMISSION_TAB_ITEMS: TabsProps['items'] = [
     key: 'agent',
     label: (
       <span>
-        智能体
-        <Tooltip title="在内容管理中开启管控并发布到系统广场后可在此处进行授权">
+        {t('NuwaxPC.Pages.SystemMenuDataPermissionModal.tabAgent')}
+        <Tooltip
+          title={t(
+            'NuwaxPC.Pages.SystemMenuDataPermissionModal.contentMgmtTip',
+          )}
+        >
           <InfoCircleOutlined
             style={{ marginLeft: 4, color: '#999', cursor: 'help' }}
           />
@@ -96,8 +102,12 @@ export const DATA_PERMISSION_TAB_ITEMS: TabsProps['items'] = [
     key: 'page',
     label: (
       <span>
-        网页应用
-        <Tooltip title="在内容管理中开启管控并发布到系统广场后可在此处进行授权">
+        {t('NuwaxPC.Pages.SystemMenuDataPermissionModal.tabWebApp')}
+        <Tooltip
+          title={t(
+            'NuwaxPC.Pages.SystemMenuDataPermissionModal.contentMgmtTip',
+          )}
+        >
           <InfoCircleOutlined
             style={{ marginLeft: 4, color: '#999', cursor: 'help' }}
           />
@@ -107,7 +117,7 @@ export const DATA_PERMISSION_TAB_ITEMS: TabsProps['items'] = [
   },
   {
     key: 'dataPermission',
-    label: '开发权限',
+    label: t('NuwaxPC.Pages.SystemMenuDataPermissionModal.tabDevPermission'),
   },
 ];
 
@@ -494,7 +504,9 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
       manual: true,
       debounceInterval: 300,
       onSuccess: () => {
-        message.success('数据权限保存成功');
+        message.success(
+          t('NuwaxPC.Pages.SystemMenuDataPermissionModal.saveSuccess'),
+        );
         onCancel();
       },
     },
@@ -502,7 +514,9 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
 
   const handleOk = async () => {
     if (!targetId) {
-      message.error('ID缺失，无法保存数据权限');
+      message.error(
+        t('NuwaxPC.Pages.SystemMenuDataPermissionModal.missingTargetId'),
+      );
       return;
     }
 
@@ -643,7 +657,11 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
             />
           ))
         ) : (
-          <div className={cx(styles.empty)}>暂无已选模型</div>
+          <div className={cx(styles.empty)}>
+            {t(
+              'NuwaxPC.Pages.SystemMenuDataPermissionModal.emptySelectedModel',
+            )}
+          </div>
         )}
       </div>
     </div>
@@ -665,7 +683,9 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
       >
         <Input.Search
           key="agentSearch"
-          placeholder="搜索智能体"
+          placeholder={t(
+            'NuwaxPC.Pages.SystemMenuDataPermissionModal.searchAgentPlaceholder',
+          )}
           allowClear
           className={cx(styles.searchInput)}
           value={agentSearchKw}
@@ -737,7 +757,11 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
             />
           ))
         ) : (
-          <div className={cx(styles.empty)}>暂无已选智能体</div>
+          <div className={cx(styles.empty)}>
+            {t(
+              'NuwaxPC.Pages.SystemMenuDataPermissionModal.emptySelectedAgent',
+            )}
+          </div>
         )}
       </div>
     </div>
@@ -758,7 +782,9 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
       >
         <Input.Search
           key="pageSearch"
-          placeholder="搜索网页应用"
+          placeholder={t(
+            'NuwaxPC.Pages.SystemMenuDataPermissionModal.searchWebAppPlaceholder',
+          )}
           allowClear
           className={cx(styles.searchInput)}
           value={pageSearchKw}
@@ -830,7 +856,11 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
             />
           ))
         ) : (
-          <div className={cx(styles.empty)}>暂无已选网页应用</div>
+          <div className={cx(styles.empty)}>
+            {t(
+              'NuwaxPC.Pages.SystemMenuDataPermissionModal.emptySelectedWebApp',
+            )}
+          </div>
         )}
       </div>
     </div>
@@ -855,15 +885,21 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
         <Row gutter={[16, 0]}>
           <Col span={12}>
             <Form.Item
-              label="每日token限制"
+              label={t(
+                'NuwaxPC.Pages.SystemMenuDataPermissionModal.tokenLimitLabel',
+              )}
               name={['tokenLimit', 'limitPerDay']}
               tooltip={{
                 icon: <InfoCircleOutlined />,
-                title: '每日 token 限制，-1 表示不限制',
+                title: t(
+                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tokenLimitTip',
+                ),
               }}
             >
               <InputNumber
-                placeholder="请输入每日token限制数量"
+                placeholder={t(
+                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tokenLimitPlaceholder',
+                )}
                 className={cx('w-full')}
                 min={-1}
                 max={1000000000000000}
@@ -872,11 +908,15 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label="可创建工作空间数量"
+              label={t(
+                'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxSpaceCountLabel',
+              )}
               name="maxSpaceCount"
               tooltip={{
                 icon: <InfoCircleOutlined />,
-                title: '可创建工作空间数量，-1 表示不限制',
+                title: t(
+                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxSpaceCountTip',
+                ),
               }}
             >
               <InputNumber className={cx('w-full')} min={-1} max={100000000} />
@@ -884,11 +924,15 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label="可创建智能体数量"
+              label={t(
+                'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxAgentCountLabel',
+              )}
               name="maxAgentCount"
               tooltip={{
                 icon: <InfoCircleOutlined />,
-                title: '可创建智能体数量，-1 表示不限制',
+                title: t(
+                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxAgentCountTip',
+                ),
               }}
             >
               <InputNumber className={cx('w-full')} min={-1} max={100000000} />
@@ -896,11 +940,15 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label="可创建网页应用数量"
+              label={t(
+                'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxWebAppCountLabel',
+              )}
               name="maxPageAppCount"
               tooltip={{
                 icon: <InfoCircleOutlined />,
-                title: '可创建网页应用数量，-1 表示不限制',
+                title: t(
+                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxWebAppCountTip',
+                ),
               }}
             >
               <InputNumber className={cx('w-full')} min={-1} max={100000000} />
@@ -908,11 +956,15 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label="可创建知识库数量"
+              label={t(
+                'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountLabel',
+              )}
               name="maxKnowledgeCount"
               tooltip={{
                 icon: <InfoCircleOutlined />,
-                title: '可创建知识库数量，-1 表示不限制',
+                title: t(
+                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountTip',
+                ),
               }}
             >
               <InputNumber className={cx('w-full')} min={-1} max={100000000} />
@@ -920,12 +972,15 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label="知识库存储空间上限 (GB)"
+              label={t(
+                'NuwaxPC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbLabel',
+              )}
               name="knowledgeStorageLimitGb"
               tooltip={{
                 icon: <InfoCircleOutlined />,
-                title:
-                  '-1表示不限制, 0表示无权限, 精度为0.001GB, 1GB=1024MB, 1MB=1024KB',
+                title: t(
+                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbTip',
+                ),
               }}
             >
               <InputNumber
@@ -950,11 +1005,15 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label="可创建数据表数量"
+              label={t(
+                'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxDataTableCountLabel',
+              )}
               name="maxDataTableCount"
               tooltip={{
                 icon: <InfoCircleOutlined />,
-                title: '可创建数据表数量，-1 表示不限制',
+                title: t(
+                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxDataTableCountTip',
+                ),
               }}
             >
               <InputNumber className={cx('w-full')} min={-1} max={100000000} />
@@ -962,11 +1021,15 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label="可创建定时任务数量"
+              label={t(
+                'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountLabel',
+              )}
               name="maxScheduledTaskCount"
               tooltip={{
                 icon: <InfoCircleOutlined />,
-                title: '可创建定时任务数量，-1 表示不限制',
+                title: t(
+                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountTip',
+                ),
               }}
             >
               <InputNumber className={cx('w-full')} min={-1} max={100000000} />
@@ -974,12 +1037,16 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label="智能体电脑内存(GB)"
+              label={t(
+                'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentMemoryGbLabel',
+              )}
               name="agentComputerMemoryGb"
               initialValue={4}
               tooltip={{
                 icon: <InfoCircleOutlined />,
-                title: '智能体电脑内存 (GB，留空表示使用默认值4GB)',
+                title: t(
+                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentMemoryGbTip',
+                ),
               }}
             >
               <InputNumber className={cx('w-full')} min={1} max={100000000} />
@@ -987,12 +1054,16 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label="智能体电脑 CPU 核心数"
+              label={t(
+                'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentCpuCoresLabel',
+              )}
               name="agentComputerCpuCores"
               initialValue={2}
               tooltip={{
                 icon: <InfoCircleOutlined />,
-                title: '智能体电脑 CPU 核心数（留空表示使用默认值）',
+                title: t(
+                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentCpuCoresTip',
+                ),
               }}
             >
               <InputNumber className={cx('w-full')} min={1} max={100000000} />
@@ -1000,11 +1071,15 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label="通用智能体每天对话次数限制"
+              label={t(
+                'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitLabel',
+              )}
               name="agentDailyPromptLimit"
               tooltip={{
                 icon: <InfoCircleOutlined />,
-                title: '通用智能体每天对话次数，-1表示不限制',
+                title: t(
+                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitTip',
+                ),
               }}
             >
               <InputNumber className={cx('w-full')} min={-1} max={100000000} />
@@ -1012,11 +1087,15 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label="网页应用开发每天对话次数"
+              label={t(
+                'NuwaxPC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitLabel',
+              )}
               name="pageDailyPromptLimit"
               tooltip={{
                 icon: <InfoCircleOutlined />,
-                title: '网页应用开发每天对话次数，-1表示不限制',
+                title: t(
+                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitTip',
+                ),
               }}
             >
               <InputNumber className={cx('w-full')} min={-1} max={100000000} />
@@ -1040,12 +1119,15 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
 
   return (
     <Modal
-      title={`数据权限设置 - ${name}`}
+      title={t(
+        'NuwaxPC.Pages.SystemMenuDataPermissionModal.titleWithName',
+        name || '',
+      )}
       open={open}
       onCancel={onCancel}
       onOk={handleOk}
-      okText="确定"
-      cancelText="取消"
+      okText={t('NuwaxPC.Common.Global.confirm')}
+      cancelText={t('NuwaxPC.Common.Global.cancel')}
       confirmLoading={bindLoading}
       width={1000}
     >
@@ -1053,7 +1135,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
         <Tabs
           activeKey={activeTab}
           onChange={handleTabChange}
-          items={DATA_PERMISSION_TAB_ITEMS}
+          items={getDataPermissionTabItems()}
         />
         <div className={cx(styles.tabContent)}>{renderTabContent()}</div>
       </div>

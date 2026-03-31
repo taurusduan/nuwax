@@ -173,3 +173,11 @@
 - 影响：
   - 文案更精确，避免误导用户搜索范围
   - 后续调整一侧提示不会影响另一侧
+
+### D-025 MenuPermission 模态分域命名
+
+- 决策：`MenuPermission` 下 `DataPermissionModal` 与 `MenuPermissionModal` 使用独立 Domain（`SystemMenuDataPermissionModal` / `SystemMenuPermissionModal`）
+- 原因：两个弹层职责不同（数据授权 vs 菜单授权），共享同域会导致 key 膨胀与语义混淆
+- 影响：
+  - key 检索与联调更直观，便于按弹层拆分排查
+  - 后续继续扩展任一弹层文案时，不会影响另一弹层 key 结构
