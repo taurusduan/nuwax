@@ -756,6 +756,33 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.ApiKeyStatsModal.viewRecords': 'View Records',
   'NuwaxPC.Pages.ApiKeyStatsModal.callStatsWithName': 'Call Stats - {0}',
   'NuwaxPC.Pages.ApiKeyStatsModal.close': 'Close',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.type': 'Type',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.selectType': 'Please select type',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.targetId': 'Target ID',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.enterTargetId': 'Please enter target ID',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.targetName': 'Target Name',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.enterTargetName':
+    'Please enter target name',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.requestId': 'Request ID',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.enterRequestId':
+    'Please enter request ID',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.conversationId': 'Conversation ID',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.enterConversationId':
+    'Please enter conversation ID',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.inputContent': 'Input Content',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.outputContent': 'Output Content',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.enterContentByKeywords':
+    'Separate multiple keywords with spaces, then enter content',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.timeRange': 'Time Range',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.inputToken': 'Input Token',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.outputToken': 'Output Token',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.requestTime': 'Request Time',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.totalDuration': 'Total Duration',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.queryFailed': 'Query failed',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.recordMissingRequestId':
+    'This record is missing requestId, details are unavailable',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.actions': 'Actions',
+  'NuwaxPC.Pages.ApiKeyLogsLogProTable.detail': 'Detail',
   'NuwaxPC.Toast.UploadAvatar.invalidType':
     'Please upload JPG, JPEG, or PNG image files',
   'NuwaxPC.Toast.UploadAvatar.invalidSize': 'Image size cannot exceed 2MB',

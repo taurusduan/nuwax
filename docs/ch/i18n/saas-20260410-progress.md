@@ -1504,3 +1504,25 @@
 - 风险/阻塞：
   - `ApiKeyLogs/LogProTable` 仍有高密度中文存量待继续清理
 - 下一步：继续推进 `src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx`
+
+### 里程碑：Top 模块第六十一批实改（ApiKeyLogs ProTable）
+
+- 时间：2026-03-31 17:33
+- 任务：处理 `MorePage/ApiKeyLogs/LogProTable` 查询条件、列头、操作与错误提示文案
+- 执行命令：
+  - `pnpm prettier --write src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `LogProTable` 查询项（类型、对象 ID、请求 ID、会话 ID、输入输出内容、时间范围）及表头文案全部切换为 `t(...)`
+  - 查询失败、记录缺失提示、操作列“详情”全部切换为 `t(...)`
+  - 日志输出改为英文，删除中文注释中的历史用户 ID 筛选代码块
+  - 新增 `NuwaxPC.Pages.ApiKeyLogsLogProTable.*` 中英文默认词典
+  - 治理总量从 `2543` 下降至 `2517`（-26）
+- 风险/阻塞：
+  - `MorePage` 仍有路由名称等中文存量待处理
+- 下一步：继续推进 `src/routes/index.ts` 与 `src/pages/Chat/index.tsx` 热点项
