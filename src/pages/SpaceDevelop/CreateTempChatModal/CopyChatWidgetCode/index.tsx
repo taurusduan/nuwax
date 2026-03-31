@@ -169,7 +169,7 @@ const CopyChatWidgetCode: React.FC<CopyChatWidgetCodeProps> = ({
       <img
         className={cx('cursor-pointer')}
         src={iframeCopyImage}
-        alt="复制代码"
+        alt={dict('NuwaxPC.Pages.SpaceDevelop.CopyChatWidgetCode.copyCode')}
         style={{ width: size, height: size }}
         title={tooltipText}
       />

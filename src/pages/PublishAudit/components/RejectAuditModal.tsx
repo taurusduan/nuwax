@@ -1,5 +1,6 @@
 import CustomFormModal from '@/components/CustomFormModal';
 import { apiRejectAudit } from '@/services/publishManage';
+import { dict } from '@/services/i18nRuntime';
 import { customizeRequiredMark } from '@/utils/form';
 import { useRequest } from 'ahooks';
 import { Form, Input, message } from 'antd';
@@ -28,7 +29,7 @@ const RejectAuditModal: React.FC<RejectAuditModalProps> = ({
       setLoading(true);
     },
     onSuccess: () => {
-      message.success('拒绝审核成功');
+      message.success(dict('NuwaxPC.Pages.PublishAudit.RejectAuditModal.rejectSuccess'));
       form.resetFields();
       onConfirm();
     },
@@ -52,7 +53,7 @@ const RejectAuditModal: React.FC<RejectAuditModalProps> = ({
     <CustomFormModal
       open={open}
       form={form}
-      title="拒绝审核"
+      title={dict('NuwaxPC.Pages.PublishAudit.RejectAuditModal.title')}
       onCancel={() => {
         form.resetFields();
         onCancel();
@@ -63,10 +64,10 @@ const RejectAuditModal: React.FC<RejectAuditModalProps> = ({
       <Form form={form} layout="vertical" requiredMark={customizeRequiredMark}>
         <Form.Item
           name="reason"
-          label="请输入拒绝原因"
-          rules={[{ required: true, message: '请输入拒绝原因' }]}
+          label={dict('NuwaxPC.Pages.PublishAudit.RejectAuditModal.reasonLabel')}
+          rules={[{ required: true, message: dict('NuwaxPC.Pages.PublishAudit.RejectAuditModal.reasonRequired') }]}
         >
-          <Input.TextArea rows={4} placeholder="请输入拒绝原因" />
+          <Input.TextArea rows={4} placeholder={dict('NuwaxPC.Pages.PublishAudit.RejectAuditModal.reasonPlaceholder')} />
         </Form.Item>
       </Form>
     </CustomFormModal>

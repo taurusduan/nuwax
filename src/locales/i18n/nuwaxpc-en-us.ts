@@ -4073,4 +4073,147 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
 
   // Pages - SpaceSkillManage > MainContent
   'NuwaxPC.Pages.SpaceSkillManage.MainContent.noResultsFound': 'No results found',
+
+  // Pages - PublishAudit
+  'NuwaxPC.Pages.PublishAudit.pageTitle': 'Publish Audit',
+  'NuwaxPC.Pages.PublishAudit.colPublishName': 'Publish Name',
+  'NuwaxPC.Pages.PublishAudit.colPublishNamePlaceholder': 'Enter plugin, workflow, or agent name',
+  'NuwaxPC.Pages.PublishAudit.colType': 'Type',
+  'NuwaxPC.Pages.PublishAudit.typeAgent': 'Agent',
+  'NuwaxPC.Pages.PublishAudit.typePlugin': 'Plugin',
+  'NuwaxPC.Pages.PublishAudit.typeWorkflow': 'Workflow',
+  'NuwaxPC.Pages.PublishAudit.typeSkill': 'Skill',
+  'NuwaxPC.Pages.PublishAudit.colDescription': 'Description',
+  'NuwaxPC.Pages.PublishAudit.colVersionInfo': 'Version Info',
+  'NuwaxPC.Pages.PublishAudit.colPublisher': 'Publisher',
+  'NuwaxPC.Pages.PublishAudit.colStatus': 'Status',
+  'NuwaxPC.Pages.PublishAudit.statusApplying': 'Pending Review',
+  'NuwaxPC.Pages.PublishAudit.statusPassed': 'Approved',
+  'NuwaxPC.Pages.PublishAudit.statusRejected': 'Rejected',
+  'NuwaxPC.Pages.PublishAudit.colPublishTime': 'Publish Time',
+  'NuwaxPC.Pages.PublishAudit.colAction': 'Action',
+  'NuwaxPC.Pages.PublishAudit.actionPass': 'Approve',
+  'NuwaxPC.Pages.PublishAudit.actionReject': 'Reject',
+  'NuwaxPC.Pages.PublishAudit.actionView': 'View',
+  'NuwaxPC.Pages.PublishAudit.passAuditSuccess': 'Audit approved successfully',
+
+  // Pages - PublishAudit > RejectAuditModal
+  'NuwaxPC.Pages.PublishAudit.RejectAuditModal.title': 'Reject Audit',
+  'NuwaxPC.Pages.PublishAudit.RejectAuditModal.rejectSuccess': 'Audit rejected successfully',
+  'NuwaxPC.Pages.PublishAudit.RejectAuditModal.reasonLabel': 'Please enter the rejection reason',
+  'NuwaxPC.Pages.PublishAudit.RejectAuditModal.reasonRequired': 'Please enter the rejection reason',
+  'NuwaxPC.Pages.PublishAudit.RejectAuditModal.reasonPlaceholder': 'Please enter the rejection reason',
+
+  // Pages - GlobalModelManage
+  'NuwaxPC.Pages.GlobalModelManage.pageTitle': 'Public Model Management',
+  'NuwaxPC.Pages.GlobalModelManage.addModel': 'Add Model',
+  'NuwaxPC.Pages.GlobalModelManage.all': 'All',
+  'NuwaxPC.Pages.GlobalModelManage.chatText': 'Chat - Text',
+  'NuwaxPC.Pages.GlobalModelManage.embeddings': 'Embeddings',
+  'NuwaxPC.Pages.GlobalModelManage.chatMultiModal': 'Chat - Multimodal',
+  'NuwaxPC.Pages.GlobalModelManage.deleteFailed': 'Delete failed',
+  'NuwaxPC.Pages.GlobalModelManage.accessControlUpdateFailed': 'Failed to update access control status',
+  'NuwaxPC.Pages.GlobalModelManage.edit': 'Edit',
+  'NuwaxPC.Pages.GlobalModelManage.auth': 'Authorize',
+  'NuwaxPC.Pages.GlobalModelManage.deleteModel': 'Delete Model',
+  'NuwaxPC.Pages.GlobalModelManage.confirmDeleteModel': 'Are you sure you want to delete model {0}?',
+  'NuwaxPC.Pages.GlobalModelManage.columnModelName': 'Model Name',
+  'NuwaxPC.Pages.GlobalModelManage.columnType': 'Type',
+  'NuwaxPC.Pages.GlobalModelManage.columnModelId': 'Model ID',
+  'NuwaxPC.Pages.GlobalModelManage.columnDescription': 'Description',
+  'NuwaxPC.Pages.GlobalModelManage.columnStatus': 'Status',
+  'NuwaxPC.Pages.GlobalModelManage.statusEnabled': 'Enabled',
+  'NuwaxPC.Pages.GlobalModelManage.statusDisabled': 'Disabled',
+  'NuwaxPC.Pages.GlobalModelManage.columnCreator': 'Creator',
+  'NuwaxPC.Pages.GlobalModelManage.columnUpdateTime': 'Update Time',
+  'NuwaxPC.Pages.GlobalModelManage.columnAccessControl': 'Access Control',
+  'NuwaxPC.Pages.GlobalModelManage.accessControlTooltip': 'If enabled, authorization is required to use',
+  'NuwaxPC.Pages.GlobalModelManage.accessControlOff': 'Off',
+  'NuwaxPC.Pages.GlobalModelManage.accessControlOn': 'On',
+  'NuwaxPC.Pages.GlobalModelManage.columnActions': 'Actions',
+  'NuwaxPC.Pages.GlobalModelManage.fetchDataFailed': 'Failed to fetch data',
+
+  // Pages - SpacePluginTool
+  'NuwaxPC.Pages.SpacePluginTool.paramName': 'Parameter Name',
+  'NuwaxPC.Pages.SpacePluginTool.inputParamName': 'Enter parameter name, ensure clear meaning',
+  'NuwaxPC.Pages.SpacePluginTool.paramDescription': 'Parameter Description',
+  'NuwaxPC.Pages.SpacePluginTool.inputParamDescription': 'Enter parameter description for better AI understanding',
+  'NuwaxPC.Pages.SpacePluginTool.paramType': 'Parameter Type',
+  'NuwaxPC.Pages.SpacePluginTool.selectDataType': 'Select data type',
+  'NuwaxPC.Pages.SpacePluginTool.inputMode': 'Input Mode',
+  'NuwaxPC.Pages.SpacePluginTool.required': 'Required',
+  'NuwaxPC.Pages.SpacePluginTool.defaultValue': 'Default Value',
+  'NuwaxPC.Pages.SpacePluginTool.inputDefaultValue': 'Enter default value',
+  'NuwaxPC.Pages.SpacePluginTool.enable': 'Enable',
+  'NuwaxPC.Pages.SpacePluginTool.requiredParamTooltip': 'This parameter is required. Fill in a default value to enable this toggle',
+  'NuwaxPC.Pages.SpacePluginTool.action': 'Actions',
+  'NuwaxPC.Pages.SpacePluginTool.requestConfig': 'Request Configuration',
+  'NuwaxPC.Pages.SpacePluginTool.requestMethodAndPath': 'Request Method & Path',
+  'NuwaxPC.Pages.SpacePluginTool.selectRequestMethod': 'Select request method',
+  'NuwaxPC.Pages.SpacePluginTool.inputRequestPath': 'Enter request path',
+  'NuwaxPC.Pages.SpacePluginTool.requestContentFormat': 'Request Content Format',
+  'NuwaxPC.Pages.SpacePluginTool.selectRequestContentFormat': 'Select request content format',
+  'NuwaxPC.Pages.SpacePluginTool.requestTimeoutConfig': 'Request Timeout',
+  'NuwaxPC.Pages.SpacePluginTool.inputTimeoutConfig': 'Enter timeout configuration',
+  'NuwaxPC.Pages.SpacePluginTool.requestTimeoutPlaceholder': 'Request timeout in seconds',
+  'NuwaxPC.Pages.SpacePluginTool.inputConfig': 'Input Configuration',
+  'NuwaxPC.Pages.SpacePluginTool.outputConfig': 'Output Configuration',
+  'NuwaxPC.Pages.SpacePluginTool.autoAnalysis': 'Auto Analyze',
+
+  // Pages - SpacePluginTool > PluginHeader
+  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.code': 'Code',
+  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.published': 'Published',
+  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.unpublished': 'Unpublished',
+  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.configSavedAt': 'Config saved at {0}',
+  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.updateUnpublished': 'Updates unpublished',
+  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.tryRun': 'Try Run',
+  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.publish': 'Publish',
+
+  // Layouts - DynamicMenusLayout
+  'NuwaxPC.Layouts.DynamicMenusLayout.newConversation': 'New Conversation',
+  'NuwaxPC.Layouts.DynamicMenusLayout.home': 'Home',
+  'NuwaxPC.Layouts.DynamicMenusLayout.more': 'More',
+
+  // Layouts - DynamicMenusLayout > CollapseButton
+  'NuwaxPC.Layouts.DynamicMenusLayout.CollapseButton.expandMenu': 'Expand Menu',
+  'NuwaxPC.Layouts.DynamicMenusLayout.CollapseButton.collapseMenu': 'Collapse Menu',
+
+  // Layouts - DynamicMenusLayout > HomeSection
+  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.recentlyUsed': 'Recently Used',
+  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.noAgentUsed': 'You haven\'t used any agents yet',
+  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.exploreSquare': 'Go to the square and start your exploration journey~',
+  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.conversationHistory': 'Conversation History',
+  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.viewAll': 'View All',
+  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.lookRight': 'Look right 👉',
+  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.startFirstConversation': 'Enter instructions in the chat box to start your first conversation~',
+
+  // Layouts - DynamicMenusLayout > ConversationItem
+  'NuwaxPC.Layouts.DynamicMenusLayout.ConversationItem.executing': 'Executing',
+
+  // Layouts - DynamicMenusLayout > SpaceSection
+  'NuwaxPC.Layouts.DynamicMenusLayout.SpaceSection.personalSpace': 'Personal Space',
+  'NuwaxPC.Layouts.DynamicMenusLayout.SpaceSection.recentlyEdited': 'Recently Edited',
+
+  // Layouts - DynamicMenusLayout > DevCollect
+  'NuwaxPC.Layouts.DynamicMenusLayout.DevCollect.noCollection': 'No favorites yet',
+  'NuwaxPC.Layouts.DynamicMenusLayout.DevCollect.addByStar': 'Click the ⭐️ button to add content here~',
+
+  // Layouts - DynamicMenusLayout > CreateNewTeam
+  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.createSuccess': 'Created successfully',
+  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.createTeamSpace': 'Create Team Space',
+  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.teamSpaceTips': 'By creating a team space, projects, agents, plugins, workflows, and knowledge bases can be collaborated and shared within the team.',
+  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.teamName': 'Team Name',
+  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.pleaseInputTeamName': 'Please enter a team name',
+  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.description': 'Description',
+
+  // Layouts - DynamicMenusLayout > SquareSection
+  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.agent': 'Agent',
+  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.pageApp': 'Web App',
+  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.skill': 'Skill',
+  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.plugin': 'Plugin',
+  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.workflow': 'Workflow',
+  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.template': 'Template',
+
+  // Layouts - DynamicMenusLayout > DynamicSecondMenu
+  'NuwaxPC.Layouts.DynamicMenusLayout.DynamicSecondMenu.pathResolveFailed': 'Failed to resolve path navigation, please check if the menu path exists',
 };

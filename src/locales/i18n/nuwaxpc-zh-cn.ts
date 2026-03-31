@@ -3584,4 +3584,147 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
 
   // Pages - SpaceSkillManage > MainContent
   'NuwaxPC.Pages.SpaceSkillManage.MainContent.noResultsFound': '未能找到相关结果',
+
+  // Pages - PublishAudit
+  'NuwaxPC.Pages.PublishAudit.pageTitle': '发布审核',
+  'NuwaxPC.Pages.PublishAudit.colPublishName': '发布名称',
+  'NuwaxPC.Pages.PublishAudit.colPublishNamePlaceholder': '请输入插件工作流或智能体名称',
+  'NuwaxPC.Pages.PublishAudit.colType': '类型',
+  'NuwaxPC.Pages.PublishAudit.typeAgent': '智能体',
+  'NuwaxPC.Pages.PublishAudit.typePlugin': '插件',
+  'NuwaxPC.Pages.PublishAudit.typeWorkflow': '工作流',
+  'NuwaxPC.Pages.PublishAudit.typeSkill': '技能',
+  'NuwaxPC.Pages.PublishAudit.colDescription': '描述信息',
+  'NuwaxPC.Pages.PublishAudit.colVersionInfo': '版本信息',
+  'NuwaxPC.Pages.PublishAudit.colPublisher': '发布者',
+  'NuwaxPC.Pages.PublishAudit.colStatus': '状态',
+  'NuwaxPC.Pages.PublishAudit.statusApplying': '待审核',
+  'NuwaxPC.Pages.PublishAudit.statusPassed': '通过',
+  'NuwaxPC.Pages.PublishAudit.statusRejected': '拒绝',
+  'NuwaxPC.Pages.PublishAudit.colPublishTime': '发布时间',
+  'NuwaxPC.Pages.PublishAudit.colAction': '操作',
+  'NuwaxPC.Pages.PublishAudit.actionPass': '通过',
+  'NuwaxPC.Pages.PublishAudit.actionReject': '拒绝',
+  'NuwaxPC.Pages.PublishAudit.actionView': '查看',
+  'NuwaxPC.Pages.PublishAudit.passAuditSuccess': '通过审核成功',
+
+  // Pages - PublishAudit > RejectAuditModal
+  'NuwaxPC.Pages.PublishAudit.RejectAuditModal.title': '拒绝审核',
+  'NuwaxPC.Pages.PublishAudit.RejectAuditModal.rejectSuccess': '拒绝审核成功',
+  'NuwaxPC.Pages.PublishAudit.RejectAuditModal.reasonLabel': '请输入拒绝原因',
+  'NuwaxPC.Pages.PublishAudit.RejectAuditModal.reasonRequired': '请输入拒绝原因',
+  'NuwaxPC.Pages.PublishAudit.RejectAuditModal.reasonPlaceholder': '请输入拒绝原因',
+
+  // Pages - GlobalModelManage
+  'NuwaxPC.Pages.GlobalModelManage.pageTitle': '公共模型管理',
+  'NuwaxPC.Pages.GlobalModelManage.addModel': '添加模型',
+  'NuwaxPC.Pages.GlobalModelManage.all': '全部',
+  'NuwaxPC.Pages.GlobalModelManage.chatText': '聊天对话-纯文本',
+  'NuwaxPC.Pages.GlobalModelManage.embeddings': '向量嵌入',
+  'NuwaxPC.Pages.GlobalModelManage.chatMultiModal': '聊天对话-多模态',
+  'NuwaxPC.Pages.GlobalModelManage.deleteFailed': '删除失败',
+  'NuwaxPC.Pages.GlobalModelManage.accessControlUpdateFailed': '更新管控状态失败',
+  'NuwaxPC.Pages.GlobalModelManage.edit': '编辑',
+  'NuwaxPC.Pages.GlobalModelManage.auth': '授权',
+  'NuwaxPC.Pages.GlobalModelManage.deleteModel': '删除模型',
+  'NuwaxPC.Pages.GlobalModelManage.confirmDeleteModel': '确认删除模型 {0}?',
+  'NuwaxPC.Pages.GlobalModelManage.columnModelName': '模型名称',
+  'NuwaxPC.Pages.GlobalModelManage.columnType': '类型',
+  'NuwaxPC.Pages.GlobalModelManage.columnModelId': '模型标识',
+  'NuwaxPC.Pages.GlobalModelManage.columnDescription': '模型介绍',
+  'NuwaxPC.Pages.GlobalModelManage.columnStatus': '状态',
+  'NuwaxPC.Pages.GlobalModelManage.statusEnabled': '已启用',
+  'NuwaxPC.Pages.GlobalModelManage.statusDisabled': '已禁用',
+  'NuwaxPC.Pages.GlobalModelManage.columnCreator': '创建者',
+  'NuwaxPC.Pages.GlobalModelManage.columnUpdateTime': '更新时间',
+  'NuwaxPC.Pages.GlobalModelManage.columnAccessControl': '管控',
+  'NuwaxPC.Pages.GlobalModelManage.accessControlTooltip': '若开启管控，需授权才能使用',
+  'NuwaxPC.Pages.GlobalModelManage.accessControlOff': '关闭',
+  'NuwaxPC.Pages.GlobalModelManage.accessControlOn': '开启',
+  'NuwaxPC.Pages.GlobalModelManage.columnActions': '操作',
+  'NuwaxPC.Pages.GlobalModelManage.fetchDataFailed': '获取数据失败',
+
+  // Pages - SpacePluginTool
+  'NuwaxPC.Pages.SpacePluginTool.paramName': '参数名称',
+  'NuwaxPC.Pages.SpacePluginTool.inputParamName': '请输入参数名称，确保含义清晰',
+  'NuwaxPC.Pages.SpacePluginTool.paramDescription': '参数描述',
+  'NuwaxPC.Pages.SpacePluginTool.inputParamDescription': '请输入参数描述，确保描述详细便于大模型更好的理解',
+  'NuwaxPC.Pages.SpacePluginTool.paramType': '参数类型',
+  'NuwaxPC.Pages.SpacePluginTool.selectDataType': '请选择数据类型',
+  'NuwaxPC.Pages.SpacePluginTool.inputMode': '传入方式',
+  'NuwaxPC.Pages.SpacePluginTool.required': '是否必须',
+  'NuwaxPC.Pages.SpacePluginTool.defaultValue': '默认值',
+  'NuwaxPC.Pages.SpacePluginTool.inputDefaultValue': '请输入默认值',
+  'NuwaxPC.Pages.SpacePluginTool.enable': '开启',
+  'NuwaxPC.Pages.SpacePluginTool.requiredParamTooltip': '此参数是必填参数，填写默认值后，此开关可用',
+  'NuwaxPC.Pages.SpacePluginTool.action': '操作',
+  'NuwaxPC.Pages.SpacePluginTool.requestConfig': '请求配置',
+  'NuwaxPC.Pages.SpacePluginTool.requestMethodAndPath': '请求方法与路径',
+  'NuwaxPC.Pages.SpacePluginTool.selectRequestMethod': '请选择请求方法',
+  'NuwaxPC.Pages.SpacePluginTool.inputRequestPath': '请输入请求路径',
+  'NuwaxPC.Pages.SpacePluginTool.requestContentFormat': '请求内容格式',
+  'NuwaxPC.Pages.SpacePluginTool.selectRequestContentFormat': '请选择请求内容格式',
+  'NuwaxPC.Pages.SpacePluginTool.requestTimeoutConfig': '请求超时配置',
+  'NuwaxPC.Pages.SpacePluginTool.inputTimeoutConfig': '请输入超时配置',
+  'NuwaxPC.Pages.SpacePluginTool.requestTimeoutPlaceholder': '请求超时配置，以秒为单位',
+  'NuwaxPC.Pages.SpacePluginTool.inputConfig': '入参配置',
+  'NuwaxPC.Pages.SpacePluginTool.outputConfig': '出参配置',
+  'NuwaxPC.Pages.SpacePluginTool.autoAnalysis': '自动解析',
+
+  // Pages - SpacePluginTool > PluginHeader
+  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.code': '代码',
+  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.published': '已发布',
+  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.unpublished': '未发布',
+  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.configSavedAt': '配置保存于{0}',
+  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.updateUnpublished': '有更新未发布',
+  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.tryRun': '试运行',
+  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.publish': '发布',
+
+  // Layouts - DynamicMenusLayout
+  'NuwaxPC.Layouts.DynamicMenusLayout.newConversation': '新对话',
+  'NuwaxPC.Layouts.DynamicMenusLayout.home': '主页',
+  'NuwaxPC.Layouts.DynamicMenusLayout.more': '更多',
+
+  // Layouts - DynamicMenusLayout > CollapseButton
+  'NuwaxPC.Layouts.DynamicMenusLayout.CollapseButton.expandMenu': '展开菜单',
+  'NuwaxPC.Layouts.DynamicMenusLayout.CollapseButton.collapseMenu': '收起菜单',
+
+  // Layouts - DynamicMenusLayout > HomeSection
+  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.recentlyUsed': '最近使用',
+  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.noAgentUsed': '你还没有使用任何智能体',
+  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.exploreSquare': '现在去广场开启你的探索之旅吧～',
+  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.conversationHistory': '会话记录',
+  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.viewAll': '查看全部',
+  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.lookRight': '右边看👉',
+  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.startFirstConversation': '在会话框中输入指令开始你的第一次会话吧～',
+
+  // Layouts - DynamicMenusLayout > ConversationItem
+  'NuwaxPC.Layouts.DynamicMenusLayout.ConversationItem.executing': '执行中',
+
+  // Layouts - DynamicMenusLayout > SpaceSection
+  'NuwaxPC.Layouts.DynamicMenusLayout.SpaceSection.personalSpace': '个人空间',
+  'NuwaxPC.Layouts.DynamicMenusLayout.SpaceSection.recentlyEdited': '最近编辑',
+
+  // Layouts - DynamicMenusLayout > DevCollect
+  'NuwaxPC.Layouts.DynamicMenusLayout.DevCollect.noCollection': '还没有收藏任何内容',
+  'NuwaxPC.Layouts.DynamicMenusLayout.DevCollect.addByStar': '点击⭐️按钮可将内容添加到这里~',
+
+  // Layouts - DynamicMenusLayout > CreateNewTeam
+  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.createSuccess': '新建成功',
+  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.createTeamSpace': '创建团队空间',
+  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.teamSpaceTips': '通过创建团队空间，将支持项目、智能体、插件、工作流和知识库在团队内进行协作和共享。',
+  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.teamName': '团队名称',
+  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.pleaseInputTeamName': '请输入团队名称',
+  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.description': '描述',
+
+  // Layouts - DynamicMenusLayout > SquareSection
+  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.agent': '智能体',
+  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.pageApp': '网页应用',
+  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.skill': '技能',
+  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.plugin': '插件',
+  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.workflow': '工作流',
+  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.template': '模板',
+
+  // Layouts - DynamicMenusLayout > DynamicSecondMenu
+  'NuwaxPC.Layouts.DynamicMenusLayout.DynamicSecondMenu.pathResolveFailed': '处理路径跳转失败，请检查菜单路径是否存在',
 };

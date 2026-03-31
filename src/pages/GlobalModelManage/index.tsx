@@ -5,6 +5,7 @@ import {
 } from '@/components/ProComponents';
 import WorkspaceLayout from '@/components/WorkspaceLayout';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiSystemModelAccessControl,
   apiSystemModelDelete,
@@ -49,20 +50,20 @@ const GlobalModelManage: React.FC = () => {
   >({});
 
   const selectOptions = [
-    { label: '全部', value: '' },
-    { label: '聊天对话-纯文本', value: ModelTypeEnum.Chat },
-    { label: '向量嵌入', value: ModelTypeEnum.Embeddings },
-    { label: '聊天对话-多模态', value: ModelTypeEnum.Multi },
+    { label: dict('NuwaxPC.Pages.GlobalModelManage.all'), value: '' },
+    { label: dict('NuwaxPC.Pages.GlobalModelManage.chatText'), value: ModelTypeEnum.Chat },
+    { label: dict('NuwaxPC.Pages.GlobalModelManage.embeddings'), value: ModelTypeEnum.Embeddings },
+    { label: dict('NuwaxPC.Pages.GlobalModelManage.chatMultiModal'), value: ModelTypeEnum.Multi },
   ];
 
   // 删除模型
   const handleConfirmDelete = async (id: number) => {
     const res = await apiSystemModelDelete({ id });
     if (res.code === SUCCESS_CODE) {
-      message.success('删除成功');
+      message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
       actionRef.current?.reload();
     } else {
-      message.error(res.message || '删除失败');
+      message.error(res.message || dict('NuwaxPC.Pages.GlobalModelManage.deleteFailed'));
     }
   };
 
@@ -86,7 +87,7 @@ const GlobalModelManage: React.FC = () => {
         if (response.code === SUCCESS_CODE) {
           actionRef.current?.reload();
         } else {
-          message.error(response.message || '更新管控状态失败');
+          message.error(response.message || dict('NuwaxPC.Pages.GlobalModelManage.accessControlUpdateFailed'));
         }
       } finally {
         setAccessControlLoadingMap((prev) => ({
@@ -124,7 +125,7 @@ const GlobalModelManage: React.FC = () => {
       return [
         {
           key: 'edit',
-          label: '编辑',
+          label: dict('NuwaxPC.Pages.GlobalModelManage.edit'),
           disabled: !hasPermission('model_manage_modify'),
           onClick: () => {
             setModelId(record.id);
@@ -133,7 +134,7 @@ const GlobalModelManage: React.FC = () => {
         },
         {
           key: 'auth',
-          label: '授权',
+          label: dict('NuwaxPC.Pages.GlobalModelManage.auth'),
           // 只有开启管控才显示授权按钮
           isShow: record.accessControl === AccessControlEnum.Filter,
           disabled: !hasPermission('model_manage_access_control'),
@@ -145,13 +146,12 @@ const GlobalModelManage: React.FC = () => {
         },
         {
           key: 'delete',
-          label: '删除',
+          label: dict('NuwaxPC.Common.Global.delete'),
           confirm: {
-            title: '删除模型',
+            title: dict('NuwaxPC.Pages.GlobalModelManage.deleteModel'),
             description: (
               <div>
-                确认删除模型 <span style={{ color: 'red' }}>{record.name}</span>
-                ?
+                {dict('NuwaxPC.Pages.GlobalModelManage.confirmDeleteModel', <span style={{ color: 'red' }}>{record.name}</span>)}
               </div>
             ),
           },
@@ -165,71 +165,71 @@ const GlobalModelManage: React.FC = () => {
 
   const columns: ProColumns<ModelConfigDto>[] = [
     {
-      title: '模型名称',
+      title: dict('NuwaxPC.Pages.GlobalModelManage.columnModelName'),
       dataIndex: 'name',
       width: 200,
       fixed: 'left',
       hideInSearch: true,
     },
     {
-      title: '类型',
+      title: dict('NuwaxPC.Pages.GlobalModelManage.columnType'),
       dataIndex: 'type',
       width: 160,
       valueType: 'select',
       valueEnum: {
-        [ModelTypeEnum.Chat]: { text: '聊天对话-纯文本' },
-        [ModelTypeEnum.Embeddings]: { text: '向量嵌入' },
-        [ModelTypeEnum.Multi]: { text: '聊天对话-多模态' },
+        [ModelTypeEnum.Chat]: { text: dict('NuwaxPC.Pages.GlobalModelManage.chatText') },
+        [ModelTypeEnum.Embeddings]: { text: dict('NuwaxPC.Pages.GlobalModelManage.embeddings') },
+        [ModelTypeEnum.Multi]: { text: dict('NuwaxPC.Pages.GlobalModelManage.chatMultiModal') },
       },
       fieldProps: {
         options: selectOptions.filter((v) => v.value !== ''),
       },
     },
     {
-      title: '模型标识',
+      title: dict('NuwaxPC.Pages.GlobalModelManage.columnModelId'),
       dataIndex: 'model',
       width: 200,
       hideInSearch: true,
     },
     {
-      title: '模型介绍',
+      title: dict('NuwaxPC.Pages.GlobalModelManage.columnDescription'),
       dataIndex: 'description',
       width: 260,
       hideInSearch: true,
     },
     {
-      title: '状态',
+      title: dict('NuwaxPC.Pages.GlobalModelManage.columnStatus'),
       dataIndex: 'enabled',
       width: 100,
       hideInSearch: true,
       valueEnum: {
-        [ModelComponentStatusEnum.Enabled]: { text: '已启用' },
-        [ModelComponentStatusEnum.Disabled]: { text: '已禁用' },
+        [ModelComponentStatusEnum.Enabled]: { text: dict('NuwaxPC.Pages.GlobalModelManage.statusEnabled') },
+        [ModelComponentStatusEnum.Disabled]: { text: dict('NuwaxPC.Pages.GlobalModelManage.statusDisabled') },
       },
     },
     {
-      title: '创建者',
+      title: dict('NuwaxPC.Pages.GlobalModelManage.columnCreator'),
       dataIndex: ['creator', 'nickName'],
       width: 160,
       hideInSearch: true,
     },
     {
-      title: '更新时间',
+      title: dict('NuwaxPC.Pages.GlobalModelManage.columnUpdateTime'),
       dataIndex: 'created',
       width: 200,
       hideInSearch: true,
       valueType: 'dateTime',
     },
     {
-      title: '管控',
-      tooltip: '若开启管控，需授权才能使用',
+      title: dict('NuwaxPC.Pages.GlobalModelManage.columnAccessControl'),
+      tooltip: dict('NuwaxPC.Pages.GlobalModelManage.accessControlTooltip'),
       dataIndex: 'accessControl',
       align: 'center',
       width: 100,
       fixed: 'right',
       valueEnum: {
-        [AccessControlEnum.NoFilter]: { text: '关闭', status: 'Default' },
-        [AccessControlEnum.Filter]: { text: '开启', status: 'Processing' },
+        [AccessControlEnum.NoFilter]: { text: dict('NuwaxPC.Pages.GlobalModelManage.accessControlOff'), status: 'Default' },
+        [AccessControlEnum.Filter]: { text: dict('NuwaxPC.Pages.GlobalModelManage.accessControlOn'), status: 'Processing' },
       },
       valueType: 'select',
       render: (_, record: ModelConfigDto) => (
@@ -241,7 +241,7 @@ const GlobalModelManage: React.FC = () => {
       ),
     },
     {
-      title: '操作',
+      title: dict('NuwaxPC.Pages.GlobalModelManage.columnActions'),
       valueType: 'option',
       width: 180,
       align: 'center',
@@ -260,7 +260,7 @@ const GlobalModelManage: React.FC = () => {
     const res = await apiSystemModelList();
 
     if (res.code !== SUCCESS_CODE) {
-      message.error(res.message || '获取数据失败');
+      message.error(res.message || dict('NuwaxPC.Pages.GlobalModelManage.fetchDataFailed'));
       return { data: [], total: 0, success: false };
     }
 
@@ -282,7 +282,7 @@ const GlobalModelManage: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title="公共模型管理"
+      title={dict('NuwaxPC.Pages.GlobalModelManage.pageTitle')}
       hideScroll
       rightSlot={
         hasPermission('model_manage_add') && (
@@ -295,7 +295,7 @@ const GlobalModelManage: React.FC = () => {
               setVisible(true);
             }}
           >
-            添加模型
+            {dict('NuwaxPC.Pages.GlobalModelManage.addModel')}
           </Button>
         )
       }

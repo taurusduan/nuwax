@@ -22,6 +22,7 @@ import React, {
   useState,
 } from 'react';
 import { history, useLocation, useModel, useParams } from 'umi';
+import { dict } from '@/services/i18nRuntime';
 import DynamicSecondMenu from './DynamicSecondMenu';
 import DynamicTabs from './DynamicTabs';
 // 复用原有组件
@@ -556,13 +557,13 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
    */
   const currentTitle = useMemo(() => {
     if (isClickNewConversation) {
-      return '新对话';
+      return dict('NuwaxPC.Layouts.DynamicMenusLayout.newConversation');
     }
     if (activeTab === 'my_computer' || activeTab === 'documents') {
-      return '主页';
+      return dict('NuwaxPC.Layouts.DynamicMenusLayout.home');
     }
     if (activeTab === 'more_page') {
-      return '更多';
+      return dict('NuwaxPC.Layouts.DynamicMenusLayout.more');
     }
     const current = firstLevelMenus.find(
       (m: MenuItemDto) => m.code === activeTab,
