@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T05:49:53.082Z
+- 生成时间：2026-03-31T05:53:19.026Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2890
-- hardcoded 中文：2890
+- 总问题数：2881
+- hardcoded 中文：2881
 - legacy System key：0
 - invalid dict key：0
 
@@ -15,7 +15,7 @@
 
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
-| src/pages/Antv-X6 | 233 | 0 | 0 | 233 |
+| src/pages/Antv-X6 | 224 | 0 | 0 | 224 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
 | src/services | 110 | 0 | 0 | 110 |
@@ -121,15 +121,6 @@
 
 ## src/pages/Antv-X6
 
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/library.tsx:21 -> `检索关键词`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/library.tsx:120 -> `输入`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/library.tsx:158 -> `从知识库中获取知识的检索方式，不同的检索策略可以更有效地找到正确的信息，提高其生成的答案的准确性和可用性`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/library.tsx:166 -> `语义`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/library.tsx:167 -> `混合`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/library.tsx:168 -> `全文`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/library.tsx:177 -> `从知识库中返回给大模型的最大段落数，数值越大返回的内容越多`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/library.tsx:195 -> `根据设置的匹配度选取段落返回给大模型，低于设定匹配度的内容不会被召回`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/pluginNode.tsx:19 -> `输入`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/graph/GraphContainer.tsx:154 -> `[GraphContainer] 边的源节点(${sourceId})或目标节点(${targetId})不存在，跳过创建边`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/graph/GraphContainer.tsx:236 -> `[GraphContainer] 找不到父循环节点，无法建立父子关系`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/graph/GraphContainer.tsx:435 -> `[GraphContainer] 无法创建边：源节点(${sourceId})或目标节点(${targetId})在画布中未找到`
@@ -201,7 +192,16 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useTestRun.ts:242 -> `连接已建立`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useTestRun.ts:267 -> `试运行所有节点失败:`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowHistory.ts:71 -> `没有可撤销的操作`
-- ... 省略 153 条
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowHistory.ts:89 -> `没有可重做的操作`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowHistory.ts:186 -> `没有可撤销的操作`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowHistory.ts:200 -> `没有可重做的操作`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowLifecycle.ts:58 -> `刷新后版本号已更新:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:74 -> `画布未初始化`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:83 -> `画布数据无效，尝试使用 workflowProxy 数据`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:86 -> `构建保存数据失败，无可用数据源`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:89 -> `使用 workflowProxy 数据保存`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:92 -> `使用单一数据源保存, 节点数:`
+- ... 省略 144 条
 
 ## src/hooks
 

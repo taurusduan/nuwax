@@ -1080,3 +1080,23 @@
 - 风险/阻塞：
   - `Antv-X6 v3` 仍有剩余存量集中在 `constants/node.constants.ts`、`hooks/useAutoSave.ts` 等
 - 下一步：继续推进 `Antv-X6 v3 constants/hooks` 的高频文案与日志描述
+
+### 里程碑：Top 模块第四十三批实改（Antv-X6 v3 library/pluginNode）
+
+- 时间：2026-03-31 13:18
+- 任务：补齐 `library.tsx` 与 `pluginNode.tsx` 的输入/输出和知识库检索配置文案
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/v3/component/pluginNode.tsx src/pages/Antv-X6/v3/component/library.tsx`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/v3/component/pluginNode.tsx`
+    - `src/pages/Antv-X6/v3/component/library.tsx`
+- 结果摘要：
+  - `pluginNode` 的输入/输出标题切换为 `t(...)`
+  - `library` 的输入标题、知识库标题、搜索策略、召回数量、最小匹配度及 tooltip 全部切换为 `t(...)`
+  - 复用现有 `NuwaxPC.Pages.AntvX6Library.*` 与 `NuwaxPC.Pages.AntvX6Data.*` key，无新增词典负担
+  - 治理总量从 `2890` 下降至 `2881`（-9）
+- 风险/阻塞：
+  - Antv v3 后续剩余主要在 `constants/node.constants.ts` 与 `hooks/useAutoSave.ts`（常量/日志型文本较多）
+- 下一步：继续推进 `Antv-X6 v3 constants/node.constants.ts` 的 label 文案 key 化
