@@ -7,6 +7,8 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Common.Global.loading': '加载中...',
   'NuwaxPC.Common.Global.copy': '复制',
   'NuwaxPC.Common.Global.refresh': '刷新',
+  'NuwaxPC.Common.Global.emptyData': '暂无数据',
+  'NuwaxPC.Common.Global.pleaseSelect': '请选择',
   'NuwaxPC.Common.Global.backHome': '返回首页',
   'NuwaxPC.Common.Global.pending': '处理中',
   'NuwaxPC.Toast.Global.savedSuccessfully': '保存成功',
@@ -91,6 +93,99 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.AgentEdit.draftAutoSavedAt': '草稿自动保存于 {0}',
   'NuwaxPC.Pages.AgentEdit.unpublishedChanges': '有未发布的更改',
   'NuwaxPC.Pages.AgentEdit.publish': '发布',
+  'NuwaxPC.Pages.AgentArrangeComponentSetting.title': '设置',
+  'NuwaxPC.Pages.AgentArrangeAsyncRun.title': '异步运行',
+  'NuwaxPC.Pages.AgentArrangeAsyncRun.description':
+    '任务进入异步运行时默认返回一条回复内容，用户可以继续对话，任务在后台运行完成后会通知用户',
+  'NuwaxPC.Pages.AgentArrangeAsyncRun.defaultReplyContent':
+    '已经开始为你处理，请耐心等待运行结果',
+  'NuwaxPC.Pages.AgentArrangeAsyncRun.replyContent': '回复内容',
+  'NuwaxPC.Pages.AgentArrangeAsyncRun.replyContentPlaceholder':
+    '你可以在这里设置消息回复,任务运行时将自动回复,比如: 任务已在进行中,一旦完成我将第一时间向你报告结果,你还有其他需要我协助的事项吗?',
+  'NuwaxPC.Pages.AgentArrangeAsyncRun.replyContentRequired': '回复内容必须设置',
+  'NuwaxPC.Pages.AgentArrangeOutputWay.title': '是否直接输出',
+  'NuwaxPC.Pages.AgentArrangeOutputWay.tooltip':
+    '如果选择“是”，将会把工作流运行结果直接输出到会话框中，不会再经过大模型总结输出。',
+  'NuwaxPC.Pages.AgentArrangeOutputWay.optionNo': '否',
+  'NuwaxPC.Pages.AgentArrangeOutputWay.optionYes': '是',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.title': '调用方式',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.optionAuto': '自动调用',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.optionOnDemand': '按需调用',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.optionManual': '手动选择',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.optionManualOnDemand':
+    '手动选择+按需调用',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.optionNo': '否',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.optionYes': '是',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.autoDescription':
+    '自动调用：用户每次发送消息后都会触发调用一次',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.onDemandDescription':
+    '按需调用：由模型根据任务情况决定是否需要调用',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.manualDescription':
+    '手动选择：由用户决定是否使用该工具，在用户选择的情况下和自动调用效果一样',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.manualOnDemandDescription':
+    '手动选择+按需调用：用户选择后，由模型根据任务情况选择是否需要调用；用户不选择则不会调用',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.skillManualDescription':
+    '手动选择：用户可在会话页面中对该技能进行选择，选中后会让模型优先使用该技能',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.defaultSelected': '是否默认选中',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.alias': '展示别名',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.aliasTooltip':
+    '可选，若填写，前端优先展示该名称',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.aliasPlaceholder': '请输入展示别名',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.selectStyle': '选择卡片样式',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.optionSingle': '单张卡片',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.optionList': '竖向列表',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardListMaxLength':
+    '卡片列表最大长度',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardListMaxLengthPlaceholder':
+    '请输入卡片列表最大长度',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.bindArray':
+    '为卡片整体绑定一个数组',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.bindArrayPlaceholder':
+    '请为卡片整体绑定一个数组',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.bindListItemData':
+    '为卡片内的列表项绑定数据',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardClickJump': '点击卡片跳转',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardClickJumpTooltip':
+    '绑定后，用户在智能体对话流中点击 卡片可跳转至其他页面',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.urlDataSourcePlaceholder':
+    '为url选择数据来源',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.title': '编辑或添加变量',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.fieldName': '字段名称',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.fieldNameRequired':
+    '请输入字段名称',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.fieldNamePlaceholder':
+    '请输入字段名称，符合字段命名规划',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.displayName': '展示名称',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.displayNameRequired':
+    '请输入字段展示名称',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.displayNamePlaceholder':
+    '请输入字段展示名称，供前端展示使用',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.description': '描述',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.descriptionPlaceholder':
+    '请输入字段描述',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputType': '输入方式',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeText': '单行文本',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeParagraph': '段落',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeNumber': '数字',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeSelect': '单选',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeMultipleSelect':
+    '多选',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeAutoRecognition':
+    '智能识别',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.manualCreate': '手动创建',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.addOption': '添加选项',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.dataBinding': '数据绑定',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.addOptionRequired':
+    '请添加选项',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.optionValueRequired':
+    '请填写选项值',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.selectBindingComponent':
+    '请选择绑定组件',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.defaultValue': '默认值',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.defaultValuePlaceholder':
+    '请输入默认值',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.required': '必填',
+  'NuwaxPC.Toast.AgentArrangeCreateVariableModal.updateSuccess': '变量更新成功',
   'NuwaxPC.Pages.Error403.licenseExpired': '抱歉，您的许可证授权已过期',
   'NuwaxPC.Pages.Error404.pageNotFound': '抱歉，访问的页面不存在',
   'NuwaxPC.Pages.HomeDrag.errorTitle': '拖拽功能暂时不可用',

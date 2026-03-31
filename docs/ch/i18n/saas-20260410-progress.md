@@ -816,3 +816,29 @@
 - 风险/阻塞：
   - 当前剩余问题更多分布在其他高存量模块（EditAgent/SystemManagement 等）
 - 下一步：切换到 inventory Top 的非 Antv-X6 模块批量推进
+
+### 里程碑：Top 模块第三十二批实改（EditAgent 组件设置 + 变量弹窗）
+
+- 时间：2026-03-31 11:09
+- 任务：批量改造 `EditAgent/AgentArrangeConfig` 关键路径文案，覆盖 `ComponentSettingModal` 子模块与 `CreateVariableModal`
+- 执行命令：
+  - `pnpm prettier --write src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/AsyncRun/index.tsx src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/OutputWay/index.tsx src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/InvokeType/index.tsx src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/index.tsx src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/AsyncRun/index.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/OutputWay/index.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/InvokeType/index.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/index.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `AsyncRun`、`OutputWay`、`InvokeType`、`BindDataSource`、`CreateVariableModal` 可见文案全部切换为 `t(...)`
+  - `ComponentSettingModal/index.tsx` 的保存提示、调用方式 tooltip、左侧标题改为 `t(...)`，与子组件统一
+  - 为 `NuwaxPC.Pages.AgentArrange*` 增补中英文默认词典 key（含 `Toast` 与 `Common` 通用 key）
+  - 治理总量从 `3240` 下降至 `3202`（-38）
+- 风险/阻塞：
+  - `EditAgent` 模块仍有大量存量页面未完成显式接入（如 `EventBindModal`、`KnowledgeSetting`、`CreateVariables/index.tsx` 等）
+- 下一步：继续按 inventory Top 在 `EditAgent` 内推进下一批（优先 `EventBindModal` 与 `CreateVariables/index.tsx`）

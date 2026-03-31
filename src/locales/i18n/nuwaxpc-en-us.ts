@@ -7,6 +7,8 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Common.Global.loading': 'Loading...',
   'NuwaxPC.Common.Global.copy': 'Copy',
   'NuwaxPC.Common.Global.refresh': 'Refresh',
+  'NuwaxPC.Common.Global.emptyData': 'No data',
+  'NuwaxPC.Common.Global.pleaseSelect': 'Please select',
   'NuwaxPC.Common.Global.backHome': 'Back to Home',
   'NuwaxPC.Common.Global.pending': 'Pending',
   'NuwaxPC.Toast.Global.savedSuccessfully': 'Saved successfully',
@@ -100,6 +102,106 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AgentEdit.draftAutoSavedAt': 'Draft auto-saved at {0}',
   'NuwaxPC.Pages.AgentEdit.unpublishedChanges': 'Unpublished changes',
   'NuwaxPC.Pages.AgentEdit.publish': 'Publish',
+  'NuwaxPC.Pages.AgentArrangeComponentSetting.title': 'Settings',
+  'NuwaxPC.Pages.AgentArrangeAsyncRun.title': 'Async Run',
+  'NuwaxPC.Pages.AgentArrangeAsyncRun.description':
+    'When the task enters async mode, a default reply is returned. Users can continue chatting, and they are notified after background completion.',
+  'NuwaxPC.Pages.AgentArrangeAsyncRun.defaultReplyContent':
+    'Processing has started. Please wait for the result.',
+  'NuwaxPC.Pages.AgentArrangeAsyncRun.replyContent': 'Reply Content',
+  'NuwaxPC.Pages.AgentArrangeAsyncRun.replyContentPlaceholder':
+    'You can set an automatic reply here, for example: The task is in progress. I will notify you as soon as it is done. Is there anything else I can help with?',
+  'NuwaxPC.Pages.AgentArrangeAsyncRun.replyContentRequired':
+    'Reply content is required',
+  'NuwaxPC.Pages.AgentArrangeOutputWay.title': 'Direct Output',
+  'NuwaxPC.Pages.AgentArrangeOutputWay.tooltip':
+    'If set to "Yes", the workflow result is sent directly to the chat box without LLM summarization.',
+  'NuwaxPC.Pages.AgentArrangeOutputWay.optionNo': 'No',
+  'NuwaxPC.Pages.AgentArrangeOutputWay.optionYes': 'Yes',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.title': 'Invoke Type',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.optionAuto': 'Auto',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.optionOnDemand': 'On demand',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.optionManual': 'Manual',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.optionManualOnDemand':
+    'Manual + On demand',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.optionNo': 'No',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.optionYes': 'Yes',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.autoDescription':
+    'Auto: triggered every time the user sends a message.',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.onDemandDescription':
+    'On demand: the model decides whether to invoke based on the task.',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.manualDescription':
+    'Manual: the user decides whether to use the tool; behavior matches Auto after selection.',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.manualOnDemandDescription':
+    'Manual + On demand: after user selection, the model decides whether to invoke; no selection means no invocation.',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.skillManualDescription':
+    'Manual: users can choose this skill in chat and the model will prioritize it.',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.defaultSelected': 'Default Selected',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.alias': 'Display Alias',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.aliasTooltip':
+    'Optional. If set, the frontend prioritizes this name.',
+  'NuwaxPC.Pages.AgentArrangeInvokeType.aliasPlaceholder':
+    'Please enter display alias',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.selectStyle':
+    'Select Card Style',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.optionSingle': 'Single Card',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.optionList': 'Vertical List',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardListMaxLength':
+    'Max Card List Length',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardListMaxLengthPlaceholder':
+    'Please enter max card list length',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.bindArray':
+    'Bind an Array for the Whole Card',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.bindArrayPlaceholder':
+    'Please bind an array for the whole card',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.bindListItemData':
+    'Bind Data for Card List Items',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardClickJump':
+    'Card Click Redirect',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardClickJumpTooltip':
+    'After binding, users can click the card in the agent conversation flow to navigate to another page.',
+  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.urlDataSourcePlaceholder':
+    'Select data source for URL',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.title': 'Edit or Add Variable',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.fieldName': 'Field Name',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.fieldNameRequired':
+    'Please enter field name',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.fieldNamePlaceholder':
+    'Please enter field name following naming rules',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.displayName': 'Display Name',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.displayNameRequired':
+    'Please enter display name',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.displayNamePlaceholder':
+    'Please enter display name for frontend rendering',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.description': 'Description',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.descriptionPlaceholder':
+    'Please enter field description',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputType': 'Input Type',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeText':
+    'Single-line Text',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeParagraph':
+    'Paragraph',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeNumber': 'Number',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeSelect': 'Single',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeMultipleSelect':
+    'Multiple',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeAutoRecognition':
+    'Auto Recognition',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.manualCreate': 'Manual Create',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.addOption': 'Add Option',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.dataBinding': 'Data Binding',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.addOptionRequired':
+    'Please add options',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.optionValueRequired':
+    'Please fill option values',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.selectBindingComponent':
+    'Please select a binding component',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.defaultValue': 'Default Value',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.defaultValuePlaceholder':
+    'Please enter default value',
+  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.required': 'Required',
+  'NuwaxPC.Toast.AgentArrangeCreateVariableModal.updateSuccess':
+    'Variable updated successfully',
   'NuwaxPC.Pages.Error403.licenseExpired':
     'Sorry, your license authorization has expired',
   'NuwaxPC.Pages.Error404.pageNotFound':

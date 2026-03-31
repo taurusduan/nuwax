@@ -1,7 +1,7 @@
 import ConditionRender from '@/components/ConditionRender';
 import CustomInputNumber from '@/components/custom/CustomInputNumber';
 import LabelStar from '@/components/LabelStar';
-import { BIND_CARD_STYLE_LIST } from '@/constants/agent.constants';
+import { t } from '@/services/i18nRuntime';
 import { BindCardStyleEnum } from '@/types/enums/plugin';
 import { ArgList } from '@/types/interfaces/agent';
 import type {
@@ -209,6 +209,20 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
     setLoading(false);
   };
 
+  const cardStyleOptions = useMemo(
+    () => [
+      {
+        value: BindCardStyleEnum.SINGLE,
+        label: t('NuwaxPC.Pages.AgentArrangeCardBindDataSource.optionSingle'),
+      },
+      {
+        value: BindCardStyleEnum.LIST,
+        label: t('NuwaxPC.Pages.AgentArrangeCardBindDataSource.optionList'),
+      },
+    ],
+    [],
+  );
+
   return (
     <div className={cx('flex-1', 'flex', 'flex-col')}>
       <Form
@@ -217,28 +231,49 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
         rootClassName={cx('flex-1')}
         requiredMark={customizeRequiredMark}
       >
-        <Form.Item label="选择卡片样式">
+        <Form.Item
+          label={t('NuwaxPC.Pages.AgentArrangeCardBindDataSource.selectStyle')}
+        >
           <Radio.Group
             onChange={onChangeCardStyle}
             value={cardStyle}
-            options={BIND_CARD_STYLE_LIST}
+            options={cardStyleOptions}
           />
         </Form.Item>
         {cardStyle === BindCardStyleEnum.LIST && (
           <>
             <Form.Item
-              label={<LabelStar label="卡片列表最大长度" />}
-              rules={[{ required: true, message: '请输入卡片列表最大长度' }]}
+              label={
+                <LabelStar
+                  label={t(
+                    'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardListMaxLength',
+                  )}
+                />
+              }
+              rules={[
+                {
+                  required: true,
+                  message: t(
+                    'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardListMaxLengthPlaceholder',
+                  ),
+                },
+              ]}
             >
               <CustomInputNumber
                 value={cardListLen}
                 onChange={(value) => setCardListLen(value)}
-                placeholder="请输入卡片列表最大长度"
+                placeholder={t(
+                  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardListMaxLengthPlaceholder',
+                )}
                 max={20}
                 min={1}
               />
             </Form.Item>
-            <Form.Item label="为卡片整体绑定一个数组">
+            <Form.Item
+              label={t(
+                'NuwaxPC.Pages.AgentArrangeCardBindDataSource.bindArray',
+              )}
+            >
               <Select
                 allowClear
                 onClear={() => {
@@ -252,7 +287,9 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
                   setOpenBindArray(open);
                 }}
                 onClick={() => setOpenBindArray(true)}
-                placeholder="请为卡片整体绑定一个数组"
+                placeholder={t(
+                  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.bindArrayPlaceholder',
+                )}
                 popupRender={() =>
                   bindArray?.length > 0 ? (
                     <Tree
@@ -271,14 +308,18 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
                       }}
                     />
                   ) : (
-                    <Empty description="暂无数据" />
+                    <Empty description={t('NuwaxPC.Common.Global.emptyData')} />
                   )
                 }
               />
             </Form.Item>
           </>
         )}
-        <Form.Item label="为卡片内的列表项绑定数据">
+        <Form.Item
+          label={t(
+            'NuwaxPC.Pages.AgentArrangeCardBindDataSource.bindListItemData',
+          )}
+        >
           {argList?.map((info, index) => (
             <Form.Item key={info.key} className={cx('mb-16')}>
               <div className={cx('flex', 'items-center', styles['space-box'])}>
@@ -313,19 +354,27 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
                         }}
                       />
                     ) : (
-                      <Empty description="暂无数据" />
+                      <Empty
+                        description={t('NuwaxPC.Common.Global.emptyData')}
+                      />
                     )
                   }
-                  placeholder={info.placeholder || '请选择'}
+                  placeholder={
+                    info.placeholder || t('NuwaxPC.Common.Global.pleaseSelect')
+                  }
                 />
               </div>
             </Form.Item>
           ))}
         </Form.Item>
         <Form.Item
-          label="点击卡片跳转"
+          label={t(
+            'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardClickJump',
+          )}
           tooltip={{
-            title: '绑定后，用户在智能体对话流中点击 卡片可跳转至其他页面',
+            title: t(
+              'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardClickJumpTooltip',
+            ),
             icon: <InfoCircleOutlined />,
           }}
         >
@@ -369,14 +418,16 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
                   }}
                 />
               )}
-              placeholder="为url选择数据来源"
+              placeholder={t(
+                'NuwaxPC.Pages.AgentArrangeCardBindDataSource.urlDataSourcePlaceholder',
+              )}
             />
           </ConditionRender>
         </Form.Item>
       </Form>
       <footer className={cx(styles.footer)}>
         <Button type="primary" onClick={handleSave} loading={loading}>
-          保存
+          {t('NuwaxPC.Common.Global.save')}
         </Button>
       </footer>
     </div>

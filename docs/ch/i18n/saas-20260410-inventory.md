@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T02:43:40.777Z
+- 生成时间：2026-03-31T03:08:40.109Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：3240
-- hardcoded 中文：3240
+- 总问题数：3202
+- hardcoded 中文：3202
 - legacy System key：0
 - invalid dict key：0
 
@@ -16,7 +16,7 @@
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
 | src/pages/Antv-X6 | 267 | 0 | 0 | 267 |
-| src/pages/EditAgent | 265 | 0 | 0 | 265 |
+| src/pages/EditAgent | 227 | 0 | 0 | 227 |
 | src/pages/SystemManagement | 208 | 0 | 0 | 208 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
@@ -205,50 +205,12 @@
 
 ## src/pages/EditAgent
 
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/AsyncRun/index.tsx:27 -> `已经开始为你处理，请耐心等待运行结果`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/AsyncRun/index.tsx:72 -> `回复内容`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/AsyncRun/index.tsx:78 -> `你可以在这里设置消息回复,任务运行时将自动回复,比如: 任务已在进行中,一旦完成我将第一时间向你报告结果,你还有其他需要我协助的事项吗?`
 - [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:56 -> `为卡片整体绑定一个数组`
 - [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:125 -> `为卡片内的列表项绑定数据`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:220 -> `选择卡片样式`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:230 -> `卡片列表最大长度`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:231 -> `请输入卡片列表最大长度`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:236 -> `请输入卡片列表最大长度`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:241 -> `为卡片整体绑定一个数组`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:255 -> `请为卡片整体绑定一个数组`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:274 -> `暂无数据`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:281 -> `为卡片内的列表项绑定数据`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:316 -> `暂无数据`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:319 -> `请选择`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:326 -> `点击卡片跳转`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:328 -> `绑定后，用户在智能体对话流中点击 卡片可跳转至其他页面`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:372 -> `为url选择数据来源`
 - [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/ExceptionHanding/index.tsx:70 -> `默认信息`
 - [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/ExceptionHanding/index.tsx:76 -> `请输入异常时输出给大模型的默认信息`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/InvokeType/index.tsx:112 -> `可选，若填写，前端优先展示该名称`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/InvokeType/index.tsx:118 -> `请输入展示别名`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/OutputWay/index.tsx:44 -> `如果选择“是”，将会把工作流运行结果直接输出到会话框中，不会再经过大模型总结输出。`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/index.tsx:255 -> `保存成功`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:241 -> `手动创建`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:278 -> `数据绑定`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:297 -> `变量更新成功`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:315 -> `插件绑定`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:318 -> `请添加选项`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:321 -> `请填写选项值`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:337 -> `请选择绑定组件`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:340 -> `插件绑定`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:409 -> `编辑或添加变量`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:423 -> `字段名称`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:424 -> `请输入字段名称`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:427 -> `请输入字段名称，符合字段命名规划`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:434 -> `展示名称`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:435 -> `请输入字段展示名称`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:438 -> `请输入字段展示名称，供前端展示使用`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:443 -> `描述`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:446 -> `请输入字段描述`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:452 -> `输入方式`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:471 -> `默认值`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:475 -> `请输入默认值`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:356 -> `插件绑定`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:393 -> `插件绑定`
 - [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx:165 -> `删除成功`
 - [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx:167 -> `更新成功`
 - [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx:211 -> `名称`
@@ -285,7 +247,45 @@
 - [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:112 -> `调用方式`
 - [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:113 -> `选择是否每轮对话自动召回或按需从特定知识库召回`
 - [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:130 -> `搜索策略`
-- ... 省略 185 条
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:131 -> `从知识库中获取知识的检索方式,不同的检索策略可以更有效地找到正确的信息,提高其生成的答案的准确性和可用性。`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:144 -> `最大召回数量`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:145 -> `从知识库中返回给大模型的最大段落数,数值越大返回的内容越多`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:157 -> `最小匹配度`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:158 -> `根据设置的匹配度选取段落返回给大模型,低于设定匹配度的内容不会被召回`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:173 -> `无召回回复`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:174 -> `当知识库没有召回有效切片时的回复话术`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:191 -> `请输入`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/index.tsx:75 -> `自动调用`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/index.tsx:76 -> `按需调用`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/index.tsx:80 -> `取消知识库`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/LongMemoryContent/index.tsx:28 -> `默认支持在Prompt中调用，取消勾选后将不支持在Prompt中调用（仅能在Workflow中调用）`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/McpGroupComponentItem/index.tsx:45 -> `工具（${item.children.length}）`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:74 -> `更新成功`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:191 -> `参数名：${requireArgEmptyItem.name}是必填参数，参数值不能为空`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:277 -> `参数名`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:323 -> `请输入${record.description}`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:337 -> `预置问题设置`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:354 -> `图标`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:363 -> `展示信息`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:364 -> `请输入展示信息`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:366 -> `这里是问题内容`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:368 -> `类型`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:370 -> `请选择类型`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:378 -> `页面路径`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:379 -> `请选择页面路径`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:382 -> `请选择页面路径`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:391 -> `链接地址`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:393 -> `请输入链接地址`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:401 -> `请输入正确格式的链接地址，必须以http://或https://开头!`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:425 -> `配置输入参数`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx:105 -> `请输入开场白`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx:123 -> `添加预置问题`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx:138 -> `输入开场白引导问题`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx:152 -> `删除预置问题`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx:158 -> `设置`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/PageSettingModal/index.tsx:73 -> `更新其他页面失败:`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/PageSettingModal/index.tsx:92 -> `保存成功`
+- ... 省略 147 条
 
 ## src/pages/SystemManagement
 
