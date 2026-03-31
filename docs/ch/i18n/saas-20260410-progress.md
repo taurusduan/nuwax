@@ -760,3 +760,21 @@
 - 风险/阻塞：
   - `Antv-X6` 仍有存量主要集中在 `v3/component/graph.tsx` 与 `v3/indexV3.tsx`（注释和日志文本占比高）
 - 下一步：继续推进 `v3/component/graph.tsx`（先可见提示文案，再批量注释英文化）
+
+### 里程碑：Top 模块第二十九批实改（Antv-X6 v3 graph）
+
+- 时间：2026-03-31 10:27
+- 任务：修复 `v3/component/graph.tsx` 关键提示文案与高密度中文注释残留
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/v3/component/graph.tsx`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 shell + `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/v3/component/graph.tsx`
+- 结果摘要：
+  - 接入 `t(...)` 并修复循环节点快捷加节点 warning 文案（`NuwaxPC.Pages.AntvX6Graph.cannotQuickAddNodeForLoopBoundary`）
+  - 清理图编辑器文件中的中文注释残留，统一为可读英文注释
+  - inventory 问题总量从 `3256` 下降至 `3253`
+- 风险/阻塞：
+  - `graph.tsx` 仍有大量历史注释，后续可继续做结构化注释收敛
+- 下一步：继续推进 `v3/indexV3.tsx` 与 `Antv-X6/index.tsx` 的残留提示文案
