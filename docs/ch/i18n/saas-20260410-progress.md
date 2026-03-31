@@ -1651,3 +1651,22 @@
 - 风险/阻塞：
   - `src/services` 当前剩余主要集中在 `src/services/ecosystem.ts`（82）
 - 下一步：继续推进 `src/services/ecosystem.ts` 与 `src/hooks` 余量
+
+### 里程碑：Top 模块第六十八批实改（services.ecosystem 清零）
+
+- 时间：2026-03-31 18:57
+- 任务：清理 `src/services/ecosystem.ts` 全量中文引号文本（参数校验、错误日志、示例默认值与注释中的字符串字面量）
+- 执行命令：
+  - `pnpm prettier --write src/services/ecosystem.ts docs/ch/i18n/saas-20260410-progress.md docs/ch/i18n/saas-20260410-test-report.md docs/ch/i18n/saas-20260410-decision-log.md`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `node` 替换脚本与 `apply_patch` 修改 `src/services/ecosystem.ts`
+- 结果摘要：
+  - `ecosystem.ts` 的列表/详情/删除/上下线/撤销/草稿/发布/更新启用等流程提示文本统一英文
+  - mock 示例字段（如插件名、作者、说明文档）与 console 输出统一英文
+  - 处理替换后遗留混合字符串（如 `Config UID`、`update and enable`）并二次校正
+  - `src/services` 模块从 `82` 下降至 `0`（模块退出 inventory）
+  - 治理总量从 `2235` 下降至 `2153`（-82）
+- 风险/阻塞：
+  - 当前最高残量在 `src/components/business-component`（144）与 `src/hooks`（109）
+- 下一步：继续推进 `src/components/business-component` 批量治理

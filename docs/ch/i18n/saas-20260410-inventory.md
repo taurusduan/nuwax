@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T10:37:03.382Z
+- 生成时间：2026-03-31T10:57:08.253Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2235
-- hardcoded 中文：2235
+- 总问题数：2153
+- hardcoded 中文：2153
 - legacy System key：0
 - invalid dict key：0
 
@@ -20,7 +20,6 @@
 | src/components/FileTreeView | 97 | 0 | 0 | 97 |
 | src/pages/SpaceKnowledge | 82 | 0 | 0 | 82 |
 | src/pages/UserManage | 82 | 0 | 0 | 82 |
-| src/services | 82 | 0 | 0 | 82 |
 | src/pages/EditAgent | 78 | 0 | 0 | 78 |
 | src/pages/SpacePageDevelop | 72 | 0 | 0 | 72 |
 | src/pages/SpaceLibrary | 64 | 0 | 0 | 64 |
@@ -532,90 +531,6 @@
 - [hardcoded_chinese] src/pages/UserManage/index.tsx:248 -> `正常`
 - [hardcoded_chinese] src/pages/UserManage/index.tsx:248 -> `禁用`
 - [hardcoded_chinese] src/pages/UserManage/index.tsx:254 -> `加入时间`
-- ... 省略 2 条
-
-## src/services
-
-- [hardcoded_chinese] src/services/ecosystem.ts:41 -> `搜索关键词`
-- [hardcoded_chinese] src/services/ecosystem.ts:71 -> `获取客户端配置列表失败:`
-- [hardcoded_chinese] src/services/ecosystem.ts:98 -> `配置名称:`
-- [hardcoded_chinese] src/services/ecosystem.ts:99 -> `配置描述:`
-- [hardcoded_chinese] src/services/ecosystem.ts:120 -> `获取客户端配置详情失败:`
-- [hardcoded_chinese] src/services/ecosystem.ts:138 -> `配置删除成功`
-- [hardcoded_chinese] src/services/ecosystem.ts:140 -> `配置删除失败`
-- [hardcoded_chinese] src/services/ecosystem.ts:146 -> `UID不能为空`
-- [hardcoded_chinese] src/services/ecosystem.ts:163 -> `删除客户端配置失败:`
-- [hardcoded_chinese] src/services/ecosystem.ts:180 -> `配置下线成功:`
-- [hardcoded_chinese] src/services/ecosystem.ts:181 -> `下线时间:`
-- [hardcoded_chinese] src/services/ecosystem.ts:182 -> `分享状态:`
-- [hardcoded_chinese] src/services/ecosystem.ts:184 -> `配置下线失败`
-- [hardcoded_chinese] src/services/ecosystem.ts:192 -> `UID不能为空`
-- [hardcoded_chinese] src/services/ecosystem.ts:209 -> `下线客户端配置失败:`
-- [hardcoded_chinese] src/services/ecosystem.ts:226 -> `配置撤销成功:`
-- [hardcoded_chinese] src/services/ecosystem.ts:227 -> `撤销时间:`
-- [hardcoded_chinese] src/services/ecosystem.ts:229 -> `配置撤销失败`
-- [hardcoded_chinese] src/services/ecosystem.ts:235 -> `UID不能为空`
-- [hardcoded_chinese] src/services/ecosystem.ts:252 -> `撤销发布失败:`
-- [hardcoded_chinese] src/services/ecosystem.ts:268 -> `我的AI插件`
-- [hardcoded_chinese] src/services/ecosystem.ts:269 -> `这是一个AI助手插件`
-- [hardcoded_chinese] src/services/ecosystem.ts:271 -> `插件`
-- [hardcoded_chinese] src/services/ecosystem.ts:272 -> `张三`
-- [hardcoded_chinese] src/services/ecosystem.ts:278 -> `草稿创建成功:`
-- [hardcoded_chinese] src/services/ecosystem.ts:279 -> `草稿UID:`
-- [hardcoded_chinese] src/services/ecosystem.ts:280 -> `分享状态:`
-- [hardcoded_chinese] src/services/ecosystem.ts:288 -> `配置名称不能为空`
-- [hardcoded_chinese] src/services/ecosystem.ts:293 -> `数据类型不能为空`
-- [hardcoded_chinese] src/services/ecosystem.ts:309 -> `创建客户端配置草稿失败:`
-- [hardcoded_chinese] src/services/ecosystem.ts:325 -> `我的AI插件`
-- [hardcoded_chinese] src/services/ecosystem.ts:326 -> `这是一个AI助手插件`
-- [hardcoded_chinese] src/services/ecosystem.ts:328 -> `插件`
-- [hardcoded_chinese] src/services/ecosystem.ts:329 -> `张三`
-- [hardcoded_chinese] src/services/ecosystem.ts:331 -> `插件使用说明文档`
-- [hardcoded_chinese] src/services/ecosystem.ts:336 -> `提交审核成功:`
-- [hardcoded_chinese] src/services/ecosystem.ts:337 -> `配置UID:`
-- [hardcoded_chinese] src/services/ecosystem.ts:338 -> `分享状态:`
-- [hardcoded_chinese] src/services/ecosystem.ts:346 -> `配置名称不能为空`
-- [hardcoded_chinese] src/services/ecosystem.ts:351 -> `数据类型不能为空`
-- [hardcoded_chinese] src/services/ecosystem.ts:367 -> `保存并发布客户端配置失败:`
-- [hardcoded_chinese] src/services/ecosystem.ts:384 -> `我的AI插件`
-- [hardcoded_chinese] src/services/ecosystem.ts:385 -> `这是一个AI助手插件`
-- [hardcoded_chinese] src/services/ecosystem.ts:387 -> `插件`
-- [hardcoded_chinese] src/services/ecosystem.ts:388 -> `张三`
-- [hardcoded_chinese] src/services/ecosystem.ts:390 -> `插件使用说明文档`
-- [hardcoded_chinese] src/services/ecosystem.ts:395 -> `提交审核成功:`
-- [hardcoded_chinese] src/services/ecosystem.ts:396 -> `配置UID:`
-- [hardcoded_chinese] src/services/ecosystem.ts:397 -> `分享状态:`
-- [hardcoded_chinese] src/services/ecosystem.ts:405 -> `配置名称不能为空`
-- [hardcoded_chinese] src/services/ecosystem.ts:410 -> `数据类型不能为空`
-- [hardcoded_chinese] src/services/ecosystem.ts:426 -> `保存并发布客户端配置失败:`
-- [hardcoded_chinese] src/services/ecosystem.ts:443 -> `更新后的插件名称`
-- [hardcoded_chinese] src/services/ecosystem.ts:444 -> `更新后的描述`
-- [hardcoded_chinese] src/services/ecosystem.ts:446 -> `插件`
-- [hardcoded_chinese] src/services/ecosystem.ts:447 -> `张三`
-- [hardcoded_chinese] src/services/ecosystem.ts:453 -> `草稿更新成功:`
-- [hardcoded_chinese] src/services/ecosystem.ts:454 -> `更新时间:`
-- [hardcoded_chinese] src/services/ecosystem.ts:455 -> `分享状态:`
-- [hardcoded_chinese] src/services/ecosystem.ts:463 -> `配置UID不能为空`
-- [hardcoded_chinese] src/services/ecosystem.ts:468 -> `配置名称不能为空`
-- [hardcoded_chinese] src/services/ecosystem.ts:473 -> `数据类型不能为空`
-- [hardcoded_chinese] src/services/ecosystem.ts:489 -> `更新客户端配置草稿失败:`
-- [hardcoded_chinese] src/services/ecosystem.ts:506 -> `配置禁用成功:`
-- [hardcoded_chinese] src/services/ecosystem.ts:507 -> `禁用时间:`
-- [hardcoded_chinese] src/services/ecosystem.ts:508 -> `使用状态:`
-- [hardcoded_chinese] src/services/ecosystem.ts:510 -> `配置禁用失败`
-- [hardcoded_chinese] src/services/ecosystem.ts:518 -> `UID不能为空`
-- [hardcoded_chinese] src/services/ecosystem.ts:538 -> `禁用生态市场配置失败:`
-- [hardcoded_chinese] src/services/ecosystem.ts:555 -> `配置启用成功:`
-- [hardcoded_chinese] src/services/ecosystem.ts:556 -> `启用时间:`
-- [hardcoded_chinese] src/services/ecosystem.ts:557 -> `使用状态:`
-- [hardcoded_chinese] src/services/ecosystem.ts:559 -> `配置启用失败`
-- [hardcoded_chinese] src/services/ecosystem.ts:567 -> `UID不能为空`
-- [hardcoded_chinese] src/services/ecosystem.ts:584 -> `启用生态市场配置失败:`
-- [hardcoded_chinese] src/services/ecosystem.ts:606 -> `配置更新并启用成功:`
-- [hardcoded_chinese] src/services/ecosystem.ts:607 -> `更新时间:`
-- [hardcoded_chinese] src/services/ecosystem.ts:608 -> `使用状态:`
-- [hardcoded_chinese] src/services/ecosystem.ts:610 -> `配置更新并启用失败`
-- [hardcoded_chinese] src/services/ecosystem.ts:621 -> `配置UID不能为空`
 - ... 省略 2 条
 
 ## src/pages/EditAgent
@@ -1744,3 +1659,30 @@
 - [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:318 -> `操作`
 - [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:400 -> `入参配置`
 - [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:420 -> `出参配置`
+
+## src/pages/EcosystemPlugin
+
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:177 -> `获取插件列表失败:`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:178 -> `获取插件列表失败`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:215 -> `未命名插件`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:216 -> `暂无描述`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:234 -> `未命名插件`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:235 -> `暂无描述`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:276 -> `操作失败`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:281 -> `更新成功`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:285 -> `更新失败`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:301 -> `下线失败`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:305 -> `已下线`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:310 -> `下线失败`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:379 -> `更新成功`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:379 -> `创建成功`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:383 -> `操作失败`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:387 -> `保存分享失败:`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:388 -> `操作失败`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:425 -> `获取数据失败:`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:426 -> `获取数据失败`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:528 -> `获取插件详情失败`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:543 -> `插件已下线`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:558 -> `插件已撤销发布`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:624 -> `搜索插件`
+- [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:717 -> `暂无数据`
