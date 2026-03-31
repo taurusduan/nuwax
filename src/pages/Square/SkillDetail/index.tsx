@@ -12,6 +12,7 @@ import { jumpToSkill } from '@/utils/router';
 import { Button, message, Space } from 'antd';
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
+import { dict } from '@/services/i18nRuntime';
 import { useParams, useRequest } from 'umi';
 import PluginHeader from '../PluginDetail/PluginHeader';
 import styles from './index.less';
@@ -47,7 +48,7 @@ const SkillDetail: React.FC = ({}) => {
       manual: true,
       debounceInterval: 300,
       onSuccess: (data: number, params: PublishTemplateCopyParams[]) => {
-        message.success('模板复制成功');
+        message.success(dict('NuwaxPC.Pages.Square.SkillDetail.templateCopySuccess'));
         // 关闭弹窗
         setOpenMove(false);
         // 目标空间ID
@@ -77,7 +78,7 @@ const SkillDetail: React.FC = ({}) => {
   const handleExportProject = async () => {
     // 检查项目ID是否有效
     if (!skillId) {
-      message.warning('技能ID不存在或无效，无法导出');
+      message.warning(dict('NuwaxPC.Pages.Square.SkillDetail.skillIdInvalid'));
       return;
     }
 
@@ -88,7 +89,7 @@ const SkillDetail: React.FC = ({}) => {
       // 判断是否成功
       if (!result.success) {
         // 导出失败，显示错误信息
-        const errorMessage = result.error?.message || '导出失败';
+        const errorMessage = result.error?.message || dict('NuwaxPC.Pages.Square.SkillDetail.exportFailed');
         message.warning(errorMessage);
         setLoadingExportProject(false);
         return;
@@ -99,12 +100,12 @@ const SkillDetail: React.FC = ({}) => {
         const filename = `skill-${skillId}.zip`;
         // 导出整个项目压缩包
         exportWholeProjectZip(result, filename);
-        message.success('导出成功！');
+        message.success(dict('NuwaxPC.Pages.Square.SkillDetail.exportSuccess'));
       }
     } catch (error) {
       // 处理其他异常
       console.error('导出项目失败:', error);
-      message.error('导出失败，请重试');
+      message.error(dict('NuwaxPC.Pages.Square.SkillDetail.exportFailedRetry'));
     } finally {
       setLoadingExportProject(false);
     }
@@ -124,13 +125,13 @@ const SkillDetail: React.FC = ({}) => {
                   className={cx(styles['copy-btn'])}
                   onClick={() => setOpenMove(true)}
                 >
-                  复制模板
+                  {dict('NuwaxPC.Pages.Square.SkillDetail.copyTemplate')}
                 </Button>
                 <Button
                   onClick={handleExportProject}
                   loading={loadingExportProject}
                 >
-                  下载导出
+                  {dict('NuwaxPC.Pages.Square.SkillDetail.downloadExport')}
                 </Button>
               </Space>
             )

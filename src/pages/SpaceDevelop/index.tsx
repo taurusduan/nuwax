@@ -32,6 +32,7 @@ import {
   CustomPopoverItem,
   FileType,
 } from '@/types/interfaces/common';
+import { dict } from '@/services/i18nRuntime';
 import { modalConfirm } from '@/utils/ant-custom';
 import { exportConfigFile } from '@/utils/exportImportFile';
 import { jumpToAgent } from '@/utils/router';
@@ -179,7 +180,7 @@ const SpaceDevelop: React.FC = () => {
     debounceInterval: 300,
     onSuccess: (data: number, params: number[]) => {
       setCopyToSpaceLoading(false);
-      message.success('已成功创建副本');
+      message.success(dict('NuwaxPC.Pages.SpaceDevelop.Index.copySuccess'));
       // 关闭弹窗
       setOpenMove(false);
       // 目标空间ID
@@ -212,7 +213,7 @@ const SpaceDevelop: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success('已成功删除');
+      message.success(dict('NuwaxPC.Pages.SpaceDevelop.Index.deleteSuccess'));
       handleDelAgent();
       runEdit({
         size: 5,
@@ -238,7 +239,7 @@ const SpaceDevelop: React.FC = () => {
     debounceInterval: 300,
     onSuccess: () => {
       setTransferLoading(false);
-      message.success('迁移成功');
+      message.success(dict('NuwaxPC.Pages.SpaceDevelop.Index.transferSuccess'));
       handleDelAgent();
       setOpenMove(false);
       setCurrentAgentInfo(null);
@@ -333,19 +334,19 @@ const SpaceDevelop: React.FC = () => {
       agentInfo?.agentStatistics;
     const analyzeList = [
       {
-        label: '对话人数',
+        label: dict('NuwaxPC.Pages.SpaceDevelop.Index.statUserCount'),
         value: userCount,
       },
       {
-        label: '对话次数',
+        label: dict('NuwaxPC.Pages.SpaceDevelop.Index.statConvCount'),
         value: convCount,
       },
       {
-        label: '收藏用户数',
+        label: dict('NuwaxPC.Pages.SpaceDevelop.Index.statCollectCount'),
         value: collectCount,
       },
       {
-        label: '点赞次数',
+        label: dict('NuwaxPC.Pages.SpaceDevelop.Index.statLikeCount'),
         value: likeCount,
       },
     ];
@@ -384,8 +385,8 @@ const SpaceDevelop: React.FC = () => {
       // 导出配置
       case ApplicationMoreActionEnum.Export_Config:
         modalConfirm(
-          `导出配置 - ${agentInfo?.name}`,
-          '如果内部包含数据表或知识库，数据本身不会导出',
+          dict('NuwaxPC.Pages.SpaceDevelop.Index.exportConfigTitle', agentInfo?.name),
+          dict('NuwaxPC.Pages.SpaceDevelop.Index.exportConfigContent'),
           () => {
             exportConfigFile(id, AgentComponentTypeEnum.Agent);
             return new Promise((resolve) => {
@@ -401,7 +402,7 @@ const SpaceDevelop: React.FC = () => {
         );
         break;
       case ApplicationMoreActionEnum.Del:
-        modalConfirm('你确定要删除此智能体吗?', agentInfo?.name, () => {
+        modalConfirm(dict('NuwaxPC.Pages.SpaceDevelop.Index.deleteConfirmText'), agentInfo?.name, () => {
           runDel(id);
           return new Promise((resolve) => {
             setTimeout(resolve, 1000);
@@ -427,7 +428,7 @@ const SpaceDevelop: React.FC = () => {
     const fileName = file.name.toLocaleLowerCase();
     const isValidFile = fileName.endsWith('.agent');
     if (!isValidFile) {
-      message.error('请上传.agent类型的文件!');
+      message.error(dict('NuwaxPC.Pages.SpaceDevelop.Index.agentFileOnly'));
     }
     return isValidFile || Upload.LIST_IGNORE;
   };
@@ -442,7 +443,7 @@ const SpaceDevelop: React.FC = () => {
     <div className={cx(styles.container, 'h-full', 'flex', 'flex-col')}>
       <div className={cx(styles['header-area'])}>
         <div className={cx(styles['header-left'])}>
-          <h3 className={cx(styles.title)}>智能体开发</h3>
+          <h3 className={cx(styles.title)}>{dict('NuwaxPC.Pages.SpaceDevelop.Index.agentDevelop')}</h3>
           <SelectList
             value={agentType}
             options={AGENT_TYPE_LIST_DEV}
@@ -464,7 +465,7 @@ const SpaceDevelop: React.FC = () => {
         <div className={cx(styles['header-right'])}>
           <Input
             rootClassName={cx(styles.input)}
-            placeholder="搜索智能体"
+            placeholder={dict('NuwaxPC.Pages.SpaceDevelop.Index.searchAgent')}
             value={keyword}
             onChange={handleQueryAgent}
             prefix={<SearchOutlined />}
@@ -481,7 +482,7 @@ const SpaceDevelop: React.FC = () => {
           {/* 创建智能体按钮：如果只有一种类型则直接创建，否则显示下拉选择 */}
           <CustomPopover list={AGENT_TYPE_LIST} onClick={handlerClickAgentType}>
             <Button type="primary" icon={<PlusOutlined />}>
-              创建智能体
+              {dict('NuwaxPC.Pages.SpaceDevelop.Index.createAgent')}
             </Button>
           </CustomPopover>
         </div>
@@ -510,7 +511,7 @@ const SpaceDevelop: React.FC = () => {
         </div>
       ) : (
         <div className={cx('flex', 'items-center', 'content-center', 'h-full')}>
-          <Empty description="未能找到相关结果" />
+          <Empty description={dict('NuwaxPC.Pages.SpaceDevelop.Index.noResults')} />
         </div>
       )}
 
@@ -518,7 +519,7 @@ const SpaceDevelop: React.FC = () => {
       <AnalyzeStatistics
         open={openAnalyze}
         onCancel={() => setOpenAnalyze(false)}
-        title="智能体概览"
+        title={dict('NuwaxPC.Pages.SpaceDevelop.Index.agentOverview')}
         list={agentStatistics}
       />
       {/*智能体迁移弹窗*/}

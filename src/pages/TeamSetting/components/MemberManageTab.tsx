@@ -4,6 +4,7 @@ import {
   apiDeleteSpaceUser,
   apiGetSpaceUserList,
 } from '@/services/teamSetting';
+import { dict } from '@/services/i18nRuntime';
 import { TeamStatusEnum } from '@/types/enums/teamSetting';
 import type { SpaceUserInfo } from '@/types/interfaces/teamSetting';
 import { PlusOutlined } from '@ant-design/icons';
@@ -56,56 +57,56 @@ const MemberManageTab: React.FC<MemberManageTabProps> = ({ spaceId, role }) => {
   const removeUser = async (userId: number) => {
     const resp = await apiDeleteSpaceUser({ userId, spaceId });
     if (resp.code === SUCCESS_CODE) {
-      message.success('删除成功');
+      message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
       actionRef.current?.reload();
     }
   };
 
   const columns: ProColumns<SpaceUserInfo>[] = [
     {
-      title: '关键字',
+      title: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.keyword'),
       dataIndex: 'kw',
       hideInTable: true,
       fieldProps: {
-        placeholder: '搜索',
+        placeholder: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.search'),
       },
     },
     {
-      title: '昵称',
+      title: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.nickname'),
       dataIndex: 'nickName',
       search: false,
     },
     {
-      title: '用户名',
+      title: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.username'),
       dataIndex: 'userName',
       search: false,
     },
     {
-      title: '角色',
+      title: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.role'),
       dataIndex: 'role',
       valueType: 'select',
       valueEnum: {
-        [TeamStatusEnum.Owner]: { text: '创建人' },
-        [TeamStatusEnum.Admin]: { text: '管理员' },
-        [TeamStatusEnum.User]: { text: '成员' },
+        [TeamStatusEnum.Owner]: { text: dict('NuwaxPC.Pages.TeamSetting.roleOwner') },
+        [TeamStatusEnum.Admin]: { text: dict('NuwaxPC.Pages.TeamSetting.roleAdmin') },
+        [TeamStatusEnum.User]: { text: dict('NuwaxPC.Pages.TeamSetting.roleMember') },
       },
       render: (_: any, record: SpaceUserInfo) => {
         const role = record.role;
-        let text = '成员';
-        if (role === TeamStatusEnum.Owner) text = '创建人';
-        if (role === TeamStatusEnum.Admin) text = '管理员';
+        let text = dict('NuwaxPC.Pages.TeamSetting.roleMember');
+        if (role === TeamStatusEnum.Owner) text = dict('NuwaxPC.Pages.TeamSetting.roleOwner');
+        if (role === TeamStatusEnum.Admin) text = dict('NuwaxPC.Pages.TeamSetting.roleAdmin');
         return text;
       },
     },
     {
-      title: '加入时间',
+      title: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.joinTime'),
       dataIndex: 'created',
       search: false,
       width: 180,
       valueType: 'dateTime',
     },
     {
-      title: '操作',
+      title: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.action'),
       valueType: 'option',
       align: 'center',
       width: 160,
@@ -116,10 +117,10 @@ const MemberManageTab: React.FC<MemberManageTabProps> = ({ spaceId, role }) => {
           actions={[
             {
               key: 'delete',
-              label: '删除',
+              label: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.delete'),
               confirm: {
-                title: '确认删除',
-                description: '你确定要删除该用户吗？',
+                title: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.confirmDelete'),
+                description: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.confirmDeleteUser'),
               },
               onClick: () => removeUser(record.userId),
             },
@@ -144,7 +145,7 @@ const MemberManageTab: React.FC<MemberManageTabProps> = ({ spaceId, role }) => {
               icon={<PlusOutlined />}
               onClick={() => setOpenAddMemberModal(true)}
             >
-              添加成员
+              {dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.addMember')}
             </Button>
           ),
         ]}

@@ -5,6 +5,7 @@ import {
   apiGetSpaceUserList,
   apiSearchUser,
 } from '@/services/teamSetting';
+import { dict } from '@/services/i18nRuntime';
 import styles from '@/styles/teamSetting.less';
 import { TeamStatusEnum } from '@/types/enums/teamSetting';
 import type {
@@ -36,8 +37,8 @@ export interface AddMemberProps {
 }
 
 const selectOptions = [
-  { value: TeamStatusEnum.Admin, label: '管理员' },
-  { value: TeamStatusEnum.User, label: '成员' },
+  { value: TeamStatusEnum.Admin, label: dict('NuwaxPC.Pages.TeamSetting.roleAdmin') },
+  { value: TeamStatusEnum.User, label: dict('NuwaxPC.Pages.TeamSetting.roleMember') },
 ];
 
 const AddMember: React.FC<AddMemberProps> = ({
@@ -72,7 +73,7 @@ const AddMember: React.FC<AddMemberProps> = ({
     manual: true,
     debounceWait: 300,
     onSuccess: () => {
-      message.success('添加成功');
+      message.success(dict('NuwaxPC.Pages.TeamSetting.AddMember.addSuccess'));
       onConfirmAdd?.();
     },
   });
@@ -83,7 +84,7 @@ const AddMember: React.FC<AddMemberProps> = ({
     debounceWait: 300,
     onSuccess: (data: SearchUserInfo[]) => {
       if (!data?.length) {
-        message.warning('未搜索到相关用户');
+        message.warning(dict('NuwaxPC.Pages.TeamSetting.AddMember.noUserFound'));
         setLeftColumnMembers([]);
         return;
       }
@@ -109,7 +110,7 @@ const AddMember: React.FC<AddMemberProps> = ({
 
   const handlerSubmit = () => {
     if (rightColumnMembers.length === 0) {
-      message.warning('请选择要添加的成员');
+      message.warning(dict('NuwaxPC.Pages.TeamSetting.AddMember.selectMemberWarning'));
       return;
     }
     const params = rightColumnMembers.map((m) => ({
@@ -187,7 +188,7 @@ const AddMember: React.FC<AddMemberProps> = ({
   return (
     <CustomFormModal
       form={form}
-      title="添加新成员"
+      title={dict('NuwaxPC.Pages.TeamSetting.AddMember.addNewMember')}
       classNames={{
         content: cx(styles['add-member-modal-content']),
       }}
@@ -198,7 +199,7 @@ const AddMember: React.FC<AddMemberProps> = ({
       <div style={{ display: 'flex', gap: 20 }}>
         <div className={cx(styles['add-member-left-column'])}>
           <Input
-            placeholder="输入用户名、邮箱或手机号码，回车搜索"
+            placeholder={dict('NuwaxPC.Pages.TeamSetting.AddMember.searchPlaceholder')}
             prefix={<SearchOutlined />}
             onPressEnter={(event) => {
               if (event.key === 'Enter') {
@@ -216,7 +217,7 @@ const AddMember: React.FC<AddMemberProps> = ({
               leftColumnMembers.length > 0
             }
           >
-            全部
+            {dict('NuwaxPC.Pages.TeamSetting.AddMember.all')}
           </Checkbox>
           <Checkbox.Group
             style={{ display: 'block', marginTop: 10 }}
@@ -233,7 +234,7 @@ const AddMember: React.FC<AddMemberProps> = ({
 
         <div style={{ width: '300px' }}>
           <h3 style={{ marginBottom: 15 }}>
-            已选成员 ({rightColumnMembers.length})
+            {dict('NuwaxPC.Pages.TeamSetting.AddMember.selectedMembers').replace('{0}', String(rightColumnMembers.length))}
           </h3>
           <List
             dataSource={rightColumnMembers}

@@ -6,6 +6,7 @@ import { apiUserUsedAgentList } from '@/services/agentDev';
 import type { AgentInfo } from '@/types/interfaces/agent';
 import type { ConversationInfo } from '@/types/interfaces/conversationInfo';
 import { message } from 'antd';
+import { dict } from '@/services/i18nRuntime';
 import { useState } from 'react';
 import { useRequest } from 'umi';
 
@@ -67,7 +68,7 @@ export default () => {
       setConversationListItem?.((list) =>
         list?.filter((item) => item.id !== conversationId),
       );
-      message.success('删除成功');
+      message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
     },
   });
 

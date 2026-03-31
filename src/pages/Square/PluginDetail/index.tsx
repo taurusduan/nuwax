@@ -6,6 +6,7 @@ import type { TableColumnsType } from 'antd';
 import { Divider, Empty, Table } from 'antd';
 import classNames from 'classnames';
 import React, { useEffect } from 'react';
+import { dict } from '@/services/i18nRuntime';
 import { useParams, useRequest } from 'umi';
 import PluginHeader from './PluginHeader';
 import styles from './index.less';
@@ -35,73 +36,73 @@ const SpacePluginDetail: React.FC = ({}) => {
   // 入参配置columns
   const inputColumns: TableColumnsType<BindConfigWithSub> = [
     {
-      title: '参数名称',
+      title: dict('NuwaxPC.Pages.Square.PluginDetail.paramName'),
       dataIndex: 'name',
       key: 'name',
       width: 200,
       ellipsis: true,
     },
     {
-      title: '参数描述',
+      title: dict('NuwaxPC.Pages.Square.PluginDetail.paramDescription'),
       dataIndex: 'description',
       key: 'description',
       width: 260,
       ellipsis: true,
     },
     {
-      title: '参数类型',
+      title: dict('NuwaxPC.Pages.Square.PluginDetail.paramType'),
       dataIndex: 'dataType',
       key: 'dataType',
       width: 120,
     },
     {
-      title: '传入方式',
+      title: dict('NuwaxPC.Pages.Square.PluginDetail.inputMethod'),
       dataIndex: 'inputType',
       key: 'inputType',
       width: 120,
     },
     {
-      title: '是否必须',
+      title: dict('NuwaxPC.Pages.Square.PluginDetail.required'),
       dataIndex: 'require',
       key: 'require',
       width: 100,
       align: 'center',
-      render: (text) => (text ? '是' : '否'),
+      render: (text) => (text ? dict('NuwaxPC.Pages.Square.PluginDetail.yes') : dict('NuwaxPC.Pages.Square.PluginDetail.no')),
     },
     {
-      title: '默认值',
+      title: dict('NuwaxPC.Pages.Square.PluginDetail.defaultValue'),
       dataIndex: 'bindValue',
       key: 'bindValue',
       width: 150,
     },
     {
-      title: '开启',
+      title: dict('NuwaxPC.Pages.Square.PluginDetail.enabled'),
       dataIndex: 'enable',
       key: 'enable',
       width: 70,
       align: 'center',
-      render: (text) => (text ? '是' : '否'),
+      render: (text) => (text ? dict('NuwaxPC.Pages.Square.PluginDetail.yes') : dict('NuwaxPC.Pages.Square.PluginDetail.no')),
     },
   ];
 
   // 出参配置columns
   const outputColumns: TableColumnsType<BindConfigWithSub> = [
     {
-      title: '参数名称',
+      title: dict('NuwaxPC.Pages.Square.PluginDetail.paramName'),
       dataIndex: 'name',
       key: 'name',
       width: 430,
       ellipsis: true,
     },
     {
-      title: '参数描述',
+      title: dict('NuwaxPC.Pages.Square.PluginDetail.paramDescription'),
       dataIndex: 'description',
       key: 'description',
       width: 300,
       ellipsis: true,
     },
     {
-      title: '参数类型',
+      title: dict('NuwaxPC.Pages.Square.PluginDetail.paramType'),
       dataIndex: 'dataType',
       key: 'dataType',
       width: 120,
@@ -117,12 +118,12 @@ const SpacePluginDetail: React.FC = ({}) => {
         />
       )}
       <div className={cx(styles['main-container'], 'scroll-container')}>
-        <span className={cx(styles.title)}>插件描述</span>
+        <span className={cx(styles.title)}>{dict('NuwaxPC.Pages.Square.PluginDetail.pluginDescription')}</span>
         <p className={cx(styles.desc, 'text-ellipsis-2')}>
           {pluginInfo?.description}
         </p>
         <Divider style={{ margin: '20px 0' }} />
-        <span className={cx(styles.title)}>入参配置</span>
+        <span className={cx(styles.title)}>{dict('NuwaxPC.Pages.Square.PluginDetail.inputConfig')}</span>
         <Table
           className={cx(styles['table-wrap'], 'overflow-hide')}
           columns={inputColumns}
@@ -134,7 +135,7 @@ const SpacePluginDetail: React.FC = ({}) => {
             defaultExpandAllRows: true,
           }}
         />
-        <span className={cx(styles.title)}>出参配置</span>
+        <span className={cx(styles.title)}>{dict('NuwaxPC.Pages.Square.PluginDetail.outputConfig')}</span>
         {pluginInfo?.outputArgs?.length > 0 ? (
           <Table<BindConfigWithSub>
             className={cx(styles['table-wrap'], 'overflow-hide')}
@@ -156,7 +157,7 @@ const SpacePluginDetail: React.FC = ({}) => {
               'content-center',
             )}
           >
-            <Empty description="暂无数据" />
+            <Empty description={dict('NuwaxPC.Common.Global.emptyData')} />
           </div>
         )}
       </div>

@@ -11,6 +11,7 @@ import type { SingleAgentProps } from '@/types/interfaces/square';
 import { Button } from 'antd';
 import classNames from 'classnames';
 import React from 'react';
+import { dict } from '@/services/i18nRuntime';
 import { useRequest } from 'umi';
 import styles from './index.less';
 
@@ -120,7 +121,7 @@ const SingleAgent: React.FC<SingleAgentProps> = ({
                 onStartUse?.(e);
               }}
             >
-              开始使用
+              {dict('NuwaxPC.Pages.Square.SingleAgent.startUsing')}
             </Button>
             <span
               className={cx(styles['star-box'])}

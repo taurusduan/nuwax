@@ -1,5 +1,6 @@
 import iframeCopyImage from '@/assets/images/iframe-copy.png';
 import { message } from 'antd';
+import { dict } from '@/services/i18nRuntime';
 import classNames from 'classnames';
 import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
@@ -48,7 +49,7 @@ interface WidgetConfig {
 const CopyChatWidgetCode: React.FC<CopyChatWidgetCodeProps> = ({
   chatUrl,
   size = 16,
-  tooltipText = 'iframe代码复制',
+  tooltipText = dict('NuwaxPC.Pages.SpaceDevelop.CopyChatWidgetCode.iframeCodeCopy'),
 }) => {
   // 小部件配置状态
   const config = {
@@ -160,7 +161,7 @@ const CopyChatWidgetCode: React.FC<CopyChatWidgetCodeProps> = ({
    * 复制成功回调
    */
   const handleCopy = () => {
-    message.success('iframe代码复制成功');
+    message.success(dict('NuwaxPC.Pages.SpaceDevelop.CopyChatWidgetCode.copySuccess'));
   };
 
   return (

@@ -1,4 +1,5 @@
 import TooltipIcon from '@/components/custom/TooltipIcon';
+import { dict } from '@/services/i18nRuntime';
 import styles from '@/styles/teamSetting.less';
 import { AllowDevelopEnum, ReceivePublishEnum } from '@/types/enums/space';
 import { TeamDetailInfo } from '@/types/interfaces/teamSetting';
@@ -47,23 +48,23 @@ const SpaceSettingTab: React.FC<SpaceSettingTabProps> = ({
 
   return (
     <>
-      <h3 className={cx('font-weight', 'mb-6')}>转让空间</h3>
+      <h3 className={cx('font-weight', 'mb-6')}>{dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.transferSpace')}</h3>
       <p className={cx('mb-6')}>
-        将空间所有权转移给其他成员，转让后将成为管理员身份
+        {dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.transferSpaceDescription')}
       </p>
-      <Button type="primary" className={cx('mb-16')} onClick={transferSpace}>
-        转让空间
+      <Button type=”primary” className={cx('mb-16')} onClick={transferSpace}>
+        {dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.transferSpaceBtn')}
       </Button>
-      <h3 className={cx('font-weight', 'mb-6')}>删除空间</h3>
-      <p className={cx('mb-6')}>空间删除后所有资产将无法恢复，请谨慎操作</p>
-      <Button type="primary" className={cx('mb-16')} onClick={removeSpace}>
-        删除空间
+      <h3 className={cx('font-weight', 'mb-6')}>{dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.deleteSpace')}</h3>
+      <p className={cx('mb-6')}>{dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.deleteSpaceDescription')}</p>
+      <Button type=”primary” className={cx('mb-16')} onClick={removeSpace}>
+        {dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.deleteSpaceBtn')}
       </Button>
       <h3 className={cx('font-weight', 'mb-6', 'flex', 'items-center')}>
-        开发者功能
+        {dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.developerFeatures')}
         <TooltipIcon
           icon={<InfoCircleOutlined />}
-          title="关闭后，用户将无法看见“智能体开发”和“组件库”，创建者和管理员不受影响"
+          title={dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.developerFeaturesTooltip')}
         />
       </h3>
       <Switch
@@ -72,10 +73,10 @@ const SpaceSettingTab: React.FC<SpaceSettingTabProps> = ({
         onChange={(checked) => onChange('allowDevelop', checked)}
       />
       <h3 className={cx('font-weight', 'mb-6', 'flex', 'items-center')}>
-        接受来自外部空间的发布
+        {dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublish')}
         <TooltipIcon
           icon={<InfoCircleOutlined />}
-          title="打开后，拥有该空间权限的用户在其他空间完成开发的智能体、插件、工作流，可以发布到该空间的广场上"
+          title={dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublishTooltip')}
         />
       </h3>
       <Switch

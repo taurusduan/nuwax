@@ -3543,6 +3543,344 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Are you sure you want to remove domain',
   'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainHint':
     'After removal, users will not be able to access this project via this domain. Re-binding and resolution required.',
+  'NuwaxPC.Models.ConversationInfo.restartAgentSuccess': 'Agent restarted successfully',
+  'NuwaxPC.Models.ConversationInfo.networkTimeoutError': 'Network timeout or service unavailable, please try again later',
+  'NuwaxPC.Models.ConversationInfo.taskConflictTitle': 'Notice',
+  'NuwaxPC.Models.ConversationInfo.taskConflictContent': 'The agent is currently executing a task. Do you want to pause the current task before sending a new request. Do you want to pause?',
   'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.confirmRemove':
     'Confirm Removal',
+
+  // Pages - IMChannel - Index
+  'NuwaxPC.Pages.IMChannel.Index.title': 'IM Bots',
+  'NuwaxPC.Pages.IMChannel.Index.searchPlaceholder': 'Search agent name',
+  'NuwaxPC.Pages.IMChannel.Index.add': 'Add',
+  'NuwaxPC.Pages.IMChannel.Index.addBot': 'Add Bot',
+  'NuwaxPC.Pages.IMChannel.Index.addApp': 'Add App',
+
+  // Pages - IMChannel - PlatformList
+  'NuwaxPC.Pages.IMChannel.PlatformList.platformList': 'Platform List',
+  'NuwaxPC.Pages.IMChannel.PlatformList.robotCount': '{0} bots',
+
+  // Pages - IMChannel - CreateIMChannel
+  'NuwaxPC.Pages.IMChannel.CreateIMChannel.addSuccess':
+    'Added successfully',
+  'NuwaxPC.Pages.IMChannel.CreateIMChannel.editSuccess':
+    'Updated successfully',
+  'NuwaxPC.Pages.IMChannel.CreateIMChannel.testConnectionSuccess':
+    'Test connection successful',
+  'NuwaxPC.Pages.IMChannel.CreateIMChannel.edit': 'Edit',
+  'NuwaxPC.Pages.IMChannel.CreateIMChannel.add': 'Add',
+  'NuwaxPC.Pages.IMChannel.CreateIMChannel.app': 'App',
+  'NuwaxPC.Pages.IMChannel.CreateIMChannel.bot': 'Bot',
+  'NuwaxPC.Pages.IMChannel.CreateIMChannel.testConnectivity':
+    'Test Connectivity',
+  'NuwaxPC.Pages.IMChannel.CreateIMChannel.agent': 'Agent',
+  'NuwaxPC.Pages.IMChannel.CreateIMChannel.agentTooltip':
+    'General agents will use your sandbox (computer) environment to execute tasks. Do not share the corresponding bot with others.',
+  'NuwaxPC.Pages.IMChannel.CreateIMChannel.outputMode': 'Output Mode',
+  'NuwaxPC.Pages.IMChannel.CreateIMChannel.outputModeTooltip':
+    'When the bot replies to a message, whether to display text character by character or all at once.',
+  'NuwaxPC.Pages.IMChannel.CreateIMChannel.streamOutput':
+    'Stream output (typewriter effect)',
+  'NuwaxPC.Pages.IMChannel.CreateIMChannel.onceOutput': 'One-time output',
+  'NuwaxPC.Pages.IMChannel.CreateIMChannel.enabledStatus': 'Enabled Status',
+
+  // Pages - IMChannel - DynamicChannelForm
+  'NuwaxPC.Pages.IMChannel.DynamicChannelForm.requiredField':
+    'This field is required',
+
+  // Pages - IMChannel - WechatIlinkForm
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.qrTimeoutWarning':
+    'QR scan has stopped due to timeout, please get a new QR code',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.connectionSuccess':
+    'Connection successful',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.scanConfirmSuccess':
+    'Scan confirmation successful',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.qrExpired':
+    'QR code has expired, please get a new one',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.getQrSuccess':
+    'QR code obtained successfully',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.statusNone': 'Not started',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.statusWait': 'Waiting to scan',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.statusScanned':
+    'Scanned, please confirm on your phone',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.statusConnected': 'Connected',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.statusExpired': 'Expired',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.scanToConnect':
+    'Scan to Connect',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.scanTooltip':
+    'Click to get the QR code and scan it with WeChat on your phone.',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.fetchingQr':
+    'Fetching QR code...',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.scanSuccess':
+    'Scan successful',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.clickConfirmToSave':
+    "Please click the 'Confirm' button below to save",
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.qrExpiredRefresh':
+    'QR code expired, click to refresh',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.clickToGetQr':
+    'Please click the button below to get the QR code',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.status': 'Status',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.importantNotice':
+    'Important Notice',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.importantNoticeDesc':
+    'After scanning and confirming with the same WeChat account for the second time, the original bot connection will be immediately invalidated. Please be sure to click the "Confirm" button below to save and activate the current configuration.',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.reGetQr': 'Get QR Code Again',
+  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.getQr': 'Get QR Code',
+
+  // Pages - IMChannel - CardList
+  'NuwaxPC.Pages.IMChannel.CardList.deleteContent':
+    'This action cannot be undone. Please proceed with caution.',
+  'NuwaxPC.Pages.IMChannel.CardList.smartBot': 'Smart Bot',
+  'NuwaxPC.Pages.IMChannel.CardList.enterpriseApp': 'Enterprise App',
+  'NuwaxPC.Pages.IMChannel.CardList.unboundAgent': 'No agent bound',
+  'NuwaxPC.Pages.IMChannel.CardList.bot': 'Bot',
+  'NuwaxPC.Pages.IMChannel.CardList.app': 'App',
+  'NuwaxPC.Pages.IMChannel.CardList.lastEdited': 'Last edited',
+  'NuwaxPC.Pages.IMChannel.CardList.edit': 'Edit',
+  'NuwaxPC.Pages.IMChannel.CardList.delete': 'Delete',
+  'NuwaxPC.Pages.IMChannel.CardList.confirmDelete':
+    'Confirm delete {0} {1}?',
+  'NuwaxPC.Pages.IMChannel.CardList.noMatchingResults':
+    'No matching results found',
+  'NuwaxPC.Pages.IMChannel.CardList.noResultsFound':
+    'No relevant results found',
+  'NuwaxPC.Pages.IMChannel.CardList.noKeywordResults':
+    'No bots or configurations found containing "{0}"',
+  'NuwaxPC.Pages.IMChannel.CardList.noRobotsDesc':
+    'No bots under the current platform. Click the "Add Bot" button above to start creating',
+  'NuwaxPC.Pages.IMChannel.CardList.defaultPlatformName': 'this ',
+
+  // Pages - TeamSetting
+  'NuwaxPC.Pages.TeamSetting.roleOwner': 'Owner',
+  'NuwaxPC.Pages.TeamSetting.roleAdmin': 'Admin',
+  'NuwaxPC.Pages.TeamSetting.roleMember': 'Member',
+  'NuwaxPC.Pages.TeamSetting.myStatus': 'My Status: {0}',
+  'NuwaxPC.Pages.TeamSetting.memberManagement': 'Member Management',
+  'NuwaxPC.Pages.TeamSetting.spaceSetting': 'Space Settings',
+
+  // Pages - TeamSetting - TransferSpace
+  'NuwaxPC.Pages.TeamSetting.TransferSpace.transferSuccess': 'Transfer successful',
+  'NuwaxPC.Pages.TeamSetting.TransferSpace.transferOwnershipTitle': 'Transfer Team Ownership',
+  'NuwaxPC.Pages.TeamSetting.TransferSpace.transferDescription': 'After transferring ownership, your status will change to Admin.',
+  'NuwaxPC.Pages.TeamSetting.TransferSpace.transferToLabel': 'Transfer ownership to',
+  'NuwaxPC.Pages.TeamSetting.TransferSpace.selectTeamMember': 'Please select a team member',
+
+  // Pages - TeamSetting - ModifyTeam
+  'NuwaxPC.Pages.TeamSetting.ModifyTeam.editTeamProfile': 'Edit Team Profile',
+  'NuwaxPC.Pages.TeamSetting.ModifyTeam.teamDescription': 'By creating a team space, you can support collaboration and sharing of agents, plugins, workflows, large models, and knowledge bases within the team.',
+  'NuwaxPC.Pages.TeamSetting.ModifyTeam.teamNameLabel': 'Team Name',
+  'NuwaxPC.Pages.TeamSetting.ModifyTeam.teamNameRequired': 'Please enter team name',
+  'NuwaxPC.Pages.TeamSetting.ModifyTeam.descriptionLabel': 'Description',
+  'NuwaxPC.Pages.TeamSetting.ModifyTeam.descriptionPlaceholder': 'Describe the team',
+
+  // Pages - TeamSetting - MemberManageTab
+  'NuwaxPC.Pages.TeamSetting.MemberManageTab.keyword': 'Keyword',
+  'NuwaxPC.Pages.TeamSetting.MemberManageTab.search': 'Search',
+  'NuwaxPC.Pages.TeamSetting.MemberManageTab.nickname': 'Nickname',
+  'NuwaxPC.Pages.TeamSetting.MemberManageTab.username': 'Username',
+  'NuwaxPC.Pages.TeamSetting.MemberManageTab.role': 'Role',
+  'NuwaxPC.Pages.TeamSetting.MemberManageTab.joinTime': 'Join Time',
+  'NuwaxPC.Pages.TeamSetting.MemberManageTab.action': 'Action',
+  'NuwaxPC.Pages.TeamSetting.MemberManageTab.delete': 'Delete',
+  'NuwaxPC.Pages.TeamSetting.MemberManageTab.confirmDelete': 'Confirm Delete',
+  'NuwaxPC.Pages.TeamSetting.MemberManageTab.confirmDeleteUser': 'Are you sure you want to delete this user?',
+  'NuwaxPC.Pages.TeamSetting.MemberManageTab.addMember': 'Add Member',
+
+  // Pages - TeamSetting - AddMember
+  'NuwaxPC.Pages.TeamSetting.AddMember.addSuccess': 'Added successfully',
+  'NuwaxPC.Pages.TeamSetting.AddMember.noUserFound': 'No matching users found',
+  'NuwaxPC.Pages.TeamSetting.AddMember.selectMemberWarning': 'Please select members to add',
+  'NuwaxPC.Pages.TeamSetting.AddMember.addNewMember': 'Add New Member',
+  'NuwaxPC.Pages.TeamSetting.AddMember.searchPlaceholder': 'Enter username, email, or phone number and press Enter to search',
+  'NuwaxPC.Pages.TeamSetting.AddMember.all': 'All',
+  'NuwaxPC.Pages.TeamSetting.AddMember.selectedMembers': 'Selected ({0})',
+
+  // Pages - TeamSetting - RemoveSpace
+  'NuwaxPC.Pages.TeamSetting.RemoveSpace.deleteTeamTitle': 'Delete Team',
+  'NuwaxPC.Pages.TeamSetting.RemoveSpace.deleteWarning': 'Please delete with caution. After deletion, all data in the team will be lost.',
+  'NuwaxPC.Pages.TeamSetting.RemoveSpace.enterTeamNameLabel': 'Enter the team name to delete',
+  'NuwaxPC.Pages.TeamSetting.RemoveSpace.enterTeamNameRequired': 'Please enter the team name to delete',
+  'NuwaxPC.Pages.TeamSetting.RemoveSpace.teamNameMismatch': 'The entered team name does not match the team name to delete',
+  'NuwaxPC.Pages.TeamSetting.RemoveSpace.teamNamePlaceholder': 'Please enter team name',
+
+  // Pages - TeamSetting - SpaceSettingTab
+  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.transferSpace': 'Transfer Space',
+  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.transferSpaceDescription': 'Transfer space ownership to another member. You will become an Admin after the transfer.',
+  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.transferSpaceBtn': 'Transfer Space',
+  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.deleteSpace': 'Delete Space',
+  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.deleteSpaceDescription': 'Once the space is deleted, all assets cannot be recovered. Please proceed with caution.',
+  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.deleteSpaceBtn': 'Delete Space',
+  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.developerFeatures': 'Developer Features',
+  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.developerFeaturesTooltip': 'When disabled, users will not be able to see "Agent Development" and "Component Library". Creators and admins are not affected.',
+  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublish': 'Receive External Space Publications',
+  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublishTooltip': 'When enabled, users with permission to this space can publish agents, plugins, and workflows developed in other spaces to this space\'s marketplace.',
+  // Pages - SpaceLibraryLog
+  'NuwaxPC.Pages.SpaceLibraryLog.Index.pageTitle': 'Log Query',
+
+  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.title': 'Log Details',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.elapsedTime': 'Elapsed {0} ms',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.tokenCount': '{0} Tokens',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.messageId': 'Message ID:',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.calledComponents': 'Called Components',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.nodeDetails': 'Node Details',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.input': 'Input',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.output': 'Output',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.executionProcess': 'Execution Process',
+
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeAgent': 'Agent',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typePlugin': 'Plugin',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeWorkflow': 'Workflow',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeKnowledge': 'Knowledge Base',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeVariable': 'Variable',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeTable': 'Data Table',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeModel': 'Model',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeMCP': 'MCP',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeToolCall': 'Tool Call',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typePlan': 'Plan',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelType': 'Type',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelStatus': 'Status',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.statusSuccess': 'Success',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelName': 'Name',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelElapsedTime': 'Elapsed Time',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelStartTime': 'Start Time',
+  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelEndTime': 'End Time',
+
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colType': 'Type',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colTargetId': 'Target ID',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colTargetName': 'Target Name',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colRequestId': 'Request ID',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colUserId': 'User ID',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colUserName': 'Username',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colConversationId': 'Conversation ID',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colInput': 'Input Content',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colOutput': 'Output Content',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colTimeRange': 'Time Range',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colInputToken': 'Input Token',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colOutputToken': 'Output Token',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colRequestTime': 'Request Time',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colElapsedTime': 'Elapsed Time',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colActions': 'Actions',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phSelectType': 'Please select type',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phTargetId': 'Please enter target ID',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phTargetName': 'Please enter target name',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phRequestId': 'Please enter request ID',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phUserId': 'Please enter user ID (integers only)',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phUserName': 'Please enter username',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phConversationId': 'Please enter conversation ID',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phInputContent': 'Multiple keywords separated by spaces, please enter content',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phOutputContent': 'Multiple keywords separated by spaces, please enter content',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.viewConversationDetail': 'View conversation details',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.queryFailed': 'Query failed',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.noRequestIdWarning': 'This record is missing requestId and cannot view details',
+  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.actionDetail': 'Details',
+
+  // Pages - Square
+  'NuwaxPC.Pages.Square.Square.agent': 'Agent',
+  'NuwaxPC.Pages.Square.Square.pageApp': 'Web App',
+  'NuwaxPC.Pages.Square.Square.skill': 'Skill',
+  'NuwaxPC.Pages.Square.Square.plugin': 'Plugin',
+  'NuwaxPC.Pages.Square.Square.workflow': 'Workflow',
+  'NuwaxPC.Pages.Square.Square.template': 'Template',
+  'NuwaxPC.Pages.Square.Square.all': 'All',
+  'NuwaxPC.Pages.Square.Square.onlyOfficial': 'Official {0} only',
+  'NuwaxPC.Pages.Square.Square.defaultAgentNotConfigured': 'Default general agent is not configured for this site',
+  'NuwaxPC.Pages.Square.Square.bannerTitle': 'Everyone is an AI Designer',
+  'NuwaxPC.Pages.Square.Square.bannerSubtitle': 'Next-gen AI application design, development, and practice platform \n No code needed, easy creation, suitable for all users, supports multi-platform publishing and API',
+  'NuwaxPC.Pages.Square.Square.selectCategory': 'Select category',
+  'NuwaxPC.Pages.Square.Square.search': 'Search',
+
+  'NuwaxPC.Pages.Square.SingleAgent.startUsing': 'Start Using',
+
+  'NuwaxPC.Pages.Square.SquareComponentInfo.publishedAt': 'Published on {0}',
+
+  'NuwaxPC.Pages.Square.TemplateItem.publishedAt': 'Published on {0}',
+
+  'NuwaxPC.Pages.Square.WorkflowIdDetail.templateCopySuccess': 'Template copied successfully',
+  'NuwaxPC.Pages.Square.WorkflowIdDetail.paramName': 'Parameter Name',
+  'NuwaxPC.Pages.Square.WorkflowIdDetail.paramDescription': 'Parameter Description',
+  'NuwaxPC.Pages.Square.WorkflowIdDetail.paramType': 'Parameter Type',
+  'NuwaxPC.Pages.Square.WorkflowIdDetail.inputMethod': 'Input Method',
+  'NuwaxPC.Pages.Square.WorkflowIdDetail.required': 'Required',
+  'NuwaxPC.Pages.Square.WorkflowIdDetail.yes': 'Yes',
+  'NuwaxPC.Pages.Square.WorkflowIdDetail.no': 'No',
+  'NuwaxPC.Pages.Square.WorkflowIdDetail.defaultValue': 'Default Value',
+  'NuwaxPC.Pages.Square.WorkflowIdDetail.enabled': 'Enabled',
+  'NuwaxPC.Pages.Square.WorkflowIdDetail.workflowDescription': 'Workflow Description',
+  'NuwaxPC.Pages.Square.WorkflowIdDetail.copyTemplate': 'Copy Template',
+  'NuwaxPC.Pages.Square.WorkflowIdDetail.inputConfig': 'Input Configuration',
+  'NuwaxPC.Pages.Square.WorkflowIdDetail.outputConfig': 'Output Configuration',
+
+  'NuwaxPC.Pages.Square.SkillDetail.templateCopySuccess': 'Template copied successfully',
+  'NuwaxPC.Pages.Square.SkillDetail.skillIdInvalid': 'Skill ID is missing or invalid, cannot export',
+  'NuwaxPC.Pages.Square.SkillDetail.exportFailed': 'Export failed',
+  'NuwaxPC.Pages.Square.SkillDetail.exportSuccess': 'Export successful!',
+  'NuwaxPC.Pages.Square.SkillDetail.exportFailedRetry': 'Export failed, please try again',
+  'NuwaxPC.Pages.Square.SkillDetail.copyTemplate': 'Copy Template',
+  'NuwaxPC.Pages.Square.SkillDetail.downloadExport': 'Download Export',
+
+  'NuwaxPC.Pages.Square.PluginDetail.paramName': 'Parameter Name',
+  'NuwaxPC.Pages.Square.PluginDetail.paramDescription': 'Parameter Description',
+  'NuwaxPC.Pages.Square.PluginDetail.paramType': 'Parameter Type',
+  'NuwaxPC.Pages.Square.PluginDetail.inputMethod': 'Input Method',
+  'NuwaxPC.Pages.Square.PluginDetail.required': 'Required',
+  'NuwaxPC.Pages.Square.PluginDetail.yes': 'Yes',
+  'NuwaxPC.Pages.Square.PluginDetail.no': 'No',
+  'NuwaxPC.Pages.Square.PluginDetail.defaultValue': 'Default Value',
+  'NuwaxPC.Pages.Square.PluginDetail.enabled': 'Enabled',
+  'NuwaxPC.Pages.Square.PluginDetail.pluginDescription': 'Plugin Description',
+  'NuwaxPC.Pages.Square.PluginDetail.inputConfig': 'Input Configuration',
+  'NuwaxPC.Pages.Square.PluginDetail.outputConfig': 'Output Configuration',
+
+  'NuwaxPC.Pages.Square.PluginHeader.cancelCollectSuccess': 'Uncollected successfully',
+  'NuwaxPC.Pages.Square.PluginHeader.collectSuccess': 'Collected successfully',
+  'NuwaxPC.Pages.Square.PluginHeader.publishedAt': 'Published on {0}',
+  'NuwaxPC.Pages.Square.PluginHeader.collectCount': 'Collect ({0})',
+
+  // Pages - SpaceDevelop
+  'NuwaxPC.Pages.SpaceDevelop.Index.copySuccess': 'Copy created successfully',
+  'NuwaxPC.Pages.SpaceDevelop.Index.deleteSuccess': 'Deleted successfully',
+  'NuwaxPC.Pages.SpaceDevelop.Index.transferSuccess': 'Transferred successfully',
+  'NuwaxPC.Pages.SpaceDevelop.Index.statUserCount': 'Chat Users',
+  'NuwaxPC.Pages.SpaceDevelop.Index.statConvCount': 'Chat Count',
+  'NuwaxPC.Pages.SpaceDevelop.Index.statCollectCount': 'Favorite Users',
+  'NuwaxPC.Pages.SpaceDevelop.Index.statLikeCount': 'Likes',
+  'NuwaxPC.Pages.SpaceDevelop.Index.exportConfigTitle': 'Export Config - {0}',
+  'NuwaxPC.Pages.SpaceDevelop.Index.exportConfigContent': 'If it contains data tables or knowledge bases, the data itself will not be exported',
+  'NuwaxPC.Pages.SpaceDevelop.Index.deleteConfirmText': 'Are you sure you want to delete this agent?',
+  'NuwaxPC.Pages.SpaceDevelop.Index.agentFileOnly': 'Please upload a .agent file!',
+  'NuwaxPC.Pages.SpaceDevelop.Index.agentDevelop': 'Agent Development',
+  'NuwaxPC.Pages.SpaceDevelop.Index.searchAgent': 'Search agents',
+  'NuwaxPC.Pages.SpaceDevelop.Index.createAgent': 'Create Agent',
+  'NuwaxPC.Pages.SpaceDevelop.Index.noResults': 'No relevant results found',
+  'NuwaxPC.Pages.SpaceDevelop.Index.agentOverview': 'Agent Overview',
+
+  // Pages - SpaceDevelop > ApplicationItem
+  'NuwaxPC.Pages.SpaceDevelop.ApplicationItem.lastEdited': 'Last edited',
+  'NuwaxPC.Pages.SpaceDevelop.ApplicationItem.published': 'Published',
+  'NuwaxPC.Pages.SpaceDevelop.ApplicationItem.taskType': 'General',
+  'NuwaxPC.Pages.SpaceDevelop.ApplicationItem.chatType': 'Q&A',
+  'NuwaxPC.Pages.SpaceDevelop.ApplicationItem.privateComputer': 'Private Computer',
+
+  // Pages - SpaceDevelop > CreateApiKeyModal
+  'NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.deleteConfirmText': 'Are you sure you want to delete this API Key?',
+  'NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.modalTitle': '{0} - API Key',
+  'NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.creator': 'Creator',
+  'NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.createdTime': 'Created Time',
+  'NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.devMode': 'Dev Mode',
+  'NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.devModeTooltip': 'When dev mode is enabled, unpublished changes will be reflected in real time.',
+  'NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.addApiKey': 'Add API Key',
+
+  // Pages - SpaceDevelop > CreateTempChatModal
+  'NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.deleteConfirmText': 'Are you sure you want to delete this link?',
+  'NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.modalTitle': '{0} - Temporary Chat Link Management',
+  'NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.linkAddress': 'Link Address',
+  'NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.qrCode': 'QR Code',
+  'NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.loginRequired': 'Login Required',
+  'NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.validity': 'Validity',
+  'NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.addLink': 'Add Link',
+
+  // Pages - SpaceDevelop > CopyChatWidgetCode
+  'NuwaxPC.Pages.SpaceDevelop.CopyChatWidgetCode.iframeCodeCopy': 'iframe code copy',
+  'NuwaxPC.Pages.SpaceDevelop.CopyChatWidgetCode.copySuccess': 'iframe code copied successfully',
 };

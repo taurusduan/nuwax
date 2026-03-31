@@ -21,17 +21,18 @@ const cx = classNames.bind(styles);
 // 新增资源列表
 const IM_CHANNEL_ADD_RESOURCES = [
   {
-    label: '新增机器人',
+    label: dict('NuwaxPC.Pages.IMChannel.Index.addBot'),
     value: IMChannelTypeEnum.Bot,
   },
   {
-    label: '新增应用',
+    label: dict('NuwaxPC.Pages.IMChannel.Index.addApp'),
     value: IMChannelTypeEnum.App,
   },
 ];
 
 import { SUCCESS_CODE } from '@/constants/codes.constants';
 import { apiIMConfigChannelStatistics } from '@/services/imChannel';
+import { dict } from '@/services/i18nRuntime';
 
 const IMChannel: React.FC = () => {
   const params = useParams() as any;
@@ -126,12 +127,12 @@ const IMChannel: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title="IM 机器人"
+      title={dict('NuwaxPC.Pages.IMChannel.Index.title')}
       hideScroll={true}
       rightSlot={
         <Space size={12}>
           <Input.Search
-            placeholder="搜索智能体名称"
+            placeholder={dict('NuwaxPC.Pages.IMChannel.Index.searchPlaceholder')}
             value={keyword}
             allowClear
             onSearch={setKeyword}
@@ -145,7 +146,7 @@ const IMChannel: React.FC = () => {
                 onClick={handleClickPopoverItem}
               >
                 <Button type="primary" icon={<PlusOutlined />}>
-                  新增
+                  {dict('NuwaxPC.Pages.IMChannel.Index.add')}
                 </Button>
               </CustomPopover>
             ) : (
@@ -154,7 +155,7 @@ const IMChannel: React.FC = () => {
                 icon={<PlusOutlined />}
                 onClick={() => handleCreate(IMChannelTypeEnum.Bot)}
               >
-                新增机器人
+                {dict('NuwaxPC.Pages.IMChannel.Index.addBot')}
               </Button>
             )
           ) : null}

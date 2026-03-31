@@ -68,6 +68,7 @@ import {
 } from '@/types/interfaces/vncDesktop';
 import { extractTaskResult } from '@/utils';
 import { modalConfirm } from '@/utils/ant-custom';
+import { dict } from '@/services/i18nRuntime';
 import { isEmptyObject } from '@/utils/common';
 import eventBus from '@/utils/eventBus';
 import { createSSEConnection } from '@/utils/fetchEventSourceConversationInfo';
@@ -259,7 +260,7 @@ export default () => {
       onSuccess: (result: RequestResponse<null>) => {
         const { code } = result;
         if (code === SUCCESS_CODE) {
-          message.success('重启智能体成功');
+          message.success(dict('NuwaxPC.Models.ConversationInfo.restartAgentSuccess'));
         }
       },
     },
@@ -1004,8 +1005,8 @@ export default () => {
             (!data?.success && data?.error?.includes('正在执行任务'))
           ) {
             modalConfirm(
-              '提示',
-              '智能体正在执行任务中，需要先暂停当前任务后才能发送新请求，是否暂停当前任务？',
+              dict('NuwaxPC.Models.ConversationInfo.taskConflictTitle'),
+              dict('NuwaxPC.Models.ConversationInfo.taskConflictContent'),
               () => {
                 if (params?.conversationId) {
                   runStopConversation(params?.conversationId.toString());
@@ -1159,7 +1160,7 @@ export default () => {
         perfLifecycle.onCloseRenderComplete();
       },
       onError: () => {
-        message.error('网络超时或服务不可用，请稍后再试');
+        message.error(dict('NuwaxPC.Models.ConversationInfo.networkTimeoutError'));
         // 将当前会话的loading状态的消息改为Error状态
         const list =
           messageListRef.current?.map((info: MessageInfo) => {
