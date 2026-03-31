@@ -413,6 +413,42 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
     '{0}的动态JSON参数JsonSchema如下',
   'NuwaxPC.Pages.AgentArrangeConfig.conversationExperience': '对话体验',
   'NuwaxPC.Pages.AgentArrangeConfig.interfaceConfig': '界面配置',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.pageTitle': '分类管理',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.agent': '智能体',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.webApp': '网页应用',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.component': '组件',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.categoryType': '{0}分类',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.itemCount': '{0} 项',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.confirmDeleteTitle': '确认删除',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.confirmDeleteContent':
+    '确定要删除此分类吗？此操作无法撤销。',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.deletedSuccessfully': '分类已删除',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.deleteFailed': '删除分类失败:',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.addSuccessWithType':
+    '{0}分类添加成功',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.editSuccessWithType':
+    '{0}分类修改成功',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.saveFailed': '保存分类失败:',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.add': '添加',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.addTitle': '添加{0}分类',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.editTitle': '编辑{0}分类',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.name': '分类名称',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.namePlaceholder': '请输入分类名称',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.nameRequired': '请输入分类名称',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.nameMaxLength':
+    '分类名称不能超过100个字符',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.code': '分类编码',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.codePlaceholder': '请输入分类编码',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.codeRequired': '请输入分类编码',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.codeMaxLength':
+    '分类编码不能超过100个字符',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.codePatternInvalid':
+    '分类编码只能包含字母、数字、下划线(_)或美元符号($)，且不能以数字开头',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.description': '描述',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.descriptionPlaceholder':
+    '请输入分类描述（可选）',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.descriptionMaxLength':
+    '描述不能超过100个字符',
   'NuwaxPC.Pages.Error403.licenseExpired': '抱歉，您的许可证授权已过期',
   'NuwaxPC.Pages.Error404.pageNotFound': '抱歉，访问的页面不存在',
   'NuwaxPC.Pages.HomeDrag.errorTitle': '拖拽功能暂时不可用',

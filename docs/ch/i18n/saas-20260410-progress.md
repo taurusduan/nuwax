@@ -940,3 +940,25 @@
 - 风险/阻塞：
   - 文件中仍存在大量中文注释与历史说明文本（非用户可见），会继续在 inventory 中计数
 - 下一步：继续清理 `EditAgent` 余下高频页面与主容器注释噪音，随后切回 `SystemManagement` Top 模块
+
+### 里程碑：Top 模块第三十七批实改（SystemManagement 分类管理）
+
+- 时间：2026-03-31 12:12
+- 任务：切换到 `SystemManagement` Top 模块，改造 `CategoryManage` 页面与分类弹窗 i18n
+- 执行命令：
+  - `pnpm prettier --write src/pages/SystemManagement/SystemConfig/CategoryManage/components/CategoryModal/index.tsx src/pages/SystemManagement/SystemConfig/CategoryManage/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/SystemConfig/CategoryManage/components/CategoryModal/index.tsx`
+    - `src/pages/SystemManagement/SystemConfig/CategoryManage/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - 分类管理页的分段标签、页标题、列表头、删除确认、提交成功与错误日志接入 `t(...)`
+  - 分类弹窗标题、按钮文案、表单标签/placeholder/校验提示接入 `t(...)`
+  - 增补 `NuwaxPC.Pages.SystemConfigCategoryManage.*` 与 `NuwaxPC.Pages.SystemConfigCategoryModal.*` 中英文默认词典
+  - 治理总量从 `3053` 下降至 `3024`（-29）
+- 风险/阻塞：
+  - `SystemManagement` 仍有高密度存量集中在 `MenuPermission`、`SandboxConfig` 等
+- 下一步：继续推进 `SystemManagement` Top（优先 `MenuPermission/BindUser` 或 `CategoryManage` 相邻模块）

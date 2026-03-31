@@ -461,6 +461,50 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AgentArrangeConfig.conversationExperience':
     'Conversation Experience',
   'NuwaxPC.Pages.AgentArrangeConfig.interfaceConfig': 'Interface Config',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.pageTitle': 'Category Management',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.agent': 'Agent',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.webApp': 'Web App',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.component': 'Component',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.categoryType': '{0} Category',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.itemCount': '{0} items',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.confirmDeleteTitle':
+    'Confirm Delete',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.confirmDeleteContent':
+    'Are you sure you want to delete this category? This action cannot be undone.',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.deletedSuccessfully':
+    'Category deleted successfully',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.deleteFailed':
+    'Failed to delete category:',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.addSuccessWithType':
+    '{0} category added successfully',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.editSuccessWithType':
+    '{0} category updated successfully',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.saveFailed':
+    'Failed to save category:',
+  'NuwaxPC.Pages.SystemConfigCategoryManage.add': 'Add',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.addTitle': 'Add {0} Category',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.editTitle': 'Edit {0} Category',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.name': 'Category Name',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.namePlaceholder':
+    'Please enter category name',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.nameRequired':
+    'Please enter category name',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.nameMaxLength':
+    'Category name cannot exceed 100 characters',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.code': 'Category Code',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.codePlaceholder':
+    'Please enter category code',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.codeRequired':
+    'Please enter category code',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.codeMaxLength':
+    'Category code cannot exceed 100 characters',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.codePatternInvalid':
+    'Category code can only contain letters, numbers, underscores (_), or dollar signs ($), and cannot start with a number',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.description': 'Description',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.descriptionPlaceholder':
+    'Please enter category description (optional)',
+  'NuwaxPC.Pages.SystemConfigCategoryModal.descriptionMaxLength':
+    'Description cannot exceed 100 characters',
   'NuwaxPC.Pages.Error403.licenseExpired':
     'Sorry, your license authorization has expired',
   'NuwaxPC.Pages.Error404.pageNotFound':
