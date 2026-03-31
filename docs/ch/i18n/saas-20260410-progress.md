@@ -1481,3 +1481,26 @@
 - 风险/阻塞：
   - `SkillDetails/index.tsx` 仍有次级存量（剩余流程分支与提示）
 - 下一步：继续推进 `SkillDetails/index.tsx` 剩余项与 `MorePage/ApiKeyLogs`
+
+### 里程碑：Top 模块第六十批实改（MorePage ApiKey 首批）
+
+- 时间：2026-03-31 17:28
+- 任务：处理 `MorePage/ApiKey` 的表单弹窗与统计弹窗文案
+- 执行命令：
+  - `pnpm prettier --write src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx src/pages/MorePage/ApiKey/ApiKeyStatsModal/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx`
+    - `src/pages/MorePage/ApiKey/ApiKeyStatsModal/index.tsx`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `ApiKeyFormModal` 标题、字段 label/placeholder、状态选项、成功提示全部切换为 `t(...)`
+  - `ApiKeyStatsModal` 表头、操作文案、弹窗标题与关闭按钮切换为 `t(...)`
+  - 去除 `ApiKeyFormModal` 中对中文“永不过期”的硬编码判断，改为日期有效性判断
+  - 新增 `NuwaxPC.Pages.ApiKeyFormModal.*` 与 `ApiKeyStatsModal.*` 中英文默认词典
+  - 治理总量从 `2565` 下降至 `2543`（-22）
+- 风险/阻塞：
+  - `ApiKeyLogs/LogProTable` 仍有高密度中文存量待继续清理
+- 下一步：继续推进 `src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx`

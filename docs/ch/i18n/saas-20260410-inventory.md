@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T09:23:15.648Z
+- 生成时间：2026-03-31T09:29:23.304Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2565
-- hardcoded 中文：2565
+- 总问题数：2543
+- hardcoded 中文：2543
 - legacy System key：0
 - invalid dict key：0
 
@@ -23,12 +23,12 @@
 | src/pages/SpaceKnowledge | 82 | 0 | 0 | 82 |
 | src/pages/UserManage | 82 | 0 | 0 | 82 |
 | src/pages/EditAgent | 78 | 0 | 0 | 78 |
-| src/pages/MorePage | 76 | 0 | 0 | 76 |
 | src/pages/SpacePageDevelop | 72 | 0 | 0 | 72 |
 | src/pages/SpaceLibrary | 64 | 0 | 0 | 64 |
 | src/pages/SpaceTable | 58 | 0 | 0 | 58 |
 | src/pages/Square | 58 | 0 | 0 | 58 |
 | src/layouts/Setting | 57 | 0 | 0 | 57 |
+| src/pages/MorePage | 54 | 0 | 0 | 54 |
 | src/pages/IMChannel | 52 | 0 | 0 | 52 |
 | src/pages/TeamSetting | 50 | 0 | 0 | 50 |
 | src/pages/SpaceLibraryLog | 49 | 0 | 0 | 49 |
@@ -786,85 +786,6 @@
 - [hardcoded_chinese] src/pages/EditAgent/index.tsx:824 -> `如果内部包含数据表或知识库，数据本身不会导出`
 - [hardcoded_chinese] src/pages/EditAgent/index.tsx:1222 -> `智能体概览`
 
-## src/pages/MorePage
-
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:43 -> `永不过期`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:77 -> `更新成功`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:84 -> `创建成功`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:96 -> `编辑 API Key`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:96 -> `新建 API Key`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:105 -> `密匙名称`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:106 -> `例如:生产环境API`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:107 -> `请输入密匙名称`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:112 -> `过期时间`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:113 -> `过期时间`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:114 -> `留空表示永不过期`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:122 -> `自动生成`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:127 -> `状态`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:129 -> `启用`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:130 -> `停用`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:204 -> ` 或 ISO 字符串且非 `
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:208 -> `永不过期`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:225 -> `权限配置保存成功`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:230 -> `保存权限失败:`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:299 -> `暂无权限定义`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyStatsModal/index.tsx:39 -> `接口名称`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyStatsModal/index.tsx:46 -> `接口地址`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyStatsModal/index.tsx:53 -> `调用总次数`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyStatsModal/index.tsx:63 -> `本月调用`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyStatsModal/index.tsx:73 -> `今日调用`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyStatsModal/index.tsx:83 -> `操作`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyStatsModal/index.tsx:94 -> `查看记录`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:26 -> `启用`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:27 -> `停用`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:64 -> `API KEY 已成功复制到剪贴板`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:76 -> `密钥名称`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:94 -> `隐藏`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:94 -> `显示`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:102 -> `复制`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:115 -> `创建时间`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:122 -> `过期时间`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:129 -> `永不过期`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:136 -> `永不过期`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:142 -> `状态`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:148 -> `未知`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:154 -> `操作`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:167 -> `调用统计`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:176 -> `权限配置`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:185 -> `编辑`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:194 -> `删除`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:199 -> `删除后将无法恢复，请谨慎操作。`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:205 -> `删除成功`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:216 -> `API 密钥管理`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:217 -> `管理您的API密钥与访问权限`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:74 -> `类型`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:81 -> `请选择类型`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:86 -> `对象ID`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:92 -> `请输入对象ID`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:96 -> `对象名称`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:100 -> `请输入对象名称`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:103 -> `请求ID`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:109 -> `请输入请求ID`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:112 -> `用户ID`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:117 -> `请输入用户ID，仅支持输入整数`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:123 -> `会话ID`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:127 -> `请输入会话ID`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:131 -> `输入内容`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:140 -> `多个关键字以空格分隔，请输入内容`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:143 -> `输出内容`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:152 -> `多个关键字以空格分隔，请输入内容`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:156 -> `时间范围`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:162 -> `输入token`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:169 -> `输出token`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:176 -> `请求时间`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:187 -> `整体耗时`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:274 -> `查询失败`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:287 -> `查询日志失败`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:300 -> `该条记录缺少 requestId，无法查看详情`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:312 -> `操作`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:324 -> `详情`
-- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/index.tsx:6 -> `Api调用日志`
-
 ## src/pages/SpacePageDevelop
 
 - [hardcoded_chinese] src/pages/SpacePageDevelop/AuthConfigModal/index.tsx:55 -> `页面ID不存在`
@@ -1188,6 +1109,63 @@
 - [hardcoded_chinese] src/layouts/Setting/UsageStatistics/index.tsx:148 -> `类型`
 - [hardcoded_chinese] src/layouts/Setting/UsageStatistics/index.tsx:154 -> `每日`
 - [hardcoded_chinese] src/layouts/Setting/UsageStatistics/index.tsx:160 -> `其他数量`
+
+## src/pages/MorePage
+
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:204 -> ` 或 ISO 字符串且非 `
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:208 -> `永不过期`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:225 -> `权限配置保存成功`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:230 -> `保存权限失败:`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:299 -> `暂无权限定义`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:26 -> `启用`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:27 -> `停用`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:64 -> `API KEY 已成功复制到剪贴板`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:76 -> `密钥名称`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:94 -> `隐藏`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:94 -> `显示`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:102 -> `复制`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:115 -> `创建时间`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:122 -> `过期时间`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:129 -> `永不过期`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:136 -> `永不过期`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:142 -> `状态`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:148 -> `未知`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:154 -> `操作`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:167 -> `调用统计`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:176 -> `权限配置`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:185 -> `编辑`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:194 -> `删除`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:199 -> `删除后将无法恢复，请谨慎操作。`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:205 -> `删除成功`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:216 -> `API 密钥管理`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:217 -> `管理您的API密钥与访问权限`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:74 -> `类型`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:81 -> `请选择类型`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:86 -> `对象ID`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:92 -> `请输入对象ID`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:96 -> `对象名称`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:100 -> `请输入对象名称`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:103 -> `请求ID`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:109 -> `请输入请求ID`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:112 -> `用户ID`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:117 -> `请输入用户ID，仅支持输入整数`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:123 -> `会话ID`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:127 -> `请输入会话ID`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:131 -> `输入内容`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:140 -> `多个关键字以空格分隔，请输入内容`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:143 -> `输出内容`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:152 -> `多个关键字以空格分隔，请输入内容`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:156 -> `时间范围`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:162 -> `输入token`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:169 -> `输出token`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:176 -> `请求时间`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:187 -> `整体耗时`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:274 -> `查询失败`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:287 -> `查询日志失败`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:300 -> `该条记录缺少 requestId，无法查看详情`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:312 -> `操作`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/LogProTable/index.tsx:324 -> `详情`
+- [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/index.tsx:6 -> `Api调用日志`
 
 ## src/pages/IMChannel
 

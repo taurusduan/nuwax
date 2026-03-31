@@ -1,5 +1,6 @@
 import { TableActions, XProTable } from '@/components/ProComponents';
 import { apiApiKeyStats } from '@/services/account';
+import { t } from '@/services/i18nRuntime';
 import type { ApiKeyInfo, ApiKeyStatsInfo } from '@/types/interfaces/account';
 import type { ProColumns } from '@ant-design/pro-components';
 import { Button, Modal, Typography } from 'antd';
@@ -36,21 +37,21 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
 }) => {
   const columns: ProColumns<ApiKeyStatsInfo>[] = [
     {
-      title: '接口名称',
+      title: t('NuwaxPC.Pages.ApiKeyStatsModal.apiName'),
       dataIndex: 'name',
       key: 'name',
       ellipsis: true,
       width: 200,
     },
     {
-      title: '接口地址',
+      title: t('NuwaxPC.Pages.ApiKeyStatsModal.apiPath'),
       dataIndex: 'path',
       key: 'path',
       ellipsis: true,
       width: 300,
     },
     {
-      title: '调用总次数',
+      title: t('NuwaxPC.Pages.ApiKeyStatsModal.totalCalls'),
       key: 'totalCount',
       align: 'center',
       render: (_, record) => (
@@ -60,7 +61,7 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
       ),
     },
     {
-      title: '本月调用',
+      title: t('NuwaxPC.Pages.ApiKeyStatsModal.monthCalls'),
       key: 'monthCount',
       align: 'center',
       render: (_, record) => (
@@ -70,7 +71,7 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
       ),
     },
     {
-      title: '今日调用',
+      title: t('NuwaxPC.Pages.ApiKeyStatsModal.todayCalls'),
       key: 'todayCount',
       align: 'center',
       render: (_, record) => (
@@ -80,7 +81,7 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
       ),
     },
     {
-      title: '操作',
+      title: t('NuwaxPC.Pages.ApiKeyStatsModal.actions'),
       key: 'action',
       width: 100,
       align: 'center',
@@ -91,7 +92,7 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
           actions={[
             {
               key: 'view',
-              label: '查看记录',
+              label: t('NuwaxPC.Pages.ApiKeyStatsModal.viewRecords'),
               onClick: () => {
                 onOpenChange(false);
                 history.push(
@@ -107,13 +108,17 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
 
   return (
     <Modal
-      title={<Title level={4}>调用统计 - {record?.name}</Title>}
+      title={
+        <Title level={4}>
+          {t('NuwaxPC.Pages.ApiKeyStatsModal.callStatsWithName', record?.name)}
+        </Title>
+      }
       open={open}
       onCancel={() => onOpenChange(false)}
       width={1000}
       footer={[
         <Button key="close" onClick={() => onOpenChange(false)}>
-          关闭
+          {t('NuwaxPC.Pages.ApiKeyStatsModal.close')}
         </Button>,
       ]}
       destroyOnHidden
