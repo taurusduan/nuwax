@@ -35,6 +35,8 @@ export interface ModelListItemProps {
   size?: string | number;
   // 最大输出token数, token上限
   maxTokens?: number;
+  // 可用范围
+  usageScenarios?: ModelUsageScenarioEnum[];
 }
 
 export interface GroupModelItem {
