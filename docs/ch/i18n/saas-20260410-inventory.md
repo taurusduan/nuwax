@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T10:12:57.612Z
+- 生成时间：2026-03-31T10:23:03.983Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2447
-- hardcoded 中文：2447
+- 总问题数：2321
+- hardcoded 中文：2321
 - legacy System key：0
 - invalid dict key：0
 
@@ -17,7 +17,6 @@
 | --- | ---: | ---: | ---: | ---: |
 | src/hooks | 167 | 0 | 0 | 167 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
-| src/pages/Antv-X6 | 126 | 0 | 0 | 126 |
 | src/services | 110 | 0 | 0 | 110 |
 | src/components/FileTreeView | 97 | 0 | 0 | 97 |
 | src/pages/SpaceKnowledge | 82 | 0 | 0 | 82 |
@@ -282,90 +281,6 @@
 - [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:94 -> `复制模板`
 - [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:265 -> `[PagePreviewIframe] popstate 事件：找不到目标 URL，已添加到历史记录`
 - ... 省略 64 条
-
-## src/pages/Antv-X6
-
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:21 -> `测试节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:39 -> `开始`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:49 -> `大模型`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:60 -> `结束`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:81 -> `开始`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:87 -> `条件分支`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:100 -> `分支1`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:106 -> `分支2`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:112 -> `结束`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:142 -> `初始化与重置`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:170 -> `节点查询`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:178 -> `大模型`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:192 -> `开始`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:196 -> `节点添加`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:205 -> `代码节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:214 -> `代码节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:222 -> `重复节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:228 -> `已存在`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:243 -> `未初始化`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:247 -> `节点更新`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:256 -> `更新后的大模型`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:268 -> `更新后的大模型`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:276 -> `变量节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:283 -> `变量节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:287 -> `节点删除`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:316 -> `不存在`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:320 -> `节点复制`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:343 -> `节点位置更新`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:367 -> `边操作`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:378 -> `代码节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:398 -> `已存在`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:402 -> `条件分支节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:426 -> `数据一致性`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:437 -> `外部添加`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:51 -> `[WorkflowProxy] 无效的节点 ID:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:60 -> `[WorkflowProxy] 节点 ID 超出安全整数范围，精度丢失:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:116 -> `[Proxy] 节点数量:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:118 -> `边数量:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:126 -> `[Proxy] 节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:229 -> `[Proxy] 边的源节点不存在: ${edge.source}, 将移除此边`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:234 -> `[Proxy] 边的目标节点不存在: ${edge.target}, 将移除此边`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:243 -> `[Proxy] 已移除 ${invalidEdges.length} 条无效边`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:273 -> `[Proxy] 节点 ${node.id} (${node.name}) 画布有边到 ${id}，但 nextNodeIds 缺少此连接，已自动添加`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:284 -> `[Proxy] 节点 ${node.id} (${node.name}) nextNodeIds 包含 ${id}，但画布无对应边，已自动移除`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:352 -> `工作流数据未初始化`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:360 -> `[Proxy] 节点更新成功:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:364 -> `[Proxy] 节点新增（通过更新）:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:385 -> `工作流数据未初始化`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:393 -> `节点 ${node.id} 已存在`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:415 -> `工作流数据未初始化`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:422 -> `节点 ${nodeId} 不存在`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:525 -> `工作流数据未初始化`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:532 -> `节点 ${nodeId} 不存在`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:594 -> `工作流数据未初始化`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:601 -> `节点 ${nodeId} 不存在`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:703 -> ` 或 `
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:804 -> `工作流数据未初始化`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:815 -> `边已存在`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:840 -> `[Proxy] 特殊端口连线添加:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:878 -> `工作流数据未初始化`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:895 -> `边不存在`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:921 -> `[Proxy] 特殊端口连线删除:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:957 -> `工作流数据未初始化`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:964 -> `节点 ${nodeId} 不存在`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:1257 -> `[V3 Proxy] syncFromGraph 完成，处理了`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:1257 -> `条边`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/graphV3.ts:198 -> `左侧连接桩只能作为接入点，右侧连接桩只能作为输出点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/graphV3.ts:276 -> `条件分支，意图识别，问答不能作为循环的出口连接节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/graphV3.ts:281 -> `当前已有对子节点连接循环的出口，请先删除该连线`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/graphV3.ts:291 -> `当前循环已有对子节点的连线，请先删除该连线`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/graphV3.ts:327 -> `不能创建重复的边`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/graphV3.ts:340 -> `不能连接外部的节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/graphV3.ts:363 -> `不能连接外部节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts:29 -> `开始`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts:30 -> `结束`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts:31 -> `大模型`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts:32 -> `代码`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts:33 -> `条件分支`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts:34 -> `意图识别`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts:35 -> `循环`
-- ... 省略 46 条
 
 ## src/services
 
@@ -1801,3 +1716,31 @@
 - [hardcoded_chinese] src/components/base/McpStatus/index.tsx:34 -> `部署失败`
 - [hardcoded_chinese] src/components/base/McpStatus/index.tsx:38 -> `已停止`
 - [hardcoded_chinese] src/components/base/MenuListItem/index.tsx:101 -> `取消收藏`
+
+## src/pages/SpacePluginCloudTool
+
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/PluginCodeHeader/index.tsx:91 -> `代码`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/PluginCodeHeader/index.tsx:95 -> `已发布`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/PluginCodeHeader/index.tsx:96 -> `未发布`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:117 -> `参数名称`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:123 -> `请输入参数名称，确保含义清晰`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:130 -> `参数描述`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:135 -> `请输入参数描述，确保描述详细便于大模型更好的理解`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:144 -> `参数类型`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:159 -> `请选择数据类型`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:164 -> `是否必须`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:179 -> `默认值`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:185 -> `请输入默认值`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:200 -> `开启`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:210 -> `此参数是必填参数，填写默认值后，此开关可用`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:224 -> `操作`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:253 -> `参数名称`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:260 -> `请输入参数名称，确保含义清晰`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:269 -> `参数描述`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:274 -> `请输入参数描述，确保描述详细便于大模型更好的理解`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:283 -> `参数类型`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:298 -> `请选择数据类型`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:303 -> `开启`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:318 -> `操作`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:400 -> `入参配置`
+- [hardcoded_chinese] src/pages/SpacePluginCloudTool/index.tsx:420 -> `出参配置`

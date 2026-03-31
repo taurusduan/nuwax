@@ -1054,3 +1054,21 @@
   - `src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx`
   - `src/locales/i18n/nuwaxpc-zh-cn.ts`
   - `src/locales/i18n/nuwaxpc-en-us.ts`
+
+### 新增验证（Top 模块第六十五批）
+
+- 命令：`pnpm prettier --write src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts src/pages/Antv-X6/v3/services/workflowProxyV3.ts src/pages/Antv-X6/v3/utils/graphV3.ts src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts src/pages/Antv-X6/v3/utils/offlineNodeFactory.ts src/pages/Antv-X6/v3/utils/variableReferenceV3.ts src/pages/Antv-X6/v3/utils/workflowV3.tsx docs/ch/i18n/saas-20260410-progress.md docs/ch/i18n/saas-20260410-test-report.md docs/ch/i18n/saas-20260410-decision-log.md`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `2447` 下降至 `2321`
+- 覆盖文件：
+  - `src/pages/Antv-X6/v3/services/workflowProxyV3.ts`
+  - `src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts`
+  - `src/pages/Antv-X6/v3/utils/graphV3.ts`
+  - `src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts`
+  - `src/pages/Antv-X6/v3/utils/offlineNodeFactory.ts`
+  - `src/pages/Antv-X6/v3/utils/variableReferenceV3.ts`
+  - `src/pages/Antv-X6/v3/utils/workflowV3.tsx`

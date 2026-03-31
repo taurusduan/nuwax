@@ -1589,3 +1589,23 @@
 - 风险/阻塞：
   - `Antv-X6` 仍有高密度存量（`126`），主要分布在 `workflowProxyV3`、`nodeDefaultConfigFactory` 与相关测试文件
 - 下一步：继续按 Top 模块推进 `Antv-X6` 批量替换（先服务层日志与错误文案，再测试与默认节点文本）
+
+### 里程碑：Top 模块第六十五批实改（Antv-X6 清零）
+
+- 时间：2026-03-31 18:23
+- 任务：清理 `Antv-X6` 模块硬编码中文命中，覆盖代理服务、测试与核心工具层
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts src/pages/Antv-X6/v3/services/workflowProxyV3.ts src/pages/Antv-X6/v3/utils/graphV3.ts src/pages/Antv-X6/v3/utils/nodeDefaultConfigFactory.ts src/pages/Antv-X6/v3/utils/offlineNodeFactory.ts src/pages/Antv-X6/v3/utils/variableReferenceV3.ts src/pages/Antv-X6/v3/utils/workflowV3.tsx docs/ch/i18n/saas-20260410-progress.md docs/ch/i18n/saas-20260410-test-report.md docs/ch/i18n/saas-20260410-decision-log.md`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改上述文件
+- 结果摘要：
+  - `workflowProxyV3.ts` 的错误消息与调试日志统一英文（含边/节点不存在、未初始化、特殊端口连线日志）
+  - `workflowProxyV3.test.ts` 的测试节点名、断言关键词、describe 标题统一英文，保持行为断言不变
+  - `graphV3.ts` 连线校验提示统一英文；`variableReferenceV3.ts` 变量描述与注释中的中文引号文本清理
+  - `nodeDefaultConfigFactory.ts` 默认节点名称与默认输出描述统一英文；`offlineNodeFactory.ts`、`workflowV3.tsx` 剩余命中清理
+  - `Antv-X6` 模块命中从 `126` 下降至 `0`
+  - 治理总量从 `2447` 下降至 `2321`（-126）
+- 风险/阻塞：
+  - `hooks`、`services`、`components/business-component` 仍是存量高位模块
+- 下一步：继续按 inventory Top 模块推进 `src/hooks` 与 `src/services` 批量改造

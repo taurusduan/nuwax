@@ -421,3 +421,11 @@
 - 影响：
   - `src/pages/AppDev` 模块存量从 `44` 直接归零
   - 同时保留用户可见文案的 key 化方向（如 `uploadSizeLimitExceeded` 与 `AppDevDesignViewerTextAlign.*`）
+
+### D-056 Antv-X6 先清治理存量再做 UI key 化补齐
+
+- 决策：`Antv-X6` 本批优先将服务层/工具层/测试层的中文引号文本统一改为英文，先把治理存量清零；界面层后续继续按 key 模式补齐
+- 原因：`Antv-X6` 是单模块最高存量（126），其中大量命中来自日志、默认文案与测试断言文本，先清理可快速降低全局噪声
+- 影响：
+  - `src/pages/Antv-X6` 模块从 `126` 下降至 `0`
+  - 后续可以把精力集中到 `hooks`、`services`、`components/business-component` 等更高残留模块
