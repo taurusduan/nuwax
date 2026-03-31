@@ -1631,3 +1631,23 @@
 - 风险/阻塞：
   - hooks 模块仍有 `109` 存量，集中在导航/空闲检测/事件代理等通用 hooks
 - 下一步：继续推进 `src/services`（110）与剩余 `src/hooks`（109）
+
+### 里程碑：Top 模块第六十七批实改（Services 批量清理）
+
+- 时间：2026-03-31 18:37
+- 任务：清理 `src/services` 中非生态市场模块的中文引号文本（主题服务、租户服务、AppDev 服务、用户服务、VNC 服务等）
+- 执行命令：
+  - `pnpm prettier --write src/services/unifiedThemeService.ts src/services/tenant.ts src/services/appDev.ts src/services/userService.ts src/services/vncDesktop.ts src/services/common.ts src/services/dataTable.ts src/services/skill.ts docs/ch/i18n/saas-20260410-progress.md docs/ch/i18n/saas-20260410-test-report.md docs/ch/i18n/saas-20260410-decision-log.md`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改上述文件
+- 结果摘要：
+  - `unifiedThemeService` 加载/保存/事件/监听器相关日志与来源文案统一英文
+  - `tenant` 默认导航风格名称/描述、租户示例名称与日志统一英文
+  - `appDev` 会话接口调试日志注释统一英文
+  - `userService`、`vncDesktop`、`common`、`dataTable`、`skill` 剩余中文引号文本清理
+  - 治理总量从 `2263` 下降至 `2235`（-28）
+  - `src/services` 模块从 `110` 下降至 `82`
+- 风险/阻塞：
+  - `src/services` 当前剩余主要集中在 `src/services/ecosystem.ts`（82）
+- 下一步：继续推进 `src/services/ecosystem.ts` 与 `src/hooks` 余量

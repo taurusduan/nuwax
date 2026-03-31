@@ -196,7 +196,7 @@ const errorHandler = (error: any, opts: any) => {
     }
   } else if (error.response) {
     // 处理HTTP错误
-    // message.error(`请求错误 ${error.response.status}`);
+    // message.error(`Request error ${error.response.status}`);
     const networkErrorMsg = dict('NuwaxPC.Toast.Global.networkError');
     if (shouldShowErrorMessage(networkErrorMsg)) {
       message.error(networkErrorMsg);

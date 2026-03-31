@@ -105,8 +105,10 @@ export async function apiEnsurePod(
 ): Promise<RequestResponse<EnsurePodResponse>> {
   const now = Date.now();
   if (now - lastEnsurePodTime < 5000) {
-    console.log('请求过于频繁，请 5s 后再试');
-    return Promise.reject(new Error('请求过于频繁，请 5s 后再试'));
+    console.log('Requests are too frequent. Please retry after 5s');
+    return Promise.reject(
+      new Error('Requests are too frequent. Please retry after 5s'),
+    );
   }
   lastEnsurePodTime = now;
 

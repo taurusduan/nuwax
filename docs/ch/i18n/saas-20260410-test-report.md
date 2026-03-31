@@ -1091,3 +1091,22 @@
   - `src/hooks/useAppDevVersionCompare.ts`
   - `src/hooks/useAutoErrorHandling.ts`
   - `src/hooks/useCopyTemplate.tsx`
+
+### 新增验证（Top 模块第六十七批）
+
+- 命令：`pnpm prettier --write src/services/unifiedThemeService.ts src/services/tenant.ts src/services/appDev.ts src/services/userService.ts src/services/vncDesktop.ts src/services/common.ts src/services/dataTable.ts src/services/skill.ts docs/ch/i18n/saas-20260410-progress.md docs/ch/i18n/saas-20260410-test-report.md docs/ch/i18n/saas-20260410-decision-log.md`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `2263` 下降至 `2235`
+- 覆盖文件：
+  - `src/services/unifiedThemeService.ts`
+  - `src/services/tenant.ts`
+  - `src/services/appDev.ts`
+  - `src/services/userService.ts`
+  - `src/services/vncDesktop.ts`
+  - `src/services/common.ts`
+  - `src/services/dataTable.ts`
+  - `src/services/skill.ts`
