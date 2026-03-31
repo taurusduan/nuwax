@@ -324,6 +324,32 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
     '输入开场白引导问题',
   'NuwaxPC.Pages.AgentArrangeOpenRemarks.deleteGuidQuestion': '删除预置问题',
   'NuwaxPC.Pages.AgentArrangeOpenRemarks.settings': '设置',
+  'NuwaxPC.Pages.AgentArrangePageSettingModal.title': '设置',
+  'NuwaxPC.Pages.AgentArrangePageSettingModal.visibleToLlm': '是否模型可见',
+  'NuwaxPC.Pages.AgentArrangePageSettingModal.homeIndex': '是否默认首页',
+  'NuwaxPC.Pages.AgentArrangePageSettingModal.updateOtherPageFailed':
+    '更新其他页面失败:',
+  'NuwaxPC.Pages.AgentArrangePageSettingModal.saveConfigFailed':
+    '保存配置失败:',
+  'NuwaxPC.Pages.AgentArrangePageSettingModal.saveFailed': '保存失败，请重试',
+  'NuwaxPC.Pages.AgentArrangeSubAgentConfig.empty':
+    '暂无子智能体配置，点击右上角添加',
+  'NuwaxPC.Pages.AgentArrangeSubAgentConfig.defaultNameWithIndex':
+    '子智能体 {0}',
+  'NuwaxPC.Pages.AgentArrangeSubAgentConfig.edit': '编辑',
+  'NuwaxPC.Pages.AgentArrangeSubAgentConfig.delete': '删除',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.cancelTitle': '确认取消',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.cancelContent':
+    '你有未保存的修改，确定要取消吗？',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.cancelConfirm': '确定取消',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.keepEditing': '继续编辑',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.editTitle': '编辑子智能体',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.createTitle': '新建子智能体',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.viewDoc': '查看文档',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.exitFullscreen': '退出全屏',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.enterFullscreen': '全屏编辑',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.promptPlaceholder':
+    '请输入子智能体 Prompt',
   'NuwaxPC.Pages.Error403.licenseExpired': '抱歉，您的许可证授权已过期',
   'NuwaxPC.Pages.Error404.pageNotFound': '抱歉，访问的页面不存在',
   'NuwaxPC.Pages.HomeDrag.errorTitle': '拖拽功能暂时不可用',

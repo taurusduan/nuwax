@@ -895,3 +895,26 @@
 - 风险/阻塞：
   - `EditAgent` 仍有较重存量集中在 `PageSettingModal`、`SubAgentConfig`、`AgentArrangeConfig/index.tsx`
 - 下一步：继续推进 `SubAgentConfig` 与 `AgentArrangeConfig/index.tsx` 主容器文案
+
+### 里程碑：Top 模块第三十五批实改（EditAgent 页面设置 + 子智能体）
+
+- 时间：2026-03-31 11:34
+- 任务：补齐 `PageSettingModal` 与 `SubAgentConfig` 链路 i18n，处理弹窗确认文案、按钮文案、默认名称与错误提示
+- 执行命令：
+  - `pnpm prettier --write src/pages/EditAgent/AgentArrangeConfig/PageSettingModal/index.tsx src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/SubAgentEditModal.tsx src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/EditAgent/AgentArrangeConfig/PageSettingModal/index.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/SubAgentEditModal.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `PageSettingModal` 的左侧菜单标题/标签、保存失败提示、日志文本全部切换为 `t(...)`
+  - `SubAgentEditModal` 取消确认弹窗、标题、文档 tooltip、全屏 tooltip、输入 placeholder、确认/取消按钮接入 `t(...)`
+  - `SubAgentConfig` 空态、默认命名、编辑/删除 tooltip 接入 `t(...)`
+  - 治理总量从 `3124` 下降至 `3105`（-19）
+- 风险/阻塞：
+  - `EditAgent` 最大存量仍集中在 `AgentArrangeConfig/index.tsx` 与少量页面残留
+- 下一步：继续处理 `AgentArrangeConfig/index.tsx` 与关联子模块高频中文文案

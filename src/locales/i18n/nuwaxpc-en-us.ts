@@ -364,6 +364,35 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AgentArrangeOpenRemarks.deleteGuidQuestion':
     'Delete Preset Question',
   'NuwaxPC.Pages.AgentArrangeOpenRemarks.settings': 'Settings',
+  'NuwaxPC.Pages.AgentArrangePageSettingModal.title': 'Settings',
+  'NuwaxPC.Pages.AgentArrangePageSettingModal.visibleToLlm': 'Visible to LLM',
+  'NuwaxPC.Pages.AgentArrangePageSettingModal.homeIndex': 'Default Home Page',
+  'NuwaxPC.Pages.AgentArrangePageSettingModal.updateOtherPageFailed':
+    'Failed to update other pages:',
+  'NuwaxPC.Pages.AgentArrangePageSettingModal.saveConfigFailed':
+    'Failed to save page settings:',
+  'NuwaxPC.Pages.AgentArrangePageSettingModal.saveFailed':
+    'Save failed, please retry',
+  'NuwaxPC.Pages.AgentArrangeSubAgentConfig.empty':
+    'No sub-agent configured. Click the top-right button to add one.',
+  'NuwaxPC.Pages.AgentArrangeSubAgentConfig.defaultNameWithIndex':
+    'Sub-agent {0}',
+  'NuwaxPC.Pages.AgentArrangeSubAgentConfig.edit': 'Edit',
+  'NuwaxPC.Pages.AgentArrangeSubAgentConfig.delete': 'Delete',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.cancelTitle': 'Confirm Cancel',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.cancelContent':
+    'You have unsaved changes. Are you sure you want to cancel?',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.cancelConfirm': 'Confirm Cancel',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.keepEditing': 'Keep Editing',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.editTitle': 'Edit Sub-agent',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.createTitle': 'Create Sub-agent',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.viewDoc': 'View Docs',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.exitFullscreen':
+    'Exit Fullscreen',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.enterFullscreen':
+    'Fullscreen Edit',
+  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.promptPlaceholder':
+    'Please enter sub-agent prompt',
   'NuwaxPC.Pages.Error403.licenseExpired':
     'Sorry, your license authorization has expired',
   'NuwaxPC.Pages.Error404.pageNotFound':
