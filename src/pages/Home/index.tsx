@@ -269,6 +269,7 @@ const Home: React.FC = () => {
           onComputerSelect={handleComputerSelect}
           agentId={agentDetail?.agentId}
           agentSandboxId={agentDetail?.sandboxId}
+          readonly={agentDetail?.allowPrivateSandbox === DefaultSelectedEnum.No}
           /** 是否启用 @ 提及功能，默认启用 */
           enableMention={
             agentDetail?.type === AgentTypeEnum.TaskAgent &&

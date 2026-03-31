@@ -1355,6 +1355,9 @@ const Chat: React.FC = () => {
               }
               isPersonalComputer={!!conversationInfo?.agent?.sandboxId}
               mentionPlacement="up"
+              readonly={
+                effectiveAgent?.allowPrivateSandbox === DefaultSelectedEnum.No
+              }
               /** 是否启用 @ 提及功能，默认启用 */
               enableMention={
                 effectiveAgent?.type === AgentTypeEnum.TaskAgent &&

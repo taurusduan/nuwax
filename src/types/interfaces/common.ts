@@ -549,6 +549,8 @@ export interface ChatInputProps extends ManualComponentItemProps {
   hasPermission?: boolean;
   /** 电脑是否不可用 */
   isSandboxUnavailable?: boolean;
+  /** 电脑选择是否为只读模式 */
+  readonly?: boolean;
   /** 蒙层显示的文本内容 */
   maskText?: string;
   /** 是否自动触发选择逻辑 */

@@ -68,6 +68,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
   autoSelectComputer,
   saveComputerOnSelect,
   isPersonalComputer,
+  readonly,
   enableMention = true,
   // @ 提及弹窗展示方向：auto | up | down，默认 auto
   mentionPlacement = 'auto',
@@ -572,6 +573,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
                 autoSelect={autoSelectComputer}
                 saveOnSelect={saveComputerOnSelect}
                 isPersonalComputer={isPersonalComputer}
+                readonly={readonly}
               />
             )}
             {/* 根据会话状态显示发送或停止按钮 */}

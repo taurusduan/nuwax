@@ -529,6 +529,9 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
               fixedSelection={!!agentDetail?.sandboxId}
               isPersonalComputer={!!agentDetail?.sandboxId}
               mentionPlacement="up"
+              readonly={
+                agentDetail?.allowPrivateSandbox === DefaultSelectedEnum.No
+              }
               /** 是否启用 @ 提及功能，默认启用 */
               enableMention={
                 agentDetail?.type === AgentTypeEnum.TaskAgent &&
