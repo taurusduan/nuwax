@@ -186,6 +186,64 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
     '请输入默认值',
   'NuwaxPC.Pages.AgentArrangeCreateVariableModal.required': '必填',
   'NuwaxPC.Toast.AgentArrangeCreateVariableModal.updateSuccess': '变量更新成功',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.title': '变量',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.add': '新增',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.name': '名称',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.description': '描述',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.type': '类型',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.systemVariable': '系统变量',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.customVariable': '自定义变量',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.inputType': '输入方式',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.required': '是否必须',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.yes': '是',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.no': '否',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.deleteSuccess': '删除成功',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.updateSuccess': '更新成功',
+  'NuwaxPC.Pages.AgentArrangeExceptionHandling.title': '异常时中断流程',
+  'NuwaxPC.Pages.AgentArrangeExceptionHandling.description':
+    '异常时输出给大模型的默认信息',
+  'NuwaxPC.Pages.AgentArrangeExceptionHandling.defaultInfo': '默认信息',
+  'NuwaxPC.Pages.AgentArrangeExceptionHandling.defaultInfoPlaceholder':
+    '请输入异常时输出给大模型的默认信息',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.title': '事件绑定',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.updateSuccess': '更新成功',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventName': '事件名称',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventNameRequired':
+    '请输入事件名称',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventNamePlaceholder':
+    '请输入事件名称',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventCode':
+    '事件标识（用于区分具体事件）',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventCodeRequired':
+    '请输入事件标识',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventCodePlaceholder':
+    '请输入事件标识,只能包含字母、数字和下划线',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventCodeInvalid':
+    '事件标识只能包含字母、数字和下划线,且必须以字母或下划线开头!',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.responseAction': '响应动作',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.responseActionPlaceholder':
+    '请选择响应动作',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.responseActionPage': '扩展页面打开',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.responseActionLink': '外部链接跳转',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.pagePath': '页面路径',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.pagePathRequired': '请选择页面路径',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.pagePathPlaceholder':
+    '请选择页面路径',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.linkUrl': '链接地址',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.linkUrlRequired': '请输入链接地址',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.linkUrlInvalid':
+    '请输入正确格式的链接地址，必须以http://或https://开头!',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.input': '输入',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.configInputArgs': '配置输入参数',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.paramName': '参数名',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.paramValue': '参数值(非必填)',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.paramValueTip':
+    '以下参数非必填，不填写时由模型补充, 可以在输入框中动态引用参数，留空的参数将由大模型自动补充',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.agentIdVariable': '智能体ID',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.systemUserIdVariable': '系统用户ID',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.userUidVariable': '用户UID',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.userNameVariable': '用户名',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.paramValuePlaceholder': '请输入{0}',
   'NuwaxPC.Pages.Error403.licenseExpired': '抱歉，您的许可证授权已过期',
   'NuwaxPC.Pages.Error404.pageNotFound': '抱歉，访问的页面不存在',
   'NuwaxPC.Pages.HomeDrag.errorTitle': '拖拽功能暂时不可用',

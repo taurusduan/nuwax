@@ -353,7 +353,7 @@ const CreateVariableModal: React.FC<CreateVariableModalProps> = ({
     if (
       [InputTypeEnum.Select, InputTypeEnum.MultipleSelect].includes(inputType)
     ) {
-      // tabs切换到"插件绑定"时，需要选择绑定组件才能提交
+      // When switching to binding mode, selecting a bound component is required
       if (activeTabKey === OptionDataSourceEnum.MANUAL) {
         if (!dataSource?.length) {
           message.error(
@@ -390,7 +390,7 @@ const CreateVariableModal: React.FC<CreateVariableModalProps> = ({
           );
           return;
         }
-        // tabs切换到"插件绑定"时，需要选择绑定组件才能提交
+        // When switching to binding mode, selecting a bound component is required
         // 编辑时，如果没有重新绑定组件，则使用默认值（currentVariable）
         selectConfig = targetComponentInfo
           ? {

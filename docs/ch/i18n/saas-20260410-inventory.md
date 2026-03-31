@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T03:08:40.109Z
+- 生成时间：2026-03-31T03:17:57.252Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：3202
-- hardcoded 中文：3202
+- 总问题数：3164
+- hardcoded 中文：3164
 - legacy System key：0
 - invalid dict key：0
 
@@ -16,8 +16,8 @@
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
 | src/pages/Antv-X6 | 267 | 0 | 0 | 267 |
-| src/pages/EditAgent | 227 | 0 | 0 | 227 |
 | src/pages/SystemManagement | 208 | 0 | 0 | 208 |
+| src/pages/EditAgent | 189 | 0 | 0 | 189 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
 | src/services | 110 | 0 | 0 | 110 |
@@ -203,90 +203,6 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useBeforeUnload.ts:93 -> `[useBeforeUnload] 页面隐藏时保存失败:`
 - ... 省略 187 条
 
-## src/pages/EditAgent
-
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:56 -> `为卡片整体绑定一个数组`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx:125 -> `为卡片内的列表项绑定数据`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/ExceptionHanding/index.tsx:70 -> `默认信息`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/ExceptionHanding/index.tsx:76 -> `请输入异常时输出给大模型的默认信息`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:356 -> `插件绑定`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx:393 -> `插件绑定`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx:165 -> `删除成功`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx:167 -> `更新成功`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx:211 -> `名称`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx:223 -> `描述`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx:235 -> `类型`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx:242 -> `系统变量`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx:242 -> `自定义变量`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx:247 -> `输入方式`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx:259 -> `是否必须`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx:268 -> `是`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx:268 -> `否`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx:377 -> `变量`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:175 -> `更新成功`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:272 -> `参数名`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:316 -> `请输入${record.description}`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:339 -> `事件绑定`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:358 -> `事件名称`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:359 -> `请输入事件名称`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:361 -> `请输入事件名称`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:365 -> `事件标识（用于区分具体事件）`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:367 -> `请输入事件标识`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:375 -> `事件标识只能包含字母、数字和下划线,且必须以字母或下划线开头!`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:383 -> `请输入事件标识,只能包含字母、数字和下划线`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:387 -> `响应动作`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:389 -> `请选择响应动作`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:398 -> `页面路径`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:399 -> `请选择页面路径`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:403 -> `请选择页面路径`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:412 -> `链接地址`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:414 -> `请输入链接地址`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:422 -> `请输入正确格式的链接地址，必须以http://或https://开头!`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx:446 -> `配置输入参数`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:106 -> `知识库设置`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:112 -> `调用方式`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:113 -> `选择是否每轮对话自动召回或按需从特定知识库召回`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:130 -> `搜索策略`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:131 -> `从知识库中获取知识的检索方式,不同的检索策略可以更有效地找到正确的信息,提高其生成的答案的准确性和可用性。`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:144 -> `最大召回数量`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:145 -> `从知识库中返回给大模型的最大段落数,数值越大返回的内容越多`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:157 -> `最小匹配度`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:158 -> `根据设置的匹配度选取段落返回给大模型,低于设定匹配度的内容不会被召回`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:173 -> `无召回回复`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:174 -> `当知识库没有召回有效切片时的回复话术`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:191 -> `请输入`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/index.tsx:75 -> `自动调用`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/index.tsx:76 -> `按需调用`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/index.tsx:80 -> `取消知识库`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/LongMemoryContent/index.tsx:28 -> `默认支持在Prompt中调用，取消勾选后将不支持在Prompt中调用（仅能在Workflow中调用）`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/McpGroupComponentItem/index.tsx:45 -> `工具（${item.children.length}）`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:74 -> `更新成功`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:191 -> `参数名：${requireArgEmptyItem.name}是必填参数，参数值不能为空`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:277 -> `参数名`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:323 -> `请输入${record.description}`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:337 -> `预置问题设置`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:354 -> `图标`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:363 -> `展示信息`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:364 -> `请输入展示信息`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:366 -> `这里是问题内容`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:368 -> `类型`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:370 -> `请选择类型`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:378 -> `页面路径`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:379 -> `请选择页面路径`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:382 -> `请选择页面路径`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:391 -> `链接地址`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:393 -> `请输入链接地址`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:401 -> `请输入正确格式的链接地址，必须以http://或https://开头!`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:425 -> `配置输入参数`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx:105 -> `请输入开场白`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx:123 -> `添加预置问题`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx:138 -> `输入开场白引导问题`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx:152 -> `删除预置问题`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx:158 -> `设置`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/PageSettingModal/index.tsx:73 -> `更新其他页面失败:`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/PageSettingModal/index.tsx:92 -> `保存成功`
-- ... 省略 147 条
-
 ## src/pages/SystemManagement
 
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:158 -> `添加成功`
@@ -370,6 +286,90 @@
 - [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:63 -> `取消`
 - [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:64 -> `保存`
 - ... 省略 128 条
+
+## src/pages/EditAgent
+
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:106 -> `知识库设置`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:112 -> `调用方式`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:113 -> `选择是否每轮对话自动召回或按需从特定知识库召回`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:130 -> `搜索策略`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:131 -> `从知识库中获取知识的检索方式,不同的检索策略可以更有效地找到正确的信息,提高其生成的答案的准确性和可用性。`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:144 -> `最大召回数量`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:145 -> `从知识库中返回给大模型的最大段落数,数值越大返回的内容越多`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:157 -> `最小匹配度`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:158 -> `根据设置的匹配度选取段落返回给大模型,低于设定匹配度的内容不会被召回`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:173 -> `无召回回复`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:174 -> `当知识库没有召回有效切片时的回复话术`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx:191 -> `请输入`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/index.tsx:75 -> `自动调用`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/index.tsx:76 -> `按需调用`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/index.tsx:80 -> `取消知识库`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/LongMemoryContent/index.tsx:28 -> `默认支持在Prompt中调用，取消勾选后将不支持在Prompt中调用（仅能在Workflow中调用）`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/McpGroupComponentItem/index.tsx:45 -> `工具（${item.children.length}）`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:74 -> `更新成功`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:191 -> `参数名：${requireArgEmptyItem.name}是必填参数，参数值不能为空`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:277 -> `参数名`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:323 -> `请输入${record.description}`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:337 -> `预置问题设置`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:354 -> `图标`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:363 -> `展示信息`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:364 -> `请输入展示信息`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:366 -> `这里是问题内容`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:368 -> `类型`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:370 -> `请选择类型`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:378 -> `页面路径`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:379 -> `请选择页面路径`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:382 -> `请选择页面路径`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:391 -> `链接地址`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:393 -> `请输入链接地址`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:401 -> `请输入正确格式的链接地址，必须以http://或https://开头!`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx:425 -> `配置输入参数`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx:105 -> `请输入开场白`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx:123 -> `添加预置问题`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx:138 -> `输入开场白引导问题`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx:152 -> `删除预置问题`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx:158 -> `设置`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/PageSettingModal/index.tsx:73 -> `更新其他页面失败:`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/PageSettingModal/index.tsx:92 -> `保存成功`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/PageSettingModal/index.tsx:94 -> `保存配置失败:`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/PageSettingModal/index.tsx:95 -> `保存失败，请重试`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/SubAgentEditModal.tsx:148 -> `确认取消`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/SubAgentEditModal.tsx:149 -> `你有未保存的修改，确定要取消吗？`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/SubAgentEditModal.tsx:150 -> `确定取消`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/SubAgentEditModal.tsx:151 -> `继续编辑`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/SubAgentEditModal.tsx:183 -> `编辑子智能体`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/SubAgentEditModal.tsx:183 -> `新建子智能体`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/SubAgentEditModal.tsx:184 -> `查看文档`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/SubAgentEditModal.tsx:192 -> `退出全屏`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/SubAgentEditModal.tsx:192 -> `全屏编辑`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/SubAgentEditModal.tsx:225 -> `确定`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/SubAgentEditModal.tsx:226 -> `取消`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/SubAgentEditModal.tsx:241 -> `请输入子智能体 Prompt`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/index.tsx:100 -> `子智能体 ${index + 1}`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/index.tsx:109 -> `编辑`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/SubAgentConfig/index.tsx:114 -> `删除`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:137 -> `规划`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:142 -> `工具`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:147 -> `技能`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:152 -> `知识`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:157 -> `记忆`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:162 -> `对话`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:167 -> `界面`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:411 -> `已成功删除`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:487 -> `已成功添加`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:573 -> `创建子智能体组件失败`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:577 -> `创建子智能体组件失败`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:589 -> `保存成功`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:597 -> `插件`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:610 -> `添加插件`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:623 -> `工作流`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:636 -> `添加工作流`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:667 -> `添加MCP`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:682 -> `文本`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:693 -> `添加知识库`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:710 -> `技能`
+- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:723 -> `添加技能`
+- ... 省略 109 条
 
 ## src/hooks
 

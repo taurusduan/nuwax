@@ -117,3 +117,11 @@
 - 影响：
   - 页面可先完成多语言接入，且不阻塞后续常量层统一改造
   - 后续常量层完成多语言后，可回收组件内映射逻辑，降低重复定义
+
+### D-018 变量输入类型 key 复用策略
+
+- 决策：`CreateVariables/index.tsx` 与 `CreateVariableModal/index.tsx` 统一复用 `NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputType*` 一组 key
+- 原因：两处展示的是同一业务枚举（`InputTypeEnum`），分裂 key 会增加维护与联调成本
+- 影响：
+  - 词典维护单源化，新增输入类型时只需补一组 key
+  - 列表页与弹窗文案保持一致，避免术语漂移

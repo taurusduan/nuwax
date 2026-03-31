@@ -572,7 +572,7 @@
     - `src/locales/i18n/nuwaxpc-en-us.ts`
     - `src/locales/i18n/nuwaxpc-zh-cn.ts`
 - 结果摘要：
-  - 抽屉标题、耗时、消息ID、调用组件、节点详情、输入/输出、执行过程、空态全部接入 `t(...)`
+  - 抽屉标题、耗时、消息 ID、调用组件、节点详情、输入/输出、执行过程、空态全部接入 `t(...)`
   - 复制成功提示切换为全局通用 key
   - 中文注释和说明文案转为英文
   - inventory 问题总量从 `3573` 下降至 `3570`
@@ -842,3 +842,29 @@
 - 风险/阻塞：
   - `EditAgent` 模块仍有大量存量页面未完成显式接入（如 `EventBindModal`、`KnowledgeSetting`、`CreateVariables/index.tsx` 等）
 - 下一步：继续按 inventory Top 在 `EditAgent` 内推进下一批（优先 `EventBindModal` 与 `CreateVariables/index.tsx`）
+
+### 里程碑：Top 模块第三十三批实改（EditAgent 变量列表 + 事件绑定）
+
+- 时间：2026-03-31 11:18
+- 任务：继续推进 `EditAgent` 存量页面，覆盖 `ExceptionHanding`、`CreateVariables/index.tsx`、`EventBindModal/index.tsx`
+- 执行命令：
+  - `pnpm prettier --write src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/ExceptionHanding/index.tsx src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/ExceptionHanding/index.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/CreateVariables/index.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/EventBindModal/index.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/CreateVariables/CreateVariableModal/index.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/ComponentSettingModal/CardBind/BindDataSource/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `ExceptionHanding` 全量接入 `t(...)`（标题/描述/默认信息/占位符/保存）
+  - `CreateVariables/index.tsx` 表格列名、类型枚举、弹窗标题与新增按钮接入 `t(...)`，并移除对中文输入方式常量文案的直接依赖
+  - `EventBindModal` 表单标签、校验提示、响应动作选项、输入参数说明与成功提示全面接入 `t(...)`
+  - 清理 `CreateVariableModal` 与 `BindDataSource` 中触发治理噪音的局部中文注释
+  - 治理总量从 `3202` 下降至 `3164`（-38）
+- 风险/阻塞：
+  - `EditAgent` 下仍有高密度存量（`KnowledgeSetting`、`GuidQuestionSetModal`、`OpenRemarksEdit` 等）
+- 下一步：继续在 `EditAgent` 批量推进 `KnowledgeTextList` 与 `OpenRemarksEdit` 相关页面

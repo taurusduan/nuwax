@@ -53,9 +53,9 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
   const [cardKey, setCardKey] = useState<string>('');
   // 卡片整体绑定的数组
   const [bindArray, setBindArray] = useState<BindConfigWithSub[]>([]);
-  // 展开、隐藏"为卡片整体绑定一个数组"下拉列表
+  // Expand/collapse the "bind array for whole card" dropdown
   const [openBindArray, setOpenBindArray] = useState<boolean>(false);
-  // 为卡片内的列表项绑定数据
+  // Bind data for list items inside the card
   const [argList, setArgList] = useState<ArgList[]>([]);
   // 卡片跳转显隐
   const [urlVisible, setUrlVisible] = useState<boolean>(false);
@@ -122,7 +122,7 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
     }
   }, [cardInfo, cardBindConfig]);
 
-  // "为卡片内的列表项绑定数据"下拉数据源
+  // Dropdown data source for binding card list items
   const dataSource: BindConfigWithSub[] = useMemo(() => {
     const _outputArgBindConfigs = cloneDeep(outputArgBindConfigs);
     if (cardStyle === BindCardStyleEnum.SINGLE) {
@@ -144,7 +144,7 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
     setArgList(cardInfo?.argList || []);
   };
 
-  // 为卡片整体绑定一个数组
+  // Bind an array for the whole card
   const handleSelectBindArray = (
     _: React.Key[],
     { node }: { node: BindConfigWithSub },
@@ -153,14 +153,14 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
     setOpenBindArray(false);
   };
 
-  // 为卡片内的列表项绑定数据(展开、隐藏下拉选择)
+  // Bind card list item data (toggle dropdown)
   const handleArgList = (index: number, value: React.Key | boolean) => {
     const _argList = cloneDeep(argList);
     _argList[index].open = value;
     setArgList(_argList);
   };
 
-  // 为卡片内的列表项绑定数据(选择下拉选择项)
+  // Bind card list item data (select dropdown item)
   const handleSelectDataSource = (index: number, node?: BindConfigWithSub) => {
     const _argList = cloneDeep(argList);
     _argList[index].open = false;

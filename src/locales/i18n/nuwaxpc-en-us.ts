@@ -202,6 +202,75 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AgentArrangeCreateVariableModal.required': 'Required',
   'NuwaxPC.Toast.AgentArrangeCreateVariableModal.updateSuccess':
     'Variable updated successfully',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.title': 'Variables',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.add': 'Add',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.name': 'Name',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.description': 'Description',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.type': 'Type',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.systemVariable': 'System Variable',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.customVariable': 'Custom Variable',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.inputType': 'Input Type',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.required': 'Required',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.yes': 'Yes',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.no': 'No',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.deleteSuccess':
+    'Deleted successfully',
+  'NuwaxPC.Pages.AgentArrangeCreateVariables.updateSuccess':
+    'Updated successfully',
+  'NuwaxPC.Pages.AgentArrangeExceptionHandling.title': 'Interrupt on Exception',
+  'NuwaxPC.Pages.AgentArrangeExceptionHandling.description':
+    'Default message sent to the LLM when an exception occurs',
+  'NuwaxPC.Pages.AgentArrangeExceptionHandling.defaultInfo': 'Default Message',
+  'NuwaxPC.Pages.AgentArrangeExceptionHandling.defaultInfoPlaceholder':
+    'Please enter the default message sent to the LLM on exception',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.title': 'Event Binding',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.updateSuccess':
+    'Updated successfully',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventName': 'Event Name',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventNameRequired':
+    'Please enter event name',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventNamePlaceholder':
+    'Please enter event name',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventCode':
+    'Event Identifier (for event distinction)',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventCodeRequired':
+    'Please enter event identifier',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventCodePlaceholder':
+    'Please enter event identifier, only letters, numbers, and underscores are allowed',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventCodeInvalid':
+    'Event identifier can only contain letters, numbers, and underscores, and must start with a letter or underscore.',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.responseAction': 'Response Action',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.responseActionPlaceholder':
+    'Please select response action',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.responseActionPage':
+    'Open Extended Page',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.responseActionLink':
+    'Open External Link',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.pagePath': 'Page Path',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.pagePathRequired':
+    'Please select page path',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.pagePathPlaceholder':
+    'Please select page path',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.linkUrl': 'Link URL',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.linkUrlRequired':
+    'Please enter link URL',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.linkUrlInvalid':
+    'Please enter a valid URL starting with http:// or https://',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.input': 'Input',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.configInputArgs':
+    'Configure Input Parameters',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.paramName': 'Parameter Name',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.paramValue':
+    'Parameter Value (Optional)',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.paramValueTip':
+    'The following parameters are optional. If empty, the model fills them automatically. You can also reference parameters dynamically in the input box.',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.agentIdVariable': 'Agent ID',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.systemUserIdVariable':
+    'System User ID',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.userUidVariable': 'User UID',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.userNameVariable': 'User Name',
+  'NuwaxPC.Pages.AgentArrangeEventBindModal.paramValuePlaceholder':
+    'Please enter {0}',
   'NuwaxPC.Pages.Error403.licenseExpired':
     'Sorry, your license authorization has expired',
   'NuwaxPC.Pages.Error404.pageNotFound':
