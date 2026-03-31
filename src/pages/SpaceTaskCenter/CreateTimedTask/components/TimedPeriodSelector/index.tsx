@@ -3,8 +3,9 @@ import { apiTaskCronList } from '@/services/agentTask';
 import { t } from '@/services/i18nRuntime';
 import { TaskCronInfo, TaskCronItemDto } from '@/types/interfaces/agentTask';
 import { option } from '@/types/interfaces/common';
-import { Form, Space } from 'antd';
+import { DatePicker, Form, Space } from 'antd';
 import classNames from 'classnames';
+import dayjs from 'dayjs';
 import React, { useEffect, useRef, useState } from 'react';
 import { useRequest } from 'umi';
 import styles from './index.less';
@@ -77,10 +78,21 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
       label: item.typeName,
       value: item.typeName,
     }));
+    // 注入“指定时间”选项
+    _typeNameList.push({
+      label: t('NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.specificTime'),
+      value: 'SpecificTime',
+    });
     setTypeNameList(_typeNameList);
 
     // 如果有需要回显的 cron，则先找到对应的定时范围
     if (targetCron) {
+      if (targetCron === 'SpecificTime') {
+        setTypeName('SpecificTime');
+        setTypeCronList([]);
+        setTypeCron('SpecificTime');
+        return;
+      }
       const currentItem = data.find((info) =>
         info.items.some((subItem) => subItem.cron === targetCron),
       );
@@ -124,15 +136,28 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
     if (value === typeCron) {
       return;
     }
+    if (value === 'SpecificTime') {
+      setTypeName('SpecificTime');
+      setTypeCronList([]);
+      setTypeCron('SpecificTime');
+      return;
+    }
     handleTimedInfo(taskCronListRef.current, value);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]);
 
   // 选择定时范围 - 名称
   const handleChangeTypeName = (value: React.Key) => {
-    setTypeName(value as string);
+    const name = value as string;
+    setTypeName(name);
+    if (name === 'SpecificTime') {
+      setTypeCronList([]);
+      setTypeCron('SpecificTime');
+      onChange?.('SpecificTime');
+      return;
+    }
     const currentItem = taskCronListRef.current?.find(
-      (item) => item.typeName === value,
+      (item) => item.typeName === name,
     );
     handleSetTypeCron(currentItem?.items || []);
   };
@@ -162,22 +187,60 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
           onChange={handleChangeTypeName}
         />
       </Form.Item>
-      <Form.Item
-        noStyle
-        rules={[
-          {
-            required: true,
-            message: t('NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.enter'),
-          },
-        ]}
-      >
-        <SelectList
-          className={cx(styles.select)}
-          options={typeCronList}
-          value={typeCron}
-          onChange={handleChangeTypeCron}
-        />
-      </Form.Item>
+      {typeName !== 'SpecificTime' && typeCronList.length > 0 && (
+        <Form.Item
+          noStyle
+          rules={[
+            {
+              required: true,
+              message: t('NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.enter'),
+            },
+          ]}
+        >
+          <SelectList
+            className={cx(styles.select)}
+            options={typeCronList}
+            value={typeCron}
+            onChange={handleChangeTypeCron}
+          />
+        </Form.Item>
+      )}
+      {typeName === 'SpecificTime' && (
+        <Form.Item
+          name="lockTime"
+          noStyle
+          rules={[
+            {
+              required: true,
+              message: t(
+                'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.selectSpecificTime',
+              ),
+            },
+            {
+              validator: (_, selectedValue) => {
+                if (selectedValue && dayjs(selectedValue).isBefore(dayjs())) {
+                  return Promise.reject(
+                    new Error(
+                      t(
+                        'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.specificTimeMustBeFuture',
+                      ),
+                    ),
+                  );
+                }
+                return Promise.resolve();
+              },
+            },
+          ]}
+        >
+          <DatePicker
+            showTime
+            placeholder={t(
+              'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.selectDateTime',
+            )}
+            style={{ width: 200 }}
+          />
+        </Form.Item>
+      )}
     </Space>
   );
 };

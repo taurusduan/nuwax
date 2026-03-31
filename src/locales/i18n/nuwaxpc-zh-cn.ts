@@ -568,6 +568,42 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Components.Created.createWithLabel': '创建{0}',
   'NuwaxPC.Components.Created.emptyWithSearch': '暂无数据，请重新搜索',
   'NuwaxPC.Components.Created.empty': '暂无数据',
+  'NuwaxPC.Components.ChatInputHomeAtMentionIcon.tryMentionSkill':
+    '试试 @ 提及技能',
+  'NuwaxPC.Components.ChatInputHomeManualComponentItem.keywordNetwork': '联网',
+  'NuwaxPC.Components.ChatInputHomeManualComponentItem.keywordSearch': '搜索',
+  'NuwaxPC.Components.ChatInputHomeManualComponentItem.keywordReasoning':
+    '推理',
+  'NuwaxPC.Components.ChatInputHomeManualComponentItem.keywordThinking': '思考',
+  'NuwaxPC.Components.ChatInputHomeMentionPopup.tabAll': '全部',
+  'NuwaxPC.Components.ChatInputHomeMentionPopup.tabRecent': '最近使用',
+  'NuwaxPC.Components.ChatInputHomeMentionPopup.tabFavorite': '我的收藏',
+  'NuwaxPC.Components.ChatInputHomeMentionPopup.searchSkill': '搜索技能',
+  'NuwaxPC.Components.ChatInputHomeMentionPopup.loading': '加载中...',
+  'NuwaxPC.Components.ChatInputHomeMentionPopup.emptyFavorite': '暂无收藏',
+  'NuwaxPC.Components.ChatInputHomeMentionPopup.emptyNotFound': '未找到匹配项',
+  'NuwaxPC.Components.ChatInputHomeMentionPopup.loadingMore': '加载更多中...',
+  'NuwaxPC.Components.ChatInputHome.pastedImageFileName':
+    '粘贴图片-{0}-{1}.png',
+  'NuwaxPC.Components.ChatInputHome.uploadFailedWithName': '{0} 上传失败',
+  'NuwaxPC.Components.ChatInputHome.conversationDisabled': '会话已禁用',
+  'NuwaxPC.Components.ChatInputHome.enterQuestion': '请输入你的问题',
+  'NuwaxPC.Components.ChatInputHome.clickStopConversation': '点击停止当前会话',
+  'NuwaxPC.Components.ChatInputHome.clickSendMessage': '点击发送消息',
+  'NuwaxPC.Components.ChatInputHome.stoppingTask': '正在停止任务...',
+  'NuwaxPC.Components.ChatInputHome.clickStopAgentTask': '点击停止Agent任务',
+  'NuwaxPC.Components.ChatInputHome.noActiveConversation': '当前无进行中的会话',
+  'NuwaxPC.Components.ChatInputHome.stoppingConversation': '正在停止会话...',
+  'NuwaxPC.Components.ChatInputHome.noAgentPermission': '无智能体使用权限',
+  'NuwaxPC.Components.ChatInputHome.agentComputerUnavailable':
+    '会话关联的智能体电脑不可用',
+  'NuwaxPC.Components.ChatInputHome.clearRecord': '清空会话记录',
+  'NuwaxPC.Components.ChatInputHome.uploadAttachment': '上传附件',
+  'NuwaxPC.Components.ChatInputHome.switchToNormalMode': '切换到普通模式',
+  'NuwaxPC.Components.ChatInputHome.useAgentComputerTask':
+    '使用我的智能体电脑执行任务',
+  'NuwaxPC.Components.ChatInputHome.generatedByAiNotice':
+    '内容由AI生成，请仔细甄别',
   'NuwaxPC.Toast.UploadAvatar.invalidType': '请上传 JPG、JPEG 或 PNG 图片文件',
   'NuwaxPC.Toast.UploadAvatar.invalidSize': '图片大小不能超过 2MB',
   'NuwaxPC.Pages.SystemDashboard.resourceOverview': '资源概览',
@@ -607,6 +643,15 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.SystemTaskSelectTargetFormItem.selectLabel': '请选择{0}',
   'NuwaxPC.Pages.SystemTaskSelectTargetFormItemTarget.delete': '删除',
   'NuwaxPC.Pages.SystemTaskTimedPeriodSelector.enter': '请输入',
+  'NuwaxPC.Pages.SystemTaskTimedPeriodSelector.specificTime': '指定时间',
+  'NuwaxPC.Pages.SystemTaskTimedPeriodSelector.selectSpecificTime':
+    '请选择指定时间',
+  'NuwaxPC.Pages.SystemTaskTimedPeriodSelector.specificTimeMustBeFuture':
+    '指定时间必须在当前时间之后',
+  'NuwaxPC.Pages.SystemTaskTimedPeriodSelector.selectDateTime':
+    '请选择日期时间',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.specificTimeMustBeFuture':
+    '指定时间必须在当前时间之后',
   'NuwaxPC.Pages.SystemConfig.pageTitle': '系统设置',
   'NuwaxPC.Pages.SystemConfig.saveSuccess': '保存成功',
   'NuwaxPC.Pages.SystemConfigBaseFormItem.enterDomain': '请输入域名',
@@ -688,6 +733,14 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.SpaceTaskSelectTargetFormItem.selectLabel': '请选择{0}',
   'NuwaxPC.Pages.SpaceTaskSelectTargetFormItemTarget.delete': '删除',
   'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.enter': '请输入',
+  'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.specificTime': '指定时间',
+  'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.selectSpecificTime':
+    '请选择指定时间',
+  'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.specificTimeMustBeFuture':
+    '指定时间必须在当前时间之后',
+  'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.selectDateTime': '请选择日期时间',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.specificTimeMustBeFuture':
+    '指定时间必须在当前时间之后',
   'NuwaxPC.Pages.AppDevChatArea.chatTab': '对话',
   'NuwaxPC.Pages.AppDevChatArea.designTab': '设计',
   'NuwaxPC.Pages.AppDevChatArea.dataTab': '数据',
@@ -1983,7 +2036,4 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.AppDevPageEditModal.name': '名称',
   'NuwaxPC.Pages.AppDevPageEditModal.namePlaceholder': '请输入名称',
   'NuwaxPC.Pages.AppDevPageEditModal.nameRequired': '请输入名称',
-  'NuwaxPC.Pages.AntvX6RunResult.totalCount': '总数: {0}',
-  'NuwaxPC.Pages.AntvX6RunResult.onlyError': '只看错误',
-  'NuwaxPC.Pages.AntvX6RunResult.batchVariables': '本次批处理变量',
 };
