@@ -277,3 +277,11 @@
 - 影响：
   - 页面和表单文案维护边界清晰，后续新增校验规则无需污染页面域
   - 词典定位更直接，便于联调排查
+
+### D-038 SpaceTaskCenter 定时任务页面独立域
+
+- 决策：`SpaceTaskCenter/CreateTimedTask` 及其子组件统一归并到 `SpaceTaskCreateTimedTask` 与相关组件域，不复用 `SystemTaskCenterProTable` 文案域
+- 原因：任务列表页和任务创建页语义重叠但交互不同（表单校验、提示文案、开关文案），强行复用会导致 key 语义不清晰
+- 影响：
+  - 创建/更新弹窗链路文案可独立扩展，不影响列表页词典
+  - 后续移动端或其他入口复用创建弹窗时可直接复用同域 key

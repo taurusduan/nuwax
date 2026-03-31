@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T07:03:32.234Z
+- 生成时间：2026-03-31T08:12:56.402Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2694
-- hardcoded 中文：2694
+- 总问题数：2670
+- hardcoded 中文：2670
 - legacy System key：0
 - invalid dict key：0
 
@@ -25,7 +25,6 @@
 | src/pages/EditAgent | 78 | 0 | 0 | 78 |
 | src/pages/SpacePageDevelop | 72 | 0 | 0 | 72 |
 | src/pages/SpaceLibrary | 64 | 0 | 0 | 64 |
-| src/pages/SpaceTaskCenter | 61 | 0 | 0 | 61 |
 | src/pages/SpaceTable | 58 | 0 | 0 | 58 |
 | src/pages/Square | 58 | 0 | 0 | 58 |
 | src/layouts/Setting | 57 | 0 | 0 | 57 |
@@ -40,6 +39,7 @@
 | src/pages/SpaceLog | 39 | 0 | 0 | 39 |
 | src/pages/MyComputerManage | 38 | 0 | 0 | 38 |
 | src/pages/SpaceSkillManage | 37 | 0 | 0 | 37 |
+| src/pages/SpaceTaskCenter | 37 | 0 | 0 | 37 |
 | src/pages/Chat | 35 | 0 | 0 | 35 |
 | src/pages/SpacePluginTool | 35 | 0 | 0 | 35 |
 | src/components/ChatInputHome | 35 | 0 | 0 | 35 |
@@ -930,70 +930,6 @@
 - [hardcoded_chinese] src/pages/SpaceLibrary/index.tsx:670 -> `搜索组件`
 - [hardcoded_chinese] src/pages/SpaceLibrary/index.tsx:715 -> `未能找到相关结果`
 
-## src/pages/SpaceTaskCenter
-
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:91 -> `执行中`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:97 -> `任务创建，等待执行`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:103 -> `执行成功，待下次执行`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:109 -> `执行失败，待下次执行`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:116 -> `已结束，不再执行`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:122 -> `已结束，不再执行`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:173 -> `查询任务列表失败`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:282 -> `执行任务成功`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:296 -> `启用任务成功`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:310 -> `停用任务成功`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:324 -> `删除任务成功`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:334 -> `任务类型`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:339 -> `智能体`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:340 -> `工作流`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:343 -> `请选择任务类型`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:350 -> `智能体`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:352 -> `工作流`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:358 -> `任务名称`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:363 -> `请输入任务名称`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:368 -> `任务对象`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:383 -> `任务状态`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:393 -> `执行次数`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:399 -> `最近执行时间`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:406 -> `下次执行时间`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:413 -> `创建人`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:420 -> `创建时间`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:427 -> `操作`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:439 -> `手动执行`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:444 -> `启用`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:446 -> `确认启用该任务？`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:451 -> `停用`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:453 -> `确认停用该任务？`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:458 -> `执行记录`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:468 -> `编辑`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:473 -> `删除`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:474 -> `确认删除该任务？`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTarget/index.tsx:125 -> `添加${item.label}`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTargetFormItem/index.tsx:99 -> `请选择${label}`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTargetFormItemTarget/index.tsx:20 -> `删除`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/components/TimedPeriodSelector/index.tsx:148 -> `请输入`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/components/TimedPeriodSelector/index.tsx:156 -> `请输入`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:58 -> `定时任务已创建成功`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:73 -> `定时任务更新成功`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:283 -> `创建定时任务`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:283 -> `更新定时任务`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:305 -> `定时周期`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:311 -> `任务名称`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:312 -> `请输入任务名称`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:314 -> `请输入任务名称`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:321 -> `任务对象`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:330 -> `保持会话`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:331 -> `选择“否”时将为每次任务执行创建一个全新的会话`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:332 -> `请选择是否保持会话`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:334 -> `是`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:334 -> `否`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:338 -> `任务内容`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:339 -> `请输入任务内容`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:342 -> `请输入你要执行的任务信息，信息提供的越详细执行成功率越高`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:356 -> `参数配置`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx:360 -> `请填写参数配置`
-- [hardcoded_chinese] src/pages/SpaceTaskCenter/index.tsx:51 -> `任务中心`
-
 ## src/pages/SpaceTable
 
 - [hardcoded_chinese] src/pages/SpaceTable/AddAndModify/index.tsx:52 -> `请选择时间`
@@ -1714,6 +1650,46 @@
 - [hardcoded_chinese] src/pages/SpaceSkillManage/type.ts:20 -> `复制到空间`
 - [hardcoded_chinese] src/pages/SpaceSkillManage/type.ts:25 -> `导出技能`
 - [hardcoded_chinese] src/pages/SpaceSkillManage/type.ts:30 -> `删除`
+
+## src/pages/SpaceTaskCenter
+
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:91 -> `执行中`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:97 -> `任务创建，等待执行`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:103 -> `执行成功，待下次执行`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:109 -> `执行失败，待下次执行`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:116 -> `已结束，不再执行`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:122 -> `已结束，不再执行`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:173 -> `查询任务列表失败`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:282 -> `执行任务成功`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:296 -> `启用任务成功`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:310 -> `停用任务成功`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:324 -> `删除任务成功`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:334 -> `任务类型`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:339 -> `智能体`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:340 -> `工作流`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:343 -> `请选择任务类型`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:350 -> `智能体`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:352 -> `工作流`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:358 -> `任务名称`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:363 -> `请输入任务名称`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:368 -> `任务对象`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:383 -> `任务状态`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:393 -> `执行次数`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:399 -> `最近执行时间`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:406 -> `下次执行时间`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:413 -> `创建人`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:420 -> `创建时间`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:427 -> `操作`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:439 -> `手动执行`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:444 -> `启用`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:446 -> `确认启用该任务？`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:451 -> `停用`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:453 -> `确认停用该任务？`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:458 -> `执行记录`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:468 -> `编辑`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:473 -> `删除`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:474 -> `确认删除该任务？`
+- [hardcoded_chinese] src/pages/SpaceTaskCenter/index.tsx:51 -> `任务中心`
 
 ## src/pages/Chat
 

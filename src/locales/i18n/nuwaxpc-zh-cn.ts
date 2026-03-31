@@ -602,6 +602,32 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.SystemTaskCenterProTable.delete': '删除',
   'NuwaxPC.Pages.SystemTaskCenterProTable.confirmDeleteTask':
     '确认删除该任务？',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.createSuccess': '定时任务已创建成功',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.updateSuccess': '定时任务更新成功',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.createTitle': '创建定时任务',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.updateTitle': '更新定时任务',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.timedPeriod': '定时周期',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.taskName': '任务名称',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.enterTaskName': '请输入任务名称',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.taskTarget': '任务对象',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.keepConversation': '保持会话',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.keepConversationTooltip':
+    '选择“否”时将为每次任务执行创建一个全新的会话',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.selectKeepConversation':
+    '请选择是否保持会话',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.yes': '是',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.no': '否',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.taskContent': '任务内容',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.enterTaskContent': '请输入任务内容',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.taskContentPlaceholder':
+    '请输入你要执行的任务信息，信息提供的越详细执行成功率越高',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.parameterConfig': '参数配置',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.fillParameterConfig':
+    '请填写参数配置',
+  'NuwaxPC.Pages.SpaceTaskSelectTarget.addItem': '添加{0}',
+  'NuwaxPC.Pages.SpaceTaskSelectTargetFormItem.selectLabel': '请选择{0}',
+  'NuwaxPC.Pages.SpaceTaskSelectTargetFormItemTarget.delete': '删除',
+  'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.enter': '请输入',
   'NuwaxPC.Pages.AppDevChatArea.chatTab': '对话',
   'NuwaxPC.Pages.AppDevChatArea.designTab': '设计',
   'NuwaxPC.Pages.AppDevChatArea.dataTab': '数据',

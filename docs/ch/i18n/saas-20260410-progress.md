@@ -1290,3 +1290,28 @@
 - 风险/阻塞：
   - `SystemManagement` 主体存量仍在 `CreateTimedTask` 和 `ThemeConfig` 其余日志/注释项
 - 下一步：继续推进 `CreateTimedTask` 页面表单与提示文案
+
+### 里程碑：Top 模块第五十二批实改（SpaceTaskCenter CreateTimedTask 全链路）
+
+- 时间：2026-03-31 16:13
+- 任务：批量处理 `SpaceTaskCenter/CreateTimedTask` 主页面与子组件的中文文案
+- 执行命令：
+  - `pnpm prettier --write src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx src/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTarget/index.tsx src/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTargetFormItem/index.tsx src/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTargetFormItemTarget/index.tsx src/pages/SpaceTaskCenter/CreateTimedTask/components/TimedPeriodSelector/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx`
+    - `src/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTarget/index.tsx`
+    - `src/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTargetFormItem/index.tsx`
+    - `src/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTargetFormItemTarget/index.tsx`
+    - `src/pages/SpaceTaskCenter/CreateTimedTask/components/TimedPeriodSelector/index.tsx`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `CreateTimedTask` 页面标题、表单项、校验提示、开关文案、成功提示全部切换为 `t(...)`
+  - `SelectTarget`、`SelectTargetFormItem`、`SelectTargetFormItemTarget`、`TimedPeriodSelector` 子组件文案全部切换为 `t(...)`
+  - 新增 `NuwaxPC.Pages.SpaceTaskCreateTimedTask.*`、`SpaceTaskSelectTarget.*`、`SpaceTaskSelectTargetFormItem.*`、`SpaceTaskTimedPeriodSelector.*` 默认中英文词典
+  - 治理总量从 `2694` 下降至 `2670`（-24）
+- 风险/阻塞：
+  - `AppDev FileTreePanel` 与 `SystemManagement/TaskManage/CreateTimedTask` 仍有剩余存量
+- 下一步：继续推进 `AppDev/FileTreePanel` 与 `SystemManagement/TaskManage/CreateTimedTask`

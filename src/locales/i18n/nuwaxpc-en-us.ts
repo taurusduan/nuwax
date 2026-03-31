@@ -686,6 +686,39 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.SystemTaskCenterProTable.delete': 'Delete',
   'NuwaxPC.Pages.SystemTaskCenterProTable.confirmDeleteTask':
     'Confirm deleting this task?',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.createSuccess':
+    'Timed task created successfully',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.updateSuccess':
+    'Timed task updated successfully',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.createTitle': 'Create Timed Task',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.updateTitle': 'Update Timed Task',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.timedPeriod': 'Timed Period',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.taskName': 'Task Name',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.enterTaskName':
+    'Please enter task name',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.taskTarget': 'Task Target',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.keepConversation':
+    'Keep Conversation',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.keepConversationTooltip':
+    'When selecting "No", a brand-new conversation is created for each task run',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.selectKeepConversation':
+    'Please select whether to keep conversation',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.yes': 'Yes',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.no': 'No',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.taskContent': 'Task Content',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.enterTaskContent':
+    'Please enter task content',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.taskContentPlaceholder':
+    'Please enter the task information to execute. More details improve execution success rate.',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.parameterConfig':
+    'Parameter Configuration',
+  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.fillParameterConfig':
+    'Please fill in parameter configuration',
+  'NuwaxPC.Pages.SpaceTaskSelectTarget.addItem': 'Add {0}',
+  'NuwaxPC.Pages.SpaceTaskSelectTargetFormItem.selectLabel':
+    'Please select {0}',
+  'NuwaxPC.Pages.SpaceTaskSelectTargetFormItemTarget.delete': 'Delete',
+  'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.enter': 'Please enter',
   'NuwaxPC.Pages.AppDevChatArea.chatTab': 'Chat',
   'NuwaxPC.Pages.AppDevChatArea.designTab': 'Design',
   'NuwaxPC.Pages.AppDevChatArea.dataTab': 'Data',

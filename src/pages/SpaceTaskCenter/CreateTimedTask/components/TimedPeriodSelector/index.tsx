@@ -1,5 +1,6 @@
 import SelectList from '@/components/custom/SelectList';
 import { apiTaskCronList } from '@/services/agentTask';
+import { t } from '@/services/i18nRuntime';
 import { TaskCronInfo, TaskCronItemDto } from '@/types/interfaces/agentTask';
 import { option } from '@/types/interfaces/common';
 import { Form, Space } from 'antd';
@@ -145,7 +146,15 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
 
   return (
     <Space>
-      <Form.Item noStyle rules={[{ required: true, message: '请输入' }]}>
+      <Form.Item
+        noStyle
+        rules={[
+          {
+            required: true,
+            message: t('NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.enter'),
+          },
+        ]}
+      >
         <SelectList
           className={cx(styles.select)}
           options={typeNameList}
@@ -153,7 +162,15 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
           onChange={handleChangeTypeName}
         />
       </Form.Item>
-      <Form.Item noStyle rules={[{ required: true, message: '请输入' }]}>
+      <Form.Item
+        noStyle
+        rules={[
+          {
+            required: true,
+            message: t('NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.enter'),
+          },
+        ]}
+      >
         <SelectList
           className={cx(styles.select)}
           options={typeCronList}

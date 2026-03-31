@@ -840,3 +840,21 @@
   - `src/pages/SystemManagement/SystemConfig/SystemConfig/index.tsx`
   - `src/locales/i18n/nuwaxpc-zh-cn.ts`
   - `src/locales/i18n/nuwaxpc-en-us.ts`
+
+### 新增验证（Top 模块第五十二批）
+
+- 命令：`pnpm prettier --write src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx src/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTarget/index.tsx src/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTargetFormItem/index.tsx src/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTargetFormItemTarget/index.tsx src/pages/SpaceTaskCenter/CreateTimedTask/components/TimedPeriodSelector/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `2694` 下降至 `2670`
+- 覆盖文件：
+  - `src/pages/SpaceTaskCenter/CreateTimedTask/index.tsx`
+  - `src/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTarget/index.tsx`
+  - `src/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTargetFormItem/index.tsx`
+  - `src/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTargetFormItemTarget/index.tsx`
+  - `src/pages/SpaceTaskCenter/CreateTimedTask/components/TimedPeriodSelector/index.tsx`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
