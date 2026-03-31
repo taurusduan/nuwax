@@ -13,7 +13,7 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { SvgIcon } from '../base';
+import { SvgIcon } from '../../base';
 import styles from './index.less';
 import type { ComputerOption, ComputerTypeSelectorProps } from './types';
 

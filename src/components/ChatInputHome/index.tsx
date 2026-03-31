@@ -1,6 +1,5 @@
 import SvgIcon from '@/components/base/SvgIcon';
 import ChatUploadFile from '@/components/ChatUploadFile';
-import ComputerTypeSelector from '@/components/ComputerTypeSelector';
 import ConditionRender from '@/components/ConditionRender';
 import PermissionMask from '@/components/PermissionMask';
 import { UPLOAD_FILE_ACTION } from '@/constants/common.constants';
@@ -27,6 +26,7 @@ import React, {
 import { useModel } from 'umi';
 import { v4 as uuidv4 } from 'uuid';
 import AtMentionIcon from './AtMentionIcon';
+import ComputerTypeSelector from './ComputerTypeSelector';
 import styles from './index.less';
 import ManualComponentItem from './ManualComponentItem';
 import MentionEditor from './MentionEditor';
@@ -543,7 +543,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
                     ? String(conversationInfo.sandboxServerId)
                     : selectedComputerId
                 }
-                onChange={(id) => onComputerSelect?.(id)}
+                onChange={(id: string) => onComputerSelect?.(id)}
                 disabled={wholeDisabled}
                 agentId={agentId}
                 fixedSelection={
