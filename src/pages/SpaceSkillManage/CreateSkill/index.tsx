@@ -2,6 +2,7 @@ import CustomFormModal from '@/components/CustomFormModal';
 import OverrideTextArea from '@/components/OverrideTextArea';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
 import { apiAddSkill, apiUpdateSkill } from '@/services/library';
+import { dict } from '@/services/i18nRuntime';
 import { CreateUpdateModeEnum } from '@/types/enums/common';
 import type {
   AddSkillParams,
@@ -40,7 +41,7 @@ const CreateSkill: React.FC<CreateSkillProps> = ({
       setLoading(true);
       const resp = await apiAddSkill(data);
       if (resp?.code === SUCCESS_CODE) {
-        message.success('技能已创建成功');
+        message.success(dict('NuwaxPC.Pages.SpaceSkillManage.CreateSkill.skillCreatedSuccessfully'));
         onConfirm?.();
         history.push(`/space/${spaceId}/skill-details/${resp?.data}`);
       }
@@ -55,7 +56,7 @@ const CreateSkill: React.FC<CreateSkillProps> = ({
       setLoading(true);
       const resp = await apiUpdateSkill(data);
       if (resp?.code === SUCCESS_CODE) {
-        message.success('技能更新成功');
+        message.success(dict('NuwaxPC.Pages.SpaceSkillManage.CreateSkill.skillUpdatedSuccessfully'));
         onConfirm?.();
       }
     } finally {
@@ -97,7 +98,7 @@ const CreateSkill: React.FC<CreateSkillProps> = ({
     <CustomFormModal
       loading={loading}
       form={form}
-      title={type === CreateUpdateModeEnum.Create ? '创建技能' : '更新技能'}
+      title={type === CreateUpdateModeEnum.Create ? dict('NuwaxPC.Pages.SpaceSkillManage.CreateSkill.createSkill') : dict('NuwaxPC.Pages.SpaceSkillManage.CreateSkill.updateSkill')}
       classNames={{
         content: cx(styles.container),
         header: cx(styles.header),
@@ -115,29 +116,29 @@ const CreateSkill: React.FC<CreateSkillProps> = ({
       >
         <Form.Item
           name="name"
-          label="名称"
+          label={dict('NuwaxPC.Pages.SpaceSkillManage.CreateSkill.nameLabel')}
           rules={[
-            { required: true, message: '请输入技能名称' },
+            { required: true, message: dict('NuwaxPC.Pages.SpaceSkillManage.CreateSkill.pleaseInputSkillName') },
             {
               validator(_, value) {
                 if (!value || value?.length <= 30) {
                   return Promise.resolve();
                 }
                 if (value?.length > 30) {
-                  return Promise.reject(new Error('名称不能超过30个字符!'));
+                  return Promise.reject(new Error(dict('NuwaxPC.Pages.SpaceSkillManage.CreateSkill.nameMaxLength')));
                 }
-                return Promise.reject(new Error('输入技能名称!'));
+                return Promise.reject(new Error(dict('NuwaxPC.Pages.SpaceSkillManage.CreateSkill.inputSkillName')));
               },
             },
           ]}
         >
-          <Input placeholder="输入技能名称" showCount maxLength={30} />
+          <Input placeholder={dict('NuwaxPC.Pages.SpaceSkillManage.CreateSkill.inputSkillNamePlaceholder')} showCount maxLength={30} />
         </Form.Item>
         <OverrideTextArea
           name="description"
-          label="描述"
+          label={dict('NuwaxPC.Pages.SpaceSkillManage.CreateSkill.descriptionLabel')}
           initialValue={description}
-          placeholder="请输入描述，让大模型理解什么情况下应该调用此技能"
+          placeholder={dict('NuwaxPC.Pages.SpaceSkillManage.CreateSkill.descriptionPlaceholder')}
           maxLength={10000}
         />
       </Form>

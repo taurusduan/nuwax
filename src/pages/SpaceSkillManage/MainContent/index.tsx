@@ -1,6 +1,7 @@
 import Loading from '@/components/custom/Loading';
 import useSearchParamsCustom from '@/hooks/useSearchParamsCustom';
 import { apiSkillList } from '@/services/library';
+import { dict } from '@/services/i18nRuntime';
 import { PublishStatusEnum } from '@/types/enums/common';
 import { FilterStatusEnum } from '@/types/enums/space';
 import type { CustomPopoverItem } from '@/types/interfaces/common';
@@ -65,7 +66,7 @@ const MainContentCard: React.FC<MainContentCardProps> = ({
   if (skillList?.length === 0) {
     return (
       <div className={cx('flex', 'h-full', 'items-center', 'content-center')}>
-        <Empty description="未能找到相关结果" />
+        <Empty description={dict('NuwaxPC.Pages.SpaceSkillManage.MainContent.noResultsFound')} />
       </div>
     );
   }

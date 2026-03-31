@@ -16,6 +16,7 @@ import {
 import { modalConfirm } from '@/utils/ant-custom';
 import { exportWholeProjectZip } from '@/utils/exportImportFile';
 import { message } from 'antd';
+import { dict } from '@/services/i18nRuntime';
 import { useEffect, useRef, useState } from 'react';
 import { history, useParams, useSearchParams } from 'umi';
 import CreateSkill from './CreateSkill';
@@ -78,10 +79,10 @@ const SpaceSkillManage: React.FC = () => {
   // 删除技能
   const handleClickDelete = (info: SkillInfo) => {
     // 二次确认
-    modalConfirm('你确定要删除此技能吗?', info.name, () => {
+    modalConfirm(dict('NuwaxPC.Pages.SpaceSkillManage.deleteConfirmText'), info.name, () => {
       apiDeleteSkill(info.id).then(() => {
         // 提示删除成功
-        message.success('技能删除成功');
+        message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
         // 查询技能列表
         mainContentRef.current?.exposeQueryComponentList();
       });
@@ -98,7 +99,7 @@ const SpaceSkillManage: React.FC = () => {
   // 确认复制到空间
   const handlerConfirmCopyToSpace = async (targetSpaceId: number) => {
     if (!currentComponentInfo) {
-      message.error('技能信息不存在');
+      message.error(dict('NuwaxPC.Pages.SpaceSkillManage.skillInfoNotFound'));
       return;
     }
     const data: SkillCopyToSpaceParams = {
@@ -111,7 +112,7 @@ const SpaceSkillManage: React.FC = () => {
       setLoadingSkill(true);
       const result = await apiSkillCopyToSpace(data);
       if (result.code === SUCCESS_CODE) {
-        message.success('技能复制成功');
+        message.success(dict('NuwaxPC.Pages.SpaceSkillManage.skillCopiedSuccessfully'));
         // 查询技能列表
         mainContentRef.current?.exposeQueryComponentList();
         // 关闭弹窗
@@ -126,7 +127,7 @@ const SpaceSkillManage: React.FC = () => {
   const handleExportProject = async (info: SkillInfo) => {
     // 检查项目ID是否有效
     if (!info?.id) {
-      message.warning('技能ID不存在或无效，无法导出');
+      message.warning(dict('NuwaxPC.Pages.SpaceSkillManage.skillIdInvalidForExport'));
       return;
     }
 
@@ -137,7 +138,7 @@ const SpaceSkillManage: React.FC = () => {
       // 判断是否成功
       if (!result.success) {
         // 导出失败，显示错误信息
-        const errorMessage = result.error?.message || '导出失败';
+        const errorMessage = result.error?.message || dict('NuwaxPC.Pages.SpaceSkillManage.exportFailed');
         message.warning(errorMessage);
         setLoadingExportProject(false);
         return;
@@ -148,11 +149,11 @@ const SpaceSkillManage: React.FC = () => {
         const filename = `skill-${info.id}.zip`;
         // 导出整个项目压缩包
         exportWholeProjectZip(result, filename);
-        message.success('导出成功！');
+        message.success(dict('NuwaxPC.Pages.SpaceSkillManage.exportSucceeded'));
       }
     } catch (error) {
       console.error('导出项目失败:', error);
-      message.error('导出失败，请重试');
+      message.error(dict('NuwaxPC.Pages.SpaceSkillManage.exportFailedRetry'));
     } finally {
       setLoadingExportProject(false);
     }
@@ -210,18 +211,18 @@ const SpaceSkillManage: React.FC = () => {
     });
 
     if (code === SUCCESS_CODE) {
-      message.success('导入成功');
+      message.success(dict('NuwaxPC.Pages.SpaceSkillManage.importSucceeded'));
       setOpenImportSkillProject(false);
       // 跳转到技能详情页
       history.push(`/space/${spaceId}/skill-details/${id}`);
     } else {
-      message.error(errorMessage || '导入失败');
+      message.error(errorMessage || dict('NuwaxPC.Pages.SpaceSkillManage.importFailed'));
     }
   };
 
   return (
     <WorkspaceLayout
-      title="技能管理"
+      title={dict('NuwaxPC.Pages.SpaceSkillManage.pageTitle')}
       leftSlot={<HeaderLeftSlot />}
       rightSlot={
         <HeaderRightSlot
@@ -234,7 +235,7 @@ const SpaceSkillManage: React.FC = () => {
         <TipsBox
           className="mt-0"
           visible={loadingExportProject}
-          text="正在导出"
+          text={dict('NuwaxPC.Pages.SpaceSkillManage.exporting')}
         />
       }
     >
