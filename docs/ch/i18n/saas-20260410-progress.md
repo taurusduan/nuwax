@@ -1123,3 +1123,22 @@
 - 风险/阻塞：
   - Antv v3 剩余仍集中在 `hooks/useBeforeUnload.ts` 与部分 `graph` 日志文案
 - 下一步：继续推进 `Antv-X6 v3 hooks/useBeforeUnload.ts` 与 `components/graph/GraphContainer.tsx`
+
+### 里程碑：Top 模块第四十五批实改（Antv-X6 v3 图编辑日志英文化）
+
+- 时间：2026-03-31 13:36
+- 任务：处理 `useBeforeUnload` 与 `GraphContainer` 的中文日志描述，收敛到英文日志规范
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/v3/hooks/useBeforeUnload.ts src/pages/Antv-X6/v3/components/graph/GraphContainer.tsx`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/v3/hooks/useBeforeUnload.ts`
+    - `src/pages/Antv-X6/v3/components/graph/GraphContainer.tsx`
+- 结果摘要：
+  - `useBeforeUnload` 页面隐藏保存成功/失败日志改为英文
+  - `GraphContainer` 三处边创建与父子关系失败 warning 改为英文
+  - 治理总量从 `2858` 下降至 `2853`（-5）
+- 风险/阻塞：
+  - `Antv-X6 v3` 仍有存量集中在注释与少量常量/hook 描述文本
+- 下一步：继续推进 `Antv-X6 v3 constants/node.constants.ts` 之外的剩余 hook 与 component 文案

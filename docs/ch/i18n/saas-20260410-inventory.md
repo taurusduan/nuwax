@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T06:06:44.069Z
+- 生成时间：2026-03-31T06:10:45.240Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2858
-- hardcoded 中文：2858
+- 总问题数：2853
+- hardcoded 中文：2853
 - legacy System key：0
 - invalid dict key：0
 
@@ -15,7 +15,7 @@
 
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
-| src/pages/Antv-X6 | 201 | 0 | 0 | 201 |
+| src/pages/Antv-X6 | 196 | 0 | 0 | 196 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
 | src/services | 110 | 0 | 0 | 110 |
@@ -121,9 +121,6 @@
 
 ## src/pages/Antv-X6
 
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/graph/GraphContainer.tsx:154 -> `[GraphContainer] 边的源节点(${sourceId})或目标节点(${targetId})不存在，跳过创建边`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/graph/GraphContainer.tsx:236 -> `[GraphContainer] 找不到父循环节点，无法建立父子关系`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/graph/GraphContainer.tsx:435 -> `[GraphContainer] 无法创建边：源节点(${sourceId})或目标节点(${targetId})在画布中未找到`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:69 -> `保存中`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:70 -> `保存中`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:76 -> `保存中`
@@ -133,8 +130,6 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Sidebar.tsx:57 -> `搜索`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:168 -> `发布`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:169 -> `拒绝`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useBeforeUnload.ts:90 -> `[useBeforeUnload] 页面隐藏时保存成功`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useBeforeUnload.ts:93 -> `[useBeforeUnload] 页面隐藏时保存失败:`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useGraphInteraction.ts:183 -> `[V3] 节点更新失败:`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:33 -> `🔄 useModifiedSaveUpdate: 节流执行保存 [第${currentSaveCount}次]`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:43 -> `⏸️ useModifiedSaveUpdate: 保存正在进行中，跳过本次调用`
@@ -201,7 +196,12 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:49 -> `大模型`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:60 -> `结束`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:81 -> `开始`
-- ... 省略 121 条
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:87 -> `条件分支`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:100 -> `分支1`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:106 -> `分支2`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:112 -> `结束`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:142 -> `初始化与重置`
+- ... 省略 116 条
 
 ## src/hooks
 

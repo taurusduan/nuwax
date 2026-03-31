@@ -87,10 +87,13 @@ export function useBeforeUnload({
           isSavingRef.current = true;
           onSave()
             .then(() => {
-              console.log('[useBeforeUnload] 页面隐藏时保存成功');
+              console.log('[useBeforeUnload] Save succeeded when page hidden');
             })
             .catch((err) => {
-              console.error('[useBeforeUnload] 页面隐藏时保存失败:', err);
+              console.error(
+                '[useBeforeUnload] Save failed when page hidden:',
+                err,
+              );
             })
             .finally(() => {
               isSavingRef.current = false;
