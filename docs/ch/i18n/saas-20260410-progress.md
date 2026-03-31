@@ -1688,3 +1688,22 @@
 - 风险/阻塞：
   - `business-component` 仍有高残量，集中在 `VncPreview`、`FilePreview`、`HistoryConversationList`、`PagePreviewIframe`
 - 下一步：继续按 inventory Top 文件推进上述组件的批量接入
+
+### 里程碑：Top 模块第七十批实改（History + Preview 组件接入）
+
+- 时间：2026-03-31 19:19
+- 任务：清理 `HistoryConversationList` 与 `PagePreviewIframe` 的硬编码中文文案并接入 `t(...)`，同步补齐本地默认词典
+- 执行命令：
+  - `pnpm prettier --write src/components/business-component/HistoryConversationList/index.tsx src/components/business-component/HistoryConversationList/ConversationList/index.tsx src/components/business-component/PagePreviewIframe/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改上述文件
+- 结果摘要：
+  - `HistoryConversationList` 的搜索、重命名、删除确认、提示消息、日期格式、摘要/智能体兜底文案全部切到 `NuwaxPC.Components.HistoryConversationList.*`
+  - `PagePreviewIframe` 的复制模板、标题兜底、工具栏 tooltip、结果上报兜底文案切到 `NuwaxPC.Components.PagePreviewIframe.*`
+  - `PagePreviewIframe` 的中文日志字符串与注释中的中文字符串改为英文，避免治理噪声
+  - `src/components/business-component` 模块命中从 `110` 下降至 `82`
+  - 治理总量从 `2119` 下降至 `2091`（-28）
+- 风险/阻塞：
+  - `business-component` 剩余存量主要集中于 `VncPreview`、`FilePreview`、`ConversationDetails` 与 `ThemeConfig` 相关文件
+- 下一步：继续按 Top 清单推进 `VncPreview`（含 `IdleWarningModal` / `useUrlRetry`）批量治理

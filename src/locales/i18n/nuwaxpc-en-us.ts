@@ -114,6 +114,41 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Components.AppDevEmptyState.noFileDescription':
     'No files in the current directory.',
   'NuwaxPC.Components.AppDevEmptyState.close': 'Close',
+  'NuwaxPC.Components.HistoryConversationList.renameTitleEmpty':
+    'Title cannot be empty',
+  'NuwaxPC.Components.HistoryConversationList.renameTitleTooLong':
+    'Title length cannot exceed 50 characters',
+  'NuwaxPC.Components.HistoryConversationList.renameSuccess':
+    'Updated successfully',
+  'NuwaxPC.Components.HistoryConversationList.deleteSuccess':
+    'Deleted successfully',
+  'NuwaxPC.Components.HistoryConversationList.pageTitle':
+    'Conversation History',
+  'NuwaxPC.Components.HistoryConversationList.searchPlaceholder':
+    'Search conversation history',
+  'NuwaxPC.Components.HistoryConversationList.renameModalTitle': 'Rename',
+  'NuwaxPC.Components.HistoryConversationList.renamePlaceholder':
+    'Enter new name',
+  'NuwaxPC.Components.HistoryConversationList.deleteModalTitle':
+    'Delete conversation permanently',
+  'NuwaxPC.Components.HistoryConversationList.deleteModalContent':
+    'This conversation will be permanently deleted and cannot be recovered. Are you sure you want to delete it?',
+  'NuwaxPC.Components.HistoryConversationList.editTitleTooltip': 'Edit title',
+  'NuwaxPC.Components.HistoryConversationList.dateTimeFormat':
+    'YYYY-MM-DD HH:mm:ss',
+  'NuwaxPC.Components.HistoryConversationList.deleteTooltip': 'Delete',
+  'NuwaxPC.Components.HistoryConversationList.summaryEmpty':
+    'No summary available',
+  'NuwaxPC.Components.HistoryConversationList.agentFallback': 'Agent',
+  'NuwaxPC.Components.HistoryConversationList.noMoreData': 'All data loaded',
+  'NuwaxPC.Components.PagePreviewIframe.copyTemplate': 'Copy template',
+  'NuwaxPC.Components.PagePreviewIframe.defaultPageTitle': 'Page preview',
+  'NuwaxPC.Components.PagePreviewIframe.unableToReadData':
+    'Unable to read data',
+  'NuwaxPC.Components.PagePreviewIframe.tooltipRefresh': 'Refresh',
+  'NuwaxPC.Components.PagePreviewIframe.tooltipBack': 'Back',
+  'NuwaxPC.Components.PagePreviewIframe.tooltipForward': 'Forward',
+  'NuwaxPC.Components.PagePreviewIframe.tooltipCopyLink': 'Copy link',
   'NuwaxPC.Pages.Login.inputEmailRequired': 'Please input email',
   'NuwaxPC.Pages.Login.inputPhoneRequired': 'Please input phone number',
   'NuwaxPC.Pages.Login.invalidEmail': 'Please input a valid email',

@@ -1,4 +1,5 @@
 import { apiAgentConversationList } from '@/services/agentConfig';
+import { t } from '@/services/i18nRuntime';
 import { ConversationInfo } from '@/types/interfaces/conversationInfo';
 import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
 import { useSize } from 'ahooks';
@@ -134,7 +135,12 @@ const ConversationList = React.forwardRef<
             <div className={styles['item-header']}>
               <div className={styles['topic-wrapper']}>
                 <span className={styles.topic}>{item.topic}</span>
-                <Tooltip title="编辑标题" mouseEnterDelay={0.5}>
+                <Tooltip
+                  title={t(
+                    'NuwaxPC.Components.HistoryConversationList.editTitleTooltip',
+                  )}
+                  mouseEnterDelay={0.5}
+                >
                   <EditOutlined
                     className={styles['edit-icon']}
                     onClick={(e) => {
@@ -146,10 +152,19 @@ const ConversationList = React.forwardRef<
               </div>
               <div className={styles['right-area']}>
                 <span className={styles.date}>
-                  {dayjs(item.modified).format('YYYY年MM月DD日 HH:mm:ss')}
+                  {dayjs(item.modified).format(
+                    t(
+                      'NuwaxPC.Components.HistoryConversationList.dateTimeFormat',
+                    ),
+                  )}
                 </span>
                 <Space className={styles.actions} size={12}>
-                  <Tooltip title="删除" mouseEnterDelay={0.5}>
+                  <Tooltip
+                    title={t(
+                      'NuwaxPC.Components.HistoryConversationList.deleteTooltip',
+                    )}
+                    mouseEnterDelay={0.5}
+                  >
                     <DeleteOutlined
                       className={cx(styles['action-icon'], styles.delete)}
                       onClick={(e) => {
@@ -163,11 +178,15 @@ const ConversationList = React.forwardRef<
             </div>
             <div className={styles['summary-wrapper']}>
               <div className={styles.summary}>
-                {item.summary || '暂无内容摘要'}
+                {item.summary ||
+                  t('NuwaxPC.Components.HistoryConversationList.summaryEmpty')}
               </div>
               <div className={styles['tag-wrapper']}>
                 <div className={styles['agent-tag-bottom']}>
-                  {item.agent?.name || '智能体'}
+                  {item.agent?.name ||
+                    t(
+                      'NuwaxPC.Components.HistoryConversationList.agentFallback',
+                    )}
                 </div>
               </div>
             </div>
@@ -179,7 +198,9 @@ const ConversationList = React.forwardRef<
           </div>
         )}
         {!hasMore && list.length > 0 && (
-          <div className={styles.nomore}>已加载全部数据</div>
+          <div className={styles.nomore}>
+            {t('NuwaxPC.Components.HistoryConversationList.noMoreData')}
+          </div>
         )}
       </div>
     </div>
