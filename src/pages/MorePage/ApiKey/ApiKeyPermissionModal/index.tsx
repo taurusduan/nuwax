@@ -235,38 +235,12 @@ const ApiKeyPermissionModal: React.FC<ApiKeyPermissionModalProps> = ({
 
   return (
     <Modal
-      title={
-        <div>
-          <Title level={4} style={{ color: '#1890ff', marginBottom: 4 }}>
-            权限配置
-          </Title>
-          <Text type="secondary">{record?.name}</Text>
-        </div>
-      }
+      title={<Title level={4}>权限配置 - {record?.name}</Title>}
       open={open}
       onCancel={() => onOpenChange(false)}
+      onOk={handleSave}
+      confirmLoading={saveLoading}
       width={720}
-      footer={
-        <Space size={12} style={{ width: '100%', justifyContent: 'flex-end' }}>
-          <Button onClick={() => onOpenChange(false)} style={{ width: 100 }}>
-            取消
-          </Button>
-          <Button
-            type="primary"
-            loading={saveLoading}
-            onClick={handleSave}
-            style={{
-              width: 120,
-              height: 40,
-              borderRadius: 6,
-              fontWeight: 'bold',
-            }}
-          >
-            保存权限
-          </Button>
-        </Space>
-      }
-      destroyOnHidden
     >
       <Spin spinning={loading}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>

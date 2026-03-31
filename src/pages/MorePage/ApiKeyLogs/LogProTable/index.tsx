@@ -4,20 +4,20 @@ import {
   XProTable,
 } from '@/components/ProComponents';
 import { AGENT_COMPONENT_TYPE_MAP } from '@/constants/agent.constants';
-import { apiSpaceLogList } from '@/services/agentDev';
+import LogDetailDrawer from '@/pages/SystemManagement/LogQuery/RunningLog/LogDetailDrawer';
+import { apiApiKeyLogList } from '@/services/agentDev';
 import type {
   SpaceLogInfo,
   SpaceLogQueryFilter,
 } from '@/types/interfaces/agent';
 import type { RequestResponse } from '@/types/interfaces/request';
-import { getIntegerOnlyFieldProps } from '@/utils/inputValidation';
-import { EyeOutlined } from '@ant-design/icons';
+// import { getIntegerOnlyFieldProps } from '@/utils/inputValidation';
 import type {
   ActionType,
   FormInstance,
   ProColumns,
 } from '@ant-design/pro-components';
-import { message, Tooltip } from 'antd';
+import { message } from 'antd';
 import dayjs from 'dayjs';
 import React, {
   useCallback,
@@ -26,32 +26,23 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import {
-  history,
-  useLocation,
-  useModel,
-  useParams,
-  useSearchParams,
-} from 'umi';
-import LogDetailDrawer from '../LogDetailDrawer';
+import { useLocation, useModel, useParams, useSearchParams } from 'umi';
 
 /**
- * 工作空间日志查询（ProTable 版本）
+ * API 调用日志查询（ProTable 版本）
  * - 支持：筛选查询、分页、点击行查看详情
- * - 数据源：apiSpaceLogList / apiSpaceLogDetail
  */
 const LogProTable: React.FC = () => {
+  const { hasPermission } = useModel('menuModel');
   const params = useParams();
   const location = useLocation();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const spaceId = Number(params.spaceId);
   const actionRef = useRef<ActionType>();
   const formRef = useRef<FormInstance>();
 
   const [detailsVisible, setDetailsVisible] = useState<boolean>(false);
   const [currentId, setCurrentId] = useState<string>();
-
-  const { userInfo } = useModel('userInfo');
 
   // 从 URL 查询参数中获取 targetType，用于初始化查询表单
   const targetTypeFromUrl = useMemo(() => {
@@ -65,36 +56,11 @@ const LogProTable: React.FC = () => {
     return searchParams.get('targetId') || undefined;
   }, [location.search]);
 
-  // 通用：更新 URL 查询参数
-  const handleSearchParamChange = useCallback(
-    (key: 'targetType' | 'targetId', value?: string) => {
-      const newParams = new URLSearchParams(searchParams);
-      if (value) {
-        newParams.set(key, value);
-      } else {
-        newParams.delete(key);
-      }
-      setSearchParams(newParams);
-    },
-    [searchParams, setSearchParams],
-  );
-
-  // 当 targetType 变化时，更新 URL 参数
-  const handleTargetTypeChange = useCallback(
-    (value: string) => {
-      handleSearchParamChange('targetType', value);
-    },
-    [handleSearchParamChange],
-  );
-
-  // 当 targetId 变化时，更新 URL 参数
-  const handleTargetIdChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      const value = e?.target ? e.target.value : e;
-      handleSearchParamChange('targetId', String(value));
-    },
-    [handleSearchParamChange],
-  );
+  // 从 URL 查询参数中获取 requestId，用于初始化查询表单
+  const requestIdFromUrl = useMemo(() => {
+    const searchParams = new URLSearchParams(location.search);
+    return searchParams.get('requestId') || undefined;
+  }, [location.search]);
 
   const handleCloseDetails = useCallback(() => {
     setDetailsVisible(false);
@@ -114,7 +80,6 @@ const LogProTable: React.FC = () => {
         fieldProps: {
           placeholder: '请选择类型',
           allowClear: true,
-          onChange: handleTargetTypeChange,
         },
       },
       {
@@ -125,7 +90,6 @@ const LogProTable: React.FC = () => {
         initialValue: targetIdFromUrl,
         fieldProps: {
           placeholder: '请输入对象ID',
-          onChange: handleTargetIdChange,
         },
       },
       {
@@ -141,55 +105,26 @@ const LogProTable: React.FC = () => {
         width: 160,
         ellipsis: true,
         hideInTable: false,
+        initialValue: requestIdFromUrl,
         fieldProps: { placeholder: '请输入请求ID' },
       },
-      {
-        title: '用户ID',
-        dataIndex: 'userId',
-        width: 100,
-        ellipsis: true,
-        fieldProps: getIntegerOnlyFieldProps(
-          '请输入用户ID，仅支持输入整数',
-          18,
-        ),
-      },
-      {
-        title: '用户名',
-        dataIndex: 'userName',
-        width: 180,
-        ellipsis: true,
-        fieldProps: { placeholder: '请输入用户名' },
-      },
+      // {
+      //   title: '用户ID',
+      //   dataIndex: 'userId',
+      //   width: 100,
+      //   ellipsis: true,
+      //   fieldProps: getIntegerOnlyFieldProps(
+      //     '请输入用户ID，仅支持输入整数',
+      //     18,
+      //   ),
+      // },
+
       {
         title: '会话ID',
         dataIndex: 'conversationId',
         width: 140,
+        ellipsis: true,
         fieldProps: { placeholder: '请输入会话ID' },
-        render: (_, record) => {
-          if (!record.conversationId) return '-';
-          const isCurrentUser = userInfo?.id === record.userId;
-
-          return (
-            <div className="flex items-center gap-2">
-              <span className="truncate">{record.conversationId}</span>
-              {isCurrentUser && (
-                <Tooltip title="查看会话详情">
-                  <a
-                    style={{ marginLeft: 5 }}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      history.push(
-                        `/home/chat/${record.conversationId}/${record.targetId}`,
-                      );
-                    }}
-                  >
-                    <EyeOutlined className="text-primary hover:opacity-80 cursor-pointer" />
-                  </a>
-                </Tooltip>
-              )}
-            </div>
-          );
-        },
       },
 
       {
@@ -268,12 +203,7 @@ const LogProTable: React.FC = () => {
         },
       },
     ],
-    [
-      handleTargetIdChange,
-      handleTargetTypeChange,
-      targetIdFromUrl,
-      targetTypeFromUrl,
-    ],
+    [],
   );
 
   // 中间变量用于判断是否是点击重置按钮
@@ -285,22 +215,12 @@ const LogProTable: React.FC = () => {
       // 判断是否是点击重置按钮
       if (isReset.current) {
         isReset.current = false;
-        // 重置表单
+        // 使用 resetFields 恢复到 initialValue (包含由 URL 初始化的值)
         formRef.current?.resetFields();
-        // 设置表单值为空(需要特殊处理)
-        formRef.current?.setFieldsValue({
-          targetType: undefined,
-          targetId: undefined,
-        });
-
-        // 删除查询参数,防止重复查询
-        searchParams.delete('targetType');
-        searchParams.delete('targetId');
-        searchParams.delete('from'); // 需要特殊处理(只有特殊情况会用到)
-        setSearchParams(searchParams);
+        // 确保 tableParams 包含重置后的所有表单项，避免参数丢失
         tableParams = {
-          current: tableParams.current,
-          pageSize: tableParams.pageSize,
+          ..._tableParams,
+          ...formRef.current?.getFieldsValue(),
         };
       }
       const current = Number(tableParams.current || 1);
@@ -339,7 +259,7 @@ const LogProTable: React.FC = () => {
         const from = searchParams.get('from') || undefined;
         // 额外查询条件
         if (from) queryFilter.from = from;
-        const resp = (await apiSpaceLogList({
+        const resp = (await apiApiKeyLogList({
           queryFilter,
           current,
           pageSize,
@@ -395,7 +315,6 @@ const LogProTable: React.FC = () => {
         fixed: 'right',
         align: 'center',
         render: (_: any, record: SpaceLogInfo) => {
-          // const disabled = !record?.requestId || !(record?.spaceId ?? spaceId);
           return (
             <TableActions
               record={record}
@@ -403,6 +322,7 @@ const LogProTable: React.FC = () => {
                 {
                   key: 'detail',
                   label: '详情',
+                  disabled: !hasPermission('system_running_log_query_detail'),
                   onClick: () => handleOpenDetails(record),
                 },
               ]}
@@ -415,12 +335,22 @@ const LogProTable: React.FC = () => {
 
   const handleReset = () => {
     isReset.current = true;
-    // 重置表格状态
+    // 显式重置表单到初始值 (URL 参数对应的默认值)
+    formRef.current?.setFieldsValue({
+      targetType: targetTypeFromUrl,
+      targetId: targetIdFromUrl,
+      requestId: requestIdFromUrl,
+      targetName: undefined,
+      conversationId: undefined,
+      input: undefined,
+      output: undefined,
+      createTimeRange: undefined,
+      userId: undefined,
+    });
+    // 重置表格内部状态并触发 reload
     actionRef.current?.reset?.();
-    // 设置分页参数:第1页,每页10条
+    // 显式跳转到第一页
     actionRef.current?.setPageInfo?.({ current: 1, pageSize: 15 });
-    // 延迟一下再重新加载,确保分页参数已设置
-    actionRef.current?.reload();
   };
 
   // 监听 location.state 变化
@@ -460,6 +390,7 @@ const LogProTable: React.FC = () => {
         dateFormatter="number"
         onSubmit={handleCloseDetails}
         onReset={handleReset}
+        showQueryButtons={hasPermission('system_running_log_query_list')}
       />
       <LogDetailDrawer
         open={detailsVisible}

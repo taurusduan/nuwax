@@ -5,6 +5,7 @@ import ConditionRender from '@/components/ConditionRender';
 import PermissionMask from '@/components/PermissionMask';
 import { UPLOAD_FILE_ACTION } from '@/constants/common.constants';
 import { ACCESS_TOKEN } from '@/constants/home.constants';
+import { t } from '@/services/i18nRuntime';
 import { TaskStatus } from '@/types/enums/agent';
 import { UploadFileStatus } from '@/types/enums/common';
 import type { ChatInputProps, UploadFileInfo } from '@/types/interfaces/common';
@@ -216,7 +217,13 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
           const uid = uuidv4();
           return {
             uid,
-            name: file.name || `粘贴图片-${Date.now()}-${index + 1}.png`,
+            name:
+              file.name ||
+              t(
+                'NuwaxPC.Components.ChatInputHome.pastedImageFileName',
+                Date.now(),
+                index + 1,
+              ),
             size: file.size,
             type: file.type,
             status: UploadFileStatus.uploading,
@@ -268,8 +275,13 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
               ),
             );
           } catch (error) {
-            console.error('图片上传失败:', error);
-            message.error(`${uploadFile.name} 上传失败`);
+            console.error('Image upload failed:', error);
+            message.error(
+              t(
+                'NuwaxPC.Components.ChatInputHome.uploadFailedWithName',
+                uploadFile.name,
+              ),
+            );
 
             // 更新为失败状态
             setUploadFiles((prev) =>
@@ -332,15 +344,15 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
   // 获取按钮提示文本
   const getButtonTooltip = () => {
     if (wholeDisabled) {
-      return '会话已禁用';
+      return t('NuwaxPC.Components.ChatInputHome.conversationDisabled');
     }
     if (disabledSend) {
-      return '请输入你的问题';
+      return t('NuwaxPC.Components.ChatInputHome.enterQuestion');
     }
     if (isConversationActive) {
-      return '点击停止当前会话';
+      return t('NuwaxPC.Components.ChatInputHome.clickStopConversation');
     }
-    return '点击发送消息';
+    return t('NuwaxPC.Components.ChatInputHome.clickSendMessage');
   };
 
   // 获取停止按钮提示文本
@@ -352,23 +364,23 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
         loadingStopConversation ||
         loadingStopTempConversation
       ) {
-        return '正在停止任务...';
+        return t('NuwaxPC.Components.ChatInputHome.stoppingTask');
       }
-      return '点击停止Agent任务';
+      return t('NuwaxPC.Components.ChatInputHome.clickStopAgentTask');
     }
 
     // 普通会话状态
     if (!isConversationActive) {
-      return '当前无进行中的会话';
+      return t('NuwaxPC.Components.ChatInputHome.noActiveConversation');
     }
     if (
       isStoppingConversation ||
       loadingStopConversation ||
       loadingStopTempConversation
     ) {
-      return '正在停止会话...';
+      return t('NuwaxPC.Components.ChatInputHome.stoppingConversation');
     }
-    return '点击停止当前会话';
+    return t('NuwaxPC.Components.ChatInputHome.clickStopConversation');
   };
 
   useEffect(() => {
@@ -395,7 +407,9 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
           visible={!hasPermission || isSandboxUnavailable}
           text={
             maskText ??
-            (!hasPermission ? '无智能体使用权限' : '会话关联的智能体电脑不可用')
+            (!hasPermission
+              ? t('NuwaxPC.Components.ChatInputHome.noAgentPermission')
+              : t('NuwaxPC.Components.ChatInputHome.agentComputerUnavailable'))
           }
         />
         {/*文件列表*/}
@@ -426,7 +440,9 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
           {/* 清空会话记录 */}
           {!!messageList?.filter((item: MessageInfo) => item.id)?.length && (
             <ConditionRender condition={!!onClear}>
-              <Tooltip title="清空会话记录">
+              <Tooltip
+                title={t('NuwaxPC.Components.ChatInputHome.clearRecord')}
+              >
                 <span
                   className={cx(
                     styles.clear,
@@ -479,7 +495,9 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
             }}
             showUploadList={false}
           >
-            <Tooltip title="上传附件">
+            <Tooltip
+              title={t('NuwaxPC.Components.ChatInputHome.uploadAttachment')}
+            >
               <span
                 className={cx(
                   'flex',
@@ -499,13 +517,13 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
               </span>
             </Tooltip>
           </Upload>
-          {/*任务智能体切换按钮*/}
+          {/*通用型智能体切换按钮*/}
           {showTaskAgentToggle && (
             <Tooltip
               title={
                 isTaskAgentActive
-                  ? '切换到普通模式'
-                  : '使用我的智能体电脑执行任务'
+                  ? t('NuwaxPC.Components.ChatInputHome.switchToNormalMode')
+                  : t('NuwaxPC.Components.ChatInputHome.useAgentComputerTask')
               }
             >
               <span
@@ -626,7 +644,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
       </div>
       {showAnnouncement && (
         <div className={cx(styles['announcement-box'])}>
-          内容由AI生成，请仔细甄别
+          {t('NuwaxPC.Components.ChatInputHome.generatedByAiNotice')}
         </div>
       )}
       {/* 滚动到底部按钮 */}

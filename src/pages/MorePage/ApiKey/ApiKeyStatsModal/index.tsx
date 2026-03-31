@@ -4,8 +4,9 @@ import type { ApiKeyInfo, ApiKeyStatsInfo } from '@/types/interfaces/account';
 import type { ProColumns } from '@ant-design/pro-components';
 import { Button, Modal, Typography } from 'antd';
 import React from 'react';
+import { history } from 'umi';
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 interface ApiKeyStatsModalProps {
   /** 是否显示弹窗 */
@@ -34,6 +35,13 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
   record,
 }) => {
   const columns: ProColumns<ApiKeyStatsInfo>[] = [
+    {
+      title: '接口名称',
+      dataIndex: 'name',
+      key: 'name',
+      ellipsis: true,
+      width: 200,
+    },
     {
       title: '接口地址',
       dataIndex: 'path',
@@ -76,16 +84,19 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
       key: 'action',
       width: 100,
       align: 'center',
-      render: (_, record) => (
+      render: (_, statsRecord) => (
         <TableActions
           type="link"
-          record={record}
+          record={statsRecord}
           actions={[
             {
               key: 'view',
               label: '查看记录',
               onClick: () => {
-                // 暂时不实现
+                onOpenChange(false);
+                history.push(
+                  `/more-page/api-key-logs?targetType=ApiKey&targetId=${record?.id}&requestId=${statsRecord.key}`,
+                );
               },
             },
           ]}
@@ -96,14 +107,7 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
 
   return (
     <Modal
-      title={
-        <div>
-          <Title level={4} style={{ color: '#1890ff', marginBottom: 4 }}>
-            调用统计
-          </Title>
-          <Text type="secondary">{record?.name}</Text>
-        </div>
-      }
+      title={<Title level={4}>调用统计 - {record?.name}</Title>}
       open={open}
       onCancel={() => onOpenChange(false)}
       width={1000}

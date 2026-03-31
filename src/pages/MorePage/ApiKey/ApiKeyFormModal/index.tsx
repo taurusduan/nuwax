@@ -99,10 +99,6 @@ const ApiKeyFormModal: React.FC<ApiKeyFormModalProps> = ({
       form={form}
       onFinish={onFinish}
       width={520}
-      modalProps={{
-        destroyOnClose: true,
-        maskClosable: false,
-      }}
     >
       <ProFormText
         name="name"
@@ -114,7 +110,7 @@ const ApiKeyFormModal: React.FC<ApiKeyFormModalProps> = ({
       <ProFormDatePicker
         name="expire"
         label="过期时间"
-        placeholder="请选择过期时间"
+        placeholder="过期时间"
         tooltip="留空表示永不过期"
       />
 
