@@ -1194,3 +1194,31 @@
 - 风险/阻塞：
   - `AppDev/SystemManagement` 仍有较大存量，下一批需要并行推进页面层与 hooks 层
 - 下一步：按 inventory 继续推进 `AppDev` 与 `SystemManagement` Top 清单，同时补齐 Antv-X6 剩余注释型文本
+
+### 里程碑：Top 模块第四十八批实改（AppDev hooks + 页面组件批量接入）
+
+- 时间：2026-03-31 14:46
+- 任务：推进 `AppDev` 高优先清单，处理聊天链路提示文案与页面组件静态文本，补齐默认中英文词典
+- 执行命令：
+  - `pnpm prettier --write src/hooks/useAppDevChat.ts src/pages/AppDev/components/ChatArea/components/ChatInputHome/index.tsx src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx src/pages/AppDev/components/ChatArea/components/ReactScrollToBottomContainer/index.tsx src/pages/AppDev/components/ChatArea/genAppDevPlugin.tsx src/pages/AppDev/components/DevLogConsole/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/hooks/useAppDevChat.ts`
+    - `src/pages/AppDev/components/ChatArea/components/ChatInputHome/index.tsx`
+    - `src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx`
+    - `src/pages/AppDev/components/ChatArea/components/ReactScrollToBottomContainer/index.tsx`
+    - `src/pages/AppDev/components/ChatArea/genAppDevPlugin.tsx`
+    - `src/pages/AppDev/components/DevLogConsole/index.tsx`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `useAppDevChat` 的 ToolCall/错误弹窗/停止服务确认/输入校验提示统一接入 `t(...)`
+  - `PlanProcess` 从 `dict(...)` 切换为 `t(...)`，并清理注释中残留的状态中文字面量
+  - `DevLogConsole` 的标题、tooltip、按钮、空态与加载态文本全部接入 `t(...)`
+  - `ChatInputHome`、`ReactScrollToBottomContainer`、`genAppDevPlugin` 清理残留中文字符串（含注释与失败提示）
+  - 新增 `NuwaxPC.Pages.AppDevChat.*` 与 `NuwaxPC.Pages.AppDevDevLogConsole.*` 默认中英文词典
+  - 治理总量从 `2783` 下降至 `2747`（-36）
+- 风险/阻塞：
+  - `AppDev` 仍有存量分布在 `FileTreePanel`、`DesignViewer/utils`、`index.tsx` 等文件
+- 下一步：继续按 inventory 推进 `AppDev` 页面组件剩余清单，再切回 `SystemManagement` 批量处理

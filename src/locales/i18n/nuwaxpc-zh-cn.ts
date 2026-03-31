@@ -1166,6 +1166,33 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
     '向 AI 助手提问，开始你的项目开发',
   'NuwaxPC.Pages.AppDevChatArea.autoFixingProgress':
     '({0}/{1}) 尝试自动修复中...',
+  'NuwaxPC.Pages.AppDevChat.toolCall': '工具调用',
+  'NuwaxPC.Pages.AppDevChat.toolCallUpdate': '工具调用更新',
+  'NuwaxPC.Pages.AppDevChat.errorMessageTitle': '错误消息',
+  'NuwaxPC.Pages.AppDevChat.stopAgentAndRestartDialog':
+    '服务异常，请停止Agent服务并重新开始对话',
+  'NuwaxPC.Pages.AppDevChat.agentServiceStopped': 'Agent服务已停止',
+  'NuwaxPC.Pages.AppDevChat.stopAgentServiceFailedWithReason':
+    '停止Agent服务失败: {0}',
+  'NuwaxPC.Pages.AppDevChat.stopAgentServiceFailed': '停止Agent服务失败',
+  'NuwaxPC.Pages.AppDevChat.agentServiceRunningDetected':
+    '检测到后台Agent服务正在运行',
+  'NuwaxPC.Pages.AppDevChat.stopRunningAgentServiceConfirm':
+    '是否停止当前运行的Agent服务？',
+  'NuwaxPC.Pages.AppDevChat.sendCancelled': '已取消发送',
+  'NuwaxPC.Pages.AppDevChat.serviceExceptionTryLater': '服务异常，请稍后再试',
+  'NuwaxPC.Pages.AppDevChat.aiAssistantConnectionFailed': 'AI助手连接失败',
+  'NuwaxPC.Pages.AppDevChat.inputMessageRequired': '请输入消息内容',
+  'NuwaxPC.Pages.AppDevDevLogConsole.clickToAddToChat': '点击添加到聊天框',
+  'NuwaxPC.Pages.AppDevDevLogConsole.headerTitle': '开发服务器日志',
+  'NuwaxPC.Pages.AppDevDevLogConsole.latestLogsContainErrors':
+    '最新日志包含错误',
+  'NuwaxPC.Pages.AppDevDevLogConsole.quickIssueFix': '一键问题处理',
+  'NuwaxPC.Pages.AppDevDevLogConsole.refreshLogs': '刷新日志',
+  'NuwaxPC.Pages.AppDevDevLogConsole.clearLogs': '清空日志',
+  'NuwaxPC.Pages.AppDevDevLogConsole.closeLogConsole': '关闭日志控制台',
+  'NuwaxPC.Pages.AppDevDevLogConsole.loadingLogs': '正在加载日志...',
+  'NuwaxPC.Pages.AppDevDevLogConsole.noLogData': '暂无日志数据',
   'NuwaxPC.Pages.AppDevContentViewer.loadingFileContentTitle':
     '正在加载文件内容',
   'NuwaxPC.Pages.AppDevContentViewer.loadingDescription': '请稍候...',

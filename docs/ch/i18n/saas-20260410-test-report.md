@@ -777,3 +777,22 @@
   - `src/pages/Antv-X6/v3/constants/node.constants.ts`
   - `src/locales/i18n/nuwaxpc-zh-cn.ts`
   - `src/locales/i18n/nuwaxpc-en-us.ts`
+
+### 新增验证（Top 模块第四十八批）
+
+- 命令：`pnpm prettier --write src/hooks/useAppDevChat.ts src/pages/AppDev/components/ChatArea/components/ChatInputHome/index.tsx src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx src/pages/AppDev/components/ChatArea/components/ReactScrollToBottomContainer/index.tsx src/pages/AppDev/components/ChatArea/genAppDevPlugin.tsx src/pages/AppDev/components/DevLogConsole/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `2783` 下降至 `2747`
+- 覆盖文件：
+  - `src/hooks/useAppDevChat.ts`
+  - `src/pages/AppDev/components/ChatArea/components/ChatInputHome/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/components/PlanProcess/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/components/ReactScrollToBottomContainer/index.tsx`
+  - `src/pages/AppDev/components/ChatArea/genAppDevPlugin.tsx`
+  - `src/pages/AppDev/components/DevLogConsole/index.tsx`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`

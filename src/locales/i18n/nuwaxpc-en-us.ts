@@ -1317,6 +1317,36 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Ask the AI assistant to start your project development',
   'NuwaxPC.Pages.AppDevChatArea.autoFixingProgress':
     '({0}/{1}) Trying automatic fixes...',
+  'NuwaxPC.Pages.AppDevChat.toolCall': 'Tool call',
+  'NuwaxPC.Pages.AppDevChat.toolCallUpdate': 'Tool call update',
+  'NuwaxPC.Pages.AppDevChat.errorMessageTitle': 'Error',
+  'NuwaxPC.Pages.AppDevChat.stopAgentAndRestartDialog':
+    'Service exception. Stop Agent service and restart the conversation.',
+  'NuwaxPC.Pages.AppDevChat.agentServiceStopped': 'Agent service stopped',
+  'NuwaxPC.Pages.AppDevChat.stopAgentServiceFailedWithReason':
+    'Failed to stop Agent service: {0}',
+  'NuwaxPC.Pages.AppDevChat.stopAgentServiceFailed':
+    'Failed to stop Agent service',
+  'NuwaxPC.Pages.AppDevChat.agentServiceRunningDetected':
+    'A background Agent service is running',
+  'NuwaxPC.Pages.AppDevChat.stopRunningAgentServiceConfirm':
+    'Stop the currently running Agent service?',
+  'NuwaxPC.Pages.AppDevChat.sendCancelled': 'Send cancelled',
+  'NuwaxPC.Pages.AppDevChat.serviceExceptionTryLater':
+    'Service exception, please try again later',
+  'NuwaxPC.Pages.AppDevChat.aiAssistantConnectionFailed':
+    'AI assistant connection failed',
+  'NuwaxPC.Pages.AppDevChat.inputMessageRequired': 'Please enter a message',
+  'NuwaxPC.Pages.AppDevDevLogConsole.clickToAddToChat': 'Click to add to chat',
+  'NuwaxPC.Pages.AppDevDevLogConsole.headerTitle': 'Dev Server Logs',
+  'NuwaxPC.Pages.AppDevDevLogConsole.latestLogsContainErrors':
+    'Latest logs contain errors',
+  'NuwaxPC.Pages.AppDevDevLogConsole.quickIssueFix': 'Quick issue fix',
+  'NuwaxPC.Pages.AppDevDevLogConsole.refreshLogs': 'Refresh logs',
+  'NuwaxPC.Pages.AppDevDevLogConsole.clearLogs': 'Clear logs',
+  'NuwaxPC.Pages.AppDevDevLogConsole.closeLogConsole': 'Close log console',
+  'NuwaxPC.Pages.AppDevDevLogConsole.loadingLogs': 'Loading logs...',
+  'NuwaxPC.Pages.AppDevDevLogConsole.noLogData': 'No log data',
   'NuwaxPC.Pages.AppDevContentViewer.loadingFileContentTitle':
     'Loading file content',
   'NuwaxPC.Pages.AppDevContentViewer.loadingDescription': 'Please wait...',

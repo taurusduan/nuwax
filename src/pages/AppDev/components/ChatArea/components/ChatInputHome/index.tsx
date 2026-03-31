@@ -408,7 +408,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
     (requestId?: string) => {
       //如果是输出过程中 或者 中止会话过程中 不能触发enter事件
       if (chat.isChatLoading || isSendingMessage || isStoppingTask) {
-        // console.warn('正在处理中，不能发送消息');
+        // console.warn('Processing in progress, sending is blocked');
         return;
       }
 
@@ -657,7 +657,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
             return { success: false, uid, error: result.message };
           }
         } catch (error) {
-          // console.error('上传图片失败:', error);
+          // console.error('Failed to upload image:', error);
           // 上传失败，更新状态
           setAttachmentPrototypeImages((prev) =>
             prev.map((item) =>
