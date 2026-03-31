@@ -1670,3 +1670,21 @@
 - 风险/阻塞：
   - 当前最高残量在 `src/components/business-component`（144）与 `src/hooks`（109）
 - 下一步：继续推进 `src/components/business-component` 批量治理
+
+### 里程碑：Top 模块第六十九批实改（AppDevEmptyState key 化）
+
+- 时间：2026-03-31 19:10
+- 任务：清理 `src/components/business-component/AppDevEmptyState/index.tsx` 的硬编码中文文案，统一切换到 `t(...)` 并补齐本地中英文默认词典
+- 执行命令：
+  - `pnpm prettier --write src/components/business-component/AppDevEmptyState/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改上述文件
+- 结果摘要：
+  - `AppDevEmptyState` 默认标题、描述、按钮文本与弹窗关闭按钮全部改为 `t('NuwaxPC.Components.AppDevEmptyState.*')`
+  - 新增 `AppDevEmptyState` 组件域双语 key，作为本地默认词典与平台导入基础
+  - `src/components/business-component` 模块命中从 `144` 下降至 `110`
+  - 治理总量从 `2153` 下降至 `2119`（-34）
+- 风险/阻塞：
+  - `business-component` 仍有高残量，集中在 `VncPreview`、`FilePreview`、`HistoryConversationList`、`PagePreviewIframe`
+- 下一步：继续按 inventory Top 文件推进上述组件的批量接入

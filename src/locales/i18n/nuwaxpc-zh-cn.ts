@@ -54,6 +54,58 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Components.UserOperate.myComputer': '我的电脑',
   'NuwaxPC.Components.UserOperate.noUnreadMessage': '暂无未读消息',
   'NuwaxPC.Components.UserOperate.unreadMessageCount': '{0} 条未读消息',
+  'NuwaxPC.Components.AppDevEmptyState.viewFullText': '查看完整内容',
+  'NuwaxPC.Components.AppDevEmptyState.loadingTitle': '加载中...',
+  'NuwaxPC.Components.AppDevEmptyState.loadingDescription':
+    '正在加载，请稍候...',
+  'NuwaxPC.Components.AppDevEmptyState.errorTitle': '出现错误',
+  'NuwaxPC.Components.AppDevEmptyState.errorDescription':
+    '加载过程中出现错误，请重试',
+  'NuwaxPC.Components.AppDevEmptyState.networkErrorTitle': '网络连接失败',
+  'NuwaxPC.Components.AppDevEmptyState.networkErrorDescription':
+    '网络连接异常，请检查网络设置后重试',
+  'NuwaxPC.Components.AppDevEmptyState.permissionDeniedTitle': '权限不足',
+  'NuwaxPC.Components.AppDevEmptyState.permissionDeniedDescription':
+    '你没有访问此资源的权限，请联系管理员',
+  'NuwaxPC.Components.AppDevEmptyState.emptyTitle': '暂无内容',
+  'NuwaxPC.Components.AppDevEmptyState.emptyDescription':
+    '当前没有可显示的内容',
+  'NuwaxPC.Components.AppDevEmptyState.noDataTitle': '暂无数据',
+  'NuwaxPC.Components.AppDevEmptyState.noDataDescription': '当前没有可用的数据',
+  'NuwaxPC.Components.AppDevEmptyState.serverStartingTitle':
+    '等待开发服务器启动',
+  'NuwaxPC.Components.AppDevEmptyState.serverStartingDescription':
+    '正在启动开发服务器，请稍候⋯',
+  'NuwaxPC.Components.AppDevEmptyState.serverRestartingTitle': '重启中',
+  'NuwaxPC.Components.AppDevEmptyState.serverRestartingDescription':
+    '正在重启开发服务器，请稍候⋯',
+  'NuwaxPC.Components.AppDevEmptyState.developingTitle': '开发中',
+  'NuwaxPC.Components.AppDevEmptyState.developingDescription':
+    '正在启动开发服务器，请稍候⋯',
+  'NuwaxPC.Components.AppDevEmptyState.importingProjectTitle': '导入项目中',
+  'NuwaxPC.Components.AppDevEmptyState.importingProjectDescription':
+    '正在启动开发服务器，请稍候⋯',
+  'NuwaxPC.Components.AppDevEmptyState.serverErrorTitle': '服务器错误',
+  'NuwaxPC.Components.AppDevEmptyState.serverErrorDescription':
+    '预览页面加载失败，请检查开发服务器状态或网络连接',
+  'NuwaxPC.Components.AppDevEmptyState.previewLoadFailedTitle': '预览加载失败',
+  'NuwaxPC.Components.AppDevEmptyState.previewLoadFailedDescription':
+    '预览页面加载失败，请检查开发服务器状态或网络连接',
+  'NuwaxPC.Components.AppDevEmptyState.serverStartFailedTitle':
+    '开发服务器启动失败',
+  'NuwaxPC.Components.AppDevEmptyState.serverStartFailedDescription':
+    '正在启动开发服务器，请稍候⋯',
+  'NuwaxPC.Components.AppDevEmptyState.noPreviewUrlTitle': '暂无预览地址',
+  'NuwaxPC.Components.AppDevEmptyState.noPreviewUrlDescription':
+    '正在启动开发服务器，请稍候⋯',
+  'NuwaxPC.Components.AppDevEmptyState.conversationEmptyTitle': '开始新对话',
+  'NuwaxPC.Components.AppDevEmptyState.conversationEmptyDescription':
+    '向 AI 助手提问，开始你的项目开发',
+  'NuwaxPC.Components.AppDevEmptyState.addDataDescription':
+    '点击“+“添加数据资源',
+  'NuwaxPC.Components.AppDevEmptyState.noFileTitle': '暂无文件',
+  'NuwaxPC.Components.AppDevEmptyState.noFileDescription': '当前目录下暂无文件',
+  'NuwaxPC.Components.AppDevEmptyState.close': '关闭',
   'NuwaxPC.Pages.Login.inputEmailRequired': '请输入邮箱',
   'NuwaxPC.Pages.Login.inputPhoneRequired': '请输入手机号',
   'NuwaxPC.Pages.Login.invalidEmail': '请输入有效邮箱',

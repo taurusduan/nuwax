@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T10:57:08.253Z
+- 生成时间：2026-03-31T11:07:42.260Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2153
-- hardcoded 中文：2153
+- 总问题数：2119
+- hardcoded 中文：2119
 - legacy System key：0
 - invalid dict key：0
 
@@ -15,7 +15,7 @@
 
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
-| src/components/business-component | 144 | 0 | 0 | 144 |
+| src/components/business-component | 110 | 0 | 0 | 110 |
 | src/hooks | 109 | 0 | 0 | 109 |
 | src/components/FileTreeView | 97 | 0 | 0 | 97 |
 | src/pages/SpaceKnowledge | 82 | 0 | 0 | 82 |
@@ -115,40 +115,6 @@
 
 ## src/components/business-component
 
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:134 -> `查看完整内容`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:152 -> `加载中...`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:153 -> `正在加载，请稍候...`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:164 -> `出现错误`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:165 -> `加载过程中出现错误，请重试`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:176 -> `网络连接失败`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:177 -> `网络连接异常，请检查网络设置后重试`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:188 -> `权限不足`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:189 -> `你没有访问此资源的权限，请联系管理员`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:201 -> `暂无内容`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:202 -> `当前没有可显示的内容`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:214 -> `暂无数据`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:215 -> `当前没有可用的数据`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:226 -> `等待开发服务器启动`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:227 -> `正在启动开发服务器，请稍候⋯`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:238 -> `重启中`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:239 -> `正在重启开发服务器，请稍候⋯`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:250 -> `开发中`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:251 -> `正在启动开发服务器，请稍候⋯`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:262 -> `导入项目中`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:263 -> `正在启动开发服务器，请稍候⋯`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:274 -> `服务器错误`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:275 -> `预览页面加载失败，请检查开发服务器状态或网络连接`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:286 -> `预览加载失败`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:287 -> `预览页面加载失败，请检查开发服务器状态或网络连接`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:298 -> `开发服务器启动失败`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:299 -> `正在启动开发服务器，请稍候⋯`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:310 -> `暂无预览地址`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:311 -> `正在启动开发服务器，请稍候⋯`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:323 -> `开始新对话`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:324 -> `向 AI 助手提问，开始你的项目开发`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:337 -> `点击“+“添加数据资源`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:345 -> `暂无文件`
-- [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:346 -> `当前目录下暂无文件`
 - [hardcoded_chinese] src/components/business-component/ConversationDetails/index.tsx:182 -> `页面预览`
 - [hardcoded_chinese] src/components/business-component/ConversationDetails/index.tsx:294 -> `请填写必填参数`
 - [hardcoded_chinese] src/components/business-component/ConversationDetails/index.tsx:388 -> `和${cachedAgentName}开始会话`
@@ -195,7 +161,41 @@
 - [hardcoded_chinese] src/components/business-component/HistoryConversationList/index.tsx:203 -> `取消`
 - [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:94 -> `复制模板`
 - [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:265 -> `[PagePreviewIframe] popstate 事件：找不到目标 URL，已添加到历史记录`
-- ... 省略 64 条
+- [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:333 -> `[PagePreviewIframe] 无法访问 iframe 文档（可能是跨域限制）:`
+- [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:353 -> `页面预览`
+- [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:366 -> `无法读取数据`
+- [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:529 -> `[PagePreviewIframe] 无法后退：已在历史记录开头`
+- [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:556 -> `[PagePreviewIframe] 无法前进：已在历史记录末尾`
+- [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:608 -> `刷新`
+- [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:621 -> `后退`
+- [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:635 -> `前进`
+- [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:649 -> `复制链接`
+- [hardcoded_chinese] src/components/business-component/ThemeConfig/BackgroundImagePanel.tsx:39 -> `上传文件:`
+- [hardcoded_chinese] src/components/business-component/ThemeConfig/BackgroundImagePanel.tsx:71 -> `暂无可用背景图`
+- [hardcoded_chinese] src/components/business-component/ThemeConfig/NavigationStylePanel.tsx:35 -> `风格1`
+- [hardcoded_chinese] src/components/business-component/ThemeConfig/NavigationStylePanel.tsx:36 -> `紧凑模式：60px宽度，无文字显示，页面容器有外边距和圆角`
+- [hardcoded_chinese] src/components/business-component/ThemeConfig/NavigationStylePanel.tsx:41 -> `风格2`
+- [hardcoded_chinese] src/components/business-component/ThemeConfig/NavigationStylePanel.tsx:42 -> `展开模式：88px宽度，显示文字，页面容器无外边距和圆角`
+- [hardcoded_chinese] src/components/business-component/ThemeConfig/NavigationStylePanel.tsx:58 -> `NavigationStylePanel - 切换导航栏风格:`
+- [hardcoded_chinese] src/components/business-component/ThemeConfig/NavigationStylePanel.tsx:65 -> `NavigationStylePanel - 切换深浅色风格`
+- [hardcoded_chinese] src/components/business-component/ThemeConfig/ThemeColorPanel.tsx:59 -> `自定义`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:36 -> `你已长时间未操作`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:45 -> `继续使用`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:80 -> `你已长时间未操作`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:81 -> `系统将自动关闭智能体电脑连接，以节省资源。`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:82 -> `继续使用`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:127 -> `✅ 用户取消操作`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:127 -> `关闭弹窗并重置倒计时`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:140 -> `⚠️ 已触发过超时回调，跳过`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:145 -> `⏱️ 倒计时结束`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:145 -> `执行超时回调`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:156 -> `🖱️ 检测到用户活动`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:156 -> `自动取消`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:170 -> `📢 弹窗打开`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:170 -> `开始 ${countdownSeconds}s 倒计时`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:186 -> `⏳ 倒计时`
+- [hardcoded_chinese] src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx:186 -> `剩余 ${prev - 1}s`
+- ... 省略 30 条
 
 ## src/hooks
 

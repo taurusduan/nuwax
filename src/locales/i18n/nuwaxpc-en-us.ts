@@ -54,6 +54,66 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Components.UserOperate.myComputer': 'My Computer',
   'NuwaxPC.Components.UserOperate.noUnreadMessage': 'No unread message',
   'NuwaxPC.Components.UserOperate.unreadMessageCount': '{0} unread messages',
+  'NuwaxPC.Components.AppDevEmptyState.viewFullText': 'View full text',
+  'NuwaxPC.Components.AppDevEmptyState.loadingTitle': 'Loading...',
+  'NuwaxPC.Components.AppDevEmptyState.loadingDescription':
+    'Loading, please wait...',
+  'NuwaxPC.Components.AppDevEmptyState.errorTitle': 'Error occurred',
+  'NuwaxPC.Components.AppDevEmptyState.errorDescription':
+    'An error occurred during loading. Please retry.',
+  'NuwaxPC.Components.AppDevEmptyState.networkErrorTitle':
+    'Network connection failed',
+  'NuwaxPC.Components.AppDevEmptyState.networkErrorDescription':
+    'Network issue detected. Check settings and retry.',
+  'NuwaxPC.Components.AppDevEmptyState.permissionDeniedTitle':
+    'Permission denied',
+  'NuwaxPC.Components.AppDevEmptyState.permissionDeniedDescription':
+    'You do not have permission to access this resource.',
+  'NuwaxPC.Components.AppDevEmptyState.emptyTitle': 'No content',
+  'NuwaxPC.Components.AppDevEmptyState.emptyDescription':
+    'There is no content to display.',
+  'NuwaxPC.Components.AppDevEmptyState.noDataTitle': 'No data',
+  'NuwaxPC.Components.AppDevEmptyState.noDataDescription':
+    'There is no available data.',
+  'NuwaxPC.Components.AppDevEmptyState.serverStartingTitle':
+    'Waiting for dev server startup',
+  'NuwaxPC.Components.AppDevEmptyState.serverStartingDescription':
+    'Starting development server, please wait...',
+  'NuwaxPC.Components.AppDevEmptyState.serverRestartingTitle': 'Restarting',
+  'NuwaxPC.Components.AppDevEmptyState.serverRestartingDescription':
+    'Restarting development server, please wait...',
+  'NuwaxPC.Components.AppDevEmptyState.developingTitle': 'Developing',
+  'NuwaxPC.Components.AppDevEmptyState.developingDescription':
+    'Starting development server, please wait...',
+  'NuwaxPC.Components.AppDevEmptyState.importingProjectTitle':
+    'Importing project',
+  'NuwaxPC.Components.AppDevEmptyState.importingProjectDescription':
+    'Starting development server, please wait...',
+  'NuwaxPC.Components.AppDevEmptyState.serverErrorTitle': 'Server error',
+  'NuwaxPC.Components.AppDevEmptyState.serverErrorDescription':
+    'Preview failed to load. Check server status or network.',
+  'NuwaxPC.Components.AppDevEmptyState.previewLoadFailedTitle':
+    'Preview load failed',
+  'NuwaxPC.Components.AppDevEmptyState.previewLoadFailedDescription':
+    'Preview failed to load. Check server status or network.',
+  'NuwaxPC.Components.AppDevEmptyState.serverStartFailedTitle':
+    'Development server failed to start',
+  'NuwaxPC.Components.AppDevEmptyState.serverStartFailedDescription':
+    'Starting development server, please wait...',
+  'NuwaxPC.Components.AppDevEmptyState.noPreviewUrlTitle':
+    'No preview URL available',
+  'NuwaxPC.Components.AppDevEmptyState.noPreviewUrlDescription':
+    'Starting development server, please wait...',
+  'NuwaxPC.Components.AppDevEmptyState.conversationEmptyTitle':
+    'Start a new conversation',
+  'NuwaxPC.Components.AppDevEmptyState.conversationEmptyDescription':
+    'Ask the AI assistant to start your project development.',
+  'NuwaxPC.Components.AppDevEmptyState.addDataDescription':
+    'Click "+" to add data resources',
+  'NuwaxPC.Components.AppDevEmptyState.noFileTitle': 'No files',
+  'NuwaxPC.Components.AppDevEmptyState.noFileDescription':
+    'No files in the current directory.',
+  'NuwaxPC.Components.AppDevEmptyState.close': 'Close',
   'NuwaxPC.Pages.Login.inputEmailRequired': 'Please input email',
   'NuwaxPC.Pages.Login.inputPhoneRequired': 'Please input phone number',
   'NuwaxPC.Pages.Login.invalidEmail': 'Please input a valid email',
