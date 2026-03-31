@@ -269,3 +269,11 @@
 - 影响：
   - 状态映射、表头、操作、确认提示都可统一从词典维护
   - 后续 `CreateTimedTask` 可复用同域 key，减少词典分散
+
+### D-037 SystemConfig 页面与表单拆分域
+
+- 决策：`SystemConfig/index` 与 `BaseFormItem` 分别使用 `SystemConfig`、`SystemConfigBaseFormItem` 域管理 key
+- 原因：页面级标题/提交提示与表单校验提示职责不同，分域能避免后续在同域中混杂页面与字段规则文案
+- 影响：
+  - 页面和表单文案维护边界清晰，后续新增校验规则无需污染页面域
+  - 词典定位更直接，便于联调排查

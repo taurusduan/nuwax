@@ -1266,3 +1266,27 @@
 - 风险/阻塞：
   - `TaskManage/CreateTimedTask` 仍有高密度中文文案需要持续处理
 - 下一步：继续推进 `CreateTimedTask` 与 `SystemConfig/BaseTab/BaseFormItem`
+
+### 里程碑：Top 模块第五十一批实改（SystemConfig 小文件补齐）
+
+- 时间：2026-03-31 15:03
+- 任务：处理 `SystemConfig/SystemConfig` 下 `BaseFormItem`、`BaseTab`、`index` 的剩余中文文案
+- 执行命令：
+  - `pnpm prettier --write src/pages/SystemManagement/SystemConfig/SystemConfig/BaseFormItem/index.tsx src/pages/SystemManagement/SystemConfig/SystemConfig/BaseTab/index.tsx src/pages/SystemManagement/SystemConfig/SystemConfig/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/SystemConfig/SystemConfig/BaseFormItem/index.tsx`
+    - `src/pages/SystemManagement/SystemConfig/SystemConfig/BaseTab/index.tsx`
+    - `src/pages/SystemManagement/SystemConfig/SystemConfig/index.tsx`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `BaseFormItem` 域名校验错误提示切换到 `t(...)`
+  - `BaseTab` 保存成功提示切换到 `t(...)`
+  - `SystemConfig/index` 页面标题与保存按钮文本切换到词典
+  - 新增 `NuwaxPC.Pages.SystemConfig.*` 与 `NuwaxPC.Pages.SystemConfigBaseFormItem.*` 默认中英文词典
+  - 治理总量从 `2697` 下降至 `2694`（-3）
+- 风险/阻塞：
+  - `SystemManagement` 主体存量仍在 `CreateTimedTask` 和 `ThemeConfig` 其余日志/注释项
+- 下一步：继续推进 `CreateTimedTask` 页面表单与提示文案
