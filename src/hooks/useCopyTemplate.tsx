@@ -44,7 +44,7 @@ export const useCopyTemplate = (): UseCopyTemplateReturn => {
       manual: true,
       debounceInterval: 300,
       onSuccess: (data: number, params: PublishTemplateCopyParams[]) => {
-        message.success('模板复制成功');
+        message.success('Template copied successfully');
         // 关闭弹窗
         setOpenMove(false);
         // 目标空间ID

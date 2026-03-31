@@ -42,9 +42,9 @@ export const useAppDevModelSelector = (
         // 如果没有编码模型列表，则提示用户先配置默认聊天模型
         if (!chatModelList?.length) {
           Modal.confirm({
-            title: '提示',
+            title: 'Notice',
             content:
-              '请在系统管理或组件库中配置编码模型，添加模型的时候请选择支持Anthropic协议的模型，推荐使用智谱的Coding Plan https://bigmodel.cn/glm-coding',
+              'Please configure a coding model in System Management or the component library. Choose a model that supports the Anthropic protocol. Recommended: Zhipu Coding Plan https://bigmodel.cn/glm-coding',
             // 核心代码：通过样式隐藏取消按钮
             cancelButtonProps: { style: { display: 'none' } },
             onOk() {
@@ -53,11 +53,11 @@ export const useAppDevModelSelector = (
           });
         }
       } else {
-        throw new Error(message || '获取模型列表失败');
+        throw new Error(message || 'Failed to get model list');
       }
     } catch (error) {
-      console.error(' 加载模型列表失败:', error);
-      message.error('加载模型列表失败，请刷新页面重试');
+      console.error('Failed to load model list:', error);
+      message.error('Failed to load model list. Please refresh and try again.');
     } finally {
       setIsLoadingModels(false);
     }

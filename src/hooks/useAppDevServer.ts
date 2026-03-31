@@ -88,7 +88,9 @@ export const useAppDevServer = ({
 
         const successMessage =
           response?.message ||
-          (operation === 'start' ? '开发环境启动成功' : '开发服务器重启成功');
+          (operation === 'start'
+            ? 'Development environment started successfully'
+            : 'Development server restarted successfully');
 
         let messageText = '';
         if (shouldShowMessage) {
@@ -110,7 +112,9 @@ export const useAppDevServer = ({
         const errorMessage =
           response?.message ||
           `${
-            operation === 'start' ? '启动开发环境失败' : '重启开发服务器失败'
+            operation === 'start'
+              ? 'Failed to start development environment'
+              : 'Failed to restart development server'
           }`;
         const errorCode = response?.code || 'UNKNOWN_ERROR';
         setServerMessage(errorMessage);
@@ -187,7 +191,7 @@ export const useAppDevServer = ({
 
     if (!isSuccess) {
       // 【关键变更】接口返回非成功状态码，设置错误信息和错误码
-      const errorMessage = response?.message || '保活请求失败';
+      const errorMessage = response?.message || 'Keepalive request failed';
       const errorCode = response?.code || 'KEEPALIVE_ERROR';
       console.warn('[useAppDevServer] keepAlive failed:', {
         code: errorCode,
@@ -348,7 +352,9 @@ export const useAppDevServer = ({
     } catch (error: any) {
       setIsStarting(false);
       setIsRunning(false);
-      setServerMessage(error?.message || '启动开发环境失败');
+      setServerMessage(
+        error?.message || 'Failed to start development environment',
+      );
       setServerErrorCode(error?.code || 'START_ERROR');
       onServerStatusChange?.(false);
 
@@ -372,9 +378,9 @@ export const useAppDevServer = ({
     async (shouldSwitchTab: boolean = false) => {
       if (!projectId) {
         if (shouldSwitchTab) {
-          message.error('项目ID不存在或无效，无法重启服务');
+          message.error('Project ID is missing or invalid. Cannot restart');
         }
-        return { success: false, message: '项目ID不存在或无效' };
+        return { success: false, message: 'Project ID is missing or invalid' };
       }
       let finalResult;
 
@@ -420,7 +426,8 @@ export const useAppDevServer = ({
         setIsRestarting(false);
         setIsRunning(false);
 
-        const errorMessage = error?.message || '重启开发服务器失败';
+        const errorMessage =
+          error?.message || 'Failed to restart development server';
         const errorCode = error?.code || 'RESTART_ERROR';
         setServerMessage(errorMessage);
         setServerErrorCode(errorCode);

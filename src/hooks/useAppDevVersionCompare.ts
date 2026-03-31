@@ -163,7 +163,7 @@ export const useAppDevVersionCompare = ({
   const startVersionCompare = useCallback(
     async (version: number) => {
       if (!projectId) {
-        message.error('项目ID不存在');
+        message.error('Project ID does not exist');
         return;
       }
 
@@ -183,10 +183,12 @@ export const useAppDevVersionCompare = ({
           // 进入对比模式
           setIsComparing(true);
         } else {
-          throw new Error(response?.message || '获取版本文件失败');
+          throw new Error(response?.message || 'Failed to get version files');
         }
       } catch (error: any) {
-        message.error(`版本对比失败: ${error.message || '未知错误'}`);
+        message.error(
+          `Version comparison failed: ${error.message || 'Unknown error'}`,
+        );
       } finally {
         setIsLoadingVersion(false);
       }
@@ -209,7 +211,7 @@ export const useAppDevVersionCompare = ({
    */
   const confirmVersionSwitch = useCallback(async () => {
     if (!projectId || !targetVersion) {
-      message.error('项目ID或目标版本不存在');
+      message.error('Project ID or target version does not exist');
       return;
     }
 
@@ -227,12 +229,14 @@ export const useAppDevVersionCompare = ({
         // 调用成功回调
         onVersionSwitchSuccess?.();
 
-        message.success('版本切换成功');
+        message.success('Version switched successfully');
       } else {
-        throw new Error(response?.message || '版本切换失败');
+        throw new Error(response?.message || 'Version switch failed');
       }
     } catch (error: any) {
-      message.error(`版本切换失败: ${error.message || '未知错误'}`);
+      message.error(
+        `Version switch failed: ${error.message || 'Unknown error'}`,
+      );
     } finally {
       setIsSwitching(false);
     }

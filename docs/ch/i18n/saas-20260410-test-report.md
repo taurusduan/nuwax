@@ -1072,3 +1072,22 @@
   - `src/pages/Antv-X6/v3/utils/offlineNodeFactory.ts`
   - `src/pages/Antv-X6/v3/utils/variableReferenceV3.ts`
   - `src/pages/Antv-X6/v3/utils/workflowV3.tsx`
+
+### 新增验证（Top 模块第六十六批）
+
+- 命令：`pnpm prettier --write src/hooks/useAppDevFileManagement.ts src/hooks/useAppDevModelSelector.ts src/hooks/useAppDevProjectId.ts src/hooks/useAppDevProjectInfo.ts src/hooks/useAppDevServer.ts src/hooks/useAppDevVersionCompare.ts src/hooks/useAutoErrorHandling.ts src/hooks/useCopyTemplate.tsx docs/ch/i18n/saas-20260410-progress.md docs/ch/i18n/saas-20260410-test-report.md docs/ch/i18n/saas-20260410-decision-log.md`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `2321` 下降至 `2263`
+- 覆盖文件：
+  - `src/hooks/useAppDevFileManagement.ts`
+  - `src/hooks/useAppDevModelSelector.ts`
+  - `src/hooks/useAppDevProjectId.ts`
+  - `src/hooks/useAppDevProjectInfo.ts`
+  - `src/hooks/useAppDevServer.ts`
+  - `src/hooks/useAppDevVersionCompare.ts`
+  - `src/hooks/useAutoErrorHandling.ts`
+  - `src/hooks/useCopyTemplate.tsx`

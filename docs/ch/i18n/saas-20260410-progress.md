@@ -1609,3 +1609,25 @@
 - 风险/阻塞：
   - `hooks`、`services`、`components/business-component` 仍是存量高位模块
 - 下一步：继续按 inventory Top 模块推进 `src/hooks` 与 `src/services` 批量改造
+
+### 里程碑：Top 模块第六十六批实改（Hooks AppDev 批量清理）
+
+- 时间：2026-03-31 18:30
+- 任务：清理 `src/hooks` 中 AppDev 相关高频 hooks 的中文引号文本（文件管理、模型选择、项目信息、服务控制、版本对比、自动错误处理等）
+- 执行命令：
+  - `pnpm prettier --write src/hooks/useAppDevFileManagement.ts src/hooks/useAppDevModelSelector.ts src/hooks/useAppDevProjectId.ts src/hooks/useAppDevProjectInfo.ts src/hooks/useAppDevServer.ts src/hooks/useAppDevVersionCompare.ts src/hooks/useAutoErrorHandling.ts src/hooks/useCopyTemplate.tsx docs/ch/i18n/saas-20260410-progress.md docs/ch/i18n/saas-20260410-test-report.md docs/ch/i18n/saas-20260410-decision-log.md`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改上述文件
+- 结果摘要：
+  - `useAppDevFileManagement` 上传/保存/重命名/加载等提示与错误文本统一英文
+  - `useAppDevModelSelector` 模型缺失提示与加载异常提示统一英文
+  - `useAppDevProjectInfo` 权限错误与操作类型标签统一英文
+  - `useAppDevServer` 启动/重启/保活失败文案统一英文
+  - `useAppDevVersionCompare` 版本对比与切换相关提示统一英文
+  - `useAutoErrorHandling` 确认弹窗与自动处理日志统一英文
+  - 治理总量从 `2321` 下降至 `2263`（-58）
+  - `src/hooks` 模块从 `167` 下降至 `109`
+- 风险/阻塞：
+  - hooks 模块仍有 `109` 存量，集中在导航/空闲检测/事件代理等通用 hooks
+- 下一步：继续推进 `src/services`（110）与剩余 `src/hooks`（109）

@@ -96,14 +96,16 @@ export const useAppDevProjectInfo = (
           setProjectInfoState((prev) => ({
             ...prev,
             isLoading: false,
-            error: '你没有权限访问该项目',
+            error: 'You do not have permission to access this project',
             hasPermission: false,
           }));
         }
       }
     } catch (error: any) {
       const errorMessage =
-        error?.message || error?.toString() || '获取项目详情时发生未知错误';
+        error?.message ||
+        error?.toString() ||
+        'Unknown error occurred while fetching project details';
 
       setProjectInfoState((prev) => ({
         ...prev,
@@ -160,23 +162,23 @@ export const useAppDevProjectInfo = (
   const getActionText = useCallback((action: string): string => {
     switch (action) {
       case 'chat':
-        return 'AI 对话';
+        return 'AI Chat';
       case 'submit_files_update':
-        return '文件更新';
+        return 'File Update';
       case 'upload_single_file':
-        return '上传单文件';
+        return 'Upload Single File';
       case 'create_project':
-        return '创建项目';
+        return 'Create Project';
       case 'build':
-        return '构建';
+        return 'Build';
       case 'deploy':
-        return '部署';
+        return 'Deploy';
       case 'upload':
-        return '上传项目';
+        return 'Upload Project';
       case 'rollback_version':
-        return '版本回滚';
+        return 'Version Rollback';
       default:
-        return '未知操作';
+        return 'Unknown Action';
     }
   }, []);
 
