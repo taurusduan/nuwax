@@ -309,3 +309,11 @@
 - 影响：
   - `Created` 复用链路（组件库/页面库）的基础文案进入统一词典
   - 后续处理 `Created/index.tsx` 可继续沿用同前缀，避免 key 分散
+
+### D-042 Created 标签名由类型映射驱动
+
+- 决策：`Created/index.tsx` 不再直接依赖 `CREATED_TABS` 的 `label` 字面量展示文案，统一通过 `getCreatedTabLabel(type)` 映射到 `NuwaxPC.Components.Created.tab*`
+- 原因：`CREATED_TABS` 常量中存在历史中文标签，若直接渲染会导致英文环境无法生效；按类型映射可在不改全局常量的前提下先完成组件侧多语言接入
+- 影响：
+  - 分段标签、动态模板文案（如“创建{0}”“仅查看官方{0}”）可在中英文间稳定切换
+  - 后续若常量层再改造为 key 模式，组件层可平滑收敛

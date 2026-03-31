@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T08:32:12.680Z
+- 生成时间：2026-03-31T08:37:35.356Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2627
-- hardcoded 中文：2627
+- 总问题数：2604
+- hardcoded 中文：2604
 - legacy System key：0
 - invalid dict key：0
 
@@ -52,7 +52,6 @@
 | src/pages/SpacePluginCloudTool | 25 | 0 | 0 | 25 |
 | src/pages/EcosystemPlugin | 24 | 0 | 0 | 24 |
 | src/components/AgentSidebar | 24 | 0 | 0 | 24 |
-| src/components/Created | 23 | 0 | 0 | 23 |
 | src/pages/PublishedManage | 22 | 0 | 0 | 22 |
 | src/components/CreateKnowledge | 21 | 0 | 0 | 21 |
 | src/pages/Home | 19 | 0 | 0 | 19 |

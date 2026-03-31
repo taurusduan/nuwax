@@ -1389,3 +1389,24 @@
 - 风险/阻塞：
   - `Created/index.tsx` 仍是高密度主存量，需要单独分批处理
 - 下一步：继续推进 `src/components/Created/index.tsx` 与 `src/components/ChatInputHome` 热点清单
+
+### 里程碑：Top 模块第五十六批实改（Created 主面板首批）
+
+- 时间：2026-03-31 16:37
+- 任务：处理 `src/components/Created/index.tsx` 主面板菜单、搜索、空态与按钮文案
+- 执行命令：
+  - `pnpm prettier --write src/components/Created/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/components/Created/index.tsx`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `Created` 顶部标题、分段标签、左侧菜单、搜索框、创建按钮、空态描述切换为 `t(...)`
+  - 普通列表项的头像 `alt`、发布时间、添加按钮文案切换为 `t(...)`
+  - 新增组件域词典：`NuwaxPC.Components.Created.*`（含标签名称与模板化文案）
+  - 治理总量从 `2627` 下降至 `2604`（-23）
+- 风险/阻塞：
+  - `ChatInputHome` 与 `SkillDetails` 仍是高密度热点
+- 下一步：继续推进 `src/components/ChatInputHome` 模块
