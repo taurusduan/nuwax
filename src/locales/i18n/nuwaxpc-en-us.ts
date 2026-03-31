@@ -393,6 +393,74 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Fullscreen Edit',
   'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.promptPlaceholder':
     'Please enter sub-agent prompt',
+  'NuwaxPC.Pages.AgentArrangeConfig.plan': 'Planning',
+  'NuwaxPC.Pages.AgentArrangeConfig.tools': 'Tools',
+  'NuwaxPC.Pages.AgentArrangeConfig.skills': 'Skills',
+  'NuwaxPC.Pages.AgentArrangeConfig.knowledge': 'Knowledge',
+  'NuwaxPC.Pages.AgentArrangeConfig.memory': 'Memory',
+  'NuwaxPC.Pages.AgentArrangeConfig.conversation': 'Conversation',
+  'NuwaxPC.Pages.AgentArrangeConfig.interface': 'Interface',
+  'NuwaxPC.Pages.AgentArrangeConfig.deleteSuccess': 'Deleted successfully',
+  'NuwaxPC.Pages.AgentArrangeConfig.addSuccess': 'Added successfully',
+  'NuwaxPC.Pages.AgentArrangeConfig.createSubAgentFailed':
+    'Failed to create sub-agent component',
+  'NuwaxPC.Pages.AgentArrangeConfig.deleteSuccessSimple': 'Delete successful',
+  'NuwaxPC.Pages.AgentArrangeConfig.insertPromptSuccess':
+    'Inserted into system prompt',
+  'NuwaxPC.Pages.AgentArrangeConfig.insertPromptUnavailable':
+    'Insert into system prompt is unavailable',
+  'NuwaxPC.Pages.AgentArrangeConfig.plugin': 'Plugin',
+  'NuwaxPC.Pages.AgentArrangeConfig.addPlugin': 'Add Plugin',
+  'NuwaxPC.Pages.AgentArrangeConfig.workflow': 'Workflow',
+  'NuwaxPC.Pages.AgentArrangeConfig.addWorkflow': 'Add Workflow',
+  'NuwaxPC.Pages.AgentArrangeConfig.mcpDescription':
+    'The agent can connect to service APIs through the standardized MCP protocol and invoke them.',
+  'NuwaxPC.Pages.AgentArrangeConfig.addMcp': 'Add MCP',
+  'NuwaxPC.Pages.AgentArrangeConfig.text': 'Text',
+  'NuwaxPC.Pages.AgentArrangeConfig.addKnowledge': 'Add Knowledge Base',
+  'NuwaxPC.Pages.AgentArrangeConfig.skill': 'Skill',
+  'NuwaxPC.Pages.AgentArrangeConfig.addSkill': 'Add Skill',
+  'NuwaxPC.Pages.AgentArrangeConfig.subAgent': 'Sub-agent',
+  'NuwaxPC.Pages.AgentArrangeConfig.addSubAgent': 'Add Sub-agent',
+  'NuwaxPC.Pages.AgentArrangeConfig.variable': 'Variable',
+  'NuwaxPC.Pages.AgentArrangeConfig.addVariable': 'Add Variable',
+  'NuwaxPC.Pages.AgentArrangeConfig.table': 'Data Table',
+  'NuwaxPC.Pages.AgentArrangeConfig.addTable': 'Add Data Table',
+  'NuwaxPC.Pages.AgentArrangeConfig.longMemory': 'Long-term Memory',
+  'NuwaxPC.Pages.AgentArrangeConfig.userQuestionSuggestion':
+    'User Question Suggestions',
+  'NuwaxPC.Pages.AgentArrangeConfig.userQuestionSuggestionEnabled':
+    'After each agent reply, provide multiple suggested user questions based on the prompt.',
+  'NuwaxPC.Pages.AgentArrangeConfig.userQuestionSuggestionDisabled':
+    'After each agent reply, do not provide suggested user questions.',
+  'NuwaxPC.Pages.AgentArrangeConfig.scheduledTask': 'Scheduled Task',
+  'NuwaxPC.Pages.AgentArrangeConfig.scheduledTaskDescription':
+    'When enabled, users can run tasks via scheduled task settings.',
+  'NuwaxPC.Pages.AgentArrangeConfig.hideRemoteDesktop': 'Hide Remote Desktop',
+  'NuwaxPC.Pages.AgentArrangeConfig.hideRemoteDesktopEnabled':
+    'Hide the remote desktop on the right side of the agent chat area',
+  'NuwaxPC.Pages.AgentArrangeConfig.hideRemoteDesktopDisabled':
+    'Show the remote desktop on the right side of the agent chat area',
+  'NuwaxPC.Pages.AgentArrangeConfig.openingRemarks': 'Opening Remarks',
+  'NuwaxPC.Pages.AgentArrangeConfig.page': 'Page',
+  'NuwaxPC.Pages.AgentArrangeConfig.addPage': 'Add Page',
+  'NuwaxPC.Pages.AgentArrangeConfig.defaultExpandPageArea':
+    'Default Expanded Page Area',
+  'NuwaxPC.Pages.AgentArrangeConfig.defaultExpandPageAreaDesc':
+    'After a page is bound to the agent, enabling this option expands the page by default beside the agent chat area.',
+  'NuwaxPC.Pages.AgentArrangeConfig.addPageFirst': 'Please add a page first',
+  'NuwaxPC.Pages.AgentArrangeConfig.eventBinding': 'Event Binding',
+  'NuwaxPC.Pages.AgentArrangeConfig.addEventBinding': 'Add Event Binding',
+  'NuwaxPC.Pages.AgentArrangeConfig.dynamicJsonParameter':
+    'Dynamic JSON Params',
+  'NuwaxPC.Pages.AgentArrangeConfig.referenceNumber': '#Reference Number',
+  'NuwaxPC.Pages.AgentArrangeConfig.appendReferenceInfo':
+    'Append reference information after the returned content as follows',
+  'NuwaxPC.Pages.AgentArrangeConfig.dynamicJsonSchemaPrefix':
+    'Dynamic JSON parameter JsonSchema for {0} is as follows',
+  'NuwaxPC.Pages.AgentArrangeConfig.conversationExperience':
+    'Conversation Experience',
+  'NuwaxPC.Pages.AgentArrangeConfig.interfaceConfig': 'Interface Config',
   'NuwaxPC.Pages.Error403.licenseExpired':
     'Sorry, your license authorization has expired',
   'NuwaxPC.Pages.Error404.pageNotFound':

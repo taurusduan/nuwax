@@ -918,3 +918,25 @@
 - 风险/阻塞：
   - `EditAgent` 最大存量仍集中在 `AgentArrangeConfig/index.tsx` 与少量页面残留
 - 下一步：继续处理 `AgentArrangeConfig/index.tsx` 与关联子模块高频中文文案
+
+### 里程碑：Top 模块第三十六批实改（EditAgent 主容器高频文案）
+
+- 时间：2026-03-31 11:42
+- 任务：推进 `AgentArrangeConfig/index.tsx` 主容器多语言接入，覆盖锚点菜单、配置分组标题、提示消息与关键 tooltip
+- 执行命令：
+  - `pnpm prettier --write src/pages/EditAgent/AgentArrangeConfig/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/EditAgent/AgentArrangeConfig/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - 锚点菜单、`ConfigOptionsHeader` 标题、`Tool/Skill/Knowledge/Memory/Page` 分组标签和添加操作 tooltip 批量切换为 `t(...)`
+  - 子智能体创建失败、删除/新增成功、删除事件绑定、插入系统提示词等消息文案接入 `t(...)`
+  - 任务体验、远程桌面、展开页面区、事件绑定等关键说明文案完成 i18n
+  - 事件“插入到提示词”模板中的硬编码中文片段改为可翻译 key（含动态 JSON 参数与引用说明）
+  - 治理总量从 `3105` 下降至 `3053`（-52）
+- 风险/阻塞：
+  - 文件中仍存在大量中文注释与历史说明文本（非用户可见），会继续在 inventory 中计数
+- 下一步：继续清理 `EditAgent` 余下高频页面与主容器注释噪音，随后切回 `SystemManagement` Top 模块

@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T03:34:02.031Z
+- 生成时间：2026-03-31T03:42:14.527Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：3105
-- hardcoded 中文：3105
+- 总问题数：3053
+- hardcoded 中文：3053
 - legacy System key：0
 - invalid dict key：0
 
@@ -19,11 +19,11 @@
 | src/pages/SystemManagement | 208 | 0 | 0 | 208 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
-| src/pages/EditAgent | 130 | 0 | 0 | 130 |
 | src/services | 110 | 0 | 0 | 110 |
 | src/components/FileTreeView | 97 | 0 | 0 | 97 |
 | src/pages/SpaceKnowledge | 82 | 0 | 0 | 82 |
 | src/pages/UserManage | 82 | 0 | 0 | 82 |
+| src/pages/EditAgent | 78 | 0 | 0 | 78 |
 | src/pages/AppDev | 72 | 0 | 0 | 72 |
 | src/pages/SpacePageDevelop | 72 | 0 | 0 | 72 |
 | src/pages/SpaceLibrary | 64 | 0 | 0 | 64 |
@@ -455,90 +455,6 @@
 - [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:265 -> `[PagePreviewIframe] popstate 事件：找不到目标 URL，已添加到历史记录`
 - ... 省略 64 条
 
-## src/pages/EditAgent
-
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:137 -> `规划`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:142 -> `工具`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:147 -> `技能`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:152 -> `知识`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:157 -> `记忆`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:162 -> `对话`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:167 -> `界面`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:411 -> `已成功删除`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:487 -> `已成功添加`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:573 -> `创建子智能体组件失败`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:577 -> `创建子智能体组件失败`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:589 -> `保存成功`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:597 -> `插件`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:610 -> `添加插件`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:623 -> `工作流`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:636 -> `添加工作流`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:667 -> `添加MCP`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:682 -> `文本`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:693 -> `添加知识库`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:710 -> `技能`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:723 -> `添加技能`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:734 -> `子智能体`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:743 -> `添加子智能体`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:761 -> `变量`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:769 -> `添加变量`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:777 -> `数据表`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:790 -> `添加数据表`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:801 -> `长期记忆`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:836 -> `用户问题建议`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:840 -> `在智能体回复后，根据 Prompt 提供多条用户提问建议`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:841 -> `在每次智能体回复后，不会提供任何用户问题建议`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:866 -> `定时任务`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:930 -> `删除成功`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:979 -> `动态JSON参数`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:996 -> `已插入到系统提示词`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:998 -> `插入系统提示词功能不可用`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1015 -> `隐藏远程桌面`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1019 -> `在智能体对话框右侧隐藏远程桌面`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1020 -> `在智能体对话框右侧显示远程桌面`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1048 -> `开场白`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1068 -> `页面`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1081 -> `添加页面`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1094 -> `展开页面区`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1103 -> `请先添加页面`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1130 -> `事件绑定`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1141 -> `添加事件绑定`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1249 -> `工具`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1259 -> `技能`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1268 -> `知识`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1276 -> `记忆`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1284 -> `对话体验`
-- [hardcoded_chinese] src/pages/EditAgent/AgentArrangeConfig/index.tsx:1295 -> `界面配置`
-- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:279 -> `模型设置`
-- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:291 -> `请选择会话模型`
-- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:305 -> `模型设置`
-- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:317 -> `请选择会话模型`
-- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:327 -> `请选择推理模型`
-- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:369 -> `生成随机性`
-- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:370 -> `temperature: 调高温度会使得模型的输出更多样性和创新性，反之，降低温度会使输出内容更加遵循指令要求但减少多样性。建议不要与 “Top p” 同时调整`
-- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:384 -> `Top p 为累计概率: 模型在生成输出时会从概率最高的词汇开始选择，直到这些词汇的总概率累积达到 Top p 值。这样可以限制模型只选择这些高概率的词汇，从而控制输出内容的多样性。建议不要与 “生成随机性” 同时调整。`
-- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:398 -> `携带上下文轮数`
-- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:399 -> `设置带入模型上下文的对话历史轮数。轮数越多，多轮对话的相关性越高，但消耗的 Token 也越多`
-- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:412 -> `最大回复长度`
-- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:413 -> `控制模型输出的 Tokens 长度上限。通常 100 Tokens 约等于 150 个中文汉字。`
-- [hardcoded_chinese] src/pages/EditAgent/ArrangeTitle/index.tsx:96 -> `请选择会话模型`
-- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:35 -> `插件`
-- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:37 -> `工作流`
-- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:39 -> `知识库`
-- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:41 -> `变量`
-- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:43 -> `数据表`
-- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:45 -> `模型`
-- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:56 -> `类型`
-- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:57 -> `状态`
-- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:57 -> `成功`
-- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:58 -> `名称`
-- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:59 -> `耗时`
-- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:62 -> `发起时间`
-- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:69 -> `结束时间`
-- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/index.tsx:76 -> `复制成功`
-- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/index.tsx:102 -> `调试详情`
-- ... 省略 50 条
-
 ## src/services
 
 - [hardcoded_chinese] src/services/appDev.ts:321 -> `📤 [Service] 发送聊天请求:`
@@ -874,6 +790,87 @@
 - [hardcoded_chinese] src/pages/UserManage/index.tsx:248 -> `禁用`
 - [hardcoded_chinese] src/pages/UserManage/index.tsx:254 -> `加入时间`
 - ... 省略 2 条
+
+## src/pages/EditAgent
+
+- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:279 -> `模型设置`
+- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:291 -> `请选择会话模型`
+- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:305 -> `模型设置`
+- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:317 -> `请选择会话模型`
+- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:327 -> `请选择推理模型`
+- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:369 -> `生成随机性`
+- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:370 -> `temperature: 调高温度会使得模型的输出更多样性和创新性，反之，降低温度会使输出内容更加遵循指令要求但减少多样性。建议不要与 “Top p” 同时调整`
+- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:384 -> `Top p 为累计概率: 模型在生成输出时会从概率最高的词汇开始选择，直到这些词汇的总概率累积达到 Top p 值。这样可以限制模型只选择这些高概率的词汇，从而控制输出内容的多样性。建议不要与 “生成随机性” 同时调整。`
+- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:398 -> `携带上下文轮数`
+- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:399 -> `设置带入模型上下文的对话历史轮数。轮数越多，多轮对话的相关性越高，但消耗的 Token 也越多`
+- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:412 -> `最大回复长度`
+- [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:413 -> `控制模型输出的 Tokens 长度上限。通常 100 Tokens 约等于 150 个中文汉字。`
+- [hardcoded_chinese] src/pages/EditAgent/ArrangeTitle/index.tsx:96 -> `请选择会话模型`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:35 -> `插件`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:37 -> `工作流`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:39 -> `知识库`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:41 -> `变量`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:43 -> `数据表`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:45 -> `模型`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:56 -> `类型`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:57 -> `状态`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:57 -> `成功`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:58 -> `名称`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:59 -> `耗时`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:62 -> `发起时间`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/NodeDetails/index.tsx:69 -> `结束时间`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/index.tsx:76 -> `复制成功`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/index.tsx:102 -> `调试详情`
+- [hardcoded_chinese] src/pages/EditAgent/DebugDetails/index.tsx:170 -> `暂无数据`
+- [hardcoded_chinese] src/pages/EditAgent/PreviewAndDebug/PreviewAndDebugHeader/index.tsx:61 -> `调试`
+- [hardcoded_chinese] src/pages/EditAgent/PreviewAndDebug/PreviewAndDebugHeader/index.tsx:71 -> `打开预览页面`
+- [hardcoded_chinese] src/pages/EditAgent/PreviewAndDebug/PreviewAndDebugHeader/index.tsx:85 -> `关闭文件预览`
+- [hardcoded_chinese] src/pages/EditAgent/PreviewAndDebug/PreviewAndDebugHeader/index.tsx:86 -> `打开文件预览`
+- [hardcoded_chinese] src/pages/EditAgent/PreviewAndDebug/PreviewAndDebugHeader/index.tsx:100 -> `关闭智能体电脑`
+- [hardcoded_chinese] src/pages/EditAgent/PreviewAndDebug/PreviewAndDebugHeader/index.tsx:101 -> `打开智能体电脑`
+- [hardcoded_chinese] src/pages/EditAgent/PreviewAndDebug/index.tsx:318 -> `重置`
+- [hardcoded_chinese] src/pages/EditAgent/PreviewAndDebug/index.tsx:363 -> `请填写必填参数`
+- [hardcoded_chinese] src/pages/EditAgent/PreviewAndDebug/index.tsx:403 -> `会话ID不存在，无法打开文件预览`
+- [hardcoded_chinese] src/pages/EditAgent/PreviewAndDebug/index.tsx:429 -> `会话ID不存在，无法打开智能体电脑`
+- [hardcoded_chinese] src/pages/EditAgent/PreviewAndDebug/index.tsx:664 -> `您无该智能体权限`
+- [hardcoded_chinese] src/pages/EditAgent/PreviewAndDebug/index.tsx:674 -> `直接输入指令, 可通过Shift+Enter换行, 通过回车发送消息；支持粘贴图片`
+- [hardcoded_chinese] src/pages/EditAgent/SystemTipsWord/index.tsx:87 -> `replaceText 方法不存在`
+- [hardcoded_chinese] src/pages/EditAgent/SystemTipsWord/index.tsx:159 -> `输入系统提示词，对大模型进行角色塑造`
+- [hardcoded_chinese] src/pages/EditAgent/SystemTipsWord/index.tsx:179 -> `输入用户提示词，预置指令、问题或请求`
+- [hardcoded_chinese] src/pages/EditAgent/SystemTipsWord/index.tsx:214 -> `系统提示词`
+- [hardcoded_chinese] src/pages/EditAgent/SystemTipsWord/index.tsx:214 -> `用户提示词`
+- [hardcoded_chinese] src/pages/EditAgent/SystemTipsWord/index.tsx:216 -> `退出全屏`
+- [hardcoded_chinese] src/pages/EditAgent/SystemTipsWord/index.tsx:253 -> `系统提示词`
+- [hardcoded_chinese] src/pages/EditAgent/SystemTipsWord/index.tsx:254 -> `用户提示词`
+- [hardcoded_chinese] src/pages/EditAgent/SystemTipsWord/index.tsx:258 -> `全屏编辑`
+- [hardcoded_chinese] src/pages/EditAgent/SystemTipsWord/index.tsx:272 -> `自动优化提示词`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:362 -> `[EditAgent] 配置信息尚未加载，跳过更新:`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:380 -> `[EditAgent] 数组值无变化，跳过API调用:`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:388 -> `[EditAgent] 布尔值无变化，跳过API调用:`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:396 -> `[EditAgent] 数字值无变化，跳过API调用:`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:541 -> `会话ID不存在，无法新建文件`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:583 -> `你确定要删除此文件吗?`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:588 -> `会话ID不存在，无法删除文件`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:610 -> `文件不存在，无法删除`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:631 -> `删除成功`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:637 -> `删除文件失败:`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:655 -> `会话ID不存在，无法重命名文件`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:689 -> `会话ID不存在，无法保存文件`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:722 -> `会话ID不存在，无法上传文件`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:732 -> `上传文件总大小不能超过${maxFileSize}MB`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:744 -> `上传成功`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:749 -> `上传失败`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:757 -> `开发会话ID不存在或无效，无法导出`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:766 -> `导出失败`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:774 -> `导出成功！`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:776 -> `导出项目失败:`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:790 -> `对话人数`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:794 -> `对话次数`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:798 -> `收藏用户数`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:802 -> `点赞次数`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:823 -> `导出配置 - ${agentConfigInfo?.name}`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:824 -> `如果内部包含数据表或知识库，数据本身不会导出`
+- [hardcoded_chinese] src/pages/EditAgent/index.tsx:1222 -> `智能体概览`
 
 ## src/pages/AppDev
 
