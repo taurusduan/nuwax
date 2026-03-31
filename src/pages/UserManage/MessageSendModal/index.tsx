@@ -1,6 +1,7 @@
 import personalImage from '@/assets/images/personal.png';
 import CustomFormModal from '@/components/CustomFormModal';
 import { MESSAGE_SCOPE_OPTIONS } from '@/constants/system.constants';
+import { dict } from '@/services/i18nRuntime';
 import { apiSystemNotifyMessageSend } from '@/services/systemManage';
 import { apiSearchUser } from '@/services/teamSetting';
 import styles from '@/styles/teamSetting.less';
@@ -58,7 +59,9 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
     manual: true,
     debounceWait: 300,
     onSuccess: () => {
-      message.success('消息发送成功');
+      message.success(
+        dict('NuwaxPC.Pages.UserManage.MessageSendModal.messageSendSuccess'),
+      );
       setLoading(false);
       onCancel?.();
     },
@@ -72,7 +75,9 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
     debounceWait: 300,
     onSuccess: (data: SearchUserInfo[]) => {
       if (!data?.length) {
-        message.warning('未搜索到相关用户');
+        message.warning(
+          dict('NuwaxPC.Pages.UserManage.MessageSendModal.noUserFound'),
+        );
         setLeftColumnMembers([]);
         return;
       }
@@ -95,14 +100,18 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
 
   const handlerSubmit = () => {
     if (!content) {
-      message.warning('请输入消息内容');
+      message.warning(
+        dict('NuwaxPC.Pages.UserManage.MessageSendModal.pleaseInputMessage'),
+      );
       return;
     }
     if (
       messageScope === MessageScopeEnum.Broadcast &&
       rightColumnMembers.length === 0
     ) {
-      message.warning('请选择要添加的成员');
+      message.warning(
+        dict('NuwaxPC.Pages.UserManage.MessageSendModal.pleaseSelectMembers'),
+      );
       return;
     }
     setLoading(true);
@@ -172,12 +181,12 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
   return (
     <CustomFormModal
       form={form}
-      title="添加接受消息用户"
+      title={dict('NuwaxPC.Pages.UserManage.MessageSendModal.addMessageUser')}
       classNames={{
         content: cx(styles['add-member-modal-content']),
       }}
       open={open}
-      okText="发送消息"
+      okText={dict('NuwaxPC.Pages.UserManage.MessageSendModal.sendMessage')}
       loading={loading}
       onCancel={onCancel}
       onConfirm={handlerSubmit}
@@ -190,7 +199,9 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
         />
 
         <Input.TextArea
-          placeholder="输入消息内容"
+          placeholder={dict(
+            'NuwaxPC.Pages.UserManage.MessageSendModal.inputMessageContent',
+          )}
           value={content}
           onChange={(e) => setContent(e.target.value)}
           autoSize={{ minRows: 5, maxRows: 6 }}
@@ -199,7 +210,9 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
           <div style={{ display: 'flex', gap: 20 }}>
             <div className={cx(styles['add-member-left-column'])}>
               <Input
-                placeholder="输入用户名、邮箱或手机号码，回车搜索"
+                placeholder={dict(
+                  'NuwaxPC.Pages.UserManage.MessageSendModal.searchUserPlaceholder',
+                )}
                 prefix={<SearchOutlined />}
                 onPressEnter={(event) => {
                   if (event.key === 'Enter') {

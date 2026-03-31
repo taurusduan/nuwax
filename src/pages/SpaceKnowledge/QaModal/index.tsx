@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import { KnowledgeTextImportEnum } from '@/types/enums/library';
 import { KnowledgeQAInfo } from '@/types/interfaces/knowledge';
 import { customizeRequiredMark } from '@/utils/form';
@@ -57,7 +58,11 @@ const QaModal: React.FC<QaModalProps> = ({
   return (
     <Modal
       open={open}
-      title={data?.id ? '编辑QA问答' : '添加QA问答'}
+      title={
+        data?.id
+          ? dict('NuwaxPC.Pages.SpaceKnowledge.QaModal.editQa')
+          : dict('NuwaxPC.Pages.SpaceKnowledge.QaModal.addQa')
+      }
       confirmLoading={loading}
       onCancel={handleCancel}
       onOk={handleConfirm}

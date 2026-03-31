@@ -2347,4 +2347,126 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.AppDevPageEditModal.name': '名称',
   'NuwaxPC.Pages.AppDevPageEditModal.namePlaceholder': '请输入名称',
   'NuwaxPC.Pages.AppDevPageEditModal.nameRequired': '请输入名称',
+  'NuwaxPC.Components.FileContextMenu.newFile': '新建文件',
+  'NuwaxPC.Components.FileContextMenu.newFolder': '新建文件夹',
+  'NuwaxPC.Components.FileContextMenu.rename': '重命名',
+  'NuwaxPC.Components.FileContextMenu.uploadFile': '上传文件',
+  'NuwaxPC.Components.FileContextMenu.delete': '删除',
+  'NuwaxPC.Components.FileContextMenu.download': '下载',
+  'NuwaxPC.Components.FileContextMenu.exportPdf': '导出为 PDF',
+  'NuwaxPC.Components.FileContextMenu.importSkill': '导入技能',
+  'NuwaxPC.Components.MoreActionsMenu.importProject': '导入项目',
+  'NuwaxPC.Components.MoreActionsMenu.restartComputer': '重启智能体电脑',
+  'NuwaxPC.Components.MoreActionsMenu.restartComputerTooltip':
+    '当前用户正在运行的所有智能体将全部被重启',
+  'NuwaxPC.Components.MoreActionsMenu.restartAgent': '重启智能体',
+  'NuwaxPC.Components.MoreActionsMenu.restartAgentTooltip':
+    '当前会话对应的智能体将重启',
+  'NuwaxPC.Components.MoreActionsMenu.exportResult': '导出结果',
+  'NuwaxPC.Components.ShareDesktopModal.permanent': '永久',
+  'NuwaxPC.Components.ShareDesktopModal.minute1': '1分钟',
+  'NuwaxPC.Components.ShareDesktopModal.minute5': '5分钟',
+  'NuwaxPC.Components.ShareDesktopModal.minute10': '10分钟',
+  'NuwaxPC.Components.ShareDesktopModal.minute20': '20分钟',
+  'NuwaxPC.Components.ShareDesktopModal.minute30': '30分钟',
+  'NuwaxPC.Components.ShareDesktopModal.minute40': '40分钟',
+  'NuwaxPC.Components.ShareDesktopModal.minute50': '50分钟',
+  'NuwaxPC.Components.ShareDesktopModal.hour1': '1小时',
+  'NuwaxPC.Components.ShareDesktopModal.hour2': '2小时',
+  'NuwaxPC.Components.ShareDesktopModal.hour4': '4小时',
+  'NuwaxPC.Components.ShareDesktopModal.hour8': '8小时',
+  'NuwaxPC.Components.ShareDesktopModal.hour16': '16小时',
+  'NuwaxPC.Components.ShareDesktopModal.day1': '1天',
+  'NuwaxPC.Components.ShareDesktopModal.conversationIdMissing':
+    '会话ID不存在，无法分享',
+  'NuwaxPC.Components.ShareDesktopModal.desktopShareSuccess':
+    '远程桌面分享成功，链接已复制到剪切板',
+  'NuwaxPC.Components.ShareDesktopModal.shareFailedRetry':
+    '分享失败，请稍后重试',
+  'NuwaxPC.Components.ShareDesktopModal.fileShareSuccess':
+    '分享成功，链接已复制到剪切板',
+  'NuwaxPC.Components.ShareDesktopModal.titleDesktop': '分享远程桌面',
+  'NuwaxPC.Components.ShareDesktopModal.titleFile': '分享文件',
+  'NuwaxPC.Components.ShareDesktopModal.generateShareLink': '生成分享链接',
+  'NuwaxPC.Components.ShareDesktopModal.validDuration': '有效时间',
+  'NuwaxPC.Components.ShareDesktopModal.selectValidDuration': '请选择有效时间',
+  'NuwaxPC.Components.ShareDesktopModal.linkExpiresIn': '链接将在 {0} 后失效',
+  'NuwaxPC.Components.ShareDesktopModal.linkPermanent': '链接永久有效',
+  'NuwaxPC.Components.ShareDesktopModal.noticeTitle': '温馨提示：',
+  'NuwaxPC.Components.ShareDesktopModal.noticeDescription':
+    '分享链接生成后将自动复制到剪切板；互联网上得到该分享链接的用户均可访问，请谨慎分享，注意数据风险。',
+  'NuwaxPC.Components.FilePathHeader.filePreview': '文件预览',
+  'NuwaxPC.Components.FilePathHeader.collapseFileTree': '点击收起文件树',
+  'NuwaxPC.Components.FilePathHeader.expandFileTree': '点击展开文件树',
+  'NuwaxPC.Components.FilePathHeader.preview': '预览',
+  'NuwaxPC.Components.FilePathHeader.code': '代码',
+  'NuwaxPC.Components.FilePathHeader.remote': '远程',
+  'NuwaxPC.Components.FilePathHeader.agentComputerSuffix': '的智能体电脑',
+  'NuwaxPC.Components.FilePathHeader.exporting': '导出中...',
+  'NuwaxPC.Components.FilePathHeader.exportPdf': '导出为 PDF',
+  'NuwaxPC.Components.FilePathHeader.downloading': '下载中...',
+  'NuwaxPC.Components.FilePathHeader.download': '下载',
+  'NuwaxPC.Components.FilePathHeader.share': '分享',
+  'NuwaxPC.Components.FilePathHeader.exitFullscreen': '退出全屏',
+  'NuwaxPC.Components.FilePathHeader.fullscreen': '全屏',
+  'NuwaxPC.Components.SearchView.searchPlaceholder': '搜索文件...',
+  'NuwaxPC.Components.SearchView.noMatchingFiles': '暂无匹配文件',
+  'NuwaxPC.Components.FileTreeView.noFilesToPreview': '当前没有可预览的文件',
+  'NuwaxPC.Components.FileTreeView.noMatchingFile':
+    '没有匹配到对应的文件，请从左侧文件树选择一个文件进行预览',
+  'NuwaxPC.Components.FileTreeView.selectFileToPreview':
+    '请从左侧文件树选择一个文件进行预览',
+  'NuwaxPC.Components.FileTreeView.cannotPreviewType': '无法预览此文件类型',
+  'NuwaxPC.Components.FileTreeView.unsupportedFormat':
+    '当前不支持预览【{0}】格式的文件。',
+  'NuwaxPC.Components.FileTreeView.fileRenaming':
+    '文件正在重命名中，请稍后再试',
+  'NuwaxPC.Components.FileTreeView.unsavedChangesSwitchFile':
+    '你有未保存的文件修改，请先保存后再切换文件',
+  'NuwaxPC.Components.FileTreeView.unsavedChangesRename':
+    '你有未保存的文件修改，请先保存后再重命名',
+  'NuwaxPC.Components.FileTreeView.unsavedChangesUpload':
+    '你有未保存的文件修改，请先保存后再上传文件',
+  'NuwaxPC.Components.FileTreeView.unsavedChangesDelete':
+    '你有未保存的文件修改，请先保存后再删除文件',
+  'NuwaxPC.Components.FileTreeView.unsavedChangesCreateFile':
+    '你有未保存的文件修改，请先保存后再新建文件',
+  'NuwaxPC.Components.FileTreeView.unsavedChangesCreateFolder':
+    '你有未保存的文件修改，请先保存后再新建文件夹',
+  'NuwaxPC.Components.FileTreeView.downloading': '正在下载',
+  'NuwaxPC.Components.FileTreeView.uploading': '正在上传',
+  'NuwaxPC.Components.FileTreeView.exporting': '正在导出',
+  'NuwaxPC.Components.FileTreeView.importing': '正在导入',
+  'NuwaxPC.Components.FileTreeView.files': '文件',
+  'NuwaxPC.Components.FileTreeView.refreshing': '刷新中...',
+  'NuwaxPC.Components.FileTreeView.refreshFileTree': '刷新文件树',
+  'NuwaxPC.Components.FileTreeView.restarting': '重启中...',
+  'NuwaxPC.Toast.Global.deletedSuccessfully': '删除成功',
+  'NuwaxPC.Hooks.UseEcoMarket.confirmDelete': '你确定要删除此分享吗?',
+  'NuwaxPC.Hooks.UseEventPolling.newVersionFound': '发现新版本',
+  'NuwaxPC.Hooks.UseEventPolling.updatePrompt':
+    '检测到新版本 {0}，是否立即更新？',
+  'NuwaxPC.Hooks.UseEventPolling.update': '更新',
+  'NuwaxPC.Hooks.UseFileImport.unsupportedFileType':
+    '仅支持 .zip 压缩文件、.skill 文件或 SKILL.md 文件',
+  'NuwaxPC.Hooks.UseFileImport.importSuccess': '导入成功',
+  'NuwaxPC.Hooks.UseFileImport.importFailed': '导入失败',
+  'NuwaxPC.Hooks.UseNavigationGuard.confirmLeave': '确认离开',
+  'NuwaxPC.Hooks.UseNavigationGuard.confirmLeaveMessage':
+    '你确定要离开当前页面吗？',
+  'NuwaxPC.Hooks.UseNavigationGuard.discard': '放弃',
+  'NuwaxPC.Hooks.UsePluginConfig.saveSuccess': '插件保存成功',
+  'NuwaxPC.Hooks.UseRestartDevServer.invalidProjectId':
+    '项目ID不存在或无效，无法重启服务',
+  'NuwaxPC.Hooks.UseRestartDevServer.restartFailed': '重启开发服务器失败',
+  'NuwaxPC.Hooks.UseMcp.addItem': '添加{0}',
+  'NuwaxPC.Hooks.UseTryRun.reconfigureParams': '请重新配置入参,添加子级',
+  'NuwaxPC.Hooks.UseMessageEventDelegate.pagePathConfigError':
+    '页面路径配置错误',
+  'NuwaxPC.Hooks.UseMessageEventDelegate.pagePathParamConfigError':
+    '页面路径参数配置错误',
+  'NuwaxPC.Hooks.UseMessageEventDelegate.linkUrlConfigError':
+    '链接地址配置错误',
+  'NuwaxPC.Hooks.UseMessageEventDelegate.page': '页面',
+  'NuwaxPC.Hooks.UseSendCode.codeSent': '验证码已发送',
 };

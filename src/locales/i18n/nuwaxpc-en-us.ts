@@ -2657,8 +2657,137 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AppDevPageEditModal.name': 'Name',
   'NuwaxPC.Pages.AppDevPageEditModal.namePlaceholder': 'Please enter name',
   'NuwaxPC.Pages.AppDevPageEditModal.nameRequired': 'Please enter name',
-  'NuwaxPC.Pages.AntvX6RunResult.totalCount': 'Total: {0}',
-  'NuwaxPC.Pages.AntvX6RunResult.onlyError': 'Only Failed',
-  'NuwaxPC.Pages.AntvX6RunResult.batchVariables':
-    'Batch Variables for This Run',
+  'NuwaxPC.Components.FileContextMenu.newFile': 'New File',
+  'NuwaxPC.Components.FileContextMenu.newFolder': 'New Folder',
+  'NuwaxPC.Components.FileContextMenu.rename': 'Rename',
+  'NuwaxPC.Components.FileContextMenu.uploadFile': 'Upload File',
+  'NuwaxPC.Components.FileContextMenu.delete': 'Delete',
+  'NuwaxPC.Components.FileContextMenu.download': 'Download',
+  'NuwaxPC.Components.FileContextMenu.exportPdf': 'Export as PDF',
+  'NuwaxPC.Components.FileContextMenu.importSkill': 'Import Skill',
+  'NuwaxPC.Components.MoreActionsMenu.importProject': 'Import Project',
+  'NuwaxPC.Components.MoreActionsMenu.restartComputer':
+    'Restart Agent Computer',
+  'NuwaxPC.Components.MoreActionsMenu.restartComputerTooltip':
+    'All running agents will be restarted',
+  'NuwaxPC.Components.MoreActionsMenu.restartAgent': 'Restart Agent',
+  'NuwaxPC.Components.MoreActionsMenu.restartAgentTooltip':
+    'Current agent will restart',
+  'NuwaxPC.Components.MoreActionsMenu.exportResult': 'Export Result',
+  'NuwaxPC.Components.ShareDesktopModal.permanent': 'Permanent',
+  'NuwaxPC.Components.ShareDesktopModal.minute1': '1 min',
+  'NuwaxPC.Components.ShareDesktopModal.minute5': '5 min',
+  'NuwaxPC.Components.ShareDesktopModal.minute10': '10 min',
+  'NuwaxPC.Components.ShareDesktopModal.minute20': '20 min',
+  'NuwaxPC.Components.ShareDesktopModal.minute30': '30 min',
+  'NuwaxPC.Components.ShareDesktopModal.minute40': '40 min',
+  'NuwaxPC.Components.ShareDesktopModal.minute50': '50 min',
+  'NuwaxPC.Components.ShareDesktopModal.hour1': '1 hour',
+  'NuwaxPC.Components.ShareDesktopModal.hour2': '2 hours',
+  'NuwaxPC.Components.ShareDesktopModal.hour4': '4 hours',
+  'NuwaxPC.Components.ShareDesktopModal.hour8': '8 hours',
+  'NuwaxPC.Components.ShareDesktopModal.hour16': '16 hours',
+  'NuwaxPC.Components.ShareDesktopModal.day1': '1 day',
+  'NuwaxPC.Components.ShareDesktopModal.conversationIdMissing':
+    'Conversation ID missing, unable to share',
+  'NuwaxPC.Components.ShareDesktopModal.desktopShareSuccess':
+    'Desktop share successful, link copied to clipboard',
+  'NuwaxPC.Components.ShareDesktopModal.shareFailedRetry':
+    'Share failed, please retry later',
+  'NuwaxPC.Components.ShareDesktopModal.fileShareSuccess':
+    'Share successful, link copied to clipboard',
+  'NuwaxPC.Components.ShareDesktopModal.titleDesktop': 'Share Desktop',
+  'NuwaxPC.Components.ShareDesktopModal.titleFile': 'Share File',
+  'NuwaxPC.Components.ShareDesktopModal.generateShareLink':
+    'Generate Share Link',
+  'NuwaxPC.Components.ShareDesktopModal.validDuration': 'Valid Duration',
+  'NuwaxPC.Components.ShareDesktopModal.selectValidDuration':
+    'Please select valid duration',
+  'NuwaxPC.Components.ShareDesktopModal.linkExpiresIn': 'Link expires in {0}',
+  'NuwaxPC.Components.ShareDesktopModal.linkPermanent':
+    'Link is permanently valid',
+  'NuwaxPC.Components.ShareDesktopModal.noticeTitle': 'Notice:',
+  'NuwaxPC.Components.ShareDesktopModal.noticeDescription':
+    'The share link will be automatically copied to clipboard. Anyone with this link can access it. Share carefully and be aware of data risks.',
+  'NuwaxPC.Components.FilePathHeader.filePreview': 'File Preview',
+  'NuwaxPC.Components.FilePathHeader.collapseFileTree':
+    'Click to collapse file tree',
+  'NuwaxPC.Components.FilePathHeader.expandFileTree':
+    'Click to expand file tree',
+  'NuwaxPC.Components.FilePathHeader.preview': 'Preview',
+  'NuwaxPC.Components.FilePathHeader.code': 'Code',
+  'NuwaxPC.Components.FilePathHeader.remote': 'Remote',
+  'NuwaxPC.Components.FilePathHeader.agentComputerSuffix': "'s Agent Computer",
+  'NuwaxPC.Components.FilePathHeader.exporting': 'Exporting...',
+  'NuwaxPC.Components.FilePathHeader.exportPdf': 'Export as PDF',
+  'NuwaxPC.Components.FilePathHeader.downloading': 'Downloading...',
+  'NuwaxPC.Components.FilePathHeader.download': 'Download',
+  'NuwaxPC.Components.FilePathHeader.share': 'Share',
+  'NuwaxPC.Components.FilePathHeader.exitFullscreen': 'Exit Fullscreen',
+  'NuwaxPC.Components.FilePathHeader.fullscreen': 'Fullscreen',
+  'NuwaxPC.Components.SearchView.searchPlaceholder': 'Search files...',
+  'NuwaxPC.Components.SearchView.noMatchingFiles': 'No matching files',
+  'NuwaxPC.Components.FileTreeView.noFilesToPreview':
+    'No files available for preview',
+  'NuwaxPC.Components.FileTreeView.noMatchingFile':
+    'No matching file found. Please select a file from the file tree',
+  'NuwaxPC.Components.FileTreeView.selectFileToPreview':
+    'Please select a file from the file tree to preview',
+  'NuwaxPC.Components.FileTreeView.cannotPreviewType':
+    'Cannot preview this file type',
+  'NuwaxPC.Components.FileTreeView.unsupportedFormat':
+    'Preview is not supported for .{0} format',
+  'NuwaxPC.Components.FileTreeView.fileRenaming':
+    'File is being renamed, please try later',
+  'NuwaxPC.Components.FileTreeView.unsavedChangesSwitchFile':
+    'You have unsaved changes. Please save before switching files',
+  'NuwaxPC.Components.FileTreeView.unsavedChangesRename':
+    'You have unsaved changes. Please save before renaming',
+  'NuwaxPC.Components.FileTreeView.unsavedChangesUpload':
+    'You have unsaved changes. Please save before uploading',
+  'NuwaxPC.Components.FileTreeView.unsavedChangesDelete':
+    'You have unsaved changes. Please save before deleting',
+  'NuwaxPC.Components.FileTreeView.unsavedChangesCreateFile':
+    'You have unsaved changes. Please save before creating a file',
+  'NuwaxPC.Components.FileTreeView.unsavedChangesCreateFolder':
+    'You have unsaved changes. Please save before creating a folder',
+  'NuwaxPC.Components.FileTreeView.downloading': 'Downloading',
+  'NuwaxPC.Components.FileTreeView.uploading': 'Uploading',
+  'NuwaxPC.Components.FileTreeView.exporting': 'Exporting',
+  'NuwaxPC.Components.FileTreeView.importing': 'Importing',
+  'NuwaxPC.Components.FileTreeView.files': 'Files',
+  'NuwaxPC.Components.FileTreeView.refreshing': 'Refreshing...',
+  'NuwaxPC.Components.FileTreeView.refreshFileTree': 'Refresh File Tree',
+  'NuwaxPC.Components.FileTreeView.restarting': 'Restarting...',
+  'NuwaxPC.Toast.Global.deletedSuccessfully': 'Deleted successfully',
+  'NuwaxPC.Hooks.UseEcoMarket.confirmDelete':
+    'Are you sure you want to delete this share?',
+  'NuwaxPC.Hooks.UseEventPolling.newVersionFound': 'New Version Available',
+  'NuwaxPC.Hooks.UseEventPolling.updatePrompt':
+    'New version {0} detected. Update now?',
+  'NuwaxPC.Hooks.UseEventPolling.update': 'Update',
+  'NuwaxPC.Hooks.UseFileImport.unsupportedFileType':
+    'Only .zip, .skill files or SKILL.md files are supported',
+  'NuwaxPC.Hooks.UseFileImport.importSuccess': 'Import successful',
+  'NuwaxPC.Hooks.UseFileImport.importFailed': 'Import failed',
+  'NuwaxPC.Hooks.UseNavigationGuard.confirmLeave': 'Confirm Leave',
+  'NuwaxPC.Hooks.UseNavigationGuard.confirmLeaveMessage':
+    'Are you sure you want to leave the current page?',
+  'NuwaxPC.Hooks.UseNavigationGuard.discard': 'Discard',
+  'NuwaxPC.Hooks.UsePluginConfig.saveSuccess': 'Plugin saved successfully',
+  'NuwaxPC.Hooks.UseRestartDevServer.invalidProjectId':
+    'Project ID is missing or invalid, unable to restart',
+  'NuwaxPC.Hooks.UseRestartDevServer.restartFailed':
+    'Failed to restart development server',
+  'NuwaxPC.Hooks.UseMcp.addItem': 'Add {0}',
+  'NuwaxPC.Hooks.UseTryRun.reconfigureParams':
+    'Please reconfigure input parameters and add sub-level',
+  'NuwaxPC.Hooks.UseMessageEventDelegate.pagePathConfigError':
+    'Page path configuration error',
+  'NuwaxPC.Hooks.UseMessageEventDelegate.pagePathParamConfigError':
+    'Page path parameter configuration error',
+  'NuwaxPC.Hooks.UseMessageEventDelegate.linkUrlConfigError':
+    'Link URL configuration error',
+  'NuwaxPC.Hooks.UseMessageEventDelegate.page': 'Page',
+  'NuwaxPC.Hooks.UseSendCode.codeSent': 'Verification code sent',
 };

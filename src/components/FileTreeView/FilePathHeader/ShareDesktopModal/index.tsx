@@ -8,26 +8,61 @@ import { ProFormDependency, ProFormSelect } from '@ant-design/pro-components';
 import { Alert, message } from 'antd';
 import React, { useRef } from 'react';
 
+import { dict } from '@/services/i18nRuntime';
+
 /**
  * 时间选项配置
  * value: 秒数（0表示永久）
  * label: 显示文本
  */
 const TIME_OPTIONS = [
-  { label: '永久', value: 0 },
-  { label: '1分钟', value: 60 },
-  { label: '5分钟', value: 5 * 60 },
-  { label: '10分钟', value: 10 * 60 },
-  { label: '20分钟', value: 20 * 60 },
-  { label: '30分钟', value: 30 * 60 },
-  { label: '40分钟', value: 40 * 60 },
-  { label: '50分钟', value: 50 * 60 },
-  { label: '1小时', value: 60 * 60 },
-  { label: '2小时', value: 2 * 60 * 60 },
-  { label: '4小时', value: 4 * 60 * 60 },
-  { label: '8小时', value: 8 * 60 * 60 },
-  { label: '16小时', value: 16 * 60 * 60 },
-  { label: '1天', value: 24 * 60 * 60 },
+  { label: dict('NuwaxPC.Components.ShareDesktopModal.permanent'), value: 0 },
+  { label: dict('NuwaxPC.Components.ShareDesktopModal.minute1'), value: 60 },
+  {
+    label: dict('NuwaxPC.Components.ShareDesktopModal.minute5'),
+    value: 5 * 60,
+  },
+  {
+    label: dict('NuwaxPC.Components.ShareDesktopModal.minute10'),
+    value: 10 * 60,
+  },
+  {
+    label: dict('NuwaxPC.Components.ShareDesktopModal.minute20'),
+    value: 20 * 60,
+  },
+  {
+    label: dict('NuwaxPC.Components.ShareDesktopModal.minute30'),
+    value: 30 * 60,
+  },
+  {
+    label: dict('NuwaxPC.Components.ShareDesktopModal.minute40'),
+    value: 40 * 60,
+  },
+  {
+    label: dict('NuwaxPC.Components.ShareDesktopModal.minute50'),
+    value: 50 * 60,
+  },
+  { label: dict('NuwaxPC.Components.ShareDesktopModal.hour1'), value: 60 * 60 },
+  {
+    label: dict('NuwaxPC.Components.ShareDesktopModal.hour2'),
+    value: 2 * 60 * 60,
+  },
+  {
+    label: dict('NuwaxPC.Components.ShareDesktopModal.hour4'),
+    value: 4 * 60 * 60,
+  },
+  {
+    label: dict('NuwaxPC.Components.ShareDesktopModal.hour8'),
+    value: 8 * 60 * 60,
+  },
+  {
+    label: dict('NuwaxPC.Components.ShareDesktopModal.hour16'),
+    value: 16 * 60 * 60,
+  },
+  {
+    label: dict('NuwaxPC.Components.ShareDesktopModal.day1'),
+    value: 24 * 60 * 60,
+  },
 ];
 
 /**
@@ -104,7 +139,9 @@ const ShareDesktopModal: React.FC<ShareDesktopModalProps> = ({
 
   const generateDesktopShareUrl = async (values: ShareFormValues) => {
     if (!conversationId) {
-      message.error('会话ID不存在，无法分享');
+      message.error(
+        dict('NuwaxPC.Components.ShareDesktopModal.conversationIdMissing'),
+      );
       return false;
     }
 
@@ -133,22 +170,30 @@ const ShareDesktopModal: React.FC<ShareDesktopModalProps> = ({
 
         // 复制到剪切板
         copyTextToClipboard(shareUrl);
-        message.success('远程桌面分享成功，链接已复制到剪切板');
+        message.success(
+          dict('NuwaxPC.Components.ShareDesktopModal.desktopShareSuccess'),
+        );
 
         return true; // 返回 true 关闭弹窗
       } else {
-        message.error('分享失败，请稍后重试');
+        message.error(
+          dict('NuwaxPC.Components.ShareDesktopModal.shareFailedRetry'),
+        );
         return false; // 返回 false 保持弹窗打开
       }
     } catch (error) {
       console.error('分享远程桌面失败:', error);
-      message.error('分享失败，请稍后重试');
+      message.error(
+        dict('NuwaxPC.Components.ShareDesktopModal.shareFailedRetry'),
+      );
       return false;
     }
   };
   const generateFileShareUrl = async (values: ShareFormValues) => {
     if (!conversationId) {
-      message.error('会话ID不存在，无法分享');
+      message.error(
+        dict('NuwaxPC.Components.ShareDesktopModal.conversationIdMissing'),
+      );
       return false;
     }
 
@@ -171,15 +216,21 @@ const ShareDesktopModal: React.FC<ShareDesktopModalProps> = ({
 
         // 复制到剪切板
         copyTextToClipboard(previewUrl);
-        message.success('分享成功，链接已复制到剪切板');
+        message.success(
+          dict('NuwaxPC.Components.ShareDesktopModal.fileShareSuccess'),
+        );
         return true;
       } else {
-        message.error('分享失败，请稍后重试');
+        message.error(
+          dict('NuwaxPC.Components.ShareDesktopModal.shareFailedRetry'),
+        );
         return false;
       }
     } catch (error) {
       console.error('分享文件失败:', error);
-      message.error('分享失败，请稍后重试');
+      message.error(
+        dict('NuwaxPC.Components.ShareDesktopModal.shareFailedRetry'),
+      );
       return false;
     }
   };
@@ -198,7 +249,11 @@ const ShareDesktopModal: React.FC<ShareDesktopModalProps> = ({
 
   return (
     <XModalForm<ShareFormValues>
-      title={shareType === 'DESKTOP' ? '分享远程桌面' : '分享文件'}
+      title={
+        shareType === 'DESKTOP'
+          ? dict('NuwaxPC.Components.ShareDesktopModal.titleDesktop')
+          : dict('NuwaxPC.Components.ShareDesktopModal.titleFile')
+      }
       open={visible}
       formRef={formRef}
       onOpenChange={(open) => {
@@ -215,8 +270,10 @@ const ShareDesktopModal: React.FC<ShareDesktopModalProps> = ({
       submitTimeout={2000}
       submitter={{
         searchConfig: {
-          submitText: '生成分享链接',
-          resetText: '取消',
+          submitText: dict(
+            'NuwaxPC.Components.ShareDesktopModal.generateShareLink',
+          ),
+          resetText: dict('NuwaxPC.Common.Global.cancel'),
         },
       }}
       initialValues={{
@@ -226,10 +283,19 @@ const ShareDesktopModal: React.FC<ShareDesktopModalProps> = ({
       {/* 有效时间选择 */}
       <ProFormSelect
         name="expireSeconds"
-        label="有效时间"
-        placeholder="请选择有效时间"
+        label={dict('NuwaxPC.Components.ShareDesktopModal.validDuration')}
+        placeholder={dict(
+          'NuwaxPC.Components.ShareDesktopModal.selectValidDuration',
+        )}
         options={getTimeOptions()}
-        rules={[{ required: true, message: '请选择有效时间' }]}
+        rules={[
+          {
+            required: true,
+            message: dict(
+              'NuwaxPC.Components.ShareDesktopModal.selectValidDuration',
+            ),
+          },
+        ]}
       />
 
       {/* 实时显示有效时间提示 */}
@@ -237,16 +303,21 @@ const ShareDesktopModal: React.FC<ShareDesktopModalProps> = ({
         {({ expireSeconds }) => (
           <div style={{ marginTop: -16, marginBottom: 16, color: '#00000073' }}>
             {expireSeconds
-              ? `链接将在 ${formatTimeDisplay(expireSeconds || 5 * 60)} 后失效`
-              : `链接永久有效`}
+              ? dict(
+                  'NuwaxPC.Components.ShareDesktopModal.linkExpiresIn',
+                  formatTimeDisplay(expireSeconds || 5 * 60),
+                )
+              : dict('NuwaxPC.Components.ShareDesktopModal.linkPermanent')}
           </div>
         )}
       </ProFormDependency>
 
       {/* 温馨提示 */}
       <Alert
-        message="温馨提示："
-        description="分享链接生成后将自动复制到剪切板；互联网上得到该分享链接的用户均可访问，请谨慎分享，注意数据风险。"
+        message={dict('NuwaxPC.Components.ShareDesktopModal.noticeTitle')}
+        description={dict(
+          'NuwaxPC.Components.ShareDesktopModal.noticeDescription',
+        )}
         type="info"
         showIcon
         style={{ marginTop: 8 }}

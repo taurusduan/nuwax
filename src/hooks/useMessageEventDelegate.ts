@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import { EventBindResponseActionEnum } from '@/types/enums/agent';
 import { checkPathParams, fillPathParams } from '@/utils';
 import { message as antdMessage } from 'antd';
@@ -79,7 +80,9 @@ export const useMessageEventDelegate = ({
         case EventBindResponseActionEnum.Page: {
           // 打开页面
           if (!eventConfig.pageUrl) {
-            antdMessage.error('页面路径配置错误');
+            antdMessage.error(
+              dict('NuwaxPC.Hooks.UseMessageEventDelegate.pagePathConfigError'),
+            );
             return;
           }
 
@@ -114,13 +117,19 @@ export const useMessageEventDelegate = ({
 
             // 调用页面预览
             showPagePreview({
-              name: eventConfig.pageName || '页面',
+              name:
+                eventConfig.pageName ||
+                dict('NuwaxPC.Hooks.UseMessageEventDelegate.page'),
               uri: fullUri,
               params,
               executeId: `event-${Date.now()}`,
             });
           } else {
-            antdMessage.error('页面路径参数配置错误');
+            antdMessage.error(
+              dict(
+                'NuwaxPC.Hooks.UseMessageEventDelegate.pagePathParamConfigError',
+              ),
+            );
           }
           break;
         }
@@ -128,7 +137,9 @@ export const useMessageEventDelegate = ({
         case EventBindResponseActionEnum.Link: {
           // 打开外链
           if (!eventConfig.url) {
-            antdMessage.error('链接地址配置错误');
+            antdMessage.error(
+              dict('NuwaxPC.Hooks.UseMessageEventDelegate.linkUrlConfigError'),
+            );
             return;
           }
 

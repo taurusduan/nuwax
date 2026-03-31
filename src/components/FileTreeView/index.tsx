@@ -1,4 +1,5 @@
 import { ImageViewer } from '@/pages/AppDev/components';
+import { dict } from '@/services/i18nRuntime';
 import { fetchContentFromUrl } from '@/services/skill';
 import { FileNode } from '@/types/interfaces/appDev';
 import {
@@ -365,7 +366,9 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
 
           // 文件没有内容或需要重新加载
           if (isRenamingFile) {
-            message.warning('文件正在重命名中，请稍后再试');
+            message.warning(
+              dict('NuwaxPC.Components.FileTreeView.fileRenaming'),
+            );
             return;
           }
 
@@ -374,7 +377,9 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
            * 当重新切换回来这个页面时，会导致已修改的文件内容丢失，所以需要清空修改的文件列表和重置正在保存文件的状态
            */
           if (changeFiles?.length > 0) {
-            message.warning('你有未保存的文件修改，请先保存后再切换文件');
+            message.warning(
+              dict('NuwaxPC.Components.FileTreeView.unsavedChangesSwitchFile'),
+            );
             return;
           }
 
@@ -718,7 +723,9 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
      */
     const handleRenameFromMenu = (node: FileNode) => {
       if (!node?.fileProxyUrl && changeFiles?.length > 0) {
-        message.warning('你有未保存的文件修改，请先保存后再重命名');
+        message.warning(
+          dict('NuwaxPC.Components.FileTreeView.unsavedChangesRename'),
+        );
         return;
       }
       setRenamingNode(node);
@@ -830,7 +837,9 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
      */
     const handleUploadFromMenu = async (node: FileNode | null) => {
       if (!node?.fileProxyUrl && changeFiles?.length > 0) {
-        message.warning('你有未保存的文件修改，请先保存后再上传文件');
+        message.warning(
+          dict('NuwaxPC.Components.FileTreeView.unsavedChangesUpload'),
+        );
         return;
       }
 
@@ -896,7 +905,9 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
      */
     const handleDelete = async (node: FileNode) => {
       if (!node?.fileProxyUrl && changeFiles?.length > 0) {
-        message.warning('你有未保存的文件修改，请先保存后再删除文件');
+        message.warning(
+          dict('NuwaxPC.Components.FileTreeView.unsavedChangesDelete'),
+        );
         return;
       }
       // 直接调用现有的删除文件功能，等待返回值
@@ -987,7 +998,9 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
      */
     const handleCreateFile = (parentNode: FileNode | null) => {
       if (changeFiles?.length > 0) {
-        message.warning('你有未保存的文件修改，请先保存后再新建文件');
+        message.warning(
+          dict('NuwaxPC.Components.FileTreeView.unsavedChangesCreateFile'),
+        );
         return;
       }
       createTempNodeAndStartRename(parentNode, 'file');
@@ -998,7 +1011,9 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
      */
     const handleCreateFolder = (parentNode: FileNode | null) => {
       if (changeFiles?.length > 0) {
-        message.warning('你有未保存的文件修改，请先保存后再新建文件夹');
+        message.warning(
+          dict('NuwaxPC.Components.FileTreeView.unsavedChangesCreateFolder'),
+        );
         return;
       }
       createTempNodeAndStartRename(parentNode, 'folder');
@@ -1368,7 +1383,9 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
             showTitle={false}
             showIcon={false}
             showButtons={false}
-            description="当前没有可预览的文件"
+            description={dict(
+              'NuwaxPC.Components.FileTreeView.noFilesToPreview',
+            )}
           />
         );
       }
@@ -1380,7 +1397,7 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
             showTitle={false}
             showIcon={false}
             showButtons={false}
-            description="没有匹配到对应的文件，请从左侧文件树选择一个文件进行预览"
+            description={dict('NuwaxPC.Components.FileTreeView.noMatchingFile')}
           />
         );
       }
@@ -1393,7 +1410,9 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
             showTitle={false}
             showIcon={false}
             showButtons={false}
-            description="请从左侧文件树选择一个文件进行预览"
+            description={dict(
+              'NuwaxPC.Components.FileTreeView.selectFileToPreview',
+            )}
           />
         );
       }
@@ -1477,9 +1496,12 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
         return (
           <AppDevEmptyState
             type="error"
-            title="无法预览此文件类型"
+            title={dict('NuwaxPC.Components.FileTreeView.cannotPreviewType')}
             showButtons={false}
-            description={`当前不支持预览【${fileExtension}】格式的文件。`}
+            description={dict(
+              'NuwaxPC.Components.FileTreeView.unsupportedFormat',
+              fileExtension,
+            )}
           />
         );
       }
@@ -1712,10 +1734,22 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
                   useRelativePosition={true}
                 />
                 {/* 操作提示框 */}
-                <TipsBox visible={isDownloadingFile} text="正在下载" />
-                <TipsBox visible={isUploadingFiles} text="正在上传" />
-                <TipsBox visible={isExportingProjecting} text="正在导出" />
-                <TipsBox visible={isImportingProject} text="正在导入" />
+                <TipsBox
+                  visible={isDownloadingFile}
+                  text={dict('NuwaxPC.Components.FileTreeView.downloading')}
+                />
+                <TipsBox
+                  visible={isUploadingFiles}
+                  text={dict('NuwaxPC.Components.FileTreeView.uploading')}
+                />
+                <TipsBox
+                  visible={isExportingProjecting}
+                  text={dict('NuwaxPC.Components.FileTreeView.exporting')}
+                />
+                <TipsBox
+                  visible={isImportingProject}
+                  text={dict('NuwaxPC.Components.FileTreeView.importing')}
+                />
 
                 <div
                   className={cx(
@@ -1725,14 +1759,20 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
                     styles['file-tree-header'],
                   )}
                 >
-                  <span>文件</span>
+                  <span>{dict('NuwaxPC.Components.FileTreeView.files')}</span>
 
                   {/* 刷新文件树 */}
                   {/* 是否显示刷新按钮 */}
                   {viewMode === 'preview' && showRefreshButton && (
                     // 是否正在刷新文件树
                     <Tooltip
-                      title={isRefreshingFileTree ? '刷新中...' : '刷新文件树'}
+                      title={
+                        isRefreshingFileTree
+                          ? dict('NuwaxPC.Components.FileTreeView.refreshing')
+                          : dict(
+                              'NuwaxPC.Components.FileTreeView.refreshFileTree',
+                            )
+                      }
                     >
                       <Button
                         type="text"
@@ -1785,7 +1825,9 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
                 {/* 遮罩层（半透明遮罩 + Loading + Spin） */}
                 <div className={cx(styles['loading-overlay'])}>
                   <Spin size="large" className={cx(styles['loading-spin'])} />
-                  <span className={cx(styles['loading-text'])}>重启中...</span>
+                  <span className={cx(styles['loading-text'])}>
+                    {dict('NuwaxPC.Components.FileTreeView.restarting')}
+                  </span>
                 </div>
               </div>
             )}
