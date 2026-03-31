@@ -24,6 +24,7 @@ import useMessageEventDelegate from '@/hooks/useMessageEventDelegate';
 import { useNavigationGuard } from '@/hooks/useNavigationGuard';
 import useSelectedComponent from '@/hooks/useSelectedComponent';
 import { apiAgentConversationCreate } from '@/services/agentConfig';
+import { t } from '@/services/i18nRuntime';
 import {
   apiDownloadAllFiles,
   apiUpdateStaticFile,
@@ -830,7 +831,9 @@ const Chat: React.FC = () => {
     newName: string,
   ): Promise<boolean> => {
     if (!id) {
-      messageAntd.warning('会话ID不存在，无法新建文件');
+      messageAntd.warning(
+        t('NuwaxPC.Pages.Chat.conversationIdMissingCreateFile'),
+      );
       return false;
     }
 
@@ -878,7 +881,7 @@ const Chat: React.FC = () => {
   const handleDeleteFile = async (fileNode: FileNode): Promise<boolean> => {
     return new Promise((resolve) => {
       modalConfirm(
-        '你确定要删除此文件吗?',
+        t('NuwaxPC.Pages.Chat.confirmDeleteFile'),
         fileNode.name,
         async () => {
           try {
@@ -899,7 +902,7 @@ const Chat: React.FC = () => {
                 (item: StaticFileInfo) => item.fileId === fileNode.id,
               );
               if (!currentFile) {
-                messageAntd.error('文件不存在，无法删除');
+                messageAntd.error(t('NuwaxPC.Pages.Chat.fileNotFoundDelete'));
                 resolve(false);
                 return;
               }
@@ -921,13 +924,13 @@ const Chat: React.FC = () => {
             if (code === SUCCESS_CODE) {
               // 重新查询文件树列表，因为更新了文件名或文件夹名称，需要刷新文件树
               handleRefreshFileList(id);
-              messageAntd.success('删除成功');
+              messageAntd.success(t('NuwaxPC.Pages.Chat.deleteSuccess'));
               resolve(true);
             } else {
               resolve(false);
             }
           } catch (error) {
-            console.error('删除文件失败:', error);
+            console.error('Failed to delete file:', error);
             resolve(false);
           }
         },
@@ -1003,7 +1006,7 @@ const Chat: React.FC = () => {
     filePaths: string[],
   ) => {
     if (!id) {
-      messageAntd.warning('会话ID不存在，无法上传文件');
+      messageAntd.warning(t('NuwaxPC.Pages.Chat.conversationIdMissingUpload'));
       return;
     }
 
@@ -1013,7 +1016,9 @@ const Chat: React.FC = () => {
     );
     // 如果超过最大上传文件大小，则提示错误
     if (isExceedLimitSize) {
-      messageAntd.warning(`上传文件总大小不能超过${maxFileSize}MB`);
+      messageAntd.warning(
+        t('NuwaxPC.Pages.Chat.uploadSizeLimitExceeded', maxFileSize),
+      );
       return;
     }
 
@@ -1026,12 +1031,12 @@ const Chat: React.FC = () => {
       });
 
       if (code === SUCCESS_CODE) {
-        messageAntd.success('上传成功');
+        messageAntd.success(t('NuwaxPC.Pages.Chat.uploadSuccess'));
         // 刷新项目详情
         await handleRefreshFileList(id);
       }
     } catch (error) {
-      console.error('上传失败', error);
+      console.error('Upload failed:', error);
     }
   };
 
@@ -1039,7 +1044,7 @@ const Chat: React.FC = () => {
   const handleExportProject = async () => {
     // 检查项目ID是否有效
     if (!id) {
-      messageAntd.warning('会话ID不存在或无效，无法导出');
+      messageAntd.warning(t('NuwaxPC.Pages.Chat.invalidConversationIdExport'));
       return;
     }
 
@@ -1048,7 +1053,8 @@ const Chat: React.FC = () => {
       // 判断是否成功
       if (!result.success) {
         // 导出失败，显示错误信息
-        const errorMessage = result.error?.message || '导出失败';
+        const errorMessage =
+          result.error?.message || t('NuwaxPC.Pages.Chat.exportFailed');
         messageAntd.warning(errorMessage);
         return;
       }
@@ -1056,9 +1062,9 @@ const Chat: React.FC = () => {
       const filename = `chat-${id}.zip`;
       // 导出整个项目压缩包
       exportWholeProjectZip(result, filename);
-      messageAntd.success('导出成功！');
+      messageAntd.success(t('NuwaxPC.Pages.Chat.exportSuccess'));
     } catch (error) {
-      console.error('导出项目失败:', error);
+      console.error('Failed to export project:', error);
     }
   };
 
@@ -1081,7 +1087,7 @@ const Chat: React.FC = () => {
                 condition={isAppSidebarMode && !isAppSidebarVisible}
               >
                 <TooltipIcon
-                  title="展开导航"
+                  title={t('NuwaxPC.Pages.Chat.expandNavigation')}
                   className={cx(styles['icon-box'])}
                   icon={
                     <SvgIcon
@@ -1094,7 +1100,7 @@ const Chat: React.FC = () => {
 
                 {/* 新建会话 */}
                 <TooltipIcon
-                  title="新建会话"
+                  title={t('NuwaxPC.Pages.Chat.newConversation')}
                   className={cx(styles['icon-box'])}
                   icon={
                     <SvgIcon
@@ -1110,7 +1116,7 @@ const Chat: React.FC = () => {
               {/* 当文件树显示时，也显示这个按钮，用于关闭文件树并打开 AgentSidebar */}
               {!isAppSidebarMode && !isSidebarVisible && !isMobile && (
                 <TooltipIcon
-                  title="查看智能体详情"
+                  title={t('NuwaxPC.Pages.Chat.viewAgentDetails')}
                   className={cx(styles['icon-box'])}
                   icon={
                     <SvgIcon

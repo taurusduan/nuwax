@@ -783,6 +783,25 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'This record is missing requestId, details are unavailable',
   'NuwaxPC.Pages.ApiKeyLogsLogProTable.actions': 'Actions',
   'NuwaxPC.Pages.ApiKeyLogsLogProTable.detail': 'Detail',
+  'NuwaxPC.Pages.Chat.conversationIdMissingCreateFile':
+    'Conversation ID is missing, cannot create file',
+  'NuwaxPC.Pages.Chat.confirmDeleteFile':
+    'Are you sure you want to delete this file?',
+  'NuwaxPC.Pages.Chat.fileNotFoundDelete':
+    'File does not exist and cannot be deleted',
+  'NuwaxPC.Pages.Chat.deleteSuccess': 'Deleted successfully',
+  'NuwaxPC.Pages.Chat.conversationIdMissingUpload':
+    'Conversation ID is missing, cannot upload files',
+  'NuwaxPC.Pages.Chat.uploadSizeLimitExceeded':
+    'The total upload file size cannot exceed {0}MB',
+  'NuwaxPC.Pages.Chat.uploadSuccess': 'Uploaded successfully',
+  'NuwaxPC.Pages.Chat.invalidConversationIdExport':
+    'Conversation ID is missing or invalid, cannot export',
+  'NuwaxPC.Pages.Chat.exportFailed': 'Export failed',
+  'NuwaxPC.Pages.Chat.exportSuccess': 'Export successful!',
+  'NuwaxPC.Pages.Chat.expandNavigation': 'Expand navigation',
+  'NuwaxPC.Pages.Chat.newConversation': 'New conversation',
+  'NuwaxPC.Pages.Chat.viewAgentDetails': 'View agent details',
   'NuwaxPC.Toast.UploadAvatar.invalidType':
     'Please upload JPG, JPEG, or PNG image files',
   'NuwaxPC.Toast.UploadAvatar.invalidSize': 'Image size cannot exceed 2MB',

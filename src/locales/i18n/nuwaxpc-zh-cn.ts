@@ -686,6 +686,22 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
     '该条记录缺少 requestId，无法查看详情',
   'NuwaxPC.Pages.ApiKeyLogsLogProTable.actions': '操作',
   'NuwaxPC.Pages.ApiKeyLogsLogProTable.detail': '详情',
+  'NuwaxPC.Pages.Chat.conversationIdMissingCreateFile':
+    '会话ID不存在，无法新建文件',
+  'NuwaxPC.Pages.Chat.confirmDeleteFile': '你确定要删除此文件吗?',
+  'NuwaxPC.Pages.Chat.fileNotFoundDelete': '文件不存在，无法删除',
+  'NuwaxPC.Pages.Chat.deleteSuccess': '删除成功',
+  'NuwaxPC.Pages.Chat.conversationIdMissingUpload':
+    '会话ID不存在，无法上传文件',
+  'NuwaxPC.Pages.Chat.uploadSizeLimitExceeded': '上传文件总大小不能超过{0}MB',
+  'NuwaxPC.Pages.Chat.uploadSuccess': '上传成功',
+  'NuwaxPC.Pages.Chat.invalidConversationIdExport':
+    '会话ID不存在或无效，无法导出',
+  'NuwaxPC.Pages.Chat.exportFailed': '导出失败',
+  'NuwaxPC.Pages.Chat.exportSuccess': '导出成功！',
+  'NuwaxPC.Pages.Chat.expandNavigation': '展开导航',
+  'NuwaxPC.Pages.Chat.newConversation': '新建会话',
+  'NuwaxPC.Pages.Chat.viewAgentDetails': '查看智能体详情',
   'NuwaxPC.Toast.UploadAvatar.invalidType': '请上传 JPG、JPEG 或 PNG 图片文件',
   'NuwaxPC.Toast.UploadAvatar.invalidSize': '图片大小不能超过 2MB',
   'NuwaxPC.Pages.SystemDashboard.resourceOverview': '资源概览',

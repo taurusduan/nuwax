@@ -144,7 +144,7 @@ const routes = [
           },
           {
             path: 'api-key-logs',
-            name: 'Api调用日志',
+            name: 'API Call Logs',
             component: '@/pages/MorePage/ApiKeyLogs',
             hideInMenu: true,
           },

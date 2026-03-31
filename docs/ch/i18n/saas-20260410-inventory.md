@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T09:35:22.121Z
+- 生成时间：2026-03-31T09:44:07.144Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2517
-- hardcoded 中文：2517
+- 总问题数：2501
+- hardcoded 中文：2501
 - legacy System key：0
 - invalid dict key：0
 
@@ -37,7 +37,6 @@
 | src/components/FormListItem | 41 | 0 | 0 | 41 |
 | src/pages/SpaceLog | 39 | 0 | 0 | 39 |
 | src/pages/MyComputerManage | 38 | 0 | 0 | 38 |
-| src/pages/Chat | 37 | 0 | 0 | 37 |
 | src/pages/SpaceSkillManage | 37 | 0 | 0 | 37 |
 | src/pages/SpaceTaskCenter | 37 | 0 | 0 | 37 |
 | src/pages/SpacePluginTool | 35 | 0 | 0 | 35 |
@@ -51,6 +50,7 @@
 | src/pages/EcosystemPlugin | 24 | 0 | 0 | 24 |
 | src/components/AgentSidebar | 24 | 0 | 0 | 24 |
 | src/pages/PublishedManage | 22 | 0 | 0 | 22 |
+| src/pages/Chat | 21 | 0 | 0 | 21 |
 | src/components/CreateKnowledge | 21 | 0 | 0 | 21 |
 | src/pages/Home | 19 | 0 | 0 | 19 |
 | src/pages/SpaceMcpEdit | 19 | 0 | 0 | 19 |
@@ -1544,46 +1544,6 @@
 - [hardcoded_chinese] src/pages/MyComputerManage/index.tsx:338 -> `删除`
 - [hardcoded_chinese] src/pages/MyComputerManage/index.tsx:355 -> `暂无电脑配置`
 
-## src/pages/Chat
-
-- [hardcoded_chinese] src/pages/Chat/DropdownChangeName/index.tsx:64 -> `修改名称`
-- [hardcoded_chinese] src/pages/Chat/DropdownChangeName/index.tsx:69 -> `删除`
-- [hardcoded_chinese] src/pages/Chat/DropdownChangeName/index.tsx:90 -> `修改成功`
-- [hardcoded_chinese] src/pages/Chat/DropdownChangeName/index.tsx:112 -> `删除成功`
-- [hardcoded_chinese] src/pages/Chat/DropdownChangeName/index.tsx:205 -> `修改名称`
-- [hardcoded_chinese] src/pages/Chat/DropdownChangeName/index.tsx:226 -> `会话名称不能为空`
-- [hardcoded_chinese] src/pages/Chat/DropdownChangeName/index.tsx:230 -> `会话名称不能只包含空格`
-- [hardcoded_chinese] src/pages/Chat/DropdownChangeName/index.tsx:240 -> `请输入会话名称`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:376 -> `任务执行中`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:377 -> `离开后，执行成功的任务会收到提示消息`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:378 -> `确定离开`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:419 -> `页面预览`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:701 -> `创建会话失败`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:704 -> `清空并创建会话失败`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:833 -> `会话ID不存在，无法新建文件`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:881 -> `你确定要删除此文件吗?`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:902 -> `文件不存在，无法删除`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:924 -> `删除成功`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:930 -> `删除文件失败:`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1006 -> `会话ID不存在，无法上传文件`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1016 -> `上传文件总大小不能超过${maxFileSize}MB`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1029 -> `上传成功`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1034 -> `上传失败`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1042 -> `会话ID不存在或无效，无法导出`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1051 -> `导出失败`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1059 -> `导出成功！`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1061 -> `导出项目失败:`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1084 -> `展开导航`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1097 -> `新建会话`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1113 -> `查看智能体详情`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1139 -> `打开预览页面`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1162 -> `关闭文件预览`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1163 -> `打开文件预览`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1187 -> `关闭智能体电脑`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1188 -> `打开智能体电脑`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1341 -> `您无该智能体权限`
-- [hardcoded_chinese] src/pages/Chat/index.tsx:1492 -> `复制模板`
-
 ## src/pages/SpaceSkillManage
 
 - [hardcoded_chinese] src/pages/SpaceSkillManage/CreateSkill/index.tsx:43 -> `技能已创建成功`
@@ -1831,3 +1791,33 @@
 - [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:216 -> `API 密钥管理`
 - [hardcoded_chinese] src/pages/MorePage/ApiKey/index.tsx:217 -> `管理您的API密钥与访问权限`
 - [hardcoded_chinese] src/pages/MorePage/ApiKeyLogs/index.tsx:6 -> `Api调用日志`
+
+## src/pages/EcosystemTemplate
+
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:232 -> `获取模板列表失败:`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:233 -> `获取模板列表失败`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:318 -> `未命名插件`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:319 -> `暂无描述`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:337 -> `未命名插件`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:338 -> `暂无描述`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:378 -> `更新失败`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:383 -> `更新成功`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:387 -> `更新失败`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:401 -> `下线失败`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:405 -> `已下线`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:410 -> `下线失败`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:490 -> `更新成功`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:490 -> `创建成功`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:497 -> `保存分享失败:`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:558 -> `获取数据失败:`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:559 -> `获取数据失败`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:584 -> `智能体`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:588 -> `工作流`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:592 -> `网页应用`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:674 -> `获取详情失败`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:690 -> `模板已下线`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:707 -> `模板已撤销发布`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:743 -> `搜索模板`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:764 -> `搜索模板`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:872 -> `查看详情`
+- [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:960 -> `暂无数据`

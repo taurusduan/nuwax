@@ -1526,3 +1526,26 @@
 - 风险/阻塞：
   - `MorePage` 仍有路由名称等中文存量待处理
 - 下一步：继续推进 `src/routes/index.ts` 与 `src/pages/Chat/index.tsx` 热点项
+
+### 里程碑：Top 模块第六十二批实改（Chat 页面与路由入口）
+
+- 时间：2026-03-31 17:42
+- 任务：处理 `Chat/index.tsx` 文件操作与导出流程提示，以及 `routes/index.ts` 中 API 日志路由名
+- 执行命令：
+  - `pnpm prettier --write src/pages/Chat/index.tsx src/routes/index.ts src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Chat/index.tsx`
+    - `src/routes/index.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `Chat/index.tsx` 中新建/删除/上传/导出相关提示与顶部 tooltip（展开导航/新建会话/查看智能体详情）切换为 `t(...)`
+  - `Chat/index.tsx` 文件操作相关日志统一改为英文
+  - `routes/index.ts` 中 `api-key-logs` 路由名称改为英文 `API Call Logs`
+  - 新增 `NuwaxPC.Pages.Chat.*` 默认中英文词典
+  - 治理总量从 `2517` 下降至 `2501`（-16）
+- 风险/阻塞：
+  - `Chat/index.tsx` 仍有其他流程分支中文存量待继续处理
+- 下一步：继续推进 `Chat/index.tsx` 剩余分支与 `routes/index.ts` 其余菜单项
