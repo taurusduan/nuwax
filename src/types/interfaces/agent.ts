@@ -799,6 +799,39 @@ export interface SpaceLogDetailParams {
   id: string;
 }
 
+/**
+ * 智能体会话可选模型列表项
+ */
+export interface ModelOptionDto {
+  id: number;
+  tenantId: number;
+  spaceId: number;
+  scope: string;
+  name: string;
+  description: string;
+  model: string;
+  type: string;
+  isReasonModel: number;
+  networkType: string;
+  functionCall: string;
+  maxTokens: number;
+  maxContextTokens: number;
+  apiProtocol: string;
+  apiInfoList: {
+    url: string;
+    key: string;
+    weight: number;
+  }[];
+  strategy: string;
+  dimension: number;
+  modified: string;
+  created: string;
+  creator: CreatorInfo;
+  enabled: number;
+  accessControl: number;
+  usageScenarios: string[];
+}
+
 // 日志查询响应-工作空间
 export interface SpaceLogInfo {
   /** 日志 ID，不用于展示，仅用于查询详情 */

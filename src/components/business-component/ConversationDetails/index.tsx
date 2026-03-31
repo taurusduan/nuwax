@@ -106,6 +106,8 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
   const [conversationId, setConversationId] = useState<number | null>(null);
   // 选中的电脑ID（用于任务智能体模式）
   const [selectedComputerId, setSelectedComputerId] = useState<string>('');
+  // 选中的模型 ID
+  const [selectedModelId, setSelectedModelId] = useState<number>();
 
   const [isSidebarVisible, setIsSidebarVisible] = useState<boolean>(true);
   const sidebarRef = useRef<AgentSidebarRef>(null);
@@ -284,6 +286,7 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
     messageInfo: string,
     files?: UploadFileInfo[],
     skillIds?: number[],
+    modelId?: number,
   ) => {
     // 智能体信息为空
     if (!agentDetail) {
@@ -322,6 +325,7 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
       messageSourceType: 'agent' as MessageSourceType,
       selectedComputerId,
       skillIds,
+      modelId: modelId || selectedModelId,
     };
     history.push(url, attach);
   };
@@ -530,6 +534,10 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
                 agentDetail?.type === AgentTypeEnum.TaskAgent &&
                 agentDetail?.allowAtSkill === DefaultSelectedEnum.Yes
               }
+              allowOtherModel={agentDetail?.allowOtherModel}
+              selectedModelId={selectedModelId}
+              onModelSelect={setSelectedModelId}
+              agentType={agentDetail?.type}
               // 通用性智能体才有技能，所以技能信息存在时才显示提及项，其他类型智能体不显示提及项
               defaultMentions={defaultMentions}
             />

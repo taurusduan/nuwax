@@ -43,6 +43,8 @@ const Home: React.FC = () => {
   // 选中的电脑 ID，'remote' 表示远程电脑（默认）
   const [selectedComputerId, setSelectedComputerId] =
     useState<string>('remote');
+  // 选中的模型 ID
+  const [selectedModelId, setSelectedModelId] = useState<number>();
   // 创建智能体会话
   const { handleCreateConversation } = useConversation();
   // 会话输入框已选择组件
@@ -129,6 +131,7 @@ const Home: React.FC = () => {
     _message: string,
     files?: UploadFileInfo[],
     skillIds?: number[],
+    modelId?: number,
   ) => {
     if (!tenantConfigInfo) {
       message.warning('租户信息不存在');
@@ -149,6 +152,7 @@ const Home: React.FC = () => {
       messageSourceType: 'home' as MessageSourceType,
       hideMenu: isTaskAgentMode,
       skillIds,
+      modelId: modelId || selectedModelId,
     };
 
     await handleCreateConversation(agentId, attach);
@@ -270,6 +274,10 @@ const Home: React.FC = () => {
             agentDetail?.type === AgentTypeEnum.TaskAgent &&
             agentDetail?.allowAtSkill === DefaultSelectedEnum.Yes
           }
+          allowOtherModel={agentDetail?.allowOtherModel}
+          selectedModelId={selectedModelId}
+          onModelSelect={setSelectedModelId}
+          agentType={agentDetail?.type}
         />
         <div
           className={cx(
