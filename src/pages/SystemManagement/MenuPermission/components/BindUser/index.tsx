@@ -156,7 +156,7 @@ const BindUser: React.FC<BindUserProps> = ({
   //   manual: true,
   //   debounceInterval: 300,
   //   onSuccess: () => {
-  //     message.success('添加成功');
+  //     message.success('Added successfully');
   //     onConfirmBindUser?.();
   //   },
   // });

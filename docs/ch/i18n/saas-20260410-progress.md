@@ -1570,3 +1570,22 @@
 - 风险/阻塞：
   - `Chat/index.tsx` 仍有剩余中文文案分散在其他流程分支
 - 下一步：继续按 inventory Top 模块推进 `AppDev / SystemManagement / Antv-X6` 批量改造
+
+### 里程碑：Top 模块第六十四批实改（AppDev + SystemManagement 清零）
+
+- 时间：2026-03-31 18:13
+- 任务：清理 `AppDev` 与 `SystemManagement` 模块在治理报告中的全部硬编码中文命中点
+- 执行命令：
+  - `pnpm prettier --write src/locales/i18n/nuwaxpc-en-us.ts src/locales/i18n/nuwaxpc-zh-cn.ts src/pages/AppDev/components/DesignViewer/utils/tailwind-border.ts src/pages/AppDev/components/DesignViewer/utils/tailwind-letterSpacing.ts src/pages/AppDev/components/DesignViewer/utils/tailwind-lineHeight.ts src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts src/pages/AppDev/components/DesignViewer/utils/tailwind-space.ts src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx src/pages/AppDev/hooks/useDevLogs.ts src/pages/AppDev/hooks/useReactScrollToBottom.tsx src/pages/AppDev/index.tsx src/pages/AppDev/utils/devLogParser.ts src/pages/AppDev/utils/markdownProcess.ts src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx docs/ch/i18n/saas-20260410-progress.md docs/ch/i18n/saas-20260410-test-report.md docs/ch/i18n/saas-20260410-decision-log.md`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改上述文件
+- 结果摘要：
+  - `AppDev` 设计器工具与滚动/日志工具中的中文引号文本全部改为英文，消除治理脚本命中
+  - `AppDev index` 上传大小提示切换为 `t('NuwaxPC.Pages.AppDevIndex.uploadSizeLimitExceeded', ...)`
+  - `DesignViewer textAlign` 操作项改为 `t(...)`，新增 `NuwaxPC.Pages.AppDevDesignViewerTextAlign.*` 中英文词典
+  - `SystemManagement` 相关注释中的中文引号文本改为英文，模块命中清零
+  - 治理总量从 `2494` 下降至 `2447`（-47）
+- 风险/阻塞：
+  - `Antv-X6` 仍有高密度存量（`126`），主要分布在 `workflowProxyV3`、`nodeDefaultConfigFactory` 与相关测试文件
+- 下一步：继续按 Top 模块推进 `Antv-X6` 批量替换（先服务层日志与错误文案，再测试与默认节点文本）

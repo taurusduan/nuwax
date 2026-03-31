@@ -2129,9 +2129,16 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.AppDevIndex.upload': '上传',
   'NuwaxPC.Pages.AppDevIndex.uploadDragText': '点击或拖拽文件到此区域选择',
   'NuwaxPC.Pages.AppDevIndex.uploadProject': '上传项目',
+  'NuwaxPC.Pages.AppDevIndex.uploadSizeLimitExceeded':
+    '上传文件总大小不能超过{0}MB',
   'NuwaxPC.Pages.AppDevIndex.uploadZipHint':
     '仅支持 .zip 压缩文件格式（将更新当前项目）',
   'NuwaxPC.Pages.AppDevIndex.zipOnly': '仅支持 .zip 压缩文件格式',
+  'NuwaxPC.Pages.AppDevDesignViewerTextAlign.reset': '重置',
+  'NuwaxPC.Pages.AppDevDesignViewerTextAlign.left': '靠左',
+  'NuwaxPC.Pages.AppDevDesignViewerTextAlign.center': '居中',
+  'NuwaxPC.Pages.AppDevDesignViewerTextAlign.right': '靠右',
+  'NuwaxPC.Pages.AppDevDesignViewerTextAlign.justify': '两端对齐',
   'NuwaxPC.Pages.AppDevPageEditModal.coverImage': '封面图片',
   'NuwaxPC.Pages.AppDevPageEditModal.coverImageTip':
     '建议尺寸356px * 200px, 比例16:9',

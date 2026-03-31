@@ -33,7 +33,7 @@ const cx = classNames.bind(styles);
  * 重构特点：
  * - 使用统一的主题数据管理服务
  * - 所有切换都是临时预览效果，不会立即保存到本地缓存
- * - 用户需要点击"保存配置"按钮才会真正保存到后端和本地缓存
+ * - Users must click the "Save Config" button to persist changes to backend and local cache
  * - 支持完整的自定义功能（自定义颜色、背景图片上传等）
  * - 配置优先级：用户设置 > 租户信息设置 > 默认配置
  */
@@ -268,7 +268,7 @@ const ThemeConfig: React.FC = () => {
 
     // 使用 setTimeout 确保在 remount 后消息能正常显示
     // setTimeout(() => {
-    //   message.info('已重置为默认配置（预览效果）');
+    //   message.info('Reset to default config (preview mode)');
     // }, 200);
   }, [message]);
 

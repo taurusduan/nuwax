@@ -2400,9 +2400,16 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AppDevIndex.uploadDragText':
     'Click or drag file to this area to select',
   'NuwaxPC.Pages.AppDevIndex.uploadProject': 'Upload Project',
+  'NuwaxPC.Pages.AppDevIndex.uploadSizeLimitExceeded':
+    'The total upload file size cannot exceed {0}MB',
   'NuwaxPC.Pages.AppDevIndex.uploadZipHint':
     'Only .zip archives are supported (will update current project)',
   'NuwaxPC.Pages.AppDevIndex.zipOnly': 'Only .zip archive format is supported',
+  'NuwaxPC.Pages.AppDevDesignViewerTextAlign.reset': 'Reset',
+  'NuwaxPC.Pages.AppDevDesignViewerTextAlign.left': 'Align Left',
+  'NuwaxPC.Pages.AppDevDesignViewerTextAlign.center': 'Align Center',
+  'NuwaxPC.Pages.AppDevDesignViewerTextAlign.right': 'Align Right',
+  'NuwaxPC.Pages.AppDevDesignViewerTextAlign.justify': 'Justify',
   'NuwaxPC.Pages.AppDevPageEditModal.coverImage': 'Cover Image',
   'NuwaxPC.Pages.AppDevPageEditModal.coverImageTip':
     'Recommended size 356px * 200px, ratio 16:9',

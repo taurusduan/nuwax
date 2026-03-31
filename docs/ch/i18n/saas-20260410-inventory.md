@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T09:59:18.513Z
+- 生成时间：2026-03-31T10:12:57.612Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2494
-- hardcoded 中文：2494
+- 总问题数：2447
+- hardcoded 中文：2447
 - legacy System key：0
 - invalid dict key：0
 
@@ -33,7 +33,6 @@
 | src/pages/SpaceLibraryLog | 49 | 0 | 0 | 49 |
 | src/pages/SpaceDevelop | 48 | 0 | 0 | 48 |
 | src/models | 46 | 0 | 0 | 46 |
-| src/pages/AppDev | 44 | 0 | 0 | 44 |
 | src/components/FormListItem | 41 | 0 | 0 | 41 |
 | src/pages/SpaceLog | 39 | 0 | 0 | 39 |
 | src/pages/MyComputerManage | 38 | 0 | 0 | 38 |
@@ -95,7 +94,6 @@
 | src/components/PluginAutoAnalysis | 4 | 0 | 0 | 4 |
 | src/components/PluginTryRunModal | 4 | 0 | 0 | 4 |
 | src/components/RecommendList | 4 | 0 | 0 | 4 |
-| src/pages/SystemManagement | 3 | 0 | 0 | 3 |
 | src/components/EcosystemSelectCategory | 3 | 0 | 0 | 3 |
 | src/components/FoldWrap | 3 | 0 | 0 | 3 |
 | src/components/PromptOptimizeModal | 2 | 0 | 0 | 2 |
@@ -1370,53 +1368,6 @@
 - [hardcoded_chinese] src/models/workflowV3.ts:65 -> `测试`
 - [hardcoded_chinese] src/models/workflowV3.ts:66 -> `测试`
 
-## src/pages/AppDev
-
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-border.ts:117 -> `; // border 默认是 1px，返回 Tailwind 边框宽度值 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-letterSpacing.ts:39 -> ` } 或 { label: `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-lineHeight.ts:42 -> ` } 或 { label: `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:30 -> ` 可能对应 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:30 -> ` 或 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:30 -> `，优先返回 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:33 -> ` 比 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:30 -> ` 可能对应 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:30 -> ` 或 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:30 -> `，优先返回 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:33 -> ` 比 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-space.ts:214 -> ` 中的 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:28 -> `重置`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:33 -> `靠左`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:38 -> `居中`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:43 -> `靠右`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:48 -> `两端对齐`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:76 -> ` } 或 { label: `
-- [hardcoded_chinese] src/pages/AppDev/hooks/useDevLogs.ts:209 -> `获取日志失败`
-- [hardcoded_chinese] src/pages/AppDev/hooks/useDevLogs.ts:231 -> `取消轮询时出错:`
-- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:140 -> `[useReactScrollToBottom] 滚动到底部失败:`
-- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:152 -> `[useReactScrollToBottom] 检查是否在底部`
-- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:155 -> `[useReactScrollToBottom] 检查滚动位置失败:`
-- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:167 -> `[useReactScrollToBottom] 检查滚动位置失败:`
-- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:214 -> `[useReactScrollToBottom] 处理用户滚动事件失败:`
-- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:298 -> `[useReactScrollToBottom] 处理新消息失败:`
-- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:503 -> `[ScrollPositionObserver] 未找到滚动容器`
-- [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:557 -> `[ScrollPositionObserver] 备用监听器未找到滚动容器`
-- [hardcoded_chinese] src/pages/AppDev/index.tsx:441 -> `[AppDev] ✅ 自动发送消息事件已触发，requestId: ${currentRequestIdRef.current}`
-- [hardcoded_chinese] src/pages/AppDev/index.tsx:958 -> `上传文件总大小不能超过${maxFileSize}MB`
-- [hardcoded_chinese] src/pages/AppDev/index.tsx:1113 -> `上传文件总大小不能超过${maxFileSize}MB`
-- [hardcoded_chinese] src/pages/AppDev/utils/devLogParser.ts:142 -> `🚨 检测到开发服务器错误，相关日志如下：\n\n`
-- [hardcoded_chinese] src/pages/AppDev/utils/devLogParser.ts:145 -> `**错误摘要：**\n`
-- [hardcoded_chinese] src/pages/AppDev/utils/devLogParser.ts:146 -> `- 错误行号: ${errorLog.line}\n`
-- [hardcoded_chinese] src/pages/AppDev/utils/devLogParser.ts:147 -> `未知`
-- [hardcoded_chinese] src/pages/AppDev/utils/devLogParser.ts:148 -> `- 错误内容: ${errorLog.content}\n\n`
-- [hardcoded_chinese] src/pages/AppDev/utils/devLogParser.ts:152 -> `**错误堆栈：**\n`
-- [hardcoded_chinese] src/pages/AppDev/utils/devLogParser.ts:160 -> `**上下文日志（最近50行）：**\n`
-- [hardcoded_chinese] src/pages/AppDev/utils/devLogParser.ts:170 -> `\n请分析上述错误并提供修复建议。`
-- [hardcoded_chinese] src/pages/AppDev/utils/devLogParser.ts:352 -> `未知时间`
-- [hardcoded_chinese] src/pages/AppDev/utils/devLogParser.ts:415 -> `时间戳解析失败:`
-- [hardcoded_chinese] src/pages/AppDev/utils/markdownProcess.ts:5 -> `序列化的JSON`
-- [hardcoded_chinese] src/pages/AppDev/utils/markdownProcess.ts:21 -> `序列化的JSON`
-- [hardcoded_chinese] src/pages/AppDev/utils/markdownProcess.ts:38 -> `序列化的JSON`
-
 ## src/components/FormListItem
 
 - [hardcoded_chinese] src/components/FormListItem/Condition.tsx:7 -> `等于`
@@ -1821,3 +1772,32 @@
 - [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:764 -> `搜索模板`
 - [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:872 -> `查看详情`
 - [hardcoded_chinese] src/pages/EcosystemTemplate/index.tsx:960 -> `暂无数据`
+
+## src/components/base
+
+- [hardcoded_chinese] src/components/base/ActionMenu/index.tsx:53 -> `更多`
+- [hardcoded_chinese] src/components/base/AgentType/index.tsx:29 -> `智能体`
+- [hardcoded_chinese] src/components/base/AgentType/index.tsx:34 -> `插件`
+- [hardcoded_chinese] src/components/base/AgentType/index.tsx:39 -> `工作流`
+- [hardcoded_chinese] src/components/base/AgentType/index.tsx:44 -> `知识库`
+- [hardcoded_chinese] src/components/base/AgentType/index.tsx:49 -> `数据表`
+- [hardcoded_chinese] src/components/base/AgentType/index.tsx:54 -> `模型`
+- [hardcoded_chinese] src/components/base/AgentType/index.tsx:59 -> `网页应用`
+- [hardcoded_chinese] src/components/base/AgentType/index.tsx:64 -> `技能`
+- [hardcoded_chinese] src/components/base/CopyButton/index.tsx:25 -> `复制`
+- [hardcoded_chinese] src/components/base/CopyButton/index.tsx:53 -> `复制`
+- [hardcoded_chinese] src/components/base/CopyButton/index.tsx:95 -> `复制失败:`
+- [hardcoded_chinese] src/components/base/CopyIconButton/index.tsx:42 -> `复制`
+- [hardcoded_chinese] src/components/base/CopyIconButton/index.tsx:76 -> `复制失败:`
+- [hardcoded_chinese] src/components/base/EcoShareStatus/index.tsx:13 -> `草稿`
+- [hardcoded_chinese] src/components/base/EcoShareStatus/index.tsx:16 -> `审核中`
+- [hardcoded_chinese] src/components/base/EcoShareStatus/index.tsx:19 -> `已发布`
+- [hardcoded_chinese] src/components/base/EcoShareStatus/index.tsx:22 -> `已下线`
+- [hardcoded_chinese] src/components/base/EcoShareStatus/index.tsx:25 -> `已驳回`
+- [hardcoded_chinese] src/components/base/McpInstallType/index.tsx:33 -> `组件库`
+- [hardcoded_chinese] src/components/base/McpStatus/index.tsx:22 -> `待部署`
+- [hardcoded_chinese] src/components/base/McpStatus/index.tsx:26 -> `部署中`
+- [hardcoded_chinese] src/components/base/McpStatus/index.tsx:30 -> `已部署`
+- [hardcoded_chinese] src/components/base/McpStatus/index.tsx:34 -> `部署失败`
+- [hardcoded_chinese] src/components/base/McpStatus/index.tsx:38 -> `已停止`
+- [hardcoded_chinese] src/components/base/MenuListItem/index.tsx:101 -> `取消收藏`

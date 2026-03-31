@@ -438,7 +438,7 @@ const AppDev: React.FC = () => {
                 currentRequestIdRef.current,
               );
               console.log(
-                `[AppDev] ✅ 自动发送消息事件已触发，requestId: ${currentRequestIdRef.current}`,
+                `[AppDev] Auto-send message event triggered, requestId: ${currentRequestIdRef.current}`,
               );
 
               // 发送成功后，生成新的 requestId 供下次使用（如果下次还有自动处理）
@@ -955,7 +955,12 @@ const AppDev: React.FC = () => {
     ]);
     // 如果超过最大上传文件大小，则提示错误
     if (isExceedLimitSize) {
-      message.error(`上传文件总大小不能超过${maxFileSize}MB`);
+      message.error(
+        t(
+          'NuwaxPC.Pages.AppDevIndex.uploadSizeLimitExceeded',
+          String(maxFileSize),
+        ),
+      );
       return;
     }
 
@@ -1110,7 +1115,12 @@ const AppDev: React.FC = () => {
         ]);
         // 如果超过最大上传文件大小，则提示错误
         if (isExceedLimitSize) {
-          message.error(`上传文件总大小不能超过${maxFileSize}MB`);
+          message.error(
+            t(
+              'NuwaxPC.Pages.AppDevIndex.uploadSizeLimitExceeded',
+              String(maxFileSize),
+            ),
+          );
           return;
         }
 
