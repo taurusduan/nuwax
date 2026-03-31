@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T04:12:38.813Z
+- 生成时间：2026-03-31T04:19:36.262Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：3024
-- hardcoded 中文：3024
+- 总问题数：2970
+- hardcoded 中文：2970
 - legacy System key：0
 - invalid dict key：0
 
@@ -17,8 +17,8 @@
 | --- | ---: | ---: | ---: | ---: |
 | src/pages/Antv-X6 | 267 | 0 | 0 | 267 |
 | src/hooks | 186 | 0 | 0 | 186 |
-| src/pages/SystemManagement | 179 | 0 | 0 | 179 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
+| src/pages/SystemManagement | 125 | 0 | 0 | 125 |
 | src/services | 110 | 0 | 0 | 110 |
 | src/components/FileTreeView | 97 | 0 | 0 | 97 |
 | src/pages/SpaceKnowledge | 82 | 0 | 0 | 82 |
@@ -287,90 +287,6 @@
 - [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:95 -> `数据资源创建成功`
 - ... 省略 106 条
 
-## src/pages/SystemManagement
-
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:158 -> `添加成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:169 -> `未搜索到相关用户`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:413 -> `绑定用户 - ${name}`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:431 -> `输入用户名、邮箱或手机号码，回车搜索`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:450 -> `通过关键字搜索已绑定成员`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:485 -> `暂无数据`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/components/ResourceItem/index.tsx:74 -> `已添加`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/components/ResourceItem/index.tsx:74 -> `添加`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:74 -> `模型需要授权后才可用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:87 -> `在内容管理中开启管控并发布到系统广场后可在此处进行授权`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:100 -> `在内容管理中开启管控并发布到系统广场后可在此处进行授权`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:110 -> `开发权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:497 -> `数据权限保存成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:505 -> `ID缺失，无法保存数据权限`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:668 -> `搜索智能体`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:761 -> `搜索网页应用`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:858 -> `每日token限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:862 -> `每日 token 限制，-1 表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:866 -> `请输入每日token限制数量`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:875 -> `可创建工作空间数量`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:879 -> `可创建工作空间数量，-1 表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:887 -> `可创建智能体数量`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:891 -> `可创建智能体数量，-1 表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:899 -> `可创建网页应用数量`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:903 -> `可创建网页应用数量，-1 表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:911 -> `可创建知识库数量`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:915 -> `可创建知识库数量，-1 表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:923 -> `知识库存储空间上限 (GB)`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:928 -> `-1表示不限制, 0表示无权限, 精度为0.001GB, 1GB=1024MB, 1MB=1024KB`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:953 -> `可创建数据表数量`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:957 -> `可创建数据表数量，-1 表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:965 -> `可创建定时任务数量`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:969 -> `可创建定时任务数量，-1 表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:977 -> `智能体电脑内存(GB)`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:982 -> `智能体电脑内存 (GB，留空表示使用默认值4GB)`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:990 -> `智能体电脑 CPU 核心数`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:995 -> `智能体电脑 CPU 核心数（留空表示使用默认值）`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1003 -> `通用智能体每天对话次数限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1007 -> `通用智能体每天对话次数，-1表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1015 -> `网页应用开发每天对话次数`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1019 -> `网页应用开发每天对话次数，-1表示不限制`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1043 -> `数据权限设置 - ${name}`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1047 -> `确定`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1048 -> `取消`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/MenuPermissionModal/MenuPermissionTree/index.tsx:320 -> `资源 ${resource.id}`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/MenuPermissionModal/index.tsx:163 -> `菜单权限保存成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/MenuPermissionModal/index.tsx:348 -> `菜单权限配置-${name}`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:52 -> `添加沙盒`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:52 -> `编辑沙盒`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:63 -> `取消`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:64 -> `保存`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:71 -> `沙盒名称`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:72 -> `例如：AGENT沙箱`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:75 -> `请输入沙盒名称`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:76 -> `沙盒名称不能超过 100 个字符`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:85 -> `沙盒根地址`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:86 -> `例如：http://192.168.1.21`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:89 -> `请输入沙盒根地址`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:90 -> `地址长度不能超过 255 个字符`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:93 -> `请输入正确的地址格式，需包含 http:// 或 https://`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:103 -> `Agent端口`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:107 -> `请输入Agent端口`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:111 -> `VNC端口`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:115 -> `请输入VNC端口`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:119 -> `文件服务端口`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:123 -> `请输入文件服务端口`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:127 -> `通信key (可选)`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:128 -> `留空表示不使用通信密钥`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:137 -> `最大并发用户数`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:142 -> `请输入最大并发用户数`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx:143 -> `最大并发用户数不能超过 9999`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/index.tsx:104 -> `保存成功`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/index.tsx:116 -> `测试成功，沙盒连接正常`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/index.tsx:118 -> `连接异常`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/index.tsx:131 -> `停用`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/index.tsx:131 -> `启用`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/index.tsx:133 -> `${actionText}确认`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/index.tsx:134 -> `确定要${actionText}沙盒${record.name}吗？`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/index.tsx:135 -> `确定`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SandboxConfig/index.tsx:136 -> `取消`
-- ... 省略 99 条
-
 ## src/components/business-component
 
 - [hardcoded_chinese] src/components/business-component/AppDevEmptyState/index.tsx:134 -> `查看完整内容`
@@ -454,6 +370,90 @@
 - [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:94 -> `复制模板`
 - [hardcoded_chinese] src/components/business-component/PagePreviewIframe/index.tsx:265 -> `[PagePreviewIframe] popstate 事件：找不到目标 URL，已添加到历史记录`
 - ... 省略 64 条
+
+## src/pages/SystemManagement
+
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:158 -> `添加成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:169 -> `未搜索到相关用户`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:413 -> `绑定用户 - ${name}`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:431 -> `输入用户名、邮箱或手机号码，回车搜索`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:450 -> `通过关键字搜索已绑定成员`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:485 -> `暂无数据`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/components/ResourceItem/index.tsx:74 -> `已添加`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/components/ResourceItem/index.tsx:74 -> `添加`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:74 -> `模型需要授权后才可用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:87 -> `在内容管理中开启管控并发布到系统广场后可在此处进行授权`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:100 -> `在内容管理中开启管控并发布到系统广场后可在此处进行授权`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:110 -> `开发权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:497 -> `数据权限保存成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:505 -> `ID缺失，无法保存数据权限`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:668 -> `搜索智能体`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:761 -> `搜索网页应用`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:858 -> `每日token限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:862 -> `每日 token 限制，-1 表示不限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:866 -> `请输入每日token限制数量`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:875 -> `可创建工作空间数量`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:879 -> `可创建工作空间数量，-1 表示不限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:887 -> `可创建智能体数量`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:891 -> `可创建智能体数量，-1 表示不限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:899 -> `可创建网页应用数量`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:903 -> `可创建网页应用数量，-1 表示不限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:911 -> `可创建知识库数量`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:915 -> `可创建知识库数量，-1 表示不限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:923 -> `知识库存储空间上限 (GB)`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:928 -> `-1表示不限制, 0表示无权限, 精度为0.001GB, 1GB=1024MB, 1MB=1024KB`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:953 -> `可创建数据表数量`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:957 -> `可创建数据表数量，-1 表示不限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:965 -> `可创建定时任务数量`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:969 -> `可创建定时任务数量，-1 表示不限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:977 -> `智能体电脑内存(GB)`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:982 -> `智能体电脑内存 (GB，留空表示使用默认值4GB)`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:990 -> `智能体电脑 CPU 核心数`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:995 -> `智能体电脑 CPU 核心数（留空表示使用默认值）`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1003 -> `通用智能体每天对话次数限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1007 -> `通用智能体每天对话次数，-1表示不限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1015 -> `网页应用开发每天对话次数`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1019 -> `网页应用开发每天对话次数，-1表示不限制`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1043 -> `数据权限设置 - ${name}`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1047 -> `确定`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:1048 -> `取消`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/MenuPermissionModal/MenuPermissionTree/index.tsx:320 -> `资源 ${resource.id}`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/MenuPermissionModal/index.tsx:163 -> `菜单权限保存成功`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/MenuPermissionModal/index.tsx:348 -> `菜单权限配置-${name}`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SystemConfig/BaseFormItem/index.tsx:118 -> `请输入域名`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SystemConfig/BaseTab/index.tsx:78 -> `保存成功`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SystemConfig/index.tsx:74 -> `系统设置`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:35 -> `保存配置`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:94 -> `预览主题色失败:`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:119 -> `预览导航风格失败:`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:137 -> `预览背景图失败:`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:147 -> `深色`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:147 -> `浅色`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:166 -> `预览布局风格失败:`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:189 -> `预览背景图失败:`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:195 -> `深色`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:195 -> `浅色`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:226 -> `主题配置保存成功`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:227 -> `保存的配置:`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:245 -> `已重置为默认配置（预览效果）`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:263 -> `已重置为默认配置（预览效果）`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:277 -> `主题配置`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:75 -> `执行中`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:81 -> `任务创建，等待执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:87 -> `执行成功，待下次执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:93 -> `执行失败，待下次执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:100 -> `已结束，不再执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:106 -> `已结束，不再执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:177 -> `查询任务列表失败`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:189 -> `执行任务成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:203 -> `启用任务成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:217 -> `停用任务成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:231 -> `删除任务成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:241 -> `任务类型`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:247 -> `智能体`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:248 -> `工作流`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:251 -> `请选择任务类型`
+- ... 省略 45 条
 
 ## src/services
 

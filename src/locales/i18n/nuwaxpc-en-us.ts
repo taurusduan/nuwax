@@ -505,6 +505,85 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Please enter category description (optional)',
   'NuwaxPC.Pages.SystemConfigCategoryModal.descriptionMaxLength':
     'Description cannot exceed 100 characters',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.addTitle': 'Add Sandbox',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.editTitle': 'Edit Sandbox',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.name': 'Sandbox Name',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.namePlaceholder':
+    'e.g. AGENT Sandbox',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.nameRequired':
+    'Please enter sandbox name',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.nameMaxLength':
+    'Sandbox name cannot exceed 100 characters',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.host': 'Sandbox Base URL',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.hostPlaceholder':
+    'e.g. http://192.168.1.21',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.hostRequired':
+    'Please enter sandbox base URL',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.hostMaxLength':
+    'URL length cannot exceed 255 characters',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.hostInvalid':
+    'Please enter a valid URL including http:// or https://',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.agentPort': 'Agent Port',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.agentPortRequired':
+    'Please enter Agent port',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.vncPort': 'VNC Port',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.vncPortRequired':
+    'Please enter VNC port',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.fileServerPort': 'File Service Port',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.fileServerPortRequired':
+    'Please enter file service port',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.apiKey':
+    'Communication Key (Optional)',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.apiKeyPlaceholder':
+    'Leave blank to disable communication key',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.maxUsers': 'Maximum Concurrent Users',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.maxUsersRequired':
+    'Please enter maximum concurrent users',
+  'NuwaxPC.Pages.SystemConfigSandboxModal.maxUsersMax':
+    'Maximum concurrent users cannot exceed 9999',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.pageTitle': 'Sandbox Configuration',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.connectivitySuccess':
+    'Connectivity test passed, sandbox is reachable',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.connectivityFailed':
+    'Connectivity test failed: {0}',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.connectionException':
+    'Connection exception',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.disable': 'Disable',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.enable': 'Enable',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.toggleConfirmTitle': 'Confirm {0}',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.toggleConfirmContent':
+    'Are you sure you want to {0} sandbox {1}?',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.toggleSuccess': '{0} succeeded',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.addSuccess': 'Added successfully',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.columnName': 'Sandbox Name',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.columnUsage': 'Usage',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.usagePercentInUse': '{0}% in use',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.columnOnlineStatus': 'Online Status',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.online': 'Online',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.offline': 'Offline',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.columnActiveStatus': 'Active Status',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.enabled': 'Enabled',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.disabled': 'Disabled',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.columnAction': 'Action',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.connectivityTest':
+    'Connectivity Test',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.edit': 'Edit',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.delete': 'Delete',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.deleteConfirmTitle':
+    'Confirm Delete',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.deleteConfirmContent':
+    'Are you sure you want to delete this sandbox?',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.deleteSuccess':
+    'Deleted successfully',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.addSandbox': 'Add Sandbox',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.globalConfig': 'Global Config',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.perUserMemory': 'Per-user Memory',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.perUserCpu': 'Per-user CPU Cores',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.unitGb': 'GB',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.unitCore': 'cores',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.totalSandboxCount':
+    '{0} sandboxes total',
+  'NuwaxPC.Pages.SystemConfigSandboxConfig.onlineSandboxCount': '{0} online',
   'NuwaxPC.Pages.Error403.licenseExpired':
     'Sorry, your license authorization has expired',
   'NuwaxPC.Pages.Error404.pageNotFound':

@@ -962,3 +962,26 @@
 - 风险/阻塞：
   - `SystemManagement` 仍有高密度存量集中在 `MenuPermission`、`SandboxConfig` 等
 - 下一步：继续推进 `SystemManagement` Top（优先 `MenuPermission/BindUser` 或 `CategoryManage` 相邻模块）
+
+### 里程碑：Top 模块第三十八批实改（SystemManagement 沙盒配置）
+
+- 时间：2026-03-31 12:19
+- 任务：推进 `SystemConfig/SandboxConfig`（列表页+弹窗）多语言接入，并清理该批中文注释噪音
+- 执行命令：
+  - `pnpm prettier --write src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx src/pages/SystemManagement/SystemConfig/SandboxConfig/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/SystemConfig/SandboxConfig/components/SandboxModal/index.tsx`
+    - `src/pages/SystemManagement/SystemConfig/SandboxConfig/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - 沙盒弹窗标题、按钮、表单标签、placeholder、校验提示改为 `t(...)`
+  - 沙盒列表页列名、状态标签、操作 tooltip、确认弹窗、全局配置标签、页脚统计与提示消息改为 `t(...)`
+  - 事件测试/启停/删除等提示文本和确认文案完成 i18n
+  - 同步补齐 `NuwaxPC.Pages.SystemConfigSandboxModal.*` 与 `NuwaxPC.Pages.SystemConfigSandboxConfig.*` 中英文默认词典
+  - 治理总量从 `3024` 下降至 `2970`（-54）
+- 风险/阻塞：
+  - `SystemManagement` 存量仍主要集中在 `MenuPermission` 相关文件
+- 下一步：继续推进 `MenuPermission/components/BindUser/index.tsx` 批次
