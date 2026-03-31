@@ -1031,3 +1031,29 @@
 - 风险/阻塞：
   - `MenuPermission` 目录仍有少量存量集中在业务逻辑与注释密集区（非本批核心可见链路）
 - 下一步：继续按 inventory 推进 `AppDev / SystemManagement / Antv-X6` Top 文件
+
+### 里程碑：Top 模块第四十一批实改（Antv-X6 v3 布局层）
+
+- 时间：2026-03-31 12:56
+- 任务：改造 `Antv-X6 v3` 布局层高频可见文案（控制面板、错误列表、头部、节点选择侧栏）
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/v3/components/layout/ControlPanel.tsx src/pages/Antv-X6/v3/components/layout/ErrorList.tsx src/pages/Antv-X6/v3/components/layout/Sidebar.tsx src/pages/Antv-X6/v3/components/layout/Header.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/v3/components/layout/ControlPanel.tsx`
+    - `src/pages/Antv-X6/v3/components/layout/ErrorList.tsx`
+    - `src/pages/Antv-X6/v3/components/layout/Sidebar.tsx`
+    - `src/pages/Antv-X6/v3/components/layout/Header.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `ControlPanel` 的缩放选项、调试、试运行、添加节点提示接入 `t(...)`
+  - `ErrorList` 的标题与空态文案接入 `t(...)`
+  - `Sidebar` 的“节点选择”标题接入 `t(...)`
+  - `Header` 的保存状态提示、失败重试、未保存提示、撤销/重做 tooltip、发布按钮文案接入 `t(...)`
+  - 扩展 `NuwaxPC.Pages.AntvX6Header.*` 中英文默认词典（保存失败/重试/未保存/快捷键 tooltip）
+  - 治理总量从 `2924` 下降至 `2908`（-16）
+- 风险/阻塞：
+  - `Antv-X6 v3` 仍有较多存量集中在 `component/*` 与 `constants/hooks`，后续仍需滚动清理
+- 下一步：继续推进 `Antv-X6 v3 component/registerCustomNodes.tsx` 与 `runResult.tsx`

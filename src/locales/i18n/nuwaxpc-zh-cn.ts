@@ -902,6 +902,15 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6Header.autoSavedAt': '自动保存于 {0}',
   'NuwaxPC.Pages.AntvX6Header.unpublished': '未发布',
   'NuwaxPC.Pages.AntvX6Header.updatedNotPublished': '已更新但未发布',
+  'NuwaxPC.Pages.AntvX6Header.saving': '保存中...',
+  'NuwaxPC.Pages.AntvX6Header.saveFailed': '保存失败',
+  'NuwaxPC.Pages.AntvX6Header.saveFailedCheckNetwork':
+    '保存失败，请检查网络连接',
+  'NuwaxPC.Pages.AntvX6Header.retrySave': '点击重试保存',
+  'NuwaxPC.Pages.AntvX6Header.unsavedChanges': '有未保存的更改',
+  'NuwaxPC.Pages.AntvX6Header.saveNow': '点击立即保存',
+  'NuwaxPC.Pages.AntvX6Header.undoWithShortcut': '撤销 ({0})',
+  'NuwaxPC.Pages.AntvX6Header.redoWithShortcut': '重做 ({0})',
   'NuwaxPC.Pages.AntvX6Header.validating': '校验中',
   'NuwaxPC.Pages.AntvX6Header.publish': '发布',
   'NuwaxPC.Pages.AntvX6NodePanel.loopContinueDescription':

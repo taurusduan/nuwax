@@ -1,5 +1,6 @@
 import { SaveStatusEnum } from '@/models/workflowV3';
 import { getImg } from '@/pages/Antv-X6/v3/utils/workflowV3';
+import { t } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import { PermissionsEnum } from '@/types/enums/common';
 import { getTime } from '@/utils';
@@ -110,37 +111,46 @@ const Header: React.FC<HeaderProp> = ({
           // 保存中但未超过 300ms，显示上一次的状态（已保存）
           return (
             <Tag color="default" bordered={false}>
-              已自动保存{' '}
-              {getTime(
-                lastSaveTime?.toString() ?? modified ?? new Date().toString(),
+              {t(
+                'NuwaxPC.Pages.AntvX6Header.autoSavedAt',
+                getTime(
+                  lastSaveTime?.toString() ?? modified ?? new Date().toString(),
+                ),
               )}
             </Tag>
           );
         }
         return (
           <Tag color="processing" bordered={false} icon={<LoadingOutlined />}>
-            保存中...
+            {t('NuwaxPC.Pages.AntvX6Header.saving')}
           </Tag>
         );
       case SaveStatusEnum.Saved:
         return (
           <Tag color="default" bordered={false}>
-            已自动保存{' '}
-            {getTime(
-              lastSaveTime?.toString() ?? modified ?? new Date().toString(),
+            {t(
+              'NuwaxPC.Pages.AntvX6Header.autoSavedAt',
+              getTime(
+                lastSaveTime?.toString() ?? modified ?? new Date().toString(),
+              ),
             )}
           </Tag>
         );
       case SaveStatusEnum.Failed:
         return (
           <div className="flex items-center gap-8" style={{ marginRight: 8 }}>
-            <Tooltip title={saveError || '保存失败，请检查网络连接'}>
+            <Tooltip
+              title={
+                saveError ||
+                t('NuwaxPC.Pages.AntvX6Header.saveFailedCheckNetwork')
+              }
+            >
               <Tag
                 color="error"
                 bordered={false}
                 icon={<ExclamationCircleFilled />}
               >
-                保存失败
+                {t('NuwaxPC.Pages.AntvX6Header.saveFailed')}
               </Tag>
             </Tooltip>
             {onManualSave && (
@@ -149,7 +159,7 @@ const Header: React.FC<HeaderProp> = ({
                 onClick={() => onManualSave?.()}
                 size="small"
               >
-                点击重试保存
+                {t('NuwaxPC.Pages.AntvX6Header.retrySave')}
               </Button>
             )}
           </div>
@@ -158,7 +168,7 @@ const Header: React.FC<HeaderProp> = ({
         return (
           <div className="flex items-center gap-8" style={{ marginRight: 8 }}>
             <Tag color="warning" bordered={false}>
-              有未保存的更改
+              {t('NuwaxPC.Pages.AntvX6Header.unsavedChanges')}
             </Tag>
             {onManualSave && (
               <Button
@@ -166,7 +176,7 @@ const Header: React.FC<HeaderProp> = ({
                 onClick={() => onManualSave?.()}
                 size="small"
               >
-                点击立即保存
+                {t('NuwaxPC.Pages.AntvX6Header.saveNow')}
               </Button>
             )}
           </div>
@@ -174,7 +184,10 @@ const Header: React.FC<HeaderProp> = ({
       default:
         return (
           <Tag color="default" bordered={false}>
-            已自动保存 {getTime(modified ?? new Date().toString())}
+            {t(
+              'NuwaxPC.Pages.AntvX6Header.autoSavedAt',
+              getTime(modified ?? new Date().toString()),
+            )}
           </Tag>
         );
     }
@@ -208,7 +221,7 @@ const Header: React.FC<HeaderProp> = ({
               />
             </Popover>
             {publishStatus === 'Published' && (
-              <Popover content={'已发布'}>
+              <Popover content={t('NuwaxPC.Pages.AntvX6Header.published')}>
                 <CheckCircleFilled
                   className="mr-6"
                   style={{ color: '#00B23C', fontSize: '16px' }}
@@ -231,13 +244,13 @@ const Header: React.FC<HeaderProp> = ({
 
         {publishDate === null && (
           <Tag color="#EBECF5" style={{ color: 'rgba(15,21,40,0.82)' }}>
-            未发布
+            {t('NuwaxPC.Pages.AntvX6Header.unpublished')}
           </Tag>
         )}
 
         {publishDate !== null && publishDate !== modified && (
           <Tag bordered={false} color="volcano">
-            有更新未发布
+            {t('NuwaxPC.Pages.AntvX6Header.updatedNotPublished')}
           </Tag>
         )}
       </div>
@@ -246,7 +259,9 @@ const Header: React.FC<HeaderProp> = ({
         className="flex items-center gap-8 mr-12"
         style={{ display: 'flex', gap: '16px' }}
       >
-        <Tooltip title={`撤销 (${undoShortcut})`}>
+        <Tooltip
+          title={t('NuwaxPC.Pages.AntvX6Header.undoWithShortcut', undoShortcut)}
+        >
           <UndoOutlined
             style={{
               fontSize: '18px',
@@ -256,7 +271,9 @@ const Header: React.FC<HeaderProp> = ({
             onClick={canUndo ? onUndo : undefined}
           />
         </Tooltip>
-        <Tooltip title={`重做 (${redoShortcut})`}>
+        <Tooltip
+          title={t('NuwaxPC.Pages.AntvX6Header.redoWithShortcut', redoShortcut)}
+        >
           <RedoOutlined
             style={{
               fontSize: '18px',
@@ -278,7 +295,9 @@ const Header: React.FC<HeaderProp> = ({
         type={'primary'}
         loading={isValidLoading}
       >
-        {isValidLoading ? '校验中' : '发布'}
+        {isValidLoading
+          ? t('NuwaxPC.Pages.AntvX6Header.validating')
+          : t('NuwaxPC.Pages.AntvX6Header.publish')}
       </Button>
     </div>
   );

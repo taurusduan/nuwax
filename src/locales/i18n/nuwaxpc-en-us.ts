@@ -1023,6 +1023,15 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6Header.autoSavedAt': 'Auto-saved {0}',
   'NuwaxPC.Pages.AntvX6Header.unpublished': 'Unpublished',
   'NuwaxPC.Pages.AntvX6Header.updatedNotPublished': 'Updated but unpublished',
+  'NuwaxPC.Pages.AntvX6Header.saving': 'Saving...',
+  'NuwaxPC.Pages.AntvX6Header.saveFailed': 'Save failed',
+  'NuwaxPC.Pages.AntvX6Header.saveFailedCheckNetwork':
+    'Save failed, please check network connection',
+  'NuwaxPC.Pages.AntvX6Header.retrySave': 'Retry save',
+  'NuwaxPC.Pages.AntvX6Header.unsavedChanges': 'Unsaved changes',
+  'NuwaxPC.Pages.AntvX6Header.saveNow': 'Save now',
+  'NuwaxPC.Pages.AntvX6Header.undoWithShortcut': 'Undo ({0})',
+  'NuwaxPC.Pages.AntvX6Header.redoWithShortcut': 'Redo ({0})',
   'NuwaxPC.Pages.AntvX6Header.validating': 'Validating',
   'NuwaxPC.Pages.AntvX6Header.publish': 'Publish',
   'NuwaxPC.Pages.AntvX6NodePanel.loopContinueDescription':

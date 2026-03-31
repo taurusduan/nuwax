@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T04:36:59.471Z
+- 生成时间：2026-03-31T05:42:59.118Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2924
-- hardcoded 中文：2924
+- 总问题数：2908
+- hardcoded 中文：2908
 - legacy System key：0
 - invalid dict key：0
 
@@ -15,7 +15,7 @@
 
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
-| src/pages/Antv-X6 | 267 | 0 | 0 | 267 |
+| src/pages/Antv-X6 | 251 | 0 | 0 | 251 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
 | src/services | 110 | 0 | 0 | 110 |
@@ -151,29 +151,13 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/graph/GraphContainer.tsx:154 -> `[GraphContainer] 边的源节点(${sourceId})或目标节点(${targetId})不存在，跳过创建边`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/graph/GraphContainer.tsx:236 -> `[GraphContainer] 找不到父循环节点，无法建立父子关系`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/graph/GraphContainer.tsx:435 -> `[GraphContainer] 无法创建边：源节点(${sourceId})或目标节点(${targetId})在画布中未找到`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/ControlPanel.tsx:33 -> `放大 10%`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/ControlPanel.tsx:34 -> `缩小 10%`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/ControlPanel.tsx:35 -> `缩放到适配画布`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/ControlPanel.tsx:53 -> `缩放到 50%`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/ControlPanel.tsx:54 -> `缩放到 100%`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/ControlPanel.tsx:55 -> `缩放到 150%`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/ControlPanel.tsx:56 -> `缩放到 200%`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/ControlPanel.tsx:128 -> `缩放到适配画布`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/ControlPanel.tsx:169 -> `调试`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/ErrorList.tsx:86 -> `暂无`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:68 -> `保存中`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:69 -> `保存中`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:75 -> `保存中`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:108 -> `保存中`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:137 -> `保存失败，请检查网络连接`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:211 -> `已发布`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:228 -> `已发布`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:228 -> `未发布`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:249 -> `撤销 (${undoShortcut})`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:259 -> `重做 (${redoShortcut})`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:281 -> `校验中`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:281 -> `发布`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Sidebar.tsx:56 -> `搜索`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:70 -> `保存中`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:76 -> `保存中`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:109 -> `保存中`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:241 -> `已发布`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:241 -> `未发布`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Sidebar.tsx:57 -> `搜索`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:30 -> `如果`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:31 -> `否则如果`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:32 -> `否则`
@@ -201,7 +185,23 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useAutoSave.ts:102 -> `useAutoSave 保存异常:`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useBeforeUnload.ts:90 -> `[useBeforeUnload] 页面隐藏时保存成功`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useBeforeUnload.ts:93 -> `[useBeforeUnload] 页面隐藏时保存失败:`
-- ... 省略 187 条
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useGraphInteraction.ts:183 -> `[V3] 节点更新失败:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:33 -> `🔄 useModifiedSaveUpdate: 节流执行保存 [第${currentSaveCount}次]`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:43 -> `⏸️ useModifiedSaveUpdate: 保存正在进行中，跳过本次调用`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:49 -> `✅ useModifiedSaveUpdate: 开始执行保存操作`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:55 -> `🎉 useModifiedSaveUpdate: 保存成功完成`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:57 -> `❌ useModifiedSaveUpdate: 保存失败`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:67 -> `🚀 useModifiedSaveUpdate: 节流函数被调用`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:79 -> `📝 useModifiedSaveUpdate: isModified 状态变化 =`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:82 -> `⚡ useModifiedSaveUpdate: 触发节流保存函数`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:91 -> `🔗 useModifiedSaveUpdate: Hook 初始化完成`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useModifiedSaveUpdateV3.ts:94 -> `🧹 useModifiedSaveUpdate: 清理 Hook 状态`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:291 -> `[handleConditionalNodeConnection] sourcePortId 为空，跳过连线创建`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:488 -> `[handleTargetNodeConnection] 删除边失败:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:598 -> `处理节点连接时发生错误:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:654 -> `循环体里请不要再添加循环体`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:732 -> `添加节点失败`
+- ... 省略 171 条
 
 ## src/hooks
 
