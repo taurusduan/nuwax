@@ -1,3 +1,4 @@
+import { SvgIcon } from '@/components/base';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
 import {
   apiGetUserSelectableSandboxList,
@@ -13,9 +14,8 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { SvgIcon } from '../../base';
 import styles from './index.less';
-import type { ComputerOption, ComputerTypeSelectorProps } from './types';
+import { type ComputerOption, type ComputerTypeSelectorProps } from './types';
 
 const cx = classNames.bind(styles);
 
