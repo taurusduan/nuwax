@@ -604,6 +604,10 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
     '使用我的智能体电脑执行任务',
   'NuwaxPC.Components.ChatInputHome.generatedByAiNotice':
     '内容由AI生成，请仔细甄别',
+  'NuwaxPC.Components.ChatInputHomeMentionEditor.placeholderWithMention':
+    '直接输入指令, 可通过Shift+Enter换行, 通过回车发送消息；支持输入@唤起技能；支持粘贴图片',
+  'NuwaxPC.Components.ChatInputHomeMentionEditor.placeholderWithoutMention':
+    '直接输入指令, 可通过Shift+Enter换行, 通过回车发送消息；支持粘贴图片',
   'NuwaxPC.Toast.UploadAvatar.invalidType': '请上传 JPG、JPEG 或 PNG 图片文件',
   'NuwaxPC.Toast.UploadAvatar.invalidSize': '图片大小不能超过 2MB',
   'NuwaxPC.Pages.SystemDashboard.resourceOverview': '资源概览',

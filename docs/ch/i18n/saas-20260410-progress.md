@@ -1410,3 +1410,50 @@
 - 风险/阻塞：
   - `ChatInputHome` 与 `SkillDetails` 仍是高密度热点
 - 下一步：继续推进 `src/components/ChatInputHome` 模块
+
+### 里程碑：Top 模块第五十七批实改（ChatInputHome @提及与输入区）
+
+- 时间：2026-03-31 17:08
+- 任务：处理 `ChatInputHome` 的 `AtMentionIcon`、`ManualComponentItem`、`MentionPopup`、`index` 文案与提示
+- 执行命令：
+  - `pnpm prettier --write src/components/ChatInputHome/index.tsx src/components/ChatInputHome/AtMentionIcon/index.tsx src/components/ChatInputHome/ManualComponentItem/index.tsx src/components/ChatInputHome/MentionPopup/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/components/ChatInputHome/index.tsx`
+    - `src/components/ChatInputHome/AtMentionIcon/index.tsx`
+    - `src/components/ChatInputHome/ManualComponentItem/index.tsx`
+    - `src/components/ChatInputHome/MentionPopup/index.tsx`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `AtMentionIcon` 引导 tooltip 文案切换为 `t(...)`
+  - `ManualComponentItem` 关键词匹配去除中文硬编码，改为 `t(...)` + 英文关键词兜底
+  - `MentionPopup` 标签、搜索 placeholder、加载态、空态、加载更多文案切换为 `t(...)`，错误日志改为英文
+  - `ChatInputHome/index` 上传失败提示、会话按钮 tooltip、权限遮罩、清空/上传/模式切换提示、AI 公告文案切换为 `t(...)`
+  - 新增 `NuwaxPC.Components.ChatInputHome*` 默认中英文词典
+  - 治理总量从 `2604` 下降至 `2598`（-6）
+- 风险/阻塞：
+  - `pnpm run check:i18n-hardcoded` 当前为全量校验模式，仍被仓内未改造存量阻断（本批改动文件已完成替换）
+- 下一步：继续推进 `src/components/ChatInputHome/index.tsx` 剩余项与 `src/pages/SkillDetails`
+
+### 里程碑：Top 模块第五十八批实改（ChatInputHome MentionEditor 占位符）
+
+- 时间：2026-03-31 17:13
+- 任务：处理 `ChatInputHome/MentionEditor` 占位符硬编码文案
+- 执行命令：
+  - `pnpm prettier --write src/components/ChatInputHome/MentionEditor/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts docs/ch/i18n/saas-20260410-progress.md docs/ch/i18n/saas-20260410-test-report.md docs/ch/i18n/saas-20260410-decision-log.md`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/components/ChatInputHome/MentionEditor/index.tsx`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `MentionEditor` “启用/禁用 @ 提及”两套默认占位符切换为 `t(...)`
+  - 新增 `NuwaxPC.Components.ChatInputHomeMentionEditor.placeholder*` 默认中英文词典
+  - `check:i18n-hardcoded` 通过（新增行符合治理规则）
+  - 治理总量从 `2598` 下降至 `2596`（-2）
+- 风险/阻塞：
+  - `ChatInputHome` 主文件仍有存量（非本批范围）
+- 下一步：继续推进 `ChatInputHome/index.tsx` 与 `SkillDetails`

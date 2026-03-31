@@ -317,3 +317,27 @@
 - 影响：
   - 分段标签、动态模板文案（如“创建{0}”“仅查看官方{0}”）可在中英文间稳定切换
   - 后续若常量层再改造为 key 模式，组件层可平滑收敛
+
+### D-043 ChatInputHome 组件按子域拆分接入
+
+- 决策：`ChatInputHome` 按子组件域接入：`ChatInputHomeAtMentionIcon`、`ChatInputHomeManualComponentItem`、`ChatInputHomeMentionPopup`、`ChatInputHome`
+- 原因：输入区包含多个可复用子模块（@ 提及弹窗、手动组件选择、主输入区提示），统一放在单域会导致 key 语义混杂
+- 影响：
+  - @ 提及链路、上传提示、会话按钮提示可独立扩展
+  - 词典检索与回归定位更直接
+
+### D-044 ManualComponentItem 关键词匹配双语兜底
+
+- 决策：`ManualComponentItem` 图标识别不再写死中文关键词，改为 `t(...)` 当前语言关键词 + 英文关键词兜底
+- 原因：组件名称/描述可能随语言变化，单语匹配会导致图标识别失效
+- 影响：
+  - 在中英文环境下都可识别网络/思考类组件
+  - 避免继续引入中文硬编码常量
+
+### D-045 MentionEditor 默认占位符分场景 key 化
+
+- 决策：`MentionEditor` 默认占位符拆分为 `placeholderWithMention` 与 `placeholderWithoutMention` 两个 key
+- 原因：启用 @ 提及时占位符包含额外引导语，禁用时应避免误导用户
+- 影响：
+  - 占位符语义在中英文环境下保持一致
+  - 后续调整引导文案只需更新词典，不改组件逻辑

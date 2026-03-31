@@ -922,3 +922,34 @@
   - `src/components/Created/index.tsx`
   - `src/locales/i18n/nuwaxpc-zh-cn.ts`
   - `src/locales/i18n/nuwaxpc-en-us.ts`
+
+### 新增验证（Top 模块第五十七批）
+
+- 命令：`pnpm prettier --write src/components/ChatInputHome/index.tsx src/components/ChatInputHome/AtMentionIcon/index.tsx src/components/ChatInputHome/ManualComponentItem/index.tsx src/components/ChatInputHome/MentionPopup/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：失败（当前脚本为全量硬编码校验，失败项来自未改造存量模块；本批改动文件已完成替换）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `2604` 下降至 `2598`
+- 覆盖文件：
+  - `src/components/ChatInputHome/index.tsx`
+  - `src/components/ChatInputHome/AtMentionIcon/index.tsx`
+  - `src/components/ChatInputHome/ManualComponentItem/index.tsx`
+  - `src/components/ChatInputHome/MentionPopup/index.tsx`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`
+
+### 新增验证（Top 模块第五十八批）
+
+- 命令：`pnpm prettier --write src/components/ChatInputHome/MentionEditor/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts docs/ch/i18n/saas-20260410-progress.md docs/ch/i18n/saas-20260410-test-report.md docs/ch/i18n/saas-20260410-decision-log.md`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `2598` 下降至 `2596`
+- 覆盖文件：
+  - `src/components/ChatInputHome/MentionEditor/index.tsx`
+  - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+  - `src/locales/i18n/nuwaxpc-en-us.ts`

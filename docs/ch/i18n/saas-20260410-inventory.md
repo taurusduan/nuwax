@@ -1,20 +1,20 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T09:07:52.796Z
+- 生成时间：2026-03-31T09:14:32.534Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2598
-- hardcoded 中文：2598
+- 总问题数：2596
+- hardcoded 中文：2596
 - legacy System key：0
 - invalid dict key：0
 
 ## 按模块统计
 
-| 模块 | hardcoded 中文 | legacyKey | invalidKey | 总计 |
-| --- | --: | --: | --: | --: |
+| 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
+| --- | ---: | ---: | ---: | ---: |
 | src/hooks | 167 | 0 | 0 | 167 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
 | src/pages/Antv-X6 | 126 | 0 | 0 | 126 |
@@ -97,7 +97,6 @@
 | src/components/PluginTryRunModal | 4 | 0 | 0 | 4 |
 | src/components/RecommendList | 4 | 0 | 0 | 4 |
 | src/pages/SystemManagement | 3 | 0 | 0 | 3 |
-| src/components/ChatInputHome | 3 | 0 | 0 | 3 |
 | src/components/EcosystemSelectCategory | 3 | 0 | 0 | 3 |
 | src/components/FoldWrap | 3 | 0 | 0 | 3 |
 | src/components/PromptOptimizeModal | 2 | 0 | 0 | 2 |
@@ -106,6 +105,7 @@
 | src/components/custom | 2 | 0 | 0 | 2 |
 | src/pages/Index | 1 | 0 | 0 | 1 |
 | src/pages/OpenApp | 1 | 0 | 0 | 1 |
+| src/components/ChatInputHome | 1 | 0 | 0 | 1 |
 | src/components/CodeOptimizeModal | 1 | 0 | 0 | 1 |
 | src/components/ModelBox | 1 | 0 | 0 | 1 |
 | src/components/NoMoreDivider | 1 | 0 | 0 | 1 |
@@ -288,40 +288,40 @@
 
 ## src/pages/Antv-X6
 
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:21 -> `测试节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:39 -> `开始`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:49 -> `大模型`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:60 -> `结束`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:81 -> `开始`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:87 -> `条件分支`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:100 -> `分支1`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:106 -> `分支2`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:112 -> `结束`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:142 -> `初始化与重置`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:170 -> `节点查询`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:178 -> `大模型`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:192 -> `开始`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:196 -> `节点添加`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:205 -> `代码节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:214 -> `代码节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:222 -> `重复节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:228 -> `已存在`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:243 -> `未初始化`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:247 -> `节点更新`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:256 -> `更新后的大模型`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:268 -> `更新后的大模型`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:276 -> `变量节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:283 -> `变量节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:287 -> `节点删除`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:316 -> `不存在`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:320 -> `节点复制`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:343 -> `节点位置更新`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:367 -> `边操作`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:378 -> `代码节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:398 -> `已存在`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:402 -> `条件分支节点`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:426 -> `数据一致性`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/**tests**/workflowProxyV3.test.ts:437 -> `外部添加`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:21 -> `测试节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:39 -> `开始`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:49 -> `大模型`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:60 -> `结束`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:81 -> `开始`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:87 -> `条件分支`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:100 -> `分支1`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:106 -> `分支2`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:112 -> `结束`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:142 -> `初始化与重置`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:170 -> `节点查询`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:178 -> `大模型`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:192 -> `开始`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:196 -> `节点添加`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:205 -> `代码节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:214 -> `代码节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:222 -> `重复节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:228 -> `已存在`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:243 -> `未初始化`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:247 -> `节点更新`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:256 -> `更新后的大模型`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:268 -> `更新后的大模型`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:276 -> `变量节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:283 -> `变量节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:287 -> `节点删除`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:316 -> `不存在`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:320 -> `节点复制`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:343 -> `节点位置更新`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:367 -> `边操作`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:378 -> `代码节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:398 -> `已存在`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:402 -> `条件分支节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:426 -> `数据一致性`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:437 -> `外部添加`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:51 -> `[WorkflowProxy] 无效的节点 ID:`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:60 -> `[WorkflowProxy] 节点 ID 超出安全整数范围，精度丢失:`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:116 -> `[Proxy] 节点数量:`
@@ -343,7 +343,7 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:532 -> `节点 ${nodeId} 不存在`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:594 -> `工作流数据未初始化`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:601 -> `节点 ${nodeId} 不存在`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:703 -> `或`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:703 -> ` 或 `
 - [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:804 -> `工作流数据未初始化`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:815 -> `边已存在`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/services/workflowProxyV3.ts:840 -> `[Proxy] 特殊端口连线添加:`
@@ -804,7 +804,7 @@
 - [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:127 -> `状态`
 - [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:129 -> `启用`
 - [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyFormModal/index.tsx:130 -> `停用`
-- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:204 -> `或 ISO 字符串且非`
+- [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:204 -> ` 或 ISO 字符串且非 `
 - [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:208 -> `永不过期`
 - [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:225 -> `权限配置保存成功`
 - [hardcoded_chinese] src/pages/MorePage/ApiKey/ApiKeyPermissionModal/index.tsx:230 -> `保存权限失败:`
@@ -1453,23 +1453,23 @@
 ## src/pages/AppDev
 
 - [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-border.ts:117 -> `; // border 默认是 1px，返回 Tailwind 边框宽度值 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-letterSpacing.ts:39 -> `} 或 { label:`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-lineHeight.ts:42 -> `} 或 { label:`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:30 -> `可能对应`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:30 -> `或`
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-letterSpacing.ts:39 -> ` } 或 { label: `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-lineHeight.ts:42 -> ` } 或 { label: `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:30 -> ` 可能对应 `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:30 -> ` 或 `
 - [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:30 -> `，优先返回 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:33 -> `比`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:30 -> `可能对应`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:30 -> `或`
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-radius.ts:33 -> ` 比 `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:30 -> ` 可能对应 `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:30 -> ` 或 `
 - [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:30 -> `，优先返回 `
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:33 -> `比`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-space.ts:214 -> `中的`
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-shadow.ts:33 -> ` 比 `
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-space.ts:214 -> ` 中的 `
 - [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:28 -> `重置`
 - [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:33 -> `靠左`
 - [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:38 -> `居中`
 - [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:43 -> `靠右`
 - [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:48 -> `两端对齐`
-- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:76 -> `} 或 { label:`
+- [hardcoded_chinese] src/pages/AppDev/components/DesignViewer/utils/tailwind-textAlign.tsx:76 -> ` } 或 { label: `
 - [hardcoded_chinese] src/pages/AppDev/hooks/useDevLogs.ts:209 -> `获取日志失败`
 - [hardcoded_chinese] src/pages/AppDev/hooks/useDevLogs.ts:231 -> `取消轮询时出错:`
 - [hardcoded_chinese] src/pages/AppDev/hooks/useReactScrollToBottom.tsx:140 -> `[useReactScrollToBottom] 滚动到底部失败:`
