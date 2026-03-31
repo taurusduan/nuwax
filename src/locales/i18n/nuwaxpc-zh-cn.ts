@@ -233,6 +233,24 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Components.ThemeConfigThemeColorPanel.customName': '自定义',
   'NuwaxPC.Components.CopyToSpaceComponent.pageCopySuccess': '页面复制成功',
   'NuwaxPC.Components.CopyToSpaceComponent.templateCopySuccess': '模板复制成功',
+  'NuwaxPC.Components.DataResourceManagement.fetchListFailed':
+    '获取数据资源列表失败',
+  'NuwaxPC.Components.DataResourceManagement.createSuccess': '创建成功',
+  'NuwaxPC.Components.DataResourceManagement.createFailed': '创建失败',
+  'NuwaxPC.Components.DataResourceManagement.updateSuccess': '更新成功',
+  'NuwaxPC.Components.DataResourceManagement.updateFailed': '更新失败',
+  'NuwaxPC.Components.DataResourceManagement.deleteSuccess': '删除成功',
+  'NuwaxPC.Components.DataResourceManagement.deleteFailed': '删除失败',
+  'NuwaxPC.Components.DataResourceManagement.enableSuccess': '启用成功',
+  'NuwaxPC.Components.DataResourceManagement.disableSuccess': '停用成功',
+  'NuwaxPC.Components.DataResourceManagement.switchStatusFailed':
+    '切换资源状态失败',
+  'NuwaxPC.Components.DataResourceManagement.operationFailed': '操作失败',
+  'NuwaxPC.Components.DataResourceManagement.connectionTestSuccess':
+    '连接测试成功',
+  'NuwaxPC.Components.DataResourceManagement.connectionTestFailed':
+    '连接测试失败',
+  'NuwaxPC.Components.DataResourceManagement.testFailed': '测试失败',
   'NuwaxPC.Pages.Login.inputEmailRequired': '请输入邮箱',
   'NuwaxPC.Pages.Login.inputPhoneRequired': '请输入手机号',
   'NuwaxPC.Pages.Login.invalidEmail': '请输入有效邮箱',

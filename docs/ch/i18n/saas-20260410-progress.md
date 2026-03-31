@@ -1764,3 +1764,21 @@
 - 风险/阻塞：
   - Top 残量已转移至 `src/hooks`（109）与 `src/components/FileTreeView`（97）
 - 下一步：继续按 inventory Top 模块推进 `src/hooks` 与 `src/components/FileTreeView`
+
+### 里程碑：Top 模块第七十四批实改（hooks 单文件清理）
+
+- 时间：2026-03-31 19:58
+- 任务：清理 `src/hooks/useDataResourceManagement.ts` 的硬编码中文，统一迁移到 `t(...)` 并补齐双语默认词典
+- 执行命令：
+  - `pnpm prettier --write src/hooks/useDataResourceManagement.ts src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改上述文件
+- 结果摘要：
+  - `useDataResourceManagement` 的列表加载、创建/更新/删除、状态切换、连接测试提示与返回 message 全部切到 `NuwaxPC.Components.DataResourceManagement.*`
+  - 该文件中文日志文本统一英文化，避免治理噪声
+  - `src/hooks` 模块命中从 `109` 下降至 `80`
+  - 治理总量从 `2009` 下降至 `1980`（-29）
+- 风险/阻塞：
+  - `src/hooks` 仍是 Top 模块，剩余主要集中在 `useIdleDetection`、`useMessageEventDelegate`、`useNavigationGuard`
+- 下一步：继续批量推进上述 hooks 文件

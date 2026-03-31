@@ -493,3 +493,11 @@
 - 影响：
   - 既避免单域过大，也避免细碎 key 难追踪
   - 该策略可复用于其他“页面容器 + 可复用子面板”的组件体系
+
+### D-065 hooks 返回消息统一纳入 Components 域
+
+- 决策：`useDataResourceManagement` 的 `message.*` 与 `DataResourceOperationResult.message` 统一使用 `NuwaxPC.Components.DataResourceManagement.*`
+- 原因：该 Hook 既触发 UI 提示又向上游返回 message，若两套文本来源不同会导致展示不一致
+- 影响：
+  - 页面提示与上层结果处理读取同一词典来源，减少语义分叉
+  - 后续替换真实 API 时可以复用同一 key，不需要重复改造文案层

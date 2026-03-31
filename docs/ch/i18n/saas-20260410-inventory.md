@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T11:31:49.791Z
+- 生成时间：2026-03-31T11:37:17.017Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2009
-- hardcoded 中文：2009
+- 总问题数：1980
+- hardcoded 中文：1980
 - legacy System key：0
 - invalid dict key：0
 
@@ -15,10 +15,10 @@
 
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
-| src/hooks | 109 | 0 | 0 | 109 |
 | src/components/FileTreeView | 97 | 0 | 0 | 97 |
 | src/pages/SpaceKnowledge | 82 | 0 | 0 | 82 |
 | src/pages/UserManage | 82 | 0 | 0 | 82 |
+| src/hooks | 80 | 0 | 0 | 80 |
 | src/pages/EditAgent | 78 | 0 | 0 | 78 |
 | src/pages/SpacePageDevelop | 72 | 0 | 0 | 72 |
 | src/pages/SpaceLibrary | 64 | 0 | 0 | 64 |
@@ -111,90 +111,6 @@
 | src/components/SubmitButton | 1 | 0 | 0 | 1 |
 | src/layouts/HoverMenu | 1 | 0 | 0 | 1 |
 | src/layouts/MobileMenu.tsx | 1 | 0 | 0 | 1 |
-
-## src/hooks
-
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:55 -> `获取数据资源列表失败:`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:56 -> `获取数据资源列表失败`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:95 -> `数据资源创建成功`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:99 -> `创建成功`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:103 -> `创建数据资源失败:`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:104 -> `创建数据资源失败`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:108 -> `创建失败`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:144 -> `数据资源更新成功`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:148 -> `更新成功`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:151 -> `更新数据资源失败:`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:152 -> `更新数据资源失败`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:156 -> `更新失败`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:183 -> `数据资源删除成功`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:187 -> `删除成功`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:190 -> `删除数据资源失败:`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:191 -> `删除数据资源失败`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:195 -> `删除失败`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:237 -> `启用成功`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:237 -> `停用成功`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:240 -> `切换资源状态失败:`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:241 -> `切换资源状态失败`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:245 -> `操作失败`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:271 -> `连接测试成功`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:274 -> `连接测试成功`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:277 -> `连接测试失败`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:280 -> `连接测试失败`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:284 -> `测试资源连接失败:`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:285 -> `测试资源连接失败`
-- [hardcoded_chinese] src/hooks/useDataResourceManagement.ts:289 -> `测试失败`
-- [hardcoded_chinese] src/hooks/useEcoMarket.ts:8 -> `你确定要删除此分享吗?`
-- [hardcoded_chinese] src/hooks/useEcoMarket.ts:10 -> `删除成功`
-- [hardcoded_chinese] src/hooks/useEventPolling.ts:84 -> `发现新版本`
-- [hardcoded_chinese] src/hooks/useEventPolling.ts:86 -> `检测到新版本 ${newVersion}，是否立即更新？`
-- [hardcoded_chinese] src/hooks/useEventPolling.ts:87 -> `更新`
-- [hardcoded_chinese] src/hooks/useEventPolling.ts:88 -> `取消`
-- [hardcoded_chinese] src/hooks/useEventPolling.ts:120 -> `跳过重复的事件处理`
-- [hardcoded_chinese] src/hooks/useEventPolling.ts:140 -> `处理事件时出错:`
-- [hardcoded_chinese] src/hooks/useExclusivePanels.ts:57 -> `[ExclusivePanels] PagePreview 打开，关闭其他面板`
-- [hardcoded_chinese] src/hooks/useExclusivePanels.ts:72 -> `[ExclusivePanels] AgentSidebar 打开，关闭 PagePreview`
-- [hardcoded_chinese] src/hooks/useExclusivePanels.ts:78 -> `[ExclusivePanels] ShowArea 打开，关闭 PagePreview`
-- [hardcoded_chinese] src/hooks/useFileImport.ts:67 -> `仅支持 .zip 压缩文件、.skill 文件或 SKILL.md 文件`
-- [hardcoded_chinese] src/hooks/useFileImport.ts:70 -> `导入成功`
-- [hardcoded_chinese] src/hooks/useFileImport.ts:164 -> `导入失败`
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:46 -> ` 或 `
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:116 -> `用户已空闲`
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:208 -> `⏸️ 暂停空闲检测`
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:217 -> `▶️ 恢复空闲检测`
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:265 -> `⚠️ 无法访问 iframe（可能是跨域）`
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:281 -> `🚫 空闲检测未启用`
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:291 -> `⏸️ 空闲检测已暂停，跳过事件监听器设置`
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:296 -> `✅ 空闲检测已启用`
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:315 -> `🧹 清理空闲检测事件监听器`
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:338 -> `🖥️ 检测到 iframe 内用户活动`
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:352 -> `🔗 绑定 iframe 事件监听器`
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:369 -> `🔍 扫描 iframe`
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:409 -> `🔄 检测到新 iframe，重新扫描`
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:431 -> `🧹 清理 iframe 事件监听器`
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:449 -> `👁️ 页面切出，暂停空闲计时器`
-- [hardcoded_chinese] src/hooks/useIdleDetection.ts:453 -> `👁️ 页面切回，重置空闲计时器`
-- [hardcoded_chinese] src/hooks/useMcp.tsx:152 -> `添加${item.label}`
-- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:54 -> `[Event Delegate] 触发事件:`
-- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:61 -> `[Event Delegate] 数据解析失败:`
-- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:71 -> `[Event Delegate] 未找到事件配置: ${eventType}`
-- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:75 -> `[Event Delegate] 找到事件配置:`
-- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:82 -> `页面路径配置错误`
-- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:109 -> `[Event Delegate] 打开页面:`
-- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:117 -> `页面`
-- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:123 -> `页面路径参数配置错误`
-- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:131 -> `链接地址配置错误`
-- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:135 -> `[Event Delegate] 打开外链:`
-- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:141 -> `[Event Delegate] 未知的事件类型: ${eventConfig.type}`
-- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:174 -> `[Event Delegate] 缺少必要的属性:`
-- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:185 -> `[Event Delegate] 事件代理已初始化`
-- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:190 -> `[Event Delegate] 事件代理已清理`
-- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:33 -> `🔄 useModifiedSaveUpdate: 节流执行保存 [第${currentSaveCount}次]`
-- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:43 -> `⏸️ useModifiedSaveUpdate: 保存正在进行中，跳过本次调用`
-- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:49 -> `✅ useModifiedSaveUpdate: 开始执行保存操作`
-- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:55 -> `🎉 useModifiedSaveUpdate: 保存成功完成`
-- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:57 -> `❌ useModifiedSaveUpdate: 保存失败`
-- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:67 -> `🚀 useModifiedSaveUpdate: 节流函数被调用`
-- ... 省略 29 条
 
 ## src/components/FileTreeView
 
@@ -447,6 +363,89 @@
 - [hardcoded_chinese] src/pages/UserManage/index.tsx:248 -> `禁用`
 - [hardcoded_chinese] src/pages/UserManage/index.tsx:254 -> `加入时间`
 - ... 省略 2 条
+
+## src/hooks
+
+- [hardcoded_chinese] src/hooks/useEcoMarket.ts:8 -> `你确定要删除此分享吗?`
+- [hardcoded_chinese] src/hooks/useEcoMarket.ts:10 -> `删除成功`
+- [hardcoded_chinese] src/hooks/useEventPolling.ts:84 -> `发现新版本`
+- [hardcoded_chinese] src/hooks/useEventPolling.ts:86 -> `检测到新版本 ${newVersion}，是否立即更新？`
+- [hardcoded_chinese] src/hooks/useEventPolling.ts:87 -> `更新`
+- [hardcoded_chinese] src/hooks/useEventPolling.ts:88 -> `取消`
+- [hardcoded_chinese] src/hooks/useEventPolling.ts:120 -> `跳过重复的事件处理`
+- [hardcoded_chinese] src/hooks/useEventPolling.ts:140 -> `处理事件时出错:`
+- [hardcoded_chinese] src/hooks/useExclusivePanels.ts:57 -> `[ExclusivePanels] PagePreview 打开，关闭其他面板`
+- [hardcoded_chinese] src/hooks/useExclusivePanels.ts:72 -> `[ExclusivePanels] AgentSidebar 打开，关闭 PagePreview`
+- [hardcoded_chinese] src/hooks/useExclusivePanels.ts:78 -> `[ExclusivePanels] ShowArea 打开，关闭 PagePreview`
+- [hardcoded_chinese] src/hooks/useFileImport.ts:67 -> `仅支持 .zip 压缩文件、.skill 文件或 SKILL.md 文件`
+- [hardcoded_chinese] src/hooks/useFileImport.ts:70 -> `导入成功`
+- [hardcoded_chinese] src/hooks/useFileImport.ts:164 -> `导入失败`
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:46 -> ` 或 `
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:116 -> `用户已空闲`
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:208 -> `⏸️ 暂停空闲检测`
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:217 -> `▶️ 恢复空闲检测`
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:265 -> `⚠️ 无法访问 iframe（可能是跨域）`
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:281 -> `🚫 空闲检测未启用`
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:291 -> `⏸️ 空闲检测已暂停，跳过事件监听器设置`
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:296 -> `✅ 空闲检测已启用`
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:315 -> `🧹 清理空闲检测事件监听器`
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:338 -> `🖥️ 检测到 iframe 内用户活动`
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:352 -> `🔗 绑定 iframe 事件监听器`
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:369 -> `🔍 扫描 iframe`
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:409 -> `🔄 检测到新 iframe，重新扫描`
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:431 -> `🧹 清理 iframe 事件监听器`
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:449 -> `👁️ 页面切出，暂停空闲计时器`
+- [hardcoded_chinese] src/hooks/useIdleDetection.ts:453 -> `👁️ 页面切回，重置空闲计时器`
+- [hardcoded_chinese] src/hooks/useMcp.tsx:152 -> `添加${item.label}`
+- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:54 -> `[Event Delegate] 触发事件:`
+- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:61 -> `[Event Delegate] 数据解析失败:`
+- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:71 -> `[Event Delegate] 未找到事件配置: ${eventType}`
+- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:75 -> `[Event Delegate] 找到事件配置:`
+- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:82 -> `页面路径配置错误`
+- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:109 -> `[Event Delegate] 打开页面:`
+- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:117 -> `页面`
+- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:123 -> `页面路径参数配置错误`
+- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:131 -> `链接地址配置错误`
+- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:135 -> `[Event Delegate] 打开外链:`
+- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:141 -> `[Event Delegate] 未知的事件类型: ${eventConfig.type}`
+- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:174 -> `[Event Delegate] 缺少必要的属性:`
+- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:185 -> `[Event Delegate] 事件代理已初始化`
+- [hardcoded_chinese] src/hooks/useMessageEventDelegate.ts:190 -> `[Event Delegate] 事件代理已清理`
+- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:33 -> `🔄 useModifiedSaveUpdate: 节流执行保存 [第${currentSaveCount}次]`
+- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:43 -> `⏸️ useModifiedSaveUpdate: 保存正在进行中，跳过本次调用`
+- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:49 -> `✅ useModifiedSaveUpdate: 开始执行保存操作`
+- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:55 -> `🎉 useModifiedSaveUpdate: 保存成功完成`
+- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:57 -> `❌ useModifiedSaveUpdate: 保存失败`
+- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:67 -> `🚀 useModifiedSaveUpdate: 节流函数被调用`
+- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:79 -> `📝 useModifiedSaveUpdate: isModified 状态变化 =`
+- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:82 -> `⚡ useModifiedSaveUpdate: 触发节流保存函数`
+- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:91 -> `🔗 useModifiedSaveUpdate: Hook 初始化完成`
+- [hardcoded_chinese] src/hooks/useModifiedSaveUpdate.ts:94 -> `🧹 useModifiedSaveUpdate: 清理 Hook 状态`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:12 -> `确认`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:12 -> `放弃`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:12 -> `取消`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:20 -> `你有未保存的更改`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:29 -> `保存并离开`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:30 -> `不保存离开`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:51 -> `确认`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:51 -> `确认`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:53 -> `放弃`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:53 -> `放弃`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:55 -> `取消`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:55 -> `取消`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:75 -> `确认离开`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:76 -> `你确定要离开当前页面吗？`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:78 -> `确认`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:79 -> `放弃`
+- [hardcoded_chinese] src/hooks/useNavigationGuard.tsx:80 -> `取消`
+- [hardcoded_chinese] src/hooks/usePluginConfig.ts:213 -> `插件保存成功`
+- [hardcoded_chinese] src/hooks/useRestartDevServer.ts:64 -> `项目ID不存在或无效，无法重启服务`
+- [hardcoded_chinese] src/hooks/useRestartDevServer.ts:103 -> `重启开发服务器失败`
+- [hardcoded_chinese] src/hooks/useScrollSync.ts:80 -> `🎯 标签点击：导航到 ${type}`
+- [hardcoded_chinese] src/hooks/useScrollSync.ts:146 -> `🔄 滚动同步：自动切换到标签 ${targetActive}`
+- [hardcoded_chinese] src/hooks/useSendCode.ts:11 -> `验证码已发送`
+- [hardcoded_chinese] src/hooks/useTryRun.ts:162 -> `请重新配置入参,添加子级`
+- [hardcoded_chinese] src/hooks/useUnifiedTheme.ts:117 -> `主题更新失败:`
 
 ## src/pages/EditAgent
 

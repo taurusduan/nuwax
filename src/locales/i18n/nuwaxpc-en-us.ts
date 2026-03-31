@@ -265,6 +265,30 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Page copied successfully',
   'NuwaxPC.Components.CopyToSpaceComponent.templateCopySuccess':
     'Template copied successfully',
+  'NuwaxPC.Components.DataResourceManagement.fetchListFailed':
+    'Failed to fetch data resource list',
+  'NuwaxPC.Components.DataResourceManagement.createSuccess':
+    'Created successfully',
+  'NuwaxPC.Components.DataResourceManagement.createFailed': 'Create failed',
+  'NuwaxPC.Components.DataResourceManagement.updateSuccess':
+    'Updated successfully',
+  'NuwaxPC.Components.DataResourceManagement.updateFailed': 'Update failed',
+  'NuwaxPC.Components.DataResourceManagement.deleteSuccess':
+    'Deleted successfully',
+  'NuwaxPC.Components.DataResourceManagement.deleteFailed': 'Delete failed',
+  'NuwaxPC.Components.DataResourceManagement.enableSuccess':
+    'Enabled successfully',
+  'NuwaxPC.Components.DataResourceManagement.disableSuccess':
+    'Disabled successfully',
+  'NuwaxPC.Components.DataResourceManagement.switchStatusFailed':
+    'Failed to switch resource status',
+  'NuwaxPC.Components.DataResourceManagement.operationFailed':
+    'Operation failed',
+  'NuwaxPC.Components.DataResourceManagement.connectionTestSuccess':
+    'Connection test succeeded',
+  'NuwaxPC.Components.DataResourceManagement.connectionTestFailed':
+    'Connection test failed',
+  'NuwaxPC.Components.DataResourceManagement.testFailed': 'Test failed',
   'NuwaxPC.Pages.Login.inputEmailRequired': 'Please input email',
   'NuwaxPC.Pages.Login.inputPhoneRequired': 'Please input phone number',
   'NuwaxPC.Pages.Login.invalidEmail': 'Please input a valid email',
