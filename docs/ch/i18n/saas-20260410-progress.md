@@ -868,3 +868,30 @@
 - 风险/阻塞：
   - `EditAgent` 下仍有高密度存量（`KnowledgeSetting`、`GuidQuestionSetModal`、`OpenRemarksEdit` 等）
 - 下一步：继续在 `EditAgent` 批量推进 `KnowledgeTextList` 与 `OpenRemarksEdit` 相关页面
+
+### 里程碑：Top 模块第三十四批实改（EditAgent 知识与开场白链路）
+
+- 时间：2026-03-31 11:28
+- 任务：继续覆盖 `EditAgent` 场景页面，完成 `KnowledgeTextList`、`LongMemoryContent`、`McpGroupComponentItem`、`OpenRemarksEdit` 主链路 i18n
+- 执行命令：
+  - `pnpm prettier --write src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/index.tsx src/pages/EditAgent/AgentArrangeConfig/LongMemoryContent/index.tsx src/pages/EditAgent/AgentArrangeConfig/McpGroupComponentItem/index.tsx src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/KnowledgeSetting/index.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/KnowledgeTextList/index.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/LongMemoryContent/index.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/McpGroupComponentItem/index.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/GuidQuestionSetModal/index.tsx`
+    - `src/pages/EditAgent/AgentArrangeConfig/OpenRemarksEdit/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `KnowledgeSetting` 的标题、分组、说明文案、召回与无召回策略选项、输入 placeholder 全部改为 `t(...)`
+  - `KnowledgeTextList` 空态描述、调用方式标识、取消知识库 tooltip 接入 `t(...)`
+  - `OpenRemarksEdit` 与 `GuidQuestionSetModal` 的展示信息、类型选择、页面路径、链接校验、输入参数区提示全面接入 `t(...)`
+  - `McpGroupComponentItem` 工具数量文案支持 `{0}` 占位符，`LongMemoryContent` 描述文案接入 `t(...)`
+  - 治理总量从 `3164` 下降至 `3124`（-40）
+- 风险/阻塞：
+  - `EditAgent` 仍有较重存量集中在 `PageSettingModal`、`SubAgentConfig`、`AgentArrangeConfig/index.tsx`
+- 下一步：继续推进 `SubAgentConfig` 与 `AgentArrangeConfig/index.tsx` 主容器文案

@@ -125,3 +125,11 @@
 - 影响：
   - 词典维护单源化，新增输入类型时只需补一组 key
   - 列表页与弹窗文案保持一致，避免术语漂移
+
+### D-019 引导问题与事件绑定参数区文案分域
+
+- 决策：`GuidQuestionSetModal` 与 `EventBindModal` 保持独立 Domain key（分别使用 `AgentArrangeGuidQuestionSetModal` / `AgentArrangeEventBindModal`），不强制复用同一组 key
+- 原因：两者语义相近但业务上下文不同，后续可能出现差异化提示与校验文案
+- 影响：
+  - 允许后续按场景独立演进文案，不引入跨模块联动风险
+  - 维护成本略增，但通过统一命名规则降低检索成本

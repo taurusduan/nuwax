@@ -244,6 +244,86 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.AgentArrangeEventBindModal.userUidVariable': '用户UID',
   'NuwaxPC.Pages.AgentArrangeEventBindModal.userNameVariable': '用户名',
   'NuwaxPC.Pages.AgentArrangeEventBindModal.paramValuePlaceholder': '请输入{0}',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.title': '知识库设置',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.recallSection': '召回',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.invokeType': '调用方式',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.invokeTypeTip':
+    '选择是否每轮对话自动召回或按需从特定知识库召回',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchStrategy': '搜索策略',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchStrategyTip':
+    '从知识库中获取知识的检索方式,不同的检索策略可以更有效地找到正确的信息,提高其生成的答案的准确性和可用性。',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchMixed': '混合',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchSemantic': '语义',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchFullText': '全文',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.maxRecallCount': '最大召回数量',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.maxRecallCountTip':
+    '从知识库中返回给大模型的最大段落数,数值越大返回的内容越多',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegree': '最小匹配度',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegreeTip':
+    '根据设置的匹配度选取段落返回给大模型,低于设定匹配度的内容不会被召回',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.replySection': '回复',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallReply': '无召回回复',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyTip':
+    '当知识库没有召回有效切片时的回复话术',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallDefault': '默认',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallCustom': '自定义',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyPlaceholder':
+    '请输入',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeTextList.emptyDescription':
+    '将文档、URL、三方数据源上传为文本知识库后，用户发送消息时，智能体能够引用文本知识中的内容回答用户问题。',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeTextList.remove': '取消知识库',
+  'NuwaxPC.Pages.AgentArrangeLongMemoryContent.description':
+    '总结聊天对话的内容，并用于更好的响应用户的消息。',
+  'NuwaxPC.Pages.AgentArrangeMcpGroupComponentItem.toolsWithCount':
+    '工具（{0}）',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.title': '预置问题设置',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.updateSuccess': '更新成功',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.requiredParamEmpty':
+    '参数名：{0}是必填参数，参数值不能为空',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typeQuestion': '问题引导',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typePage': '扩展页面路径',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typeLink': '外链地址',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramName': '参数名',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramValue': '参数值',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramValueTip':
+    '可以在输入框中动态引用参数，留空的参数将由大模型自动补充',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.agentIdVariable': '智能体ID',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.systemUserIdVariable':
+    '系统用户ID',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.userUidVariable': '用户UID',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.userNameVariable': '用户名',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramValuePlaceholder':
+    '请输入{0}',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.icon': '图标',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.displayInfo': '展示信息',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoRequired':
+    '请输入展示信息',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoPlaceholder':
+    '这里是问题内容',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.type': '类型',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typePlaceholder':
+    '请选择类型',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.pagePath': '页面路径',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.pagePathRequired':
+    '请选择页面路径',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.pagePathPlaceholder':
+    '请选择页面路径',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.linkUrl': '链接地址',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlRequired':
+    '请输入链接地址',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlInvalid':
+    '请输入正确格式的链接地址，必须以http://或https://开头!',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.input': '输入',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.configInputArgs':
+    '配置输入参数',
+  'NuwaxPC.Pages.AgentArrangeOpenRemarks.headerTitle': '开场白文案',
+  'NuwaxPC.Pages.AgentArrangeOpenRemarks.placeholder': '请输入开场白',
+  'NuwaxPC.Pages.AgentArrangeOpenRemarks.guidQuestionTitle': '开场白预置问题',
+  'NuwaxPC.Pages.AgentArrangeOpenRemarks.addGuidQuestion': '添加预置问题',
+  'NuwaxPC.Pages.AgentArrangeOpenRemarks.guidQuestionPlaceholder':
+    '输入开场白引导问题',
+  'NuwaxPC.Pages.AgentArrangeOpenRemarks.deleteGuidQuestion': '删除预置问题',
+  'NuwaxPC.Pages.AgentArrangeOpenRemarks.settings': '设置',
   'NuwaxPC.Pages.Error403.licenseExpired': '抱歉，您的许可证授权已过期',
   'NuwaxPC.Pages.Error404.pageNotFound': '抱歉，访问的页面不存在',
   'NuwaxPC.Pages.HomeDrag.errorTitle': '拖拽功能暂时不可用',

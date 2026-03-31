@@ -271,6 +271,99 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AgentArrangeEventBindModal.userNameVariable': 'User Name',
   'NuwaxPC.Pages.AgentArrangeEventBindModal.paramValuePlaceholder':
     'Please enter {0}',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.title': 'Knowledge Base Settings',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.recallSection': 'Recall',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.invokeType': 'Invoke Type',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.invokeTypeTip':
+    'Choose whether to auto recall each round or recall from a specific knowledge base on demand.',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchStrategy':
+    'Search Strategy',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchStrategyTip':
+    'This strategy defines how knowledge is retrieved. Different strategies improve answer accuracy and usability in different scenarios.',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchMixed': 'Mixed',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchSemantic': 'Semantic',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchFullText': 'Full Text',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.maxRecallCount':
+    'Maximum Recall Count',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.maxRecallCountTip':
+    'Maximum number of passages returned from the knowledge base to the LLM. Larger values return more content.',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegree':
+    'Minimum Match Degree',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegreeTip':
+    'Only passages above the configured match degree are recalled and returned to the LLM.',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.replySection': 'Reply',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallReply': 'No-recall Reply',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyTip':
+    'Reply text used when no valid chunks are recalled from the knowledge base.',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallDefault': 'Default',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallCustom': 'Custom',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyPlaceholder':
+    'Please enter',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeTextList.emptyDescription':
+    'After uploading documents, URLs, or third-party data sources as text knowledge bases, the agent can answer user questions with referenced knowledge content.',
+  'NuwaxPC.Pages.AgentArrangeKnowledgeTextList.remove': 'Remove Knowledge Base',
+  'NuwaxPC.Pages.AgentArrangeLongMemoryContent.description':
+    'Summarize chat conversations to improve responses to user messages.',
+  'NuwaxPC.Pages.AgentArrangeMcpGroupComponentItem.toolsWithCount':
+    'Tools ({0})',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.title':
+    'Preset Question Settings',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.updateSuccess':
+    'Updated successfully',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.requiredParamEmpty':
+    'Parameter "{0}" is required and cannot be empty.',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typeQuestion':
+    'Question Guide',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typePage':
+    'Extended Page Path',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typeLink': 'External Link',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramName': 'Parameter Name',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramValue':
+    'Parameter Value',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramValueTip':
+    'You can dynamically reference parameters in the input. Empty values are auto-completed by the model.',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.agentIdVariable': 'Agent ID',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.systemUserIdVariable':
+    'System User ID',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.userUidVariable': 'User UID',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.userNameVariable':
+    'User Name',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramValuePlaceholder':
+    'Please enter {0}',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.icon': 'Icon',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.displayInfo': 'Display Info',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoRequired':
+    'Please enter display info',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoPlaceholder':
+    'Question content',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.type': 'Type',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typePlaceholder':
+    'Please select type',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.pagePath': 'Page Path',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.pagePathRequired':
+    'Please select page path',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.pagePathPlaceholder':
+    'Please select page path',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.linkUrl': 'Link URL',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlRequired':
+    'Please enter link URL',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlInvalid':
+    'Please enter a valid URL starting with http:// or https://',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.input': 'Input',
+  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.configInputArgs':
+    'Configure Input Parameters',
+  'NuwaxPC.Pages.AgentArrangeOpenRemarks.headerTitle': 'Opening Remarks Copy',
+  'NuwaxPC.Pages.AgentArrangeOpenRemarks.placeholder':
+    'Please enter opening remarks',
+  'NuwaxPC.Pages.AgentArrangeOpenRemarks.guidQuestionTitle':
+    'Preset Opening Questions',
+  'NuwaxPC.Pages.AgentArrangeOpenRemarks.addGuidQuestion':
+    'Add Preset Question',
+  'NuwaxPC.Pages.AgentArrangeOpenRemarks.guidQuestionPlaceholder':
+    'Enter a guided opening question',
+  'NuwaxPC.Pages.AgentArrangeOpenRemarks.deleteGuidQuestion':
+    'Delete Preset Question',
+  'NuwaxPC.Pages.AgentArrangeOpenRemarks.settings': 'Settings',
   'NuwaxPC.Pages.Error403.licenseExpired':
     'Sorry, your license authorization has expired',
   'NuwaxPC.Pages.Error404.pageNotFound':
