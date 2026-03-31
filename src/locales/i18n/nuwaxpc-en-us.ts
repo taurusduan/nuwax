@@ -584,6 +584,14 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.SystemConfigSandboxConfig.totalSandboxCount':
     '{0} sandboxes total',
   'NuwaxPC.Pages.SystemConfigSandboxConfig.onlineSandboxCount': '{0} online',
+  'NuwaxPC.Pages.SystemMenuBindUser.userNotFoundBySearch':
+    'No matching user found',
+  'NuwaxPC.Pages.SystemMenuBindUser.bindUserWithName': 'Bind User - {0}',
+  'NuwaxPC.Pages.SystemMenuBindUser.close': 'Close',
+  'NuwaxPC.Pages.SystemMenuBindUser.leftSearchPlaceholder':
+    'Enter username, email, or phone number and press Enter to search',
+  'NuwaxPC.Pages.SystemMenuBindUser.rightSearchPlaceholder':
+    'Search bound members by keyword',
   'NuwaxPC.Pages.Error403.licenseExpired':
     'Sorry, your license authorization has expired',
   'NuwaxPC.Pages.Error404.pageNotFound':

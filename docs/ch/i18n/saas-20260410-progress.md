@@ -985,3 +985,23 @@
 - 风险/阻塞：
   - `SystemManagement` 存量仍主要集中在 `MenuPermission` 相关文件
 - 下一步：继续推进 `MenuPermission/components/BindUser/index.tsx` 批次
+
+### 里程碑：Top 模块第三十九批实改（MenuPermission 绑定用户）
+
+- 时间：2026-03-31 12:24
+- 任务：改造 `MenuPermission/components/BindUser/index.tsx` 可见文案
+- 执行命令：
+  - `pnpm prettier --write src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - 绑定用户弹窗标题、关闭按钮、左右搜索 placeholder、空态文案、搜索未命中提示接入 `t(...)`
+  - 新增 `NuwaxPC.Pages.SystemMenuBindUser.*` 中英文默认词典
+  - 治理总量从 `2970` 下降至 `2965`（-5）
+- 风险/阻塞：
+  - `MenuPermission` 仍有较多存量集中在 `DataPermissionModal` 与 `MenuPermissionModal`
+- 下一步：继续推进 `MenuPermission/components/DataPermissionModal/index.tsx`

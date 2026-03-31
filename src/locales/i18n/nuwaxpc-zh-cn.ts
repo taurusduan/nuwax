@@ -516,6 +516,13 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.SystemConfigSandboxConfig.unitCore': '核',
   'NuwaxPC.Pages.SystemConfigSandboxConfig.totalSandboxCount': '共 {0} 个沙盒',
   'NuwaxPC.Pages.SystemConfigSandboxConfig.onlineSandboxCount': '{0} 个在线',
+  'NuwaxPC.Pages.SystemMenuBindUser.userNotFoundBySearch': '未搜索到相关用户',
+  'NuwaxPC.Pages.SystemMenuBindUser.bindUserWithName': '绑定用户 - {0}',
+  'NuwaxPC.Pages.SystemMenuBindUser.close': '关闭',
+  'NuwaxPC.Pages.SystemMenuBindUser.leftSearchPlaceholder':
+    '输入用户名、邮箱或手机号码，回车搜索',
+  'NuwaxPC.Pages.SystemMenuBindUser.rightSearchPlaceholder':
+    '通过关键字搜索已绑定成员',
   'NuwaxPC.Pages.Error403.licenseExpired': '抱歉，您的许可证授权已过期',
   'NuwaxPC.Pages.Error404.pageNotFound': '抱歉，访问的页面不存在',
   'NuwaxPC.Pages.HomeDrag.errorTitle': '拖拽功能暂时不可用',

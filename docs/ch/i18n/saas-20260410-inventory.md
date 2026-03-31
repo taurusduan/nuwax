@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T04:19:36.262Z
+- 生成时间：2026-03-31T04:23:56.072Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2970
-- hardcoded 中文：2970
+- 总问题数：2965
+- hardcoded 中文：2965
 - legacy System key：0
 - invalid dict key：0
 
@@ -18,7 +18,7 @@
 | src/pages/Antv-X6 | 267 | 0 | 0 | 267 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
-| src/pages/SystemManagement | 125 | 0 | 0 | 125 |
+| src/pages/SystemManagement | 120 | 0 | 0 | 120 |
 | src/services | 110 | 0 | 0 | 110 |
 | src/components/FileTreeView | 97 | 0 | 0 | 97 |
 | src/pages/SpaceKnowledge | 82 | 0 | 0 | 82 |
@@ -373,12 +373,7 @@
 
 ## src/pages/SystemManagement
 
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:158 -> `添加成功`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:169 -> `未搜索到相关用户`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:413 -> `绑定用户 - ${name}`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:431 -> `输入用户名、邮箱或手机号码，回车搜索`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:450 -> `通过关键字搜索已绑定成员`
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:485 -> `暂无数据`
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:159 -> `添加成功`
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/components/ResourceItem/index.tsx:74 -> `已添加`
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/components/ResourceItem/index.tsx:74 -> `添加`
 - [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/DataPermissionModal/index.tsx:74 -> `模型需要授权后才可用`
@@ -453,7 +448,12 @@
 - [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:247 -> `智能体`
 - [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:248 -> `工作流`
 - [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:251 -> `请选择任务类型`
-- ... 省略 45 条
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:258 -> `智能体`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:260 -> `工作流`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:266 -> `任务名称`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:271 -> `请输入任务名称`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:276 -> `任务对象`
+- ... 省略 40 条
 
 ## src/services
 
