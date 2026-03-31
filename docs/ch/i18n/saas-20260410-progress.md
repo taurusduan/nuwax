@@ -796,3 +796,23 @@
 - 风险/阻塞：
   - `Antv-X6/index.tsx` 与 `src/pages/Antv-X6/component/graph.tsx` 仍有存量
 - 下一步：继续推进 `Antv-X6/index.tsx` 与 `Antv-X6/component/graph.tsx`
+
+### 里程碑：Top 模块第三十一批实改（Antv-X6 index + legacy graph 注释收敛）
+
+- 时间：2026-03-31 10:41
+- 任务：继续收敛 `Antv-X6/index.tsx` 与 `Antv-X6/component/graph.tsx` 中文残留
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/v3/indexV3.tsx src/pages/Antv-X6/index.tsx src/pages/Antv-X6/component/graph.tsx`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 shell 批量清理 + `apply_patch` 更新以下文件
+    - `src/pages/Antv-X6/index.tsx`
+    - `src/pages/Antv-X6/component/graph.tsx`
+    - `src/pages/Antv-X6/v3/indexV3.tsx`
+- 结果摘要：
+  - `index.tsx` 与 V1 `component/graph.tsx` 中中文注释残留进一步收敛
+  - 与上一批串行推进，继续压降 Antv-X6 主干文件的治理噪音
+  - inventory 问题总量从 `3243` 下降至 `3240`
+- 风险/阻塞：
+  - 当前剩余问题更多分布在其他高存量模块（EditAgent/SystemManagement 等）
+- 下一步：切换到 inventory Top 的非 Antv-X6 模块批量推进

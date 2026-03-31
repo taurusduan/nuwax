@@ -505,3 +505,17 @@
   - 汇总：问题总量从 `3253` 下降至 `3243`
 - 覆盖文件：
   - `src/pages/Antv-X6/v3/indexV3.tsx`
+
+### 新增验证（Top 模块第三十一批）
+
+- 命令：`pnpm prettier --write src/pages/Antv-X6/v3/indexV3.tsx src/pages/Antv-X6/index.tsx src/pages/Antv-X6/component/graph.tsx`
+  - 结果：通过（本批改动文件格式化完成）
+- 命令：`pnpm run check:i18n-hardcoded`
+  - 结果：通过（新增行符合治理规则）
+- 命令：`pnpm run report:i18n-governance`
+  - 结果：通过（重新生成 inventory）
+  - 汇总：问题总量从 `3243` 下降至 `3240`
+- 覆盖文件：
+  - `src/pages/Antv-X6/v3/indexV3.tsx`
+  - `src/pages/Antv-X6/index.tsx`
+  - `src/pages/Antv-X6/component/graph.tsx`

@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T02:37:15.822Z
+- 生成时间：2026-03-31T02:43:40.777Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：3243
-- hardcoded 中文：3243
+- 总问题数：3240
+- hardcoded 中文：3240
 - legacy System key：0
 - invalid dict key：0
 
@@ -15,7 +15,7 @@
 
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
-| src/pages/Antv-X6 | 270 | 0 | 0 | 270 |
+| src/pages/Antv-X6 | 267 | 0 | 0 | 267 |
 | src/pages/EditAgent | 265 | 0 | 0 | 265 |
 | src/pages/SystemManagement | 208 | 0 | 0 | 208 |
 | src/hooks | 186 | 0 | 0 | 186 |
@@ -121,9 +121,6 @@
 
 ## src/pages/Antv-X6
 
-- [hardcoded_chinese] src/pages/Antv-X6/component/graph.tsx:227 -> `, // 或者 `
-- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1285 -> `发布成功`
-- [hardcoded_chinese] src/pages/Antv-X6/index.tsx:1474 -> `连线不完整`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/library.tsx:21 -> `检索关键词`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/library.tsx:120 -> `输入`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/library.tsx:158 -> `从知识库中获取知识的检索方式，不同的检索策略可以更有效地找到正确的信息，提高其生成的答案的准确性和可用性`
@@ -201,7 +198,10 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useAutoSave.ts:93 -> `useAutoSave 版本冲突，自动保存失败`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useAutoSave.ts:94 -> `版本冲突，工作流已在其他窗口修改`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useAutoSave.ts:97 -> `useAutoSave 保存失败:`
-- ... 省略 190 条
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useAutoSave.ts:102 -> `useAutoSave 保存异常:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useBeforeUnload.ts:90 -> `[useBeforeUnload] 页面隐藏时保存成功`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useBeforeUnload.ts:93 -> `[useBeforeUnload] 页面隐藏时保存失败:`
+- ... 省略 187 条
 
 ## src/pages/EditAgent
 

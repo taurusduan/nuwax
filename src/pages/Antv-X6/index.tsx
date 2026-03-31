@@ -1,11 +1,11 @@
 /**
- * 工作流页面主入口
  *
- * 支持 v1 和 v3 两种方案：
- * - v1: 原有方案（后端数据驱动）
- * - v3: 新方案（前端数据驱动、全量更新、支持撤销重做）
  *
- * 切换方式见 config.ts
+ *  v1  v3 ：
+ * - v1: （）
+ * - v3: （）
+ *
+ *  config.ts
  */
 
 import Created from '@/components/Created';
@@ -109,7 +109,7 @@ import GraphContainer from './graphContainer';
 import Header from './header';
 import './index.less';
 
-// V3 方案切换配置
+// V3
 import { WORKFLOW_CONFIG } from './config';
 const workflowCreatedTabs = CREATED_TABS.filter((item) =>
   [
@@ -132,73 +132,55 @@ const Workflow: React.FC = () => {
   } = useModel('workflow');
 
   const params = useParams();
-  // 当前工作流的id
+  // id
   const workflowId = Number(params.workflowId);
   const spaceId = Number(params.spaceId);
-  // 当前被选中的节点
   const [foldWrapItem, setFoldWrapItem] =
     useState<ChildNode>(DEFAULT_DRAWER_FORM);
 
-  // 工作流左上角的详细信息
   const [info, setInfo] = useState<IgetDetails | null>();
-  // 定义一个节点试运行返回值
   const [testRunResult, setTestRunResult] = useState<string>('');
-  // 节点试运行
   const [stopWait, setStopWait] = useState<boolean>(false);
-  // 打开和关闭发布弹窗
   const [showPublish, setShowPublish] = useState<boolean>(false);
-  // 打开和关闭新增组件
   const [open, setOpen] = useState(false);
-  // 展示修改工作流的弹窗
   const [showCreateWorkflow, setShowCreateWorkflow] = useState(false);
-  // 创建工作流，插件，知识库，数据库
   const [createdItem, setCreatedItem] = useState<AgentComponentTypeEnum>(
     AgentComponentTypeEnum.Plugin,
   );
-  // 拖动节点到画布中的x和y
+  // xy
   const [dragEvent, setDragEvent] = useState<{ x: number; y: number }>({
     x: 0,
     y: 0,
   });
   const [testRunLoading, setTestRunLoading] = useState<boolean>(false);
-  // 当点击连接桩和边时，存储一些数据
   const currentNodeRef = useRef<CurrentNodeRefProps | null>(null);
-  // 节点的form表单
+  // form
   const [form] = Form.useForm<NodeConfig>();
-  // 修改右侧抽屉的名称
   const [showNameInput, setShowNameInput] = useState<boolean>(false);
-  // 当前画布中的节点和边的数据
   const [graphParams, setGraphParams] = useState<{
     nodeList: ChildNode[];
     edgeList: Edge[];
   }>({ nodeList: [], edgeList: [] });
-  // 针对问答节点，试运行的问答参数
   const [testRunParams, setTestRunParams] = useState<TestRunParams>({
     question: '',
     options: [],
   });
-  // 针对问答节点条开始节点，参数丢失
   const [formItemValue, setFormItemValue] = useState<DefaultObjectType>({});
-  // 错误列表的参数
   const [errorParams, setErrorParams] = useState<ErrorParams>({
     errorList: [],
     show: false,
   });
-  // 发布前的校验
   const [isValidLoading, setIsValidLoading] = useState<boolean>(false);
-  // 画布的ref
+  // ref
   const graphRef = useRef<GraphContainerRef>(null);
-  // 阻止获取当前节点的上级参数
   const preventGetReference = useRef<number>(0);
-  // 新增定时器引用
   const timerRef = useRef<NodeJS.Timeout>();
   const nodeDrawerRef = useRef<NodeDrawerRef>(null);
   const [showVersionHistory, setShowVersionHistory] = useState(false);
-  // 按钮是否处于loading
+  // loading
   const [loading, setLoading] = useState(false);
-  // 是否显示创建工作流，插件，知识库，数据库的弹窗和试运行的弹窗
   const { setTestRun } = useModel('model');
-  // 从useModel中获取到数据
+  // useModel
   const {
     setReferenceList,
     setIsModified,
@@ -207,10 +189,8 @@ const Workflow: React.FC = () => {
     isModified,
     setSpaceId,
   } = useModel('workflow');
-  // 修改更新时间
   const changeUpdateTime = () => {
     const _time = new Date();
-    // 修改时间
     setInfo((prev) => {
       if (!prev) return null;
       return {
@@ -220,10 +200,10 @@ const Workflow: React.FC = () => {
     });
   };
 
-  // 使用 Hook 控制抽屉打开时的滚动条
+  //  Hook
   useDrawerScroll(showVersionHistory);
 
-  // 全局禁用Ctrl+S/Cmd+S
+  // Ctrl+S/Cmd+S
   useDisableSaveShortcut();
 
   const updateCurrentNodeRef = useCallback(
@@ -237,36 +217,29 @@ const Workflow: React.FC = () => {
     },
     [currentNodeRef],
   );
-  /** -----------------  需要调用接口的方法  --------------------- */
-  // 同步 foldWrapItem 到 model 中的 drawerForm
+  /** -----------------    --------------------- */
+  //  foldWrapItem  model  drawerForm
   useEffect(() => {
-    // 直接使用 setDrawerForm 进行更新
+    //  setDrawerForm
     storeWorkflow('drawerForm', foldWrapItem);
     if (skillChange) {
-      // 处理技能变化时的表单更新
       form.setFieldsValue(foldWrapItem.nodeConfig);
       setSkillChange(false);
     }
   }, [foldWrapItem]);
 
-  // 获取当前画布的信息
   const getDetails = async () => {
     try {
-      // 调用接口，获取当前画布的所有节点和边
       const _res = await service.getDetails(workflowId);
-      // 获取左上角的信息
       setInfo(_res.data);
       setSpaceId(_res.data.spaceId);
-      // 获取节点和边的数据
       const _nodeList = _res.data.nodes;
       const _edgeList = getEdges(_nodeList);
-      // 修改数据，更新画布
       setGraphParams({ edgeList: _edgeList, nodeList: _nodeList });
     } catch (error) {
       console.error('Failed to fetch graph data:', error);
     }
   };
-  // 修改当前工作流的基础信息
   const onConfirm = async (value: IUpdateDetails) => {
     // if (!value.name) return;
     if (showCreateWorkflow) {
@@ -279,7 +252,7 @@ const Workflow: React.FC = () => {
       getDetails();
     }
   };
-  // 调整画布的大小（左下角select）
+  // （select）
   const changeGraph = (val: number | string) => {
     if (val === -1) {
       graphRef.current?.graphChangeZoomToFit();
@@ -287,7 +260,6 @@ const Workflow: React.FC = () => {
       graphRef.current?.graphChangeZoom(val as number);
     }
   };
-  // 调整画布的大小(滚轮)
   const changeZoom = (val: number) => {
     setInfo((prev) => {
       if (!prev) return null;
@@ -297,11 +269,9 @@ const Workflow: React.FC = () => {
       };
     });
   };
-  // 获取当前节点的参数
   const getReference = async (id: number): Promise<boolean> => {
     if (id === FoldFormIdEnum.empty || preventGetReference.current === id)
       return false;
-    // 获取节点需要的引用参数
     const _res = await service.getOutputArgs(id);
     const isSuccess = _res.code === Constant.success;
     if (isSuccess) {
@@ -321,7 +291,6 @@ const Workflow: React.FC = () => {
     }
     return isSuccess;
   };
-  // 查询节点的指定信息
   const getNodeConfig = async (id: number): Promise<ChildNode | false> => {
     const _res = await service.getNodeConfig(id);
     if (_res.code === Constant.success) {
@@ -332,7 +301,6 @@ const Workflow: React.FC = () => {
     return false;
   };
 
-  // 节点添加或移除边
   const nodeChangeEdge = async (
     config: ChangeEdgeProps,
     callback: () => Promise<boolean> | void = () =>
@@ -360,7 +328,6 @@ const Workflow: React.FC = () => {
     return newNodeIds;
   };
 
-  // 自动保存节点配置
   const autoSaveNodeConfig = async (
     updateFormConfig: ChildNode,
   ): Promise<boolean> => {
@@ -371,12 +338,10 @@ const Workflow: React.FC = () => {
     let result = false;
     const _res = await apiUpdateNode(params);
     if (_res.code === Constant.success) {
-      // 如果是修改节点的参数，那么就要更新当前节点的参数
       if (updateFormConfig.id === getWorkflow('drawerForm').id) {
-        // TODO 是否应该更新drawerForm
+        // TODO drawerForm
         setFoldWrapItem(params);
       }
-      // 跟新当前节点的上级参数
       await getReference(getWorkflow('drawerForm').id);
       changeUpdateTime();
       result = true;
@@ -384,7 +349,6 @@ const Workflow: React.FC = () => {
     return result;
   };
 
-  // 更新节点
   const changeNode = async (
     { nodeData, update, targetNodeId }: ChangeNodeProps,
     callback: () => Promise<boolean> | void = () =>
@@ -414,26 +378,24 @@ const Workflow: React.FC = () => {
     if (isSuccess) {
       changeUpdateTime();
       if (isOnlyUpdate) {
-        // 仅更新节点大小和位置 不需要更新form表单
+        //  form
         return true;
       }
       if (targetNodeId) {
         if (params.type === NodeTypeEnum.Loop) {
-          // 如果传递的是boolean，那么证明要更新这个节点
+          // boolean，
           getNodeConfig(Number(nodeData.id));
         }
       }
-      // 如果是修改节点的参数，那么就要更新当前节点的参数
       if (params.id === getWorkflow('drawerForm').id) {
         setFoldWrapItem(params);
       }
-      // 更新当前节点的上级引用参数
       callback();
       return true;
     }
     return false;
   };
-  // 优化后的onFinish方法
+  // onFinish
   const onSaveWorkflow = useCallback(
     async (currentFoldWrapItem: ChildNode): Promise<boolean> => {
       let result = false;
@@ -486,7 +448,6 @@ const Workflow: React.FC = () => {
     let result = false;
     const hasSkillChange = getWorkflow('skillChange');
     if (getWorkflow('isModified') === false) return result;
-    //重新获取节点配置信息 并更新表单 与节点配置数据
     try {
       setIsModified(false);
       result = await onSaveWorkflow(getWorkflow('drawerForm'));
@@ -495,7 +456,6 @@ const Workflow: React.FC = () => {
         const isSuccess = _res.code === Constant.success;
         const data = _res.data;
         if (isSuccess && data && data.nodeConfig[SKILL_FORM_KEY]) {
-          //更新表单数据 包括技能数据
           const updateValue = updateSkillComponentConfigs(
             form.getFieldsValue(true)[SKILL_FORM_KEY] || [],
             data.nodeConfig[SKILL_FORM_KEY],
@@ -515,13 +475,11 @@ const Workflow: React.FC = () => {
     return result;
   }, [setIsModified, form, setSkillChange]);
 
-  // 点击组件，显示抽屉
   const changeDrawer = useCallback(async (child: ChildNode | null) => {
     const _isModified = getWorkflow('isModified');
     const _drawerForm = getWorkflow('drawerForm');
 
     if (_isModified === true && _drawerForm?.id !== 0) {
-      //如果有修改先保存
       setIsModified(false);
       onSaveWorkflow(_drawerForm);
       if (timerRef.current) {
@@ -564,12 +522,10 @@ const Workflow: React.FC = () => {
     });
   }, []);
 
-  // ==================== 节点创建相关辅助函数 ====================
-
   /**
-   * 检查节点类型是否为条件分支或意图识别节点
-   * @param nodeType 节点类型
-   * @returns 是否为特殊节点类型
+   *
+   * @param nodeType
+   * @returns
    */
   const isConditionalNode = (nodeType: string): boolean => {
     return (
@@ -579,9 +535,9 @@ const Workflow: React.FC = () => {
   };
 
   /**
-   * 处理知识库节点的特殊配置
-   * @param nodeData 节点数据
-   * @param knowledgeBaseConfigs 知识库配置
+   *
+   * @param nodeData
+   * @param knowledgeBaseConfigs
    */
   const handleKnowledgeNodeConfig = async (
     nodeData: ChildNode,
@@ -600,12 +556,12 @@ const Workflow: React.FC = () => {
   };
 
   /**
-   * 处理特殊端口连接（长端口ID）
-   * @param sourceNode 源节点
-   * @param portId 端口ID
-   * @param newNodeId 新节点ID
-   * @param targetNode 目标节点
-   * @param isLoop 是否为循环节点
+   * （ID）
+   * @param sourceNode
+   * @param portId ID
+   * @param newNodeId ID
+   * @param targetNode
+   * @param isLoop
    */
   const handleSpecialPortConnection = async ({
     sourceNode,
@@ -637,12 +593,12 @@ const Workflow: React.FC = () => {
     }
   };
   /**
-   * 处理异常端口连接
-   * @param sourceNode 源节点
-   * @param portId 端口ID
-   * @param newNodeId 新节点ID
-   * @param targetNode 目标节点
-   * @param isLoop 是否为循环节点
+   *
+   * @param sourceNode
+   * @param portId ID
+   * @param newNodeId ID
+   * @param targetNode
+   * @param isLoop
    */
   const handleExceptionPortConnection = async ({
     sourceNode,
@@ -674,10 +630,10 @@ const Workflow: React.FC = () => {
   };
 
   /**
-   * 处理输出端口连接
-   * @param newNodeId 新节点ID
-   * @param sourceNode 源节点
-   * @param isLoop 是否为循环节点
+   *
+   * @param newNodeId ID
+   * @param sourceNode
+   * @param isLoop
    */
   const handleOutputPortConnection = async ({
     newNodeId,
@@ -706,10 +662,10 @@ const Workflow: React.FC = () => {
   };
 
   /**
-   * 处理条件分支节点连接
-   * @param newNode 新节点
-   * @param targetNode 目标节点
-   * @param isLoop 是否为循环节点
+   *
+   * @param newNode
+   * @param targetNode
+   * @param isLoop
    */
   const handleConditionalNodeConnection = async ({
     newNode,
@@ -735,11 +691,11 @@ const Workflow: React.FC = () => {
   };
 
   /**
-   * 处理普通节点连接
-   * @param newNodeId 新节点ID
-   * @param targetNodeId 目标节点ID
-   * @param newNode 新节点数据
-   * @param isLoop 是否为循环节点
+   *
+   * @param newNodeId ID
+   * @param targetNodeId ID
+   * @param newNode
+   * @param isLoop
    */
   const handleNormalNodeConnection = async ({
     newNodeId,
@@ -770,11 +726,11 @@ const Workflow: React.FC = () => {
   };
 
   /**
-   * 处理输入端口连接
-   * @param newNode 新节点
-   * @param sourceNode 源节点
-   * @param portId 端口ID
-   * @param isLoop 是否为循环节点
+   *
+   * @param newNode
+   * @param sourceNode
+   * @param portId ID
+   * @param isLoop
    */
   const handleInputPortConnection = async ({
     newNode,
@@ -822,12 +778,12 @@ const Workflow: React.FC = () => {
   };
 
   /**
-   * 处理目标节点连接
-   * @param newNode 新节点
-   * @param targetNode 目标节点
-   * @param sourceNode 源节点
-   * @param edgeId 边ID
-   * @param isLoop 是否为循环节点
+   *
+   * @param newNode
+   * @param targetNode
+   * @param sourceNode
+   * @param edgeId ID
+   * @param isLoop
    */
   const handleTargetNodeConnection = async ({
     newNode,
@@ -863,7 +819,6 @@ const Workflow: React.FC = () => {
       edgeId,
     );
 
-    // 删除原有连接
     const newNodeIds = await nodeChangeEdge(
       {
         type: UpdateEdgeType.deleted,
@@ -878,15 +833,14 @@ const Workflow: React.FC = () => {
   };
 
   /**
-   * 处理节点创建成功后的所有操作
-   * @param nodeData 创建成功的节点数据
-   * @param child 原始子节点配置
+   *
+   * @param nodeData
+   * @param child
    */
   const handleNodeCreationSuccess = async (
     nodeData: AddNodeResponse,
     child: Partial<ChildNode>,
   ) => {
-    // 设置节点基本属性
     const shape = getShape(nodeData.type);
     const { nodeConfig, ...rest } = nodeData;
     const { toolName, mcpId } = child.nodeConfig || {};
@@ -900,10 +854,8 @@ const Workflow: React.FC = () => {
     };
     const extension = nodeConfig?.extension || {};
 
-    // 添加节点到图形中
     graphRef.current?.graphAddNode(extension as GraphRect, newNodeData);
 
-    // 处理知识库节点特殊配置
     if (
       child.type === NodeTypeEnum.Knowledge &&
       child.nodeConfig?.knowledgeBaseConfigs
@@ -913,19 +865,16 @@ const Workflow: React.FC = () => {
         child.nodeConfig.knowledgeBaseConfigs,
       );
     }
-    // 更新抽屉和选中状态
     await changeDrawer(newNodeData);
     graphRef.current?.graphSelectNode(String(nodeData.id));
     changeUpdateTime();
 
-    // 处理节点连接逻辑(通过节点或者边创建的节点)
     if (currentNodeRef.current) {
       const { portId, edgeId } = currentNodeRef.current;
       const isLoop = Boolean(nodeData.loopNodeId);
       const isOut = portId.endsWith('out');
       try {
         if (portId.includes(PortGroupEnum.exception)) {
-          // 处理异常端口连接
           await handleExceptionPortConnection({
             sourceNode: currentNodeRef.current.sourceNode,
             portId,
@@ -934,7 +883,6 @@ const Workflow: React.FC = () => {
             isLoop,
           });
         } else if (portId.length > 15) {
-          // 处理特殊端口连接
           await handleSpecialPortConnection({
             sourceNode: currentNodeRef.current.sourceNode,
             portId,
@@ -943,14 +891,12 @@ const Workflow: React.FC = () => {
             isLoop,
           });
         } else if (isOut) {
-          // 处理输出端口连接
           await handleOutputPortConnection({
             newNodeId: nodeData.id,
             sourceNode: currentNodeRef.current.sourceNode,
             isLoop,
           });
         } else {
-          // 处理输入端口连接
           await handleInputPortConnection({
             newNode: newNodeData,
             sourceNode: currentNodeRef.current.sourceNode,
@@ -959,7 +905,6 @@ const Workflow: React.FC = () => {
           });
         }
 
-        // 处理目标节点连接
         if (currentNodeRef.current.targetNode) {
           await handleTargetNodeConnection({
             newNode: newNodeData,
@@ -975,15 +920,11 @@ const Workflow: React.FC = () => {
         console.error('[Workflow] node connection handling failed:', error);
         throw error;
       } finally {
-        // 清空当前节点引用
         currentNodeRef.current = null;
       }
     }
   };
 
-  // ==================== 节点创建相关辅助函数结束 ====================
-
-  // 新增节点
   const addNode = async (child: Partial<ChildNode>, dragEvent: GraphRect) => {
     let _params = JSON.parse(JSON.stringify(child));
     _params.workflowId = workflowId;
@@ -993,8 +934,6 @@ const Workflow: React.FC = () => {
       ports: [],
       type: NodeSizeGetTypeEnum.create,
     });
-    // 如果是条件分支，需要增加高度
-    // 需要设置固定尺寸的节点类型列表
     const fixedSizeNodeTypes = [
       NodeTypeEnum.Condition,
       NodeTypeEnum.QA,
@@ -1002,7 +941,6 @@ const Workflow: React.FC = () => {
       NodeTypeEnum.Loop,
     ];
 
-    // 如果当前节点类型需要固定尺寸，则设置扩展属性
     if (child.type && fixedSizeNodeTypes.includes(child.type)) {
       _params.extension = {
         ...dragEvent,
@@ -1010,8 +948,7 @@ const Workflow: React.FC = () => {
         width,
       };
     }
-    // 查看当前是否有选中的节点以及被选中的节点的type是否是Loop
-    // 如果当前选择的是循环节点或者循环内部的子节点，那么就要将他的位置放置于循环内部
+    // typeLoop
     if (foldWrapItem.type === NodeTypeEnum.Loop || foldWrapItem.loopNodeId) {
       if (_params.type === NodeTypeEnum.Loop) {
         message.warning(t('NuwaxPC.Pages.AntvX6Workflow.cannotNestLoop'));
@@ -1019,7 +956,6 @@ const Workflow: React.FC = () => {
       }
       _params.loopNodeId =
         Number(foldWrapItem.loopNodeId) || Number(foldWrapItem.id);
-      // 点击增加的节点，需要通过接口获取父节点的数据
       const _parent = await service.getNodeConfig(_params.loopNodeId);
       if (_parent.code === Constant.success) {
         const loopNode: ChildNode = _parent.data;
@@ -1050,11 +986,9 @@ const Workflow: React.FC = () => {
         await handleNodeCreationSuccess(_res.data, child);
       } catch (error) {
         console.error('[Workflow] post-create node handling failed:', error);
-        // 可以添加用户友好的错误提示
       }
     }
   };
-  // 复制节点
   const copyNode = async (child: ChildNode) => {
     const _res = await service.apiCopyNode(child.id.toString());
     if (_res.code === Constant.success) {
@@ -1087,12 +1021,10 @@ const Workflow: React.FC = () => {
         shape,
       };
       changeNode({ nodeData: newNode });
-      // 选中新增的节点
       graphRef.current?.graphSelectNode(String(_res.data.id));
       // changeUpdateTime();
     }
   };
-  // 删除指定的节点
   const deleteNode = async (id: number | string, node?: ChildNode) => {
     setVisible(false);
     preventGetReference.current = Number(id);
@@ -1123,7 +1055,7 @@ const Workflow: React.FC = () => {
     }
   };
 
-  // 添加工作流，插件，知识库，数据库 mcp 节点
+  // ，，， mcp
   const onAdded = (val: CreatedNodeItem, parentFC?: string) => {
     if (parentFC && parentFC !== 'workflow') return;
     let _child: Partial<ChildNode>;
@@ -1190,23 +1122,19 @@ const Workflow: React.FC = () => {
     // graphRef.current.addNode(dragEvent, _child);
     setOpen(false);
   };
-  // 拖拽组件到画布中
   const dragChild = async (
     child: StencilChildNode,
     position?: React.DragEvent<HTMLDivElement> | GraphRect,
     continueDragCount?: number,
   ) => {
     const childType = child?.type || '';
-    // 获取当前画布可视区域中心点
 
-    // 判断是否需要显示特定类型的创建面板
     const isSpecialType = [
       NodeTypeEnum.Plugin,
       NodeTypeEnum.Workflow,
       NodeTypeEnum.MCP,
     ].includes(childType);
 
-    // 数据库新增
     const isTableNode = [
       'TableDataAdd',
       'TableDataDelete',
@@ -1217,7 +1145,7 @@ const Workflow: React.FC = () => {
 
     const viewGraph = graphRef.current?.getCurrentViewPort();
     if (isSpecialType) {
-      setCreatedItem(childType as unknown as AgentComponentTypeEnum); // 注意这个类型转换的前提是两个枚举的值相同
+      setCreatedItem(childType as unknown as AgentComponentTypeEnum); //
       setOpen(true);
       setDragEvent(getCoordinates(position, viewGraph, continueDragCount));
     } else if (isTableNode) {
@@ -1233,19 +1161,15 @@ const Workflow: React.FC = () => {
       );
       // if (e) {
       //   e.preventDefault();
-      // }
       await addNode(child as ChildNode, coordinates);
     }
   };
-  // 校验当前工作流
   const validWorkflow = async () => {
     setLoading(false);
 
     if (getWorkflow('isModified') === true) {
-      // 如果当前有未保存的修改，则先保存一下
       await doSubmitFormData();
     }
-    // 先将数据提交到后端
     const _detail = await service.getDetails(workflowId);
     const _nodeList = _detail.data.nodes;
     setGraphParams((prev) => ({ ...prev, nodeList: _nodeList }));
@@ -1273,37 +1197,28 @@ const Workflow: React.FC = () => {
       return false;
     }
   };
-  // // 发布，保存数据
   // const onSubmit = async (values: IPublish) => {
   //   const volid = await validWorkflow();
   //   if (volid) {
-  //     // 获取所有节点,保存位置
   //     setLoading(true);
   //     const _params = { ...values, workflowId: info?.id };
   //     const _res = await service.publishWorkflow(_params);
   //     if (_res.code === Constant.success) {
-  //       message.success('发布成功');
   //       setLoading(false);
   //       setShowPublish(false);
   //       const _time = new Date();
-  //       // 更新时间
   //       setInfo({
   //         ...(info as IgetDetails),
   //         ...values,
   //         modified: _time.toString(),
   //         publishDate: _time.toString(),
   //         publishStatus: 'Published',
-  //       });
-  //     }
   //   } else {
   //     setShowPublish(false);
-  //   }
-  // };
 
   const handleConfirmPublishWorkflow = () => {
     setShowPublish(false);
     const _time = new Date();
-    // 更新时间
     setInfo({
       ...(info as IgetDetails),
       modified: _time.toString(),
@@ -1315,7 +1230,6 @@ const Workflow: React.FC = () => {
     setTestRunResult('');
     graphRef.current?.graphResetRunResult();
   };
-  // 节点试运行
   const nodeTestRun = async (params?: DefaultObjectType) => {
     const _params = {
       nodeId: foldWrapItem.id,
@@ -1323,7 +1237,6 @@ const Workflow: React.FC = () => {
     };
     setTestRunResult('');
 
-    // 启动连接
     const abortConnection = await createSSEConnection({
       url: `${process.env.BASE_URL}/api/workflow/test/node/execute`,
       method: 'POST',
@@ -1359,11 +1272,10 @@ const Workflow: React.FC = () => {
             });
           }
         }
-        // 更新UI状态...
+        // UI...
       },
       onError: (error) => {
         console.error('[Workflow] streaming request error:', error);
-        // 显示错误提示...
       },
       onOpen: (response) => {
         console.log('[Workflow] connection established', response.status);
@@ -1372,14 +1284,11 @@ const Workflow: React.FC = () => {
         setLoading(false);
       },
     });
-    // 主动关闭连接
     abortConnection();
   };
-  // 试运行所有节点
   const testRunAllNode = async (params: ITestRun) => {
     // await getDetails();
     setLoading(true);
-    // 遍历检查所有节点是否都已经输入了参数
     const abortConnection = await createSSEConnection({
       url: `${process.env.BASE_URL}/api/workflow/test/execute`,
       method: 'POST',
@@ -1390,9 +1299,9 @@ const Workflow: React.FC = () => {
       body: params,
       onMessage: (data) => {
         if (data.data && data.data.nodeId) {
-          // 1.运行到当前节点时 给聚焦样式 与 选择当前节点 两种逻辑 这里x6要支持聚焦focus
-          // 2.并显示运行状态
-          // 3. 如果有循环则需要记录数据总条数
+          // 1.     x6focus
+          // 2.
+          // 3.
           const runResult: RunResultItem = {
             requestId: data.requestId,
             options: {
@@ -1455,11 +1364,10 @@ const Workflow: React.FC = () => {
             }
           }
         }
-        // 更新UI状态...
+        // UI...
       },
       onError: (error) => {
         console.error('[Workflow] streaming request error:', error);
-        // 显示错误提示...
       },
       onOpen: (response) => {
         console.log('[Workflow] connection established', response.status);
@@ -1468,16 +1376,12 @@ const Workflow: React.FC = () => {
         setLoading(false);
       },
     });
-    // 主动关闭连接
     abortConnection();
     // } else {
-    //   message.warning('连线不完整');
     //   return;
-    // }
     changeUpdateTime();
   };
 
-  // 试运行所有节点
   const testRunAll = async () => {
     const loadingTimer = setTimeout(() => {
       setTestRunLoading(true);
@@ -1496,7 +1400,6 @@ const Workflow: React.FC = () => {
     }
   };
 
-  // 节点试运行
   const runTest = useCallback(
     async (type: string, params?: DefaultObjectType) => {
       setErrorParams({
@@ -1521,7 +1424,7 @@ const Workflow: React.FC = () => {
           _params = {
             workflowId: info?.id as number,
             params,
-            requestId: uuidv4(), // 使用uuid生成唯一ID
+            requestId: uuidv4(), // uuidID
           };
         }
 
@@ -1541,7 +1444,6 @@ const Workflow: React.FC = () => {
     },
     [isModified, foldWrapItem.id],
   );
-  // 右上角的相关操作
   const handleOperationsChange = useCallback(
     async (val: string) => {
       switch (val) {
@@ -1576,19 +1478,16 @@ const Workflow: React.FC = () => {
     },
     [isModified, foldWrapItem.id],
   );
-  // 点击关闭按钮
   const handleDrawerClose = useCallback(() => {
-    // TODO 排除 Loop 节点 触发空白区域点击事件 清空选择状态
+    // TODO  Loop
     graphRef.current?.graphTriggerBlankClick();
   }, []);
 
   const handleClickBlank = useCallback(() => {
-    // 关闭右侧抽屉
     changeDrawer(null);
     setVisible(false);
   }, []);
 
-  // 更改节点的名称
   const changeFoldWrap = ({
     name,
     description,
@@ -1603,7 +1502,6 @@ const Workflow: React.FC = () => {
 
   const handleSaveNode = useCallback(
     (data: ChildNode, payload: Partial<ChildNode>) => {
-      // 更新节点名称
       const newValue = { ...data, ...payload };
       changeNode({ nodeData: newValue });
       const graph = graphRef.current?.getGraphRef();
@@ -1625,9 +1523,7 @@ const Workflow: React.FC = () => {
     [changeNode, setFoldWrapItem],
   );
 
-  // 点击画布中的节点
   const handleNodeClick = (node: ChildNode | null) => {
-    // 如果右侧抽屉是再展示的，且就是当前选中的节点，那么就不做任何操作
     if (
       getWorkflow('visible') &&
       node &&
@@ -1646,27 +1542,23 @@ const Workflow: React.FC = () => {
   };
 
   const handleErrorNodeClick = (node: ChildNode | null) => {
-    // 如果右侧抽屉是再展示的，且就是当前选中的节点，那么就不做任何操作
     if (visible && node && node.id === getWorkflow('drawerForm').id) return;
     if (node) {
-      //分成二个步骤：
-      // 1. 先获取当前选中节点的位置，然后平移画布到当前选中节点在视口中间
+      // 1. ，
       const graph = graphRef.current?.getGraphRef();
       const cell = graph?.getCellById(node.id.toString());
       if (cell) {
         graph?.centerCell(cell);
       }
-      // 2. 选中节点
+      // 2.
       selectGraphNode(node.id);
     }
   };
 
-  // 通过连接桩或者边创建节点
   const createNodeByPortOrEdge = async (
     config: CreateNodeByPortOrEdgeProps,
   ) => {
     const { child, sourceNode, portId, position, targetNode, edgeId } = config;
-    // 首先创建节点
     currentNodeRef.current = {
       sourceNode: sourceNode,
       portId: portId,
@@ -1684,7 +1576,6 @@ const Workflow: React.FC = () => {
     await dragChild(child, newPosition);
   };
 
-  // 保存当前画布中节点的位置
   useEffect(() => {
     getDetails();
     return () => {
@@ -1705,13 +1596,10 @@ const Workflow: React.FC = () => {
     if (foldWrapItem.id !== 0) {
       const newFoldWrapItem = cloneDeep(foldWrapItem);
 
-      // 先重置表单，清除所有字段
       form.resetFields();
 
-      // 然后设置当前节点的配置
       form.setFieldsValue(newFoldWrapItem.nodeConfig);
 
-      // 设置默认值
       setFormDefaultValues({
         type: newFoldWrapItem.type,
         nodeConfig: newFoldWrapItem.nodeConfig,
@@ -1724,7 +1612,6 @@ const Workflow: React.FC = () => {
     setLoading(false);
 
     if (getWorkflow('isModified') === true) {
-      // 如果当前有未保存的修改，则先保存一下
       await doSubmitFormData();
     }
 
@@ -1749,7 +1636,6 @@ const Workflow: React.FC = () => {
       return false;
     }
   };
-  // 发布
   const handleShowPublish = async () => {
     const timer = setTimeout(() => {
       setIsValidLoading(true);
@@ -1766,7 +1652,6 @@ const Workflow: React.FC = () => {
     setIsValidLoading(false);
   };
 
-  // 监听保存更新修改
   useModifiedSaveUpdate({
     run: useCallback(async () => {
       const _drawerForm = getWorkflow('drawerForm');
@@ -1774,7 +1659,6 @@ const Workflow: React.FC = () => {
       //   'useModifiedSaveUpdate: run: onSaveWorkflow',
       //   _drawerForm.id,
       //   JSON.stringify(_drawerForm.nodeConfig),
-      // );
       return await onSaveWorkflow(_drawerForm);
     }, []),
     doNext: useCallback(() => {
@@ -1790,7 +1674,6 @@ const Workflow: React.FC = () => {
     await getDetails();
   };
 
-  // 更新画布中的节点
   const handleGraphUpdateByFormData = useCallback(
     (changedValues: any, fullFormValues: any) => {
       const nodeId = getWorkflow('drawerForm').id;
@@ -1806,25 +1689,22 @@ const Workflow: React.FC = () => {
     [graphRef.current],
   );
 
-  // 使用节流处理表单值变化，确保最后一次调用必须触发更新
   const throttledHandleGraphUpdate = useThrottledCallback(
     (changedValues: any, fullFormValues: any) => {
-      // 先关闭之前修改的标记
       setIsModified(false);
       handleGraphUpdateByFormData(changedValues, fullFormValues);
-      // 再打开新的修改标记
       setIsModified(true);
     },
-    500, // 500ms 的节流延迟
+    500, // 500ms
     {
-      leading: true, // 立即执行第一次调用
-      trailing: true, // 确保最后一次调用被执行
+      leading: true, //
+      trailing: true, //
     },
   );
 
   return (
     <div id="container">
-      {/* 顶部的名称和发布等按钮 */}
+      {/*  */}
       <Header
         isValidLoading={isValidLoading}
         info={info ?? {}}
@@ -1894,7 +1774,6 @@ const Workflow: React.FC = () => {
             key={`${foldWrapItem.type}-${foldWrapItem.id}-form`}
             clearOnDestroy={true}
             onValuesChange={(values) => {
-              // 使用节流处理，确保最后一次调用必须触发更新
               throttledHandleGraphUpdate(values, form.getFieldsValue(true));
             }}
           >
@@ -1949,18 +1828,17 @@ const Workflow: React.FC = () => {
         nodeList={graphParams.nodeList}
       />
 
-      {/*工作流发布弹窗*/}
+      {/**/}
       <PublishComponentModal
         mode={AgentComponentTypeEnum.Workflow}
         targetId={workflowId}
         spaceId={spaceId}
         category={info?.category}
         open={showPublish}
-        // 取消发布
         onCancel={() => setShowPublish(false)}
         onConfirm={handleConfirmPublishWorkflow}
       />
-      {/*版本历史*/}
+      {/**/}
       <VersionHistory
         targetId={workflowId}
         targetName={info?.name}
@@ -1981,16 +1859,16 @@ const Workflow: React.FC = () => {
   );
 };
 
-// V3 方案组件（懒加载，避免不使用时加载）
+// V3 （，）
 const WorkflowV3 = React.lazy(() => import('./v3/indexV3'));
 
 /**
- * 工作流页面入口组件
- * 根据配置决定使用 v1 还是 v3 方案
- * 优先级：V3 > V1
+ *
+ *  v1  v3
+ * ：V3 > V1
  */
 const WorkflowEntry: React.FC = () => {
-  // V3 优先级最高
+  // V3
   if (WORKFLOW_CONFIG.useV3) {
     return (
       <React.Suspense
@@ -2015,7 +1893,7 @@ const WorkflowEntry: React.FC = () => {
     );
   }
 
-  // 默认使用 v1 方案
+  //  v1
   return <Workflow />;
 };
 
