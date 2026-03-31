@@ -7,6 +7,7 @@ import {
   DEFAULT_THEME_CONFIG,
 } from '@/constants/theme.constants';
 import { useUnifiedTheme } from '@/hooks/useUnifiedTheme';
+import { t } from '@/services/i18nRuntime';
 import { apiSystemConfigUpdate } from '@/services/systemManage';
 import {
   reloadConfiguration,
@@ -91,7 +92,7 @@ const ThemeConfig: React.FC = () => {
     try {
       await updatePrimaryColor(color, { saveToStorage: false });
     } catch (error) {
-      console.warn('预览主题色失败:', error);
+      console.warn('Failed to preview theme color:', error);
     }
   };
 
@@ -116,7 +117,7 @@ const ThemeConfig: React.FC = () => {
         { saveToStorage: false },
       );
     } catch (error) {
-      console.warn('预览导航风格失败:', error);
+      console.warn('Failed to preview navigation style:', error);
     }
   };
 
@@ -134,7 +135,7 @@ const ThemeConfig: React.FC = () => {
     try {
       await updateBackground(backgroundId, { saveToStorage: false });
     } catch (error) {
-      console.warn('预览背景图失败:', error);
+      console.warn('Failed to preview background image:', error);
     }
 
     // 显示联动提示
@@ -143,9 +144,12 @@ const ThemeConfig: React.FC = () => {
     );
     if (backgroundConfig) {
       message.info(
-        `已自动切换为${
-          newLayoutStyle === ThemeLayoutColorStyle.DARK ? '深色' : '浅色'
-        }导航栏（预览效果）`,
+        t(
+          'NuwaxPC.Pages.SystemThemeConfig.autoSwitchedNavModePreview',
+          newLayoutStyle === ThemeLayoutColorStyle.DARK
+            ? t('NuwaxPC.Pages.SystemThemeConfig.darkMode')
+            : t('NuwaxPC.Pages.SystemThemeConfig.lightMode'),
+        ),
       );
     }
   };
@@ -163,7 +167,7 @@ const ThemeConfig: React.FC = () => {
     try {
       await updateLayoutStyle(newLayoutStyle, { saveToStorage: false });
     } catch (error) {
-      console.warn('预览布局风格失败:', error);
+      console.warn('Failed to preview layout style:', error);
     }
 
     // 检查当前背景是否与新的导航栏深浅色匹配
@@ -186,14 +190,18 @@ const ThemeConfig: React.FC = () => {
             saveToStorage: false,
           });
         } catch (error) {
-          console.warn('预览背景图失败:', error);
+          console.warn('Failed to preview background image:', error);
         }
 
         // 显示背景自动匹配提示
         message.info(
-          `已自动切换为${matchingBackground.name}以匹配${
-            newLayoutStyle === ThemeLayoutColorStyle.DARK ? '深色' : '浅色'
-          }导航栏（预览效果）`,
+          t(
+            'NuwaxPC.Pages.SystemThemeConfig.autoSwitchedBackgroundPreview',
+            matchingBackground.name,
+            newLayoutStyle === ThemeLayoutColorStyle.DARK
+              ? t('NuwaxPC.Pages.SystemThemeConfig.darkMode')
+              : t('NuwaxPC.Pages.SystemThemeConfig.lightMode'),
+          ),
         );
       }
     }
@@ -223,8 +231,8 @@ const ThemeConfig: React.FC = () => {
         templateConfig: JSON.stringify(themeConfig),
       });
 
-      message.success('主题配置保存成功');
-      console.log('保存的配置:', themeConfig);
+      message.success(t('NuwaxPC.Pages.SystemThemeConfig.saveSuccess'));
+      console.log('Saved theme config:', themeConfig);
 
       // 页面刷新后检查
       setTimeout(() => {
@@ -242,7 +250,7 @@ const ThemeConfig: React.FC = () => {
     setPreviewNavigationStyle('style1' as any);
     setPreviewLayoutStyle(ThemeLayoutColorStyle.LIGHT);
     setPreviewIsNavigationDark(false);
-    message.info('已重置为默认配置（预览效果）');
+    message.info(t('NuwaxPC.Pages.SystemThemeConfig.resetPreview'));
   };
 
   // 恢复到已保存状态（页面加载状态）
@@ -274,16 +282,16 @@ const ThemeConfig: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title="主题配置"
+      title={t('NuwaxPC.Pages.SystemThemeConfig.pageTitle')}
       extraContent={
         <div style={{ padding: '12px 6px' }}>
           {hasPermission('system_theme_config_save') && (
             <>
               <Button type="primary" onClick={handleSave}>
-                保存配置
+                {t('NuwaxPC.Pages.SystemThemeConfig.saveConfig')}
               </Button>
               <Button style={{ marginLeft: 12 }} onClick={handleReset}>
-                重置默认
+                {t('NuwaxPC.Pages.SystemThemeConfig.resetDefault')}
               </Button>
             </>
           )}

@@ -1222,3 +1222,25 @@
 - 风险/阻塞：
   - `AppDev` 仍有存量分布在 `FileTreePanel`、`DesignViewer/utils`、`index.tsx` 等文件
 - 下一步：继续按 inventory 推进 `AppDev` 页面组件剩余清单，再切回 `SystemManagement` 批量处理
+
+### 里程碑：Top 模块第四十九批实改（SystemManagement ThemeConfig 接入）
+
+- 时间：2026-03-31 14:51
+- 任务：处理 `SystemManagement/SystemConfig/ThemeConfig` 页面的主题配置文案与联动提示
+- 执行命令：
+  - `pnpm prettier --write src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `ThemeConfig` 页面标题、按钮文案、保存成功提示、重置提示全部切换为 `t(...)`
+  - 导航深浅色与背景自动匹配提示切换为参数化 key，避免页面内拼接中英文文本
+  - 主题预览失败类 `console.warn` 与保存日志统一为英文
+  - 新增 `NuwaxPC.Pages.SystemThemeConfig.*` 默认中英文词典
+  - 治理总量从 `2747` 下降至 `2734`（-13）
+- 风险/阻塞：
+  - `SystemManagement` 其余热点仍集中在 `TaskManage` 与 `SystemConfig` 其他子页
+- 下一步：继续推进 `TaskManage/CenterProTable` 与 `CreateTimedTask` 的多语言替换

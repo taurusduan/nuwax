@@ -547,6 +547,18 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.SystemLog.operationLog': '操作日志',
   'NuwaxPC.Pages.SystemTaskManage.pageTitle': '任务管理',
   'NuwaxPC.Pages.SystemTaskManage.selectTargetRequired': '请选择{0}',
+  'NuwaxPC.Pages.SystemThemeConfig.pageTitle': '主题配置',
+  'NuwaxPC.Pages.SystemThemeConfig.saveConfig': '保存配置',
+  'NuwaxPC.Pages.SystemThemeConfig.resetDefault': '重置默认',
+  'NuwaxPC.Pages.SystemThemeConfig.saveSuccess': '主题配置保存成功',
+  'NuwaxPC.Pages.SystemThemeConfig.resetPreview':
+    '已重置为默认配置（预览效果）',
+  'NuwaxPC.Pages.SystemThemeConfig.darkMode': '深色',
+  'NuwaxPC.Pages.SystemThemeConfig.lightMode': '浅色',
+  'NuwaxPC.Pages.SystemThemeConfig.autoSwitchedNavModePreview':
+    '已自动切换为{0}导航栏（预览效果）',
+  'NuwaxPC.Pages.SystemThemeConfig.autoSwitchedBackgroundPreview':
+    '已自动切换为{0}以匹配{1}导航栏（预览效果）',
   'NuwaxPC.Pages.AppDevChatArea.chatTab': '对话',
   'NuwaxPC.Pages.AppDevChatArea.designTab': '设计',
   'NuwaxPC.Pages.AppDevChatArea.dataTab': '数据',

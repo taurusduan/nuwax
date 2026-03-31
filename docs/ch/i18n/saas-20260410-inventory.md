@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T06:46:18.476Z
+- 生成时间：2026-03-31T06:51:35.366Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2747
-- hardcoded 中文：2747
+- 总问题数：2734
+- hardcoded 中文：2734
 - legacy System key：0
 - invalid dict key：0
 
@@ -22,9 +22,9 @@
 | src/components/FileTreeView | 97 | 0 | 0 | 97 |
 | src/pages/SpaceKnowledge | 82 | 0 | 0 | 82 |
 | src/pages/UserManage | 82 | 0 | 0 | 82 |
-| src/pages/SystemManagement | 79 | 0 | 0 | 79 |
 | src/pages/EditAgent | 78 | 0 | 0 | 78 |
 | src/pages/SpacePageDevelop | 72 | 0 | 0 | 72 |
+| src/pages/SystemManagement | 66 | 0 | 0 | 66 |
 | src/pages/SpaceLibrary | 64 | 0 | 0 | 64 |
 | src/pages/SpaceTaskCenter | 61 | 0 | 0 | 61 |
 | src/pages/SpaceTable | 58 | 0 | 0 | 58 |
@@ -707,88 +707,6 @@
 - [hardcoded_chinese] src/pages/UserManage/index.tsx:254 -> `加入时间`
 - ... 省略 2 条
 
-## src/pages/SystemManagement
-
-- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:159 -> `添加成功`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SystemConfig/BaseFormItem/index.tsx:118 -> `请输入域名`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SystemConfig/BaseTab/index.tsx:78 -> `保存成功`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SystemConfig/index.tsx:74 -> `系统设置`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:35 -> `保存配置`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:94 -> `预览主题色失败:`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:119 -> `预览导航风格失败:`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:137 -> `预览背景图失败:`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:147 -> `深色`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:147 -> `浅色`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:166 -> `预览布局风格失败:`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:189 -> `预览背景图失败:`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:195 -> `深色`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:195 -> `浅色`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:226 -> `主题配置保存成功`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:227 -> `保存的配置:`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:245 -> `已重置为默认配置（预览效果）`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:263 -> `已重置为默认配置（预览效果）`
-- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:277 -> `主题配置`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:75 -> `执行中`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:81 -> `任务创建，等待执行`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:87 -> `执行成功，待下次执行`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:93 -> `执行失败，待下次执行`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:100 -> `已结束，不再执行`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:106 -> `已结束，不再执行`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:177 -> `查询任务列表失败`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:189 -> `执行任务成功`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:203 -> `启用任务成功`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:217 -> `停用任务成功`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:231 -> `删除任务成功`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:241 -> `任务类型`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:247 -> `智能体`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:248 -> `工作流`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:251 -> `请选择任务类型`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:258 -> `智能体`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:260 -> `工作流`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:266 -> `任务名称`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:271 -> `请输入任务名称`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:276 -> `任务对象`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:291 -> `任务状态`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:301 -> `执行次数`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:307 -> `最近执行时间`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:314 -> `下次执行时间`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:321 -> `创建人`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:326 -> `请输入创建人`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:331 -> `创建时间`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:338 -> `操作`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:352 -> `手动执行`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:358 -> `启用`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:362 -> `确认启用该任务？`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:368 -> `停用`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:372 -> `确认停用该任务？`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:378 -> `编辑`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:384 -> `执行记录`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:397 -> `删除`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:400 -> `确认删除该任务？`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/components/SelectTarget/index.tsx:125 -> `添加${item.label}`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/components/SelectTargetFormItemTarget/index.tsx:21 -> `删除`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/components/TimedPeriodSelector/index.tsx:148 -> `请输入`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/components/TimedPeriodSelector/index.tsx:156 -> `请输入`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:59 -> `定时任务已创建成功`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:74 -> `定时任务更新成功`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:287 -> `创建定时任务`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:287 -> `更新定时任务`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:309 -> `定时周期`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:315 -> `任务名称`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:316 -> `请输入任务名称`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:318 -> `请输入任务名称`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:325 -> `任务对象`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:335 -> `保持会话`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:336 -> `选择“否”时将为每次任务执行创建一个全新的会话`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:337 -> `请选择是否保持会话`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:339 -> `是`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:339 -> `否`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:343 -> `任务内容`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:344 -> `请输入任务内容`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:347 -> `请输入你要执行的任务信息，信息提供的越详细执行成功率越高`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:361 -> `参数配置`
-- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:365 -> `请填写参数配置`
-
 ## src/pages/EditAgent
 
 - [hardcoded_chinese] src/pages/EditAgent/AgentModelSetting/index.tsx:279 -> `模型设置`
@@ -944,6 +862,75 @@
 - [hardcoded_chinese] src/pages/SpacePageDevelop/index.tsx:552 -> `已发布`
 - [hardcoded_chinese] src/pages/SpacePageDevelop/index.tsx:552 -> `未发布`
 - [hardcoded_chinese] src/pages/SpacePageDevelop/index.tsx:561 -> `未能找到相关结果`
+
+## src/pages/SystemManagement
+
+- [hardcoded_chinese] src/pages/SystemManagement/MenuPermission/components/BindUser/index.tsx:159 -> `添加成功`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SystemConfig/BaseFormItem/index.tsx:118 -> `请输入域名`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SystemConfig/BaseTab/index.tsx:78 -> `保存成功`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/SystemConfig/index.tsx:74 -> `系统设置`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:36 -> `保存配置`
+- [hardcoded_chinese] src/pages/SystemManagement/SystemConfig/ThemeConfig/index.tsx:271 -> `已重置为默认配置（预览效果）`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:75 -> `执行中`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:81 -> `任务创建，等待执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:87 -> `执行成功，待下次执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:93 -> `执行失败，待下次执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:100 -> `已结束，不再执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:106 -> `已结束，不再执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:177 -> `查询任务列表失败`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:189 -> `执行任务成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:203 -> `启用任务成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:217 -> `停用任务成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:231 -> `删除任务成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:241 -> `任务类型`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:247 -> `智能体`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:248 -> `工作流`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:251 -> `请选择任务类型`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:258 -> `智能体`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:260 -> `工作流`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:266 -> `任务名称`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:271 -> `请输入任务名称`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:276 -> `任务对象`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:291 -> `任务状态`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:301 -> `执行次数`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:307 -> `最近执行时间`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:314 -> `下次执行时间`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:321 -> `创建人`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:326 -> `请输入创建人`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:331 -> `创建时间`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:338 -> `操作`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:352 -> `手动执行`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:358 -> `启用`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:362 -> `确认启用该任务？`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:368 -> `停用`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:372 -> `确认停用该任务？`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:378 -> `编辑`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:384 -> `执行记录`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:397 -> `删除`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx:400 -> `确认删除该任务？`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/components/SelectTarget/index.tsx:125 -> `添加${item.label}`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/components/SelectTargetFormItemTarget/index.tsx:21 -> `删除`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/components/TimedPeriodSelector/index.tsx:148 -> `请输入`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/components/TimedPeriodSelector/index.tsx:156 -> `请输入`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:59 -> `定时任务已创建成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:74 -> `定时任务更新成功`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:287 -> `创建定时任务`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:287 -> `更新定时任务`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:309 -> `定时周期`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:315 -> `任务名称`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:316 -> `请输入任务名称`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:318 -> `请输入任务名称`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:325 -> `任务对象`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:335 -> `保持会话`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:336 -> `选择“否”时将为每次任务执行创建一个全新的会话`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:337 -> `请选择是否保持会话`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:339 -> `是`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:339 -> `否`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:343 -> `任务内容`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:344 -> `请输入任务内容`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:347 -> `请输入你要执行的任务信息，信息提供的越详细执行成功率越高`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:361 -> `参数配置`
+- [hardcoded_chinese] src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx:365 -> `请填写参数配置`
 
 ## src/pages/SpaceLibrary
 

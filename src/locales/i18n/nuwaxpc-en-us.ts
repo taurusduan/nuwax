@@ -622,6 +622,19 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.SystemLog.operationLog': 'Operation Log',
   'NuwaxPC.Pages.SystemTaskManage.pageTitle': 'Task Management',
   'NuwaxPC.Pages.SystemTaskManage.selectTargetRequired': 'Please select {0}',
+  'NuwaxPC.Pages.SystemThemeConfig.pageTitle': 'Theme Configuration',
+  'NuwaxPC.Pages.SystemThemeConfig.saveConfig': 'Save Configuration',
+  'NuwaxPC.Pages.SystemThemeConfig.resetDefault': 'Reset Default',
+  'NuwaxPC.Pages.SystemThemeConfig.saveSuccess':
+    'Theme configuration saved successfully',
+  'NuwaxPC.Pages.SystemThemeConfig.resetPreview':
+    'Reset to default configuration (preview)',
+  'NuwaxPC.Pages.SystemThemeConfig.darkMode': 'Dark',
+  'NuwaxPC.Pages.SystemThemeConfig.lightMode': 'Light',
+  'NuwaxPC.Pages.SystemThemeConfig.autoSwitchedNavModePreview':
+    'Automatically switched to {0} navigation (preview)',
+  'NuwaxPC.Pages.SystemThemeConfig.autoSwitchedBackgroundPreview':
+    'Automatically switched to {0} to match {1} navigation (preview)',
   'NuwaxPC.Pages.AppDevChatArea.chatTab': 'Chat',
   'NuwaxPC.Pages.AppDevChatArea.designTab': 'Design',
   'NuwaxPC.Pages.AppDevChatArea.dataTab': 'Data',
