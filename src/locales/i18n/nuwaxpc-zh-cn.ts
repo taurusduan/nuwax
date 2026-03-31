@@ -165,6 +165,39 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Components.VncIdleWarningModal.countdownAutoClose':
     '{0} 秒后自动关闭',
   'NuwaxPC.Components.VncIdleWarningModal.hintAction': '任意键鼠操作将{0}',
+  'NuwaxPC.Components.FilePreview.errorInvalidPptx':
+    '文件格式无效或已损坏，请确认是否为有效的 PPTX 文件',
+  'NuwaxPC.Components.FilePreview.errorNetwork':
+    '网络请求失败，请检查网络连接后重试',
+  'NuwaxPC.Components.FilePreview.errorFileLoad': '文件加载失败，请重试',
+  'NuwaxPC.Components.FilePreview.errorFileParse':
+    '文件解析失败，文件可能已损坏或格式不支持',
+  'NuwaxPC.Components.FilePreview.errorDocxPreview':
+    '文档预览失败，请确认文件格式正确',
+  'NuwaxPC.Components.FilePreview.errorXlsxPreview':
+    '表格预览失败，请确认文件格式正确',
+  'NuwaxPC.Components.FilePreview.errorPdfPreview':
+    'PDF 预览失败，请确认文件格式正确',
+  'NuwaxPC.Components.FilePreview.errorPptxPreview':
+    '演示文稿预览失败，请确认文件格式正确',
+  'NuwaxPC.Components.FilePreview.errorImageLoad': '图片加载失败',
+  'NuwaxPC.Components.FilePreview.errorDefaultPreview': '文件预览失败，请重试',
+  'NuwaxPC.Components.FilePreview.errorLoadFileContent':
+    '文件内容加载失败，请重试',
+  'NuwaxPC.Components.FilePreview.errorLoadHtmlContent':
+    'HTML 内容加载失败，请重试',
+  'NuwaxPC.Components.FilePreview.errorImageLoadCheckFile':
+    '图片加载失败，请检查文件是否有效',
+  'NuwaxPC.Components.FilePreview.tooltipRefresh': '刷新',
+  'NuwaxPC.Components.FilePreview.tooltipDownload': '下载',
+  'NuwaxPC.Components.FilePreview.emptyNoFile': '暂无文件可预览',
+  'NuwaxPC.Components.FilePreview.loadingPreview': '正在加载预览...',
+  'NuwaxPC.Components.FilePreview.alertPreviewFailed': '预览失败',
+  'NuwaxPC.Components.FilePreview.alertCannotPreview': '无法预览此文件',
+  'NuwaxPC.Components.FilePreview.retry': '重试',
+  'NuwaxPC.Components.FilePreview.unsupportedType': '暂不支持预览此文件类型',
+  'NuwaxPC.Components.FilePreview.fileTypeLabel': '文件类型: .{0}',
+  'NuwaxPC.Components.FilePreview.downloadFile': '下载文件',
   'NuwaxPC.Pages.Login.inputEmailRequired': '请输入邮箱',
   'NuwaxPC.Pages.Login.inputPhoneRequired': '请输入手机号',
   'NuwaxPC.Pages.Login.invalidEmail': '请输入有效邮箱',

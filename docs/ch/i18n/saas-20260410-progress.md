@@ -1726,3 +1726,21 @@
 - 风险/阻塞：
   - `business-component` 当前剩余主要集中于 `FilePreview`、`ConversationDetails`、`ThemeConfig`
 - 下一步：继续推进 `FilePreview` 与 `ConversationDetails` 的批量治理
+
+### 里程碑：Top 模块第七十二批实改（FilePreview 全量 key 化）
+
+- 时间：2026-03-31 19:39
+- 任务：清理 `src/components/business-component/FilePreview/index.tsx` 的硬编码中文并接入 `t(...)`，补齐双语默认词典
+- 执行命令：
+  - `pnpm prettier --write src/components/business-component/FilePreview/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改上述文件
+- 结果摘要：
+  - 文件预览错误映射函数 `getLocalizedErrorMessage` 全面改为 key 输出，覆盖 doc/xls/ppt/pdf/image 与通用异常
+  - 工具栏 tooltip、空态/加载态/错误态/不支持态文案全部改为 `NuwaxPC.Components.FilePreview.*`
+  - `src/components/business-component` 模块命中从 `36` 下降至 `19`
+  - 治理总量从 `2045` 下降至 `2028`（-17）
+- 风险/阻塞：
+  - `business-component` 剩余问题集中在 `ConversationDetails`、`ThemeConfig`、`CopyToSpaceComponent`
+- 下一步：继续推进 `ConversationDetails` 与 `ThemeConfig` 子模块

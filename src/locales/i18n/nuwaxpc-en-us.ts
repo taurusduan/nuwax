@@ -186,6 +186,43 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Auto close in {0}s',
   'NuwaxPC.Components.VncIdleWarningModal.hintAction':
     'Any keyboard or mouse action will {0}',
+  'NuwaxPC.Components.FilePreview.errorInvalidPptx':
+    'The file format is invalid or corrupted. Please verify it is a valid PPTX file.',
+  'NuwaxPC.Components.FilePreview.errorNetwork':
+    'Network request failed. Check your network and retry.',
+  'NuwaxPC.Components.FilePreview.errorFileLoad':
+    'Failed to load file. Please retry.',
+  'NuwaxPC.Components.FilePreview.errorFileParse':
+    'Failed to parse file. The file may be corrupted or unsupported.',
+  'NuwaxPC.Components.FilePreview.errorDocxPreview':
+    'Document preview failed. Please verify the file format.',
+  'NuwaxPC.Components.FilePreview.errorXlsxPreview':
+    'Spreadsheet preview failed. Please verify the file format.',
+  'NuwaxPC.Components.FilePreview.errorPdfPreview':
+    'PDF preview failed. Please verify the file format.',
+  'NuwaxPC.Components.FilePreview.errorPptxPreview':
+    'Presentation preview failed. Please verify the file format.',
+  'NuwaxPC.Components.FilePreview.errorImageLoad': 'Failed to load image.',
+  'NuwaxPC.Components.FilePreview.errorDefaultPreview':
+    'File preview failed. Please retry.',
+  'NuwaxPC.Components.FilePreview.errorLoadFileContent':
+    'Failed to load file content. Please retry.',
+  'NuwaxPC.Components.FilePreview.errorLoadHtmlContent':
+    'Failed to load HTML content. Please retry.',
+  'NuwaxPC.Components.FilePreview.errorImageLoadCheckFile':
+    'Image load failed. Please verify the file is valid.',
+  'NuwaxPC.Components.FilePreview.tooltipRefresh': 'Refresh',
+  'NuwaxPC.Components.FilePreview.tooltipDownload': 'Download',
+  'NuwaxPC.Components.FilePreview.emptyNoFile': 'No file available for preview',
+  'NuwaxPC.Components.FilePreview.loadingPreview': 'Loading preview...',
+  'NuwaxPC.Components.FilePreview.alertPreviewFailed': 'Preview failed',
+  'NuwaxPC.Components.FilePreview.alertCannotPreview':
+    'Unable to preview this file',
+  'NuwaxPC.Components.FilePreview.retry': 'Retry',
+  'NuwaxPC.Components.FilePreview.unsupportedType':
+    'This file type is not supported for preview',
+  'NuwaxPC.Components.FilePreview.fileTypeLabel': 'File type: .{0}',
+  'NuwaxPC.Components.FilePreview.downloadFile': 'Download file',
   'NuwaxPC.Pages.Login.inputEmailRequired': 'Please input email',
   'NuwaxPC.Pages.Login.inputPhoneRequired': 'Please input phone number',
   'NuwaxPC.Pages.Login.invalidEmail': 'Please input a valid email',

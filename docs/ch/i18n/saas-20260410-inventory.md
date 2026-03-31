@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T11:18:33.962Z
+- 生成时间：2026-03-31T11:24:23.983Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2045
-- hardcoded 中文：2045
+- 总问题数：2028
+- hardcoded 中文：2028
 - legacy System key：0
 - invalid dict key：0
 
@@ -35,7 +35,6 @@
 | src/pages/MyComputerManage | 38 | 0 | 0 | 38 |
 | src/pages/SpaceSkillManage | 37 | 0 | 0 | 37 |
 | src/pages/SpaceTaskCenter | 37 | 0 | 0 | 37 |
-| src/components/business-component | 36 | 0 | 0 | 36 |
 | src/pages/SpacePluginTool | 35 | 0 | 0 | 35 |
 | src/pages/GlobalModelManage | 30 | 0 | 0 | 30 |
 | src/pages/PublishAudit | 30 | 0 | 0 | 30 |
@@ -52,6 +51,7 @@
 | src/pages/SpaceMcpEdit | 19 | 0 | 0 | 19 |
 | src/components/CreateAgent | 19 | 0 | 0 | 19 |
 | src/components/TestRun | 19 | 0 | 0 | 19 |
+| src/components/business-component | 19 | 0 | 0 | 19 |
 | src/components/PublishComponentModal | 18 | 0 | 0 | 18 |
 | src/pages/SpaceMcpCreate | 17 | 0 | 0 | 17 |
 | src/components/MarkdownCustomProcess | 17 | 0 | 0 | 17 |
@@ -1321,45 +1321,6 @@
 - [hardcoded_chinese] src/pages/SpaceTaskCenter/CenterProTable/index.tsx:474 -> `确认删除该任务？`
 - [hardcoded_chinese] src/pages/SpaceTaskCenter/index.tsx:51 -> `任务中心`
 
-## src/components/business-component
-
-- [hardcoded_chinese] src/components/business-component/ConversationDetails/index.tsx:182 -> `页面预览`
-- [hardcoded_chinese] src/components/business-component/ConversationDetails/index.tsx:294 -> `请填写必填参数`
-- [hardcoded_chinese] src/components/business-component/ConversationDetails/index.tsx:388 -> `和${cachedAgentName}开始会话`
-- [hardcoded_chinese] src/components/business-component/ConversationDetails/index.tsx:398 -> `展开导航`
-- [hardcoded_chinese] src/components/business-component/ConversationDetails/index.tsx:413 -> `查看智能体详情`
-- [hardcoded_chinese] src/components/business-component/ConversationDetails/index.tsx:435 -> `打开预览页面`
-- [hardcoded_chinese] src/components/business-component/ConversationDetails/index.tsx:523 -> `您无该智能体权限`
-- [hardcoded_chinese] src/components/business-component/ConversationDetails/index.tsx:606 -> `复制模板`
-- [hardcoded_chinese] src/components/business-component/CopyToSpaceComponent/index.tsx:72 -> `页面复制成功`
-- [hardcoded_chinese] src/components/business-component/CopyToSpaceComponent/index.tsx:95 -> `模板复制成功`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:261 -> `文件格式无效或已损坏，请确认是否为有效的 PPTX 文件`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:270 -> `网络请求失败，请检查网络连接后重试`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:275 -> `文件加载失败，请重试`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:280 -> `文件解析失败，文件可能已损坏或格式不支持`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:286 -> `文档预览失败，请确认文件格式正确`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:288 -> `表格预览失败，请确认文件格式正确`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:290 -> `PDF 预览失败，请确认文件格式正确`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:292 -> `演示文稿预览失败，请确认文件格式正确`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:294 -> `图片加载失败`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:296 -> `文件预览失败，请重试`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:455 -> `文件内容加载失败，请重试`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:483 -> `HTML 内容加载失败，请重试`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:736 -> `图片加载失败，请检查文件是否有效`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:885 -> `刷新`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:895 -> `下载`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:927 -> `预览失败`
-- [hardcoded_chinese] src/components/business-component/FilePreview/index.tsx:928 -> `无法预览此文件`
-- [hardcoded_chinese] src/components/business-component/ThemeConfig/BackgroundImagePanel.tsx:39 -> `上传文件:`
-- [hardcoded_chinese] src/components/business-component/ThemeConfig/BackgroundImagePanel.tsx:71 -> `暂无可用背景图`
-- [hardcoded_chinese] src/components/business-component/ThemeConfig/NavigationStylePanel.tsx:35 -> `风格1`
-- [hardcoded_chinese] src/components/business-component/ThemeConfig/NavigationStylePanel.tsx:36 -> `紧凑模式：60px宽度，无文字显示，页面容器有外边距和圆角`
-- [hardcoded_chinese] src/components/business-component/ThemeConfig/NavigationStylePanel.tsx:41 -> `风格2`
-- [hardcoded_chinese] src/components/business-component/ThemeConfig/NavigationStylePanel.tsx:42 -> `展开模式：88px宽度，显示文字，页面容器无外边距和圆角`
-- [hardcoded_chinese] src/components/business-component/ThemeConfig/NavigationStylePanel.tsx:58 -> `NavigationStylePanel - 切换导航栏风格:`
-- [hardcoded_chinese] src/components/business-component/ThemeConfig/NavigationStylePanel.tsx:65 -> `NavigationStylePanel - 切换深浅色风格`
-- [hardcoded_chinese] src/components/business-component/ThemeConfig/ThemeColorPanel.tsx:59 -> `自定义`
-
 ## src/pages/SpacePluginTool
 
 - [hardcoded_chinese] src/pages/SpacePluginTool/PluginHeader/index.tsx:81 -> `代码`
@@ -1641,3 +1602,30 @@
 - [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:558 -> `插件已撤销发布`
 - [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:624 -> `搜索插件`
 - [hardcoded_chinese] src/pages/EcosystemPlugin/index.tsx:717 -> `暂无数据`
+
+## src/components/AgentSidebar
+
+- [hardcoded_chinese] src/components/AgentSidebar/AgentConversation/index.tsx:87 -> `暂无相关会话`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/CreateTimedTask/index.tsx:94 -> `定时任务创建成功`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/CreateTimedTask/index.tsx:106 -> `定时任务更新成功`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/CreateTimedTask/index.tsx:186 -> `创建定时任务`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/CreateTimedTask/index.tsx:186 -> `更新定时任务`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/CreateTimedTask/index.tsx:199 -> `定时周期`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/CreateTimedTask/index.tsx:201 -> `请输入`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/CreateTimedTask/index.tsx:209 -> `请输入`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/CreateTimedTask/index.tsx:221 -> `任务名称`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/CreateTimedTask/index.tsx:222 -> `请输入任务名称`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/CreateTimedTask/index.tsx:224 -> `请输入任务名称`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/CreateTimedTask/index.tsx:228 -> `任务内容`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/CreateTimedTask/index.tsx:229 -> `请输入任务内容`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/CreateTimedTask/index.tsx:230 -> `请输入你要执行的任务信息，信息提供的越详细执行成功率越高`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/TaskList/index.tsx:31 -> `暂无进行中的任务`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/TaskList/index.tsx:32 -> `暂无已取消的任务`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/TaskList/index.tsx:54 -> `你确定要取消此定时任务吗?`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/TaskList/index.tsx:57 -> `确定`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/TaskList/index.tsx:59 -> `取消`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/index.tsx:70 -> `定时任务已取消`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/index.tsx:87 -> `进行中`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/index.tsx:119 -> `进行中`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/index.tsx:132 -> `已取消`
+- [hardcoded_chinese] src/components/AgentSidebar/TimedTask/index.tsx:152 -> `进行中`
