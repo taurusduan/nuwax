@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import pic from '@/assets/images/pic.jpeg';
 import type { ModalSliderCaptchaType } from '@/types/interfaces/login';
 import {
@@ -62,7 +63,7 @@ const ModalSliderCaptcha: React.FC<ModalSliderCaptchaType> = ({
     <Modal
       open={open}
       onCancel={() => onCancel(false)}
-      title="请完成下列验证后继续"
+      title={dict('NuwaxPC.Pages.Login.captchaTitle')}
       footer={false}
       destroyOnHidden
       width={318}
@@ -83,11 +84,11 @@ const ModalSliderCaptcha: React.FC<ModalSliderCaptchaType> = ({
           refresh: <RedditOutlined />,
         }}
         tipText={{
-          default: '向右拖动完成拼图',
-          loading: '努力中...',
-          moving: '向右拖动至拼图位置',
-          verifying: '验证中...',
-          error: '验证失败',
+          default: dict('NuwaxPC.Pages.Login.captchaDefault'),
+          loading: dict('NuwaxPC.Pages.Login.captchaLoading'),
+          moving: dict('NuwaxPC.Pages.Login.captchaMoving'),
+          verifying: dict('NuwaxPC.Pages.Login.captchaVerifying'),
+          error: dict('NuwaxPC.Pages.Login.captchaError'),
         }}
       />
     </Modal>

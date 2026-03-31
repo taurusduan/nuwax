@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import { UPLOAD_FILE_ACTION } from '@/constants/common.constants';
 import { ACCESS_TOKEN } from '@/constants/home.constants';
 import { useWorkflowModel } from '@/hooks/useWorkflowModel';
@@ -50,7 +51,7 @@ const InputBox: React.FC<InputBoxProps> = ({ item, loading, ...restProps }) => {
             // 检查是否有响应且响应明确失败（success === false）
             if (file.response && file.response.success === false) {
               console.error('文件上传失败:', file.name, file.response);
-              message.error(`上传失败: ${file.name}`);
+              message.error(dict('NuwaxPC.Components.TestRun.uploadFailed', file.name));
               return false;
             }
           }
@@ -172,7 +173,7 @@ const InputBox: React.FC<InputBoxProps> = ({ item, loading, ...restProps }) => {
           )}
           disabled={loading}
         >
-          <Button>上传文件</Button>
+          <Button>{dict('NuwaxPC.Components.TestRun.uploadFile')}</Button>
         </Upload>
       );
     }
@@ -215,7 +216,7 @@ const InputBox: React.FC<InputBoxProps> = ({ item, loading, ...restProps }) => {
           return (
             <Input
               variant="filled"
-              placeholder={description || '请输入'}
+              placeholder={description || dict('NuwaxPC.Components.TestRun.pleaseInput')}
               allowClear
               disabled={loading}
               {...restProps}
@@ -227,7 +228,7 @@ const InputBox: React.FC<InputBoxProps> = ({ item, loading, ...restProps }) => {
           return (
             <Input.TextArea
               variant="filled"
-              placeholder={description || '请输入'}
+              placeholder={description || dict('NuwaxPC.Components.TestRun.pleaseInput')}
               allowClear
               disabled={loading}
               {...restProps}
@@ -239,7 +240,7 @@ const InputBox: React.FC<InputBoxProps> = ({ item, loading, ...restProps }) => {
             <InputNumber
               variant="filled"
               className="w-full"
-              placeholder={description || '请输入'}
+              placeholder={description || dict('NuwaxPC.Components.TestRun.pleaseInput')}
               disabled={loading}
               {...restProps}
             />
@@ -254,7 +255,7 @@ const InputBox: React.FC<InputBoxProps> = ({ item, loading, ...restProps }) => {
               multiple={inputType === InputTypeEnum.MultipleSelect}
               maxTagCount="responsive"
               showCheckedStrategy={SHOW_CHILD}
-              placeholder={description || '请选择'}
+              placeholder={description || dict('NuwaxPC.Components.TestRun.pleaseSelect')}
               options={item.selectConfig?.options || []}
               allowClear
               disabled={loading}
@@ -264,7 +265,7 @@ const InputBox: React.FC<InputBoxProps> = ({ item, loading, ...restProps }) => {
         default:
           return (
             <Input
-              placeholder={description || '请输入'}
+              placeholder={description || dict('NuwaxPC.Components.TestRun.pleaseInput')}
               allowClear
               disabled={loading}
               {...restProps}

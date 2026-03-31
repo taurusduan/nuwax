@@ -1,5 +1,6 @@
 import ChatInputHome from '@/components/ChatInputHome';
 import Loading from '@/components/custom/Loading';
+import { dict } from '@/services/i18nRuntime';
 import useConversation from '@/hooks/useConversation';
 import useSelectedComponent from '@/hooks/useSelectedComponent';
 import {
@@ -130,7 +131,7 @@ const Home: React.FC = () => {
     skillIds?: number[],
   ) => {
     if (!tenantConfigInfo) {
-      message.warning('租户信息不存在');
+      message.warning(dict('NuwaxPC.Pages.Home.noTenantInfo'));
       return;
     }
 
@@ -222,7 +223,7 @@ const Home: React.FC = () => {
     if (item.type === 'Link') {
       // 打开外链
       if (!item.url) {
-        antdMessage.error('链接地址配置错误');
+        antdMessage.error(dict('NuwaxPC.Pages.Home.linkConfigError'));
         return;
       }
       window.open(item.url, '_blank');

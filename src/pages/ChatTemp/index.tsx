@@ -1,5 +1,6 @@
 import AgentChatEmpty from '@/components/AgentChatEmpty';
 import AliyunCaptcha from '@/components/AliyunCaptcha';
+import { dict } from '@/services/i18nRuntime';
 import ChatInputHome from '@/components/ChatInputHome';
 import ChatView from '@/components/ChatView';
 import ConditionRender from '@/components/ConditionRender';
@@ -236,7 +237,7 @@ const ChatTemp: React.FC = () => {
         setConversationInfo(data);
         setIsLoaded(true);
         // 设置标题和图标
-        document.title = `和${data?.agent?.name}开始会话` || '';
+        document.title = dict('NuwaxPC.Pages.ChatTemp.startConversationWithName', data?.agent?.name) || '';
         if (data?.agent?.icon) {
           // 创建一个新的link元素
           const link = document.createElement('link');
@@ -488,7 +489,7 @@ const ChatTemp: React.FC = () => {
         handleScrollBottom();
       },
       onError: () => {
-        message.error('网络超时或服务不可用，请稍后再试');
+        message.error(dict('NuwaxPC.Pages.ChatTemp.networkTimeout'));
         // 将当前会话的loading状态的消息改为Error状态
         const list =
           messageListRef.current?.map((info: MessageInfo) => {
@@ -769,7 +770,7 @@ const ChatTemp: React.FC = () => {
     // 变量参数为空，不发送消息
     if (wholeDisabled) {
       form.validateFields(); // 触发表单验证以显示error
-      message.warning('请填写必填参数');
+      message.warning(dict('NuwaxPC.Pages.ChatTemp.fillRequiredParams'));
       return;
     }
     isSendMessageRef.current = true;
@@ -817,8 +818,8 @@ const ChatTemp: React.FC = () => {
                 )}
               >
                 {conversationInfo?.agent?.name
-                  ? `和${conversationInfo?.agent?.name}开始会话`
-                  : '开始会话'}
+                  ? dict('NuwaxPC.Pages.ChatTemp.startConversationWithName', conversationInfo?.agent?.name)
+                  : dict('NuwaxPC.Pages.ChatTemp.startConversation')}
               </h3>
             </div>
           </ConditionRender>
@@ -916,7 +917,7 @@ const ChatTemp: React.FC = () => {
               loadingStopTempConversation={loadingStopTempConversation}
               // 禁用 @ 提及功能
               enableMention={false}
-              placeholder="直接输入指令, 可通过Shift+Enter换行, 通过回车发送消息；支持粘贴图片"
+              placeholder={dict('NuwaxPC.Pages.ChatTemp.inputPlaceholder')}
             />
             {/*手机会话输入框*/}
             <ChatInputPhone
@@ -936,7 +937,7 @@ const ChatTemp: React.FC = () => {
                 'clip-path-animation',
               )}
               onClick={handleSiteLink}
-            >{`欢迎使用${tenantConfigInfo?.siteName}，快速搭建你的个性化智能体`}</p>
+            >{dict('NuwaxPC.Pages.ChatTemp.welcomeText', tenantConfigInfo?.siteName)}</p>
           </div>
           <button
             id={buttonId}

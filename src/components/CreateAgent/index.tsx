@@ -13,6 +13,7 @@ import type {
 } from '@/types/interfaces/agent';
 import type { CreateAgentProps } from '@/types/interfaces/common';
 import { customizeRequiredMark } from '@/utils/form';
+import { dict } from '@/services/i18nRuntime';
 import { Form, FormProps, Input, message } from 'antd';
 // import classNames from 'classnames';
 import React, { useCallback, useEffect, useState } from 'react';
@@ -48,7 +49,7 @@ const CreateAgent: React.FC<CreateAgentProps> = ({
     onSuccess: (result: number) => {
       setImageUrl('');
       onConfirmCreate?.(result);
-      message.success('智能体已创建');
+      message.success(dict('NuwaxPC.Components.CreateAgent.createSuccess'));
       setLoading(false);
     },
     onError: () => {
@@ -61,7 +62,7 @@ const CreateAgent: React.FC<CreateAgentProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: AgentConfigUpdateParams[]) => {
-      message.success('智能体编辑成功');
+      message.success(dict('NuwaxPC.Components.CreateAgent.editSuccess'));
       setLoading(false);
       const info: AgentConfigUpdateParams = params[0];
       onConfirmUpdate?.(info);
@@ -122,17 +123,19 @@ const CreateAgent: React.FC<CreateAgentProps> = ({
         AgentTypeEnum.ChatBot | AgentTypeEnum.TaskAgent,
         string
       > = {
-        [AgentTypeEnum.ChatBot]: '问答型',
-        [AgentTypeEnum.TaskAgent]: '通用型',
+        [AgentTypeEnum.ChatBot]: dict('NuwaxPC.Components.CreateAgent.typeChatBot'),
+        [AgentTypeEnum.TaskAgent]: dict('NuwaxPC.Components.CreateAgent.typeTaskAgent'),
       };
 
       const typeName =
         typeMap[type as AgentTypeEnum.ChatBot | AgentTypeEnum.TaskAgent];
       return mode === CreateUpdateModeEnum.Create
-        ? `创建${typeName}智能体`
-        : `更新${typeName}智能体`;
+        ? dict('NuwaxPC.Components.CreateAgent.createTypeTitle', typeName)
+        : dict('NuwaxPC.Components.CreateAgent.updateTypeTitle', typeName);
     }
-    return mode === CreateUpdateModeEnum.Create ? '创建智能体' : '更新智能体';
+    return mode === CreateUpdateModeEnum.Create
+      ? dict('NuwaxPC.Components.CreateAgent.createTitle')
+      : dict('NuwaxPC.Components.CreateAgent.updateTitle');
   }, [type, mode]);
 
   return (
@@ -172,37 +175,37 @@ const CreateAgent: React.FC<CreateAgentProps> = ({
         {/*  <>*/}
         <Form.Item
           name="name"
-          label="智能体名称"
+          label={dict('NuwaxPC.Components.CreateAgent.nameLabel')}
           validateTrigger="onBlur"
           rules={[
-            { required: true, message: '请输入智能体名称' },
+            { required: true, message: dict('NuwaxPC.Components.CreateAgent.nameRequired') },
             {
               validator(_, value) {
                 if (!value || value?.length <= 50) {
                   return Promise.resolve();
                 }
                 if (value?.length > 50) {
-                  return Promise.reject(new Error('名称不能超过50个字符!'));
+                  return Promise.reject(new Error(dict('NuwaxPC.Components.CreateAgent.nameMaxLength')));
                 }
-                return Promise.reject(new Error('请输入智能体名称!'));
+                return Promise.reject(new Error(dict('NuwaxPC.Components.CreateAgent.nameRequired')));
               },
             },
           ]}
         >
           <Input
-            placeholder="给智能体起一个独一无二的名字"
+            placeholder={dict('NuwaxPC.Components.CreateAgent.namePlaceholder')}
             showCount
             maxLength={50}
           />
         </Form.Item>
         <OverrideTextArea
           name="description"
-          label="智能体功能介绍"
+          label={dict('NuwaxPC.Components.CreateAgent.descriptionLabel')}
           initialValue={agentConfigInfo?.description}
-          placeholder="介绍智能体的功能，将会展示给智能体的用户"
+          placeholder={dict('NuwaxPC.Components.CreateAgent.descriptionPlaceholder')}
           maxLength={10000}
         />
-        <Form.Item name="icon" label="图标">
+        <Form.Item name="icon" label={dict('NuwaxPC.Components.CreateAgent.iconLabel')}>
           <UploadAvatar
             onUploadSuccess={setImageUrl}
             imageUrl={imageUrl}

@@ -5,6 +5,7 @@ import Created from '@/components/Created';
 import LabelStar from '@/components/LabelStar';
 import UploadAvatar from '@/components/UploadAvatar';
 import { MCP_INSTALL_TYPE_LIST } from '@/constants/mcp.constants';
+import { dict } from '@/services/i18nRuntime';
 import useMcp from '@/hooks/useMcp';
 import { apiMcpCreate } from '@/services/mcp';
 import { McpInstallTypeEnum } from '@/types/enums/mcp';
@@ -109,8 +110,8 @@ const SpaceMcpCreate: React.FC = () => {
       setSaveDeployLoading(false);
       setSaveLoading(false);
       const text = withDeployRef.current
-        ? '已完成保存并提交部署'
-        : '保存MCP服务成功';
+        ? dict('NuwaxPC.Pages.SpaceMcpEdit.saveAndDeploySuccess')
+        : dict('NuwaxPC.Pages.SpaceMcpEdit.saveSuccess');
       message.success(text);
       history.replace(`/space/${spaceId}/mcp/edit/${result.id}`);
     },
@@ -130,11 +131,11 @@ const SpaceMcpCreate: React.FC = () => {
     // 组件库
     if (installType === McpInstallTypeEnum.COMPONENT) {
       if (!mcpConfigComponentList?.length) {
-        message.warning('请选择组件');
+        message.warning(dict('NuwaxPC.Pages.SpaceMcpEdit.selectComponent'));
         return;
       }
     } else if (!serverConfig) {
-      message.warning('请输入MCP服务配置');
+      message.warning(dict('NuwaxPC.Pages.SpaceMcpEdit.inputServerConfig'));
       return;
     }
 
@@ -195,19 +196,19 @@ const SpaceMcpCreate: React.FC = () => {
           >
             <Form.Item
               name="name"
-              label="服务名称"
-              rules={[{ required: true, message: '请输入MCP服务名称' }]}
+              label={dict('NuwaxPC.Pages.SpaceMcpEdit.serviceName')}
+              rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceMcpEdit.inputServiceName') }]}
             >
-              <Input placeholder="MCP服务名称" showCount maxLength={30} />
+              <Input placeholder={dict('NuwaxPC.Pages.SpaceMcpEdit.serviceNamePlaceholder')} showCount maxLength={30} />
             </Form.Item>
             <Form.Item
               name="description"
-              label="描述"
-              rules={[{ required: true, message: '请输入描述你的MCP服务' }]}
+              label={dict('NuwaxPC.Pages.SpaceMcpEdit.description')}
+              rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceMcpEdit.inputDescription') }]}
             >
               <Input.TextArea
                 className="dispose-textarea-count"
-                placeholder="描述你的MCP服务"
+                placeholder={dict('NuwaxPC.Pages.SpaceMcpEdit.descriptionPlaceholder')}
                 showCount
                 maxLength={10000}
                 autoSize={{ minRows: 3, maxRows: 5 }}
@@ -215,8 +216,8 @@ const SpaceMcpCreate: React.FC = () => {
             </Form.Item>
             <Form.Item
               name="installType"
-              label="安装方式"
-              rules={[{ required: true, message: '请选择安装方式' }]}
+              label={dict('NuwaxPC.Pages.SpaceMcpEdit.installMethod')}
+              rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceMcpEdit.selectInstallMethod') }]}
             >
               <Radio.Group
                 onChange={(e) => {
@@ -242,16 +243,16 @@ const SpaceMcpCreate: React.FC = () => {
                 name="serverConfig"
                 label={
                   <div className={cx('flex', 'items-center')}>
-                    <span>MCP服务配置</span>
+                    <span>{dict('NuwaxPC.Pages.SpaceMcpEdit.mcpServiceConfig')}</span>
                     <span className={cx(styles['sub-title'])}>
-                      MCP服务使用json配置，提交前确保格式正确
+                      {dict('NuwaxPC.Pages.SpaceMcpEdit.mcpConfigJsonTip')}
                     </span>
                   </div>
                 }
                 rules={[
                   {
                     required: true,
-                    message: '请输入MCP服务配置',
+                    message: dict('NuwaxPC.Pages.SpaceMcpEdit.inputServerConfig'),
                   },
                   {
                     validator: (_, value) => {
@@ -260,7 +261,7 @@ const SpaceMcpCreate: React.FC = () => {
                       }
                       if (!isValidJSON(value)) {
                         return Promise.reject(
-                          new Error('请输入有效的JSON格式'),
+                          new Error(dict('NuwaxPC.Pages.SpaceMcpEdit.invalidJsonFormat')),
                         );
                       }
                       return Promise.resolve();
@@ -282,7 +283,7 @@ const SpaceMcpCreate: React.FC = () => {
             ) : (
               <Form.Item
                 name="components"
-                label={<LabelStar label="组件选择" />}
+                label={<LabelStar label={dict('NuwaxPC.Pages.SpaceMcpEdit.componentSelect')} />}
               >
                 <ConfigOptionCollapse
                   className={cx(styles['collapse-container'])}

@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import ButtonToggle from '@/components/ButtonToggle';
 import Loading from '@/components/custom/Loading';
 import SelectList from '@/components/custom/SelectList';
@@ -197,7 +198,7 @@ const SpaceLibrary: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: number[]) => {
-      message.success('停用成功');
+      message.success(dict('NuwaxPC.Pages.SpaceMcpManage.stopSuccess'));
       const [id] = params;
       handleStopServiceSuccess(id);
     },
@@ -217,7 +218,7 @@ const SpaceLibrary: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: number[]) => {
-      message.success('删除成功');
+      message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
       const [id] = params;
       handleDelSuccess(id);
     },
@@ -298,12 +299,12 @@ const SpaceLibrary: React.FC = () => {
       // 停止服务
       case McpMoreActionEnum.Stop_Service:
         confirm({
-          title: '你确定要停止此服务吗?',
+          title: dict('NuwaxPC.Pages.SpaceMcpManage.confirmStopService'),
           icon: <ExclamationCircleFilled />,
           content: info.name,
-          okText: '确定',
+          okText: dict('NuwaxPC.Common.Global.confirm'),
           maskClosable: true,
-          cancelText: '取消',
+          cancelText: dict('NuwaxPC.Common.Global.cancel'),
           onOk() {
             runMcpStop(info.id);
           },
@@ -312,12 +313,12 @@ const SpaceLibrary: React.FC = () => {
       // 删除
       case McpMoreActionEnum.Del:
         confirm({
-          title: '你确定要删除此服务吗?',
+          title: dict('NuwaxPC.Pages.SpaceMcpManage.confirmDeleteService'),
           icon: <ExclamationCircleFilled />,
           content: info.name,
-          okText: '确定',
+          okText: dict('NuwaxPC.Common.Global.confirm'),
           maskClosable: true,
-          cancelText: '取消',
+          cancelText: dict('NuwaxPC.Common.Global.cancel'),
           onOk() {
             runMcpDelete(info.id);
           },
@@ -382,7 +383,7 @@ const SpaceLibrary: React.FC = () => {
       >
         <div style={{ flex: 1 }}>
           <Space>
-            <h3 className={cx(styles.title)}>MCP管理</h3>
+            <h3 className={cx(styles.title)}>{dict('NuwaxPC.Pages.SpaceMcpManage.title')}</h3>
             {segmentedValue === McpManageSegmentedEnum.Custom && (
               <>
                 <SelectList
@@ -412,7 +413,7 @@ const SpaceLibrary: React.FC = () => {
         <div style={{ flex: 1, display: 'flex' }}>
           <Input
             rootClassName={cx(styles.input)}
-            placeholder="搜索MCP服务"
+            placeholder={dict('NuwaxPC.Pages.SpaceMcpManage.searchPlaceholder')}
             value={keyword}
             onChange={handleQueryAgent}
             prefix={<SearchOutlined />}
@@ -420,7 +421,7 @@ const SpaceLibrary: React.FC = () => {
             onClear={handleClearKeyword}
           />
           <Button type="primary" icon={<PlusOutlined />} onClick={handleCreate}>
-            创建MCP服务
+            {dict('NuwaxPC.Pages.SpaceMcpManage.createMcpService')}
           </Button>
         </div>
       </div>
@@ -447,7 +448,7 @@ const SpaceLibrary: React.FC = () => {
         </div>
       ) : (
         <div className={cx('flex', 'h-full', 'items-center', 'content-center')}>
-          <Empty description="未能找到相关结果" />
+          <Empty description={dict('NuwaxPC.Pages.SpaceMcpManage.noResults')} />
         </div>
       )}
       <ServerExportModal

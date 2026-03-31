@@ -1,4 +1,5 @@
 import Loading from '@/components/custom/Loading';
+import { dict } from '@/services/i18nRuntime';
 import { useScrollSync } from '@/hooks/useScrollSync';
 import { apiUpdateAgentSort } from '@/services/agentDev';
 import type {
@@ -215,7 +216,7 @@ const DraggableHomeContent: React.FC<DraggableHomeContentProps> = ({
       {isEmpty ? (
         <div className={cx(styles.emptyContainer)}>
           <a onClick={handleLinkToSquare} className={cx('empty-link')}>
-            暂无数据，立即探索 {'>'} {'>'}
+            {dict('NuwaxPC.Pages.HomeDrag.emptyExplore')} {'>'} {'>'}
           </a>
         </div>
       ) : (

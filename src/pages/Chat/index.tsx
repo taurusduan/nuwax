@@ -374,9 +374,9 @@ const Chat: React.FC = () => {
     // 只有通用型智能体在会话活跃时才启用导航拦截，会话型智能体不需要
     enabled:
       isConversationActive && effectiveAgent?.type === AgentTypeEnum.TaskAgent,
-    title: '任务执行中',
-    message: '离开后，执行成功的任务会收到提示消息',
-    discardText: '确定离开',
+    title: t('NuwaxPC.Pages.Chat.taskExecuting'),
+    message: t('NuwaxPC.Pages.Chat.leaveTaskWarning'),
+    discardText: t('NuwaxPC.Pages.Chat.confirmLeave'),
   });
 
   // 聊天会话框是否禁用，不能发送消息
@@ -417,7 +417,7 @@ const Chat: React.FC = () => {
     if (agent && agent?.expandPageArea && agent?.pageHomeIndex) {
       // 自动触发预览
       showPagePreview({
-        name: '页面预览',
+        name: t('NuwaxPC.Pages.Chat.pagePreview'),
         uri: process.env.BASE_URL + agent?.pageHomeIndex,
         params: {},
         executeId: '',
@@ -699,10 +699,10 @@ const Chat: React.FC = () => {
           selectedComputerId: null, // 显式清除 location.state 中的 selectedComputerId
         });
       } else {
-        throw new Error(res.message || '创建会话失败');
+        throw new Error(res.message || t('NuwaxPC.Pages.Chat.createConversationFailed'));
       }
     } catch (error: any) {
-      message.error(error.message || '清空并创建会话失败');
+      message.error(error.message || t('NuwaxPC.Pages.Chat.clearAndCreateFailed'));
       setClearLoading(false);
       setIsLoadingOtherInterface(false);
     }

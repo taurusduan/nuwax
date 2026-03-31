@@ -1,4 +1,5 @@
 import agentImage from '@/assets/images/agent_image.png';
+import { dict } from '@/services/i18nRuntime';
 import { AgentItemProps } from '@/types/interfaces/agentConfig';
 import { StarFilled } from '@ant-design/icons';
 import { Typography } from 'antd';
@@ -48,13 +49,13 @@ const AgentItem: React.FC<AgentItemProps> = ({
     if (info?.publishUser?.userName) {
       return info.publishUser.userName;
     }
-    return '未知用户';
+    return dict('NuwaxPC.Pages.HomeDrag.unknownUser');
   };
 
   // 获取智能体描述
   const getDescription = () => {
     if (!info?.description) {
-      return '暂无描述';
+      return dict('NuwaxPC.Pages.HomeDrag.noDescription');
     }
     return info.description;
   };
@@ -63,14 +64,14 @@ const AgentItem: React.FC<AgentItemProps> = ({
     <div
       className={cx(styles.container)}
       onClick={onItemClick}
-      title={`${info?.name || '智能体'} - ${getDescription()}`}
+      title={`${info?.name || dict('NuwaxPC.Pages.HomeDrag.agent')} - ${getDescription()}`}
     >
       {/* 智能体头像 */}
       <div className={styles['img-wrapper']}>
         <img
           className={cx(styles.img)}
           src={imageError ? agentImage : info.icon || agentImage}
-          alt={info?.name || '智能体头像'}
+          alt={info?.name || dict('NuwaxPC.Pages.HomeDrag.agentAvatar')}
           onError={handleImageError}
           loading="lazy"
         />
@@ -86,17 +87,17 @@ const AgentItem: React.FC<AgentItemProps> = ({
             expandable: false,
             symbol: '...',
           }}
-          title={info?.name || '智能体名称'}
+          title={info?.name || dict('NuwaxPC.Pages.HomeDrag.agentName')}
           className={styles['title-section']}
         >
-          {info?.name || '未命名智能体'}
+          {info?.name || dict('NuwaxPC.Pages.HomeDrag.unnamedAgent')}
         </Typography.Title>
 
         {/* 用户信息区域 */}
         <div className={styles['source-section']}>
           <p className={cx(styles.source)}>
             {/* <UserOutlined className={styles['user-icon']} /> */}
-            来自 {getUserDisplayName()}
+            {dict('NuwaxPC.Pages.HomeDrag.from')} {getUserDisplayName()}
           </p>
         </div>
       </div>
@@ -108,7 +109,7 @@ const AgentItem: React.FC<AgentItemProps> = ({
           [styles.collecting]: isCollecting,
         })}
         onClick={handlerCollect}
-        title={info.collect ? '取消收藏' : '收藏'}
+        title={info.collect ? dict('NuwaxPC.Pages.HomeDrag.cancelCollect') : dict('NuwaxPC.Pages.HomeDrag.collect')}
       >
         <StarFilled
           className={cx(styles['star-icon'], {

@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import {
   InputAndOutConfig,
   NodePreviousAndArgMap,
@@ -52,7 +53,7 @@ const FormItemsRender: React.FC<FormItemRenderProps> = ({
                   ? [
                       {
                         required: true,
-                        message: `${item.name}是必填项`,
+                        message: dict('NuwaxPC.Components.TestRun.fieldRequired', item.name),
                       },
                     ]
                   : []

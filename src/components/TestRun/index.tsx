@@ -1,4 +1,5 @@
 // import squareImage from '@/assets/images/square_bg.png';
+import { dict } from '@/services/i18nRuntime';
 import { useWorkflowModel } from '@/hooks/useWorkflowModel';
 import { AnswerTypeEnum, NodeTypeEnum } from '@/types/enums/common';
 import { DefaultObjectType } from '@/types/interfaces/common';
@@ -21,7 +22,7 @@ import { useEffect, useState } from 'react';
 import { useModel } from 'umi';
 import FormItemsRender from './FormItemsRender';
 import './index.less';
-// import { stringify } from 'uuid';
+// import { stringify } from 'uuid');
 
 function middleEllipsis(str: string, maxLength: number): string {
   if (str.length <= maxLength) return str;
@@ -82,8 +83,8 @@ const StopWaitNode: React.FC<{
       <div className="stop-wait-header dis-center">
         {returnImg(NodeTypeEnum.QA)}
         <div></div>
-        <span className="ml-10">问答</span>
-        <span className="ml-10">回复以下问题后继续试运行</span>
+        <span className="ml-10">{dict('NuwaxPC.Components.TestRun.qa')}</span>
+        <span className="ml-10">{dict('NuwaxPC.Components.TestRun.replyToContinue')}</span>
       </div>
       {/* 对话气泡 */}
       <Bubble
@@ -95,7 +96,7 @@ const StopWaitNode: React.FC<{
           />
         }
         variant={answerType === AnswerTypeEnum.SELECT ? 'borderless' : 'filled'}
-        header={<span>机器人</span>}
+        header={<span>{dict('NuwaxPC.Components.TestRun.robot')}</span>}
         content={
           params?.options?.length ? (
             <div className="qa-question-style">
@@ -135,7 +136,7 @@ const HttpArgs: React.FC<{
         <FormItemsRender items={queries} loading={loading} options={options} />
       )}
       {!body?.length && !headers?.length && !queries?.length && (
-        <Empty description="本次试运行无需输入" />
+        <Empty description={dict('NuwaxPC.Components.TestRun.noInputRequired')} />
       )}
     </>
   );
@@ -163,7 +164,7 @@ const renderInputArgs = ({
             options={options}
           />
         ) : (
-          <Empty description="本次试运行无需输入" />
+          <Empty description={dict('NuwaxPC.Components.TestRun.noInputRequired')} />
         ))}
       {type === NodeTypeEnum.HTTPRequest && (
         <HttpArgs config={config} loading={loading} options={options} />
@@ -184,7 +185,7 @@ const renderOutputArgs = ({
   const { inputArgs } = config;
   return (
     <>
-      <p className="collapse-title-style dis-left">输入</p>
+      <p className="collapse-title-style dis-left">{dict('NuwaxPC.Components.TestRun.input')}</p>
       {inputArgs?.map((item) => (
         <Input
           key={item.name}
@@ -197,7 +198,7 @@ const renderOutputArgs = ({
           className="mb-12 override-input-style"
         />
       ))}
-      <p className="collapse-title-style dis-left">输出</p>
+      <p className="collapse-title-style dis-left">{dict('NuwaxPC.Components.TestRun.output')}</p>
       <pre className="result-style overflow-y">{value}</pre>
     </>
   );
@@ -287,7 +288,7 @@ const TestRun: React.FC<TestRunProps> = ({
   const items = [
     {
       key: 'inputArgs',
-      label: '试运行输入',
+      label: dict('NuwaxPC.Components.TestRun.testRunInput'),
       children: (
         <Form
           form={form}
@@ -312,7 +313,7 @@ const TestRun: React.FC<TestRunProps> = ({
       ? [
           {
             key: 'outputArgs',
-            label: '运行结果',
+            label: dict('NuwaxPC.Components.TestRun.runResult'),
             children: renderOutputArgs({
               form,
               config: node.nodeConfig,
@@ -368,7 +369,7 @@ const TestRun: React.FC<TestRunProps> = ({
       <div className="test-content-style dis-col ">
         {/* 试运行的头部 */}
         <div className="test-run-header dis-sb">
-          <span>试运行</span>
+          <span>{dict('NuwaxPC.Components.TestRun.testRun')}</span>
           <CloseOutlined
             className={'cursor-pointer'}
             onClick={() => {
@@ -397,7 +398,7 @@ const TestRun: React.FC<TestRunProps> = ({
               loading={loading}
               className="mt-16"
             >
-              运行
+              {dict('NuwaxPC.Components.TestRun.run')}
             </Button>
           </>
         )}

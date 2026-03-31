@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import McpInstallType from '@/components/base/McpInstallType';
 import McpStatus from '@/components/base/McpStatus';
 import CardWrapper from '@/components/business-component/CardWrapper';
@@ -74,9 +75,9 @@ const McpComponentItem: React.FC<McpComponentItemProps> = ({
   // 获取时间信息
   const getTime = () => {
     if (mcpInfo.deployStatus === DeployStatusEnum.Deployed) {
-      return `发布于 ${dayjs(mcpInfo.deployed).format('MM-DD HH:mm')}`;
+      return `${dict('NuwaxPC.Pages.SpaceMcpManage.publishedAt')} ${dayjs(mcpInfo.deployed).format('MM-DD HH:mm')}`;
     }
-    return `创建于 ${dayjs(mcpInfo.created).format('MM-DD HH:mm')}`;
+    return `${dict('NuwaxPC.Pages.SpaceMcpManage.createdAt')} ${dayjs(mcpInfo.created).format('MM-DD HH:mm')}`;
   };
 
   return (
