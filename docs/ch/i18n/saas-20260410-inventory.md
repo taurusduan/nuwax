@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T09:44:07.144Z
+- 生成时间：2026-03-31T09:59:18.513Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2501
-- hardcoded 中文：2501
+- 总问题数：2494
+- hardcoded 中文：2494
 - legacy System key：0
 - invalid dict key：0
 
@@ -50,7 +50,6 @@
 | src/pages/EcosystemPlugin | 24 | 0 | 0 | 24 |
 | src/components/AgentSidebar | 24 | 0 | 0 | 24 |
 | src/pages/PublishedManage | 22 | 0 | 0 | 22 |
-| src/pages/Chat | 21 | 0 | 0 | 21 |
 | src/components/CreateKnowledge | 21 | 0 | 0 | 21 |
 | src/pages/Home | 19 | 0 | 0 | 19 |
 | src/pages/SpaceMcpEdit | 19 | 0 | 0 | 19 |
@@ -62,6 +61,7 @@
 | src/pages/SpaceMcpManage | 16 | 0 | 0 | 16 |
 | src/components/CreateNewPlugin | 16 | 0 | 0 | 16 |
 | src/components/CreatedItem | 15 | 0 | 0 | 15 |
+| src/pages/Chat | 14 | 0 | 0 | 14 |
 | src/components/EcosystemDetailDrawer | 14 | 0 | 0 | 14 |
 | src/components/EcosystemShareModal | 14 | 0 | 0 | 14 |
 | src/components/TiptapVariableInput | 14 | 0 | 0 | 14 |

@@ -802,6 +802,17 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.Chat.expandNavigation': 'Expand navigation',
   'NuwaxPC.Pages.Chat.newConversation': 'New conversation',
   'NuwaxPC.Pages.Chat.viewAgentDetails': 'View agent details',
+  'NuwaxPC.Pages.Chat.openPreviewPage': 'Open preview page',
+  'NuwaxPC.Pages.Chat.closeFilePreview': 'Close file preview',
+  'NuwaxPC.Pages.Chat.openFilePreview': 'Open file preview',
+  'NuwaxPC.Pages.Chat.closeAgentDesktop': 'Close agent desktop',
+  'NuwaxPC.Pages.Chat.openAgentDesktop': 'Open agent desktop',
+  'NuwaxPC.Pages.Chat.loadingHistoryConversation':
+    'Loading conversation history',
+  'NuwaxPC.Pages.Chat.agentExecutingWait': 'Agent is executing, please wait',
+  'NuwaxPC.Pages.Chat.noAgentPermission':
+    'You do not have permission for this agent',
+  'NuwaxPC.Pages.Chat.copyTemplate': 'Copy template',
   'NuwaxPC.Toast.UploadAvatar.invalidType':
     'Please upload JPG, JPEG, or PNG image files',
   'NuwaxPC.Toast.UploadAvatar.invalidSize': 'Image size cannot exceed 2MB',

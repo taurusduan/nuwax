@@ -1549,3 +1549,24 @@
 - 风险/阻塞：
   - `Chat/index.tsx` 仍有其他流程分支中文存量待继续处理
 - 下一步：继续推进 `Chat/index.tsx` 剩余分支与 `routes/index.ts` 其余菜单项
+
+### 里程碑：Top 模块第六十三批实改（Chat 预览/桌面切换提示）
+
+- 时间：2026-03-31 17:58
+- 任务：处理 `Chat/index.tsx` 中预览页/文件预览/智能体桌面切换、历史加载、执行中提示、权限遮罩与复制模板文案
+- 执行命令：
+  - `pnpm prettier --write src/pages/Chat/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts docs/ch/i18n/saas-20260410-progress.md docs/ch/i18n/saas-20260410-test-report.md docs/ch/i18n/saas-20260410-decision-log.md`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Chat/index.tsx`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `Chat` 顶部控制条新增 key：打开预览页、打开/关闭文件预览、打开/关闭智能体电脑
+  - 历史会话加载提示、执行中提示、权限遮罩与复制模板按钮全部切换为 `t(...)`
+  - 新增 `NuwaxPC.Pages.Chat.*` 默认中英文词典（9 个 key）
+  - 治理总量从 `2501` 下降至 `2494`（-7）
+- 风险/阻塞：
+  - `Chat/index.tsx` 仍有剩余中文文案分散在其他流程分支
+- 下一步：继续按 inventory Top 模块推进 `AppDev / SystemManagement / Antv-X6` 批量改造

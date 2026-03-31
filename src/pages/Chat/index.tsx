@@ -1142,7 +1142,7 @@ const Chat: React.FC = () => {
                 !!effectiveAgent?.pageHomeIndex &&
                 !pagePreviewData && (
                   <TooltipIcon
-                    title="打开预览页面"
+                    title={t('NuwaxPC.Pages.Chat.openPreviewPage')}
                     className={cx(styles['icon-box'])}
                     icon={
                       <SvgIcon
@@ -1165,8 +1165,8 @@ const Chat: React.FC = () => {
                   <TooltipIcon
                     title={
                       isFileTreeVisible && viewMode === 'preview'
-                        ? '关闭文件预览'
-                        : '打开文件预览'
+                        ? t('NuwaxPC.Pages.Chat.closeFilePreview')
+                        : t('NuwaxPC.Pages.Chat.openFilePreview')
                     }
                     className={cx(styles['icon-box'], {
                       [styles['active']]:
@@ -1190,8 +1190,8 @@ const Chat: React.FC = () => {
                     <TooltipIcon
                       title={
                         isFileTreeVisible && viewMode === 'desktop'
-                          ? '关闭智能体电脑'
-                          : '打开智能体电脑'
+                          ? t('NuwaxPC.Pages.Chat.closeAgentDesktop')
+                          : t('NuwaxPC.Pages.Chat.openAgentDesktop')
                       }
                       className={cx(styles['icon-box'], {
                         [styles['active']]:
@@ -1245,7 +1245,7 @@ const Chat: React.FC = () => {
                       {loadingMore ? (
                         <span>
                           <LoadingOutlined style={{ marginRight: 8 }} />
-                          正在加载历史会话
+                          {t('NuwaxPC.Pages.Chat.loadingHistoryConversation')}
                         </span>
                       ) : null}
                     </div>
@@ -1283,7 +1283,9 @@ const Chat: React.FC = () => {
                         )}
                       >
                         <LoadingOutlined />
-                        <span>智能体正在执行，请稍等</span>
+                        <span>
+                          {t('NuwaxPC.Pages.Chat.agentExecutingWait')}
+                        </span>
                       </div>
                     )}
                   </>
@@ -1344,7 +1346,7 @@ const Chat: React.FC = () => {
               }
               // 计算蒙层可见性与文案
               hasPermission={effectiveAgent?.hasPermission}
-              maskText="您无该智能体权限"
+              maskText={t('NuwaxPC.Pages.Chat.noAgentPermission')}
               fixedSelection={
                 !!conversationInfo?.agent?.sandboxId ||
                 !!conversationInfo?.sandboxServerId ||
@@ -1495,7 +1497,7 @@ const Chat: React.FC = () => {
                         effectiveAgent?.allowCopy === AllowCopyEnum.Yes
                       }
                       onCopyClick={() => setOpenCopyModal(true)}
-                      copyButtonText="复制模板"
+                      copyButtonText={t('NuwaxPC.Pages.Chat.copyTemplate')}
                       copyButtonClassName={styles['copy-btn']}
                     />
                     {/* 复制模板弹窗 */}
