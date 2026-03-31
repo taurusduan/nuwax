@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T09:14:32.534Z
+- 生成时间：2026-03-31T09:23:15.648Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2596
-- hardcoded 中文：2596
+- 总问题数：2565
+- hardcoded 中文：2565
 - legacy System key：0
 - invalid dict key：0
 
@@ -42,7 +42,6 @@
 | src/pages/SpaceSkillManage | 37 | 0 | 0 | 37 |
 | src/pages/SpaceTaskCenter | 37 | 0 | 0 | 37 |
 | src/pages/SpacePluginTool | 35 | 0 | 0 | 35 |
-| src/pages/SkillDetails | 31 | 0 | 0 | 31 |
 | src/pages/GlobalModelManage | 30 | 0 | 0 | 30 |
 | src/pages/PublishAudit | 30 | 0 | 0 | 30 |
 | src/layouts/DynamicMenusLayout | 30 | 0 | 0 | 30 |
@@ -1782,40 +1781,6 @@
 - [hardcoded_chinese] src/pages/SpacePluginTool/index.tsx:478 -> `入参配置`
 - [hardcoded_chinese] src/pages/SpacePluginTool/index.tsx:496 -> `出参配置`
 
-## src/pages/SkillDetails
-
-- [hardcoded_chinese] src/pages/SkillDetails/SkillHeader/MoreActionsMenu/index.tsx:36 -> `导入技能`
-- [hardcoded_chinese] src/pages/SkillDetails/SkillHeader/MoreActionsMenu/index.tsx:48 -> `全屏预览`
-- [hardcoded_chinese] src/pages/SkillDetails/SkillHeader/MoreActionsMenu/index.tsx:57 -> `导出技能`
-- [hardcoded_chinese] src/pages/SkillDetails/SkillHeader/index.tsx:84 -> `已发布`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:91 -> `发布`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:95 -> `你有未保存的文件修改，请先保存后再${text}`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:121 -> `保存成功`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:126 -> `保存文件失败:`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:137 -> `未保存的文件修改`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:138 -> `你有未保存的文件修改，是否保存后离开？`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:139 -> `保存并离开`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:140 -> `不保存离开`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:203 -> `导入成功`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:211 -> `导入失败`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:218 -> `技能ID不能为空`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:223 -> `空间ID不能为空`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:241 -> `技能ID不能为空`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:250 -> `上传文件总大小不能超过20MB`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:263 -> `上传成功`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:268 -> `上传失败`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:276 -> `技能ID不存在或无效，无法导出`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:287 -> `导出失败`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:298 -> `导出成功！`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:301 -> `导出项目失败:`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:311 -> `你确定要删除此文件吗?`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:331 -> `文件不存在，无法删除`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:353 -> `删除成功`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:359 -> `删除文件失败:`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:377 -> `技能信息不存在，无法新建文件`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:499 -> `编辑技能`
-- [hardcoded_chinese] src/pages/SkillDetails/index.tsx:533 -> `正在导出`
-
 ## src/pages/GlobalModelManage
 
 - [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:52 -> `全部`
@@ -1881,3 +1846,36 @@
 - [hardcoded_chinese] src/pages/PublishAudit/index.tsx:211 -> `发布时间`
 - [hardcoded_chinese] src/pages/PublishAudit/index.tsx:218 -> `操作`
 - [hardcoded_chinese] src/pages/PublishAudit/index.tsx:274 -> `发布审核`
+
+## src/layouts/DynamicMenusLayout
+
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/CollapseButton/index.tsx:103 -> `展开菜单`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/CollapseButton/index.tsx:103 -> `收起菜单`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/DynamicSecondMenu/index.tsx:251 -> `处理路径跳转失败，请检查菜单路径是否存在`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/DynamicSecondMenu/index.tsx:595 -> `成员与设置`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/DynamicSecondMenu/index.tsx:595 -> `成员与设置`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SpaceSection/SpaceTitle/CreateNewTeam/index.tsx:40 -> `新建成功`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SpaceSection/SpaceTitle/CreateNewTeam/index.tsx:129 -> `创建团队空间`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SpaceSection/SpaceTitle/CreateNewTeam/index.tsx:156 -> `团队名称`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SpaceSection/SpaceTitle/CreateNewTeam/index.tsx:157 -> `请输入团队名称`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SpaceSection/SpaceTitle/CreateNewTeam/index.tsx:159 -> `请输入团队名称`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SpaceSection/SpaceTitle/CreateNewTeam/index.tsx:161 -> `描述`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SpaceSection/SpaceTitle/PersonalSpaceContent/index.tsx:91 -> `智能体开发`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SpaceSection/SpaceTitle/PersonalSpaceContent/index.tsx:96 -> `成员与设置`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SpaceSection/SpaceTitle/PersonalSpaceContent/index.tsx:96 -> `成员与设置`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SpaceSection/SpaceTitle/PersonalSpaceContent/index.tsx:155 -> `个人空间`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SpaceSection/index.tsx:50 -> `个人空间`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SpaceSection/index.tsx:62 -> `个人空间`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SpaceSection/index.tsx:64 -> `个人空间`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SpaceSection/index.tsx:68 -> `个人空间`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SpaceSection/index.tsx:97 -> `工作空间智能体`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SquareSection/index.tsx:90 -> `智能体`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SquareSection/index.tsx:96 -> `网页应用`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SquareSection/index.tsx:102 -> `技能`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SquareSection/index.tsx:108 -> `插件`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SquareSection/index.tsx:114 -> `工作流`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/SquareSection/index.tsx:120 -> `模板`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/index.tsx:559 -> `新对话`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/index.tsx:562 -> `主页`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/index.tsx:565 -> `更多`
+- [hardcoded_chinese] src/layouts/DynamicMenusLayout/index.tsx:578 -> ` 和 动态菜单的 `

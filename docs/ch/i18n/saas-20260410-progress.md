@@ -1457,3 +1457,27 @@
 - 风险/阻塞：
   - `ChatInputHome` 主文件仍有存量（非本批范围）
 - 下一步：继续推进 `ChatInputHome/index.tsx` 与 `SkillDetails`
+
+### 里程碑：Top 模块第五十九批实改（SkillDetails 首批）
+
+- 时间：2026-03-31 17:21
+- 任务：处理 `SkillDetails` 页面、Header 和 MoreActionsMenu 的高频文案与日志
+- 执行命令：
+  - `pnpm prettier --write src/pages/SkillDetails/index.tsx src/pages/SkillDetails/SkillHeader/index.tsx src/pages/SkillDetails/SkillHeader/MoreActionsMenu/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SkillDetails/index.tsx`
+    - `src/pages/SkillDetails/SkillHeader/index.tsx`
+    - `src/pages/SkillDetails/SkillHeader/MoreActionsMenu/index.tsx`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `MoreActionsMenu`（导入/全屏/导出）与 `SkillHeader`（已发布/有更新未发布/发布）切换为 `t(...)`
+  - `SkillDetails` 页面中保存、导入、上传、导出、删除、未保存离开保护等提示切换为 `t(...)`
+  - 页面内中文日志统一改为英文
+  - 新增 `NuwaxPC.Pages.SkillDetailsMoreActionsMenu.*`、`SkillDetailsHeader.*`、`SkillDetails.*` 中英文默认词典
+  - 治理总量从 `2596` 下降至 `2565`（-31）
+- 风险/阻塞：
+  - `SkillDetails/index.tsx` 仍有次级存量（剩余流程分支与提示）
+- 下一步：继续推进 `SkillDetails/index.tsx` 剩余项与 `MorePage/ApiKeyLogs`

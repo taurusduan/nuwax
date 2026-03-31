@@ -341,3 +341,19 @@
 - 影响：
   - 占位符语义在中英文环境下保持一致
   - 后续调整引导文案只需更新词典，不改组件逻辑
+
+### D-046 SkillDetails 按页面子域拆分
+
+- 决策：`SkillDetails` 相关文案按 `SkillDetailsMoreActionsMenu`、`SkillDetailsHeader`、`SkillDetails` 三个页面子域管理
+- 原因：同一页面中“顶部操作菜单”“头部状态”“页面流程提示”职责不同，分域可避免 key 混杂
+- 影响：
+  - 词典定位与联调排查更快
+  - 后续继续改造 `SkillDetails/index.tsx` 剩余分支时可复用同域规范
+
+### D-047 SkillDetails 日志文本统一英文
+
+- 决策：`SkillDetails/index.tsx` 中保存、导入、上传、导出、删除相关 `console.error` 文本统一英文
+- 原因：日志规范要求英文输出，且便于跨团队排查
+- 影响：
+  - 不改变业务逻辑，仅改善日志可读性与一致性
+  - 避免日志文本被 i18n 治理脚本重复命中

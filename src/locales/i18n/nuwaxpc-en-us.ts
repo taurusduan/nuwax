@@ -695,6 +695,42 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Type commands directly, use Shift+Enter for a new line and Enter to send; supports @ to mention skills and image paste.',
   'NuwaxPC.Components.ChatInputHomeMentionEditor.placeholderWithoutMention':
     'Type commands directly, use Shift+Enter for a new line and Enter to send; supports image paste.',
+  'NuwaxPC.Pages.SkillDetailsMoreActionsMenu.importSkill': 'Import Skill',
+  'NuwaxPC.Pages.SkillDetailsMoreActionsMenu.fullscreenPreview':
+    'Fullscreen Preview',
+  'NuwaxPC.Pages.SkillDetailsMoreActionsMenu.exportSkill': 'Export Skill',
+  'NuwaxPC.Pages.SkillDetailsHeader.published': 'Published',
+  'NuwaxPC.Pages.SkillDetailsHeader.updatesNotPublished':
+    'Updates not published',
+  'NuwaxPC.Pages.SkillDetailsHeader.publish': 'Publish',
+  'NuwaxPC.Pages.SkillDetails.actionPublish': 'Publish',
+  'NuwaxPC.Pages.SkillDetails.saveBeforeAction':
+    'You have unsaved file changes. Please save before {0}.',
+  'NuwaxPC.Pages.SkillDetails.saveSuccess': 'Saved successfully',
+  'NuwaxPC.Pages.SkillDetails.unsavedTitle': 'Unsaved file changes',
+  'NuwaxPC.Pages.SkillDetails.unsavedLeaveMessage':
+    'You have unsaved file changes. Save before leaving?',
+  'NuwaxPC.Pages.SkillDetails.saveAndLeave': 'Save and Leave',
+  'NuwaxPC.Pages.SkillDetails.leaveWithoutSaving': 'Leave Without Saving',
+  'NuwaxPC.Pages.SkillDetails.importSuccess': 'Imported successfully',
+  'NuwaxPC.Pages.SkillDetails.skillIdRequired': 'Skill ID is required',
+  'NuwaxPC.Pages.SkillDetails.spaceIdRequired': 'Space ID is required',
+  'NuwaxPC.Pages.SkillDetails.uploadSizeLimitExceeded':
+    'The total upload file size cannot exceed 20MB',
+  'NuwaxPC.Pages.SkillDetails.uploadSuccess': 'Uploaded successfully',
+  'NuwaxPC.Pages.SkillDetails.invalidSkillIdForExport':
+    'Skill ID is missing or invalid, cannot export',
+  'NuwaxPC.Pages.SkillDetails.exportFailed': 'Export failed',
+  'NuwaxPC.Pages.SkillDetails.exportSuccess': 'Export successful!',
+  'NuwaxPC.Pages.SkillDetails.confirmDeleteFile':
+    'Are you sure you want to delete this file?',
+  'NuwaxPC.Pages.SkillDetails.fileNotFound':
+    'File does not exist and cannot be deleted',
+  'NuwaxPC.Pages.SkillDetails.deleteSuccess': 'Deleted successfully',
+  'NuwaxPC.Pages.SkillDetails.skillInfoMissing':
+    'Skill information is missing, cannot create file',
+  'NuwaxPC.Pages.SkillDetails.actionEdit': 'Edit skill',
+  'NuwaxPC.Pages.SkillDetails.exporting': 'Exporting',
   'NuwaxPC.Toast.UploadAvatar.invalidType':
     'Please upload JPG, JPEG, or PNG image files',
   'NuwaxPC.Toast.UploadAvatar.invalidSize': 'Image size cannot exceed 2MB',
