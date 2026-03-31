@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T08:26:54.421Z
+- 生成时间：2026-03-31T08:32:12.680Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2636
-- hardcoded 中文：2636
+- 总问题数：2627
+- hardcoded 中文：2627
 - legacy System key：0
 - invalid dict key：0
 
@@ -43,7 +43,6 @@
 | src/pages/Chat | 35 | 0 | 0 | 35 |
 | src/pages/SpacePluginTool | 35 | 0 | 0 | 35 |
 | src/components/ChatInputHome | 35 | 0 | 0 | 35 |
-| src/components/Created | 32 | 0 | 0 | 32 |
 | src/pages/SkillDetails | 31 | 0 | 0 | 31 |
 | src/pages/GlobalModelManage | 30 | 0 | 0 | 30 |
 | src/pages/PublishAudit | 30 | 0 | 0 | 30 |
@@ -53,6 +52,7 @@
 | src/pages/SpacePluginCloudTool | 25 | 0 | 0 | 25 |
 | src/pages/EcosystemPlugin | 24 | 0 | 0 | 24 |
 | src/components/AgentSidebar | 24 | 0 | 0 | 24 |
+| src/components/Created | 23 | 0 | 0 | 23 |
 | src/pages/PublishedManage | 22 | 0 | 0 | 22 |
 | src/components/CreateKnowledge | 21 | 0 | 0 | 21 |
 | src/pages/Home | 19 | 0 | 0 | 19 |
@@ -1794,41 +1794,6 @@
 - [hardcoded_chinese] src/components/ChatInputHome/index.tsx:507 -> `切换到普通模式`
 - [hardcoded_chinese] src/components/ChatInputHome/index.tsx:508 -> `使用我的智能体电脑执行任务`
 
-## src/components/Created
-
-- [hardcoded_chinese] src/components/Created/MCPItem/index.tsx:67 -> `用户头像`
-- [hardcoded_chinese] src/components/Created/MCPItem/index.tsx:72 -> `部署于`
-- [hardcoded_chinese] src/components/Created/MCPTools/index.tsx:82 -> `暂无描述`
-- [hardcoded_chinese] src/components/Created/MCPTools/index.tsx:99 -> `已添加`
-- [hardcoded_chinese] src/components/Created/MCPTools/index.tsx:99 -> `添加`
-- [hardcoded_chinese] src/components/Created/PageItem/index.tsx:48 -> `用户头像`
-- [hardcoded_chinese] src/components/Created/PageItem/index.tsx:53 -> `创建于`
-- [hardcoded_chinese] src/components/Created/PageItem/index.tsx:70 -> `已添加`
-- [hardcoded_chinese] src/components/Created/PageItem/index.tsx:70 -> `添加`
-- [hardcoded_chinese] src/components/Created/index.tsx:87 -> `插件`
-- [hardcoded_chinese] src/components/Created/index.tsx:120 -> `全部`
-- [hardcoded_chinese] src/components/Created/index.tsx:124 -> `组件库${selected.label}`
-- [hardcoded_chinese] src/components/Created/index.tsx:128 -> `收藏`
-- [hardcoded_chinese] src/components/Created/index.tsx:132 -> `仅查看官方${selected.label}`
-- [hardcoded_chinese] src/components/Created/index.tsx:139 -> `全部`
-- [hardcoded_chinese] src/components/Created/index.tsx:146 -> `全部`
-- [hardcoded_chinese] src/components/Created/index.tsx:150 -> `当前空间智能体`
-- [hardcoded_chinese] src/components/Created/index.tsx:157 -> `全部`
-- [hardcoded_chinese] src/components/Created/index.tsx:161 -> `文档`
-- [hardcoded_chinese] src/components/Created/index.tsx:168 -> `组件库数据表`
-- [hardcoded_chinese] src/components/Created/index.tsx:175 -> `全部`
-- [hardcoded_chinese] src/components/Created/index.tsx:179 -> `自定义服务`
-- [hardcoded_chinese] src/components/Created/index.tsx:186 -> `全部`
-- [hardcoded_chinese] src/components/Created/index.tsx:190 -> `仅查看官方${selected.label}`
-- [hardcoded_chinese] src/components/Created/index.tsx:717 -> `用户头像`
-- [hardcoded_chinese] src/components/Created/index.tsx:721 -> `发布于${getTime(item.created!)}`
-- [hardcoded_chinese] src/components/Created/index.tsx:762 -> `已添加`
-- [hardcoded_chinese] src/components/Created/index.tsx:762 -> `添加`
-- [hardcoded_chinese] src/components/Created/index.tsx:808 -> `搜索`
-- [hardcoded_chinese] src/components/Created/index.tsx:842 -> `创建${selected.label}`
-- [hardcoded_chinese] src/components/Created/index.tsx:877 -> `暂无数据，请重新搜索`
-- [hardcoded_chinese] src/components/Created/index.tsx:877 -> `暂无数据`
-
 ## src/pages/SkillDetails
 
 - [hardcoded_chinese] src/pages/SkillDetails/SkillHeader/MoreActionsMenu/index.tsx:36 -> `导入技能`
@@ -1862,3 +1827,36 @@
 - [hardcoded_chinese] src/pages/SkillDetails/index.tsx:377 -> `技能信息不存在，无法新建文件`
 - [hardcoded_chinese] src/pages/SkillDetails/index.tsx:499 -> `编辑技能`
 - [hardcoded_chinese] src/pages/SkillDetails/index.tsx:533 -> `正在导出`
+
+## src/pages/GlobalModelManage
+
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:52 -> `全部`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:53 -> `聊天对话-纯文本`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:54 -> `向量嵌入`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:55 -> `聊天对话-多模态`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:62 -> `删除成功`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:65 -> `删除失败`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:89 -> `更新管控状态失败`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:127 -> `编辑`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:136 -> `授权`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:148 -> `删除`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:150 -> `删除模型`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:168 -> `模型名称`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:175 -> `类型`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:180 -> `聊天对话-纯文本`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:181 -> `向量嵌入`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:182 -> `聊天对话-多模态`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:189 -> `模型标识`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:195 -> `模型介绍`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:201 -> `状态`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:206 -> `已启用`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:207 -> `已禁用`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:211 -> `创建者`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:217 -> `更新时间`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:224 -> `管控`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:225 -> `若开启管控，需授权才能使用`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:231 -> `关闭`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:232 -> `开启`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:244 -> `操作`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:263 -> `获取数据失败`
+- [hardcoded_chinese] src/pages/GlobalModelManage/index.tsx:285 -> `公共模型管理`

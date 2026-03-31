@@ -301,3 +301,11 @@
 - 影响：
   - 系统任务创建弹窗文案独立维护，后续联调可按系统侧域补词典
   - `SelectTargetFormItem` 的 `dict(...)` 存量被消除，保持调用规范一致
+
+### D-041 Created 列表子组件按组件域拆分
+
+- 决策：`Created` 组件下首批子组件采用 `NuwaxPC.Components.CreatedMcpItem.*`、`CreatedMcpTools.*`、`CreatedPageItem.*` 三个域，不放入 `Pages` 域
+- 原因：这批组件是跨页面复用的通用构件，按组件域命名更符合 `{Client}.{Scope}.{Domain}.{key}` 规范，也便于后续在不同页面复用
+- 影响：
+  - `Created` 复用链路（组件库/页面库）的基础文案进入统一词典
+  - 后续处理 `Created/index.tsx` 可继续沿用同前缀，避免 key 分散

@@ -1365,3 +1365,27 @@
 - 风险/阻塞：
   - `Created`、`ChatInputHome`、`SkillDetails` 等热点目录仍存在高密度存量
 - 下一步：继续按 inventory Top 模块推进 `src/components/Created` 与 `src/components/ChatInputHome`
+
+### 里程碑：Top 模块第五十五批实改（Created 子组件首批）
+
+- 时间：2026-03-31 16:32
+- 任务：处理 `src/components/Created` 子组件 `MCPItem/MCPTools/PageItem` 的硬编码文案
+- 执行命令：
+  - `pnpm prettier --write src/components/Created/MCPItem/index.tsx src/components/Created/MCPTools/index.tsx src/components/Created/PageItem/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/components/Created/MCPItem/index.tsx`
+    - `src/components/Created/MCPTools/index.tsx`
+    - `src/components/Created/PageItem/index.tsx`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `MCPItem` 头像 `alt` 与“部署于”文案改为 `t(...)`
+  - `MCPTools` 的“暂无描述/添加/已添加”改为 `t(...)`
+  - `PageItem` 头像 `alt`、“创建于”、按钮文案改为 `t(...)`
+  - 新增 `NuwaxPC.Components.CreatedMcpItem.*`、`CreatedMcpTools.*`、`CreatedPageItem.*` 中英文默认词典
+  - 治理总量从 `2636` 下降至 `2627`（-9）
+- 风险/阻塞：
+  - `Created/index.tsx` 仍是高密度主存量，需要单独分批处理
+- 下一步：继续推进 `src/components/Created/index.tsx` 与 `src/components/ChatInputHome` 热点清单

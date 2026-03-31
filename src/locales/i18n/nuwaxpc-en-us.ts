@@ -608,6 +608,15 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Components.NoMoreDivider.noMoreData': 'No more data',
   'NuwaxPC.Components.WorkspaceSearch.placeholder':
     'Please input search content',
+  'NuwaxPC.Components.CreatedMcpItem.avatarAlt': 'User avatar',
+  'NuwaxPC.Components.CreatedMcpItem.deployedAt': 'Deployed at {0}',
+  'NuwaxPC.Components.CreatedMcpTools.noDescription': 'No description',
+  'NuwaxPC.Components.CreatedMcpTools.added': 'Added',
+  'NuwaxPC.Components.CreatedMcpTools.add': 'Add',
+  'NuwaxPC.Components.CreatedPageItem.avatarAlt': 'User avatar',
+  'NuwaxPC.Components.CreatedPageItem.createdAt': 'Created at {0}',
+  'NuwaxPC.Components.CreatedPageItem.added': 'Added',
+  'NuwaxPC.Components.CreatedPageItem.add': 'Add',
   'NuwaxPC.Toast.UploadAvatar.invalidType':
     'Please upload JPG, JPEG, or PNG image files',
   'NuwaxPC.Toast.UploadAvatar.invalidSize': 'Image size cannot exceed 2MB',
