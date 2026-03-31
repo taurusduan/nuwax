@@ -1,6 +1,7 @@
 import { EllipsisTooltip } from '@/components/custom/EllipsisTooltip';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import type { NodeDetailsProps } from '@/types/interfaces/agentConfig';
+import { dict } from '@/services/i18nRuntime';
 import classNames from 'classnames';
 import dayjs from 'dayjs';
 import type React from 'react';
@@ -32,19 +33,19 @@ export const NodeDetails: React.FC<NodeDetailsProps> = ({ node }) => {
   const nodeTypeName = useMemo(() => {
     switch (node?.type) {
       case AgentComponentTypeEnum.Plugin:
-        return '插件';
+        return dict('NuwaxPC.Pages.EditAgent.NodeDetails.typePlugin');
       case AgentComponentTypeEnum.Workflow:
-        return '工作流';
+        return dict('NuwaxPC.Pages.EditAgent.NodeDetails.typeWorkflow');
       case AgentComponentTypeEnum.Knowledge:
-        return '知识库';
+        return dict('NuwaxPC.Pages.EditAgent.NodeDetails.typeKnowledge');
       case AgentComponentTypeEnum.Variable:
-        return '变量';
+        return dict('NuwaxPC.Pages.EditAgent.NodeDetails.typeVariable');
       case AgentComponentTypeEnum.Table:
-        return '数据表';
+        return dict('NuwaxPC.Pages.EditAgent.NodeDetails.typeTable');
       case AgentComponentTypeEnum.Model:
-        return '模型';
+        return dict('NuwaxPC.Pages.EditAgent.NodeDetails.typeModel');
       case AgentComponentTypeEnum.MCP:
-        return 'MCP';
+        return dict('NuwaxPC.Pages.EditAgent.NodeDetails.typeMCP');
       default:
         return '--';
     }
@@ -53,20 +54,20 @@ export const NodeDetails: React.FC<NodeDetailsProps> = ({ node }) => {
   return (
     <>
       <div className={cx(styles.container)}>
-        {renderDetailItem('类型', nodeTypeName)}
-        {renderDetailItem('状态', '成功')}
-        {renderDetailItem('名称', node?.name as string)}
-        {renderDetailItem('耗时', time)}
+        {renderDetailItem(dict('NuwaxPC.Pages.EditAgent.NodeDetails.labelType'), nodeTypeName)}
+        {renderDetailItem(dict('NuwaxPC.Pages.EditAgent.NodeDetails.labelStatus'), dict('NuwaxPC.Pages.EditAgent.NodeDetails.statusSuccess'))}
+        {renderDetailItem(dict('NuwaxPC.Pages.EditAgent.NodeDetails.labelName'), node?.name as string)}
+        {renderDetailItem(dict('NuwaxPC.Pages.EditAgent.NodeDetails.labelDuration'), time)}
       </div>
       {renderDetailItem(
-        '发起时间',
+        dict('NuwaxPC.Pages.EditAgent.NodeDetails.labelStartTime'),
         node?.startTime
           ? dayjs(node?.startTime).format('YYYY-MM-DD HH:mm')
           : '',
         styles['mt-10'],
       )}
       {renderDetailItem(
-        '结束时间',
+        dict('NuwaxPC.Pages.EditAgent.NodeDetails.labelEndTime'),
         node?.endTime ? dayjs(node?.endTime).format('YYYY-MM-DD HH:mm') : '',
         styles['mt-10'],
       )}

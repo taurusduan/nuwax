@@ -568,7 +568,7 @@ const PreviewAndDebug: React.FC<PreviewAndDebugProps> = ({
                         {loadingMore ? (
                           <span>
                             <LoadingOutlined style={{ marginRight: 8 }} />
-                            正在加载历史会话
+                            {dict('NuwaxPC.Pages.Chat.loadingHistoryConversation')}
                           </span>
                         ) : null}
                       </div>
@@ -602,7 +602,7 @@ const PreviewAndDebug: React.FC<PreviewAndDebugProps> = ({
                       )}
                     >
                       <LoadingOutlined />
-                      <span>智能体正在执行，请稍等</span>
+                      <span>{dict('NuwaxPC.Pages.Chat.agentExecutingWait')}</span>
                     </div>
                   )}
                 </>
@@ -666,7 +666,7 @@ const PreviewAndDebug: React.FC<PreviewAndDebugProps> = ({
               agentSandboxId={conversationInfo?.agent?.sandboxId}
               hasPermission={conversationInfo?.agent?.hasPermission}
               maskText={
-                conversationInfo?.agent?.hasPermission ? '' : '您无该智能体权限'
+                conversationInfo?.agent?.hasPermission ? '' : dict('NuwaxPC.Components.ChatInputHome.noAgentPermission')
               }
               fixedSelection={
                 !!conversationInfo?.agent?.sandboxId ||
@@ -676,7 +676,7 @@ const PreviewAndDebug: React.FC<PreviewAndDebugProps> = ({
               isPersonalComputer={!!conversationInfo?.agent?.sandboxId}
               // 禁用 @ 提及功能 (编排页面不支持 @ 提及功能)
               enableMention={false}
-              placeholder="直接输入指令, 可通过Shift+Enter换行, 通过回车发送消息；支持粘贴图片"
+              placeholder={dict('NuwaxPC.Components.ChatInputHomeMentionEditor.placeholderWithoutMention')}
             />
           </div>
         </div>

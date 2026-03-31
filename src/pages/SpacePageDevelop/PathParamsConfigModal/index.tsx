@@ -1,4 +1,5 @@
 import { apiPageDeletePath } from '@/services/pageDev';
+import { dict } from '@/services/i18nRuntime';
 import { CreateUpdateModeEnum } from '@/types/enums/common';
 import {
   PageAddPathParams,
@@ -163,9 +164,9 @@ const PathParamsConfigModal: React.FC<PathParamsConfigModalProps> = ({
                   styles.header,
                 )}
               >
-                <h3>路径参数配置</h3>
+                <h3>{dict('NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigModal.title')}</h3>
                 {/* 新增路径 */}
-                <Tooltip title="新增路径">
+                <Tooltip title={dict('NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigModal.addPath')}>
                   <Button
                     type="text"
                     size="small"

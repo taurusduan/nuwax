@@ -2934,6 +2934,85 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'QA updated successfully',
   'NuwaxPC.Pages.SpaceKnowledge.Index.qaAddSuccess': 'QA added successfully',
 
+  // SpaceLibrary - Index
+  'NuwaxPC.Pages.SpaceLibrary.Index.pageTitle': 'Component Library',
+  'NuwaxPC.Pages.SpaceLibrary.Index.searchComponent': 'Search components',
+  'NuwaxPC.Pages.SpaceLibrary.Index.addComponent': 'Component',
+  'NuwaxPC.Pages.SpaceLibrary.Index.noResults': 'No results found',
+  'NuwaxPC.Pages.SpaceLibrary.Index.pluginCopySuccess': 'Plugin copied successfully',
+  'NuwaxPC.Pages.SpaceLibrary.Index.pluginDeleteSuccess': 'Plugin deleted successfully',
+  'NuwaxPC.Pages.SpaceLibrary.Index.modelDeleteSuccess': 'Model deleted successfully',
+  'NuwaxPC.Pages.SpaceLibrary.Index.workflowCopySuccess': 'Workflow copied successfully',
+  'NuwaxPC.Pages.SpaceLibrary.Index.workflowDeleteSuccess': 'Workflow deleted successfully',
+  'NuwaxPC.Pages.SpaceLibrary.Index.knowledgeDeleteSuccess': 'Knowledge base deleted successfully',
+  'NuwaxPC.Pages.SpaceLibrary.Index.tableDeleteSuccess': 'Data table deleted successfully',
+  'NuwaxPC.Pages.SpaceLibrary.Index.tableCopySuccess': 'Data table copied successfully',
+  'NuwaxPC.Pages.SpaceLibrary.Index.confirmDeleteComponent': 'Are you sure you want to delete this component?',
+  'NuwaxPC.Pages.SpaceLibrary.Index.exportConfigTitle': 'Export Config - {0}',
+  'NuwaxPC.Pages.SpaceLibrary.Index.exportWorkflowConfigDesc': 'If it contains data tables or knowledge bases, the data itself will not be exported',
+  'NuwaxPC.Pages.SpaceLibrary.Index.exportTableConfigDesc': 'Only the data table structure will be exported, the data itself will not be exported',
+
+  // SpaceLibrary - ComponentItem
+  'NuwaxPC.Pages.SpaceLibrary.ComponentItem.lastEdited': 'Last edited',
+  'NuwaxPC.Pages.SpaceLibrary.ComponentItem.enabled': 'Enabled',
+  'NuwaxPC.Pages.SpaceLibrary.ComponentItem.disabled': 'Disabled',
+  'NuwaxPC.Pages.SpaceLibrary.ComponentItem.published': 'Published',
+
+  // SpaceLibrary - CreateModel
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.addModel': 'Add Model',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.updateModel': 'Update Model',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.testConnection': 'Test Connectivity',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.testConnectionSuccess': 'Model connection test successful',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.modelCreateSuccess': 'Model created successfully',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.modelUpdateSuccess': 'Model updated successfully',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.modelName': 'Model Name',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelName': 'Enter model name',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.modelIdentifier': 'Model Identifier',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelIdentifier': 'Enter model identifier',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.modelDescription': 'Model Description',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelDescription': 'Enter model description',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.modelType': 'Model Type',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.selectModelType': 'Please select model type',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.reasoningModel': 'Reasoning Model',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.yes': 'Yes',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.no': 'No',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.vectorDimension': 'Vector Dimension',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputVectorDimension': 'Enter vector dimension',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.maxOutputTokens': 'Max Output Tokens',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputMaxOutputTokens': 'Enter max output tokens',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.maxContextLength': 'Max Context Length',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputMaxContextLength': 'Enter max context length',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.functionCallSupport': 'Function Call Support',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.selectFunctionCallSupport': 'Select function call support',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.enableModel': 'Enable',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.disableTooltip': 'Once disabled, it can no longer be selected. Agents currently using it will not be affected',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.enable': 'Enable',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.disable': 'Disable',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.apiProtocol': 'API Protocol',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.selectApiProtocol': 'Select API protocol',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.apiConfig': 'API Configuration',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.callStrategy': 'Call Strategy',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.selectCallStrategy': 'Select call strategy',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.weight': 'Weight',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputWeight': 'Enter weight value',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputUrl': 'Enter URL',
+  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputApiKey': 'Enter API KEY',
+
+  // SpaceLibrary - IntranetModel
+  'NuwaxPC.Pages.SpaceLibrary.IntranetModel.description': 'Select "Intranet Model" to expose models on your local network to the platform. You only need to execute one command on your intranet server, and then you can configure your intranet address in the API URL configuration below',
+  'NuwaxPC.Pages.SpaceLibrary.IntranetModel.viewCommand': 'View Intranet Server Command',
+  'NuwaxPC.Pages.SpaceLibrary.IntranetModel.offlineStatus': 'Current status: Offline',
+  'NuwaxPC.Pages.SpaceLibrary.IntranetModel.refreshStatus': 'Refresh Status',
+
+  // SpaceLibrary - IntranetServerCommand
+  'NuwaxPC.Pages.SpaceLibrary.IntranetServerCommand.modalTitle': 'Intranet Server Command',
+  'NuwaxPC.Pages.SpaceLibrary.IntranetServerCommand.windowsTitle': 'Windows (Execute in CMD window)',
+  'NuwaxPC.Pages.SpaceLibrary.IntranetServerCommand.windowsDownload': 'Windows 64-bit Client Download',
+  'NuwaxPC.Pages.SpaceLibrary.IntranetServerCommand.macTitle': 'Mac (Execute in Terminal)',
+  'NuwaxPC.Pages.SpaceLibrary.IntranetServerCommand.macDownload': 'Mac OS 64-bit Client Download',
+  'NuwaxPC.Pages.SpaceLibrary.IntranetServerCommand.linuxTitle': 'Linux (Execute in Terminal)',
+  'NuwaxPC.Pages.SpaceLibrary.IntranetServerCommand.linuxDownload': 'Linux 64-bit Client Download',
+
   // UserManage - Common
   'NuwaxPC.Common.Global.noData': 'No data',
 
@@ -3167,4 +3246,303 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Scheduled Task Creation Limit',
   'NuwaxPC.Layouts.Setting.UsageStatistics.sandboxMemory':
     'Agent Computer Max Memory',
+
+  // Common - additional keys
+  'NuwaxPC.Common.Global.submit': 'Submit',
+  'NuwaxPC.Common.Global.operation': 'Action',
+  'NuwaxPC.Common.Global.edit': 'Edit',
+  'NuwaxPC.Common.Global.delete': 'Delete',
+  'NuwaxPC.Common.Global.add': 'Add',
+  'NuwaxPC.Common.Global.import': 'Import',
+  'NuwaxPC.Common.Global.export': 'Export',
+  'NuwaxPC.Common.Global.pleaseInput': 'Please enter',
+  'NuwaxPC.Common.Global.nameEmpty': 'Name cannot be empty',
+  'NuwaxPC.Common.Global.deleteConfirmTitle': 'Delete Confirmation',
+  'NuwaxPC.Common.Global.deleteConfirmContent': 'Are you sure you want to delete?',
+  'NuwaxPC.Common.Global.selectTime': 'Please select time',
+  'NuwaxPC.Toast.Global.deletedSuccessfully': 'Deleted successfully',
+  'NuwaxPC.Toast.Global.modifiedSuccessfully': 'Modified successfully',
+  'NuwaxPC.Toast.Global.clearedSuccessfully': 'Cleared successfully',
+  'NuwaxPC.Toast.Global.importedSuccessfully': 'Imported successfully',
+  'NuwaxPC.Toast.Global.importFailedRetry': 'Import failed, please retry',
+  'NuwaxPC.Toast.Global.fileUploadFailedRetry':
+    'File upload failed, please retry',
+
+  // Pages - SpaceTable
+  'NuwaxPC.Pages.SpaceTable.Index.fieldNameValidate':
+    'Field name can only contain letters, numbers, underscores, and must start with a letter',
+  'NuwaxPC.Pages.SpaceTable.Index.hint': 'Hint',
+  'NuwaxPC.Pages.SpaceTable.Index.structureModified':
+    'Current table structure has been modified. Save changes?',
+  'NuwaxPC.Pages.SpaceTable.Index.discardChanges': 'Discard Changes',
+  'NuwaxPC.Pages.SpaceTable.Index.confirmSave': 'Save',
+  'NuwaxPC.Pages.SpaceTable.Index.modifyData': 'Edit Data',
+  'NuwaxPC.Pages.SpaceTable.Index.addData': 'Add Data',
+  'NuwaxPC.Pages.SpaceTable.Index.clearConfirm': 'Clear Confirmation',
+  'NuwaxPC.Pages.SpaceTable.AddAndModify.inputPlaceholder': 'Please enter {0}',
+  'NuwaxPC.Pages.SpaceTable.AddAndModify.defaultPlaceholder':
+    'Please enter default value for {0}',
+  'NuwaxPC.Pages.SpaceTable.AddAndModify.integerRange':
+    'Range: [-2147483648, 2147483647]',
+  'NuwaxPC.Pages.SpaceTable.AddAndModify.numberPrecision':
+    'Precision 20 digits, max 14 integer digits, max 6 decimal digits',
+  'NuwaxPC.Pages.SpaceTable.DataTable.totalCount': 'Total {0} records',
+  'NuwaxPC.Pages.SpaceTable.DataTable.itemsPerPage': ' / page',
+  'NuwaxPC.Pages.SpaceTable.DataTable.tabStructure': 'Structure',
+  'NuwaxPC.Pages.SpaceTable.DataTable.tabData': 'Data',
+  'NuwaxPC.Pages.SpaceTable.DeleteSure.warning':
+    'Please delete carefully. All data will be lost after confirmation!',
+  'NuwaxPC.Pages.SpaceTable.DeleteSure.confirmAgain': 'Please confirm again',
+  'NuwaxPC.Pages.SpaceTable.DeleteSure.matchValidation':
+    'Input must exactly match "{0}"',
+  'NuwaxPC.Pages.SpaceTable.DeleteSure.inputPlaceholder':
+    'Please enter "{0}" to confirm deletion',
+  'NuwaxPC.Pages.SpaceTable.StructureTable.systemVariable': 'System Variable',
+  'NuwaxPC.Pages.SpaceTable.StructureTable.serial': 'No.',
+  'NuwaxPC.Pages.SpaceTable.StructureTable.fieldName': 'Field Name',
+  'NuwaxPC.Pages.SpaceTable.StructureTable.fieldDescription':
+    'Field Description',
+  'NuwaxPC.Pages.SpaceTable.StructureTable.fieldType': 'Field Type',
+  'NuwaxPC.Pages.SpaceTable.StructureTable.dataLength': 'Data Length',
+  'NuwaxPC.Pages.SpaceTable.StructureTable.required': 'Required',
+  'NuwaxPC.Pages.SpaceTable.StructureTable.unique': 'Unique',
+  'NuwaxPC.Pages.SpaceTable.StructureTable.enabled': 'Enabled',
+  'NuwaxPC.Pages.SpaceTable.StructureTable.defaultValue': 'Default Value',
+  'NuwaxPC.Pages.SpaceTable.StructureTable.inputFieldName':
+    'Please enter field name',
+  'NuwaxPC.Pages.SpaceTable.StructureTable.inputFieldDescription':
+    'Please enter field description',
+  'NuwaxPC.Pages.SpaceTable.StructureTable.shortText': 'Short Text (0-255)',
+  'NuwaxPC.Pages.SpaceTable.StructureTable.mediumText': 'Long Text (0-16M)',
+  'NuwaxPC.Pages.SpaceTable.TableHeader.recordCount': '{0} records',
+  'NuwaxPC.Pages.SpaceTable.TableOperationBar.excelFileOnly':
+    'Please upload an Excel file (.xlsx or .xls format)',
+  'NuwaxPC.Pages.SpaceTable.TableOperationBar.fileSizeLimit':
+    'File size cannot exceed 100MB',
+  'NuwaxPC.Pages.SpaceTable.TableOperationBar.addField': 'Add Field',
+  'NuwaxPC.Pages.SpaceTable.TableOperationBar.clearAllData': 'Clear All Data',
+  'NuwaxPC.Pages.SpaceTable.ClearDataTooltip.clearDataToModify':
+    'Can be modified after clearing table data',
+  'NuwaxPC.Pages.EditAgent.EventList.emptyDescription':
+    'Content returned by clicking on event binding can be sent to the model',
+  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.fillRequiredParams':
+    'Please fill in the required parameters',
+  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.convIdNotFoundFilePreview':
+    'Conversation ID does not exist, unable to open file preview',
+  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.convIdNotFoundDesktop':
+    'Conversation ID does not exist, unable to open agent computer',
+  'NuwaxPC.Pages.EditAgent.DebugDetails.title': 'Debug Details',
+  'NuwaxPC.Pages.EditAgent.DebugDetails.elapsedTime': 'Elapsed {0} ms',
+  'NuwaxPC.Pages.EditAgent.DebugDetails.calledComponents': 'Called Components',
+
+  // Pages - EditAgent (main index)
+  'NuwaxPC.Pages.EditAgent.convIdNotFoundCreateFile':
+    'Conversation ID does not exist, unable to create file',
+  'NuwaxPC.Pages.EditAgent.deleteFileConfirmTitle':
+    'Are you sure you want to delete this file?',
+  'NuwaxPC.Pages.EditAgent.convIdNotFoundDeleteFile':
+    'Conversation ID does not exist, unable to delete file',
+  'NuwaxPC.Pages.EditAgent.fileNotFoundDelete':
+    'File not found, unable to delete',
+  'NuwaxPC.Pages.EditAgent.convIdNotFoundRenameFile':
+    'Conversation ID does not exist, unable to rename file',
+  'NuwaxPC.Pages.EditAgent.convIdNotFoundSaveFile':
+    'Conversation ID does not exist, unable to save file',
+  'NuwaxPC.Pages.EditAgent.convIdNotFoundUploadFile':
+    'Conversation ID does not exist, unable to upload file',
+  'NuwaxPC.Pages.EditAgent.uploadFileSizeExceed':
+    'Total upload file size cannot exceed {0}MB',
+  'NuwaxPC.Pages.EditAgent.uploadSuccess': 'Uploaded successfully',
+  'NuwaxPC.Pages.EditAgent.convIdNotFoundExport':
+    'Development session ID does not exist or is invalid, unable to export',
+  'NuwaxPC.Pages.EditAgent.exportFailed': 'Export failed',
+  'NuwaxPC.Pages.EditAgent.exportSuccess': 'Exported successfully!',
+  'NuwaxPC.Pages.EditAgent.statUserCount': 'Chat Users',
+  'NuwaxPC.Pages.EditAgent.statConvCount': 'Chat Count',
+  'NuwaxPC.Pages.EditAgent.statCollectCount': 'Favorite Users',
+  'NuwaxPC.Pages.EditAgent.statLikeCount': 'Likes',
+  'NuwaxPC.Pages.EditAgent.exportConfigTitle': 'Export Config - {0}',
+  'NuwaxPC.Pages.EditAgent.exportConfigContent':
+    'If it contains data tables or knowledge bases, the data itself will not be exported',
+  'NuwaxPC.Pages.EditAgent.agentOverview': 'Agent Overview',
+
+  // Pages - EditAgent > ArrangeTitle
+  'NuwaxPC.Pages.EditAgent.ArrangeTitle.selectChatModel':
+    'Please select a chat model',
+  'NuwaxPC.Pages.EditAgent.ArrangeTitle.arrange': 'Arrange',
+
+  // Pages - EditAgent > PreviewAndDebug > PreviewAndDebugHeader
+  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.previewAndDebug':
+    'Preview & Debug',
+  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.debug': 'Debug',
+  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openPreviewPage':
+    'Open Preview Page',
+  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.closeFilePreview':
+    'Close File Preview',
+  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openFilePreview':
+    'Open File Preview',
+  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.closeAgentDesktop':
+    'Close Agent Desktop',
+  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openAgentDesktop':
+    'Open Agent Desktop',
+
+  // Pages - EditAgent > DebugDetails > NodeDetails
+  'NuwaxPC.Pages.EditAgent.NodeDetails.typePlugin': 'Plugin',
+  'NuwaxPC.Pages.EditAgent.NodeDetails.typeWorkflow': 'Workflow',
+  'NuwaxPC.Pages.EditAgent.NodeDetails.typeKnowledge': 'Knowledge Base',
+  'NuwaxPC.Pages.EditAgent.NodeDetails.typeVariable': 'Variable',
+  'NuwaxPC.Pages.EditAgent.NodeDetails.typeTable': 'Data Table',
+  'NuwaxPC.Pages.EditAgent.NodeDetails.typeModel': 'Model',
+  'NuwaxPC.Pages.EditAgent.NodeDetails.typeMCP': 'MCP',
+  'NuwaxPC.Pages.EditAgent.NodeDetails.labelType': 'Type',
+  'NuwaxPC.Pages.EditAgent.NodeDetails.labelStatus': 'Status',
+  'NuwaxPC.Pages.EditAgent.NodeDetails.statusSuccess': 'Success',
+  'NuwaxPC.Pages.EditAgent.NodeDetails.labelName': 'Name',
+  'NuwaxPC.Pages.EditAgent.NodeDetails.labelDuration': 'Duration',
+  'NuwaxPC.Pages.EditAgent.NodeDetails.labelStartTime': 'Start Time',
+  'NuwaxPC.Pages.EditAgent.NodeDetails.labelEndTime': 'End Time',
+
+  // Pages - EditAgent > AgentModelSetting
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.modelSetting': 'Model Settings',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.selectChatModel':
+    'Please select a chat model',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.chatModel': 'Chat Model',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.reasoningModelOptional':
+    'Reasoning Model (Optional)',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.selectReasoningModel':
+    'Please select a reasoning model',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.generateDiversity':
+    'Generation Diversity',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.precisionModeTitle':
+    'Precision Mode:',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.precisionModeDesc1':
+    'Strictly follows instructions to generate content',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.precisionModeDesc2':
+    'Suitable for scenarios requiring accuracy, such as formal documents, code, etc.',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.balanceModeTitle': 'Balance Mode:',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.balanceModeDesc1':
+    'Seeks balance between creativity and precision',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.balanceModeDesc2':
+    'Suitable for most daily applications, generating interesting yet rigorous content',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.creativeModeTitle': 'Creative Mode:',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.creativeModeDesc1':
+    'Inspires creativity and provides novel and unique ideas',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.creativeModeDesc2':
+    'Suitable for scenarios requiring inspiration and unique perspectives, such as brainstorming, creative writing, etc.',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.customModeTitle': 'Custom Mode:',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.customModeDesc1':
+    'Customize generation through advanced settings',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.customModeDesc2':
+    'Fine-tune according to needs for personalized optimization',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.generateRandomness':
+    'Generation Randomness',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.generateRandomnessTooltip':
+    'Temperature: Increasing temperature makes the model output more diverse and creative, while decreasing temperature makes the output follow instructions more closely but reduces diversity. It is recommended not to adjust together with "Top p"',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.topPTooltip':
+    'Top p is the cumulative probability: The model selects from the highest probability words when generating output until the total probability of these words reaches the Top p value. This limits the model to only select high-probability words, thereby controlling output diversity. It is recommended not to adjust together with "Generation Randomness".',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.inputOutputSettings':
+    'Input & Output Settings',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.contextRoundsLabel':
+    'Context Rounds',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.contextRoundsTooltip':
+    'Set the number of conversation history rounds included in the model context. More rounds improve multi-turn dialogue relevance but consume more tokens.',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.maxReplyLengthLabel':
+    'Max Reply Length',
+  'NuwaxPC.Pages.EditAgent.AgentModelSetting.maxReplyLengthTooltip':
+    'Control the maximum token length of model output. Typically, 100 tokens equals approximately 150 Chinese characters.',
+
+  // Pages - EditAgent > SystemTipsWord
+  'NuwaxPC.Pages.EditAgent.SystemTipsWord.systemPromptPlaceholder':
+    'Enter system prompt to shape the model role',
+  'NuwaxPC.Pages.EditAgent.SystemTipsWord.userPromptPlaceholder':
+    'Enter user prompt, preset instructions, questions or requests',
+  'NuwaxPC.Pages.EditAgent.SystemTipsWord.systemPrompt': 'System Prompt',
+  'NuwaxPC.Pages.EditAgent.SystemTipsWord.userPrompt': 'User Prompt',
+  'NuwaxPC.Pages.EditAgent.SystemTipsWord.exitFullscreen': 'Exit Fullscreen',
+  'NuwaxPC.Pages.EditAgent.SystemTipsWord.fullscreenEdit': 'Fullscreen Edit',
+  'NuwaxPC.Pages.EditAgent.SystemTipsWord.autoOptimizeTooltip':
+    'Auto-optimize prompt',
+  'NuwaxPC.Pages.EditAgent.SystemTipsWord.optimize': 'Optimize',
+
+  // Pages - SpacePageDevelop
+  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyModal.title': 'Reverse Proxy',
+  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.path': 'Path',
+  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.pathPlaceholder':
+    'Please enter path',
+  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.backendAddress':
+    'Backend Address',
+  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.backendAddressPlaceholder':
+    'Please enter backend address',
+  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.addConfig':
+    'Add Config',
+  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.savedSuccessfully':
+    'Saved successfully',
+  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.duplicatePathError':
+    'Paths cannot be the same',
+  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.rootPathError':
+    'Root path / is built-in, no configuration needed',
+  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.addPath': 'Add Path',
+  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.editPath': 'Edit Path',
+  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathName': 'Path Name',
+  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathName':
+    'Please enter path name',
+  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathUri': 'Path URI',
+  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathUri':
+    'Please enter path URI',
+  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathUriFormatError':
+    'Please enter a valid path URI, must start with /',
+  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathUriPlaceholder':
+    'Path URI, e.g. /detail/view or /detail/view/{id}',
+  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathDescription':
+    'Path Description',
+  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathDescriptionPlaceholder':
+    'Path description, e.g. Get detail information',
+  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.actionSuccess':
+    '{0} successfully',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigModal.title':
+    'Path Params Config',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigModal.addPath':
+    'Add Path',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.title':
+    'Domain Binding Management',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameTitle':
+    'Please resolve the domain to one of the following CNAME addresses',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameCnValue':
+    'cn-cname.nuwax.com',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameCnDesc':
+    'For users in China, ICP filing is required',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameEnValue':
+    'en-cname.nuwax.com',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameEnDesc':
+    'For overseas users, please comply with local laws and regulations',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.boundDomains':
+    'Bound Domains',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.domainCount':
+    '{0} domains',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.addDomain':
+    'Add New Domain',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.addSuccess':
+    'Added successfully',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.modifySuccess':
+    'Modified successfully',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.deleteSuccess':
+    'Deleted successfully',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.pleaseEnterDomain':
+    'Please enter a domain',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.invalidDomainFormat':
+    'Please enter a valid domain format',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.editDomain':
+    'Edit Domain',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.domainInputPlaceholder':
+    'Please enter domain, e.g. example.com',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameResolveHint':
+    'Please ensure the domain has completed CNAME resolution',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainTitle':
+    'Remove Domain Binding',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainContent':
+    'Are you sure you want to remove domain',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainHint':
+    'After removal, users will not be able to access this project via this domain. Re-binding and resolution required.',
+  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.confirmRemove':
+    'Confirm Removal',
 };

@@ -1,5 +1,6 @@
 import databaseImage from '@/assets/images/database_image.png';
 import { TableHeaderProps } from '@/types/interfaces/dataTable';
+import { dict } from '@/services/i18nRuntime';
 import { jumpBack } from '@/utils/router';
 import { FormOutlined, LeftOutlined } from '@ant-design/icons';
 import { Tag } from 'antd';
@@ -34,7 +35,7 @@ const TableHeader: React.FC<TableHeaderProps> = ({
             onClick={onClick}
             style={{ fontSize: 16 }}
           />
-          <Tag className={cx(styles['tag-style'])}>{`${total}条记录`}</Tag>
+          <Tag className={cx(styles['tag-style'])}>{dict('NuwaxPC.Pages.SpaceTable.TableHeader.recordCount', String(total))}</Tag>
         </div>
       </div>
     </header>

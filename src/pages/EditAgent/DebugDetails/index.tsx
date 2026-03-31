@@ -100,14 +100,14 @@ const DebugDetails: React.FC<DebugDetailsProps> = ({ visible, onClose }) => {
   };
 
   return (
-    <ToggleWrap title="调试详情" onClose={onClose} visible={visible}>
+    <ToggleWrap title={dict('NuwaxPC.Pages.EditAgent.DebugDetails.title')} onClose={onClose} visible={visible}>
       {!!finalResult ? (
         <>
           <header className={cx(styles.header)}>
             <div className={cx('flex', styles['time-box'])}>
               <div className={cx(styles.num, 'flex', 'items-center')}>
                 <span>
-                  耗时{finalResult.endTime - finalResult.startTime} ms
+                  {dict('NuwaxPC.Pages.EditAgent.DebugDetails.elapsedTime', finalResult.endTime - finalResult.startTime)}
                 </span>
                 <span className={cx(styles['vertical-line'])} />
                 <span>{finalResult.totalTokens} Tokens</span>
@@ -124,7 +124,7 @@ const DebugDetails: React.FC<DebugDetailsProps> = ({ visible, onClose }) => {
             </div>
           </header>
           <div className={cx(styles.wrap)}>
-            <h5 className={cx(styles.title)}>调用组件</h5>
+            <h5 className={cx(styles.title)}>{dict('NuwaxPC.Pages.EditAgent.DebugDetails.calledComponents')}</h5>
             {finalResult?.componentExecuteResults?.map(
               (info: ExecuteResultInfo, index: number) => (
                 // 模型可能不存在id，所以使用index作为key
@@ -154,21 +154,21 @@ const DebugDetails: React.FC<DebugDetailsProps> = ({ visible, onClose }) => {
             )}
           </div>
           <div className={cx(styles.wrap)}>
-            <h5 className={cx(styles.title)}>节点详情</h5>
+            <h5 className={cx(styles.title)}>{dict('NuwaxPC.Pages.SystemRunningLogDetailDrawer.nodeDetails')}</h5>
             <NodeDetails node={executeInfo} />
           </div>
           <div className={cx(styles.wrap, styles['render-container'])}>
-            <h5 className={cx(styles.title)}>输入</h5>
+            <h5 className={cx(styles.title)}>{dict('NuwaxPC.Pages.SystemRunningLogDetailDrawer.input')}</h5>
             <pre>{inputData}</pre>
           </div>
           <div className={cx(styles.wrap, styles['render-container'])}>
-            <h5 className={cx(styles.title)}>输出</h5>
+            <h5 className={cx(styles.title)}>{dict('NuwaxPC.Pages.EditAgent.DebugDetails.output')}</h5>
             <pre>{outputData}</pre>
           </div>
         </>
       ) : (
         <div className={cx('flex', 'h-full', 'items-center', 'content-center')}>
-          <Empty description="暂无数据" />
+          <Empty description={dict('NuwaxPC.Common.Global.noData')} />
         </div>
       )}
     </ToggleWrap>

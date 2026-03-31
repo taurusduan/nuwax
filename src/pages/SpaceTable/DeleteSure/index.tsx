@@ -1,4 +1,5 @@
 import { DeleteSureProps } from '@/types/interfaces/dataTable';
+import { dict } from '@/services/i18nRuntime';
 import { WarningFilled } from '@ant-design/icons';
 import { Button, Form, Input, Modal, Space } from 'antd';
 import React, { useEffect, useState } from 'react';
@@ -41,12 +42,12 @@ const DeleteSure: React.FC<DeleteSureProps> = ({
       title={title}
       open={open}
       width={width}
-      okText="提交"
-      cancelText="取消"
+      okText={dict('NuwaxPC.Common.Global.submit')}
+      cancelText={dict('NuwaxPC.Common.Global.cancel')}
       onCancel={onClose}
       footer={[
         <Button key="back" onClick={onClose}>
-          取消
+          {dict('NuwaxPC.Common.Global.cancel')}
         </Button>,
         <Button
           danger
@@ -55,7 +56,7 @@ const DeleteSure: React.FC<DeleteSureProps> = ({
           loading={loading}
           onClick={onFinish}
         >
-          确认
+          {dict('NuwaxPC.Common.Global.confirm')}
         </Button>,
       ]}
     >
@@ -68,11 +69,11 @@ const DeleteSure: React.FC<DeleteSureProps> = ({
         <Form.Item>
           <Space className="clear-box">
             <WarningFilled style={{ color: 'red' }} />
-            <p>请谨慎删除，点击确定后将丢失所有数据！</p>
+            <p>{dict('NuwaxPC.Pages.SpaceTable.DeleteSure.warning')}</p>
           </Space>
         </Form.Item>
         <Form.Item
-          label="请再次确认"
+          label={dict('NuwaxPC.Pages.SpaceTable.DeleteSure.confirmAgain')}
           name="inputStr"
           rules={[
             {
@@ -80,12 +81,12 @@ const DeleteSure: React.FC<DeleteSureProps> = ({
                 value === sureText
                   ? Promise.resolve()
                   : Promise.reject(
-                      new Error(`输入必须与"${sureText}"完全匹配`),
+                      new Error(dict('NuwaxPC.Pages.SpaceTable.DeleteSure.matchValidation', sureText)),
                     ),
             },
           ]}
         >
-          <Input placeholder={`请输入"${sureText}"确认删除`} />
+          <Input placeholder={dict('NuwaxPC.Pages.SpaceTable.DeleteSure.inputPlaceholder', sureText)} />
         </Form.Item>
       </Form>
     </Modal>

@@ -57,6 +57,7 @@ import {
 } from '@/types/interfaces/vncDesktop';
 import { checkFileSizeExceedLimit } from '@/utils';
 import { modalConfirm } from '@/utils/ant-custom';
+import { dict } from '@/services/i18nRuntime';
 import { addBaseTarget } from '@/utils/common';
 import eventBus from '@/utils/eventBus';
 import {
@@ -538,7 +539,7 @@ const EditAgent: React.FC = () => {
     newName: string,
   ): Promise<boolean> => {
     if (!devConversationId) {
-      messageAntd.error('会话ID不存在，无法新建文件');
+      messageAntd.error(dict('NuwaxPC.Pages.EditAgent.convIdNotFoundCreateFile'));
       return false;
     }
 
@@ -580,12 +581,12 @@ const EditAgent: React.FC = () => {
   const handleDeleteFile = async (fileNode: FileNode): Promise<boolean> => {
     return new Promise((resolve) => {
       modalConfirm(
-        '你确定要删除此文件吗?',
+        dict('NuwaxPC.Pages.EditAgent.deleteFileConfirmTitle'),
         fileNode.name,
         async () => {
           try {
             if (!devConversationId) {
-              messageAntd.error('会话ID不存在，无法删除文件');
+              messageAntd.error(dict('NuwaxPC.Pages.EditAgent.convIdNotFoundDeleteFile'));
               resolve(false);
               return;
             }
@@ -607,7 +608,7 @@ const EditAgent: React.FC = () => {
                 (item: StaticFileInfo) => item.fileId === fileNode.id,
               );
               if (!currentFile) {
-                messageAntd.error('文件不存在，无法删除');
+                messageAntd.error(dict('NuwaxPC.Pages.EditAgent.fileNotFoundDelete'));
                 resolve(false);
                 return;
               }
@@ -628,7 +629,7 @@ const EditAgent: React.FC = () => {
             const { code } = await apiUpdateStaticFile(newSkillInfo);
             if (code === SUCCESS_CODE) {
               handleRefreshFileList(devConversationId);
-              messageAntd.success('删除成功');
+              messageAntd.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
               resolve(true);
             } else {
               resolve(false);
@@ -652,7 +653,7 @@ const EditAgent: React.FC = () => {
     newName: string,
   ) => {
     if (!devConversationId) {
-      messageAntd.error('会话ID不存在，无法重命名文件');
+      messageAntd.error(dict('NuwaxPC.Pages.EditAgent.convIdNotFoundRenameFile'));
       return false;
     }
 
@@ -686,7 +687,7 @@ const EditAgent: React.FC = () => {
     }[],
   ) => {
     if (!devConversationId) {
-      messageAntd.error('会话ID不存在，无法保存文件');
+      messageAntd.error(dict('NuwaxPC.Pages.EditAgent.convIdNotFoundSaveFile'));
       return false;
     }
 
@@ -719,7 +720,7 @@ const EditAgent: React.FC = () => {
     filePaths: string[],
   ) => {
     if (!devConversationId) {
-      messageAntd.error('会话ID不存在，无法上传文件');
+      messageAntd.error(dict('NuwaxPC.Pages.EditAgent.convIdNotFoundUploadFile'));
       return;
     }
 
@@ -729,7 +730,7 @@ const EditAgent: React.FC = () => {
     );
     // 如果超过最大上传文件大小，则提示错误
     if (isExceedLimitSize) {
-      messageAntd.error(`上传文件总大小不能超过${maxFileSize}MB`);
+      messageAntd.error(dict('NuwaxPC.Pages.EditAgent.uploadFileSizeExceed').replace('{0}', String(maxFileSize)));
       return;
     }
 
@@ -741,7 +742,7 @@ const EditAgent: React.FC = () => {
         filePaths,
       });
       if (code === SUCCESS_CODE && devConversationId) {
-        messageAntd.success('上传成功');
+        messageAntd.success(dict('NuwaxPC.Pages.EditAgent.uploadSuccess'));
         // 上传成功后，重新查询文件树列表
         await handleRefreshFileList(devConversationId);
       }
@@ -754,7 +755,7 @@ const EditAgent: React.FC = () => {
   const handleExportProject = async () => {
     // 检查项目ID是否有效
     if (!devConversationId) {
-      messageAntd.warning('开发会话ID不存在或无效，无法导出');
+      messageAntd.warning(dict('NuwaxPC.Pages.EditAgent.convIdNotFoundExport'));
       return;
     }
 
@@ -763,7 +764,7 @@ const EditAgent: React.FC = () => {
       // 判断是否成功
       if (!result.success) {
         // 导出失败，显示错误信息
-        const errorMessage = result.error?.message || '导出失败';
+        const errorMessage = result.error?.message || dict('NuwaxPC.Pages.EditAgent.exportFailed');
         messageAntd.warning(errorMessage);
         return;
       }
@@ -771,7 +772,7 @@ const EditAgent: React.FC = () => {
       const filename = `agent-${agentId}-${devConversationId}.zip`;
       // 导出整个项目压缩包
       exportWholeProjectZip(result, filename);
-      messageAntd.success('导出成功！');
+      messageAntd.success(dict('NuwaxPC.Pages.EditAgent.exportSuccess'));
     } catch (error) {
       console.error('导出项目失败:', error);
     }
@@ -787,19 +788,19 @@ const EditAgent: React.FC = () => {
     } = agentInfo?.agentStatistics || {};
     const analyzeList = [
       {
-        label: '对话人数',
+        label: dict('NuwaxPC.Pages.EditAgent.statUserCount'),
         value: userCount,
       },
       {
-        label: '对话次数',
+        label: dict('NuwaxPC.Pages.EditAgent.statConvCount'),
         value: convCount,
       },
       {
-        label: '收藏用户数',
+        label: dict('NuwaxPC.Pages.EditAgent.statCollectCount'),
         value: collectCount,
       },
       {
-        label: '点赞次数',
+        label: dict('NuwaxPC.Pages.EditAgent.statLikeCount'),
         value: likeCount,
       },
     ];
@@ -820,8 +821,8 @@ const EditAgent: React.FC = () => {
       // 导出配置
       case ApplicationMoreActionEnum.Export_Config:
         modalConfirm(
-          `导出配置 - ${agentConfigInfo?.name}`,
-          '如果内部包含数据表或知识库，数据本身不会导出',
+          dict('NuwaxPC.Pages.EditAgent.exportConfigTitle').replace('{0}', agentConfigInfo?.name || ''),
+          dict('NuwaxPC.Pages.EditAgent.exportConfigContent'),
           () => {
             exportConfigFile(
               agentConfigInfo?.id as number,
@@ -1219,7 +1220,7 @@ const EditAgent: React.FC = () => {
       <AnalyzeStatistics
         open={openAnalyze}
         onCancel={() => setOpenAnalyze(false)}
-        title="智能体概览"
+        title={dict('NuwaxPC.Pages.EditAgent.agentOverview')}
         list={agentStatistics}
       />
       {/* 临时会话弹窗 */}

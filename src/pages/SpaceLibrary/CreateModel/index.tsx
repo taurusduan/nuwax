@@ -12,6 +12,7 @@ import {
   apiModelSave,
   apiModelTestConnectivity,
 } from '@/services/modelConfig';
+import { dict } from '@/services/i18nRuntime';
 import { CreateUpdateModeEnum } from '@/types/enums/common';
 import {
   ModelApiProtocolEnum,
@@ -101,7 +102,7 @@ const CreateModel: React.FC<CreateModelProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success('模型检测连接成功');
+      message.success(dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.testConnectionSuccess'));
       setLoadingTestConnection(false);
     },
     onError: () => {
@@ -122,8 +123,8 @@ const CreateModel: React.FC<CreateModelProps> = ({
     onSuccess: (_: null, params: ModelSaveParams[]) => {
       message.success(
         mode === CreateUpdateModeEnum.Create
-          ? '模型已创建成功'
-          : '模型已更新成功',
+          ? dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.modelCreateSuccess')
+          : dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.modelUpdateSuccess'),
       );
       setLoading(false);
       const info = params[0];
@@ -169,7 +170,7 @@ const CreateModel: React.FC<CreateModelProps> = ({
 
   return (
     <Modal
-      title={mode === CreateUpdateModeEnum.Create ? '新增模型' : '更新模型'}
+      title={mode === CreateUpdateModeEnum.Create ? dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.addModel') : dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.updateModel')}
       open={open}
       classNames={{
         content: cx(styles.container),
@@ -190,10 +191,10 @@ const CreateModel: React.FC<CreateModelProps> = ({
             )}
             disabled={!submittable}
           >
-            模型连通性测试
+            {dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.testConnection')}
           </Button>
           <Button className={cx(styles.btn)} type="default" onClick={onCancel}>
-            取消
+            {dict('NuwaxPC.Common.Global.cancel')}
           </Button>
           <Button
             type="primary"
@@ -202,7 +203,7 @@ const CreateModel: React.FC<CreateModelProps> = ({
             className={cx(!submittable && styles['confirm-btn'], styles.btn)}
             disabled={!submittable}
           >
-            确定
+            {dict('NuwaxPC.Common.Global.confirm')}
           </Button>
         </>
       }
@@ -232,27 +233,27 @@ const CreateModel: React.FC<CreateModelProps> = ({
           <Form.Item
             className={cx('flex-1')}
             name="name"
-            label="模型名称"
-            rules={[{ required: true, message: '输入模型名称' }]}
+            label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.modelName')}
+            rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelName') }]}
           >
-            <Input placeholder="输入模型名称" />
+            <Input placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelName')} />
           </Form.Item>
           <Form.Item
             className={cx('flex-1')}
             name="model"
-            label="模型标识"
-            rules={[{ required: true, message: '输入模型标识' }]}
+            label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.modelIdentifier')}
+            rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelIdentifier') }]}
           >
-            <Input placeholder="输入模型标识" />
+            <Input placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelIdentifier')} />
           </Form.Item>
         </div>
         <Form.Item
           name="description"
-          label="模型介绍"
-          rules={[{ required: true, message: '输入模型介绍' }]}
+          label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.modelDescription')}
+          rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelDescription') }]}
         >
           <Input.TextArea
-            placeholder="输入模型介绍"
+            placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelDescription')}
             className="dispose-textarea-count"
             showCount
             maxLength={100}
@@ -262,9 +263,9 @@ const CreateModel: React.FC<CreateModelProps> = ({
         <div className={cx('flex', styles['gap-16'])}>
           <Form.Item
             name="type"
-            label="模型类型"
+            label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.modelType')}
             className={cx('flex-1')}
-            rules={[{ required: true, message: '请选择模型类型' }]}
+            rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.selectModelType') }]}
           >
             <Select
               onChange={setModelType}
@@ -275,19 +276,19 @@ const CreateModel: React.FC<CreateModelProps> = ({
                   ModelTypeEnum.Multi,
                 ].includes(v.value),
               )}
-              placeholder="请选择模型类型"
+              placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.selectModelType')}
             />
           </Form.Item>
           {modelType !== ModelTypeEnum.Embeddings && (
             <Form.Item
               name="isReasonModel"
               className={cx('flex-1')}
-              label="推理模型"
+              label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.reasoningModel')}
             >
               <Radio.Group
                 options={[
-                  { label: '是', value: 1 },
-                  { label: '否', value: 0 },
+                  { label: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.yes'), value: 1 },
+                  { label: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.no'), value: 0 },
                 ]}
               />
             </Form.Item>
@@ -295,9 +296,9 @@ const CreateModel: React.FC<CreateModelProps> = ({
           <ConditionRender condition={modelType === ModelTypeEnum.Embeddings}>
             <Form.Item
               name="dimension"
-              label="向量维度"
+              label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.vectorDimension')}
               className={cx('flex-1')}
-              rules={[{ required: true, message: '填写向量维度' }]}
+              rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputVectorDimension') }]}
             >
               <InputNumber className={cx('w-full')} min={0} />
             </Form.Item>
@@ -309,28 +310,28 @@ const CreateModel: React.FC<CreateModelProps> = ({
             <Form.Item
               name="maxTokens"
               className={cx('flex-1')}
-              label="最大输出token数"
-              rules={[{ required: true, message: '请输入最大输出token数' }]}
+              label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.maxOutputTokens')}
+              rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputMaxOutputTokens') }]}
             >
               <InputNumber className={cx('w-full')} min={0} />
             </Form.Item>
             <Form.Item
               name="maxContextTokens"
               className={cx('flex-1')}
-              label="最大上下文长度"
-              rules={[{ required: true, message: '请输入最大上下文长度' }]}
+              label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.maxContextLength')}
+              rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputMaxContextLength') }]}
             >
               <InputNumber className={cx('w-full')} min={0} />
             </Form.Item>
           </div>
           <Form.Item
             name="functionCall"
-            label="函数调用支持"
-            rules={[{ required: true, message: '函数调用支持' }]}
+            label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.functionCallSupport')}
+            rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.functionCallSupport') }]}
           >
             <Select
               options={MODEL_FUNCTION_CALL_LIST}
-              placeholder="选择函数调用支持"
+              placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.selectFunctionCallSupport')}
             />
           </Form.Item>
         </ConditionRender>
@@ -340,9 +341,9 @@ const CreateModel: React.FC<CreateModelProps> = ({
           name="enabled"
           label={
             <div className={cx('flex', 'items-center')}>
-              <span>是否启用</span>
+              <span>{dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.enableModel')}</span>
               <TooltipIcon
-                title="禁用后，将不可再被选择，正在使用中的智能体不受影响"
+                title={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.disableTooltip')}
                 icon={<InfoCircleOutlined />}
               />
             </div>
@@ -350,45 +351,45 @@ const CreateModel: React.FC<CreateModelProps> = ({
         >
           <Radio.Group
             options={[
-              { label: '启用', value: ModelComponentStatusEnum.Enabled },
-              { label: '禁用', value: ModelComponentStatusEnum.Disabled },
+              { label: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.enable'), value: ModelComponentStatusEnum.Enabled },
+              { label: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.disable'), value: ModelComponentStatusEnum.Disabled },
             ]}
           />
         </Form.Item>
 
         <Form.Item
           name="apiProtocol"
-          label="接口协议"
-          rules={[{ required: true, message: '选择模型接口协议' }]}
+          label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.apiProtocol')}
+          rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.selectApiProtocol') }]}
         >
           <Select
             options={MODEL_API_PROTOCOL_LIST}
-            placeholder="请选择模型接口协议"
+            placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.selectApiProtocol')}
           />
         </Form.Item>
         {/* 隐藏调用策略, 但不去掉，默认选择轮询 -- start */}
-        <Form.Item label={<LabelStar label="接口配置" />} noStyle>
+        <Form.Item label={<LabelStar label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.apiConfig')} />} noStyle>
           <div className={cx(styles.hide)}>
             <Form.Item noStyle>
-              <p>调用策略</p>
+              <p>{dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.callStrategy')}</p>
             </Form.Item>
             <Form.Item
               className={cx('mb-0')}
               noStyle
               name="strategy"
-              rules={[{ required: true, message: '接口配置' }]}
+              rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.apiConfig') }]}
             >
               <Select
                 options={MODEL_STRATEGY_LIST}
                 rootClassName={styles.select}
-                placeholder="请选择调用策略"
+                placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.selectCallStrategy')}
               />
             </Form.Item>
           </div>
         </Form.Item>
         {/* 隐藏调用策略 -- end */}
         <Form.Item noStyle>
-          <LabelStar label="接口配置" className={cx(styles['weight-600'])} />
+          <LabelStar label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.apiConfig')} className={cx(styles['weight-600'])} />
         </Form.Item>
         <Form.List name="apiInfoList">
           {(fields, { add, remove }) => (
@@ -403,25 +404,25 @@ const CreateModel: React.FC<CreateModelProps> = ({
                     {...restField}
                     label={key === 0 ? 'URL' : ''}
                     name={[name, 'url']}
-                    rules={[{ required: true, message: '输入URL' }]}
+                    rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputUrl') }]}
                   >
-                    <Input placeholder="输入URL" />
+                    <Input placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputUrl')} />
                   </Form.Item>
                   <Form.Item
                     {...restField}
                     label={key === 0 ? 'API KEY' : ''}
                     name={[name, 'key']}
-                    rules={[{ required: true, message: '输入API KEY' }]}
+                    rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputApiKey') }]}
                   >
-                    <Input placeholder="输入API KEY" />
+                    <Input placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputApiKey')} />
                   </Form.Item>
                   <Form.Item
                     {...restField}
-                    label={key === 0 ? '权重' : ''}
+                    label={key === 0 ? dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.weight') : ''}
                     name={[name, 'weight']}
-                    rules={[{ required: true, message: '输入权重值' }]}
+                    rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputWeight') }]}
                   >
-                    <InputNumber placeholder="输入权重值" />
+                    <InputNumber placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputWeight')} />
                   </Form.Item>
                   <Form.Item
                     label={
@@ -433,7 +434,7 @@ const CreateModel: React.FC<CreateModelProps> = ({
                         ''
                       )
                     }
-                    rules={[{ required: true, message: '输入权重值' }]}
+                    rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputWeight') }]}
                   >
                     {key !== 0 && (
                       <DeleteOutlined onClick={() => remove(name)} />

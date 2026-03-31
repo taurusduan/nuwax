@@ -1,5 +1,6 @@
 import { TableFieldTypeEnum } from '@/types/enums/dataTable';
 import { DataTableProp, TableFieldInfo } from '@/types/interfaces/dataTable';
+import { dict } from '@/services/i18nRuntime';
 import {
   DeleteOutlined,
   EditOutlined,
@@ -64,10 +65,10 @@ const DataTable: React.FC<DataTableProp> = ({
         pagination={{
           ...pagination,
           onChange: onPageChange,
-          showTotal: (total) => `共 ${total} 条`,
+          showTotal: (total) => dict('NuwaxPC.Pages.SpaceTable.DataTable.totalCount', String(total)),
           showSizeChanger: true,
           locale: {
-            items_per_page: '条 / 页',
+            items_per_page: dict('NuwaxPC.Pages.SpaceTable.DataTable.itemsPerPage'),
           },
         }}
       >
@@ -112,7 +113,7 @@ const DataTable: React.FC<DataTableProp> = ({
 
         {/* 操作列 */}
         <Table.Column
-          title="操作"
+          title={dict('NuwaxPC.Common.Global.operation')}
           dataIndex="action"
           width={100}
           className={'table-action-column-fixed'}
@@ -123,13 +124,13 @@ const DataTable: React.FC<DataTableProp> = ({
               <Button
                 icon={<EditOutlined />}
                 onClick={() => onEdit(record)}
-                title="编辑"
+                title={dict('NuwaxPC.Common.Global.edit')}
                 type="text"
               />
               <Button
                 icon={<DeleteOutlined />}
                 onClick={() => onDel(record)}
-                title="删除"
+                title={dict('NuwaxPC.Common.Global.delete')}
                 type="text"
               />
             </Space>
