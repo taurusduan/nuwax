@@ -149,6 +149,43 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Components.PagePreviewIframe.tooltipBack': 'Back',
   'NuwaxPC.Components.PagePreviewIframe.tooltipForward': 'Forward',
   'NuwaxPC.Components.PagePreviewIframe.tooltipCopyLink': 'Copy link',
+  'NuwaxPC.Components.VncPreview.missingConfig':
+    'Missing required configuration (service URL or container ID).',
+  'NuwaxPC.Components.VncPreview.desktopUnavailable':
+    'Agent desktop is temporarily unavailable. Please retry later.',
+  'NuwaxPC.Components.VncPreview.forbidden':
+    'Access denied (403 Forbidden). Check permission settings.',
+  'NuwaxPC.Components.VncPreview.serviceUnavailableWithStatus':
+    'Service is temporarily unavailable ({0}). Please retry later.',
+  'NuwaxPC.Components.VncPreview.requestFailedWithStatus':
+    'Request failed (HTTP {0}). Check service status.',
+  'NuwaxPC.Components.VncPreview.cannotConnectDesktop':
+    'Unable to connect to agent desktop',
+  'NuwaxPC.Components.VncPreview.connectionClosed': 'Connection closed',
+  'NuwaxPC.Components.VncPreview.shareExpired': 'Share has expired',
+  'NuwaxPC.Components.VncPreview.autoCloseCanceled':
+    'Automatic close has been canceled',
+  'NuwaxPC.Components.VncPreview.autoClosedByIdleTimeout':
+    'Agent desktop connection was closed automatically due to inactivity',
+  'NuwaxPC.Components.VncPreview.connected': 'Connected',
+  'NuwaxPC.Components.VncPreview.connecting': 'Connecting...',
+  'NuwaxPC.Components.VncPreview.disconnected': 'Disconnected',
+  'NuwaxPC.Components.VncPreview.preparingConnection': 'Preparing connection',
+  'NuwaxPC.Components.VncPreview.desktopConnecting':
+    'Connecting to agent desktop...',
+  'NuwaxPC.Components.VncPreview.connectionError': 'Connection error',
+  'NuwaxPC.Components.VncPreview.cannotEstablish':
+    'Unable to establish connection',
+  'NuwaxPC.Components.VncPreview.retry': 'Retry',
+  'NuwaxPC.Components.VncIdleWarningModal.title':
+    'You have been inactive for a while',
+  'NuwaxPC.Components.VncIdleWarningModal.description':
+    'The system will automatically close the agent desktop connection to save resources.',
+  'NuwaxPC.Components.VncIdleWarningModal.confirmText': 'Continue',
+  'NuwaxPC.Components.VncIdleWarningModal.countdownAutoClose':
+    'Auto close in {0}s',
+  'NuwaxPC.Components.VncIdleWarningModal.hintAction':
+    'Any keyboard or mouse action will {0}',
   'NuwaxPC.Pages.Login.inputEmailRequired': 'Please input email',
   'NuwaxPC.Pages.Login.inputPhoneRequired': 'Please input phone number',
   'NuwaxPC.Pages.Login.invalidEmail': 'Please input a valid email',

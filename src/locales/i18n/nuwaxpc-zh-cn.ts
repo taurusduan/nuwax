@@ -134,6 +134,37 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Components.PagePreviewIframe.tooltipBack': '后退',
   'NuwaxPC.Components.PagePreviewIframe.tooltipForward': '前进',
   'NuwaxPC.Components.PagePreviewIframe.tooltipCopyLink': '复制链接',
+  'NuwaxPC.Components.VncPreview.missingConfig':
+    '缺少必要配置（服务地址或容器 ID）',
+  'NuwaxPC.Components.VncPreview.desktopUnavailable':
+    '智能体电脑暂时不可用，请稍后手动刷新重试。',
+  'NuwaxPC.Components.VncPreview.forbidden':
+    '访问被拒绝 (403 Forbidden)，请检查权限配置。',
+  'NuwaxPC.Components.VncPreview.serviceUnavailableWithStatus':
+    '服务暂时不可用 ({0})，请稍后重试。',
+  'NuwaxPC.Components.VncPreview.requestFailedWithStatus':
+    '请求失败 (HTTP {0})，请检查服务状态。',
+  'NuwaxPC.Components.VncPreview.cannotConnectDesktop': '无法连接到智能体电脑',
+  'NuwaxPC.Components.VncPreview.connectionClosed': '连接已断开',
+  'NuwaxPC.Components.VncPreview.shareExpired': '分享已过期',
+  'NuwaxPC.Components.VncPreview.autoCloseCanceled': '已取消自动关闭',
+  'NuwaxPC.Components.VncPreview.autoClosedByIdleTimeout':
+    '由于长时间未操作，已自动关闭智能体电脑连接',
+  'NuwaxPC.Components.VncPreview.connected': '已连接',
+  'NuwaxPC.Components.VncPreview.connecting': '连接中...',
+  'NuwaxPC.Components.VncPreview.disconnected': '未连接',
+  'NuwaxPC.Components.VncPreview.preparingConnection': '准备连接',
+  'NuwaxPC.Components.VncPreview.desktopConnecting': '智能体电脑连接中...',
+  'NuwaxPC.Components.VncPreview.connectionError': '连接错误',
+  'NuwaxPC.Components.VncPreview.cannotEstablish': '无法建立连接',
+  'NuwaxPC.Components.VncPreview.retry': '重试',
+  'NuwaxPC.Components.VncIdleWarningModal.title': '你已长时间未操作',
+  'NuwaxPC.Components.VncIdleWarningModal.description':
+    '系统将自动关闭智能体电脑连接，以节省资源。',
+  'NuwaxPC.Components.VncIdleWarningModal.confirmText': '继续使用',
+  'NuwaxPC.Components.VncIdleWarningModal.countdownAutoClose':
+    '{0} 秒后自动关闭',
+  'NuwaxPC.Components.VncIdleWarningModal.hintAction': '任意键鼠操作将{0}',
   'NuwaxPC.Pages.Login.inputEmailRequired': '请输入邮箱',
   'NuwaxPC.Pages.Login.inputPhoneRequired': '请输入手机号',
   'NuwaxPC.Pages.Login.invalidEmail': '请输入有效邮箱',

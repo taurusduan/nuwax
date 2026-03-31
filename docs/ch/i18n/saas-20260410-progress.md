@@ -1707,3 +1707,22 @@
 - 风险/阻塞：
   - `business-component` 剩余存量主要集中于 `VncPreview`、`FilePreview`、`ConversationDetails` 与 `ThemeConfig` 相关文件
 - 下一步：继续按 Top 清单推进 `VncPreview`（含 `IdleWarningModal` / `useUrlRetry`）批量治理
+
+### 里程碑：Top 模块第七十一批实改（VncPreview 组批量治理）
+
+- 时间：2026-03-31 19:31
+- 任务：清理 `VncPreview` 组件组（`index.tsx`、`components/IdleWarningModal`、`useUrlRetry.ts`）硬编码中文并完成 `t(...)` 接入
+- 执行命令：
+  - `pnpm prettier --write src/components/business-component/VncPreview/index.tsx src/components/business-component/VncPreview/components/IdleWarningModal/index.tsx src/components/business-component/VncPreview/useUrlRetry.ts src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改上述文件
+- 结果摘要：
+  - `VncPreview` 的连接状态、错误提示、空闲超时提示、按钮/Tag 文案统一迁移至 `NuwaxPC.Components.VncPreview.*`
+  - `IdleWarningModal` 默认标题、描述、确认按钮、倒计时和提示文案统一迁移至 `NuwaxPC.Components.VncIdleWarningModal.*`
+  - `useUrlRetry` 与 `VncPreview` 空闲检测日志字符串改为英文，清除治理噪声
+  - `src/components/business-component` 模块命中从 `82` 下降至 `36`
+  - 治理总量从 `2091` 下降至 `2045`（-46）
+- 风险/阻塞：
+  - `business-component` 当前剩余主要集中于 `FilePreview`、`ConversationDetails`、`ThemeConfig`
+- 下一步：继续推进 `FilePreview` 与 `ConversationDetails` 的批量治理
