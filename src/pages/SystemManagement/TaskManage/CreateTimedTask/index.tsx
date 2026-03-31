@@ -1,5 +1,6 @@
 import CustomFormModal from '@/components/CustomFormModal';
 import LabelStar from '@/components/LabelStar';
+import { t } from '@/services/i18nRuntime';
 import { apiAddTimedTask } from '@/services/library';
 import { apiSystemTaskUpdate } from '@/services/systemManage';
 import { CreateUpdateModeEnum } from '@/types/enums/common';
@@ -56,7 +57,9 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
       setLoading(true);
       const resp = await apiAddTimedTask(data);
       if (resp?.code === SUCCESS_CODE) {
-        message.success('定时任务已创建成功');
+        message.success(
+          t('NuwaxPC.Pages.SystemTaskCreateTimedTask.createSuccess'),
+        );
         onCancel?.();
         onConfirm?.();
       }
@@ -71,7 +74,9 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
       setLoading(true);
       const resp = await apiSystemTaskUpdate(data);
       if (resp?.code === SUCCESS_CODE) {
-        message.success('定时任务更新成功');
+        message.success(
+          t('NuwaxPC.Pages.SystemTaskCreateTimedTask.updateSuccess'),
+        );
         onCancel?.();
         onConfirm?.();
       }
@@ -111,7 +116,7 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
   }>['onFinish'] = (values: any) => {
     const {
       taskTarget: { targetId, type: targetType },
-      message,
+      message: taskMessage,
       taskName,
       cron,
       keepConversation,
@@ -137,7 +142,7 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
     if (targetType === AgentComponentTypeEnum.Agent) {
       data = {
         ...data,
-        params: { message: message, variables: params },
+        params: { message: taskMessage, variables: params },
       };
     }
 
@@ -284,7 +289,9 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
       loading={loading}
       form={form}
       title={
-        mode === CreateUpdateModeEnum.Create ? '创建定时任务' : '更新定时任务'
+        mode === CreateUpdateModeEnum.Create
+          ? t('NuwaxPC.Pages.SystemTaskCreateTimedTask.createTitle')
+          : t('NuwaxPC.Pages.SystemTaskCreateTimedTask.updateTitle')
       }
       classNames={{
         content: cx(styles.container),
@@ -306,23 +313,43 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
           keepConversation: false,
         }}
       >
-        <Form.Item name="cron" label={<LabelStar label="定时周期" />}>
+        <Form.Item
+          name="cron"
+          label={
+            <LabelStar
+              label={t('NuwaxPC.Pages.SystemTaskCreateTimedTask.timedPeriod')}
+            />
+          }
+        >
           <TimedPeriodSelector />
         </Form.Item>
 
         <Form.Item
           name="taskName"
-          label="任务名称"
-          rules={[{ required: true, message: '请输入任务名称' }]}
+          label={t('NuwaxPC.Pages.SystemTaskCreateTimedTask.taskName')}
+          rules={[
+            {
+              required: true,
+              message: t(
+                'NuwaxPC.Pages.SystemTaskCreateTimedTask.enterTaskName',
+              ),
+            },
+          ]}
         >
-          <Input placeholder="请输入任务名称" showCount maxLength={100} />
+          <Input
+            placeholder={t(
+              'NuwaxPC.Pages.SystemTaskCreateTimedTask.enterTaskName',
+            )}
+            showCount
+            maxLength={100}
+          />
         </Form.Item>
 
         {/* 任务对象 自定义 Form.Item */}
         <SelectTargetFormItem
           form={form}
           name="taskTarget"
-          label="任务对象"
+          label={t('NuwaxPC.Pages.SystemTaskCreateTimedTask.taskTarget')}
           mode={mode}
           onChange={handleChangeTarget}
         />
@@ -332,19 +359,46 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
           <>
             <Form.Item
               name="keepConversation"
-              label="保持会话"
-              tooltip="选择“否”时将为每次任务执行创建一个全新的会话"
-              rules={[{ required: true, message: '请选择是否保持会话' }]}
+              label={t(
+                'NuwaxPC.Pages.SystemTaskCreateTimedTask.keepConversation',
+              )}
+              tooltip={t(
+                'NuwaxPC.Pages.SystemTaskCreateTimedTask.keepConversationTooltip',
+              )}
+              rules={[
+                {
+                  required: true,
+                  message: t(
+                    'NuwaxPC.Pages.SystemTaskCreateTimedTask.selectKeepConversation',
+                  ),
+                },
+              ]}
             >
-              <Switch checkedChildren="是" unCheckedChildren="否" />
+              <Switch
+                checkedChildren={t(
+                  'NuwaxPC.Pages.SystemTaskCreateTimedTask.yes',
+                )}
+                unCheckedChildren={t(
+                  'NuwaxPC.Pages.SystemTaskCreateTimedTask.no',
+                )}
+              />
             </Form.Item>
             <Form.Item
               name="message"
-              label="任务内容"
-              rules={[{ required: true, message: '请输入任务内容' }]}
+              label={t('NuwaxPC.Pages.SystemTaskCreateTimedTask.taskContent')}
+              rules={[
+                {
+                  required: true,
+                  message: t(
+                    'NuwaxPC.Pages.SystemTaskCreateTimedTask.enterTaskContent',
+                  ),
+                },
+              ]}
             >
               <Input.TextArea
-                placeholder="请输入你要执行的任务信息，信息提供的越详细执行成功率越高"
+                placeholder={t(
+                  'NuwaxPC.Pages.SystemTaskCreateTimedTask.taskContentPlaceholder',
+                )}
                 showCount
                 autoSize={{ minRows: 3, maxRows: 6 }}
                 maxLength={10000}
@@ -358,11 +412,17 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
           name="variables"
           label={
             variables && Array.isArray(variables) && variables.length > 0
-              ? '参数配置'
+              ? t('NuwaxPC.Pages.SystemTaskCreateTimedTask.parameterConfig')
               : ''
           }
           rules={[
-            { required: false, message: '请填写参数配置', type: 'array' },
+            {
+              required: false,
+              message: t(
+                'NuwaxPC.Pages.SystemTaskCreateTimedTask.fillParameterConfig',
+              ),
+              type: 'array',
+            },
           ]}
         >
           <ParameterConfig />

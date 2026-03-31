@@ -1,5 +1,5 @@
 import Created from '@/components/Created';
-import { dict } from '@/services/i18nRuntime';
+import { t } from '@/services/i18nRuntime';
 import {
   AgentAddComponentStatusEnum,
   AgentComponentTypeEnum,
@@ -93,8 +93,8 @@ const SelectTarget: React.FC<SelectTargetProps> = ({
           rules={[
             {
               required: true,
-              message: dict(
-                'NuwaxPC.Pages.SystemTaskManage.selectTargetRequired',
+              message: t(
+                'NuwaxPC.Pages.SystemTaskSelectTargetFormItem.selectLabel',
                 label,
               ),
               type: 'object',

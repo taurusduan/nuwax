@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T08:18:19.527Z
+- 生成时间：2026-03-31T08:26:54.421Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2659
-- hardcoded 中文：2659
+- 总问题数：2636
+- hardcoded 中文：2636
 - legacy System key：0
 - invalid dict key：0
 
@@ -49,7 +49,6 @@
 | src/pages/PublishAudit | 30 | 0 | 0 | 30 |
 | src/layouts/DynamicMenusLayout | 30 | 0 | 0 | 30 |
 | src/pages/EcosystemTemplate | 27 | 0 | 0 | 27 |
-| src/pages/SystemManagement | 26 | 0 | 0 | 26 |
 | src/components/base | 26 | 0 | 0 | 26 |
 | src/pages/SpacePluginCloudTool | 25 | 0 | 0 | 25 |
 | src/pages/EcosystemPlugin | 24 | 0 | 0 | 24 |
@@ -99,6 +98,7 @@
 | src/components/PluginAutoAnalysis | 4 | 0 | 0 | 4 |
 | src/components/PluginTryRunModal | 4 | 0 | 0 | 4 |
 | src/components/RecommendList | 4 | 0 | 0 | 4 |
+| src/pages/SystemManagement | 3 | 0 | 0 | 3 |
 | src/components/EcosystemSelectCategory | 3 | 0 | 0 | 3 |
 | src/components/FoldWrap | 3 | 0 | 0 | 3 |
 | src/pages/openApp | 2 | 0 | 0 | 2 |

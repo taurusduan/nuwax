@@ -293,3 +293,11 @@
 - 影响：
   - 文件树接入范围更清晰，后续新增菜单项无需污染面板域
   - 词典检索与治理报告定位更直接
+
+### D-040 System Task CreateTimedTask 域独立与 `t(...)` 统一
+
+- 决策：`SystemManagement/TaskManage/CreateTimedTask` 及子组件统一使用 `SystemTaskCreateTimedTask`、`SystemTaskSelectTarget`、`SystemTaskSelectTargetFormItem`、`SystemTaskSelectTargetFormItemTarget`、`SystemTaskTimedPeriodSelector` 域，且组件内统一改为 `t(...)`
+- 原因：系统任务创建链路与空间任务创建链路语义相近但场景不同，需要独立域防止后续页面扩展时 key 语义混用；同时用户已明确要求停止新增 `dict(...)`
+- 影响：
+  - 系统任务创建弹窗文案独立维护，后续联调可按系统侧域补词典
+  - `SelectTargetFormItem` 的 `dict(...)` 存量被消除，保持调用规范一致

@@ -1339,3 +1339,29 @@
 - 风险/阻塞：
   - `AppDev` 仍有存量分布在 `DesignViewer/utils`、`useDevLogs`、`index.tsx`
 - 下一步：继续推进 `SystemManagement/TaskManage/CreateTimedTask` 或 `AppDev/useDevLogs` 热点清单
+
+### 里程碑：Top 模块第五十四批实改（System Task CreateTimedTask 全链路）
+
+- 时间：2026-03-31 16:27
+- 任务：批量处理 `SystemManagement/TaskManage/CreateTimedTask` 页面与子组件中文文案
+- 执行命令：
+  - `pnpm prettier --write src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx src/pages/SystemManagement/TaskManage/CreateTimedTask/components/SelectTarget/index.tsx src/pages/SystemManagement/TaskManage/CreateTimedTask/components/SelectTargetFormItem/index.tsx src/pages/SystemManagement/TaskManage/CreateTimedTask/components/SelectTargetFormItemTarget/index.tsx src/pages/SystemManagement/TaskManage/CreateTimedTask/components/TimedPeriodSelector/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/TaskManage/CreateTimedTask/index.tsx`
+    - `src/pages/SystemManagement/TaskManage/CreateTimedTask/components/SelectTarget/index.tsx`
+    - `src/pages/SystemManagement/TaskManage/CreateTimedTask/components/SelectTargetFormItem/index.tsx`
+    - `src/pages/SystemManagement/TaskManage/CreateTimedTask/components/SelectTargetFormItemTarget/index.tsx`
+    - `src/pages/SystemManagement/TaskManage/CreateTimedTask/components/TimedPeriodSelector/index.tsx`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `CreateTimedTask` 页面标题、表单项、校验提示、成功提示、开关文案全部切换为 `t(...)`
+  - `SelectTarget`、`SelectTargetFormItem`、`SelectTargetFormItemTarget`、`TimedPeriodSelector` 子组件文案全部切换为 `t(...)`
+  - `SelectTargetFormItem` 从 `dict(...)` 迁移为 `t(...)`，统一调用约定
+  - 新增 `NuwaxPC.Pages.SystemTaskCreateTimedTask.*`、`SystemTaskSelectTarget.*`、`SystemTaskSelectTargetFormItem.*`、`SystemTaskSelectTargetFormItemTarget.*`、`SystemTaskTimedPeriodSelector.*` 默认中英文词典
+  - 治理总量从 `2659` 下降至 `2636`（-23）
+- 风险/阻塞：
+  - `Created`、`ChatInputHome`、`SkillDetails` 等热点目录仍存在高密度存量
+- 下一步：继续按 inventory Top 模块推进 `src/components/Created` 与 `src/components/ChatInputHome`

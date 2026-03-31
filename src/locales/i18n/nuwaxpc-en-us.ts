@@ -622,6 +622,39 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.SystemLog.operationLog': 'Operation Log',
   'NuwaxPC.Pages.SystemTaskManage.pageTitle': 'Task Management',
   'NuwaxPC.Pages.SystemTaskManage.selectTargetRequired': 'Please select {0}',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.createSuccess':
+    'Timed task created successfully',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.updateSuccess':
+    'Timed task updated successfully',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.createTitle': 'Create Timed Task',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.updateTitle': 'Update Timed Task',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.timedPeriod': 'Timed Period',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.taskName': 'Task Name',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.enterTaskName':
+    'Please enter task name',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.taskTarget': 'Task Target',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.keepConversation':
+    'Keep Conversation',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.keepConversationTooltip':
+    'When selecting "No", a brand-new conversation is created for each task run',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.selectKeepConversation':
+    'Please select whether to keep conversation',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.yes': 'Yes',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.no': 'No',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.taskContent': 'Task Content',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.enterTaskContent':
+    'Please enter task content',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.taskContentPlaceholder':
+    'Please enter the task information to execute. More details improve execution success rate.',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.parameterConfig':
+    'Parameter Configuration',
+  'NuwaxPC.Pages.SystemTaskCreateTimedTask.fillParameterConfig':
+    'Please fill in parameter configuration',
+  'NuwaxPC.Pages.SystemTaskSelectTarget.addItem': 'Add {0}',
+  'NuwaxPC.Pages.SystemTaskSelectTargetFormItem.selectLabel':
+    'Please select {0}',
+  'NuwaxPC.Pages.SystemTaskSelectTargetFormItemTarget.delete': 'Delete',
+  'NuwaxPC.Pages.SystemTaskTimedPeriodSelector.enter': 'Please enter',
   'NuwaxPC.Pages.SystemConfig.pageTitle': 'System Settings',
   'NuwaxPC.Pages.SystemConfig.saveSuccess': 'Saved successfully',
   'NuwaxPC.Pages.SystemConfigBaseFormItem.enterDomain': 'Please enter domain',
