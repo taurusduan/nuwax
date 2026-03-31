@@ -223,6 +223,48 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'This file type is not supported for preview',
   'NuwaxPC.Components.FilePreview.fileTypeLabel': 'File type: .{0}',
   'NuwaxPC.Components.FilePreview.downloadFile': 'Download file',
+  'NuwaxPC.Components.ConversationDetails.pagePreviewName': 'Page Preview',
+  'NuwaxPC.Components.ConversationDetails.requiredParamsWarning':
+    'Please fill in required parameters',
+  'NuwaxPC.Components.ConversationDetails.startConversationWithAgent':
+    'Start a conversation with {0}',
+  'NuwaxPC.Components.ConversationDetails.expandNavigation':
+    'Expand navigation',
+  'NuwaxPC.Components.ConversationDetails.viewAgentDetails':
+    'View agent details',
+  'NuwaxPC.Components.ConversationDetails.openPreviewPage': 'Open preview page',
+  'NuwaxPC.Components.ConversationDetails.noAgentPermission':
+    'You do not have permission for this agent',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.panelTitle':
+    'Navigation Bar',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.styleSectionTitle':
+    'Style',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.colorSectionTitle':
+    'Light/Dark',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.style1Name': 'Style 1',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.style1Description':
+    'Compact mode: 60px width, no text, container with margin and rounded corners.',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.style2Name': 'Style 2',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.style2Description':
+    'Expanded mode: 88px width with text, container without margin or rounded corners.',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.lightMode': 'Light',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.darkMode': 'Dark',
+  'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.panelTitle':
+    'Background Image',
+  'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.systemSectionTitle':
+    'System Background Images',
+  'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.emptyAvailable':
+    'No available background image',
+  'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.customSectionTitle':
+    'Custom Background Images',
+  'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.uploadImage':
+    'Upload Image',
+  'NuwaxPC.Components.ThemeConfigThemeColorPanel.panelTitle': 'Theme Color',
+  'NuwaxPC.Components.ThemeConfigThemeColorPanel.customName': 'Custom',
+  'NuwaxPC.Components.CopyToSpaceComponent.pageCopySuccess':
+    'Page copied successfully',
+  'NuwaxPC.Components.CopyToSpaceComponent.templateCopySuccess':
+    'Template copied successfully',
   'NuwaxPC.Pages.Login.inputEmailRequired': 'Please input email',
   'NuwaxPC.Pages.Login.inputPhoneRequired': 'Please input phone number',
   'NuwaxPC.Pages.Login.invalidEmail': 'Please input a valid email',

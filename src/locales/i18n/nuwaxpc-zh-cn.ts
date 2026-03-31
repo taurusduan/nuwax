@@ -198,6 +198,41 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Components.FilePreview.unsupportedType': '暂不支持预览此文件类型',
   'NuwaxPC.Components.FilePreview.fileTypeLabel': '文件类型: .{0}',
   'NuwaxPC.Components.FilePreview.downloadFile': '下载文件',
+  'NuwaxPC.Components.ConversationDetails.pagePreviewName': '页面预览',
+  'NuwaxPC.Components.ConversationDetails.requiredParamsWarning':
+    '请填写必填参数',
+  'NuwaxPC.Components.ConversationDetails.startConversationWithAgent':
+    '和{0}开始会话',
+  'NuwaxPC.Components.ConversationDetails.expandNavigation': '展开导航',
+  'NuwaxPC.Components.ConversationDetails.viewAgentDetails': '查看智能体详情',
+  'NuwaxPC.Components.ConversationDetails.openPreviewPage': '打开预览页面',
+  'NuwaxPC.Components.ConversationDetails.noAgentPermission':
+    '您无该智能体权限',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.panelTitle': '导航栏',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.styleSectionTitle':
+    '风格样式',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.colorSectionTitle':
+    '深浅色',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.style1Name': '风格1',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.style1Description':
+    '紧凑模式：60px宽度，无文字显示，页面容器有外边距和圆角',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.style2Name': '风格2',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.style2Description':
+    '展开模式：88px宽度，显示文字，页面容器无外边距和圆角',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.lightMode': '浅色',
+  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.darkMode': '深色',
+  'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.panelTitle': '背景图片',
+  'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.systemSectionTitle':
+    '系统自带背景图片',
+  'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.emptyAvailable':
+    '暂无可用背景图',
+  'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.customSectionTitle':
+    '自定义背景图片',
+  'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.uploadImage': '上传图片',
+  'NuwaxPC.Components.ThemeConfigThemeColorPanel.panelTitle': '主题色',
+  'NuwaxPC.Components.ThemeConfigThemeColorPanel.customName': '自定义',
+  'NuwaxPC.Components.CopyToSpaceComponent.pageCopySuccess': '页面复制成功',
+  'NuwaxPC.Components.CopyToSpaceComponent.templateCopySuccess': '模板复制成功',
   'NuwaxPC.Pages.Login.inputEmailRequired': '请输入邮箱',
   'NuwaxPC.Pages.Login.inputPhoneRequired': '请输入手机号',
   'NuwaxPC.Pages.Login.invalidEmail': '请输入有效邮箱',

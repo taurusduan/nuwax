@@ -485,3 +485,11 @@
 - 影响：
   - 文档/表格/PDF/PPT/图片与通用错误提示都可由词典统一管理
   - 页面态文案和错误态文案来源一致，便于后续联调与翻译补齐
+
+### D-064 ThemeConfig 与 ConversationDetails 使用 Components 域分拆
+
+- 决策：将 `ThemeConfig` 子面板按组件名拆分为独立域（`ThemeConfigNavigationStylePanel` / `ThemeConfigBackgroundImagePanel` / `ThemeConfigThemeColorPanel`），`ConversationDetails` 保持单域聚合
+- 原因：主题配置面板可独立复用，拆分域有利于后续抽离；`ConversationDetails` 文案集中于单页面交互，聚合更利于维护
+- 影响：
+  - 既避免单域过大，也避免细碎 key 难追踪
+  - 该策略可复用于其他“页面容器 + 可复用子面板”的组件体系

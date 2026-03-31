@@ -1744,3 +1744,23 @@
 - 风险/阻塞：
   - `business-component` 剩余问题集中在 `ConversationDetails`、`ThemeConfig`、`CopyToSpaceComponent`
 - 下一步：继续推进 `ConversationDetails` 与 `ThemeConfig` 子模块
+
+### 里程碑：Top 模块第七十三批实改（business-component 清零）
+
+- 时间：2026-03-31 19:50
+- 任务：完成 `business-component` 残余模块清理，覆盖 `ConversationDetails`、`ThemeConfig`（Navigation/Background/ThemeColor）与 `CopyToSpaceComponent`
+- 执行命令：
+  - `pnpm prettier --write src/components/business-component/ConversationDetails/index.tsx src/components/business-component/ThemeConfig/NavigationStylePanel.tsx src/components/business-component/ThemeConfig/BackgroundImagePanel.tsx src/components/business-component/ThemeConfig/ThemeColorPanel.tsx src/components/business-component/CopyToSpaceComponent/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改上述文件
+- 结果摘要：
+  - `ConversationDetails` 的页面预览名、必填参数提示、标题和 tooltip、无权限遮罩、复制模板按钮全部接入 `t(...)`
+  - `ThemeConfig` 三个面板文案（风格、深浅色、背景图、主题色）及日志文本完成 key 化/英文化
+  - `CopyToSpaceComponent` 复制成功提示统一迁移至 `NuwaxPC.Components.CopyToSpaceComponent.*`
+  - `src/components/business-component` 模块命中从 `19` 下降至 `0`（模块退出 inventory）
+  - 治理总量从 `2028` 下降至 `2009`（-19）
+  - 报告模块数从 `97` 下降至 `96`
+- 风险/阻塞：
+  - Top 残量已转移至 `src/hooks`（109）与 `src/components/FileTreeView`（97）
+- 下一步：继续按 inventory Top 模块推进 `src/hooks` 与 `src/components/FileTreeView`

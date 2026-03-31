@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T11:24:23.983Z
+- 生成时间：2026-03-31T11:31:49.791Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2028
-- hardcoded 中文：2028
+- 总问题数：2009
+- hardcoded 中文：2009
 - legacy System key：0
 - invalid dict key：0
 
@@ -51,7 +51,6 @@
 | src/pages/SpaceMcpEdit | 19 | 0 | 0 | 19 |
 | src/components/CreateAgent | 19 | 0 | 0 | 19 |
 | src/components/TestRun | 19 | 0 | 0 | 19 |
-| src/components/business-component | 19 | 0 | 0 | 19 |
 | src/components/PublishComponentModal | 18 | 0 | 0 | 18 |
 | src/pages/SpaceMcpCreate | 17 | 0 | 0 | 17 |
 | src/components/MarkdownCustomProcess | 17 | 0 | 0 | 17 |
