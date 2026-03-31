@@ -463,6 +463,8 @@ export interface SystemKnowledgeListParams extends SystemPaginationParams {
   spaceId?: number;
   /** 创建人名称 */
   creatorName?: string;
+  /** 管控状态 */
+  accessControl?: AccessControlEnum;
 }
 
 // 知识库列表分页响应
