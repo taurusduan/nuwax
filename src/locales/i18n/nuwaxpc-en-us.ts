@@ -937,6 +937,10 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Start node cannot be pasted',
   'NuwaxPC.Pages.AntvX6EventHandlers.cannotPasteEndNode':
     'End node cannot be pasted',
+  'NuwaxPC.Pages.AntvX6EventHandlers.unsupportedCopyNodeType':
+    'This node type does not support copy',
+  'NuwaxPC.Pages.AntvX6EventHandlers.nodeCopied': 'Node copied',
+  'NuwaxPC.Pages.AntvX6EventHandlers.copyNodeFirst': 'Please copy a node first',
   'NuwaxPC.Pages.AntvX6EventHandlers.cannotDeleteLoopEdge':
     'Loop node edges cannot be deleted',
   'NuwaxPC.Pages.AntvX6EventHandlers.cannotDeleteStartEndNodes':
@@ -1063,10 +1067,12 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6ComplexNode.none': 'None',
   'NuwaxPC.Pages.AntvX6ComplexNode.skills': 'Skills',
   'NuwaxPC.Pages.AntvX6ComplexNode.input': 'Input',
+  'NuwaxPC.Pages.AntvX6ComplexNode.systemPromptTitle': 'System Prompt',
   'NuwaxPC.Pages.AntvX6ComplexNode.systemPromptTooltip':
     'Provide system-level instructions for the conversation, such as role setting and response logic.',
   'NuwaxPC.Pages.AntvX6ComplexNode.systemPromptPlaceholder':
     'System prompt can reference input variables with {{var}}, {{var.child}}, or {{var[index]}}.',
+  'NuwaxPC.Pages.AntvX6ComplexNode.userPromptTitle': 'User Prompt',
   'NuwaxPC.Pages.AntvX6ComplexNode.userPromptTooltip':
     'Provide user instructions to the model, such as queries or text-based questions.',
   'NuwaxPC.Pages.AntvX6ComplexNode.userPromptPlaceholder':

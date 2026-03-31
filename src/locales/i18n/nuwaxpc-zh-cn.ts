@@ -834,6 +834,10 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6EventHandlers.cannotPasteLoopNode': '不能粘贴循环节点',
   'NuwaxPC.Pages.AntvX6EventHandlers.cannotPasteStartNode': '不能粘贴开始节点',
   'NuwaxPC.Pages.AntvX6EventHandlers.cannotPasteEndNode': '不能粘贴结束节点',
+  'NuwaxPC.Pages.AntvX6EventHandlers.unsupportedCopyNodeType':
+    '该节点类型不支持复制',
+  'NuwaxPC.Pages.AntvX6EventHandlers.nodeCopied': '已复制节点',
+  'NuwaxPC.Pages.AntvX6EventHandlers.copyNodeFirst': '请先复制一个节点',
   'NuwaxPC.Pages.AntvX6EventHandlers.cannotDeleteLoopEdge':
     '不能删除循环节点连线',
   'NuwaxPC.Pages.AntvX6EventHandlers.cannotDeleteStartEndNodes':
@@ -948,10 +952,12 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6ComplexNode.none': '无',
   'NuwaxPC.Pages.AntvX6ComplexNode.skills': '技能',
   'NuwaxPC.Pages.AntvX6ComplexNode.input': '输入',
+  'NuwaxPC.Pages.AntvX6ComplexNode.systemPromptTitle': '系统提示词',
   'NuwaxPC.Pages.AntvX6ComplexNode.systemPromptTooltip':
     '为对话提供系统级指导，如设定人设和回复逻辑。',
   'NuwaxPC.Pages.AntvX6ComplexNode.systemPromptPlaceholder':
     '系统提示词，可以使用{{变量名}}、{{变量名.子变量名}}、 {{变量名[数组索引]}}的方式引用输入参数中的变量',
+  'NuwaxPC.Pages.AntvX6ComplexNode.userPromptTitle': '用户提示词',
   'NuwaxPC.Pages.AntvX6ComplexNode.userPromptTooltip':
     '向模型提供用户指令，如查询或任何基于文本输入的提问。',
   'NuwaxPC.Pages.AntvX6ComplexNode.userPromptPlaceholder':

@@ -734,3 +734,29 @@
 - 风险/阻塞：
   - Antv-X6 仍有重度存量集中在 `index.tsx`、`v3/component/graph.tsx`、`v3/indexV3.tsx`
 - 下一步：继续按 Top 清单推进 `v3/component/graph.tsx` 和 `v3/indexV3.tsx`
+
+### 里程碑：Top 模块第二十八批实改（Antv-X6 Complex/Condition/Event/NodeItem）
+
+- 时间：2026-03-31 10:22
+- 任务：批量改造 `Antv-X6/v3` 核心节点组件文案，覆盖 `complexNode.tsx`、`condition.tsx`、`eventHandlers.tsx`、`nodeItem.tsx`
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/v3/component/complexNode.tsx src/pages/Antv-X6/v3/component/condition.tsx src/pages/Antv-X6/v3/component/eventHandlers.tsx src/pages/Antv-X6/v3/component/nodeItem.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/v3/component/complexNode.tsx`
+    - `src/pages/Antv-X6/v3/component/condition.tsx`
+    - `src/pages/Antv-X6/v3/component/eventHandlers.tsx`
+    - `src/pages/Antv-X6/v3/component/nodeItem.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `complexNode.tsx`：LLM/意图识别/问答/HTTP 工具的标题、提示、placeholder、表单标签全部切换为 `t(...)`
+  - `condition.tsx`：条件分支标题、优先级、AND/OR、引用占位符、新增按钮、否则文案切换为 `t(...)`
+  - `eventHandlers.tsx`：复制/粘贴/删除流程提示文案切换为 `t(...)`，并补齐英文注释
+  - `nodeItem.tsx`：开始/结束/循环/变量/文本处理/代码节点关键文案全部接入 `t(...)`
+  - 词典新增键：`NuwaxPC.Pages.AntvX6EventHandlers.unsupportedCopyNodeType/nodeCopied/copyNodeFirst`、`NuwaxPC.Pages.AntvX6ComplexNode.systemPromptTitle/userPromptTitle`
+  - inventory 问题总量从 `3328` 下降至 `3256`
+- 风险/阻塞：
+  - `Antv-X6` 仍有存量主要集中在 `v3/component/graph.tsx` 与 `v3/indexV3.tsx`（注释和日志文本占比高）
+- 下一步：继续推进 `v3/component/graph.tsx`（先可见提示文案，再批量注释英文化）
