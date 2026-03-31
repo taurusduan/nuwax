@@ -2790,4 +2790,381 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Link URL configuration error',
   'NuwaxPC.Hooks.UseMessageEventDelegate.page': 'Page',
   'NuwaxPC.Hooks.UseSendCode.codeSent': 'Verification code sent',
+
+  // SpaceKnowledge
+  'NuwaxPC.Pages.SpaceKnowledge.DocItem.analyzing': 'Analyzing',
+  'NuwaxPC.Pages.SpaceKnowledge.DocItem.segmentGenerating':
+    'Segment generating',
+  'NuwaxPC.Pages.SpaceKnowledge.DocItem.buildSuccess': 'Build success',
+  'NuwaxPC.Pages.SpaceKnowledge.DocItem.buildFailedRetry':
+    'Build failed, retry',
+  'NuwaxPC.Pages.SpaceKnowledge.DocItem.building': 'Building',
+  'NuwaxPC.Pages.SpaceKnowledge.DocWrap.search': 'Search',
+  'NuwaxPC.Pages.SpaceKnowledge.DocWrap.documentList': 'Document List',
+  'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.docCount': '{0} documents',
+  'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.doc': 'Document',
+  'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.qa': 'QA',
+  'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.addContent': 'Add Content',
+  'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.addQa': 'Add QA',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.autoSegmentClean':
+    'Auto Segment & Clean',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.autoSegmentCleanDesc':
+    'Auto segmentation and preprocessing rules',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.custom': 'Custom',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.customDesc':
+    'Custom segmentation rules, segment length and preprocessing rules',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentDelimiter':
+    'Segment Delimiter',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputSegmentDelimiter':
+    'Enter segment delimiter',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentDelimiterPlaceholder':
+    'Enter segment delimiter, e.g. \\n for line break',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentMaxLength':
+    'Max Segment Length',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputRange100To5000':
+    'Please enter a value between 100-5000',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputValidNumber':
+    'Please enter a valid number!',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentMaxLengthRange':
+    'Max segment length must be between 100 and 5000!',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentOverlapPercent':
+    'Segment Overlap %',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputRange0To100':
+    'Please enter a value between 0-100',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentOverlapRange':
+    'Segment overlap must be between 0 and 100!',
+  'NuwaxPC.Pages.SpaceKnowledge.TextFill.docName': 'Document Name',
+  'NuwaxPC.Pages.SpaceKnowledge.TextFill.inputDocName':
+    'Please enter document name',
+  'NuwaxPC.Pages.SpaceKnowledge.TextFill.docNamePlaceholder':
+    'Enter document name',
+  'NuwaxPC.Pages.SpaceKnowledge.TextFill.docContent': 'Document Content',
+  'NuwaxPC.Pages.SpaceKnowledge.TextFill.inputDocContent':
+    'Please enter document content',
+  'NuwaxPC.Pages.SpaceKnowledge.TextFill.docContentPlaceholder':
+    'Enter document content',
+  'NuwaxPC.Pages.SpaceKnowledge.UploadFile.correctFileType':
+    'Please upload a valid file type',
+  'NuwaxPC.Pages.SpaceKnowledge.UploadFile.supportedFileTypes':
+    'Please upload PDF, TXT, DOC, DOCX, MD, JSON, JPG, PNG, GIF, WEBP, SVG, HEIC, MP4, MKV, MOV, WEBM, MP3, AAC, WAV, FLAC, OGG, OPUS files!',
+  'NuwaxPC.Pages.SpaceKnowledge.UploadFile.fileSizeLimit100MB':
+    'File size cannot exceed 100MB!',
+  'NuwaxPC.Pages.SpaceKnowledge.UploadFile.clickOrDragToUpload':
+    'Click to upload or drag documents here',
+  'NuwaxPC.Pages.SpaceKnowledge.UploadFile.uploadHint':
+    'Supports PDF, TXT, DOC, DOCX, MD, JSON, JPG, PNG, GIF, WEBP, SVG, HEIC, MP4, MKV, MOV, WEBM, MP3, AAC, WAV, FLAC, OGG, OPUS. Up to 300 files, each no larger than 100MB, PDF max 500 pages',
+  'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.docAddSuccess':
+    'Document added successfully',
+  'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.addContent': 'Add Content',
+  'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.nextStep': 'Next',
+  'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.prevStep': 'Previous',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.uploadFailedCheckFormat':
+    'Upload failed, please check the file format',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.excelOnly':
+    'Only Excel files (.xlsx/.xls) are supported',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.fileSizeLimit10MB':
+    'File size cannot exceed 10MB',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.pleaseUploadFile':
+    'Please upload a file',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.batchImportSuccess':
+    'Batch import successful',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.exportFailed': 'Export failed',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateFailed':
+    'Failed to download QA batch Excel template',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.qaBatchImport': 'QA Batch Import',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadExcelTemplate':
+    'Download Excel Import Template',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplate':
+    'Download Template',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.confirmUpload': 'Confirm Upload',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.clickOrDragToUpload':
+    'Click or drag files to this area to upload',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.excelUploadHint':
+    'Only Excel files (.xlsx/.xls), size not exceeding 10MB',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateHint':
+    'Please download the import template first, fill in according to the format and then upload',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.editQa': 'Edit QA',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.addQa': 'Add QA',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.question': 'Question',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputQuestion':
+    'Please enter a question',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputQuestionContent':
+    'Please enter question content',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.answer': 'Answer',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputAnswer': 'Please enter an answer',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputAnswerContent':
+    'Please enter answer content',
+  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.question': 'Question',
+  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.answer': 'Answer',
+  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.vectorized': 'Vectorized',
+  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.completed': 'Completed',
+  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.building': 'Building',
+  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.action': 'Action',
+  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.confirmDeleteQa':
+    'Are you sure you want to delete this QA?',
+  'NuwaxPC.Pages.SpaceKnowledge.DocRename.updateSuccess':
+    'Updated successfully',
+  'NuwaxPC.Pages.SpaceKnowledge.DocRename.rename': 'Rename',
+  'NuwaxPC.Pages.SpaceKnowledge.DocRename.docNameRequired':
+    'Document name cannot be empty',
+  'NuwaxPC.Pages.SpaceKnowledge.DocRename.inputDocName':
+    'Please enter document name',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.editRawSegment':
+    'Edit Raw Segment',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.segmentContent':
+    'Segment Content',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.inputSegmentContent':
+    'Please enter segment content',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.modifySuccess':
+    'Modified successfully',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.previewRawDoc':
+    'Preview Raw Document',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.segmentProcessing':
+    'Segments are being processed',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.edit': 'Edit',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.noSegment': 'No segments',
+  'NuwaxPC.Pages.SpaceKnowledge.Index.deleteDocSuccess':
+    'Document deleted successfully',
+  'NuwaxPC.Pages.SpaceKnowledge.Index.confirmDeleteDoc':
+    'Are you sure you want to delete this document?',
+  'NuwaxPC.Pages.SpaceKnowledge.Index.deleteQaSuccess':
+    'QA deleted successfully',
+  'NuwaxPC.Pages.SpaceKnowledge.Index.searchQuestion': 'Search by question',
+  'NuwaxPC.Pages.SpaceKnowledge.Index.qaUpdateSuccess':
+    'QA updated successfully',
+  'NuwaxPC.Pages.SpaceKnowledge.Index.qaAddSuccess': 'QA added successfully',
+
+  // UserManage - Common
+  'NuwaxPC.Common.Global.noData': 'No data',
+
+  // UserManage - MessageSendModal
+  'NuwaxPC.Pages.UserManage.MessageSendModal.messageSendSuccess':
+    'Message sent successfully',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.noUserFound':
+    'No matching users found',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.pleaseInputMessage':
+    'Please enter message content',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.pleaseSelectMembers':
+    'Please select members to add',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.addMessageUser':
+    'Add Message Recipients',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.sendMessage': 'Send Message',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.inputMessageContent':
+    'Enter message content',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.searchUserPlaceholder':
+    'Enter username, email or phone number, press Enter to search',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.selectAll': 'All',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.selectedMembers':
+    'Selected Members ({0})',
+
+  // UserManage - DataPermissionModal
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.dataPermissionTitle':
+    'Data Permissions - {0}',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.dailyTokenLimit':
+    'Daily Token Limit',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.dailyTokenLimitTooltip':
+    'Daily token limit, -1 means unlimited',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.dailyTokenLimitPlaceholder':
+    'Enter daily token limit',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxSpaceCount':
+    'Max Workspace Count',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxSpaceCountTooltip':
+    'Max workspace count, -1 means unlimited',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxAgentCount':
+    'Max Agent Count',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxAgentCountTooltip':
+    'Max agent count, -1 means unlimited',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxPageAppCount':
+    'Max Web App Count',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxPageAppCountTooltip':
+    'Max web app count, -1 means unlimited',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxKnowledgeCount':
+    'Max Knowledge Base Count',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxKnowledgeCountTooltip':
+    'Max knowledge base count, -1 means unlimited',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGb':
+    'Knowledge Storage Limit (GB)',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGbTooltip':
+    'Knowledge storage limit (GB), -1 means unlimited',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxDataTableCount':
+    'Max Data Table Count',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxDataTableCountTooltip':
+    'Max data table count, -1 means unlimited',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCount':
+    'Max Scheduled Task Count',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCountTooltip':
+    'Max scheduled task count, -1 means unlimited',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGb':
+    'Agent Computer Memory (GB)',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGbTooltip':
+    'Agent computer memory (GB, leave empty for default 4GB)',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerCpuCores':
+    'Agent Computer CPU Cores',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerCpuCoresTooltip':
+    'Agent computer CPU cores (leave empty for default value)',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimit':
+    'Daily Agent Chat Limit',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimitTooltip':
+    'Daily agent chat limit, -1 means unlimited',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimit':
+    'Daily Web App Chat Limit',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimitTooltip':
+    'Daily web app chat limit, -1 means unlimited',
+
+  // UserManage - UserAuthModal
+  'NuwaxPC.Pages.UserManage.UserAuthModal.role': 'Role',
+  'NuwaxPC.Pages.UserManage.UserAuthModal.userGroup': 'User Group',
+  'NuwaxPC.Pages.UserManage.UserAuthModal.authTitle': 'Authorization - {0}',
+  'NuwaxPC.Pages.UserManage.UserAuthModal.selectAll': 'Select All',
+  'NuwaxPC.Pages.UserManage.UserAuthModal.deselectAll': 'Deselect All',
+
+  // UserManage - UserFormModal
+  'NuwaxPC.Pages.UserManage.UserFormModal.editUser': 'Edit User',
+  'NuwaxPC.Pages.UserManage.UserFormModal.addUser': 'Add User',
+  'NuwaxPC.Pages.UserManage.UserFormModal.userName': 'Username',
+  'NuwaxPC.Pages.UserManage.UserFormModal.inputUserName':
+    'Please enter username',
+  'NuwaxPC.Pages.UserManage.UserFormModal.nickName': 'Nickname',
+  'NuwaxPC.Pages.UserManage.UserFormModal.inputNickName':
+    'Please enter nickname (full name)',
+  'NuwaxPC.Pages.UserManage.UserFormModal.phoneNumber': 'Phone Number',
+  'NuwaxPC.Pages.UserManage.UserFormModal.inputPhoneNumber':
+    'Please enter phone number',
+  'NuwaxPC.Pages.UserManage.UserFormModal.emailAddress': 'Email Address',
+  'NuwaxPC.Pages.UserManage.UserFormModal.inputEmailAddress':
+    'Please enter email address',
+  'NuwaxPC.Pages.UserManage.UserFormModal.loginPassword': 'Login Password',
+  'NuwaxPC.Pages.UserManage.UserFormModal.inputLoginPassword':
+    'Please enter login password',
+  'NuwaxPC.Pages.UserManage.UserFormModal.userType': 'User Type',
+  'NuwaxPC.Pages.UserManage.UserFormModal.admin': 'Admin',
+  'NuwaxPC.Pages.UserManage.UserFormModal.normalUser': 'Normal User',
+
+  // UserManage - UserViewMenuModal
+  'NuwaxPC.Pages.UserManage.UserViewMenuModal.viewMenuResourcePermission':
+    'View Menu Resource Permissions',
+  'NuwaxPC.Pages.UserManage.UserViewMenuModal.resourceId': 'Resource {0}',
+  'NuwaxPC.Pages.UserManage.UserViewMenuModal.menuId': 'Menu {0}',
+
+  // UserManage - Index
+  'NuwaxPC.Pages.UserManage.Index.enableSuccess': 'Enabled successfully',
+  'NuwaxPC.Pages.UserManage.Index.disableSuccess': 'Disabled successfully',
+  'NuwaxPC.Pages.UserManage.Index.edit': 'Edit',
+  'NuwaxPC.Pages.UserManage.Index.disable': 'Disable',
+  'NuwaxPC.Pages.UserManage.Index.enable': 'Enable',
+  'NuwaxPC.Pages.UserManage.Index.auth': 'Authorize',
+  'NuwaxPC.Pages.UserManage.Index.viewMenuResourcePermission':
+    'View Menu Permissions',
+  'NuwaxPC.Pages.UserManage.Index.viewDataPermission': 'View Data Permissions',
+  'NuwaxPC.Pages.UserManage.Index.userName': 'Username',
+  'NuwaxPC.Pages.UserManage.Index.userFullName': 'Full Name',
+  'NuwaxPC.Pages.UserManage.Index.nickName': 'Nickname',
+  'NuwaxPC.Pages.UserManage.Index.phoneNumber': 'Phone',
+  'NuwaxPC.Pages.UserManage.Index.email': 'Email',
+  'NuwaxPC.Pages.UserManage.Index.type': 'Type',
+  'NuwaxPC.Pages.UserManage.Index.admin': 'Admin',
+  'NuwaxPC.Pages.UserManage.Index.member': 'Member',
+  'NuwaxPC.Pages.UserManage.Index.status': 'Status',
+  'NuwaxPC.Pages.UserManage.Index.normal': 'Active',
+  'NuwaxPC.Pages.UserManage.Index.disabled': 'Disabled',
+  'NuwaxPC.Pages.UserManage.Index.joinTime': 'Join Time',
+  'NuwaxPC.Pages.UserManage.Index.action': 'Action',
+  'NuwaxPC.Pages.UserManage.Index.userManage': 'User Management',
+  'NuwaxPC.Pages.UserManage.Index.addUser': 'Add User',
+  'NuwaxPC.Pages.UserManage.Index.sendMessage': 'Send Message',
+
+  // Layouts - Setting
+  // Layouts - Setting > ResetPassword
+  'NuwaxPC.Layouts.Setting.ResetPassword.title': 'Reset Password',
+  'NuwaxPC.Layouts.Setting.ResetPassword.newPassword': 'New Password',
+  'NuwaxPC.Layouts.Setting.ResetPassword.inputNewPassword':
+    'Please enter new password!',
+  'NuwaxPC.Layouts.Setting.ResetPassword.inputCorrectPassword':
+    'Please enter a valid password!',
+  'NuwaxPC.Layouts.Setting.ResetPassword.confirmPassword': 'Confirm Password',
+  'NuwaxPC.Layouts.Setting.ResetPassword.inputConfirmPassword':
+    'Please enter the password again!',
+  'NuwaxPC.Layouts.Setting.ResetPassword.passwordMismatch':
+    'Passwords do not match!',
+  'NuwaxPC.Layouts.Setting.ResetPassword.inputCorrectNewPassword':
+    'Please enter a valid new password!',
+  'NuwaxPC.Layouts.Setting.ResetPassword.placeholderNewPassword':
+    'Please enter new password',
+  'NuwaxPC.Layouts.Setting.ResetPassword.placeholderConfirmPassword':
+    'Please enter the password again',
+  'NuwaxPC.Layouts.Setting.ResetPassword.verificationCode': 'Verification Code',
+  'NuwaxPC.Layouts.Setting.ResetPassword.inputVerificationCode':
+    'Please enter verification code',
+  'NuwaxPC.Layouts.Setting.ResetPassword.inputCorrectCode':
+    'Please enter a valid verification code!',
+  'NuwaxPC.Layouts.Setting.ResetPassword.placeholderCode':
+    'Please enter verification code',
+  'NuwaxPC.Layouts.Setting.ResetPassword.sendCode': 'Send Code',
+  'NuwaxPC.Layouts.Setting.ResetPassword.submit': 'Confirm Change',
+  'NuwaxPC.Layouts.Setting.ResetPassword.resetSuccess': 'Reset successful',
+
+  // Layouts - Setting > SettingEmail
+  'NuwaxPC.Layouts.Setting.SettingEmail.emailBindTitle': 'Email Binding',
+  'NuwaxPC.Layouts.Setting.SettingEmail.phoneBindTitle': 'Phone Binding',
+  'NuwaxPC.Layouts.Setting.SettingEmail.emailAddress': 'Email Address',
+  'NuwaxPC.Layouts.Setting.SettingEmail.phoneNumber': 'Phone Number',
+  'NuwaxPC.Layouts.Setting.SettingEmail.inputEmailAddress':
+    'Please enter email address',
+  'NuwaxPC.Layouts.Setting.SettingEmail.inputPhoneNumber':
+    'Please enter phone number',
+  'NuwaxPC.Layouts.Setting.SettingEmail.inputCorrectEmail':
+    'Please enter a valid email address!',
+  'NuwaxPC.Layouts.Setting.SettingEmail.inputCorrectPhone':
+    'Please enter a valid phone number!',
+  'NuwaxPC.Layouts.Setting.SettingEmail.verificationCode': 'Verification Code',
+  'NuwaxPC.Layouts.Setting.SettingEmail.inputVerificationCode':
+    'Please enter verification code',
+  'NuwaxPC.Layouts.Setting.SettingEmail.inputCorrectCode':
+    'Please enter a valid verification code!',
+  'NuwaxPC.Layouts.Setting.SettingEmail.placeholderCode':
+    'Please enter verification code',
+  'NuwaxPC.Layouts.Setting.SettingEmail.sendCode': 'Send Code',
+  'NuwaxPC.Layouts.Setting.SettingEmail.bind': 'Bind',
+  'NuwaxPC.Layouts.Setting.SettingEmail.bindSuccess': 'Binding successful',
+
+  // Layouts - Setting > ThemeSwitchPanel
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.title': 'Theme Switch',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.colorUpdateFailed':
+    'Failed to update theme color',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.autoSwitchNav':
+    'Automatically switched to {0} navigation bar',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.dark': 'dark',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.light': 'light',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.backgroundUpdateFailed':
+    'Failed to update background image',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.navStyleUpdateFailed':
+    'Failed to update navigation style',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.autoSwitchBackground':
+    'Automatically switched to {0} to match {1} navigation bar',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.navThemeToggleFailed':
+    'Failed to toggle navigation theme',
+
+  // Layouts - Setting > UsageStatistics
+  'NuwaxPC.Layouts.Setting.UsageStatistics.title': 'Usage Statistics',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.query': 'Query',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.columnType': 'Type',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.columnDaily': 'Daily',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.columnOther': 'Other',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.tokenLimit': 'Token Usage Limit',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.agentPrompt': 'Agent Chat Count',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.pagePrompt':
+    'Web App Dev Chat Count',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.workspace':
+    'Workspace Creation Limit',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.agent': 'Agent Creation Limit',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.pageApp': 'Web App Creation Limit',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.knowledgeBase':
+    'Knowledge Base Creation Limit',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.kbStorage':
+    'Knowledge Base Storage Limit',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.table': 'Data Table Creation Limit',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.task':
+    'Scheduled Task Creation Limit',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.sandboxMemory':
+    'Agent Computer Max Memory',
 };

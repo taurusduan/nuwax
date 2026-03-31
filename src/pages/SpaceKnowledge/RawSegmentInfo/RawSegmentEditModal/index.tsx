@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import { Form, Input, Modal } from 'antd';
 import React, { useEffect } from 'react';
 
@@ -37,7 +38,9 @@ const RawSegmentEditModal: React.FC<RawSegmentEditModalProps> = ({
 
   return (
     <Modal
-      title="编辑原始分段"
+      title={dict(
+        'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.editRawSegment',
+      )}
       open={open}
       onOk={handleOk}
       onCancel={onCancel}
@@ -47,15 +50,24 @@ const RawSegmentEditModal: React.FC<RawSegmentEditModalProps> = ({
       <Form form={form} layout="vertical">
         <Form.Item
           name="rawTxt"
-          label="分段内容"
+          label={dict(
+            'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.segmentContent',
+          )}
           rules={[
-            { required: true, message: '请输入分段内容' },
+            {
+              required: true,
+              message: dict(
+                'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.inputSegmentContent',
+              ),
+            },
             // { max: 2000, message: '分段内容不能超过2000个字符' },
           ]}
         >
           <Input.TextArea
             rows={16}
-            placeholder="请输入分段内容"
+            placeholder={dict(
+              'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.inputSegmentContent',
+            )}
             showCount
             // maxLength={2000}
           />

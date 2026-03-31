@@ -230,7 +230,7 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
                   leftColumnMembers.length > 0
                 }
               >
-                全部
+                {dict('NuwaxPC.Pages.UserManage.MessageSendModal.selectAll')}
               </Checkbox>
               <Checkbox.Group
                 style={{ display: 'block', marginTop: 10 }}
@@ -247,7 +247,10 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
 
             <div style={{ width: '300px' }}>
               <h3 style={{ marginBottom: 15 }}>
-                已选成员 ({rightColumnMembers.length})
+                {dict(
+                  'NuwaxPC.Pages.UserManage.MessageSendModal.selectedMembers',
+                  String(rightColumnMembers.length),
+                )}
               </h3>
               <List
                 dataSource={rightColumnMembers}

@@ -77,26 +77,42 @@ const QaModal: React.FC<QaModalProps> = ({
       >
         <Form.Item
           name="question"
-          label="问题"
-          rules={[{ required: true, message: '请输入问题' }]}
+          label={dict('NuwaxPC.Pages.SpaceKnowledge.QaModal.question')}
+          rules={[
+            {
+              required: true,
+              message: dict(
+                'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputQuestion',
+              ),
+            },
+          ]}
         >
           <Input.TextArea
             className="dispose-textarea-count"
             autoSize={{ minRows: 5, maxRows: 8 }}
-            placeholder="请输入问题内容"
+            placeholder={dict(
+              'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputQuestionContent',
+            )}
             showCount
             maxLength={500}
           />
         </Form.Item>
         <Form.Item
           name="answer"
-          label="答案"
-          rules={[{ required: true, message: '请输入答案' }]}
+          label={dict('NuwaxPC.Pages.SpaceKnowledge.QaModal.answer')}
+          rules={[
+            {
+              required: true,
+              message: dict('NuwaxPC.Pages.SpaceKnowledge.QaModal.inputAnswer'),
+            },
+          ]}
         >
           <Input.TextArea
             className="dispose-textarea-count"
             autoSize={{ minRows: 5, maxRows: 8 }}
-            placeholder="请输入答案内容"
+            placeholder={dict(
+              'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputAnswerContent',
+            )}
             showCount
             maxLength={5000}
           />

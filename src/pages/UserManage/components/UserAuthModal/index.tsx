@@ -253,7 +253,7 @@ const UserAuthModal: React.FC<UserAuthModalProps> = ({
                   </Checkbox.Group>
                 ) : (
                   <div className={cx('py-16')}>
-                    <Empty description="暂无数据" />
+                    <Empty description={dict('NuwaxPC.Common.Global.noData')} />
                   </div>
                 )}
               </div>
@@ -263,7 +263,7 @@ const UserAuthModal: React.FC<UserAuthModalProps> = ({
       : []),
     {
       key: 'group',
-      label: '用户组',
+      label: dict('NuwaxPC.Pages.UserManage.UserAuthModal.userGroup'),
       children: (
         <div className={cx(styles.tabContent)}>
           {groupList && groupList.length > 0 ? (
@@ -282,7 +282,7 @@ const UserAuthModal: React.FC<UserAuthModalProps> = ({
             </Checkbox.Group>
           ) : (
             <div className={cx('py-16')}>
-              <Empty description="暂无数据" />
+              <Empty description={dict('NuwaxPC.Common.Global.noData')} />
             </div>
           )}
         </div>
@@ -293,7 +293,7 @@ const UserAuthModal: React.FC<UserAuthModalProps> = ({
   return (
     <CustomFormModal
       form={dummyForm}
-      title={`授权 - ${userName}`}
+      title={dict('NuwaxPC.Pages.UserManage.UserAuthModal.authTitle', userName)}
       open={open}
       loading={loading}
       onCancel={onCancel}
@@ -324,7 +324,9 @@ const UserAuthModal: React.FC<UserAuthModalProps> = ({
             size="small"
             onClick={selectAllConfig.onSelectAll}
           >
-            {selectAllConfig.isAllSelected ? '取消全选' : '全选'}
+            {selectAllConfig.isAllSelected
+              ? dict('NuwaxPC.Pages.UserManage.UserAuthModal.deselectAll')
+              : dict('NuwaxPC.Pages.UserManage.UserAuthModal.selectAll')}
           </Button>
         )}
       </div>

@@ -2469,4 +2469,337 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
     '链接地址配置错误',
   'NuwaxPC.Hooks.UseMessageEventDelegate.page': '页面',
   'NuwaxPC.Hooks.UseSendCode.codeSent': '验证码已发送',
+
+  // SpaceKnowledge
+  'NuwaxPC.Pages.SpaceKnowledge.DocItem.analyzing': '分析中',
+  'NuwaxPC.Pages.SpaceKnowledge.DocItem.segmentGenerating': '分段生成中',
+  'NuwaxPC.Pages.SpaceKnowledge.DocItem.buildSuccess': '构建成功',
+  'NuwaxPC.Pages.SpaceKnowledge.DocItem.buildFailedRetry': '构建失败,重新构建',
+  'NuwaxPC.Pages.SpaceKnowledge.DocItem.building': '构建中',
+  'NuwaxPC.Pages.SpaceKnowledge.DocWrap.search': '搜索',
+  'NuwaxPC.Pages.SpaceKnowledge.DocWrap.documentList': '文档列表',
+  'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.docCount': '{0}个文档',
+  'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.doc': '文档',
+  'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.qa': 'QA问答',
+  'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.addContent': '添加内容',
+  'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.addQa': '添加QA问答',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.autoSegmentClean': '自动分段与清洗',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.autoSegmentCleanDesc':
+    '自动分段与预处理规则',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.custom': '自定义',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.customDesc':
+    '自定义分段规则，分段长度及预处理规则',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentDelimiter': '分段标识符',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputSegmentDelimiter':
+    '输入分段标识符',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentDelimiterPlaceholder':
+    '输入分段标识符，例如 \\n 换行',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentMaxLength': '分段最大长度',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputRange100To5000':
+    '请输入100-5000的数值',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputValidNumber':
+    '请输入正确的数字!',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentMaxLengthRange':
+    '分段最大长度不得小于100，大于5000!',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentOverlapPercent': '分段重叠度%',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputRange0To100':
+    '请输入0-100的数值',
+  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentOverlapRange':
+    '分段重叠度不得小于0，大于100!',
+  'NuwaxPC.Pages.SpaceKnowledge.TextFill.docName': '文档名称',
+  'NuwaxPC.Pages.SpaceKnowledge.TextFill.inputDocName': '请输入文档名称',
+  'NuwaxPC.Pages.SpaceKnowledge.TextFill.docNamePlaceholder': '输入文档名称',
+  'NuwaxPC.Pages.SpaceKnowledge.TextFill.docContent': '文档内容',
+  'NuwaxPC.Pages.SpaceKnowledge.TextFill.inputDocContent': '请输入文档内容',
+  'NuwaxPC.Pages.SpaceKnowledge.TextFill.docContentPlaceholder': '输入文档内容',
+  'NuwaxPC.Pages.SpaceKnowledge.UploadFile.correctFileType':
+    '请上传正确的文件类型',
+  'NuwaxPC.Pages.SpaceKnowledge.UploadFile.supportedFileTypes':
+    '请上传 PDF、TXT、DOC、DOCX、MD、JSON、JPG、PNG、GIF、WEBP、SVG、HEIC、MP4、MKV、MOV、WEBM、MP3、AAC、WAV、FLAC、OGG、OPUS 类型文件!',
+  'NuwaxPC.Pages.SpaceKnowledge.UploadFile.fileSizeLimit100MB':
+    '文件大小不能超过100MB!',
+  'NuwaxPC.Pages.SpaceKnowledge.UploadFile.clickOrDragToUpload':
+    '点击上传或拖拽文档到这里',
+  'NuwaxPC.Pages.SpaceKnowledge.UploadFile.uploadHint':
+    '支持 PDF、TXT、DOC、DOCX、MD、JSON、JPG、PNG、GIF、WEBP、SVG、HEIC、MP4、MKV、MOV、WEBM、MP3、AAC、WAV、FLAC、OGG、OPUS，最多可上传 300 个文件，每个文件不超过 100MB， PDF 最多 500 页',
+  'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.docAddSuccess':
+    '文档添加成功',
+  'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.addContent': '添加内容',
+  'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.nextStep': '下一步',
+  'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.prevStep': '上一步',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.uploadFailedCheckFormat':
+    '上传失败，请检查文件格式是否正确',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.excelOnly':
+    '仅支持Excel文件(.xlsx/.xls)',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.fileSizeLimit10MB':
+    '文件大小不能超过10MB',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.pleaseUploadFile': '请上传文件',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.batchImportSuccess':
+    '批量导入成功',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.exportFailed': '导出失败',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateFailed':
+    '下载QA批量excel模板失败',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.qaBatchImport': 'QA批量导入',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadExcelTemplate':
+    '下载Excel导入模板',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplate': '下载模板',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.confirmUpload': '确认上传',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.clickOrDragToUpload':
+    '点击或拖拽文件到此区域上传',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.excelUploadHint':
+    '仅支持Excel文件(.xlsx/.xls)，大小不超过10MB',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateHint':
+    '请先下载导入模板，按照格式填写后上传',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.editQa': '编辑QA问答',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.addQa': '添加QA问答',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.question': '问题',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputQuestion': '请输入问题',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputQuestionContent': '请输入问题内容',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.answer': '答案',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputAnswer': '请输入答案',
+  'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputAnswerContent': '请输入答案内容',
+  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.question': '问题',
+  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.answer': '答案',
+  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.vectorized': '向量化',
+  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.completed': '已完成',
+  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.building': '构建中',
+  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.action': '操作',
+  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.confirmDeleteQa':
+    '你确定要删除此QA问答吗?',
+  'NuwaxPC.Pages.SpaceKnowledge.DocRename.updateSuccess': '更新成功',
+  'NuwaxPC.Pages.SpaceKnowledge.DocRename.rename': '重命名',
+  'NuwaxPC.Pages.SpaceKnowledge.DocRename.docNameRequired': '文档名称不能为空',
+  'NuwaxPC.Pages.SpaceKnowledge.DocRename.inputDocName': '请输入文档名称',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.editRawSegment':
+    '编辑原始分段',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.segmentContent': '分段内容',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.inputSegmentContent':
+    '请输入分段内容',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.modifySuccess': '修改成功',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.previewRawDoc': '预览原始文档',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.segmentProcessing':
+    '分段正在处理中',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.edit': '编辑',
+  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.noSegment': '暂无分段',
+  'NuwaxPC.Pages.SpaceKnowledge.Index.deleteDocSuccess': '删除文档成功',
+  'NuwaxPC.Pages.SpaceKnowledge.Index.confirmDeleteDoc':
+    '你确定要删除此文档吗?',
+  'NuwaxPC.Pages.SpaceKnowledge.Index.deleteQaSuccess': '删除QA问答成功',
+  'NuwaxPC.Pages.SpaceKnowledge.Index.searchQuestion': '请输入问题搜索',
+  'NuwaxPC.Pages.SpaceKnowledge.Index.qaUpdateSuccess': 'QA问答更新成功',
+  'NuwaxPC.Pages.SpaceKnowledge.Index.qaAddSuccess': '添加QA问答成功',
+
+  // UserManage - Common
+  'NuwaxPC.Common.Global.noData': '暂无数据',
+
+  // UserManage - MessageSendModal
+  'NuwaxPC.Pages.UserManage.MessageSendModal.messageSendSuccess':
+    '消息发送成功',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.noUserFound': '未搜索到相关用户',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.pleaseInputMessage':
+    '请输入消息内容',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.pleaseSelectMembers':
+    '请选择要添加的成员',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.addMessageUser':
+    '添加接受消息用户',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.sendMessage': '发送消息',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.inputMessageContent':
+    '输入消息内容',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.searchUserPlaceholder':
+    '输入用户名、邮箱或手机号码，回车搜索',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.selectAll': '全部',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.selectedMembers': '已选成员 ({0})',
+
+  // UserManage - DataPermissionModal
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.dataPermissionTitle':
+    '数据权限 - {0}',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.dailyTokenLimit':
+    '每日token限制',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.dailyTokenLimitTooltip':
+    '每日 token 限制，-1 表示不限制',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.dailyTokenLimitPlaceholder':
+    '请输入每日token限制数量',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxSpaceCount':
+    '可创建工作空间数量',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxSpaceCountTooltip':
+    '可创建工作空间数量，-1 表示不限制',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxAgentCount':
+    '可创建智能体数量',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxAgentCountTooltip':
+    '可创建智能体数量，-1 表示不限制',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxPageAppCount':
+    '可创建网页应用数量',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxPageAppCountTooltip':
+    '可创建网页应用数量，-1 表示不限制',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxKnowledgeCount':
+    '可创建知识库数量',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxKnowledgeCountTooltip':
+    '可创建知识库数量，-1 表示不限制',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGb':
+    '知识库存储空间上限 (GB)',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGbTooltip':
+    '知识库存储空间上限(GB)，-1表示不限制',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxDataTableCount':
+    '可创建数据表数量',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxDataTableCountTooltip':
+    '可创建数据表数量，-1 表示不限制',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCount':
+    '可创建定时任务数量',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCountTooltip':
+    '可创建定时任务数量，-1 表示不限制',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGb':
+    '智能体电脑内存(GB)',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGbTooltip':
+    '智能体电脑内存 (GB，留空表示使用默认值4GB)',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerCpuCores':
+    '智能体电脑 CPU 核心数',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerCpuCoresTooltip':
+    '智能体电脑 CPU 核心数（留空表示使用默认值）',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimit':
+    '通用智能体每天对话次数限制',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimitTooltip':
+    '通用智能体每天对话次数，-1表示不限制',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimit':
+    '网页应用开发每天对话次数',
+  'NuwaxPC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimitTooltip':
+    '网页应用开发每天对话次数，-1表示不限制',
+
+  // UserManage - UserAuthModal
+  'NuwaxPC.Pages.UserManage.UserAuthModal.role': '角色',
+  'NuwaxPC.Pages.UserManage.UserAuthModal.userGroup': '用户组',
+  'NuwaxPC.Pages.UserManage.UserAuthModal.authTitle': '授权 - {0}',
+  'NuwaxPC.Pages.UserManage.UserAuthModal.selectAll': '全选',
+  'NuwaxPC.Pages.UserManage.UserAuthModal.deselectAll': '取消全选',
+
+  // UserManage - UserFormModal
+  'NuwaxPC.Pages.UserManage.UserFormModal.editUser': '修改用户信息',
+  'NuwaxPC.Pages.UserManage.UserFormModal.addUser': '新增用户',
+  'NuwaxPC.Pages.UserManage.UserFormModal.userName': '用户名',
+  'NuwaxPC.Pages.UserManage.UserFormModal.inputUserName': '请输入用户名',
+  'NuwaxPC.Pages.UserManage.UserFormModal.nickName': '用户昵称',
+  'NuwaxPC.Pages.UserManage.UserFormModal.inputNickName':
+    '请输入用户昵称（姓名）',
+  'NuwaxPC.Pages.UserManage.UserFormModal.phoneNumber': '手机号码',
+  'NuwaxPC.Pages.UserManage.UserFormModal.inputPhoneNumber': '请输入手机号码',
+  'NuwaxPC.Pages.UserManage.UserFormModal.emailAddress': '邮箱地址',
+  'NuwaxPC.Pages.UserManage.UserFormModal.inputEmailAddress': '请输入邮箱地址',
+  'NuwaxPC.Pages.UserManage.UserFormModal.loginPassword': '登录密码',
+  'NuwaxPC.Pages.UserManage.UserFormModal.inputLoginPassword': '请输入登录密码',
+  'NuwaxPC.Pages.UserManage.UserFormModal.userType': '用户类型',
+  'NuwaxPC.Pages.UserManage.UserFormModal.admin': '管理员',
+  'NuwaxPC.Pages.UserManage.UserFormModal.normalUser': '普通用户',
+
+  // UserManage - UserViewMenuModal
+  'NuwaxPC.Pages.UserManage.UserViewMenuModal.viewMenuResourcePermission':
+    '查看菜单资源权限',
+  'NuwaxPC.Pages.UserManage.UserViewMenuModal.resourceId': '资源 {0}',
+  'NuwaxPC.Pages.UserManage.UserViewMenuModal.menuId': '菜单 {0}',
+
+  // UserManage - Index
+  'NuwaxPC.Pages.UserManage.Index.enableSuccess': '启用成功',
+  'NuwaxPC.Pages.UserManage.Index.disableSuccess': '禁用成功',
+  'NuwaxPC.Pages.UserManage.Index.edit': '修改',
+  'NuwaxPC.Pages.UserManage.Index.disable': '禁用',
+  'NuwaxPC.Pages.UserManage.Index.enable': '启用',
+  'NuwaxPC.Pages.UserManage.Index.auth': '授权',
+  'NuwaxPC.Pages.UserManage.Index.viewMenuResourcePermission':
+    '查看菜单资源权限',
+  'NuwaxPC.Pages.UserManage.Index.viewDataPermission': '查看数据权限',
+  'NuwaxPC.Pages.UserManage.Index.userName': '用户名',
+  'NuwaxPC.Pages.UserManage.Index.userFullName': '用户姓名',
+  'NuwaxPC.Pages.UserManage.Index.nickName': '昵称',
+  'NuwaxPC.Pages.UserManage.Index.phoneNumber': '手机号码',
+  'NuwaxPC.Pages.UserManage.Index.email': '邮箱',
+  'NuwaxPC.Pages.UserManage.Index.type': '类型',
+  'NuwaxPC.Pages.UserManage.Index.admin': '管理员',
+  'NuwaxPC.Pages.UserManage.Index.member': '成员',
+  'NuwaxPC.Pages.UserManage.Index.status': '状态',
+  'NuwaxPC.Pages.UserManage.Index.normal': '正常',
+  'NuwaxPC.Pages.UserManage.Index.disabled': '禁用',
+  'NuwaxPC.Pages.UserManage.Index.joinTime': '加入时间',
+  'NuwaxPC.Pages.UserManage.Index.action': '操作',
+  'NuwaxPC.Pages.UserManage.Index.userManage': '用户管理',
+  'NuwaxPC.Pages.UserManage.Index.addUser': '添加用户',
+  'NuwaxPC.Pages.UserManage.Index.sendMessage': '消息发送',
+
+  // Layouts - Setting
+  // Layouts - Setting > ResetPassword
+  'NuwaxPC.Layouts.Setting.ResetPassword.title': '重置密码',
+  'NuwaxPC.Layouts.Setting.ResetPassword.newPassword': '新密码',
+  'NuwaxPC.Layouts.Setting.ResetPassword.inputNewPassword': '请输入新密码!',
+  'NuwaxPC.Layouts.Setting.ResetPassword.inputCorrectPassword':
+    '请输入正确的新密码!',
+  'NuwaxPC.Layouts.Setting.ResetPassword.confirmPassword': '确认密码',
+  'NuwaxPC.Layouts.Setting.ResetPassword.inputConfirmPassword':
+    '请再次输入新密码!',
+  'NuwaxPC.Layouts.Setting.ResetPassword.passwordMismatch': '两次密码不一致!',
+  'NuwaxPC.Layouts.Setting.ResetPassword.inputCorrectNewPassword':
+    '请输入正确的密码!',
+  'NuwaxPC.Layouts.Setting.ResetPassword.placeholderNewPassword':
+    '请输入新密码',
+  'NuwaxPC.Layouts.Setting.ResetPassword.placeholderConfirmPassword':
+    '请再次输入新密码',
+  'NuwaxPC.Layouts.Setting.ResetPassword.verificationCode': '验证码',
+  'NuwaxPC.Layouts.Setting.ResetPassword.inputVerificationCode': '请输入验证码',
+  'NuwaxPC.Layouts.Setting.ResetPassword.inputCorrectCode':
+    '请输入正确的验证码!',
+  'NuwaxPC.Layouts.Setting.ResetPassword.placeholderCode': '请输入验证码',
+  'NuwaxPC.Layouts.Setting.ResetPassword.sendCode': '发送验证码',
+  'NuwaxPC.Layouts.Setting.ResetPassword.submit': '确定修改',
+  'NuwaxPC.Layouts.Setting.ResetPassword.resetSuccess': '重置成功',
+
+  // Layouts - Setting > SettingEmail
+  'NuwaxPC.Layouts.Setting.SettingEmail.emailBindTitle': '邮箱绑定',
+  'NuwaxPC.Layouts.Setting.SettingEmail.phoneBindTitle': '手机号绑定',
+  'NuwaxPC.Layouts.Setting.SettingEmail.emailAddress': '邮箱地址',
+  'NuwaxPC.Layouts.Setting.SettingEmail.phoneNumber': '手机号码',
+  'NuwaxPC.Layouts.Setting.SettingEmail.inputEmailAddress': '请输入邮箱地址',
+  'NuwaxPC.Layouts.Setting.SettingEmail.inputPhoneNumber': '请输入手机号码',
+  'NuwaxPC.Layouts.Setting.SettingEmail.inputCorrectEmail':
+    '请输入正确的邮箱地址!',
+  'NuwaxPC.Layouts.Setting.SettingEmail.inputCorrectPhone':
+    '请输入正确的手机号码!',
+  'NuwaxPC.Layouts.Setting.SettingEmail.verificationCode': '验证码',
+  'NuwaxPC.Layouts.Setting.SettingEmail.inputVerificationCode': '请输入验证码',
+  'NuwaxPC.Layouts.Setting.SettingEmail.inputCorrectCode':
+    '请输入正确的验证码!',
+  'NuwaxPC.Layouts.Setting.SettingEmail.placeholderCode': '请输入验证码',
+  'NuwaxPC.Layouts.Setting.SettingEmail.sendCode': '发送验证码',
+  'NuwaxPC.Layouts.Setting.SettingEmail.bind': '绑定',
+  'NuwaxPC.Layouts.Setting.SettingEmail.bindSuccess': '绑定成功',
+
+  // Layouts - Setting > ThemeSwitchPanel
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.title': '主题切换',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.colorUpdateFailed':
+    '主题色更新失败',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.autoSwitchNav':
+    '已自动切换为{0}导航栏',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.dark': '深色',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.light': '浅色',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.backgroundUpdateFailed':
+    '背景图更新失败',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.navStyleUpdateFailed':
+    '导航风格更新失败',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.autoSwitchBackground':
+    '已自动切换为{0}以匹配{1}导航栏',
+  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.navThemeToggleFailed':
+    '导航主题切换失败',
+
+  // Layouts - Setting > UsageStatistics
+  'NuwaxPC.Layouts.Setting.UsageStatistics.title': '用量统计',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.query': '查询',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.columnType': '类型',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.columnDaily': '每日',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.columnOther': '其他数量',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.tokenLimit': '使用TOKEN上限',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.agentPrompt': '通用智能体对话次数',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.pagePrompt': '网页应用开发对话次数',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.workspace': '可创建工作空间数量',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.agent': '可创建智能体数量',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.pageApp': '可创建网页应用数量',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.knowledgeBase': '可创建知识库数量',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.kbStorage': '知识库存储上限',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.table': '可创建数据表数量',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.task': '可创建定时任务数量',
+  'NuwaxPC.Layouts.Setting.UsageStatistics.sandboxMemory': '智能体电脑最大内存',
 };

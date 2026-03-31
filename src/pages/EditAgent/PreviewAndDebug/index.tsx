@@ -11,6 +11,7 @@ import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import useMessageEventDelegate from '@/hooks/useMessageEventDelegate';
 import useSelectedComponent from '@/hooks/useSelectedComponent';
 import ConversationStatus from '@/pages/Chat/components/ConversationStatus';
+import { dict } from '@/services/i18nRuntime';
 import { HideDesktopEnum, TaskStatus } from '@/types/enums/agent';
 import { AgentTypeEnum, EditAgentShowType } from '@/types/enums/space';
 import { AgentConfigInfo } from '@/types/interfaces/agent';
@@ -360,7 +361,7 @@ const PreviewAndDebug: React.FC<PreviewAndDebugProps> = ({
     // 变量参数为空，不发送消息
     if (wholeDisabled) {
       form.validateFields(); // 触发表单验证以显示error
-      message.warning('请填写必填参数');
+      message.warning(dict('NuwaxPC.Pages.PreviewAndDebug.fillRequiredParams'));
       return;
     }
     // 标记用户已发送消息
@@ -400,7 +401,9 @@ const PreviewAndDebug: React.FC<PreviewAndDebugProps> = ({
   const handleOpenPreviewPanel = () => {
     const convId = devConversationIdRef.current;
     if (!convId) {
-      message.warning('会话ID不存在，无法打开文件预览');
+      message.warning(
+        dict('NuwaxPC.Pages.PreviewAndDebug.convIdNotFoundFilePreview'),
+      );
       return;
     }
 
@@ -426,7 +429,9 @@ const PreviewAndDebug: React.FC<PreviewAndDebugProps> = ({
   const handleOpenDesktopPanel = () => {
     const convId = devConversationIdRef.current;
     if (!convId) {
-      message.warning('会话ID不存在，无法打开智能体电脑');
+      message.warning(
+        dict('NuwaxPC.Pages.PreviewAndDebug.convIdNotFoundDesktop'),
+      );
       return;
     }
 

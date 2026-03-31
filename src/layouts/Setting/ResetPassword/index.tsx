@@ -3,6 +3,7 @@ import { PHONE } from '@/constants/home.constants';
 import useCountDown from '@/hooks/useCountDown';
 import useSendCode from '@/hooks/useSendCode';
 import { apiResetPassword } from '@/services/account';
+import { dict } from '@/services/i18nRuntime';
 import { SendCodeEnum } from '@/types/enums/login';
 import type { ResetPasswordForm } from '@/types/interfaces/login';
 import { validatePassword } from '@/utils/common';
@@ -30,7 +31,9 @@ const ResetPassword: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success('重置成功');
+      message.success(
+        dict('NuwaxPC.Layouts.Setting.ResetPassword.resetSuccess'),
+      );
       form.resetFields();
       setCountDown(0);
       onClearTimer();
@@ -61,7 +64,7 @@ const ResetPassword: React.FC = () => {
 
   return (
     <div className={cx(styles.container)}>
-      <h3>重置密码</h3>
+      <h3>{dict('NuwaxPC.Layouts.Setting.ResetPassword.title')}</h3>
       <Form
         layout="vertical"
         form={form}
@@ -71,26 +74,46 @@ const ResetPassword: React.FC = () => {
       >
         <Form.Item
           name="password"
-          label="新密码"
+          label={dict('NuwaxPC.Layouts.Setting.ResetPassword.newPassword')}
           rules={[
-            { required: true, message: '请输入新密码!' },
+            {
+              required: true,
+              message: dict(
+                'NuwaxPC.Layouts.Setting.ResetPassword.inputNewPassword',
+              ),
+            },
             {
               validator(_, value) {
                 if (!value || validatePassword(value)) {
                   return Promise.resolve();
                 }
-                return Promise.reject(new Error('请输入正确的新密码!'));
+                return Promise.reject(
+                  new Error(
+                    dict(
+                      'NuwaxPC.Layouts.Setting.ResetPassword.inputCorrectPassword',
+                    ),
+                  ),
+                );
               },
             },
           ]}
         >
-          <Input.Password placeholder="请输入新密码" />
+          <Input.Password
+            placeholder={dict(
+              'NuwaxPC.Layouts.Setting.ResetPassword.placeholderNewPassword',
+            )}
+          />
         </Form.Item>
         <Form.Item
           name="newPassword"
-          label="确认密码"
+          label={dict('NuwaxPC.Layouts.Setting.ResetPassword.confirmPassword')}
           rules={[
-            { required: true, message: '请再次输入新密码!' },
+            {
+              required: true,
+              message: dict(
+                'NuwaxPC.Layouts.Setting.ResetPassword.inputConfirmPassword',
+              ),
+            },
             ({ getFieldValue }) => ({
               validator(_, value) {
                 const _password = getFieldValue('password');
@@ -98,32 +121,64 @@ const ResetPassword: React.FC = () => {
                   return Promise.resolve();
                 }
                 if (_password && _password !== value) {
-                  return Promise.reject(new Error('两次密码不一致!'));
+                  return Promise.reject(
+                    new Error(
+                      dict(
+                        'NuwaxPC.Layouts.Setting.ResetPassword.passwordMismatch',
+                      ),
+                    ),
+                  );
                 }
-                return Promise.reject(new Error('请输入正确的密码!'));
+                return Promise.reject(
+                  new Error(
+                    dict(
+                      'NuwaxPC.Layouts.Setting.ResetPassword.inputCorrectNewPassword',
+                    ),
+                  ),
+                );
               },
             }),
           ]}
         >
-          <Input.Password placeholder="请再次输入新密码" />
+          <Input.Password
+            placeholder={dict(
+              'NuwaxPC.Layouts.Setting.ResetPassword.placeholderConfirmPassword',
+            )}
+          />
         </Form.Item>
         <Form.Item
           name="code"
-          label="验证码"
+          label={dict('NuwaxPC.Layouts.Setting.ResetPassword.verificationCode')}
           rules={[
-            { required: true, message: '请输入验证码' },
+            {
+              required: true,
+              message: dict(
+                'NuwaxPC.Layouts.Setting.ResetPassword.inputVerificationCode',
+              ),
+            },
             {
               validator(_, value) {
                 if (!value || value?.length === VERIFICATION_CODE_LEN) {
                   return Promise.resolve();
                 }
-                return Promise.reject(new Error('请输入正确的验证码!'));
+                return Promise.reject(
+                  new Error(
+                    dict(
+                      'NuwaxPC.Layouts.Setting.ResetPassword.inputCorrectCode',
+                    ),
+                  ),
+                );
               },
             },
           ]}
         >
           <div className={cx('flex', 'content-between')}>
-            <Input rootClassName={styles.input} placeholder={'请输入验证码'} />
+            <Input
+              rootClassName={styles.input}
+              placeholder={dict(
+                'NuwaxPC.Layouts.Setting.ResetPassword.placeholderCode',
+              )}
+            />
             {countDown < 60 && countDown > 0 ? (
               <Button rootClassName={styles.btn} disabled type="primary">
                 {`${countDown}s`}
@@ -134,14 +189,14 @@ const ResetPassword: React.FC = () => {
                 type="primary"
                 onClick={handleSendCode}
               >
-                发送验证码
+                {dict('NuwaxPC.Layouts.Setting.ResetPassword.sendCode')}
               </Button>
             )}
           </div>
         </Form.Item>
         <Form.Item>
           <Button block type="primary" htmlType="submit" loading={loading}>
-            确定修改
+            {dict('NuwaxPC.Layouts.Setting.ResetPassword.submit')}
           </Button>
         </Form.Item>
       </Form>

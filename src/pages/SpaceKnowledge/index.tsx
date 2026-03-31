@@ -1,5 +1,6 @@
 import CreateKnowledge from '@/components/CreateKnowledge';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiKnowledgeConfigDetail,
   apiKnowledgeDocumentDelete,
@@ -147,7 +148,9 @@ const SpaceKnowledge: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success('删除文档成功');
+      message.success(
+        dict('NuwaxPC.Pages.SpaceKnowledge.Index.deleteDocSuccess'),
+      );
       // 删除文档后，更新文档列表以及分段信息
       setLoadingDoc(true);
       handleDocList();
@@ -224,7 +227,7 @@ const SpaceKnowledge: React.FC = () => {
   const handleDocDel = useCallback(() => {
     const docId = currentDocumentInfo?.id;
     modalConfirm(
-      '你确定要删除此文档吗?',
+      dict('NuwaxPC.Pages.SpaceKnowledge.Index.confirmDeleteDoc'),
       currentDocumentInfo?.name || '',
       () => {
         runDocDelete(docId);
@@ -323,7 +326,9 @@ const SpaceKnowledge: React.FC = () => {
         id: record.id,
       });
       if (code === SUCCESS_CODE) {
-        message.success('删除QA问答成功');
+        message.success(
+          dict('NuwaxPC.Pages.SpaceKnowledge.Index.deleteQaSuccess'),
+        );
         handleQaList();
       }
     } catch {}
@@ -341,7 +346,9 @@ const SpaceKnowledge: React.FC = () => {
       <div className={cx('flex', 'flex-col', 'w-full')}>
         <div className={cx(styles.inputSearch)}>
           <Input.Search
-            placeholder="请输入问题搜索"
+            placeholder={dict(
+              'NuwaxPC.Pages.SpaceKnowledge.Index.searchQuestion',
+            )}
             allowClear
             style={{
               width: 240,
@@ -384,7 +391,11 @@ const SpaceKnowledge: React.FC = () => {
     try {
       const res = await doAction;
       if (res.code === SUCCESS_CODE) {
-        message.success(values.id ? 'QA问答更新成功' : '添加QA问答成功');
+        message.success(
+          values.id
+            ? dict('NuwaxPC.Pages.SpaceKnowledge.Index.qaUpdateSuccess')
+            : dict('NuwaxPC.Pages.SpaceKnowledge.Index.qaAddSuccess'),
+        );
         // 添加成功后，查询文档列表
         handleQaList();
         setQaOpen(false);

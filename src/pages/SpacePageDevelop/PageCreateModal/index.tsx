@@ -1,6 +1,7 @@
 import CustomFormModal from '@/components/CustomFormModal';
 import OverrideTextArea from '@/components/OverrideTextArea';
 import UploadAvatar from '@/components/UploadAvatar';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiCustomPageCreate,
   apiCustomPageCreateReverseProxy,
@@ -93,7 +94,11 @@ const PageCreateModal: React.FC<PageCreateModalProps> = ({
       const file = fileList?.[0]?.originFileObj;
       // 校验文件是否存在
       if (!file) {
-        message.error('请上传项目压缩包文件');
+        message.error(
+          dict(
+            'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseUploadZip',
+          ),
+        );
         return;
       }
 
@@ -101,7 +106,9 @@ const PageCreateModal: React.FC<PageCreateModalProps> = ({
       const isZip = file.name?.endsWith('.zip');
 
       if (!isZip) {
-        message.error('仅支持.zip后缀的压缩文件');
+        message.error(
+          dict('NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.zipOnly'),
+        );
         return;
       }
 
@@ -168,7 +175,9 @@ const PageCreateModal: React.FC<PageCreateModalProps> = ({
       const isZip = file.name.endsWith('.zip');
 
       if (!isZip) {
-        message.error('仅支持压缩文件(.zip)');
+        message.error(
+          dict('NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.zipOnly'),
+        );
         return Upload.LIST_IGNORE; // 阻止文件被添加到fileList
       }
 
@@ -206,7 +215,7 @@ const PageCreateModal: React.FC<PageCreateModalProps> = ({
     <CustomFormModal
       form={form}
       open={open}
-      title="创建应用"
+      title={dict('NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.createApp')}
       loading={loading}
       classNames={{
         content: styles['modal-content'],
@@ -226,18 +235,38 @@ const PageCreateModal: React.FC<PageCreateModalProps> = ({
       >
         <Form.Item
           name="projectName"
-          label="名称"
-          rules={[{ required: true, message: '请输入名称' }]}
+          label={dict('NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.name')}
+          rules={[
+            {
+              required: true,
+              message: dict(
+                'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterName',
+              ),
+            },
+          ]}
         >
-          <Input placeholder="请输入名称" showCount maxLength={50} />
+          <Input
+            placeholder={dict(
+              'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterName',
+            )}
+            showCount
+            maxLength={50}
+          />
         </Form.Item>
         <OverrideTextArea
           name="projectDesc"
-          label="描述"
-          placeholder="请输入描述"
+          label={dict(
+            'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.description',
+          )}
+          placeholder={dict(
+            'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterDescription',
+          )}
           maxLength={200}
         />
-        <Form.Item name="icon" label="图标">
+        <Form.Item
+          name="icon"
+          label={dict('NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.icon')}
+        >
           <UploadAvatar
             onUploadSuccess={uploadIconSuccess}
             imageUrl={imageUrl}
@@ -255,9 +284,13 @@ const PageCreateModal: React.FC<PageCreateModalProps> = ({
                 <InboxOutlined />
               </p>
               <p className="ant-upload-text">
-                点击或拖拽项目压缩包文件到此区域上传
+                {dict(
+                  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.uploadDragText',
+                )}
               </p>
-              <p className="ant-upload-hint">仅支持压缩文件(.zip)</p>
+              <p className="ant-upload-hint">
+                {dict('NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.zipOnly')}
+              </p>
             </Dragger>
           </Form.Item>
         )}

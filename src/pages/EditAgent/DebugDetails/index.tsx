@@ -6,6 +6,7 @@ import pluginImage from '@/assets/images/plugin_image.png';
 import variableImage from '@/assets/images/variable_image.png';
 import workflowImage from '@/assets/images/workflow_image.png';
 import ToggleWrap from '@/components/ToggleWrap';
+import { dict } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import type { DebugDetailsProps } from '@/types/interfaces/agentConfig';
 import type { ExecuteResultInfo } from '@/types/interfaces/conversationInfo';
@@ -73,7 +74,7 @@ const DebugDetails: React.FC<DebugDetailsProps> = ({ visible, onClose }) => {
   }, []);
 
   const handleCopy = () => {
-    message.success('复制成功');
+    message.success(dict('NuwaxPC.Toast.Global.copiedSuccessfully'));
   };
 
   // 获取图标，如果不存在则使用默认图
