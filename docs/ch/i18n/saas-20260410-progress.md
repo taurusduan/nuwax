@@ -1100,3 +1100,26 @@
 - 风险/阻塞：
   - Antv v3 后续剩余主要在 `constants/node.constants.ts` 与 `hooks/useAutoSave.ts`（常量/日志型文本较多）
 - 下一步：继续推进 `Antv-X6 v3 constants/node.constants.ts` 的 label 文案 key 化
+
+### 里程碑：Top 模块第四十四批实改（Antv-X6 v3 常量映射 + 自动保存日志）
+
+- 时间：2026-03-31 13:29
+- 任务：推进 `node.constants.ts` 的用户可见 label key 化，并将 `useAutoSave.ts` 日志描述改为英文
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/v3/constants/node.constants.ts src/pages/Antv-X6/v3/hooks/useAutoSave.ts src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/v3/constants/node.constants.ts`
+    - `src/pages/Antv-X6/v3/hooks/useAutoSave.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `branchTypeMap/EXCEPTION_HANDLE_OPTIONS/RETRY_COUNT_OPTIONS/answerTypeMap/VARIABLE_CONFIG_TYPE_OPTIONS` 全部接入 `t(...)`
+  - `DEFAULT_DRAWER_FORM` 默认名称与描述切换为 key，避免常量层中文硬编码
+  - `useAutoSave` 日志统一改为英文；版本冲突错误文案通过 `NuwaxPC.Pages.AntvX6AutoSave.versionConflictMessage` 输出
+  - 新增并补齐 `NuwaxPC.Pages.AntvX6Condition.if/elseIf`、`NuwaxPC.Pages.AntvX6NodeItem.getVariable`、`NuwaxPC.Pages.AntvX6NodeConstants.defaultNode*`、`NuwaxPC.Pages.AntvX6AutoSave.versionConflictMessage` 中英文词典
+  - 治理总量从 `2881` 下降至 `2858`（-23）
+- 风险/阻塞：
+  - Antv v3 剩余仍集中在 `hooks/useBeforeUnload.ts` 与部分 `graph` 日志文案
+- 下一步：继续推进 `Antv-X6 v3 hooks/useBeforeUnload.ts` 与 `components/graph/GraphContainer.tsx`

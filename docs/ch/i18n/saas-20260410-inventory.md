@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T05:53:19.026Z
+- 生成时间：2026-03-31T06:06:44.069Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2881
-- hardcoded 中文：2881
+- 总问题数：2858
+- hardcoded 中文：2858
 - legacy System key：0
 - invalid dict key：0
 
@@ -15,7 +15,7 @@
 
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
-| src/pages/Antv-X6 | 224 | 0 | 0 | 224 |
+| src/pages/Antv-X6 | 201 | 0 | 0 | 201 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
 | src/services | 110 | 0 | 0 | 110 |
@@ -131,31 +131,8 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:241 -> `已发布`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Header.tsx:241 -> `未发布`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/layout/Sidebar.tsx:57 -> `搜索`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:30 -> `如果`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:31 -> `否则如果`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:32 -> `否则`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:40 -> `中断流程`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:44 -> `返回特定内容`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:48 -> `执行异常流程`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:72 -> `不重试`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:73 -> `1次`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:74 -> `2次`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:75 -> `3次`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:93 -> `直接回答`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:94 -> `选项回答`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:165 -> `发布`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:166 -> `拒绝`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:176 -> `测试`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:177 -> `测试`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:185 -> `设置变量值`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:186 -> `获取变量值`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useAutoSave.ts:53 -> `Graph 未初始化`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useAutoSave.ts:66 -> `构建保存数据失败`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useAutoSave.ts:89 -> `useAutoSave 自动保存成功`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useAutoSave.ts:93 -> `useAutoSave 版本冲突，自动保存失败`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useAutoSave.ts:94 -> `版本冲突，工作流已在其他窗口修改`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useAutoSave.ts:97 -> `useAutoSave 保存失败:`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useAutoSave.ts:102 -> `useAutoSave 保存异常:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:168 -> `发布`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/constants/node.constants.ts:169 -> `拒绝`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useBeforeUnload.ts:90 -> `[useBeforeUnload] 页面隐藏时保存成功`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useBeforeUnload.ts:93 -> `[useBeforeUnload] 页面隐藏时保存失败:`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useGraphInteraction.ts:183 -> `[V3] 节点更新失败:`
@@ -201,7 +178,30 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:86 -> `构建保存数据失败，无可用数据源`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:89 -> `使用 workflowProxy 数据保存`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:92 -> `使用单一数据源保存, 节点数:`
-- ... 省略 144 条
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:115 -> `版本号已更新:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:124 -> `保存成功 ✓`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:131 -> `版本冲突，工作流已被其他窗口修改`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:133 -> `版本冲突`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:142 -> `版本冲突`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:143 -> `工作流已在其他窗口修改，是否强制覆盖？`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:144 -> `强制覆盖`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:145 -> `取消`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:163 -> `工作流保存失败:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:166 -> `保存失败`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:170 -> `[V3] 工作流保存异常:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:174 -> `网络异常，保存失败`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowPersistence.ts:282 -> `[V3] 节点配置自动保存失败:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowValidation.ts:74 -> `[V3] 工作流保存失败，无法进行校验`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowValidation.ts:219 -> `先判断是否有覆盖`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/WorkflowSaveService.ts:93 -> `[SaveService] 未初始化，无法更新元数据`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/WorkflowSaveService.ts:152 -> `[SaveService] 未初始化，无法构建保存数据`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/WorkflowSaveService.ts:162 -> `[SaveService] 画布无有效节点，尝试使用 workflowProxy 数据保存`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:21 -> `测试节点`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:39 -> `开始`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:49 -> `大模型`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:60 -> `结束`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/services/__tests__/workflowProxyV3.test.ts:81 -> `开始`
+- ... 省略 121 条
 
 ## src/hooks
 

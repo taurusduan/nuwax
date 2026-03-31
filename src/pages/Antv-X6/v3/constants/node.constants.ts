@@ -1,3 +1,4 @@
+import { t } from '@/services/i18nRuntime';
 import {
   AnswerTypeEnum,
   CompareTypeEnum,
@@ -27,9 +28,9 @@ export const testRunList = [
 ];
 
 export const branchTypeMap = {
-  IF: '如果',
-  ELSE_IF: '否则如果',
-  ELSE: '否则',
+  IF: t('NuwaxPC.Pages.AntvX6Condition.if'),
+  ELSE_IF: t('NuwaxPC.Pages.AntvX6Condition.elseIf'),
+  ELSE: t('NuwaxPC.Pages.AntvX6Condition.else'),
 };
 export const GENERAL_NODE = NodeShapeEnum.General;
 export const LOOP_NODE = NodeShapeEnum.Loop;
@@ -37,15 +38,15 @@ export const LOOP_NODE = NodeShapeEnum.Loop;
 // 异常处理类型 label 映射
 export const EXCEPTION_HANDLE_OPTIONS = [
   {
-    label: '中断流程',
+    label: t('NuwaxPC.Pages.AntvX6ExceptionItem.interruptFlow'),
     value: ExceptionHandleTypeEnum.INTERRUPT,
   },
   {
-    label: '返回特定内容',
+    label: t('NuwaxPC.Pages.AntvX6ExceptionItem.returnSpecificContent'),
     value: ExceptionHandleTypeEnum.SPECIFIC_CONTENT,
   },
   {
-    label: '执行异常流程',
+    label: t('NuwaxPC.Pages.AntvX6ExceptionItem.executeExceptionFlow'),
     value: ExceptionHandleTypeEnum.EXECUTE_EXCEPTION_FLOW,
   },
 ];
@@ -69,10 +70,10 @@ export const EXCEPTION_NODES_TYPE = [
 ];
 
 export const RETRY_COUNT_OPTIONS = [
-  { label: '不重试', value: 0 },
-  { label: '1次', value: 1 },
-  { label: '2次', value: 2 },
-  { label: '3次', value: 3 },
+  { label: t('NuwaxPC.Pages.AntvX6ExceptionItem.noRetry'), value: 0 },
+  { label: t('NuwaxPC.Pages.AntvX6ExceptionItem.retryOnce'), value: 1 },
+  { label: t('NuwaxPC.Pages.AntvX6ExceptionItem.retryTwice'), value: 2 },
+  { label: t('NuwaxPC.Pages.AntvX6ExceptionItem.retryThrice'), value: 3 },
 ];
 
 export const compareTypeMap = {
@@ -90,8 +91,10 @@ export const compareTypeMap = {
 };
 
 export const answerTypeMap = {
-  [AnswerTypeEnum.TEXT]: '直接回答',
-  [AnswerTypeEnum.SELECT]: '选项回答',
+  [AnswerTypeEnum.TEXT]: t('NuwaxPC.Pages.AntvX6ComplexNode.answerTypeText'),
+  [AnswerTypeEnum.SELECT]: t(
+    'NuwaxPC.Pages.AntvX6ComplexNode.answerTypeSelect',
+  ),
 };
 export const DEFAULT_NODE_CONFIG = {
   newNodeOffsetX: 100, // 新增节点时，x轴的间距
@@ -173,8 +176,8 @@ export const DEFAULT_DRAWER_FORM: ChildNode = {
     inputArgs: [],
   },
   id: FoldFormIdEnum.empty,
-  name: '测试',
-  description: '测试',
+  name: t('NuwaxPC.Pages.AntvX6NodeConstants.defaultNodeName'),
+  description: t('NuwaxPC.Pages.AntvX6NodeConstants.defaultNodeDescription'),
   workflowId: 0,
   icon: '',
 };
@@ -182,6 +185,12 @@ export const DEFAULT_DRAWER_FORM: ChildNode = {
 export const SKILL_FORM_KEY = 'skillComponentConfigs';
 
 export const VARIABLE_CONFIG_TYPE_OPTIONS = [
-  { label: '设置变量值', value: VariableConfigTypeEnum.SET_VARIABLE },
-  { label: '获取变量值', value: VariableConfigTypeEnum.GET_VARIABLE },
+  {
+    label: t('NuwaxPC.Pages.AntvX6NodeItem.setVariable'),
+    value: VariableConfigTypeEnum.SET_VARIABLE,
+  },
+  {
+    label: t('NuwaxPC.Pages.AntvX6NodeItem.getVariable'),
+    value: VariableConfigTypeEnum.GET_VARIABLE,
+  },
 ];

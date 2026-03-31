@@ -1042,6 +1042,8 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.AntvX6Skill.remove': 'Remove',
   'NuwaxPC.Pages.AntvX6Condition.branchTitle': 'Conditional Branch',
   'NuwaxPC.Pages.AntvX6Condition.priority': 'Priority {0}',
+  'NuwaxPC.Pages.AntvX6Condition.if': 'If',
+  'NuwaxPC.Pages.AntvX6Condition.elseIf': 'Else If',
   'NuwaxPC.Pages.AntvX6Condition.and': 'AND',
   'NuwaxPC.Pages.AntvX6Condition.or': 'OR',
   'NuwaxPC.Pages.AntvX6Condition.referencePlaceholder':
@@ -1763,10 +1765,15 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Please select split symbol',
   'NuwaxPC.Pages.AntvX6NodeItem.semicolon': 'Semicolon (;)',
   'NuwaxPC.Pages.AntvX6NodeItem.setVariable': 'Set Variable',
+  'NuwaxPC.Pages.AntvX6NodeItem.getVariable': 'Get Variable',
   'NuwaxPC.Pages.AntvX6NodeItem.space': 'Space ( )',
   'NuwaxPC.Pages.AntvX6NodeItem.stringConcat': 'String Concat',
   'NuwaxPC.Pages.AntvX6NodeItem.stringSplit': 'String Split',
   'NuwaxPC.Pages.AntvX6NodeItem.tab': 'Tab (\\t)',
+  'NuwaxPC.Pages.AntvX6NodeConstants.defaultNodeName': 'Test',
+  'NuwaxPC.Pages.AntvX6NodeConstants.defaultNodeDescription': 'Test',
+  'NuwaxPC.Pages.AntvX6AutoSave.versionConflictMessage':
+    'Version conflict: workflow was modified in another window',
   'NuwaxPC.Pages.SystemPermissionResourceFormModal.addSuccess':
     'Resource created successfully',
   'NuwaxPC.Pages.SystemPermissionResourceFormModal.code': 'Resource Code',
