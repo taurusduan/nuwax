@@ -1057,3 +1057,26 @@
 - 风险/阻塞：
   - `Antv-X6 v3` 仍有较多存量集中在 `component/*` 与 `constants/hooks`，后续仍需滚动清理
 - 下一步：继续推进 `Antv-X6 v3 component/registerCustomNodes.tsx` 与 `runResult.tsx`
+
+### 里程碑：Top 模块第四十二批实改（Antv-X6 v3 运行结果链路）
+
+- 时间：2026-03-31 13:09
+- 任务：改造 `registerCustomNodes.tsx` 与 `runResult.tsx` 的节点运行态可见文案
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/v3/component/runResult.tsx src/pages/Antv-X6/v3/component/registerCustomNodes.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/v3/component/runResult.tsx`
+    - `src/pages/Antv-X6/v3/component/registerCustomNodes.tsx`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+- 结果摘要：
+  - `runResult` 的复制 tooltip、状态文案、总数、只看错误、批处理变量、输入/输出标题接入 `t(...)`
+  - `registerCustomNodes` 中 QA/意图识别节点的输入、提问内容、问答类型、未配置提示、运行状态标题接入 `t(...)`
+  - 清理节点运行结果区域的中文调试日志文本，避免中英文混杂
+  - 新增 `NuwaxPC.Pages.AntvX6RunResult.*` 中英文默认词典
+  - 治理总量从 `2908` 下降至 `2890`（-18）
+- 风险/阻塞：
+  - `Antv-X6 v3` 仍有剩余存量集中在 `constants/node.constants.ts`、`hooks/useAutoSave.ts` 等
+- 下一步：继续推进 `Antv-X6 v3 constants/hooks` 的高频文案与日志描述

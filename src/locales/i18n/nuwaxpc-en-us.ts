@@ -1892,6 +1892,9 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Intent not configured',
   'NuwaxPC.Pages.AntvX6RegisterNodes.unconfiguredQuestion':
     'Question not configured',
+  'NuwaxPC.Pages.AntvX6RunResult.totalCount': 'Total: {0}',
+  'NuwaxPC.Pages.AntvX6RunResult.onlyShowErrors': 'Only show errors',
+  'NuwaxPC.Pages.AntvX6RunResult.batchVariables': 'Batch variables in this run',
   'NuwaxPC.Pages.AppDevIndex.application': 'Application',
   'NuwaxPC.Pages.AppDevIndex.back': 'Back',
   'NuwaxPC.Pages.AppDevIndex.bindDataSourceFailed':

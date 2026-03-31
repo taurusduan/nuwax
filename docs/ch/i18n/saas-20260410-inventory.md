@@ -1,13 +1,13 @@
 # 多语言治理全量扫描报告（SAAS 2026-04-10）
 
-- 生成时间：2026-03-31T05:42:59.118Z
+- 生成时间：2026-03-31T05:49:53.082Z
 - 扫描范围：src/pages, src/components, src/layouts, src/hooks, src/models, src/services
 - 规则：hardcoded 中文字符串 / legacy `System.*` key / invalid `dict()` key 格式
 
 ## 汇总
 
-- 总问题数：2908
-- hardcoded 中文：2908
+- 总问题数：2890
+- hardcoded 中文：2890
 - legacy System key：0
 - invalid dict key：0
 
@@ -15,7 +15,7 @@
 
 | 模块 | hardcoded中文 | legacyKey | invalidKey | 总计 |
 | --- | ---: | ---: | ---: | ---: |
-| src/pages/Antv-X6 | 251 | 0 | 0 | 251 |
+| src/pages/Antv-X6 | 233 | 0 | 0 | 233 |
 | src/hooks | 186 | 0 | 0 | 186 |
 | src/components/business-component | 144 | 0 | 0 | 144 |
 | src/services | 110 | 0 | 0 | 110 |
@@ -130,24 +130,6 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/library.tsx:177 -> `从知识库中返回给大模型的最大段落数，数值越大返回的内容越多`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/library.tsx:195 -> `根据设置的匹配度选取段落返回给大模型，低于设定匹配度的内容不会被召回`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/component/pluginNode.tsx:19 -> `输入`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/registerCustomNodes.tsx:103 -> `未配置提问内容`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/registerCustomNodes.tsx:119 -> `未配置内容`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/registerCustomNodes.tsx:136 -> `未配置意图`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/registerCustomNodes.tsx:184 -> `页码变化：`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/registerCustomNodes.tsx:190 -> `只看错误变化：`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/registerCustomNodes.tsx:196 -> `展开/收起变化：`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/registerCustomNodes.tsx:226 -> `请答复问题`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/registerCustomNodes.tsx:230 -> `运行中`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/registerCustomNodes.tsx:232 -> `运行失败`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/registerCustomNodes.tsx:236 -> `运行成功`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/registerCustomNodes.tsx:238 -> `运行失败`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/runResult.tsx:167 -> `复制`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/runResult.tsx:198 -> `运行中`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/runResult.tsx:198 -> `运行成功`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/runResult.tsx:198 -> `运行失败`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/runResult.tsx:233 -> `复制`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/runResult.tsx:242 -> `输入`
-- [hardcoded_chinese] src/pages/Antv-X6/v3/component/runResult.tsx:243 -> `输出`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/graph/GraphContainer.tsx:154 -> `[GraphContainer] 边的源节点(${sourceId})或目标节点(${targetId})不存在，跳过创建边`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/graph/GraphContainer.tsx:236 -> `[GraphContainer] 找不到父循环节点，无法建立父子关系`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/components/graph/GraphContainer.tsx:435 -> `[GraphContainer] 无法创建边：源节点(${sourceId})或目标节点(${targetId})在画布中未找到`
@@ -201,7 +183,25 @@
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:598 -> `处理节点连接时发生错误:`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:654 -> `循环体里请不要再添加循环体`
 - [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:732 -> `添加节点失败`
-- ... 省略 171 条
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:733 -> `[V3] 添加节点 API 失败:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:738 -> `网络异常，添加节点失败`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:739 -> `[V3] 添加节点 API 异常:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:812 -> `处理节点创建成功后的操作失败:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:816 -> `[V3] 添加节点代理层失败:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:872 -> `[V3] 复制节点代理层添加失败:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:875 -> `复制失败`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:878 -> `[V3] 复制节点 API 异常:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:879 -> `网络异常，复制节点失败`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:941 -> `删除失败`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useNodeOperations.ts:1019 -> `暂不支持该类型组件`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useSkillConfigRefresh.ts:71 -> `[useSkillConfigRefresh] 工具参数回填失败:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useTestRun.ts:137 -> `流式请求异常:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useTestRun.ts:140 -> `连接已建立`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useTestRun.ts:239 -> `流式请求异常:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useTestRun.ts:242 -> `连接已建立`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useTestRun.ts:267 -> `试运行所有节点失败:`
+- [hardcoded_chinese] src/pages/Antv-X6/v3/hooks/useWorkflowHistory.ts:71 -> `没有可撤销的操作`
+- ... 省略 153 条
 
 ## src/hooks
 
