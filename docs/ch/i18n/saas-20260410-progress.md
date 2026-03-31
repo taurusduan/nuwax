@@ -1142,3 +1142,21 @@
 - 风险/阻塞：
   - `Antv-X6 v3` 仍有存量集中在注释与少量常量/hook 描述文本
 - 下一步：继续推进 `Antv-X6 v3 constants/node.constants.ts` 之外的剩余 hook 与 component 文案
+
+### 里程碑：Top 模块第四十六批实改（Antv-X6 v3 Hook 注释英文化）
+
+- 时间：2026-03-31 14:16
+- 任务：清理 `useBeforeUnload.ts` 注释与接口说明中的中文描述，统一为英文维护注释
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/v3/hooks/useBeforeUnload.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/v3/hooks/useBeforeUnload.ts`
+- 结果摘要：
+  - `useBeforeUnload` 文件头注释、类型注释与关键逻辑注释全部切换为英文描述
+  - 保持业务逻辑不变，仅清理维护注释语言，避免代码层新增中文文本
+  - 治理总量保持 `2853`（无新增硬编码，存量不变）
+- 风险/阻塞：
+  - 页面与组件层仍有大量存量文案待接入，当前 inventory 主要集中在 `AppDev`、`SystemManagement`、`Antv-X6` 其余子模块
+- 下一步：按 inventory Top 模块继续批量推进页面与组件文案 key 化
