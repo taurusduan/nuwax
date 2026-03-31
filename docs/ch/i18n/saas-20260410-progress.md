@@ -1244,3 +1244,25 @@
 - 风险/阻塞：
   - `SystemManagement` 其余热点仍集中在 `TaskManage` 与 `SystemConfig` 其他子页
 - 下一步：继续推进 `TaskManage/CenterProTable` 与 `CreateTimedTask` 的多语言替换
+
+### 里程碑：Top 模块第五十批实改（SystemManagement TaskManage CenterProTable）
+
+- 时间：2026-03-31 14:58
+- 任务：处理 `TaskManage/CenterProTable` 的状态映射、查询表头、操作按钮与成功提示
+- 执行命令：
+  - `pnpm prettier --write src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/SystemManagement/TaskManage/CenterProTable/index.tsx`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - 表格状态映射文案（执行中/待执行/已结束等）全部切换为 `t(...)`
+  - 列标题、搜索 placeholder、操作按钮与二次确认提示全部切换为 `t(...)`
+  - 执行/启用/停用/删除成功提示切换为 `t(...)`
+  - 新增 `NuwaxPC.Pages.SystemTaskCenterProTable.*` 默认中英文词典
+  - 治理总量从 `2734` 下降至 `2697`（-37）
+- 风险/阻塞：
+  - `TaskManage/CreateTimedTask` 仍有高密度中文文案需要持续处理
+- 下一步：继续推进 `CreateTimedTask` 与 `SystemConfig/BaseTab/BaseFormItem`

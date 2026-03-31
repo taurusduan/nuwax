@@ -635,6 +635,54 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Automatically switched to {0} navigation (preview)',
   'NuwaxPC.Pages.SystemThemeConfig.autoSwitchedBackgroundPreview':
     'Automatically switched to {0} to match {1} navigation (preview)',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.statusExecuting': 'Executing',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.statusCreatedWaiting':
+    'Task created, waiting for execution',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.statusSuccessWaitingNext':
+    'Executed successfully, waiting for next run',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.statusFailedWaitingNext':
+    'Execution failed, waiting for next run',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.statusEndedNoMore':
+    'Ended, no further execution',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.executeTaskSuccess':
+    'Task executed successfully',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.enableTaskSuccess':
+    'Task enabled successfully',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.disableTaskSuccess':
+    'Task disabled successfully',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.deleteTaskSuccess':
+    'Task deleted successfully',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.taskType': 'Task Type',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.agent': 'Agent',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.workflow': 'Workflow',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.selectTaskType':
+    'Please select task type',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.taskName': 'Task Name',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.enterTaskName':
+    'Please enter task name',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.taskTarget': 'Task Target',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.taskStatus': 'Task Status',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.executionTimes': 'Execution Count',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.latestExecutionTime':
+    'Latest Execution Time',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.nextExecutionTime':
+    'Next Execution Time',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.creator': 'Creator',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.enterCreator': 'Please enter creator',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.createdTime': 'Created Time',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.actions': 'Actions',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.manualExecute': 'Run Manually',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.enable': 'Enable',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.confirmEnableTask':
+    'Confirm enabling this task?',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.disable': 'Disable',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.confirmDisableTask':
+    'Confirm disabling this task?',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.edit': 'Edit',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.executionRecord': 'Execution Record',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.delete': 'Delete',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.confirmDeleteTask':
+    'Confirm deleting this task?',
   'NuwaxPC.Pages.AppDevChatArea.chatTab': 'Chat',
   'NuwaxPC.Pages.AppDevChatArea.designTab': 'Design',
   'NuwaxPC.Pages.AppDevChatArea.dataTab': 'Data',

@@ -559,6 +559,46 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
     '已自动切换为{0}导航栏（预览效果）',
   'NuwaxPC.Pages.SystemThemeConfig.autoSwitchedBackgroundPreview':
     '已自动切换为{0}以匹配{1}导航栏（预览效果）',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.statusExecuting': '执行中',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.statusCreatedWaiting':
+    '任务创建，等待执行',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.statusSuccessWaitingNext':
+    '执行成功，待下次执行',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.statusFailedWaitingNext':
+    '执行失败，待下次执行',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.statusEndedNoMore':
+    '已结束，不再执行',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.executeTaskSuccess': '执行任务成功',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.enableTaskSuccess': '启用任务成功',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.disableTaskSuccess': '停用任务成功',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.deleteTaskSuccess': '删除任务成功',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.taskType': '任务类型',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.agent': '智能体',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.workflow': '工作流',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.selectTaskType': '请选择任务类型',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.taskName': '任务名称',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.enterTaskName': '请输入任务名称',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.taskTarget': '任务对象',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.taskStatus': '任务状态',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.executionTimes': '执行次数',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.latestExecutionTime': '最近执行时间',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.nextExecutionTime': '下次执行时间',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.creator': '创建人',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.enterCreator': '请输入创建人',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.createdTime': '创建时间',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.actions': '操作',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.manualExecute': '手动执行',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.enable': '启用',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.confirmEnableTask':
+    '确认启用该任务？',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.disable': '停用',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.confirmDisableTask':
+    '确认停用该任务？',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.edit': '编辑',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.executionRecord': '执行记录',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.delete': '删除',
+  'NuwaxPC.Pages.SystemTaskCenterProTable.confirmDeleteTask':
+    '确认删除该任务？',
   'NuwaxPC.Pages.AppDevChatArea.chatTab': '对话',
   'NuwaxPC.Pages.AppDevChatArea.designTab': '设计',
   'NuwaxPC.Pages.AppDevChatArea.dataTab': '数据',
