@@ -1315,3 +1315,27 @@
 - 风险/阻塞：
   - `AppDev FileTreePanel` 与 `SystemManagement/TaskManage/CreateTimedTask` 仍有剩余存量
 - 下一步：继续推进 `AppDev/FileTreePanel` 与 `SystemManagement/TaskManage/CreateTimedTask`
+
+### 里程碑：Top 模块第五十三批实改（AppDev FileTreePanel）
+
+- 时间：2026-03-31 16:18
+- 任务：处理 `AppDev/components/FileTreePanel` 的菜单文案、加载态和展开收起提示
+- 执行命令：
+  - `pnpm prettier --write src/pages/AppDev/components/FileTreePanel/index.tsx src/pages/AppDev/components/FileTreePanel/FileContextMenu/index.tsx src/pages/AppDev/components/FileTreePanel/AppDevFileTree/index.tsx src/locales/i18n/nuwaxpc-zh-cn.ts src/locales/i18n/nuwaxpc-en-us.ts`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 `apply_patch` 修改以下文件
+    - `src/pages/AppDev/components/FileTreePanel/index.tsx`
+    - `src/pages/AppDev/components/FileTreePanel/FileContextMenu/index.tsx`
+    - `src/pages/AppDev/components/FileTreePanel/AppDevFileTree/index.tsx`
+    - `src/locales/i18n/nuwaxpc-zh-cn.ts`
+    - `src/locales/i18n/nuwaxpc-en-us.ts`
+- 结果摘要：
+  - `FileTreePanel` 折叠/展开 tooltip、初始化加载文案、空态按钮文案切换为 `t(...)`
+  - `FileContextMenu` 重命名/上传文件/删除/导入项目文案全部切换为 `t(...)`
+  - `AppDevFileTree` 重命名失败注释文本改为英文，消除硬编码中文
+  - 新增 `NuwaxPC.Pages.AppDevFileTreePanel.*` 与 `NuwaxPC.Pages.AppDevFileTreeContextMenu.*` 默认中英文词典
+  - 治理总量从 `2670` 下降至 `2659`（-11）
+- 风险/阻塞：
+  - `AppDev` 仍有存量分布在 `DesignViewer/utils`、`useDevLogs`、`index.tsx`
+- 下一步：继续推进 `SystemManagement/TaskManage/CreateTimedTask` 或 `AppDev/useDevLogs` 热点清单
