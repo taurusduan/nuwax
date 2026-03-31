@@ -3,6 +3,7 @@ import {
   keepAlive,
   rollbackVersion,
 } from '@/services/appDev';
+import { dict } from '@/services/i18nRuntime';
 import type { FileNode } from '@/types/interfaces/appDev';
 import { message } from 'antd';
 import { useCallback, useState } from 'react';
@@ -163,7 +164,7 @@ export const useAppDevVersionCompare = ({
   const startVersionCompare = useCallback(
     async (version: number) => {
       if (!projectId) {
-        message.error('Project ID does not exist');
+        message.error(dict('NuwaxPC.Hooks.UseAppDevVersionCompare.projectIdNotExist'));
         return;
       }
 
@@ -187,7 +188,7 @@ export const useAppDevVersionCompare = ({
         }
       } catch (error: any) {
         message.error(
-          `Version comparison failed: ${error.message || 'Unknown error'}`,
+          dict('NuwaxPC.Hooks.UseAppDevVersionCompare.versionCompareFailed', error.message || dict('NuwaxPC.Common.Global.unknownError')),
         );
       } finally {
         setIsLoadingVersion(false);
@@ -211,7 +212,7 @@ export const useAppDevVersionCompare = ({
    */
   const confirmVersionSwitch = useCallback(async () => {
     if (!projectId || !targetVersion) {
-      message.error('Project ID or target version does not exist');
+      message.error(dict('NuwaxPC.Hooks.UseAppDevVersionCompare.projectIdOrVersionNotExist'));
       return;
     }
 
@@ -229,13 +230,13 @@ export const useAppDevVersionCompare = ({
         // 调用成功回调
         onVersionSwitchSuccess?.();
 
-        message.success('Version switched successfully');
+        message.success(dict('NuwaxPC.Hooks.UseAppDevVersionCompare.versionSwitchSuccess'));
       } else {
         throw new Error(response?.message || 'Version switch failed');
       }
     } catch (error: any) {
       message.error(
-        `Version switch failed: ${error.message || 'Unknown error'}`,
+        dict('NuwaxPC.Hooks.UseAppDevVersionCompare.versionSwitchFailed', error.message || dict('NuwaxPC.Common.Global.unknownError')),
       );
     } finally {
       setIsSwitching(false);

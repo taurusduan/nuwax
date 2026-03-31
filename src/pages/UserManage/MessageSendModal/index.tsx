@@ -193,7 +193,13 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
     >
       <div className={cx('flex', 'flex-col', 'gap-10')}>
         <Radio.Group
-          options={MESSAGE_SCOPE_OPTIONS}
+          options={MESSAGE_SCOPE_OPTIONS.map((opt) => ({
+            ...opt,
+            label:
+              opt.value === MessageScopeEnum.Broadcast
+                ? dict('NuwaxPC.Pages.UserManage.MessageSendModal.broadcast')
+                : dict('NuwaxPC.Pages.UserManage.MessageSendModal.systemMessage'),
+          }))}
           value={messageScope}
           onChange={(e) => setMessageScope(e.target.value)}
         />

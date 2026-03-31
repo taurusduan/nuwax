@@ -3,6 +3,7 @@
  * 管理模型列表加载和选择逻辑
  */
 import { listModels } from '@/services/appDev';
+import { dict } from '@/services/i18nRuntime';
 import type { ModelLisDto } from '@/types/interfaces/appDev';
 import { jumpBack } from '@/utils/router';
 import { message, Modal } from 'antd';
@@ -42,9 +43,9 @@ export const useAppDevModelSelector = (
         // 如果没有编码模型列表，则提示用户先配置默认聊天模型
         if (!chatModelList?.length) {
           Modal.confirm({
-            title: 'Notice',
+            title: dict('NuwaxPC.Hooks.UseAppDevModelSelector.notice'),
             content:
-              'Please configure a coding model in System Management or the component library. Choose a model that supports the Anthropic protocol. Recommended: Zhipu Coding Plan https://bigmodel.cn/glm-coding',
+              dict('NuwaxPC.Hooks.UseAppDevModelSelector.configCodingModel'),
             // 核心代码：通过样式隐藏取消按钮
             cancelButtonProps: { style: { display: 'none' } },
             onOk() {
@@ -57,7 +58,7 @@ export const useAppDevModelSelector = (
       }
     } catch (error) {
       console.error('Failed to load model list:', error);
-      message.error('Failed to load model list. Please refresh and try again.');
+      message.error(dict('NuwaxPC.Hooks.UseAppDevModelSelector.loadModelListFailed'));
     } finally {
       setIsLoadingModels(false);
     }

@@ -2392,6 +2392,7 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Components.ShareDesktopModal.selectValidDuration': '请选择有效时间',
   'NuwaxPC.Components.ShareDesktopModal.linkExpiresIn': '链接将在 {0} 后失效',
   'NuwaxPC.Components.ShareDesktopModal.linkPermanent': '链接永久有效',
+  'NuwaxPC.Components.ShareDesktopModal.secondsUnit': '{0}秒',
   'NuwaxPC.Components.ShareDesktopModal.noticeTitle': '温馨提示：',
   'NuwaxPC.Components.ShareDesktopModal.noticeDescription':
     '分享链接生成后将自动复制到剪切板；互联网上得到该分享链接的用户均可访问，请谨慎分享，注意数据风险。',
@@ -2411,6 +2412,7 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Components.FilePathHeader.fullscreen': '全屏',
   'NuwaxPC.Components.SearchView.searchPlaceholder': '搜索文件...',
   'NuwaxPC.Components.SearchView.noMatchingFiles': '暂无匹配文件',
+  'NuwaxPC.Components.FileTree.noFiles': '暂无文件',
   'NuwaxPC.Components.FileTreeView.noFilesToPreview': '当前没有可预览的文件',
   'NuwaxPC.Components.FileTreeView.noMatchingFile':
     '没有匹配到对应的文件，请从左侧文件树选择一个文件进行预览',
@@ -2799,6 +2801,8 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.UserManage.Index.userManage': '用户管理',
   'NuwaxPC.Pages.UserManage.Index.addUser': '添加用户',
   'NuwaxPC.Pages.UserManage.Index.sendMessage': '消息发送',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.broadcast': '指定用户发送',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.systemMessage': '系统消息（全部用户）',
 
   // Layouts - Setting
   // Layouts - Setting > ResetPassword
@@ -3088,6 +3092,13 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Models.ConversationInfo.networkTimeoutError': '网络超时或服务不可用，请稍后再试',
   'NuwaxPC.Models.ConversationInfo.taskConflictTitle': '提示',
   'NuwaxPC.Models.ConversationInfo.taskConflictContent': '智能体正在执行任务中，需要先暂停当前任务后才能发送新请求，是否暂停当前任务？',
+  'NuwaxPC.Models.DevCollectAgent.uncollectSuccess': '取消收藏成功',
+  'NuwaxPC.Models.UserInfo.getUserInfoFailed': '获取用户信息失败',
+  'NuwaxPC.Models.UserInfo.refreshUserInfoFailed': '刷新用户信息失败',
+  'NuwaxPC.Models.WorkflowV3.defaultNodeName': '测试',
+  'NuwaxPC.Models.WorkflowV3.defaultNodeDescription': '测试',
+  'NuwaxPC.Models.Workflow.defaultNodeName': '测试',
+  'NuwaxPC.Models.Workflow.defaultNodeDescription': '测试',
 
   // Pages - IMChannel - Index
   'NuwaxPC.Pages.IMChannel.Index.title': 'IM 机器人',
@@ -3727,4 +3738,57 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
 
   // Layouts - DynamicMenusLayout > DynamicSecondMenu
   'NuwaxPC.Layouts.DynamicMenusLayout.DynamicSecondMenu.pathResolveFailed': '处理路径跳转失败，请检查菜单路径是否存在',
+
+  // Common - Global (additional)
+  'NuwaxPC.Common.Global.unknownError': '未知错误',
+  'NuwaxPC.Common.Global.continue': '继续',
+
+  // Hooks - UseAppDevVersionCompare
+  'NuwaxPC.Hooks.UseAppDevVersionCompare.projectIdNotExist': '项目ID不存在',
+  'NuwaxPC.Hooks.UseAppDevVersionCompare.versionCompareFailed': '版本对比失败: {0}',
+  'NuwaxPC.Hooks.UseAppDevVersionCompare.projectIdOrVersionNotExist': '项目ID或目标版本不存在',
+  'NuwaxPC.Hooks.UseAppDevVersionCompare.versionSwitchSuccess': '版本切换成功',
+  'NuwaxPC.Hooks.UseAppDevVersionCompare.versionSwitchFailed': '版本切换失败: {0}',
+
+  // Hooks - UseAppDevModelSelector
+  'NuwaxPC.Hooks.UseAppDevModelSelector.notice': '提示',
+  'NuwaxPC.Hooks.UseAppDevModelSelector.configCodingModel': '请先在系统管理或组件库中配置编码模型，请选择支持 Anthropic 协议的模型。推荐：智谱编码方案 https://bigmodel.cn/glm-coding',
+  'NuwaxPC.Hooks.UseAppDevModelSelector.loadModelListFailed': '加载模型列表失败，请刷新后重试',
+
+  // Hooks - UseAppDevFileManagement
+  'NuwaxPC.Hooks.UseAppDevFileManagement.loadFileFailed': '加载文件 {0} 失败',
+  'NuwaxPC.Hooks.UseAppDevFileManagement.editCanceled': '已取消编辑',
+  'NuwaxPC.Hooks.UseAppDevFileManagement.renameFailed': '重命名失败',
+  'NuwaxPC.Hooks.UseAppDevFileManagement.renameFailedWithError': '重命名失败: {0}',
+
+  // Hooks - UseAppDevServer
+  'NuwaxPC.Hooks.UseAppDevServer.devEnvStarted': '开发环境启动成功',
+  'NuwaxPC.Hooks.UseAppDevServer.devServerRestarted': '开发服务器重启成功',
+  'NuwaxPC.Hooks.UseAppDevServer.startDevEnvFailed': '开发环境启动失败',
+  'NuwaxPC.Hooks.UseAppDevServer.restartDevServerFailed': '重启开发服务器失败',
+  'NuwaxPC.Hooks.UseAppDevServer.keepaliveFailed': '保活请求失败',
+  'NuwaxPC.Hooks.UseAppDevServer.projectIdMissing': '项目ID缺失或无效，无法重启',
+
+  // Hooks - UseAppDevProjectInfo
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.noPermission': '您没有权限访问该项目',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.fetchProjectFailed': '获取项目详情时发生未知错误',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionChat': 'AI对话',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionFileUpdate': '文件更新',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionUploadSingleFile': '上传单个文件',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionCreateProject': '创建项目',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionBuild': '构建',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionDeploy': '部署',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionUploadProject': '上传项目',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionVersionRollback': '版本回滚',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionUnknown': '未知操作',
+
+  // Hooks - UseAutoErrorHandling
+  'NuwaxPC.Hooks.UseAutoErrorHandling.limitReached': '自动错误处理已达上限',
+  'NuwaxPC.Hooks.UseAutoErrorHandling.continueAutoHandling': '是否继续自动处理此问题？',
+  'NuwaxPC.Hooks.UseAutoErrorHandling.whiteScreenError': '预览页面检测到白屏，请分析并修复以下错误：\n\n```\n{0}\n```',
+  'NuwaxPC.Hooks.UseAutoErrorHandling.logError': '请分析以下日志并修复错误：\n\n```\n{0}\n```',
+  'NuwaxPC.Hooks.UseAutoErrorHandling.iframeError': '预览页面加载失败，请分析并修复错误：\n\n```\n{0}\n```',
+
+  // Hooks - UseCopyTemplate
+  'NuwaxPC.Hooks.UseCopyTemplate.copySuccess': '模板复制成功',
 };

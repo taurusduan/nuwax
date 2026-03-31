@@ -4,6 +4,7 @@
 
 import { DEV_SERVER_CONSTANTS } from '@/constants/appDevConstants';
 import { keepAlive, restartDev, startDev } from '@/services/appDev';
+import { dict } from '@/services/i18nRuntime';
 import { message } from 'antd';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useParams, useRequest } from 'umi';
@@ -89,8 +90,8 @@ export const useAppDevServer = ({
         const successMessage =
           response?.message ||
           (operation === 'start'
-            ? 'Development environment started successfully'
-            : 'Development server restarted successfully');
+            ? dict('NuwaxPC.Hooks.UseAppDevServer.devEnvStarted')
+            : dict('NuwaxPC.Hooks.UseAppDevServer.devServerRestarted'));
 
         let messageText = '';
         if (shouldShowMessage) {
@@ -113,8 +114,8 @@ export const useAppDevServer = ({
           response?.message ||
           `${
             operation === 'start'
-              ? 'Failed to start development environment'
-              : 'Failed to restart development server'
+              ? dict('NuwaxPC.Hooks.UseAppDevServer.startDevEnvFailed')
+              : dict('NuwaxPC.Hooks.UseAppDevServer.restartDevServerFailed')
           }`;
         const errorCode = response?.code || 'UNKNOWN_ERROR';
         setServerMessage(errorMessage);
@@ -191,7 +192,7 @@ export const useAppDevServer = ({
 
     if (!isSuccess) {
       // 【关键变更】接口返回非成功状态码，设置错误信息和错误码
-      const errorMessage = response?.message || 'Keepalive request failed';
+      const errorMessage = response?.message || dict('NuwaxPC.Hooks.UseAppDevServer.keepaliveFailed');
       const errorCode = response?.code || 'KEEPALIVE_ERROR';
       console.warn('[useAppDevServer] keepAlive failed:', {
         code: errorCode,
@@ -353,7 +354,7 @@ export const useAppDevServer = ({
       setIsStarting(false);
       setIsRunning(false);
       setServerMessage(
-        error?.message || 'Failed to start development environment',
+        error?.message || dict('NuwaxPC.Hooks.UseAppDevServer.startDevEnvFailed'),
       );
       setServerErrorCode(error?.code || 'START_ERROR');
       onServerStatusChange?.(false);
@@ -378,9 +379,9 @@ export const useAppDevServer = ({
     async (shouldSwitchTab: boolean = false) => {
       if (!projectId) {
         if (shouldSwitchTab) {
-          message.error('Project ID is missing or invalid. Cannot restart');
+          message.error(dict('NuwaxPC.Hooks.UseAppDevServer.projectIdMissing'));
         }
-        return { success: false, message: 'Project ID is missing or invalid' };
+        return { success: false, message: dict('NuwaxPC.Hooks.UseAppDevServer.projectIdMissing') };
       }
       let finalResult;
 
@@ -427,7 +428,7 @@ export const useAppDevServer = ({
         setIsRunning(false);
 
         const errorMessage =
-          error?.message || 'Failed to restart development server';
+          error?.message || dict('NuwaxPC.Hooks.UseAppDevServer.restartDevServerFailed');
         const errorCode = error?.code || 'RESTART_ERROR';
         setServerMessage(errorMessage);
         setServerErrorCode(errorCode);

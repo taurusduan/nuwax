@@ -9,6 +9,8 @@ import dayjs from 'dayjs';
 import { useCallback, useRef } from 'react';
 import { useModel } from 'umi';
 
+import { dict } from '@/services/i18nRuntime';
+
 interface UseAutoErrorHandlingProps {
   /** 添加日志到聊天框的回调 */
   onAddToChat: (
@@ -126,10 +128,10 @@ export const useAutoErrorHandling = ({
       modelStateRef.current.setHasShownConfirmModal(true);
 
       Modal.confirm({
-        title: 'Auto error handling limit reached',
-        content: 'Continue automatic handling for this issue?',
-        okText: 'Continue',
-        cancelText: 'Cancel',
+        title: dict('NuwaxPC.Hooks.UseAutoErrorHandling.limitReached'),
+        content: dict('NuwaxPC.Hooks.UseAutoErrorHandling.continueAutoHandling'),
+        okText: dict('NuwaxPC.Common.Global.continue'),
+        cancelText: dict('NuwaxPC.Common.Global.cancel'),
         onOk: () => {
           handleUserConfirmContinue(formattedContent);
           confirmModalRef.current = false;
@@ -157,15 +159,15 @@ export const useAutoErrorHandling = ({
       switch (errorType) {
         case 'whiteScreen':
           // 白屏错误格式
-          return `A white screen was detected on the preview page. Analyze and fix the following error:\n\n\`\`\`\n${trimmedContent}\n\`\`\``;
+          return dict('NuwaxPC.Hooks.UseAutoErrorHandling.whiteScreenError', trimmedContent);
 
         case 'log':
           // 日志错误格式
-          return `Analyze the following logs and fix the error:\n\n\`\`\`\n${trimmedContent}\n\`\`\``;
+          return dict('NuwaxPC.Hooks.UseAutoErrorHandling.logError', trimmedContent);
 
         case 'iframe':
           // iframe 加载错误格式
-          return `Preview page failed to load. Analyze and fix the error:\n\n\`\`\`\n${trimmedContent}\n\`\`\``;
+          return dict('NuwaxPC.Hooks.UseAutoErrorHandling.iframeError', trimmedContent);
 
         default:
           // 默认格式（保持原有逻辑）

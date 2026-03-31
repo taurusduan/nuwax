@@ -14,6 +14,7 @@ import {
   submitFilesUpdate,
   uploadSingleFile,
 } from '@/services/appDev';
+import { dict } from '@/services/i18nRuntime';
 import type {
   FileContentState,
   FileNode,
@@ -343,7 +344,7 @@ export const useAppDevFileManagement = ({
         // 即使失败也要标记文件已尝试加载，避免重复调用
         setLoadedFiles((prev) => new Set(prev).add(fileId));
 
-        message.error(`Failed to load file ${fileId}`);
+        message.error(dict('NuwaxPC.Hooks.UseAppDevFileManagement.loadFileFailed', fileId));
       }
     },
     [projectId, fileTreeState.data, onFileSelect, onFileContentChange],
@@ -478,7 +479,7 @@ export const useAppDevFileManagement = ({
       }));
 
       if (!silent) {
-        message.info('Edit canceled');
+        message.info(dict('NuwaxPC.Hooks.UseAppDevFileManagement.editCanceled'));
       }
     },
     [fileContentState],
@@ -805,16 +806,14 @@ export const useAppDevFileManagement = ({
         } else {
           // 重命名文件失败，重新加载文件树以恢复原状态
           await loadFileTree(true, true);
-          message.error('Rename failed');
+          message.error(dict('NuwaxPC.Hooks.UseAppDevFileManagement.renameFailed'));
           return false;
         }
       } catch (error) {
         // 重命名文件异常，重新加载文件树以恢复原状态
         await loadFileTree(true, true);
         message.error(
-          `Rename failed: ${
-            error instanceof Error ? error.message : 'Unknown error'
-          }`,
+          dict('NuwaxPC.Hooks.UseAppDevFileManagement.renameFailedWithError', error instanceof Error ? error.message : dict('NuwaxPC.Common.Global.unknownError')),
         );
         return false;
       }

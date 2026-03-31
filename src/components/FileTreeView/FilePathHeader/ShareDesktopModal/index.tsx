@@ -134,7 +134,7 @@ const ShareDesktopModal: React.FC<ShareDesktopModalProps> = ({
    */
   const formatTimeDisplay = (seconds: number): string => {
     const option = TIME_OPTIONS.find((opt) => opt.value === seconds);
-    return option?.label || `${seconds}秒`;
+    return option?.label || dict('NuwaxPC.Components.ShareDesktopModal.secondsUnit', `${seconds}`);
   };
 
   const generateDesktopShareUrl = async (values: ShareFormValues) => {

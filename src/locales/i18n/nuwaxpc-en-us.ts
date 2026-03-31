@@ -2706,6 +2706,7 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Components.ShareDesktopModal.linkExpiresIn': 'Link expires in {0}',
   'NuwaxPC.Components.ShareDesktopModal.linkPermanent':
     'Link is permanently valid',
+  'NuwaxPC.Components.ShareDesktopModal.secondsUnit': '{0}s',
   'NuwaxPC.Components.ShareDesktopModal.noticeTitle': 'Notice:',
   'NuwaxPC.Components.ShareDesktopModal.noticeDescription':
     'The share link will be automatically copied to clipboard. Anyone with this link can access it. Share carefully and be aware of data risks.',
@@ -2727,6 +2728,7 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Components.FilePathHeader.fullscreen': 'Fullscreen',
   'NuwaxPC.Components.SearchView.searchPlaceholder': 'Search files...',
   'NuwaxPC.Components.SearchView.noMatchingFiles': 'No matching files',
+  'NuwaxPC.Components.FileTree.noFiles': 'No files',
   'NuwaxPC.Components.FileTreeView.noFilesToPreview':
     'No files available for preview',
   'NuwaxPC.Components.FileTreeView.noMatchingFile':
@@ -3150,6 +3152,8 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.UserManage.Index.userManage': 'User Management',
   'NuwaxPC.Pages.UserManage.Index.addUser': 'Add User',
   'NuwaxPC.Pages.UserManage.Index.sendMessage': 'Send Message',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.broadcast': 'Send to specified users',
+  'NuwaxPC.Pages.UserManage.MessageSendModal.systemMessage': 'System message (all users)',
 
   // Layouts - Setting
   // Layouts - Setting > ResetPassword
@@ -3546,6 +3550,13 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Models.ConversationInfo.networkTimeoutError': 'Network timeout or service unavailable, please try again later',
   'NuwaxPC.Models.ConversationInfo.taskConflictTitle': 'Notice',
   'NuwaxPC.Models.ConversationInfo.taskConflictContent': 'The agent is currently executing a task. Do you want to pause the current task before sending a new request. Do you want to pause?',
+  'NuwaxPC.Models.DevCollectAgent.uncollectSuccess': 'Uncollected successfully',
+  'NuwaxPC.Models.UserInfo.getUserInfoFailed': 'Failed to get user info',
+  'NuwaxPC.Models.UserInfo.refreshUserInfoFailed': 'Failed to refresh user info',
+  'NuwaxPC.Models.WorkflowV3.defaultNodeName': 'Test',
+  'NuwaxPC.Models.WorkflowV3.defaultNodeDescription': 'Test',
+  'NuwaxPC.Models.Workflow.defaultNodeName': 'Test',
+  'NuwaxPC.Models.Workflow.defaultNodeDescription': 'Test',
   'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.confirmRemove':
     'Confirm Removal',
 
@@ -4216,4 +4227,57 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
 
   // Layouts - DynamicMenusLayout > DynamicSecondMenu
   'NuwaxPC.Layouts.DynamicMenusLayout.DynamicSecondMenu.pathResolveFailed': 'Failed to resolve path navigation, please check if the menu path exists',
+
+  // Hooks - UseAppDevFileManagement
+  'NuwaxPC.Hooks.UseAppDevFileManagement.editCanceled': 'Edit canceled',
+  'NuwaxPC.Hooks.UseAppDevFileManagement.loadFileFailed': 'Failed to load file {0}',
+  'NuwaxPC.Hooks.UseAppDevFileManagement.renameFailed': 'Rename failed',
+  'NuwaxPC.Hooks.UseAppDevFileManagement.renameFailedWithError': 'Rename failed: {0}',
+
+  // Hooks - UseAppDevModelSelector
+  'NuwaxPC.Hooks.UseAppDevModelSelector.configCodingModel': 'Please configure a coding model in system management or component library. Select a model that supports the Anthropic protocol. Recommended: Zhipu Coding Solution https://bigmodel.cn/glm-coding',
+  'NuwaxPC.Hooks.UseAppDevModelSelector.loadModelListFailed': 'Failed to load model list, please refresh and try again',
+  'NuwaxPC.Hooks.UseAppDevModelSelector.notice': 'Notice',
+
+  // Hooks - UseAppDevProjectInfo
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionBuild': 'Build',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionChat': 'AI Chat',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionCreateProject': 'Create Project',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionDeploy': 'Deploy',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionFileUpdate': 'File Update',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionUnknown': 'Unknown Action',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionUploadProject': 'Upload Project',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionUploadSingleFile': 'Upload Single File',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionVersionRollback': 'Version Rollback',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.fetchProjectFailed': 'Unknown error occurred while fetching project details',
+  'NuwaxPC.Hooks.UseAppDevProjectInfo.noPermission': 'You do not have permission to access this project',
+
+  // Hooks - UseAppDevServer
+  'NuwaxPC.Hooks.UseAppDevServer.devEnvStarted': 'Development environment started successfully',
+  'NuwaxPC.Hooks.UseAppDevServer.devServerRestarted': 'Development server restarted successfully',
+  'NuwaxPC.Hooks.UseAppDevServer.keepaliveFailed': 'Keepalive request failed',
+  'NuwaxPC.Hooks.UseAppDevServer.projectIdMissing': 'Project ID is missing or invalid, cannot restart',
+  'NuwaxPC.Hooks.UseAppDevServer.restartDevServerFailed': 'Failed to restart development server',
+  'NuwaxPC.Hooks.UseAppDevServer.startDevEnvFailed': 'Failed to start development environment',
+
+  // Hooks - UseAppDevVersionCompare
+  'NuwaxPC.Hooks.UseAppDevVersionCompare.projectIdNotExist': 'Project ID does not exist',
+  'NuwaxPC.Hooks.UseAppDevVersionCompare.projectIdOrVersionNotExist': 'Project ID or target version does not exist',
+  'NuwaxPC.Hooks.UseAppDevVersionCompare.versionCompareFailed': 'Version comparison failed: {0}',
+  'NuwaxPC.Hooks.UseAppDevVersionCompare.versionSwitchFailed': 'Version switch failed: {0}',
+  'NuwaxPC.Hooks.UseAppDevVersionCompare.versionSwitchSuccess': 'Version switched successfully',
+
+  // Hooks - UseAutoErrorHandling
+  'NuwaxPC.Hooks.UseAutoErrorHandling.continueAutoHandling': 'Continue auto-handling this issue?',
+  'NuwaxPC.Hooks.UseAutoErrorHandling.iframeError': 'Preview page failed to load, please analyze and fix the error:\n\n```\n{0}\n```',
+  'NuwaxPC.Hooks.UseAutoErrorHandling.limitReached': 'Auto error handling limit reached',
+  'NuwaxPC.Hooks.UseAutoErrorHandling.logError': 'Please analyze the following logs and fix the errors:\n\n```\n{0}\n```',
+  'NuwaxPC.Hooks.UseAutoErrorHandling.whiteScreenError': 'White screen detected in preview, please analyze and fix the following error:\n\n```\n{0}\n```',
+
+  // Hooks - UseCopyTemplate
+  'NuwaxPC.Hooks.UseCopyTemplate.copySuccess': 'Template copied successfully',
+
+  // Common - additional
+  'NuwaxPC.Common.Global.continue': 'Continue',
+  'NuwaxPC.Common.Global.unknownError': 'Unknown error',
 };
