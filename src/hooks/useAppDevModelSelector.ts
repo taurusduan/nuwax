@@ -3,7 +3,7 @@
  * 管理模型列表加载和选择逻辑
  */
 import { apiModelList } from '@/services/modelConfig';
-import { AgentComponentTypeEnum } from '@/types/enums/agent';
+import { AgentComponentTypeEnum, TaskTypeEnum } from '@/types/enums/agent';
 import {
   ModelTypeEnum,
   ModelUsageScenarioEnum,
@@ -38,7 +38,7 @@ export const useAppDevModelSelector = (
     setIsLoadingModels(true);
     try {
       const { data, message, success } = await apiModelList({
-        modelType: AgentComponentTypeEnum.PageApp as any,
+        modelType: TaskTypeEnum.Chat as any,
         spaceId: Number(spaceId),
       });
 
