@@ -8,6 +8,7 @@ import {
   apiPublishedAgentInfo,
   apiUnCollectAgent,
 } from '@/services/agentDev';
+import { DefaultSelectedEnum } from '@/types/enums/agent';
 import { AgentTypeEnum } from '@/types/enums/space';
 import { AgentDetailDto, GuidQuestionDto } from '@/types/interfaces/agent';
 import type {
@@ -265,7 +266,10 @@ const Home: React.FC = () => {
           agentId={agentDetail?.agentId}
           agentSandboxId={agentDetail?.sandboxId}
           /** 是否启用 @ 提及功能，默认启用 */
-          enableMention={agentDetail?.type === AgentTypeEnum.TaskAgent}
+          enableMention={
+            agentDetail?.type === AgentTypeEnum.TaskAgent &&
+            agentDetail?.allowAtSkill === DefaultSelectedEnum.Yes
+          }
         />
         <div
           className={cx(

@@ -672,6 +672,12 @@ export interface AgentDetailDto extends AgentBaseInfo {
   isSandboxUnavailable?: boolean;
   /** 是否隐藏远程桌面，1 隐藏；0 不隐藏 */
   hideDesktop: HideDesktopEnum;
+  // 允许用户选择自有模型
+  allowOtherModel?: DefaultSelectedEnum;
+  // 允许用户@技能
+  allowAtSkill?: DefaultSelectedEnum;
+  // 允许用户选择个人电脑
+  allowPrivateSandbox?: DefaultSelectedEnum;
 }
 
 // 日志查询过滤条件

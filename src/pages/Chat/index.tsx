@@ -32,6 +32,7 @@ import {
 import {
   AgentComponentTypeEnum,
   AllowCopyEnum,
+  DefaultSelectedEnum,
   HideDesktopEnum,
   MessageTypeEnum,
   TaskStatus,
@@ -1348,7 +1349,10 @@ const Chat: React.FC = () => {
               isPersonalComputer={!!conversationInfo?.agent?.sandboxId}
               mentionPlacement="up"
               /** 是否启用 @ 提及功能，默认启用 */
-              enableMention={effectiveAgent?.type === AgentTypeEnum.TaskAgent}
+              enableMention={
+                effectiveAgent?.type === AgentTypeEnum.TaskAgent &&
+                effectiveAgent?.allowAtSkill === DefaultSelectedEnum.Yes
+              }
             />
           </div>
 

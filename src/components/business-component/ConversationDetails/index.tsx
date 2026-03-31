@@ -20,6 +20,7 @@ import {
   AgentComponentTypeEnum,
   AllowCopyEnum,
   AssistantRoleEnum,
+  DefaultSelectedEnum,
   MessageModeEnum,
   MessageTypeEnum,
 } from '@/types/enums/agent';
@@ -525,7 +526,10 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
               isPersonalComputer={!!agentDetail?.sandboxId}
               mentionPlacement="up"
               /** 是否启用 @ 提及功能，默认启用 */
-              enableMention={agentDetail?.type === AgentTypeEnum.TaskAgent}
+              enableMention={
+                agentDetail?.type === AgentTypeEnum.TaskAgent &&
+                agentDetail?.allowAtSkill === DefaultSelectedEnum.Yes
+              }
               // 通用性智能体才有技能，所以技能信息存在时才显示提及项，其他类型智能体不显示提及项
               defaultMentions={defaultMentions}
             />
