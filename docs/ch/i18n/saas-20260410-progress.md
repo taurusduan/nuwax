@@ -778,3 +778,21 @@
 - 风险/阻塞：
   - `graph.tsx` 仍有大量历史注释，后续可继续做结构化注释收敛
 - 下一步：继续推进 `v3/indexV3.tsx` 与 `Antv-X6/index.tsx` 的残留提示文案
+
+### 里程碑：Top 模块第三十批实改（Antv-X6 v3 index）
+
+- 时间：2026-03-31 10:37
+- 任务：处理 `v3/indexV3.tsx` 的多语言遗留文本（日志提示、注释残留、脏文案）
+- 执行命令：
+  - `pnpm prettier --write src/pages/Antv-X6/v3/indexV3.tsx`
+  - `pnpm run check:i18n-hardcoded`
+  - `pnpm run report:i18n-governance`
+  - 通过 shell + `apply_patch` 修改以下文件
+    - `src/pages/Antv-X6/v3/indexV3.tsx`
+- 结果摘要：
+  - 清理 V3 index 中遗留中文字符，统一为英文注释与日志描述
+  - 修复被历史文案替换后的无语义日志文本，补齐可读日志（如 `getReference` / `changeDrawer`）
+  - inventory 问题总量从 `3253` 下降至 `3243`
+- 风险/阻塞：
+  - `Antv-X6/index.tsx` 与 `src/pages/Antv-X6/component/graph.tsx` 仍有存量
+- 下一步：继续推进 `Antv-X6/index.tsx` 与 `Antv-X6/component/graph.tsx`
