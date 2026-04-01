@@ -9,6 +9,10 @@ import {
   apiSystemResourceKnowledgeListByIds,
   apiSystemResourcePageListByIds,
 } from '@/pages/UserManage/user-manage';
+import {
+  apiGetOpenApiList,
+  OpenApiPermissionTargetTypeEnum,
+} from '@/services/account';
 import { apiPublishedAgentList } from '@/services/square';
 import {
   apiSystemModelList,
@@ -16,6 +20,7 @@ import {
 } from '@/services/systemManage';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import { AccessControlEnum } from '@/types/enums/systemManage';
+import type { OpenApiDefinition } from '@/types/interfaces/account';
 import type { AgentConfigInfo } from '@/types/interfaces/agent';
 import type { CustomPageDto } from '@/types/interfaces/pageDev';
 import type { Page } from '@/types/interfaces/request';
@@ -29,28 +34,32 @@ import type {
 import { InfoCircleOutlined } from '@ant-design/icons';
 import {
   Col,
+  Empty,
   Form,
   Input,
   InputNumber,
+  message,
   Modal,
   Row,
   Tabs,
   TabsProps,
   Tooltip,
-  message,
+  Tree,
+  Typography,
 } from 'antd';
 import classNames from 'classnames';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useRequest } from 'umi';
 import {
   apiGetGroupBoundDataPermissionList,
   apiGroupBindDataPermission,
 } from '../../services/user-group-manage';
-import { DataPermission } from '../../types/role-manage';
+import { DataPermission, OpenApiConfigInfo } from '../../types/role-manage';
 import ResourceItem from './components/ResourceItem';
 import styles from './index.less';
 
 const cx = classNames.bind(styles);
+const { Text } = Typography;
 
 interface DataPermissionModalProps {
   /** 是否打开 */
@@ -128,14 +137,14 @@ export const DATA_PERMISSION_TAB_ITEMS: TabsProps['items'] = [
   },
   {
     key: 'dataPermission',
-    label: '开发权限',
+    label: '开发者权限',
   },
   {
     key: 'apiPermission',
     label: (
       <span>
         API权限
-        <Tooltip title="需授权才能使用API">
+        <Tooltip title="需授权才能使用API，可配置API接口调用频率限制（每分钟调用次数和每天调用次数，-1表示不限制，默认-1， 0表示无权限）">
           <InfoCircleOutlined
             style={{ marginLeft: 4, color: '#999', cursor: 'help' }}
           />
@@ -212,6 +221,21 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
   // 保存表单值的状态，用于在组件卸载时保留值
   const [formValuesCache, setFormValuesCache] = useState<DataPermission>({});
 
+  // ============================= API 权限 Tab：可选 API 树 =============================
+  /** 左侧树数据，来自 apiGetOpenApiList（随 type 区分角色 / 用户组） */
+  const [openApiTreeData, setOpenApiTreeData] = useState<OpenApiDefinition[]>(
+    [],
+  );
+  /** 拉取开放 API 列表时的 loading */
+  const [openApiListLoading, setOpenApiListLoading] = useState<boolean>(false);
+  /**
+   * 开放 API 勾选与限流：列表中的项即勾选节点，含 key / rpm / rpd；
+   * 与数据权限接口的 openApiConfigs 一致，用于树勾选回显与提交。
+   */
+  const [openApiConfigsCache, setOpenApiConfigsCache] = useState<
+    OpenApiConfigInfo[]
+  >([]);
+
   // 模型列表
   const {
     data: modelList,
@@ -263,6 +287,8 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
       setSelectedPageAgentIds(result?.pageAgentIds || []);
       // 回显知识库选择
       setSelectedKnowledgeIds(result?.knowledgeIds || []);
+      // 回显 API 权限选择
+      setOpenApiConfigsCache(result.openApiConfigs || []);
     },
   });
 
@@ -466,8 +492,121 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
       setKnowledgeSearchKw('');
       setKnowledgePage(1);
       setKnowledgeHasMore(false);
+
+      // API 权限 Tab 状态重置（关闭弹窗时）
+      setOpenApiTreeData([]);
+      setOpenApiConfigsCache([]);
+      setOpenApiListLoading(false);
     }
   }, [open, targetId]);
+
+  /**
+   * 加载 API 权限左侧树数据。
+   * type 为 role 时传 OpenApiPermissionTargetTypeEnum.Role，否则传 Group。
+   * 树使用 defaultExpandAll，加载后全部展开。
+   */
+  const loadOpenApiTree = useCallback(async () => {
+    const targetType =
+      type === 'role'
+        ? OpenApiPermissionTargetTypeEnum.Role
+        : OpenApiPermissionTargetTypeEnum.Group;
+    setOpenApiListLoading(true);
+    try {
+      const res = await apiGetOpenApiList(targetType);
+      if (res.success && res.data) {
+        setOpenApiTreeData(res.data);
+      } else {
+        setOpenApiTreeData([]);
+      }
+    } catch (e) {
+      console.error(e);
+      setOpenApiTreeData([]);
+    } finally {
+      setOpenApiListLoading(false);
+    }
+  }, [type]);
+
+  /** 树勾选变化：用新勾选 key 集合重建列表，保留仍在勾选中的项的 rpm/rpd，新增项默认 0 */
+  const handleOpenApiTreeCheck = useCallback((keys: React.Key[] | any) => {
+    const raw = Array.isArray(keys) ? keys : keys.checked;
+    const keySet = new Set((raw as React.Key[]).map((k) => String(k)));
+    setOpenApiConfigsCache((prev) => {
+      const byKey = new Map(prev.map((c) => [c.key, c]));
+      const next: OpenApiConfigInfo[] = [];
+      keySet.forEach((key) => {
+        const existing = byKey.get(key);
+        next.push(
+          existing ?? {
+            key,
+            rpm: -1,
+            rpd: -1,
+          },
+        );
+      });
+      return next;
+    });
+  }, []);
+
+  /** 树节点标题：名称 + path（12px）；已勾选叶子右侧展示 RPM、RPD（读写 openApiConfigsCache） */
+  const openApiTitleRender = (node: OpenApiDefinition) => {
+    const isLeaf = !node.apiList?.length;
+    const cfg = openApiConfigsCache.find((c) => c.key === node.key);
+    return (
+      <div className={styles.openApiTreeTitleRow}>
+        <div className={styles.openApiTreeTitleLeft}>
+          <span
+            className={cx(styles.openApiTreeTitleName, 'text-ellipsis')}
+            title={node.name}
+          >
+            {node.name}
+          </span>
+          {node.path ? (
+            <span
+              className={cx(styles.openApiTreeTitlePath, 'text-ellipsis')}
+              title={node.path}
+            >
+              {node.path}
+            </span>
+          ) : null}
+        </div>
+        {isLeaf && cfg ? (
+          <div
+            className={styles.openApiTreeTitleControls}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Text className={styles['font-12']}>每分钟调用次数</Text>
+            <InputNumber
+              size="small"
+              min={-1}
+              className={styles['input-number']}
+              value={cfg.rpm}
+              onChange={(v) => {
+                setOpenApiConfigsCache((prev) =>
+                  prev.map((c) =>
+                    c.key === node.key ? { ...c, rpm: v ?? 0 } : c,
+                  ),
+                );
+              }}
+            />
+            <Text className={styles['font-12']}>每天调用次数</Text>
+            <InputNumber
+              size="small"
+              min={-1}
+              className={styles['input-number']}
+              value={cfg.rpd}
+              onChange={(v) => {
+                setOpenApiConfigsCache((prev) =>
+                  prev.map((c) =>
+                    c.key === node.key ? { ...c, rpd: v ?? 0 } : c,
+                  ),
+                );
+              }}
+            />
+          </div>
+        ) : null}
+      </div>
+    );
+  };
 
   // 根据 selectedModelIds 更新 selectedModelList
   useEffect(() => {
@@ -523,7 +662,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
       targetType: AgentComponentTypeEnum.Agent,
       targetSubType: 'ChatBot',
       kw,
-      accessControl: 1, // 访问控制过滤，0 无需过滤，1 过滤出需要权限管控的内容
+      accessControl: AccessControlEnum.Filter, // 访问控制过滤，0 无需过滤，1 过滤出需要权限管控的内容
     });
   };
 
@@ -535,7 +674,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
       targetType: AgentComponentTypeEnum.Agent,
       targetSubType: 'PageApp',
       kw,
-      accessControl: 1, // 访问控制过滤，0 无需过滤，1 过滤出需要权限管控的内容
+      accessControl: AccessControlEnum.Filter, // 访问控制过滤，0 无需过滤，1 过滤出需要权限管控的内容
     });
   };
 
@@ -630,6 +769,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
     },
   );
 
+  // 保存数据权限
   const handleOk = async () => {
     if (!targetId) {
       message.error('ID缺失，无法保存数据权限');
@@ -639,7 +779,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
     // 优先使用缓存的值（即使字段被卸载，缓存的值仍然存在）
     let formValues: DataPermission = { ...formValuesCache };
 
-    // 如果当前在数据权限 tab，尝试验证并获取最新值
+    // 如果当前在开发者权限 tab，尝试验证并获取最新值
     if (activeTab === 'dataPermission') {
       try {
         const validatedValues = (await form.validateFields()) || {};
@@ -653,17 +793,15 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           formValues = currentValues;
           setFormValuesCache(currentValues);
         }
-        // 如果表单值也为空，继续使用缓存的值
       }
     } else {
-      // 不在数据权限 tab 时，尝试从表单获取最新值（如果字段还在）
+      // 不在开发者权限 tab 时，尝试从表单获取最新值（如果字段还在）
       const currentValues = form.getFieldsValue() || {};
       if (currentValues && Object.keys(currentValues).length > 0) {
         // 如果表单有值，使用表单值并更新缓存
         formValues = currentValues;
         setFormValuesCache(currentValues);
       }
-      // 如果表单值为空，使用缓存的值（已经在上面初始化了）
     }
 
     // 直接使用选中的模型ID数组
@@ -681,6 +819,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
         agentIds: selectedAgentIds,
         pageAgentIds: selectedPageAgentIds,
         knowledgeIds: selectedKnowledgeIds,
+        openApiConfigs: openApiConfigsCache,
       },
     };
 
@@ -692,7 +831,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
     const tabKey = key as DataPermissionTabKey;
     setActiveTab(tabKey);
 
-    // 只针对智能体和网页应用 tab 做额外处理
+    // 智能体 / 网页应用 / 知识库 / API 权限等 Tab 的按需加载
     if (tabKey === 'agent') {
       // 右侧：根据选中的ID列表查询已选择的智能体
       if (selectedAgentIds.length > 0) {
@@ -731,6 +870,11 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
       }
       if (knowledgeList.length === 0 && !knowledgeLoading) {
         queryKnowledgeList();
+      }
+    } else if (tabKey === 'apiPermission') {
+      // 首次进入且尚无树数据时拉取列表（避免重复请求）
+      if (openApiTreeData.length === 0 && !openApiListLoading) {
+        loadOpenApiTree();
       }
     }
   };
@@ -1073,10 +1217,10 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
     </div>
   );
 
-  // 开发权限tab内容
+  // 开发者权限tab内容
   const dataPermissionTabContent = (
     <div className={cx(styles.dataPermissionFormWrapper)}>
-      {/* 开发权限表单 */}
+      {/* 开发者权限表单 */}
       <Form
         form={form}
         layout="vertical"
@@ -1264,6 +1408,51 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
     </div>
   );
 
+  /** API 权限 Tab：可勾选开放 API 树 */
+  const apiPermissionTabContent = (
+    <div className={cx('h-full', 'overflow-hide')}>
+      {openApiListLoading ? (
+        <div className={cx('h-full', 'flex', 'items-center', 'content-center')}>
+          <Loading />
+        </div>
+      ) : (
+        <div className={cx('h-full', 'overflow-y', 'py-16')}>
+          {openApiTreeData?.length > 0 ? (
+            <Tree
+              checkable
+              checkStrictly={false}
+              defaultExpandAll
+              checkedKeys={openApiConfigsCache.map((c) => c.key)}
+              onCheck={(keys) => {
+                // checkStrictly=false 时可能返回 { checked, halfChecked }
+                handleOpenApiTreeCheck(keys);
+              }}
+              treeData={openApiTreeData as any}
+              fieldNames={{ title: 'name', key: 'key', children: 'apiList' }}
+              titleRender={(node) =>
+                openApiTitleRender(node as OpenApiDefinition)
+              }
+              blockNode
+            />
+          ) : (
+            !openApiListLoading && (
+              <div
+                className={cx(
+                  'flex',
+                  'items-center',
+                  'content-center',
+                  'h-full',
+                )}
+              >
+                <Empty description="暂无 API 权限配置" />
+              </div>
+            )
+          )}
+        </div>
+      )}
+    </div>
+  );
+
   // 渲染tab内容
   const renderTabContent = () => {
     const contentMap: Record<DataPermissionTabKey, React.ReactNode> = {
@@ -1272,7 +1461,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
       page: pageTabContent,
       knowledge: knowledgeTabContent,
       dataPermission: dataPermissionTabContent,
-      apiPermission: null,
+      apiPermission: apiPermissionTabContent,
     };
     return contentMap[activeTab] ?? null;
   };
