@@ -735,8 +735,9 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
     }
   };
 
+  // 避免在父组件内定义子组件（每次渲染新函数引用会 remount 子树、丢失滚动）
   // 模型tab内容
-  const ModelTabContent = () => (
+  const modelTabContent = (
     <div className={cx('flex', 'h-full')}>
       {/* 左侧：可选模型列表 */}
       <div
@@ -792,7 +793,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
   );
 
   // 智能体tab内容
-  const AgentTabContent = () => (
+  const agentTabContent = (
     <div className={cx('flex', 'h-full')}>
       {/* 左侧：搜索 + 可选智能体列表（支持滚动加载） */}
       <div
@@ -886,7 +887,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
   );
 
   // 网页应用tab内容
-  const PageTabContent = () => (
+  const pageTabContent = (
     <div className={cx('flex', 'h-full')}>
       {/* 左侧：搜索 + 可选网页应用列表（支持滚动加载） */}
       <div
@@ -979,7 +980,8 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
     </div>
   );
 
-  const KnowledgeTabContent = () => (
+  // 知识库tab内容
+  const knowledgeTabContent = (
     <div className={cx('flex', 'h-full')}>
       <div
         className={cx(
@@ -1000,12 +1002,14 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           onChange={(e) => setKnowledgeSearchKw(e.target.value)}
           onSearch={(value) => {
             setKnowledgeSearchKw(value);
+            // 平滑滚动到顶部
             if (knowledgeListScrollRef.current) {
               knowledgeListScrollRef.current.scrollTo({
                 top: 0,
                 behavior: 'smooth',
               });
             }
+            // 查询知识库列表
             queryKnowledgeList(1, value);
           }}
         />
@@ -1027,6 +1031,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
               hasMore={knowledgeHasMore}
               onScroll={() => {
                 if (!knowledgeLoading && knowledgeHasMore) {
+                  // 加载更多知识库列表
                   queryKnowledgeList(knowledgePage + 1);
                 }
               }}
@@ -1046,7 +1051,9 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           )}
         </div>
       </div>
+      {/* 分割线 */}
       <div className={cx(styles.rightSeparator)} />
+      {/* 右侧：已选择的知识库列表（通过ID列表查询） */}
       <div className={cx(styles.rightList, 'flex-1')}>
         {selectedKnowledgeList.length ? (
           selectedKnowledgeList.map((item) => (
@@ -1067,7 +1074,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
   );
 
   // 开发权限tab内容
-  const DataPermissionTabContent = () => (
+  const dataPermissionTabContent = (
     <div className={cx(styles.dataPermissionFormWrapper)}>
       {/* 开发权限表单 */}
       <Form
@@ -1260,11 +1267,11 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
   // 渲染tab内容
   const renderTabContent = () => {
     const contentMap: Record<DataPermissionTabKey, React.ReactNode> = {
-      model: <ModelTabContent />,
-      agent: <AgentTabContent />,
-      page: <PageTabContent />,
-      knowledge: <KnowledgeTabContent />,
-      dataPermission: <DataPermissionTabContent />,
+      model: modelTabContent,
+      agent: agentTabContent,
+      page: pageTabContent,
+      knowledge: knowledgeTabContent,
+      dataPermission: dataPermissionTabContent,
       apiPermission: null,
     };
     return contentMap[activeTab] ?? null;
