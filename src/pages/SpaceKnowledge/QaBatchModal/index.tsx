@@ -181,7 +181,9 @@ const QaBatchModal: React.FC<QaBatchModalProps> = ({
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'QA批量excel模板.xlsx';
+      a.download = dict(
+        'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.templateFileName',
+      );
       a.click();
       URL.revokeObjectURL(url);
     } catch (error) {

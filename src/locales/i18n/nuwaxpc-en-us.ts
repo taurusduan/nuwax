@@ -2904,6 +2904,8 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
     'Only Excel files (.xlsx/.xls), size not exceeding 10MB',
   'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateHint':
     'Please download the import template first, fill in according to the format and then upload',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.templateFileName':
+    'QA_Batch_Excel_Template.xlsx',
   'NuwaxPC.Pages.SpaceKnowledge.QaModal.editQa': 'Edit QA',
   'NuwaxPC.Pages.SpaceKnowledge.QaModal.addQa': 'Add QA',
   'NuwaxPC.Pages.SpaceKnowledge.QaModal.question': 'Question',
@@ -3357,6 +3359,7 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.EditAgent.DebugDetails.title': 'Debug Details',
   'NuwaxPC.Pages.EditAgent.DebugDetails.elapsedTime': 'Elapsed {0} ms',
   'NuwaxPC.Pages.EditAgent.DebugDetails.calledComponents': 'Called Components',
+  'NuwaxPC.Pages.EditAgent.DebugDetails.output': 'Output',
 
   // Pages - EditAgent (main index)
   'NuwaxPC.Pages.EditAgent.convIdNotFoundCreateFile':
@@ -3579,6 +3582,53 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Models.Workflow.defaultNodeDescription': 'Test',
   'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.confirmRemove':
     'Confirm Removal',
+
+  // Pages - SpacePageDevelop - AuthConfigModal
+  'NuwaxPC.Pages.SpacePageDevelop.AuthConfigModal.authConfig': 'Auth Configuration',
+  'NuwaxPC.Pages.SpacePageDevelop.AuthConfigModal.allowAccessWithoutLogin': 'Allow Access Without Login',
+  'NuwaxPC.Pages.SpacePageDevelop.AuthConfigModal.pageIdNotExist': 'Page ID does not exist',
+
+  // Pages - SpacePageDevelop - PageCreateModal
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.createApp': 'Create App',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.name': 'Name',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterName': 'Please enter name',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.description': 'Description',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterDescription': 'Please enter description',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.icon': 'Icon',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseUploadZip': 'Please upload a project zip file',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.zipOnly': 'ZIP files only',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.uploadDragText': 'Click or drag file to this area to upload',
+
+  // Pages - SpacePageDevelop - PathParamsConfigContent
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramName': 'Param Name',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramNamePlaceholder': 'Please enter param name',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescription': 'Param Description',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescriptionPlaceholder': 'Please enter param description',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.inputType': 'Input Type',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.isRequired': 'Required',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValue': 'Default Value',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValuePlaceholder': 'Please enter default value',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.enable': 'Enable',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.action': 'Action',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.noPathParams': 'No path params',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.addParam': 'Add Param',
+
+  // Pages - SpacePageDevelop - Index
+  'NuwaxPC.Pages.SpacePageDevelop.Index.pageTitle': 'Page Development',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.searchPlaceholder': 'Search page name',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.create': 'Create',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.viewDetails': 'View Details',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.published': 'Published',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.unpublished': 'Unpublished',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.noResultsFound': 'No results found',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.pageUrlNotExist': 'Page URL does not exist',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.projectIdInvalidCannotExport': 'Invalid project ID, cannot export',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.exportFailed': 'Export failed',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.exportSuccess': 'Exported successfully',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.exportUnknownError': 'Unknown export error',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.exportFailedWithError': 'Export failed: {0}',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.domainBindingConditionWarning': 'Domain binding is only available when the publish type is "App" and "Allow Access Without Login" is enabled',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.confirmDeletePage': 'Are you sure you want to delete this page?',
 
   // Pages - IMChannel - Index
   'NuwaxPC.Pages.IMChannel.Index.title': 'IM Bots',
@@ -3913,6 +3963,7 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   // Pages - SpaceDevelop > CopyChatWidgetCode
   'NuwaxPC.Pages.SpaceDevelop.CopyChatWidgetCode.iframeCodeCopy': 'iframe code copy',
   'NuwaxPC.Pages.SpaceDevelop.CopyChatWidgetCode.copySuccess': 'iframe code copied successfully',
+  'NuwaxPC.Pages.SpaceDevelop.CopyChatWidgetCode.copyCode': 'Copy code',
 
   // Pages - SpaceLog
   'NuwaxPC.Pages.SpaceLog.colMessageId': 'Message ID',

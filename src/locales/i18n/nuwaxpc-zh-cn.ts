@@ -2571,6 +2571,8 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
     '仅支持Excel文件(.xlsx/.xls)，大小不超过10MB',
   'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateHint':
     '请先下载导入模板，按照格式填写后上传',
+  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.templateFileName':
+    'QA批量excel模板.xlsx',
   'NuwaxPC.Pages.SpaceKnowledge.QaModal.editQa': '编辑QA问答',
   'NuwaxPC.Pages.SpaceKnowledge.QaModal.addQa': '添加QA问答',
   'NuwaxPC.Pages.SpaceKnowledge.QaModal.question': '问题',
@@ -2973,6 +2975,7 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.EditAgent.DebugDetails.title': '调试详情',
   'NuwaxPC.Pages.EditAgent.DebugDetails.elapsedTime': '耗时{0} ms',
   'NuwaxPC.Pages.EditAgent.DebugDetails.calledComponents': '调用组件',
+  'NuwaxPC.Pages.EditAgent.DebugDetails.output': '输出',
 
   // Pages - EditAgent (main index)
   'NuwaxPC.Pages.EditAgent.convIdNotFoundCreateFile': '会话ID不存在，无法新建文件',
@@ -3106,6 +3109,53 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainContent': '确定要移除域名',
   'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainHint': '移除后，用户将无法通过该域名访问此项目。需重新绑定并解析。',
   'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.confirmRemove': '确认移除',
+
+  // Pages - SpacePageDevelop - AuthConfigModal
+  'NuwaxPC.Pages.SpacePageDevelop.AuthConfigModal.authConfig': '认证配置',
+  'NuwaxPC.Pages.SpacePageDevelop.AuthConfigModal.allowAccessWithoutLogin': '允许免登录访问',
+  'NuwaxPC.Pages.SpacePageDevelop.AuthConfigModal.pageIdNotExist': '页面ID不存在',
+
+  // Pages - SpacePageDevelop - PageCreateModal
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.createApp': '创建应用',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.name': '名称',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterName': '请输入名称',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.description': '描述',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterDescription': '请输入描述',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.icon': '图标',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseUploadZip': '请上传项目压缩包',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.zipOnly': '仅支持 ZIP 文件',
+  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.uploadDragText': '点击或拖拽文件到此区域上传',
+
+  // Pages - SpacePageDevelop - PathParamsConfigContent
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramName': '参数名称',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramNamePlaceholder': '请输入参数名称',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescription': '参数描述',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescriptionPlaceholder': '请输入参数描述',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.inputType': '入参类型',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.isRequired': '是否必填',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValue': '默认值',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValuePlaceholder': '请输入默认值',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.enable': '启用',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.action': '操作',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.noPathParams': '暂无路径参数',
+  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.addParam': '添加参数',
+
+  // Pages - SpacePageDevelop - Index
+  'NuwaxPC.Pages.SpacePageDevelop.Index.pageTitle': '页面开发',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.searchPlaceholder': '搜索页面名称',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.create': '创建',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.viewDetails': '查看详情',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.published': '已发布',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.unpublished': '未发布',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.noResultsFound': '未能找到相关结果',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.pageUrlNotExist': '页面地址不存在',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.projectIdInvalidCannotExport': '项目ID无效，无法导出',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.exportFailed': '导出失败',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.exportSuccess': '导出成功',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.exportUnknownError': '未知导出错误',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.exportFailedWithError': '导出失败: {0}',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.domainBindingConditionWarning': '域名绑定仅在发布类型为"应用"且认证配置为"免登录访问"开启时可用',
+  'NuwaxPC.Pages.SpacePageDevelop.Index.confirmDeletePage': '你确定要删除此页面吗?',
 
   // Models
   'NuwaxPC.Models.ConversationInfo.restartAgentSuccess': '重启智能体成功',
@@ -3424,6 +3474,7 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   // Pages - SpaceDevelop > CopyChatWidgetCode
   'NuwaxPC.Pages.SpaceDevelop.CopyChatWidgetCode.iframeCodeCopy': 'iframe代码复制',
   'NuwaxPC.Pages.SpaceDevelop.CopyChatWidgetCode.copySuccess': 'iframe代码复制成功',
+  'NuwaxPC.Pages.SpaceDevelop.CopyChatWidgetCode.copyCode': '复制代码',
 
   // Pages - SpaceLog
   'NuwaxPC.Pages.SpaceLog.colMessageId': '消息ID',
