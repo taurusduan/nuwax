@@ -8,6 +8,7 @@ import {
   MIN_ZH_I18N_MAP,
 } from '@/constants/i18n.constants';
 import type { I18nKeyPattern, SystemLangMap } from '@/types/interfaces/i18n';
+import { syncLocaleSystems } from '@/utils/localeSync';
 import { apiI18nQuery } from './i18n';
 
 let currentLang = DEFAULT_I18N_LANG;
@@ -170,6 +171,7 @@ export const setCurrentLang = (lang?: string | null): void => {
   const resolvedLang = normalizeLang(lang || getBrowserLang());
   currentLang = resolvedLang;
   safeSetItem(I18N_STORAGE_KEYS.ACTIVE_LANG, resolvedLang);
+  syncLocaleSystems(resolvedLang);
 };
 
 export const syncLangFromUserInfo = async (user?: {

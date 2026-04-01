@@ -1,6 +1,6 @@
 import type { SystemLangMap } from '@/types/interfaces/i18n';
 
-export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
+export const ZH_CN: SystemLangMap = {
   'PC.Common.Global.confirm': '确认',
   'PC.Common.Global.cancel': '取消',
   'PC.Common.Global.save': '保存',

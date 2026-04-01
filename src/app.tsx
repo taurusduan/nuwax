@@ -9,11 +9,16 @@ import { APP_NAME, APP_VERSION } from './constants/version';
 import useEventPolling from './hooks/useEventPolling';
 import { request as requestCommon } from './services/common';
 import { startI18nDomTranslator } from './services/i18nDomTranslator';
-import { initI18n, syncLangFromUserInfo } from './services/i18nRuntime';
+import {
+  getCurrentLang,
+  initI18n,
+  syncLangFromUserInfo,
+} from './services/i18nRuntime';
 import { apiQueryMenus } from './services/menuService';
 import { unifiedThemeService } from './services/unifiedThemeService';
 import { UserService } from './services/userService';
 import type { MenuItemDto } from './types/interfaces/menu';
+import { getAntdLocale } from './utils/i18nAdapters';
 
 /**
  * 全局初始状态类型
@@ -158,6 +163,7 @@ const AppContainer: React.FC<{ children: React.ReactElement }> = ({
             },
             cssVar: { prefix: 'xagi' },
           },
+          locale: getAntdLocale(data.language || getCurrentLang()),
           appConfig: {},
         });
 
@@ -265,6 +271,9 @@ export const antd = (memo: any) => {
     memo.theme.cssVar = { prefix: 'xagi' } as any;
     memo.direction = 'ltr' as any;
     memo.appConfig ??= {} as any;
+
+    // 根据自定义 i18n 系统设置 antd locale（适配层自动处理回退链）
+    memo.locale = getAntdLocale(getCurrentLang());
   } catch {
     // 回退到基础配置
     memo.theme ??= {} as any;

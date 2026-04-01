@@ -12,7 +12,6 @@ import { DeleteOutlined, PlusOutlined } from '@ant-design/icons';
 import {
   Button,
   Checkbox,
-  ConfigProvider,
   DatePicker,
   Empty,
   message,
@@ -22,7 +21,6 @@ import {
   TableColumnsType,
   Tooltip,
 } from 'antd';
-import locale from 'antd/locale/zh_CN';
 import classNames from 'classnames';
 import dayjs, { Dayjs } from 'dayjs';
 import React, { useEffect, useState } from 'react';
@@ -32,10 +30,7 @@ import styles from './index.less';
 
 import { dict } from '@/services/i18nRuntime';
 import { modalConfirm } from '@/utils/ant-custom';
-import 'dayjs/locale/zh-cn';
 // import CopyChatWidgetCode from './CopyChatWidgetCode';
-
-dayjs.locale('zh-cn');
 
 const cx = classNames.bind(styles);
 
@@ -243,18 +238,16 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
       key: 'expire',
       width: 210,
       render: (_, record) => (
-        <ConfigProvider locale={locale}>
-          <DatePicker
-            minDate={dayjs()}
-            value={record.expire ? dayjs(record.expire) : null}
-            allowClear={false}
-            showTime
-            format={'YYYY-MM-DD HH:mm:ss'}
-            onChange={(_, dateString) =>
-              handleUpdate(record.id, 'expire', dateString.toString())
-            }
-          />
-        </ConfigProvider>
+        <DatePicker
+          minDate={dayjs()}
+          value={record.expire ? dayjs(record.expire) : null}
+          allowClear={false}
+          showTime
+          format={'YYYY-MM-DD HH:mm:ss'}
+          onChange={(_, dateString) =>
+            handleUpdate(record.id, 'expire', dateString.toString())
+          }
+        />
       ),
     },
     {

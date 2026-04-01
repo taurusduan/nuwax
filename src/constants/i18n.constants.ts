@@ -2,8 +2,8 @@ import {
   I18N_LOCAL_DEFAULT_MAP,
   I18N_LOCAL_IMPORT_DEFAULTS,
 } from '@/locales/i18n';
-import { NUWAXPC_I18N_EN_US } from '@/locales/i18n/nuwaxpc-en-us';
-import { NUWAXPC_I18N_ZH_CN } from '@/locales/i18n/nuwaxpc-zh-cn';
+import { EN_US } from '@/locales/i18n/en-US';
+import { ZH_CN } from '@/locales/i18n/zh-CN';
 
 export const DEFAULT_I18N_LANG = 'en-us';
 
@@ -17,8 +17,8 @@ export const I18N_STORAGE_KEYS = {
 export const I18N_MAP_CACHE_TTL = 24 * 60 * 60 * 1000;
 
 // Runtime fallback dictionaries
-export const MIN_EN_I18N_MAP: Record<string, string> = NUWAXPC_I18N_EN_US;
-export const MIN_ZH_I18N_MAP: Record<string, string> = NUWAXPC_I18N_ZH_CN;
+export const MIN_EN_I18N_MAP: Record<string, string> = EN_US;
+export const MIN_ZH_I18N_MAP: Record<string, string> = ZH_CN;
 export const LOCAL_DEFAULT_I18N_MAP = I18N_LOCAL_DEFAULT_MAP;
 
 // Platform defaults for i18n management import
