@@ -1,5 +1,3 @@
-import InfiniteScrollDiv from '@/components/custom/InfiniteScrollDiv';
-import Loading from '@/components/custom/Loading';
 import {
   apiGetRoleBoundDataPermissionList,
   apiRoleBindDataPermission,
@@ -32,21 +30,7 @@ import type {
   SystemKnowledgePage,
 } from '@/types/interfaces/systemManage';
 import { InfoCircleOutlined } from '@ant-design/icons';
-import {
-  Col,
-  Empty,
-  Form,
-  Input,
-  InputNumber,
-  message,
-  Modal,
-  Row,
-  Tabs,
-  TabsProps,
-  Tooltip,
-  Tree,
-  Typography,
-} from 'antd';
+import { Form, message, Modal, Tabs, TabsProps, Tooltip } from 'antd';
 import classNames from 'classnames';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useRequest } from 'umi';
@@ -55,11 +39,17 @@ import {
   apiGroupBindDataPermission,
 } from '../../services/user-group-manage';
 import { DataPermission, OpenApiConfigInfo } from '../../types/role-manage';
-import ResourceItem from './components/ResourceItem';
 import styles from './index.less';
+import {
+  AgentTabPanel,
+  ApiPermissionTabPanel,
+  DeveloperPermissionFormTab,
+  KnowledgeTabPanel,
+  ModelTabPanel,
+  PageTabPanel,
+} from './tabPanels';
 
 const cx = classNames.bind(styles);
-const { Text } = Typography;
 
 interface DataPermissionModalProps {
   /** 是否打开 */
@@ -526,88 +516,6 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
     }
   }, [type]);
 
-  /** 树勾选变化：用新勾选 key 集合重建列表，保留仍在勾选中的项的 rpm/rpd，新增项默认 0 */
-  const handleOpenApiTreeCheck = useCallback((keys: React.Key[] | any) => {
-    const raw = Array.isArray(keys) ? keys : keys.checked;
-    const keySet = new Set((raw as React.Key[]).map((k) => String(k)));
-    setOpenApiConfigsCache((prev) => {
-      const byKey = new Map(prev.map((c) => [c.key, c]));
-      const next: OpenApiConfigInfo[] = [];
-      keySet.forEach((key) => {
-        const existing = byKey.get(key);
-        next.push(
-          existing ?? {
-            key,
-            rpm: -1,
-            rpd: -1,
-          },
-        );
-      });
-      return next;
-    });
-  }, []);
-
-  /** 树节点标题：名称 + path（12px）；已勾选叶子右侧展示 RPM、RPD（读写 openApiConfigsCache） */
-  const openApiTitleRender = (node: OpenApiDefinition) => {
-    const isLeaf = !node.apiList?.length;
-    const cfg = openApiConfigsCache.find((c) => c.key === node.key);
-    return (
-      <div className={styles.openApiTreeTitleRow}>
-        <div className={styles.openApiTreeTitleLeft}>
-          <span
-            className={cx(styles.openApiTreeTitleName, 'text-ellipsis')}
-            title={node.name}
-          >
-            {node.name}
-          </span>
-          {node.path ? (
-            <span
-              className={cx(styles.openApiTreeTitlePath, 'text-ellipsis')}
-              title={node.path}
-            >
-              {node.path}
-            </span>
-          ) : null}
-        </div>
-        {isLeaf && cfg ? (
-          <div
-            className={styles.openApiTreeTitleControls}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Text className={styles['font-12']}>每分钟调用次数</Text>
-            <InputNumber
-              size="small"
-              min={-1}
-              className={styles['input-number']}
-              value={cfg.rpm}
-              onChange={(v) => {
-                setOpenApiConfigsCache((prev) =>
-                  prev.map((c) =>
-                    c.key === node.key ? { ...c, rpm: v ?? 0 } : c,
-                  ),
-                );
-              }}
-            />
-            <Text className={styles['font-12']}>每天调用次数</Text>
-            <InputNumber
-              size="small"
-              min={-1}
-              className={styles['input-number']}
-              value={cfg.rpd}
-              onChange={(v) => {
-                setOpenApiConfigsCache((prev) =>
-                  prev.map((c) =>
-                    c.key === node.key ? { ...c, rpd: v ?? 0 } : c,
-                  ),
-                );
-              }}
-            />
-          </div>
-        ) : null}
-      </div>
-    );
-  };
-
   // 根据 selectedModelIds 更新 selectedModelList
   useEffect(() => {
     if (modelList && modelList.length > 0 && selectedModelIds.length > 0) {
@@ -879,589 +787,83 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
     }
   };
 
-  // 避免在父组件内定义子组件（每次渲染新函数引用会 remount 子树、丢失滚动）
-  // 模型tab内容
-  const modelTabContent = (
-    <div className={cx('flex', 'h-full')}>
-      {/* 左侧：可选模型列表 */}
-      <div
-        className={cx(
-          'flex',
-          'flex-col',
-          'h-full',
-          'flex-1',
-          'overflow-y',
-          styles.leftList,
-        )}
-      >
-        {modelLoading && !modelList?.length ? (
-          <div
-            className={cx('h-full', 'flex', 'items-center', 'content-center')}
-          >
-            <Loading />
-          </div>
-        ) : (
-          modelList?.map((item: ModelConfigDto) => (
-            <ResourceItem
-              key={item.id}
-              showIcon={false}
-              name={item.name}
-              description={item.description}
-              targetId={item.id}
-              onAdd={toggleModelSelected}
-              isAdded={selectedModelIds.includes(item.id)}
-            />
-          ))
-        )}
-      </div>
-      {/* 分割线 */}
-      <div className={cx(styles.rightSeparator)} />
-      {/* 右侧：已选择的模型列表 */}
-      <div className={cx(styles.rightList, 'flex-1')}>
-        {selectedModelList.length ? (
-          selectedModelList.map((item: ModelConfigDto) => (
-            <ResourceItem
-              key={item.id}
-              showIcon={false}
-              name={item.name}
-              description={item.description}
-              targetId={item.id}
-              onDelete={removeModelFromSelected}
-            />
-          ))
-        ) : (
-          <div className={cx(styles.empty)}>暂无已选模型</div>
-        )}
-      </div>
-    </div>
-  );
-
-  // 智能体tab内容
-  const agentTabContent = (
-    <div className={cx('flex', 'h-full')}>
-      {/* 左侧：搜索 + 可选智能体列表（支持滚动加载） */}
-      <div
-        className={cx(
-          'flex',
-          'flex-col',
-          'h-full',
-          'flex-1',
-          'overflow-hide',
-          styles.leftList,
-        )}
-      >
-        <Input.Search
-          key="agentSearch"
-          placeholder="搜索智能体"
-          allowClear
-          className={cx(styles.searchInput)}
-          value={agentSearchKw}
-          onChange={(e) => setAgentSearchKw(e.target.value)}
-          onSearch={(value) => {
-            setAgentSearchKw(value);
-            // 平滑滚动到顶部
-            if (agentListScrollRef.current) {
-              agentListScrollRef.current.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-              });
-            }
-            // 查询智能体列表
-            queryAgentList(1, value);
-          }}
-        />
-        <div
-          ref={agentListScrollRef}
-          id="agent-list-scroll"
-          className={cx('flex-1', 'overflow-y', 'h-full')}
-        >
-          {agentLoading && !agentList?.length ? (
-            <div
-              className={cx('h-full', 'flex', 'items-center', 'content-center')}
-            >
-              <Loading />
-            </div>
-          ) : (
-            <InfiniteScrollDiv
-              scrollableTarget="agent-list-scroll"
-              list={agentList}
-              hasMore={agentHasMore}
-              onScroll={() => {
-                if (!agentLoading && agentHasMore) {
-                  // 查询智能体列表
-                  queryAgentList(agentPage + 1);
-                }
-              }}
-            >
-              {agentList?.map((item) => (
-                <ResourceItem
-                  key={item.targetId}
-                  icon={item.icon}
-                  name={item.name}
-                  description={item.description}
-                  targetId={item.targetId}
-                  onAdd={toggleAgentSelected}
-                  isAdded={selectedAgentIds.includes(item.targetId)}
-                />
-              ))}
-            </InfiniteScrollDiv>
-          )}
-        </div>
-      </div>
-      {/* 分割线 */}
-      <div className={cx(styles.rightSeparator)} />
-      {/* 右侧：已选择的智能体列表（通过ID列表查询） */}
-      <div className={cx(styles.rightList, 'flex-1')}>
-        {selectedAgentList.length ? (
-          selectedAgentList.map((item) => (
-            <ResourceItem
-              key={item.id}
-              icon={item.icon}
-              name={item.name}
-              description={item.description}
-              targetId={item.id}
-              onDelete={removeAgentFromSelected}
-            />
-          ))
-        ) : (
-          <div className={cx(styles.empty)}>暂无已选智能体</div>
-        )}
-      </div>
-    </div>
-  );
-
-  // 网页应用tab内容
-  const pageTabContent = (
-    <div className={cx('flex', 'h-full')}>
-      {/* 左侧：搜索 + 可选网页应用列表（支持滚动加载） */}
-      <div
-        className={cx(
-          'flex',
-          'flex-col',
-          'h-full',
-          'flex-1',
-          'overflow-hide',
-          styles.leftList,
-        )}
-      >
-        <Input.Search
-          key="pageSearch"
-          placeholder="搜索网页应用"
-          allowClear
-          className={cx(styles.searchInput)}
-          value={pageSearchKw}
-          onChange={(e) => setPageSearchKw(e.target.value)}
-          onSearch={(value) => {
-            setPageSearchKw(value);
-            // 平滑滚动到顶部
-            if (pageListScrollRef.current) {
-              pageListScrollRef.current.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-              });
-            }
-            // 查询网页应用列表
-            queryPageList(1, value);
-          }}
-        />
-        <div
-          ref={pageListScrollRef}
-          id="page-list-scroll"
-          className={cx('flex-1', 'overflow-y', 'h-full')}
-        >
-          {pageLoading && !pageList?.length ? (
-            <div
-              className={cx('h-full', 'flex', 'items-center', 'content-center')}
-            >
-              <Loading />
-            </div>
-          ) : (
-            <InfiniteScrollDiv
-              scrollableTarget="page-list-scroll"
-              list={pageList}
-              hasMore={pageHasMore}
-              onScroll={() => {
-                if (!pageLoading && pageHasMore) {
-                  // 查询网页应用列表
-                  queryPageList(pagePage + 1);
-                }
-              }}
-            >
-              {pageList?.map((item) => (
-                <ResourceItem
-                  key={item.targetId}
-                  icon={item.coverImg || item.icon}
-                  name={item.name}
-                  description={item.description}
-                  targetId={item.targetId}
-                  onAdd={togglePageSelected}
-                  isAdded={selectedPageAgentIds.includes(item.targetId)}
-                />
-              ))}
-            </InfiniteScrollDiv>
-          )}
-        </div>
-      </div>
-      {/* 分割线 */}
-      <div className={cx(styles.rightSeparator)} />
-      {/* 右侧：已选择的网页应用列表（通过ID列表查询） */}
-      <div className={cx(styles.rightList, 'flex-1')}>
-        {selectedPageList.length ? (
-          selectedPageList.map((item) => (
-            <ResourceItem
-              key={item.devAgentId}
-              icon={item.coverImg || item.icon}
-              name={item.name}
-              description={item.description}
-              targetId={item.devAgentId}
-              onDelete={removePageFromSelected}
-            />
-          ))
-        ) : (
-          <div className={cx(styles.empty)}>暂无已选网页应用</div>
-        )}
-      </div>
-    </div>
-  );
-
-  // 知识库tab内容
-  const knowledgeTabContent = (
-    <div className={cx('flex', 'h-full')}>
-      <div
-        className={cx(
-          'flex',
-          'flex-col',
-          'h-full',
-          'flex-1',
-          'overflow-hide',
-          styles.leftList,
-        )}
-      >
-        <Input.Search
-          key="knowledgeSearch"
-          placeholder="搜索知识库"
-          allowClear
-          className={cx(styles.searchInput)}
-          value={knowledgeSearchKw}
-          onChange={(e) => setKnowledgeSearchKw(e.target.value)}
-          onSearch={(value) => {
-            setKnowledgeSearchKw(value);
-            // 平滑滚动到顶部
-            if (knowledgeListScrollRef.current) {
-              knowledgeListScrollRef.current.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-              });
-            }
-            // 查询知识库列表
-            queryKnowledgeList(1, value);
-          }}
-        />
-        <div
-          ref={knowledgeListScrollRef}
-          id="knowledge-list-scroll"
-          className={cx('flex-1', 'overflow-y', 'h-full')}
-        >
-          {knowledgeLoading && !knowledgeList?.length ? (
-            <div
-              className={cx('h-full', 'flex', 'items-center', 'content-center')}
-            >
-              <Loading />
-            </div>
-          ) : (
-            <InfiniteScrollDiv
-              scrollableTarget="knowledge-list-scroll"
-              list={knowledgeList}
-              hasMore={knowledgeHasMore}
-              onScroll={() => {
-                if (!knowledgeLoading && knowledgeHasMore) {
-                  // 加载更多知识库列表
-                  queryKnowledgeList(knowledgePage + 1);
-                }
-              }}
-            >
-              {knowledgeList?.map((item) => (
-                <ResourceItem
-                  key={item.id}
-                  showIcon={false}
-                  name={item.name}
-                  description={item.description}
-                  targetId={item.id}
-                  onAdd={toggleKnowledgeSelected}
-                  isAdded={selectedKnowledgeIds.includes(item.id)}
-                />
-              ))}
-            </InfiniteScrollDiv>
-          )}
-        </div>
-      </div>
-      {/* 分割线 */}
-      <div className={cx(styles.rightSeparator)} />
-      {/* 右侧：已选择的知识库列表（通过ID列表查询） */}
-      <div className={cx(styles.rightList, 'flex-1')}>
-        {selectedKnowledgeList.length ? (
-          selectedKnowledgeList.map((item) => (
-            <ResourceItem
-              key={item.id}
-              showIcon={false}
-              name={item.name}
-              description={item.description}
-              targetId={item.id}
-              onDelete={removeKnowledgeFromSelected}
-            />
-          ))
-        ) : (
-          <div className={cx(styles.empty)}>暂无已选知识库</div>
-        )}
-      </div>
-    </div>
-  );
-
-  // 开发者权限tab内容
-  const dataPermissionTabContent = (
-    <div className={cx(styles.dataPermissionFormWrapper)}>
-      {/* 开发者权限表单 */}
-      <Form
-        form={form}
-        layout="vertical"
-        className={cx(styles.dataPermissionForm)}
-        preserve={true}
-        onValuesChange={(_, allValues) => {
-          setFormValuesCache((prev) => ({
-            ...prev,
-            ...allValues,
-          }));
-        }}
-      >
-        <Row gutter={[16, 0]}>
-          <Col span={12}>
-            <Form.Item
-              label="每日token限制"
-              name={['tokenLimit', 'limitPerDay']}
-              tooltip={{
-                icon: <InfoCircleOutlined />,
-                title: '每日 token 限制，-1 表示不限制',
-              }}
-            >
-              <InputNumber
-                placeholder="请输入每日token限制数量"
-                className={cx('w-full')}
-                min={-1}
-                max={1000000000000000}
-              />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Form.Item
-              label="可创建工作空间数量"
-              name="maxSpaceCount"
-              tooltip={{
-                icon: <InfoCircleOutlined />,
-                title: '可创建工作空间数量，-1 表示不限制',
-              }}
-            >
-              <InputNumber className={cx('w-full')} min={-1} max={100000000} />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Form.Item
-              label="可创建智能体数量"
-              name="maxAgentCount"
-              tooltip={{
-                icon: <InfoCircleOutlined />,
-                title: '可创建智能体数量，-1 表示不限制',
-              }}
-            >
-              <InputNumber className={cx('w-full')} min={-1} max={100000000} />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Form.Item
-              label="可创建网页应用数量"
-              name="maxPageAppCount"
-              tooltip={{
-                icon: <InfoCircleOutlined />,
-                title: '可创建网页应用数量，-1 表示不限制',
-              }}
-            >
-              <InputNumber className={cx('w-full')} min={-1} max={100000000} />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Form.Item
-              label="可创建知识库数量"
-              name="maxKnowledgeCount"
-              tooltip={{
-                icon: <InfoCircleOutlined />,
-                title: '可创建知识库数量，-1 表示不限制',
-              }}
-            >
-              <InputNumber className={cx('w-full')} min={-1} max={100000000} />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Form.Item
-              label="知识库存储空间上限 (GB)"
-              name="knowledgeStorageLimitGb"
-              tooltip={{
-                icon: <InfoCircleOutlined />,
-                title:
-                  '-1表示不限制, 0表示无权限, 精度为0.001GB, 1GB=1024MB, 1MB=1024KB',
-              }}
-            >
-              <InputNumber
-                className={cx('w-full')}
-                min={-1}
-                max={100000000}
-                step={0.001}
-                precision={3}
-                formatter={(value) => {
-                  if (value === undefined || value === null) return '';
-                  const num = Number(value);
-                  if (Number.isInteger(num)) return String(num);
-                  return num.toFixed(3).replace(/\.?0+$/, '');
-                }}
-                parser={(value) => {
-                  if (!value) return value as any;
-                  const num = parseFloat(value);
-                  return isNaN(num) ? (value as any) : num;
-                }}
-              />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Form.Item
-              label="可创建数据表数量"
-              name="maxDataTableCount"
-              tooltip={{
-                icon: <InfoCircleOutlined />,
-                title: '可创建数据表数量，-1 表示不限制',
-              }}
-            >
-              <InputNumber className={cx('w-full')} min={-1} max={100000000} />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Form.Item
-              label="可创建定时任务数量"
-              name="maxScheduledTaskCount"
-              tooltip={{
-                icon: <InfoCircleOutlined />,
-                title: '可创建定时任务数量，-1 表示不限制',
-              }}
-            >
-              <InputNumber className={cx('w-full')} min={-1} max={100000000} />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Form.Item
-              label="智能体电脑内存(GB)"
-              name="agentComputerMemoryGb"
-              initialValue={4}
-              tooltip={{
-                icon: <InfoCircleOutlined />,
-                title: '智能体电脑内存 (GB，留空表示使用默认值4GB)',
-              }}
-            >
-              <InputNumber className={cx('w-full')} min={1} max={100000000} />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Form.Item
-              label="智能体电脑 CPU 核心数"
-              name="agentComputerCpuCores"
-              initialValue={2}
-              tooltip={{
-                icon: <InfoCircleOutlined />,
-                title: '智能体电脑 CPU 核心数（留空表示使用默认值）',
-              }}
-            >
-              <InputNumber className={cx('w-full')} min={1} max={100000000} />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Form.Item
-              label="通用智能体每天对话次数限制"
-              name="agentDailyPromptLimit"
-              tooltip={{
-                icon: <InfoCircleOutlined />,
-                title: '通用智能体每天对话次数，-1表示不限制',
-              }}
-            >
-              <InputNumber className={cx('w-full')} min={-1} max={100000000} />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Form.Item
-              label="网页应用开发每天对话次数"
-              name="pageDailyPromptLimit"
-              tooltip={{
-                icon: <InfoCircleOutlined />,
-                title: '网页应用开发每天对话次数，-1表示不限制',
-              }}
-            >
-              <InputNumber className={cx('w-full')} min={-1} max={100000000} />
-            </Form.Item>
-          </Col>
-        </Row>
-      </Form>
-    </div>
-  );
-
-  /** API 权限 Tab：可勾选开放 API 树 */
-  const apiPermissionTabContent = (
-    <div className={cx('h-full', 'overflow-hide')}>
-      {openApiListLoading ? (
-        <div className={cx('h-full', 'flex', 'items-center', 'content-center')}>
-          <Loading />
-        </div>
-      ) : (
-        <div className={cx('h-full', 'overflow-y', 'py-16')}>
-          {openApiTreeData?.length > 0 ? (
-            <Tree
-              checkable
-              checkStrictly={false}
-              defaultExpandAll
-              checkedKeys={openApiConfigsCache.map((c) => c.key)}
-              onCheck={(keys) => {
-                // checkStrictly=false 时可能返回 { checked, halfChecked }
-                handleOpenApiTreeCheck(keys);
-              }}
-              treeData={openApiTreeData as any}
-              fieldNames={{ title: 'name', key: 'key', children: 'apiList' }}
-              titleRender={(node) =>
-                openApiTitleRender(node as OpenApiDefinition)
-              }
-              blockNode
-            />
-          ) : (
-            !openApiListLoading && (
-              <div
-                className={cx(
-                  'flex',
-                  'items-center',
-                  'content-center',
-                  'h-full',
-                )}
-              >
-                <Empty description="暂无 API 权限配置" />
-              </div>
-            )
-          )}
-        </div>
-      )}
-    </div>
-  );
-
-  // 渲染tab内容
+  // 各 Tab 内容拆至 tabPanels/，避免单文件过长
   const renderTabContent = () => {
     const contentMap: Record<DataPermissionTabKey, React.ReactNode> = {
-      model: modelTabContent,
-      agent: agentTabContent,
-      page: pageTabContent,
-      knowledge: knowledgeTabContent,
-      dataPermission: dataPermissionTabContent,
-      apiPermission: apiPermissionTabContent,
+      model: (
+        <ModelTabPanel
+          modelLoading={modelLoading}
+          modelList={modelList}
+          selectedModelIds={selectedModelIds}
+          selectedModelList={selectedModelList}
+          onToggleModel={toggleModelSelected}
+          onRemoveModel={removeModelFromSelected}
+        />
+      ),
+      agent: (
+        <AgentTabPanel
+          agentSearchKw={agentSearchKw}
+          onAgentSearchKwChange={setAgentSearchKw}
+          onAgentSearch={(v) => queryAgentList(1, v)}
+          agentListScrollRef={agentListScrollRef}
+          agentLoading={agentLoading}
+          agentList={agentList}
+          agentHasMore={agentHasMore}
+          onLoadMoreAgent={() => queryAgentList(agentPage + 1)}
+          selectedAgentIds={selectedAgentIds}
+          selectedAgentList={selectedAgentList}
+          onToggleAgent={toggleAgentSelected}
+          onRemoveAgent={removeAgentFromSelected}
+        />
+      ),
+      page: (
+        <PageTabPanel
+          pageSearchKw={pageSearchKw}
+          onPageSearchKwChange={setPageSearchKw}
+          onPageSearch={(v) => queryPageList(1, v)}
+          pageListScrollRef={pageListScrollRef}
+          pageLoading={pageLoading}
+          pageList={pageList}
+          pageHasMore={pageHasMore}
+          onLoadMorePage={() => queryPageList(pagePage + 1)}
+          selectedPageAgentIds={selectedPageAgentIds}
+          selectedPageList={selectedPageList}
+          onTogglePage={togglePageSelected}
+          onRemovePage={removePageFromSelected}
+        />
+      ),
+      knowledge: (
+        <KnowledgeTabPanel
+          knowledgeSearchKw={knowledgeSearchKw}
+          onKnowledgeSearchKwChange={setKnowledgeSearchKw}
+          onKnowledgeSearch={(v) => queryKnowledgeList(1, v)}
+          knowledgeListScrollRef={knowledgeListScrollRef}
+          knowledgeLoading={knowledgeLoading}
+          knowledgeList={knowledgeList}
+          knowledgeHasMore={knowledgeHasMore}
+          onLoadMoreKnowledge={() => queryKnowledgeList(knowledgePage + 1)}
+          selectedKnowledgeIds={selectedKnowledgeIds}
+          selectedKnowledgeList={selectedKnowledgeList}
+          onToggleKnowledge={toggleKnowledgeSelected}
+          onRemoveKnowledge={removeKnowledgeFromSelected}
+        />
+      ),
+      dataPermission: (
+        <DeveloperPermissionFormTab
+          form={form}
+          onValuesChange={(allValues) =>
+            setFormValuesCache((prev) => ({ ...prev, ...allValues }))
+          }
+        />
+      ),
+      apiPermission: (
+        <ApiPermissionTabPanel
+          openApiListLoading={openApiListLoading}
+          openApiTreeData={openApiTreeData}
+          openApiConfigsCache={openApiConfigsCache}
+          setOpenApiConfigsCache={setOpenApiConfigsCache}
+        />
+      ),
     };
     return contentMap[activeTab] ?? null;
   };
