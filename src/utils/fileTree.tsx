@@ -14,6 +14,7 @@ import {
 import type { FileNode } from '@/types/interfaces/appDev';
 import { SkillFileInfo } from '@/types/interfaces/skill';
 import { StaticFileInfo } from '@/types/interfaces/vncDesktop';
+import { dict } from '@/services/i18nRuntime';
 import { message } from 'antd';
 import { isMarkdownFile } from './common';
 import { htmlToPdf } from './htmlToPdf';
@@ -227,7 +228,7 @@ export const downloadFileByUrl = async (
     if (exportAsPdf && isMarkdownFile(fileName)) {
       const markdownContent = targetNode.content || '';
       if (!markdownContent) {
-        message.warning('文件内容为空，无法导出 PDF');
+        message.warning(dict('NuwaxPC.Utils.FileTree.emptyFileCannotExportPdf'));
         return;
       }
       // 使用静态导入的 markdownToPdf
@@ -237,7 +238,7 @@ export const downloadFileByUrl = async (
         pageSize: 'a4',
         orientation: 'portrait',
       });
-      message.success('PDF 导出成功');
+      message.success(dict('NuwaxPC.Utils.FileTree.pdfExportSuccess'));
       return;
     }
 
@@ -248,7 +249,7 @@ export const downloadFileByUrl = async (
     ) {
       const htmlContent = targetNode.content || '';
       if (!htmlContent) {
-        message.warning('文件内容为空，无法导出 PDF');
+        message.warning(dict('NuwaxPC.Utils.FileTree.emptyFileCannotExportPdf'));
         return;
       }
       const pdfFileName = fileName.replace(/\.(html|htm)$/i, '');
@@ -257,7 +258,7 @@ export const downloadFileByUrl = async (
         pageSize: 'a4',
         orientation: 'portrait',
       });
-      message.success('PDF 导出成功');
+      message.success(dict('NuwaxPC.Utils.FileTree.pdfExportSuccess'));
       return;
     }
 
@@ -273,7 +274,7 @@ export const downloadFileByUrl = async (
     // 使用 fetch 获取文件内容
     const response = await fetch(fullUrl);
     if (!response.ok) {
-      throw new Error(`下载失败: ${response.statusText}`);
+      throw new Error(`${dict('NuwaxPC.Utils.FileTree.downloadFailed')}: ${response.statusText}`);
     }
 
     // 将响应转换为 Blob
@@ -300,7 +301,7 @@ export const downloadFileByUrl = async (
     }, 100);
   } catch (error) {
     console.error('下载文件失败:', error);
-    message.error('下载文件失败，请重试');
+    message.error(dict('NuwaxPC.Utils.FileTree.downloadFailedRetry'));
   }
 };
 

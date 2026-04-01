@@ -4878,4 +4878,234 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Components.MarkdownCustomProcess.expand': 'Expand',
   'NuwaxPC.Components.MarkdownCustomProcess.copyDetailData': 'Copy detail data',
   'NuwaxPC.Components.MarkdownCustomProcess.copyFailedRetry': 'Failed to copy detail data, please retry',
+
+  // Components - SharedIcon
+  'NuwaxPC.Components.SharedIcon.published': 'Published',
+  'NuwaxPC.Components.SharedIcon.reviewing': 'Under Review',
+  'NuwaxPC.Components.SharedIcon.offline': 'Offline',
+  'NuwaxPC.Components.SharedIcon.draft': 'Draft',
+  'NuwaxPC.Components.SharedIcon.rejected': 'Rejected',
+
+  // Components - ActivatedIcon
+  'NuwaxPC.Components.ActivatedIcon.activated': 'Activated',
+
+  // Components - ChatView
+  'NuwaxPC.Components.ChatView.copy': 'Copy',
+
+  // Components - CustomFormModal
+  'NuwaxPC.Components.CustomFormModal.cancel': 'Cancel',
+
+  // Components - MarkdownRenderer
+  'NuwaxPC.Components.MarkdownRenderer.thinking': 'Thinking',
+  'NuwaxPC.Components.MarkdownRenderer.thought': 'Thought',
+
+  // Components - PageCard
+  'NuwaxPC.Components.PageCard.activated': 'Activated',
+  'NuwaxPC.Components.PageCard.newVersion': 'New version available',
+  'NuwaxPC.Components.PageCard.noPreview': 'No preview available',
+  'NuwaxPC.Components.PageCard.startUsing': 'Start Using',
+  'NuwaxPC.Components.PageCard.createdAt': 'Created at',
+
+  // Components - PluginConfigTitle
+  'NuwaxPC.Components.PluginConfigTitle.addParam': 'Add Parameter',
+
+  // Components - genCustomPlugin
+  'NuwaxPC.Components.genCustomPlugin.table': 'Table',
+
+  // Components - Skill database
+  'NuwaxPC.Components.Skill.database.collapse': 'Collapse',
+
+  // Components - SqlOptimizeModal
+  'NuwaxPC.Components.SqlOptimizeModal.replace': 'Replace',
+  'NuwaxPC.Components.SqlOptimizeModal.exit': 'Exit',
+  'NuwaxPC.Components.SqlOptimizeModal.placeholder': 'Please describe your SQL query requirements in detail',
+
+  // Components - SubmitButton
+  'NuwaxPC.Components.SubmitButton.confirm': 'Confirm',
+
+  // Components - MentionList
+  'NuwaxPC.Components.MentionList.noMatch': 'No matches found',
+
+  // Components - TiptapVariableInput - useVariableTree
+  'NuwaxPC.Components.useVariableTree.tools': 'Tools',
+  'NuwaxPC.Components.useVariableTree.skills': 'Skills',
+
+  // Components - CurrentPublishItem
+  'NuwaxPC.Components.CurrentPublishItem.publishedAt': 'Published at',
+  'NuwaxPC.Components.CurrentPublishItem.offShelf': 'Off Shelf',
+  'NuwaxPC.Components.CurrentPublishItem.reviewing': 'Under Review',
+  'NuwaxPC.Components.CurrentPublishItem.hasBeenOffShelf': 'Off Shelf',
+
+  // Components - VersionHistory
+  'NuwaxPC.Components.VersionHistory.agent': 'Agent',
+  'NuwaxPC.Components.VersionHistory.plugin': 'Plugin',
+  'NuwaxPC.Components.VersionHistory.workflow': 'Workflow',
+  'NuwaxPC.Components.VersionHistory.offShelfSuccess': 'Successfully taken off shelf',
+  'NuwaxPC.Components.VersionHistory.confirmOffShelf': 'Are you sure you want to take this {0} off shelf?',
+  'NuwaxPC.Components.VersionHistory.currentPublish': 'Current Publish',
+  'NuwaxPC.Components.VersionHistory.arrangeAndPublishRecord': 'Arrangement & Publish Records',
+  'NuwaxPC.Components.VersionHistory.noVersionHistory': 'No version history',
+  'NuwaxPC.Components.VersionHistory.versionHistoryTip': 'Version history is automatically saved when you modify the project',
+  'NuwaxPC.Components.VersionHistory.versionHistory': 'Version History',
+
+  // Components - SelectList
+  'NuwaxPC.Components.SelectList.pleaseSelect': 'Please select',
+
+  // Components - PublishComponentModal
+  'NuwaxPC.Components.PublishComponentModal.selectPublishScope': 'Select publish scope',
+
+  // Layouts - HistoryConversation
+  'NuwaxPC.Layouts.HistoryConversation.title': 'History Conversations',
+
+  // Layouts - InfiniteList
+  'NuwaxPC.Layouts.InfiniteList.allDataLoaded': 'All data loaded',
+
+  // Pages - AppDev DesignViewer
+  'NuwaxPC.Pages.AppDevDesignViewer.selectElementToEdit': 'Select a page element on the right to edit',
+  'NuwaxPC.Pages.AppDevDesignViewer.textContent': 'Text Content',
+  'NuwaxPC.Pages.AppDevDesignViewer.font': 'Font',
+  'NuwaxPC.Pages.AppDevDesignViewer.fontWeight': 'Weight',
+  'NuwaxPC.Pages.AppDevDesignViewer.fontSize': 'Font Size',
+  'NuwaxPC.Pages.AppDevDesignViewer.lineHeight': 'Line Height',
+  'NuwaxPC.Pages.AppDevDesignViewer.letterSpacing': 'Letter Spacing',
+  'NuwaxPC.Pages.AppDevDesignViewer.alignment': 'Alignment',
+  'NuwaxPC.Pages.AppDevDesignViewer.textColor': 'Text Color',
+  'NuwaxPC.Pages.AppDevDesignViewer.background': 'Background',
+  'NuwaxPC.Pages.AppDevDesignViewer.layout': 'Layout',
+  'NuwaxPC.Pages.AppDevDesignViewer.margin': 'Margin',
+  'NuwaxPC.Pages.AppDevDesignViewer.padding': 'Padding',
+  'NuwaxPC.Pages.AppDevDesignViewer.border': 'Border',
+  'NuwaxPC.Pages.AppDevDesignViewer.borderColor': 'Border Color',
+  'NuwaxPC.Pages.AppDevDesignViewer.borderStyle': 'Border Style',
+  'NuwaxPC.Pages.AppDevDesignViewer.borderWidth': 'Border Width',
+  'NuwaxPC.Pages.AppDevDesignViewer.appearance': 'Appearance',
+  'NuwaxPC.Pages.AppDevDesignViewer.opacity': 'Opacity',
+  'NuwaxPC.Pages.AppDevDesignViewer.borderRadius': 'Border Radius',
+  'NuwaxPC.Pages.AppDevDesignViewer.shadow': 'Shadow',
+
+  // Pages - SpacePluginCloudTool
+  'NuwaxPC.Pages.SpacePluginCloudTool.inputConfig': 'Input Config',
+  'NuwaxPC.Pages.SpacePluginCloudTool.outputConfig': 'Output Config',
+  'NuwaxPC.Pages.SpacePluginCloudTool.autoAnalysis': 'Auto Analysis',
+  'NuwaxPC.Pages.SpacePluginCloudTool.paramName': 'Parameter Name',
+  'NuwaxPC.Pages.SpacePluginCloudTool.paramDesc': 'Parameter Description',
+  'NuwaxPC.Pages.SpacePluginCloudTool.paramType': 'Parameter Type',
+  'NuwaxPC.Pages.SpacePluginCloudTool.paramNamePlaceholder': 'Enter parameter name, ensure clarity',
+  'NuwaxPC.Pages.SpacePluginCloudTool.paramDescPlaceholder': 'Enter parameter description, ensure detail for better AI understanding',
+  'NuwaxPC.Pages.SpacePluginCloudTool.selectDataType': 'Select data type',
+  'NuwaxPC.Pages.SpacePluginCloudTool.isRequired': 'Required',
+  'NuwaxPC.Pages.SpacePluginCloudTool.defaultValue': 'Default Value',
+  'NuwaxPC.Pages.SpacePluginCloudTool.inputDefaultValue': 'Enter default value',
+  'NuwaxPC.Pages.SpacePluginCloudTool.enable': 'Enable',
+  'NuwaxPC.Pages.SpacePluginCloudTool.requiredParamTip': 'This is a required parameter, the switch is available after filling in the default value',
+  'NuwaxPC.Pages.SpacePluginCloudTool.operation': 'Operation',
+
+  // Layouts - MobileMenu
+  'NuwaxPC.Layouts.MobileMenu.menuMask': 'Menu Mask',
+
+  // Layouts - Message
+  'NuwaxPC.Layouts.Message.noMessages': 'No messages',
+
+  // Utils - PptxFallbackRenderer
+  'NuwaxPC.Utils.PptxFallbackRenderer.parseFailed': 'PPTX file parse failed',
+  'NuwaxPC.Utils.PptxFallbackRenderer.previewAlt': 'Presentation Preview',
+  'NuwaxPC.Utils.PptxFallbackRenderer.coverPreview': 'Presentation Cover Preview',
+  'NuwaxPC.Utils.PptxFallbackRenderer.slideCount': '{0} slides in total',
+  'NuwaxPC.Utils.PptxFallbackRenderer.complexFormatNotice': 'This PPTX file has a complex format and full preview is not supported.<br>It is recommended to download and view in PowerPoint.',
+
+  // Utils - Clipboard
+  'NuwaxPC.Utils.Clipboard.copyFailed': 'Copy failed, please copy manually',
+  'NuwaxPC.Utils.Clipboard.copySuccess': 'Copied successfully',
+  'NuwaxPC.Utils.Clipboard.noContent': 'No content to copy',
+
+  // Utils - FetchEventSource
+  'NuwaxPC.Utils.FetchEventSource.sseConnectionFailed': 'SSE connection failed',
+
+  // Utils - HtmlToPdf
+  'NuwaxPC.Utils.HtmlToPdf.cannotCreatePrintEnv': 'Cannot create print environment',
+  'NuwaxPC.Utils.HtmlToPdf.cannotAccessIframeDoc': 'Cannot access iframe document',
+
+  // Utils - FileTree
+  'NuwaxPC.Utils.FileTree.emptyFileCannotExportPdf': 'File content is empty, cannot export PDF',
+  'NuwaxPC.Utils.FileTree.pdfExportSuccess': 'PDF exported successfully',
+  'NuwaxPC.Utils.FileTree.downloadFailed': 'Download failed',
+  'NuwaxPC.Utils.FileTree.downloadFailedRetry': 'Download failed, please retry',
+
+  // Utils - AntCustom
+  'NuwaxPC.Utils.AntCustom.okText': 'OK',
+  'NuwaxPC.Utils.AntCustom.cancelText': 'Cancel',
+
+  // Utils - Mcp
+  'NuwaxPC.Utils.Mcp.pendingDeploy': 'Pending Deploy',
+  'NuwaxPC.Utils.Mcp.deploying': 'Deploying',
+  'NuwaxPC.Utils.Mcp.deployed': 'Deployed',
+  'NuwaxPC.Utils.Mcp.deployFailed': 'Deploy Failed',
+  'NuwaxPC.Utils.Mcp.stopped': 'Stopped',
+
+  // Utils - ChatUtils
+  'NuwaxPC.Utils.ChatUtils.errorOccurred': 'Error occurred',
+  'NuwaxPC.Utils.ChatUtils.cancelled': 'Cancelled',
+  'NuwaxPC.Utils.ChatUtils.newConversation': 'New Conversation',
+
+  // Utils - Common
+  'NuwaxPC.Utils.Common.yearsAgo': '{0} years ago',
+  'NuwaxPC.Utils.Common.lastYear': 'Last year',
+  'NuwaxPC.Utils.Common.monthsAgo': '{0} months ago',
+  'NuwaxPC.Utils.Common.daysAgo': '{0} days ago',
+  'NuwaxPC.Utils.Common.dayBeforeYesterday': 'Day before yesterday',
+  'NuwaxPC.Utils.Common.yesterday': 'Yesterday',
+  'NuwaxPC.Utils.Common.hoursAgo': '{0} hours ago',
+  'NuwaxPC.Utils.Common.minutesAgo': '{0} minutes ago',
+  'NuwaxPC.Utils.Common.justNow': 'Just now',
+  'NuwaxPC.Utils.Common.emptyInput': 'Input is empty or not a string',
+  'NuwaxPC.Utils.Common.invalidJsonFormat': 'Invalid JSON format',
+
+  // Utils - MermaidExporter
+  'NuwaxPC.Utils.MermaidExporter.svgExportSuccess': 'SVG exported successfully',
+  'NuwaxPC.Utils.MermaidExporter.svgExportFailed': 'SVG export failed',
+  'NuwaxPC.Utils.MermaidExporter.pngExportSuccess': 'PNG exported successfully',
+  'NuwaxPC.Utils.MermaidExporter.pngExportFailed': 'PNG export failed',
+
+  // Components - PermissionMask
+  'NuwaxPC.Components.PermissionMask.noAgentPermission': 'No agent usage permission',
+
+  // Components - EcosystemDetailDrawer
+  'NuwaxPC.Components.EcosystemDetailDrawer.plugin': 'Plugin',
+
+  // Components - EcosystemShareModal
+  'NuwaxPC.Components.EcosystemShareModal.plugin': 'Plugin',
+
+  // Components - ModelBox
+  'NuwaxPC.Components.ModelBox.search': 'Search',
+
+  // Components - SkillCopy
+  'NuwaxPC.Components.SkillCopy.editParams': 'Edit Parameters',
+
+  // Components - TiptapVariableInput
+  'NuwaxPC.Components.TiptapVariableInput.tools': 'Tools',
+  'NuwaxPC.Components.TiptapVariableInput.skills': 'Skills',
+
+  // Constants - Theme
+  'NuwaxPC.Constants.Theme.colorBlue': 'Blue',
+  'NuwaxPC.Constants.Theme.colorRed': 'Red',
+  'NuwaxPC.Constants.Theme.colorOrange': 'Orange',
+  'NuwaxPC.Constants.Theme.colorGreen': 'Green',
+  'NuwaxPC.Constants.Theme.colorPurple': 'Purple',
+  'NuwaxPC.Constants.Theme.colorPink': 'Pink',
+  'NuwaxPC.Constants.Theme.bgStarryNight': 'Starry Night',
+  'NuwaxPC.Constants.Theme.bgStarryNightDesc': 'Dark background, suitable for dark layout',
+  'NuwaxPC.Constants.Theme.bgCloudyDay': 'Cloudy Day',
+  'NuwaxPC.Constants.Theme.bgCloudyDayDesc': 'Light background, suitable for light layout',
+  'NuwaxPC.Constants.Theme.bgForestDawn': 'Forest Dawn',
+  'NuwaxPC.Constants.Theme.bgForestDawnDesc': 'Bright background, suitable for light layout',
+  'NuwaxPC.Constants.Theme.bgDeepSeaNight': 'Deep Sea Night',
+  'NuwaxPC.Constants.Theme.bgDeepSeaNightDesc': 'Dark background, suitable for dark layout',
+  'NuwaxPC.Constants.Theme.bgDreamyPurple': 'Dreamy Purple',
+  'NuwaxPC.Constants.Theme.bgDreamyPurpleDesc': 'Dark tone background, suitable for dark layout',
+  'NuwaxPC.Constants.Theme.bgWarmSunshine': 'Warm Sunshine',
+  'NuwaxPC.Constants.Theme.bgWarmSunshineDesc': 'Warm tones, suitable for light layout',
+  'NuwaxPC.Constants.Theme.bgNightCity': 'Night City',
+  'NuwaxPC.Constants.Theme.bgNightCityDesc': 'City night view, suitable for dark layout',
+  'NuwaxPC.Constants.Theme.bgFreshBlueSky': 'Fresh Blue Sky',
+  'NuwaxPC.Constants.Theme.bgFreshBlueSkyDesc': 'Fresh and bright, suitable for light layout',
 };

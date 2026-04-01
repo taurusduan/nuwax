@@ -1,5 +1,6 @@
 import type { OverrideTextAreaProps } from '@/types/interfaces/common';
 import { Form, Input } from 'antd';
+import { dict } from '@/services/i18nRuntime';
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 import styles from './index.less';
@@ -10,7 +11,7 @@ const { TextArea } = Input;
 
 const OverrideTextArea: React.FC<OverrideTextAreaProps> = (props) => {
   const {
-    placeholder = '请输入',
+    placeholder = dict('NuwaxPC.Common.Global.pleaseInput'),
     name,
     label,
     initialValue,

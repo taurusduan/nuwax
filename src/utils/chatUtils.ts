@@ -2,6 +2,7 @@
  * 聊天相关工具函数
  */
 
+import { dict } from '@/services/i18nRuntime';
 import { MessageModeEnum } from '@/types/enums/agent';
 import type {
   AppDevChatMessage,
@@ -321,7 +322,7 @@ export const markStreamingMessageError = (
       (messages.find(
         (msg) => msg.requestId === requestId && msg.role === 'ASSISTANT',
       )?.text || '') +
-      '\n\n[已出错] ' +
+      '\n\n[' + dict('NuwaxPC.Utils.ChatUtils.errorOccurred') + '] ' +
       errorMessage,
   });
 };
@@ -341,7 +342,7 @@ export const markStreamingMessageCancelled = (
     text:
       (messages.find(
         (msg) => msg.requestId === requestId && msg.role === 'ASSISTANT',
-      )?.text || '') + '\n\n[已取消]',
+      )?.text || '') + '\n\n[' + dict('NuwaxPC.Utils.ChatUtils.cancelled') + ']',
   });
 };
 
@@ -408,7 +409,7 @@ export const generateConversationTopic = (
   messages: AppDevChatMessage[],
 ): string => {
   const firstUserMessage = messages.find((msg) => msg.role === 'USER');
-  return firstUserMessage ? firstUserMessage.text.substring(0, 50) : '新会话';
+  return firstUserMessage ? firstUserMessage.text.substring(0, 50) : dict('NuwaxPC.Utils.ChatUtils.newConversation');
 };
 
 /**

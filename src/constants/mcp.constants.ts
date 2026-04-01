@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import {
   FilterDeployEnum,
@@ -9,16 +10,16 @@ import {
 
 // 过滤部署状态
 export const FILTER_DEPLOY = [
-  { value: FilterDeployEnum.All, label: '全部' },
-  { value: FilterDeployEnum.Deployed, label: '已部署' },
+  { value: FilterDeployEnum.All, label: dict('NuwaxPC.Common.Global.all') },
+  { value: FilterDeployEnum.Deployed, label: dict('NuwaxPC.Constants.Mcp.deployed') },
 ];
 
 // MCP更多操作
 export const MCP_MORE_ACTION = [
-  { type: McpMoreActionEnum.Stop_Service, label: '停止服务' },
-  { type: McpMoreActionEnum.Service_Export, label: '服务导出' },
-  { type: McpMoreActionEnum.Log, label: '日志' },
-  { type: McpMoreActionEnum.Del, label: '删除', isDel: true },
+  { type: McpMoreActionEnum.Stop_Service, label: dict('NuwaxPC.Constants.Mcp.stopService') },
+  { type: McpMoreActionEnum.Service_Export, label: dict('NuwaxPC.Constants.Mcp.serviceExport') },
+  { type: McpMoreActionEnum.Log, label: dict('NuwaxPC.Common.Global.log') },
+  { type: McpMoreActionEnum.Del, label: dict('NuwaxPC.Common.Global.delete'), isDel: true },
 ];
 
 // MCP安装方式列表
@@ -27,7 +28,7 @@ export const MCP_INSTALL_TYPE_LIST = [
   { value: McpInstallTypeEnum.UVX, label: 'uvx' },
   { value: McpInstallTypeEnum.SSE, label: 'sse' },
   { value: McpInstallTypeEnum.STREAMABLE_HTTP, label: 'streamableHttp' },
-  { value: McpInstallTypeEnum.COMPONENT, label: '组件库' },
+  { value: McpInstallTypeEnum.COMPONENT, label: dict('NuwaxPC.Constants.Space.componentLibrary') },
 ];
 
 // MCP服务配置组件列表

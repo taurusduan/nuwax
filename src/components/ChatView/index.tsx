@@ -175,7 +175,7 @@ const ChatView: React.FC<ChatViewProps> = memo(
                   text={messageInfo.text || ''}
                   onCopy={handleTextCopy}
                 >
-                  复制
+                  {dict('NuwaxPC.Components.ChatView.copy')}
                 </CopyButton>
               </div>
             </div>

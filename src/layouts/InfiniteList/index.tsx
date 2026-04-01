@@ -1,4 +1,5 @@
 import type { ConversationInfo } from '@/types/interfaces/conversationInfo';
+import { dict } from '@/services/i18nRuntime';
 import { DeleteOutlined } from '@ant-design/icons';
 import { Spin } from 'antd';
 import classNames from 'classnames';
@@ -125,7 +126,7 @@ function InfiniteList({
       )}
       {conversationList && conversationList.length > 0 && !hasMore && (
         <div style={{ textAlign: 'center', padding: 5, color: '#999' }}>
-          已加载全部数据
+          {dict('NuwaxPC.Layouts.InfiniteList.allDataLoaded')}
         </div>
       )}
     </div>

@@ -4389,4 +4389,234 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Components.MarkdownCustomProcess.expand': '展开',
   'NuwaxPC.Components.MarkdownCustomProcess.copyDetailData': '复制详情数据',
   'NuwaxPC.Components.MarkdownCustomProcess.copyFailedRetry': '详情数据复制失败，请重试',
+
+  // Components - SharedIcon
+  'NuwaxPC.Components.SharedIcon.published': '已发布',
+  'NuwaxPC.Components.SharedIcon.reviewing': '审核中',
+  'NuwaxPC.Components.SharedIcon.offline': '已下线',
+  'NuwaxPC.Components.SharedIcon.draft': '草稿',
+  'NuwaxPC.Components.SharedIcon.rejected': '已驳回',
+
+  // Components - ActivatedIcon
+  'NuwaxPC.Components.ActivatedIcon.activated': '已启用',
+
+  // Components - ChatView
+  'NuwaxPC.Components.ChatView.copy': '复制',
+
+  // Components - CustomFormModal
+  'NuwaxPC.Components.CustomFormModal.cancel': '取消',
+
+  // Components - MarkdownRenderer
+  'NuwaxPC.Components.MarkdownRenderer.thinking': '正在思考',
+  'NuwaxPC.Components.MarkdownRenderer.thought': '已思考',
+
+  // Components - PageCard
+  'NuwaxPC.Components.PageCard.activated': '已启用',
+  'NuwaxPC.Components.PageCard.newVersion': '有版本更新',
+  'NuwaxPC.Components.PageCard.noPreview': '无可用预览图',
+  'NuwaxPC.Components.PageCard.startUsing': '开始使用',
+  'NuwaxPC.Components.PageCard.createdAt': '创建于',
+
+  // Components - PluginConfigTitle
+  'NuwaxPC.Components.PluginConfigTitle.addParam': '新增参数',
+
+  // Components - genCustomPlugin
+  'NuwaxPC.Components.genCustomPlugin.table': '表格',
+
+  // Components - Skill database
+  'NuwaxPC.Components.Skill.database.collapse': '收起',
+
+  // Components - SqlOptimizeModal
+  'NuwaxPC.Components.SqlOptimizeModal.replace': '替换',
+  'NuwaxPC.Components.SqlOptimizeModal.exit': '退出',
+  'NuwaxPC.Components.SqlOptimizeModal.placeholder': '请输入你的SQL查询需求，逻辑尽量描述详细',
+
+  // Components - SubmitButton
+  'NuwaxPC.Components.SubmitButton.confirm': '确定',
+
+  // Components - MentionList
+  'NuwaxPC.Components.MentionList.noMatch': '未找到匹配项',
+
+  // Components - TiptapVariableInput - useVariableTree
+  'NuwaxPC.Components.useVariableTree.tools': '工具',
+  'NuwaxPC.Components.useVariableTree.skills': '技能',
+
+  // Components - CurrentPublishItem
+  'NuwaxPC.Components.CurrentPublishItem.publishedAt': '发布于',
+  'NuwaxPC.Components.CurrentPublishItem.offShelf': '下架',
+  'NuwaxPC.Components.CurrentPublishItem.reviewing': '审核中',
+  'NuwaxPC.Components.CurrentPublishItem.hasBeenOffShelf': '已下架',
+
+  // Components - VersionHistory
+  'NuwaxPC.Components.VersionHistory.agent': '智能体',
+  'NuwaxPC.Components.VersionHistory.plugin': '插件',
+  'NuwaxPC.Components.VersionHistory.workflow': '工作流',
+  'NuwaxPC.Components.VersionHistory.offShelfSuccess': '已成功下架',
+  'NuwaxPC.Components.VersionHistory.confirmOffShelf': '你确定要下架此{0}吗?',
+  'NuwaxPC.Components.VersionHistory.currentPublish': '当前发布',
+  'NuwaxPC.Components.VersionHistory.arrangeAndPublishRecord': '编排与发布记录',
+  'NuwaxPC.Components.VersionHistory.noVersionHistory': '暂无版本历史记录',
+  'NuwaxPC.Components.VersionHistory.versionHistoryTip': '当你对项目进行修改时，系统会自动保存版本历史',
+  'NuwaxPC.Components.VersionHistory.versionHistory': '版本历史',
+
+  // Components - SelectList
+  'NuwaxPC.Components.SelectList.pleaseSelect': '请选择',
+
+  // Components - PublishComponentModal
+  'NuwaxPC.Components.PublishComponentModal.selectPublishScope': '选择发布范围',
+
+  // Layouts - HistoryConversation
+  'NuwaxPC.Layouts.HistoryConversation.title': '历史会话',
+
+  // Layouts - InfiniteList
+  'NuwaxPC.Layouts.InfiniteList.allDataLoaded': '已加载全部数据',
+
+  // Pages - AppDev DesignViewer
+  'NuwaxPC.Pages.AppDevDesignViewer.selectElementToEdit': '请选中右侧页面元素进行编辑',
+  'NuwaxPC.Pages.AppDevDesignViewer.textContent': '文本内容',
+  'NuwaxPC.Pages.AppDevDesignViewer.font': '字体',
+  'NuwaxPC.Pages.AppDevDesignViewer.fontWeight': '字重',
+  'NuwaxPC.Pages.AppDevDesignViewer.fontSize': '字体大小',
+  'NuwaxPC.Pages.AppDevDesignViewer.lineHeight': '行高',
+  'NuwaxPC.Pages.AppDevDesignViewer.letterSpacing': '字间距',
+  'NuwaxPC.Pages.AppDevDesignViewer.alignment': '对齐方式',
+  'NuwaxPC.Pages.AppDevDesignViewer.textColor': '文字颜色',
+  'NuwaxPC.Pages.AppDevDesignViewer.background': '背景',
+  'NuwaxPC.Pages.AppDevDesignViewer.layout': '布局',
+  'NuwaxPC.Pages.AppDevDesignViewer.margin': '外边距',
+  'NuwaxPC.Pages.AppDevDesignViewer.padding': '内边距',
+  'NuwaxPC.Pages.AppDevDesignViewer.border': '边框',
+  'NuwaxPC.Pages.AppDevDesignViewer.borderColor': '边框颜色',
+  'NuwaxPC.Pages.AppDevDesignViewer.borderStyle': '边框样式',
+  'NuwaxPC.Pages.AppDevDesignViewer.borderWidth': '边框宽度',
+  'NuwaxPC.Pages.AppDevDesignViewer.appearance': '外观',
+  'NuwaxPC.Pages.AppDevDesignViewer.opacity': '透明度',
+  'NuwaxPC.Pages.AppDevDesignViewer.borderRadius': '圆角',
+  'NuwaxPC.Pages.AppDevDesignViewer.shadow': '阴影',
+
+  // Pages - SpacePluginCloudTool
+  'NuwaxPC.Pages.SpacePluginCloudTool.inputConfig': '入参配置',
+  'NuwaxPC.Pages.SpacePluginCloudTool.outputConfig': '出参配置',
+  'NuwaxPC.Pages.SpacePluginCloudTool.autoAnalysis': '自动解析',
+  'NuwaxPC.Pages.SpacePluginCloudTool.paramName': '参数名称',
+  'NuwaxPC.Pages.SpacePluginCloudTool.paramDesc': '参数描述',
+  'NuwaxPC.Pages.SpacePluginCloudTool.paramType': '参数类型',
+  'NuwaxPC.Pages.SpacePluginCloudTool.paramNamePlaceholder': '请输入参数名称，确保含义清晰',
+  'NuwaxPC.Pages.SpacePluginCloudTool.paramDescPlaceholder': '请输入参数描述，确保描述详细便于大模型更好的理解',
+  'NuwaxPC.Pages.SpacePluginCloudTool.selectDataType': '请选择数据类型',
+  'NuwaxPC.Pages.SpacePluginCloudTool.isRequired': '是否必须',
+  'NuwaxPC.Pages.SpacePluginCloudTool.defaultValue': '默认值',
+  'NuwaxPC.Pages.SpacePluginCloudTool.inputDefaultValue': '请输入默认值',
+  'NuwaxPC.Pages.SpacePluginCloudTool.enable': '开启',
+  'NuwaxPC.Pages.SpacePluginCloudTool.requiredParamTip': '此参数是必填参数，填写默认值后，此开关可用',
+  'NuwaxPC.Pages.SpacePluginCloudTool.operation': '操作',
+
+  // Layouts - MobileMenu
+  'NuwaxPC.Layouts.MobileMenu.menuMask': '菜单遮罩',
+
+  // Layouts - Message
+  'NuwaxPC.Layouts.Message.noMessages': '暂无消息',
+
+  // Utils - PptxFallbackRenderer
+  'NuwaxPC.Utils.PptxFallbackRenderer.parseFailed': 'PPTX 文件解析失败',
+  'NuwaxPC.Utils.PptxFallbackRenderer.previewAlt': '演示文稿预览',
+  'NuwaxPC.Utils.PptxFallbackRenderer.coverPreview': '演示文稿封面预览',
+  'NuwaxPC.Utils.PptxFallbackRenderer.slideCount': '共 {0} 张幻灯片',
+  'NuwaxPC.Utils.PptxFallbackRenderer.complexFormatNotice': '该 PPTX 文件格式较为复杂，暂不支持完整预览。<br>建议下载后在 PowerPoint 中查看完整内容。',
+
+  // Utils - Clipboard
+  'NuwaxPC.Utils.Clipboard.copyFailed': '复制失败，请手动复制',
+  'NuwaxPC.Utils.Clipboard.copySuccess': '复制成功',
+  'NuwaxPC.Utils.Clipboard.noContent': '没有可复制的内容',
+
+  // Utils - FetchEventSource
+  'NuwaxPC.Utils.FetchEventSource.sseConnectionFailed': 'SSE连接失败',
+
+  // Utils - HtmlToPdf
+  'NuwaxPC.Utils.HtmlToPdf.cannotCreatePrintEnv': '无法创建打印环境',
+  'NuwaxPC.Utils.HtmlToPdf.cannotAccessIframeDoc': '无法访问 iframe 文档',
+
+  // Utils - FileTree
+  'NuwaxPC.Utils.FileTree.emptyFileCannotExportPdf': '文件内容为空，无法导出 PDF',
+  'NuwaxPC.Utils.FileTree.pdfExportSuccess': 'PDF 导出成功',
+  'NuwaxPC.Utils.FileTree.downloadFailed': '下载失败',
+  'NuwaxPC.Utils.FileTree.downloadFailedRetry': '下载文件失败，请重试',
+
+  // Utils - AntCustom
+  'NuwaxPC.Utils.AntCustom.okText': '确定',
+  'NuwaxPC.Utils.AntCustom.cancelText': '取消',
+
+  // Utils - Mcp
+  'NuwaxPC.Utils.Mcp.pendingDeploy': '待部署',
+  'NuwaxPC.Utils.Mcp.deploying': '部署中',
+  'NuwaxPC.Utils.Mcp.deployed': '已部署',
+  'NuwaxPC.Utils.Mcp.deployFailed': '部署失败',
+  'NuwaxPC.Utils.Mcp.stopped': '已停止',
+
+  // Utils - ChatUtils
+  'NuwaxPC.Utils.ChatUtils.errorOccurred': '已出错',
+  'NuwaxPC.Utils.ChatUtils.cancelled': '已取消',
+  'NuwaxPC.Utils.ChatUtils.newConversation': '新会话',
+
+  // Utils - Common
+  'NuwaxPC.Utils.Common.yearsAgo': '{0}年前',
+  'NuwaxPC.Utils.Common.lastYear': '去年',
+  'NuwaxPC.Utils.Common.monthsAgo': '{0} 月前',
+  'NuwaxPC.Utils.Common.daysAgo': '{0}天前',
+  'NuwaxPC.Utils.Common.dayBeforeYesterday': '前天',
+  'NuwaxPC.Utils.Common.yesterday': '昨天',
+  'NuwaxPC.Utils.Common.hoursAgo': '{0}小时前',
+  'NuwaxPC.Utils.Common.minutesAgo': '{0}分钟前',
+  'NuwaxPC.Utils.Common.justNow': '刚刚',
+  'NuwaxPC.Utils.Common.emptyInput': '输入为空或不是字符串',
+  'NuwaxPC.Utils.Common.invalidJsonFormat': 'JSON格式错误',
+
+  // Utils - MermaidExporter
+  'NuwaxPC.Utils.MermaidExporter.svgExportSuccess': 'SVG 导出成功',
+  'NuwaxPC.Utils.MermaidExporter.svgExportFailed': 'SVG 导出失败',
+  'NuwaxPC.Utils.MermaidExporter.pngExportSuccess': 'PNG 导出成功',
+  'NuwaxPC.Utils.MermaidExporter.pngExportFailed': 'PNG 导出失败',
+
+  // Components - PermissionMask
+  'NuwaxPC.Components.PermissionMask.noAgentPermission': '无智能体使用权限',
+
+  // Components - EcosystemDetailDrawer
+  'NuwaxPC.Components.EcosystemDetailDrawer.plugin': '插件',
+
+  // Components - EcosystemShareModal
+  'NuwaxPC.Components.EcosystemShareModal.plugin': '插件',
+
+  // Components - ModelBox
+  'NuwaxPC.Components.ModelBox.search': '搜索',
+
+  // Components - SkillCopy
+  'NuwaxPC.Components.SkillCopy.editParams': '编辑参数',
+
+  // Components - TiptapVariableInput
+  'NuwaxPC.Components.TiptapVariableInput.tools': '工具',
+  'NuwaxPC.Components.TiptapVariableInput.skills': '技能',
+
+  // Constants - Theme
+  'NuwaxPC.Constants.Theme.colorBlue': '蓝色',
+  'NuwaxPC.Constants.Theme.colorRed': '红色',
+  'NuwaxPC.Constants.Theme.colorOrange': '橙色',
+  'NuwaxPC.Constants.Theme.colorGreen': '绿色',
+  'NuwaxPC.Constants.Theme.colorPurple': '紫色',
+  'NuwaxPC.Constants.Theme.colorPink': '粉色',
+  'NuwaxPC.Constants.Theme.bgStarryNight': '星空夜景',
+  'NuwaxPC.Constants.Theme.bgStarryNightDesc': '深色背景，适合深色布局风格',
+  'NuwaxPC.Constants.Theme.bgCloudyDay': '云朵白天',
+  'NuwaxPC.Constants.Theme.bgCloudyDayDesc': '浅色背景，适合浅色布局风格',
+  'NuwaxPC.Constants.Theme.bgForestDawn': '森林晨光',
+  'NuwaxPC.Constants.Theme.bgForestDawnDesc': '明亮背景，适合浅色布局风格',
+  'NuwaxPC.Constants.Theme.bgDeepSeaNight': '深海夜色',
+  'NuwaxPC.Constants.Theme.bgDeepSeaNightDesc': '深色背景，适合深色布局风格',
+  'NuwaxPC.Constants.Theme.bgDreamyPurple': '梦幻紫色',
+  'NuwaxPC.Constants.Theme.bgDreamyPurpleDesc': '深色调背景，适合深色布局风格',
+  'NuwaxPC.Constants.Theme.bgWarmSunshine': '温暖阳光',
+  'NuwaxPC.Constants.Theme.bgWarmSunshineDesc': '温暖色调，适合浅色布局风格',
+  'NuwaxPC.Constants.Theme.bgNightCity': '夜晚都市',
+  'NuwaxPC.Constants.Theme.bgNightCityDesc': '都市夜景，适合深色布局风格',
+  'NuwaxPC.Constants.Theme.bgFreshBlueSky': '清新蓝天',
+  'NuwaxPC.Constants.Theme.bgFreshBlueSkyDesc': '清新明亮，适合浅色布局风格',
 };

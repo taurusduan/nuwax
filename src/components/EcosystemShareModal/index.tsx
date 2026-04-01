@@ -112,7 +112,7 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
   const [form] = Form.useForm();
   const [configParam, setConfigParam] = useState<PluginParam[]>([]);
   const [suffixInfo, setSuffixInfo] = useState<any>({
-    name: '插件',
+    name: dict('NuwaxPC.Components.EcosystemShareModal.plugin'),
     targetType: AgentComponentTypeEnum.Plugin,
   });
   const [pluginError, setPluginError] = useState(false);

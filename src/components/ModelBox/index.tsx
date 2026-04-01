@@ -2,6 +2,7 @@ import { LeftGroup, LeftMenu, ModelBoxProps } from '@/types/interfaces/common';
 import { CloseOutlined, SearchOutlined } from '@ant-design/icons';
 import { Input, Modal } from 'antd';
 import classNames from 'classnames';
+import { dict } from '@/services/i18nRuntime';
 import React, { useState } from 'react';
 import { useModel } from 'umi';
 import styles from './index.less';
@@ -59,7 +60,7 @@ const ModelBox: React.FC<ModelBoxProps> = ({
               <Input
                 className={cx(styles.search)}
                 allowClear
-                placeholder="搜索"
+                placeholder={dict('NuwaxPC.Components.ModelBox.search')}
                 prefix={<SearchOutlined />}
                 onPressEnter={(event) => {
                   if (onSearch && event.key === 'Enter') {

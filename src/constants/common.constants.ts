@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum, BindValueType } from '@/types/enums/agent';
 import { DataTypeEnum } from '@/types/enums/common';
 
@@ -105,11 +106,11 @@ export const DataTypeMap = {
 export const ParamsSettingDefaultOptions = [
   {
     value: BindValueType.Input,
-    label: '输入',
+    label: dict('NuwaxPC.Constants.Common.input'),
   },
   {
     value: BindValueType.Reference,
-    label: '引用',
+    label: dict('NuwaxPC.Constants.Common.reference'),
   },
 ];
 
@@ -118,26 +119,26 @@ export const CREATED_TABS: {
   label: string;
   key: AgentComponentTypeEnum;
 }[] = [
-  { label: '插件', key: AgentComponentTypeEnum.Plugin },
-  { label: '工作流', key: AgentComponentTypeEnum.Workflow },
-  { label: '知识库', key: AgentComponentTypeEnum.Knowledge },
-  { label: '数据表', key: AgentComponentTypeEnum.Table },
-  { label: '智能体', key: AgentComponentTypeEnum.Agent },
-  { label: 'MCP服务', key: AgentComponentTypeEnum.MCP },
-  { label: '页面', key: AgentComponentTypeEnum.Page },
-  { label: '技能', key: AgentComponentTypeEnum.Skill },
+  { label: dict('NuwaxPC.Common.Global.plugin'), key: AgentComponentTypeEnum.Plugin },
+  { label: dict('NuwaxPC.Common.Global.workflow'), key: AgentComponentTypeEnum.Workflow },
+  { label: dict('NuwaxPC.Common.Global.knowledge'), key: AgentComponentTypeEnum.Knowledge },
+  { label: dict('NuwaxPC.Common.Global.dataTable'), key: AgentComponentTypeEnum.Table },
+  { label: dict('NuwaxPC.Common.Global.agent'), key: AgentComponentTypeEnum.Agent },
+  { label: dict('NuwaxPC.Constants.Common.mcpService'), key: AgentComponentTypeEnum.MCP },
+  { label: dict('NuwaxPC.Constants.Common.page'), key: AgentComponentTypeEnum.Page },
+  { label: dict('NuwaxPC.Common.Global.skill'), key: AgentComponentTypeEnum.Skill },
 ];
 
 // 组件类型名称
 export const COMPONENT_TYPE_NAME_MAP = {
-  [AgentComponentTypeEnum.Agent]: '智能体',
-  [AgentComponentTypeEnum.Plugin]: '插件',
-  [AgentComponentTypeEnum.Workflow]: '工作流',
-  [AgentComponentTypeEnum.Knowledge]: '知识库',
-  [AgentComponentTypeEnum.Variable]: '变量',
-  [AgentComponentTypeEnum.Table]: '数据表',
-  [AgentComponentTypeEnum.Model]: '模型',
-  [AgentComponentTypeEnum.MCP]: 'MCP服务',
+  [AgentComponentTypeEnum.Agent]: dict('NuwaxPC.Common.Global.agent'),
+  [AgentComponentTypeEnum.Plugin]: dict('NuwaxPC.Common.Global.plugin'),
+  [AgentComponentTypeEnum.Workflow]: dict('NuwaxPC.Common.Global.workflow'),
+  [AgentComponentTypeEnum.Knowledge]: dict('NuwaxPC.Common.Global.knowledge'),
+  [AgentComponentTypeEnum.Variable]: dict('NuwaxPC.Constants.Common.variable'),
+  [AgentComponentTypeEnum.Table]: dict('NuwaxPC.Common.Global.dataTable'),
+  [AgentComponentTypeEnum.Model]: dict('NuwaxPC.Common.Global.model'),
+  [AgentComponentTypeEnum.MCP]: dict('NuwaxPC.Constants.Common.mcpService'),
 };
 
 /**

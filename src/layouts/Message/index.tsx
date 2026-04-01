@@ -3,6 +3,7 @@ import {
   apiNotifyMessageList,
   apiNotifyMessageUnreadClear,
 } from '@/services/message';
+import { dict } from '@/services/i18nRuntime';
 // import { MessageReadStatusEnum } from '@/types/enums/menus';
 import type { NotifyMessageInfo } from '@/types/interfaces/message';
 import type { RequestResponse } from '@/types/interfaces/request';
@@ -142,7 +143,7 @@ const Message: React.FC = () => {
                   'items-center',
                   'content-center',
                 )}
-                description="暂无消息"
+                description={dict('NuwaxPC.Layouts.Message.noMessages')}
                 // description={
                 //   segmentedValue === MessageReadStatusEnum.All
                 //     ? '暂无消息'

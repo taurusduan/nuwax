@@ -15,6 +15,7 @@ import {
 import { ExclamationCircleFilled } from '@ant-design/icons';
 import { Drawer, Empty, message, Modal } from 'antd';
 import classNames from 'classnames';
+import { dict } from '@/services/i18nRuntime';
 import React, { useEffect, useState } from 'react';
 import { useRequest } from 'umi';
 import ConditionRender from '../ConditionRender';
@@ -49,10 +50,10 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
   // 组件类型
   const componentType =
     targetType === AgentComponentTypeEnum.Agent
-      ? '智能体'
+      ? dict('NuwaxPC.Components.VersionHistory.agent')
       : targetType === AgentComponentTypeEnum.Plugin
-      ? '插件'
-      : '工作流';
+      ? dict('NuwaxPC.Components.VersionHistory.plugin')
+      : dict('NuwaxPC.Components.VersionHistory.workflow');
 
   // 请求接口
   const apiUrl =
@@ -100,7 +101,7 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: PublishOffShelfParams[]) => {
-      message.success('已成功下架');
+      message.success(dict('NuwaxPC.Components.VersionHistory.offShelfSuccess'));
       offShelfSuccess(params[0].publishId);
     },
   });
@@ -129,12 +130,12 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
     }
 
     Modal.confirm({
-      title: `你确定要下架此${componentType}吗?`,
+      title: dict('NuwaxPC.Components.VersionHistory.confirmOffShelf', componentType),
       icon: <ExclamationCircleFilled />,
       content: targetName,
-      okText: '确定',
+      okText: dict('NuwaxPC.Components.SubmitButton.confirm'),
       maskClosable: true,
-      cancelText: '取消',
+      cancelText: dict('NuwaxPC.Common.Global.cancel'),
       onOk() {
         runOffShelf({
           targetType,
@@ -155,7 +156,7 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
           permissions?.includes(PermissionsEnum.Publish) && publishList?.length
         }
       >
-        <h5 className={cx(styles.title)}>当前发布</h5>
+        <h5 className={cx(styles.title)}>{dict('NuwaxPC.Components.VersionHistory.currentPublish')}</h5>
         {publishList?.map((info: PublishItemInfo) => (
           <CurrentPublishItem
             key={info.publishId}
@@ -164,7 +165,7 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
           />
         ))}
       </ConditionRender>
-      <h5 className={cx(styles.title)}>编排与发布记录</h5>
+      <h5 className={cx(styles.title)}>{dict('NuwaxPC.Components.VersionHistory.arrangeAndPublishRecord')}</h5>
       {versionHistoryList?.map((item) => (
         <PublishRecordItem
           key={item.id}
@@ -176,11 +177,11 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
   ) : (
     <div className={cx('flex', 'h-full', 'items-center', 'content-center')}>
       <Empty
-        description="暂无版本历史记录"
+        description={dict('NuwaxPC.Components.VersionHistory.noVersionHistory')}
         image={Empty.PRESENTED_IMAGE_SIMPLE}
       >
         <div style={{ color: '#8c8c8c', fontSize: '12px', marginTop: '8px' }}>
-          当你对项目进行修改时，系统会自动保存版本历史
+          {dict('NuwaxPC.Components.VersionHistory.versionHistoryTip')}
         </div>
       </Empty>
     </div>
@@ -196,7 +197,7 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
         closable
         title={
           <div>
-            <div style={{ fontSize: '16px', fontWeight: 600 }}>版本历史</div>
+            <div style={{ fontSize: '16px', fontWeight: 600 }}>{dict('NuwaxPC.Components.VersionHistory.versionHistory')}</div>
             <div
               style={{ fontSize: '12px', color: '#8c8c8c', marginTop: '4px' }}
             >
@@ -216,7 +217,7 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
 
   return (
     <ToggleWrap
-      title={'版本历史'}
+      title={dict('NuwaxPC.Components.VersionHistory.versionHistory')}
       visible={visible}
       onClose={onClose}
       headerClassName={headerClassName}

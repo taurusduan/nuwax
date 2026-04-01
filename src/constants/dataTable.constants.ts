@@ -1,9 +1,10 @@
+import { dict } from '@/services/i18nRuntime';
 import { TableFieldTypeEnum, TableTabsEnum } from '@/types/enums/dataTable';
 
 // 短文本
-export const SHORT_TEXT_STRING = '短文本（0-255）';
+export const SHORT_TEXT_STRING = dict('NuwaxPC.Constants.DataTable.shortText');
 // 长文本
-export const MEDIUM_TEXT_STRING = '长文本（0-16M）';
+export const MEDIUM_TEXT_STRING = dict('NuwaxPC.Constants.DataTable.longText');
 
 // 数据表字段类型列表
 export const TABLE_FIELD_TYPE_LIST = [
@@ -28,8 +29,8 @@ export const BOOLEAN_LIST = [
 
 // 数据表tabs列表
 export const TABLE_TABS_LIST = [
-  { key: TableTabsEnum.Structure, label: '表结构' },
-  { key: TableTabsEnum.Data, label: '表数据' },
+  { key: TableTabsEnum.Structure, label: dict('NuwaxPC.Constants.DataTable.tableStructure') },
+  { key: TableTabsEnum.Data, label: dict('NuwaxPC.Constants.DataTable.tableData') },
 ];
 
 /**
@@ -49,16 +50,16 @@ export const COMMON_PRO_TABLE_PROPS = {
   pagination: {
     showSizeChanger: true,
     pageSizeOptions: [15, 30, 50, 100],
-    showTotal: (total: number) => `共 ${total} 条`,
+    showTotal: (total: number) => `${dict('NuwaxPC.Constants.DataTable.totalPrefix')}${total}${dict('NuwaxPC.Constants.DataTable.totalSuffix')}`,
     defaultPageSize: 15,
     locale: {
-      items_per_page: '条/页',
+      items_per_page: dict('NuwaxPC.Constants.DataTable.itemsPerPage'),
     },
   },
   search: {
     filterType: 'light' as any,
     defaultCollapsed: false,
-    searchText: '查询',
-    resetText: '重置',
+    searchText: dict('NuwaxPC.Constants.DataTable.search'),
+    resetText: dict('NuwaxPC.Constants.DataTable.reset'),
   } as any,
 };

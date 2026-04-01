@@ -1,22 +1,23 @@
+import { dict } from '@/services/i18nRuntime';
 import { SquareTemplateTargetTypeEnum } from '@/types/enums/square';
 
 // 广场-模板分类列表
 const SQUARE_TEMPLATE_SEGMENTED_LIST_ALL = [
   {
     value: SquareTemplateTargetTypeEnum.ChatBot,
-    label: '智能体',
+    label: dict('NuwaxPC.Common.Global.agent'),
   },
   {
     value: SquareTemplateTargetTypeEnum.PageApp,
-    label: '网页应用',
+    label: dict('NuwaxPC.Constants.Ecosystem.webApp'),
   },
   {
     value: SquareTemplateTargetTypeEnum.Workflow,
-    label: '工作流',
+    label: dict('NuwaxPC.Common.Global.workflow'),
   },
   {
     value: SquareTemplateTargetTypeEnum.Skill,
-    label: '技能',
+    label: dict('NuwaxPC.Common.Global.skill'),
   },
 ];
 

@@ -2,6 +2,7 @@ import type { CustomInputNumberProps } from '@/types/interfaces/common';
 import { DownOutlined, UpOutlined } from '@ant-design/icons';
 import { Input } from 'antd';
 import classNames from 'classnames';
+import { dict } from '@/services/i18nRuntime';
 import React from 'react';
 import styles from './index.less';
 
@@ -10,7 +11,7 @@ const cx = classNames.bind(styles);
 const CustomInputNumber: React.FC<CustomInputNumberProps> = ({
   value,
   onChange,
-  placeholder = '请输入',
+  placeholder = dict('NuwaxPC.Common.Global.pleaseInput'),
   min = 0,
   max,
   step = 1,

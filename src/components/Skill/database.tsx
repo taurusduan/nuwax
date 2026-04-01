@@ -1,6 +1,7 @@
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import type { DataTableProps } from '@/types/interfaces/workflow';
 import { getImg } from '@/utils/workflow';
+import { dict } from '@/services/i18nRuntime';
 import React, { useState } from 'react';
 import './index.less';
 const DataTable: React.FC<DataTableProps> = ({
@@ -41,7 +42,7 @@ const DataTable: React.FC<DataTableProps> = ({
                 onClick={() => setIsExpand(false)}
                 className="database-tag-style cursor-pointer"
               >
-                {'收起'}
+                {dict('NuwaxPC.Components.Skill.database.collapse')}
               </div>
             </div>
           ) : (

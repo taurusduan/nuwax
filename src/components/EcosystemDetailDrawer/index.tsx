@@ -37,7 +37,7 @@ const { Title, Paragraph } = Typography;
 
 const DEFAULT_ICON =
   'https://agent-1251073634.cos.ap-chengdu.myqcloud.com/store/b5fdb62e8b994a418d0fdfae723ee827.png';
-const DEFAULT_TEXT = '插件';
+const DEFAULT_TEXT = dict('NuwaxPC.Components.EcosystemDetailDrawer.plugin');
 
 // 类型定义
 interface ConfigParam {

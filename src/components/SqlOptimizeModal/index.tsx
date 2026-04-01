@@ -6,6 +6,7 @@ import type { MessageInfo } from '@/types/interfaces/conversationInfo';
 import type { ModalProps } from 'antd';
 import { Button, Input, Modal } from 'antd';
 import classNames from 'classnames';
+import { dict } from '@/services/i18nRuntime';
 import React, { useEffect, useState } from 'react';
 import { useModel } from 'umi';
 import { v4 as uuidv4 } from 'uuid';
@@ -172,7 +173,7 @@ const SqlOptimizeModal: React.FC<SqlOptimizeModalProps> = ({
             onChange={(e) => setMessage(e.target.value)}
             rootClassName={styles.input}
             onPressEnter={handlePressEnter}
-            placeholder={'请输入你的SQL查询需求，逻辑尽量描述详细'}
+            placeholder={dict('NuwaxPC.Components.SqlOptimizeModal.placeholder')}
             autoSize={{ minRows: 1, maxRows: 3 }}
           />
 

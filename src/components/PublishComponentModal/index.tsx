@@ -596,7 +596,7 @@ const PublishComponentModal: React.FC<PublishComponentModalProps> = ({
         <Form.Item name="category" label={dict('NuwaxPC.Components.PublishComponentModal.categorySelect')}>
           <SelectList className={styles.select} options={classifyList} />
         </Form.Item>
-        <Form.Item label="选择发布范围">
+        <Form.Item label={dict('NuwaxPC.Components.PublishComponentModal.selectPublishScope')}>
           <Table<PublishScope>
             className={cx(styles['table-wrap'])}
             columns={inputColumns}

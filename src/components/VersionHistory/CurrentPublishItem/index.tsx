@@ -2,6 +2,7 @@ import { PublishStatusEnum } from '@/types/enums/common';
 import { CurrentPublishItemProps } from '@/types/interfaces/publish';
 import classNames from 'classnames';
 import dayjs from 'dayjs';
+import { dict } from '@/services/i18nRuntime';
 import React from 'react';
 import styles from './index.less';
 
@@ -29,7 +30,7 @@ const CurrentPublishItem: React.FC<CurrentPublishItemProps> = ({
         <span className={cx(styles['p-time'], 'text-ellipsis')}>
           {`${
             info?.publishUser?.nickName || info?.publishUser?.userName
-          }发布于${dayjs(info?.publishDate).format('YYYY-MM-DD HH:mm')}`}
+          }${dict('NuwaxPC.Components.CurrentPublishItem.publishedAt')}${dayjs(info?.publishDate).format('YYYY-MM-DD HH:mm')}`}
         </span>
       </div>
       <div
@@ -53,10 +54,10 @@ const CurrentPublishItem: React.FC<CurrentPublishItemProps> = ({
       >
         {`${
           info?.publishStatus === PublishStatusEnum.Published
-            ? '下架'
+            ? dict('NuwaxPC.Components.CurrentPublishItem.offShelf')
             : info?.publishStatus === PublishStatusEnum.Applying
-            ? '审核中'
-            : '已下架'
+            ? dict('NuwaxPC.Components.CurrentPublishItem.reviewing')
+            : dict('NuwaxPC.Components.CurrentPublishItem.hasBeenOffShelf')
         }`}
       </div>
     </div>
