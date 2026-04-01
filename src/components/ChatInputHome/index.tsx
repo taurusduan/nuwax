@@ -551,7 +551,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
           )}
           <div className={cx('flex')} style={{ gap: 4 }}>
             {/* 智能体电脑模式下显示电脑类型选择器 */}
-            {isTaskAgentActive && (
+            {isTaskAgentActive && !readonly && (
               <ComputerTypeSelector
                 value={
                   agentSandboxId !== undefined && agentSandboxId !== null

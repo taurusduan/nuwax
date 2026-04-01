@@ -90,7 +90,7 @@ const ComputerTypeSelector: React.FC<ComputerTypeSelectorProps> = ({
         }));
         setComputerList(options);
         if (selectedMap) {
-          setAgentSelectedMap(selectedMap);
+          setAgentSelectedMap(readonly ? {} : selectedMap);
         }
         setInitialized(true);
         initializedRef.current = true;
