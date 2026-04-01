@@ -10,6 +10,8 @@
 - hardcoded 中文：1980
 - legacy System key：0
 - invalid dict key：0
+- **已完成**：2026-04-01 全部模块已完成，1980/1980 问题已修复
+- **Locale keys**：3572 (zh-cn/en-us 完全对齐，无重复)
 
 ## 按模块统计
 
