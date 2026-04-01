@@ -89,7 +89,7 @@ export interface RestrictionTargets {
 
 /** 绑定智能体限制访问对象参数 */
 export interface BindRestrictionTargetsParams {
-  // 主体ID（如模型ID、智能体ID、网页应用ID）
+  // 主体ID（如模型ID、智能体ID、网页应用ID、知识库ID）
   subjectId: number;
   // 可访问的角色ID列表
   roleIds: number[];
@@ -164,5 +164,29 @@ export async function apiSystemResourceAgentAccess(
 ): Promise<RequestResponse<null>> {
   return request(`/api/system/resource/agent/access/${id}/${status}`, {
     method: 'POST',
+  });
+}
+
+// ============================= 内容管理-知识库 =============================
+
+// 查询知识库限制访问的对象
+export async function apiKnowledgeRestrictionTargets(
+  knowledgeId: number,
+): Promise<RequestResponse<RestrictionTargets>> {
+  return request(
+    `/api/system/resource/knowledge/restriction-targets/${knowledgeId}`,
+    {
+      method: 'GET',
+    },
+  );
+}
+
+// 绑定知识库限制访问对象（全量覆盖）
+export async function apiKnowledgeBindRestrictionTargets(
+  data: BindRestrictionTargetsParams,
+): Promise<RequestResponse<RestrictionTargets>> {
+  return request('/api/system/resource/knowledge/bind-restriction-targets', {
+    method: 'POST',
+    data,
   });
 }

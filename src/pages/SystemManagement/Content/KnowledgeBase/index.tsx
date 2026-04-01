@@ -20,6 +20,7 @@ import {
 import { message, Switch } from 'antd';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useLocation, useModel } from 'umi';
+import TargetAuthModal from '../components/TargetAuthModal';
 
 const KnowledgeBase: React.FC = () => {
   const { hasPermission } = useModel('menuModel');
@@ -29,6 +30,11 @@ const KnowledgeBase: React.FC = () => {
   const [accessControlLoadingMap, setAccessControlLoadingMap] = useState<
     Record<number, boolean>
   >({});
+
+  // 授权弹窗相关状态
+  const [authModalOpen, setAuthModalOpen] = useState<boolean>(false);
+  const [currentKnowledgeInfo, setCurrentKnowledgeInfo] =
+    useState<SystemKnowledgeInfo | null>(null);
 
   const handleReset = useCallback(() => {
     // 重置表单
@@ -92,6 +98,14 @@ const KnowledgeBase: React.FC = () => {
   );
 
   /**
+   * 处理授权
+   */
+  const handleAuth = useCallback((record: SystemKnowledgeInfo) => {
+    setCurrentKnowledgeInfo(record);
+    setAuthModalOpen(true);
+  }, []);
+
+  /**
    * 操作列配置
    */
   const getActions = useCallback(
@@ -101,6 +115,12 @@ const KnowledgeBase: React.FC = () => {
         label: '查看',
         disabled: !hasPermission('content_knowledge_query_detail'),
         onClick: handleView,
+      },
+      {
+        key: 'auth',
+        label: '授权',
+        visible: record.accessControl === AccessControlEnum.Filter,
+        onClick: handleAuth,
       },
       {
         key: 'delete',
@@ -226,6 +246,18 @@ const KnowledgeBase: React.FC = () => {
         request={request}
         onReset={handleReset}
         showQueryButtons={hasPermission('content_knowledge_query_list')}
+      />
+
+      {/* 授权弹窗 */}
+      <TargetAuthModal
+        open={authModalOpen}
+        targetId={currentKnowledgeInfo?.id || 0}
+        targetName={currentKnowledgeInfo?.name}
+        targetType="knowledge"
+        onCancel={() => {
+          setAuthModalOpen(false);
+          setCurrentKnowledgeInfo(null);
+        }}
       />
     </WorkspaceLayout>
   );
