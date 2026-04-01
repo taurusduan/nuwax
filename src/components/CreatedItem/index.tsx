@@ -8,6 +8,7 @@ import {
   CLOUD_BASE_CODE_OPTIONS,
   PLUGIN_CREATE_TOOL,
 } from '@/constants/library.constants';
+import { dict } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import { CreateUpdateModeEnum } from '@/types/enums/common';
 import type { CreateKnowledgeProps } from '@/types/interfaces/common';
@@ -61,14 +62,14 @@ const CreatedItem: React.FC<CreatedItemProp> = ({
   //   title
   const getTitle = () => {
     const _mode = {
-      [CreateUpdateModeEnum.Create]: '创建',
-      [CreateUpdateModeEnum.Update]: '编辑',
+      [CreateUpdateModeEnum.Create]: dict('NuwaxPC.Components.CreatedItem.create'),
+      [CreateUpdateModeEnum.Update]: dict('NuwaxPC.Components.CreatedItem.update'),
     };
     const _type = {
-      [AgentComponentTypeEnum.Table]: '数据表',
-      [AgentComponentTypeEnum.Knowledge]: '知识库',
-      [AgentComponentTypeEnum.Plugin]: '插件',
-      [AgentComponentTypeEnum.Workflow]: '工作流',
+      [AgentComponentTypeEnum.Table]: dict('NuwaxPC.Components.CreatedItem.dataTable'),
+      [AgentComponentTypeEnum.Knowledge]: dict('NuwaxPC.Components.CreatedItem.knowledge'),
+      [AgentComponentTypeEnum.Plugin]: dict('NuwaxPC.Components.CreatedItem.plugin'),
+      [AgentComponentTypeEnum.Workflow]: dict('NuwaxPC.Components.CreatedItem.workflow'),
     };
     return `${_mode[mode]}${_type[type]}`;
   };
@@ -126,31 +127,31 @@ const CreatedItem: React.FC<CreatedItemProp> = ({
         )}
         <Form.Item
           name="name"
-          label="名称"
+          label={dict('NuwaxPC.Components.CreatedItem.name')}
           rules={[
-            { required: true, message: '请输入名称' },
+            { required: true, message: dict('NuwaxPC.Components.CreatedItem.pleaseInputName') },
             {
               validator(_, value) {
                 if (!value || value?.length <= 30) {
                   return Promise.resolve();
                 }
                 if (value?.length > 30) {
-                  return Promise.reject(new Error('名称不能超过30个字符!'));
+                  return Promise.reject(new Error(dict('NuwaxPC.Components.CreatedItem.nameMaxChars')));
                 }
-                return Promise.reject(new Error('请输入名称!'));
+                return Promise.reject(new Error(dict('NuwaxPC.Components.CreatedItem.pleaseInputNameBang')));
               },
             },
           ]}
         >
-          <Input placeholder="请输入名称" showCount maxLength={30} />
+          <Input placeholder={dict('NuwaxPC.Components.CreatedItem.placeholderName')} showCount maxLength={30} />
         </Form.Item>
         <Form.Item
           name="description"
-          label="描述"
+          label={dict('NuwaxPC.Components.CreatedItem.description')}
           className="position-relative"
         >
           <Input.TextArea
-            placeholder="请输入描述"
+            placeholder={dict('NuwaxPC.Components.CreatedItem.placeholderDesc')}
             autoSize={{ minRows: 3, maxRows: 6 }}
             maxLength={10000}
             showCount
@@ -175,14 +176,14 @@ const CreatedItem: React.FC<CreatedItemProp> = ({
         )}
         {type === AgentComponentTypeEnum.Plugin && (
           <>
-            <Form.Item shouldUpdate label="工具创建方式" name="type">
+            <Form.Item shouldUpdate label={dict('NuwaxPC.Components.CreatedItem.toolCreateMethod')} name="type">
               <Radio.Group options={PLUGIN_CREATE_TOOL}></Radio.Group>
             </Form.Item>
             {/* IDE 运行时 */}
             <Form.Item shouldUpdate>
               {() =>
                 form.getFieldValue('type') === 'CODE' && (
-                  <Form.Item label="IDE 运行时" name="codeLang">
+                  <Form.Item label={dict('NuwaxPC.Components.CreatedItem.ideRuntime')} name="codeLang">
                     <SelectList options={CLOUD_BASE_CODE_OPTIONS} />
                   </Form.Item>
                 )

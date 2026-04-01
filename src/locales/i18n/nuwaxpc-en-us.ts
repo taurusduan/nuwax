@@ -4661,4 +4661,148 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
 
   // Components - HistoryConversation
   'NuwaxPC.Components.HistoryConversation.title': 'History Conversations',
+
+  // Components - EcosystemCard
+  'NuwaxPC.Components.EcosystemCard.enabled': 'Enabled',
+  'NuwaxPC.Components.EcosystemCard.versionUpdate': 'New version available',
+
+  // Components - EcosystemDetailDrawer
+  'NuwaxPC.Components.EcosystemDetailDrawer.updateConfig': 'Update Config',
+  'NuwaxPC.Components.EcosystemDetailDrawer.update': 'Update',
+  'NuwaxPC.Components.EcosystemDetailDrawer.saveConfigAndEnable': 'Save Config & Enable',
+  'NuwaxPC.Components.EcosystemDetailDrawer.enable': 'Enable',
+  'NuwaxPC.Components.EcosystemDetailDrawer.enablePublishOfficialTip': 'After enabling, it will be published to the official service list',
+  'NuwaxPC.Components.EcosystemDetailDrawer.enablePublishSquareTip': 'After enabling, it will be published to the system marketplace',
+  'NuwaxPC.Components.EcosystemDetailDrawer.disableOfficialTip': 'After disabling, it will no longer be visible in the official service list',
+  'NuwaxPC.Components.EcosystemDetailDrawer.disableSquareTip': 'After disabling, it will no longer be visible in the marketplace {0}',
+  'NuwaxPC.Components.EcosystemDetailDrawer.disable': 'Disable',
+  'NuwaxPC.Components.EcosystemDetailDrawer.pleaseInput': 'Please input {0}',
+  'NuwaxPC.Components.EcosystemDetailDrawer.newVersionUpdate': 'New version available',
+  'NuwaxPC.Components.EcosystemDetailDrawer.fromAuthor': 'From {0}',
+  'NuwaxPC.Components.EcosystemDetailDrawer.usageDoc': 'Documentation',
+
+  // Components - EcosystemShareModal
+  'NuwaxPC.Components.EcosystemShareModal.paramName': 'Parameter Name',
+  'NuwaxPC.Components.EcosystemShareModal.paramDesc': 'Parameter Description',
+  'NuwaxPC.Components.EcosystemShareModal.required': 'Required',
+  'NuwaxPC.Components.EcosystemShareModal.saveAndPublish': 'Save & Publish',
+  'NuwaxPC.Components.EcosystemShareModal.offline': 'Offline',
+  'NuwaxPC.Components.EcosystemShareModal.withdrawPublish': 'Withdraw',
+  'NuwaxPC.Components.EcosystemShareModal.saveDraft': 'Save Draft',
+  'NuwaxPC.Components.EcosystemShareModal.editShare': 'Edit Share',
+  'NuwaxPC.Components.EcosystemShareModal.createShare': 'Create Share',
+  'NuwaxPC.Components.EcosystemShareModal.componentInfo': '{0} Info',
+  'NuwaxPC.Components.EcosystemShareModal.addComponent': 'Add {0}',
+  'NuwaxPC.Components.EcosystemShareModal.pleaseSelectComponent': 'Please select {0}',
+  'NuwaxPC.Components.EcosystemShareModal.pleaseSelectComponentFirst': 'Please select {0} first',
+  'NuwaxPC.Components.EcosystemShareModal.publisherInfo': 'Publisher Info',
+  'NuwaxPC.Components.EcosystemShareModal.pleaseInputPublisherInfo': 'Please input publisher info',
+  'NuwaxPC.Components.EcosystemShareModal.publisherInfoPlaceholder': 'Please input publisher info, e.g. Nuwa Official',
+  'NuwaxPC.Components.EcosystemShareModal.pluginParams': 'Plugin Parameters',
+  'NuwaxPC.Components.EcosystemShareModal.usageDoc': 'Documentation',
+  'NuwaxPC.Components.EcosystemShareModal.pleaseInputUsageDoc': 'Please input documentation',
+  'NuwaxPC.Components.EcosystemShareModal.usageDocPlaceholder': 'Please input documentation (Markdown supported)',
+
+  // Components - ChatTitleActions
+  'NuwaxPC.Components.ChatTitleActions.incompleteAgentInfo': 'Agent information is incomplete',
+  'NuwaxPC.Components.ChatTitleActions.uncollected': 'Removed from favorites',
+  'NuwaxPC.Components.ChatTitleActions.uncollectFailed': 'Failed to remove from favorites',
+  'NuwaxPC.Components.ChatTitleActions.collected': 'Added to favorites',
+  'NuwaxPC.Components.ChatTitleActions.collectFailed': 'Failed to add to favorites',
+  'NuwaxPC.Components.ChatTitleActions.shareLinkCopied': 'Share link copied to clipboard',
+  'NuwaxPC.Components.ChatTitleActions.noShareLink': 'No share link available',
+  'NuwaxPC.Components.ChatTitleActions.templateCopySuccess': 'Template copied successfully',
+  'NuwaxPC.Components.ChatTitleActions.share': 'Share',
+  'NuwaxPC.Components.ChatTitleActions.collect': 'Favorite',
+  'NuwaxPC.Components.ChatTitleActions.copyTemplate': 'Copy Template',
+
+  // Components - AgentConversation
+  'NuwaxPC.Components.AgentConversation.title': 'Related Conversations',
+  'NuwaxPC.Components.AgentConversation.viewMore': 'View More',
+  'NuwaxPC.Components.AgentConversation.emptyDesc': 'No related conversations',
+
+  // Components - CreateTimedTask
+  'NuwaxPC.Components.CreateTimedTask.createSuccess': 'Timed task created successfully',
+  'NuwaxPC.Components.CreateTimedTask.updateSuccess': 'Timed task updated successfully',
+  'NuwaxPC.Components.CreateTimedTask.createTitle': 'Create Timed Task',
+  'NuwaxPC.Components.CreateTimedTask.updateTitle': 'Update Timed Task',
+  'NuwaxPC.Components.CreateTimedTask.timedPeriod': 'Timed Period',
+  'NuwaxPC.Components.CreateTimedTask.taskName': 'Task Name',
+  'NuwaxPC.Components.CreateTimedTask.pleaseInputTaskName': 'Please input task name',
+  'NuwaxPC.Components.CreateTimedTask.taskContent': 'Task Content',
+  'NuwaxPC.Components.CreateTimedTask.pleaseInputTaskContent': 'Please input task content',
+  'NuwaxPC.Components.CreateTimedTask.taskContentPlaceholder': 'Please input the task information to execute. The more detailed the information, the higher the success rate',
+
+  // Components - TaskList
+  'NuwaxPC.Components.TaskList.noInProgressTasks': 'No in-progress tasks',
+  'NuwaxPC.Components.TaskList.noCancelledTasks': 'No cancelled tasks',
+  'NuwaxPC.Components.TaskList.confirmCancelTask': 'Are you sure you want to cancel this timed task?',
+
+  // Components - NewMonaco
+  'NuwaxPC.Components.NewMonaco.code': 'Code',
+  'NuwaxPC.Components.NewMonaco.pleaseSelectLanguage': 'Please select language',
+
+  // Components - Monaco
+  'NuwaxPC.Components.Monaco.code': 'Code',
+  'NuwaxPC.Components.Monaco.pleaseSelectLanguage': 'Please select language',
+
+  // Components - CodeOptimizeModal
+  'NuwaxPC.Components.CodeOptimizeModal.replace': 'Replace',
+  'NuwaxPC.Components.CodeOptimizeModal.exit': 'Exit',
+  'NuwaxPC.Components.CodeOptimizeModal.placeholder': 'Please describe your specific business requirements in detail',
+
+  // Components - MonacoEditor
+  'NuwaxPC.Components.MonacoEditor.loadingEditor': 'Loading editor...',
+  'NuwaxPC.Components.MonacoEditor.loadingEditorDesc': 'Please wait, Monaco Editor is initializing',
+  'NuwaxPC.Components.MonacoEditor.selectFileToEdit': 'Select a file to edit',
+  'NuwaxPC.Components.MonacoEditor.selectFileToEditDesc': 'Select a file from the file tree on the left, or create a new file to start editing',
+
+  // Components - CreateNewPlugin
+  'NuwaxPC.Components.CreateNewPlugin.pluginCreated': 'Plugin created',
+  'NuwaxPC.Components.CreateNewPlugin.pluginUpdated': 'Plugin updated successfully',
+  'NuwaxPC.Components.CreateNewPlugin.createPlugin': 'Create Plugin',
+  'NuwaxPC.Components.CreateNewPlugin.updatePlugin': 'Update Plugin',
+  'NuwaxPC.Components.CreateNewPlugin.pluginName': 'Plugin Name',
+  'NuwaxPC.Components.CreateNewPlugin.pleaseInputPluginName': 'Please input plugin name',
+  'NuwaxPC.Components.CreateNewPlugin.nameMaxChars': 'Name cannot exceed 30 characters!',
+  'NuwaxPC.Components.CreateNewPlugin.pleaseInputPluginNameBang': 'Please input plugin name!',
+  'NuwaxPC.Components.CreateNewPlugin.placeholderPluginName': 'Please input a plugin name that is clear and complies with platform guidelines',
+  'NuwaxPC.Components.CreateNewPlugin.pluginDescription': 'Plugin Description',
+  'NuwaxPC.Components.CreateNewPlugin.pleaseInputPluginDesc': 'Please input the main features and usage scenarios of the plugin',
+  'NuwaxPC.Components.CreateNewPlugin.placeholderPluginDesc': 'Please input the main features and usage scenarios of the plugin, ensuring the content complies with platform guidelines. This helps users/models better understand',
+  'NuwaxPC.Components.CreateNewPlugin.pluginCreateTool': 'Plugin Tool Creation Method',
+  'NuwaxPC.Components.CreateNewPlugin.pleaseSelectPluginCreateTool': 'Please select a plugin tool creation method',
+  'NuwaxPC.Components.CreateNewPlugin.ideRuntime': 'IDE Runtime',
+  'NuwaxPC.Components.CreateNewPlugin.pleaseSelectPluginMode': 'Please select plugin mode',
+
+  // Components - CreateWorkflow
+  'NuwaxPC.Components.CreateWorkflow.workflowCreated': 'Workflow created successfully',
+  'NuwaxPC.Components.CreateWorkflow.workflowUpdated': 'Workflow updated successfully',
+  'NuwaxPC.Components.CreateWorkflow.createWorkflow': 'Create Workflow',
+  'NuwaxPC.Components.CreateWorkflow.updateWorkflow': 'Update Workflow',
+  'NuwaxPC.Components.CreateWorkflow.name': 'Name',
+  'NuwaxPC.Components.CreateWorkflow.pleaseInputWorkflowName': 'Please input workflow name',
+  'NuwaxPC.Components.CreateWorkflow.nameMaxChars': 'Name cannot exceed 30 characters!',
+  'NuwaxPC.Components.CreateWorkflow.pleaseInputWorkflowNameBang': 'Please input workflow name!',
+  'NuwaxPC.Components.CreateWorkflow.placeholderWorkflowName': 'Input workflow name',
+  'NuwaxPC.Components.CreateWorkflow.description': 'Description',
+  'NuwaxPC.Components.CreateWorkflow.placeholderWorkflowDesc': 'Please input a description so the model understands when to invoke this workflow',
+  'NuwaxPC.Components.CreateWorkflow.icon': 'Icon',
+
+  // Components - CreatedItem
+  'NuwaxPC.Components.CreatedItem.create': 'Create',
+  'NuwaxPC.Components.CreatedItem.update': 'Edit',
+  'NuwaxPC.Components.CreatedItem.dataTable': 'Data Table',
+  'NuwaxPC.Components.CreatedItem.knowledge': 'Knowledge Base',
+  'NuwaxPC.Components.CreatedItem.plugin': 'Plugin',
+  'NuwaxPC.Components.CreatedItem.workflow': 'Workflow',
+  'NuwaxPC.Components.CreatedItem.name': 'Name',
+  'NuwaxPC.Components.CreatedItem.pleaseInputName': 'Please input name',
+  'NuwaxPC.Components.CreatedItem.nameMaxChars': 'Name cannot exceed 30 characters!',
+  'NuwaxPC.Components.CreatedItem.pleaseInputNameBang': 'Please input name!',
+  'NuwaxPC.Components.CreatedItem.placeholderName': 'Please input name',
+  'NuwaxPC.Components.CreatedItem.description': 'Description',
+  'NuwaxPC.Components.CreatedItem.placeholderDesc': 'Please input description',
+  'NuwaxPC.Components.CreatedItem.toolCreateMethod': 'Tool Creation Method',
+  'NuwaxPC.Components.CreatedItem.ideRuntime': 'IDE Runtime',
 };

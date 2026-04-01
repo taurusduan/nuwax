@@ -2,6 +2,7 @@ import ActionMenu, { ActionItem } from '@/components/base/ActionMenu';
 import MoveCopyComponent from '@/components/MoveCopyComponent';
 import { apiCollectAgent, apiUnCollectAgent } from '@/services/agentDev';
 import { apiPublishTemplateCopy } from '@/services/publish';
+import { dict } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum, AllowCopyEnum } from '@/types/enums/agent';
 import { ApplicationMoreActionEnum } from '@/types/enums/space';
 import { AgentDetailDto } from '@/types/interfaces/agent';
@@ -47,7 +48,7 @@ const ChatTitleActions: React.FC<ChatTitleActionsProps> = ({
   const handleToggleCollect = useCallback(() => {
     const targetId = agentInfo?.statistics?.targetId;
     if (!targetId) {
-      message.error('智能体信息不完整');
+      message.error(dict('NuwaxPC.Components.ChatTitleActions.incompleteAgentInfo'));
       return;
     }
 
@@ -55,27 +56,27 @@ const ChatTitleActions: React.FC<ChatTitleActionsProps> = ({
       // 取消收藏
       apiUnCollectAgent(targetId)
         .then(() => {
-          message.success('已取消收藏');
+          message.success(dict('NuwaxPC.Components.ChatTitleActions.uncollected'));
           // 更新本地状态
           if (agentInfo) {
             setIsCollected(false);
           }
         })
         .catch(() => {
-          message.error('取消收藏失败');
+          message.error(dict('NuwaxPC.Components.ChatTitleActions.uncollectFailed'));
         });
     } else {
       // 添加收藏
       apiCollectAgent(targetId)
         .then(() => {
-          message.success('已添加到收藏');
+          message.success(dict('NuwaxPC.Components.ChatTitleActions.collected'));
           // 更新本地状态
           if (agentInfo) {
             setIsCollected(true);
           }
         })
         .catch(() => {
-          message.error('添加收藏失败');
+          message.error(dict('NuwaxPC.Components.ChatTitleActions.collectFailed'));
         });
     }
   }, [agentInfo?.statistics?.targetId, isCollected]);
@@ -87,12 +88,12 @@ const ChatTitleActions: React.FC<ChatTitleActionsProps> = ({
       await copyTextToClipboard(
         agentInfo.shareLink,
         () => {
-          message.success('分享链接已复制到剪贴板');
+          message.success(dict('NuwaxPC.Components.ChatTitleActions.shareLinkCopied'));
         },
         false, // 不显示默认成功消息，使用自定义消息
       );
     } else {
-      message.info('暂无分享链接');
+      message.info(dict('NuwaxPC.Components.ChatTitleActions.noShareLink'));
     }
   };
 
@@ -108,7 +109,7 @@ const ChatTitleActions: React.FC<ChatTitleActionsProps> = ({
         targetId: number;
       }[],
     ) => {
-      message.success('模板复制成功');
+      message.success(dict('NuwaxPC.Components.ChatTitleActions.templateCopySuccess'));
       setCopyTemplateLoading(false);
       // 关闭弹窗
       setOpenMove(false);
@@ -144,13 +145,13 @@ const ChatTitleActions: React.FC<ChatTitleActionsProps> = ({
         {
           key: 'share',
           icon: 'icons-chat-share',
-          title: '分享',
+          title: dict('NuwaxPC.Components.ChatTitleActions.share'),
           onClick: handleShare,
         },
         {
           key: isCollected ? 'collected' : 'collect',
           icon: isCollected ? 'icons-chat-collected' : 'icons-chat-collect',
-          title: '收藏',
+          title: dict('NuwaxPC.Components.ChatTitleActions.collect'),
           onClick: handleToggleCollect,
           className: isCollected ? styles.collected : '',
         },
@@ -160,7 +161,7 @@ const ChatTitleActions: React.FC<ChatTitleActionsProps> = ({
               {
                 key: 'copy-template',
                 icon: 'icons-chat-copy',
-                title: '复制模板',
+                title: dict('NuwaxPC.Components.ChatTitleActions.copyTemplate'),
                 onClick: handleCopyTemplate,
                 className: styles['copy-template'],
               },

@@ -4172,4 +4172,148 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
 
   // Components - HistoryConversation
   'NuwaxPC.Components.HistoryConversation.title': '历史会话',
+
+  // Components - EcosystemCard
+  'NuwaxPC.Components.EcosystemCard.enabled': '已启用',
+  'NuwaxPC.Components.EcosystemCard.versionUpdate': '有版本更新',
+
+  // Components - EcosystemDetailDrawer
+  'NuwaxPC.Components.EcosystemDetailDrawer.updateConfig': '更新配置',
+  'NuwaxPC.Components.EcosystemDetailDrawer.update': '更新',
+  'NuwaxPC.Components.EcosystemDetailDrawer.saveConfigAndEnable': '保存配置并启用',
+  'NuwaxPC.Components.EcosystemDetailDrawer.enable': '启用',
+  'NuwaxPC.Components.EcosystemDetailDrawer.enablePublishOfficialTip': '启用后将发布到官方服务列表',
+  'NuwaxPC.Components.EcosystemDetailDrawer.enablePublishSquareTip': '启用后将发布到系统广场',
+  'NuwaxPC.Components.EcosystemDetailDrawer.disableOfficialTip': '停用后，官方服务列表中将不可见',
+  'NuwaxPC.Components.EcosystemDetailDrawer.disableSquareTip': '停用后，广场{0}中将不可见',
+  'NuwaxPC.Components.EcosystemDetailDrawer.disable': '停用',
+  'NuwaxPC.Components.EcosystemDetailDrawer.pleaseInput': '请输入{0}',
+  'NuwaxPC.Components.EcosystemDetailDrawer.newVersionUpdate': '新版本更新',
+  'NuwaxPC.Components.EcosystemDetailDrawer.fromAuthor': '来自{0}',
+  'NuwaxPC.Components.EcosystemDetailDrawer.usageDoc': '使用文档',
+
+  // Components - EcosystemShareModal
+  'NuwaxPC.Components.EcosystemShareModal.paramName': '参数名称',
+  'NuwaxPC.Components.EcosystemShareModal.paramDesc': '参数描述',
+  'NuwaxPC.Components.EcosystemShareModal.required': '启用必填',
+  'NuwaxPC.Components.EcosystemShareModal.saveAndPublish': '保存并发布分享',
+  'NuwaxPC.Components.EcosystemShareModal.offline': '下线',
+  'NuwaxPC.Components.EcosystemShareModal.withdrawPublish': '撤销发布',
+  'NuwaxPC.Components.EcosystemShareModal.saveDraft': '保存草稿',
+  'NuwaxPC.Components.EcosystemShareModal.editShare': '编辑分享',
+  'NuwaxPC.Components.EcosystemShareModal.createShare': '创建分享',
+  'NuwaxPC.Components.EcosystemShareModal.componentInfo': '{0}信息',
+  'NuwaxPC.Components.EcosystemShareModal.addComponent': '添加{0}',
+  'NuwaxPC.Components.EcosystemShareModal.pleaseSelectComponent': '请选择{0}',
+  'NuwaxPC.Components.EcosystemShareModal.pleaseSelectComponentFirst': '请先选择{0}',
+  'NuwaxPC.Components.EcosystemShareModal.publisherInfo': '发布者信息',
+  'NuwaxPC.Components.EcosystemShareModal.pleaseInputPublisherInfo': '请输入发布者信息',
+  'NuwaxPC.Components.EcosystemShareModal.publisherInfoPlaceholder': '请输入发布者信息，比如：女娲官方',
+  'NuwaxPC.Components.EcosystemShareModal.pluginParams': '插件参数',
+  'NuwaxPC.Components.EcosystemShareModal.usageDoc': '使用文档',
+  'NuwaxPC.Components.EcosystemShareModal.pleaseInputUsageDoc': '请输入使用文档',
+  'NuwaxPC.Components.EcosystemShareModal.usageDocPlaceholder': '请输入使用文档，支持markdown格式',
+
+  // Components - ChatTitleActions
+  'NuwaxPC.Components.ChatTitleActions.incompleteAgentInfo': '智能体信息不完整',
+  'NuwaxPC.Components.ChatTitleActions.uncollected': '已取消收藏',
+  'NuwaxPC.Components.ChatTitleActions.uncollectFailed': '取消收藏失败',
+  'NuwaxPC.Components.ChatTitleActions.collected': '已添加到收藏',
+  'NuwaxPC.Components.ChatTitleActions.collectFailed': '添加收藏失败',
+  'NuwaxPC.Components.ChatTitleActions.shareLinkCopied': '分享链接已复制到剪贴板',
+  'NuwaxPC.Components.ChatTitleActions.noShareLink': '暂无分享链接',
+  'NuwaxPC.Components.ChatTitleActions.templateCopySuccess': '模板复制成功',
+  'NuwaxPC.Components.ChatTitleActions.share': '分享',
+  'NuwaxPC.Components.ChatTitleActions.collect': '收藏',
+  'NuwaxPC.Components.ChatTitleActions.copyTemplate': '复制模板',
+
+  // Components - AgentConversation
+  'NuwaxPC.Components.AgentConversation.title': '相关会话',
+  'NuwaxPC.Components.AgentConversation.viewMore': '查看更多',
+  'NuwaxPC.Components.AgentConversation.emptyDesc': '暂无相关会话',
+
+  // Components - CreateTimedTask
+  'NuwaxPC.Components.CreateTimedTask.createSuccess': '定时任务创建成功',
+  'NuwaxPC.Components.CreateTimedTask.updateSuccess': '定时任务更新成功',
+  'NuwaxPC.Components.CreateTimedTask.createTitle': '创建定时任务',
+  'NuwaxPC.Components.CreateTimedTask.updateTitle': '更新定时任务',
+  'NuwaxPC.Components.CreateTimedTask.timedPeriod': '定时周期',
+  'NuwaxPC.Components.CreateTimedTask.taskName': '任务名称',
+  'NuwaxPC.Components.CreateTimedTask.pleaseInputTaskName': '请输入任务名称',
+  'NuwaxPC.Components.CreateTimedTask.taskContent': '任务内容',
+  'NuwaxPC.Components.CreateTimedTask.pleaseInputTaskContent': '请输入任务内容',
+  'NuwaxPC.Components.CreateTimedTask.taskContentPlaceholder': '请输入你要执行的任务信息，信息提供的越详细执行成功率越高',
+
+  // Components - TaskList
+  'NuwaxPC.Components.TaskList.noInProgressTasks': '暂无进行中的任务',
+  'NuwaxPC.Components.TaskList.noCancelledTasks': '暂无已取消的任务',
+  'NuwaxPC.Components.TaskList.confirmCancelTask': '你确定要取消此定时任务吗?',
+
+  // Components - NewMonaco
+  'NuwaxPC.Components.NewMonaco.code': '代码',
+  'NuwaxPC.Components.NewMonaco.pleaseSelectLanguage': '请选择语言',
+
+  // Components - Monaco
+  'NuwaxPC.Components.Monaco.code': '代码',
+  'NuwaxPC.Components.Monaco.pleaseSelectLanguage': '请选择语言',
+
+  // Components - CodeOptimizeModal
+  'NuwaxPC.Components.CodeOptimizeModal.replace': '替换',
+  'NuwaxPC.Components.CodeOptimizeModal.exit': '退出',
+  'NuwaxPC.Components.CodeOptimizeModal.placeholder': '请描述你的具体业务需求，逻辑尽量描述详细',
+
+  // Components - MonacoEditor
+  'NuwaxPC.Components.MonacoEditor.loadingEditor': '正在加载编辑器...',
+  'NuwaxPC.Components.MonacoEditor.loadingEditorDesc': '请稍候，Monaco Editor正在初始化',
+  'NuwaxPC.Components.MonacoEditor.selectFileToEdit': '选择文件进行编辑',
+  'NuwaxPC.Components.MonacoEditor.selectFileToEditDesc': '从左侧文件树中选择一个文件，或创建新文件开始编辑',
+
+  // Components - CreateNewPlugin
+  'NuwaxPC.Components.CreateNewPlugin.pluginCreated': '插件已创建',
+  'NuwaxPC.Components.CreateNewPlugin.pluginUpdated': '插件更新成功',
+  'NuwaxPC.Components.CreateNewPlugin.createPlugin': '新建插件',
+  'NuwaxPC.Components.CreateNewPlugin.updatePlugin': '更新插件',
+  'NuwaxPC.Components.CreateNewPlugin.pluginName': '插件名称',
+  'NuwaxPC.Components.CreateNewPlugin.pleaseInputPluginName': '请输入插件名称',
+  'NuwaxPC.Components.CreateNewPlugin.nameMaxChars': '名称不能超过30个字符!',
+  'NuwaxPC.Components.CreateNewPlugin.pleaseInputPluginNameBang': '请输入插件名称!',
+  'NuwaxPC.Components.CreateNewPlugin.placeholderPluginName': '请输入插件名称，确保名称含义清晰且符合平台规范',
+  'NuwaxPC.Components.CreateNewPlugin.pluginDescription': '插件描述',
+  'NuwaxPC.Components.CreateNewPlugin.pleaseInputPluginDesc': '请输入插件的主要功能和使用场景',
+  'NuwaxPC.Components.CreateNewPlugin.placeholderPluginDesc': '请输入插件的主要功能和使用场景，确保内容符合平台规范。帮助用户/大模型更好地理解',
+  'NuwaxPC.Components.CreateNewPlugin.pluginCreateTool': '插件工具创建方式',
+  'NuwaxPC.Components.CreateNewPlugin.pleaseSelectPluginCreateTool': '请选择插件工具创建方式',
+  'NuwaxPC.Components.CreateNewPlugin.ideRuntime': 'IDE 运行时',
+  'NuwaxPC.Components.CreateNewPlugin.pleaseSelectPluginMode': '请选择插件模式',
+
+  // Components - CreateWorkflow
+  'NuwaxPC.Components.CreateWorkflow.workflowCreated': '工作流已创建成功',
+  'NuwaxPC.Components.CreateWorkflow.workflowUpdated': '工作流更新成功',
+  'NuwaxPC.Components.CreateWorkflow.createWorkflow': '创建工作流',
+  'NuwaxPC.Components.CreateWorkflow.updateWorkflow': '更新工作流',
+  'NuwaxPC.Components.CreateWorkflow.name': '名称',
+  'NuwaxPC.Components.CreateWorkflow.pleaseInputWorkflowName': '请输入工作流名称',
+  'NuwaxPC.Components.CreateWorkflow.nameMaxChars': '名称不能超过30个字符!',
+  'NuwaxPC.Components.CreateWorkflow.pleaseInputWorkflowNameBang': '输入工作流名称!',
+  'NuwaxPC.Components.CreateWorkflow.placeholderWorkflowName': '输入工作流名称',
+  'NuwaxPC.Components.CreateWorkflow.description': '描述',
+  'NuwaxPC.Components.CreateWorkflow.placeholderWorkflowDesc': '请输入描述，让大模型理解什么情况下应该调用此工作流',
+  'NuwaxPC.Components.CreateWorkflow.icon': '图标',
+
+  // Components - CreatedItem
+  'NuwaxPC.Components.CreatedItem.create': '创建',
+  'NuwaxPC.Components.CreatedItem.update': '编辑',
+  'NuwaxPC.Components.CreatedItem.dataTable': '数据表',
+  'NuwaxPC.Components.CreatedItem.knowledge': '知识库',
+  'NuwaxPC.Components.CreatedItem.plugin': '插件',
+  'NuwaxPC.Components.CreatedItem.workflow': '工作流',
+  'NuwaxPC.Components.CreatedItem.name': '名称',
+  'NuwaxPC.Components.CreatedItem.pleaseInputName': '请输入名称',
+  'NuwaxPC.Components.CreatedItem.nameMaxChars': '名称不能超过30个字符!',
+  'NuwaxPC.Components.CreatedItem.pleaseInputNameBang': '请输入名称!',
+  'NuwaxPC.Components.CreatedItem.placeholderName': '请输入名称',
+  'NuwaxPC.Components.CreatedItem.description': '描述',
+  'NuwaxPC.Components.CreatedItem.placeholderDesc': '请输入描述',
+  'NuwaxPC.Components.CreatedItem.toolCreateMethod': '工具创建方式',
+  'NuwaxPC.Components.CreatedItem.ideRuntime': 'IDE 运行时',
 };
