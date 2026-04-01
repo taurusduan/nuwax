@@ -2428,6 +2428,8 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Components.FilePathHeader.share': '分享',
   'NuwaxPC.Components.FilePathHeader.exitFullscreen': '退出全屏',
   'NuwaxPC.Components.FilePathHeader.fullscreen': '全屏',
+  'NuwaxPC.Components.FilePathHeader.copy': '复制',
+  'NuwaxPC.Components.FilePathHeader.close': '关闭',
   'NuwaxPC.Components.SearchView.searchPlaceholder': '搜索文件...',
   'NuwaxPC.Components.SearchView.noMatchingFiles': '暂无匹配文件',
   'NuwaxPC.Components.FileTree.noFiles': '暂无文件',
@@ -4316,4 +4318,13 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Components.CreatedItem.placeholderDesc': '请输入描述',
   'NuwaxPC.Components.CreatedItem.toolCreateMethod': '工具创建方式',
   'NuwaxPC.Components.CreatedItem.ideRuntime': 'IDE 运行时',
+
+  // Components - TiptapVariableInput
+  'NuwaxPC.Components.TiptapVariableInput.placeholder': '输入 @ 或 { 开始使用',
+
+  // Components - VariableList
+  'NuwaxPC.Components.VariableList.noMatchingVariable': '未找到匹配变量',
+  'NuwaxPC.Components.VariableList.tabVariables': '变量',
+  'NuwaxPC.Components.VariableList.tabTools': '工具',
+  'NuwaxPC.Components.VariableList.tabSkills': '技能',
 };

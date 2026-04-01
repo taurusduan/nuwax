@@ -2744,6 +2744,8 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Components.FilePathHeader.share': 'Share',
   'NuwaxPC.Components.FilePathHeader.exitFullscreen': 'Exit Fullscreen',
   'NuwaxPC.Components.FilePathHeader.fullscreen': 'Fullscreen',
+  'NuwaxPC.Components.FilePathHeader.copy': 'Copy',
+  'NuwaxPC.Components.FilePathHeader.close': 'Close',
   'NuwaxPC.Components.SearchView.searchPlaceholder': 'Search files...',
   'NuwaxPC.Components.SearchView.noMatchingFiles': 'No matching files',
   'NuwaxPC.Components.FileTree.noFiles': 'No files',
@@ -4805,4 +4807,13 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Components.CreatedItem.placeholderDesc': 'Please input description',
   'NuwaxPC.Components.CreatedItem.toolCreateMethod': 'Tool Creation Method',
   'NuwaxPC.Components.CreatedItem.ideRuntime': 'IDE Runtime',
+
+  // Components - TiptapVariableInput
+  'NuwaxPC.Components.TiptapVariableInput.placeholder': 'Type @ or { to get started',
+
+  // Components - VariableList
+  'NuwaxPC.Components.VariableList.noMatchingVariable': 'No matching variable found',
+  'NuwaxPC.Components.VariableList.tabVariables': 'Variables',
+  'NuwaxPC.Components.VariableList.tabTools': 'Tools',
+  'NuwaxPC.Components.VariableList.tabSkills': 'Skills',
 };

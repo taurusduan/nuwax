@@ -7,6 +7,7 @@ import { TextSelection } from '@tiptap/pm/state';
 import type { Editor } from '@tiptap/react';
 import { EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
+import { dict } from '@/services/i18nRuntime';
 import { theme } from 'antd';
 import { isEqual } from 'lodash';
 import React, { useEffect, useMemo, useRef } from 'react';
@@ -41,7 +42,7 @@ const TiptapVariableInputInner: React.FC<TiptapVariableInputProps> = ({
   variables = [],
   skills = [],
   mentions = [],
-  placeholder = '输入 @ 或 { 开始使用',
+  placeholder = dict('NuwaxPC.Components.TiptapVariableInput.placeholder'),
   disabled = false,
   readonly = false,
   className,
