@@ -1,4 +1,11 @@
-import { dict } from '@/services/i18nRuntime';
+import { EN_US } from '../locales/i18n/en-US';
+
+/**
+ * 路由配置会在 Umi 读取 config 时于 Node 环境直接执行。
+ * 这里不能依赖运行时 i18n service，否则 pre-commit 的配置解析阶段会报模块解析错误。
+ * 因此路由名称统一从本地静态词典读取，缺失时回退为 key 本身。
+ */
+const getRouteLabel = (key: string): string => EN_US[key] || key;
 
 const routes = [
   {
@@ -137,7 +144,7 @@ const routes = [
       },
       {
         path: '/more-page',
-        name: dict('PC.Routes.morePage'),
+        name: getRouteLabel('PC.Routes.morePage'),
         routes: [
           {
             path: 'api-key',
@@ -155,61 +162,61 @@ const routes = [
       // 系统管理统一管理
       {
         path: '/system',
-        name: dict('PC.Routes.systemManagement'),
+        name: getRouteLabel('PC.Routes.systemManagement'),
         routes: [
           {
             path: 'dashboard',
-            name: dict('PC.Routes.systemOverview'),
+            name: getRouteLabel('PC.Routes.systemOverview'),
             component: '@/pages/SystemManagement/Dashboard',
           },
           {
             path: 'task-manage',
-            name: dict('PC.Routes.taskManagement'),
+            name: getRouteLabel('PC.Routes.taskManagement'),
             component: '@/pages/SystemManagement/TaskManage',
           },
           {
             path: 'user/manage',
-            name: dict('PC.Routes.userManagement'),
+            name: getRouteLabel('PC.Routes.userManagement'),
             component: '@/pages/UserManage',
           },
           {
             path: 'publish/audit',
-            name: dict('PC.Routes.publishAudit'),
+            name: getRouteLabel('PC.Routes.publishAudit'),
             component: '@/pages/PublishAudit',
           },
           {
             path: 'published/manage',
-            name: dict('PC.Routes.publishedManagement'),
+            name: getRouteLabel('PC.Routes.publishedManagement'),
             component: '@/pages/PublishedManage',
           },
           {
             path: 'model/manage',
-            name: dict('PC.Routes.publicModelManagement'),
+            name: getRouteLabel('PC.Routes.publicModelManagement'),
             component: '@/pages/GlobalModelManage',
           },
           {
             path: 'config',
-            name: dict('PC.Routes.systemConfig'),
+            name: getRouteLabel('PC.Routes.systemConfig'),
             routes: [
               {
                 path: 'setting',
-                name: dict('PC.Routes.systemSetting'),
+                name: getRouteLabel('PC.Routes.systemSetting'),
                 component: '@/pages/SystemManagement/SystemConfig/SystemConfig',
               },
               {
                 path: 'theme',
-                name: dict('PC.Routes.themeConfig'),
+                name: getRouteLabel('PC.Routes.themeConfig'),
                 component: '@/pages/SystemManagement/SystemConfig/ThemeConfig',
               },
               {
                 path: 'sandbox',
-                name: dict('PC.Routes.sandboxConfig'),
+                name: getRouteLabel('PC.Routes.sandboxConfig'),
                 component:
                   '@/pages/SystemManagement/SystemConfig/SandboxConfig',
               },
               {
                 path: 'category',
-                name: dict('PC.Routes.categoryManagement'),
+                name: getRouteLabel('PC.Routes.categoryManagement'),
                 component:
                   '@/pages/SystemManagement/SystemConfig/CategoryManage',
               },
@@ -222,41 +229,41 @@ const routes = [
           },
           {
             path: 'content',
-            name: dict('PC.Routes.contentManagement'),
+            name: getRouteLabel('PC.Routes.contentManagement'),
             routes: [
               {
                 path: 'content-space',
-                name: dict('PC.Routes.contentSpace'),
+                name: getRouteLabel('PC.Routes.contentSpace'),
                 component: '@/pages/SystemManagement/Content/Space',
               },
               {
                 path: 'content-agent',
-                name: dict('PC.Routes.contentAgent'),
+                name: getRouteLabel('PC.Routes.contentAgent'),
                 component: '@/pages/SystemManagement/Content/Agent',
               },
               {
                 path: 'content-web-application',
-                name: dict('PC.Routes.contentWebApplication'),
+                name: getRouteLabel('PC.Routes.contentWebApplication'),
                 component: '@/pages/SystemManagement/Content/WebApplication',
               },
               {
                 path: 'content-knowledge-base',
-                name: dict('PC.Routes.contentKnowledgeBase'),
+                name: getRouteLabel('PC.Routes.contentKnowledgeBase'),
                 component: '@/pages/SystemManagement/Content/KnowledgeBase',
               },
               {
                 path: 'content-data-table',
-                name: dict('PC.Routes.contentDataTable'),
+                name: getRouteLabel('PC.Routes.contentDataTable'),
                 component: '@/pages/SystemManagement/Content/DataTable',
               },
               {
                 path: 'content-workflow',
-                name: dict('PC.Routes.contentWorkflow'),
+                name: getRouteLabel('PC.Routes.contentWorkflow'),
                 component: '@/pages/SystemManagement/Content/Workflow',
               },
               {
                 path: 'content-plugin',
-                name: dict('PC.Routes.contentPlugin'),
+                name: getRouteLabel('PC.Routes.contentPlugin'),
                 component: '@/pages/SystemManagement/Content/Plugin',
               },
               {
@@ -266,34 +273,34 @@ const routes = [
               },
               {
                 path: 'content-skill',
-                name: dict('PC.Routes.contentSkill'),
+                name: getRouteLabel('PC.Routes.contentSkill'),
                 component: '@/pages/SystemManagement/Content/Skill',
               },
             ],
           },
           {
             path: 'menu-permission',
-            name: dict('PC.Routes.menuPermission'),
+            name: getRouteLabel('PC.Routes.menuPermission'),
             routes: [
               {
                 path: 'permission-resources',
-                name: dict('PC.Routes.permissionResources'),
+                name: getRouteLabel('PC.Routes.permissionResources'),
                 component:
                   '@/pages/SystemManagement/MenuPermission/PermissionResources',
               },
               {
                 path: 'menu-manage',
-                name: dict('PC.Routes.menuManage'),
+                name: getRouteLabel('PC.Routes.menuManage'),
                 component: '@/pages/SystemManagement/MenuPermission/MenuManage',
               },
               {
                 path: 'role-manage',
-                name: dict('PC.Routes.roleManage'),
+                name: getRouteLabel('PC.Routes.roleManage'),
                 component: '@/pages/SystemManagement/MenuPermission/RoleManage',
               },
               {
                 path: 'user-group-manage',
-                name: dict('PC.Routes.userGroupManage'),
+                name: getRouteLabel('PC.Routes.userGroupManage'),
                 component:
                   '@/pages/SystemManagement/MenuPermission/UserGroupManage',
               },
@@ -301,7 +308,7 @@ const routes = [
           },
           {
             path: 'log-query',
-            name: dict('PC.Routes.logQuery'),
+            name: getRouteLabel('PC.Routes.logQuery'),
             routes: [
               // {
               //   path: 'operation-log',
@@ -310,7 +317,7 @@ const routes = [
               // },
               {
                 path: 'running-log',
-                name: dict('PC.Routes.runningLog'),
+                name: getRouteLabel('PC.Routes.runningLog'),
                 component: '@/pages/SystemManagement/LogQuery/RunningLog',
               },
             ],
@@ -320,18 +327,18 @@ const routes = [
       // 生态市场
       {
         path: '/ecosystem',
-        name: dict('PC.Routes.ecosystemMarket'),
+        name: getRouteLabel('PC.Routes.ecosystemMarket'),
         access: 'canAdmin',
         routes: [
           {
             path: '/ecosystem/plugin',
-            name: dict('PC.Routes.ecosystemPlugin'),
+            name: getRouteLabel('PC.Routes.ecosystemPlugin'),
             component: '@/pages/EcosystemPlugin',
             access: 'canAdmin',
           },
           {
             path: '/ecosystem/template',
-            name: dict('PC.Routes.ecosystemTemplate'),
+            name: getRouteLabel('PC.Routes.ecosystemTemplate'),
             component: '@/pages/EcosystemTemplate',
             access: 'canAdmin',
           },

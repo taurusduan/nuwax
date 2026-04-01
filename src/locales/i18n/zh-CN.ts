@@ -4703,7 +4703,6 @@ export const ZH_CN: SystemLangMap = {
   'PC.Constants.Theme.bgNightCityDesc': '都市夜景，适合深色布局风格',
   'PC.Constants.Theme.bgFreshBlueSky': '清新蓝天',
   'PC.Constants.Theme.bgFreshBlueSkyDesc': '清新明亮，适合浅色布局风格',
-};
 
   // ========== New keys from Agent 1 & 2 ==========
 
@@ -4776,7 +4775,8 @@ export const ZH_CN: SystemLangMap = {
   // Constants - Common
   'PC.Constants.Common.subAgentTemplateName': '你的子智能体名称',
   'PC.Constants.Common.subAgentTemplateDesc': '子智能体应在何时被调用的说明',
-  'PC.Constants.Common.subAgentTemplateBody': '你的子智能体系统提示信息在此处显示。该提示可包含多个段落，\n需明确界定子智能体的角色、功能及解决问题的方法。\n\n包含具体说明、最佳实践以及子智能体应遵循的任何限制条件。',
+  'PC.Constants.Common.subAgentTemplateBody':
+    '你的子智能体系统提示信息在此处显示。该提示可包含多个段落，\n需明确界定子智能体的角色、功能及解决问题的方法。\n\n包含具体说明、最佳实践以及子智能体应遵循的任何限制条件。',
 
   // Routes
   'PC.Routes.morePage': '更多页面',
@@ -4821,10 +4821,14 @@ export const ZH_CN: SystemLangMap = {
   'PC.Utils.InputValidation.enterNumber': '请输入数字',
 
   // Utils - Graph
-  'PC.Utils.Graph.portConnectionWarning': '左侧连接桩只能作为接入点，右侧连接桩只能作为输出点',
-  'PC.Utils.Graph.loopExitNodeInvalid': '条件分支，意图识别，问答不能作为循环的出口连接节点',
-  'PC.Utils.Graph.loopExitAlreadyExists': '当前已有对子节点连接循环的出口，请先删除该连线',
-  'PC.Utils.Graph.loopInnerEdgeAlreadyExists': '当前循环已有对子节点的连线，请先删除该连线',
+  'PC.Utils.Graph.portConnectionWarning':
+    '左侧连接桩只能作为接入点，右侧连接桩只能作为输出点',
+  'PC.Utils.Graph.loopExitNodeInvalid':
+    '条件分支，意图识别，问答不能作为循环的出口连接节点',
+  'PC.Utils.Graph.loopExitAlreadyExists':
+    '当前已有对子节点连接循环的出口，请先删除该连线',
+  'PC.Utils.Graph.loopInnerEdgeAlreadyExists':
+    '当前循环已有对子节点的连线，请先删除该连线',
   'PC.Utils.Graph.duplicateEdgeNotAllowed': '不能创建重复的边',
   'PC.Utils.Graph.cannotConnectExternalNode': '不能连接外部的节点',
   'PC.Utils.Graph.cannotConnectOutsideNode': '不能连接外部节点',
@@ -4865,7 +4869,8 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.OpenApp.historyConversation': '历史会话',
   'PC.Pages.OpenApp.viewAll': '查看全部',
   'PC.Pages.OpenApp.lookRight': '右边看>',
-  'PC.Pages.OpenApp.firstConversationTip': '在会话框中输入指令开始你的第一次会话吧～',
+  'PC.Pages.OpenApp.firstConversationTip':
+    '在会话框中输入指令开始你的第一次会话吧～',
 
   // Pages - EditAgent
   'PC.Pages.EditAgent.bindCardDataSource': '为卡片绑定数据源',
@@ -4873,20 +4878,24 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.EditAgent.isModelVisible': '是否模型可见',
   'PC.Pages.EditAgent.isDefaultHome': '是否为默认首页',
   'PC.Pages.EditAgent.save': '保存',
-  'PC.Pages.EditAgent.pluginWorkflowDataStructure': '插件或工作流返回数据结构以及示例',
+  'PC.Pages.EditAgent.pluginWorkflowDataStructure':
+    '插件或工作流返回数据结构以及示例',
 
   // Pages - SpacePluginCloudTool
   'PC.Pages.SpacePluginCloudTool.paramName': '参数名称',
-  'PC.Pages.SpacePluginCloudTool.paramNamePlaceholder': '请输入参数名称，确保含义清晰',
+  'PC.Pages.SpacePluginCloudTool.paramNamePlaceholder':
+    '请输入参数名称，确保含义清晰',
   'PC.Pages.SpacePluginCloudTool.paramDesc': '参数描述',
-  'PC.Pages.SpacePluginCloudTool.paramDescPlaceholder': '请输入参数描述，确保描述详细便于大模型更好的理解',
+  'PC.Pages.SpacePluginCloudTool.paramDescPlaceholder':
+    '请输入参数描述，确保描述详细便于大模型更好的理解',
   'PC.Pages.SpacePluginCloudTool.paramType': '参数类型',
   'PC.Pages.SpacePluginCloudTool.selectDataType': '请选择数据类型',
   'PC.Pages.SpacePluginCloudTool.isRequired': '是否必须',
   'PC.Pages.SpacePluginCloudTool.defaultValue': '默认值',
   'PC.Pages.SpacePluginCloudTool.enterDefaultValue': '请输入默认值',
   'PC.Pages.SpacePluginCloudTool.enable': '开启',
-  'PC.Pages.SpacePluginCloudTool.requiredParamTooltip': '此参数是必填参数，填写默认值后，此开关可用',
+  'PC.Pages.SpacePluginCloudTool.requiredParamTooltip':
+    '此参数是必填参数，填写默认值后，此开关可用',
   'PC.Pages.SpacePluginCloudTool.operation': '操作',
   'PC.Pages.SpacePluginCloudTool.inputConfig': '入参配置',
   'PC.Pages.SpacePluginCloudTool.outputConfig': '出参配置',
@@ -4912,6 +4921,7 @@ export const ZH_CN: SystemLangMap = {
   'PC.Constants.Common.variable': '变量',
   'PC.Constants.Mcp.deployed': '已部署',
   'PC.Pages.EditAgent.codeExampleOptionsComment': '//options 选项列表；',
-  'PC.Pages.EditAgent.codeExampleValueComment': '//value：选项值；label选项名称；children下级选项',
+  'PC.Pages.EditAgent.codeExampleValueComment':
+    '//value：选项值；label选项名称；children下级选项',
   'PC.Pages.SpacePluginCloudTool.save': '保存',
 };

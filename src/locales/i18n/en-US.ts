@@ -5205,7 +5205,6 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Theme.bgFreshBlueSky': 'Fresh Blue Sky',
   'PC.Constants.Theme.bgFreshBlueSkyDesc':
     'Fresh and bright, suitable for light layout',
-};
 
   // ========== New keys from Agent 1 & 2 ==========
 
@@ -5263,11 +5262,14 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Node.execExceptionFlow': 'Exception Flow',
 
   // Constants - Home
-  'PC.Constants.Home.exampleQ1': 'Overview of Nuwa Agent Design Platform features',
+  'PC.Constants.Home.exampleQ1':
+    'Overview of Nuwa Agent Design Platform features',
   'PC.Constants.Home.exampleQ2': 'Recommended NLP textbook recommendations',
   'PC.Constants.Home.exampleQ3': 'Nuwa Agent Design Platform user manual',
-  'PC.Constants.Home.exampleQ4': 'What should I start preparing in my sophomore year for grad school?',
-  'PC.Constants.Home.exampleQ5': 'What should I start preparing in my sophomore year for grad school?',
+  'PC.Constants.Home.exampleQ4':
+    'What should I start preparing in my sophomore year for grad school?',
+  'PC.Constants.Home.exampleQ5':
+    'What should I start preparing in my sophomore year for grad school?',
 
   // Constants - ImChannel
   'PC.Constants.ImChannel.platformFeishu': 'Feishu',
@@ -5277,8 +5279,10 @@ export const EN_US: SystemLangMap = {
 
   // Constants - Common
   'PC.Constants.Common.subAgentTemplateName': 'Your sub-agent name',
-  'PC.Constants.Common.subAgentTemplateDesc': 'Description of when the sub-agent should be invoked',
-  'PC.Constants.Common.subAgentTemplateBody': 'Your sub-agent system prompt is displayed here. This prompt can contain multiple paragraphs,\nYou need to clearly define the role, capabilities, and approach to problem-solving for the sub-agent.\n\nIncludes specific instructions, best practices, and any limitations that the sub-agent should follow.',
+  'PC.Constants.Common.subAgentTemplateDesc':
+    'Description of when the sub-agent should be invoked',
+  'PC.Constants.Common.subAgentTemplateBody':
+    'Your sub-agent system prompt is displayed here. This prompt can contain multiple paragraphs,\nYou need to clearly define the role, capabilities, and approach to problem-solving for the sub-agent.\n\nIncludes specific instructions, best practices, and any limitations that the sub-agent should follow.',
 
   // Routes
   'PC.Routes.morePage': 'More Pages',
@@ -5323,17 +5327,23 @@ export const EN_US: SystemLangMap = {
   'PC.Utils.Graph.cannotConnectExternalNode': 'Cannot connect external node',
   'PC.Utils.Graph.cannotConnectOutsideNode': 'Cannot connect outside node',
   'PC.Utils.Graph.duplicateEdgeNotAllowed': 'Cannot create duplicate edge',
-  'PC.Utils.Graph.loopExitAlreadyExists': 'Loop exit already exists for child node, please delete the edge first',
-  'PC.Utils.Graph.loopExitNodeInvalid': 'Condition branch, intent recognition, Q&A cannot be used as loop exit connection node',
-  'PC.Utils.Graph.loopInnerEdgeAlreadyExists': 'Loop already has inner edge, please delete it first',
-  'PC.Utils.Graph.portConnectionWarning': 'Left port can only be used as input, right port can only be used as output',
+  'PC.Utils.Graph.loopExitAlreadyExists':
+    'Loop exit already exists for child node, please delete the edge first',
+  'PC.Utils.Graph.loopExitNodeInvalid':
+    'Condition branch, intent recognition, Q&A cannot be used as loop exit connection node',
+  'PC.Utils.Graph.loopInnerEdgeAlreadyExists':
+    'Loop already has inner edge, please delete it first',
+  'PC.Utils.Graph.portConnectionWarning':
+    'Left port can only be used as input, right port can only be used as output',
 
   // Utils - InputValidation
   'PC.Utils.InputValidation.enterNumber': 'Please enter a number',
 
   // Pages - AntvX6
-  'PC.Pages.AntvX6.loopContinueDesc': 'Terminate current loop and continue to next iteration',
-  'PC.Pages.AntvX6.loopBreakDesc': 'Immediately terminate current loop and break out of loop body',
+  'PC.Pages.AntvX6.loopContinueDesc':
+    'Terminate current loop and continue to next iteration',
+  'PC.Pages.AntvX6.loopBreakDesc':
+    'Immediately terminate current loop and break out of loop body',
 
   // Pages - AppDev DesignViewer
   'PC.Pages.AppDev.DesignViewer.textContent': 'Text Content',
@@ -5356,10 +5366,12 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AppDev.DesignViewer.opacity': 'Opacity',
   'PC.Pages.AppDev.DesignViewer.borderRadius': 'Border Radius',
   'PC.Pages.AppDev.DesignViewer.shadow': 'Shadow',
-  'PC.Pages.AppDev.DesignViewer.selectElementTip': 'Select a page element on the right to edit',
+  'PC.Pages.AppDev.DesignViewer.selectElementTip':
+    'Select a page element on the right to edit',
 
   // Pages - ChatTemp
-  'PC.Pages.ChatTemp.enterInstruction': 'Enter instructions directly; press Enter for new line',
+  'PC.Pages.ChatTemp.enterInstruction':
+    'Enter instructions directly; press Enter for new line',
 
   // Pages - OpenApp
   'PC.Pages.OpenApp.collapseNav': 'Collapse Navigation',
@@ -5367,7 +5379,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.OpenApp.historyConversation': 'History',
   'PC.Pages.OpenApp.viewAll': 'View All',
   'PC.Pages.OpenApp.lookRight': 'See Right >',
-  'PC.Pages.OpenApp.firstConversationTip': 'Enter instructions in the chat to start your first conversation~',
+  'PC.Pages.OpenApp.firstConversationTip':
+    'Enter instructions in the chat to start your first conversation~',
 
   // Pages - EditAgent
   'PC.Pages.EditAgent.bindCardDataSource': 'Bind data source for card',
@@ -5375,20 +5388,24 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.EditAgent.isModelVisible': 'Visible to model',
   'PC.Pages.EditAgent.isDefaultHome': 'Set as default home',
   'PC.Pages.EditAgent.save': 'Save',
-  'PC.Pages.EditAgent.pluginWorkflowDataStructure': 'Plugin or workflow return data structure and example',
+  'PC.Pages.EditAgent.pluginWorkflowDataStructure':
+    'Plugin or workflow return data structure and example',
 
   // Pages - SpacePluginCloudTool
   'PC.Pages.SpacePluginCloudTool.paramName': 'Parameter Name',
-  'PC.Pages.SpacePluginCloudTool.paramNamePlaceholder': 'Enter parameter name with clear meaning',
+  'PC.Pages.SpacePluginCloudTool.paramNamePlaceholder':
+    'Enter parameter name with clear meaning',
   'PC.Pages.SpacePluginCloudTool.paramDesc': 'Parameter Description',
-  'PC.Pages.SpacePluginCloudTool.paramDescPlaceholder': 'Enter parameter description for better model understanding',
+  'PC.Pages.SpacePluginCloudTool.paramDescPlaceholder':
+    'Enter parameter description for better model understanding',
   'PC.Pages.SpacePluginCloudTool.paramType': 'Parameter Type',
   'PC.Pages.SpacePluginCloudTool.selectDataType': 'Select data type',
   'PC.Pages.SpacePluginCloudTool.isRequired': 'Required',
   'PC.Pages.SpacePluginCloudTool.defaultValue': 'Default Value',
   'PC.Pages.SpacePluginCloudTool.enterDefaultValue': 'Enter default value',
   'PC.Pages.SpacePluginCloudTool.enable': 'Enable',
-  'PC.Pages.SpacePluginCloudTool.requiredParamTooltip': 'This is a required parameter. Available after setting a default value',
+  'PC.Pages.SpacePluginCloudTool.requiredParamTooltip':
+    'This is a required parameter. Available after setting a default value',
   'PC.Pages.SpacePluginCloudTool.operation': 'Action',
   'PC.Pages.SpacePluginCloudTool.inputConfig': 'Input Config',
   'PC.Pages.SpacePluginCloudTool.outputConfig': 'Output Config',
@@ -5413,7 +5430,8 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Common.variable': 'Variable',
   'PC.Constants.Mcp.deployed': 'Deployed',
   'PC.Pages.EditAgent.codeExampleOptionsComment': '//options Option list;',
-  'PC.Pages.EditAgent.codeExampleValueComment': '//value: Option value; label: Option name; children: Sub-options',
+  'PC.Pages.EditAgent.codeExampleValueComment':
+    '//value: Option value; label: Option name; children: Sub-options',
   'PC.Pages.SpacePluginCloudTool.save': 'Save',
   // Pages - Space componentLibrary
   'PC.Constants.Space.componentLibrary': 'Component Library',
