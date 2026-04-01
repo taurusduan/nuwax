@@ -1,4 +1,5 @@
 import React from 'react';
+import { dict } from '@/services/i18nRuntime';
 
 /**
  * 输入验证工具函数
@@ -48,7 +49,7 @@ export const getNumberOnlyFieldProps = (
   options: NumberOnlyFieldPropsOptions = {},
 ) => {
   const {
-    placeholder = '请输入数字',
+    placeholder = dict('PC.Utils.InputValidation.enterNumber'),
     allowNegative = false,
     allowDecimal = false,
     maxLength,

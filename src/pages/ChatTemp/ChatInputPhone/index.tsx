@@ -15,6 +15,7 @@ import type { UploadProps } from 'antd';
 import { Input, message, Upload } from 'antd';
 import classNames from 'classnames';
 import React, { useMemo, useState } from 'react';
+import { dict } from '@/services/i18nRuntime';
 import styles from './index.less';
 const cx = classNames.bind(styles);
 
@@ -175,7 +176,7 @@ const ChatInputPhone: React.FC<ChatInputProps> = ({
             onChange={(e) => setMessageInfo(e.target.value)}
             rootClassName={cx(styles.input, 'flex-1')}
             onPressEnter={handlePressEnter}
-            placeholder="直接输入指令；可通过回车换行"
+            placeholder={dict('PC.Pages.ChatTemp.enterInstruction')}
           />
           <span
             onClick={handleSendMessage}

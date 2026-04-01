@@ -4,6 +4,8 @@ import {
 } from '@/locales/i18n';
 import { EN_US } from '@/locales/i18n/en-US';
 import { ZH_CN } from '@/locales/i18n/zh-CN';
+import { ZH_TW } from '@/locales/i18n/zh-TW';
+import { ZH_HK } from '@/locales/i18n/zh-HK';
 
 export const DEFAULT_I18N_LANG = 'en-us';
 
@@ -19,6 +21,8 @@ export const I18N_MAP_CACHE_TTL = 24 * 60 * 60 * 1000;
 // Runtime fallback dictionaries
 export const MIN_EN_I18N_MAP: Record<string, string> = EN_US;
 export const MIN_ZH_I18N_MAP: Record<string, string> = ZH_CN;
+export const MIN_ZH_TW_I18N_MAP: Record<string, string> = ZH_TW;
+export const MIN_ZH_HK_I18N_MAP: Record<string, string> = ZH_HK;
 export const LOCAL_DEFAULT_I18N_MAP = I18N_LOCAL_DEFAULT_MAP;
 
 // Platform defaults for i18n management import

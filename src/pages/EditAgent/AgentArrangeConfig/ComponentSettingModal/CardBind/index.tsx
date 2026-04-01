@@ -1,6 +1,7 @@
 import Loading from '@/components/custom/Loading';
 import type { AgentCardInfo } from '@/types/interfaces/agent';
 import type { CardBindProps } from '@/types/interfaces/agentConfig';
+import { dict } from '@/services/i18nRuntime';
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 import BindDataSource from './BindDataSource';
@@ -38,7 +39,7 @@ const CardBind: React.FC<CardBindProps> = ({
       ) : (
         <>
           <div className={cx('flex-1', 'px-16', 'py-16')}>
-            <h3 className={cx(styles.title)}>选择卡片样式</h3>
+            <h3 className={cx(styles.title)}>{dict('PC.Pages.EditAgent.selectCardStyle')}</h3>
             <CardModeSetting
               cardKey={cardInfo?.cardKey}
               list={agentCardList}
@@ -46,7 +47,7 @@ const CardBind: React.FC<CardBindProps> = ({
             />
           </div>
           <div className={cx('flex-1', 'flex', 'flex-col', 'px-16', 'py-16')}>
-            <h3 className={cx(styles.title)}>为卡片绑定数据源</h3>
+            <h3 className={cx(styles.title)}>{dict('PC.Pages.EditAgent.bindCardDataSource')}</h3>
             <BindDataSource
               cardInfo={cardInfo}
               componentInfo={componentInfo}

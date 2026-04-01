@@ -1,3 +1,5 @@
+import { dict } from '@/services/i18nRuntime';
+
 const routes = [
   {
     path: '/login',
@@ -135,7 +137,7 @@ const routes = [
       },
       {
         path: '/more-page',
-        name: '更多页面',
+        name: dict('PC.Routes.morePage'),
         routes: [
           {
             path: 'api-key',
@@ -153,61 +155,61 @@ const routes = [
       // 系统管理统一管理
       {
         path: '/system',
-        name: '系统管理',
+        name: dict('PC.Routes.systemManagement'),
         routes: [
           {
             path: 'dashboard',
-            name: '系统概览',
+            name: dict('PC.Routes.systemOverview'),
             component: '@/pages/SystemManagement/Dashboard',
           },
           {
             path: 'task-manage',
-            name: '任务管理',
+            name: dict('PC.Routes.taskManagement'),
             component: '@/pages/SystemManagement/TaskManage',
           },
           {
             path: 'user/manage',
-            name: '用户管理',
+            name: dict('PC.Routes.userManagement'),
             component: '@/pages/UserManage',
           },
           {
             path: 'publish/audit',
-            name: '发布审核',
+            name: dict('PC.Routes.publishAudit'),
             component: '@/pages/PublishAudit',
           },
           {
             path: 'published/manage',
-            name: '已发布管理',
+            name: dict('PC.Routes.publishedManagement'),
             component: '@/pages/PublishedManage',
           },
           {
             path: 'model/manage',
-            name: '公共模型管理',
+            name: dict('PC.Routes.publicModelManagement'),
             component: '@/pages/GlobalModelManage',
           },
           {
             path: 'config',
-            name: '系统配置',
+            name: dict('PC.Routes.systemConfig'),
             routes: [
               {
                 path: 'setting',
-                name: '系统设置',
+                name: dict('PC.Routes.systemSetting'),
                 component: '@/pages/SystemManagement/SystemConfig/SystemConfig',
               },
               {
                 path: 'theme',
-                name: '主题配置',
+                name: dict('PC.Routes.themeConfig'),
                 component: '@/pages/SystemManagement/SystemConfig/ThemeConfig',
               },
               {
                 path: 'sandbox',
-                name: '沙盒配置',
+                name: dict('PC.Routes.sandboxConfig'),
                 component:
                   '@/pages/SystemManagement/SystemConfig/SandboxConfig',
               },
               {
                 path: 'category',
-                name: '分类管理',
+                name: dict('PC.Routes.categoryManagement'),
                 component:
                   '@/pages/SystemManagement/SystemConfig/CategoryManage',
               },
@@ -220,41 +222,41 @@ const routes = [
           },
           {
             path: 'content',
-            name: '内容管理',
+            name: dict('PC.Routes.contentManagement'),
             routes: [
               {
                 path: 'content-space',
-                name: '空间',
+                name: dict('PC.Routes.contentSpace'),
                 component: '@/pages/SystemManagement/Content/Space',
               },
               {
                 path: 'content-agent',
-                name: '智能体',
+                name: dict('PC.Routes.contentAgent'),
                 component: '@/pages/SystemManagement/Content/Agent',
               },
               {
                 path: 'content-web-application',
-                name: '网页应用',
+                name: dict('PC.Routes.contentWebApplication'),
                 component: '@/pages/SystemManagement/Content/WebApplication',
               },
               {
                 path: 'content-knowledge-base',
-                name: '知识库',
+                name: dict('PC.Routes.contentKnowledgeBase'),
                 component: '@/pages/SystemManagement/Content/KnowledgeBase',
               },
               {
                 path: 'content-data-table',
-                name: '数据表',
+                name: dict('PC.Routes.contentDataTable'),
                 component: '@/pages/SystemManagement/Content/DataTable',
               },
               {
                 path: 'content-workflow',
-                name: '工作流',
+                name: dict('PC.Routes.contentWorkflow'),
                 component: '@/pages/SystemManagement/Content/Workflow',
               },
               {
                 path: 'content-plugin',
-                name: '插件',
+                name: dict('PC.Routes.contentPlugin'),
                 component: '@/pages/SystemManagement/Content/Plugin',
               },
               {
@@ -264,34 +266,34 @@ const routes = [
               },
               {
                 path: 'content-skill',
-                name: '技能',
+                name: dict('PC.Routes.contentSkill'),
                 component: '@/pages/SystemManagement/Content/Skill',
               },
             ],
           },
           {
             path: 'menu-permission',
-            name: '菜单权限',
+            name: dict('PC.Routes.menuPermission'),
             routes: [
               {
                 path: 'permission-resources',
-                name: '权限资源',
+                name: dict('PC.Routes.permissionResources'),
                 component:
                   '@/pages/SystemManagement/MenuPermission/PermissionResources',
               },
               {
                 path: 'menu-manage',
-                name: '菜单管理',
+                name: dict('PC.Routes.menuManage'),
                 component: '@/pages/SystemManagement/MenuPermission/MenuManage',
               },
               {
                 path: 'role-manage',
-                name: '角色管理',
+                name: dict('PC.Routes.roleManage'),
                 component: '@/pages/SystemManagement/MenuPermission/RoleManage',
               },
               {
                 path: 'user-group-manage',
-                name: '用户组管理',
+                name: dict('PC.Routes.userGroupManage'),
                 component:
                   '@/pages/SystemManagement/MenuPermission/UserGroupManage',
               },
@@ -299,7 +301,7 @@ const routes = [
           },
           {
             path: 'log-query',
-            name: '日志查询',
+            name: dict('PC.Routes.logQuery'),
             routes: [
               // {
               //   path: 'operation-log',
@@ -308,7 +310,7 @@ const routes = [
               // },
               {
                 path: 'running-log',
-                name: '运行日志',
+                name: dict('PC.Routes.runningLog'),
                 component: '@/pages/SystemManagement/LogQuery/RunningLog',
               },
             ],
@@ -318,18 +320,18 @@ const routes = [
       // 生态市场
       {
         path: '/ecosystem',
-        name: '生态市场',
+        name: dict('PC.Routes.ecosystemMarket'),
         access: 'canAdmin',
         routes: [
           {
             path: '/ecosystem/plugin',
-            name: '插件',
+            name: dict('PC.Routes.ecosystemPlugin'),
             component: '@/pages/EcosystemPlugin',
             access: 'canAdmin',
           },
           {
             path: '/ecosystem/template',
-            name: '模板',
+            name: dict('PC.Routes.ecosystemTemplate'),
             component: '@/pages/EcosystemTemplate',
             access: 'canAdmin',
           },

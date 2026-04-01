@@ -5206,3 +5206,215 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Theme.bgFreshBlueSkyDesc':
     'Fresh and bright, suitable for light layout',
 };
+
+  // ========== New keys from Agent 1 & 2 ==========
+
+  // Common - additional
+  'PC.Common.Global.agent': 'Agent',
+  'PC.Common.Global.all': 'All',
+  'PC.Common.Global.custom': 'Custom',
+  'PC.Common.Global.dataTable': 'Data Table',
+  'PC.Common.Global.disable': 'Disable',
+  'PC.Common.Global.enable': 'Enable',
+  'PC.Common.Global.knowledge': 'Knowledge',
+  'PC.Common.Global.log': 'Log',
+  'PC.Common.Global.model': 'Model',
+  'PC.Common.Global.no': 'No',
+  'PC.Common.Global.other': 'Other',
+  'PC.Common.Global.plugin': 'Plugin',
+  'PC.Common.Global.published': 'Published',
+  'PC.Common.Global.skill': 'Skill',
+  'PC.Common.Global.template': 'Template',
+  'PC.Common.Global.unpublished': 'Unpublished',
+  'PC.Common.Global.workflow': 'Workflow',
+  'PC.Common.Global.yes': 'Yes',
+
+  // Constants - Mcp
+  'PC.Constants.Mcp.typeAgent': 'Agent',
+  'PC.Constants.Mcp.typePlugin': 'Plugin',
+  'PC.Constants.Mcp.typeWorkflow': 'Workflow',
+  'PC.Constants.Mcp.typeKnowledge': 'Knowledge',
+  'PC.Constants.Mcp.typeDataTable': 'Data Table',
+  'PC.Constants.Mcp.menuOverview': 'Overview',
+  'PC.Constants.Mcp.menuTool': 'Tool',
+  'PC.Constants.Mcp.menuResource': 'Resource',
+  'PC.Constants.Mcp.menuPrompt': 'Prompt',
+  'PC.Constants.Mcp.segCustom': 'Custom Service',
+  'PC.Constants.Mcp.segOfficial': 'Official Service',
+  'PC.Constants.Mcp.serviceExport': 'Service Export',
+  'PC.Constants.Mcp.stopService': 'Stop Service',
+
+  // Constants - Node
+  'PC.Constants.Node.directAnswer': 'Direct Answer',
+  'PC.Constants.Node.else': 'Else',
+  'PC.Constants.Node.elseIf': 'Else If',
+  'PC.Constants.Node.getVariable': 'Get Variable',
+  'PC.Constants.Node.if': 'If',
+  'PC.Constants.Node.interruptFlow': 'Interrupt Flow',
+  'PC.Constants.Node.noRetry': 'No Retry',
+  'PC.Constants.Node.optionAnswer': 'Option Answer',
+  'PC.Constants.Node.retryOnce': 'Retry Once',
+  'PC.Constants.Node.retryThreeTimes': 'Retry 3 Times',
+  'PC.Constants.Node.retryTwice': 'Retry Twice',
+  'PC.Constants.Node.returnSpecificContent': 'Return Specific Content',
+  'PC.Constants.Node.setVariable': 'Set Variable',
+  'PC.Constants.Node.testName': 'Test',
+  'PC.Constants.Node.testDescription': 'Test',
+  'PC.Constants.Node.execExceptionFlow': 'Exception Flow',
+
+  // Constants - Home
+  'PC.Constants.Home.exampleQ1': 'Overview of Nuwa Agent Design Platform features',
+  'PC.Constants.Home.exampleQ2': 'Recommended NLP textbook recommendations',
+  'PC.Constants.Home.exampleQ3': 'Nuwa Agent Design Platform user manual',
+  'PC.Constants.Home.exampleQ4': 'What should I start preparing in my sophomore year for grad school?',
+  'PC.Constants.Home.exampleQ5': 'What should I start preparing in my sophomore year for grad school?',
+
+  // Constants - ImChannel
+  'PC.Constants.ImChannel.platformFeishu': 'Feishu',
+  'PC.Constants.ImChannel.platformDingtalk': 'DingTalk',
+  'PC.Constants.ImChannel.platformWework': 'WeCom',
+  'PC.Constants.ImChannel.platformWechat': 'WeChat',
+
+  // Constants - Common
+  'PC.Constants.Common.subAgentTemplateName': 'Your sub-agent name',
+  'PC.Constants.Common.subAgentTemplateDesc': 'Description of when the sub-agent should be invoked',
+  'PC.Constants.Common.subAgentTemplateBody': 'Your sub-agent system prompt is displayed here. This prompt can contain multiple paragraphs,\nYou need to clearly define the role, capabilities, and approach to problem-solving for the sub-agent.\n\nIncludes specific instructions, best practices, and any limitations that the sub-agent should follow.',
+
+  // Routes
+  'PC.Routes.morePage': 'More Pages',
+  'PC.Routes.systemManagement': 'System Management',
+  'PC.Routes.systemOverview': 'System Overview',
+  'PC.Routes.taskManagement': 'Task Management',
+  'PC.Routes.userManagement': 'User Management',
+  'PC.Routes.publishAudit': 'Publish Audit',
+  'PC.Routes.publishedManagement': 'Published Management',
+  'PC.Routes.publicModelManagement': 'Public Model Management',
+  'PC.Routes.systemConfig': 'System Configuration',
+  'PC.Routes.systemSetting': 'System Settings',
+  'PC.Routes.themeConfig': 'Theme Configuration',
+  'PC.Routes.sandboxConfig': 'Sandbox Configuration',
+  'PC.Routes.categoryManagement': 'Category Management',
+  'PC.Routes.contentManagement': 'Content Management',
+  'PC.Routes.contentSpace': 'Space',
+  'PC.Routes.contentAgent': 'Agent',
+  'PC.Routes.contentWebApplication': 'Web Application',
+  'PC.Routes.contentKnowledgeBase': 'Knowledge Base',
+  'PC.Routes.contentDataTable': 'Data Table',
+  'PC.Routes.contentWorkflow': 'Workflow',
+  'PC.Routes.contentPlugin': 'Plugin',
+  'PC.Routes.contentSkill': 'Skill',
+  'PC.Routes.menuPermission': 'Menu Permission',
+  'PC.Routes.permissionResources': 'Permission Resources',
+  'PC.Routes.menuManage': 'Menu Management',
+  'PC.Routes.roleManage': 'Role Management',
+  'PC.Routes.userGroupManage': 'User Group Management',
+  'PC.Routes.logQuery': 'Log Query',
+  'PC.Routes.runningLog': 'Running Log',
+  'PC.Routes.ecosystemMarket': 'Ecosystem Market',
+  'PC.Routes.ecosystemPlugin': 'Plugin',
+  'PC.Routes.ecosystemTemplate': 'Template',
+
+  // Utils - ExportImport
+  'PC.Utils.ExportImport.exportFailed': 'Export failed',
+  'PC.Utils.ExportImport.cannotParseResponse': 'Cannot parse server response',
+  'PC.Utils.ExportImport.networkRequestFailed': 'Network request failed',
+
+  // Utils - Graph
+  'PC.Utils.Graph.cannotConnectExternalNode': 'Cannot connect external node',
+  'PC.Utils.Graph.cannotConnectOutsideNode': 'Cannot connect outside node',
+  'PC.Utils.Graph.duplicateEdgeNotAllowed': 'Cannot create duplicate edge',
+  'PC.Utils.Graph.loopExitAlreadyExists': 'Loop exit already exists for child node, please delete the edge first',
+  'PC.Utils.Graph.loopExitNodeInvalid': 'Condition branch, intent recognition, Q&A cannot be used as loop exit connection node',
+  'PC.Utils.Graph.loopInnerEdgeAlreadyExists': 'Loop already has inner edge, please delete it first',
+  'PC.Utils.Graph.portConnectionWarning': 'Left port can only be used as input, right port can only be used as output',
+
+  // Utils - InputValidation
+  'PC.Utils.InputValidation.enterNumber': 'Please enter a number',
+
+  // Pages - AntvX6
+  'PC.Pages.AntvX6.loopContinueDesc': 'Terminate current loop and continue to next iteration',
+  'PC.Pages.AntvX6.loopBreakDesc': 'Immediately terminate current loop and break out of loop body',
+
+  // Pages - AppDev DesignViewer
+  'PC.Pages.AppDev.DesignViewer.textContent': 'Text Content',
+  'PC.Pages.AppDev.DesignViewer.fontFamily': 'Font',
+  'PC.Pages.AppDev.DesignViewer.fontWeight': 'Font Weight',
+  'PC.Pages.AppDev.DesignViewer.fontSize': 'Font Size',
+  'PC.Pages.AppDev.DesignViewer.lineHeight': 'Line Height',
+  'PC.Pages.AppDev.DesignViewer.letterSpacing': 'Letter Spacing',
+  'PC.Pages.AppDev.DesignViewer.textAlign': 'Text Align',
+  'PC.Pages.AppDev.DesignViewer.textColor': 'Text Color',
+  'PC.Pages.AppDev.DesignViewer.background': 'Background',
+  'PC.Pages.AppDev.DesignViewer.layout': 'Layout',
+  'PC.Pages.AppDev.DesignViewer.margin': 'Margin',
+  'PC.Pages.AppDev.DesignViewer.padding': 'Padding',
+  'PC.Pages.AppDev.DesignViewer.border': 'Border',
+  'PC.Pages.AppDev.DesignViewer.borderColor': 'Border Color',
+  'PC.Pages.AppDev.DesignViewer.borderStyle': 'Border Style',
+  'PC.Pages.AppDev.DesignViewer.borderWidth': 'Border Width',
+  'PC.Pages.AppDev.DesignViewer.appearance': 'Appearance',
+  'PC.Pages.AppDev.DesignViewer.opacity': 'Opacity',
+  'PC.Pages.AppDev.DesignViewer.borderRadius': 'Border Radius',
+  'PC.Pages.AppDev.DesignViewer.shadow': 'Shadow',
+  'PC.Pages.AppDev.DesignViewer.selectElementTip': 'Select a page element on the right to edit',
+
+  // Pages - ChatTemp
+  'PC.Pages.ChatTemp.enterInstruction': 'Enter instructions directly; press Enter for new line',
+
+  // Pages - OpenApp
+  'PC.Pages.OpenApp.collapseNav': 'Collapse Navigation',
+  'PC.Pages.OpenApp.newConversation': 'New Conversation',
+  'PC.Pages.OpenApp.historyConversation': 'History',
+  'PC.Pages.OpenApp.viewAll': 'View All',
+  'PC.Pages.OpenApp.lookRight': 'See Right >',
+  'PC.Pages.OpenApp.firstConversationTip': 'Enter instructions in the chat to start your first conversation~',
+
+  // Pages - EditAgent
+  'PC.Pages.EditAgent.bindCardDataSource': 'Bind data source for card',
+  'PC.Pages.EditAgent.selectCardStyle': 'Select card style',
+  'PC.Pages.EditAgent.isModelVisible': 'Visible to model',
+  'PC.Pages.EditAgent.isDefaultHome': 'Set as default home',
+  'PC.Pages.EditAgent.save': 'Save',
+  'PC.Pages.EditAgent.pluginWorkflowDataStructure': 'Plugin or workflow return data structure and example',
+
+  // Pages - SpacePluginCloudTool
+  'PC.Pages.SpacePluginCloudTool.paramName': 'Parameter Name',
+  'PC.Pages.SpacePluginCloudTool.paramNamePlaceholder': 'Enter parameter name with clear meaning',
+  'PC.Pages.SpacePluginCloudTool.paramDesc': 'Parameter Description',
+  'PC.Pages.SpacePluginCloudTool.paramDescPlaceholder': 'Enter parameter description for better model understanding',
+  'PC.Pages.SpacePluginCloudTool.paramType': 'Parameter Type',
+  'PC.Pages.SpacePluginCloudTool.selectDataType': 'Select data type',
+  'PC.Pages.SpacePluginCloudTool.isRequired': 'Required',
+  'PC.Pages.SpacePluginCloudTool.defaultValue': 'Default Value',
+  'PC.Pages.SpacePluginCloudTool.enterDefaultValue': 'Enter default value',
+  'PC.Pages.SpacePluginCloudTool.enable': 'Enable',
+  'PC.Pages.SpacePluginCloudTool.requiredParamTooltip': 'This is a required parameter. Available after setting a default value',
+  'PC.Pages.SpacePluginCloudTool.operation': 'Action',
+  'PC.Pages.SpacePluginCloudTool.inputConfig': 'Input Config',
+  'PC.Pages.SpacePluginCloudTool.outputConfig': 'Output Config',
+  'PC.Pages.SpacePluginCloudTool.autoAnalyze': 'Auto Analyze',
+  'PC.Pages.SpacePluginCloudTool.unpublishedUpdate': 'Unpublished updates',
+  'PC.Pages.SpacePluginCloudTool.code': 'Code',
+  'PC.Pages.SpacePluginCloudTool.published': 'Published',
+  'PC.Pages.SpacePluginCloudTool.unpublished': 'Unpublished',
+  'PC.Pages.SpacePluginCloudTool.savedAt': 'Config saved at',
+  'PC.Pages.SpacePluginCloudTool.tryRun': 'Try Run',
+  'PC.Pages.SpacePluginCloudTool.publish': 'Publish',
+
+  // Components - MarkdownRenderer
+  'PC.Components.MarkdownRenderer.tableCodeBlock': 'Table',
+
+  // Pages - Space componentLibrary
+  // Missing keys from Agent 1
+  'PC.Constants.Common.input': 'Input',
+  'PC.Constants.Common.mcpService': 'MCP Service',
+  'PC.Constants.Common.page': 'Page',
+  'PC.Constants.Common.reference': 'Reference',
+  'PC.Constants.Common.variable': 'Variable',
+  'PC.Constants.Mcp.deployed': 'Deployed',
+  'PC.Pages.EditAgent.codeExampleOptionsComment': '//options Option list;',
+  'PC.Pages.EditAgent.codeExampleValueComment': '//value: Option value; label: Option name; children: Sub-options',
+  'PC.Pages.SpacePluginCloudTool.save': 'Save',
+  // Pages - Space componentLibrary
+  'PC.Constants.Space.componentLibrary': 'Component Library',
+};

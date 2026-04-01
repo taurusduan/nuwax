@@ -1,5 +1,5 @@
 import SelectList from '@/components/custom/SelectList';
-import { t } from '@/services/i18nRuntime';
+import { t, dict } from '@/services/i18nRuntime';
 import {
   CompressOutlined,
   ExpandOutlined,
@@ -1312,7 +1312,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
             styles.empty,
           )}
         >
-          请选中右侧页面元素进行编辑
+          {dict('PC.Pages.AppDev.DesignViewer.selectElementTip')}
         </div>
       );
     }
@@ -1356,7 +1356,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
           {/* Text Content 配置 */}
           {selectedElement?.isStaticText && (
             <div className={cx(styles.propertySection)}>
-              <div className={cx(styles.propertyLabel)}>文本内容</div>
+              <div className={cx(styles.propertyLabel)}>{dict('PC.Pages.AppDev.DesignViewer.textContent')}</div>
               <Input.TextArea
                 className={cx('w-full')}
                 value={localTextContent}
@@ -1368,7 +1368,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
 
           {/* Typography 配置 */}
           <div className={cx(styles.propertySection)}>
-            <div className={cx(styles.propertyLabel)}>字体</div>
+            <div className={cx(styles.propertyLabel)}>{dict('PC.Pages.AppDev.DesignViewer.fontFamily')}</div>
             {/* <SelectList
             className={cx(styles.propertyInput)}
             value={localTypography}
@@ -1381,7 +1381,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
               {/* Font Weight 和 Font Size */}
               <div className={cx(styles.typographyRow)}>
                 <div className={cx(styles.typographyInputGroup)}>
-                  <div className={cx(styles.typographyInputLabel)}>字重</div>
+                  <div className={cx(styles.typographyInputLabel)}>{dict('PC.Pages.AppDev.DesignViewer.fontWeight')}</div>
                   <SelectList
                     className={cx(styles.typographySelect)}
                     value={fontWeight}
@@ -1391,7 +1391,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
                 </div>
                 <div className={cx(styles.typographyInputGroup)}>
                   <div className={cx(styles.typographyInputLabel)}>
-                    字体大小
+                    {dict('PC.Pages.AppDev.DesignViewer.fontSize')}
                   </div>
                   <SelectList
                     className={cx(styles.typographySelect)}
@@ -1405,7 +1405,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
               {/* Line Height 和 Letter Spacing */}
               <div className={cx(styles.typographyRow)}>
                 <div className={cx(styles.typographyInputGroup)}>
-                  <div className={cx(styles.typographyInputLabel)}>行高</div>
+                  <div className={cx(styles.typographyInputLabel)}>{dict('PC.Pages.AppDev.DesignViewer.lineHeight')}</div>
                   <SelectList
                     className={cx(styles.typographySelect)}
                     value={lineHeight}
@@ -1414,7 +1414,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
                   />
                 </div>
                 <div className={cx(styles.typographyInputGroup)}>
-                  <div className={cx(styles.typographyInputLabel)}>字间距</div>
+                  <div className={cx(styles.typographyInputLabel)}>{dict('PC.Pages.AppDev.DesignViewer.letterSpacing')}</div>
                   <SelectList
                     className={cx(styles.typographySelect)}
                     value={letterSpacing}
@@ -1428,7 +1428,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
                 {/* Alignment */}
                 <div className={cx(styles.typographyInputGroup)}>
                   <div className={cx(styles.typographyInputLabel)}>
-                    对齐方式
+                    {dict('PC.Pages.AppDev.DesignViewer.textAlign')}
                   </div>
                   <div className={cx(styles.buttonGroup)}>
                     {TEXT_ALIGN_OPTIONS.map((option) => (
@@ -1516,7 +1516,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
 
           {/* Color 配置 */}
           <div className={cx(styles.propertySection)}>
-            <div className={cx(styles.propertyLabel)}>文字颜色</div>
+            <div className={cx(styles.propertyLabel)}>{dict('PC.Pages.AppDev.DesignViewer.textColor')}</div>
             <Select
               className={cx('w-full')}
               value={localColor}
@@ -1554,7 +1554,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
 
           {/* Background 配置 */}
           <div className={cx(styles.propertySection)}>
-            <div className={cx(styles.propertyLabel)}>背景</div>
+            <div className={cx(styles.propertyLabel)}>{dict('PC.Pages.AppDev.DesignViewer.background')}</div>
             <Select
               className={cx('w-full')}
               value={localBackground}
@@ -1592,11 +1592,11 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
 
           {/* Layout 配置 */}
           <div className={cx(styles.propertySection)}>
-            <div className={cx(styles.propertyLabel)}>布局</div>
+            <div className={cx(styles.propertyLabel)}>{dict('PC.Pages.AppDev.DesignViewer.layout')}</div>
 
             {/* Margin */}
             <div className={cx(styles.layoutSubSection)}>
-              <div className={cx(styles.layoutLabel)}>外边距</div>
+              <div className={cx(styles.layoutLabel)}>{dict('PC.Pages.AppDev.DesignViewer.margin')}</div>
               {!isMarginExpanded ? (
                 // 折叠状态：根据锁定状态显示一个或两个输入框
                 <div className={cx(styles.layoutInputs)}>
@@ -1803,7 +1803,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
 
             {/* Padding */}
             <div className={cx(styles.layoutSubSection)}>
-              <div className={cx(styles.layoutLabel)}>内边距</div>
+              <div className={cx(styles.layoutLabel)}>{dict('PC.Pages.AppDev.DesignViewer.padding')}</div>
               {!isPaddingExpanded ? (
                 // 折叠状态：根据锁定状态显示一个或两个下拉选择
                 <div className={cx(styles.layoutInputs)}>
@@ -2013,11 +2013,11 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
 
           {/* Border 配置 */}
           <div className={cx(styles.propertySection)}>
-            <div className={cx(styles.propertyLabel)}>边框</div>
+            <div className={cx(styles.propertyLabel)}>{dict('PC.Pages.AppDev.DesignViewer.border')}</div>
             {/* Border Style 和 Border Color */}
             <div className={cx(styles.typographyRow)}>
               <div className={cx(styles.typographyInputGroup)}>
-                <div className={cx(styles.typographyInputLabel)}>边框颜色</div>
+                <div className={cx(styles.typographyInputLabel)}>{dict('PC.Pages.AppDev.DesignViewer.borderColor')}</div>
                 <Select
                   className={cx(styles.typographySelect)}
                   value={borderColor}
@@ -2053,7 +2053,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
                 />
               </div>
               <div className={cx(styles.typographyInputGroup)}>
-                <div className={cx(styles.typographyInputLabel)}>边框样式</div>
+                <div className={cx(styles.typographyInputLabel)}>{dict('PC.Pages.AppDev.DesignViewer.borderStyle')}</div>
                 <SelectList
                   className={cx(styles.typographySelect)}
                   value={borderStyle}
@@ -2064,7 +2064,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
             </div>
             {/* Border Width */}
             <div className={cx(styles.layoutSubSection)}>
-              <div className={cx(styles.layoutLabel)}>边框宽度</div>
+              <div className={cx(styles.layoutLabel)}>{dict('PC.Pages.AppDev.DesignViewer.borderWidth')}</div>
               {!isBorderWidthExpanded ? (
                 // 折叠状态：显示单个下拉选择
                 <div className={cx(styles.layoutInputs)}>
@@ -2172,11 +2172,11 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
 
           {/* Appearance 配置 */}
           <div className={cx(styles.propertySection)}>
-            <div className={cx(styles.propertyLabel)}>外观</div>
+            <div className={cx(styles.propertyLabel)}>{dict('PC.Pages.AppDev.DesignViewer.appearance')}</div>
             <div className={cx(styles.typographyRow)}>
               {/* Opacity */}
               <div className={cx(styles.typographyInputGroup)}>
-                <div className={cx(styles.typographyInputLabel)}>透明度</div>
+                <div className={cx(styles.typographyInputLabel)}>{dict('PC.Pages.AppDev.DesignViewer.opacity')}</div>
                 <Select
                   className={cx('w-full')}
                   value={opacity}
@@ -2187,7 +2187,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
               </div>
               {/* Radius */}
               <div className={cx(styles.typographyInputGroup)}>
-                <div className={cx(styles.typographyInputLabel)}>圆角</div>
+                <div className={cx(styles.typographyInputLabel)}>{dict('PC.Pages.AppDev.DesignViewer.borderRadius')}</div>
                 <SelectList
                   className={cx(styles.typographySelect)}
                   value={radius}
@@ -2201,7 +2201,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
 
           {/* Shadow 配置 */}
           <div className={cx(styles.propertySection)}>
-            <div className={cx(styles.propertyLabel)}>阴影</div>
+            <div className={cx(styles.propertyLabel)}>{dict('PC.Pages.AppDev.DesignViewer.shadow')}</div>
             <SelectList
               className={cx(styles.shadowSelect)}
               value={shadowType}

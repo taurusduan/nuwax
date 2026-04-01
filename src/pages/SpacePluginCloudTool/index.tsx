@@ -8,6 +8,7 @@ import PublishComponentModal from '@/components/PublishComponentModal';
 import VersionHistory from '@/components/VersionHistory';
 import { ICON_ADD_TR } from '@/constants/images.constants';
 import usePluginConfig from '@/hooks/usePluginConfig';
+import { dict } from '@/services/i18nRuntime';
 import { dataTypes } from '@/pages/Antv-X6/params';
 import { apiPluginCodeUpdate, apiPluginInfo } from '@/services/plugin';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
@@ -114,25 +115,25 @@ const SpacePluginCloudTool: React.FC = () => {
   // 入参配置columns
   const inputColumns: TableColumnsType<BindConfigWithSub> = [
     {
-      title: <LabelStar label="参数名称" />,
+      title: <LabelStar label={dict('PC.Pages.SpacePluginCloudTool.paramName')} />,
       dataIndex: 'name',
       key: 'name',
       className: 'flex items-center',
       render: (value, record) => (
         <Input
-          placeholder="请输入参数名称，确保含义清晰"
+          placeholder={dict('PC.Pages.SpacePluginCloudTool.paramNamePlaceholder')}
           value={value}
           onChange={(e) => handleInputValue(record.key, 'name', e.target.value)}
         />
       ),
     },
     {
-      title: <LabelStar label="参数描述" />,
+      title: <LabelStar label={dict('PC.Pages.SpacePluginCloudTool.paramDesc')} />,
       dataIndex: 'description',
       key: 'description',
       render: (value, record) => (
         <Input
-          placeholder="请输入参数描述，确保描述详细便于大模型更好的理解"
+          placeholder={dict('PC.Pages.SpacePluginCloudTool.paramDescPlaceholder')}
           value={value}
           onChange={(e) =>
             handleInputValue(record.key, 'description', e.target.value)
@@ -141,7 +142,7 @@ const SpacePluginCloudTool: React.FC = () => {
       ),
     },
     {
-      title: <LabelStar label="参数类型" />,
+      title: <LabelStar label={dict('PC.Pages.SpacePluginCloudTool.paramType')} />,
       dataIndex: 'dataType',
       key: 'dataType',
       width: 120,
@@ -156,12 +157,12 @@ const SpacePluginCloudTool: React.FC = () => {
           onChange={(value) => {
             handleInputValue(record.key, 'dataType', CascaderChange(value));
           }}
-          placeholder="请选择数据类型"
+          placeholder={dict('PC.Pages.SpacePluginCloudTool.selectDataType')}
         />
       ),
     },
     {
-      title: '是否必须',
+      title: dict('PC.Pages.SpacePluginCloudTool.isRequired'),
       dataIndex: 'require',
       key: 'require',
       width: 100,
@@ -176,13 +177,13 @@ const SpacePluginCloudTool: React.FC = () => {
       ),
     },
     {
-      title: '默认值',
+      title: dict('PC.Pages.SpacePluginCloudTool.defaultValue'),
       dataIndex: 'bindValue',
       key: 'bindValue',
       width: 150,
       render: (value, record) => (
         <Input
-          placeholder="请输入默认值"
+          placeholder={dict('PC.Pages.SpacePluginCloudTool.enterDefaultValue')}
           disabled={
             DataTypeEnum.Object === record.dataType ||
             DataTypeEnum.Array_Object === record.dataType ||
@@ -197,7 +198,7 @@ const SpacePluginCloudTool: React.FC = () => {
       ),
     },
     {
-      title: '开启',
+      title: dict('PC.Pages.SpacePluginCloudTool.enable'),
       dataIndex: 'enable',
       key: 'enable',
       width: 70,
@@ -207,7 +208,7 @@ const SpacePluginCloudTool: React.FC = () => {
           title={
             record.require &&
             !record.bindValue &&
-            '此参数是必填参数，填写默认值后，此开关可用'
+            dict('PC.Pages.SpacePluginCloudTool.requiredParamTooltip')
           }
         >
           <Checkbox
@@ -221,7 +222,7 @@ const SpacePluginCloudTool: React.FC = () => {
       ),
     },
     {
-      title: '操作',
+      title: dict('PC.Pages.SpacePluginCloudTool.operation'),
       key: 'action',
       width: 66,
       align: 'right',
@@ -250,14 +251,14 @@ const SpacePluginCloudTool: React.FC = () => {
   // 出参配置columns
   const outputColumns: TableColumnsType<BindConfigWithSub> = [
     {
-      title: <LabelStar label="参数名称" />,
+      title: <LabelStar label={dict('PC.Pages.SpacePluginCloudTool.paramName')} />,
       dataIndex: 'name',
       key: 'name',
       width: 430,
       className: 'flex items-center',
       render: (value, record) => (
         <Input
-          placeholder="请输入参数名称，确保含义清晰"
+          placeholder={dict('PC.Pages.SpacePluginCloudTool.paramNamePlaceholder')}
           value={value}
           onChange={(e) =>
             handleOutputValue(record.key, 'name', e.target.value)
@@ -266,12 +267,12 @@ const SpacePluginCloudTool: React.FC = () => {
       ),
     },
     {
-      title: <LabelStar label="参数描述" />,
+      title: <LabelStar label={dict('PC.Pages.SpacePluginCloudTool.paramDesc')} />,
       dataIndex: 'description',
       key: 'description',
       render: (value, record) => (
         <Input
-          placeholder="请输入参数描述，确保描述详细便于大模型更好的理解"
+          placeholder={dict('PC.Pages.SpacePluginCloudTool.paramDescPlaceholder')}
           onChange={(e) =>
             handleOutputValue(record.key, 'description', e.target.value)
           }
@@ -280,7 +281,7 @@ const SpacePluginCloudTool: React.FC = () => {
       ),
     },
     {
-      title: <LabelStar label="参数类型" />,
+      title: <LabelStar label={dict('PC.Pages.SpacePluginCloudTool.paramType')} />,
       dataIndex: 'dataType',
       key: 'dataType',
       width: 120,
@@ -295,12 +296,12 @@ const SpacePluginCloudTool: React.FC = () => {
           onChange={(value) => {
             handleOutputValue(record.key, 'dataType', CascaderChange(value));
           }}
-          placeholder="请选择数据类型"
+          placeholder={dict('PC.Pages.SpacePluginCloudTool.selectDataType')}
         />
       ),
     },
     {
-      title: '开启',
+      title: dict('PC.Pages.SpacePluginCloudTool.enable'),
       dataIndex: 'enable',
       key: 'enable',
       width: 70,
@@ -315,7 +316,7 @@ const SpacePluginCloudTool: React.FC = () => {
       ),
     },
     {
-      title: '操作',
+      title: dict('PC.Pages.SpacePluginCloudTool.operation'),
       key: 'action',
       width: 66,
       align: 'right',
@@ -397,7 +398,7 @@ const SpacePluginCloudTool: React.FC = () => {
         {codeMode === PluginCodeModeEnum.Metadata ? (
           <div className={cx(styles['main-container'], 'overflow-y', 'flex-1')}>
             <PluginConfigTitle
-              title="入参配置"
+              title={dict('PC.Pages.SpacePluginCloudTool.inputConfig')}
               onClick={handleInputConfigAdd}
             />
             <Table<BindConfigWithSub>
@@ -417,9 +418,9 @@ const SpacePluginCloudTool: React.FC = () => {
               }}
             />
             <PluginConfigTitle
-              title="出参配置"
+              title={dict('PC.Pages.SpacePluginCloudTool.outputConfig')}
               onClick={handleOutputConfigAdd}
-              extra={<Button onClick={handleAutoResolve}>自动解析</Button>}
+              extra={<Button onClick={handleAutoResolve}>{dict('PC.Pages.SpacePluginCloudTool.autoAnalyze')}</Button>}
             />
             <Table<BindConfigWithSub>
               className={cx(styles['table-wrap'], 'overflow-hide')}

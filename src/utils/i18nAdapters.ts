@@ -14,15 +14,18 @@
 import type { Locale } from 'antd/es/locale';
 import enUS from 'antd/es/locale/en_US';
 import zhCN from 'antd/es/locale/zh_CN';
+import zhHK from 'antd/es/locale/zh_HK';
+import zhTW from 'antd/es/locale/zh_TW';
 import dayjs from 'dayjs';
 import 'dayjs/locale/en';
 import 'dayjs/locale/zh-cn';
+import 'dayjs/locale/zh-tw';
 
 // ---------------------------------------------------------------------------
 // 1. 系统支持的业务语言
 // ---------------------------------------------------------------------------
 
-export const supportedAppLocales = ['zh-CN', 'zh-TW', 'en-US'] as const;
+export const supportedAppLocales = ['zh-CN', 'zh-TW', 'zh-HK', 'en-US'] as const;
 export type AppLocale = (typeof supportedAppLocales)[number];
 
 // ---------------------------------------------------------------------------
@@ -38,28 +41,31 @@ interface LibraryLocaleEntry<T> {
 
 const libraryLocaleRegistry: Record<string, LibraryLocaleEntry<unknown>> = {
   antd: {
-    supported: ['zh-CN', 'en-US'],
+    supported: ['zh-CN', 'zh-TW', 'zh-HK', 'en-US'],
     map: {
       'zh-CN': zhCN,
+      'zh-TW': zhTW,
+      'zh-HK': zhHK,
       'en-US': enUS,
     },
     fallback: 'en-US',
   },
   dayjs: {
-    supported: ['zh-cn', 'en'],
-    // dayjs 使用字符串 locale 标识
+    supported: ['zh-cn', 'zh-tw', 'en'],
     map: {
       'zh-CN': 'zh-cn',
-      'zh-TW': 'zh-cn', // dayjs 没有 zh-tw 独立包，降级到 zh-cn
+      'zh-TW': 'zh-tw',
+      'zh-HK': 'zh-tw', // dayjs 无 zh-hk，降级到 zh-tw
       'en-US': 'en',
     },
     fallback: 'en',
   },
   umi: {
-    supported: ['zh-CN', 'en-US'],
+    supported: ['zh-CN', 'zh-TW', 'zh-HK', 'en-US'],
     map: {
       'zh-CN': 'zh-CN',
-      'zh-TW': 'zh-CN', // Umi locale 插件对 zh-TW 支持：降级到 zh-CN
+      'zh-TW': 'zh-TW',
+      'zh-HK': 'zh-HK',
       'en-US': 'en-US',
     },
     fallback: 'zh-CN',

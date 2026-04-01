@@ -175,8 +175,8 @@ export const DEFAULT_DRAWER_FORM: ChildNode = {
     inputArgs: [],
   },
   id: FoldFormIdEnum.empty,
-  name: '测试',
-  description: '测试',
+  name: dict('PC.Constants.Node.testName'),
+  description: dict('PC.Constants.Node.testDescription'),
   workflowId: 0,
   icon: '',
 };

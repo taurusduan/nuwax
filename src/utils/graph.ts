@@ -11,6 +11,7 @@ import {
 import { PortGroupEnum } from '@/types/enums/node';
 import { ChildNode, GraphRect, ViewGraphProps } from '@/types/interfaces/graph';
 import { ExceptionHandleConfig, NodeConfig } from '@/types/interfaces/node';
+import { dict } from '@/services/i18nRuntime';
 import { isEmptyObject } from '@/utils/index';
 import { getWidthAndHeight } from '@/utils/updateNode';
 import { Cell, Edge, Graph, Node } from '@antv/x6';
@@ -186,7 +187,7 @@ export function handleSpecialNodeTypes(
 // 辅助函数：验证端口连接是否合法
 export function validatePortConnection(sourcePort: string, targetPort: string) {
   if (sourcePort?.includes('left') || targetPort?.includes('right')) {
-    message.warning('左侧连接桩只能作为接入点，右侧连接桩只能作为输出点');
+    message.warning(dict('PC.Utils.Graph.portConnectionWarning'));
     return false;
   }
   return true;
@@ -260,12 +261,12 @@ const _validateLoopInnerNode = (
   if (targetNode.type === 'Loop') {
     const isInvalidSource = ['IntentRecognition', 'Condition', 'QA'];
     if (isInvalidSource.includes(sourceNode.type) && sourceNode.loopNodeId) {
-      return '条件分支，意图识别，问答不能作为循环的出口连接节点';
+      return dict('PC.Utils.Graph.loopExitNodeInvalid');
     }
     if (sourceNode.loopNodeId && sourceNode.loopNodeId === targetNode.id) {
       // 源节点是循环内部节点
       if (targetNode.innerEndNodeId && targetNode.innerEndNodeId !== -1) {
-        return '当前已有对子节点连接循环的出口，请先删除该连线';
+        return dict('PC.Utils.Graph.loopExitAlreadyExists');
       }
     }
   }
@@ -275,7 +276,7 @@ const _validateLoopInnerNode = (
     if (targetNode.loopNodeId && targetNode.loopNodeId === sourceNode.id) {
       // 目标节点是循环内部节点
       if (sourceNode.innerStartNodeId && sourceNode.innerStartNodeId !== -1) {
-        return '当前循环已有对子节点的连线，请先删除该连线';
+        return dict('PC.Utils.Graph.loopInnerEdgeAlreadyExists');
       }
     }
   }
@@ -309,7 +310,7 @@ export const validateConnect = (
       edgeId,
     )
   ) {
-    return '不能创建重复的边';
+    return dict('PC.Utils.Graph.duplicateEdgeNotAllowed');
   }
 
   // Loop 节点逻辑
@@ -322,7 +323,7 @@ export const validateConnect = (
         !sourceNode.loopNodeId &&
         targetPort.includes('out'))
     ) {
-      return '不能连接外部的节点';
+      return dict('PC.Utils.Graph.cannotConnectExternalNode');
     }
     const result = _validateLoopInnerNode(sourceNode, targetNode);
     if (result !== false) {
@@ -345,7 +346,7 @@ export const validateConnect = (
       !isValidLoopConnection(sourceNode, currentLoopNodeId) ||
       !isValidLoopConnection(targetNode, currentLoopNodeId)
     ) {
-      return '不能连接外部节点';
+      return dict('PC.Utils.Graph.cannotConnectOutsideNode');
     }
   }
 

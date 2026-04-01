@@ -4,6 +4,7 @@ import { CodeBlockActions, useThemeState } from 'ds-markdown';
 import { createBuildInPlugin } from 'ds-markdown/plugins';
 import rehypeRaw from 'rehype-raw';
 import rehypeStringify from 'rehype-stringify';
+import { dict } from '@/services/i18nRuntime';
 import MarkdownCustomProcess from '../MarkdownCustomProcess';
 import styles from './index.less';
 import OptimizedImage from './OptimizedImage';
@@ -69,7 +70,7 @@ export default (conversationId: string | number = '') => {
                   <div className="md-code-block-banner-wrap">
                     <div className="md-code-block-banner md-code-block-banner-lite">
                       <>
-                        <div className="md-code-block-language">表格</div>
+                        <div className="md-code-block-language">{dict('PC.Components.MarkdownRenderer.tableCodeBlock')}</div>
                         <CodeBlockActions
                           language="markdown"
                           codeContent={tableMDContent}

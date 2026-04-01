@@ -5,7 +5,9 @@ import {
   I18N_MAP_CACHE_TTL,
   I18N_STORAGE_KEYS,
   MIN_EN_I18N_MAP,
+  MIN_ZH_HK_I18N_MAP,
   MIN_ZH_I18N_MAP,
+  MIN_ZH_TW_I18N_MAP,
 } from '@/constants/i18n.constants';
 import type { I18nKeyPattern, SystemLangMap } from '@/types/interfaces/i18n';
 import { syncLocaleSystems } from '@/utils/localeSync';
@@ -26,8 +28,15 @@ const normalizeLang = (lang?: string | null) =>
 const isZhLang = (lang?: string | null): boolean =>
   normalizeLang(lang).startsWith('zh');
 
-const getLocalDefaultMapByLang = (lang?: string | null): SystemLangMap =>
-  isZhLang(lang) ? MIN_ZH_I18N_MAP : MIN_EN_I18N_MAP;
+const getLocalDefaultMapByLang = (lang?: string | null): SystemLangMap => {
+  const normalized = normalizeLang(lang);
+  if (normalized.startsWith('zh-tw') || normalized.startsWith('zh-hant'))
+    return MIN_ZH_TW_I18N_MAP;
+  if (normalized.startsWith('zh-hk') || normalized.startsWith('zh-mo'))
+    return MIN_ZH_HK_I18N_MAP;
+  if (normalized.startsWith('zh')) return MIN_ZH_I18N_MAP;
+  return MIN_EN_I18N_MAP;
+};
 
 const isLegacySystemKey = (key: string): boolean => key.startsWith('System.');
 
