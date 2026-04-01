@@ -6,7 +6,10 @@ import {
 import { apiSystemModelList } from '@/services/systemManage';
 import { AgentConfigInfo } from '@/types/interfaces/agent';
 import { CustomPageDto } from '@/types/interfaces/pageDev';
-import type { ModelConfigDto } from '@/types/interfaces/systemManage';
+import type {
+  KnowledgeInfoById,
+  ModelConfigDto,
+} from '@/types/interfaces/systemManage';
 import { InfoCircleOutlined } from '@ant-design/icons';
 import { Col, Empty, Form, InputNumber, Modal, Row, Tabs } from 'antd';
 import classNames from 'classnames';
@@ -14,6 +17,7 @@ import React, { useEffect, useState } from 'react';
 import { useRequest } from 'umi';
 import {
   apiSystemResourceAgentListByIds,
+  apiSystemResourceKnowledgeListByIds,
   apiSystemResourcePageListByIds,
   apiSystemUserDataPermission,
   UserDataPermission,
@@ -47,20 +51,35 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
   const [form] = Form.useForm();
   // 当前激活的tab
   const [activeTab, setActiveTab] = useState<DataPermissionTabKey>('model');
+
+  // ============================= 模型 =============================
+  // 存储查询到的数据权限中的 modelIds，用于处理异步加载问题
+  const [fetchedModelIds, setFetchedModelIds] = useState<number[] | null>(null);
+
+  // 已选中的模型列表（通过ID列表过滤）
+  const [filteredModelList, setFilteredModelList] = useState<ModelConfigDto[]>(
+    [],
+  );
+
+  // ============================= 智能体 =============================
   // 智能体列表
   const [agentList, setAgentList] = useState<AgentConfigInfo[]>([]);
-  // 应用页面列表
-  const [pageList, setPageList] = useState<CustomPageDto[]>([]);
   // 选中的智能体ID列表
   const [selectedAgentIds, setSelectedAgentIds] = useState<number[]>([]);
+
+  // ============================= 应用页面 =============================
+  // 应用页面列表
+  const [pageList, setPageList] = useState<CustomPageDto[]>([]);
   // 选中的应用页面关联的agentId列表（此处应该是页面的devAgentId字段值列表）
   const [selectedPageAgentIds, setSelectedPageAgentIds] = useState<number[]>(
     [],
   );
-  // 存储查询到的数据权限中的 modelIds，用于处理异步加载问题
-  const [fetchedModelIds, setFetchedModelIds] = useState<number[] | null>(null);
 
-  const [filteredModelList, setFilteredModelList] = useState<ModelConfigDto[]>(
+  // ============================= 知识库 =============================
+  // 知识库列表
+  const [knowledgeList, setKnowledgeList] = useState<KnowledgeInfoById[]>([]);
+  // 选中的知识库ID列表
+  const [selectedKnowledgeIds, setSelectedKnowledgeIds] = useState<number[]>(
     [],
   );
 
@@ -101,6 +120,8 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
         setFetchedModelIds(result.modelIds || null);
         setSelectedAgentIds(result.agentIds || []);
         setSelectedPageAgentIds(result.pageAgentIds || []);
+        // 知识库ID列表
+        setSelectedKnowledgeIds(result?.knowledgeIds || []);
       },
     });
 
@@ -125,6 +146,16 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
       },
     },
   );
+
+  // ======================================= 知识库 =======================================
+  // 根据ID列表查询知识库列表
+  const { loading: knowledgeLoading, run: runGetKnowledgeListByIds } =
+    useRequest(apiSystemResourceKnowledgeListByIds, {
+      manual: true,
+      onSuccess: (result: KnowledgeInfoById[]) => {
+        setKnowledgeList(result || []);
+      },
+    });
 
   // 当弹窗打开时，加载数据
   useEffect(() => {
@@ -160,6 +191,12 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
       setAgentList([]);
       setPageList([]);
       setActiveTab('model');
+
+      // ======================================= 知识库 =======================================
+      // 知识库列表
+      setKnowledgeList([]);
+      // 选中的知识库ID列表
+      setSelectedKnowledgeIds([]);
     }
   }, [open, userId]);
 
@@ -190,9 +227,6 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
         runGetAgentListByIds({
           agentIds: selectedAgentIds,
         });
-      } else {
-        // 如果没有权限，清空列表
-        setAgentList([]);
       }
     } else if (tabKey === 'page') {
       if (selectedPageAgentIds.length > 0) {
@@ -200,52 +234,43 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
         runGetPageListByIds({
           agentIds: selectedPageAgentIds,
         });
-      } else {
-        // 如果没有权限，清空列表
-        setPageList([]);
+      }
+    } else if (tabKey === 'knowledge') {
+      if (selectedKnowledgeIds.length > 0) {
+        // 切换到知识库 tab 时，根据权限 ID 列表查询知识库数据
+        runGetKnowledgeListByIds({
+          knowledgeIds: selectedKnowledgeIds,
+        });
       }
     }
   };
 
-  // 智能体列表（直接使用查询结果，因为接口已经根据 ID 列表过滤）
-  const filteredAgentList = agentList;
-
-  // 应用页面列表（直接使用查询结果，因为接口已经根据 ID 列表过滤）
-  const filteredPageList = pageList;
-
   // 检查是否有数据
   const hasModelData = filteredModelList.length > 0;
-  const hasAgentData = filteredAgentList.length > 0;
-  const hasPageData = filteredPageList.length > 0;
+  const hasAgentData = agentList.length > 0;
+  const hasPageData = pageList.length > 0;
 
   // 渲染 Tab 内容
   const renderTabContent = () => {
     switch (activeTab) {
       case 'model':
-        return hasModelData ? (
+        return (modelLoading || dataPermissionLoading) &&
+          !filteredModelList?.length ? (
+          <div
+            className={cx('h-full', 'flex', 'items-center', 'content-center')}
+          >
+            <Loading />
+          </div>
+        ) : hasModelData ? (
           <div className={cx('flex-1', 'overflow-y', 'h-full')}>
-            {(modelLoading || dataPermissionLoading) &&
-            !filteredModelList?.length ? (
-              <div
-                className={cx(
-                  'h-full',
-                  'flex',
-                  'items-center',
-                  'content-center',
-                )}
-              >
-                <Loading />
-              </div>
-            ) : (
-              filteredModelList?.map((item: ModelConfigDto) => (
-                <ResourceItem
-                  key={item.id}
-                  showIcon={false}
-                  name={item.name}
-                  description={item.description}
-                />
-              ))
-            )}
+            {filteredModelList?.map((item: ModelConfigDto) => (
+              <ResourceItem
+                key={item.id}
+                showIcon={false}
+                name={item.name}
+                description={item.description}
+              />
+            ))}
           </div>
         ) : (
           <div
@@ -255,7 +280,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           </div>
         );
       case 'agent':
-        return agentLoading && !filteredAgentList?.length ? (
+        return agentLoading && !agentList?.length ? (
           <div
             className={cx('h-full', 'flex', 'items-center', 'content-center')}
           >
@@ -263,7 +288,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           </div>
         ) : hasAgentData ? (
           <div className={cx('flex-1', 'overflow-y', 'h-full')}>
-            {filteredAgentList.map((item) => (
+            {agentList.map((item) => (
               <ResourceItem
                 key={item.id}
                 icon={item.icon}
@@ -280,7 +305,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           </div>
         );
       case 'page':
-        return pageLoading && !filteredPageList?.length ? (
+        return pageLoading && !pageList?.length ? (
           <div
             className={cx('h-full', 'flex', 'items-center', 'content-center')}
           >
@@ -288,10 +313,35 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           </div>
         ) : hasPageData ? (
           <div className={cx('flex-1', 'overflow-y', 'h-full')}>
-            {filteredPageList.map((item) => (
+            {pageList.map((item) => (
               <ResourceItem
                 key={item.devAgentId}
                 icon={item.coverImg || item.icon}
+                name={item.name}
+                description={item.description}
+              />
+            ))}
+          </div>
+        ) : (
+          <div
+            className={cx('flex', 'items-center', 'content-center', 'h-full')}
+          >
+            <Empty description="暂无数据" />
+          </div>
+        );
+      case 'knowledge':
+        return knowledgeLoading && !knowledgeList?.length ? (
+          <div
+            className={cx('h-full', 'flex', 'items-center', 'content-center')}
+          >
+            <Loading />
+          </div>
+        ) : knowledgeList?.length > 0 ? (
+          <div className={cx('flex-1', 'overflow-y', 'h-full')}>
+            {knowledgeList.map((item) => (
+              <ResourceItem
+                key={item.id}
+                icon={item.icon}
                 name={item.name}
                 description={item.description}
               />
