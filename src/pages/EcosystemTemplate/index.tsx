@@ -20,6 +20,7 @@ import {
 } from '@/constants/ecosystem.constants';
 import { ICON_MORE } from '@/constants/images.constants';
 import useEcoMarket from '@/hooks/useEcoMarket';
+import { dict } from '@/services/i18nRuntime';
 import {
   createClientConfigDraft,
   disableClientConfig,
@@ -230,7 +231,7 @@ export default function EcosystemTemplate() {
         setPluginData(result);
       } catch (error) {
         console.error('获取模板列表失败:', error);
-        message.error('获取模板列表失败');
+        message.error(dict('NuwaxPC.Pages.EcosystemTemplate.fetchListFailed'));
       } finally {
         setLoading(false);
       }
@@ -315,8 +316,8 @@ export default function EcosystemTemplate() {
     const isMyShare = activeTab === TabTypeEnum.SHARED;
     return {
       icon: config.icon || '',
-      title: config.name || '未命名插件',
-      description: config.description || '暂无描述',
+      title: config.name || dict('NuwaxPC.Pages.EcosystemTemplate.unnamedTemplate'),
+      description: config.description || dict('NuwaxPC.Pages.EcosystemTemplate.noDescription'),
       isNewVersion: config.isNewVersion,
       author: config.author || '',
       targetType: config.targetType as AgentComponentTypeEnum,
@@ -334,8 +335,8 @@ export default function EcosystemTemplate() {
   ): EcosystemDetailDrawerData => {
     return {
       icon: config.icon || '',
-      title: config.name || '未命名插件',
-      description: config.description || '暂无描述',
+      title: config.name || dict('NuwaxPC.Pages.EcosystemTemplate.unnamedTemplate'),
+      description: config.description || dict('NuwaxPC.Pages.EcosystemTemplate.noDescription'),
       isNewVersion: config.isNewVersion || false,
       author: config.author || '',
       dataType: config.dataType as EcosystemDataTypeEnum,
@@ -375,16 +376,16 @@ export default function EcosystemTemplate() {
         configParamJson: JSON.stringify(values),
       });
     } catch (error) {
-      message.error('更新失败');
+      message.error(dict('NuwaxPC.Pages.EcosystemTemplate.updateFailed'));
       return false;
     }
     if (result) {
       setDrawerVisible(false);
-      message.success('更新成功');
+      message.success(dict('NuwaxPC.Pages.EcosystemTemplate.updateSuccess'));
       refreshPluginList();
       return true;
     }
-    message.error('更新失败');
+    message.error(dict('NuwaxPC.Pages.EcosystemTemplate.updateFailed'));
     return false;
   };
 
@@ -398,16 +399,16 @@ export default function EcosystemTemplate() {
       // 如果是已发布状态，调用下线接口
       result = await disableClientConfig(selectedPlugin.uid);
     } catch (error) {
-      message.error('下线失败');
+      message.error(dict('NuwaxPC.Pages.EcosystemTemplate.offlineFailed'));
       return false;
     }
     if (result) {
-      message.success('已下线');
+      message.success(dict('NuwaxPC.Pages.EcosystemTemplate.offlineSuccess'));
       setDrawerVisible(false);
       refreshPluginList();
       return true;
     }
-    message.error('下线失败');
+    message.error(dict('NuwaxPC.Pages.EcosystemTemplate.offlineFailed'));
     return false;
   };
 
@@ -487,7 +488,7 @@ export default function EcosystemTemplate() {
       }
 
       if (result) {
-        message.success(isEditMode ? '更新成功' : '创建成功');
+        message.success(isEditMode ? dict('NuwaxPC.Pages.EcosystemTemplate.updateSuccess') : dict('NuwaxPC.Pages.EcosystemTemplate.createSuccess'));
         refreshPluginListAndReset();
         return true;
       } else {
@@ -556,7 +557,7 @@ export default function EcosystemTemplate() {
       }
     } catch (error) {
       console.error('获取数据失败:', error);
-      message.error('获取数据失败');
+      message.error(dict('NuwaxPC.Pages.EcosystemTemplate.fetchDataFailed'));
     } finally {
       setLoading(false);
     }
@@ -581,15 +582,15 @@ export default function EcosystemTemplate() {
     items: [
       {
         key: AgentComponentTypeEnum.Agent,
-        label: '智能体',
+        label: dict('NuwaxPC.Pages.EcosystemTemplate.agent'),
       },
       {
         key: AgentComponentTypeEnum.Workflow,
-        label: '工作流',
+        label: dict('NuwaxPC.Pages.EcosystemTemplate.workflow'),
       },
       {
         key: AgentComponentTypeEnum.Page,
-        label: '网页应用',
+        label: dict('NuwaxPC.Pages.EcosystemTemplate.pageApp'),
       },
     ],
     onClick: (e: any) => {
@@ -671,7 +672,7 @@ export default function EcosystemTemplate() {
             setDrawerVisible(true);
           }
         } catch (error) {
-          message.error('获取详情失败');
+          message.error(dict('NuwaxPC.Pages.EcosystemTemplate.fetchDetailFailed'));
         }
       }
     }
@@ -687,7 +688,7 @@ export default function EcosystemTemplate() {
     }
 
     if (result) {
-      message.success('模板已下线');
+      message.success(dict('NuwaxPC.Pages.EcosystemTemplate.templateOffline'));
       refreshPluginList();
       return true;
     }
@@ -704,7 +705,7 @@ export default function EcosystemTemplate() {
     }
 
     if (result) {
-      message.success('模板已撤销发布');
+      message.success(dict('NuwaxPC.Pages.EcosystemTemplate.templateWithdrawn'));
       refreshPluginList();
       return true;
     }
@@ -740,7 +741,7 @@ export default function EcosystemTemplate() {
         <div className={cx(styles.headerRight)}>
           <Search
             className={cx(styles.searchInput)}
-            placeholder="搜索模板"
+            placeholder={dict('NuwaxPC.Pages.EcosystemTemplate.searchPlaceholder')}
             value={searchKeyword}
             onChange={(e) => setSearchKeyword(e.target.value)}
             onSearch={handleSearch}
@@ -750,7 +751,7 @@ export default function EcosystemTemplate() {
           <Dropdown menu={menuProps}>
             <Button type="primary">
               <PlusOutlined />
-              创建分享
+              {dict('NuwaxPC.Pages.EcosystemTemplate.createShare')}
               <DownOutlined />
             </Button>
           </Dropdown>
@@ -761,7 +762,7 @@ export default function EcosystemTemplate() {
       <div className={cx(styles.headerRight)}>
         <Search
           className={cx(styles.searchInput)}
-          placeholder="搜索模板"
+          placeholder={dict('NuwaxPC.Pages.EcosystemTemplate.searchPlaceholder')}
           value={searchKeyword}
           onChange={(e) => setSearchKeyword(e.target.value)}
           onSearch={handleSearch}
@@ -795,7 +796,7 @@ export default function EcosystemTemplate() {
       >
         <div className={cx(styles.header)}>
           <Space>
-            <h3 className={cx(styles.title)}>模板</h3>
+            <h3 className={cx(styles.title)}>{dict('NuwaxPC.Pages.EcosystemTemplate.title')}</h3>
             <Segmented
               className={cx(styles.segmented)}
               options={SPACE_SQUARE_SEGMENTED_LIST}
@@ -869,7 +870,7 @@ export default function EcosystemTemplate() {
                         avatar={''}
                         userName={config.author || ''}
                         created={config.created || ''}
-                        overlayText="查看详情"
+                        overlayText={dict('NuwaxPC.Pages.EcosystemTemplate.viewDetail')}
                         isNewVersion={config.isNewVersion}
                         isEnabled={
                           activeTab === TabTypeEnum.ALL
@@ -957,7 +958,7 @@ export default function EcosystemTemplate() {
                   'items-center',
                   'content-center',
                 )}
-                description="暂无数据"
+                description={dict('NuwaxPC.Common.Global.emptyData')}
               />
             </div>
           )}

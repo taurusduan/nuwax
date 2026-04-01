@@ -1,5 +1,6 @@
 import CustomFormModal from '@/components/CustomFormModal';
 import { apiOffShelf } from '@/services/publishManage';
+import { dict } from '@/services/i18nRuntime';
 import { customizeRequiredMark } from '@/utils/form';
 import { useRequest } from 'ahooks';
 import { Form, Input, message } from 'antd';
@@ -28,7 +29,7 @@ const OffshelfModal: React.FC<OffshelfModalProps> = ({
       setLoading(true);
     },
     onSuccess: () => {
-      message.success('下架成功');
+      message.success(dict('NuwaxPC.Pages.PublishedManage.OffshelfModal.offShelfSuccess'));
       form.resetFields();
       onConfirm();
     },
@@ -52,7 +53,7 @@ const OffshelfModal: React.FC<OffshelfModalProps> = ({
     <CustomFormModal
       open={open}
       form={form}
-      title="下架"
+      title={dict('NuwaxPC.Pages.PublishedManage.OffshelfModal.title')}
       onCancel={() => {
         form.resetFields();
         onCancel();
@@ -63,10 +64,10 @@ const OffshelfModal: React.FC<OffshelfModalProps> = ({
       <Form form={form} layout="vertical" requiredMark={customizeRequiredMark}>
         <Form.Item
           name="reason"
-          label="请输入下架原因"
-          rules={[{ required: true, message: '请输入下架原因' }]}
+          label={dict('NuwaxPC.Pages.PublishedManage.OffshelfModal.reasonLabel')}
+          rules={[{ required: true, message: dict('NuwaxPC.Pages.PublishedManage.OffshelfModal.reasonRequired') }]}
         >
-          <Input.TextArea rows={4} placeholder="请输入下架原因" />
+          <Input.TextArea rows={4} placeholder={dict('NuwaxPC.Pages.PublishedManage.OffshelfModal.reasonPlaceholder')} />
         </Form.Item>
       </Form>
     </CustomFormModal>

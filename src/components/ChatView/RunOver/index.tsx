@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import { MessageStatusEnum, ProcessingEnum } from '@/types/enums/common';
 import type { RunOverProps } from '@/types/interfaces/common';
 import {
@@ -84,17 +85,17 @@ const RunOver: React.FC<RunOverProps> = ({
             <SolutionOutlined />
             <span
               className={cx('flex-1', 'text-ellipsis')}
-            >{`已调用 ${info.name}`}</span>
+            >{dict('NuwaxPC.Components.RunOver.called', info.name)}</span>
             <span>{getTime(info.result.endTime, info.result.startTime)}</span>
           </div>
         ))}
 
         {messageInfo?.status === MessageStatusEnum.Complete && (
-          <span className={cx(styles.summary)}>{`运行完毕 ${runTime}s`}</span>
+          <span className={cx(styles.summary)}>{dict('NuwaxPC.Components.RunOver.runComplete', String(runTime))}</span>
         )}
 
         {messageInfo?.status === MessageStatusEnum.Error && (
-          <span className={cx(styles.error)}>运行错误</span>
+          <span className={cx(styles.error)}>{dict('NuwaxPC.Components.RunOver.runError')}</span>
         )}
       </div>
     );
@@ -127,7 +128,7 @@ const RunOver: React.FC<RunOverProps> = ({
         {isThinking ? (
           <>
             <LoadingOutlined className={cx(styles.successColor)} />
-            <span className={cx(styles['status-name'])}>正在思考</span>
+            <span className={cx(styles['status-name'])}>{dict('NuwaxPC.Components.RunOver.thinking')}</span>
           </>
         ) : messageInfo?.status === MessageStatusEnum.Loading ||
           messageInfo?.status === MessageStatusEnum.Incomplete ? (
@@ -136,19 +137,19 @@ const RunOver: React.FC<RunOverProps> = ({
             {showStatusDesc && lastProcessInfo && (
               <span className={cx(styles['status-name'])}>
                 {lastProcessInfo.status === ProcessingEnum.EXECUTING
-                  ? `正在调用 `
-                  : `已调用 `}
+                  ? dict('NuwaxPC.Components.RunOver.calling')
+                  : dict('NuwaxPC.Components.RunOver.called', '')}
                 {lastProcessInfo.name}
               </span>
             )}
           </>
         ) : messageInfo?.status === MessageStatusEnum.Error ? (
-          <span>运行错误</span>
+          <span>{dict('NuwaxPC.Components.RunOver.runError')}</span>
         ) : messageInfo?.status ===
-          MessageStatusEnum.Stopped ? // <span>已中断</span>
+          MessageStatusEnum.Stopped? // <span>已中断</span>
         null : (
           <span>
-            运行完毕
+            {dict('NuwaxPC.Components.RunOver.runComplete')}
             <DownOutlined className={cx(styles.icon)} />
           </span>
         )}

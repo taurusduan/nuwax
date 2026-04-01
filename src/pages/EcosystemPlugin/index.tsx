@@ -59,6 +59,7 @@ import Loading from '@/components/custom/Loading';
 import { CREATED_TABS } from '@/constants/common.constants';
 import { ICON_MORE } from '@/constants/images.constants';
 import useEcoMarket from '@/hooks/useEcoMarket';
+import { dict } from '@/services/i18nRuntime';
 import { PlusOutlined } from '@ant-design/icons';
 const defaultTabs = CREATED_TABS.filter((item) =>
   [AgentComponentTypeEnum.Plugin].includes(item.key),
@@ -175,7 +176,7 @@ export default function EcosystemPlugin() {
         setPluginData(result);
       } catch (error) {
         console.error('获取插件列表失败:', error);
-        message.error('获取插件列表失败');
+        message.error(dict('NuwaxPC.Pages.EcosystemPlugin.fetchListFailed'));
       } finally {
         setLoading(false);
       }
@@ -212,8 +213,8 @@ export default function EcosystemPlugin() {
     const isAll = activeTab === TabTypeEnum.ALL;
     return {
       icon: config.icon || '',
-      title: config.name || '未命名插件',
-      description: config.description || '暂无描述',
+      title: config.name || dict('NuwaxPC.Pages.EcosystemPlugin.unnamedPlugin'),
+      description: config.description || dict('NuwaxPC.Pages.EcosystemPlugin.noDescription'),
       isNewVersion: config.isNewVersion,
       author: config.author || '',
       targetType: config.targetType as AgentComponentTypeEnum,
@@ -231,8 +232,8 @@ export default function EcosystemPlugin() {
   ): EcosystemDetailDrawerData => {
     return {
       icon: config.icon || '',
-      title: config.name || '未命名插件',
-      description: config.description || '暂无描述',
+      title: config.name || dict('NuwaxPC.Pages.EcosystemPlugin.unnamedPlugin'),
+      description: config.description || dict('NuwaxPC.Pages.EcosystemPlugin.noDescription'),
       // isNewVersion: true,
       isNewVersion: config.isNewVersion || false,
       author: config.author || '',
@@ -273,16 +274,16 @@ export default function EcosystemPlugin() {
         configParamJson: JSON.stringify(values),
       });
     } catch (error) {
-      message.error('操作失败');
+      message.error(dict('NuwaxPC.Pages.EcosystemPlugin.operationFailed'));
       return false;
     }
     if (result) {
       setDrawerVisible(false);
-      message.success('更新成功');
+      message.success(dict('NuwaxPC.Pages.EcosystemPlugin.updateSuccess'));
       refreshPluginList();
       return true;
     }
-    message.error('更新失败');
+    message.error(dict('NuwaxPC.Pages.EcosystemPlugin.updateFailed'));
     return false;
   };
 
@@ -298,16 +299,16 @@ export default function EcosystemPlugin() {
       // 如果是已发布状态，调用下线接口
       result = await disableClientConfig(selectedPlugin.uid);
     } catch (error) {
-      message.error('下线失败');
+      message.error(dict('NuwaxPC.Pages.EcosystemPlugin.offlineFailed'));
       return false;
     }
     if (result) {
-      message.success('已下线');
+      message.success(dict('NuwaxPC.Pages.EcosystemPlugin.offlineSuccess'));
       setDrawerVisible(false);
       refreshPluginList();
       return true;
     }
-    message.error('下线失败');
+    message.error(dict('NuwaxPC.Pages.EcosystemPlugin.offlineFailed'));
     return false;
   };
 
@@ -376,16 +377,16 @@ export default function EcosystemPlugin() {
       }
 
       if (result) {
-        message.success(isEditMode ? '更新成功' : '创建成功');
+        message.success(isEditMode ? dict('NuwaxPC.Pages.EcosystemPlugin.updateSuccess') : dict('NuwaxPC.Pages.EcosystemPlugin.createSuccess'));
         refreshPluginListAndReset();
         return true;
       } else {
-        message.error('操作失败');
+        message.error(dict('NuwaxPC.Pages.EcosystemPlugin.operationFailed'));
         return false;
       }
     } catch (error) {
       console.error('保存分享失败:', error);
-      message.error('操作失败');
+      message.error(dict('NuwaxPC.Pages.EcosystemPlugin.operationFailed'));
       return false;
     }
   };
@@ -423,7 +424,7 @@ export default function EcosystemPlugin() {
       }
     } catch (error) {
       console.error('获取数据失败:', error);
-      message.error('获取数据失败');
+      message.error(dict('NuwaxPC.Pages.EcosystemPlugin.fetchDataFailed'));
     } finally {
       setLoading(false);
     }
@@ -525,7 +526,7 @@ export default function EcosystemPlugin() {
             setDrawerVisible(true);
           }
         } catch (error) {
-          message.error('获取插件详情失败');
+          message.error(dict('NuwaxPC.Pages.EcosystemPlugin.fetchDetailFailed'));
         }
       }
     }
@@ -540,7 +541,7 @@ export default function EcosystemPlugin() {
       return false;
     }
     if (result) {
-      message.success('插件已下线');
+      message.success(dict('NuwaxPC.Pages.EcosystemPlugin.pluginOffline'));
       refreshPluginList();
       return true;
     }
@@ -555,7 +556,7 @@ export default function EcosystemPlugin() {
       return false;
     }
     if (result) {
-      message.success('插件已撤销发布');
+      message.success(dict('NuwaxPC.Pages.EcosystemPlugin.pluginWithdrawn'));
       refreshPluginList();
       return true;
     }
@@ -595,7 +596,7 @@ export default function EcosystemPlugin() {
       >
         <div className={cx(styles.header)}>
           <Space>
-            <h3 className={cx(styles.title)}>插件</h3>
+            <h3 className={cx(styles.title)}>{dict('NuwaxPC.Pages.EcosystemPlugin.title')}</h3>
             <Segmented
               className={cx(styles.segmented)}
               options={SPACE_SQUARE_SEGMENTED_LIST}
@@ -621,7 +622,7 @@ export default function EcosystemPlugin() {
           <div className={cx(styles.headerRight)}>
             <Search
               className={cx(styles.searchInput)}
-              placeholder="搜索插件"
+              placeholder={dict('NuwaxPC.Pages.EcosystemPlugin.searchPlaceholder')}
               value={searchKeyword}
               onChange={(e) => setSearchKeyword(e.target.value)}
               onSearch={handleSearch}
@@ -635,7 +636,7 @@ export default function EcosystemPlugin() {
                 onClick={handleCreateShare}
                 icon={<PlusOutlined />}
               >
-                创建分享
+                {dict('NuwaxPC.Pages.EcosystemPlugin.createShare')}
               </Button>
             )}
           </div>
@@ -714,7 +715,7 @@ export default function EcosystemPlugin() {
                   'items-center',
                   'content-center',
                 )}
-                description="暂无数据"
+                description={dict('NuwaxPC.Common.Global.emptyData')}
               />
             </div>
           )}

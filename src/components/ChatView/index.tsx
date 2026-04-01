@@ -7,6 +7,7 @@ import MarkdownRenderer from '@/components/MarkdownRenderer';
 import { USER_INFO } from '@/constants/home.constants';
 import useMarkdownRender from '@/hooks/useMarkdownRender';
 import { useUnifiedTheme } from '@/hooks/useUnifiedTheme';
+import { dict } from '@/services/i18nRuntime';
 import { AssistantRoleEnum } from '@/types/enums/agent';
 import { MessageStatusEnum } from '@/types/enums/common';
 import type {
@@ -56,7 +57,7 @@ const ChatView: React.FC<ChatViewProps> = memo(
       switch (messageInfo?.role) {
         case AssistantRoleEnum.USER:
           return {
-            name: _userInfo?.nickName || _userInfo?.userName || '游客',
+            name: _userInfo?.nickName || _userInfo?.userName || dict('NuwaxPC.Components.ChatView.guest'),
             avatar: _userInfo?.avatar || avatar,
           };
         case AssistantRoleEnum.ASSISTANT:
@@ -73,7 +74,7 @@ const ChatView: React.FC<ChatViewProps> = memo(
     })();
 
     const handleTextCopy = () => {
-      message.success('复制成功');
+      message.success(dict('NuwaxPC.Toast.Global.copiedSuccessfully'));
     };
 
     const trim = useCallback((text: string) => {
