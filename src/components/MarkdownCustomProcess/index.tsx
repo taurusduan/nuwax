@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import { ProcessingEnum } from '@/types/enums/common';
 // import { copyTextToClipboard } from '@/utils/clipboard';
@@ -209,7 +210,7 @@ function MarkdownCustomProcess(props: MarkdownCustomProcessProps) {
     }
 
     if (!detailData) {
-      message.error('暂无数据');
+      message.error(dict('NuwaxPC.Components.MarkdownCustomProcess.noData'));
       return;
     }
     setOpenModal(true);
@@ -350,12 +351,12 @@ function MarkdownCustomProcess(props: MarkdownCustomProcessProps) {
     >
       <div className={cx(styles['process-header'])}>
         <div className={cx(styles['process-title'])}>
-          {innerProcessing?.name || '暂无名称'}
+          {innerProcessing?.name || dict('NuwaxPC.Components.MarkdownCustomProcess.noName')}
         </div>
         <div className={cx(styles['process-controls'])}>
           {genStatusDisplay()}
           <div className={cx(styles['process-controls-actions'])}>
-            <Tooltip title="查看详情">
+            <Tooltip title={dict('NuwaxPC.Components.MarkdownCustomProcess.viewDetail')}>
               <Button
                 size="small"
                 type="text"
@@ -366,7 +367,7 @@ function MarkdownCustomProcess(props: MarkdownCustomProcessProps) {
             </Tooltip>
             {isPageType ? (
               <Tooltip
-                title={pagePreviewData ? '关闭预览' : '预览页面'}
+                title={pagePreviewData ? dict('NuwaxPC.Components.MarkdownCustomProcess.closePreview') : dict('NuwaxPC.Components.MarkdownCustomProcess.previewPage')}
                 open={open}
                 onOpenChange={setOpen}
               >
@@ -385,7 +386,7 @@ function MarkdownCustomProcess(props: MarkdownCustomProcessProps) {
             ) : null}
             {/* 展开/收起 */}
             {isPlanType && (
-              <Tooltip title={isPlanExpanded ? '收起' : '展开'}>
+              <Tooltip title={isPlanExpanded ? dict('NuwaxPC.Components.MarkdownCustomProcess.collapse') : dict('NuwaxPC.Components.MarkdownCustomProcess.expand')}>
                 <Button
                   size="small"
                   type="text"
@@ -415,7 +416,7 @@ function MarkdownCustomProcess(props: MarkdownCustomProcessProps) {
       {/* 使用 SeeDetailModal 组件 */}
       <SeeDetailModal
         key={innerProcessing.executeId}
-        title={innerProcessing.name || '暂无名称'}
+        title={innerProcessing.name || dict('NuwaxPC.Components.MarkdownCustomProcess.noName')}
         visible={openModal}
         onClose={() => setOpenModal(false)}
         data={detailData}

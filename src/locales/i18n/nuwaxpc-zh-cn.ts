@@ -4327,4 +4327,15 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Components.VariableList.tabVariables': '变量',
   'NuwaxPC.Components.VariableList.tabTools': '工具',
   'NuwaxPC.Components.VariableList.tabSkills': '技能',
+
+  // Components - MarkdownCustomProcess
+  'NuwaxPC.Components.MarkdownCustomProcess.noData': '暂无数据',
+  'NuwaxPC.Components.MarkdownCustomProcess.noName': '暂无名称',
+  'NuwaxPC.Components.MarkdownCustomProcess.viewDetail': '查看详情',
+  'NuwaxPC.Components.MarkdownCustomProcess.closePreview': '关闭预览',
+  'NuwaxPC.Components.MarkdownCustomProcess.previewPage': '预览页面',
+  'NuwaxPC.Components.MarkdownCustomProcess.collapse': '收起',
+  'NuwaxPC.Components.MarkdownCustomProcess.expand': '展开',
+  'NuwaxPC.Components.MarkdownCustomProcess.copyDetailData': '复制详情数据',
+  'NuwaxPC.Components.MarkdownCustomProcess.copyFailedRetry': '详情数据复制失败，请重试',
 };

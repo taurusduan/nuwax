@@ -4816,4 +4816,15 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Components.VariableList.tabVariables': 'Variables',
   'NuwaxPC.Components.VariableList.tabTools': 'Tools',
   'NuwaxPC.Components.VariableList.tabSkills': 'Skills',
+
+  // Components - MarkdownCustomProcess
+  'NuwaxPC.Components.MarkdownCustomProcess.noData': 'No data available',
+  'NuwaxPC.Components.MarkdownCustomProcess.noName': 'No name',
+  'NuwaxPC.Components.MarkdownCustomProcess.viewDetail': 'View details',
+  'NuwaxPC.Components.MarkdownCustomProcess.closePreview': 'Close preview',
+  'NuwaxPC.Components.MarkdownCustomProcess.previewPage': 'Preview page',
+  'NuwaxPC.Components.MarkdownCustomProcess.collapse': 'Collapse',
+  'NuwaxPC.Components.MarkdownCustomProcess.expand': 'Expand',
+  'NuwaxPC.Components.MarkdownCustomProcess.copyDetailData': 'Copy detail data',
+  'NuwaxPC.Components.MarkdownCustomProcess.copyFailedRetry': 'Failed to copy detail data, please retry',
 };
