@@ -4468,4 +4468,197 @@ export const NUWAXPC_I18N_EN_US: SystemLangMap = {
   'NuwaxPC.Pages.EcosystemMcp.disableFailed': 'Disable failed',
   'NuwaxPC.Pages.EcosystemMcp.disableSuccess': 'Disabled successfully',
   'NuwaxPC.Pages.EcosystemMcp.searchPlaceholder': 'Search MCP',
+
+  // Components - ParamsSetting
+  'NuwaxPC.Components.ParamsSetting.paramName': 'Parameter Name',
+  'NuwaxPC.Components.ParamsSetting.paramType': 'Parameter Type',
+  'NuwaxPC.Components.ParamsSetting.required': 'Required',
+  'NuwaxPC.Components.ParamsSetting.notRequired': 'Optional',
+  'NuwaxPC.Components.ParamsSetting.defaultValue': 'Default Value',
+  'NuwaxPC.Components.ParamsSetting.pleaseFill': 'Please fill in',
+  'NuwaxPC.Components.ParamsSetting.enable': 'Enable',
+  'NuwaxPC.Components.ParamsSetting.enableTooltip': 'When a parameter is disabled, the model will not be able to see it. If the parameter has a default value and is invisible, the agent will only use the set value when called.',
+  'NuwaxPC.Components.ParamsSetting.requiredParamTooltip': 'This is a required parameter. The switch will be available after filling in a default value.',
+
+  // Components - CollapseComponentList
+  'NuwaxPC.Components.CollapseComponentList.pluginDesc': 'Plugins enable the agent to call external APIs, such as searching information, browsing web pages, generating images, etc., expanding the agent\'s capabilities and use cases.',
+  'NuwaxPC.Components.CollapseComponentList.workflowDesc': 'Workflows support combining plugins, large language models, code blocks, and other functions in a visual way to achieve complex and stable business process orchestration, such as travel planning, report analysis, etc.',
+  'NuwaxPC.Components.CollapseComponentList.mcpDesc': 'The agent can connect to various service APIs through the standardized protocol (MCP) and initiate calls.',
+  'NuwaxPC.Components.CollapseComponentList.tableDesc': 'Organize data in a table structure to implement functions such as bookmarks and book management.',
+  'NuwaxPC.Components.CollapseComponentList.pageDesc': 'Pages are the visual interface of the agent, through which users can interact with the agent.',
+  'NuwaxPC.Components.CollapseComponentList.skillDesc': 'Skills are the agent\'s capabilities, through which users can interact with the agent.',
+  'NuwaxPC.Components.CollapseComponentList.settings': 'Settings',
+  'NuwaxPC.Components.CollapseComponentList.delete': 'Delete',
+
+  // Components - McpCollapseComponentList
+  'NuwaxPC.Components.McpCollapseComponentList.agentDesc': 'The agent is responsible for receiving user task requests, performing intelligent analysis and decision-making, coordinating the collaborative work of various modules, and ultimately providing response results.',
+  'NuwaxPC.Components.McpCollapseComponentList.pluginDesc': 'Plugins enable the agent to call external APIs, such as searching information, browsing web pages, generating images, etc., expanding the agent\'s capabilities and use cases.',
+  'NuwaxPC.Components.McpCollapseComponentList.workflowDesc': 'Workflows support combining plugins, large language models, code blocks, and other functions in a visual way to achieve complex and stable business process orchestration, such as travel planning, report analysis, etc.',
+  'NuwaxPC.Components.McpCollapseComponentList.knowledgeDesc': 'After uploading documents, URLs, and third-party data sources as text knowledge bases, when users send messages, the agent can reference the content in the text knowledge to answer user questions.',
+  'NuwaxPC.Components.McpCollapseComponentList.tableDesc': 'Organize data in a table structure to implement functions such as bookmarks and book management.',
+  'NuwaxPC.Components.McpCollapseComponentList.delete': 'Delete',
+
+  // Components - EcosystemSelectCategory
+  'NuwaxPC.Components.EcosystemSelectCategory.all': 'All',
+  'NuwaxPC.Components.EcosystemSelectCategory.pleaseSelectCategory': 'Please select a category',
+
+  // Components - FoldWrap
+  'NuwaxPC.Components.FoldWrap.pleaseInputNodeName': 'Please enter node name',
+  'NuwaxPC.Components.FoldWrap.pleaseInputNodeDesc': 'Please enter node description',
+  'NuwaxPC.Components.FoldWrap.noContent': 'No content',
+
+  // Components - ShowStand
+  'NuwaxPC.Components.ShowStand.title': 'Showcase',
+
+  // Components - SlateVariableEditor
+  'NuwaxPC.Components.SlateVariableEditor.variable': 'Variable',
+  'NuwaxPC.Components.SlateVariableEditor.placeholder': 'Please enter content...',
+
+  // Components - NewConversationSet
+  'NuwaxPC.Components.NewConversationSet.conversationSettings': 'Conversation Settings',
+  'NuwaxPC.Components.NewConversationSet.startConversation': 'Start Conversation',
+  'NuwaxPC.Components.NewConversationSet.settingsLockedHint': 'Once the conversation starts, the settings cannot be modified.',
+  'NuwaxPC.Components.NewConversationSet.pleaseSelectField': 'Please select {0}',
+  'NuwaxPC.Components.NewConversationSet.pleaseInputField': 'Please enter {0}',
+
+  // Components - UploadImportConfig
+  'NuwaxPC.Components.UploadImportConfig.importSuccess': 'Configuration imported successfully',
+  'NuwaxPC.Components.UploadImportConfig.uploadFailed': '{0} upload failed',
+  'NuwaxPC.Components.UploadImportConfig.notice': 'Notice',
+  'NuwaxPC.Components.UploadImportConfig.checkConfigHint': 'If the configuration contains plugins or MCP, please check the related configuration after import to ensure correct operation.',
+  'NuwaxPC.Components.UploadImportConfig.invalidFileType': 'Please upload a .table, .workflow or .plugin file!',
+  'NuwaxPC.Components.UploadImportConfig.importConfig': 'Import Configuration',
+
+  // Components - ComputerTypeSelector
+  'NuwaxPC.Components.ComputerTypeSelector.noComputerAvailable': 'No computer available',
+  'NuwaxPC.Components.ComputerTypeSelector.computerUnavailable': 'Computer unavailable',
+  'NuwaxPC.Components.ComputerTypeSelector.personalComputerUnavailable': 'Personal computer unavailable',
+  'NuwaxPC.Components.ComputerTypeSelector.selectComputer': 'Select computer',
+
+  // Components - PluginCardDetail
+  'NuwaxPC.Components.PluginCardDetail.back': 'Back',
+  'NuwaxPC.Components.PluginCardDetail.newVersion': 'New version available',
+  'NuwaxPC.Components.PluginCardDetail.version': 'Version',
+  'NuwaxPC.Components.PluginCardDetail.publishDate': 'Publish Date',
+  'NuwaxPC.Components.PluginCardDetail.author': 'Author',
+  'NuwaxPC.Components.PluginCardDetail.uninstall': 'Uninstall',
+  'NuwaxPC.Components.PluginCardDetail.install': 'Install',
+  'NuwaxPC.Components.PluginCardDetail.pluginDescription': 'Plugin Description',
+  'NuwaxPC.Components.PluginCardDetail.detailedInfo': 'Detailed Information',
+  'NuwaxPC.Components.PluginCardDetail.pluginName': 'Plugin Name',
+  'NuwaxPC.Components.PluginCardDetail.supportedPlatforms': 'Supported Platforms',
+
+  // Components - XProTable
+  'NuwaxPC.Components.XProTable.index': 'Index',
+  'NuwaxPC.Components.XProTable.reset': 'Reset',
+  'NuwaxPC.Components.XProTable.query': 'Query',
+
+  // Components - OperationBtn
+  'NuwaxPC.Components.OperationBtn.confirmAction': 'Confirm Action',
+  'NuwaxPC.Components.OperationBtn.confirmActionDesc': 'Are you sure you want to perform this action?',
+
+  // Components - CodeEditor
+  'NuwaxPC.Components.CodeEditor.loadingEditor': 'Loading editor...',
+  'NuwaxPC.Components.CodeEditor.codeAssistant': 'Code Assistant',
+
+  // Components - PluginTryRunModal
+  'NuwaxPC.Components.PluginTryRunModal.paramName': 'Parameter Name',
+  'NuwaxPC.Components.PluginTryRunModal.paramValue': 'Parameter Value',
+  'NuwaxPC.Components.PluginTryRunModal.pleaseInputParamValue': 'Please enter parameter value',
+  'NuwaxPC.Components.PluginTryRunModal.tryRun': 'Try Run',
+  'NuwaxPC.Components.PluginTryRunModal.inputParams': 'Input Parameters',
+  'NuwaxPC.Components.PluginTryRunModal.run': 'Run',
+  'NuwaxPC.Components.PluginTryRunModal.debugResult': 'Debug Result',
+  'NuwaxPC.Components.PluginTryRunModal.debugResultPlaceholder': 'Debug results will be displayed here',
+
+  // Components - PluginAutoAnalysis
+  'NuwaxPC.Components.PluginAutoAnalysis.paramName': 'Parameter Name',
+  'NuwaxPC.Components.PluginAutoAnalysis.paramValue': 'Parameter Value',
+  'NuwaxPC.Components.PluginAutoAnalysis.pleaseInputParamValue': 'Please enter parameter value',
+  'NuwaxPC.Components.PluginAutoAnalysis.autoAnalysis': 'Auto Analysis',
+  'NuwaxPC.Components.PluginAutoAnalysis.inputParams': 'Input Parameters',
+
+  // Components - RecommendList
+  'NuwaxPC.Components.RecommendList.pagePreview': 'Page Preview',
+  'NuwaxPC.Components.RecommendList.pagePathParamError': 'Page path parameter configuration error',
+  'NuwaxPC.Components.RecommendList.pagePathConfigError': 'Page path configuration error',
+  'NuwaxPC.Components.RecommendList.linkAddressConfigError': 'Link address configuration error',
+
+  // Components - ExampleNavigation
+  'NuwaxPC.Components.ExampleNavigation.exampleCenter': 'Example Center',
+  'NuwaxPC.Components.ExampleNavigation.backgroundStyle': 'Background Style Switch',
+  'NuwaxPC.Components.ExampleNavigation.navigationTokenGuide': 'Navigation Token Guide',
+  'NuwaxPC.Components.ExampleNavigation.antdShowcase': 'Ant Design Showcase',
+  'NuwaxPC.Components.ExampleNavigation.home': 'Home',
+  'NuwaxPC.Components.ExampleNavigation.back': 'Back',
+
+  // Components - PromptOptimizeModal
+  'NuwaxPC.Components.PromptOptimizeModal.replace': 'Replace',
+  'NuwaxPC.Components.PromptOptimizeModal.exit': 'Exit',
+  'NuwaxPC.Components.PromptOptimizeModal.defaultOptimizePrompt': 'A smart robot that can provide work help and suggestions',
+  'NuwaxPC.Components.PromptOptimizeModal.autoOptimize': 'Auto Optimize',
+  'NuwaxPC.Components.PromptOptimizeModal.promptPlaceholder': 'Please describe your prompt requirements, such as role definition, skill requirements, etc.',
+
+  // Components - OtherAction
+  'NuwaxPC.Components.OtherAction.confirmDeleteLoopNode': 'Are you sure you want to delete the loop node?',
+  'NuwaxPC.Components.OtherAction.rename': 'Rename',
+  'NuwaxPC.Components.OtherAction.createCopy': 'Create Copy',
+  'NuwaxPC.Components.OtherAction.testNode': 'Test this node',
+
+  // Components - ModelSetting
+  'NuwaxPC.Components.ModelSetting.pleaseSelectModel': 'Please select a model',
+  'NuwaxPC.Components.ModelSetting.precisionMode': 'Precision',
+  'NuwaxPC.Components.ModelSetting.balancedMode': 'Balanced',
+  'NuwaxPC.Components.ModelSetting.creativeMode': 'Creative',
+  'NuwaxPC.Components.ModelSetting.customMode': 'Custom',
+  'NuwaxPC.Components.ModelSetting.model': 'Model',
+  'NuwaxPC.Components.ModelSetting.generateDiversity': 'Generation Diversity',
+  'NuwaxPC.Components.ModelSetting.advancedSettings': 'Advanced Settings',
+  'NuwaxPC.Components.ModelSetting.generateRandomness': 'Randomness',
+  'NuwaxPC.Components.ModelSetting.temperatureDesc': "Temperature: Raising the temperature makes the model's output more diverse and creative. Conversely, lowering the temperature makes the output more instruction-following but less diverse. It is recommended not to adjust it together with 'Top p'.",
+  'NuwaxPC.Components.ModelSetting.topPDesc': "Top p is the cumulative probability: When generating output, the model selects from the highest probability words until the cumulative probability reaches the Top p value. This limits the model to only select these high-probability words, thus controlling output diversity. It is recommended not to adjust it together with 'Randomness'.",
+  'NuwaxPC.Components.ModelSetting.inputOutputSettings': 'Input & Output Settings',
+  'NuwaxPC.Components.ModelSetting.maxReplyLength': 'Max Reply Length',
+  'NuwaxPC.Components.ModelSetting.maxTokensDesc': 'Controls the upper limit of the model output Tokens length. Typically, 100 Tokens is approximately equal to 150 Chinese characters.',
+
+  // Components - MoveCopyComponent
+  'NuwaxPC.Components.MoveCopyComponent.move': 'Move',
+  'NuwaxPC.Components.MoveCopyComponent.copy': 'Copy',
+  'NuwaxPC.Components.MoveCopyComponent.agent': 'Agent',
+  'NuwaxPC.Components.MoveCopyComponent.page': 'Page',
+  'NuwaxPC.Components.MoveCopyComponent.plugin': 'Plugin',
+  'NuwaxPC.Components.MoveCopyComponent.workflow': 'Workflow',
+  'NuwaxPC.Components.MoveCopyComponent.skill': 'Skill',
+  'NuwaxPC.Components.MoveCopyComponent.component': 'Component',
+  'NuwaxPC.Components.MoveCopyComponent.selectTargetSpace': 'Select target space to ',
+
+  // Components - SelectComponent
+  'NuwaxPC.Components.SelectComponent.add': 'Add ',
+  'NuwaxPC.Components.SelectComponent.userAvatar': 'User avatar',
+  'NuwaxPC.Components.SelectComponent.publishedAt': 'Published ',
+  'NuwaxPC.Components.SelectComponent.added': 'Added',
+  'NuwaxPC.Components.SelectComponent.addBtn': 'Add',
+  'NuwaxPC.Components.SelectComponent.search': 'Search',
+
+  // Components - Skill
+  'NuwaxPC.Components.Skill.settings': 'Settings',
+  'NuwaxPC.Components.Skill.configInputParams': 'Configure Input Parameters',
+  'NuwaxPC.Components.Skill.paramName': 'Parameter Name',
+  'NuwaxPC.Components.Skill.defaultValue': 'Default Value',
+  'NuwaxPC.Components.Skill.enable': 'Enable',
+  'NuwaxPC.Components.Skill.enableDesc': 'When a parameter is set to invisible, the model will not be able to see it. If the parameter has a default value and is invisible, the agent will only use this set value by default when calling the plugin',
+  'NuwaxPC.Components.Skill.remove': 'Remove',
+
+  // Components - AgentContent
+  'NuwaxPC.Components.AgentContent.from': 'From',
+
+  // Components - TimedTask
+  'NuwaxPC.Components.TimedTask.taskCancelled': 'Timed task cancelled',
+  'NuwaxPC.Components.TimedTask.inProgress': 'In Progress',
+  'NuwaxPC.Components.TimedTask.cancelled': 'Cancelled',
+  'NuwaxPC.Components.TimedTask.timedTask': 'Timed Tasks',
+  'NuwaxPC.Components.TimedTask.addTask': 'Add',
+
+  // Components - HistoryConversation
+  'NuwaxPC.Components.HistoryConversation.title': 'History Conversations',
 };

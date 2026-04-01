@@ -1,5 +1,6 @@
 import InfiniteList from '@/layouts/InfiniteList';
 import { apiAgentConversationList } from '@/services/agentConfig';
+import { dict } from '@/services/i18nRuntime';
 import { Modal } from 'antd';
 import React from 'react';
 import { history, useModel, useParams } from 'umi';
@@ -57,7 +58,7 @@ const HistoryConversation: React.FC<HistoryConversationProps> = ({
 
   return (
     <Modal
-      title={<p>历史会话</p>}
+      title={<p>{dict('NuwaxPC.Components.HistoryConversation.title')}</p>}
       width={600}
       footer={null}
       maskClosable

@@ -1,4 +1,5 @@
 import { modalConfirm } from '@/utils/ant-custom';
+import { dict } from '@/services/i18nRuntime';
 import { Button, Popconfirm, Tooltip } from 'antd';
 import classNames from 'classnames';
 import { useState } from 'react';
@@ -70,8 +71,8 @@ const OperationBtn = <T extends object>(props: OperationBtnProps<T>) => {
           : confirm.description;
 
       modalConfirm(
-        title || '确认操作',
-        content || '确定执行该操作吗？',
+        title || dict('NuwaxPC.Components.OperationBtn.confirmAction'),
+        content || dict('NuwaxPC.Components.OperationBtn.confirmActionDesc'),
         executeAction,
       );
       return;

@@ -1,5 +1,6 @@
 import { GuidQuestionDto } from '@/types/interfaces/agent';
 import type { RecommendListProps } from '@/types/interfaces/agentConfig';
+import { dict } from '@/services/i18nRuntime';
 import { checkPathParams, fillPathParams } from '@/utils';
 import { LoadingOutlined } from '@ant-design/icons';
 import { message as antdMessage } from 'antd';
@@ -46,13 +47,13 @@ const RecommendList: React.FC<RecommendListProps> = ({
 
       // 调用页面预览
       showPagePreview({
-        name: eventConfig.info || '页面预览',
+        name: eventConfig.info || dict('NuwaxPC.Components.RecommendList.pagePreview'),
         uri: fullUri,
         params,
         executeId: `event-${Date.now()}`,
       });
     } else {
-      antdMessage.error('页面路径参数配置错误');
+      antdMessage.error(dict('NuwaxPC.Components.RecommendList.pagePathParamError'));
     }
   };
 
@@ -66,7 +67,7 @@ const RecommendList: React.FC<RecommendListProps> = ({
     if (item.type === 'Page') {
       // 打开页面
       if (!item.pageUrl) {
-        antdMessage.error('页面路径配置错误');
+        antdMessage.error(dict('NuwaxPC.Components.RecommendList.pagePathConfigError'));
         return;
       }
       handleShowPage(item);
@@ -77,7 +78,7 @@ const RecommendList: React.FC<RecommendListProps> = ({
     if (item.type === 'Link') {
       // 打开外链
       if (!item.url) {
-        antdMessage.error('链接地址配置错误');
+        antdMessage.error(dict('NuwaxPC.Components.RecommendList.linkAddressConfigError'));
         return;
       }
       window.open(item.url, '_blank');

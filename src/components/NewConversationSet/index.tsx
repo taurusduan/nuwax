@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import { InputTypeEnum } from '@/types/enums/agent';
 import {
   BindConfigWithSub,
@@ -67,7 +68,7 @@ const NewConversationSet: React.FC<NewConversationSetProps> = ({
         content = (
           <Input
             variant="filled"
-            placeholder={description || '请输入'}
+            placeholder={description || dict('NuwaxPC.Common.Global.pleaseInput')}
             allowClear
           />
         );
@@ -78,7 +79,7 @@ const NewConversationSet: React.FC<NewConversationSetProps> = ({
         content = (
           <Input.TextArea
             variant="filled"
-            placeholder={description || '请输入'}
+            placeholder={description || dict('NuwaxPC.Common.Global.pleaseInput')}
             allowClear
           />
         );
@@ -89,7 +90,7 @@ const NewConversationSet: React.FC<NewConversationSetProps> = ({
           <InputNumber
             variant="filled"
             className="w-full"
-            placeholder={description || '请输入'}
+            placeholder={description || dict('NuwaxPC.Common.Global.pleaseInput')}
           />
         );
         break;
@@ -103,14 +104,14 @@ const NewConversationSet: React.FC<NewConversationSetProps> = ({
             multiple={inputType === InputTypeEnum.MultipleSelect}
             maxTagCount="responsive"
             showCheckedStrategy={SHOW_CHILD}
-            placeholder={description || '请选择'}
+            placeholder={description || dict('NuwaxPC.Common.Global.pleaseSelect')}
             options={item.selectConfig?.options || []}
             allowClear
           />
         );
         break;
       default:
-        content = <Input placeholder={description || '请输入'} allowClear />;
+        content = <Input placeholder={description || dict('NuwaxPC.Common.Global.pleaseInput')} allowClear />;
     }
 
     return { isSelect, content };
@@ -125,7 +126,7 @@ const NewConversationSet: React.FC<NewConversationSetProps> = ({
       <header
         className={cx(styles.header, 'flex', 'items-center', 'content-between')}
       >
-        <span>对话设置</span>
+        <span>{dict('NuwaxPC.Components.NewConversationSet.conversationSettings')}</span>
         <ConditionRender condition={isFilled}>
           <span
             className={cx(styles.text, 'cursor-pointer')}
@@ -162,7 +163,9 @@ const NewConversationSet: React.FC<NewConversationSetProps> = ({
                 rules={[
                   {
                     required: require,
-                    message: `请${isSelect ? '选择' : '输入'}${displayName}`,
+                    message: isSelect
+                      ? dict('NuwaxPC.Components.NewConversationSet.pleaseSelectField').replace('{0}', displayName)
+                      : dict('NuwaxPC.Components.NewConversationSet.pleaseInputField').replace('{0}', displayName),
                   },
                 ]}
               >
@@ -173,13 +176,13 @@ const NewConversationSet: React.FC<NewConversationSetProps> = ({
           <ConditionRender condition={showSubmitButton}>
             <Form.Item>
               <Button type="primary" htmlType="submit" block>
-                开始对话
+                {dict('NuwaxPC.Components.NewConversationSet.startConversation')}
               </Button>
             </Form.Item>
           </ConditionRender>
         </Form>
         <ConditionRender condition={disabled}>
-          <p className={cx(styles.desc)}>对话开始后，对话设置将无法修改。</p>
+          <p className={cx(styles.desc)}>{dict('NuwaxPC.Components.NewConversationSet.settingsLockedHint')}</p>
         </ConditionRender>
       </div>
     </div>

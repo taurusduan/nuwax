@@ -3979,4 +3979,197 @@ export const NUWAXPC_I18N_ZH_CN: SystemLangMap = {
   'NuwaxPC.Pages.EcosystemMcp.disableFailed': '停用失败',
   'NuwaxPC.Pages.EcosystemMcp.disableSuccess': '已成功停用',
   'NuwaxPC.Pages.EcosystemMcp.searchPlaceholder': '搜索MCP',
+
+  // Components - ParamsSetting
+  'NuwaxPC.Components.ParamsSetting.paramName': '参数名称',
+  'NuwaxPC.Components.ParamsSetting.paramType': '参数类型',
+  'NuwaxPC.Components.ParamsSetting.required': '必填',
+  'NuwaxPC.Components.ParamsSetting.notRequired': '非必填',
+  'NuwaxPC.Components.ParamsSetting.defaultValue': '默认值',
+  'NuwaxPC.Components.ParamsSetting.pleaseFill': '请填写',
+  'NuwaxPC.Components.ParamsSetting.enable': '开启',
+  'NuwaxPC.Components.ParamsSetting.enableTooltip': '当参数设置为关闭时，大模型将无法看到该参数。如果该参数设置了默认值并且不可见，则在调用时，智能体会默认只使用这个设定值',
+  'NuwaxPC.Components.ParamsSetting.requiredParamTooltip': '此参数是必填参数，填写默认值后，此开关可用',
+
+  // Components - CollapseComponentList
+  'NuwaxPC.Components.CollapseComponentList.pluginDesc': '插件能够让智能体调用外部API，例如搜索信息、浏览网页、生成图片等，扩展智能体的能力和使用场景。',
+  'NuwaxPC.Components.CollapseComponentList.workflowDesc': '工作流支持通过可视化的方式，对插件、大语言模型、代码块等功能进行组合，从而实现复杂、稳定的业务流程编排，例如旅行规划、报告分析等。',
+  'NuwaxPC.Components.CollapseComponentList.mcpDesc': '智能体可以通过标准化协议（MCP）连接各类服务API并发起调用。',
+  'NuwaxPC.Components.CollapseComponentList.tableDesc': '以表格结构组织数据，可实现类似书签和图书管理等功能。',
+  'NuwaxPC.Components.CollapseComponentList.pageDesc': '页面是智能体的可视化界面，用户可以通过页面与智能体进行交互。',
+  'NuwaxPC.Components.CollapseComponentList.skillDesc': '技能是智能体的技能，用户可以通过技能与智能体进行交互。',
+  'NuwaxPC.Components.CollapseComponentList.settings': '设置',
+  'NuwaxPC.Components.CollapseComponentList.delete': '删除',
+
+  // Components - McpCollapseComponentList
+  'NuwaxPC.Components.McpCollapseComponentList.agentDesc': '智能体负责接收用户任务请求，进行智能分析和决策，协调各个模块的协同工作，并最终给出响应结果。',
+  'NuwaxPC.Components.McpCollapseComponentList.pluginDesc': '插件能够让智能体调用外部API，例如搜索信息、浏览网页、生成图片等，扩展智能体的能力和使用场景。',
+  'NuwaxPC.Components.McpCollapseComponentList.workflowDesc': '工作流支持通过可视化的方式，对插件、大语言模型、代码块等功能进行组合，从而实现复杂、稳定的业务流程编排，例如旅行规划、报告分析等。',
+  'NuwaxPC.Components.McpCollapseComponentList.knowledgeDesc': '将文档、URL、三方数据源上传为文本知识库后，用户发送消息时，智能体能够引用文本知识中的内容回答用户问题。',
+  'NuwaxPC.Components.McpCollapseComponentList.tableDesc': '以表格结构组织数据，可实现类似书签和图书管理等功能。',
+  'NuwaxPC.Components.McpCollapseComponentList.delete': '删除',
+
+  // Components - EcosystemSelectCategory
+  'NuwaxPC.Components.EcosystemSelectCategory.all': '全部',
+  'NuwaxPC.Components.EcosystemSelectCategory.pleaseSelectCategory': '请选择分类',
+
+  // Components - FoldWrap
+  'NuwaxPC.Components.FoldWrap.pleaseInputNodeName': '请输入节点名称',
+  'NuwaxPC.Components.FoldWrap.pleaseInputNodeDesc': '请输入节点描述',
+  'NuwaxPC.Components.FoldWrap.noContent': '暂无内容',
+
+  // Components - ShowStand
+  'NuwaxPC.Components.ShowStand.title': '展示台',
+
+  // Components - SlateVariableEditor
+  'NuwaxPC.Components.SlateVariableEditor.variable': '变量',
+  'NuwaxPC.Components.SlateVariableEditor.placeholder': '请输入内容...',
+
+  // Components - NewConversationSet
+  'NuwaxPC.Components.NewConversationSet.conversationSettings': '对话设置',
+  'NuwaxPC.Components.NewConversationSet.startConversation': '开始对话',
+  'NuwaxPC.Components.NewConversationSet.settingsLockedHint': '对话开始后，对话设置将无法修改。',
+  'NuwaxPC.Components.NewConversationSet.pleaseSelectField': '请选择{0}',
+  'NuwaxPC.Components.NewConversationSet.pleaseInputField': '请输入{0}',
+
+  // Components - UploadImportConfig
+  'NuwaxPC.Components.UploadImportConfig.importSuccess': '已成功导入配置',
+  'NuwaxPC.Components.UploadImportConfig.uploadFailed': '{0} 上传失败',
+  'NuwaxPC.Components.UploadImportConfig.notice': '提示',
+  'NuwaxPC.Components.UploadImportConfig.checkConfigHint': '配置中若包含插件、MCP，导入成功后请检查相关配置，以确保能正确运行',
+  'NuwaxPC.Components.UploadImportConfig.invalidFileType': '请上传 .table, .workflow 或 .plugin 类型的文件!',
+  'NuwaxPC.Components.UploadImportConfig.importConfig': '导入配置',
+
+  // Components - ComputerTypeSelector
+  'NuwaxPC.Components.ComputerTypeSelector.noComputerAvailable': '无可用电脑',
+  'NuwaxPC.Components.ComputerTypeSelector.computerUnavailable': '电脑不可用',
+  'NuwaxPC.Components.ComputerTypeSelector.personalComputerUnavailable': '个人电脑不可用',
+  'NuwaxPC.Components.ComputerTypeSelector.selectComputer': '选择电脑',
+
+  // Components - PluginCardDetail
+  'NuwaxPC.Components.PluginCardDetail.back': '返回',
+  'NuwaxPC.Components.PluginCardDetail.newVersion': '有新版本',
+  'NuwaxPC.Components.PluginCardDetail.version': '版本',
+  'NuwaxPC.Components.PluginCardDetail.publishDate': '发布日期',
+  'NuwaxPC.Components.PluginCardDetail.author': '作者',
+  'NuwaxPC.Components.PluginCardDetail.uninstall': '卸载',
+  'NuwaxPC.Components.PluginCardDetail.install': '安装',
+  'NuwaxPC.Components.PluginCardDetail.pluginDescription': '插件描述',
+  'NuwaxPC.Components.PluginCardDetail.detailedInfo': '详细信息',
+  'NuwaxPC.Components.PluginCardDetail.pluginName': '插件名称',
+  'NuwaxPC.Components.PluginCardDetail.supportedPlatforms': '支持的平台',
+
+  // Components - XProTable
+  'NuwaxPC.Components.XProTable.index': '序号',
+  'NuwaxPC.Components.XProTable.reset': '重置',
+  'NuwaxPC.Components.XProTable.query': '查询',
+
+  // Components - OperationBtn
+  'NuwaxPC.Components.OperationBtn.confirmAction': '确认操作',
+  'NuwaxPC.Components.OperationBtn.confirmActionDesc': '确定执行该操作吗？',
+
+  // Components - CodeEditor
+  'NuwaxPC.Components.CodeEditor.loadingEditor': '加载编辑器...',
+  'NuwaxPC.Components.CodeEditor.codeAssistant': '代码助手',
+
+  // Components - PluginTryRunModal
+  'NuwaxPC.Components.PluginTryRunModal.paramName': '参数名称',
+  'NuwaxPC.Components.PluginTryRunModal.paramValue': '参数值',
+  'NuwaxPC.Components.PluginTryRunModal.pleaseInputParamValue': '请输入参数值',
+  'NuwaxPC.Components.PluginTryRunModal.tryRun': '试运行',
+  'NuwaxPC.Components.PluginTryRunModal.inputParams': '输入参数',
+  'NuwaxPC.Components.PluginTryRunModal.run': '运行',
+  'NuwaxPC.Components.PluginTryRunModal.debugResult': '调试结果',
+  'NuwaxPC.Components.PluginTryRunModal.debugResultPlaceholder': '调试结果将展示在此处',
+
+  // Components - PluginAutoAnalysis
+  'NuwaxPC.Components.PluginAutoAnalysis.paramName': '参数名称',
+  'NuwaxPC.Components.PluginAutoAnalysis.paramValue': '参数值',
+  'NuwaxPC.Components.PluginAutoAnalysis.pleaseInputParamValue': '请输入参数值',
+  'NuwaxPC.Components.PluginAutoAnalysis.autoAnalysis': '自动解析',
+  'NuwaxPC.Components.PluginAutoAnalysis.inputParams': '输入参数',
+
+  // Components - RecommendList
+  'NuwaxPC.Components.RecommendList.pagePreview': '页面预览',
+  'NuwaxPC.Components.RecommendList.pagePathParamError': '页面路径参数配置错误',
+  'NuwaxPC.Components.RecommendList.pagePathConfigError': '页面路径配置错误',
+  'NuwaxPC.Components.RecommendList.linkAddressConfigError': '链接地址配置错误',
+
+  // Components - ExampleNavigation
+  'NuwaxPC.Components.ExampleNavigation.exampleCenter': '示例中心',
+  'NuwaxPC.Components.ExampleNavigation.backgroundStyle': '背景风格切换',
+  'NuwaxPC.Components.ExampleNavigation.navigationTokenGuide': '导航Token指南',
+  'NuwaxPC.Components.ExampleNavigation.antdShowcase': 'Ant Design展示',
+  'NuwaxPC.Components.ExampleNavigation.home': '首页',
+  'NuwaxPC.Components.ExampleNavigation.back': '返回',
+
+  // Components - PromptOptimizeModal
+  'NuwaxPC.Components.PromptOptimizeModal.replace': '替换',
+  'NuwaxPC.Components.PromptOptimizeModal.exit': '退出',
+  'NuwaxPC.Components.PromptOptimizeModal.defaultOptimizePrompt': '一个能为你提供工作帮助和建议的智能机器人',
+  'NuwaxPC.Components.PromptOptimizeModal.autoOptimize': '自动优化',
+  'NuwaxPC.Components.PromptOptimizeModal.promptPlaceholder': '请描述你的提示词需求，比如角色定义、技能要求等',
+
+  // Components - OtherAction
+  'NuwaxPC.Components.OtherAction.confirmDeleteLoopNode': '确定要删除循环节点吗？',
+  'NuwaxPC.Components.OtherAction.rename': '重命名',
+  'NuwaxPC.Components.OtherAction.createCopy': '创建副本',
+  'NuwaxPC.Components.OtherAction.testNode': '测试该节点',
+
+  // Components - ModelSetting
+  'NuwaxPC.Components.ModelSetting.pleaseSelectModel': '请选择模型',
+  'NuwaxPC.Components.ModelSetting.precisionMode': '精确模式',
+  'NuwaxPC.Components.ModelSetting.balancedMode': '平衡模式',
+  'NuwaxPC.Components.ModelSetting.creativeMode': '创意模式',
+  'NuwaxPC.Components.ModelSetting.customMode': '自定义',
+  'NuwaxPC.Components.ModelSetting.model': '模型',
+  'NuwaxPC.Components.ModelSetting.generateDiversity': '生成多样性',
+  'NuwaxPC.Components.ModelSetting.advancedSettings': '高级设置',
+  'NuwaxPC.Components.ModelSetting.generateRandomness': '生成随机性',
+  'NuwaxPC.Components.ModelSetting.temperatureDesc': "temperature: 调高温度会使得模型的输出更多样性和创新性，反之，降低温度会使输出内容更加遵循指令要求但减少多样性。建议不要与 'Top p' 同时调整。",
+  'NuwaxPC.Components.ModelSetting.topPDesc': "Top p 为累计概率: 模型在生成输出时会从概率最高的词汇开始选择，直到这些词汇的总概率累积达到 Top p 值。这样可以限制模型只选择这些高概率的词汇，从而控制输出内容的多样性。建议不要与 '生成随机性' 同时调整。",
+  'NuwaxPC.Components.ModelSetting.inputOutputSettings': '输入及输出设置',
+  'NuwaxPC.Components.ModelSetting.maxReplyLength': '最大回复长度',
+  'NuwaxPC.Components.ModelSetting.maxTokensDesc': '控制模型输出的 Tokens 长度上限。通常 100 Tokens 约等于 150 个中文汉字。',
+
+  // Components - MoveCopyComponent
+  'NuwaxPC.Components.MoveCopyComponent.move': '迁移',
+  'NuwaxPC.Components.MoveCopyComponent.copy': '复制',
+  'NuwaxPC.Components.MoveCopyComponent.agent': '智能体',
+  'NuwaxPC.Components.MoveCopyComponent.page': '页面',
+  'NuwaxPC.Components.MoveCopyComponent.plugin': '插件',
+  'NuwaxPC.Components.MoveCopyComponent.workflow': '工作流',
+  'NuwaxPC.Components.MoveCopyComponent.skill': '技能',
+  'NuwaxPC.Components.MoveCopyComponent.component': '组件',
+  'NuwaxPC.Components.MoveCopyComponent.selectTargetSpace': '选择要',
+
+  // Components - SelectComponent
+  'NuwaxPC.Components.SelectComponent.add': '添加',
+  'NuwaxPC.Components.SelectComponent.userAvatar': '用户头像',
+  'NuwaxPC.Components.SelectComponent.publishedAt': '发布于',
+  'NuwaxPC.Components.SelectComponent.added': '已添加',
+  'NuwaxPC.Components.SelectComponent.addBtn': '添加',
+  'NuwaxPC.Components.SelectComponent.search': '搜索',
+
+  // Components - Skill
+  'NuwaxPC.Components.Skill.settings': '设置',
+  'NuwaxPC.Components.Skill.configInputParams': '配置输入参数',
+  'NuwaxPC.Components.Skill.paramName': '参数名称',
+  'NuwaxPC.Components.Skill.defaultValue': '默认值',
+  'NuwaxPC.Components.Skill.enable': '开启',
+  'NuwaxPC.Components.Skill.enableDesc': '当参数设置为不可见时，大模型将无法看到该参数。如果该参数设置了默认值并且不可见，则在调用插件时，智能体会默认只使用这个设定值',
+  'NuwaxPC.Components.Skill.remove': '移除',
+
+  // Components - AgentContent
+  'NuwaxPC.Components.AgentContent.from': '来自于',
+
+  // Components - TimedTask
+  'NuwaxPC.Components.TimedTask.taskCancelled': '定时任务已取消',
+  'NuwaxPC.Components.TimedTask.inProgress': '进行中',
+  'NuwaxPC.Components.TimedTask.cancelled': '已取消',
+  'NuwaxPC.Components.TimedTask.timedTask': '定时任务',
+  'NuwaxPC.Components.TimedTask.addTask': '添加',
+
+  // Components - HistoryConversation
+  'NuwaxPC.Components.HistoryConversation.title': '历史会话',
 };

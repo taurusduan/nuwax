@@ -3,6 +3,7 @@ import { ARRAY_ITEM } from '@/constants/common.constants';
 import { ICON_ADD_TR } from '@/constants/images.constants';
 import useTryRun from '@/hooks/useTryRun';
 import { apiPluginAnalysisOutput } from '@/services/plugin';
+import { dict } from '@/services/i18nRuntime';
 import { DataTypeEnum } from '@/types/enums/common';
 import type { BindConfigWithSub } from '@/types/interfaces/common';
 import type { PluginAutoAnalysisProps } from '@/types/interfaces/library';
@@ -65,7 +66,7 @@ const PluginAutoAnalysis: React.FC<PluginAutoAnalysisProps> = ({
   // 入参配置columns
   const inputColumns = [
     {
-      title: '参数名称',
+      title: dict('NuwaxPC.Components.PluginAutoAnalysis.paramName'),
       dataIndex: 'name',
       key: 'name',
       className: 'flex',
@@ -78,7 +79,7 @@ const PluginAutoAnalysis: React.FC<PluginAutoAnalysisProps> = ({
       ),
     },
     {
-      title: '参数值',
+      title: dict('NuwaxPC.Components.PluginAutoAnalysis.paramValue'),
       dataIndex: 'description',
       key: 'description',
       render: (_: string, record: BindConfigWithSub) => (
@@ -91,7 +92,7 @@ const PluginAutoAnalysis: React.FC<PluginAutoAnalysisProps> = ({
               onChange={(e) =>
                 handleInputValue(record.key, 'bindValue', e.target.value)
               }
-              placeholder="请输入参数值"
+              placeholder={dict('NuwaxPC.Components.PluginAutoAnalysis.pleaseInputParamValue')}
             />
           )}
           <p className={cx(styles['param-desc'])}>{record.description}</p>
@@ -99,7 +100,7 @@ const PluginAutoAnalysis: React.FC<PluginAutoAnalysisProps> = ({
       ),
     },
     {
-      title: '操作',
+      title: dict('NuwaxPC.Common.Global.operation'),
       key: 'action',
       width: 60,
       align: 'center',
@@ -153,7 +154,7 @@ const PluginAutoAnalysis: React.FC<PluginAutoAnalysisProps> = ({
               styles.header,
             )}
           >
-            <h3>自动解析</h3>
+            <h3>{dict('NuwaxPC.Components.PluginAutoAnalysis.autoAnalysis')}</h3>
             <CloseOutlined
               className={cx('cursor-pointer')}
               onClick={onCancel}
@@ -161,7 +162,7 @@ const PluginAutoAnalysis: React.FC<PluginAutoAnalysisProps> = ({
           </header>
           {/*内容区*/}
           <div className={cx('flex-1', 'flex', 'flex-col', 'overflow-hide')}>
-            <h3 className={cx(styles['p-title'])}>{pluginName} 输入参数</h3>
+            <h3 className={cx(styles['p-title'])}>{pluginName} {dict('NuwaxPC.Components.PluginAutoAnalysis.inputParams')}</h3>
             <Table<BindConfigWithSub>
               className={cx(styles['table-wrap'])}
               columns={inputColumns}
@@ -185,7 +186,7 @@ const PluginAutoAnalysis: React.FC<PluginAutoAnalysisProps> = ({
               onClick={handleAutoResolve}
               loading={loadingAnalysis}
             >
-              自动解析
+              {dict('NuwaxPC.Components.PluginAutoAnalysis.autoAnalysis')}
             </Button>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { SvgIcon } from '@/components/base';
 import ChatTitleActions from '@/components/ChatTitleActions';
 import ConditionRender from '@/components/ConditionRender';
 import { AgentContentProps } from '@/types/interfaces/agentTask';
+import { dict } from '@/services/i18nRuntime';
 import { Typography } from 'antd';
 import classNames from 'classnames';
 import React, { useRef } from 'react';
@@ -45,7 +46,7 @@ const AgentContent: React.FC<AgentContentProps> = ({ agentDetail }) => {
       </Typography.Title>
       <div className={cx(styles.infoContainer)}>
         <Typography.Text className={cx(styles.from)} ellipsis={true}>
-          来自于{' '}
+          {dict('NuwaxPC.Components.AgentContent.from')}{' '}
           {agentDetail?.publishUser?.nickName ||
             agentDetail?.publishUser?.userName}
         </Typography.Text>

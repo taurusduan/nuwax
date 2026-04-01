@@ -1,4 +1,5 @@
 import { NodeTypeEnum } from '@/types/enums/common';
+import { dict } from '@/services/i18nRuntime';
 import { CaretRightFilled, EllipsisOutlined } from '@ant-design/icons';
 import { App, Button, Popover } from 'antd';
 import React from 'react';
@@ -28,9 +29,9 @@ const OtherOperations: React.FC<OtherOperationsProps> = ({
     // 只有删除循环节点时才需要确认
     if (isLoopNode && val === 'Delete') {
       modal.confirm({
-        title: '确定要删除循环节点吗？',
-        okText: '确认',
-        cancelText: '取消',
+        title: dict('NuwaxPC.Components.OtherAction.confirmDeleteLoopNode'),
+        okText: dict('NuwaxPC.Common.Global.confirm'),
+        cancelText: dict('NuwaxPC.Common.Global.cancel'),
         onOk: () => {
           onChange(val);
           setPopoverVisible(false); // 关闭Popover
@@ -49,7 +50,7 @@ const OtherOperations: React.FC<OtherOperationsProps> = ({
         className="cursor-pointer"
         style={{ padding: '3px 0' }}
       >
-        重命名
+        {dict('NuwaxPC.Components.OtherAction.rename')}
       </p>
       {!isLoopNode && (
         <p
@@ -58,7 +59,7 @@ const OtherOperations: React.FC<OtherOperationsProps> = ({
           className="cursor-pointer"
           style={{ padding: '3px 0' }}
         >
-          创建副本
+          {dict('NuwaxPC.Components.OtherAction.createCopy')}
         </p>
       )}
       <p
@@ -67,7 +68,7 @@ const OtherOperations: React.FC<OtherOperationsProps> = ({
         className="cursor-pointer"
         style={{ padding: '3px 0' }}
       >
-        删除
+        {dict('NuwaxPC.Common.Global.delete')}
       </p>
     </>
   );
@@ -76,7 +77,7 @@ const OtherOperations: React.FC<OtherOperationsProps> = ({
     <div className="dis-left">
       {/* 试运行 */}
       {testRun && (
-        <Popover placement="top" content={'测试该节点'}>
+        <Popover placement="top" content={dict('NuwaxPC.Components.OtherAction.testNode')}>
           <Button
             type="text"
             icon={<CaretRightFilled />}

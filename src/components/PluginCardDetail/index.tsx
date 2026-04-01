@@ -8,6 +8,7 @@ import {
   Typography,
 } from 'antd';
 import React from 'react';
+import { dict } from '@/services/i18nRuntime';
 import type { PluginCardProps } from '../EcosystemCard';
 import styles from './index.less';
 
@@ -56,7 +57,7 @@ const PluginCardDetail: React.FC<PluginDetailProps> = ({
   return (
     <Card className={styles.detailCard}>
       <Button type="link" className={styles.backButton} onClick={onBack}>
-        返回
+        {dict('NuwaxPC.Components.PluginCardDetail.back')}
       </Button>
 
       <div className={styles.header}>
@@ -70,14 +71,14 @@ const PluginCardDetail: React.FC<PluginDetailProps> = ({
             </Title>
             {isNew && (
               <Tag color="red" className={styles.newTag}>
-                有新版本
+                {dict('NuwaxPC.Components.PluginCardDetail.newVersion')}
               </Tag>
             )}
           </div>
           <Space size={16} className={styles.metaInfo}>
-            <Text type="secondary">版本: {version}</Text>
-            <Text type="secondary">发布日期: {publishDate}</Text>
-            <Text type="secondary">作者: {author}</Text>
+            <Text type="secondary">{dict('NuwaxPC.Components.PluginCardDetail.version')}: {version}</Text>
+            <Text type="secondary">{dict('NuwaxPC.Components.PluginCardDetail.publishDate')}: {publishDate}</Text>
+            <Text type="secondary">{dict('NuwaxPC.Components.PluginCardDetail.author')}: {author}</Text>
           </Space>
           <Space size={8} wrap className={styles.categories}>
             {categories.map((category, index) => (
@@ -91,7 +92,7 @@ const PluginCardDetail: React.FC<PluginDetailProps> = ({
             className={styles.actionButton}
             onClick={onToggleEnable}
           >
-            {isEnabled ? '卸载' : '安装'}
+            {isEnabled ? dict('NuwaxPC.Components.PluginCardDetail.uninstall') : dict('NuwaxPC.Components.PluginCardDetail.install')}
           </Button>
         </div>
       </div>
@@ -99,20 +100,20 @@ const PluginCardDetail: React.FC<PluginDetailProps> = ({
       <Divider />
 
       <div className={styles.descriptionSection}>
-        <Title level={5}>插件描述</Title>
+        <Title level={5}>{dict('NuwaxPC.Components.PluginCardDetail.pluginDescription')}</Title>
         <Paragraph className={styles.description}>{description}</Paragraph>
       </div>
 
       <Divider />
 
       <div className={styles.detailsSection}>
-        <Title level={5}>详细信息</Title>
+        <Title level={5}>{dict('NuwaxPC.Components.PluginCardDetail.detailedInfo')}</Title>
         <Descriptions column={1} bordered>
-          <Descriptions.Item label="插件名称">{title}</Descriptions.Item>
-          <Descriptions.Item label="版本">{version}</Descriptions.Item>
-          <Descriptions.Item label="发布日期">{publishDate}</Descriptions.Item>
-          <Descriptions.Item label="作者">{author}</Descriptions.Item>
-          <Descriptions.Item label="支持的平台">Web</Descriptions.Item>
+          <Descriptions.Item label={dict('NuwaxPC.Components.PluginCardDetail.pluginName')}>{title}</Descriptions.Item>
+          <Descriptions.Item label={dict('NuwaxPC.Components.PluginCardDetail.version')}>{version}</Descriptions.Item>
+          <Descriptions.Item label={dict('NuwaxPC.Components.PluginCardDetail.publishDate')}>{publishDate}</Descriptions.Item>
+          <Descriptions.Item label={dict('NuwaxPC.Components.PluginCardDetail.author')}>{author}</Descriptions.Item>
+          <Descriptions.Item label={dict('NuwaxPC.Components.PluginCardDetail.supportedPlatforms')}>Web</Descriptions.Item>
         </Descriptions>
       </div>
     </Card>

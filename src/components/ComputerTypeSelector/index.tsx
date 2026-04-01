@@ -3,6 +3,7 @@ import {
   apiGetUserSelectableSandboxList,
   apiSaveSelectedSandbox,
 } from '@/services/systemManage';
+import { dict } from '@/services/i18nRuntime';
 import { CheckOutlined } from '@ant-design/icons';
 import { Dropdown, MenuProps, Spin } from 'antd';
 import classNames from 'classnames';
@@ -24,7 +25,7 @@ const cx = classNames.bind(styles);
  */
 const NO_COMPUTER_OPTION: ComputerOption = {
   id: '',
-  name: '无可用电脑',
+  name: dict('NuwaxPC.Components.ComputerTypeSelector.noComputerAvailable'),
   description: '',
 };
 
@@ -33,7 +34,7 @@ const NO_COMPUTER_OPTION: ComputerOption = {
  */
 const UNAVAILABLE_OPTION: ComputerOption = {
   id: '',
-  name: '电脑不可用',
+  name: dict('NuwaxPC.Components.ComputerTypeSelector.computerUnavailable'),
   description: '',
 };
 
@@ -42,7 +43,7 @@ const UNAVAILABLE_OPTION: ComputerOption = {
  */
 const PERSONAL_COMPUTER_UNAVAILABLE_OPTION: ComputerOption = {
   id: '',
-  name: '个人电脑不可用',
+  name: dict('NuwaxPC.Components.ComputerTypeSelector.personalComputerUnavailable'),
   description: '',
 };
 
@@ -199,7 +200,7 @@ const ComputerTypeSelector: React.FC<ComputerTypeSelectorProps> = ({
       return computerList[0];
     }
     // 未初始化时显示默认文本
-    return { id: '', name: '选择电脑', description: '' };
+    return { id: '', name: dict('NuwaxPC.Components.ComputerTypeSelector.selectComputer'), description: '' };
   }, [value, computerList, unavailable, initialized, fixedSelection]);
 
   // 处理选择
@@ -245,7 +246,7 @@ const ComputerTypeSelector: React.FC<ComputerTypeSelectorProps> = ({
         label: (
           <div className={cx(styles['menu-item'])}>
             <Spin size="small" />
-            <span style={{ marginLeft: 8 }}>加载中...</span>
+            <span style={{ marginLeft: 8 }}>{dict('NuwaxPC.Common.Global.loading')}</span>
           </div>
         ),
         disabled: true,
@@ -287,7 +288,7 @@ const ComputerTypeSelector: React.FC<ComputerTypeSelectorProps> = ({
           <div
             className={cx(styles['menu-item'], styles['menu-item-disabled'])}
           >
-            <span className={cx(styles['item-name'])}>暂无可用电脑</span>
+            <span className={cx(styles['item-name'])}>{dict('NuwaxPC.Components.ComputerTypeSelector.noComputerAvailable')}</span>
           </div>
         ),
         disabled: true,

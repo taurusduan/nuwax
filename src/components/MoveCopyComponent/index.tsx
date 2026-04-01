@@ -7,6 +7,7 @@ import {
 } from '@/types/enums/space';
 import { MoveCopyComponentProps } from '@/types/interfaces/common';
 import type { SpaceInfo } from '@/types/interfaces/workspace';
+import { dict } from '@/services/i18nRuntime';
 import { CheckOutlined } from '@ant-design/icons';
 import { Button, Modal } from 'antd';
 import classNames from 'classnames';
@@ -37,29 +38,29 @@ const MoveCopyComponent: React.FC<MoveCopyComponentProps> = ({
   const [componentType, setComponentType] = useState<string>('');
   const { spaceList } = useModel('spaceModel');
   // 迁移或复制的标题
-  const actionText = type === ApplicationMoreActionEnum.Move ? '迁移' : '复制';
+  const actionText = type === ApplicationMoreActionEnum.Move ? dict('NuwaxPC.Components.MoveCopyComponent.move') : dict('NuwaxPC.Components.MoveCopyComponent.copy');
 
   useEffect(() => {
     if (open) {
       setTargetSpaceId(0);
       switch (mode) {
         case AgentComponentTypeEnum.Agent:
-          setComponentType('智能体');
+          setComponentType(dict('NuwaxPC.Components.MoveCopyComponent.agent'));
           break;
         case AgentComponentTypeEnum.Page:
-          setComponentType('页面');
+          setComponentType(dict('NuwaxPC.Components.MoveCopyComponent.page'));
           break;
         case AgentComponentTypeEnum.Plugin:
-          setComponentType('插件');
+          setComponentType(dict('NuwaxPC.Components.MoveCopyComponent.plugin'));
           break;
         case AgentComponentTypeEnum.Workflow:
-          setComponentType('工作流');
+          setComponentType(dict('NuwaxPC.Components.MoveCopyComponent.workflow'));
           break;
         case AgentComponentTypeEnum.Skill:
-          setComponentType('技能');
+          setComponentType(dict('NuwaxPC.Components.MoveCopyComponent.skill'));
           break;
         default:
-          setComponentType('组件');
+          setComponentType(dict('NuwaxPC.Components.MoveCopyComponent.component'));
           break;
       }
     }
@@ -130,7 +131,7 @@ const MoveCopyComponent: React.FC<MoveCopyComponentProps> = ({
         <div className={cx(styles['row-line'])} />
         <span
           className={cx(styles.label)}
-        >{`选择要${actionText}到的空间`}</span>
+        >{`${dict('NuwaxPC.Components.MoveCopyComponent.selectTargetSpace')}${actionText}`}</span>
         {filterSpaceList.map((item: SpaceInfo) => (
           <div
             key={item.id}

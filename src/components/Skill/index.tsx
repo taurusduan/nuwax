@@ -1,6 +1,7 @@
 import type { CreatedNodeItem } from '@/types/interfaces/common';
 import { InputAndOutConfig } from '@/types/interfaces/node';
 import { SkillDisposeProps, SkillProps } from '@/types/interfaces/workflow';
+import { dict } from '@/services/i18nRuntime';
 import { getImg } from '@/utils/workflow';
 import {
   DeleteOutlined,
@@ -75,19 +76,19 @@ export const SkillDispose: React.FC<SkillDisposeProps> = ({
       onCancel={() => onCancel()}
       className="skill-dispose-modal-style"
       width={800}
-      footer={() => <Button onClick={handleOk}>保存</Button>}
+      footer={() => <Button onClick={handleOk}>{dict('NuwaxPC.Common.Global.save')}</Button>}
     >
       <div className="skill-dispose-container flex ">
         {/* 左侧部分 */}
         <div className="skill-dispose-left">
-          <div className="skill-dispose-left-title">设置</div>
+          <div className="skill-dispose-left-title">{dict('NuwaxPC.Components.Skill.settings')}</div>
           <p
             className={`skill-menu-style ${
               selectMenu === 'input' ? 'select-menu' : ''
             }`}
             onClick={() => setSelectMenu('input')}
           >
-            配置输入参数
+            {dict('NuwaxPC.Components.Skill.configInputParams')}
           </p>
           {/* <p
             className={`skill-menu-style ${
@@ -103,13 +104,13 @@ export const SkillDispose: React.FC<SkillDisposeProps> = ({
           {selectMenu === 'input' && (
             <div>
               <div className="dis-sb content-item-style content-title-style">
-                <span className="flex-1">参数名称</span>
-                <span className="content-center-item-style">默认值</span>
+                <span className="flex-1">{dict('NuwaxPC.Components.Skill.paramName')}</span>
+                <span className="content-center-item-style">{dict('NuwaxPC.Components.Skill.defaultValue')}</span>
                 <p className="content-right-item-style flex">
-                  <span>开启</span>
+                  <span>{dict('NuwaxPC.Components.Skill.enable')}</span>
                   <Popover
                     content={
-                      '当参数设置为不可见时，大模型将无法看到该参数。如果该参数设置了默认值并且不可见，则在调用插件时，智能体会默认只使用这个设定值'
+                      dict('NuwaxPC.Components.Skill.enableDesc')
                     }
                     styles={{
                       body: {
@@ -246,7 +247,7 @@ export const SkillList: React.FC<SkillProps> = ({
                         </Popover>
                       )}
                     {!disabled && (
-                      <Popover content={'移除'} trigger="hover">
+                      <Popover content={dict('NuwaxPC.Components.Skill.remove')} trigger="hover">
                         <DeleteOutlined
                           className="ml-12  white"
                           onClick={() => handleDelete(item)}
