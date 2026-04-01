@@ -33,17 +33,17 @@ const NavigationStylePanel: React.FC<NavigationStylePanelProps> = ({
   const navigationStyles: NavigationStyle[] = [
     {
       id: 'style1',
-      name: t('NuwaxPC.Components.ThemeConfigNavigationStylePanel.style1Name'),
+      name: t('PC.Components.ThemeConfigNavigationStylePanel.style1Name'),
       description: t(
-        'NuwaxPC.Components.ThemeConfigNavigationStylePanel.style1Description',
+        'PC.Components.ThemeConfigNavigationStylePanel.style1Description',
       ),
       isDefault: true,
     },
     {
       id: 'style2',
-      name: t('NuwaxPC.Components.ThemeConfigNavigationStylePanel.style2Name'),
+      name: t('PC.Components.ThemeConfigNavigationStylePanel.style2Name'),
       description: t(
-        'NuwaxPC.Components.ThemeConfigNavigationStylePanel.style2Description',
+        'PC.Components.ThemeConfigNavigationStylePanel.style2Description',
       ),
     },
   ];
@@ -73,15 +73,13 @@ const NavigationStylePanel: React.FC<NavigationStylePanelProps> = ({
   return (
     <div className={cx(styles.navigationStylePanel)}>
       <h3 className={cx(styles.panelTitle)}>
-        {t('NuwaxPC.Components.ThemeConfigNavigationStylePanel.panelTitle')}
+        {t('PC.Components.ThemeConfigNavigationStylePanel.panelTitle')}
       </h3>
 
       {/* 导航栏风格样式选择 */}
       <div className={cx(styles.navigationStyleOptions)}>
         <h4>
-          {t(
-            'NuwaxPC.Components.ThemeConfigNavigationStylePanel.styleSectionTitle',
-          )}
+          {t('PC.Components.ThemeConfigNavigationStylePanel.styleSectionTitle')}
         </h4>
         <div className={cx(styles.styleOptions)}>
           {navigationStyles.map((style) => (
@@ -117,9 +115,7 @@ const NavigationStylePanel: React.FC<NavigationStylePanelProps> = ({
       {/* 导航栏深浅色选择 */}
       <div className={cx(styles.navigationColorOptions)}>
         <h4>
-          {t(
-            'NuwaxPC.Components.ThemeConfigNavigationStylePanel.colorSectionTitle',
-          )}
+          {t('PC.Components.ThemeConfigNavigationStylePanel.colorSectionTitle')}
         </h4>
         <div className={cx(styles.colorOptions)}>
           {/* 浅色模式 */}
@@ -135,9 +131,7 @@ const NavigationStylePanel: React.FC<NavigationStylePanelProps> = ({
               </div>
             </div>
             <div className={cx(styles.colorLabel)}>
-              {t(
-                'NuwaxPC.Components.ThemeConfigNavigationStylePanel.lightMode',
-              )}
+              {t('PC.Components.ThemeConfigNavigationStylePanel.lightMode')}
             </div>
           </div>
 
@@ -154,7 +148,7 @@ const NavigationStylePanel: React.FC<NavigationStylePanelProps> = ({
               </div>
             </div>
             <div className={cx(styles.colorLabel)}>
-              {t('NuwaxPC.Components.ThemeConfigNavigationStylePanel.darkMode')}
+              {t('PC.Components.ThemeConfigNavigationStylePanel.darkMode')}
             </div>
           </div>
         </div>

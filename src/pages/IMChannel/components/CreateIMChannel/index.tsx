@@ -5,13 +5,13 @@ import {
   IMPlatformEnum,
 } from '@/constants/imChannel.constants';
 import SelectTargetFormItem from '@/pages/SpaceTaskCenter/CreateTimedTask/components/SelectTargetFormItem';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiAddIMConfigChannel,
   apiGetIMConfigChannelDetail,
   apiTestIMConfigChannelConnection,
   apiUpdateIMConfigChannel,
 } from '@/services/imChannel';
-import { dict } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import { CreateUpdateModeEnum } from '@/types/enums/common';
 import { IMChannelInfo, IMChannelTypeEnum } from '@/types/interfaces/imChannel';
@@ -131,7 +131,9 @@ const CreateIMChannel: React.FC<CreateIMChannelProps> = ({
 
       if (res.code === SUCCESS_CODE) {
         message.success(
-          mode === CreateUpdateModeEnum.Create ? dict('NuwaxPC.Pages.IMChannel.CreateIMChannel.addSuccess') : dict('NuwaxPC.Pages.IMChannel.CreateIMChannel.editSuccess'),
+          mode === CreateUpdateModeEnum.Create
+            ? dict('PC.Pages.IMChannel.CreateIMChannel.addSuccess')
+            : dict('PC.Pages.IMChannel.CreateIMChannel.editSuccess'),
         );
         onSuccess();
         return true;
@@ -153,7 +155,9 @@ const CreateIMChannel: React.FC<CreateIMChannelProps> = ({
       });
 
       if (res.code === SUCCESS_CODE) {
-        message.success(dict('NuwaxPC.Pages.IMChannel.CreateIMChannel.testConnectionSuccess'));
+        message.success(
+          dict('PC.Pages.IMChannel.CreateIMChannel.testConnectionSuccess'),
+        );
       }
     } catch (error) {
       console.error('Test Connection Failed:', error);
@@ -173,8 +177,14 @@ const CreateIMChannel: React.FC<CreateIMChannelProps> = ({
     const pName = platform
       ? IM_PLATFORM_LABEL_MAP[platform as IMPlatformEnum]
       : '';
-    const prefix = mode === CreateUpdateModeEnum.Update ? dict('NuwaxPC.Pages.IMChannel.CreateIMChannel.edit') : dict('NuwaxPC.Pages.IMChannel.CreateIMChannel.add');
-    const suffix = robotType === IMChannelTypeEnum.App ? dict('NuwaxPC.Pages.IMChannel.CreateIMChannel.app') : dict('NuwaxPC.Pages.IMChannel.CreateIMChannel.bot');
+    const prefix =
+      mode === CreateUpdateModeEnum.Update
+        ? dict('PC.Pages.IMChannel.CreateIMChannel.edit')
+        : dict('PC.Pages.IMChannel.CreateIMChannel.add');
+    const suffix =
+      robotType === IMChannelTypeEnum.App
+        ? dict('PC.Pages.IMChannel.CreateIMChannel.app')
+        : dict('PC.Pages.IMChannel.CreateIMChannel.bot');
     return `${prefix}${pName}${suffix}`;
   };
 
@@ -201,7 +211,7 @@ const CreateIMChannel: React.FC<CreateIMChannelProps> = ({
                 loading={testing}
                 onClick={handleTestConnection}
               >
-                {dict('NuwaxPC.Pages.IMChannel.CreateIMChannel.testConnectivity')}
+                {dict('PC.Pages.IMChannel.CreateIMChannel.testConnectivity')}
               </Button>
             ),
             defaultDoms[1],
@@ -216,8 +226,8 @@ const CreateIMChannel: React.FC<CreateIMChannelProps> = ({
       <SelectTargetFormItem
         form={form}
         name="target"
-        label={dict('NuwaxPC.Pages.IMChannel.CreateIMChannel.agent')}
-        tooltip={dict('NuwaxPC.Pages.IMChannel.CreateIMChannel.agentTooltip')}
+        label={dict('PC.Pages.IMChannel.CreateIMChannel.agent')}
+        tooltip={dict('PC.Pages.IMChannel.CreateIMChannel.agentTooltip')}
         hideTop={[
           AgentComponentTypeEnum.Knowledge,
           AgentComponentTypeEnum.Table,
@@ -229,15 +239,24 @@ const CreateIMChannel: React.FC<CreateIMChannelProps> = ({
 
       <ProFormRadio.Group
         name="outputMode"
-        label={dict('NuwaxPC.Pages.IMChannel.CreateIMChannel.outputMode')}
-        tooltip={dict('NuwaxPC.Pages.IMChannel.CreateIMChannel.outputModeTooltip')}
+        label={dict('PC.Pages.IMChannel.CreateIMChannel.outputMode')}
+        tooltip={dict('PC.Pages.IMChannel.CreateIMChannel.outputModeTooltip')}
         options={[
-          { label: dict('NuwaxPC.Pages.IMChannel.CreateIMChannel.streamOutput'), value: 'stream' },
-          { label: dict('NuwaxPC.Pages.IMChannel.CreateIMChannel.onceOutput'), value: 'once' },
+          {
+            label: dict('PC.Pages.IMChannel.CreateIMChannel.streamOutput'),
+            value: 'stream',
+          },
+          {
+            label: dict('PC.Pages.IMChannel.CreateIMChannel.onceOutput'),
+            value: 'once',
+          },
         ]}
         disabled={platform === IMPlatformEnum.Wework || isWechat}
       />
-      <ProFormSwitch name="enabled" label={dict('NuwaxPC.Pages.IMChannel.CreateIMChannel.enabledStatus')} />
+      <ProFormSwitch
+        name="enabled"
+        label={dict('PC.Pages.IMChannel.CreateIMChannel.enabledStatus')}
+      />
     </XModalForm>
   );
 };

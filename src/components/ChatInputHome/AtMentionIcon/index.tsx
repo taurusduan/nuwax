@@ -196,7 +196,7 @@ const AtMentionIcon: React.FC<AtMentionIconProps> = ({
     () =>
       hasUsedMentionIcon
         ? ''
-        : t('NuwaxPC.Components.ChatInputHomeAtMentionIcon.tryMentionSkill'),
+        : t('PC.Components.ChatInputHomeAtMentionIcon.tryMentionSkill'),
     [hasUsedMentionIcon],
   );
 

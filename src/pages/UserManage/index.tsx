@@ -86,7 +86,7 @@ const UserManage: React.FC = () => {
   const handleEnable = useCallback(async (record: SystemUserListInfo) => {
     const res = await apiEnableSystemUser({ id: record.id });
     if (res.code === SUCCESS_CODE) {
-      message.success(dict('NuwaxPC.Pages.UserManage.Index.enableSuccess'));
+      message.success(dict('PC.Pages.UserManage.Index.enableSuccess'));
       actionRef.current?.reload();
     }
   }, []);
@@ -94,7 +94,7 @@ const UserManage: React.FC = () => {
   const handleDisable = useCallback(async (record: SystemUserListInfo) => {
     const res = await apiDisableSystemUser({ id: record.id });
     if (res.code === SUCCESS_CODE) {
-      message.success(dict('NuwaxPC.Pages.UserManage.Index.disableSuccess'));
+      message.success(dict('PC.Pages.UserManage.Index.disableSuccess'));
       actionRef.current?.reload();
     }
   }, []);
@@ -130,7 +130,7 @@ const UserManage: React.FC = () => {
       return [
         {
           key: 'edit',
-          label: dict('NuwaxPC.Pages.UserManage.Index.edit'),
+          label: dict('PC.Pages.UserManage.Index.edit'),
           disabled: !hasPermissionByMenuCode(
             'user_manage',
             'user_manage_modify',
@@ -139,7 +139,7 @@ const UserManage: React.FC = () => {
         },
         {
           key: 'disable',
-          label: dict('NuwaxPC.Pages.UserManage.Index.disable'),
+          label: dict('PC.Pages.UserManage.Index.disable'),
           isShow: record.status === UserStatusEnum.Enabled,
           disabled: !hasPermissionByMenuCode(
             'user_manage',
@@ -149,7 +149,7 @@ const UserManage: React.FC = () => {
         },
         {
           key: 'enable',
-          label: dict('NuwaxPC.Pages.UserManage.Index.enable'),
+          label: dict('PC.Pages.UserManage.Index.enable'),
           isShow: record.status !== UserStatusEnum.Enabled,
           disabled: !hasPermissionByMenuCode(
             'user_manage',
@@ -159,7 +159,7 @@ const UserManage: React.FC = () => {
         },
         {
           key: 'auth',
-          label: dict('NuwaxPC.Pages.UserManage.Index.auth'),
+          label: dict('PC.Pages.UserManage.Index.auth'),
           disabled:
             !hasPermissionByMenuCode('user_manage', 'user_manage_bind_role') &&
             !hasPermissionByMenuCode('user_manage', 'user_manage_bind_group'),
@@ -167,9 +167,7 @@ const UserManage: React.FC = () => {
         },
         {
           key: 'viewMenu',
-          label: dict(
-            'NuwaxPC.Pages.UserManage.Index.viewMenuResourcePermission',
-          ),
+          label: dict('PC.Pages.UserManage.Index.viewMenuResourcePermission'),
           disabled: !hasPermissionByMenuCode(
             'user_manage',
             'user_manage_query_menu_permission',
@@ -178,7 +176,7 @@ const UserManage: React.FC = () => {
         },
         {
           key: 'dataPermission',
-          label: dict('NuwaxPC.Pages.UserManage.Index.viewDataPermission'),
+          label: dict('PC.Pages.UserManage.Index.viewDataPermission'),
           disabled: !hasPermissionByMenuCode(
             'user_manage',
             'user_manage_query_data_permission',
@@ -200,47 +198,47 @@ const UserManage: React.FC = () => {
 
   const columns: ProColumns<SystemUserListInfo>[] = [
     {
-      title: dict('NuwaxPC.Pages.UserManage.Index.userName'),
+      title: dict('PC.Pages.UserManage.Index.userName'),
       dataIndex: 'userName',
       width: 160,
       fieldProps: {
-        placeholder: dict('NuwaxPC.Pages.UserManage.Index.userFullName'),
+        placeholder: dict('PC.Pages.UserManage.Index.userFullName'),
       },
     },
     {
-      title: dict('NuwaxPC.Pages.UserManage.Index.nickName'),
+      title: dict('PC.Pages.UserManage.Index.nickName'),
       dataIndex: 'nickName',
       width: 100,
       hideInSearch: true,
     },
     {
-      title: dict('NuwaxPC.Pages.UserManage.Index.phoneNumber'),
+      title: dict('PC.Pages.UserManage.Index.phoneNumber'),
       dataIndex: 'phone',
       width: 140,
       hideInSearch: true,
     },
     {
-      title: dict('NuwaxPC.Pages.UserManage.Index.email'),
+      title: dict('PC.Pages.UserManage.Index.email'),
       dataIndex: 'email',
       width: 200,
       hideInSearch: true,
     },
     {
-      title: dict('NuwaxPC.Pages.UserManage.Index.type'),
+      title: dict('PC.Pages.UserManage.Index.type'),
       dataIndex: 'role',
       width: 100,
       valueType: 'select',
       valueEnum: {
         [UserRoleEnum.Admin]: {
-          text: dict('NuwaxPC.Pages.UserManage.Index.admin'),
+          text: dict('PC.Pages.UserManage.Index.admin'),
         },
         [UserRoleEnum.User]: {
-          text: dict('NuwaxPC.Pages.UserManage.Index.member'),
+          text: dict('PC.Pages.UserManage.Index.member'),
         },
       },
     },
     {
-      title: dict('NuwaxPC.Pages.UserManage.Index.status'),
+      title: dict('PC.Pages.UserManage.Index.status'),
       dataIndex: 'status',
       width: 90,
       hideInSearch: true,
@@ -255,21 +253,21 @@ const UserManage: React.FC = () => {
               )}
             ></span>
             {isEnabled
-              ? dict('NuwaxPC.Pages.UserManage.Index.normal')
-              : dict('NuwaxPC.Pages.UserManage.Index.disabled')}
+              ? dict('PC.Pages.UserManage.Index.normal')
+              : dict('PC.Pages.UserManage.Index.disabled')}
           </span>
         );
       },
     },
     {
-      title: dict('NuwaxPC.Pages.UserManage.Index.joinTime'),
+      title: dict('PC.Pages.UserManage.Index.joinTime'),
       dataIndex: 'created',
       width: 180,
       hideInSearch: true,
       valueType: 'dateTime',
     },
     {
-      title: dict('NuwaxPC.Pages.UserManage.Index.action'),
+      title: dict('PC.Pages.UserManage.Index.action'),
       valueType: 'option',
       fixed: 'right',
       align: 'center',
@@ -307,7 +305,7 @@ const UserManage: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={dict('NuwaxPC.Pages.UserManage.Index.userManage')}
+      title={dict('PC.Pages.UserManage.Index.userManage')}
       hideScroll
       rightSlot={[
         hasPermissionByMenuCode('user_manage', 'user_manage_add') && (
@@ -317,7 +315,7 @@ const UserManage: React.FC = () => {
             icon={<PlusOutlined />}
             onClick={handleAddUser}
           >
-            {dict('NuwaxPC.Pages.UserManage.Index.addUser')}
+            {dict('PC.Pages.UserManage.Index.addUser')}
           </Button>
         ),
         hasPermissionByMenuCode('user_manage', 'user_manage_send_message') && (
@@ -326,7 +324,7 @@ const UserManage: React.FC = () => {
             type="primary"
             onClick={() => setMessageSendOpen(true)}
           >
-            {dict('NuwaxPC.Pages.UserManage.Index.sendMessage')}
+            {dict('PC.Pages.UserManage.Index.sendMessage')}
           </Button>
         ),
       ]}

@@ -13,8 +13,7 @@ export const CHAT_CONSTANTS = {
     {
       id: '1',
       type: 'ai' as const,
-      content:
-        dict('NuwaxPC.Constants.AppDev.defaultAiMessage'),
+      content: dict('PC.Constants.AppDev.defaultAiMessage'),
       timestamp: new Date(),
     },
   ] as ChatMessage[],
@@ -114,10 +113,10 @@ export const FILE_CONSTANTS = {
 export const DEV_SERVER_CONSTANTS = {
   DEFAULT_PORT_RANGE: [3000, 4000] as [number, number],
   STATUS_MESSAGES: {
-    STARTING: dict('NuwaxPC.Constants.AppDev.statusStarting'),
-    RUNNING: dict('NuwaxPC.Constants.AppDev.statusRunning'),
-    STOPPED: dict('NuwaxPC.Constants.AppDev.statusStopped'),
-    ERROR: dict('NuwaxPC.Constants.AppDev.statusError'),
+    STARTING: dict('PC.Constants.AppDev.statusStarting'),
+    RUNNING: dict('PC.Constants.AppDev.statusRunning'),
+    STOPPED: dict('PC.Constants.AppDev.statusStopped'),
+    ERROR: dict('PC.Constants.AppDev.statusError'),
   },
   API_TIMEOUT: 10000, // 10秒
   SSE_HEARTBEAT_INTERVAL: 30000, // 30秒
@@ -132,9 +131,9 @@ export const UI_CONSTANTS = {
     UPLOAD_SINGLE_FILE: 500,
   },
   LOADING_MESSAGES: {
-    FILE_CONTENT: dict('NuwaxPC.Constants.AppDev.loadingFileContent'),
-    FILE_TREE: dict('NuwaxPC.Constants.AppDev.loadingFileTree'),
-    UPLOADING: dict('NuwaxPC.Constants.AppDev.uploadingFile'),
+    FILE_CONTENT: dict('PC.Constants.AppDev.loadingFileContent'),
+    FILE_TREE: dict('PC.Constants.AppDev.loadingFileTree'),
+    UPLOADING: dict('PC.Constants.AppDev.uploadingFile'),
   },
   ANIMATION_DURATION: 300,
   DEBOUNCE_DELAY: 300,
@@ -176,8 +175,8 @@ export const KEYBOARD_SHORTCUTS = {
 export const VERSION_CONSTANTS = {
   AVAILABLE_VERSIONS: ['v1', 'v2', 'v3', 'v4', 'v5'],
   DEFAULT_VERSION: 'v4',
-  READ_ONLY_MESSAGE: dict('NuwaxPC.Constants.AppDev.readOnlyMessage'),
-  PREVIEW_DISABLED_MESSAGE: dict('NuwaxPC.Constants.AppDev.previewDisabledMessage'),
+  READ_ONLY_MESSAGE: dict('PC.Constants.AppDev.readOnlyMessage'),
+  PREVIEW_DISABLED_MESSAGE: dict('PC.Constants.AppDev.previewDisabledMessage'),
 } as const;
 
 /**
@@ -192,23 +191,23 @@ export const UPLOAD_CONSTANTS = {
  * 错误消息常量
  */
 export const ERROR_MESSAGES = {
-  NO_PROJECT_ID: dict('NuwaxPC.Constants.AppDev.errNoProjectId'),
-  EMPTY_FILE_PATH: dict('NuwaxPC.Constants.AppDev.errEmptyFilePath'),
-  NO_FILE_SELECTED: dict('NuwaxPC.Constants.AppDev.errNoFileSelected'),
-  UPLOAD_FAILED: dict('NuwaxPC.Constants.AppDev.errUploadFailed'),
-  LOAD_FILE_FAILED: dict('NuwaxPC.Constants.AppDev.errLoadFileFailed'),
-  SAVE_FILE_FAILED: dict('NuwaxPC.Constants.AppDev.errSaveFileFailed'),
-  DEV_SERVER_START_FAILED: dict('NuwaxPC.Constants.AppDev.errDevServerStartFailed'),
-  CHAT_SEND_FAILED: dict('NuwaxPC.Constants.AppDev.errChatSendFailed'),
+  NO_PROJECT_ID: dict('PC.Constants.AppDev.errNoProjectId'),
+  EMPTY_FILE_PATH: dict('PC.Constants.AppDev.errEmptyFilePath'),
+  NO_FILE_SELECTED: dict('PC.Constants.AppDev.errNoFileSelected'),
+  UPLOAD_FAILED: dict('PC.Constants.AppDev.errUploadFailed'),
+  LOAD_FILE_FAILED: dict('PC.Constants.AppDev.errLoadFileFailed'),
+  SAVE_FILE_FAILED: dict('PC.Constants.AppDev.errSaveFileFailed'),
+  DEV_SERVER_START_FAILED: dict('PC.Constants.AppDev.errDevServerStartFailed'),
+  CHAT_SEND_FAILED: dict('PC.Constants.AppDev.errChatSendFailed'),
 } as const;
 
 /**
  * 成功消息常量
  */
 export const SUCCESS_MESSAGES = {
-  FILE_SAVED: dict('NuwaxPC.Constants.AppDev.successFileSaved'),
-  FILE_UPLOADED: dict('NuwaxPC.Constants.AppDev.successFileUploaded'),
-  PROJECT_UPLOADED: dict('NuwaxPC.Constants.AppDev.successProjectUploaded'),
-  DEV_SERVER_STARTED: dict('NuwaxPC.Constants.AppDev.successDevServerStarted'),
-  CHAT_CANCELLED: dict('NuwaxPC.Constants.AppDev.successChatCancelled'),
+  FILE_SAVED: dict('PC.Constants.AppDev.successFileSaved'),
+  FILE_UPLOADED: dict('PC.Constants.AppDev.successFileUploaded'),
+  PROJECT_UPLOADED: dict('PC.Constants.AppDev.successProjectUploaded'),
+  DEV_SERVER_STARTED: dict('PC.Constants.AppDev.successDevServerStarted'),
+  CHAT_CANCELLED: dict('PC.Constants.AppDev.successChatCancelled'),
 } as const;

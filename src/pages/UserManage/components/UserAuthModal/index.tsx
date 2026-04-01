@@ -230,7 +230,7 @@ const UserAuthModal: React.FC<UserAuthModalProps> = ({
       ? [
           {
             key: 'role',
-            label: dict('NuwaxPC.Pages.UserManage.UserAuthModal.role'),
+            label: dict('PC.Pages.UserManage.UserAuthModal.role'),
             children: (
               <div className={cx(styles.tabContent)}>
                 {roleList && roleList.length > 0 ? (
@@ -253,7 +253,7 @@ const UserAuthModal: React.FC<UserAuthModalProps> = ({
                   </Checkbox.Group>
                 ) : (
                   <div className={cx('py-16')}>
-                    <Empty description={dict('NuwaxPC.Common.Global.noData')} />
+                    <Empty description={dict('PC.Common.Global.noData')} />
                   </div>
                 )}
               </div>
@@ -263,7 +263,7 @@ const UserAuthModal: React.FC<UserAuthModalProps> = ({
       : []),
     {
       key: 'group',
-      label: dict('NuwaxPC.Pages.UserManage.UserAuthModal.userGroup'),
+      label: dict('PC.Pages.UserManage.UserAuthModal.userGroup'),
       children: (
         <div className={cx(styles.tabContent)}>
           {groupList && groupList.length > 0 ? (
@@ -282,7 +282,7 @@ const UserAuthModal: React.FC<UserAuthModalProps> = ({
             </Checkbox.Group>
           ) : (
             <div className={cx('py-16')}>
-              <Empty description={dict('NuwaxPC.Common.Global.noData')} />
+              <Empty description={dict('PC.Common.Global.noData')} />
             </div>
           )}
         </div>
@@ -293,7 +293,7 @@ const UserAuthModal: React.FC<UserAuthModalProps> = ({
   return (
     <CustomFormModal
       form={dummyForm}
-      title={dict('NuwaxPC.Pages.UserManage.UserAuthModal.authTitle', userName)}
+      title={dict('PC.Pages.UserManage.UserAuthModal.authTitle', userName)}
       open={open}
       loading={loading}
       onCancel={onCancel}
@@ -325,8 +325,8 @@ const UserAuthModal: React.FC<UserAuthModalProps> = ({
             onClick={selectAllConfig.onSelectAll}
           >
             {selectAllConfig.isAllSelected
-              ? dict('NuwaxPC.Pages.UserManage.UserAuthModal.deselectAll')
-              : dict('NuwaxPC.Pages.UserManage.UserAuthModal.selectAll')}
+              ? dict('PC.Pages.UserManage.UserAuthModal.deselectAll')
+              : dict('PC.Pages.UserManage.UserAuthModal.selectAll')}
           </Button>
         )}
       </div>

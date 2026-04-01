@@ -57,7 +57,7 @@ const ThemeColorPanel: React.FC<ThemeColorPanelProps> = ({
           )
           .map((color) => ({
             color,
-            name: t('NuwaxPC.Components.ThemeConfigThemeColorPanel.customName'),
+            name: t('PC.Components.ThemeConfigThemeColorPanel.customName'),
             isCustom: true,
           }))),
   ];
@@ -74,7 +74,7 @@ const ThemeColorPanel: React.FC<ThemeColorPanelProps> = ({
   return (
     <div className={cx(styles.themeColorPanel)}>
       <h3 className={cx(styles.panelTitle)}>
-        {t('NuwaxPC.Components.ThemeConfigThemeColorPanel.panelTitle')}
+        {t('PC.Components.ThemeConfigThemeColorPanel.panelTitle')}
       </h3>
 
       {/* 预设颜色选择 */}
@@ -149,7 +149,7 @@ const ThemeColorPanel: React.FC<ThemeColorPanelProps> = ({
                   opacity: currentColor === customColor ? 1 : 0,
                 }}
               >
-                {t('NuwaxPC.Components.ThemeConfigThemeColorPanel.customName')}
+                {t('PC.Components.ThemeConfigThemeColorPanel.customName')}
               </span>
             </div>
           )}

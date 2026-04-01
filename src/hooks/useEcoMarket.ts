@@ -7,11 +7,11 @@ const useEcoMarket = () => {
   // 我的分享 ~ 删除操作
   const onDeleteShare = (uid: string, name: string, onSuccess: () => void) => {
     modalConfirm(
-      dict('NuwaxPC.Hooks.UseEcoMarket.confirmDelete'),
+      dict('PC.Hooks.UseEcoMarket.confirmDelete'),
       name || '',
       async () => {
         await apiEcoMarketClientConfigDelete(uid);
-        message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
+        message.success(dict('PC.Toast.Global.deletedSuccessfully'));
         onSuccess();
         return new Promise((resolve) => {
           setTimeout(resolve, 300);

@@ -81,7 +81,7 @@ const MCPTools: React.FC<MCPToolsProps> = ({
               </div>
               <div className={cx(styles['mcp-tools-item-description-style'])}>
                 {tool.description ||
-                  t('NuwaxPC.Components.CreatedMcpTools.noDescription')}
+                  t('PC.Components.CreatedMcpTools.noDescription')}
               </div>
             </div>
             <div
@@ -99,8 +99,8 @@ const MCPTools: React.FC<MCPToolsProps> = ({
                 loading={isCurrentLoading}
               >
                 {isAddedState
-                  ? t('NuwaxPC.Components.CreatedMcpTools.added')
-                  : t('NuwaxPC.Components.CreatedMcpTools.add')}
+                  ? t('PC.Components.CreatedMcpTools.added')
+                  : t('PC.Components.CreatedMcpTools.add')}
               </Button>
             </div>
           </div>

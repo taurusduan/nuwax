@@ -1,6 +1,5 @@
 import AgentChatEmpty from '@/components/AgentChatEmpty';
 import AliyunCaptcha from '@/components/AliyunCaptcha';
-import { dict } from '@/services/i18nRuntime';
 import ChatInputHome from '@/components/ChatInputHome';
 import ChatView from '@/components/ChatView';
 import ConditionRender from '@/components/ConditionRender';
@@ -17,6 +16,7 @@ import { useConversationScrollDetection } from '@/hooks/useConversationScrollDet
 import useMessageEventDelegate from '@/hooks/useMessageEventDelegate';
 import { getCustomBlock } from '@/plugins/ds-markdown-process';
 import { apiTempChatConversationStop } from '@/services/agentConfig';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiTempChatConversationCreate,
   apiTempChatConversationQuery,
@@ -237,7 +237,11 @@ const ChatTemp: React.FC = () => {
         setConversationInfo(data);
         setIsLoaded(true);
         // 设置标题和图标
-        document.title = dict('NuwaxPC.Pages.ChatTemp.startConversationWithName', data?.agent?.name) || '';
+        document.title =
+          dict(
+            'PC.Pages.ChatTemp.startConversationWithName',
+            data?.agent?.name,
+          ) || '';
         if (data?.agent?.icon) {
           // 创建一个新的link元素
           const link = document.createElement('link');
@@ -489,7 +493,7 @@ const ChatTemp: React.FC = () => {
         handleScrollBottom();
       },
       onError: () => {
-        message.error(dict('NuwaxPC.Pages.ChatTemp.networkTimeout'));
+        message.error(dict('PC.Pages.ChatTemp.networkTimeout'));
         // 将当前会话的loading状态的消息改为Error状态
         const list =
           messageListRef.current?.map((info: MessageInfo) => {
@@ -770,7 +774,7 @@ const ChatTemp: React.FC = () => {
     // 变量参数为空，不发送消息
     if (wholeDisabled) {
       form.validateFields(); // 触发表单验证以显示error
-      message.warning(dict('NuwaxPC.Pages.ChatTemp.fillRequiredParams'));
+      message.warning(dict('PC.Pages.ChatTemp.fillRequiredParams'));
       return;
     }
     isSendMessageRef.current = true;
@@ -818,8 +822,11 @@ const ChatTemp: React.FC = () => {
                 )}
               >
                 {conversationInfo?.agent?.name
-                  ? dict('NuwaxPC.Pages.ChatTemp.startConversationWithName', conversationInfo?.agent?.name)
-                  : dict('NuwaxPC.Pages.ChatTemp.startConversation')}
+                  ? dict(
+                      'PC.Pages.ChatTemp.startConversationWithName',
+                      conversationInfo?.agent?.name,
+                    )
+                  : dict('PC.Pages.ChatTemp.startConversation')}
               </h3>
             </div>
           </ConditionRender>
@@ -917,7 +924,7 @@ const ChatTemp: React.FC = () => {
               loadingStopTempConversation={loadingStopTempConversation}
               // 禁用 @ 提及功能
               enableMention={false}
-              placeholder={dict('NuwaxPC.Pages.ChatTemp.inputPlaceholder')}
+              placeholder={dict('PC.Pages.ChatTemp.inputPlaceholder')}
             />
             {/*手机会话输入框*/}
             <ChatInputPhone
@@ -937,7 +944,12 @@ const ChatTemp: React.FC = () => {
                 'clip-path-animation',
               )}
               onClick={handleSiteLink}
-            >{dict('NuwaxPC.Pages.ChatTemp.welcomeText', tenantConfigInfo?.siteName)}</p>
+            >
+              {dict(
+                'PC.Pages.ChatTemp.welcomeText',
+                tenantConfigInfo?.siteName,
+              )}
+            </p>
           </div>
           <button
             id={buttonId}

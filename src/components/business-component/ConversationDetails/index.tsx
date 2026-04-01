@@ -180,7 +180,7 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
     ) {
       // 自动触发预览
       showPagePreview({
-        name: t('NuwaxPC.Components.ConversationDetails.pagePreviewName'),
+        name: t('PC.Components.ConversationDetails.pagePreviewName'),
         uri: process.env.BASE_URL + agentDetail?.pageHomeIndex,
         params: {},
         executeId: '',
@@ -293,7 +293,7 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
     if (wholeDisabled) {
       form.validateFields(); // 触发表单验证以显示error
       message.warning(
-        t('NuwaxPC.Components.ConversationDetails.requiredParamsWarning'),
+        t('PC.Components.ConversationDetails.requiredParamsWarning'),
       );
       return;
     }
@@ -390,7 +390,7 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
             >
               {cachedAgentName
                 ? t(
-                    'NuwaxPC.Components.ConversationDetails.startConversationWithAgent',
+                    'PC.Components.ConversationDetails.startConversationWithAgent',
                     cachedAgentName,
                   )
                 : ''}
@@ -404,7 +404,7 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
               >
                 <TooltipIcon
                   title={t(
-                    'NuwaxPC.Components.ConversationDetails.expandNavigation',
+                    'PC.Components.ConversationDetails.expandNavigation',
                   )}
                   className={cx(styles['icon-box'])}
                   icon={
@@ -421,7 +421,7 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
               {!isAppSidebarMode && !isSidebarVisible && !isMobile && (
                 <TooltipIcon
                   title={t(
-                    'NuwaxPC.Components.ConversationDetails.viewAgentDetails',
+                    'PC.Components.ConversationDetails.viewAgentDetails',
                   )}
                   className={cx(styles['icon-box'])}
                   icon={
@@ -445,7 +445,7 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
                 !pagePreviewData && (
                   <TooltipIcon
                     title={t(
-                      'NuwaxPC.Components.ConversationDetails.openPreviewPage',
+                      'PC.Components.ConversationDetails.openPreviewPage',
                     )}
                     className={cx(styles['icon-box'])}
                     icon={
@@ -535,7 +535,7 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
               agentSandboxId={agentDetail?.sandboxId}
               hasPermission={agentDetail?.hasPermission}
               maskText={t(
-                'NuwaxPC.Components.ConversationDetails.noAgentPermission',
+                'PC.Components.ConversationDetails.noAgentPermission',
               )}
               fixedSelection={!!agentDetail?.sandboxId}
               isPersonalComputer={!!agentDetail?.sandboxId}
@@ -620,7 +620,7 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
                     allowCopy={agentDetail?.allowCopy === AllowCopyEnum.Yes}
                     onCopyClick={() => setOpenPageCopyModal(true)}
                     copyButtonText={t(
-                      'NuwaxPC.Components.PagePreviewIframe.copyTemplate',
+                      'PC.Components.PagePreviewIframe.copyTemplate',
                     )}
                     copyButtonClassName={styles['copy-btn']}
                   />

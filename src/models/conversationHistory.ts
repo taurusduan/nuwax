@@ -3,10 +3,10 @@ import {
   apiAgentConversationList,
 } from '@/services/agentConfig';
 import { apiUserUsedAgentList } from '@/services/agentDev';
+import { dict } from '@/services/i18nRuntime';
 import type { AgentInfo } from '@/types/interfaces/agent';
 import type { ConversationInfo } from '@/types/interfaces/conversationInfo';
 import { message } from 'antd';
-import { dict } from '@/services/i18nRuntime';
 import { useState } from 'react';
 import { useRequest } from 'umi';
 
@@ -68,7 +68,7 @@ export default () => {
       setConversationListItem?.((list) =>
         list?.filter((item) => item.id !== conversationId),
       );
-      message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
+      message.success(dict('PC.Toast.Global.deletedSuccessfully'));
     },
   });
 

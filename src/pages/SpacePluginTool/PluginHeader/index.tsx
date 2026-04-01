@@ -79,19 +79,24 @@ const PluginHeader: React.FC<PluginHeaderProps> = ({
 
           <div className={cx(styles['bottom-box'], 'flex', 'items-center')}>
             <span className={cx(styles.box)}>
-              {pluginInfo?.type === PluginTypeEnum.HTTP ? 'http' : dict('NuwaxPC.Pages.SpacePluginTool.PluginHeader.code')}
+              {pluginInfo?.type === PluginTypeEnum.HTTP
+                ? 'http'
+                : dict('PC.Pages.SpacePluginTool.PluginHeader.code')}
             </span>
             <span className={cx(styles.box)}>
               {pluginInfo?.publishStatus === PublishStatusEnum.Published
-                ? dict('NuwaxPC.Pages.SpacePluginTool.PluginHeader.published')
-                : dict('NuwaxPC.Pages.SpacePluginTool.PluginHeader.unpublished')}
+                ? dict('PC.Pages.SpacePluginTool.PluginHeader.published')
+                : dict('PC.Pages.SpacePluginTool.PluginHeader.unpublished')}
             </span>
           </div>
         </div>
       </section>
       <div className={cx(styles['bottom-box'], 'flex', 'items-center')}>
         <span className={cx(styles['update-time'])}>
-          {dict('NuwaxPC.Pages.SpacePluginTool.PluginHeader.configSavedAt', dayjs(pluginInfo?.modified).format('HH:mm'))}
+          {dict(
+            'PC.Pages.SpacePluginTool.PluginHeader.configSavedAt',
+            dayjs(pluginInfo?.modified).format('HH:mm'),
+          )}
         </span>
 
         <span>
@@ -99,7 +104,9 @@ const PluginHeader: React.FC<PluginHeaderProps> = ({
           {pluginInfo?.publishDate !== null &&
             dayjs(pluginInfo?.publishDate).isBefore(pluginInfo?.modified) && (
               <Tag bordered={false} color="volcano" style={{ marginRight: 0 }}>
-                {dict('NuwaxPC.Pages.SpacePluginTool.PluginHeader.updateUnpublished')}
+                {dict(
+                  'PC.Pages.SpacePluginTool.PluginHeader.updateUnpublished',
+                )}
               </Tag>
             )}
         </span>
@@ -109,7 +116,7 @@ const PluginHeader: React.FC<PluginHeaderProps> = ({
         onClick={onToggleHistory}
       />
       <Button className={cx(styles['try-btn'])} type="primary" onClick={onSave}>
-        {dict('NuwaxPC.Common.Global.save')}
+        {dict('PC.Common.Global.save')}
       </Button>
       <Button
         className={cx(styles['try-btn'])}
@@ -117,10 +124,10 @@ const PluginHeader: React.FC<PluginHeaderProps> = ({
         icon={<CaretRightOutlined />}
         onClick={onTryRun}
       >
-        {dict('NuwaxPC.Pages.SpacePluginTool.PluginHeader.tryRun')}
+        {dict('PC.Pages.SpacePluginTool.PluginHeader.tryRun')}
       </Button>
       <Button type="primary" onClick={onPublish} disabled={disabledBtn}>
-        {dict('NuwaxPC.Pages.SpacePluginTool.PluginHeader.publish')}
+        {dict('PC.Pages.SpacePluginTool.PluginHeader.publish')}
       </Button>
     </header>
   );

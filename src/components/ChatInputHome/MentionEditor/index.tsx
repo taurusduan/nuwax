@@ -432,11 +432,11 @@ const MentionEditor = React.forwardRef<MentionEditorHandle, MentionEditorProps>(
       // 如果启用 @ 提及功能，则显示默认占位符文本
       if (enableMention) {
         return t(
-          'NuwaxPC.Components.ChatInputHomeMentionEditor.placeholderWithMention',
+          'PC.Components.ChatInputHomeMentionEditor.placeholderWithMention',
         );
       }
       return t(
-        'NuwaxPC.Components.ChatInputHomeMentionEditor.placeholderWithoutMention',
+        'PC.Components.ChatInputHomeMentionEditor.placeholderWithoutMention',
       );
     }, [enableMention, defaultPlaceholder]);
 

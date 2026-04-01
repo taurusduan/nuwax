@@ -5,6 +5,7 @@ import UploadAvatar from '@/components/UploadAvatar';
 // import { ICON_CONFIRM_STAR } from '@/constants/images.constants';
 // import { CREATE_AGENT_LIST } from '@/constants/space.constants';
 import { apiAgentAdd, apiAgentConfigUpdate } from '@/services/agentConfig';
+import { dict } from '@/services/i18nRuntime';
 import { CreateUpdateModeEnum } from '@/types/enums/common';
 import { AgentTypeEnum } from '@/types/enums/space';
 import type {
@@ -13,7 +14,6 @@ import type {
 } from '@/types/interfaces/agent';
 import type { CreateAgentProps } from '@/types/interfaces/common';
 import { customizeRequiredMark } from '@/utils/form';
-import { dict } from '@/services/i18nRuntime';
 import { Form, FormProps, Input, message } from 'antd';
 // import classNames from 'classnames';
 import React, { useCallback, useEffect, useState } from 'react';
@@ -49,7 +49,7 @@ const CreateAgent: React.FC<CreateAgentProps> = ({
     onSuccess: (result: number) => {
       setImageUrl('');
       onConfirmCreate?.(result);
-      message.success(dict('NuwaxPC.Components.CreateAgent.createSuccess'));
+      message.success(dict('PC.Components.CreateAgent.createSuccess'));
       setLoading(false);
     },
     onError: () => {
@@ -62,7 +62,7 @@ const CreateAgent: React.FC<CreateAgentProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: AgentConfigUpdateParams[]) => {
-      message.success(dict('NuwaxPC.Components.CreateAgent.editSuccess'));
+      message.success(dict('PC.Components.CreateAgent.editSuccess'));
       setLoading(false);
       const info: AgentConfigUpdateParams = params[0];
       onConfirmUpdate?.(info);
@@ -123,19 +123,21 @@ const CreateAgent: React.FC<CreateAgentProps> = ({
         AgentTypeEnum.ChatBot | AgentTypeEnum.TaskAgent,
         string
       > = {
-        [AgentTypeEnum.ChatBot]: dict('NuwaxPC.Components.CreateAgent.typeChatBot'),
-        [AgentTypeEnum.TaskAgent]: dict('NuwaxPC.Components.CreateAgent.typeTaskAgent'),
+        [AgentTypeEnum.ChatBot]: dict('PC.Components.CreateAgent.typeChatBot'),
+        [AgentTypeEnum.TaskAgent]: dict(
+          'PC.Components.CreateAgent.typeTaskAgent',
+        ),
       };
 
       const typeName =
         typeMap[type as AgentTypeEnum.ChatBot | AgentTypeEnum.TaskAgent];
       return mode === CreateUpdateModeEnum.Create
-        ? dict('NuwaxPC.Components.CreateAgent.createTypeTitle', typeName)
-        : dict('NuwaxPC.Components.CreateAgent.updateTypeTitle', typeName);
+        ? dict('PC.Components.CreateAgent.createTypeTitle', typeName)
+        : dict('PC.Components.CreateAgent.updateTypeTitle', typeName);
     }
     return mode === CreateUpdateModeEnum.Create
-      ? dict('NuwaxPC.Components.CreateAgent.createTitle')
-      : dict('NuwaxPC.Components.CreateAgent.updateTitle');
+      ? dict('PC.Components.CreateAgent.createTitle')
+      : dict('PC.Components.CreateAgent.updateTitle');
   }, [type, mode]);
 
   return (
@@ -175,37 +177,47 @@ const CreateAgent: React.FC<CreateAgentProps> = ({
         {/*  <>*/}
         <Form.Item
           name="name"
-          label={dict('NuwaxPC.Components.CreateAgent.nameLabel')}
+          label={dict('PC.Components.CreateAgent.nameLabel')}
           validateTrigger="onBlur"
           rules={[
-            { required: true, message: dict('NuwaxPC.Components.CreateAgent.nameRequired') },
+            {
+              required: true,
+              message: dict('PC.Components.CreateAgent.nameRequired'),
+            },
             {
               validator(_, value) {
                 if (!value || value?.length <= 50) {
                   return Promise.resolve();
                 }
                 if (value?.length > 50) {
-                  return Promise.reject(new Error(dict('NuwaxPC.Components.CreateAgent.nameMaxLength')));
+                  return Promise.reject(
+                    new Error(dict('PC.Components.CreateAgent.nameMaxLength')),
+                  );
                 }
-                return Promise.reject(new Error(dict('NuwaxPC.Components.CreateAgent.nameRequired')));
+                return Promise.reject(
+                  new Error(dict('PC.Components.CreateAgent.nameRequired')),
+                );
               },
             },
           ]}
         >
           <Input
-            placeholder={dict('NuwaxPC.Components.CreateAgent.namePlaceholder')}
+            placeholder={dict('PC.Components.CreateAgent.namePlaceholder')}
             showCount
             maxLength={50}
           />
         </Form.Item>
         <OverrideTextArea
           name="description"
-          label={dict('NuwaxPC.Components.CreateAgent.descriptionLabel')}
+          label={dict('PC.Components.CreateAgent.descriptionLabel')}
           initialValue={agentConfigInfo?.description}
-          placeholder={dict('NuwaxPC.Components.CreateAgent.descriptionPlaceholder')}
+          placeholder={dict('PC.Components.CreateAgent.descriptionPlaceholder')}
           maxLength={10000}
         />
-        <Form.Item name="icon" label={dict('NuwaxPC.Components.CreateAgent.iconLabel')}>
+        <Form.Item
+          name="icon"
+          label={dict('PC.Components.CreateAgent.iconLabel')}
+        >
           <UploadAvatar
             onUploadSuccess={setImageUrl}
             imageUrl={imageUrl}

@@ -1,6 +1,6 @@
 import CustomFormModal from '@/components/CustomFormModal';
-import { UploadOutlined } from '@ant-design/icons';
 import { dict } from '@/services/i18nRuntime';
+import { UploadOutlined } from '@ant-design/icons';
 import { Form, FormProps, message, Typography, Upload } from 'antd';
 import { useCallback, useEffect, useState } from 'react';
 
@@ -43,12 +43,18 @@ const ImportSkillProjectModal: React.FC<ImportSkillProjectModalProps> = ({
   const onFinish: FormProps['onFinish'] = async (values) => {
     const files = values.files;
     if (!files || files.length === 0) {
-      message.error(dict('NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.pleaseSelectFile'));
+      message.error(
+        dict(
+          'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.pleaseSelectFile',
+        ),
+      );
       return;
     }
     const file = files[0]?.originFileObj || files[0];
     if (!file) {
-      message.error(dict('NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileGetFailed'));
+      message.error(
+        dict('PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileGetFailed'),
+      );
       return;
     }
 
@@ -61,7 +67,11 @@ const ImportSkillProjectModal: React.FC<ImportSkillProjectModalProps> = ({
     const isSkillMd = lowerFileName === 'skill.md';
 
     if (!isZip && !isSkill && !isSkillMd) {
-      message.error(dict('NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileTypeUnsupported'));
+      message.error(
+        dict(
+          'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileTypeUnsupported',
+        ),
+      );
       return false;
     }
 
@@ -101,13 +111,21 @@ const ImportSkillProjectModal: React.FC<ImportSkillProjectModalProps> = ({
     const isSkillMd = lowerFileName === 'skill.md';
 
     if (!isZip && !isSkill && !isSkillMd) {
-      message.error(dict('NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileTypeUnsupported'));
+      message.error(
+        dict(
+          'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileTypeUnsupported',
+        ),
+      );
       return false;
     }
 
     // 校验文件大小，限制为20M
     if (file.size > SKILL_MAX_FILE_SIZE) {
-      message.error(dict('NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSizeExceeded'));
+      message.error(
+        dict(
+          'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSizeExceeded',
+        ),
+      );
       return false;
     }
 
@@ -127,10 +145,14 @@ const ImportSkillProjectModal: React.FC<ImportSkillProjectModalProps> = ({
   return (
     <CustomFormModal
       form={form}
-      title={dict('NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.importSkill')}
+      title={dict(
+        'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.importSkill',
+      )}
       open={open}
       loading={loading}
-      okText={dict('NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.confirmImport')}
+      okText={dict(
+        'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.confirmImport',
+      )}
       onCancel={onCancel}
       onConfirm={handlerSubmit}
     >
@@ -151,11 +173,21 @@ const ImportSkillProjectModal: React.FC<ImportSkillProjectModalProps> = ({
               <p className="ant-upload-drag-icon">
                 <UploadOutlined />
               </p>
-              <p className="ant-upload-text">{dict('NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.dragOrClickToSelect')}</p>
-              <p className="ant-upload-hint">
-                {dict('NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.uploadHint')}
+              <p className="ant-upload-text">
+                {dict(
+                  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.dragOrClickToSelect',
+                )}
               </p>
-              <p className="ant-upload-hint">{dict('NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSizeHint')}</p>
+              <p className="ant-upload-hint">
+                {dict(
+                  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.uploadHint',
+                )}
+              </p>
+              <p className="ant-upload-hint">
+                {dict(
+                  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSizeHint',
+                )}
+              </p>
             </Upload.Dragger>
           </Form.Item>
           <Form.Item name="file" noStyle>
@@ -168,12 +200,19 @@ const ImportSkillProjectModal: React.FC<ImportSkillProjectModalProps> = ({
                   borderRadius: 6,
                 }}
               >
-                <Text strong>{dict('NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.selectedFile')}</Text>
+                <Text strong>
+                  {dict(
+                    'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.selectedFile',
+                  )}
+                </Text>
                 <br />
                 <Text>{selectedFile.name}</Text>
                 <br />
                 <Text type="secondary">
-                  {dict('NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSize')}{(selectedFile.size / 1024 / 1024).toFixed(2)} MB
+                  {dict(
+                    'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSize',
+                  )}
+                  {(selectedFile.size / 1024 / 1024).toFixed(2)} MB
                 </Text>
               </div>
             )}

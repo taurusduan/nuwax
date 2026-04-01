@@ -249,7 +249,11 @@ const DynamicSecondMenu: React.FC<DynamicSecondMenuProps> = ({
     const resolvedPath = resolveDynamicPath(path);
 
     if (!resolvedPath) {
-      message.warning(dict('NuwaxPC.Layouts.DynamicMenusLayout.DynamicSecondMenu.pathResolveFailed'));
+      message.warning(
+        dict(
+          'PC.Layouts.DynamicMenusLayout.DynamicSecondMenu.pathResolveFailed',
+        ),
+      );
       return;
     }
 

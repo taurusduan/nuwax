@@ -97,7 +97,7 @@ export const useAppDevProjectInfo = (
           setProjectInfoState((prev) => ({
             ...prev,
             isLoading: false,
-            error: dict('NuwaxPC.Hooks.UseAppDevProjectInfo.noPermission'),
+            error: dict('PC.Hooks.UseAppDevProjectInfo.noPermission'),
             hasPermission: false,
           }));
         }
@@ -106,7 +106,7 @@ export const useAppDevProjectInfo = (
       const errorMessage =
         error?.message ||
         error?.toString() ||
-        dict('NuwaxPC.Hooks.UseAppDevProjectInfo.fetchProjectFailed');
+        dict('PC.Hooks.UseAppDevProjectInfo.fetchProjectFailed');
 
       setProjectInfoState((prev) => ({
         ...prev,
@@ -163,23 +163,23 @@ export const useAppDevProjectInfo = (
   const getActionText = useCallback((action: string): string => {
     switch (action) {
       case 'chat':
-        return dict('NuwaxPC.Hooks.UseAppDevProjectInfo.actionChat');
+        return dict('PC.Hooks.UseAppDevProjectInfo.actionChat');
       case 'submit_files_update':
-        return dict('NuwaxPC.Hooks.UseAppDevProjectInfo.actionFileUpdate');
+        return dict('PC.Hooks.UseAppDevProjectInfo.actionFileUpdate');
       case 'upload_single_file':
-        return dict('NuwaxPC.Hooks.UseAppDevProjectInfo.actionUploadSingleFile');
+        return dict('PC.Hooks.UseAppDevProjectInfo.actionUploadSingleFile');
       case 'create_project':
-        return dict('NuwaxPC.Hooks.UseAppDevProjectInfo.actionCreateProject');
+        return dict('PC.Hooks.UseAppDevProjectInfo.actionCreateProject');
       case 'build':
-        return dict('NuwaxPC.Hooks.UseAppDevProjectInfo.actionBuild');
+        return dict('PC.Hooks.UseAppDevProjectInfo.actionBuild');
       case 'deploy':
-        return dict('NuwaxPC.Hooks.UseAppDevProjectInfo.actionDeploy');
+        return dict('PC.Hooks.UseAppDevProjectInfo.actionDeploy');
       case 'upload':
-        return dict('NuwaxPC.Hooks.UseAppDevProjectInfo.actionUploadProject');
+        return dict('PC.Hooks.UseAppDevProjectInfo.actionUploadProject');
       case 'rollback_version':
-        return dict('NuwaxPC.Hooks.UseAppDevProjectInfo.actionVersionRollback');
+        return dict('PC.Hooks.UseAppDevProjectInfo.actionVersionRollback');
       default:
-        return dict('NuwaxPC.Hooks.UseAppDevProjectInfo.actionUnknown');
+        return dict('PC.Hooks.UseAppDevProjectInfo.actionUnknown');
     }
   }, []);
 

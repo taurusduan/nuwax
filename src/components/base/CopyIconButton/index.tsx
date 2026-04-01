@@ -39,7 +39,7 @@ const CopyIconButton: React.FC<CopyIconButtonProps> = ({
   buttonSize = 'small',
   showMessage = true,
   jsonSpace = 2,
-  tooltipTitle = dict('NuwaxPC.Components.CopyIconButton.copy'),
+  tooltipTitle = dict('PC.Components.CopyIconButton.copy'),
   style,
   className,
 }) => {

@@ -26,27 +26,27 @@ export const tailwindTextAlignMap: Record<string, string> = {
 export const TEXT_ALIGN_OPTIONS = [
   {
     type: 'reset',
-    label: t('NuwaxPC.Pages.AppDevDesignViewerTextAlign.reset'),
+    label: t('PC.Pages.AppDevDesignViewerTextAlign.reset'),
     icon: <ResetSvg />,
   },
   {
     type: 'left',
-    label: t('NuwaxPC.Pages.AppDevDesignViewerTextAlign.left'),
+    label: t('PC.Pages.AppDevDesignViewerTextAlign.left'),
     icon: <AlignLeftSvg />,
   },
   {
     type: 'center',
-    label: t('NuwaxPC.Pages.AppDevDesignViewerTextAlign.center'),
+    label: t('PC.Pages.AppDevDesignViewerTextAlign.center'),
     icon: <AlignCenterSvg />,
   },
   {
     type: 'right',
-    label: t('NuwaxPC.Pages.AppDevDesignViewerTextAlign.right'),
+    label: t('PC.Pages.AppDevDesignViewerTextAlign.right'),
     icon: <AlignRightSvg />,
   },
   {
     type: 'justify',
-    label: t('NuwaxPC.Pages.AppDevDesignViewerTextAlign.justify'),
+    label: t('PC.Pages.AppDevDesignViewerTextAlign.justify'),
     icon: <AlignJustifySvg />,
   },
 ];

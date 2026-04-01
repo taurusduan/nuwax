@@ -62,12 +62,12 @@ const DropdownChangeName: React.FC<Porps> = ({
 
   const items: MenuProps['items'] = [
     {
-      label: dict('NuwaxPC.Pages.Chat.rename'),
+      label: dict('PC.Pages.Chat.rename'),
       key: 'edit',
       icon: <EditOutlined />,
     },
     {
-      label: dict('NuwaxPC.Common.Global.delete'),
+      label: dict('PC.Common.Global.delete'),
       key: 'delete',
       icon: <DeleteOutlined />,
       danger: true,
@@ -88,7 +88,7 @@ const DropdownChangeName: React.FC<Porps> = ({
           topic: result.data.topic,
           topicUpdated: 1,
         });
-        message.success(dict('NuwaxPC.Toast.Global.modifiedSuccessfully'));
+        message.success(dict('PC.Toast.Global.modifiedSuccessfully'));
 
         // 更新所有智能体的历史记录
         runHistory({
@@ -110,7 +110,7 @@ const DropdownChangeName: React.FC<Porps> = ({
     debounceWait: 300,
     onSuccess: (result: RequestResponse<null>) => {
       if (result.success) {
-        message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
+        message.success(dict('PC.Toast.Global.deletedSuccessfully'));
         // 如果是会话聊天页（chat页），同步更新会话记录
         runHistory({
           agentId: null,
@@ -123,7 +123,9 @@ const DropdownChangeName: React.FC<Porps> = ({
   const config: ModalFuncProps = {
     title: (
       <Typography>
-        <Typography.Title level={5}>{dict('NuwaxPC.Pages.Chat.permanentlyDeleteConversation')}</Typography.Title>
+        <Typography.Title level={5}>
+          {dict('PC.Pages.Chat.permanentlyDeleteConversation')}
+        </Typography.Title>
       </Typography>
     ),
     icon: null,
@@ -132,7 +134,7 @@ const DropdownChangeName: React.FC<Porps> = ({
       <>
         <Typography>
           <Typography.Text type={'secondary'}>
-            {dict('NuwaxPC.Pages.Chat.permanentDeleteWarning')}
+            {dict('PC.Pages.Chat.permanentDeleteWarning')}
           </Typography.Text>
         </Typography>
       </>
@@ -203,7 +205,7 @@ const DropdownChangeName: React.FC<Porps> = ({
         </div>
       </Dropdown>
       <Modal
-        title={dict('NuwaxPC.Pages.Chat.rename')}
+        title={dict('PC.Pages.Chat.rename')}
         centered
         okButtonProps={{ disabled: disabledEdit, loading: loadingEdit }}
         open={modalOpenEdit}
@@ -224,11 +226,16 @@ const DropdownChangeName: React.FC<Porps> = ({
             label=""
             name="topic"
             rules={[
-              { required: true, message: dict('NuwaxPC.Pages.Chat.conversationNameRequired') },
+              {
+                required: true,
+                message: dict('PC.Pages.Chat.conversationNameRequired'),
+              },
               {
                 validator: (_, value) => {
                   if (value && value.trim() === '') {
-                    return Promise.reject(new Error(dict('NuwaxPC.Pages.Chat.conversationNameNoSpaces')));
+                    return Promise.reject(
+                      new Error(dict('PC.Pages.Chat.conversationNameNoSpaces')),
+                    );
                   }
                   return Promise.resolve();
                 },
@@ -238,7 +245,7 @@ const DropdownChangeName: React.FC<Porps> = ({
             <Input
               size="large"
               style={{ marginTop: 10 }}
-              placeholder={dict('NuwaxPC.Pages.Chat.inputConversationName')}
+              placeholder={dict('PC.Pages.Chat.inputConversationName')}
               showCount
               maxLength={50}
             />

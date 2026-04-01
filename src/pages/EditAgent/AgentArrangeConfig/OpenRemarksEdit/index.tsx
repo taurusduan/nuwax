@@ -101,11 +101,11 @@ const OpenRemarksEdit: React.FC<OpenRemarksEditProps> = ({
   return (
     <>
       <p className={cx(styles['header-title'])}>
-        {t('NuwaxPC.Pages.AgentArrangeOpenRemarks.headerTitle')}
+        {t('PC.Pages.AgentArrangeOpenRemarks.headerTitle')}
       </p>
       <div className={cx(styles['content-box'])}>
         <Input.TextArea
-          placeholder={t('NuwaxPC.Pages.AgentArrangeOpenRemarks.placeholder')}
+          placeholder={t('PC.Pages.AgentArrangeOpenRemarks.placeholder')}
           value={content}
           onChange={(e) => handleOpeningChatMsg(e.target.value)}
           autoSize={{ minRows: 3, maxRows: 5 }}
@@ -120,10 +120,10 @@ const OpenRemarksEdit: React.FC<OpenRemarksEditProps> = ({
         )}
       >
         <p className={cx(styles.title, 'flex', 'items-center')}>
-          {t('NuwaxPC.Pages.AgentArrangeOpenRemarks.guidQuestionTitle')}
+          {t('PC.Pages.AgentArrangeOpenRemarks.guidQuestionTitle')}
         </p>
         <TooltipIcon
-          title={t('NuwaxPC.Pages.AgentArrangeOpenRemarks.addGuidQuestion')}
+          title={t('PC.Pages.AgentArrangeOpenRemarks.addGuidQuestion')}
           icon={
             <SvgIcon
               name="icons-common-plus"
@@ -139,7 +139,7 @@ const OpenRemarksEdit: React.FC<OpenRemarksEditProps> = ({
           key={index}
           rootClassName={cx(styles.input)}
           placeholder={t(
-            'NuwaxPC.Pages.AgentArrangeOpenRemarks.guidQuestionPlaceholder',
+            'PC.Pages.AgentArrangeOpenRemarks.guidQuestionPlaceholder',
           )}
           value={item.info}
           onChange={(e) => handleChangeGuidQuestions(index, e.target.value)}
@@ -154,15 +154,13 @@ const OpenRemarksEdit: React.FC<OpenRemarksEditProps> = ({
           suffix={
             <>
               <TooltipIcon
-                title={t(
-                  'NuwaxPC.Pages.AgentArrangeOpenRemarks.deleteGuidQuestion',
-                )}
+                title={t('PC.Pages.AgentArrangeOpenRemarks.deleteGuidQuestion')}
                 className={cx(styles['icon-input-suffix'])}
                 icon={<DeleteOutlined className={cx('cursor-pointer')} />}
                 onClick={() => handleDel(index)}
               />
               <TooltipIcon
-                title={t('NuwaxPC.Pages.AgentArrangeOpenRemarks.settings')}
+                title={t('PC.Pages.AgentArrangeOpenRemarks.settings')}
                 icon={<ICON_SETTING className={'cursor-pointer'} />}
                 onClick={() => handleSetGuidQuestions(item, index)}
               />

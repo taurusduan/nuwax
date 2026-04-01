@@ -49,7 +49,7 @@ const HistoryConversation: React.FC = () => {
 
   return (
     <Modal
-      title={<p>{dict('NuwaxPC.Layouts.HistoryConversation.title')}</p>}
+      title={<p>{dict('PC.Layouts.HistoryConversation.title')}</p>}
       width={600}
       footer={null}
       maskClosable

@@ -31,7 +31,8 @@ const ComponentItem: React.FC<SkillItemProps> = ({
       extra={
         <>
           <span className={cx('text-ellipsis', 'flex-1', styles.time)}>
-            {dict('NuwaxPC.Pages.SpaceSkillManage.ComponentItem.lastEdited')} {dayjs(skillInfo.modified).format('MM-DD HH:mm')}
+            {dict('PC.Pages.SpaceSkillManage.ComponentItem.lastEdited')}{' '}
+            {dayjs(skillInfo.modified).format('MM-DD HH:mm')}
           </span>
         </>
       }

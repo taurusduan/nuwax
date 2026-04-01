@@ -65,13 +65,13 @@ const MCPItem: React.FC<MCPItemProps> = ({
                   require('@/assets/images/avatar.png')
                 }
                 style={{ borderRadius: '50%' }}
-                alt={t('NuwaxPC.Components.CreatedMcpItem.avatarAlt')}
+                alt={t('PC.Components.CreatedMcpItem.avatarAlt')}
               />
               <span>{item.publishUser?.nickName}</span>
               <Divider type="vertical" />
               <span>
                 {t(
-                  'NuwaxPC.Components.CreatedMcpItem.deployedAt',
+                  'PC.Components.CreatedMcpItem.deployedAt',
                   getTime(item.deployed!),
                 )}
               </span>

@@ -93,9 +93,9 @@
 ### 里程碑：新 key 规范一次性切换（L1 + L2 核心路径）
 
 - 时间：2026-03-30 14:xx
-- 任务：将已接入 `System.*` key 一次性替换为 `NuwaxPC.*` 新规范，并在运行时禁用 legacy key
+- 任务：将已接入 `System.*` key 一次性替换为 `PC.*` 新规范，并在运行时禁用 legacy key
 - 执行命令：
-  - `perl -0pi -e "s/System.../NuwaxPC.../g" ...`
+  - `perl -0pi -e "s/System.../PC.../g" ...`
   - `apply_patch` 更新 `src/constants/i18n.constants.ts`
   - `apply_patch` 更新 `src/services/i18nRuntime.ts`
   - `apply_patch` 更新登录、验证码、设置、导航、系统配置、AgentHeader 等核心页面
@@ -134,7 +134,7 @@
   - `src/components/UploadAvatar/index.tsx`
   - `src/constants/i18n.constants.ts`
 - 结果摘要：
-  - 页面与组件文案已改为 `dict('NuwaxPC.*')`
+  - 页面与组件文案已改为 `dict('PC.*')`
   - 新增对应 key 到最小英文词典
   - `System.*` 业务引用仍为 0
 - 风险/阻塞：大模块（`AppDev`/`Antv-X6`/`SystemManagement`）仍有大量存量，需继续分批
@@ -156,7 +156,7 @@
   - `src/pages/Antv-X6/header.tsx`
   - `src/constants/i18n.constants.ts`
 - 结果摘要：
-  - 三大模块新增一批 `dict('NuwaxPC.*')` 显式改造
+  - 三大模块新增一批 `dict('PC.*')` 显式改造
   - 新增 key 已补入最小英文词典，`dict` 使用与词典定义一致（缺失 0）
   - inventory 问题总量进一步下降
 - 风险/阻塞：`AppDev` 与 `Antv-X6` 仍存在大量存量字符串，需继续拆批降低回归风险
@@ -279,7 +279,7 @@
     - `src/locales/i18n/nuwaxpc-zh-cn.ts`
 - 结果摘要：
   - 新增并落地 `SystemContentWebApplication`、`SystemOperationLog`、`AppDevContentViewer`、`AppDevChatArea`、`AppDevDesignViewer`、`AntvX6ExceptionItem`、`AntvX6CommonNode` 等 key 域
-  - AppDev 与 SystemManagement 多个高频页面已统一 `t('NuwaxPC.*')`
+  - AppDev 与 SystemManagement 多个高频页面已统一 `t('PC.*')`
   - inventory 问题总量从 `4255` 降至 `4082`
 - 风险/阻塞：
   - `Antv-X6/complexNode`、`SystemManagement/MenuPermission`、`AppDev/Preview` 仍是存量大头
@@ -461,7 +461,7 @@
   - 通过 `apply_patch` 修改：
     - `src/pages/Antv-X6/component/pluginNode.tsx`
 - 结果摘要：
-  - `pluginNode` 输入/输出标题统一替换为 `t('NuwaxPC.Pages.AntvX6Data.*')`
+  - `pluginNode` 输入/输出标题统一替换为 `t('PC.Pages.AntvX6Data.*')`
   - 中文注释替换为英文，避免继续计入治理统计
   - inventory 问题总量从 `3727` 下降至 `3726`
 - 风险/阻塞：
@@ -660,7 +660,7 @@
   - 用户组表单（标题、按钮、校验、placeholder、状态/来源/描述）全面切换为 `t(...)`
   - 用户组列表页（列头、操作、权限提示、删除确认、空态、页面标题）全面切换为 `t(...)`
   - 相关中文注释与错误日志描述切换为英文，降低治理噪音
-  - 新增 `NuwaxPC.Pages.SystemUserGroupFormModal.*`、`NuwaxPC.Toast.SystemUserGroupFormModal.*`、`NuwaxPC.Pages.SystemUserGroupManage.*` 默认中英文词典
+  - 新增 `PC.Pages.SystemUserGroupFormModal.*`、`PC.Toast.SystemUserGroupFormModal.*`、`PC.Pages.SystemUserGroupManage.*` 默认中英文词典
   - inventory 问题总量从 `3423` 下降至 `3373`
 - 风险/阻塞：
   - `Antv-X6` 仍有高密度存量，尤其 `v3/component/*` 与 `header.tsx`
@@ -685,7 +685,7 @@
   - `ExceptionItem.tsx` 的标题、提示、表单项、校验、placeholder 全量接入 `t(...)`
   - `ExceptionItem.tsx` 的异常处理方式与重试次数选项改为组件内 i18n 化配置，不再依赖中文常量标签
   - `commonNode.tsx` 的参数列头、字段标签、placeholder、空描述、分支提示判断全部切换为 key
-  - 新增默认词典 key：`NuwaxPC.Pages.AntvX6ExceptionItem.returnSpecificContent/executeExceptionFlow/retryOnce/retryTwice/retryThrice`、`NuwaxPC.Pages.AntvX6CommonNode.noDescription`
+  - 新增默认词典 key：`PC.Pages.AntvX6ExceptionItem.returnSpecificContent/executeExceptionFlow/retryOnce/retryTwice/retryThrice`、`PC.Pages.AntvX6CommonNode.noDescription`
   - inventory 问题总量从 `3373` 下降至 `3348`
 - 风险/阻塞：
   - `Antv-X6` 仍是最高存量模块，`complexNode.tsx`、`database.tsx`、`v3/constants/node.constants.ts` 仍有明显中文集中
@@ -711,7 +711,7 @@
   - `database.tsx` 里的条件标题、AND/OR、下拉 placeholder、空态、按钮文案、查询上限、数据表、SQL placeholder、输出标题、生成 SQL 标题全部切换为 `t(...)`
   - `VariableAggregation` 三个组件（`index.tsx`/`VariableGroupItem.tsx`/`VariableSelector.tsx`）接入 `t(...)`，包含策略、分组配置、选择变量、空态提示、分组名称占位符
   - `useVariableAggregation.ts` 中文注释清理为英文，降低治理噪音
-  - 新增默认词典 key：`NuwaxPC.Pages.AntvX6VariableAggregation.*`（10 个）
+  - 新增默认词典 key：`PC.Pages.AntvX6VariableAggregation.*`（10 个）
   - inventory 问题总量从 `3348` 下降至 `3330`
 - 风险/阻塞：
   - `Antv-X6/index.tsx`、`v3/component/graph.tsx`、`v3/indexV3.tsx` 仍有较多中文残量
@@ -755,7 +755,7 @@
   - `condition.tsx`：条件分支标题、优先级、AND/OR、引用占位符、新增按钮、否则文案切换为 `t(...)`
   - `eventHandlers.tsx`：复制/粘贴/删除流程提示文案切换为 `t(...)`，并补齐英文注释
   - `nodeItem.tsx`：开始/结束/循环/变量/文本处理/代码节点关键文案全部接入 `t(...)`
-  - 词典新增键：`NuwaxPC.Pages.AntvX6EventHandlers.unsupportedCopyNodeType/nodeCopied/copyNodeFirst`、`NuwaxPC.Pages.AntvX6ComplexNode.systemPromptTitle/userPromptTitle`
+  - 词典新增键：`PC.Pages.AntvX6EventHandlers.unsupportedCopyNodeType/nodeCopied/copyNodeFirst`、`PC.Pages.AntvX6ComplexNode.systemPromptTitle/userPromptTitle`
   - inventory 问题总量从 `3328` 下降至 `3256`
 - 风险/阻塞：
   - `Antv-X6` 仍有存量主要集中在 `v3/component/graph.tsx` 与 `v3/indexV3.tsx`（注释和日志文本占比高）
@@ -772,7 +772,7 @@
   - 通过 shell + `apply_patch` 修改以下文件
     - `src/pages/Antv-X6/v3/component/graph.tsx`
 - 结果摘要：
-  - 接入 `t(...)` 并修复循环节点快捷加节点 warning 文案（`NuwaxPC.Pages.AntvX6Graph.cannotQuickAddNodeForLoopBoundary`）
+  - 接入 `t(...)` 并修复循环节点快捷加节点 warning 文案（`PC.Pages.AntvX6Graph.cannotQuickAddNodeForLoopBoundary`）
   - 清理图编辑器文件中的中文注释残留，统一为可读英文注释
   - inventory 问题总量从 `3256` 下降至 `3253`
 - 风险/阻塞：
@@ -837,7 +837,7 @@
 - 结果摘要：
   - `AsyncRun`、`OutputWay`、`InvokeType`、`BindDataSource`、`CreateVariableModal` 可见文案全部切换为 `t(...)`
   - `ComponentSettingModal/index.tsx` 的保存提示、调用方式 tooltip、左侧标题改为 `t(...)`，与子组件统一
-  - 为 `NuwaxPC.Pages.AgentArrange*` 增补中英文默认词典 key（含 `Toast` 与 `Common` 通用 key）
+  - 为 `PC.Pages.AgentArrange*` 增补中英文默认词典 key（含 `Toast` 与 `Common` 通用 key）
   - 治理总量从 `3240` 下降至 `3202`（-38）
 - 风险/阻塞：
   - `EditAgent` 模块仍有大量存量页面未完成显式接入（如 `EventBindModal`、`KnowledgeSetting`、`CreateVariables/index.tsx` 等）
@@ -957,7 +957,7 @@
 - 结果摘要：
   - 分类管理页的分段标签、页标题、列表头、删除确认、提交成功与错误日志接入 `t(...)`
   - 分类弹窗标题、按钮文案、表单标签/placeholder/校验提示接入 `t(...)`
-  - 增补 `NuwaxPC.Pages.SystemConfigCategoryManage.*` 与 `NuwaxPC.Pages.SystemConfigCategoryModal.*` 中英文默认词典
+  - 增补 `PC.Pages.SystemConfigCategoryManage.*` 与 `PC.Pages.SystemConfigCategoryModal.*` 中英文默认词典
   - 治理总量从 `3053` 下降至 `3024`（-29）
 - 风险/阻塞：
   - `SystemManagement` 仍有高密度存量集中在 `MenuPermission`、`SandboxConfig` 等
@@ -980,7 +980,7 @@
   - 沙盒弹窗标题、按钮、表单标签、placeholder、校验提示改为 `t(...)`
   - 沙盒列表页列名、状态标签、操作 tooltip、确认弹窗、全局配置标签、页脚统计与提示消息改为 `t(...)`
   - 事件测试/启停/删除等提示文本和确认文案完成 i18n
-  - 同步补齐 `NuwaxPC.Pages.SystemConfigSandboxModal.*` 与 `NuwaxPC.Pages.SystemConfigSandboxConfig.*` 中英文默认词典
+  - 同步补齐 `PC.Pages.SystemConfigSandboxModal.*` 与 `PC.Pages.SystemConfigSandboxConfig.*` 中英文默认词典
   - 治理总量从 `3024` 下降至 `2970`（-54）
 - 风险/阻塞：
   - `SystemManagement` 存量仍主要集中在 `MenuPermission` 相关文件
@@ -1000,7 +1000,7 @@
     - `src/locales/i18n/nuwaxpc-zh-cn.ts`
 - 结果摘要：
   - 绑定用户弹窗标题、关闭按钮、左右搜索 placeholder、空态文案、搜索未命中提示接入 `t(...)`
-  - 新增 `NuwaxPC.Pages.SystemMenuBindUser.*` 中英文默认词典
+  - 新增 `PC.Pages.SystemMenuBindUser.*` 中英文默认词典
   - 治理总量从 `2970` 下降至 `2965`（-5）
 - 风险/阻塞：
   - `MenuPermission` 仍有较多存量集中在 `DataPermissionModal` 与 `MenuPermissionModal`
@@ -1026,7 +1026,7 @@
   - `ResourceItem` 的添加/已添加/移除按钮文案改为 `t(...)`
   - `MenuPermissionModal` 的标题、成功提示、空态与取消按钮文案接入 `t(...)`
   - `MenuPermissionTree` 资源名称兜底文案改为 `t(...)`
-  - 新增 `NuwaxPC.Pages.SystemMenuDataPermissionModal.*`、`NuwaxPC.Pages.SystemMenuPermissionModal.*` 中英文默认词典
+  - 新增 `PC.Pages.SystemMenuDataPermissionModal.*`、`PC.Pages.SystemMenuPermissionModal.*` 中英文默认词典
   - 治理总量从 `2965` 下降至 `2924`（-41）
 - 风险/阻塞：
   - `MenuPermission` 目录仍有少量存量集中在业务逻辑与注释密集区（非本批核心可见链路）
@@ -1052,7 +1052,7 @@
   - `ErrorList` 的标题与空态文案接入 `t(...)`
   - `Sidebar` 的“节点选择”标题接入 `t(...)`
   - `Header` 的保存状态提示、失败重试、未保存提示、撤销/重做 tooltip、发布按钮文案接入 `t(...)`
-  - 扩展 `NuwaxPC.Pages.AntvX6Header.*` 中英文默认词典（保存失败/重试/未保存/快捷键 tooltip）
+  - 扩展 `PC.Pages.AntvX6Header.*` 中英文默认词典（保存失败/重试/未保存/快捷键 tooltip）
   - 治理总量从 `2924` 下降至 `2908`（-16）
 - 风险/阻塞：
   - `Antv-X6 v3` 仍有较多存量集中在 `component/*` 与 `constants/hooks`，后续仍需滚动清理
@@ -1075,7 +1075,7 @@
   - `runResult` 的复制 tooltip、状态文案、总数、只看错误、批处理变量、输入/输出标题接入 `t(...)`
   - `registerCustomNodes` 中 QA/意图识别节点的输入、提问内容、问答类型、未配置提示、运行状态标题接入 `t(...)`
   - 清理节点运行结果区域的中文调试日志文本，避免中英文混杂
-  - 新增 `NuwaxPC.Pages.AntvX6RunResult.*` 中英文默认词典
+  - 新增 `PC.Pages.AntvX6RunResult.*` 中英文默认词典
   - 治理总量从 `2908` 下降至 `2890`（-18）
 - 风险/阻塞：
   - `Antv-X6 v3` 仍有剩余存量集中在 `constants/node.constants.ts`、`hooks/useAutoSave.ts` 等
@@ -1095,7 +1095,7 @@
 - 结果摘要：
   - `pluginNode` 的输入/输出标题切换为 `t(...)`
   - `library` 的输入标题、知识库标题、搜索策略、召回数量、最小匹配度及 tooltip 全部切换为 `t(...)`
-  - 复用现有 `NuwaxPC.Pages.AntvX6Library.*` 与 `NuwaxPC.Pages.AntvX6Data.*` key，无新增词典负担
+  - 复用现有 `PC.Pages.AntvX6Library.*` 与 `PC.Pages.AntvX6Data.*` key，无新增词典负担
   - 治理总量从 `2890` 下降至 `2881`（-9）
 - 风险/阻塞：
   - Antv v3 后续剩余主要在 `constants/node.constants.ts` 与 `hooks/useAutoSave.ts`（常量/日志型文本较多）
@@ -1117,8 +1117,8 @@
 - 结果摘要：
   - `branchTypeMap/EXCEPTION_HANDLE_OPTIONS/RETRY_COUNT_OPTIONS/answerTypeMap/VARIABLE_CONFIG_TYPE_OPTIONS` 全部接入 `t(...)`
   - `DEFAULT_DRAWER_FORM` 默认名称与描述切换为 key，避免常量层中文硬编码
-  - `useAutoSave` 日志统一改为英文；版本冲突错误文案通过 `NuwaxPC.Pages.AntvX6AutoSave.versionConflictMessage` 输出
-  - 新增并补齐 `NuwaxPC.Pages.AntvX6Condition.if/elseIf`、`NuwaxPC.Pages.AntvX6NodeItem.getVariable`、`NuwaxPC.Pages.AntvX6NodeConstants.defaultNode*`、`NuwaxPC.Pages.AntvX6AutoSave.versionConflictMessage` 中英文词典
+  - `useAutoSave` 日志统一改为英文；版本冲突错误文案通过 `PC.Pages.AntvX6AutoSave.versionConflictMessage` 输出
+  - 新增并补齐 `PC.Pages.AntvX6Condition.if/elseIf`、`PC.Pages.AntvX6NodeItem.getVariable`、`PC.Pages.AntvX6NodeConstants.defaultNode*`、`PC.Pages.AntvX6AutoSave.versionConflictMessage` 中英文词典
   - 治理总量从 `2881` 下降至 `2858`（-23）
 - 风险/阻塞：
   - Antv v3 剩余仍集中在 `hooks/useBeforeUnload.ts` 与部分 `graph` 日志文案
@@ -1187,9 +1187,9 @@
     - `src/locales/i18n/nuwaxpc-en-us.ts`
 - 结果摘要：
   - `useNodeOperations/useWorkflowHistory/useWorkflowPersistence` 的用户提示接入 `t(...)`
-  - `Header` 发布状态残留中文字面量改为 `t('NuwaxPC.Pages.AntvX6Header.*')`
+  - `Header` 发布状态残留中文字面量改为 `t('PC.Pages.AntvX6Header.*')`
   - `useTestRun/useGraphInteraction/useSkillConfigRefresh/useWorkflowLifecycle/useWorkflowValidation/WorkflowSaveService` 中中文日志统一改为英文
-  - 补齐 `NuwaxPC.Pages.AntvX6NodeOperations.*`、`NuwaxPC.Pages.AntvX6History.*`、`NuwaxPC.Pages.AntvX6Persistence.*` 默认中英文词典
+  - 补齐 `PC.Pages.AntvX6NodeOperations.*`、`PC.Pages.AntvX6History.*`、`PC.Pages.AntvX6Persistence.*` 默认中英文词典
   - 治理总量从 `2853` 下降至 `2783`（-70）
 - 风险/阻塞：
   - `AppDev/SystemManagement` 仍有较大存量，下一批需要并行推进页面层与 hooks 层
@@ -1217,7 +1217,7 @@
   - `PlanProcess` 从 `dict(...)` 切换为 `t(...)`，并清理注释中残留的状态中文字面量
   - `DevLogConsole` 的标题、tooltip、按钮、空态与加载态文本全部接入 `t(...)`
   - `ChatInputHome`、`ReactScrollToBottomContainer`、`genAppDevPlugin` 清理残留中文字符串（含注释与失败提示）
-  - 新增 `NuwaxPC.Pages.AppDevChat.*` 与 `NuwaxPC.Pages.AppDevDevLogConsole.*` 默认中英文词典
+  - 新增 `PC.Pages.AppDevChat.*` 与 `PC.Pages.AppDevDevLogConsole.*` 默认中英文词典
   - 治理总量从 `2783` 下降至 `2747`（-36）
 - 风险/阻塞：
   - `AppDev` 仍有存量分布在 `FileTreePanel`、`DesignViewer/utils`、`index.tsx` 等文件
@@ -1239,7 +1239,7 @@
   - `ThemeConfig` 页面标题、按钮文案、保存成功提示、重置提示全部切换为 `t(...)`
   - 导航深浅色与背景自动匹配提示切换为参数化 key，避免页面内拼接中英文文本
   - 主题预览失败类 `console.warn` 与保存日志统一为英文
-  - 新增 `NuwaxPC.Pages.SystemThemeConfig.*` 默认中英文词典
+  - 新增 `PC.Pages.SystemThemeConfig.*` 默认中英文词典
   - 治理总量从 `2747` 下降至 `2734`（-13）
 - 风险/阻塞：
   - `SystemManagement` 其余热点仍集中在 `TaskManage` 与 `SystemConfig` 其他子页
@@ -1261,7 +1261,7 @@
   - 表格状态映射文案（执行中/待执行/已结束等）全部切换为 `t(...)`
   - 列标题、搜索 placeholder、操作按钮与二次确认提示全部切换为 `t(...)`
   - 执行/启用/停用/删除成功提示切换为 `t(...)`
-  - 新增 `NuwaxPC.Pages.SystemTaskCenterProTable.*` 默认中英文词典
+  - 新增 `PC.Pages.SystemTaskCenterProTable.*` 默认中英文词典
   - 治理总量从 `2734` 下降至 `2697`（-37）
 - 风险/阻塞：
   - `TaskManage/CreateTimedTask` 仍有高密度中文文案需要持续处理
@@ -1285,7 +1285,7 @@
   - `BaseFormItem` 域名校验错误提示切换到 `t(...)`
   - `BaseTab` 保存成功提示切换到 `t(...)`
   - `SystemConfig/index` 页面标题与保存按钮文本切换到词典
-  - 新增 `NuwaxPC.Pages.SystemConfig.*` 与 `NuwaxPC.Pages.SystemConfigBaseFormItem.*` 默认中英文词典
+  - 新增 `PC.Pages.SystemConfig.*` 与 `PC.Pages.SystemConfigBaseFormItem.*` 默认中英文词典
   - 治理总量从 `2697` 下降至 `2694`（-3）
 - 风险/阻塞：
   - `SystemManagement` 主体存量仍在 `CreateTimedTask` 和 `ThemeConfig` 其余日志/注释项
@@ -1310,7 +1310,7 @@
 - 结果摘要：
   - `CreateTimedTask` 页面标题、表单项、校验提示、开关文案、成功提示全部切换为 `t(...)`
   - `SelectTarget`、`SelectTargetFormItem`、`SelectTargetFormItemTarget`、`TimedPeriodSelector` 子组件文案全部切换为 `t(...)`
-  - 新增 `NuwaxPC.Pages.SpaceTaskCreateTimedTask.*`、`SpaceTaskSelectTarget.*`、`SpaceTaskSelectTargetFormItem.*`、`SpaceTaskTimedPeriodSelector.*` 默认中英文词典
+  - 新增 `PC.Pages.SpaceTaskCreateTimedTask.*`、`SpaceTaskSelectTarget.*`、`SpaceTaskSelectTargetFormItem.*`、`SpaceTaskTimedPeriodSelector.*` 默认中英文词典
   - 治理总量从 `2694` 下降至 `2670`（-24）
 - 风险/阻塞：
   - `AppDev FileTreePanel` 与 `SystemManagement/TaskManage/CreateTimedTask` 仍有剩余存量
@@ -1334,7 +1334,7 @@
   - `FileTreePanel` 折叠/展开 tooltip、初始化加载文案、空态按钮文案切换为 `t(...)`
   - `FileContextMenu` 重命名/上传文件/删除/导入项目文案全部切换为 `t(...)`
   - `AppDevFileTree` 重命名失败注释文本改为英文，消除硬编码中文
-  - 新增 `NuwaxPC.Pages.AppDevFileTreePanel.*` 与 `NuwaxPC.Pages.AppDevFileTreeContextMenu.*` 默认中英文词典
+  - 新增 `PC.Pages.AppDevFileTreePanel.*` 与 `PC.Pages.AppDevFileTreeContextMenu.*` 默认中英文词典
   - 治理总量从 `2670` 下降至 `2659`（-11）
 - 风险/阻塞：
   - `AppDev` 仍有存量分布在 `DesignViewer/utils`、`useDevLogs`、`index.tsx`
@@ -1360,7 +1360,7 @@
   - `CreateTimedTask` 页面标题、表单项、校验提示、成功提示、开关文案全部切换为 `t(...)`
   - `SelectTarget`、`SelectTargetFormItem`、`SelectTargetFormItemTarget`、`TimedPeriodSelector` 子组件文案全部切换为 `t(...)`
   - `SelectTargetFormItem` 从 `dict(...)` 迁移为 `t(...)`，统一调用约定
-  - 新增 `NuwaxPC.Pages.SystemTaskCreateTimedTask.*`、`SystemTaskSelectTarget.*`、`SystemTaskSelectTargetFormItem.*`、`SystemTaskSelectTargetFormItemTarget.*`、`SystemTaskTimedPeriodSelector.*` 默认中英文词典
+  - 新增 `PC.Pages.SystemTaskCreateTimedTask.*`、`SystemTaskSelectTarget.*`、`SystemTaskSelectTargetFormItem.*`、`SystemTaskSelectTargetFormItemTarget.*`、`SystemTaskTimedPeriodSelector.*` 默认中英文词典
   - 治理总量从 `2659` 下降至 `2636`（-23）
 - 风险/阻塞：
   - `Created`、`ChatInputHome`、`SkillDetails` 等热点目录仍存在高密度存量
@@ -1384,7 +1384,7 @@
   - `MCPItem` 头像 `alt` 与“部署于”文案改为 `t(...)`
   - `MCPTools` 的“暂无描述/添加/已添加”改为 `t(...)`
   - `PageItem` 头像 `alt`、“创建于”、按钮文案改为 `t(...)`
-  - 新增 `NuwaxPC.Components.CreatedMcpItem.*`、`CreatedMcpTools.*`、`CreatedPageItem.*` 中英文默认词典
+  - 新增 `PC.Components.CreatedMcpItem.*`、`CreatedMcpTools.*`、`CreatedPageItem.*` 中英文默认词典
   - 治理总量从 `2636` 下降至 `2627`（-9）
 - 风险/阻塞：
   - `Created/index.tsx` 仍是高密度主存量，需要单独分批处理
@@ -1405,7 +1405,7 @@
 - 结果摘要：
   - `Created` 顶部标题、分段标签、左侧菜单、搜索框、创建按钮、空态描述切换为 `t(...)`
   - 普通列表项的头像 `alt`、发布时间、添加按钮文案切换为 `t(...)`
-  - 新增组件域词典：`NuwaxPC.Components.Created.*`（含标签名称与模板化文案）
+  - 新增组件域词典：`PC.Components.Created.*`（含标签名称与模板化文案）
   - 治理总量从 `2627` 下降至 `2604`（-23）
 - 风险/阻塞：
   - `ChatInputHome` 与 `SkillDetails` 仍是高密度热点
@@ -1431,7 +1431,7 @@
   - `ManualComponentItem` 关键词匹配去除中文硬编码，改为 `t(...)` + 英文关键词兜底
   - `MentionPopup` 标签、搜索 placeholder、加载态、空态、加载更多文案切换为 `t(...)`，错误日志改为英文
   - `ChatInputHome/index` 上传失败提示、会话按钮 tooltip、权限遮罩、清空/上传/模式切换提示、AI 公告文案切换为 `t(...)`
-  - 新增 `NuwaxPC.Components.ChatInputHome*` 默认中英文词典
+  - 新增 `PC.Components.ChatInputHome*` 默认中英文词典
   - 治理总量从 `2604` 下降至 `2598`（-6）
 - 风险/阻塞：
   - `pnpm run check:i18n-hardcoded` 当前为全量校验模式，仍被仓内未改造存量阻断（本批改动文件已完成替换）
@@ -1451,7 +1451,7 @@
     - `src/locales/i18n/nuwaxpc-en-us.ts`
 - 结果摘要：
   - `MentionEditor` “启用/禁用 @ 提及”两套默认占位符切换为 `t(...)`
-  - 新增 `NuwaxPC.Components.ChatInputHomeMentionEditor.placeholder*` 默认中英文词典
+  - 新增 `PC.Components.ChatInputHomeMentionEditor.placeholder*` 默认中英文词典
   - `check:i18n-hardcoded` 通过（新增行符合治理规则）
   - 治理总量从 `2598` 下降至 `2596`（-2）
 - 风险/阻塞：
@@ -1476,7 +1476,7 @@
   - `MoreActionsMenu`（导入/全屏/导出）与 `SkillHeader`（已发布/有更新未发布/发布）切换为 `t(...)`
   - `SkillDetails` 页面中保存、导入、上传、导出、删除、未保存离开保护等提示切换为 `t(...)`
   - 页面内中文日志统一改为英文
-  - 新增 `NuwaxPC.Pages.SkillDetailsMoreActionsMenu.*`、`SkillDetailsHeader.*`、`SkillDetails.*` 中英文默认词典
+  - 新增 `PC.Pages.SkillDetailsMoreActionsMenu.*`、`SkillDetailsHeader.*`、`SkillDetails.*` 中英文默认词典
   - 治理总量从 `2596` 下降至 `2565`（-31）
 - 风险/阻塞：
   - `SkillDetails/index.tsx` 仍有次级存量（剩余流程分支与提示）
@@ -1499,7 +1499,7 @@
   - `ApiKeyFormModal` 标题、字段 label/placeholder、状态选项、成功提示全部切换为 `t(...)`
   - `ApiKeyStatsModal` 表头、操作文案、弹窗标题与关闭按钮切换为 `t(...)`
   - 去除 `ApiKeyFormModal` 中对中文“永不过期”的硬编码判断，改为日期有效性判断
-  - 新增 `NuwaxPC.Pages.ApiKeyFormModal.*` 与 `ApiKeyStatsModal.*` 中英文默认词典
+  - 新增 `PC.Pages.ApiKeyFormModal.*` 与 `ApiKeyStatsModal.*` 中英文默认词典
   - 治理总量从 `2565` 下降至 `2543`（-22）
 - 风险/阻塞：
   - `ApiKeyLogs/LogProTable` 仍有高密度中文存量待继续清理
@@ -1521,7 +1521,7 @@
   - `LogProTable` 查询项（类型、对象 ID、请求 ID、会话 ID、输入输出内容、时间范围）及表头文案全部切换为 `t(...)`
   - 查询失败、记录缺失提示、操作列“详情”全部切换为 `t(...)`
   - 日志输出改为英文，删除中文注释中的历史用户 ID 筛选代码块
-  - 新增 `NuwaxPC.Pages.ApiKeyLogsLogProTable.*` 中英文默认词典
+  - 新增 `PC.Pages.ApiKeyLogsLogProTable.*` 中英文默认词典
   - 治理总量从 `2543` 下降至 `2517`（-26）
 - 风险/阻塞：
   - `MorePage` 仍有路由名称等中文存量待处理
@@ -1544,7 +1544,7 @@
   - `Chat/index.tsx` 中新建/删除/上传/导出相关提示与顶部 tooltip（展开导航/新建会话/查看智能体详情）切换为 `t(...)`
   - `Chat/index.tsx` 文件操作相关日志统一改为英文
   - `routes/index.ts` 中 `api-key-logs` 路由名称改为英文 `API Call Logs`
-  - 新增 `NuwaxPC.Pages.Chat.*` 默认中英文词典
+  - 新增 `PC.Pages.Chat.*` 默认中英文词典
   - 治理总量从 `2517` 下降至 `2501`（-16）
 - 风险/阻塞：
   - `Chat/index.tsx` 仍有其他流程分支中文存量待继续处理
@@ -1565,7 +1565,7 @@
 - 结果摘要：
   - `Chat` 顶部控制条新增 key：打开预览页、打开/关闭文件预览、打开/关闭智能体电脑
   - 历史会话加载提示、执行中提示、权限遮罩与复制模板按钮全部切换为 `t(...)`
-  - 新增 `NuwaxPC.Pages.Chat.*` 默认中英文词典（9 个 key）
+  - 新增 `PC.Pages.Chat.*` 默认中英文词典（9 个 key）
   - 治理总量从 `2501` 下降至 `2494`（-7）
 - 风险/阻塞：
   - `Chat/index.tsx` 仍有剩余中文文案分散在其他流程分支
@@ -1582,8 +1582,8 @@
   - 通过 `apply_patch` 修改上述文件
 - 结果摘要：
   - `AppDev` 设计器工具与滚动/日志工具中的中文引号文本全部改为英文，消除治理脚本命中
-  - `AppDev index` 上传大小提示切换为 `t('NuwaxPC.Pages.AppDevIndex.uploadSizeLimitExceeded', ...)`
-  - `DesignViewer textAlign` 操作项改为 `t(...)`，新增 `NuwaxPC.Pages.AppDevDesignViewerTextAlign.*` 中英文词典
+  - `AppDev index` 上传大小提示切换为 `t('PC.Pages.AppDevIndex.uploadSizeLimitExceeded', ...)`
+  - `DesignViewer textAlign` 操作项改为 `t(...)`，新增 `PC.Pages.AppDevDesignViewerTextAlign.*` 中英文词典
   - `SystemManagement` 相关注释中的中文引号文本改为英文，模块命中清零
   - 治理总量从 `2494` 下降至 `2447`（-47）
 - 风险/阻塞：
@@ -1681,7 +1681,7 @@
   - `pnpm run report:i18n-governance`
   - 通过 `apply_patch` 修改上述文件
 - 结果摘要：
-  - `AppDevEmptyState` 默认标题、描述、按钮文本与弹窗关闭按钮全部改为 `t('NuwaxPC.Components.AppDevEmptyState.*')`
+  - `AppDevEmptyState` 默认标题、描述、按钮文本与弹窗关闭按钮全部改为 `t('PC.Components.AppDevEmptyState.*')`
   - 新增 `AppDevEmptyState` 组件域双语 key，作为本地默认词典与平台导入基础
   - `src/components/business-component` 模块命中从 `144` 下降至 `110`
   - 治理总量从 `2153` 下降至 `2119`（-34）
@@ -1699,8 +1699,8 @@
   - `pnpm run report:i18n-governance`
   - 通过 `apply_patch` 修改上述文件
 - 结果摘要：
-  - `HistoryConversationList` 的搜索、重命名、删除确认、提示消息、日期格式、摘要/智能体兜底文案全部切到 `NuwaxPC.Components.HistoryConversationList.*`
-  - `PagePreviewIframe` 的复制模板、标题兜底、工具栏 tooltip、结果上报兜底文案切到 `NuwaxPC.Components.PagePreviewIframe.*`
+  - `HistoryConversationList` 的搜索、重命名、删除确认、提示消息、日期格式、摘要/智能体兜底文案全部切到 `PC.Components.HistoryConversationList.*`
+  - `PagePreviewIframe` 的复制模板、标题兜底、工具栏 tooltip、结果上报兜底文案切到 `PC.Components.PagePreviewIframe.*`
   - `PagePreviewIframe` 的中文日志字符串与注释中的中文字符串改为英文，避免治理噪声
   - `src/components/business-component` 模块命中从 `110` 下降至 `82`
   - 治理总量从 `2119` 下降至 `2091`（-28）
@@ -1718,8 +1718,8 @@
   - `pnpm run report:i18n-governance`
   - 通过 `apply_patch` 修改上述文件
 - 结果摘要：
-  - `VncPreview` 的连接状态、错误提示、空闲超时提示、按钮/Tag 文案统一迁移至 `NuwaxPC.Components.VncPreview.*`
-  - `IdleWarningModal` 默认标题、描述、确认按钮、倒计时和提示文案统一迁移至 `NuwaxPC.Components.VncIdleWarningModal.*`
+  - `VncPreview` 的连接状态、错误提示、空闲超时提示、按钮/Tag 文案统一迁移至 `PC.Components.VncPreview.*`
+  - `IdleWarningModal` 默认标题、描述、确认按钮、倒计时和提示文案统一迁移至 `PC.Components.VncIdleWarningModal.*`
   - `useUrlRetry` 与 `VncPreview` 空闲检测日志字符串改为英文，清除治理噪声
   - `src/components/business-component` 模块命中从 `82` 下降至 `36`
   - 治理总量从 `2091` 下降至 `2045`（-46）
@@ -1738,7 +1738,7 @@
   - 通过 `apply_patch` 修改上述文件
 - 结果摘要：
   - 文件预览错误映射函数 `getLocalizedErrorMessage` 全面改为 key 输出，覆盖 doc/xls/ppt/pdf/image 与通用异常
-  - 工具栏 tooltip、空态/加载态/错误态/不支持态文案全部改为 `NuwaxPC.Components.FilePreview.*`
+  - 工具栏 tooltip、空态/加载态/错误态/不支持态文案全部改为 `PC.Components.FilePreview.*`
   - `src/components/business-component` 模块命中从 `36` 下降至 `19`
   - 治理总量从 `2045` 下降至 `2028`（-17）
 - 风险/阻塞：
@@ -1757,7 +1757,7 @@
 - 结果摘要：
   - `ConversationDetails` 的页面预览名、必填参数提示、标题和 tooltip、无权限遮罩、复制模板按钮全部接入 `t(...)`
   - `ThemeConfig` 三个面板文案（风格、深浅色、背景图、主题色）及日志文本完成 key 化/英文化
-  - `CopyToSpaceComponent` 复制成功提示统一迁移至 `NuwaxPC.Components.CopyToSpaceComponent.*`
+  - `CopyToSpaceComponent` 复制成功提示统一迁移至 `PC.Components.CopyToSpaceComponent.*`
   - `src/components/business-component` 模块命中从 `19` 下降至 `0`（模块退出 inventory）
   - 治理总量从 `2028` 下降至 `2009`（-19）
   - 报告模块数从 `97` 下降至 `96`
@@ -1775,7 +1775,7 @@
   - `pnpm run report:i18n-governance`
   - 通过 `apply_patch` 修改上述文件
 - 结果摘要：
-  - `useDataResourceManagement` 的列表加载、创建/更新/删除、状态切换、连接测试提示与返回 message 全部切到 `NuwaxPC.Components.DataResourceManagement.*`
+  - `useDataResourceManagement` 的列表加载、创建/更新/删除、状态切换、连接测试提示与返回 message 全部切到 `PC.Components.DataResourceManagement.*`
   - 该文件中文日志文本统一英文化，避免治理噪声
   - `src/hooks` 模块命中从 `109` 下降至 `80`
   - 治理总量从 `2009` 下降至 `1980`（-29）

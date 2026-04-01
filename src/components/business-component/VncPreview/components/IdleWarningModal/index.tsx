@@ -78,9 +78,9 @@ const IdleWarningModal: React.FC<IdleWarningModalProps> = ({
   countdownSeconds = 15,
   onCancel,
   onTimeout,
-  title = t('NuwaxPC.Components.VncIdleWarningModal.title'),
-  description = t('NuwaxPC.Components.VncIdleWarningModal.description'),
-  confirmText = t('NuwaxPC.Components.VncIdleWarningModal.confirmText'),
+  title = t('PC.Components.VncIdleWarningModal.title'),
+  description = t('PC.Components.VncIdleWarningModal.description'),
+  confirmText = t('PC.Components.VncIdleWarningModal.confirmText'),
   autoDetectActivity = true,
 }) => {
   // 当前倒计时秒数
@@ -293,7 +293,7 @@ const IdleWarningModal: React.FC<IdleWarningModalProps> = ({
           />
           <p className={cx(styles['countdown-text'])}>
             {t(
-              'NuwaxPC.Components.VncIdleWarningModal.countdownAutoClose',
+              'PC.Components.VncIdleWarningModal.countdownAutoClose',
               String(countdown),
             )}
           </p>
@@ -314,7 +314,7 @@ const IdleWarningModal: React.FC<IdleWarningModalProps> = ({
 
         {/* 提示文字 */}
         <p className={cx(styles['hint-text'])}>
-          {t('NuwaxPC.Components.VncIdleWarningModal.hintAction', confirmText)}
+          {t('PC.Components.VncIdleWarningModal.hintAction', confirmText)}
         </p>
       </div>
     </Modal>

@@ -113,7 +113,7 @@ const Dashboard: React.FC = () => {
 
     return [
       {
-        title: t('NuwaxPC.Pages.SystemDashboard.totalUsers'),
+        title: t('PC.Pages.SystemDashboard.totalUsers'),
         value: userData?.totalUserCount || 0,
         icon: <TeamOutlined />,
         iconColor: '#1890ff',
@@ -121,7 +121,7 @@ const Dashboard: React.FC = () => {
         loading: isCoreStatsLoading,
       },
       {
-        title: t('NuwaxPC.Pages.SystemDashboard.todayNewUsers'),
+        title: t('PC.Pages.SystemDashboard.todayNewUsers'),
         value: userData?.todayNewUserCount || 0,
         icon: <UserAddOutlined />,
         iconColor: '#52c41a',
@@ -129,7 +129,7 @@ const Dashboard: React.FC = () => {
         loading: isCoreStatsLoading,
       },
       {
-        title: t('NuwaxPC.Pages.SystemDashboard.todayVisits'),
+        title: t('PC.Pages.SystemDashboard.todayVisits'),
         value: data?.todayUserCount || 0,
         icon: <EyeOutlined />,
         iconColor: '#722ed1',
@@ -137,7 +137,7 @@ const Dashboard: React.FC = () => {
         loading: isCoreStatsLoading,
       },
       {
-        title: t('NuwaxPC.Pages.SystemDashboard.last30DaysVisits'),
+        title: t('PC.Pages.SystemDashboard.last30DaysVisits'),
         value: data?.last30DaysUserCount || 0,
         icon: <BarChartOutlined />,
         iconColor: '#fa8c16',
@@ -186,35 +186,35 @@ const Dashboard: React.FC = () => {
 
     return [
       {
-        name: t('NuwaxPC.Pages.SystemDashboard.resourceSpace'),
+        name: t('PC.Pages.SystemDashboard.resourceSpace'),
         count: data?.spaceCount || 0,
         icon: <FolderOutlined />,
         color: '#597ef7',
         bgColor: '#f0f5ff',
       },
       {
-        name: t('NuwaxPC.Pages.SystemDashboard.resourceAgent'),
+        name: t('PC.Pages.SystemDashboard.resourceAgent'),
         count: data?.agentCount || 0,
         icon: <TeamOutlined />,
         color: '#1890ff',
         bgColor: '#e6f7ff',
       },
       {
-        name: t('NuwaxPC.Pages.SystemDashboard.resourceKnowledgeBase'),
+        name: t('PC.Pages.SystemDashboard.resourceKnowledgeBase'),
         count: data?.knowledgeCount || 0,
         icon: <BookOutlined />,
         color: '#13c2c2',
         bgColor: '#e6fffb',
       },
       {
-        name: t('NuwaxPC.Pages.SystemDashboard.resourceWorkflow'),
+        name: t('PC.Pages.SystemDashboard.resourceWorkflow'),
         count: data?.workflowCount || 0,
         icon: <SyncOutlined />,
         color: '#52c41a',
         bgColor: '#f6ffed',
       },
       {
-        name: t('NuwaxPC.Pages.SystemDashboard.resourceDataTable'),
+        name: t('PC.Pages.SystemDashboard.resourceDataTable'),
         count: data?.tableCount || 0,
         icon: <TableOutlined />,
         color: '#faad14',
@@ -228,28 +228,28 @@ const Dashboard: React.FC = () => {
         bgColor: '#f9f0ff',
       },
       {
-        name: t('NuwaxPC.Pages.SystemDashboard.resourceWebApplication'),
+        name: t('PC.Pages.SystemDashboard.resourceWebApplication'),
         count: data?.pageCount || 0,
         icon: <AppstoreOutlined />,
         color: '#f5222d',
         bgColor: '#fff1f0',
       },
       {
-        name: t('NuwaxPC.Pages.SystemDashboard.resourceModel'),
+        name: t('PC.Pages.SystemDashboard.resourceModel'),
         count: data?.modelCount || 0,
         icon: <DesktopOutlined />,
         color: '#2f54eb',
         bgColor: '#f0f5ff',
       },
       {
-        name: t('NuwaxPC.Pages.SystemDashboard.resourcePlugin'),
+        name: t('PC.Pages.SystemDashboard.resourcePlugin'),
         count: data?.pluginCount || 0,
         icon: <ApiOutlined />,
         color: '#fa541c',
         bgColor: '#fff2e8',
       },
       {
-        name: t('NuwaxPC.Pages.SystemDashboard.resourceSkill'),
+        name: t('PC.Pages.SystemDashboard.resourceSkill'),
         count: data?.skillCount || 0,
         icon: <ThunderboltOutlined />,
         color: '#ffc53d',
@@ -265,14 +265,14 @@ const Dashboard: React.FC = () => {
 
     return [
       {
-        title: t('NuwaxPC.Pages.SystemDashboard.totalConversations'),
+        title: t('PC.Pages.SystemDashboard.totalConversations'),
         value: data?.totalConversations || 0,
         icon: <CommentOutlined />,
         iconColor: '#722ed1',
         iconBgColor: '#f9f0ff',
       },
       {
-        title: t('NuwaxPC.Pages.SystemDashboard.todayNewConversations'),
+        title: t('PC.Pages.SystemDashboard.todayNewConversations'),
         value: data?.todayNewConversations || 0,
         icon: <CommentOutlined />,
         iconColor: '#13c2c2',
@@ -304,7 +304,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={t('NuwaxPC.Pages.SystemDashboard.pageTitle')}
+      title={t('PC.Pages.SystemDashboard.pageTitle')}
       hideScroll={true}
       contentPadding="0"
     >
@@ -322,10 +322,10 @@ const Dashboard: React.FC = () => {
         <Row gutter={[16, 16]} className={cx(styles['trend-row'])}>
           <Col span={24}>
             <TrendChart
-              title={t('NuwaxPC.Pages.SystemDashboard.userTrendTitle')}
+              title={t('PC.Pages.SystemDashboard.userTrendTitle')}
               data={userTrendData}
               color="#722ed1"
-              tooltipName={t('NuwaxPC.Pages.SystemDashboard.userTrendTooltip')}
+              tooltipName={t('PC.Pages.SystemDashboard.userTrendTooltip')}
               loading={isCoreStatsLoading}
               period={userPeriod}
               onPeriodChange={setUserPeriod}
@@ -333,14 +333,14 @@ const Dashboard: React.FC = () => {
           </Col>
           <Col span={24}>
             <TrendChart
-              title={t('NuwaxPC.Pages.SystemDashboard.visitTrendTitle')}
+              title={t('PC.Pages.SystemDashboard.visitTrendTitle')}
               data={visitTrendData}
               color="#1890ff"
-              tooltipName={t('NuwaxPC.Pages.SystemDashboard.visitTrendTooltip')}
+              tooltipName={t('PC.Pages.SystemDashboard.visitTrendTooltip')}
               loading={!hasAccessLoaded && accessLoading}
               periods={[
                 {
-                  label: t('NuwaxPC.Pages.SystemDashboard.last7Days'),
+                  label: t('PC.Pages.SystemDashboard.last7Days'),
                   value: '7d',
                 },
               ]}

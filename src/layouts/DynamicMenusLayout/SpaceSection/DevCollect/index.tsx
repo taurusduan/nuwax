@@ -44,9 +44,11 @@ const DevCollect: React.FC = () => {
     </div>
   ) : (
     <>
-      <div className={cx(styles['no-dev-collect'])}>{dict('NuwaxPC.Layouts.DynamicMenusLayout.DevCollect.noCollection')}</div>
       <div className={cx(styles['no-dev-collect'])}>
-        {dict('NuwaxPC.Layouts.DynamicMenusLayout.DevCollect.addByStar')}
+        {dict('PC.Layouts.DynamicMenusLayout.DevCollect.noCollection')}
+      </div>
+      <div className={cx(styles['no-dev-collect'])}>
+        {dict('PC.Layouts.DynamicMenusLayout.DevCollect.addByStar')}
       </div>
     </>
   );

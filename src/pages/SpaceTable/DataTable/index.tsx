@@ -1,6 +1,6 @@
+import { dict } from '@/services/i18nRuntime';
 import { TableFieldTypeEnum } from '@/types/enums/dataTable';
 import { DataTableProp, TableFieldInfo } from '@/types/interfaces/dataTable';
-import { dict } from '@/services/i18nRuntime';
 import {
   DeleteOutlined,
   EditOutlined,
@@ -65,10 +65,11 @@ const DataTable: React.FC<DataTableProp> = ({
         pagination={{
           ...pagination,
           onChange: onPageChange,
-          showTotal: (total) => dict('NuwaxPC.Pages.SpaceTable.DataTable.totalCount', String(total)),
+          showTotal: (total) =>
+            dict('PC.Pages.SpaceTable.DataTable.totalCount', String(total)),
           showSizeChanger: true,
           locale: {
-            items_per_page: dict('NuwaxPC.Pages.SpaceTable.DataTable.itemsPerPage'),
+            items_per_page: dict('PC.Pages.SpaceTable.DataTable.itemsPerPage'),
           },
         }}
       >
@@ -113,7 +114,7 @@ const DataTable: React.FC<DataTableProp> = ({
 
         {/* 操作列 */}
         <Table.Column
-          title={dict('NuwaxPC.Common.Global.operation')}
+          title={dict('PC.Common.Global.operation')}
           dataIndex="action"
           width={100}
           className={'table-action-column-fixed'}
@@ -124,13 +125,13 @@ const DataTable: React.FC<DataTableProp> = ({
               <Button
                 icon={<EditOutlined />}
                 onClick={() => onEdit(record)}
-                title={dict('NuwaxPC.Common.Global.edit')}
+                title={dict('PC.Common.Global.edit')}
                 type="text"
               />
               <Button
                 icon={<DeleteOutlined />}
                 onClick={() => onDel(record)}
-                title={dict('NuwaxPC.Common.Global.delete')}
+                title={dict('PC.Common.Global.delete')}
                 type="text"
               />
             </Space>

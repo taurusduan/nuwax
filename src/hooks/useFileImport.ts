@@ -65,10 +65,10 @@ export const useFileImport = <T = any>(
     multiple = false,
     accept = '.zip,.skill,.md',
     validateFileType,
-    fileTypeErrorMsg = dict('NuwaxPC.Hooks.UseFileImport.unsupportedFileType'),
+    fileTypeErrorMsg = dict('PC.Hooks.UseFileImport.unsupportedFileType'),
     onSuccess,
     onError,
-    successMessage = dict('NuwaxPC.Hooks.UseFileImport.importSuccess'),
+    successMessage = dict('PC.Hooks.UseFileImport.importSuccess'),
   } = options;
 
   const [loading, setLoading] = useState(false);
@@ -163,7 +163,7 @@ export const useFileImport = <T = any>(
           onSuccess?.(result.data);
         } else {
           throw new Error(
-            result.message || dict('NuwaxPC.Hooks.UseFileImport.importFailed'),
+            result.message || dict('PC.Hooks.UseFileImport.importFailed'),
           );
         }
       } catch (error) {

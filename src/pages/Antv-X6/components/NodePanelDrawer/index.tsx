@@ -30,7 +30,7 @@ const { KnowledgeNode } = Library;
 const LoopContinue: React.FC = () => {
   return (
     <div className="node-title-style">
-      {dict('NuwaxPC.Pages.AntvX6NodePanel.loopContinueDescription')}
+      {dict('PC.Pages.AntvX6NodePanel.loopContinueDescription')}
     </div>
   );
 };
@@ -38,7 +38,7 @@ const LoopContinue: React.FC = () => {
 const LoopBreak: React.FC = () => {
   return (
     <div className="node-title-style">
-      {dict('NuwaxPC.Pages.AntvX6NodePanel.loopBreakDescription')}
+      {dict('PC.Pages.AntvX6NodePanel.loopBreakDescription')}
     </div>
   );
 };

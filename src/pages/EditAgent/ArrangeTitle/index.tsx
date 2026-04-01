@@ -1,13 +1,13 @@
 import { SvgIcon } from '@/components/base';
 import ConditionRender from '@/components/ConditionRender';
 
+import { dict } from '@/services/i18nRuntime';
 import {
   ModelApiProtocolEnum,
   ModelFunctionCallEnum,
 } from '@/types/enums/modelConfig';
 import { AgentTypeEnum } from '@/types/enums/space';
 import type { ArrangeTitleProps } from '@/types/interfaces/agentConfig';
-import { dict } from '@/services/i18nRuntime';
 import type { MenuProps } from 'antd';
 import { Dropdown } from 'antd';
 import classNames from 'classnames';
@@ -94,7 +94,11 @@ const ArrangeTitle: React.FC<ArrangeTitleProps> = ({
       <ConditionRender condition={!!icon}>
         <img src={icon} alt="" />
       </ConditionRender>
-      <span>{showModelName ? modelName : dict('NuwaxPC.Pages.EditAgent.ArrangeTitle.selectChatModel')}</span>
+      <span>
+        {showModelName
+          ? modelName
+          : dict('PC.Pages.EditAgent.ArrangeTitle.selectChatModel')}
+      </span>
       <SvgIcon name="icons-common-caret_down" style={{ fontSize: 16 }} />
     </div>
   );
@@ -108,7 +112,7 @@ const ArrangeTitle: React.FC<ArrangeTitleProps> = ({
         styles['edit-header'],
       )}
     >
-      <h3>{dict('NuwaxPC.Pages.EditAgent.ArrangeTitle.arrange')}</h3>
+      <h3>{dict('PC.Pages.EditAgent.ArrangeTitle.arrange')}</h3>
       {isTaskAgent ? (
         <Dropdown
           menu={{

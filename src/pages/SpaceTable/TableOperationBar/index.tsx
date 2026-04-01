@@ -1,9 +1,9 @@
 import { TABLE_TABS_LIST } from '@/constants/dataTable.constants';
 import { ACCESS_TOKEN } from '@/constants/home.constants';
+import { dict } from '@/services/i18nRuntime';
 import { TableTabsEnum } from '@/types/enums/dataTable';
 import { FileType } from '@/types/interfaces/common';
 import { TableOperationBarProps } from '@/types/interfaces/dataTable';
-import { dict } from '@/services/i18nRuntime';
 import {
   ClearOutlined,
   DownloadOutlined,
@@ -46,14 +46,18 @@ const TableOperationBar: React.FC<TableOperationBarProps> = ({
       file.name.endsWith('.xls');
 
     if (!isExcel) {
-      message.error(dict('NuwaxPC.Pages.SpaceTable.TableOperationBar.excelFileOnly'));
+      message.error(
+        dict('PC.Pages.SpaceTable.TableOperationBar.excelFileOnly'),
+      );
       return false;
     }
 
     // 校验文件大小（限制为100MB）
     const isLessThan10M = file.size / 1024 / 1024 < 100;
     if (!isLessThan10M) {
-      message.error(dict('NuwaxPC.Pages.SpaceTable.TableOperationBar.fileSizeLimit'));
+      message.error(
+        dict('PC.Pages.SpaceTable.TableOperationBar.fileSizeLimit'),
+      );
       return false;
     }
 
@@ -66,8 +70,8 @@ const TableOperationBar: React.FC<TableOperationBarProps> = ({
           ...item,
           label:
             item.key === TableTabsEnum.Structure
-              ? dict('NuwaxPC.Pages.SpaceTable.DataTable.tabStructure')
-              : dict('NuwaxPC.Pages.SpaceTable.DataTable.tabData'),
+              ? dict('PC.Pages.SpaceTable.DataTable.tabStructure')
+              : dict('PC.Pages.SpaceTable.DataTable.tabData'),
         }))}
         activeKey={activeKey}
         onChange={onChangeTabs}
@@ -75,19 +79,19 @@ const TableOperationBar: React.FC<TableOperationBarProps> = ({
       />
       <Space>
         <Button icon={<ReloadOutlined />} onClick={onRefresh}>
-          {dict('NuwaxPC.Common.Global.refresh')}
+          {dict('PC.Common.Global.refresh')}
         </Button>
         {activeKey === TableTabsEnum.Structure ? (
           <>
             <Button icon={<PlusOutlined />} onClick={onAddField}>
-              {dict('NuwaxPC.Pages.SpaceTable.TableOperationBar.addField')}
+              {dict('PC.Pages.SpaceTable.TableOperationBar.addField')}
             </Button>
             <Button
               loading={loading}
               icon={<SaveOutlined />}
               onClick={onSaveTableStructure}
             >
-              {dict('NuwaxPC.Common.Global.save')}
+              {dict('PC.Common.Global.save')}
             </Button>
           </>
         ) : (
@@ -97,7 +101,7 @@ const TableOperationBar: React.FC<TableOperationBarProps> = ({
               onClick={onClear}
               disabled={!tableData?.length} // 没有数据时禁用清空按钮
             >
-              {dict('NuwaxPC.Pages.SpaceTable.TableOperationBar.clearAllData')}
+              {dict('PC.Pages.SpaceTable.TableOperationBar.clearAllData')}
             </Button>
             <Upload
               // 是否禁用
@@ -118,7 +122,7 @@ const TableOperationBar: React.FC<TableOperationBarProps> = ({
                 loading={importLoading}
                 disabled={importLoading}
               >
-                {dict('NuwaxPC.Common.Global.import')}
+                {dict('PC.Common.Global.import')}
               </Button>
             </Upload>
             <Button
@@ -126,14 +130,14 @@ const TableOperationBar: React.FC<TableOperationBarProps> = ({
               loading={loading}
               onClick={onExportData}
             >
-              {dict('NuwaxPC.Common.Global.export')}
+              {dict('PC.Common.Global.export')}
             </Button>
             <Button
               icon={<PlusOutlined />}
               onClick={onCreateOrEditData}
               disabled={disabledCreateBtn} // 没有数据时禁用新增按钮
             >
-              {dict('NuwaxPC.Common.Global.add')}
+              {dict('PC.Common.Global.add')}
             </Button>
           </>
         )}

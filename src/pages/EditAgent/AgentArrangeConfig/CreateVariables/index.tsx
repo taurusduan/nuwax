@@ -128,22 +128,22 @@ const CreateVariables: React.FC<CreateVariablesProps> = ({
   const inputTypeLabelMap = useMemo<Record<InputTypeEnum, string>>(
     () => ({
       [InputTypeEnum.Text]: t(
-        'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeText',
+        'PC.Pages.AgentArrangeCreateVariableModal.inputTypeText',
       ),
       [InputTypeEnum.Paragraph]: t(
-        'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeParagraph',
+        'PC.Pages.AgentArrangeCreateVariableModal.inputTypeParagraph',
       ),
       [InputTypeEnum.Number]: t(
-        'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeNumber',
+        'PC.Pages.AgentArrangeCreateVariableModal.inputTypeNumber',
       ),
       [InputTypeEnum.Select]: t(
-        'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeSelect',
+        'PC.Pages.AgentArrangeCreateVariableModal.inputTypeSelect',
       ),
       [InputTypeEnum.MultipleSelect]: t(
-        'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeMultipleSelect',
+        'PC.Pages.AgentArrangeCreateVariableModal.inputTypeMultipleSelect',
       ),
       [InputTypeEnum.AutoRecognition]: t(
-        'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeAutoRecognition',
+        'PC.Pages.AgentArrangeCreateVariableModal.inputTypeAutoRecognition',
       ),
     }),
     [],
@@ -186,11 +186,11 @@ const CreateVariables: React.FC<CreateVariablesProps> = ({
       onSuccess: () => {
         if (updateVariablesTypeRef.current === UpdateVariablesTypeEnum.Delete) {
           message.success(
-            t('NuwaxPC.Pages.AgentArrangeCreateVariables.deleteSuccess'),
+            t('PC.Pages.AgentArrangeCreateVariables.deleteSuccess'),
           );
         } else {
           message.success(
-            t('NuwaxPC.Pages.AgentArrangeCreateVariables.updateSuccess'),
+            t('PC.Pages.AgentArrangeCreateVariables.updateSuccess'),
           );
         }
         isAddedNewVariable.current = true;
@@ -236,9 +236,7 @@ const CreateVariables: React.FC<CreateVariablesProps> = ({
     },
     {
       title: (
-        <LabelStar
-          label={t('NuwaxPC.Pages.AgentArrangeCreateVariables.name')}
-        />
+        <LabelStar label={t('PC.Pages.AgentArrangeCreateVariables.name')} />
       ),
       dataIndex: 'name',
       key: 'name',
@@ -251,7 +249,7 @@ const CreateVariables: React.FC<CreateVariablesProps> = ({
       ),
     },
     {
-      title: t('NuwaxPC.Pages.AgentArrangeCreateVariables.description'),
+      title: t('PC.Pages.AgentArrangeCreateVariables.description'),
       dataIndex: 'description',
       key: 'description',
       ellipsis: true,
@@ -263,7 +261,7 @@ const CreateVariables: React.FC<CreateVariablesProps> = ({
       ),
     },
     {
-      title: t('NuwaxPC.Pages.AgentArrangeCreateVariables.type'),
+      title: t('PC.Pages.AgentArrangeCreateVariables.type'),
       dataIndex: 'systemVariable',
       key: 'systemVariable',
       width: 100,
@@ -271,13 +269,13 @@ const CreateVariables: React.FC<CreateVariablesProps> = ({
       render: (value: boolean) => (
         <span className={cx('flex', 'items-center', 'h-full')}>
           {value
-            ? t('NuwaxPC.Pages.AgentArrangeCreateVariables.systemVariable')
-            : t('NuwaxPC.Pages.AgentArrangeCreateVariables.customVariable')}
+            ? t('PC.Pages.AgentArrangeCreateVariables.systemVariable')
+            : t('PC.Pages.AgentArrangeCreateVariables.customVariable')}
         </span>
       ),
     },
     {
-      title: t('NuwaxPC.Pages.AgentArrangeCreateVariables.inputType'),
+      title: t('PC.Pages.AgentArrangeCreateVariables.inputType'),
       dataIndex: 'inputType',
       key: 'inputType',
       width: 100,
@@ -288,7 +286,7 @@ const CreateVariables: React.FC<CreateVariablesProps> = ({
       ),
     },
     {
-      title: t('NuwaxPC.Pages.AgentArrangeCreateVariables.required'),
+      title: t('PC.Pages.AgentArrangeCreateVariables.required'),
       dataIndex: 'require',
       key: 'require',
       width: 100,
@@ -298,8 +296,8 @@ const CreateVariables: React.FC<CreateVariablesProps> = ({
           className={cx('flex', 'items-center', 'content-center', 'h-full')}
         >
           {value
-            ? t('NuwaxPC.Pages.AgentArrangeCreateVariables.yes')
-            : t('NuwaxPC.Pages.AgentArrangeCreateVariables.no')}
+            ? t('PC.Pages.AgentArrangeCreateVariables.yes')
+            : t('PC.Pages.AgentArrangeCreateVariables.no')}
         </span>
       ),
     },
@@ -408,7 +406,7 @@ const CreateVariables: React.FC<CreateVariablesProps> = ({
   return (
     <Modal
       width={870}
-      title={t('NuwaxPC.Pages.AgentArrangeCreateVariables.title')}
+      title={t('PC.Pages.AgentArrangeCreateVariables.title')}
       open={open}
       footer={null}
       onCancel={handleCancel}
@@ -436,7 +434,7 @@ const CreateVariables: React.FC<CreateVariablesProps> = ({
             }}
             footer={() => (
               <Button icon={<PlusOutlined />} onClick={handleAddVariable}>
-                {t('NuwaxPC.Pages.AgentArrangeCreateVariables.add')}
+                {t('PC.Pages.AgentArrangeCreateVariables.add')}
               </Button>
             )}
           />

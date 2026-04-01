@@ -126,7 +126,7 @@ const LogGroupItem: React.FC<{
         <Tooltip
           title={
             onAddToChat
-              ? t('NuwaxPC.Pages.AppDevDevLogConsole.clickToAddToChat')
+              ? t('PC.Pages.AppDevDevLogConsole.clickToAddToChat')
               : ''
           }
         >
@@ -265,13 +265,13 @@ const DevLogConsole: React.FC<DevLogConsoleProps> = ({
         <div className="header-left">
           <BugOutlined className="header-icon" />
           <span className="header-title">
-            {t('NuwaxPC.Pages.AppDevDevLogConsole.headerTitle')}
+            {t('PC.Pages.AppDevDevLogConsole.headerTitle')}
           </span>
           {hasErrorInLatestBlock && (
             <>
               <Tooltip
                 title={t(
-                  'NuwaxPC.Pages.AppDevDevLogConsole.latestLogsContainErrors',
+                  'PC.Pages.AppDevDevLogConsole.latestLogsContainErrors',
                 )}
               >
                 <Badge status="error" className="error-badge" />
@@ -289,14 +289,14 @@ const DevLogConsole: React.FC<DevLogConsoleProps> = ({
                   }
                   onClick={handleFindLatestErrorLogs}
                 >
-                  {t('NuwaxPC.Pages.AppDevDevLogConsole.quickIssueFix')}
+                  {t('PC.Pages.AppDevDevLogConsole.quickIssueFix')}
                 </Button>
               )}
             </>
           )}
         </div>
         <div className="header-right">
-          <Tooltip title={t('NuwaxPC.Pages.AppDevDevLogConsole.refreshLogs')}>
+          <Tooltip title={t('PC.Pages.AppDevDevLogConsole.refreshLogs')}>
             <Button
               type="text"
               size="small"
@@ -304,7 +304,7 @@ const DevLogConsole: React.FC<DevLogConsoleProps> = ({
               onClick={onRefresh}
             />
           </Tooltip>
-          <Tooltip title={t('NuwaxPC.Pages.AppDevDevLogConsole.clearLogs')}>
+          <Tooltip title={t('PC.Pages.AppDevDevLogConsole.clearLogs')}>
             <Button
               type="text"
               size="small"
@@ -312,9 +312,7 @@ const DevLogConsole: React.FC<DevLogConsoleProps> = ({
               onClick={onClear}
             />
           </Tooltip>
-          <Tooltip
-            title={t('NuwaxPC.Pages.AppDevDevLogConsole.closeLogConsole')}
-          >
+          <Tooltip title={t('PC.Pages.AppDevDevLogConsole.closeLogConsole')}>
             <Button
               type="text"
               size="small"
@@ -332,7 +330,7 @@ const DevLogConsole: React.FC<DevLogConsoleProps> = ({
             <div className="loading-spinner">
               <ReloadOutlined spin />
             </div>
-            <p>{t('NuwaxPC.Pages.AppDevDevLogConsole.loadingLogs')}</p>
+            <p>{t('PC.Pages.AppDevDevLogConsole.loadingLogs')}</p>
           </div>
         ) : logGroups.length > 0 ? (
           <div ref={logListRef} className="log-list">
@@ -347,7 +345,7 @@ const DevLogConsole: React.FC<DevLogConsoleProps> = ({
         ) : (
           <div className="empty-logs">
             <BugOutlined className="empty-icon" />
-            <p>{t('NuwaxPC.Pages.AppDevDevLogConsole.noLogData')}</p>
+            <p>{t('PC.Pages.AppDevDevLogConsole.noLogData')}</p>
           </div>
         )}
       </div>

@@ -83,7 +83,7 @@ const SessionStats: React.FC<SessionStatsProps> = ({
         },
       },
       tooltip: (d: { date: string; value: number }) => ({
-        name: dict('NuwaxPC.Pages.SystemDashboard.newSession'),
+        name: dict('PC.Pages.SystemDashboard.newSession'),
         value: (d.value || 0).toLocaleString(),
       }),
     }),
@@ -102,7 +102,7 @@ const SessionStats: React.FC<SessionStatsProps> = ({
       <Card className={cx(styles['session-chart'])} bordered={false}>
         <div className={cx(styles['chart-header'])}>
           <h3 className={cx(styles['chart-title'])}>
-            {dict('NuwaxPC.Pages.SystemDashboard.sevenDayTrend')}
+            {dict('PC.Pages.SystemDashboard.sevenDayTrend')}
           </h3>
           <Radio.Group
             value={period}
@@ -112,13 +112,13 @@ const SessionStats: React.FC<SessionStatsProps> = ({
             disabled={loading}
           >
             <Radio.Button value="7d">
-              {dict('NuwaxPC.Pages.SystemDashboard.period7d')}
+              {dict('PC.Pages.SystemDashboard.period7d')}
             </Radio.Button>
             <Radio.Button value="30d">
-              {dict('NuwaxPC.Pages.SystemDashboard.period30d')}
+              {dict('PC.Pages.SystemDashboard.period30d')}
             </Radio.Button>
             <Radio.Button value="month">
-              {dict('NuwaxPC.Pages.SystemDashboard.periodMonth')}
+              {dict('PC.Pages.SystemDashboard.periodMonth')}
             </Radio.Button>
           </Radio.Group>
         </div>

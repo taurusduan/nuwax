@@ -3,8 +3,8 @@ import LabelIcon from '@/components/LabelIcon';
 import SelectList from '@/components/custom/SelectList';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
 import useCategory from '@/hooks/useCategory';
-import { apiPublishApply, apiPublishItemList } from '@/services/publish';
 import { dict } from '@/services/i18nRuntime';
+import { apiPublishApply, apiPublishItemList } from '@/services/publish';
 import { apiSpaceList } from '@/services/workspace';
 import {
   AgentComponentTypeEnum,
@@ -110,12 +110,12 @@ const PublishComponentModal: React.FC<PublishComponentModalProps> = ({
     const _dataSource: PublishScope[] = [
       {
         key: PluginPublishScopeEnum.Tenant,
-        name: dict('NuwaxPC.Components.PublishComponentModal.systemSquare'),
+        name: dict('PC.Components.PublishComponentModal.systemSquare'),
         scope: PluginPublishScopeEnum.Tenant,
       },
       {
         key: PluginPublishScopeEnum.Space,
-        name: dict('NuwaxPC.Components.PublishComponentModal.space'),
+        name: dict('PC.Components.PublishComponentModal.space'),
         scope: PluginPublishScopeEnum.Space,
         children: list,
       },
@@ -191,19 +191,21 @@ const PublishComponentModal: React.FC<PublishComponentModalProps> = ({
     switch (mode) {
       case AgentComponentTypeEnum.Agent:
         _classifyList = currentTitle ? pageAppInfoList : agentInfoList;
-        setTitle(currentTitle ?? dict('NuwaxPC.Components.PublishComponentModal.agent'));
+        setTitle(
+          currentTitle ?? dict('PC.Components.PublishComponentModal.agent'),
+        );
         break;
       case AgentComponentTypeEnum.Plugin:
         _classifyList = pluginInfoList;
-        setTitle(dict('NuwaxPC.Components.PublishComponentModal.plugin'));
+        setTitle(dict('PC.Components.PublishComponentModal.plugin'));
         break;
       case AgentComponentTypeEnum.Workflow:
         _classifyList = workflowInfoList;
-        setTitle(dict('NuwaxPC.Components.PublishComponentModal.workflow'));
+        setTitle(dict('PC.Components.PublishComponentModal.workflow'));
         break;
       case AgentComponentTypeEnum.Skill:
         _classifyList = skillInfoList;
-        setTitle(dict('NuwaxPC.Components.PublishComponentModal.skill'));
+        setTitle(dict('PC.Components.PublishComponentModal.skill'));
         break;
     }
     // 分类选择列表 - 数据类型转换
@@ -241,7 +243,9 @@ const PublishComponentModal: React.FC<PublishComponentModalProps> = ({
       return res.data;
     },
     onSuccess: (data: string) => {
-      message.success(data || dict('NuwaxPC.Components.PublishComponentModal.publishSubmitted'));
+      message.success(
+        data || dict('PC.Components.PublishComponentModal.publishSubmitted'),
+      );
       onConfirm();
     },
   });
@@ -475,11 +479,15 @@ const PublishComponentModal: React.FC<PublishComponentModalProps> = ({
       title: (
         <LabelIcon
           className={cx(styles['label-normal'])}
-          label={dict('NuwaxPC.Components.PublishComponentModal.publishScope')}
+          label={dict('PC.Components.PublishComponentModal.publishScope')}
           title={
             <>
-              <p>{dict('NuwaxPC.Components.PublishComponentModal.systemSquareTip')}</p>
-              <p>{dict('NuwaxPC.Components.PublishComponentModal.spaceSquareTip')}</p>
+              <p>
+                {dict('PC.Components.PublishComponentModal.systemSquareTip')}
+              </p>
+              <p>
+                {dict('PC.Components.PublishComponentModal.spaceSquareTip')}
+              </p>
             </>
           }
           type={TooltipTitleTypeEnum.White}
@@ -515,10 +523,10 @@ const PublishComponentModal: React.FC<PublishComponentModalProps> = ({
       title: (
         <LabelIcon
           className={cx(styles['label-normal'])}
-          label={dict('NuwaxPC.Components.PublishComponentModal.allowCopyTemplate')}
+          label={dict('PC.Components.PublishComponentModal.allowCopyTemplate')}
           title={
             <p>
-              {dict('NuwaxPC.Components.PublishComponentModal.allowCopyTemplateTip')}
+              {dict('PC.Components.PublishComponentModal.allowCopyTemplateTip')}
             </p>
           }
           type={TooltipTitleTypeEnum.White}
@@ -540,8 +548,8 @@ const PublishComponentModal: React.FC<PublishComponentModalProps> = ({
       title: (
         <LabelIcon
           className={cx(styles['label-normal'])}
-          label={dict('NuwaxPC.Components.PublishComponentModal.onlyTemplate')}
-          title={dict('NuwaxPC.Components.PublishComponentModal.onlyTemplateTip')}
+          label={dict('PC.Components.PublishComponentModal.onlyTemplate')}
+          title={dict('PC.Components.PublishComponentModal.onlyTemplateTip')}
           type={TooltipTitleTypeEnum.White}
         />
       ),
@@ -574,29 +582,39 @@ const PublishComponentModal: React.FC<PublishComponentModalProps> = ({
         body: styles['modal-body'],
       }}
       loading={loading}
-      title={dict('NuwaxPC.Components.PublishComponentModal.publishTitle', title)}
+      title={dict('PC.Components.PublishComponentModal.publishTitle', title)}
       centered={true}
       open={open}
       onConfirm={handlerConfirm}
       onCancel={onCancel}
     >
       <Form form={form} layout="vertical" onFinish={onFinish}>
-        <Form.Item name="remark" label={dict('NuwaxPC.Components.PublishComponentModal.publishRecord')}>
+        <Form.Item
+          name="remark"
+          label={dict('PC.Components.PublishComponentModal.publishRecord')}
+        >
           <Input.TextArea
             rootClassName={cx(
               styles['input-textarea'],
               'dispose-textarea-count',
             )}
-            placeholder={dict('NuwaxPC.Components.PublishComponentModal.publishRecordPlaceholder')}
+            placeholder={dict(
+              'PC.Components.PublishComponentModal.publishRecordPlaceholder',
+            )}
             autoSize={{ minRows: 5, maxRows: 8 }}
             maxLength={200}
             showCount
           />
         </Form.Item>
-        <Form.Item name="category" label={dict('NuwaxPC.Components.PublishComponentModal.categorySelect')}>
+        <Form.Item
+          name="category"
+          label={dict('PC.Components.PublishComponentModal.categorySelect')}
+        >
           <SelectList className={styles.select} options={classifyList} />
         </Form.Item>
-        <Form.Item label={dict('NuwaxPC.Components.PublishComponentModal.selectPublishScope')}>
+        <Form.Item
+          label={dict('PC.Components.PublishComponentModal.selectPublishScope')}
+        >
           <Table<PublishScope>
             className={cx(styles['table-wrap'])}
             columns={inputColumns}

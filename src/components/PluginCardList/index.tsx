@@ -1,5 +1,5 @@
-import { Col, Empty, Row, Typography } from 'antd';
 import { dict } from '@/services/i18nRuntime';
+import { Col, Empty, Row, Typography } from 'antd';
 import React from 'react';
 import PluginCard, { PluginCardProps } from '../EcosystemCard';
 import styles from './index.less';
@@ -35,7 +35,7 @@ export interface PluginCardListProps {
 const PluginCardList: React.FC<PluginCardListProps> = ({
   title,
   plugins = [],
-  emptyText = dict('NuwaxPC.Common.Global.emptyData'),
+  emptyText = dict('PC.Common.Global.emptyData'),
   onCardClick,
   column = 1,
   gutter = [16, 16],

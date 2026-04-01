@@ -53,7 +53,7 @@ const ErrorList: React.FC<ErrorListProps> = ({
           height: '48px',
         }}
       >
-        <span>{t('NuwaxPC.Pages.AntvX6ErrorList.title')}</span>
+        <span>{t('PC.Pages.AntvX6ErrorList.title')}</span>
         <Button
           type="text"
           icon={<CloseOutlined />}
@@ -85,7 +85,7 @@ const ErrorList: React.FC<ErrorListProps> = ({
                   <div className="image-div-style">{returnImg(node.type)}</div>
                   <div className="content-error-item-width">
                     <p className="error-node-name">
-                      {node.name || t('NuwaxPC.Pages.AntvX6ErrorList.empty')}
+                      {node.name || t('PC.Pages.AntvX6ErrorList.empty')}
                     </p>
                     {item.error.length > 110 ? (
                       <Popover

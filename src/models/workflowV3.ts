@@ -63,8 +63,8 @@ const useWorkflowV3 = () => {
       inputArgs: [],
     },
     id: 0,
-    name: dict('NuwaxPC.Models.WorkflowV3.defaultNodeName'),
-    description: dict('NuwaxPC.Models.WorkflowV3.defaultNodeDescription'),
+    name: dict('PC.Models.WorkflowV3.defaultNodeName'),
+    description: dict('PC.Models.WorkflowV3.defaultNodeDescription'),
     workflowId: 0,
     icon: '',
   });

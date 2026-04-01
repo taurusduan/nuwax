@@ -54,7 +54,7 @@ const VariableGroupItem: React.FC<VariableGroupItemProps> = ({
           <Input
             size="small"
             placeholder={t(
-              'NuwaxPC.Pages.AntvX6VariableAggregation.groupNamePlaceholder',
+              'PC.Pages.AntvX6VariableAggregation.groupNamePlaceholder',
             )}
             value={group.name}
             onChange={(e) =>
@@ -113,7 +113,7 @@ const VariableGroupItem: React.FC<VariableGroupItemProps> = ({
       {/* Empty-state hint */}
       {(!group.inputs || group.inputs.length === 0) && (
         <div className="group-empty-tip">
-          {t('NuwaxPC.Pages.AntvX6VariableAggregation.emptyGroupInputHint')}
+          {t('PC.Pages.AntvX6VariableAggregation.emptyGroupInputHint')}
         </div>
       )}
     </div>

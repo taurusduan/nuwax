@@ -161,9 +161,7 @@ const MenuPermissionModal: React.FC<MenuPermissionModalProps> = ({
       manual: true,
       debounceInterval: 300,
       onSuccess: () => {
-        message.success(
-          t('NuwaxPC.Pages.SystemMenuPermissionModal.saveSuccess'),
-        );
+        message.success(t('PC.Pages.SystemMenuPermissionModal.saveSuccess'));
         onSuccess?.();
       },
     },
@@ -348,7 +346,7 @@ const MenuPermissionModal: React.FC<MenuPermissionModalProps> = ({
       open={open}
       width={600}
       onCancel={onClose}
-      title={t('NuwaxPC.Pages.SystemMenuPermissionModal.titleWithName', name)}
+      title={t('PC.Pages.SystemMenuPermissionModal.titleWithName', name)}
       onOk={handleSave}
       okButtonProps={{ loading: bindMenuLoading }}
       className={cx(styles.menuPermissionModal)}
@@ -357,7 +355,7 @@ const MenuPermissionModal: React.FC<MenuPermissionModalProps> = ({
         hasNoMenuData
           ? [
               <Button key="cancel" onClick={onClose}>
-                {t('NuwaxPC.Common.Global.cancel')}
+                {t('PC.Common.Global.cancel')}
               </Button>,
             ]
           : undefined // 使用默认 footer（包含确认和取消按钮）
@@ -381,7 +379,7 @@ const MenuPermissionModal: React.FC<MenuPermissionModalProps> = ({
           />
         ) : (
           <div className={cx(styles.empty)}>
-            {t('NuwaxPC.Pages.SystemMenuPermissionModal.emptyMenuData')}
+            {t('PC.Pages.SystemMenuPermissionModal.emptyMenuData')}
           </div>
         )}
       </div>

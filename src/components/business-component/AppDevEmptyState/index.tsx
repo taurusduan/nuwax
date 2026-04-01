@@ -132,9 +132,7 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
   allowDescriptionWrap = false, // 默认不允许换行
   maxLines = 3, // 默认最大显示 3 行
   clickableDescription = false, // 默认不支持点击查看
-  viewFullTextButtonText = t(
-    'NuwaxPC.Components.AppDevEmptyState.viewFullText',
-  ), // 默认按钮文本
+  viewFullTextButtonText = t('PC.Components.AppDevEmptyState.viewFullText'), // 默认按钮文本
 }) => {
   // 弹窗状态管理
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -152,8 +150,8 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           </div>
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.loadingTitle'),
-      description: t('NuwaxPC.Components.AppDevEmptyState.loadingDescription'),
+      title: t('PC.Components.AppDevEmptyState.loadingTitle'),
+      description: t('PC.Components.AppDevEmptyState.loadingDescription'),
     },
     error: {
       icon: (
@@ -164,8 +162,8 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           </div>
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.errorTitle'),
-      description: t('NuwaxPC.Components.AppDevEmptyState.errorDescription'),
+      title: t('PC.Components.AppDevEmptyState.errorTitle'),
+      description: t('PC.Components.AppDevEmptyState.errorDescription'),
     },
     'network-error': {
       icon: (
@@ -176,10 +174,8 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           </div>
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.networkErrorTitle'),
-      description: t(
-        'NuwaxPC.Components.AppDevEmptyState.networkErrorDescription',
-      ),
+      title: t('PC.Components.AppDevEmptyState.networkErrorTitle'),
+      description: t('PC.Components.AppDevEmptyState.networkErrorDescription'),
     },
     'permission-denied': {
       icon: (
@@ -190,9 +186,9 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           </div>
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.permissionDeniedTitle'),
+      title: t('PC.Components.AppDevEmptyState.permissionDeniedTitle'),
       description: t(
-        'NuwaxPC.Components.AppDevEmptyState.permissionDeniedDescription',
+        'PC.Components.AppDevEmptyState.permissionDeniedDescription',
       ),
     },
     empty: {
@@ -205,8 +201,8 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           />
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.emptyTitle'),
-      description: t('NuwaxPC.Components.AppDevEmptyState.emptyDescription'),
+      title: t('PC.Components.AppDevEmptyState.emptyTitle'),
+      description: t('PC.Components.AppDevEmptyState.emptyDescription'),
     },
     'no-data': {
       icon: (
@@ -218,8 +214,8 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           />
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.noDataTitle'),
-      description: t('NuwaxPC.Components.AppDevEmptyState.noDataDescription'),
+      title: t('PC.Components.AppDevEmptyState.noDataTitle'),
+      description: t('PC.Components.AppDevEmptyState.noDataDescription'),
     },
     'server-starting': {
       icon: (
@@ -230,9 +226,9 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           </div>
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.serverStartingTitle'),
+      title: t('PC.Components.AppDevEmptyState.serverStartingTitle'),
       description: t(
-        'NuwaxPC.Components.AppDevEmptyState.serverStartingDescription',
+        'PC.Components.AppDevEmptyState.serverStartingDescription',
       ),
     },
     'server-restarting': {
@@ -244,9 +240,9 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           </div>
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.serverRestartingTitle'),
+      title: t('PC.Components.AppDevEmptyState.serverRestartingTitle'),
       description: t(
-        'NuwaxPC.Components.AppDevEmptyState.serverRestartingDescription',
+        'PC.Components.AppDevEmptyState.serverRestartingDescription',
       ),
     },
     developing: {
@@ -258,10 +254,8 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           </div>
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.developingTitle'),
-      description: t(
-        'NuwaxPC.Components.AppDevEmptyState.developingDescription',
-      ),
+      title: t('PC.Components.AppDevEmptyState.developingTitle'),
+      description: t('PC.Components.AppDevEmptyState.developingDescription'),
     },
     'importing-project': {
       icon: (
@@ -272,9 +266,9 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           </div>
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.importingProjectTitle'),
+      title: t('PC.Components.AppDevEmptyState.importingProjectTitle'),
       description: t(
-        'NuwaxPC.Components.AppDevEmptyState.importingProjectDescription',
+        'PC.Components.AppDevEmptyState.importingProjectDescription',
       ),
     },
     'server-error': {
@@ -286,10 +280,8 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           </div>
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.serverErrorTitle'),
-      description: t(
-        'NuwaxPC.Components.AppDevEmptyState.serverErrorDescription',
-      ),
+      title: t('PC.Components.AppDevEmptyState.serverErrorTitle'),
+      description: t('PC.Components.AppDevEmptyState.serverErrorDescription'),
     },
     'preview-load-failed': {
       icon: (
@@ -300,9 +292,9 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           </div>
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.previewLoadFailedTitle'),
+      title: t('PC.Components.AppDevEmptyState.previewLoadFailedTitle'),
       description: t(
-        'NuwaxPC.Components.AppDevEmptyState.previewLoadFailedDescription',
+        'PC.Components.AppDevEmptyState.previewLoadFailedDescription',
       ),
     },
     'server-start-failed': {
@@ -314,9 +306,9 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           </div>
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.serverStartFailedTitle'),
+      title: t('PC.Components.AppDevEmptyState.serverStartFailedTitle'),
       description: t(
-        'NuwaxPC.Components.AppDevEmptyState.serverStartFailedDescription',
+        'PC.Components.AppDevEmptyState.serverStartFailedDescription',
       ),
     },
     'no-preview-url': {
@@ -328,10 +320,8 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           </div>
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.noPreviewUrlTitle'),
-      description: t(
-        'NuwaxPC.Components.AppDevEmptyState.noPreviewUrlDescription',
-      ),
+      title: t('PC.Components.AppDevEmptyState.noPreviewUrlTitle'),
+      description: t('PC.Components.AppDevEmptyState.noPreviewUrlDescription'),
     },
     'conversation-empty': {
       icon: (
@@ -343,9 +333,9 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           />
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.conversationEmptyTitle'),
+      title: t('PC.Components.AppDevEmptyState.conversationEmptyTitle'),
       description: t(
-        'NuwaxPC.Components.AppDevEmptyState.conversationEmptyDescription',
+        'PC.Components.AppDevEmptyState.conversationEmptyDescription',
       ),
     },
     'add-data': {
@@ -359,7 +349,7 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
         </div>
       ),
       title: '', // Figma 设计中没有标题
-      description: t('NuwaxPC.Components.AppDevEmptyState.addDataDescription'),
+      description: t('PC.Components.AppDevEmptyState.addDataDescription'),
     },
     'no-file': {
       icon: (
@@ -367,8 +357,8 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
           <img src={emptyStateLaptop} alt="" className={styles.laptopIcon} />
         </div>
       ),
-      title: t('NuwaxPC.Components.AppDevEmptyState.noFileTitle'),
-      description: t('NuwaxPC.Components.AppDevEmptyState.noFileDescription'),
+      title: t('PC.Components.AppDevEmptyState.noFileTitle'),
+      description: t('PC.Components.AppDevEmptyState.noFileDescription'),
     },
   };
 
@@ -514,7 +504,7 @@ const AppDevEmptyState: React.FC<AppDevEmptyStateProps> = ({
         onCancel={handleCloseModal}
         footer={[
           <Button key="close" onClick={handleCloseModal}>
-            {t('NuwaxPC.Components.AppDevEmptyState.close')}
+            {t('PC.Components.AppDevEmptyState.close')}
           </Button>,
         ]}
         width={600}

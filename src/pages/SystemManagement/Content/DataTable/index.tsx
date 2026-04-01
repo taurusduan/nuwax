@@ -58,12 +58,11 @@ const DataTable: React.FC = () => {
   const handleDelete = useCallback(async (record: SystemDataTableInfo) => {
     const response = await apiSystemResourceDataTableDelete({ id: record.id });
     if (response.code === SUCCESS_CODE) {
-      message.success(t('NuwaxPC.Pages.SystemContentDataTable.deleteSuccess'));
+      message.success(t('PC.Pages.SystemContentDataTable.deleteSuccess'));
       actionRef.current?.reload();
     } else {
       message.error(
-        response.message ||
-          t('NuwaxPC.Pages.SystemContentDataTable.deleteFailed'),
+        response.message || t('PC.Pages.SystemContentDataTable.deleteFailed'),
       );
     }
   }, []);
@@ -75,20 +74,20 @@ const DataTable: React.FC = () => {
     (record: SystemDataTableInfo): ActionItem<SystemDataTableInfo>[] => [
       {
         key: 'view',
-        label: t('NuwaxPC.Pages.SystemContentDataTable.view'),
+        label: t('PC.Pages.SystemContentDataTable.view'),
         disabled: !hasPermission('content_datatable_query_detail'),
         onClick: handleView,
       },
       {
         key: 'delete',
-        label: t('NuwaxPC.Pages.SystemContentDataTable.delete'),
+        label: t('PC.Pages.SystemContentDataTable.delete'),
         confirm: {
           title: t(
-            'NuwaxPC.Pages.SystemContentDataTable.deleteConfirmTitle',
+            'PC.Pages.SystemContentDataTable.deleteConfirmTitle',
             record.name,
           ),
           description: t(
-            'NuwaxPC.Pages.SystemContentDataTable.deleteConfirmDescription',
+            'PC.Pages.SystemContentDataTable.deleteConfirmDescription',
           ),
         },
         disabled: !hasPermission('content_datatable_delete'),
@@ -103,31 +102,31 @@ const DataTable: React.FC = () => {
    */
   const columns: ProColumns<SystemDataTableInfo>[] = [
     {
-      title: t('NuwaxPC.Pages.SystemContentDataTable.columnName'),
+      title: t('PC.Pages.SystemContentDataTable.columnName'),
       dataIndex: 'name',
       width: 180,
       ellipsis: true,
       fieldProps: {
-        placeholder: t('NuwaxPC.Pages.SystemContentDataTable.searchName'),
+        placeholder: t('PC.Pages.SystemContentDataTable.searchName'),
         allowClear: true,
       },
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentDataTable.columnDescription'),
+      title: t('PC.Pages.SystemContentDataTable.columnDescription'),
       dataIndex: 'description',
       width: 250,
       ellipsis: true,
       hideInSearch: true,
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentDataTable.columnCreator'),
+      title: t('PC.Pages.SystemContentDataTable.columnCreator'),
       dataIndex: 'creatorName',
       width: 120,
       ellipsis: true,
       hideInSearch: false,
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentDataTable.columnCreated'),
+      title: t('PC.Pages.SystemContentDataTable.columnCreated'),
       dataIndex: 'created',
       align: 'center',
       width: 170,
@@ -135,7 +134,7 @@ const DataTable: React.FC = () => {
       valueType: 'dateTime',
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentDataTable.columnAction'),
+      title: t('PC.Pages.SystemContentDataTable.columnAction'),
       valueType: 'option',
       fixed: 'right',
       align: 'center',
@@ -174,7 +173,7 @@ const DataTable: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={t('NuwaxPC.Pages.SystemContentDataTable.pageTitle')}
+      title={t('PC.Pages.SystemContentDataTable.pageTitle')}
       hideScroll
     >
       <XProTable<SystemDataTableInfo>

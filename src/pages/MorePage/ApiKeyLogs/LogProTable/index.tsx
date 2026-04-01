@@ -72,61 +72,59 @@ const LogProTable: React.FC = () => {
     () => [
       {
         width: 100,
-        title: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.type'),
+        title: t('PC.Pages.ApiKeyLogsLogProTable.type'),
         dataIndex: 'targetType',
         valueType: 'select',
         valueEnum: AGENT_COMPONENT_TYPE_MAP,
         hideInTable: false,
         initialValue: targetTypeFromUrl,
         fieldProps: {
-          placeholder: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.selectType'),
+          placeholder: t('PC.Pages.ApiKeyLogsLogProTable.selectType'),
           allowClear: true,
         },
       },
       {
-        title: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.targetId'),
+        title: t('PC.Pages.ApiKeyLogsLogProTable.targetId'),
         dataIndex: 'targetId',
         width: 140,
         ellipsis: true,
         initialValue: targetIdFromUrl,
         fieldProps: {
-          placeholder: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.enterTargetId'),
+          placeholder: t('PC.Pages.ApiKeyLogsLogProTable.enterTargetId'),
         },
       },
       {
-        title: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.targetName'),
+        title: t('PC.Pages.ApiKeyLogsLogProTable.targetName'),
         dataIndex: 'targetName',
         width: 140,
         ellipsis: true,
         fieldProps: {
-          placeholder: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.enterTargetName'),
+          placeholder: t('PC.Pages.ApiKeyLogsLogProTable.enterTargetName'),
         },
       },
       {
-        title: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.requestId'),
+        title: t('PC.Pages.ApiKeyLogsLogProTable.requestId'),
         dataIndex: 'requestId',
         width: 160,
         ellipsis: true,
         hideInTable: false,
         initialValue: requestIdFromUrl,
         fieldProps: {
-          placeholder: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.enterRequestId'),
+          placeholder: t('PC.Pages.ApiKeyLogsLogProTable.enterRequestId'),
         },
       },
       {
-        title: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.conversationId'),
+        title: t('PC.Pages.ApiKeyLogsLogProTable.conversationId'),
         dataIndex: 'conversationId',
         width: 140,
         ellipsis: true,
         fieldProps: {
-          placeholder: t(
-            'NuwaxPC.Pages.ApiKeyLogsLogProTable.enterConversationId',
-          ),
+          placeholder: t('PC.Pages.ApiKeyLogsLogProTable.enterConversationId'),
         },
       },
 
       {
-        title: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.inputContent'),
+        title: t('PC.Pages.ApiKeyLogsLogProTable.inputContent'),
         dataIndex: 'input',
         minWidth: 150,
         width: 220,
@@ -137,12 +135,12 @@ const LogProTable: React.FC = () => {
         ),
         fieldProps: {
           placeholder: t(
-            'NuwaxPC.Pages.ApiKeyLogsLogProTable.enterContentByKeywords',
+            'PC.Pages.ApiKeyLogsLogProTable.enterContentByKeywords',
           ),
         },
       },
       {
-        title: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.outputContent'),
+        title: t('PC.Pages.ApiKeyLogsLogProTable.outputContent'),
         dataIndex: 'output',
         minWidth: 150,
         width: 220,
@@ -153,33 +151,33 @@ const LogProTable: React.FC = () => {
         ),
         fieldProps: {
           placeholder: t(
-            'NuwaxPC.Pages.ApiKeyLogsLogProTable.enterContentByKeywords',
+            'PC.Pages.ApiKeyLogsLogProTable.enterContentByKeywords',
           ),
         },
       },
 
       {
-        title: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.timeRange'),
+        title: t('PC.Pages.ApiKeyLogsLogProTable.timeRange'),
         dataIndex: 'createTimeRange',
         valueType: 'dateTimeRange',
         hideInTable: true,
       },
       {
-        title: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.inputToken'),
+        title: t('PC.Pages.ApiKeyLogsLogProTable.inputToken'),
         dataIndex: 'inputToken',
         width: 100,
         align: 'center',
         search: false,
       },
       {
-        title: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.outputToken'),
+        title: t('PC.Pages.ApiKeyLogsLogProTable.outputToken'),
         dataIndex: 'outputToken',
         width: 100,
         align: 'center',
         search: false,
       },
       {
-        title: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.requestTime'),
+        title: t('PC.Pages.ApiKeyLogsLogProTable.requestTime'),
         dataIndex: 'requestStartTime',
         width: 180,
         valueType: 'dateTime',
@@ -190,7 +188,7 @@ const LogProTable: React.FC = () => {
         // },
       },
       {
-        title: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.totalDuration'),
+        title: t('PC.Pages.ApiKeyLogsLogProTable.totalDuration'),
         key: 'elapsedTimeMs',
         width: 110,
         align: 'center',
@@ -278,8 +276,7 @@ const LogProTable: React.FC = () => {
           !resp.success
         ) {
           message.error(
-            resp.message ||
-              t('NuwaxPC.Pages.ApiKeyLogsLogProTable.queryFailed'),
+            resp.message || t('PC.Pages.ApiKeyLogsLogProTable.queryFailed'),
           );
           return { data: [], total: 0, success: false };
         }
@@ -307,7 +304,7 @@ const LogProTable: React.FC = () => {
   const handleOpenDetails = useCallback((record: SpaceLogInfo) => {
     if (!record?.id) {
       message.warning(
-        t('NuwaxPC.Pages.ApiKeyLogsLogProTable.recordMissingRequestId'),
+        t('PC.Pages.ApiKeyLogsLogProTable.recordMissingRequestId'),
       );
       return;
     }
@@ -320,7 +317,7 @@ const LogProTable: React.FC = () => {
     return [
       ...columns,
       {
-        title: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.actions'),
+        title: t('PC.Pages.ApiKeyLogsLogProTable.actions'),
         valueType: 'option',
         width: 90,
         fixed: 'right',
@@ -332,7 +329,7 @@ const LogProTable: React.FC = () => {
               actions={[
                 {
                   key: 'detail',
-                  label: t('NuwaxPC.Pages.ApiKeyLogsLogProTable.detail'),
+                  label: t('PC.Pages.ApiKeyLogsLogProTable.detail'),
                   disabled: !hasPermission('system_running_log_query_detail'),
                   onClick: () => handleOpenDetails(record),
                 },

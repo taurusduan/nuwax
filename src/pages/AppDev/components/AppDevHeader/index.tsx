@@ -65,7 +65,7 @@ const AppDevHeader: React.FC<AppDevHeaderProps> = ({
   const projectName =
     projectInfo?.name ||
     workspace.name ||
-    dict('NuwaxPC.Pages.AppDevHeader.defaultProjectName');
+    dict('PC.Pages.AppDevHeader.defaultProjectName');
 
   // // 权限检查
   // const { hasPermission } = useModel('menuModel');
@@ -157,14 +157,11 @@ const AppDevHeader: React.FC<AppDevHeaderProps> = ({
         <div className={cx('flex', 'items-center', styles['agent-rel-info'])}>
           {workspace.projectId && (
             <span className={cx(styles['project-id'])}>
-              {dict(
-                'NuwaxPC.Pages.AppDevHeader.projectId',
-                workspace.projectId,
-              )}
+              {dict('PC.Pages.AppDevHeader.projectId', workspace.projectId)}
             </span>
           )}
           {deployStatus && (
-            <Popover content={dict('NuwaxPC.Pages.AppDevHeader.published')}>
+            <Popover content={dict('PC.Pages.AppDevHeader.published')}>
               <CheckCircleFilled className={cx(styles.circle)} />
             </Popover>
           )}
@@ -175,7 +172,7 @@ const AppDevHeader: React.FC<AppDevHeaderProps> = ({
         {lastUpdateTime && (
           <div className={cx('flex', 'items-center', styles['save-time'])}>
             <span className={styles['last-update-text']}>
-              {dict('NuwaxPC.Pages.AppDevHeader.lastUpdated', lastUpdateTime)}
+              {dict('PC.Pages.AppDevHeader.lastUpdated', lastUpdateTime)}
             </span>
             {/* 已发布，并存在更新 */}
             {hasUpdates && (
@@ -184,7 +181,7 @@ const AppDevHeader: React.FC<AppDevHeaderProps> = ({
                 color="volcano"
                 className={cx(styles['volcano'])}
               >
-                {dict('NuwaxPC.Pages.AppDevHeader.updatesNotPublished')}
+                {dict('PC.Pages.AppDevHeader.updatesNotPublished')}
               </Tag>
             )}
           </div>
@@ -194,7 +191,7 @@ const AppDevHeader: React.FC<AppDevHeaderProps> = ({
             projectInfo?.publishType === PageDevelopPublishTypeEnum.AGENT
           }
         >
-          <Tooltip title={dict('NuwaxPC.Pages.AppDevHeader.versionHistory')}>
+          <Tooltip title={dict('PC.Pages.AppDevHeader.versionHistory')}>
             <ClockCircleOutlined
               className={cx(
                 'ico',
@@ -216,8 +213,8 @@ const AppDevHeader: React.FC<AppDevHeaderProps> = ({
               disabled={isChatLoading} // 新增：聊天加载时禁用部署按钮
             >
               {isDeploying
-                ? dict('NuwaxPC.Pages.AppDevHeader.publishing')
-                : dict('NuwaxPC.Pages.AppDevHeader.publish')}
+                ? dict('PC.Pages.AppDevHeader.publishing')
+                : dict('PC.Pages.AppDevHeader.publish')}
             </Button>
           </div>
         </CustomPopover>
@@ -230,8 +227,8 @@ const AppDevHeader: React.FC<AppDevHeaderProps> = ({
               disabled={true}
             >
               {isDeploying
-                ? dict('NuwaxPC.Pages.AppDevHeader.publishing')
-                : dict('NuwaxPC.Pages.AppDevHeader.publish')}
+                ? dict('PC.Pages.AppDevHeader.publishing')
+                : dict('PC.Pages.AppDevHeader.publish')}
             </Button>
           </div>
         )} */}

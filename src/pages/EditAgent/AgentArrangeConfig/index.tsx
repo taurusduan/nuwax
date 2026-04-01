@@ -135,37 +135,37 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
     () => [
       {
         key: 'plan',
-        label: t('NuwaxPC.Pages.AgentArrangeConfig.plan'),
+        label: t('PC.Pages.AgentArrangeConfig.plan'),
         ref: planSectionRef,
       },
       {
         key: 'tool',
-        label: t('NuwaxPC.Pages.AgentArrangeConfig.tools'),
+        label: t('PC.Pages.AgentArrangeConfig.tools'),
         ref: toolSectionRef,
       },
       {
         key: 'skill',
-        label: t('NuwaxPC.Pages.AgentArrangeConfig.skills'),
+        label: t('PC.Pages.AgentArrangeConfig.skills'),
         ref: skillSectionRef,
       },
       {
         key: 'knowledge',
-        label: t('NuwaxPC.Pages.AgentArrangeConfig.knowledge'),
+        label: t('PC.Pages.AgentArrangeConfig.knowledge'),
         ref: knowledgeSectionRef,
       },
       {
         key: 'memory',
-        label: t('NuwaxPC.Pages.AgentArrangeConfig.memory'),
+        label: t('PC.Pages.AgentArrangeConfig.memory'),
         ref: memorySectionRef,
       },
       {
         key: 'experience',
-        label: t('NuwaxPC.Pages.AgentArrangeConfig.conversation'),
+        label: t('PC.Pages.AgentArrangeConfig.conversation'),
         ref: experienceSectionRef,
       },
       {
         key: 'page',
-        label: t('NuwaxPC.Pages.AgentArrangeConfig.interface'),
+        label: t('PC.Pages.AgentArrangeConfig.interface'),
         ref: pageSectionRef,
       },
     ],
@@ -409,7 +409,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
     const newDeleteList = [...deleteList, { id, targetId, type }];
     setDeleteList(newDeleteList);
     await runAgentComponentDel(id);
-    message.success(t('NuwaxPC.Pages.AgentArrangeConfig.deleteSuccess'));
+    message.success(t('PC.Pages.AgentArrangeConfig.deleteSuccess'));
     const list =
       agentComponentList?.filter(
         (item: AgentComponentInfo) =>
@@ -485,7 +485,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
     manual: true,
     debounceWait: 300,
     onSuccess: async () => {
-      message.success(t('NuwaxPC.Pages.AgentArrangeConfig.addSuccess'));
+      message.success(t('PC.Pages.AgentArrangeConfig.addSuccess'));
       // 重新查询智能体配置组件列表
       await asyncFun();
     },
@@ -571,15 +571,11 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
             item.type === AgentComponentTypeEnum.SubAgent,
         );
         if (!componentInfo) {
-          message.error(
-            t('NuwaxPC.Pages.AgentArrangeConfig.createSubAgentFailed'),
-          );
+          message.error(t('PC.Pages.AgentArrangeConfig.createSubAgentFailed'));
           return;
         }
       } catch (error) {
-        message.error(
-          t('NuwaxPC.Pages.AgentArrangeConfig.createSubAgentFailed'),
-        );
+        message.error(t('PC.Pages.AgentArrangeConfig.createSubAgentFailed'));
         return;
       }
     }
@@ -591,7 +587,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
       },
     };
     await apiAgentComponentSubAgentUpdate(params as any);
-    message.success(t('NuwaxPC.Toast.Global.savedSuccessfully'));
+    message.success(t('PC.Toast.Global.savedSuccessfully'));
     asyncFun(true);
   };
 
@@ -599,7 +595,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
   const ToolList: CollapseProps['items'] = [
     {
       key: AgentArrangeConfigEnum.Plugin,
-      label: t('NuwaxPC.Pages.AgentArrangeConfig.plugin'),
+      label: t('PC.Pages.AgentArrangeConfig.plugin'),
       children: (
         <CollapseComponentList
           textClassName={cx(styles.text)}
@@ -612,7 +608,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
       ),
       extra: (
         <TooltipIcon
-          title={t('NuwaxPC.Pages.AgentArrangeConfig.addPlugin')}
+          title={t('PC.Pages.AgentArrangeConfig.addPlugin')}
           onClick={(e) =>
             handlerComponentPlus(e, AgentComponentTypeEnum.Plugin)
           }
@@ -625,7 +621,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
     },
     {
       key: AgentArrangeConfigEnum.Workflow,
-      label: t('NuwaxPC.Pages.AgentArrangeConfig.workflow'),
+      label: t('PC.Pages.AgentArrangeConfig.workflow'),
       children: (
         <CollapseComponentList
           textClassName={cx(styles.text)}
@@ -638,7 +634,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
       ),
       extra: (
         <TooltipIcon
-          title={t('NuwaxPC.Pages.AgentArrangeConfig.addWorkflow')}
+          title={t('PC.Pages.AgentArrangeConfig.addWorkflow')}
           onClick={(e) =>
             handlerComponentPlus(e, AgentComponentTypeEnum.Workflow)
           }
@@ -654,7 +650,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
       label: 'MCP',
       children: !groupMcpList?.length ? (
         <p className={cx(styles.text)}>
-          {t('NuwaxPC.Pages.AgentArrangeConfig.mcpDescription')}
+          {t('PC.Pages.AgentArrangeConfig.mcpDescription')}
         </p>
       ) : (
         groupMcpList.map((item: GroupMcpInfo) => (
@@ -669,7 +665,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
       ),
       extra: (
         <TooltipIcon
-          title={t('NuwaxPC.Pages.AgentArrangeConfig.addMcp')}
+          title={t('PC.Pages.AgentArrangeConfig.addMcp')}
           onClick={(e) => handlerComponentPlus(e, AgentComponentTypeEnum.MCP)}
         />
       ),
@@ -684,7 +680,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
   const KnowledgeList: CollapseProps['items'] = [
     {
       key: AgentArrangeConfigEnum.Text,
-      label: t('NuwaxPC.Pages.AgentArrangeConfig.text'),
+      label: t('PC.Pages.AgentArrangeConfig.text'),
       children: (
         <KnowledgeTextList
           textClassName={cx(styles.text)}
@@ -695,7 +691,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
       ),
       extra: (
         <TooltipIcon
-          title={t('NuwaxPC.Pages.AgentArrangeConfig.addKnowledge')}
+          title={t('PC.Pages.AgentArrangeConfig.addKnowledge')}
           onClick={(e) =>
             handlerComponentPlus(e, AgentComponentTypeEnum.Knowledge)
           }
@@ -712,7 +708,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
   const SkillList: CollapseProps['items'] = [
     {
       key: AgentArrangeConfigEnum.Skill,
-      label: t('NuwaxPC.Pages.AgentArrangeConfig.skill'),
+      label: t('PC.Pages.AgentArrangeConfig.skill'),
       children: (
         <CollapseComponentList
           textClassName={cx(styles.text)}
@@ -725,7 +721,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
       ),
       extra: (
         <TooltipIcon
-          title={t('NuwaxPC.Pages.AgentArrangeConfig.addSkill')}
+          title={t('PC.Pages.AgentArrangeConfig.addSkill')}
           onClick={(e) => handlerComponentPlus(e, AgentComponentTypeEnum.Skill)}
         />
       ),
@@ -736,7 +732,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
     },
     {
       key: AgentArrangeConfigEnum.SubAgent,
-      label: t('NuwaxPC.Pages.AgentArrangeConfig.subAgent'),
+      label: t('PC.Pages.AgentArrangeConfig.subAgent'),
       children: (
         <SubAgentConfig
           subAgents={subAgentComponentInfo?.bindConfig?.subAgents}
@@ -745,7 +741,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
       ),
       extra: (
         <TooltipIcon
-          title={t('NuwaxPC.Pages.AgentArrangeConfig.addSubAgent')}
+          title={t('PC.Pages.AgentArrangeConfig.addSubAgent')}
           onClick={(e) => {
             e.stopPropagation();
             setOpenSubAgentModel(true);
@@ -763,7 +759,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
   const MemoryList: CollapseProps['items'] = [
     {
       key: AgentArrangeConfigEnum.Variable,
-      label: t('NuwaxPC.Pages.AgentArrangeConfig.variable'),
+      label: t('PC.Pages.AgentArrangeConfig.variable'),
       children: (
         <VariableList
           textClassName={cx(styles.text)}
@@ -773,7 +769,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
       ),
       extra: (
         <TooltipIcon
-          title={t('NuwaxPC.Pages.AgentArrangeConfig.addVariable')}
+          title={t('PC.Pages.AgentArrangeConfig.addVariable')}
           onClick={handlerVariablePlus}
         />
       ),
@@ -784,7 +780,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
     },
     {
       key: AgentArrangeConfigEnum.Table,
-      label: t('NuwaxPC.Pages.AgentArrangeConfig.table'),
+      label: t('PC.Pages.AgentArrangeConfig.table'),
       children: (
         <CollapseComponentList
           textClassName={cx(styles.text)}
@@ -797,7 +793,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
       ),
       extra: (
         <TooltipIcon
-          title={t('NuwaxPC.Pages.AgentArrangeConfig.addTable')}
+          title={t('PC.Pages.AgentArrangeConfig.addTable')}
           onClick={(e) => handlerComponentPlus(e, AgentComponentTypeEnum.Table)}
         />
       ),
@@ -808,7 +804,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
     },
     {
       key: AgentArrangeConfigEnum.Long_Memory,
-      label: t('NuwaxPC.Pages.AgentArrangeConfig.longMemory'),
+      label: t('PC.Pages.AgentArrangeConfig.longMemory'),
       children: (
         <LongMemoryContent
           textClassName={cx(styles.text)}
@@ -843,16 +839,12 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
   const ConversationalExperienceList: CollapseProps['items'] = [
     {
       key: AgentArrangeConfigEnum.User_Problem_Suggestion,
-      label: t('NuwaxPC.Pages.AgentArrangeConfig.userQuestionSuggestion'),
+      label: t('PC.Pages.AgentArrangeConfig.userQuestionSuggestion'),
       children: (
         <p className={cx(styles.text)}>
           {agentConfigInfo?.openSuggest === OpenCloseEnum.Open
-            ? t(
-                'NuwaxPC.Pages.AgentArrangeConfig.userQuestionSuggestionEnabled',
-              )
-            : t(
-                'NuwaxPC.Pages.AgentArrangeConfig.userQuestionSuggestionDisabled',
-              )}
+            ? t('PC.Pages.AgentArrangeConfig.userQuestionSuggestionEnabled')
+            : t('PC.Pages.AgentArrangeConfig.userQuestionSuggestionDisabled')}
         </p>
       ),
       extra: (
@@ -877,10 +869,10 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
     },
     {
       key: AgentArrangeConfigEnum.Open_Scheduled_Task,
-      label: t('NuwaxPC.Pages.AgentArrangeConfig.scheduledTask'),
+      label: t('PC.Pages.AgentArrangeConfig.scheduledTask'),
       children: (
         <p className={cx(styles.text)}>
-          {t('NuwaxPC.Pages.AgentArrangeConfig.scheduledTaskDescription')}
+          {t('PC.Pages.AgentArrangeConfig.scheduledTaskDescription')}
         </p>
       ),
       extra: (
@@ -941,7 +933,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
       },
     } as AgentComponentEventUpdateParams;
     await runEventUpdate(newEventsInfo);
-    message.success(t('NuwaxPC.Pages.AgentArrangeConfig.deleteSuccessSimple'));
+    message.success(t('PC.Pages.AgentArrangeConfig.deleteSuccessSimple'));
     // 重新查询智能体配置组件列表
     asyncFun(true);
   };
@@ -993,8 +985,8 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
           const eventTagHtml = `<div class="event" event-type="${
             item.identification
           }" data='${t(
-            'NuwaxPC.Pages.AgentArrangeConfig.dynamicJsonParameter',
-          )}'>[${t('NuwaxPC.Pages.AgentArrangeConfig.referenceNumber')}]</div>`;
+            'PC.Pages.AgentArrangeConfig.dynamicJsonParameter',
+          )}'>[${t('PC.Pages.AgentArrangeConfig.referenceNumber')}]</div>`;
           const escapedEventTag = eventTagHtml
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;');
@@ -1009,19 +1001,17 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
 
           // 构建完整的 HTML 格式文本
           const eventText = `<p>${t(
-            'NuwaxPC.Pages.AgentArrangeConfig.appendReferenceInfo',
+            'PC.Pages.AgentArrangeConfig.appendReferenceInfo',
           )}</p><p>${escapedEventTag}</p><p><br class="ProseMirror-trailingBreak"></p><p>${t(
-            'NuwaxPC.Pages.AgentArrangeConfig.dynamicJsonSchemaPrefix',
+            'PC.Pages.AgentArrangeConfig.dynamicJsonSchemaPrefix',
             escapedIdentification,
           )}</p><p>\`\`\`</p>${jsonSchemaLines}<p>\`\`\`</p>`;
 
           onInsertSystemPrompt(eventText);
-          message.success(
-            t('NuwaxPC.Pages.AgentArrangeConfig.insertPromptSuccess'),
-          );
+          message.success(t('PC.Pages.AgentArrangeConfig.insertPromptSuccess'));
         } else {
           message.warning(
-            t('NuwaxPC.Pages.AgentArrangeConfig.insertPromptUnavailable'),
+            t('PC.Pages.AgentArrangeConfig.insertPromptUnavailable'),
           );
         }
         break;
@@ -1039,16 +1029,12 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
       ? [
           {
             key: AgentArrangeConfigEnum.Hide_Remote_Desktop,
-            label: t('NuwaxPC.Pages.AgentArrangeConfig.hideRemoteDesktop'),
+            label: t('PC.Pages.AgentArrangeConfig.hideRemoteDesktop'),
             children: (
               <p className={cx(styles.text)}>
                 {agentConfigInfo?.hideDesktop === HideDesktopEnum.Yes
-                  ? t(
-                      'NuwaxPC.Pages.AgentArrangeConfig.hideRemoteDesktopEnabled',
-                    )
-                  : t(
-                      'NuwaxPC.Pages.AgentArrangeConfig.hideRemoteDesktopDisabled',
-                    )}
+                  ? t('PC.Pages.AgentArrangeConfig.hideRemoteDesktopEnabled')
+                  : t('PC.Pages.AgentArrangeConfig.hideRemoteDesktopDisabled')}
               </p>
             ),
             extra: (
@@ -1076,7 +1062,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
 
     {
       key: AgentArrangeConfigEnum.Opening_Remarks,
-      label: t('NuwaxPC.Pages.AgentArrangeConfig.openingRemarks'),
+      label: t('PC.Pages.AgentArrangeConfig.openingRemarks'),
       children: (
         <OpenRemarksEdit
           agentConfigInfo={agentConfigInfo}
@@ -1096,7 +1082,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
       : [
           {
             key: AgentArrangeConfigEnum.Page,
-            label: t('NuwaxPC.Pages.AgentArrangeConfig.page'),
+            label: t('PC.Pages.AgentArrangeConfig.page'),
             children: (
               <CollapseComponentList
                 textClassName={cx(styles.text)}
@@ -1109,7 +1095,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
             ),
             extra: (
               <TooltipIcon
-                title={t('NuwaxPC.Pages.AgentArrangeConfig.addPage')}
+                title={t('PC.Pages.AgentArrangeConfig.addPage')}
                 onClick={(e) =>
                   handlerComponentPlus(e, AgentComponentTypeEnum.Page)
                 }
@@ -1122,20 +1108,18 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
           },
           {
             key: AgentArrangeConfigEnum.Default_Expand_Page_Area,
-            label: t('NuwaxPC.Pages.AgentArrangeConfig.defaultExpandPageArea'),
+            label: t('PC.Pages.AgentArrangeConfig.defaultExpandPageArea'),
             children: (
               // 默认展开页面区”，当选中时，用户进入智能体详情或会话时为左右分栏，左边是对话框，右边是页面
               <p className={cx(styles.text)}>
-                {t(
-                  'NuwaxPC.Pages.AgentArrangeConfig.defaultExpandPageAreaDesc',
-                )}
+                {t('PC.Pages.AgentArrangeConfig.defaultExpandPageAreaDesc')}
               </p>
             ),
             extra: (
               <Tooltip
                 title={
                   !allPageComponentList?.length
-                    ? t('NuwaxPC.Pages.AgentArrangeConfig.addPageFirst')
+                    ? t('PC.Pages.AgentArrangeConfig.addPageFirst')
                     : ''
                 }
               >
@@ -1164,7 +1148,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
           },
           {
             key: AgentArrangeConfigEnum.Page_Event_Binding,
-            label: t('NuwaxPC.Pages.AgentArrangeConfig.eventBinding'),
+            label: t('PC.Pages.AgentArrangeConfig.eventBinding'),
             children: (
               // 事件绑定列表
               <EventList
@@ -1175,7 +1159,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
             ),
             extra: (
               <TooltipIcon
-                title={t('NuwaxPC.Pages.AgentArrangeConfig.addEventBinding')}
+                title={t('PC.Pages.AgentArrangeConfig.addEventBinding')}
                 onClick={(e) => {
                   e.stopPropagation();
                   handleAddEventBinding();
@@ -1284,7 +1268,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
 
           <div ref={toolSectionRef}>
             <ConfigOptionsHeader
-              title={t('NuwaxPC.Pages.AgentArrangeConfig.tools')}
+              title={t('PC.Pages.AgentArrangeConfig.tools')}
             />
             <ConfigOptionCollapse
               items={ToolList}
@@ -1296,7 +1280,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
           {agentConfigInfo?.type === AgentTypeEnum.TaskAgent && (
             <div ref={skillSectionRef}>
               <ConfigOptionsHeader
-                title={t('NuwaxPC.Pages.AgentArrangeConfig.skills')}
+                title={t('PC.Pages.AgentArrangeConfig.skills')}
               />
               <ConfigOptionCollapse
                 items={SkillList}
@@ -1307,7 +1291,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
 
           <div ref={knowledgeSectionRef}>
             <ConfigOptionsHeader
-              title={t('NuwaxPC.Pages.AgentArrangeConfig.knowledge')}
+              title={t('PC.Pages.AgentArrangeConfig.knowledge')}
             />
             <ConfigOptionCollapse
               items={KnowledgeList}
@@ -1317,7 +1301,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
 
           <div ref={memorySectionRef}>
             <ConfigOptionsHeader
-              title={t('NuwaxPC.Pages.AgentArrangeConfig.memory')}
+              title={t('PC.Pages.AgentArrangeConfig.memory')}
             />
             <ConfigOptionCollapse
               items={MemoryList}
@@ -1327,9 +1311,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
 
           <div ref={experienceSectionRef}>
             <ConfigOptionsHeader
-              title={t(
-                'NuwaxPC.Pages.AgentArrangeConfig.conversationExperience',
-              )}
+              title={t('PC.Pages.AgentArrangeConfig.conversationExperience')}
             />
             <ConfigOptionCollapse
               items={ConversationalExperienceList}
@@ -1342,7 +1324,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
 
           <div ref={pageSectionRef}>
             <ConfigOptionsHeader
-              title={t('NuwaxPC.Pages.AgentArrangeConfig.interfaceConfig')}
+              title={t('PC.Pages.AgentArrangeConfig.interfaceConfig')}
             />
             <ConfigOptionCollapse
               items={PageConfigList}

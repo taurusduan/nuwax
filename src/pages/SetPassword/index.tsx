@@ -60,10 +60,10 @@ const SetPassword: React.FC = () => {
         >
           <Form.Item>
             <h3 className={cx(styles.title)}>
-              {dict('NuwaxPC.Pages.SetPassword.title')}
+              {dict('PC.Pages.SetPassword.title')}
             </h3>
             <p className={cx(styles['sub-title'])}>
-              {dict('NuwaxPC.Pages.SetPassword.description')}
+              {dict('PC.Pages.SetPassword.description')}
             </p>
           </Form.Item>
           <Form.Item
@@ -71,7 +71,7 @@ const SetPassword: React.FC = () => {
             rules={[
               {
                 required: true,
-                message: dict('NuwaxPC.Pages.SetPassword.passwordRequired'),
+                message: dict('PC.Pages.SetPassword.passwordRequired'),
               },
               {
                 validator(_, value) {
@@ -79,9 +79,7 @@ const SetPassword: React.FC = () => {
                     return Promise.resolve();
                   }
                   return Promise.reject(
-                    new Error(
-                      dict('NuwaxPC.Pages.SetPassword.invalidPassword'),
-                    ),
+                    new Error(dict('PC.Pages.SetPassword.invalidPassword')),
                   );
                 },
               },
@@ -89,9 +87,7 @@ const SetPassword: React.FC = () => {
           >
             <Input.Password
               rootClassName={cx(styles.input)}
-              placeholder={dict(
-                'NuwaxPC.Pages.SetPassword.passwordPlaceholder',
-              )}
+              placeholder={dict('PC.Pages.SetPassword.passwordPlaceholder')}
               autoComplete="off"
             />
           </Form.Item>
@@ -100,9 +96,7 @@ const SetPassword: React.FC = () => {
             rules={[
               {
                 required: true,
-                message: dict(
-                  'NuwaxPC.Pages.SetPassword.confirmPasswordRequired',
-                ),
+                message: dict('PC.Pages.SetPassword.confirmPasswordRequired'),
               },
               ({ getFieldValue }) => ({
                 validator(_, value) {
@@ -112,14 +106,12 @@ const SetPassword: React.FC = () => {
                   }
                   if (_password && _password !== value) {
                     return Promise.reject(
-                      new Error(
-                        dict('NuwaxPC.Pages.SetPassword.passwordMismatch'),
-                      ),
+                      new Error(dict('PC.Pages.SetPassword.passwordMismatch')),
                     );
                   }
                   return Promise.reject(
                     new Error(
-                      dict('NuwaxPC.Pages.SetPassword.confirmPasswordInvalid'),
+                      dict('PC.Pages.SetPassword.confirmPasswordInvalid'),
                     ),
                   );
                 },
@@ -129,7 +121,7 @@ const SetPassword: React.FC = () => {
             <Input.Password
               rootClassName={cx(styles.input)}
               placeholder={dict(
-                'NuwaxPC.Pages.SetPassword.confirmPasswordPlaceholder',
+                'PC.Pages.SetPassword.confirmPasswordPlaceholder',
               )}
               autoComplete="off"
             />
@@ -142,7 +134,7 @@ const SetPassword: React.FC = () => {
               loading={loading}
               htmlType="submit"
             >
-              {dict('NuwaxPC.Common.Global.confirm')}
+              {dict('PC.Common.Global.confirm')}
             </Button>
           </Form.Item>
         </Form>

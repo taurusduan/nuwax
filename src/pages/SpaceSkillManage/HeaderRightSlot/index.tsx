@@ -67,7 +67,7 @@ const HeaderRightSlot: React.FC<HeaderRightSlotProps> = ({
       />
       <CustomPopover list={SKILL_ALL_RESOURCE} onClick={handleClickPopoverItem}>
         <Button type="primary" icon={<PlusOutlined />}>
-          {dict('NuwaxPC.Pages.SpaceSkillManage.HeaderRightSlot.skill')}
+          {dict('PC.Pages.SpaceSkillManage.HeaderRightSlot.skill')}
         </Button>
       </CustomPopover>
     </Space>

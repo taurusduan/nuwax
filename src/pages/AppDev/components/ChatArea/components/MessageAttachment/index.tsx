@@ -83,7 +83,7 @@ const MessageAttachment: React.FC<MessageAttachmentProps> = ({
           src={imageSrc}
           alt={
             imageAttachment.filename ||
-            t('NuwaxPC.Pages.AppDevMessageAttachment.imageAlt')
+            t('PC.Pages.AppDevMessageAttachment.imageAlt')
           }
           width={size}
           height={size}
@@ -117,15 +117,15 @@ const MessageAttachment: React.FC<MessageAttachmentProps> = ({
     ): string => {
       switch (fileType) {
         case 'Text':
-          return t('NuwaxPC.Pages.AppDevMessageAttachment.fileTypeText');
+          return t('PC.Pages.AppDevMessageAttachment.fileTypeText');
         case 'Document':
-          return t('NuwaxPC.Pages.AppDevMessageAttachment.fileTypeDocument');
+          return t('PC.Pages.AppDevMessageAttachment.fileTypeDocument');
         case 'Audio':
-          return t('NuwaxPC.Pages.AppDevMessageAttachment.fileTypeAudio');
+          return t('PC.Pages.AppDevMessageAttachment.fileTypeAudio');
         case 'File':
-          return t('NuwaxPC.Pages.AppDevMessageAttachment.fileTypeFile');
+          return t('PC.Pages.AppDevMessageAttachment.fileTypeFile');
         default:
-          return t('NuwaxPC.Pages.AppDevMessageAttachment.fileTypeFile');
+          return t('PC.Pages.AppDevMessageAttachment.fileTypeFile');
       }
     };
 
@@ -161,7 +161,7 @@ const MessageAttachment: React.FC<MessageAttachmentProps> = ({
               (fileAttachment.source?.source_type === 'FilePath'
                 ? fileAttachment.source.data?.path?.split('/').pop()
                 : null) ||
-              t('NuwaxPC.Pages.AppDevMessageAttachment.fileTypeFile')}
+              t('PC.Pages.AppDevMessageAttachment.fileTypeFile')}
           </div>
           <div className={styles.fileAttachmentType}>
             {getFileTypeText(type as 'Text' | 'Document' | 'Audio' | 'File')}
@@ -179,11 +179,11 @@ const MessageAttachment: React.FC<MessageAttachmentProps> = ({
     const getDataSourceTypeText = (type: 'plugin' | 'workflow'): string => {
       switch (type) {
         case 'plugin':
-          return t('NuwaxPC.Pages.AppDevMessageAttachment.dataSourcePlugin');
+          return t('PC.Pages.AppDevMessageAttachment.dataSourcePlugin');
         case 'workflow':
-          return t('NuwaxPC.Pages.AppDevMessageAttachment.dataSourceWorkflow');
+          return t('PC.Pages.AppDevMessageAttachment.dataSourceWorkflow');
         default:
-          return t('NuwaxPC.Pages.AppDevMessageAttachment.dataSourceDefault');
+          return t('PC.Pages.AppDevMessageAttachment.dataSourceDefault');
       }
     };
 

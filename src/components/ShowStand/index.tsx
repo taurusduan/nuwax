@@ -27,7 +27,7 @@ const ShowStand: React.FC<ShowStandProps> = ({
 
   return (
     <ToggleWrap
-      title={dict('NuwaxPC.Components.ShowStand.title')}
+      title={dict('PC.Components.ShowStand.title')}
       className={className}
       visible={visible}
       onClose={onClose}
@@ -46,7 +46,7 @@ const ShowStand: React.FC<ShowStandProps> = ({
         </div>
       ) : (
         <div className={cx('flex', 'h-full', 'items-center', 'content-center')}>
-          <Empty description={dict('NuwaxPC.Common.Global.emptyData')} />
+          <Empty description={dict('PC.Common.Global.emptyData')} />
         </div>
       )}
     </ToggleWrap>

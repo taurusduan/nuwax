@@ -42,7 +42,9 @@ const PlatformList: React.FC<PlatformListProps> = ({
 
   return (
     <div className={cx(styles.container)}>
-      <div className={cx(styles.header)}>{dict('NuwaxPC.Pages.IMChannel.PlatformList.platformList')}</div>
+      <div className={cx(styles.header)}>
+        {dict('PC.Pages.IMChannel.PlatformList.platformList')}
+      </div>
       <div className={cx(styles.listWrapper)}>
         {platforms.map((item) => {
           const isActive = value === item.id;
@@ -57,7 +59,12 @@ const PlatformList: React.FC<PlatformListProps> = ({
               </div>
               <div className={cx(styles.info)}>
                 <div className={cx(styles.name)}>{item.name}</div>
-                <div className={cx(styles.count)}>{dict('NuwaxPC.Pages.IMChannel.PlatformList.robotCount', String(item.count))}</div>
+                <div className={cx(styles.count)}>
+                  {dict(
+                    'PC.Pages.IMChannel.PlatformList.robotCount',
+                    String(item.count),
+                  )}
+                </div>
               </div>
             </div>
           );

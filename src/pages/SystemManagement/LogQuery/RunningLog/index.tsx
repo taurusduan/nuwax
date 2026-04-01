@@ -5,7 +5,7 @@ import LogProTable from './LogProTable';
 const RunningLog: React.FC = () => {
   return (
     <WorkspaceLayout
-      title={dict('NuwaxPC.Pages.SystemLog.runningLog')}
+      title={dict('PC.Pages.SystemLog.runningLog')}
       hideScroll={false}
     >
       <LogProTable />

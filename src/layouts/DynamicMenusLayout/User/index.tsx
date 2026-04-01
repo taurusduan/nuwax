@@ -59,12 +59,12 @@ const User: React.FC<PropsWithChildren> = ({ children }) => {
         return (
           userInfo?.nickName ||
           userInfo?.userName ||
-          dict('NuwaxPC.Components.UserMenu.defaultUserName')
+          dict('PC.Components.UserMenu.defaultUserName')
         );
       case UserAvatarEnum.Setting:
-        return dict('NuwaxPC.Components.UserMenu.profile');
+        return dict('PC.Components.UserMenu.profile');
       case UserAvatarEnum.Log_Out:
-        return dict('NuwaxPC.Components.UserMenu.logout');
+        return dict('PC.Components.UserMenu.logout');
       default:
         return '';
     }

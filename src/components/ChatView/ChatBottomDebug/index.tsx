@@ -62,7 +62,7 @@ const ChatBottomDebug: React.FC<ChatBottomDebugProps> = ({ messageInfo }) => {
               className={styles.icon}
               icon={<img src={debugImage as string} alt="" />}
               onClick={handleClick}
-              title={dict('NuwaxPC.Components.ChatBottomDebug.debug')}
+              title={dict('PC.Components.ChatBottomDebug.debug')}
               type={TooltipTitleTypeEnum.White}
             />
           </ConditionRender>

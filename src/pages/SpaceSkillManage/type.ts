@@ -18,17 +18,17 @@ export enum SkillMoreActionEnum {
 export const SKILL_MORE_ACTION: CustomPopoverItem[] = [
   {
     action: SkillMoreActionEnum.Copy_To_Space,
-    label: dict('NuwaxPC.Pages.SpaceSkillManage.type.copyToSpace'),
+    label: dict('PC.Pages.SpaceSkillManage.type.copyToSpace'),
     type: ComponentTypeEnum.Skill,
   },
   {
     action: SkillMoreActionEnum.Export_Project,
-    label: dict('NuwaxPC.Pages.SpaceSkillManage.type.exportSkill'),
+    label: dict('PC.Pages.SpaceSkillManage.type.exportSkill'),
     type: ComponentTypeEnum.Skill,
   },
   {
     action: SkillMoreActionEnum.Delete,
-    label: dict('NuwaxPC.Common.Global.delete'),
+    label: dict('PC.Common.Global.delete'),
     isDel: true,
     type: ComponentTypeEnum.Skill,
   },

@@ -37,21 +37,21 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
 }) => {
   const columns: ProColumns<ApiKeyStatsInfo>[] = [
     {
-      title: t('NuwaxPC.Pages.ApiKeyStatsModal.apiName'),
+      title: t('PC.Pages.ApiKeyStatsModal.apiName'),
       dataIndex: 'name',
       key: 'name',
       ellipsis: true,
       width: 200,
     },
     {
-      title: t('NuwaxPC.Pages.ApiKeyStatsModal.apiPath'),
+      title: t('PC.Pages.ApiKeyStatsModal.apiPath'),
       dataIndex: 'path',
       key: 'path',
       ellipsis: true,
       width: 300,
     },
     {
-      title: t('NuwaxPC.Pages.ApiKeyStatsModal.totalCalls'),
+      title: t('PC.Pages.ApiKeyStatsModal.totalCalls'),
       key: 'totalCount',
       align: 'center',
       render: (_, record) => (
@@ -61,7 +61,7 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
       ),
     },
     {
-      title: t('NuwaxPC.Pages.ApiKeyStatsModal.monthCalls'),
+      title: t('PC.Pages.ApiKeyStatsModal.monthCalls'),
       key: 'monthCount',
       align: 'center',
       render: (_, record) => (
@@ -71,7 +71,7 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
       ),
     },
     {
-      title: t('NuwaxPC.Pages.ApiKeyStatsModal.todayCalls'),
+      title: t('PC.Pages.ApiKeyStatsModal.todayCalls'),
       key: 'todayCount',
       align: 'center',
       render: (_, record) => (
@@ -81,7 +81,7 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
       ),
     },
     {
-      title: t('NuwaxPC.Pages.ApiKeyStatsModal.actions'),
+      title: t('PC.Pages.ApiKeyStatsModal.actions'),
       key: 'action',
       width: 100,
       align: 'center',
@@ -92,7 +92,7 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
           actions={[
             {
               key: 'view',
-              label: t('NuwaxPC.Pages.ApiKeyStatsModal.viewRecords'),
+              label: t('PC.Pages.ApiKeyStatsModal.viewRecords'),
               onClick: () => {
                 onOpenChange(false);
                 history.push(
@@ -110,7 +110,7 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
     <Modal
       title={
         <Title level={4}>
-          {t('NuwaxPC.Pages.ApiKeyStatsModal.callStatsWithName', record?.name)}
+          {t('PC.Pages.ApiKeyStatsModal.callStatsWithName', record?.name)}
         </Title>
       }
       open={open}
@@ -118,7 +118,7 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
       width={1000}
       footer={[
         <Button key="close" onClick={() => onOpenChange(false)}>
-          {t('NuwaxPC.Pages.ApiKeyStatsModal.close')}
+          {t('PC.Pages.ApiKeyStatsModal.close')}
         </Button>,
       ]}
       destroyOnHidden

@@ -89,11 +89,17 @@ const MyComputerManage: React.FC = () => {
     try {
       const res = await apiToggleSandboxConfig(id);
       if (res.code === SUCCESS_CODE) {
-        message.success(dict(checked ? 'NuwaxPC.Toast.MyComputerManage.enabled' : 'NuwaxPC.Toast.MyComputerManage.disabled'));
+        message.success(
+          dict(
+            checked
+              ? 'PC.Toast.MyComputerManage.enabled'
+              : 'PC.Toast.MyComputerManage.disabled',
+          ),
+        );
         fetchList();
       }
     } catch (error) {
-      message.error(dict('NuwaxPC.Toast.MyComputerManage.operationFailed'));
+      message.error(dict('PC.Toast.MyComputerManage.operationFailed'));
     } finally {
       setToggleLoadingId(null);
     }
@@ -101,16 +107,16 @@ const MyComputerManage: React.FC = () => {
 
   const handleDelete = (id: number) => {
     confirm({
-      title: dict('NuwaxPC.Pages.MyComputerManage.deleteConfirmTitle'),
+      title: dict('PC.Pages.MyComputerManage.deleteConfirmTitle'),
       icon: <ExclamationCircleOutlined />,
-      content: dict('NuwaxPC.Pages.MyComputerManage.deleteConfirmContent'),
-      okText: dict('NuwaxPC.Common.Global.confirm'),
+      content: dict('PC.Pages.MyComputerManage.deleteConfirmContent'),
+      okText: dict('PC.Common.Global.confirm'),
       okType: 'danger',
-      cancelText: dict('NuwaxPC.Common.Global.cancel'),
+      cancelText: dict('PC.Common.Global.cancel'),
       onOk: async () => {
         const res = await apiDeleteSandboxUserConfig(id);
         if (res.code === SUCCESS_CODE) {
-          message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
+          message.success(dict('PC.Toast.Global.deletedSuccessfully'));
           fetchList();
         }
       },
@@ -142,7 +148,9 @@ const MyComputerManage: React.FC = () => {
           maxAgentCount: values.maxAgentCount,
         });
         if (res.code === SUCCESS_CODE) {
-          message.success(dict('NuwaxPC.Toast.MyComputerManage.modifiedSuccessfully'));
+          message.success(
+            dict('PC.Toast.MyComputerManage.modifiedSuccessfully'),
+          );
           setEditModalOpen(false);
           fetchList();
         }
@@ -153,30 +161,46 @@ const MyComputerManage: React.FC = () => {
           maxAgentCount: values.maxAgentCount,
         });
         if (res.code === SUCCESS_CODE) {
-          message.success(dict('NuwaxPC.Toast.MyComputerManage.createdSuccessfully'));
+          message.success(
+            dict('PC.Toast.MyComputerManage.createdSuccessfully'),
+          );
           setEditModalOpen(false);
           fetchList();
         }
       }
     } catch (error) {
       console.error(error);
-      message.error(dict(currentEditItem ? 'NuwaxPC.Toast.MyComputerManage.modifyFailed' : 'NuwaxPC.Toast.MyComputerManage.createFailed'));
+      message.error(
+        dict(
+          currentEditItem
+            ? 'PC.Toast.MyComputerManage.modifyFailed'
+            : 'PC.Toast.MyComputerManage.createFailed',
+        ),
+      );
     }
   };
 
   return (
     <WorkspaceLayout
-      title={dict('NuwaxPC.Pages.MyComputerManage.pageTitle')}
+      title={dict('PC.Pages.MyComputerManage.pageTitle')}
       leftSlot={
         <Radio.Group
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
           buttonStyle="solid"
         >
-          <Radio.Button value="all">{dict('NuwaxPC.Pages.MyComputerManage.filterAll')}</Radio.Button>
-          <Radio.Button value="online">{dict('NuwaxPC.Pages.MyComputerManage.filterOnline')}</Radio.Button>
-          <Radio.Button value="offline">{dict('NuwaxPC.Pages.MyComputerManage.filterOffline')}</Radio.Button>
-          <Radio.Button value="deactivated">{dict('NuwaxPC.Pages.MyComputerManage.filterDeactivated')}</Radio.Button>
+          <Radio.Button value="all">
+            {dict('PC.Pages.MyComputerManage.filterAll')}
+          </Radio.Button>
+          <Radio.Button value="online">
+            {dict('PC.Pages.MyComputerManage.filterOnline')}
+          </Radio.Button>
+          <Radio.Button value="offline">
+            {dict('PC.Pages.MyComputerManage.filterOffline')}
+          </Radio.Button>
+          <Radio.Button value="deactivated">
+            {dict('PC.Pages.MyComputerManage.filterDeactivated')}
+          </Radio.Button>
         </Radio.Group>
       }
       rightSlot={
@@ -188,7 +212,7 @@ const MyComputerManage: React.FC = () => {
             setEditModalOpen(true);
           }}
         >
-          {dict('NuwaxPC.Pages.MyComputerManage.addComputer')}
+          {dict('PC.Pages.MyComputerManage.addComputer')}
         </Button>
       }
     >
@@ -251,10 +275,10 @@ const MyComputerManage: React.FC = () => {
                       })}
                     >
                       {!item.isActive
-                        ? dict('NuwaxPC.Pages.MyComputerManage.statusDeactivated')
+                        ? dict('PC.Pages.MyComputerManage.statusDeactivated')
                         : item.online
-                        ? dict('NuwaxPC.Pages.MyComputerManage.statusOnline')
-                        : dict('NuwaxPC.Pages.MyComputerManage.statusOffline')}
+                        ? dict('PC.Pages.MyComputerManage.statusOnline')
+                        : dict('PC.Pages.MyComputerManage.statusOffline')}
                     </Tag>
                   </div>
                 }
@@ -286,7 +310,9 @@ const MyComputerManage: React.FC = () => {
                       <Tooltip
                         title={
                           item.isActive
-                            ? dict('NuwaxPC.Pages.MyComputerManage.deactivateTooltip')
+                            ? dict(
+                                'PC.Pages.MyComputerManage.deactivateTooltip',
+                              )
                             : ''
                         }
                       >
@@ -301,7 +327,9 @@ const MyComputerManage: React.FC = () => {
                       </Tooltip>
                     </Space>
                     <Space size={8}>
-                      <Tooltip title={dict('NuwaxPC.Pages.MyComputerManage.sessionTooltip')}>
+                      <Tooltip
+                        title={dict('PC.Pages.MyComputerManage.sessionTooltip')}
+                      >
                         <Button
                           icon={<MessageOutlined />}
                           disabled={!item.agentId}
@@ -314,12 +342,20 @@ const MyComputerManage: React.FC = () => {
                         />
                       </Tooltip>
                       {item.configKey && (
-                        <Tooltip title={dict('NuwaxPC.Pages.MyComputerManage.connectionKeyTooltip')}>
+                        <Tooltip
+                          title={dict(
+                            'PC.Pages.MyComputerManage.connectionKeyTooltip',
+                          )}
+                        >
                           <Button
                             icon={<KeyOutlined />}
                             onClick={() => {
                               copyTextToClipboard(item.configKey || '', () => {
-                                message.success(dict('NuwaxPC.Toast.MyComputerManage.connectionKeyCopied'));
+                                message.success(
+                                  dict(
+                                    'PC.Toast.MyComputerManage.connectionKeyCopied',
+                                  ),
+                                );
                               });
                             }}
                             className={classNames(
@@ -329,14 +365,16 @@ const MyComputerManage: React.FC = () => {
                           />
                         </Tooltip>
                       )}
-                      <Tooltip title={dict('NuwaxPC.Pages.MyComputerManage.editTooltip')}>
+                      <Tooltip
+                        title={dict('PC.Pages.MyComputerManage.editTooltip')}
+                      >
                         <Button
                           className="action-btn edit-btn"
                           icon={<EditOutlined />}
                           onClick={() => handleEdit(item)}
                         />
                       </Tooltip>
-                      <Tooltip title={dict('NuwaxPC.Common.Global.delete')}>
+                      <Tooltip title={dict('PC.Common.Global.delete')}>
                         <Button
                           className="action-btn delete-btn"
                           icon={<DeleteOutlined />}
@@ -353,7 +391,11 @@ const MyComputerManage: React.FC = () => {
       ) : (
         !loading && (
           <div style={{ padding: '300px 0' }}>
-            <Empty description={dict('NuwaxPC.Pages.MyComputerManage.emptyComputerConfig')} />
+            <Empty
+              description={dict(
+                'PC.Pages.MyComputerManage.emptyComputerConfig',
+              )}
+            />
           </div>
         )
       )}

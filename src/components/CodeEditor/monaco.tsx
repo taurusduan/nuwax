@@ -44,7 +44,7 @@ const Monaco: React.FC<MonacoProps> = ({ form, isShow, close }) => {
                   display: 'inline-block',
                 }}
               >
-                {dict('NuwaxPC.Components.Monaco.code')}
+                {dict('PC.Components.Monaco.code')}
               </span>
               <Form.Item name={'codeLanguage'}>
                 <Select
@@ -54,7 +54,9 @@ const Monaco: React.FC<MonacoProps> = ({ form, isShow, close }) => {
                     { value: 'Python', label: 'Python' },
                   ]}
                   size="small"
-                  placeholder={dict('NuwaxPC.Components.Monaco.pleaseSelectLanguage')}
+                  placeholder={dict(
+                    'PC.Components.Monaco.pleaseSelectLanguage',
+                  )}
                 />
               </Form.Item>
             </Space>

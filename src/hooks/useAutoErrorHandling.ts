@@ -128,10 +128,10 @@ export const useAutoErrorHandling = ({
       modelStateRef.current.setHasShownConfirmModal(true);
 
       Modal.confirm({
-        title: dict('NuwaxPC.Hooks.UseAutoErrorHandling.limitReached'),
-        content: dict('NuwaxPC.Hooks.UseAutoErrorHandling.continueAutoHandling'),
-        okText: dict('NuwaxPC.Common.Global.continue'),
-        cancelText: dict('NuwaxPC.Common.Global.cancel'),
+        title: dict('PC.Hooks.UseAutoErrorHandling.limitReached'),
+        content: dict('PC.Hooks.UseAutoErrorHandling.continueAutoHandling'),
+        okText: dict('PC.Common.Global.continue'),
+        cancelText: dict('PC.Common.Global.cancel'),
         onOk: () => {
           handleUserConfirmContinue(formattedContent);
           confirmModalRef.current = false;
@@ -159,15 +159,21 @@ export const useAutoErrorHandling = ({
       switch (errorType) {
         case 'whiteScreen':
           // 白屏错误格式
-          return dict('NuwaxPC.Hooks.UseAutoErrorHandling.whiteScreenError', trimmedContent);
+          return dict(
+            'PC.Hooks.UseAutoErrorHandling.whiteScreenError',
+            trimmedContent,
+          );
 
         case 'log':
           // 日志错误格式
-          return dict('NuwaxPC.Hooks.UseAutoErrorHandling.logError', trimmedContent);
+          return dict('PC.Hooks.UseAutoErrorHandling.logError', trimmedContent);
 
         case 'iframe':
           // iframe 加载错误格式
-          return dict('NuwaxPC.Hooks.UseAutoErrorHandling.iframeError', trimmedContent);
+          return dict(
+            'PC.Hooks.UseAutoErrorHandling.iframeError',
+            trimmedContent,
+          );
 
         default:
           // 默认格式（保持原有逻辑）

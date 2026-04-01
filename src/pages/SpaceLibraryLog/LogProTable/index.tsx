@@ -106,66 +106,80 @@ const LogProTable: React.FC = () => {
     () => [
       {
         width: 100,
-        title: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colType'),
+        title: dict('PC.Pages.SpaceLibraryLog.LogProTable.colType'),
         dataIndex: 'targetType',
         valueType: 'select',
         valueEnum: AGENT_COMPONENT_TYPE_MAP,
         hideInTable: false,
         initialValue: targetTypeFromUrl,
         fieldProps: {
-          placeholder: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phSelectType'),
+          placeholder: dict(
+            'PC.Pages.SpaceLibraryLog.LogProTable.phSelectType',
+          ),
           allowClear: true,
           onChange: handleTargetTypeChange,
         },
       },
       {
-        title: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colTargetId'),
+        title: dict('PC.Pages.SpaceLibraryLog.LogProTable.colTargetId'),
         dataIndex: 'targetId',
         width: 140,
         ellipsis: true,
         initialValue: targetIdFromUrl,
         fieldProps: {
-          placeholder: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phTargetId'),
+          placeholder: dict('PC.Pages.SpaceLibraryLog.LogProTable.phTargetId'),
           onChange: handleTargetIdChange,
         },
       },
       {
-        title: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colTargetName'),
+        title: dict('PC.Pages.SpaceLibraryLog.LogProTable.colTargetName'),
         dataIndex: 'targetName',
         width: 140,
         ellipsis: true,
-        fieldProps: { placeholder: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phTargetName') },
+        fieldProps: {
+          placeholder: dict(
+            'PC.Pages.SpaceLibraryLog.LogProTable.phTargetName',
+          ),
+        },
       },
       {
-        title: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colRequestId'),
+        title: dict('PC.Pages.SpaceLibraryLog.LogProTable.colRequestId'),
         dataIndex: 'requestId',
         width: 160,
         ellipsis: true,
         hideInTable: false,
-        fieldProps: { placeholder: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phRequestId') },
+        fieldProps: {
+          placeholder: dict('PC.Pages.SpaceLibraryLog.LogProTable.phRequestId'),
+        },
       },
       {
-        title: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colUserId'),
+        title: dict('PC.Pages.SpaceLibraryLog.LogProTable.colUserId'),
         dataIndex: 'userId',
         width: 100,
         ellipsis: true,
         fieldProps: getIntegerOnlyFieldProps(
-          dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phUserId'),
+          dict('PC.Pages.SpaceLibraryLog.LogProTable.phUserId'),
           18,
         ),
       },
       {
-        title: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colUserName'),
+        title: dict('PC.Pages.SpaceLibraryLog.LogProTable.colUserName'),
         dataIndex: 'userName',
         width: 180,
         ellipsis: true,
-        fieldProps: { placeholder: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phUserName') },
+        fieldProps: {
+          placeholder: dict('PC.Pages.SpaceLibraryLog.LogProTable.phUserName'),
+        },
       },
       {
-        title: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colConversationId'),
+        title: dict('PC.Pages.SpaceLibraryLog.LogProTable.colConversationId'),
         dataIndex: 'conversationId',
         width: 140,
-        fieldProps: { placeholder: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phConversationId') },
+        fieldProps: {
+          placeholder: dict(
+            'PC.Pages.SpaceLibraryLog.LogProTable.phConversationId',
+          ),
+        },
         render: (_, record) => {
           if (!record.conversationId) return '-';
           const isCurrentUser = userInfo?.id === record.userId;
@@ -174,7 +188,11 @@ const LogProTable: React.FC = () => {
             <div className="flex items-center gap-2">
               <span className="truncate">{record.conversationId}</span>
               {isCurrentUser && (
-                <Tooltip title={dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.viewConversationDetail')}>
+                <Tooltip
+                  title={dict(
+                    'PC.Pages.SpaceLibraryLog.LogProTable.viewConversationDetail',
+                  )}
+                >
                   <a
                     style={{ marginLeft: 5 }}
                     onClick={(e) => {
@@ -194,7 +212,7 @@ const LogProTable: React.FC = () => {
       },
 
       {
-        title: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colInput'),
+        title: dict('PC.Pages.SpaceLibraryLog.LogProTable.colInput'),
         dataIndex: 'input',
         minWidth: 150,
         width: 220,
@@ -203,10 +221,14 @@ const LogProTable: React.FC = () => {
         render: (_: any, record: SpaceLogInfo) => (
           <LimitedTooltip formatJson>{record?.input}</LimitedTooltip>
         ),
-        fieldProps: { placeholder: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phInputContent') },
+        fieldProps: {
+          placeholder: dict(
+            'PC.Pages.SpaceLibraryLog.LogProTable.phInputContent',
+          ),
+        },
       },
       {
-        title: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colOutput'),
+        title: dict('PC.Pages.SpaceLibraryLog.LogProTable.colOutput'),
         dataIndex: 'output',
         minWidth: 150,
         width: 220,
@@ -215,31 +237,35 @@ const LogProTable: React.FC = () => {
         render: (_: any, record: SpaceLogInfo) => (
           <LimitedTooltip formatJson>{record?.output}</LimitedTooltip>
         ),
-        fieldProps: { placeholder: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phOutputContent') },
+        fieldProps: {
+          placeholder: dict(
+            'PC.Pages.SpaceLibraryLog.LogProTable.phOutputContent',
+          ),
+        },
       },
 
       {
-        title: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colTimeRange'),
+        title: dict('PC.Pages.SpaceLibraryLog.LogProTable.colTimeRange'),
         dataIndex: 'createTimeRange',
         valueType: 'dateTimeRange',
         hideInTable: true,
       },
       {
-        title: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colInputToken'),
+        title: dict('PC.Pages.SpaceLibraryLog.LogProTable.colInputToken'),
         dataIndex: 'inputToken',
         width: 100,
         align: 'center',
         search: false,
       },
       {
-        title: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colOutputToken'),
+        title: dict('PC.Pages.SpaceLibraryLog.LogProTable.colOutputToken'),
         dataIndex: 'outputToken',
         width: 100,
         align: 'center',
         search: false,
       },
       {
-        title: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colRequestTime'),
+        title: dict('PC.Pages.SpaceLibraryLog.LogProTable.colRequestTime'),
         dataIndex: 'requestStartTime',
         width: 180,
         valueType: 'dateTime',
@@ -250,7 +276,7 @@ const LogProTable: React.FC = () => {
         // },
       },
       {
-        title: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colElapsedTime'),
+        title: dict('PC.Pages.SpaceLibraryLog.LogProTable.colElapsedTime'),
         key: 'elapsedTimeMs',
         width: 110,
         align: 'center',
@@ -352,7 +378,10 @@ const LogProTable: React.FC = () => {
           'success' in resp &&
           !resp.success
         ) {
-          message.error(resp.message || dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.queryFailed'));
+          message.error(
+            resp.message ||
+              dict('PC.Pages.SpaceLibraryLog.LogProTable.queryFailed'),
+          );
           return { data: [], total: 0, success: false };
         }
 
@@ -378,7 +407,9 @@ const LogProTable: React.FC = () => {
    */
   const handleOpenDetails = useCallback((record: SpaceLogInfo) => {
     if (!record?.id) {
-      message.warning(dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.noRequestIdWarning'));
+      message.warning(
+        dict('PC.Pages.SpaceLibraryLog.LogProTable.noRequestIdWarning'),
+      );
       return;
     }
 
@@ -390,7 +421,7 @@ const LogProTable: React.FC = () => {
     return [
       ...columns,
       {
-        title: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colActions'),
+        title: dict('PC.Pages.SpaceLibraryLog.LogProTable.colActions'),
         valueType: 'option',
         width: 90,
         fixed: 'right',
@@ -403,7 +434,9 @@ const LogProTable: React.FC = () => {
               actions={[
                 {
                   key: 'detail',
-                  label: dict('NuwaxPC.Pages.SpaceLibraryLog.LogProTable.actionDetail'),
+                  label: dict(
+                    'PC.Pages.SpaceLibraryLog.LogProTable.actionDetail',
+                  ),
                   onClick: () => handleOpenDetails(record),
                 },
               ]}

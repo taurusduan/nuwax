@@ -147,7 +147,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
     }
   };
   const handleCopy = () => {
-    message.success(dict('NuwaxPC.Toast.Global.copiedSuccessfully'));
+    message.success(dict('PC.Toast.Global.copiedSuccessfully'));
   };
 
   // 获取图标，如果不存在则使用默认图
@@ -179,7 +179,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
   return (
     <Drawer
       className={styles.drawer}
-      title={dict('NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.title')}
+      title={dict('PC.Pages.SpaceLibraryLog.LogDetailDrawer.title')}
       placement="right"
       open={open}
       onClose={onClose}
@@ -198,18 +198,30 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
             <div className={cx('flex', styles['time-box'])}>
               <div className={cx(styles.num, 'flex', 'items-center')}>
                 <span>
-                  {dict('NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.elapsedTime', String(spaceLogInfoDetail.requestEndTime -
-                    spaceLogInfoDetail.requestStartTime))}
+                  {dict(
+                    'PC.Pages.SpaceLibraryLog.LogDetailDrawer.elapsedTime',
+                    String(
+                      spaceLogInfoDetail.requestEndTime -
+                        spaceLogInfoDetail.requestStartTime,
+                    ),
+                  )}
                 </span>
                 <span className={cx(styles['vertical-line'])} />
                 <span>
-                  {dict('NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.tokenCount', String((spaceLogInfoDetail.inputToken || 0) +
-                    (spaceLogInfoDetail.outputToken || 0)))}
+                  {dict(
+                    'PC.Pages.SpaceLibraryLog.LogDetailDrawer.tokenCount',
+                    String(
+                      (spaceLogInfoDetail.inputToken || 0) +
+                        (spaceLogInfoDetail.outputToken || 0),
+                    ),
+                  )}
                 </span>
               </div>
             </div>
             <div className={cx('flex', styles.box)}>
-              <span>{dict('NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.messageId')}</span>
+              <span>
+                {dict('PC.Pages.SpaceLibraryLog.LogDetailDrawer.messageId')}
+              </span>
               <span className={cx(styles.value, 'text-ellipsis')}>
                 {spaceLogInfoDetail.requestId}
               </span>
@@ -224,7 +236,11 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
           {spaceLogInfoDetail.targetType === AgentComponentTypeEnum.Agent &&
             !!componentExecuteResults?.length && (
               <div className={cx(styles.wrap)}>
-                <h5 className={cx(styles.title)}>{dict('NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.calledComponents')}</h5>
+                <h5 className={cx(styles.title)}>
+                  {dict(
+                    'PC.Pages.SpaceLibraryLog.LogDetailDrawer.calledComponents',
+                  )}
+                </h5>
                 {componentExecuteResults?.map(
                   (info: ExecuteResultInfo, index: number) => (
                     // 模型可能不存在id，所以使用index作为key
@@ -265,12 +281,14 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
             )}
 
           <div className={cx(styles.wrap)}>
-            <h5 className={cx(styles.title)}>{dict('NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.nodeDetails')}</h5>
+            <h5 className={cx(styles.title)}>
+              {dict('PC.Pages.SpaceLibraryLog.LogDetailDrawer.nodeDetails')}
+            </h5>
             <NodeDetails node={finalResult} />
           </div>
           <div className={cx(styles.wrap, styles['render-container'])}>
             <h5 className={cx(styles.title)}>
-              {dict('NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.input')}&nbsp;
+              {dict('PC.Pages.SpaceLibraryLog.LogDetailDrawer.input')}&nbsp;
               <CopyToClipboard
                 text={finalResult?.input || ''}
                 onCopy={handleCopy}
@@ -282,7 +300,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
           </div>
           <div className={cx(styles.wrap, styles['render-container'])}>
             <h5 className={cx(styles.title)}>
-              {dict('NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.output')}&nbsp;
+              {dict('PC.Pages.SpaceLibraryLog.LogDetailDrawer.output')}&nbsp;
               <CopyToClipboard
                 text={finalResult?.output || ''}
                 onCopy={handleCopy}
@@ -295,7 +313,10 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
           {spaceLogInfoDetail?.targetType !== AgentComponentTypeEnum.Agent && (
             <div className={cx(styles.wrap, styles['render-container'])}>
               <h5 className={cx(styles.title)}>
-                {dict('NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.executionProcess')}&nbsp;
+                {dict(
+                  'PC.Pages.SpaceLibraryLog.LogDetailDrawer.executionProcess',
+                )}
+                &nbsp;
                 <CopyToClipboard
                   text={spaceLogInfoDetail.processData || ''}
                   onCopy={handleCopy}
@@ -309,7 +330,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
         </>
       ) : (
         <div className={cx('flex', 'h-full', 'items-center', 'content-center')}>
-          <Empty description={dict('NuwaxPC.Common.Global.emptyData')} />
+          <Empty description={dict('PC.Common.Global.emptyData')} />
         </div>
       )}
     </Drawer>

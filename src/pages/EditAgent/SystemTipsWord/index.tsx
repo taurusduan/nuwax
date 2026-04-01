@@ -2,9 +2,9 @@ import { SvgIcon } from '@/components/base';
 import PromptOptimizeModal from '@/components/PromptOptimizeModal';
 import TiptapVariableInput from '@/components/TiptapVariableInput/TiptapVariableInput';
 import { extractTextFromHTML } from '@/components/TiptapVariableInput/utils/htmlUtils';
+import { dict } from '@/services/i18nRuntime';
 import { AgentTypeEnum } from '@/types/enums/space';
 import type { SystemUserTipsWordProps } from '@/types/interfaces/space';
-import { dict } from '@/services/i18nRuntime';
 import { Button, Modal, Segmented, theme, Tooltip } from 'antd';
 import classNames from 'classnames';
 import {
@@ -157,7 +157,9 @@ const SystemTipsWord = forwardRef<
               key={'systemPrompt'}
               value={valueSystem}
               onChange={(html) => onChangeSystem(extractTextFromHTML(html))}
-              placeholder={dict('NuwaxPC.Pages.EditAgent.SystemTipsWord.systemPromptPlaceholder')}
+              placeholder={dict(
+                'PC.Pages.EditAgent.SystemTipsWord.systemPromptPlaceholder',
+              )}
               getEditor={(editor: any) => {
                 editorSystemRef.current = editor;
               }}
@@ -177,7 +179,9 @@ const SystemTipsWord = forwardRef<
               key={'userPrompt'}
               value={valueUser}
               onChange={(html) => onChangeUser(extractTextFromHTML(html))}
-              placeholder={dict('NuwaxPC.Pages.EditAgent.SystemTipsWord.userPromptPlaceholder')}
+              placeholder={dict(
+                'PC.Pages.EditAgent.SystemTipsWord.userPromptPlaceholder',
+              )}
               getEditor={(editor: any) => {
                 editorUserRef.current = editor;
               }}
@@ -212,9 +216,13 @@ const SystemTipsWord = forwardRef<
     const modalTitle = (
       <div className={cx('flex', 'items-center', 'content-between')}>
         <span>
-          {valueSegmented === 'systemPrompt' ? dict('NuwaxPC.Pages.EditAgent.SystemTipsWord.systemPrompt') : dict('NuwaxPC.Pages.EditAgent.SystemTipsWord.userPrompt')}
+          {valueSegmented === 'systemPrompt'
+            ? dict('PC.Pages.EditAgent.SystemTipsWord.systemPrompt')
+            : dict('PC.Pages.EditAgent.SystemTipsWord.userPrompt')}
         </span>
-        <Tooltip title={dict('NuwaxPC.Pages.EditAgent.SystemTipsWord.exitFullscreen')}>
+        <Tooltip
+          title={dict('PC.Pages.EditAgent.SystemTipsWord.exitFullscreen')}
+        >
           <Button
             type="text"
             icon={
@@ -251,12 +259,20 @@ const SystemTipsWord = forwardRef<
             value={valueSegmented}
             onChange={setValueSegmented}
             options={[
-              { label: dict('NuwaxPC.Pages.EditAgent.SystemTipsWord.systemPrompt'), value: 'systemPrompt' },
-              { label: dict('NuwaxPC.Pages.EditAgent.SystemTipsWord.userPrompt'), value: 'userPrompt' },
+              {
+                label: dict('PC.Pages.EditAgent.SystemTipsWord.systemPrompt'),
+                value: 'systemPrompt',
+              },
+              {
+                label: dict('PC.Pages.EditAgent.SystemTipsWord.userPrompt'),
+                value: 'userPrompt',
+              },
             ]}
           />
           <div className="flex items-center gap-6">
-            <Tooltip title={dict('NuwaxPC.Pages.EditAgent.SystemTipsWord.fullscreenEdit')}>
+            <Tooltip
+              title={dict('PC.Pages.EditAgent.SystemTipsWord.fullscreenEdit')}
+            >
               <Button
                 type="text"
                 className={cx(styles['border-none'])}
@@ -270,7 +286,12 @@ const SystemTipsWord = forwardRef<
               />
             </Tooltip>
             {valueSegmented === 'systemPrompt' && (
-              <Tooltip title={dict('NuwaxPC.Pages.EditAgent.SystemTipsWord.autoOptimizeTooltip')} placement="top">
+              <Tooltip
+                title={dict(
+                  'PC.Pages.EditAgent.SystemTipsWord.autoOptimizeTooltip',
+                )}
+                placement="top"
+              >
                 <Button
                   color="primary"
                   variant="filled"
@@ -290,7 +311,7 @@ const SystemTipsWord = forwardRef<
                     }
                   }}
                 >
-                  {dict('NuwaxPC.Pages.EditAgent.SystemTipsWord.optimize')}
+                  {dict('PC.Pages.EditAgent.SystemTipsWord.optimize')}
                 </Button>
               </Tooltip>
             )}

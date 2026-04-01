@@ -73,7 +73,7 @@ const VncPreview = forwardRef<VncPreviewRef, VncPreviewProps>(
     // Helper to build the VNC URL
     const buildVncUrl = useCallback(() => {
       if (!cId) {
-        setErrorMessage(t('NuwaxPC.Components.VncPreview.missingConfig'));
+        setErrorMessage(t('PC.Components.VncPreview.missingConfig'));
         return null;
       }
 
@@ -112,20 +112,20 @@ const VncPreview = forwardRef<VncPreviewRef, VncPreviewProps>(
 
       if (result.isTimeout) {
         setStatus('error');
-        setErrorMessage(t('NuwaxPC.Components.VncPreview.desktopUnavailable'));
+        setErrorMessage(t('PC.Components.VncPreview.desktopUnavailable'));
         return;
       }
 
       if (result.status === 403) {
         setStatus('error');
-        setErrorMessage(t('NuwaxPC.Components.VncPreview.forbidden'));
+        setErrorMessage(t('PC.Components.VncPreview.forbidden'));
         return;
       }
       if (result.status === 502 || result.status === 503) {
         setStatus('error');
         setErrorMessage(
           t(
-            'NuwaxPC.Components.VncPreview.serviceUnavailableWithStatus',
+            'PC.Components.VncPreview.serviceUnavailableWithStatus',
             String(result.status),
           ),
         );
@@ -135,7 +135,7 @@ const VncPreview = forwardRef<VncPreviewRef, VncPreviewProps>(
         setStatus('error');
         setErrorMessage(
           t(
-            'NuwaxPC.Components.VncPreview.requestFailedWithStatus',
+            'PC.Components.VncPreview.requestFailedWithStatus',
             String(result.status),
           ),
         );
@@ -175,18 +175,18 @@ const VncPreview = forwardRef<VncPreviewRef, VncPreviewProps>(
           case 'vnc_connection_failed':
             setStatus('error');
             setErrorMessage(
-              msg || t('NuwaxPC.Components.VncPreview.cannotConnectDesktop'),
+              msg || t('PC.Components.VncPreview.cannotConnectDesktop'),
             );
             break;
           case 'vnc_connection_closed':
             setStatus('error');
             setErrorMessage(
-              msg || t('NuwaxPC.Components.VncPreview.connectionClosed'),
+              msg || t('PC.Components.VncPreview.connectionClosed'),
             );
             break;
           case 'vnc_share_expired':
             setStatus('error');
-            setErrorMessage(t('NuwaxPC.Components.VncPreview.shareExpired'));
+            setErrorMessage(t('PC.Components.VncPreview.shareExpired'));
             break;
           default:
             break;
@@ -302,7 +302,7 @@ const VncPreview = forwardRef<VncPreviewRef, VncPreviewProps>(
       setShowIdleWarning(false);
       isIdleWarningActiveRef.current = false;
       resetIdleTimer();
-      message.success(t('NuwaxPC.Components.VncPreview.autoCloseCanceled'));
+      message.success(t('PC.Components.VncPreview.autoCloseCanceled'));
       onIdleCancel?.();
     }, [resetIdleTimer, onIdleCancel]);
 
@@ -318,7 +318,7 @@ const VncPreview = forwardRef<VncPreviewRef, VncPreviewProps>(
       isIdleWarningActiveRef.current = false;
       // 断开连接
       disconnect();
-      message.info(t('NuwaxPC.Components.VncPreview.autoClosedByIdleTimeout'));
+      message.info(t('PC.Components.VncPreview.autoClosedByIdleTimeout'));
       onIdleTimeout?.();
     }, [cId, disconnect, onIdleTimeout]);
 
@@ -328,18 +328,16 @@ const VncPreview = forwardRef<VncPreviewRef, VncPreviewProps>(
       switch (status) {
         case 'connected':
           return (
-            <Tag color="#52c41a">
-              {t('NuwaxPC.Components.VncPreview.connected')}
-            </Tag>
+            <Tag color="#52c41a">{t('PC.Components.VncPreview.connected')}</Tag>
           );
         case 'connecting':
           return (
             <Tag color="#1890ff">
-              {t('NuwaxPC.Components.VncPreview.connecting')}
+              {t('PC.Components.VncPreview.connecting')}
             </Tag>
           );
         case 'disconnected':
-          return <Tag>{t('NuwaxPC.Components.VncPreview.disconnected')}</Tag>;
+          return <Tag>{t('PC.Components.VncPreview.disconnected')}</Tag>;
         case 'error':
           // 连接失败时不显示标签
           return null;
@@ -384,7 +382,7 @@ const VncPreview = forwardRef<VncPreviewRef, VncPreviewProps>(
               }}
             >
               <DesktopOutlined style={{ fontSize: 48, marginBottom: 16 }} />
-              <p>{t('NuwaxPC.Components.VncPreview.preparingConnection')}</p>
+              <p>{t('PC.Components.VncPreview.preparingConnection')}</p>
             </div>
           )}
 
@@ -392,7 +390,7 @@ const VncPreview = forwardRef<VncPreviewRef, VncPreviewProps>(
             <div className={styles.loadingOverlay}>
               <Spin size="large" />
               <span className={styles.loadingText}>
-                {t('NuwaxPC.Components.VncPreview.desktopConnecting')}
+                {t('PC.Components.VncPreview.desktopConnecting')}
               </span>
             </div>
           ) : null}
@@ -400,16 +398,15 @@ const VncPreview = forwardRef<VncPreviewRef, VncPreviewProps>(
           {status === 'error' && (
             <div className={styles.errorOverlay}>
               <Alert
-                message={t('NuwaxPC.Components.VncPreview.connectionError')}
+                message={t('PC.Components.VncPreview.connectionError')}
                 description={
-                  errorMessage ||
-                  t('NuwaxPC.Components.VncPreview.cannotEstablish')
+                  errorMessage || t('PC.Components.VncPreview.cannotEstablish')
                 }
                 type="error"
                 showIcon
                 action={
                   <Button size="small" type="primary" onClick={connect}>
-                    {t('NuwaxPC.Components.VncPreview.retry')}
+                    {t('PC.Components.VncPreview.retry')}
                   </Button>
                 }
               />

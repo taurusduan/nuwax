@@ -86,7 +86,7 @@ const CodeEditor: React.FC<Props> = ({
   }, []);
 
   if (!isMonacoReady) {
-    return <div>{dict('NuwaxPC.Components.CodeEditor.loadingEditor')}</div>;
+    return <div>{dict('PC.Components.CodeEditor.loadingEditor')}</div>;
   }
 
   const handleCodeChange = (newValue?: string) => {
@@ -174,13 +174,13 @@ const CodeEditor: React.FC<Props> = ({
           type="primary"
           style={{ insetInlineEnd: 94, display: testRun ? 'none' : 'block' }}
           icon={<ICON_CONFIRM_STAR />}
-          tooltip={dict('NuwaxPC.Components.CodeEditor.codeAssistant')}
+          tooltip={dict('PC.Components.CodeEditor.codeAssistant')}
           onClick={() => {
             setOpen(true);
           }}
         />
         <CodeOptimizeModal
-          title={dict('NuwaxPC.Components.CodeEditor.codeAssistant')}
+          title={dict('PC.Components.CodeEditor.codeAssistant')}
           open={open}
           codeLanguage={codeLanguage}
           onCancel={() => {

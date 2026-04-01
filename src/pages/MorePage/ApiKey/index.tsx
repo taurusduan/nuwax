@@ -24,8 +24,8 @@ import ApiKeyPermissionModal from './ApiKeyPermissionModal';
 import ApiKeyStatsModal from './ApiKeyStatsModal';
 
 export const STATUS_MAP: Record<number, { color: string; text: string }> = {
-  1: { color: 'green', text: dict('NuwaxPC.Pages.MorePage.ApiKey.statusEnabled') },
-  0: { color: 'red', text: dict('NuwaxPC.Pages.MorePage.ApiKey.statusDisabled') },
+  1: { color: 'green', text: dict('PC.Pages.MorePage.ApiKey.statusEnabled') },
+  0: { color: 'red', text: dict('PC.Pages.MorePage.ApiKey.statusDisabled') },
 };
 
 const { Text } = Typography;
@@ -62,7 +62,7 @@ const ApiKeyPage: React.FC = () => {
 
   const copyToClipboard = (text: string) => {
     copyTextToClipboard(text, () => {
-      message.success(dict('NuwaxPC.Pages.MorePage.ApiKey.copiedToClipboard'));
+      message.success(dict('PC.Pages.MorePage.ApiKey.copiedToClipboard'));
     });
   };
 
@@ -74,7 +74,7 @@ const ApiKeyPage: React.FC = () => {
 
   const columns: ProColumns<ApiKeyInfo>[] = [
     {
-      title: dict('NuwaxPC.Pages.MorePage.ApiKey.keyName'),
+      title: dict('PC.Pages.MorePage.ApiKey.keyName'),
       dataIndex: 'name',
       key: 'name',
       ellipsis: true,
@@ -92,7 +92,13 @@ const ApiKeyPage: React.FC = () => {
             <Text className="font-mono">
               {visible ? record.accessKey : maskApiKey(record.accessKey)}
             </Text>
-            <Tooltip title={visible ? dict('NuwaxPC.Pages.MorePage.ApiKey.hide') : dict('NuwaxPC.Pages.MorePage.ApiKey.show')}>
+            <Tooltip
+              title={
+                visible
+                  ? dict('PC.Pages.MorePage.ApiKey.hide')
+                  : dict('PC.Pages.MorePage.ApiKey.show')
+              }
+            >
               <Button
                 type="text"
                 size="small"
@@ -100,7 +106,7 @@ const ApiKeyPage: React.FC = () => {
                 onClick={() => toggleShowKey(record.id)}
               />
             </Tooltip>
-            <Tooltip title={dict('NuwaxPC.Common.Global.copy')}>
+            <Tooltip title={dict('PC.Common.Global.copy')}>
               <Button
                 type="text"
                 size="small"
@@ -113,14 +119,14 @@ const ApiKeyPage: React.FC = () => {
       },
     },
     {
-      title: dict('NuwaxPC.Pages.MorePage.ApiKey.createdTime'),
+      title: dict('PC.Pages.MorePage.ApiKey.createdTime'),
       dataIndex: 'created',
       key: 'created',
       search: false,
       valueType: 'dateTime',
     },
     {
-      title: dict('NuwaxPC.Pages.MorePage.ApiKey.expireTime'),
+      title: dict('PC.Pages.MorePage.ApiKey.expireTime'),
       dataIndex: 'expire',
       key: 'expire',
       search: false,
@@ -134,25 +140,27 @@ const ApiKeyPage: React.FC = () => {
 
         return (
           <Text type={isNever ? 'success' : undefined}>
-            {isNever ? dict('NuwaxPC.Pages.MorePage.ApiKey.neverExpire') : display}
+            {isNever ? dict('PC.Pages.MorePage.ApiKey.neverExpire') : display}
           </Text>
         );
       },
     },
     {
-      title: dict('NuwaxPC.Pages.MorePage.ApiKey.status'),
+      title: dict('PC.Pages.MorePage.ApiKey.status'),
       dataIndex: 'status',
       key: 'status',
       search: false,
       valueEnum: STATUS_MAP,
       render: (_, record) => {
-        const { color = 'default', text = dict('NuwaxPC.Pages.MorePage.ApiKey.unknownStatus') } =
-          STATUS_MAP[record.status] || {};
+        const {
+          color = 'default',
+          text = dict('PC.Pages.MorePage.ApiKey.unknownStatus'),
+        } = STATUS_MAP[record.status] || {};
         return <Tag color={color}>{text}</Tag>;
       },
     },
     {
-      title: dict('NuwaxPC.Pages.MorePage.ApiKey.actions'),
+      title: dict('PC.Pages.MorePage.ApiKey.actions'),
       key: 'action',
       width: 220,
       search: false,
@@ -165,7 +173,7 @@ const ApiKeyPage: React.FC = () => {
           actions={[
             {
               key: 'stats',
-              label: dict('NuwaxPC.Pages.MorePage.ApiKey.callStats'),
+              label: dict('PC.Pages.MorePage.ApiKey.callStats'),
               icon: <BarChartOutlined />,
               onClick: (r) => {
                 setStatsRecord(r);
@@ -174,7 +182,7 @@ const ApiKeyPage: React.FC = () => {
             },
             {
               key: 'permission',
-              label: dict('NuwaxPC.Pages.MorePage.ApiKey.permissionConfig'),
+              label: dict('PC.Pages.MorePage.ApiKey.permissionConfig'),
               icon: <SafetyCertificateOutlined />,
               onClick: (r) => {
                 setPermissionRecord(r);
@@ -183,7 +191,7 @@ const ApiKeyPage: React.FC = () => {
             },
             {
               key: 'edit',
-              label: dict('NuwaxPC.Pages.MorePage.ApiKey.edit'),
+              label: dict('PC.Pages.MorePage.ApiKey.edit'),
               icon: <EditOutlined />,
               onClick: (r) => {
                 setCurrentRecord(r);
@@ -192,18 +200,19 @@ const ApiKeyPage: React.FC = () => {
             },
             {
               key: 'delete',
-              label: dict('NuwaxPC.Pages.MorePage.ApiKey.delete'),
+              label: dict('PC.Pages.MorePage.ApiKey.delete'),
               icon: <DeleteOutlined />,
               danger: true,
               confirm: {
-                title: (r) => dict('NuwaxPC.Pages.MorePage.ApiKey.confirmDeleteKey', r.name),
-                description: dict('NuwaxPC.Pages.MorePage.ApiKey.deleteWarning'),
+                title: (r) =>
+                  dict('PC.Pages.MorePage.ApiKey.confirmDeleteKey', r.name),
+                description: dict('PC.Pages.MorePage.ApiKey.deleteWarning'),
               },
               onClick: async () => {
                 await apiApiKeyDelete(record.accessKey);
                 setAllData([]); // 重置缓存以重新获取最新数据
                 actionRef.current?.reload();
-                message.success(dict('NuwaxPC.Pages.MorePage.ApiKey.deleteSuccess'));
+                message.success(dict('PC.Pages.MorePage.ApiKey.deleteSuccess'));
               },
             },
           ]}
@@ -214,8 +223,8 @@ const ApiKeyPage: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={dict('NuwaxPC.Pages.MorePage.ApiKey.pageTitle')}
-      tips={dict('NuwaxPC.Pages.MorePage.ApiKey.pageTips')}
+      title={dict('PC.Pages.MorePage.ApiKey.pageTitle')}
+      tips={dict('PC.Pages.MorePage.ApiKey.pageTips')}
       rightSlot={
         <Button
           key="add"
@@ -226,7 +235,7 @@ const ApiKeyPage: React.FC = () => {
             setModalOpen(true);
           }}
         >
-          {dict('NuwaxPC.Pages.MorePage.ApiKey.createKey')}
+          {dict('PC.Pages.MorePage.ApiKey.createKey')}
         </Button>
       }
     >

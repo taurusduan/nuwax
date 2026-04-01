@@ -1,11 +1,11 @@
 import personalImage from '@/assets/images/personal.png';
 import CustomFormModal from '@/components/CustomFormModal';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiAddSpaceMember,
   apiGetSpaceUserList,
   apiSearchUser,
 } from '@/services/teamSetting';
-import { dict } from '@/services/i18nRuntime';
 import styles from '@/styles/teamSetting.less';
 import { TeamStatusEnum } from '@/types/enums/teamSetting';
 import type {
@@ -37,8 +37,14 @@ export interface AddMemberProps {
 }
 
 const selectOptions = [
-  { value: TeamStatusEnum.Admin, label: dict('NuwaxPC.Pages.TeamSetting.roleAdmin') },
-  { value: TeamStatusEnum.User, label: dict('NuwaxPC.Pages.TeamSetting.roleMember') },
+  {
+    value: TeamStatusEnum.Admin,
+    label: dict('PC.Pages.TeamSetting.roleAdmin'),
+  },
+  {
+    value: TeamStatusEnum.User,
+    label: dict('PC.Pages.TeamSetting.roleMember'),
+  },
 ];
 
 const AddMember: React.FC<AddMemberProps> = ({
@@ -73,7 +79,7 @@ const AddMember: React.FC<AddMemberProps> = ({
     manual: true,
     debounceWait: 300,
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Pages.TeamSetting.AddMember.addSuccess'));
+      message.success(dict('PC.Pages.TeamSetting.AddMember.addSuccess'));
       onConfirmAdd?.();
     },
   });
@@ -84,7 +90,7 @@ const AddMember: React.FC<AddMemberProps> = ({
     debounceWait: 300,
     onSuccess: (data: SearchUserInfo[]) => {
       if (!data?.length) {
-        message.warning(dict('NuwaxPC.Pages.TeamSetting.AddMember.noUserFound'));
+        message.warning(dict('PC.Pages.TeamSetting.AddMember.noUserFound'));
         setLeftColumnMembers([]);
         return;
       }
@@ -110,7 +116,9 @@ const AddMember: React.FC<AddMemberProps> = ({
 
   const handlerSubmit = () => {
     if (rightColumnMembers.length === 0) {
-      message.warning(dict('NuwaxPC.Pages.TeamSetting.AddMember.selectMemberWarning'));
+      message.warning(
+        dict('PC.Pages.TeamSetting.AddMember.selectMemberWarning'),
+      );
       return;
     }
     const params = rightColumnMembers.map((m) => ({
@@ -188,7 +196,7 @@ const AddMember: React.FC<AddMemberProps> = ({
   return (
     <CustomFormModal
       form={form}
-      title={dict('NuwaxPC.Pages.TeamSetting.AddMember.addNewMember')}
+      title={dict('PC.Pages.TeamSetting.AddMember.addNewMember')}
       classNames={{
         content: cx(styles['add-member-modal-content']),
       }}
@@ -199,7 +207,9 @@ const AddMember: React.FC<AddMemberProps> = ({
       <div style={{ display: 'flex', gap: 20 }}>
         <div className={cx(styles['add-member-left-column'])}>
           <Input
-            placeholder={dict('NuwaxPC.Pages.TeamSetting.AddMember.searchPlaceholder')}
+            placeholder={dict(
+              'PC.Pages.TeamSetting.AddMember.searchPlaceholder',
+            )}
             prefix={<SearchOutlined />}
             onPressEnter={(event) => {
               if (event.key === 'Enter') {
@@ -217,7 +227,7 @@ const AddMember: React.FC<AddMemberProps> = ({
               leftColumnMembers.length > 0
             }
           >
-            {dict('NuwaxPC.Pages.TeamSetting.AddMember.all')}
+            {dict('PC.Pages.TeamSetting.AddMember.all')}
           </Checkbox>
           <Checkbox.Group
             style={{ display: 'block', marginTop: 10 }}
@@ -234,7 +244,10 @@ const AddMember: React.FC<AddMemberProps> = ({
 
         <div style={{ width: '300px' }}>
           <h3 style={{ marginBottom: 15 }}>
-            {dict('NuwaxPC.Pages.TeamSetting.AddMember.selectedMembers').replace('{0}', String(rightColumnMembers.length))}
+            {dict('PC.Pages.TeamSetting.AddMember.selectedMembers').replace(
+              '{0}',
+              String(rightColumnMembers.length),
+            )}
           </h3>
           <List
             dataSource={rightColumnMembers}

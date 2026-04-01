@@ -1,5111 +1,5208 @@
 import type { SystemLangMap } from '@/types/interfaces/i18n';
 
 export const NUWAXPC_I18N_EN_US: SystemLangMap = {
-  'NuwaxPC.Common.Global.confirm': 'Confirm',
-  'NuwaxPC.Common.Global.cancel': 'Cancel',
-  'NuwaxPC.Common.Global.save': 'Save',
-  'NuwaxPC.Common.Global.loading': 'Loading...',
-  'NuwaxPC.Common.Global.copy': 'Copy',
-  'NuwaxPC.Common.Global.refresh': 'Refresh',
-  'NuwaxPC.Common.Global.emptyData': 'No data',
-  'NuwaxPC.Common.Global.pleaseSelect': 'Please select',
-  'NuwaxPC.Common.Global.backHome': 'Back to Home',
-  'NuwaxPC.Common.Global.pending': 'Pending',
-  'NuwaxPC.Toast.Global.savedSuccessfully': 'Saved successfully',
-  'NuwaxPC.Toast.Global.copiedSuccessfully': 'Copied successfully',
-  'NuwaxPC.Toast.Global.networkError': 'Network error',
-  'NuwaxPC.Toast.Global.serverTimeout': 'Server timeout, please retry',
-  'NuwaxPC.Toast.Global.serverUnreachable': 'Network error, unable to connect',
-  'NuwaxPC.Toast.Global.languageSavedReload': 'Language saved, reloading...',
-  'NuwaxPC.Pages.Setting.profileTitle': 'Profile',
-  'NuwaxPC.Pages.Setting.accountTitle': 'Account',
-  'NuwaxPC.Pages.Setting.emailBind': 'Email Binding',
-  'NuwaxPC.Pages.Setting.phoneBind': 'Phone Binding',
-  'NuwaxPC.Pages.Setting.resetPassword': 'Reset Password',
-  'NuwaxPC.Pages.Setting.themeSwitch': 'Theme Switch',
-  'NuwaxPC.Pages.Setting.usageStatistics': 'Usage Statistics',
-  'NuwaxPC.Pages.Setting.themeLoadFailed': 'Failed to load theme config',
-  'NuwaxPC.Pages.Setting.userName': 'User Name',
-  'NuwaxPC.Pages.Setting.nickName': 'Nickname',
-  'NuwaxPC.Pages.Setting.inputUserName': 'Please input user name',
-  'NuwaxPC.Pages.Setting.inputNickName': 'Please input nickname',
-  'NuwaxPC.Pages.Setting.phone': 'Phone Number',
-  'NuwaxPC.Pages.Setting.email': 'Email',
-  'NuwaxPC.Pages.Setting.dynamicCode': 'Dynamic Code',
-  'NuwaxPC.Pages.Setting.expiresAt': 'expires at {0}',
-  'NuwaxPC.Pages.Setting.language': 'Language',
-  'NuwaxPC.Pages.Setting.selectLanguage': 'Select language',
-  'NuwaxPC.Pages.Setting.bindPending': 'Pending binding',
-  'NuwaxPC.Pages.SystemConfigI18n.manageTitle': 'Language Management',
-  'NuwaxPC.Pages.SystemConfigI18n.columnName': 'Language Name',
-  'NuwaxPC.Pages.SystemConfigI18n.columnLang': 'Language Code',
-  'NuwaxPC.Pages.SystemConfigI18n.columnDefault': 'Default',
-  'NuwaxPC.Pages.SystemConfigI18n.columnStatus': 'Status',
-  'NuwaxPC.Pages.SystemConfigI18n.columnSort': 'Sort',
-  'NuwaxPC.Pages.SystemConfigI18n.columnModified': 'Modified Time',
-  'NuwaxPC.Pages.SystemConfigI18n.defaultYes': 'Yes',
-  'NuwaxPC.Pages.SystemConfigI18n.defaultNo': 'No',
-  'NuwaxPC.Pages.SystemConfigI18n.statusEnabled': 'Enabled',
-  'NuwaxPC.Pages.SystemConfigI18n.statusDisabled': 'Disabled',
-  'NuwaxPC.Components.UserMenu.defaultUserName': 'User Name',
-  'NuwaxPC.Components.UserMenu.profile': 'Profile',
-  'NuwaxPC.Components.UserMenu.logout': 'Logout',
-  'NuwaxPC.Components.UserOperate.documents': 'Documents',
-  'NuwaxPC.Components.UserOperate.myComputer': 'My Computer',
-  'NuwaxPC.Components.UserOperate.noUnreadMessage': 'No unread message',
-  'NuwaxPC.Components.UserOperate.unreadMessageCount': '{0} unread messages',
-  'NuwaxPC.Components.AppDevEmptyState.viewFullText': 'View full text',
-  'NuwaxPC.Components.AppDevEmptyState.loadingTitle': 'Loading...',
-  'NuwaxPC.Components.AppDevEmptyState.loadingDescription':
+  'PC.Common.Global.confirm': 'Confirm',
+  'PC.Common.Global.cancel': 'Cancel',
+  'PC.Common.Global.save': 'Save',
+  'PC.Common.Global.loading': 'Loading...',
+  'PC.Common.Global.copy': 'Copy',
+  'PC.Common.Global.refresh': 'Refresh',
+  'PC.Common.Global.emptyData': 'No data',
+  'PC.Common.Global.pleaseSelect': 'Please select',
+  'PC.Common.Global.backHome': 'Back to Home',
+  'PC.Common.Global.pending': 'Pending',
+  'PC.Toast.Global.savedSuccessfully': 'Saved successfully',
+  'PC.Toast.Global.copiedSuccessfully': 'Copied successfully',
+  'PC.Toast.Global.networkError': 'Network error',
+  'PC.Toast.Global.serverTimeout': 'Server timeout, please retry',
+  'PC.Toast.Global.serverUnreachable': 'Network error, unable to connect',
+  'PC.Toast.Global.languageSavedReload': 'Language saved, reloading...',
+  'PC.Pages.Setting.profileTitle': 'Profile',
+  'PC.Pages.Setting.accountTitle': 'Account',
+  'PC.Pages.Setting.emailBind': 'Email Binding',
+  'PC.Pages.Setting.phoneBind': 'Phone Binding',
+  'PC.Pages.Setting.resetPassword': 'Reset Password',
+  'PC.Pages.Setting.themeSwitch': 'Theme Switch',
+  'PC.Pages.Setting.usageStatistics': 'Usage Statistics',
+  'PC.Pages.Setting.themeLoadFailed': 'Failed to load theme config',
+  'PC.Pages.Setting.userName': 'User Name',
+  'PC.Pages.Setting.nickName': 'Nickname',
+  'PC.Pages.Setting.inputUserName': 'Please input user name',
+  'PC.Pages.Setting.inputNickName': 'Please input nickname',
+  'PC.Pages.Setting.phone': 'Phone Number',
+  'PC.Pages.Setting.email': 'Email',
+  'PC.Pages.Setting.dynamicCode': 'Dynamic Code',
+  'PC.Pages.Setting.expiresAt': 'expires at {0}',
+  'PC.Pages.Setting.language': 'Language',
+  'PC.Pages.Setting.selectLanguage': 'Select language',
+  'PC.Pages.Setting.bindPending': 'Pending binding',
+  'PC.Pages.SystemConfigI18n.manageTitle': 'Language Management',
+  'PC.Pages.SystemConfigI18n.columnName': 'Language Name',
+  'PC.Pages.SystemConfigI18n.columnLang': 'Language Code',
+  'PC.Pages.SystemConfigI18n.columnDefault': 'Default',
+  'PC.Pages.SystemConfigI18n.columnStatus': 'Status',
+  'PC.Pages.SystemConfigI18n.columnSort': 'Sort',
+  'PC.Pages.SystemConfigI18n.columnModified': 'Modified Time',
+  'PC.Pages.SystemConfigI18n.defaultYes': 'Yes',
+  'PC.Pages.SystemConfigI18n.defaultNo': 'No',
+  'PC.Pages.SystemConfigI18n.statusEnabled': 'Enabled',
+  'PC.Pages.SystemConfigI18n.statusDisabled': 'Disabled',
+  'PC.Components.UserMenu.defaultUserName': 'User Name',
+  'PC.Components.UserMenu.profile': 'Profile',
+  'PC.Components.UserMenu.logout': 'Logout',
+  'PC.Components.UserOperate.documents': 'Documents',
+  'PC.Components.UserOperate.myComputer': 'My Computer',
+  'PC.Components.UserOperate.noUnreadMessage': 'No unread message',
+  'PC.Components.UserOperate.unreadMessageCount': '{0} unread messages',
+  'PC.Components.AppDevEmptyState.viewFullText': 'View full text',
+  'PC.Components.AppDevEmptyState.loadingTitle': 'Loading...',
+  'PC.Components.AppDevEmptyState.loadingDescription':
     'Loading, please wait...',
-  'NuwaxPC.Components.AppDevEmptyState.errorTitle': 'Error occurred',
-  'NuwaxPC.Components.AppDevEmptyState.errorDescription':
+  'PC.Components.AppDevEmptyState.errorTitle': 'Error occurred',
+  'PC.Components.AppDevEmptyState.errorDescription':
     'An error occurred during loading. Please retry.',
-  'NuwaxPC.Components.AppDevEmptyState.networkErrorTitle':
+  'PC.Components.AppDevEmptyState.networkErrorTitle':
     'Network connection failed',
-  'NuwaxPC.Components.AppDevEmptyState.networkErrorDescription':
+  'PC.Components.AppDevEmptyState.networkErrorDescription':
     'Network issue detected. Check settings and retry.',
-  'NuwaxPC.Components.AppDevEmptyState.permissionDeniedTitle':
-    'Permission denied',
-  'NuwaxPC.Components.AppDevEmptyState.permissionDeniedDescription':
+  'PC.Components.AppDevEmptyState.permissionDeniedTitle': 'Permission denied',
+  'PC.Components.AppDevEmptyState.permissionDeniedDescription':
     'You do not have permission to access this resource.',
-  'NuwaxPC.Components.AppDevEmptyState.emptyTitle': 'No content',
-  'NuwaxPC.Components.AppDevEmptyState.emptyDescription':
+  'PC.Components.AppDevEmptyState.emptyTitle': 'No content',
+  'PC.Components.AppDevEmptyState.emptyDescription':
     'There is no content to display.',
-  'NuwaxPC.Components.AppDevEmptyState.noDataTitle': 'No data',
-  'NuwaxPC.Components.AppDevEmptyState.noDataDescription':
+  'PC.Components.AppDevEmptyState.noDataTitle': 'No data',
+  'PC.Components.AppDevEmptyState.noDataDescription':
     'There is no available data.',
-  'NuwaxPC.Components.AppDevEmptyState.serverStartingTitle':
+  'PC.Components.AppDevEmptyState.serverStartingTitle':
     'Waiting for dev server startup',
-  'NuwaxPC.Components.AppDevEmptyState.serverStartingDescription':
+  'PC.Components.AppDevEmptyState.serverStartingDescription':
     'Starting development server, please wait...',
-  'NuwaxPC.Components.AppDevEmptyState.serverRestartingTitle': 'Restarting',
-  'NuwaxPC.Components.AppDevEmptyState.serverRestartingDescription':
+  'PC.Components.AppDevEmptyState.serverRestartingTitle': 'Restarting',
+  'PC.Components.AppDevEmptyState.serverRestartingDescription':
     'Restarting development server, please wait...',
-  'NuwaxPC.Components.AppDevEmptyState.developingTitle': 'Developing',
-  'NuwaxPC.Components.AppDevEmptyState.developingDescription':
+  'PC.Components.AppDevEmptyState.developingTitle': 'Developing',
+  'PC.Components.AppDevEmptyState.developingDescription':
     'Starting development server, please wait...',
-  'NuwaxPC.Components.AppDevEmptyState.importingProjectTitle':
-    'Importing project',
-  'NuwaxPC.Components.AppDevEmptyState.importingProjectDescription':
+  'PC.Components.AppDevEmptyState.importingProjectTitle': 'Importing project',
+  'PC.Components.AppDevEmptyState.importingProjectDescription':
     'Starting development server, please wait...',
-  'NuwaxPC.Components.AppDevEmptyState.serverErrorTitle': 'Server error',
-  'NuwaxPC.Components.AppDevEmptyState.serverErrorDescription':
+  'PC.Components.AppDevEmptyState.serverErrorTitle': 'Server error',
+  'PC.Components.AppDevEmptyState.serverErrorDescription':
     'Preview failed to load. Check server status or network.',
-  'NuwaxPC.Components.AppDevEmptyState.previewLoadFailedTitle':
+  'PC.Components.AppDevEmptyState.previewLoadFailedTitle':
     'Preview load failed',
-  'NuwaxPC.Components.AppDevEmptyState.previewLoadFailedDescription':
+  'PC.Components.AppDevEmptyState.previewLoadFailedDescription':
     'Preview failed to load. Check server status or network.',
-  'NuwaxPC.Components.AppDevEmptyState.serverStartFailedTitle':
+  'PC.Components.AppDevEmptyState.serverStartFailedTitle':
     'Development server failed to start',
-  'NuwaxPC.Components.AppDevEmptyState.serverStartFailedDescription':
+  'PC.Components.AppDevEmptyState.serverStartFailedDescription':
     'Starting development server, please wait...',
-  'NuwaxPC.Components.AppDevEmptyState.noPreviewUrlTitle':
+  'PC.Components.AppDevEmptyState.noPreviewUrlTitle':
     'No preview URL available',
-  'NuwaxPC.Components.AppDevEmptyState.noPreviewUrlDescription':
+  'PC.Components.AppDevEmptyState.noPreviewUrlDescription':
     'Starting development server, please wait...',
-  'NuwaxPC.Components.AppDevEmptyState.conversationEmptyTitle':
+  'PC.Components.AppDevEmptyState.conversationEmptyTitle':
     'Start a new conversation',
-  'NuwaxPC.Components.AppDevEmptyState.conversationEmptyDescription':
+  'PC.Components.AppDevEmptyState.conversationEmptyDescription':
     'Ask the AI assistant to start your project development.',
-  'NuwaxPC.Components.AppDevEmptyState.addDataDescription':
+  'PC.Components.AppDevEmptyState.addDataDescription':
     'Click "+" to add data resources',
-  'NuwaxPC.Components.AppDevEmptyState.noFileTitle': 'No files',
-  'NuwaxPC.Components.AppDevEmptyState.noFileDescription':
+  'PC.Components.AppDevEmptyState.noFileTitle': 'No files',
+  'PC.Components.AppDevEmptyState.noFileDescription':
     'No files in the current directory.',
-  'NuwaxPC.Components.AppDevEmptyState.close': 'Close',
-  'NuwaxPC.Components.HistoryConversationList.renameTitleEmpty':
+  'PC.Components.AppDevEmptyState.close': 'Close',
+  'PC.Components.HistoryConversationList.renameTitleEmpty':
     'Title cannot be empty',
-  'NuwaxPC.Components.HistoryConversationList.renameTitleTooLong':
+  'PC.Components.HistoryConversationList.renameTitleTooLong':
     'Title length cannot exceed 50 characters',
-  'NuwaxPC.Components.HistoryConversationList.renameSuccess':
-    'Updated successfully',
-  'NuwaxPC.Components.HistoryConversationList.deleteSuccess':
-    'Deleted successfully',
-  'NuwaxPC.Components.HistoryConversationList.pageTitle':
-    'Conversation History',
-  'NuwaxPC.Components.HistoryConversationList.searchPlaceholder':
+  'PC.Components.HistoryConversationList.renameSuccess': 'Updated successfully',
+  'PC.Components.HistoryConversationList.deleteSuccess': 'Deleted successfully',
+  'PC.Components.HistoryConversationList.pageTitle': 'Conversation History',
+  'PC.Components.HistoryConversationList.searchPlaceholder':
     'Search conversation history',
-  'NuwaxPC.Components.HistoryConversationList.renameModalTitle': 'Rename',
-  'NuwaxPC.Components.HistoryConversationList.renamePlaceholder':
-    'Enter new name',
-  'NuwaxPC.Components.HistoryConversationList.deleteModalTitle':
+  'PC.Components.HistoryConversationList.renameModalTitle': 'Rename',
+  'PC.Components.HistoryConversationList.renamePlaceholder': 'Enter new name',
+  'PC.Components.HistoryConversationList.deleteModalTitle':
     'Delete conversation permanently',
-  'NuwaxPC.Components.HistoryConversationList.deleteModalContent':
+  'PC.Components.HistoryConversationList.deleteModalContent':
     'This conversation will be permanently deleted and cannot be recovered. Are you sure you want to delete it?',
-  'NuwaxPC.Components.HistoryConversationList.editTitleTooltip': 'Edit title',
-  'NuwaxPC.Components.HistoryConversationList.dateTimeFormat':
-    'YYYY-MM-DD HH:mm:ss',
-  'NuwaxPC.Components.HistoryConversationList.deleteTooltip': 'Delete',
-  'NuwaxPC.Components.HistoryConversationList.summaryEmpty':
-    'No summary available',
-  'NuwaxPC.Components.HistoryConversationList.agentFallback': 'Agent',
-  'NuwaxPC.Components.HistoryConversationList.noMoreData': 'All data loaded',
-  'NuwaxPC.Components.PagePreviewIframe.copyTemplate': 'Copy template',
-  'NuwaxPC.Components.PagePreviewIframe.defaultPageTitle': 'Page preview',
-  'NuwaxPC.Components.PagePreviewIframe.unableToReadData':
-    'Unable to read data',
-  'NuwaxPC.Components.PagePreviewIframe.tooltipRefresh': 'Refresh',
-  'NuwaxPC.Components.PagePreviewIframe.tooltipBack': 'Back',
-  'NuwaxPC.Components.PagePreviewIframe.tooltipForward': 'Forward',
-  'NuwaxPC.Components.PagePreviewIframe.tooltipCopyLink': 'Copy link',
-  'NuwaxPC.Components.VncPreview.missingConfig':
+  'PC.Components.HistoryConversationList.editTitleTooltip': 'Edit title',
+  'PC.Components.HistoryConversationList.dateTimeFormat': 'YYYY-MM-DD HH:mm:ss',
+  'PC.Components.HistoryConversationList.deleteTooltip': 'Delete',
+  'PC.Components.HistoryConversationList.summaryEmpty': 'No summary available',
+  'PC.Components.HistoryConversationList.agentFallback': 'Agent',
+  'PC.Components.HistoryConversationList.noMoreData': 'All data loaded',
+  'PC.Components.PagePreviewIframe.copyTemplate': 'Copy template',
+  'PC.Components.PagePreviewIframe.defaultPageTitle': 'Page preview',
+  'PC.Components.PagePreviewIframe.unableToReadData': 'Unable to read data',
+  'PC.Components.PagePreviewIframe.tooltipRefresh': 'Refresh',
+  'PC.Components.PagePreviewIframe.tooltipBack': 'Back',
+  'PC.Components.PagePreviewIframe.tooltipForward': 'Forward',
+  'PC.Components.PagePreviewIframe.tooltipCopyLink': 'Copy link',
+  'PC.Components.VncPreview.missingConfig':
     'Missing required configuration (service URL or container ID).',
-  'NuwaxPC.Components.VncPreview.desktopUnavailable':
+  'PC.Components.VncPreview.desktopUnavailable':
     'Agent desktop is temporarily unavailable. Please retry later.',
-  'NuwaxPC.Components.VncPreview.forbidden':
+  'PC.Components.VncPreview.forbidden':
     'Access denied (403 Forbidden). Check permission settings.',
-  'NuwaxPC.Components.VncPreview.serviceUnavailableWithStatus':
+  'PC.Components.VncPreview.serviceUnavailableWithStatus':
     'Service is temporarily unavailable ({0}). Please retry later.',
-  'NuwaxPC.Components.VncPreview.requestFailedWithStatus':
+  'PC.Components.VncPreview.requestFailedWithStatus':
     'Request failed (HTTP {0}). Check service status.',
-  'NuwaxPC.Components.VncPreview.cannotConnectDesktop':
+  'PC.Components.VncPreview.cannotConnectDesktop':
     'Unable to connect to agent desktop',
-  'NuwaxPC.Components.VncPreview.connectionClosed': 'Connection closed',
-  'NuwaxPC.Components.VncPreview.shareExpired': 'Share has expired',
-  'NuwaxPC.Components.VncPreview.autoCloseCanceled':
+  'PC.Components.VncPreview.connectionClosed': 'Connection closed',
+  'PC.Components.VncPreview.shareExpired': 'Share has expired',
+  'PC.Components.VncPreview.autoCloseCanceled':
     'Automatic close has been canceled',
-  'NuwaxPC.Components.VncPreview.autoClosedByIdleTimeout':
+  'PC.Components.VncPreview.autoClosedByIdleTimeout':
     'Agent desktop connection was closed automatically due to inactivity',
-  'NuwaxPC.Components.VncPreview.connected': 'Connected',
-  'NuwaxPC.Components.VncPreview.connecting': 'Connecting...',
-  'NuwaxPC.Components.VncPreview.disconnected': 'Disconnected',
-  'NuwaxPC.Components.VncPreview.preparingConnection': 'Preparing connection',
-  'NuwaxPC.Components.VncPreview.desktopConnecting':
+  'PC.Components.VncPreview.connected': 'Connected',
+  'PC.Components.VncPreview.connecting': 'Connecting...',
+  'PC.Components.VncPreview.disconnected': 'Disconnected',
+  'PC.Components.VncPreview.preparingConnection': 'Preparing connection',
+  'PC.Components.VncPreview.desktopConnecting':
     'Connecting to agent desktop...',
-  'NuwaxPC.Components.VncPreview.connectionError': 'Connection error',
-  'NuwaxPC.Components.VncPreview.cannotEstablish':
-    'Unable to establish connection',
-  'NuwaxPC.Components.VncPreview.retry': 'Retry',
-  'NuwaxPC.Components.VncIdleWarningModal.title':
+  'PC.Components.VncPreview.connectionError': 'Connection error',
+  'PC.Components.VncPreview.cannotEstablish': 'Unable to establish connection',
+  'PC.Components.VncPreview.retry': 'Retry',
+  'PC.Components.VncIdleWarningModal.title':
     'You have been inactive for a while',
-  'NuwaxPC.Components.VncIdleWarningModal.description':
+  'PC.Components.VncIdleWarningModal.description':
     'The system will automatically close the agent desktop connection to save resources.',
-  'NuwaxPC.Components.VncIdleWarningModal.confirmText': 'Continue',
-  'NuwaxPC.Components.VncIdleWarningModal.countdownAutoClose':
-    'Auto close in {0}s',
-  'NuwaxPC.Components.VncIdleWarningModal.hintAction':
+  'PC.Components.VncIdleWarningModal.confirmText': 'Continue',
+  'PC.Components.VncIdleWarningModal.countdownAutoClose': 'Auto close in {0}s',
+  'PC.Components.VncIdleWarningModal.hintAction':
     'Any keyboard or mouse action will {0}',
-  'NuwaxPC.Components.FilePreview.errorInvalidPptx':
+  'PC.Components.FilePreview.errorInvalidPptx':
     'The file format is invalid or corrupted. Please verify it is a valid PPTX file.',
-  'NuwaxPC.Components.FilePreview.errorNetwork':
+  'PC.Components.FilePreview.errorNetwork':
     'Network request failed. Check your network and retry.',
-  'NuwaxPC.Components.FilePreview.errorFileLoad':
+  'PC.Components.FilePreview.errorFileLoad':
     'Failed to load file. Please retry.',
-  'NuwaxPC.Components.FilePreview.errorFileParse':
+  'PC.Components.FilePreview.errorFileParse':
     'Failed to parse file. The file may be corrupted or unsupported.',
-  'NuwaxPC.Components.FilePreview.errorDocxPreview':
+  'PC.Components.FilePreview.errorDocxPreview':
     'Document preview failed. Please verify the file format.',
-  'NuwaxPC.Components.FilePreview.errorXlsxPreview':
+  'PC.Components.FilePreview.errorXlsxPreview':
     'Spreadsheet preview failed. Please verify the file format.',
-  'NuwaxPC.Components.FilePreview.errorPdfPreview':
+  'PC.Components.FilePreview.errorPdfPreview':
     'PDF preview failed. Please verify the file format.',
-  'NuwaxPC.Components.FilePreview.errorPptxPreview':
+  'PC.Components.FilePreview.errorPptxPreview':
     'Presentation preview failed. Please verify the file format.',
-  'NuwaxPC.Components.FilePreview.errorImageLoad': 'Failed to load image.',
-  'NuwaxPC.Components.FilePreview.errorDefaultPreview':
+  'PC.Components.FilePreview.errorImageLoad': 'Failed to load image.',
+  'PC.Components.FilePreview.errorDefaultPreview':
     'File preview failed. Please retry.',
-  'NuwaxPC.Components.FilePreview.errorLoadFileContent':
+  'PC.Components.FilePreview.errorLoadFileContent':
     'Failed to load file content. Please retry.',
-  'NuwaxPC.Components.FilePreview.errorLoadHtmlContent':
+  'PC.Components.FilePreview.errorLoadHtmlContent':
     'Failed to load HTML content. Please retry.',
-  'NuwaxPC.Components.FilePreview.errorImageLoadCheckFile':
+  'PC.Components.FilePreview.errorImageLoadCheckFile':
     'Image load failed. Please verify the file is valid.',
-  'NuwaxPC.Components.FilePreview.tooltipRefresh': 'Refresh',
-  'NuwaxPC.Components.FilePreview.tooltipDownload': 'Download',
-  'NuwaxPC.Components.FilePreview.emptyNoFile': 'No file available for preview',
-  'NuwaxPC.Components.FilePreview.loadingPreview': 'Loading preview...',
-  'NuwaxPC.Components.FilePreview.alertPreviewFailed': 'Preview failed',
-  'NuwaxPC.Components.FilePreview.alertCannotPreview':
-    'Unable to preview this file',
-  'NuwaxPC.Components.FilePreview.retry': 'Retry',
-  'NuwaxPC.Components.FilePreview.unsupportedType':
+  'PC.Components.FilePreview.tooltipRefresh': 'Refresh',
+  'PC.Components.FilePreview.tooltipDownload': 'Download',
+  'PC.Components.FilePreview.emptyNoFile': 'No file available for preview',
+  'PC.Components.FilePreview.loadingPreview': 'Loading preview...',
+  'PC.Components.FilePreview.alertPreviewFailed': 'Preview failed',
+  'PC.Components.FilePreview.alertCannotPreview': 'Unable to preview this file',
+  'PC.Components.FilePreview.retry': 'Retry',
+  'PC.Components.FilePreview.unsupportedType':
     'This file type is not supported for preview',
-  'NuwaxPC.Components.FilePreview.fileTypeLabel': 'File type: .{0}',
-  'NuwaxPC.Components.FilePreview.downloadFile': 'Download file',
-  'NuwaxPC.Components.ConversationDetails.pagePreviewName': 'Page Preview',
-  'NuwaxPC.Components.ConversationDetails.requiredParamsWarning':
+  'PC.Components.FilePreview.fileTypeLabel': 'File type: .{0}',
+  'PC.Components.FilePreview.downloadFile': 'Download file',
+  'PC.Components.ConversationDetails.pagePreviewName': 'Page Preview',
+  'PC.Components.ConversationDetails.requiredParamsWarning':
     'Please fill in required parameters',
-  'NuwaxPC.Components.ConversationDetails.startConversationWithAgent':
+  'PC.Components.ConversationDetails.startConversationWithAgent':
     'Start a conversation with {0}',
-  'NuwaxPC.Components.ConversationDetails.expandNavigation':
-    'Expand navigation',
-  'NuwaxPC.Components.ConversationDetails.viewAgentDetails':
-    'View agent details',
-  'NuwaxPC.Components.ConversationDetails.openPreviewPage': 'Open preview page',
-  'NuwaxPC.Components.ConversationDetails.noAgentPermission':
+  'PC.Components.ConversationDetails.expandNavigation': 'Expand navigation',
+  'PC.Components.ConversationDetails.viewAgentDetails': 'View agent details',
+  'PC.Components.ConversationDetails.openPreviewPage': 'Open preview page',
+  'PC.Components.ConversationDetails.noAgentPermission':
     'You do not have permission for this agent',
-  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.panelTitle':
-    'Navigation Bar',
-  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.styleSectionTitle':
-    'Style',
-  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.colorSectionTitle':
+  'PC.Components.ThemeConfigNavigationStylePanel.panelTitle': 'Navigation Bar',
+  'PC.Components.ThemeConfigNavigationStylePanel.styleSectionTitle': 'Style',
+  'PC.Components.ThemeConfigNavigationStylePanel.colorSectionTitle':
     'Light/Dark',
-  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.style1Name': 'Style 1',
-  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.style1Description':
+  'PC.Components.ThemeConfigNavigationStylePanel.style1Name': 'Style 1',
+  'PC.Components.ThemeConfigNavigationStylePanel.style1Description':
     'Compact mode: 60px width, no text, container with margin and rounded corners.',
-  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.style2Name': 'Style 2',
-  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.style2Description':
+  'PC.Components.ThemeConfigNavigationStylePanel.style2Name': 'Style 2',
+  'PC.Components.ThemeConfigNavigationStylePanel.style2Description':
     'Expanded mode: 88px width with text, container without margin or rounded corners.',
-  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.lightMode': 'Light',
-  'NuwaxPC.Components.ThemeConfigNavigationStylePanel.darkMode': 'Dark',
-  'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.panelTitle':
+  'PC.Components.ThemeConfigNavigationStylePanel.lightMode': 'Light',
+  'PC.Components.ThemeConfigNavigationStylePanel.darkMode': 'Dark',
+  'PC.Components.ThemeConfigBackgroundImagePanel.panelTitle':
     'Background Image',
-  'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.systemSectionTitle':
+  'PC.Components.ThemeConfigBackgroundImagePanel.systemSectionTitle':
     'System Background Images',
-  'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.emptyAvailable':
+  'PC.Components.ThemeConfigBackgroundImagePanel.emptyAvailable':
     'No available background image',
-  'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.customSectionTitle':
+  'PC.Components.ThemeConfigBackgroundImagePanel.customSectionTitle':
     'Custom Background Images',
-  'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.uploadImage':
-    'Upload Image',
-  'NuwaxPC.Components.ThemeConfigThemeColorPanel.panelTitle': 'Theme Color',
-  'NuwaxPC.Components.ThemeConfigThemeColorPanel.customName': 'Custom',
-  'NuwaxPC.Components.CopyToSpaceComponent.pageCopySuccess':
+  'PC.Components.ThemeConfigBackgroundImagePanel.uploadImage': 'Upload Image',
+  'PC.Components.ThemeConfigThemeColorPanel.panelTitle': 'Theme Color',
+  'PC.Components.ThemeConfigThemeColorPanel.customName': 'Custom',
+  'PC.Components.CopyToSpaceComponent.pageCopySuccess':
     'Page copied successfully',
-  'NuwaxPC.Components.CopyToSpaceComponent.templateCopySuccess':
+  'PC.Components.CopyToSpaceComponent.templateCopySuccess':
     'Template copied successfully',
-  'NuwaxPC.Components.DataResourceManagement.fetchListFailed':
+  'PC.Components.DataResourceManagement.fetchListFailed':
     'Failed to fetch data resource list',
-  'NuwaxPC.Components.DataResourceManagement.createSuccess':
-    'Created successfully',
-  'NuwaxPC.Components.DataResourceManagement.createFailed': 'Create failed',
-  'NuwaxPC.Components.DataResourceManagement.updateSuccess':
-    'Updated successfully',
-  'NuwaxPC.Components.DataResourceManagement.updateFailed': 'Update failed',
-  'NuwaxPC.Components.DataResourceManagement.deleteSuccess':
-    'Deleted successfully',
-  'NuwaxPC.Components.DataResourceManagement.deleteFailed': 'Delete failed',
-  'NuwaxPC.Components.DataResourceManagement.enableSuccess':
-    'Enabled successfully',
-  'NuwaxPC.Components.DataResourceManagement.disableSuccess':
+  'PC.Components.DataResourceManagement.createSuccess': 'Created successfully',
+  'PC.Components.DataResourceManagement.createFailed': 'Create failed',
+  'PC.Components.DataResourceManagement.updateSuccess': 'Updated successfully',
+  'PC.Components.DataResourceManagement.updateFailed': 'Update failed',
+  'PC.Components.DataResourceManagement.deleteSuccess': 'Deleted successfully',
+  'PC.Components.DataResourceManagement.deleteFailed': 'Delete failed',
+  'PC.Components.DataResourceManagement.enableSuccess': 'Enabled successfully',
+  'PC.Components.DataResourceManagement.disableSuccess':
     'Disabled successfully',
-  'NuwaxPC.Components.DataResourceManagement.switchStatusFailed':
+  'PC.Components.DataResourceManagement.switchStatusFailed':
     'Failed to switch resource status',
-  'NuwaxPC.Components.DataResourceManagement.operationFailed':
-    'Operation failed',
-  'NuwaxPC.Components.DataResourceManagement.connectionTestSuccess':
+  'PC.Components.DataResourceManagement.operationFailed': 'Operation failed',
+  'PC.Components.DataResourceManagement.connectionTestSuccess':
     'Connection test succeeded',
-  'NuwaxPC.Components.DataResourceManagement.connectionTestFailed':
+  'PC.Components.DataResourceManagement.connectionTestFailed':
     'Connection test failed',
-  'NuwaxPC.Components.DataResourceManagement.testFailed': 'Test failed',
-  'NuwaxPC.Pages.Login.inputEmailRequired': 'Please input email',
-  'NuwaxPC.Pages.Login.inputPhoneRequired': 'Please input phone number',
-  'NuwaxPC.Pages.Login.invalidEmail': 'Please input a valid email',
-  'NuwaxPC.Pages.Login.invalidPhone': 'Please input a valid phone number',
-  'NuwaxPC.Pages.Login.passwordRequired':
-    'Please input password with 6+ characters',
-  'NuwaxPC.Pages.Login.invalidPassword': 'Please input a valid password',
-  'NuwaxPC.Pages.Login.serviceAgreementTitle':
+  'PC.Components.DataResourceManagement.testFailed': 'Test failed',
+  'PC.Pages.Login.inputEmailRequired': 'Please input email',
+  'PC.Pages.Login.inputPhoneRequired': 'Please input phone number',
+  'PC.Pages.Login.invalidEmail': 'Please input a valid email',
+  'PC.Pages.Login.invalidPhone': 'Please input a valid phone number',
+  'PC.Pages.Login.passwordRequired': 'Please input password with 6+ characters',
+  'PC.Pages.Login.invalidPassword': 'Please input a valid password',
+  'PC.Pages.Login.serviceAgreementTitle':
     'Service Agreement and Privacy Protection',
-  'NuwaxPC.Pages.Login.serviceAgreementAgree': 'Agree',
-  'NuwaxPC.Pages.Login.serviceAgreementDisagree': 'Disagree',
-  'NuwaxPC.Pages.Login.passwordLogin': 'Password Login',
-  'NuwaxPC.Pages.Login.codeLoginOrRegister': 'Code Login / Register',
-  'NuwaxPC.Pages.Login.welcome': 'Welcome to {0}',
-  'NuwaxPC.Pages.Login.inputEmailPlaceholder': 'Please input email',
-  'NuwaxPC.Pages.Login.inputPhonePlaceholder': 'Please input phone number',
-  'NuwaxPC.Pages.Login.inputPasswordPlaceholder':
+  'PC.Pages.Login.serviceAgreementAgree': 'Agree',
+  'PC.Pages.Login.serviceAgreementDisagree': 'Disagree',
+  'PC.Pages.Login.passwordLogin': 'Password Login',
+  'PC.Pages.Login.codeLoginOrRegister': 'Code Login / Register',
+  'PC.Pages.Login.welcome': 'Welcome to {0}',
+  'PC.Pages.Login.inputEmailPlaceholder': 'Please input email',
+  'PC.Pages.Login.inputPhonePlaceholder': 'Please input phone number',
+  'PC.Pages.Login.inputPasswordPlaceholder':
     'Please input password with 6+ characters',
-  'NuwaxPC.Pages.Login.login': 'Login',
-  'NuwaxPC.Pages.Login.nextStep': 'Next',
-  'NuwaxPC.Pages.VerifyCode.inputEmailCode': 'Enter email verification code',
-  'NuwaxPC.Pages.VerifyCode.inputSmsCode': 'Enter SMS verification code',
-  'NuwaxPC.Pages.VerifyCode.codeSentTo': 'Verification code sent to {0}{1}',
-  'NuwaxPC.Pages.VerifyCode.yourEmail': 'your email ',
-  'NuwaxPC.Pages.VerifyCode.yourPhone': 'phone number ',
-  'NuwaxPC.Pages.VerifyCode.countdownSuffix': 's later',
-  'NuwaxPC.Pages.VerifyCode.resend': 'Resend',
-  'NuwaxPC.Pages.SetPassword.title': 'Set Password',
-  'NuwaxPC.Pages.SetPassword.description':
+  'PC.Pages.Login.login': 'Login',
+  'PC.Pages.Login.nextStep': 'Next',
+  'PC.Pages.VerifyCode.inputEmailCode': 'Enter email verification code',
+  'PC.Pages.VerifyCode.inputSmsCode': 'Enter SMS verification code',
+  'PC.Pages.VerifyCode.codeSentTo': 'Verification code sent to {0}{1}',
+  'PC.Pages.VerifyCode.yourEmail': 'your email ',
+  'PC.Pages.VerifyCode.yourPhone': 'phone number ',
+  'PC.Pages.VerifyCode.countdownSuffix': 's later',
+  'PC.Pages.VerifyCode.resend': 'Resend',
+  'PC.Pages.SetPassword.title': 'Set Password',
+  'PC.Pages.SetPassword.description':
     'Please use at least 6 characters. Avoid passwords reused on other sites.',
-  'NuwaxPC.Pages.SetPassword.passwordRequired':
+  'PC.Pages.SetPassword.passwordRequired':
     'Please input password with 6+ characters',
-  'NuwaxPC.Pages.SetPassword.invalidPassword': 'Please input a valid password',
-  'NuwaxPC.Pages.SetPassword.passwordPlaceholder':
+  'PC.Pages.SetPassword.invalidPassword': 'Please input a valid password',
+  'PC.Pages.SetPassword.passwordPlaceholder':
     'Please input password with 6+ characters',
-  'NuwaxPC.Pages.SetPassword.confirmPasswordRequired':
+  'PC.Pages.SetPassword.confirmPasswordRequired':
     'Please confirm your password',
-  'NuwaxPC.Pages.SetPassword.passwordMismatch':
-    'The two passwords do not match',
-  'NuwaxPC.Pages.SetPassword.confirmPasswordInvalid':
+  'PC.Pages.SetPassword.passwordMismatch': 'The two passwords do not match',
+  'PC.Pages.SetPassword.confirmPasswordInvalid':
     'Please input a valid password',
-  'NuwaxPC.Pages.SetPassword.confirmPasswordPlaceholder':
+  'PC.Pages.SetPassword.confirmPasswordPlaceholder':
     'Please confirm your password',
-  'NuwaxPC.Pages.AgentEdit.showStand': 'Showroom',
-  'NuwaxPC.Pages.AgentEdit.versionHistory': 'Version History',
-  'NuwaxPC.Pages.AgentEdit.draftAutoSavedAt': 'Draft auto-saved at {0}',
-  'NuwaxPC.Pages.AgentEdit.unpublishedChanges': 'Unpublished changes',
-  'NuwaxPC.Pages.AgentEdit.publish': 'Publish',
-  'NuwaxPC.Pages.AgentArrangeComponentSetting.title': 'Settings',
-  'NuwaxPC.Pages.AgentArrangeAsyncRun.title': 'Async Run',
-  'NuwaxPC.Pages.AgentArrangeAsyncRun.description':
+  'PC.Pages.AgentEdit.showStand': 'Showroom',
+  'PC.Pages.AgentEdit.versionHistory': 'Version History',
+  'PC.Pages.AgentEdit.draftAutoSavedAt': 'Draft auto-saved at {0}',
+  'PC.Pages.AgentEdit.unpublishedChanges': 'Unpublished changes',
+  'PC.Pages.AgentEdit.publish': 'Publish',
+  'PC.Pages.AgentArrangeComponentSetting.title': 'Settings',
+  'PC.Pages.AgentArrangeAsyncRun.title': 'Async Run',
+  'PC.Pages.AgentArrangeAsyncRun.description':
     'When the task enters async mode, a default reply is returned. Users can continue chatting, and they are notified after background completion.',
-  'NuwaxPC.Pages.AgentArrangeAsyncRun.defaultReplyContent':
+  'PC.Pages.AgentArrangeAsyncRun.defaultReplyContent':
     'Processing has started. Please wait for the result.',
-  'NuwaxPC.Pages.AgentArrangeAsyncRun.replyContent': 'Reply Content',
-  'NuwaxPC.Pages.AgentArrangeAsyncRun.replyContentPlaceholder':
+  'PC.Pages.AgentArrangeAsyncRun.replyContent': 'Reply Content',
+  'PC.Pages.AgentArrangeAsyncRun.replyContentPlaceholder':
     'You can set an automatic reply here, for example: The task is in progress. I will notify you as soon as it is done. Is there anything else I can help with?',
-  'NuwaxPC.Pages.AgentArrangeAsyncRun.replyContentRequired':
+  'PC.Pages.AgentArrangeAsyncRun.replyContentRequired':
     'Reply content is required',
-  'NuwaxPC.Pages.AgentArrangeOutputWay.title': 'Direct Output',
-  'NuwaxPC.Pages.AgentArrangeOutputWay.tooltip':
+  'PC.Pages.AgentArrangeOutputWay.title': 'Direct Output',
+  'PC.Pages.AgentArrangeOutputWay.tooltip':
     'If set to "Yes", the workflow result is sent directly to the chat box without LLM summarization.',
-  'NuwaxPC.Pages.AgentArrangeOutputWay.optionNo': 'No',
-  'NuwaxPC.Pages.AgentArrangeOutputWay.optionYes': 'Yes',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.title': 'Invoke Type',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.optionAuto': 'Auto',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.optionOnDemand': 'On demand',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.optionManual': 'Manual',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.optionManualOnDemand':
-    'Manual + On demand',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.optionNo': 'No',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.optionYes': 'Yes',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.autoDescription':
+  'PC.Pages.AgentArrangeOutputWay.optionNo': 'No',
+  'PC.Pages.AgentArrangeOutputWay.optionYes': 'Yes',
+  'PC.Pages.AgentArrangeInvokeType.title': 'Invoke Type',
+  'PC.Pages.AgentArrangeInvokeType.optionAuto': 'Auto',
+  'PC.Pages.AgentArrangeInvokeType.optionOnDemand': 'On demand',
+  'PC.Pages.AgentArrangeInvokeType.optionManual': 'Manual',
+  'PC.Pages.AgentArrangeInvokeType.optionManualOnDemand': 'Manual + On demand',
+  'PC.Pages.AgentArrangeInvokeType.optionNo': 'No',
+  'PC.Pages.AgentArrangeInvokeType.optionYes': 'Yes',
+  'PC.Pages.AgentArrangeInvokeType.autoDescription':
     'Auto: triggered every time the user sends a message.',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.onDemandDescription':
+  'PC.Pages.AgentArrangeInvokeType.onDemandDescription':
     'On demand: the model decides whether to invoke based on the task.',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.manualDescription':
+  'PC.Pages.AgentArrangeInvokeType.manualDescription':
     'Manual: the user decides whether to use the tool; behavior matches Auto after selection.',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.manualOnDemandDescription':
+  'PC.Pages.AgentArrangeInvokeType.manualOnDemandDescription':
     'Manual + On demand: after user selection, the model decides whether to invoke; no selection means no invocation.',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.skillManualDescription':
+  'PC.Pages.AgentArrangeInvokeType.skillManualDescription':
     'Manual: users can choose this skill in chat and the model will prioritize it.',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.defaultSelected': 'Default Selected',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.alias': 'Display Alias',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.aliasTooltip':
+  'PC.Pages.AgentArrangeInvokeType.defaultSelected': 'Default Selected',
+  'PC.Pages.AgentArrangeInvokeType.alias': 'Display Alias',
+  'PC.Pages.AgentArrangeInvokeType.aliasTooltip':
     'Optional. If set, the frontend prioritizes this name.',
-  'NuwaxPC.Pages.AgentArrangeInvokeType.aliasPlaceholder':
+  'PC.Pages.AgentArrangeInvokeType.aliasPlaceholder':
     'Please enter display alias',
-  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.selectStyle':
-    'Select Card Style',
-  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.optionSingle': 'Single Card',
-  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.optionList': 'Vertical List',
-  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardListMaxLength':
+  'PC.Pages.AgentArrangeCardBindDataSource.selectStyle': 'Select Card Style',
+  'PC.Pages.AgentArrangeCardBindDataSource.optionSingle': 'Single Card',
+  'PC.Pages.AgentArrangeCardBindDataSource.optionList': 'Vertical List',
+  'PC.Pages.AgentArrangeCardBindDataSource.cardListMaxLength':
     'Max Card List Length',
-  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardListMaxLengthPlaceholder':
+  'PC.Pages.AgentArrangeCardBindDataSource.cardListMaxLengthPlaceholder':
     'Please enter max card list length',
-  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.bindArray':
+  'PC.Pages.AgentArrangeCardBindDataSource.bindArray':
     'Bind an Array for the Whole Card',
-  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.bindArrayPlaceholder':
+  'PC.Pages.AgentArrangeCardBindDataSource.bindArrayPlaceholder':
     'Please bind an array for the whole card',
-  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.bindListItemData':
+  'PC.Pages.AgentArrangeCardBindDataSource.bindListItemData':
     'Bind Data for Card List Items',
-  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardClickJump':
+  'PC.Pages.AgentArrangeCardBindDataSource.cardClickJump':
     'Card Click Redirect',
-  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardClickJumpTooltip':
+  'PC.Pages.AgentArrangeCardBindDataSource.cardClickJumpTooltip':
     'After binding, users can click the card in the agent conversation flow to navigate to another page.',
-  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.urlDataSourcePlaceholder':
+  'PC.Pages.AgentArrangeCardBindDataSource.urlDataSourcePlaceholder':
     'Select data source for URL',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.title': 'Edit or Add Variable',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.fieldName': 'Field Name',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.fieldNameRequired':
+  'PC.Pages.AgentArrangeCreateVariableModal.title': 'Edit or Add Variable',
+  'PC.Pages.AgentArrangeCreateVariableModal.fieldName': 'Field Name',
+  'PC.Pages.AgentArrangeCreateVariableModal.fieldNameRequired':
     'Please enter field name',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.fieldNamePlaceholder':
+  'PC.Pages.AgentArrangeCreateVariableModal.fieldNamePlaceholder':
     'Please enter field name following naming rules',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.displayName': 'Display Name',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.displayNameRequired':
+  'PC.Pages.AgentArrangeCreateVariableModal.displayName': 'Display Name',
+  'PC.Pages.AgentArrangeCreateVariableModal.displayNameRequired':
     'Please enter display name',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.displayNamePlaceholder':
+  'PC.Pages.AgentArrangeCreateVariableModal.displayNamePlaceholder':
     'Please enter display name for frontend rendering',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.description': 'Description',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.descriptionPlaceholder':
+  'PC.Pages.AgentArrangeCreateVariableModal.description': 'Description',
+  'PC.Pages.AgentArrangeCreateVariableModal.descriptionPlaceholder':
     'Please enter field description',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputType': 'Input Type',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeText':
-    'Single-line Text',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeParagraph':
-    'Paragraph',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeNumber': 'Number',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeSelect': 'Single',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeMultipleSelect':
+  'PC.Pages.AgentArrangeCreateVariableModal.inputType': 'Input Type',
+  'PC.Pages.AgentArrangeCreateVariableModal.inputTypeText': 'Single-line Text',
+  'PC.Pages.AgentArrangeCreateVariableModal.inputTypeParagraph': 'Paragraph',
+  'PC.Pages.AgentArrangeCreateVariableModal.inputTypeNumber': 'Number',
+  'PC.Pages.AgentArrangeCreateVariableModal.inputTypeSelect': 'Single',
+  'PC.Pages.AgentArrangeCreateVariableModal.inputTypeMultipleSelect':
     'Multiple',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeAutoRecognition':
+  'PC.Pages.AgentArrangeCreateVariableModal.inputTypeAutoRecognition':
     'Auto Recognition',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.manualCreate': 'Manual Create',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.addOption': 'Add Option',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.dataBinding': 'Data Binding',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.addOptionRequired':
+  'PC.Pages.AgentArrangeCreateVariableModal.manualCreate': 'Manual Create',
+  'PC.Pages.AgentArrangeCreateVariableModal.addOption': 'Add Option',
+  'PC.Pages.AgentArrangeCreateVariableModal.dataBinding': 'Data Binding',
+  'PC.Pages.AgentArrangeCreateVariableModal.addOptionRequired':
     'Please add options',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.optionValueRequired':
+  'PC.Pages.AgentArrangeCreateVariableModal.optionValueRequired':
     'Please fill option values',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.selectBindingComponent':
+  'PC.Pages.AgentArrangeCreateVariableModal.selectBindingComponent':
     'Please select a binding component',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.defaultValue': 'Default Value',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.defaultValuePlaceholder':
+  'PC.Pages.AgentArrangeCreateVariableModal.defaultValue': 'Default Value',
+  'PC.Pages.AgentArrangeCreateVariableModal.defaultValuePlaceholder':
     'Please enter default value',
-  'NuwaxPC.Pages.AgentArrangeCreateVariableModal.required': 'Required',
-  'NuwaxPC.Toast.AgentArrangeCreateVariableModal.updateSuccess':
+  'PC.Pages.AgentArrangeCreateVariableModal.required': 'Required',
+  'PC.Toast.AgentArrangeCreateVariableModal.updateSuccess':
     'Variable updated successfully',
-  'NuwaxPC.Pages.AgentArrangeCreateVariables.title': 'Variables',
-  'NuwaxPC.Pages.AgentArrangeCreateVariables.add': 'Add',
-  'NuwaxPC.Pages.AgentArrangeCreateVariables.name': 'Name',
-  'NuwaxPC.Pages.AgentArrangeCreateVariables.description': 'Description',
-  'NuwaxPC.Pages.AgentArrangeCreateVariables.type': 'Type',
-  'NuwaxPC.Pages.AgentArrangeCreateVariables.systemVariable': 'System Variable',
-  'NuwaxPC.Pages.AgentArrangeCreateVariables.customVariable': 'Custom Variable',
-  'NuwaxPC.Pages.AgentArrangeCreateVariables.inputType': 'Input Type',
-  'NuwaxPC.Pages.AgentArrangeCreateVariables.required': 'Required',
-  'NuwaxPC.Pages.AgentArrangeCreateVariables.yes': 'Yes',
-  'NuwaxPC.Pages.AgentArrangeCreateVariables.no': 'No',
-  'NuwaxPC.Pages.AgentArrangeCreateVariables.deleteSuccess':
-    'Deleted successfully',
-  'NuwaxPC.Pages.AgentArrangeCreateVariables.updateSuccess':
-    'Updated successfully',
-  'NuwaxPC.Pages.AgentArrangeExceptionHandling.title': 'Interrupt on Exception',
-  'NuwaxPC.Pages.AgentArrangeExceptionHandling.description':
+  'PC.Pages.AgentArrangeCreateVariables.title': 'Variables',
+  'PC.Pages.AgentArrangeCreateVariables.add': 'Add',
+  'PC.Pages.AgentArrangeCreateVariables.name': 'Name',
+  'PC.Pages.AgentArrangeCreateVariables.description': 'Description',
+  'PC.Pages.AgentArrangeCreateVariables.type': 'Type',
+  'PC.Pages.AgentArrangeCreateVariables.systemVariable': 'System Variable',
+  'PC.Pages.AgentArrangeCreateVariables.customVariable': 'Custom Variable',
+  'PC.Pages.AgentArrangeCreateVariables.inputType': 'Input Type',
+  'PC.Pages.AgentArrangeCreateVariables.required': 'Required',
+  'PC.Pages.AgentArrangeCreateVariables.yes': 'Yes',
+  'PC.Pages.AgentArrangeCreateVariables.no': 'No',
+  'PC.Pages.AgentArrangeCreateVariables.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.AgentArrangeCreateVariables.updateSuccess': 'Updated successfully',
+  'PC.Pages.AgentArrangeExceptionHandling.title': 'Interrupt on Exception',
+  'PC.Pages.AgentArrangeExceptionHandling.description':
     'Default message sent to the LLM when an exception occurs',
-  'NuwaxPC.Pages.AgentArrangeExceptionHandling.defaultInfo': 'Default Message',
-  'NuwaxPC.Pages.AgentArrangeExceptionHandling.defaultInfoPlaceholder':
+  'PC.Pages.AgentArrangeExceptionHandling.defaultInfo': 'Default Message',
+  'PC.Pages.AgentArrangeExceptionHandling.defaultInfoPlaceholder':
     'Please enter the default message sent to the LLM on exception',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.title': 'Event Binding',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.updateSuccess':
-    'Updated successfully',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventName': 'Event Name',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventNameRequired':
+  'PC.Pages.AgentArrangeEventBindModal.title': 'Event Binding',
+  'PC.Pages.AgentArrangeEventBindModal.updateSuccess': 'Updated successfully',
+  'PC.Pages.AgentArrangeEventBindModal.eventName': 'Event Name',
+  'PC.Pages.AgentArrangeEventBindModal.eventNameRequired':
     'Please enter event name',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventNamePlaceholder':
+  'PC.Pages.AgentArrangeEventBindModal.eventNamePlaceholder':
     'Please enter event name',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventCode':
+  'PC.Pages.AgentArrangeEventBindModal.eventCode':
     'Event Identifier (for event distinction)',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventCodeRequired':
+  'PC.Pages.AgentArrangeEventBindModal.eventCodeRequired':
     'Please enter event identifier',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventCodePlaceholder':
+  'PC.Pages.AgentArrangeEventBindModal.eventCodePlaceholder':
     'Please enter event identifier, only letters, numbers, and underscores are allowed',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.eventCodeInvalid':
+  'PC.Pages.AgentArrangeEventBindModal.eventCodeInvalid':
     'Event identifier can only contain letters, numbers, and underscores, and must start with a letter or underscore.',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.responseAction': 'Response Action',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.responseActionPlaceholder':
+  'PC.Pages.AgentArrangeEventBindModal.responseAction': 'Response Action',
+  'PC.Pages.AgentArrangeEventBindModal.responseActionPlaceholder':
     'Please select response action',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.responseActionPage':
+  'PC.Pages.AgentArrangeEventBindModal.responseActionPage':
     'Open Extended Page',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.responseActionLink':
+  'PC.Pages.AgentArrangeEventBindModal.responseActionLink':
     'Open External Link',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.pagePath': 'Page Path',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.pagePathRequired':
+  'PC.Pages.AgentArrangeEventBindModal.pagePath': 'Page Path',
+  'PC.Pages.AgentArrangeEventBindModal.pagePathRequired':
     'Please select page path',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.pagePathPlaceholder':
+  'PC.Pages.AgentArrangeEventBindModal.pagePathPlaceholder':
     'Please select page path',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.linkUrl': 'Link URL',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.linkUrlRequired':
+  'PC.Pages.AgentArrangeEventBindModal.linkUrl': 'Link URL',
+  'PC.Pages.AgentArrangeEventBindModal.linkUrlRequired':
     'Please enter link URL',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.linkUrlInvalid':
+  'PC.Pages.AgentArrangeEventBindModal.linkUrlInvalid':
     'Please enter a valid URL starting with http:// or https://',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.input': 'Input',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.configInputArgs':
+  'PC.Pages.AgentArrangeEventBindModal.input': 'Input',
+  'PC.Pages.AgentArrangeEventBindModal.configInputArgs':
     'Configure Input Parameters',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.paramName': 'Parameter Name',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.paramValue':
+  'PC.Pages.AgentArrangeEventBindModal.paramName': 'Parameter Name',
+  'PC.Pages.AgentArrangeEventBindModal.paramValue':
     'Parameter Value (Optional)',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.paramValueTip':
+  'PC.Pages.AgentArrangeEventBindModal.paramValueTip':
     'The following parameters are optional. If empty, the model fills them automatically. You can also reference parameters dynamically in the input box.',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.agentIdVariable': 'Agent ID',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.systemUserIdVariable':
-    'System User ID',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.userUidVariable': 'User UID',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.userNameVariable': 'User Name',
-  'NuwaxPC.Pages.AgentArrangeEventBindModal.paramValuePlaceholder':
+  'PC.Pages.AgentArrangeEventBindModal.agentIdVariable': 'Agent ID',
+  'PC.Pages.AgentArrangeEventBindModal.systemUserIdVariable': 'System User ID',
+  'PC.Pages.AgentArrangeEventBindModal.userUidVariable': 'User UID',
+  'PC.Pages.AgentArrangeEventBindModal.userNameVariable': 'User Name',
+  'PC.Pages.AgentArrangeEventBindModal.paramValuePlaceholder':
     'Please enter {0}',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.title': 'Knowledge Base Settings',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.recallSection': 'Recall',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.invokeType': 'Invoke Type',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.invokeTypeTip':
+  'PC.Pages.AgentArrangeKnowledgeSetting.title': 'Knowledge Base Settings',
+  'PC.Pages.AgentArrangeKnowledgeSetting.recallSection': 'Recall',
+  'PC.Pages.AgentArrangeKnowledgeSetting.invokeType': 'Invoke Type',
+  'PC.Pages.AgentArrangeKnowledgeSetting.invokeTypeTip':
     'Choose whether to auto recall each round or recall from a specific knowledge base on demand.',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchStrategy':
-    'Search Strategy',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchStrategyTip':
+  'PC.Pages.AgentArrangeKnowledgeSetting.searchStrategy': 'Search Strategy',
+  'PC.Pages.AgentArrangeKnowledgeSetting.searchStrategyTip':
     'This strategy defines how knowledge is retrieved. Different strategies improve answer accuracy and usability in different scenarios.',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchMixed': 'Mixed',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchSemantic': 'Semantic',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchFullText': 'Full Text',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.maxRecallCount':
+  'PC.Pages.AgentArrangeKnowledgeSetting.searchMixed': 'Mixed',
+  'PC.Pages.AgentArrangeKnowledgeSetting.searchSemantic': 'Semantic',
+  'PC.Pages.AgentArrangeKnowledgeSetting.searchFullText': 'Full Text',
+  'PC.Pages.AgentArrangeKnowledgeSetting.maxRecallCount':
     'Maximum Recall Count',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.maxRecallCountTip':
+  'PC.Pages.AgentArrangeKnowledgeSetting.maxRecallCountTip':
     'Maximum number of passages returned from the knowledge base to the LLM. Larger values return more content.',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegree':
+  'PC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegree':
     'Minimum Match Degree',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegreeTip':
+  'PC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegreeTip':
     'Only passages above the configured match degree are recalled and returned to the LLM.',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.replySection': 'Reply',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallReply': 'No-recall Reply',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyTip':
+  'PC.Pages.AgentArrangeKnowledgeSetting.replySection': 'Reply',
+  'PC.Pages.AgentArrangeKnowledgeSetting.noRecallReply': 'No-recall Reply',
+  'PC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyTip':
     'Reply text used when no valid chunks are recalled from the knowledge base.',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallDefault': 'Default',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallCustom': 'Custom',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyPlaceholder':
+  'PC.Pages.AgentArrangeKnowledgeSetting.noRecallDefault': 'Default',
+  'PC.Pages.AgentArrangeKnowledgeSetting.noRecallCustom': 'Custom',
+  'PC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyPlaceholder':
     'Please enter',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeTextList.emptyDescription':
+  'PC.Pages.AgentArrangeKnowledgeTextList.emptyDescription':
     'After uploading documents, URLs, or third-party data sources as text knowledge bases, the agent can answer user questions with referenced knowledge content.',
-  'NuwaxPC.Pages.AgentArrangeKnowledgeTextList.remove': 'Remove Knowledge Base',
-  'NuwaxPC.Pages.AgentArrangeLongMemoryContent.description':
+  'PC.Pages.AgentArrangeKnowledgeTextList.remove': 'Remove Knowledge Base',
+  'PC.Pages.AgentArrangeLongMemoryContent.description':
     'Summarize chat conversations to improve responses to user messages.',
-  'NuwaxPC.Pages.AgentArrangeMcpGroupComponentItem.toolsWithCount':
-    'Tools ({0})',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.title':
-    'Preset Question Settings',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.updateSuccess':
+  'PC.Pages.AgentArrangeMcpGroupComponentItem.toolsWithCount': 'Tools ({0})',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.title': 'Preset Question Settings',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.updateSuccess':
     'Updated successfully',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.requiredParamEmpty':
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.requiredParamEmpty':
     'Parameter "{0}" is required and cannot be empty.',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typeQuestion':
-    'Question Guide',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typePage':
-    'Extended Page Path',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typeLink': 'External Link',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramName': 'Parameter Name',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramValue':
-    'Parameter Value',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramValueTip':
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.typeQuestion': 'Question Guide',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.typePage': 'Extended Page Path',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.typeLink': 'External Link',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.paramName': 'Parameter Name',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.paramValue': 'Parameter Value',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.paramValueTip':
     'You can dynamically reference parameters in the input. Empty values are auto-completed by the model.',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.agentIdVariable': 'Agent ID',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.systemUserIdVariable':
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.agentIdVariable': 'Agent ID',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.systemUserIdVariable':
     'System User ID',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.userUidVariable': 'User UID',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.userNameVariable':
-    'User Name',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramValuePlaceholder':
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.userUidVariable': 'User UID',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.userNameVariable': 'User Name',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.paramValuePlaceholder':
     'Please enter {0}',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.icon': 'Icon',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.displayInfo': 'Display Info',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoRequired':
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.icon': 'Icon',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.displayInfo': 'Display Info',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoRequired':
     'Please enter display info',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoPlaceholder':
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoPlaceholder':
     'Question content',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.type': 'Type',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typePlaceholder':
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.type': 'Type',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.typePlaceholder':
     'Please select type',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.pagePath': 'Page Path',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.pagePathRequired':
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.pagePath': 'Page Path',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.pagePathRequired':
     'Please select page path',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.pagePathPlaceholder':
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.pagePathPlaceholder':
     'Please select page path',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.linkUrl': 'Link URL',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlRequired':
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.linkUrl': 'Link URL',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlRequired':
     'Please enter link URL',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlInvalid':
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlInvalid':
     'Please enter a valid URL starting with http:// or https://',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.input': 'Input',
-  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.configInputArgs':
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.input': 'Input',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.configInputArgs':
     'Configure Input Parameters',
-  'NuwaxPC.Pages.AgentArrangeOpenRemarks.headerTitle': 'Opening Remarks Copy',
-  'NuwaxPC.Pages.AgentArrangeOpenRemarks.placeholder':
+  'PC.Pages.AgentArrangeOpenRemarks.headerTitle': 'Opening Remarks Copy',
+  'PC.Pages.AgentArrangeOpenRemarks.placeholder':
     'Please enter opening remarks',
-  'NuwaxPC.Pages.AgentArrangeOpenRemarks.guidQuestionTitle':
+  'PC.Pages.AgentArrangeOpenRemarks.guidQuestionTitle':
     'Preset Opening Questions',
-  'NuwaxPC.Pages.AgentArrangeOpenRemarks.addGuidQuestion':
-    'Add Preset Question',
-  'NuwaxPC.Pages.AgentArrangeOpenRemarks.guidQuestionPlaceholder':
+  'PC.Pages.AgentArrangeOpenRemarks.addGuidQuestion': 'Add Preset Question',
+  'PC.Pages.AgentArrangeOpenRemarks.guidQuestionPlaceholder':
     'Enter a guided opening question',
-  'NuwaxPC.Pages.AgentArrangeOpenRemarks.deleteGuidQuestion':
+  'PC.Pages.AgentArrangeOpenRemarks.deleteGuidQuestion':
     'Delete Preset Question',
-  'NuwaxPC.Pages.AgentArrangeOpenRemarks.settings': 'Settings',
-  'NuwaxPC.Pages.AgentArrangePageSettingModal.title': 'Settings',
-  'NuwaxPC.Pages.AgentArrangePageSettingModal.visibleToLlm': 'Visible to LLM',
-  'NuwaxPC.Pages.AgentArrangePageSettingModal.homeIndex': 'Default Home Page',
-  'NuwaxPC.Pages.AgentArrangePageSettingModal.updateOtherPageFailed':
+  'PC.Pages.AgentArrangeOpenRemarks.settings': 'Settings',
+  'PC.Pages.AgentArrangePageSettingModal.title': 'Settings',
+  'PC.Pages.AgentArrangePageSettingModal.visibleToLlm': 'Visible to LLM',
+  'PC.Pages.AgentArrangePageSettingModal.homeIndex': 'Default Home Page',
+  'PC.Pages.AgentArrangePageSettingModal.updateOtherPageFailed':
     'Failed to update other pages:',
-  'NuwaxPC.Pages.AgentArrangePageSettingModal.saveConfigFailed':
+  'PC.Pages.AgentArrangePageSettingModal.saveConfigFailed':
     'Failed to save page settings:',
-  'NuwaxPC.Pages.AgentArrangePageSettingModal.saveFailed':
+  'PC.Pages.AgentArrangePageSettingModal.saveFailed':
     'Save failed, please retry',
-  'NuwaxPC.Pages.AgentArrangeSubAgentConfig.empty':
+  'PC.Pages.AgentArrangeSubAgentConfig.empty':
     'No sub-agent configured. Click the top-right button to add one.',
-  'NuwaxPC.Pages.AgentArrangeSubAgentConfig.defaultNameWithIndex':
-    'Sub-agent {0}',
-  'NuwaxPC.Pages.AgentArrangeSubAgentConfig.edit': 'Edit',
-  'NuwaxPC.Pages.AgentArrangeSubAgentConfig.delete': 'Delete',
-  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.cancelTitle': 'Confirm Cancel',
-  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.cancelContent':
+  'PC.Pages.AgentArrangeSubAgentConfig.defaultNameWithIndex': 'Sub-agent {0}',
+  'PC.Pages.AgentArrangeSubAgentConfig.edit': 'Edit',
+  'PC.Pages.AgentArrangeSubAgentConfig.delete': 'Delete',
+  'PC.Pages.AgentArrangeSubAgentEditModal.cancelTitle': 'Confirm Cancel',
+  'PC.Pages.AgentArrangeSubAgentEditModal.cancelContent':
     'You have unsaved changes. Are you sure you want to cancel?',
-  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.cancelConfirm': 'Confirm Cancel',
-  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.keepEditing': 'Keep Editing',
-  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.editTitle': 'Edit Sub-agent',
-  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.createTitle': 'Create Sub-agent',
-  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.viewDoc': 'View Docs',
-  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.exitFullscreen':
-    'Exit Fullscreen',
-  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.enterFullscreen':
-    'Fullscreen Edit',
-  'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.promptPlaceholder':
+  'PC.Pages.AgentArrangeSubAgentEditModal.cancelConfirm': 'Confirm Cancel',
+  'PC.Pages.AgentArrangeSubAgentEditModal.keepEditing': 'Keep Editing',
+  'PC.Pages.AgentArrangeSubAgentEditModal.editTitle': 'Edit Sub-agent',
+  'PC.Pages.AgentArrangeSubAgentEditModal.createTitle': 'Create Sub-agent',
+  'PC.Pages.AgentArrangeSubAgentEditModal.viewDoc': 'View Docs',
+  'PC.Pages.AgentArrangeSubAgentEditModal.exitFullscreen': 'Exit Fullscreen',
+  'PC.Pages.AgentArrangeSubAgentEditModal.enterFullscreen': 'Fullscreen Edit',
+  'PC.Pages.AgentArrangeSubAgentEditModal.promptPlaceholder':
     'Please enter sub-agent prompt',
-  'NuwaxPC.Pages.AgentArrangeConfig.plan': 'Planning',
-  'NuwaxPC.Pages.AgentArrangeConfig.tools': 'Tools',
-  'NuwaxPC.Pages.AgentArrangeConfig.skills': 'Skills',
-  'NuwaxPC.Pages.AgentArrangeConfig.knowledge': 'Knowledge',
-  'NuwaxPC.Pages.AgentArrangeConfig.memory': 'Memory',
-  'NuwaxPC.Pages.AgentArrangeConfig.conversation': 'Conversation',
-  'NuwaxPC.Pages.AgentArrangeConfig.interface': 'Interface',
-  'NuwaxPC.Pages.AgentArrangeConfig.deleteSuccess': 'Deleted successfully',
-  'NuwaxPC.Pages.AgentArrangeConfig.addSuccess': 'Added successfully',
-  'NuwaxPC.Pages.AgentArrangeConfig.createSubAgentFailed':
+  'PC.Pages.AgentArrangeConfig.plan': 'Planning',
+  'PC.Pages.AgentArrangeConfig.tools': 'Tools',
+  'PC.Pages.AgentArrangeConfig.skills': 'Skills',
+  'PC.Pages.AgentArrangeConfig.knowledge': 'Knowledge',
+  'PC.Pages.AgentArrangeConfig.memory': 'Memory',
+  'PC.Pages.AgentArrangeConfig.conversation': 'Conversation',
+  'PC.Pages.AgentArrangeConfig.interface': 'Interface',
+  'PC.Pages.AgentArrangeConfig.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.AgentArrangeConfig.addSuccess': 'Added successfully',
+  'PC.Pages.AgentArrangeConfig.createSubAgentFailed':
     'Failed to create sub-agent component',
-  'NuwaxPC.Pages.AgentArrangeConfig.deleteSuccessSimple': 'Delete successful',
-  'NuwaxPC.Pages.AgentArrangeConfig.insertPromptSuccess':
+  'PC.Pages.AgentArrangeConfig.deleteSuccessSimple': 'Delete successful',
+  'PC.Pages.AgentArrangeConfig.insertPromptSuccess':
     'Inserted into system prompt',
-  'NuwaxPC.Pages.AgentArrangeConfig.insertPromptUnavailable':
+  'PC.Pages.AgentArrangeConfig.insertPromptUnavailable':
     'Insert into system prompt is unavailable',
-  'NuwaxPC.Pages.AgentArrangeConfig.plugin': 'Plugin',
-  'NuwaxPC.Pages.AgentArrangeConfig.addPlugin': 'Add Plugin',
-  'NuwaxPC.Pages.AgentArrangeConfig.workflow': 'Workflow',
-  'NuwaxPC.Pages.AgentArrangeConfig.addWorkflow': 'Add Workflow',
-  'NuwaxPC.Pages.AgentArrangeConfig.mcpDescription':
+  'PC.Pages.AgentArrangeConfig.plugin': 'Plugin',
+  'PC.Pages.AgentArrangeConfig.addPlugin': 'Add Plugin',
+  'PC.Pages.AgentArrangeConfig.workflow': 'Workflow',
+  'PC.Pages.AgentArrangeConfig.addWorkflow': 'Add Workflow',
+  'PC.Pages.AgentArrangeConfig.mcpDescription':
     'The agent can connect to service APIs through the standardized MCP protocol and invoke them.',
-  'NuwaxPC.Pages.AgentArrangeConfig.addMcp': 'Add MCP',
-  'NuwaxPC.Pages.AgentArrangeConfig.text': 'Text',
-  'NuwaxPC.Pages.AgentArrangeConfig.addKnowledge': 'Add Knowledge Base',
-  'NuwaxPC.Pages.AgentArrangeConfig.skill': 'Skill',
-  'NuwaxPC.Pages.AgentArrangeConfig.addSkill': 'Add Skill',
-  'NuwaxPC.Pages.AgentArrangeConfig.subAgent': 'Sub-agent',
-  'NuwaxPC.Pages.AgentArrangeConfig.addSubAgent': 'Add Sub-agent',
-  'NuwaxPC.Pages.AgentArrangeConfig.variable': 'Variable',
-  'NuwaxPC.Pages.AgentArrangeConfig.addVariable': 'Add Variable',
-  'NuwaxPC.Pages.AgentArrangeConfig.table': 'Data Table',
-  'NuwaxPC.Pages.AgentArrangeConfig.addTable': 'Add Data Table',
-  'NuwaxPC.Pages.AgentArrangeConfig.longMemory': 'Long-term Memory',
-  'NuwaxPC.Pages.AgentArrangeConfig.userQuestionSuggestion':
+  'PC.Pages.AgentArrangeConfig.addMcp': 'Add MCP',
+  'PC.Pages.AgentArrangeConfig.text': 'Text',
+  'PC.Pages.AgentArrangeConfig.addKnowledge': 'Add Knowledge Base',
+  'PC.Pages.AgentArrangeConfig.skill': 'Skill',
+  'PC.Pages.AgentArrangeConfig.addSkill': 'Add Skill',
+  'PC.Pages.AgentArrangeConfig.subAgent': 'Sub-agent',
+  'PC.Pages.AgentArrangeConfig.addSubAgent': 'Add Sub-agent',
+  'PC.Pages.AgentArrangeConfig.variable': 'Variable',
+  'PC.Pages.AgentArrangeConfig.addVariable': 'Add Variable',
+  'PC.Pages.AgentArrangeConfig.table': 'Data Table',
+  'PC.Pages.AgentArrangeConfig.addTable': 'Add Data Table',
+  'PC.Pages.AgentArrangeConfig.longMemory': 'Long-term Memory',
+  'PC.Pages.AgentArrangeConfig.userQuestionSuggestion':
     'User Question Suggestions',
-  'NuwaxPC.Pages.AgentArrangeConfig.userQuestionSuggestionEnabled':
+  'PC.Pages.AgentArrangeConfig.userQuestionSuggestionEnabled':
     'After each agent reply, provide multiple suggested user questions based on the prompt.',
-  'NuwaxPC.Pages.AgentArrangeConfig.userQuestionSuggestionDisabled':
+  'PC.Pages.AgentArrangeConfig.userQuestionSuggestionDisabled':
     'After each agent reply, do not provide suggested user questions.',
-  'NuwaxPC.Pages.AgentArrangeConfig.scheduledTask': 'Scheduled Task',
-  'NuwaxPC.Pages.AgentArrangeConfig.scheduledTaskDescription':
+  'PC.Pages.AgentArrangeConfig.scheduledTask': 'Scheduled Task',
+  'PC.Pages.AgentArrangeConfig.scheduledTaskDescription':
     'When enabled, users can run tasks via scheduled task settings.',
-  'NuwaxPC.Pages.AgentArrangeConfig.hideRemoteDesktop': 'Hide Remote Desktop',
-  'NuwaxPC.Pages.AgentArrangeConfig.hideRemoteDesktopEnabled':
+  'PC.Pages.AgentArrangeConfig.hideRemoteDesktop': 'Hide Remote Desktop',
+  'PC.Pages.AgentArrangeConfig.hideRemoteDesktopEnabled':
     'Hide the remote desktop on the right side of the agent chat area',
-  'NuwaxPC.Pages.AgentArrangeConfig.hideRemoteDesktopDisabled':
+  'PC.Pages.AgentArrangeConfig.hideRemoteDesktopDisabled':
     'Show the remote desktop on the right side of the agent chat area',
-  'NuwaxPC.Pages.AgentArrangeConfig.openingRemarks': 'Opening Remarks',
-  'NuwaxPC.Pages.AgentArrangeConfig.page': 'Page',
-  'NuwaxPC.Pages.AgentArrangeConfig.addPage': 'Add Page',
-  'NuwaxPC.Pages.AgentArrangeConfig.defaultExpandPageArea':
+  'PC.Pages.AgentArrangeConfig.openingRemarks': 'Opening Remarks',
+  'PC.Pages.AgentArrangeConfig.page': 'Page',
+  'PC.Pages.AgentArrangeConfig.addPage': 'Add Page',
+  'PC.Pages.AgentArrangeConfig.defaultExpandPageArea':
     'Default Expanded Page Area',
-  'NuwaxPC.Pages.AgentArrangeConfig.defaultExpandPageAreaDesc':
+  'PC.Pages.AgentArrangeConfig.defaultExpandPageAreaDesc':
     'After a page is bound to the agent, enabling this option expands the page by default beside the agent chat area.',
-  'NuwaxPC.Pages.AgentArrangeConfig.addPageFirst': 'Please add a page first',
-  'NuwaxPC.Pages.AgentArrangeConfig.eventBinding': 'Event Binding',
-  'NuwaxPC.Pages.AgentArrangeConfig.addEventBinding': 'Add Event Binding',
-  'NuwaxPC.Pages.AgentArrangeConfig.dynamicJsonParameter':
-    'Dynamic JSON Params',
-  'NuwaxPC.Pages.AgentArrangeConfig.referenceNumber': '#Reference Number',
-  'NuwaxPC.Pages.AgentArrangeConfig.appendReferenceInfo':
+  'PC.Pages.AgentArrangeConfig.addPageFirst': 'Please add a page first',
+  'PC.Pages.AgentArrangeConfig.eventBinding': 'Event Binding',
+  'PC.Pages.AgentArrangeConfig.addEventBinding': 'Add Event Binding',
+  'PC.Pages.AgentArrangeConfig.dynamicJsonParameter': 'Dynamic JSON Params',
+  'PC.Pages.AgentArrangeConfig.referenceNumber': '#Reference Number',
+  'PC.Pages.AgentArrangeConfig.appendReferenceInfo':
     'Append reference information after the returned content as follows',
-  'NuwaxPC.Pages.AgentArrangeConfig.dynamicJsonSchemaPrefix':
+  'PC.Pages.AgentArrangeConfig.dynamicJsonSchemaPrefix':
     'Dynamic JSON parameter JsonSchema for {0} is as follows',
-  'NuwaxPC.Pages.AgentArrangeConfig.conversationExperience':
+  'PC.Pages.AgentArrangeConfig.conversationExperience':
     'Conversation Experience',
-  'NuwaxPC.Pages.AgentArrangeConfig.interfaceConfig': 'Interface Config',
-  'NuwaxPC.Pages.SystemConfigCategoryManage.pageTitle': 'Category Management',
-  'NuwaxPC.Pages.SystemConfigCategoryManage.agent': 'Agent',
-  'NuwaxPC.Pages.SystemConfigCategoryManage.webApp': 'Web App',
-  'NuwaxPC.Pages.SystemConfigCategoryManage.component': 'Component',
-  'NuwaxPC.Pages.SystemConfigCategoryManage.categoryType': '{0} Category',
-  'NuwaxPC.Pages.SystemConfigCategoryManage.itemCount': '{0} items',
-  'NuwaxPC.Pages.SystemConfigCategoryManage.confirmDeleteTitle':
-    'Confirm Delete',
-  'NuwaxPC.Pages.SystemConfigCategoryManage.confirmDeleteContent':
+  'PC.Pages.AgentArrangeConfig.interfaceConfig': 'Interface Config',
+  'PC.Pages.SystemConfigCategoryManage.pageTitle': 'Category Management',
+  'PC.Pages.SystemConfigCategoryManage.agent': 'Agent',
+  'PC.Pages.SystemConfigCategoryManage.webApp': 'Web App',
+  'PC.Pages.SystemConfigCategoryManage.component': 'Component',
+  'PC.Pages.SystemConfigCategoryManage.categoryType': '{0} Category',
+  'PC.Pages.SystemConfigCategoryManage.itemCount': '{0} items',
+  'PC.Pages.SystemConfigCategoryManage.confirmDeleteTitle': 'Confirm Delete',
+  'PC.Pages.SystemConfigCategoryManage.confirmDeleteContent':
     'Are you sure you want to delete this category? This action cannot be undone.',
-  'NuwaxPC.Pages.SystemConfigCategoryManage.deletedSuccessfully':
+  'PC.Pages.SystemConfigCategoryManage.deletedSuccessfully':
     'Category deleted successfully',
-  'NuwaxPC.Pages.SystemConfigCategoryManage.deleteFailed':
+  'PC.Pages.SystemConfigCategoryManage.deleteFailed':
     'Failed to delete category:',
-  'NuwaxPC.Pages.SystemConfigCategoryManage.addSuccessWithType':
+  'PC.Pages.SystemConfigCategoryManage.addSuccessWithType':
     '{0} category added successfully',
-  'NuwaxPC.Pages.SystemConfigCategoryManage.editSuccessWithType':
+  'PC.Pages.SystemConfigCategoryManage.editSuccessWithType':
     '{0} category updated successfully',
-  'NuwaxPC.Pages.SystemConfigCategoryManage.saveFailed':
-    'Failed to save category:',
-  'NuwaxPC.Pages.SystemConfigCategoryManage.add': 'Add',
-  'NuwaxPC.Pages.SystemConfigCategoryModal.addTitle': 'Add {0} Category',
-  'NuwaxPC.Pages.SystemConfigCategoryModal.editTitle': 'Edit {0} Category',
-  'NuwaxPC.Pages.SystemConfigCategoryModal.name': 'Category Name',
-  'NuwaxPC.Pages.SystemConfigCategoryModal.namePlaceholder':
+  'PC.Pages.SystemConfigCategoryManage.saveFailed': 'Failed to save category:',
+  'PC.Pages.SystemConfigCategoryManage.add': 'Add',
+  'PC.Pages.SystemConfigCategoryModal.addTitle': 'Add {0} Category',
+  'PC.Pages.SystemConfigCategoryModal.editTitle': 'Edit {0} Category',
+  'PC.Pages.SystemConfigCategoryModal.name': 'Category Name',
+  'PC.Pages.SystemConfigCategoryModal.namePlaceholder':
     'Please enter category name',
-  'NuwaxPC.Pages.SystemConfigCategoryModal.nameRequired':
+  'PC.Pages.SystemConfigCategoryModal.nameRequired':
     'Please enter category name',
-  'NuwaxPC.Pages.SystemConfigCategoryModal.nameMaxLength':
+  'PC.Pages.SystemConfigCategoryModal.nameMaxLength':
     'Category name cannot exceed 100 characters',
-  'NuwaxPC.Pages.SystemConfigCategoryModal.code': 'Category Code',
-  'NuwaxPC.Pages.SystemConfigCategoryModal.codePlaceholder':
+  'PC.Pages.SystemConfigCategoryModal.code': 'Category Code',
+  'PC.Pages.SystemConfigCategoryModal.codePlaceholder':
     'Please enter category code',
-  'NuwaxPC.Pages.SystemConfigCategoryModal.codeRequired':
+  'PC.Pages.SystemConfigCategoryModal.codeRequired':
     'Please enter category code',
-  'NuwaxPC.Pages.SystemConfigCategoryModal.codeMaxLength':
+  'PC.Pages.SystemConfigCategoryModal.codeMaxLength':
     'Category code cannot exceed 100 characters',
-  'NuwaxPC.Pages.SystemConfigCategoryModal.codePatternInvalid':
+  'PC.Pages.SystemConfigCategoryModal.codePatternInvalid':
     'Category code can only contain letters, numbers, underscores (_), or dollar signs ($), and cannot start with a number',
-  'NuwaxPC.Pages.SystemConfigCategoryModal.description': 'Description',
-  'NuwaxPC.Pages.SystemConfigCategoryModal.descriptionPlaceholder':
+  'PC.Pages.SystemConfigCategoryModal.description': 'Description',
+  'PC.Pages.SystemConfigCategoryModal.descriptionPlaceholder':
     'Please enter category description (optional)',
-  'NuwaxPC.Pages.SystemConfigCategoryModal.descriptionMaxLength':
+  'PC.Pages.SystemConfigCategoryModal.descriptionMaxLength':
     'Description cannot exceed 100 characters',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.addTitle': 'Add Sandbox',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.editTitle': 'Edit Sandbox',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.name': 'Sandbox Name',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.namePlaceholder':
-    'e.g. AGENT Sandbox',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.nameRequired':
-    'Please enter sandbox name',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.nameMaxLength':
+  'PC.Pages.SystemConfigSandboxModal.addTitle': 'Add Sandbox',
+  'PC.Pages.SystemConfigSandboxModal.editTitle': 'Edit Sandbox',
+  'PC.Pages.SystemConfigSandboxModal.name': 'Sandbox Name',
+  'PC.Pages.SystemConfigSandboxModal.namePlaceholder': 'e.g. AGENT Sandbox',
+  'PC.Pages.SystemConfigSandboxModal.nameRequired': 'Please enter sandbox name',
+  'PC.Pages.SystemConfigSandboxModal.nameMaxLength':
     'Sandbox name cannot exceed 100 characters',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.host': 'Sandbox Base URL',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.hostPlaceholder':
+  'PC.Pages.SystemConfigSandboxModal.host': 'Sandbox Base URL',
+  'PC.Pages.SystemConfigSandboxModal.hostPlaceholder':
     'e.g. http://192.168.1.21',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.hostRequired':
+  'PC.Pages.SystemConfigSandboxModal.hostRequired':
     'Please enter sandbox base URL',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.hostMaxLength':
+  'PC.Pages.SystemConfigSandboxModal.hostMaxLength':
     'URL length cannot exceed 255 characters',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.hostInvalid':
+  'PC.Pages.SystemConfigSandboxModal.hostInvalid':
     'Please enter a valid URL including http:// or https://',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.agentPort': 'Agent Port',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.agentPortRequired':
+  'PC.Pages.SystemConfigSandboxModal.agentPort': 'Agent Port',
+  'PC.Pages.SystemConfigSandboxModal.agentPortRequired':
     'Please enter Agent port',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.vncPort': 'VNC Port',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.vncPortRequired':
-    'Please enter VNC port',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.fileServerPort': 'File Service Port',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.fileServerPortRequired':
+  'PC.Pages.SystemConfigSandboxModal.vncPort': 'VNC Port',
+  'PC.Pages.SystemConfigSandboxModal.vncPortRequired': 'Please enter VNC port',
+  'PC.Pages.SystemConfigSandboxModal.fileServerPort': 'File Service Port',
+  'PC.Pages.SystemConfigSandboxModal.fileServerPortRequired':
     'Please enter file service port',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.apiKey':
-    'Communication Key (Optional)',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.apiKeyPlaceholder':
+  'PC.Pages.SystemConfigSandboxModal.apiKey': 'Communication Key (Optional)',
+  'PC.Pages.SystemConfigSandboxModal.apiKeyPlaceholder':
     'Leave blank to disable communication key',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.maxUsers': 'Maximum Concurrent Users',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.maxUsersRequired':
+  'PC.Pages.SystemConfigSandboxModal.maxUsers': 'Maximum Concurrent Users',
+  'PC.Pages.SystemConfigSandboxModal.maxUsersRequired':
     'Please enter maximum concurrent users',
-  'NuwaxPC.Pages.SystemConfigSandboxModal.maxUsersMax':
+  'PC.Pages.SystemConfigSandboxModal.maxUsersMax':
     'Maximum concurrent users cannot exceed 9999',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.pageTitle': 'Sandbox Configuration',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.connectivitySuccess':
+  'PC.Pages.SystemConfigSandboxConfig.pageTitle': 'Sandbox Configuration',
+  'PC.Pages.SystemConfigSandboxConfig.connectivitySuccess':
     'Connectivity test passed, sandbox is reachable',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.connectivityFailed':
+  'PC.Pages.SystemConfigSandboxConfig.connectivityFailed':
     'Connectivity test failed: {0}',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.connectionException':
+  'PC.Pages.SystemConfigSandboxConfig.connectionException':
     'Connection exception',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.disable': 'Disable',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.enable': 'Enable',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.toggleConfirmTitle': 'Confirm {0}',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.toggleConfirmContent':
+  'PC.Pages.SystemConfigSandboxConfig.disable': 'Disable',
+  'PC.Pages.SystemConfigSandboxConfig.enable': 'Enable',
+  'PC.Pages.SystemConfigSandboxConfig.toggleConfirmTitle': 'Confirm {0}',
+  'PC.Pages.SystemConfigSandboxConfig.toggleConfirmContent':
     'Are you sure you want to {0} sandbox {1}?',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.toggleSuccess': '{0} succeeded',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.addSuccess': 'Added successfully',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.columnName': 'Sandbox Name',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.columnUsage': 'Usage',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.usagePercentInUse': '{0}% in use',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.columnOnlineStatus': 'Online Status',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.online': 'Online',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.offline': 'Offline',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.columnActiveStatus': 'Active Status',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.enabled': 'Enabled',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.disabled': 'Disabled',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.connectivityTest':
-    'Connectivity Test',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.edit': 'Edit',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.delete': 'Delete',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.deleteConfirmTitle':
-    'Confirm Delete',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.deleteConfirmContent':
+  'PC.Pages.SystemConfigSandboxConfig.toggleSuccess': '{0} succeeded',
+  'PC.Pages.SystemConfigSandboxConfig.addSuccess': 'Added successfully',
+  'PC.Pages.SystemConfigSandboxConfig.columnName': 'Sandbox Name',
+  'PC.Pages.SystemConfigSandboxConfig.columnUsage': 'Usage',
+  'PC.Pages.SystemConfigSandboxConfig.usagePercentInUse': '{0}% in use',
+  'PC.Pages.SystemConfigSandboxConfig.columnOnlineStatus': 'Online Status',
+  'PC.Pages.SystemConfigSandboxConfig.online': 'Online',
+  'PC.Pages.SystemConfigSandboxConfig.offline': 'Offline',
+  'PC.Pages.SystemConfigSandboxConfig.columnActiveStatus': 'Active Status',
+  'PC.Pages.SystemConfigSandboxConfig.enabled': 'Enabled',
+  'PC.Pages.SystemConfigSandboxConfig.disabled': 'Disabled',
+  'PC.Pages.SystemConfigSandboxConfig.columnAction': 'Action',
+  'PC.Pages.SystemConfigSandboxConfig.connectivityTest': 'Connectivity Test',
+  'PC.Pages.SystemConfigSandboxConfig.edit': 'Edit',
+  'PC.Pages.SystemConfigSandboxConfig.delete': 'Delete',
+  'PC.Pages.SystemConfigSandboxConfig.deleteConfirmTitle': 'Confirm Delete',
+  'PC.Pages.SystemConfigSandboxConfig.deleteConfirmContent':
     'Are you sure you want to delete this sandbox?',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.deleteSuccess':
-    'Deleted successfully',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.addSandbox': 'Add Sandbox',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.globalConfig': 'Global Config',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.perUserMemory': 'Per-user Memory',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.perUserCpu': 'Per-user CPU Cores',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.unitGb': 'GB',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.unitCore': 'cores',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.totalSandboxCount':
-    '{0} sandboxes total',
-  'NuwaxPC.Pages.SystemConfigSandboxConfig.onlineSandboxCount': '{0} online',
-  'NuwaxPC.Pages.SystemMenuBindUser.userNotFoundBySearch':
-    'No matching user found',
-  'NuwaxPC.Pages.SystemMenuBindUser.bindUserWithName': 'Bind User - {0}',
-  'NuwaxPC.Pages.SystemMenuBindUser.close': 'Close',
-  'NuwaxPC.Pages.SystemMenuBindUser.leftSearchPlaceholder':
+  'PC.Pages.SystemConfigSandboxConfig.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SystemConfigSandboxConfig.addSandbox': 'Add Sandbox',
+  'PC.Pages.SystemConfigSandboxConfig.globalConfig': 'Global Config',
+  'PC.Pages.SystemConfigSandboxConfig.perUserMemory': 'Per-user Memory',
+  'PC.Pages.SystemConfigSandboxConfig.perUserCpu': 'Per-user CPU Cores',
+  'PC.Pages.SystemConfigSandboxConfig.unitGb': 'GB',
+  'PC.Pages.SystemConfigSandboxConfig.unitCore': 'cores',
+  'PC.Pages.SystemConfigSandboxConfig.totalSandboxCount': '{0} sandboxes total',
+  'PC.Pages.SystemConfigSandboxConfig.onlineSandboxCount': '{0} online',
+  'PC.Pages.SystemMenuBindUser.userNotFoundBySearch': 'No matching user found',
+  'PC.Pages.SystemMenuBindUser.bindUserWithName': 'Bind User - {0}',
+  'PC.Pages.SystemMenuBindUser.close': 'Close',
+  'PC.Pages.SystemMenuBindUser.leftSearchPlaceholder':
     'Enter username, email, or phone number and press Enter to search',
-  'NuwaxPC.Pages.SystemMenuBindUser.rightSearchPlaceholder':
+  'PC.Pages.SystemMenuBindUser.rightSearchPlaceholder':
     'Search bound members by keyword',
-  'NuwaxPC.Pages.Error403.licenseExpired':
+  'PC.Pages.Error403.licenseExpired':
     'Sorry, your license authorization has expired',
-  'NuwaxPC.Pages.Error404.pageNotFound':
+  'PC.Pages.Error404.pageNotFound':
     'Sorry, the page you visited does not exist',
-  'NuwaxPC.Pages.HomeDrag.errorTitle':
-    'Drag feature is temporarily unavailable',
-  'NuwaxPC.Pages.HomeDrag.errorDescription':
-    'Please refresh the page and try again',
-  'NuwaxPC.Pages.HomeDrag.refreshPage': 'Refresh Page',
-  'NuwaxPC.Pages.HomeDrag.hoverCategory': 'Drag to reorder categories',
-  'NuwaxPC.Pages.HomeDrag.hoverAgent': 'Drag to reorder agents',
-  'NuwaxPC.Pages.HomeDrag.updatingSort': 'Updating sort order...',
-  'NuwaxPC.Pages.HomeDrag.sortSuccess': 'Sort order updated successfully',
-  'NuwaxPC.Pages.HomeDrag.sortFailed': 'Failed to update sort order, please retry',
-  'NuwaxPC.Pages.HomeDrag.unknownUser': 'Unknown user',
-  'NuwaxPC.Pages.HomeDrag.noDescription': 'No description',
-  'NuwaxPC.Pages.HomeDrag.agent': 'Agent',
-  'NuwaxPC.Pages.HomeDrag.agentAvatar': 'Agent avatar',
-  'NuwaxPC.Pages.HomeDrag.agentName': 'Agent name',
-  'NuwaxPC.Pages.HomeDrag.unnamedAgent': 'Unnamed agent',
-  'NuwaxPC.Pages.HomeDrag.from': 'From',
-  'NuwaxPC.Pages.HomeDrag.cancelCollect': 'Uncollect',
-  'NuwaxPC.Pages.HomeDrag.collect': 'Collect',
-  'NuwaxPC.Pages.HomeDrag.dragAgentTip': 'Drag agent cards to swap positions',
-  'NuwaxPC.Pages.HomeDrag.emptyExplore': 'No data, explore now',
-  'NuwaxPC.Pages.Home.noTenantInfo': 'Tenant information not found',
-  'NuwaxPC.Pages.Home.linkConfigError': 'Link address configuration error',
-  'NuwaxPC.Pages.AppDevFileOperatingMask.defaultTip':
+  'PC.Pages.HomeDrag.errorTitle': 'Drag feature is temporarily unavailable',
+  'PC.Pages.HomeDrag.errorDescription': 'Please refresh the page and try again',
+  'PC.Pages.HomeDrag.refreshPage': 'Refresh Page',
+  'PC.Pages.HomeDrag.hoverCategory': 'Drag to reorder categories',
+  'PC.Pages.HomeDrag.hoverAgent': 'Drag to reorder agents',
+  'PC.Pages.HomeDrag.updatingSort': 'Updating sort order...',
+  'PC.Pages.HomeDrag.sortSuccess': 'Sort order updated successfully',
+  'PC.Pages.HomeDrag.sortFailed': 'Failed to update sort order, please retry',
+  'PC.Pages.HomeDrag.unknownUser': 'Unknown user',
+  'PC.Pages.HomeDrag.noDescription': 'No description',
+  'PC.Pages.HomeDrag.agent': 'Agent',
+  'PC.Pages.HomeDrag.agentAvatar': 'Agent avatar',
+  'PC.Pages.HomeDrag.agentName': 'Agent name',
+  'PC.Pages.HomeDrag.unnamedAgent': 'Unnamed agent',
+  'PC.Pages.HomeDrag.from': 'From',
+  'PC.Pages.HomeDrag.cancelCollect': 'Uncollect',
+  'PC.Pages.HomeDrag.collect': 'Collect',
+  'PC.Pages.HomeDrag.dragAgentTip': 'Drag agent cards to swap positions',
+  'PC.Pages.HomeDrag.emptyExplore': 'No data, explore now',
+  'PC.Pages.Home.noTenantInfo': 'Tenant information not found',
+  'PC.Pages.Home.linkConfigError': 'Link address configuration error',
+  'PC.Pages.AppDevFileOperatingMask.defaultTip':
     'File operation in progress, please wait...',
-  'NuwaxPC.Pages.AppDevImageViewer.previewPath': 'Image Preview: {0}',
-  'NuwaxPC.Pages.AppDevImageViewer.base64Tag': ' (Base64)',
-  'NuwaxPC.Components.NoMoreDivider.noMoreData': 'No more data',
-  'NuwaxPC.Components.WorkspaceSearch.placeholder':
-    'Please input search content',
-  'NuwaxPC.Components.CreatedMcpItem.avatarAlt': 'User avatar',
-  'NuwaxPC.Components.CreatedMcpItem.deployedAt': 'Deployed at {0}',
-  'NuwaxPC.Components.CreatedMcpTools.noDescription': 'No description',
-  'NuwaxPC.Components.CreatedMcpTools.added': 'Added',
-  'NuwaxPC.Components.CreatedMcpTools.add': 'Add',
-  'NuwaxPC.Components.CreatedPageItem.avatarAlt': 'User avatar',
-  'NuwaxPC.Components.CreatedPageItem.createdAt': 'Created at {0}',
-  'NuwaxPC.Components.CreatedPageItem.added': 'Added',
-  'NuwaxPC.Components.CreatedPageItem.add': 'Add',
-  'NuwaxPC.Components.Created.tabPlugin': 'Plugin',
-  'NuwaxPC.Components.Created.tabWorkflow': 'Workflow',
-  'NuwaxPC.Components.Created.tabKnowledge': 'Knowledge Base',
-  'NuwaxPC.Components.Created.tabTable': 'Data Table',
-  'NuwaxPC.Components.Created.tabAgent': 'Agent',
-  'NuwaxPC.Components.Created.tabMcp': 'MCP Service',
-  'NuwaxPC.Components.Created.tabPage': 'Page',
-  'NuwaxPC.Components.Created.tabSkill': 'Skill',
-  'NuwaxPC.Components.Created.all': 'All',
-  'NuwaxPC.Components.Created.libraryWithLabel': '{0} Library',
-  'NuwaxPC.Components.Created.collect': 'Favorites',
-  'NuwaxPC.Components.Created.officialOnlyWithLabel': 'Official {0} Only',
-  'NuwaxPC.Components.Created.currentSpaceAgent': 'Current Space Agents',
-  'NuwaxPC.Components.Created.document': 'Document',
-  'NuwaxPC.Components.Created.libraryDataTable': 'Library Data Table',
-  'NuwaxPC.Components.Created.customService': 'Custom Service',
-  'NuwaxPC.Components.Created.addTitle': 'Add',
-  'NuwaxPC.Components.Created.userAvatar': 'User avatar',
-  'NuwaxPC.Components.Created.publishedAt': 'Published at {0}',
-  'NuwaxPC.Components.Created.added': 'Added',
-  'NuwaxPC.Components.Created.add': 'Add',
-  'NuwaxPC.Components.Created.search': 'Search',
-  'NuwaxPC.Components.Created.createWithLabel': 'Create {0}',
-  'NuwaxPC.Components.Created.emptyWithSearch':
-    'No data found, please search again',
-  'NuwaxPC.Components.Created.empty': 'No data',
-  'NuwaxPC.Components.ChatInputHomeAtMentionIcon.tryMentionSkill':
+  'PC.Pages.AppDevImageViewer.previewPath': 'Image Preview: {0}',
+  'PC.Pages.AppDevImageViewer.base64Tag': ' (Base64)',
+  'PC.Components.NoMoreDivider.noMoreData': 'No more data',
+  'PC.Components.WorkspaceSearch.placeholder': 'Please input search content',
+  'PC.Components.CreatedMcpItem.avatarAlt': 'User avatar',
+  'PC.Components.CreatedMcpItem.deployedAt': 'Deployed at {0}',
+  'PC.Components.CreatedMcpTools.noDescription': 'No description',
+  'PC.Components.CreatedMcpTools.added': 'Added',
+  'PC.Components.CreatedMcpTools.add': 'Add',
+  'PC.Components.CreatedPageItem.avatarAlt': 'User avatar',
+  'PC.Components.CreatedPageItem.createdAt': 'Created at {0}',
+  'PC.Components.CreatedPageItem.added': 'Added',
+  'PC.Components.CreatedPageItem.add': 'Add',
+  'PC.Components.Created.tabPlugin': 'Plugin',
+  'PC.Components.Created.tabWorkflow': 'Workflow',
+  'PC.Components.Created.tabKnowledge': 'Knowledge Base',
+  'PC.Components.Created.tabTable': 'Data Table',
+  'PC.Components.Created.tabAgent': 'Agent',
+  'PC.Components.Created.tabMcp': 'MCP Service',
+  'PC.Components.Created.tabPage': 'Page',
+  'PC.Components.Created.tabSkill': 'Skill',
+  'PC.Components.Created.all': 'All',
+  'PC.Components.Created.libraryWithLabel': '{0} Library',
+  'PC.Components.Created.collect': 'Favorites',
+  'PC.Components.Created.officialOnlyWithLabel': 'Official {0} Only',
+  'PC.Components.Created.currentSpaceAgent': 'Current Space Agents',
+  'PC.Components.Created.document': 'Document',
+  'PC.Components.Created.libraryDataTable': 'Library Data Table',
+  'PC.Components.Created.customService': 'Custom Service',
+  'PC.Components.Created.addTitle': 'Add',
+  'PC.Components.Created.userAvatar': 'User avatar',
+  'PC.Components.Created.publishedAt': 'Published at {0}',
+  'PC.Components.Created.added': 'Added',
+  'PC.Components.Created.add': 'Add',
+  'PC.Components.Created.search': 'Search',
+  'PC.Components.Created.createWithLabel': 'Create {0}',
+  'PC.Components.Created.emptyWithSearch': 'No data found, please search again',
+  'PC.Components.Created.empty': 'No data',
+  'PC.Components.ChatInputHomeAtMentionIcon.tryMentionSkill':
     'Try @ to mention skills',
-  'NuwaxPC.Components.ChatInputHomeManualComponentItem.keywordNetwork':
-    'Network',
-  'NuwaxPC.Components.ChatInputHomeManualComponentItem.keywordSearch': 'Search',
-  'NuwaxPC.Components.ChatInputHomeManualComponentItem.keywordReasoning':
+  'PC.Components.ChatInputHomeManualComponentItem.keywordNetwork': 'Network',
+  'PC.Components.ChatInputHomeManualComponentItem.keywordSearch': 'Search',
+  'PC.Components.ChatInputHomeManualComponentItem.keywordReasoning':
     'Reasoning',
-  'NuwaxPC.Components.ChatInputHomeManualComponentItem.keywordThinking':
-    'Thinking',
-  'NuwaxPC.Components.ChatInputHomeMentionPopup.tabAll': 'All',
-  'NuwaxPC.Components.ChatInputHomeMentionPopup.tabRecent': 'Recent',
-  'NuwaxPC.Components.ChatInputHomeMentionPopup.tabFavorite': 'Favorites',
-  'NuwaxPC.Components.ChatInputHomeMentionPopup.searchSkill': 'Search skills',
-  'NuwaxPC.Components.ChatInputHomeMentionPopup.loading': 'Loading...',
-  'NuwaxPC.Components.ChatInputHomeMentionPopup.emptyFavorite':
-    'No favorites yet',
-  'NuwaxPC.Components.ChatInputHomeMentionPopup.emptyNotFound':
+  'PC.Components.ChatInputHomeManualComponentItem.keywordThinking': 'Thinking',
+  'PC.Components.ChatInputHomeMentionPopup.tabAll': 'All',
+  'PC.Components.ChatInputHomeMentionPopup.tabRecent': 'Recent',
+  'PC.Components.ChatInputHomeMentionPopup.tabFavorite': 'Favorites',
+  'PC.Components.ChatInputHomeMentionPopup.searchSkill': 'Search skills',
+  'PC.Components.ChatInputHomeMentionPopup.loading': 'Loading...',
+  'PC.Components.ChatInputHomeMentionPopup.emptyFavorite': 'No favorites yet',
+  'PC.Components.ChatInputHomeMentionPopup.emptyNotFound':
     'No matching items found',
-  'NuwaxPC.Components.ChatInputHomeMentionPopup.loadingMore': 'Loading more...',
-  'NuwaxPC.Components.ChatInputHome.pastedImageFileName':
-    'pasted-image-{0}-{1}.png',
-  'NuwaxPC.Components.ChatInputHome.uploadFailedWithName': '{0} upload failed',
-  'NuwaxPC.Components.ChatInputHome.conversationDisabled':
+  'PC.Components.ChatInputHomeMentionPopup.loadingMore': 'Loading more...',
+  'PC.Components.ChatInputHome.pastedImageFileName': 'pasted-image-{0}-{1}.png',
+  'PC.Components.ChatInputHome.uploadFailedWithName': '{0} upload failed',
+  'PC.Components.ChatInputHome.conversationDisabled':
     'Conversation is disabled',
-  'NuwaxPC.Components.ChatInputHome.enterQuestion':
-    'Please enter your question',
-  'NuwaxPC.Components.ChatInputHome.clickStopConversation':
+  'PC.Components.ChatInputHome.enterQuestion': 'Please enter your question',
+  'PC.Components.ChatInputHome.clickStopConversation':
     'Click to stop current conversation',
-  'NuwaxPC.Components.ChatInputHome.clickSendMessage': 'Click to send message',
-  'NuwaxPC.Components.ChatInputHome.stoppingTask': 'Stopping task...',
-  'NuwaxPC.Components.ChatInputHome.clickStopAgentTask':
-    'Click to stop agent task',
-  'NuwaxPC.Components.ChatInputHome.noActiveConversation':
-    'No active conversation',
-  'NuwaxPC.Components.ChatInputHome.stoppingConversation':
+  'PC.Components.ChatInputHome.clickSendMessage': 'Click to send message',
+  'PC.Components.ChatInputHome.stoppingTask': 'Stopping task...',
+  'PC.Components.ChatInputHome.clickStopAgentTask': 'Click to stop agent task',
+  'PC.Components.ChatInputHome.noActiveConversation': 'No active conversation',
+  'PC.Components.ChatInputHome.stoppingConversation':
     'Stopping conversation...',
-  'NuwaxPC.Components.ChatInputHome.noAgentPermission':
-    'No permission to use agent',
-  'NuwaxPC.Components.ChatInputHome.agentComputerUnavailable':
+  'PC.Components.ChatInputHome.noAgentPermission': 'No permission to use agent',
+  'PC.Components.ChatInputHome.agentComputerUnavailable':
     'The agent computer for this conversation is unavailable',
-  'NuwaxPC.Components.ChatInputHome.clearRecord': 'Clear conversation history',
-  'NuwaxPC.Components.ChatInputHome.uploadAttachment': 'Upload attachment',
-  'NuwaxPC.Components.ChatInputHome.switchToNormalMode':
-    'Switch to normal mode',
-  'NuwaxPC.Components.ChatInputHome.useAgentComputerTask':
+  'PC.Components.ChatInputHome.clearRecord': 'Clear conversation history',
+  'PC.Components.ChatInputHome.uploadAttachment': 'Upload attachment',
+  'PC.Components.ChatInputHome.switchToNormalMode': 'Switch to normal mode',
+  'PC.Components.ChatInputHome.useAgentComputerTask':
     'Use my agent computer to execute tasks',
-  'NuwaxPC.Components.ChatInputHome.generatedByAiNotice':
+  'PC.Components.ChatInputHome.generatedByAiNotice':
     'Content is generated by AI, please review carefully',
-  'NuwaxPC.Components.ChatInputHomeMentionEditor.placeholderWithMention':
+  'PC.Components.ChatInputHomeMentionEditor.placeholderWithMention':
     'Type commands directly, use Shift+Enter for a new line and Enter to send; supports @ to mention skills and image paste.',
-  'NuwaxPC.Components.ChatInputHomeMentionEditor.placeholderWithoutMention':
+  'PC.Components.ChatInputHomeMentionEditor.placeholderWithoutMention':
     'Type commands directly, use Shift+Enter for a new line and Enter to send; supports image paste.',
-  'NuwaxPC.Pages.SkillDetailsMoreActionsMenu.importSkill': 'Import Skill',
-  'NuwaxPC.Pages.SkillDetailsMoreActionsMenu.fullscreenPreview':
+  'PC.Pages.SkillDetailsMoreActionsMenu.importSkill': 'Import Skill',
+  'PC.Pages.SkillDetailsMoreActionsMenu.fullscreenPreview':
     'Fullscreen Preview',
-  'NuwaxPC.Pages.SkillDetailsMoreActionsMenu.exportSkill': 'Export Skill',
-  'NuwaxPC.Pages.SkillDetailsHeader.published': 'Published',
-  'NuwaxPC.Pages.SkillDetailsHeader.updatesNotPublished':
-    'Updates not published',
-  'NuwaxPC.Pages.SkillDetailsHeader.publish': 'Publish',
-  'NuwaxPC.Pages.SkillDetails.actionPublish': 'Publish',
-  'NuwaxPC.Pages.SkillDetails.saveBeforeAction':
+  'PC.Pages.SkillDetailsMoreActionsMenu.exportSkill': 'Export Skill',
+  'PC.Pages.SkillDetailsHeader.published': 'Published',
+  'PC.Pages.SkillDetailsHeader.updatesNotPublished': 'Updates not published',
+  'PC.Pages.SkillDetailsHeader.publish': 'Publish',
+  'PC.Pages.SkillDetails.actionPublish': 'Publish',
+  'PC.Pages.SkillDetails.saveBeforeAction':
     'You have unsaved file changes. Please save before {0}.',
-  'NuwaxPC.Pages.SkillDetails.saveSuccess': 'Saved successfully',
-  'NuwaxPC.Pages.SkillDetails.unsavedTitle': 'Unsaved file changes',
-  'NuwaxPC.Pages.SkillDetails.unsavedLeaveMessage':
+  'PC.Pages.SkillDetails.saveSuccess': 'Saved successfully',
+  'PC.Pages.SkillDetails.unsavedTitle': 'Unsaved file changes',
+  'PC.Pages.SkillDetails.unsavedLeaveMessage':
     'You have unsaved file changes. Save before leaving?',
-  'NuwaxPC.Pages.SkillDetails.saveAndLeave': 'Save and Leave',
-  'NuwaxPC.Pages.SkillDetails.leaveWithoutSaving': 'Leave Without Saving',
-  'NuwaxPC.Pages.SkillDetails.importSuccess': 'Imported successfully',
-  'NuwaxPC.Pages.SkillDetails.skillIdRequired': 'Skill ID is required',
-  'NuwaxPC.Pages.SkillDetails.spaceIdRequired': 'Space ID is required',
-  'NuwaxPC.Pages.SkillDetails.uploadSizeLimitExceeded':
+  'PC.Pages.SkillDetails.saveAndLeave': 'Save and Leave',
+  'PC.Pages.SkillDetails.leaveWithoutSaving': 'Leave Without Saving',
+  'PC.Pages.SkillDetails.importSuccess': 'Imported successfully',
+  'PC.Pages.SkillDetails.skillIdRequired': 'Skill ID is required',
+  'PC.Pages.SkillDetails.spaceIdRequired': 'Space ID is required',
+  'PC.Pages.SkillDetails.uploadSizeLimitExceeded':
     'The total upload file size cannot exceed 20MB',
-  'NuwaxPC.Pages.SkillDetails.uploadSuccess': 'Uploaded successfully',
-  'NuwaxPC.Pages.SkillDetails.invalidSkillIdForExport':
+  'PC.Pages.SkillDetails.uploadSuccess': 'Uploaded successfully',
+  'PC.Pages.SkillDetails.invalidSkillIdForExport':
     'Skill ID is missing or invalid, cannot export',
-  'NuwaxPC.Pages.SkillDetails.exportFailed': 'Export failed',
-  'NuwaxPC.Pages.SkillDetails.exportSuccess': 'Export successful!',
-  'NuwaxPC.Pages.SkillDetails.confirmDeleteFile':
+  'PC.Pages.SkillDetails.exportFailed': 'Export failed',
+  'PC.Pages.SkillDetails.exportSuccess': 'Export successful!',
+  'PC.Pages.SkillDetails.confirmDeleteFile':
     'Are you sure you want to delete this file?',
-  'NuwaxPC.Pages.SkillDetails.fileNotFound':
+  'PC.Pages.SkillDetails.fileNotFound':
     'File does not exist and cannot be deleted',
-  'NuwaxPC.Pages.SkillDetails.deleteSuccess': 'Deleted successfully',
-  'NuwaxPC.Pages.SkillDetails.skillInfoMissing':
+  'PC.Pages.SkillDetails.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SkillDetails.skillInfoMissing':
     'Skill information is missing, cannot create file',
-  'NuwaxPC.Pages.SkillDetails.actionEdit': 'Edit skill',
-  'NuwaxPC.Pages.SkillDetails.exporting': 'Exporting',
-  'NuwaxPC.Pages.ApiKeyFormModal.updateSuccess': 'Updated successfully',
-  'NuwaxPC.Pages.ApiKeyFormModal.createSuccess': 'Created successfully',
-  'NuwaxPC.Pages.ApiKeyFormModal.editTitle': 'Edit API Key',
-  'NuwaxPC.Pages.ApiKeyFormModal.createTitle': 'Create API Key',
-  'NuwaxPC.Pages.ApiKeyFormModal.keyName': 'Key Name',
-  'NuwaxPC.Pages.ApiKeyFormModal.keyNamePlaceholder':
+  'PC.Pages.SkillDetails.actionEdit': 'Edit skill',
+  'PC.Pages.SkillDetails.exporting': 'Exporting',
+  'PC.Pages.ApiKeyFormModal.updateSuccess': 'Updated successfully',
+  'PC.Pages.ApiKeyFormModal.createSuccess': 'Created successfully',
+  'PC.Pages.ApiKeyFormModal.editTitle': 'Edit API Key',
+  'PC.Pages.ApiKeyFormModal.createTitle': 'Create API Key',
+  'PC.Pages.ApiKeyFormModal.keyName': 'Key Name',
+  'PC.Pages.ApiKeyFormModal.keyNamePlaceholder':
     'e.g. production-environment-api',
-  'NuwaxPC.Pages.ApiKeyFormModal.enterKeyName': 'Please enter key name',
-  'NuwaxPC.Pages.ApiKeyFormModal.expireTime': 'Expire Time',
-  'NuwaxPC.Pages.ApiKeyFormModal.expireTimeTooltip':
-    'Leave blank for no expiration',
-  'NuwaxPC.Pages.ApiKeyFormModal.apiKey': 'API Key',
-  'NuwaxPC.Pages.ApiKeyFormModal.autoGenerated': 'Auto generated',
-  'NuwaxPC.Pages.ApiKeyFormModal.status': 'Status',
-  'NuwaxPC.Pages.ApiKeyFormModal.statusEnabled': 'Enabled',
-  'NuwaxPC.Pages.ApiKeyFormModal.statusDisabled': 'Disabled',
-  'NuwaxPC.Pages.ApiKeyStatsModal.apiName': 'API Name',
-  'NuwaxPC.Pages.ApiKeyStatsModal.apiPath': 'API Path',
-  'NuwaxPC.Pages.ApiKeyStatsModal.totalCalls': 'Total Calls',
-  'NuwaxPC.Pages.ApiKeyStatsModal.monthCalls': 'Calls This Month',
-  'NuwaxPC.Pages.ApiKeyStatsModal.todayCalls': 'Calls Today',
-  'NuwaxPC.Pages.ApiKeyStatsModal.actions': 'Actions',
-  'NuwaxPC.Pages.ApiKeyStatsModal.viewRecords': 'View Records',
-  'NuwaxPC.Pages.ApiKeyStatsModal.callStatsWithName': 'Call Stats - {0}',
-  'NuwaxPC.Pages.ApiKeyStatsModal.close': 'Close',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.type': 'Type',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.selectType': 'Please select type',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.targetId': 'Target ID',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.enterTargetId': 'Please enter target ID',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.targetName': 'Target Name',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.enterTargetName':
-    'Please enter target name',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.requestId': 'Request ID',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.enterRequestId':
-    'Please enter request ID',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.conversationId': 'Conversation ID',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.enterConversationId':
+  'PC.Pages.ApiKeyFormModal.enterKeyName': 'Please enter key name',
+  'PC.Pages.ApiKeyFormModal.expireTime': 'Expire Time',
+  'PC.Pages.ApiKeyFormModal.expireTimeTooltip': 'Leave blank for no expiration',
+  'PC.Pages.ApiKeyFormModal.apiKey': 'API Key',
+  'PC.Pages.ApiKeyFormModal.autoGenerated': 'Auto generated',
+  'PC.Pages.ApiKeyFormModal.status': 'Status',
+  'PC.Pages.ApiKeyFormModal.statusEnabled': 'Enabled',
+  'PC.Pages.ApiKeyFormModal.statusDisabled': 'Disabled',
+  'PC.Pages.ApiKeyStatsModal.apiName': 'API Name',
+  'PC.Pages.ApiKeyStatsModal.apiPath': 'API Path',
+  'PC.Pages.ApiKeyStatsModal.totalCalls': 'Total Calls',
+  'PC.Pages.ApiKeyStatsModal.monthCalls': 'Calls This Month',
+  'PC.Pages.ApiKeyStatsModal.todayCalls': 'Calls Today',
+  'PC.Pages.ApiKeyStatsModal.actions': 'Actions',
+  'PC.Pages.ApiKeyStatsModal.viewRecords': 'View Records',
+  'PC.Pages.ApiKeyStatsModal.callStatsWithName': 'Call Stats - {0}',
+  'PC.Pages.ApiKeyStatsModal.close': 'Close',
+  'PC.Pages.ApiKeyLogsLogProTable.type': 'Type',
+  'PC.Pages.ApiKeyLogsLogProTable.selectType': 'Please select type',
+  'PC.Pages.ApiKeyLogsLogProTable.targetId': 'Target ID',
+  'PC.Pages.ApiKeyLogsLogProTable.enterTargetId': 'Please enter target ID',
+  'PC.Pages.ApiKeyLogsLogProTable.targetName': 'Target Name',
+  'PC.Pages.ApiKeyLogsLogProTable.enterTargetName': 'Please enter target name',
+  'PC.Pages.ApiKeyLogsLogProTable.requestId': 'Request ID',
+  'PC.Pages.ApiKeyLogsLogProTable.enterRequestId': 'Please enter request ID',
+  'PC.Pages.ApiKeyLogsLogProTable.conversationId': 'Conversation ID',
+  'PC.Pages.ApiKeyLogsLogProTable.enterConversationId':
     'Please enter conversation ID',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.inputContent': 'Input Content',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.outputContent': 'Output Content',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.enterContentByKeywords':
+  'PC.Pages.ApiKeyLogsLogProTable.inputContent': 'Input Content',
+  'PC.Pages.ApiKeyLogsLogProTable.outputContent': 'Output Content',
+  'PC.Pages.ApiKeyLogsLogProTable.enterContentByKeywords':
     'Separate multiple keywords with spaces, then enter content',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.timeRange': 'Time Range',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.inputToken': 'Input Token',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.outputToken': 'Output Token',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.requestTime': 'Request Time',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.totalDuration': 'Total Duration',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.queryFailed': 'Query failed',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.recordMissingRequestId':
+  'PC.Pages.ApiKeyLogsLogProTable.timeRange': 'Time Range',
+  'PC.Pages.ApiKeyLogsLogProTable.inputToken': 'Input Token',
+  'PC.Pages.ApiKeyLogsLogProTable.outputToken': 'Output Token',
+  'PC.Pages.ApiKeyLogsLogProTable.requestTime': 'Request Time',
+  'PC.Pages.ApiKeyLogsLogProTable.totalDuration': 'Total Duration',
+  'PC.Pages.ApiKeyLogsLogProTable.queryFailed': 'Query failed',
+  'PC.Pages.ApiKeyLogsLogProTable.recordMissingRequestId':
     'This record is missing requestId, details are unavailable',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.actions': 'Actions',
-  'NuwaxPC.Pages.ApiKeyLogsLogProTable.detail': 'Detail',
-  'NuwaxPC.Pages.Chat.conversationIdMissingCreateFile':
+  'PC.Pages.ApiKeyLogsLogProTable.actions': 'Actions',
+  'PC.Pages.ApiKeyLogsLogProTable.detail': 'Detail',
+  'PC.Pages.Chat.conversationIdMissingCreateFile':
     'Conversation ID is missing, cannot create file',
-  'NuwaxPC.Pages.Chat.confirmDeleteFile':
+  'PC.Pages.Chat.confirmDeleteFile':
     'Are you sure you want to delete this file?',
-  'NuwaxPC.Pages.Chat.fileNotFoundDelete':
+  'PC.Pages.Chat.fileNotFoundDelete':
     'File does not exist and cannot be deleted',
-  'NuwaxPC.Pages.Chat.deleteSuccess': 'Deleted successfully',
-  'NuwaxPC.Pages.Chat.conversationIdMissingUpload':
+  'PC.Pages.Chat.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.Chat.conversationIdMissingUpload':
     'Conversation ID is missing, cannot upload files',
-  'NuwaxPC.Pages.Chat.uploadSizeLimitExceeded':
+  'PC.Pages.Chat.uploadSizeLimitExceeded':
     'The total upload file size cannot exceed {0}MB',
-  'NuwaxPC.Pages.Chat.uploadSuccess': 'Uploaded successfully',
-  'NuwaxPC.Pages.Chat.invalidConversationIdExport':
+  'PC.Pages.Chat.uploadSuccess': 'Uploaded successfully',
+  'PC.Pages.Chat.invalidConversationIdExport':
     'Conversation ID is missing or invalid, cannot export',
-  'NuwaxPC.Pages.Chat.exportFailed': 'Export failed',
-  'NuwaxPC.Pages.Chat.exportSuccess': 'Export successful!',
-  'NuwaxPC.Pages.Chat.expandNavigation': 'Expand navigation',
-  'NuwaxPC.Pages.Chat.newConversation': 'New conversation',
-  'NuwaxPC.Pages.Chat.viewAgentDetails': 'View agent details',
-  'NuwaxPC.Pages.Chat.openPreviewPage': 'Open preview page',
-  'NuwaxPC.Pages.Chat.closeFilePreview': 'Close file preview',
-  'NuwaxPC.Pages.Chat.openFilePreview': 'Open file preview',
-  'NuwaxPC.Pages.Chat.closeAgentDesktop': 'Close agent desktop',
-  'NuwaxPC.Pages.Chat.openAgentDesktop': 'Open agent desktop',
-  'NuwaxPC.Pages.Chat.loadingHistoryConversation':
-    'Loading conversation history',
-  'NuwaxPC.Pages.Chat.agentExecutingWait': 'Agent is executing, please wait',
-  'NuwaxPC.Pages.Chat.noAgentPermission':
+  'PC.Pages.Chat.exportFailed': 'Export failed',
+  'PC.Pages.Chat.exportSuccess': 'Export successful!',
+  'PC.Pages.Chat.expandNavigation': 'Expand navigation',
+  'PC.Pages.Chat.newConversation': 'New conversation',
+  'PC.Pages.Chat.viewAgentDetails': 'View agent details',
+  'PC.Pages.Chat.openPreviewPage': 'Open preview page',
+  'PC.Pages.Chat.closeFilePreview': 'Close file preview',
+  'PC.Pages.Chat.openFilePreview': 'Open file preview',
+  'PC.Pages.Chat.closeAgentDesktop': 'Close agent desktop',
+  'PC.Pages.Chat.openAgentDesktop': 'Open agent desktop',
+  'PC.Pages.Chat.loadingHistoryConversation': 'Loading conversation history',
+  'PC.Pages.Chat.agentExecutingWait': 'Agent is executing, please wait',
+  'PC.Pages.Chat.noAgentPermission':
     'You do not have permission for this agent',
-  'NuwaxPC.Pages.Chat.copyTemplate': 'Copy template',
-  'NuwaxPC.Toast.UploadAvatar.invalidType':
+  'PC.Pages.Chat.copyTemplate': 'Copy template',
+  'PC.Toast.UploadAvatar.invalidType':
     'Please upload JPG, JPEG, or PNG image files',
-  'NuwaxPC.Toast.UploadAvatar.invalidSize': 'Image size cannot exceed 2MB',
-  'NuwaxPC.Pages.SystemDashboard.resourceOverview': 'Resource Overview',
-  'NuwaxPC.Pages.SystemDashboard.newSession': 'New Sessions',
-  'NuwaxPC.Pages.SystemDashboard.sevenDayTrend': 'Seven-day New Session Trend',
-  'NuwaxPC.Pages.SystemDashboard.period7d': '7 Days',
-  'NuwaxPC.Pages.SystemDashboard.period30d': '30 Days',
-  'NuwaxPC.Pages.SystemDashboard.periodMonth': 'By Month',
-  'NuwaxPC.Pages.SystemDashboard.chartTooltipData': 'Data',
-  'NuwaxPC.Pages.SystemLog.runningLog': 'Running Log',
-  'NuwaxPC.Pages.SystemLog.operationLog': 'Operation Log',
-  'NuwaxPC.Pages.SystemTaskManage.pageTitle': 'Task Management',
-  'NuwaxPC.Pages.SystemTaskManage.selectTargetRequired': 'Please select {0}',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.createSuccess':
+  'PC.Toast.UploadAvatar.invalidSize': 'Image size cannot exceed 2MB',
+  'PC.Pages.SystemDashboard.resourceOverview': 'Resource Overview',
+  'PC.Pages.SystemDashboard.newSession': 'New Sessions',
+  'PC.Pages.SystemDashboard.sevenDayTrend': 'Seven-day New Session Trend',
+  'PC.Pages.SystemDashboard.period7d': '7 Days',
+  'PC.Pages.SystemDashboard.period30d': '30 Days',
+  'PC.Pages.SystemDashboard.periodMonth': 'By Month',
+  'PC.Pages.SystemDashboard.chartTooltipData': 'Data',
+  'PC.Pages.SystemLog.runningLog': 'Running Log',
+  'PC.Pages.SystemLog.operationLog': 'Operation Log',
+  'PC.Pages.SystemTaskManage.pageTitle': 'Task Management',
+  'PC.Pages.SystemTaskManage.selectTargetRequired': 'Please select {0}',
+  'PC.Pages.SystemTaskCreateTimedTask.createSuccess':
     'Timed task created successfully',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.updateSuccess':
+  'PC.Pages.SystemTaskCreateTimedTask.updateSuccess':
     'Timed task updated successfully',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.createTitle': 'Create Timed Task',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.updateTitle': 'Update Timed Task',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.timedPeriod': 'Timed Period',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.taskName': 'Task Name',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.enterTaskName':
-    'Please enter task name',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.taskTarget': 'Task Target',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.keepConversation':
-    'Keep Conversation',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.keepConversationTooltip':
+  'PC.Pages.SystemTaskCreateTimedTask.createTitle': 'Create Timed Task',
+  'PC.Pages.SystemTaskCreateTimedTask.updateTitle': 'Update Timed Task',
+  'PC.Pages.SystemTaskCreateTimedTask.timedPeriod': 'Timed Period',
+  'PC.Pages.SystemTaskCreateTimedTask.taskName': 'Task Name',
+  'PC.Pages.SystemTaskCreateTimedTask.enterTaskName': 'Please enter task name',
+  'PC.Pages.SystemTaskCreateTimedTask.taskTarget': 'Task Target',
+  'PC.Pages.SystemTaskCreateTimedTask.keepConversation': 'Keep Conversation',
+  'PC.Pages.SystemTaskCreateTimedTask.keepConversationTooltip':
     'When selecting "No", a brand-new conversation is created for each task run',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.selectKeepConversation':
+  'PC.Pages.SystemTaskCreateTimedTask.selectKeepConversation':
     'Please select whether to keep conversation',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.yes': 'Yes',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.no': 'No',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.taskContent': 'Task Content',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.enterTaskContent':
+  'PC.Pages.SystemTaskCreateTimedTask.yes': 'Yes',
+  'PC.Pages.SystemTaskCreateTimedTask.no': 'No',
+  'PC.Pages.SystemTaskCreateTimedTask.taskContent': 'Task Content',
+  'PC.Pages.SystemTaskCreateTimedTask.enterTaskContent':
     'Please enter task content',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.taskContentPlaceholder':
+  'PC.Pages.SystemTaskCreateTimedTask.taskContentPlaceholder':
     'Please enter the task information to execute. More details improve execution success rate.',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.parameterConfig':
+  'PC.Pages.SystemTaskCreateTimedTask.parameterConfig':
     'Parameter Configuration',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.fillParameterConfig':
+  'PC.Pages.SystemTaskCreateTimedTask.fillParameterConfig':
     'Please fill in parameter configuration',
-  'NuwaxPC.Pages.SystemTaskSelectTarget.addItem': 'Add {0}',
-  'NuwaxPC.Pages.SystemTaskSelectTargetFormItem.selectLabel':
-    'Please select {0}',
-  'NuwaxPC.Pages.SystemTaskSelectTargetFormItemTarget.delete': 'Delete',
-  'NuwaxPC.Pages.SystemTaskTimedPeriodSelector.enter': 'Please enter',
-  'NuwaxPC.Pages.SystemTaskTimedPeriodSelector.specificTime': 'Specific Time',
-  'NuwaxPC.Pages.SystemTaskTimedPeriodSelector.selectSpecificTime':
+  'PC.Pages.SystemTaskSelectTarget.addItem': 'Add {0}',
+  'PC.Pages.SystemTaskSelectTargetFormItem.selectLabel': 'Please select {0}',
+  'PC.Pages.SystemTaskSelectTargetFormItemTarget.delete': 'Delete',
+  'PC.Pages.SystemTaskTimedPeriodSelector.enter': 'Please enter',
+  'PC.Pages.SystemTaskTimedPeriodSelector.specificTime': 'Specific Time',
+  'PC.Pages.SystemTaskTimedPeriodSelector.selectSpecificTime':
     'Please select specific time',
-  'NuwaxPC.Pages.SystemTaskTimedPeriodSelector.specificTimeMustBeFuture':
+  'PC.Pages.SystemTaskTimedPeriodSelector.specificTimeMustBeFuture':
     'The specific time must be later than the current time',
-  'NuwaxPC.Pages.SystemTaskTimedPeriodSelector.selectDateTime':
+  'PC.Pages.SystemTaskTimedPeriodSelector.selectDateTime':
     'Please select date and time',
-  'NuwaxPC.Pages.SystemTaskCreateTimedTask.specificTimeMustBeFuture':
+  'PC.Pages.SystemTaskCreateTimedTask.specificTimeMustBeFuture':
     'The specific time must be later than the current time',
-  'NuwaxPC.Pages.SystemConfig.pageTitle': 'System Settings',
-  'NuwaxPC.Pages.SystemConfig.saveSuccess': 'Saved successfully',
-  'NuwaxPC.Pages.SystemConfigBaseFormItem.enterDomain': 'Please enter domain',
-  'NuwaxPC.Pages.SystemThemeConfig.pageTitle': 'Theme Configuration',
-  'NuwaxPC.Pages.SystemThemeConfig.saveConfig': 'Save Configuration',
-  'NuwaxPC.Pages.SystemThemeConfig.resetDefault': 'Reset Default',
-  'NuwaxPC.Pages.SystemThemeConfig.saveSuccess':
+  'PC.Pages.SystemConfig.pageTitle': 'System Settings',
+  'PC.Pages.SystemConfig.saveSuccess': 'Saved successfully',
+  'PC.Pages.SystemConfigBaseFormItem.enterDomain': 'Please enter domain',
+  'PC.Pages.SystemThemeConfig.pageTitle': 'Theme Configuration',
+  'PC.Pages.SystemThemeConfig.saveConfig': 'Save Configuration',
+  'PC.Pages.SystemThemeConfig.resetDefault': 'Reset Default',
+  'PC.Pages.SystemThemeConfig.saveSuccess':
     'Theme configuration saved successfully',
-  'NuwaxPC.Pages.SystemThemeConfig.resetPreview':
+  'PC.Pages.SystemThemeConfig.resetPreview':
     'Reset to default configuration (preview)',
-  'NuwaxPC.Pages.SystemThemeConfig.darkMode': 'Dark',
-  'NuwaxPC.Pages.SystemThemeConfig.lightMode': 'Light',
-  'NuwaxPC.Pages.SystemThemeConfig.autoSwitchedNavModePreview':
+  'PC.Pages.SystemThemeConfig.darkMode': 'Dark',
+  'PC.Pages.SystemThemeConfig.lightMode': 'Light',
+  'PC.Pages.SystemThemeConfig.autoSwitchedNavModePreview':
     'Automatically switched to {0} navigation (preview)',
-  'NuwaxPC.Pages.SystemThemeConfig.autoSwitchedBackgroundPreview':
+  'PC.Pages.SystemThemeConfig.autoSwitchedBackgroundPreview':
     'Automatically switched to {0} to match {1} navigation (preview)',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.statusExecuting': 'Executing',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.statusCreatedWaiting':
+  'PC.Pages.SystemTaskCenterProTable.statusExecuting': 'Executing',
+  'PC.Pages.SystemTaskCenterProTable.statusCreatedWaiting':
     'Task created, waiting for execution',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.statusSuccessWaitingNext':
+  'PC.Pages.SystemTaskCenterProTable.statusSuccessWaitingNext':
     'Executed successfully, waiting for next run',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.statusFailedWaitingNext':
+  'PC.Pages.SystemTaskCenterProTable.statusFailedWaitingNext':
     'Execution failed, waiting for next run',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.statusEndedNoMore':
+  'PC.Pages.SystemTaskCenterProTable.statusEndedNoMore':
     'Ended, no further execution',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.executeTaskSuccess':
+  'PC.Pages.SystemTaskCenterProTable.executeTaskSuccess':
     'Task executed successfully',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.enableTaskSuccess':
+  'PC.Pages.SystemTaskCenterProTable.enableTaskSuccess':
     'Task enabled successfully',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.disableTaskSuccess':
+  'PC.Pages.SystemTaskCenterProTable.disableTaskSuccess':
     'Task disabled successfully',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.deleteTaskSuccess':
+  'PC.Pages.SystemTaskCenterProTable.deleteTaskSuccess':
     'Task deleted successfully',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.taskType': 'Task Type',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.agent': 'Agent',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.workflow': 'Workflow',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.selectTaskType':
-    'Please select task type',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.taskName': 'Task Name',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.enterTaskName':
-    'Please enter task name',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.taskTarget': 'Task Target',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.taskStatus': 'Task Status',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.executionTimes': 'Execution Count',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.latestExecutionTime':
+  'PC.Pages.SystemTaskCenterProTable.taskType': 'Task Type',
+  'PC.Pages.SystemTaskCenterProTable.agent': 'Agent',
+  'PC.Pages.SystemTaskCenterProTable.workflow': 'Workflow',
+  'PC.Pages.SystemTaskCenterProTable.selectTaskType': 'Please select task type',
+  'PC.Pages.SystemTaskCenterProTable.taskName': 'Task Name',
+  'PC.Pages.SystemTaskCenterProTable.enterTaskName': 'Please enter task name',
+  'PC.Pages.SystemTaskCenterProTable.taskTarget': 'Task Target',
+  'PC.Pages.SystemTaskCenterProTable.taskStatus': 'Task Status',
+  'PC.Pages.SystemTaskCenterProTable.executionTimes': 'Execution Count',
+  'PC.Pages.SystemTaskCenterProTable.latestExecutionTime':
     'Latest Execution Time',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.nextExecutionTime':
-    'Next Execution Time',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.creator': 'Creator',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.enterCreator': 'Please enter creator',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.createdTime': 'Created Time',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.actions': 'Actions',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.manualExecute': 'Run Manually',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.enable': 'Enable',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.confirmEnableTask':
+  'PC.Pages.SystemTaskCenterProTable.nextExecutionTime': 'Next Execution Time',
+  'PC.Pages.SystemTaskCenterProTable.creator': 'Creator',
+  'PC.Pages.SystemTaskCenterProTable.enterCreator': 'Please enter creator',
+  'PC.Pages.SystemTaskCenterProTable.createdTime': 'Created Time',
+  'PC.Pages.SystemTaskCenterProTable.actions': 'Actions',
+  'PC.Pages.SystemTaskCenterProTable.manualExecute': 'Run Manually',
+  'PC.Pages.SystemTaskCenterProTable.enable': 'Enable',
+  'PC.Pages.SystemTaskCenterProTable.confirmEnableTask':
     'Confirm enabling this task?',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.disable': 'Disable',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.confirmDisableTask':
+  'PC.Pages.SystemTaskCenterProTable.disable': 'Disable',
+  'PC.Pages.SystemTaskCenterProTable.confirmDisableTask':
     'Confirm disabling this task?',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.edit': 'Edit',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.executionRecord': 'Execution Record',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.delete': 'Delete',
-  'NuwaxPC.Pages.SystemTaskCenterProTable.confirmDeleteTask':
+  'PC.Pages.SystemTaskCenterProTable.edit': 'Edit',
+  'PC.Pages.SystemTaskCenterProTable.executionRecord': 'Execution Record',
+  'PC.Pages.SystemTaskCenterProTable.delete': 'Delete',
+  'PC.Pages.SystemTaskCenterProTable.confirmDeleteTask':
     'Confirm deleting this task?',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.createSuccess':
+  'PC.Pages.SpaceTaskCreateTimedTask.createSuccess':
     'Timed task created successfully',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.updateSuccess':
+  'PC.Pages.SpaceTaskCreateTimedTask.updateSuccess':
     'Timed task updated successfully',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.createTitle': 'Create Timed Task',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.updateTitle': 'Update Timed Task',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.timedPeriod': 'Timed Period',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.taskName': 'Task Name',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.enterTaskName':
-    'Please enter task name',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.taskTarget': 'Task Target',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.keepConversation':
-    'Keep Conversation',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.keepConversationTooltip':
+  'PC.Pages.SpaceTaskCreateTimedTask.createTitle': 'Create Timed Task',
+  'PC.Pages.SpaceTaskCreateTimedTask.updateTitle': 'Update Timed Task',
+  'PC.Pages.SpaceTaskCreateTimedTask.timedPeriod': 'Timed Period',
+  'PC.Pages.SpaceTaskCreateTimedTask.taskName': 'Task Name',
+  'PC.Pages.SpaceTaskCreateTimedTask.enterTaskName': 'Please enter task name',
+  'PC.Pages.SpaceTaskCreateTimedTask.taskTarget': 'Task Target',
+  'PC.Pages.SpaceTaskCreateTimedTask.keepConversation': 'Keep Conversation',
+  'PC.Pages.SpaceTaskCreateTimedTask.keepConversationTooltip':
     'When selecting "No", a brand-new conversation is created for each task run',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.selectKeepConversation':
+  'PC.Pages.SpaceTaskCreateTimedTask.selectKeepConversation':
     'Please select whether to keep conversation',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.yes': 'Yes',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.no': 'No',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.taskContent': 'Task Content',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.enterTaskContent':
+  'PC.Pages.SpaceTaskCreateTimedTask.yes': 'Yes',
+  'PC.Pages.SpaceTaskCreateTimedTask.no': 'No',
+  'PC.Pages.SpaceTaskCreateTimedTask.taskContent': 'Task Content',
+  'PC.Pages.SpaceTaskCreateTimedTask.enterTaskContent':
     'Please enter task content',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.taskContentPlaceholder':
+  'PC.Pages.SpaceTaskCreateTimedTask.taskContentPlaceholder':
     'Please enter the task information to execute. More details improve execution success rate.',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.parameterConfig':
+  'PC.Pages.SpaceTaskCreateTimedTask.parameterConfig':
     'Parameter Configuration',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.fillParameterConfig':
+  'PC.Pages.SpaceTaskCreateTimedTask.fillParameterConfig':
     'Please fill in parameter configuration',
-  'NuwaxPC.Pages.SpaceTaskSelectTarget.addItem': 'Add {0}',
-  'NuwaxPC.Pages.SpaceTaskSelectTargetFormItem.selectLabel':
-    'Please select {0}',
-  'NuwaxPC.Pages.SpaceTaskSelectTargetFormItemTarget.delete': 'Delete',
-  'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.enter': 'Please enter',
-  'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.specificTime': 'Specific Time',
-  'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.selectSpecificTime':
+  'PC.Pages.SpaceTaskSelectTarget.addItem': 'Add {0}',
+  'PC.Pages.SpaceTaskSelectTargetFormItem.selectLabel': 'Please select {0}',
+  'PC.Pages.SpaceTaskSelectTargetFormItemTarget.delete': 'Delete',
+  'PC.Pages.SpaceTaskTimedPeriodSelector.enter': 'Please enter',
+  'PC.Pages.SpaceTaskTimedPeriodSelector.specificTime': 'Specific Time',
+  'PC.Pages.SpaceTaskTimedPeriodSelector.selectSpecificTime':
     'Please select specific time',
-  'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.specificTimeMustBeFuture':
+  'PC.Pages.SpaceTaskTimedPeriodSelector.specificTimeMustBeFuture':
     'The specific time must be later than the current time',
-  'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.selectDateTime':
+  'PC.Pages.SpaceTaskTimedPeriodSelector.selectDateTime':
     'Please select date and time',
-  'NuwaxPC.Pages.SpaceTaskCreateTimedTask.specificTimeMustBeFuture':
+  'PC.Pages.SpaceTaskCreateTimedTask.specificTimeMustBeFuture':
     'The specific time must be later than the current time',
-  'NuwaxPC.Pages.AppDevChatArea.chatTab': 'Chat',
-  'NuwaxPC.Pages.AppDevChatArea.designTab': 'Design',
-  'NuwaxPC.Pages.AppDevChatArea.dataTab': 'Data',
-  'NuwaxPC.Pages.AppDevFilePathHeader.modified': 'Modified',
-  'NuwaxPC.Pages.AppDevHeader.defaultProjectName': 'Project',
-  'NuwaxPC.Pages.AppDevHeader.projectId': 'Project ID: {0}',
-  'NuwaxPC.Pages.AppDevHeader.published': 'Published',
-  'NuwaxPC.Pages.AppDevHeader.lastUpdated': 'Last updated {0}',
-  'NuwaxPC.Pages.AppDevHeader.updatesNotPublished': 'Updates not published',
-  'NuwaxPC.Pages.AppDevHeader.versionHistory': 'Version History',
-  'NuwaxPC.Pages.AppDevHeader.publishing': 'Publishing...',
-  'NuwaxPC.Pages.AppDevHeader.publish': 'Publish',
-  'NuwaxPC.Pages.AppDevFileTreePanel.expand': 'Expand file tree',
-  'NuwaxPC.Pages.AppDevFileTreePanel.collapse': 'Collapse file tree',
-  'NuwaxPC.Pages.AppDevFileTreePanel.loadingTitle': 'Loading...',
-  'NuwaxPC.Pages.AppDevFileTreePanel.loadingDescription': 'Please wait',
-  'NuwaxPC.Pages.AppDevFileTreePanel.importProject': 'Import Project',
-  'NuwaxPC.Pages.AppDevFileTreeContextMenu.rename': 'Rename',
-  'NuwaxPC.Pages.AppDevFileTreeContextMenu.uploadFile': 'Upload File',
-  'NuwaxPC.Pages.AppDevFileTreeContextMenu.delete': 'Delete',
-  'NuwaxPC.Pages.AppDevFileTreeContextMenu.importProject': 'Import Project',
-  'NuwaxPC.Pages.AppDevPlanProcess.completed': 'Completed',
-  'NuwaxPC.Pages.AppDevPlanProcess.inProgress': 'In Progress',
-  'NuwaxPC.Pages.AppDevPlanProcess.partialFailed': 'Partially Failed',
-  'NuwaxPC.Pages.AppDevPlanProcess.pending': 'Pending',
-  'NuwaxPC.Pages.AppDevPlanProcess.executionPlanProgress':
+  'PC.Pages.AppDevChatArea.chatTab': 'Chat',
+  'PC.Pages.AppDevChatArea.designTab': 'Design',
+  'PC.Pages.AppDevChatArea.dataTab': 'Data',
+  'PC.Pages.AppDevFilePathHeader.modified': 'Modified',
+  'PC.Pages.AppDevHeader.defaultProjectName': 'Project',
+  'PC.Pages.AppDevHeader.projectId': 'Project ID: {0}',
+  'PC.Pages.AppDevHeader.published': 'Published',
+  'PC.Pages.AppDevHeader.lastUpdated': 'Last updated {0}',
+  'PC.Pages.AppDevHeader.updatesNotPublished': 'Updates not published',
+  'PC.Pages.AppDevHeader.versionHistory': 'Version History',
+  'PC.Pages.AppDevHeader.publishing': 'Publishing...',
+  'PC.Pages.AppDevHeader.publish': 'Publish',
+  'PC.Pages.AppDevFileTreePanel.expand': 'Expand file tree',
+  'PC.Pages.AppDevFileTreePanel.collapse': 'Collapse file tree',
+  'PC.Pages.AppDevFileTreePanel.loadingTitle': 'Loading...',
+  'PC.Pages.AppDevFileTreePanel.loadingDescription': 'Please wait',
+  'PC.Pages.AppDevFileTreePanel.importProject': 'Import Project',
+  'PC.Pages.AppDevFileTreeContextMenu.rename': 'Rename',
+  'PC.Pages.AppDevFileTreeContextMenu.uploadFile': 'Upload File',
+  'PC.Pages.AppDevFileTreeContextMenu.delete': 'Delete',
+  'PC.Pages.AppDevFileTreeContextMenu.importProject': 'Import Project',
+  'PC.Pages.AppDevPlanProcess.completed': 'Completed',
+  'PC.Pages.AppDevPlanProcess.inProgress': 'In Progress',
+  'PC.Pages.AppDevPlanProcess.partialFailed': 'Partially Failed',
+  'PC.Pages.AppDevPlanProcess.pending': 'Pending',
+  'PC.Pages.AppDevPlanProcess.executionPlanProgress':
     'Execution Plan ({0}/{1} completed)',
-  'NuwaxPC.Pages.SystemContentAgent.deleteSuccess': 'Deleted successfully',
-  'NuwaxPC.Pages.SystemContentAgent.deleteFailed': 'Delete failed',
-  'NuwaxPC.Toast.SystemTargetAuthModal.authorized': 'Authorized successfully',
-  'NuwaxPC.Pages.SystemTargetAuthModal.roleTab': 'Role',
-  'NuwaxPC.Pages.SystemTargetAuthModal.userGroupTab': 'User Group',
-  'NuwaxPC.Pages.SystemTargetAuthModal.emptyPrefix': 'No data, please go to',
-  'NuwaxPC.Pages.SystemTargetAuthModal.roleManagement': 'Role Management',
-  'NuwaxPC.Pages.SystemTargetAuthModal.createRole': 'Create Role',
-  'NuwaxPC.Pages.SystemTargetAuthModal.userGroupManagement':
-    'User Group Management',
-  'NuwaxPC.Pages.SystemTargetAuthModal.createUserGroup': 'Create User Group',
-  'NuwaxPC.Pages.SystemTargetAuthModal.authorize': 'Authorize',
-  'NuwaxPC.Pages.SystemTargetAuthModal.authorizeWithName': 'Authorize - {0}',
-  'NuwaxPC.Pages.SystemTargetAuthModal.selectAll': 'Select All',
-  'NuwaxPC.Pages.SystemTargetAuthModal.clearAll': 'Clear All',
-  'NuwaxPC.Toast.SystemRoleFormModal.createSuccess':
-    'Role created successfully',
-  'NuwaxPC.Toast.SystemRoleFormModal.editSuccess': 'Role updated successfully',
-  'NuwaxPC.Pages.SystemRoleFormModal.roleSourceSystemBuiltIn':
-    'System Built-in',
-  'NuwaxPC.Pages.SystemRoleFormModal.roleSourceUserDefined': 'User Defined',
-  'NuwaxPC.Pages.SystemRoleFormModal.formValidateFailed':
-    'Form validation failed',
-  'NuwaxPC.Pages.SystemRoleFormModal.editTitle': 'Edit Role',
-  'NuwaxPC.Pages.SystemRoleFormModal.createTitle': 'Create Role',
-  'NuwaxPC.Pages.SystemRoleFormModal.save': 'Save',
-  'NuwaxPC.Pages.SystemRoleFormModal.create': 'Create',
-  'NuwaxPC.Pages.SystemRoleFormModal.roleName': 'Role Name',
-  'NuwaxPC.Pages.SystemRoleFormModal.roleNameRequired':
-    'Please enter role name',
-  'NuwaxPC.Pages.SystemRoleFormModal.roleNamePlaceholder':
-    'Please enter role name',
-  'NuwaxPC.Pages.SystemRoleFormModal.source': 'Source',
-  'NuwaxPC.Pages.SystemRoleFormModal.sourcePlaceholder': 'Please select source',
-  'NuwaxPC.Pages.SystemRoleFormModal.sort': 'Sort',
-  'NuwaxPC.Pages.SystemRoleFormModal.sortPlaceholder':
-    'Please enter sort order',
-  'NuwaxPC.Pages.SystemRoleFormModal.status': 'Status',
-  'NuwaxPC.Pages.SystemRoleFormModal.statusTooltip': 'Enable or disable role',
-  'NuwaxPC.Pages.SystemRoleFormModal.enabled': 'Enabled',
-  'NuwaxPC.Pages.SystemRoleFormModal.disabled': 'Disabled',
-  'NuwaxPC.Pages.SystemRoleFormModal.description': 'Description',
-  'NuwaxPC.Pages.SystemRoleFormModal.descriptionPlaceholder':
+  'PC.Pages.SystemContentAgent.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SystemContentAgent.deleteFailed': 'Delete failed',
+  'PC.Toast.SystemTargetAuthModal.authorized': 'Authorized successfully',
+  'PC.Pages.SystemTargetAuthModal.roleTab': 'Role',
+  'PC.Pages.SystemTargetAuthModal.userGroupTab': 'User Group',
+  'PC.Pages.SystemTargetAuthModal.emptyPrefix': 'No data, please go to',
+  'PC.Pages.SystemTargetAuthModal.roleManagement': 'Role Management',
+  'PC.Pages.SystemTargetAuthModal.createRole': 'Create Role',
+  'PC.Pages.SystemTargetAuthModal.userGroupManagement': 'User Group Management',
+  'PC.Pages.SystemTargetAuthModal.createUserGroup': 'Create User Group',
+  'PC.Pages.SystemTargetAuthModal.authorize': 'Authorize',
+  'PC.Pages.SystemTargetAuthModal.authorizeWithName': 'Authorize - {0}',
+  'PC.Pages.SystemTargetAuthModal.selectAll': 'Select All',
+  'PC.Pages.SystemTargetAuthModal.clearAll': 'Clear All',
+  'PC.Toast.SystemRoleFormModal.createSuccess': 'Role created successfully',
+  'PC.Toast.SystemRoleFormModal.editSuccess': 'Role updated successfully',
+  'PC.Pages.SystemRoleFormModal.roleSourceSystemBuiltIn': 'System Built-in',
+  'PC.Pages.SystemRoleFormModal.roleSourceUserDefined': 'User Defined',
+  'PC.Pages.SystemRoleFormModal.formValidateFailed': 'Form validation failed',
+  'PC.Pages.SystemRoleFormModal.editTitle': 'Edit Role',
+  'PC.Pages.SystemRoleFormModal.createTitle': 'Create Role',
+  'PC.Pages.SystemRoleFormModal.save': 'Save',
+  'PC.Pages.SystemRoleFormModal.create': 'Create',
+  'PC.Pages.SystemRoleFormModal.roleName': 'Role Name',
+  'PC.Pages.SystemRoleFormModal.roleNameRequired': 'Please enter role name',
+  'PC.Pages.SystemRoleFormModal.roleNamePlaceholder': 'Please enter role name',
+  'PC.Pages.SystemRoleFormModal.source': 'Source',
+  'PC.Pages.SystemRoleFormModal.sourcePlaceholder': 'Please select source',
+  'PC.Pages.SystemRoleFormModal.sort': 'Sort',
+  'PC.Pages.SystemRoleFormModal.sortPlaceholder': 'Please enter sort order',
+  'PC.Pages.SystemRoleFormModal.status': 'Status',
+  'PC.Pages.SystemRoleFormModal.statusTooltip': 'Enable or disable role',
+  'PC.Pages.SystemRoleFormModal.enabled': 'Enabled',
+  'PC.Pages.SystemRoleFormModal.disabled': 'Disabled',
+  'PC.Pages.SystemRoleFormModal.description': 'Description',
+  'PC.Pages.SystemRoleFormModal.descriptionPlaceholder':
     'Please enter role description',
-  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.title': 'Log Details',
-  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.duration': 'Duration',
-  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.messageId': 'Message ID:',
-  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.calledComponents':
-    'Called Components',
-  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.nodeDetails': 'Node Details',
-  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.input': 'Input',
-  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.output': 'Output',
-  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.executionProcess':
-    'Execution Process',
-  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.empty': 'No data',
-  'NuwaxPC.Pages.SystemRoleManage.deleteSuccess': 'Deleted successfully',
-  'NuwaxPC.Pages.SystemRoleManage.deleteRoleTitle': 'Delete Role',
-  'NuwaxPC.Pages.SystemRoleManage.deleteRoleConfirm':
+  'PC.Pages.SystemRunningLogDetailDrawer.title': 'Log Details',
+  'PC.Pages.SystemRunningLogDetailDrawer.duration': 'Duration',
+  'PC.Pages.SystemRunningLogDetailDrawer.messageId': 'Message ID:',
+  'PC.Pages.SystemRunningLogDetailDrawer.calledComponents': 'Called Components',
+  'PC.Pages.SystemRunningLogDetailDrawer.nodeDetails': 'Node Details',
+  'PC.Pages.SystemRunningLogDetailDrawer.input': 'Input',
+  'PC.Pages.SystemRunningLogDetailDrawer.output': 'Output',
+  'PC.Pages.SystemRunningLogDetailDrawer.executionProcess': 'Execution Process',
+  'PC.Pages.SystemRunningLogDetailDrawer.empty': 'No data',
+  'PC.Pages.SystemRoleManage.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SystemRoleManage.deleteRoleTitle': 'Delete Role',
+  'PC.Pages.SystemRoleManage.deleteRoleConfirm':
     'Are you sure to delete role "{0}"?',
-  'NuwaxPC.Pages.SystemRoleManage.sortUpdated':
-    'Sort order updated successfully',
-  'NuwaxPC.Pages.SystemRoleManage.columnSort': 'Sort',
-  'NuwaxPC.Pages.SystemRoleManage.columnRoleName': 'Role Name',
-  'NuwaxPC.Pages.SystemRoleManage.columnCode': 'Code',
-  'NuwaxPC.Pages.SystemRoleManage.columnDescription': 'Description',
-  'NuwaxPC.Pages.SystemRoleManage.columnStatus': 'Status',
-  'NuwaxPC.Pages.SystemRoleManage.statusTooltip': 'Enable or disable role',
-  'NuwaxPC.Pages.SystemRoleManage.builtInCannotDisable':
+  'PC.Pages.SystemRoleManage.sortUpdated': 'Sort order updated successfully',
+  'PC.Pages.SystemRoleManage.columnSort': 'Sort',
+  'PC.Pages.SystemRoleManage.columnRoleName': 'Role Name',
+  'PC.Pages.SystemRoleManage.columnCode': 'Code',
+  'PC.Pages.SystemRoleManage.columnDescription': 'Description',
+  'PC.Pages.SystemRoleManage.columnStatus': 'Status',
+  'PC.Pages.SystemRoleManage.statusTooltip': 'Enable or disable role',
+  'PC.Pages.SystemRoleManage.builtInCannotDisable':
     'System built-in roles cannot be disabled',
-  'NuwaxPC.Pages.SystemRoleManage.enabled': 'Enabled',
-  'NuwaxPC.Pages.SystemRoleManage.disabled': 'Disabled',
-  'NuwaxPC.Pages.SystemRoleManage.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemRoleManage.builtInCannotEdit':
+  'PC.Pages.SystemRoleManage.enabled': 'Enabled',
+  'PC.Pages.SystemRoleManage.disabled': 'Disabled',
+  'PC.Pages.SystemRoleManage.columnAction': 'Action',
+  'PC.Pages.SystemRoleManage.builtInCannotEdit':
     'System built-in roles cannot be edited',
-  'NuwaxPC.Pages.SystemRoleManage.noPermission':
-    'No permission for this resource',
-  'NuwaxPC.Pages.SystemRoleManage.builtInCannotDelete':
+  'PC.Pages.SystemRoleManage.noPermission': 'No permission for this resource',
+  'PC.Pages.SystemRoleManage.builtInCannotDelete':
     'System built-in roles cannot be deleted',
-  'NuwaxPC.Pages.SystemRoleManage.edit': 'Edit',
-  'NuwaxPC.Pages.SystemRoleManage.delete': 'Delete',
-  'NuwaxPC.Pages.SystemRoleManage.bindUser': 'Bind User',
-  'NuwaxPC.Pages.SystemRoleManage.menuPermission': 'Menu Permission',
-  'NuwaxPC.Pages.SystemRoleManage.dataPermission': 'Data Permission',
-  'NuwaxPC.Pages.SystemRoleManage.pageTitle': 'Role Management',
-  'NuwaxPC.Pages.SystemRoleManage.addRole': 'Add Role',
-  'NuwaxPC.Pages.SystemRoleManage.emptyData': 'No role data',
-  'NuwaxPC.Toast.SystemUserGroupFormModal.createSuccess':
+  'PC.Pages.SystemRoleManage.edit': 'Edit',
+  'PC.Pages.SystemRoleManage.delete': 'Delete',
+  'PC.Pages.SystemRoleManage.bindUser': 'Bind User',
+  'PC.Pages.SystemRoleManage.menuPermission': 'Menu Permission',
+  'PC.Pages.SystemRoleManage.dataPermission': 'Data Permission',
+  'PC.Pages.SystemRoleManage.pageTitle': 'Role Management',
+  'PC.Pages.SystemRoleManage.addRole': 'Add Role',
+  'PC.Pages.SystemRoleManage.emptyData': 'No role data',
+  'PC.Toast.SystemUserGroupFormModal.createSuccess':
     'User group created successfully',
-  'NuwaxPC.Toast.SystemUserGroupFormModal.updateSuccess':
+  'PC.Toast.SystemUserGroupFormModal.updateSuccess':
     'User group updated successfully',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.sourceSystemBuiltIn':
-    'System Built-in',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.sourceUserDefined': 'User Defined',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.formValidateFailed':
+  'PC.Pages.SystemUserGroupFormModal.sourceSystemBuiltIn': 'System Built-in',
+  'PC.Pages.SystemUserGroupFormModal.sourceUserDefined': 'User Defined',
+  'PC.Pages.SystemUserGroupFormModal.formValidateFailed':
     'Form validation failed',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.editTitle': 'Edit User Group',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.createTitle': 'Create User Group',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.save': 'Save',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.create': 'Create',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.name': 'User Group Name',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.nameRequired':
+  'PC.Pages.SystemUserGroupFormModal.editTitle': 'Edit User Group',
+  'PC.Pages.SystemUserGroupFormModal.createTitle': 'Create User Group',
+  'PC.Pages.SystemUserGroupFormModal.save': 'Save',
+  'PC.Pages.SystemUserGroupFormModal.create': 'Create',
+  'PC.Pages.SystemUserGroupFormModal.name': 'User Group Name',
+  'PC.Pages.SystemUserGroupFormModal.nameRequired':
     'Please enter user group name',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.namePlaceholder':
+  'PC.Pages.SystemUserGroupFormModal.namePlaceholder':
     'Please enter user group name',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.maxUserCount': 'Max User Count',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.maxUserCountRequired':
+  'PC.Pages.SystemUserGroupFormModal.maxUserCount': 'Max User Count',
+  'PC.Pages.SystemUserGroupFormModal.maxUserCountRequired':
     'Please enter max user count',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.maxValueTip':
+  'PC.Pages.SystemUserGroupFormModal.maxValueTip':
     'Maximum value is 2147483647',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.maxUserCountPlaceholder':
+  'PC.Pages.SystemUserGroupFormModal.maxUserCountPlaceholder':
     'Please enter max user count',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.source': 'Source',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.sourcePlaceholder':
-    'Please select source',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.sort': 'Sort',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.sortPlaceholder':
+  'PC.Pages.SystemUserGroupFormModal.source': 'Source',
+  'PC.Pages.SystemUserGroupFormModal.sourcePlaceholder': 'Please select source',
+  'PC.Pages.SystemUserGroupFormModal.sort': 'Sort',
+  'PC.Pages.SystemUserGroupFormModal.sortPlaceholder':
     'Please enter sort order',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.status': 'Status',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.statusTip':
+  'PC.Pages.SystemUserGroupFormModal.status': 'Status',
+  'PC.Pages.SystemUserGroupFormModal.statusTip':
     'Enable or disable this user group',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.enabled': 'Enabled',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.disabled': 'Disabled',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.description': 'Description',
-  'NuwaxPC.Pages.SystemUserGroupFormModal.descriptionPlaceholder':
+  'PC.Pages.SystemUserGroupFormModal.enabled': 'Enabled',
+  'PC.Pages.SystemUserGroupFormModal.disabled': 'Disabled',
+  'PC.Pages.SystemUserGroupFormModal.description': 'Description',
+  'PC.Pages.SystemUserGroupFormModal.descriptionPlaceholder':
     'Please enter user group description',
-  'NuwaxPC.Pages.SystemUserGroupManage.deleteSuccess': 'Deleted successfully',
-  'NuwaxPC.Pages.SystemUserGroupManage.deleteTitle': 'Delete User Group',
-  'NuwaxPC.Pages.SystemUserGroupManage.deleteConfirm':
+  'PC.Pages.SystemUserGroupManage.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SystemUserGroupManage.deleteTitle': 'Delete User Group',
+  'PC.Pages.SystemUserGroupManage.deleteConfirm':
     'Are you sure to delete user group "{0}"?',
-  'NuwaxPC.Pages.SystemUserGroupManage.sortUpdated':
+  'PC.Pages.SystemUserGroupManage.sortUpdated':
     'Sort order updated successfully',
-  'NuwaxPC.Pages.SystemUserGroupManage.columnSort': 'Sort',
-  'NuwaxPC.Pages.SystemUserGroupManage.columnName': 'User Group Name',
-  'NuwaxPC.Pages.SystemUserGroupManage.columnCode': 'Code',
-  'NuwaxPC.Pages.SystemUserGroupManage.columnDescription': 'Description',
-  'NuwaxPC.Pages.SystemUserGroupManage.columnStatus': 'Status',
-  'NuwaxPC.Pages.SystemUserGroupManage.statusTip':
+  'PC.Pages.SystemUserGroupManage.columnSort': 'Sort',
+  'PC.Pages.SystemUserGroupManage.columnName': 'User Group Name',
+  'PC.Pages.SystemUserGroupManage.columnCode': 'Code',
+  'PC.Pages.SystemUserGroupManage.columnDescription': 'Description',
+  'PC.Pages.SystemUserGroupManage.columnStatus': 'Status',
+  'PC.Pages.SystemUserGroupManage.statusTip':
     'Enable or disable this user group',
-  'NuwaxPC.Pages.SystemUserGroupManage.builtInCannotDisable':
+  'PC.Pages.SystemUserGroupManage.builtInCannotDisable':
     'System built-in user groups cannot be disabled',
-  'NuwaxPC.Pages.SystemUserGroupManage.enabled': 'Enabled',
-  'NuwaxPC.Pages.SystemUserGroupManage.disabled': 'Disabled',
-  'NuwaxPC.Pages.SystemUserGroupManage.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemUserGroupManage.builtInCannotEdit':
+  'PC.Pages.SystemUserGroupManage.enabled': 'Enabled',
+  'PC.Pages.SystemUserGroupManage.disabled': 'Disabled',
+  'PC.Pages.SystemUserGroupManage.columnAction': 'Action',
+  'PC.Pages.SystemUserGroupManage.builtInCannotEdit':
     'System built-in user groups cannot be edited',
-  'NuwaxPC.Pages.SystemUserGroupManage.noPermission':
+  'PC.Pages.SystemUserGroupManage.noPermission':
     'No permission for this resource',
-  'NuwaxPC.Pages.SystemUserGroupManage.builtInCannotDelete':
+  'PC.Pages.SystemUserGroupManage.builtInCannotDelete':
     'System built-in user groups cannot be deleted',
-  'NuwaxPC.Pages.SystemUserGroupManage.edit': 'Edit',
-  'NuwaxPC.Pages.SystemUserGroupManage.delete': 'Delete',
-  'NuwaxPC.Pages.SystemUserGroupManage.bindUser': 'Bind User',
-  'NuwaxPC.Pages.SystemUserGroupManage.menuPermission': 'Menu Permission',
-  'NuwaxPC.Pages.SystemUserGroupManage.dataPermission': 'Data Permission',
-  'NuwaxPC.Pages.SystemUserGroupManage.pageTitle': 'User Group Management',
-  'NuwaxPC.Pages.SystemUserGroupManage.add': 'Add User Group',
-  'NuwaxPC.Pages.SystemUserGroupManage.empty': 'No user-group data',
-  'NuwaxPC.Pages.SystemContentAgent.view': 'View',
-  'NuwaxPC.Pages.SystemContentAgent.authorize': 'Authorize',
-  'NuwaxPC.Pages.SystemContentAgent.delete': 'Delete',
-  'NuwaxPC.Pages.SystemContentAgent.deleteConfirmTitle':
+  'PC.Pages.SystemUserGroupManage.edit': 'Edit',
+  'PC.Pages.SystemUserGroupManage.delete': 'Delete',
+  'PC.Pages.SystemUserGroupManage.bindUser': 'Bind User',
+  'PC.Pages.SystemUserGroupManage.menuPermission': 'Menu Permission',
+  'PC.Pages.SystemUserGroupManage.dataPermission': 'Data Permission',
+  'PC.Pages.SystemUserGroupManage.pageTitle': 'User Group Management',
+  'PC.Pages.SystemUserGroupManage.add': 'Add User Group',
+  'PC.Pages.SystemUserGroupManage.empty': 'No user-group data',
+  'PC.Pages.SystemContentAgent.view': 'View',
+  'PC.Pages.SystemContentAgent.authorize': 'Authorize',
+  'PC.Pages.SystemContentAgent.delete': 'Delete',
+  'PC.Pages.SystemContentAgent.deleteConfirmTitle':
     'Are you sure you want to delete {0}?',
-  'NuwaxPC.Pages.SystemContentAgent.deleteConfirmDescription':
+  'PC.Pages.SystemContentAgent.deleteConfirmDescription':
     'This action cannot be undone and all related data will be permanently deleted.',
-  'NuwaxPC.Pages.SystemContentAgent.columnName': 'Name',
-  'NuwaxPC.Pages.SystemContentAgent.searchName': 'Please enter agent name',
-  'NuwaxPC.Pages.SystemContentAgent.columnDescription': 'Description',
-  'NuwaxPC.Pages.SystemContentAgent.columnCreator': 'Creator',
-  'NuwaxPC.Pages.SystemContentAgent.columnPublishStatus': 'Publish Status',
-  'NuwaxPC.Pages.SystemContentAgent.statusDeveloping': 'To Publish',
-  'NuwaxPC.Pages.SystemContentAgent.statusApplying': 'Pending Review',
-  'NuwaxPC.Pages.SystemContentAgent.statusPublished': 'Published',
-  'NuwaxPC.Pages.SystemContentAgent.statusRejected': 'Rejected',
-  'NuwaxPC.Pages.SystemContentAgent.columnCreated': 'Created Time',
-  'NuwaxPC.Pages.SystemContentAgent.columnAccessControl': 'Access Control',
-  'NuwaxPC.Pages.SystemContentAgent.accessControlTooltip':
+  'PC.Pages.SystemContentAgent.columnName': 'Name',
+  'PC.Pages.SystemContentAgent.searchName': 'Please enter agent name',
+  'PC.Pages.SystemContentAgent.columnDescription': 'Description',
+  'PC.Pages.SystemContentAgent.columnCreator': 'Creator',
+  'PC.Pages.SystemContentAgent.columnPublishStatus': 'Publish Status',
+  'PC.Pages.SystemContentAgent.statusDeveloping': 'To Publish',
+  'PC.Pages.SystemContentAgent.statusApplying': 'Pending Review',
+  'PC.Pages.SystemContentAgent.statusPublished': 'Published',
+  'PC.Pages.SystemContentAgent.statusRejected': 'Rejected',
+  'PC.Pages.SystemContentAgent.columnCreated': 'Created Time',
+  'PC.Pages.SystemContentAgent.columnAccessControl': 'Access Control',
+  'PC.Pages.SystemContentAgent.accessControlTooltip':
     'When enabled, agents published to the system square require authorization before use.',
-  'NuwaxPC.Pages.SystemContentAgent.accessControlOff': 'Off',
-  'NuwaxPC.Pages.SystemContentAgent.accessControlOn': 'On',
-  'NuwaxPC.Pages.SystemContentAgent.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemContentAgent.pageTitle': 'Agent Management',
-  'NuwaxPC.Pages.SystemContentDataTable.deleteSuccess': 'Deleted successfully',
-  'NuwaxPC.Pages.SystemContentDataTable.deleteFailed': 'Delete failed',
-  'NuwaxPC.Pages.SystemContentDataTable.view': 'View',
-  'NuwaxPC.Pages.SystemContentDataTable.delete': 'Delete',
-  'NuwaxPC.Pages.SystemContentDataTable.deleteConfirmTitle':
+  'PC.Pages.SystemContentAgent.accessControlOff': 'Off',
+  'PC.Pages.SystemContentAgent.accessControlOn': 'On',
+  'PC.Pages.SystemContentAgent.columnAction': 'Action',
+  'PC.Pages.SystemContentAgent.pageTitle': 'Agent Management',
+  'PC.Pages.SystemContentDataTable.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SystemContentDataTable.deleteFailed': 'Delete failed',
+  'PC.Pages.SystemContentDataTable.view': 'View',
+  'PC.Pages.SystemContentDataTable.delete': 'Delete',
+  'PC.Pages.SystemContentDataTable.deleteConfirmTitle':
     'Are you sure you want to delete {0}?',
-  'NuwaxPC.Pages.SystemContentDataTable.deleteConfirmDescription':
+  'PC.Pages.SystemContentDataTable.deleteConfirmDescription':
     'This action cannot be undone and all related data will be permanently deleted.',
-  'NuwaxPC.Pages.SystemContentDataTable.columnName': 'Name',
-  'NuwaxPC.Pages.SystemContentDataTable.searchName':
-    'Please enter data table name',
-  'NuwaxPC.Pages.SystemContentDataTable.columnDescription': 'Description',
-  'NuwaxPC.Pages.SystemContentDataTable.columnCreator': 'Creator',
-  'NuwaxPC.Pages.SystemContentDataTable.columnCreated': 'Created Time',
-  'NuwaxPC.Pages.SystemContentDataTable.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemContentDataTable.pageTitle': 'Data Table Management',
-  'NuwaxPC.Pages.SystemContentKnowledgeBase.deleteSuccess':
-    'Deleted successfully',
-  'NuwaxPC.Pages.SystemContentKnowledgeBase.deleteFailed': 'Delete failed',
-  'NuwaxPC.Pages.SystemContentKnowledgeBase.view': 'View',
-  'NuwaxPC.Pages.SystemContentKnowledgeBase.delete': 'Delete',
-  'NuwaxPC.Pages.SystemContentKnowledgeBase.deleteConfirmTitle':
+  'PC.Pages.SystemContentDataTable.columnName': 'Name',
+  'PC.Pages.SystemContentDataTable.searchName': 'Please enter data table name',
+  'PC.Pages.SystemContentDataTable.columnDescription': 'Description',
+  'PC.Pages.SystemContentDataTable.columnCreator': 'Creator',
+  'PC.Pages.SystemContentDataTable.columnCreated': 'Created Time',
+  'PC.Pages.SystemContentDataTable.columnAction': 'Action',
+  'PC.Pages.SystemContentDataTable.pageTitle': 'Data Table Management',
+  'PC.Pages.SystemContentKnowledgeBase.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SystemContentKnowledgeBase.deleteFailed': 'Delete failed',
+  'PC.Pages.SystemContentKnowledgeBase.view': 'View',
+  'PC.Pages.SystemContentKnowledgeBase.delete': 'Delete',
+  'PC.Pages.SystemContentKnowledgeBase.deleteConfirmTitle':
     'Are you sure you want to delete {0}?',
-  'NuwaxPC.Pages.SystemContentKnowledgeBase.deleteConfirmDescription':
+  'PC.Pages.SystemContentKnowledgeBase.deleteConfirmDescription':
     'This action cannot be undone and all related data will be permanently deleted.',
-  'NuwaxPC.Pages.SystemContentKnowledgeBase.columnName': 'Name',
-  'NuwaxPC.Pages.SystemContentKnowledgeBase.searchName':
+  'PC.Pages.SystemContentKnowledgeBase.columnName': 'Name',
+  'PC.Pages.SystemContentKnowledgeBase.searchName':
     'Please enter knowledge base name',
-  'NuwaxPC.Pages.SystemContentKnowledgeBase.columnDescription': 'Description',
-  'NuwaxPC.Pages.SystemContentKnowledgeBase.columnCreator': 'Creator',
-  'NuwaxPC.Pages.SystemContentKnowledgeBase.columnCreated': 'Created Time',
-  'NuwaxPC.Pages.SystemContentKnowledgeBase.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemContentKnowledgeBase.pageTitle':
-    'Knowledge Base Management',
-  'NuwaxPC.Pages.SystemContentMcp.deleteSuccess': 'Deleted successfully',
-  'NuwaxPC.Pages.SystemContentMcp.deleteFailed': 'Delete failed',
-  'NuwaxPC.Pages.SystemContentMcp.view': 'View',
-  'NuwaxPC.Pages.SystemContentMcp.delete': 'Delete',
-  'NuwaxPC.Pages.SystemContentMcp.deleteConfirmTitle':
+  'PC.Pages.SystemContentKnowledgeBase.columnDescription': 'Description',
+  'PC.Pages.SystemContentKnowledgeBase.columnCreator': 'Creator',
+  'PC.Pages.SystemContentKnowledgeBase.columnCreated': 'Created Time',
+  'PC.Pages.SystemContentKnowledgeBase.columnAction': 'Action',
+  'PC.Pages.SystemContentKnowledgeBase.pageTitle': 'Knowledge Base Management',
+  'PC.Pages.SystemContentMcp.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SystemContentMcp.deleteFailed': 'Delete failed',
+  'PC.Pages.SystemContentMcp.view': 'View',
+  'PC.Pages.SystemContentMcp.delete': 'Delete',
+  'PC.Pages.SystemContentMcp.deleteConfirmTitle':
     'Are you sure you want to delete {0}?',
-  'NuwaxPC.Pages.SystemContentMcp.deleteConfirmDescription':
+  'PC.Pages.SystemContentMcp.deleteConfirmDescription':
     'This action cannot be undone and all related data will be permanently deleted.',
-  'NuwaxPC.Pages.SystemContentMcp.columnName': 'Name',
-  'NuwaxPC.Pages.SystemContentMcp.searchName': 'Please enter MCP name',
-  'NuwaxPC.Pages.SystemContentMcp.columnDescription': 'Description',
-  'NuwaxPC.Pages.SystemContentMcp.columnCreator': 'Creator',
-  'NuwaxPC.Pages.SystemContentMcp.columnCreated': 'Created Time',
-  'NuwaxPC.Pages.SystemContentMcp.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemContentMcp.pageTitle': 'MCP Management',
-  'NuwaxPC.Pages.SystemContentPlugin.deleteSuccess': 'Deleted successfully',
-  'NuwaxPC.Pages.SystemContentPlugin.deleteFailed': 'Delete failed',
-  'NuwaxPC.Pages.SystemContentPlugin.view': 'View',
-  'NuwaxPC.Pages.SystemContentPlugin.delete': 'Delete',
-  'NuwaxPC.Pages.SystemContentPlugin.deleteConfirmTitle':
+  'PC.Pages.SystemContentMcp.columnName': 'Name',
+  'PC.Pages.SystemContentMcp.searchName': 'Please enter MCP name',
+  'PC.Pages.SystemContentMcp.columnDescription': 'Description',
+  'PC.Pages.SystemContentMcp.columnCreator': 'Creator',
+  'PC.Pages.SystemContentMcp.columnCreated': 'Created Time',
+  'PC.Pages.SystemContentMcp.columnAction': 'Action',
+  'PC.Pages.SystemContentMcp.pageTitle': 'MCP Management',
+  'PC.Pages.SystemContentPlugin.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SystemContentPlugin.deleteFailed': 'Delete failed',
+  'PC.Pages.SystemContentPlugin.view': 'View',
+  'PC.Pages.SystemContentPlugin.delete': 'Delete',
+  'PC.Pages.SystemContentPlugin.deleteConfirmTitle':
     'Are you sure you want to delete {0}?',
-  'NuwaxPC.Pages.SystemContentPlugin.deleteConfirmDescription':
+  'PC.Pages.SystemContentPlugin.deleteConfirmDescription':
     'This action cannot be undone and all related data will be permanently deleted.',
-  'NuwaxPC.Pages.SystemContentPlugin.columnName': 'Name',
-  'NuwaxPC.Pages.SystemContentPlugin.searchName': 'Please enter plugin name',
-  'NuwaxPC.Pages.SystemContentPlugin.columnDescription': 'Description',
-  'NuwaxPC.Pages.SystemContentPlugin.columnCreator': 'Creator',
-  'NuwaxPC.Pages.SystemContentPlugin.columnCreated': 'Created Time',
-  'NuwaxPC.Pages.SystemContentPlugin.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemContentPlugin.pageTitle': 'Plugin Management',
-  'NuwaxPC.Pages.SystemContentWorkflow.deleteSuccess': 'Deleted successfully',
-  'NuwaxPC.Pages.SystemContentWorkflow.deleteFailed': 'Delete failed',
-  'NuwaxPC.Pages.SystemContentWorkflow.view': 'View',
-  'NuwaxPC.Pages.SystemContentWorkflow.delete': 'Delete',
-  'NuwaxPC.Pages.SystemContentWorkflow.deleteConfirmTitle':
+  'PC.Pages.SystemContentPlugin.columnName': 'Name',
+  'PC.Pages.SystemContentPlugin.searchName': 'Please enter plugin name',
+  'PC.Pages.SystemContentPlugin.columnDescription': 'Description',
+  'PC.Pages.SystemContentPlugin.columnCreator': 'Creator',
+  'PC.Pages.SystemContentPlugin.columnCreated': 'Created Time',
+  'PC.Pages.SystemContentPlugin.columnAction': 'Action',
+  'PC.Pages.SystemContentPlugin.pageTitle': 'Plugin Management',
+  'PC.Pages.SystemContentWorkflow.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SystemContentWorkflow.deleteFailed': 'Delete failed',
+  'PC.Pages.SystemContentWorkflow.view': 'View',
+  'PC.Pages.SystemContentWorkflow.delete': 'Delete',
+  'PC.Pages.SystemContentWorkflow.deleteConfirmTitle':
     'Are you sure you want to delete {0}?',
-  'NuwaxPC.Pages.SystemContentWorkflow.deleteConfirmDescription':
+  'PC.Pages.SystemContentWorkflow.deleteConfirmDescription':
     'This action cannot be undone and all related data will be permanently deleted.',
-  'NuwaxPC.Pages.SystemContentWorkflow.columnName': 'Name',
-  'NuwaxPC.Pages.SystemContentWorkflow.searchName':
-    'Please enter workflow name',
-  'NuwaxPC.Pages.SystemContentWorkflow.columnDescription': 'Description',
-  'NuwaxPC.Pages.SystemContentWorkflow.columnCreator': 'Creator',
-  'NuwaxPC.Pages.SystemContentWorkflow.columnCreated': 'Created Time',
-  'NuwaxPC.Pages.SystemContentWorkflow.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemContentWorkflow.pageTitle': 'Workflow Management',
-  'NuwaxPC.Pages.SystemContentSkill.deleteSuccess': 'Deleted successfully',
-  'NuwaxPC.Pages.SystemContentSkill.deleteFailed': 'Delete failed',
-  'NuwaxPC.Pages.SystemContentSkill.view': 'View',
-  'NuwaxPC.Pages.SystemContentSkill.delete': 'Delete',
-  'NuwaxPC.Pages.SystemContentSkill.deleteConfirmTitle':
+  'PC.Pages.SystemContentWorkflow.columnName': 'Name',
+  'PC.Pages.SystemContentWorkflow.searchName': 'Please enter workflow name',
+  'PC.Pages.SystemContentWorkflow.columnDescription': 'Description',
+  'PC.Pages.SystemContentWorkflow.columnCreator': 'Creator',
+  'PC.Pages.SystemContentWorkflow.columnCreated': 'Created Time',
+  'PC.Pages.SystemContentWorkflow.columnAction': 'Action',
+  'PC.Pages.SystemContentWorkflow.pageTitle': 'Workflow Management',
+  'PC.Pages.SystemContentSkill.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SystemContentSkill.deleteFailed': 'Delete failed',
+  'PC.Pages.SystemContentSkill.view': 'View',
+  'PC.Pages.SystemContentSkill.delete': 'Delete',
+  'PC.Pages.SystemContentSkill.deleteConfirmTitle':
     'Are you sure you want to delete {0}?',
-  'NuwaxPC.Pages.SystemContentSkill.deleteConfirmDescription':
+  'PC.Pages.SystemContentSkill.deleteConfirmDescription':
     'This action cannot be undone and all related data will be permanently deleted.',
-  'NuwaxPC.Pages.SystemContentSkill.columnName': 'Name',
-  'NuwaxPC.Pages.SystemContentSkill.searchName': 'Please enter skill name',
-  'NuwaxPC.Pages.SystemContentSkill.columnDescription': 'Description',
-  'NuwaxPC.Pages.SystemContentSkill.columnCreator': 'Creator',
-  'NuwaxPC.Pages.SystemContentSkill.columnCreated': 'Created Time',
-  'NuwaxPC.Pages.SystemContentSkill.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemContentSkill.pageTitle': 'Skill Management',
-  'NuwaxPC.Pages.SystemContentSpace.deleteSuccess': 'Deleted successfully',
-  'NuwaxPC.Pages.SystemContentSpace.deleteFailed': 'Delete failed',
-  'NuwaxPC.Pages.SystemContentSpace.view': 'View',
-  'NuwaxPC.Pages.SystemContentSpace.delete': 'Delete',
-  'NuwaxPC.Pages.SystemContentSpace.deleteConfirmTitle':
+  'PC.Pages.SystemContentSkill.columnName': 'Name',
+  'PC.Pages.SystemContentSkill.searchName': 'Please enter skill name',
+  'PC.Pages.SystemContentSkill.columnDescription': 'Description',
+  'PC.Pages.SystemContentSkill.columnCreator': 'Creator',
+  'PC.Pages.SystemContentSkill.columnCreated': 'Created Time',
+  'PC.Pages.SystemContentSkill.columnAction': 'Action',
+  'PC.Pages.SystemContentSkill.pageTitle': 'Skill Management',
+  'PC.Pages.SystemContentSpace.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SystemContentSpace.deleteFailed': 'Delete failed',
+  'PC.Pages.SystemContentSpace.view': 'View',
+  'PC.Pages.SystemContentSpace.delete': 'Delete',
+  'PC.Pages.SystemContentSpace.deleteConfirmTitle':
     'Are you sure you want to delete {0}?',
-  'NuwaxPC.Pages.SystemContentSpace.deleteConfirmDescription':
+  'PC.Pages.SystemContentSpace.deleteConfirmDescription':
     'This action cannot be undone and all related data will be permanently deleted.',
-  'NuwaxPC.Pages.SystemContentSpace.columnName': 'Name',
-  'NuwaxPC.Pages.SystemContentSpace.searchName': 'Please enter name',
-  'NuwaxPC.Pages.SystemContentSpace.columnDescription': 'Description',
-  'NuwaxPC.Pages.SystemContentSpace.columnCreator': 'Creator',
-  'NuwaxPC.Pages.SystemContentSpace.columnCreated': 'Created Time',
-  'NuwaxPC.Pages.SystemContentSpace.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemContentSpace.pageTitle': 'Space Management',
-  'NuwaxPC.Pages.AppDevToolCallProcess.updatePrefix': '[Update] ',
-  'NuwaxPC.Pages.AppDevToolCallProcess.readFile': 'Read file {0}',
-  'NuwaxPC.Pages.AppDevToolCallProcess.editFile': 'Edit file {0}',
-  'NuwaxPC.Pages.AppDevToolCallProcess.createFile': 'Create file {0}',
-  'NuwaxPC.Pages.AppDevToolCallProcess.executeCommand': 'Execute command {0}',
-  'NuwaxPC.Pages.AppDevToolCallProcess.executeCommandDefault':
-    'Execute command',
-  'NuwaxPC.Pages.AppDevToolCallProcess.genericCall': '{0} {1}',
-  'NuwaxPC.Pages.AppDevToolCallProcess.toolCallDefault': 'Tool call',
-  'NuwaxPC.Pages.AppDevToolCallProcess.statusCompleted': 'Completed',
-  'NuwaxPC.Pages.AppDevToolCallProcess.statusInProgress': 'In Progress',
-  'NuwaxPC.Pages.AppDevToolCallProcess.statusFailed': 'Failed',
-  'NuwaxPC.Pages.AppDevToolCallProcess.statusPending': 'Pending',
-  'NuwaxPC.Pages.AppDevToolCallProcess.statusLabel': 'Status:',
-  'NuwaxPC.Pages.AppDevToolCallProcess.timeLabel': 'Time:',
-  'NuwaxPC.Pages.AppDevToolCallProcess.typeLabel': 'Type:',
-  'NuwaxPC.Pages.AppDevToolCallProcess.toolCallUpdateType': 'Tool call update',
-  'NuwaxPC.Pages.AppDevMessageAttachment.imageAlt': 'Image',
-  'NuwaxPC.Pages.AppDevMessageAttachment.fileTypeText': 'Text file',
-  'NuwaxPC.Pages.AppDevMessageAttachment.fileTypeDocument': 'Document',
-  'NuwaxPC.Pages.AppDevMessageAttachment.fileTypeAudio': 'Audio file',
-  'NuwaxPC.Pages.AppDevMessageAttachment.fileTypeFile': 'File',
-  'NuwaxPC.Pages.AppDevMessageAttachment.dataSourcePlugin': 'Plugin',
-  'NuwaxPC.Pages.AppDevMessageAttachment.dataSourceWorkflow': 'Workflow',
-  'NuwaxPC.Pages.AppDevMessageAttachment.dataSourceDefault': 'Data source',
-  'NuwaxPC.Pages.AppDevChatInput.placeholderAbility1':
+  'PC.Pages.SystemContentSpace.columnName': 'Name',
+  'PC.Pages.SystemContentSpace.searchName': 'Please enter name',
+  'PC.Pages.SystemContentSpace.columnDescription': 'Description',
+  'PC.Pages.SystemContentSpace.columnCreator': 'Creator',
+  'PC.Pages.SystemContentSpace.columnCreated': 'Created Time',
+  'PC.Pages.SystemContentSpace.columnAction': 'Action',
+  'PC.Pages.SystemContentSpace.pageTitle': 'Space Management',
+  'PC.Pages.AppDevToolCallProcess.updatePrefix': '[Update] ',
+  'PC.Pages.AppDevToolCallProcess.readFile': 'Read file {0}',
+  'PC.Pages.AppDevToolCallProcess.editFile': 'Edit file {0}',
+  'PC.Pages.AppDevToolCallProcess.createFile': 'Create file {0}',
+  'PC.Pages.AppDevToolCallProcess.executeCommand': 'Execute command {0}',
+  'PC.Pages.AppDevToolCallProcess.executeCommandDefault': 'Execute command',
+  'PC.Pages.AppDevToolCallProcess.genericCall': '{0} {1}',
+  'PC.Pages.AppDevToolCallProcess.toolCallDefault': 'Tool call',
+  'PC.Pages.AppDevToolCallProcess.statusCompleted': 'Completed',
+  'PC.Pages.AppDevToolCallProcess.statusInProgress': 'In Progress',
+  'PC.Pages.AppDevToolCallProcess.statusFailed': 'Failed',
+  'PC.Pages.AppDevToolCallProcess.statusPending': 'Pending',
+  'PC.Pages.AppDevToolCallProcess.statusLabel': 'Status:',
+  'PC.Pages.AppDevToolCallProcess.timeLabel': 'Time:',
+  'PC.Pages.AppDevToolCallProcess.typeLabel': 'Type:',
+  'PC.Pages.AppDevToolCallProcess.toolCallUpdateType': 'Tool call update',
+  'PC.Pages.AppDevMessageAttachment.imageAlt': 'Image',
+  'PC.Pages.AppDevMessageAttachment.fileTypeText': 'Text file',
+  'PC.Pages.AppDevMessageAttachment.fileTypeDocument': 'Document',
+  'PC.Pages.AppDevMessageAttachment.fileTypeAudio': 'Audio file',
+  'PC.Pages.AppDevMessageAttachment.fileTypeFile': 'File',
+  'PC.Pages.AppDevMessageAttachment.dataSourcePlugin': 'Plugin',
+  'PC.Pages.AppDevMessageAttachment.dataSourceWorkflow': 'Workflow',
+  'PC.Pages.AppDevMessageAttachment.dataSourceDefault': 'Data source',
+  'PC.Pages.AppDevChatInput.placeholderAbility1':
     'Build websites, apps, and productivity tools in one sentence. You can extend capabilities with workflows, plugins, and other data resources.',
-  'NuwaxPC.Pages.AppDevChatInput.placeholderAbility2':
+  'PC.Pages.AppDevChatInput.placeholderAbility2':
     'Use @ to mention files, folders, and data resources to improve prompt accuracy.',
-  'NuwaxPC.Pages.AppDevChatInput.pendingChangesError':
+  'PC.Pages.AppDevChatInput.pendingChangesError':
     'Please save or reset changes before sending a message',
-  'NuwaxPC.Pages.AppDevChatInput.maxPrototypeImageWarning':
+  'PC.Pages.AppDevChatInput.maxPrototypeImageWarning':
     'You can upload at most {0} prototype images. Currently {1} images exist, and up to {2} more can be uploaded.',
-  'NuwaxPC.Pages.AppDevChatInput.pasteImageFileName': 'PastedImage-{0}-{1}.png',
-  'NuwaxPC.Pages.AppDevChatInput.uploadResultSummary':
+  'PC.Pages.AppDevChatInput.pasteImageFileName': 'PastedImage-{0}-{1}.png',
+  'PC.Pages.AppDevChatInput.uploadResultSummary':
     '{0} images uploaded successfully, {1} failed',
-  'NuwaxPC.Pages.AppDevChatInput.codingModel': 'Coding Model',
-  'NuwaxPC.Pages.AppDevChatInput.visionModelOptional':
-    'Vision Model (Optional)',
-  'NuwaxPC.Pages.AppDevChatInput.attachmentFiles': 'Attachments',
-  'NuwaxPC.Pages.AppDevChatInput.prototypeImages': 'Prototype Images',
-  'NuwaxPC.Pages.AppDevChatInput.mentionsTitle': '@ Mentions',
-  'NuwaxPC.Pages.AppDevChatInput.uploadFile': 'Upload Attachment',
-  'NuwaxPC.Pages.AppDevChatInput.uploadPrototypeImage':
-    'Upload Prototype Image',
-  'NuwaxPC.Pages.AppDevChatInput.model': 'Model',
-  'NuwaxPC.Pages.AppDevChatInput.stopping': 'Stopping...',
-  'NuwaxPC.Pages.AppDevChatInput.cancelAiTask': 'Cancel AI Task',
-  'NuwaxPC.Pages.AppDevMentionSelector.filesAndFolders': 'Files/Folders',
-  'NuwaxPC.Pages.AppDevMentionSelector.dataSources': 'Data Sources',
-  'NuwaxPC.Pages.AppDevMentionSelector.recent': 'Recent',
-  'NuwaxPC.Pages.AppDevMentionSelector.recommended': 'Recommended',
-  'NuwaxPC.Pages.AppDevMentionSelector.browseProjectFiles':
-    'Browse project files',
-  'NuwaxPC.Pages.AppDevMentionSelector.workflowPluginEtc':
+  'PC.Pages.AppDevChatInput.codingModel': 'Coding Model',
+  'PC.Pages.AppDevChatInput.visionModelOptional': 'Vision Model (Optional)',
+  'PC.Pages.AppDevChatInput.attachmentFiles': 'Attachments',
+  'PC.Pages.AppDevChatInput.prototypeImages': 'Prototype Images',
+  'PC.Pages.AppDevChatInput.mentionsTitle': '@ Mentions',
+  'PC.Pages.AppDevChatInput.uploadFile': 'Upload Attachment',
+  'PC.Pages.AppDevChatInput.uploadPrototypeImage': 'Upload Prototype Image',
+  'PC.Pages.AppDevChatInput.model': 'Model',
+  'PC.Pages.AppDevChatInput.stopping': 'Stopping...',
+  'PC.Pages.AppDevChatInput.cancelAiTask': 'Cancel AI Task',
+  'PC.Pages.AppDevMentionSelector.filesAndFolders': 'Files/Folders',
+  'PC.Pages.AppDevMentionSelector.dataSources': 'Data Sources',
+  'PC.Pages.AppDevMentionSelector.recent': 'Recent',
+  'PC.Pages.AppDevMentionSelector.recommended': 'Recommended',
+  'PC.Pages.AppDevMentionSelector.browseProjectFiles': 'Browse project files',
+  'PC.Pages.AppDevMentionSelector.workflowPluginEtc':
     'Workflows, plugins, etc.',
-  'NuwaxPC.Pages.AppDevMentionSelector.noMatchedResult':
-    'No matching result found',
-  'NuwaxPC.Pages.AppDevMentionSelector.files': 'Files',
-  'NuwaxPC.Pages.AppDevMentionSelector.folders': 'Folders',
-  'NuwaxPC.Pages.AppDevMentionSelector.back': '\u2190 Back',
-  'NuwaxPC.Pages.AppDevMentionSelector.fileList': 'File List',
-  'NuwaxPC.Pages.AppDevMentionSelector.noMatchedFileOrFolder':
+  'PC.Pages.AppDevMentionSelector.noMatchedResult': 'No matching result found',
+  'PC.Pages.AppDevMentionSelector.files': 'Files',
+  'PC.Pages.AppDevMentionSelector.folders': 'Folders',
+  'PC.Pages.AppDevMentionSelector.back': '\u2190 Back',
+  'PC.Pages.AppDevMentionSelector.fileList': 'File List',
+  'PC.Pages.AppDevMentionSelector.noMatchedFileOrFolder':
     'No matching file or folder found',
-  'NuwaxPC.Pages.AppDevMentionSelector.noDataSourcesFound':
-    'No data source found',
-  'NuwaxPC.Pages.AppDevMentionSelector.categoryItemCount': '{0} items',
-  'NuwaxPC.Pages.AppDevMentionSelector.dataSourceTypeWorkflow': 'Workflow',
-  'NuwaxPC.Pages.AppDevMentionSelector.dataSourceTypePlugin': 'Plugin',
-  'NuwaxPC.Pages.AppDevMentionSelector.dataSourceTypeReverseProxy':
-    'Reverse Proxy',
-  'NuwaxPC.Pages.AppDevMentionSelector.defaultDescPlugin':
+  'PC.Pages.AppDevMentionSelector.noDataSourcesFound': 'No data source found',
+  'PC.Pages.AppDevMentionSelector.categoryItemCount': '{0} items',
+  'PC.Pages.AppDevMentionSelector.dataSourceTypeWorkflow': 'Workflow',
+  'PC.Pages.AppDevMentionSelector.dataSourceTypePlugin': 'Plugin',
+  'PC.Pages.AppDevMentionSelector.dataSourceTypeReverseProxy': 'Reverse Proxy',
+  'PC.Pages.AppDevMentionSelector.defaultDescPlugin':
     'Plugin resource for specific functions and services',
-  'NuwaxPC.Pages.AppDevMentionSelector.defaultDescWorkflow':
+  'PC.Pages.AppDevMentionSelector.defaultDescWorkflow':
     'Workflow resource for complex business orchestration',
-  'NuwaxPC.Pages.AppDevMentionSelector.defaultDescReverseProxy':
+  'PC.Pages.AppDevMentionSelector.defaultDescReverseProxy':
     'Reverse proxy resource for network proxy services',
-  'NuwaxPC.Pages.AppDevMentionSelector.defaultDescDataSource': 'Data source',
-  'NuwaxPC.Pages.AntvX6Published.title': 'Publish Workflow',
-  'NuwaxPC.Pages.AntvX6Published.scope': 'Publish Scope',
-  'NuwaxPC.Pages.AntvX6Published.releaseNote': 'Release Note',
-  'NuwaxPC.Pages.AntvX6Published.releaseNotePlaceholder':
+  'PC.Pages.AppDevMentionSelector.defaultDescDataSource': 'Data source',
+  'PC.Pages.AntvX6Published.title': 'Publish Workflow',
+  'PC.Pages.AntvX6Published.scope': 'Publish Scope',
+  'PC.Pages.AntvX6Published.releaseNote': 'Release Note',
+  'PC.Pages.AntvX6Published.releaseNotePlaceholder':
     'Describe the release details. If global scope is selected, this workflow can be referenced by all workspaces after approval.',
-  'NuwaxPC.Pages.AntvX6VersionAction.restoreSuccess':
+  'PC.Pages.AntvX6VersionAction.restoreSuccess':
     'Version restored successfully',
-  'NuwaxPC.Pages.AntvX6VersionAction.restore': 'Restore',
-  'NuwaxPC.Pages.AntvX6Data.input': 'Input',
-  'NuwaxPC.Pages.AntvX6Data.output': 'Output',
-  'NuwaxPC.Pages.AntvX6Header.published': 'Published',
-  'NuwaxPC.Pages.AntvX6Header.autoSavedAt': 'Auto-saved {0}',
-  'NuwaxPC.Pages.AntvX6Header.unpublished': 'Unpublished',
-  'NuwaxPC.Pages.AntvX6Header.updatedNotPublished': 'Updated but unpublished',
-  'NuwaxPC.Pages.AntvX6Header.saving': 'Saving...',
-  'NuwaxPC.Pages.AntvX6Header.saveFailed': 'Save failed',
-  'NuwaxPC.Pages.AntvX6Header.saveFailedCheckNetwork':
+  'PC.Pages.AntvX6VersionAction.restore': 'Restore',
+  'PC.Pages.AntvX6Data.input': 'Input',
+  'PC.Pages.AntvX6Data.output': 'Output',
+  'PC.Pages.AntvX6Header.published': 'Published',
+  'PC.Pages.AntvX6Header.autoSavedAt': 'Auto-saved {0}',
+  'PC.Pages.AntvX6Header.unpublished': 'Unpublished',
+  'PC.Pages.AntvX6Header.updatedNotPublished': 'Updated but unpublished',
+  'PC.Pages.AntvX6Header.saving': 'Saving...',
+  'PC.Pages.AntvX6Header.saveFailed': 'Save failed',
+  'PC.Pages.AntvX6Header.saveFailedCheckNetwork':
     'Save failed, please check network connection',
-  'NuwaxPC.Pages.AntvX6Header.retrySave': 'Retry save',
-  'NuwaxPC.Pages.AntvX6Header.unsavedChanges': 'Unsaved changes',
-  'NuwaxPC.Pages.AntvX6Header.saveNow': 'Save now',
-  'NuwaxPC.Pages.AntvX6Header.undoWithShortcut': 'Undo ({0})',
-  'NuwaxPC.Pages.AntvX6Header.redoWithShortcut': 'Redo ({0})',
-  'NuwaxPC.Pages.AntvX6Header.validating': 'Validating',
-  'NuwaxPC.Pages.AntvX6Header.publish': 'Publish',
-  'NuwaxPC.Pages.AntvX6NodePanel.loopContinueDescription':
+  'PC.Pages.AntvX6Header.retrySave': 'Retry save',
+  'PC.Pages.AntvX6Header.unsavedChanges': 'Unsaved changes',
+  'PC.Pages.AntvX6Header.saveNow': 'Save now',
+  'PC.Pages.AntvX6Header.undoWithShortcut': 'Undo ({0})',
+  'PC.Pages.AntvX6Header.redoWithShortcut': 'Redo ({0})',
+  'PC.Pages.AntvX6Header.validating': 'Validating',
+  'PC.Pages.AntvX6Header.publish': 'Publish',
+  'PC.Pages.AntvX6NodePanel.loopContinueDescription':
     'Terminate current loop iteration and continue next iteration',
-  'NuwaxPC.Pages.AntvX6NodePanel.loopBreakDescription':
+  'PC.Pages.AntvX6NodePanel.loopBreakDescription':
     'Immediately terminate current loop and exit loop body',
-  'NuwaxPC.Pages.AntvX6Skill.editParams': 'Edit Parameters',
-  'NuwaxPC.Pages.AntvX6Skill.remove': 'Remove',
-  'NuwaxPC.Pages.AntvX6Condition.branchTitle': 'Conditional Branch',
-  'NuwaxPC.Pages.AntvX6Condition.priority': 'Priority {0}',
-  'NuwaxPC.Pages.AntvX6Condition.if': 'If',
-  'NuwaxPC.Pages.AntvX6Condition.elseIf': 'Else If',
-  'NuwaxPC.Pages.AntvX6Condition.and': 'AND',
-  'NuwaxPC.Pages.AntvX6Condition.or': 'OR',
-  'NuwaxPC.Pages.AntvX6Condition.referencePlaceholder':
+  'PC.Pages.AntvX6Skill.editParams': 'Edit Parameters',
+  'PC.Pages.AntvX6Skill.remove': 'Remove',
+  'PC.Pages.AntvX6Condition.branchTitle': 'Conditional Branch',
+  'PC.Pages.AntvX6Condition.priority': 'Priority {0}',
+  'PC.Pages.AntvX6Condition.if': 'If',
+  'PC.Pages.AntvX6Condition.elseIf': 'Else If',
+  'PC.Pages.AntvX6Condition.and': 'AND',
+  'PC.Pages.AntvX6Condition.or': 'OR',
+  'PC.Pages.AntvX6Condition.referencePlaceholder':
     'Please reference a parameter',
-  'NuwaxPC.Pages.AntvX6Condition.add': 'Add',
-  'NuwaxPC.Pages.AntvX6Condition.else': 'Else',
-  'NuwaxPC.Pages.AntvX6Stencil.nodeSelectorTitle': 'Node Selector',
-  'NuwaxPC.Pages.AntvX6ControlPanel.zoomIn10Percent': 'Zoom In 10%',
-  'NuwaxPC.Pages.AntvX6ControlPanel.zoomOut10Percent': 'Zoom Out 10%',
-  'NuwaxPC.Pages.AntvX6ControlPanel.fitCanvas': 'Fit to Canvas',
-  'NuwaxPC.Pages.AntvX6ControlPanel.zoom50Percent': 'Zoom to 50%',
-  'NuwaxPC.Pages.AntvX6ControlPanel.zoom100Percent': 'Zoom to 100%',
-  'NuwaxPC.Pages.AntvX6ControlPanel.zoom150Percent': 'Zoom to 150%',
-  'NuwaxPC.Pages.AntvX6ControlPanel.zoom200Percent': 'Zoom to 200%',
-  'NuwaxPC.Pages.AntvX6ControlPanel.addNode': 'Add Node',
-  'NuwaxPC.Pages.AntvX6ControlPanel.debug': 'Debug',
-  'NuwaxPC.Pages.AntvX6ControlPanel.testRun': 'Test Run',
-  'NuwaxPC.Pages.AntvX6ErrorList.title': 'Error List',
-  'NuwaxPC.Pages.AntvX6ErrorList.empty': 'N/A',
-  'NuwaxPC.Pages.AntvX6Graph.cannotQuickAddNodeForLoopBoundary':
+  'PC.Pages.AntvX6Condition.add': 'Add',
+  'PC.Pages.AntvX6Condition.else': 'Else',
+  'PC.Pages.AntvX6Stencil.nodeSelectorTitle': 'Node Selector',
+  'PC.Pages.AntvX6ControlPanel.zoomIn10Percent': 'Zoom In 10%',
+  'PC.Pages.AntvX6ControlPanel.zoomOut10Percent': 'Zoom Out 10%',
+  'PC.Pages.AntvX6ControlPanel.fitCanvas': 'Fit to Canvas',
+  'PC.Pages.AntvX6ControlPanel.zoom50Percent': 'Zoom to 50%',
+  'PC.Pages.AntvX6ControlPanel.zoom100Percent': 'Zoom to 100%',
+  'PC.Pages.AntvX6ControlPanel.zoom150Percent': 'Zoom to 150%',
+  'PC.Pages.AntvX6ControlPanel.zoom200Percent': 'Zoom to 200%',
+  'PC.Pages.AntvX6ControlPanel.addNode': 'Add Node',
+  'PC.Pages.AntvX6ControlPanel.debug': 'Debug',
+  'PC.Pages.AntvX6ControlPanel.testRun': 'Test Run',
+  'PC.Pages.AntvX6ErrorList.title': 'Error List',
+  'PC.Pages.AntvX6ErrorList.empty': 'N/A',
+  'PC.Pages.AntvX6Graph.cannotQuickAddNodeForLoopBoundary':
     'Loop start and end nodes do not support quick add for downstream nodes',
-  'NuwaxPC.Pages.AntvX6Workflow.cannotNestLoop':
+  'PC.Pages.AntvX6Workflow.cannotNestLoop':
     'Do not add nested loop nodes inside a loop body',
-  'NuwaxPC.Pages.AntvX6Workflow.unsupportedComponentType':
+  'PC.Pages.AntvX6Workflow.unsupportedComponentType':
     'This component type is not supported yet',
-  'NuwaxPC.Pages.AntvX6Workflow.loadingV3Version': 'Loading V3 version...',
-  'NuwaxPC.Pages.AntvX6NodeOperations.addNodeFailed': 'Failed to add node',
-  'NuwaxPC.Pages.AntvX6NodeOperations.addNodeNetworkError':
+  'PC.Pages.AntvX6Workflow.loadingV3Version': 'Loading V3 version...',
+  'PC.Pages.AntvX6NodeOperations.addNodeFailed': 'Failed to add node',
+  'PC.Pages.AntvX6NodeOperations.addNodeNetworkError':
     'Network error, failed to add node',
-  'NuwaxPC.Pages.AntvX6NodeOperations.copyNodeFailed': 'Failed to copy node',
-  'NuwaxPC.Pages.AntvX6NodeOperations.copyNodeNetworkError':
+  'PC.Pages.AntvX6NodeOperations.copyNodeFailed': 'Failed to copy node',
+  'PC.Pages.AntvX6NodeOperations.copyNodeNetworkError':
     'Network error, failed to copy node',
-  'NuwaxPC.Pages.AntvX6NodeOperations.deleteNodeFailed':
-    'Failed to delete node',
-  'NuwaxPC.Pages.AntvX6History.noUndoAvailable':
-    'No operations available to undo',
-  'NuwaxPC.Pages.AntvX6History.noRedoAvailable':
-    'No operations available to redo',
-  'NuwaxPC.Pages.AntvX6Persistence.versionConflict': 'Version conflict',
-  'NuwaxPC.Pages.AntvX6Persistence.versionConflictTitle': 'Version conflict',
-  'NuwaxPC.Pages.AntvX6Persistence.versionConflictContent':
+  'PC.Pages.AntvX6NodeOperations.deleteNodeFailed': 'Failed to delete node',
+  'PC.Pages.AntvX6History.noUndoAvailable': 'No operations available to undo',
+  'PC.Pages.AntvX6History.noRedoAvailable': 'No operations available to redo',
+  'PC.Pages.AntvX6Persistence.versionConflict': 'Version conflict',
+  'PC.Pages.AntvX6Persistence.versionConflictTitle': 'Version conflict',
+  'PC.Pages.AntvX6Persistence.versionConflictContent':
     'Workflow was updated in another window. Force overwrite?',
-  'NuwaxPC.Pages.AntvX6Persistence.forceOverwrite': 'Force overwrite',
-  'NuwaxPC.Pages.AntvX6Persistence.cancel': 'Cancel',
-  'NuwaxPC.Pages.AntvX6Persistence.saveFailed': 'Save failed',
-  'NuwaxPC.Pages.AntvX6Persistence.networkSaveFailed':
-    'Network error, save failed',
-  'NuwaxPC.Pages.AntvX6Params.nodeLlmName': 'Large Language Model',
-  'NuwaxPC.Pages.AntvX6Params.nodeLlmDescription':
+  'PC.Pages.AntvX6Persistence.forceOverwrite': 'Force overwrite',
+  'PC.Pages.AntvX6Persistence.cancel': 'Cancel',
+  'PC.Pages.AntvX6Persistence.saveFailed': 'Save failed',
+  'PC.Pages.AntvX6Persistence.networkSaveFailed': 'Network error, save failed',
+  'PC.Pages.AntvX6Params.nodeLlmName': 'Large Language Model',
+  'PC.Pages.AntvX6Params.nodeLlmDescription':
     'Call the large language model and generate responses with variables and prompts',
-  'NuwaxPC.Pages.AntvX6Params.nodePluginName': 'Plugin',
-  'NuwaxPC.Pages.AntvX6Params.nodePluginDescription':
+  'PC.Pages.AntvX6Params.nodePluginName': 'Plugin',
+  'PC.Pages.AntvX6Params.nodePluginDescription':
     'Bing search engine. Use it when you need unknown information, such as weather...',
-  'NuwaxPC.Pages.AntvX6Params.nodeWorkflowName': 'Workflow',
-  'NuwaxPC.Pages.AntvX6Params.nodeWorkflowDescription':
+  'PC.Pages.AntvX6Params.nodeWorkflowName': 'Workflow',
+  'PC.Pages.AntvX6Params.nodeWorkflowDescription':
     'Bing search engine. Use it when you need unknown information, such as weather...',
-  'NuwaxPC.Pages.AntvX6Params.nodeMcpName': 'MCP',
-  'NuwaxPC.Pages.AntvX6Params.nodeMcpDescription': 'MCP component',
-  'NuwaxPC.Pages.AntvX6Params.groupBusinessLogic': 'Business Logic',
-  'NuwaxPC.Pages.AntvX6Params.nodeCodeName': 'Code',
-  'NuwaxPC.Pages.AntvX6Params.nodeCodeDescription':
+  'PC.Pages.AntvX6Params.nodeMcpName': 'MCP',
+  'PC.Pages.AntvX6Params.nodeMcpDescription': 'MCP component',
+  'PC.Pages.AntvX6Params.groupBusinessLogic': 'Business Logic',
+  'PC.Pages.AntvX6Params.nodeCodeName': 'Code',
+  'PC.Pages.AntvX6Params.nodeCodeDescription':
     'Write code to process input variables and generate return values',
-  'NuwaxPC.Pages.AntvX6Params.nodeConditionName': 'Condition Branch',
-  'NuwaxPC.Pages.AntvX6Params.nodeConditionDescription':
+  'PC.Pages.AntvX6Params.nodeConditionName': 'Condition Branch',
+  'PC.Pages.AntvX6Params.nodeConditionDescription':
     'Connect multiple downstream branches. Run only the branch whose condition is met. If none are met, run only the “Else” branch.',
-  'NuwaxPC.Pages.AntvX6Params.nodeIntentRecognitionName': 'Intent Recognition',
-  'NuwaxPC.Pages.AntvX6Params.nodeIntentRecognitionDescription':
+  'PC.Pages.AntvX6Params.nodeIntentRecognitionName': 'Intent Recognition',
+  'PC.Pages.AntvX6Params.nodeIntentRecognitionDescription':
     'Recognize user intent and match it to preset intent options.',
-  'NuwaxPC.Pages.AntvX6Params.nodeLoopName': 'Loop',
-  'NuwaxPC.Pages.AntvX6Params.nodeLoopDescription':
+  'PC.Pages.AntvX6Params.nodeLoopName': 'Loop',
+  'PC.Pages.AntvX6Params.nodeLoopDescription':
     'Repeat tasks by configured loop count and loop logic.',
-  'NuwaxPC.Pages.AntvX6Params.nodeLoopContinueName': 'Continue Loop',
-  'NuwaxPC.Pages.AntvX6Params.nodeLoopBreakName': 'Break Loop',
-  'NuwaxPC.Pages.AntvX6Params.groupKnowledgeData': 'Knowledge & Data',
-  'NuwaxPC.Pages.AntvX6Params.nodeKnowledgeBaseName': 'Knowledge Base',
-  'NuwaxPC.Pages.AntvX6Params.nodeKnowledgeBaseDescription':
+  'PC.Pages.AntvX6Params.nodeLoopContinueName': 'Continue Loop',
+  'PC.Pages.AntvX6Params.nodeLoopBreakName': 'Break Loop',
+  'PC.Pages.AntvX6Params.groupKnowledgeData': 'Knowledge & Data',
+  'PC.Pages.AntvX6Params.nodeKnowledgeBaseName': 'Knowledge Base',
+  'PC.Pages.AntvX6Params.nodeKnowledgeBaseDescription':
     'Recall the best matched information from selected knowledge sources based on input variables',
-  'NuwaxPC.Pages.AntvX6Params.nodeVariableName': 'Variable',
-  'NuwaxPC.Pages.AntvX6Params.nodeVariableDescription':
+  'PC.Pages.AntvX6Params.nodeVariableName': 'Variable',
+  'PC.Pages.AntvX6Params.nodeVariableDescription':
     'Read and write variables in the project. Variable names must match project variables.',
-  'NuwaxPC.Pages.AntvX6Params.nodeVariableAggregationName':
-    'Variable Aggregation',
-  'NuwaxPC.Pages.AntvX6Params.nodeVariableAggregationDescription':
+  'PC.Pages.AntvX6Params.nodeVariableAggregationName': 'Variable Aggregation',
+  'PC.Pages.AntvX6Params.nodeVariableAggregationDescription':
     'Aggregate multiple branches or variables into grouped outputs',
-  'NuwaxPC.Pages.AntvX6Params.nodeLongTermMemoryName': 'Long-Term Memory',
-  'NuwaxPC.Pages.AntvX6Params.nodeLongTermMemoryDescription':
+  'PC.Pages.AntvX6Params.nodeLongTermMemoryName': 'Long-Term Memory',
+  'PC.Pages.AntvX6Params.nodeLongTermMemoryDescription':
     'Call long-term memory to retrieve user personalization data',
-  'NuwaxPC.Pages.AntvX6Params.groupDataTable': 'Data Table',
-  'NuwaxPC.Pages.AntvX6Params.nodeTableDataAddName': 'Add Data',
-  'NuwaxPC.Pages.AntvX6Params.nodeTableDataAddDescription':
+  'PC.Pages.AntvX6Params.groupDataTable': 'Data Table',
+  'PC.Pages.AntvX6Params.nodeTableDataAddName': 'Add Data',
+  'PC.Pages.AntvX6Params.nodeTableDataAddDescription':
     'Write data to the selected data table',
-  'NuwaxPC.Pages.AntvX6Params.nodeTableDataDeleteName': 'Delete Data',
-  'NuwaxPC.Pages.AntvX6Params.nodeTableDataDeleteDescription':
+  'PC.Pages.AntvX6Params.nodeTableDataDeleteName': 'Delete Data',
+  'PC.Pages.AntvX6Params.nodeTableDataDeleteDescription':
     'Delete data from the selected data table by specified ID',
-  'NuwaxPC.Pages.AntvX6Params.nodeTableDataUpdateName': 'Update Data',
-  'NuwaxPC.Pages.AntvX6Params.nodeTableDataUpdateDescription':
+  'PC.Pages.AntvX6Params.nodeTableDataUpdateName': 'Update Data',
+  'PC.Pages.AntvX6Params.nodeTableDataUpdateDescription':
     'Update data in the selected data table by specified conditions',
-  'NuwaxPC.Pages.AntvX6Params.nodeTableDataQueryName': 'Query Data',
-  'NuwaxPC.Pages.AntvX6Params.nodeTableDataQueryDescription':
+  'PC.Pages.AntvX6Params.nodeTableDataQueryName': 'Query Data',
+  'PC.Pages.AntvX6Params.nodeTableDataQueryDescription':
     'Query data in the selected data table by specified conditions',
-  'NuwaxPC.Pages.AntvX6Params.nodeTableSqlName': 'Custom SQL',
-  'NuwaxPC.Pages.AntvX6Params.nodeTableSqlDescription':
+  'PC.Pages.AntvX6Params.nodeTableSqlName': 'Custom SQL',
+  'PC.Pages.AntvX6Params.nodeTableSqlDescription':
     'Supports query control on data tables. Users can query data submitted by other users, controlled by developers.',
-  'NuwaxPC.Pages.AntvX6Params.groupComponentTool': 'Components & Tools',
-  'NuwaxPC.Pages.AntvX6Params.nodeQaName': 'Q&A',
-  'NuwaxPC.Pages.AntvX6Params.nodeQaDescription':
+  'PC.Pages.AntvX6Params.groupComponentTool': 'Components & Tools',
+  'PC.Pages.AntvX6Params.nodeQaName': 'Q&A',
+  'PC.Pages.AntvX6Params.nodeQaDescription':
     'Support asking users questions in intermediate steps',
-  'NuwaxPC.Pages.AntvX6Params.nodeTextProcessingName': 'Text Processing',
-  'NuwaxPC.Pages.AntvX6Params.nodeTextProcessingDescription':
+  'PC.Pages.AntvX6Params.nodeTextProcessingName': 'Text Processing',
+  'PC.Pages.AntvX6Params.nodeTextProcessingDescription':
     'Process formats of multiple string-type variables',
-  'NuwaxPC.Pages.AntvX6Params.nodeDocumentExtractionName':
-    'Document Extraction',
-  'NuwaxPC.Pages.AntvX6Params.nodeDocumentExtractionDescription':
+  'PC.Pages.AntvX6Params.nodeDocumentExtractionName': 'Document Extraction',
+  'PC.Pages.AntvX6Params.nodeDocumentExtractionDescription':
     'Extract document content. Supported file types: txt, markdown, pdf, html, xlsx, xls, docx, csv, md, htm',
-  'NuwaxPC.Pages.AntvX6Params.nodeHttpRequestName': 'HTTP Request',
-  'NuwaxPC.Pages.AntvX6Params.nodeHttpRequestDescription':
+  'PC.Pages.AntvX6Params.nodeHttpRequestName': 'HTTP Request',
+  'PC.Pages.AntvX6Params.nodeHttpRequestDescription':
     'Configure HTTP requests to call existing services',
-  'NuwaxPC.Pages.AntvX6Params.groupOutput': 'Output',
-  'NuwaxPC.Pages.AntvX6Params.nodeProcessOutputName': 'Process Output',
-  'NuwaxPC.Pages.AntvX6Params.nodeProcessOutputDescription':
+  'PC.Pages.AntvX6Params.groupOutput': 'Output',
+  'PC.Pages.AntvX6Params.nodeProcessOutputName': 'Process Output',
+  'PC.Pages.AntvX6Params.nodeProcessOutputDescription':
     'Support intermediate message output in both stream and non-stream modes',
-  'NuwaxPC.Pages.AntvX6Params.modelTypeTitleGeneration': 'Title Generation',
-  'NuwaxPC.Pages.AntvX6Params.cycleArrayLoop': 'Loop by Array',
-  'NuwaxPC.Pages.AntvX6Params.cycleSpecifyTimesLoop': 'Loop by Count',
-  'NuwaxPC.Pages.AntvX6Params.cycleInfiniteLoop': 'Infinite Loop',
-  'NuwaxPC.Pages.AntvX6Params.inputVariableName': 'Variable Name',
-  'NuwaxPC.Pages.AntvX6Params.inputVariableNameRequired':
+  'PC.Pages.AntvX6Params.modelTypeTitleGeneration': 'Title Generation',
+  'PC.Pages.AntvX6Params.cycleArrayLoop': 'Loop by Array',
+  'PC.Pages.AntvX6Params.cycleSpecifyTimesLoop': 'Loop by Count',
+  'PC.Pages.AntvX6Params.cycleInfiniteLoop': 'Infinite Loop',
+  'PC.Pages.AntvX6Params.inputVariableName': 'Variable Name',
+  'PC.Pages.AntvX6Params.inputVariableNameRequired':
     'Please enter variable name',
-  'NuwaxPC.Pages.AntvX6Params.selectType': 'Select Type',
-  'NuwaxPC.Pages.AntvX6Params.inputVariableType': 'Variable Type',
-  'NuwaxPC.Pages.AntvX6Params.inputVariableTypeRequired':
+  'PC.Pages.AntvX6Params.selectType': 'Select Type',
+  'PC.Pages.AntvX6Params.inputVariableType': 'Variable Type',
+  'PC.Pages.AntvX6Params.inputVariableTypeRequired':
     'Please select variable type',
-  'NuwaxPC.Pages.AntvX6Params.description': 'Description',
-  'NuwaxPC.Pages.AntvX6Params.descriptionRequired': 'Please enter description',
-  'NuwaxPC.Pages.AntvX6Params.paramName': 'Parameter Name',
-  'NuwaxPC.Pages.AntvX6Params.paramNameRequired': 'Please enter parameter name',
-  'NuwaxPC.Pages.AntvX6Params.inputOrReferenceParamValue':
+  'PC.Pages.AntvX6Params.description': 'Description',
+  'PC.Pages.AntvX6Params.descriptionRequired': 'Please enter description',
+  'PC.Pages.AntvX6Params.paramName': 'Parameter Name',
+  'PC.Pages.AntvX6Params.paramNameRequired': 'Please enter parameter name',
+  'PC.Pages.AntvX6Params.inputOrReferenceParamValue':
     'Input or reference parameter value',
-  'NuwaxPC.Pages.AntvX6Params.paramValue': 'Parameter Value',
-  'NuwaxPC.Pages.AntvX6Params.paramValueRequired':
-    'Please enter parameter value',
-  'NuwaxPC.Pages.AntvX6Params.inputParamValue': 'Input Parameter Value',
-  'NuwaxPC.Pages.AntvX6Params.intentDescriptionRequired':
+  'PC.Pages.AntvX6Params.paramValue': 'Parameter Value',
+  'PC.Pages.AntvX6Params.paramValueRequired': 'Please enter parameter value',
+  'PC.Pages.AntvX6Params.inputParamValue': 'Input Parameter Value',
+  'PC.Pages.AntvX6Params.intentDescriptionRequired':
     'Please enter user intent description',
-  'NuwaxPC.Pages.AntvX6Params.inputOrReferenceVariableValue':
+  'PC.Pages.AntvX6Params.inputOrReferenceVariableValue':
     'Input or reference variable value',
-  'NuwaxPC.Pages.AntvX6Params.variableValue': 'Variable Value',
-  'NuwaxPC.Pages.AntvX6Params.variableValueRequired':
-    'Please enter variable value',
-  'NuwaxPC.Pages.AntvX6Params.resourceWorkflow': 'Resource Workflows',
-  'NuwaxPC.Pages.AntvX6Params.officialExample': 'Official Examples',
-  'NuwaxPC.Pages.AntvX6Params.operatorEqual': 'Equals',
-  'NuwaxPC.Pages.AntvX6Params.operatorNotEqual': 'Not Equals',
-  'NuwaxPC.Pages.AntvX6Params.operatorGreaterThan': 'Greater Than',
-  'NuwaxPC.Pages.AntvX6Params.operatorGreaterThanOrEqual':
-    'Greater Than or Equal',
-  'NuwaxPC.Pages.AntvX6Params.operatorLessThan': 'Less Than',
-  'NuwaxPC.Pages.AntvX6Params.operatorLessThanOrEqual': 'Less Than or Equal',
-  'NuwaxPC.Pages.AntvX6Params.operatorLengthGreaterThan': 'Length Greater Than',
-  'NuwaxPC.Pages.AntvX6Params.operatorLengthGreaterThanOrEqual':
+  'PC.Pages.AntvX6Params.variableValue': 'Variable Value',
+  'PC.Pages.AntvX6Params.variableValueRequired': 'Please enter variable value',
+  'PC.Pages.AntvX6Params.resourceWorkflow': 'Resource Workflows',
+  'PC.Pages.AntvX6Params.officialExample': 'Official Examples',
+  'PC.Pages.AntvX6Params.operatorEqual': 'Equals',
+  'PC.Pages.AntvX6Params.operatorNotEqual': 'Not Equals',
+  'PC.Pages.AntvX6Params.operatorGreaterThan': 'Greater Than',
+  'PC.Pages.AntvX6Params.operatorGreaterThanOrEqual': 'Greater Than or Equal',
+  'PC.Pages.AntvX6Params.operatorLessThan': 'Less Than',
+  'PC.Pages.AntvX6Params.operatorLessThanOrEqual': 'Less Than or Equal',
+  'PC.Pages.AntvX6Params.operatorLengthGreaterThan': 'Length Greater Than',
+  'PC.Pages.AntvX6Params.operatorLengthGreaterThanOrEqual':
     'Length Greater Than or Equal',
-  'NuwaxPC.Pages.AntvX6Params.operatorLengthLessThan': 'Length Less Than',
-  'NuwaxPC.Pages.AntvX6Params.operatorLengthLessThanOrEqual':
+  'PC.Pages.AntvX6Params.operatorLengthLessThan': 'Length Less Than',
+  'PC.Pages.AntvX6Params.operatorLengthLessThanOrEqual':
     'Length Less Than or Equal',
-  'NuwaxPC.Pages.AntvX6Params.operatorContains': 'Contains',
-  'NuwaxPC.Pages.AntvX6Params.operatorNotContains': 'Not Contains',
-  'NuwaxPC.Pages.AntvX6Params.operatorMatchRegex': 'Regex Match',
-  'NuwaxPC.Pages.AntvX6Params.operatorIsNull': 'Is Null',
-  'NuwaxPC.Pages.AntvX6Params.operatorNotNull': 'Not Null',
-  'NuwaxPC.Pages.AntvX6Params.operatorIn': 'In',
-  'NuwaxPC.Pages.AntvX6Params.operatorNotIn': 'Not In',
-  'NuwaxPC.Pages.SystemDashboard.pageTitle': 'System Overview',
-  'NuwaxPC.Pages.SystemDashboard.totalUsers': 'Total Users',
-  'NuwaxPC.Pages.SystemDashboard.todayNewUsers': 'Today New Users',
-  'NuwaxPC.Pages.SystemDashboard.todayVisits': 'Today Visits',
-  'NuwaxPC.Pages.SystemDashboard.last30DaysVisits': '30-Day Total Visits',
-  'NuwaxPC.Pages.SystemDashboard.resourceSpace': 'Space',
-  'NuwaxPC.Pages.SystemDashboard.resourceAgent': 'Agent',
-  'NuwaxPC.Pages.SystemDashboard.resourceKnowledgeBase': 'Knowledge Base',
-  'NuwaxPC.Pages.SystemDashboard.resourceWorkflow': 'Workflow',
-  'NuwaxPC.Pages.SystemDashboard.resourceDataTable': 'Data Table',
-  'NuwaxPC.Pages.SystemDashboard.resourceWebApplication': 'Web Application',
-  'NuwaxPC.Pages.SystemDashboard.resourceModel': 'Model',
-  'NuwaxPC.Pages.SystemDashboard.resourcePlugin': 'Plugin',
-  'NuwaxPC.Pages.SystemDashboard.resourceSkill': 'Skill',
-  'NuwaxPC.Pages.SystemDashboard.totalConversations': 'Total Conversations',
-  'NuwaxPC.Pages.SystemDashboard.todayNewConversations':
-    'Today New Conversations',
-  'NuwaxPC.Pages.SystemDashboard.userTrendTitle': 'User Growth Trend',
-  'NuwaxPC.Pages.SystemDashboard.userTrendTooltip': 'New Users',
-  'NuwaxPC.Pages.SystemDashboard.visitTrendTitle': '7-Day Visit Trend',
-  'NuwaxPC.Pages.SystemDashboard.visitTrendTooltip': 'Visits',
-  'NuwaxPC.Pages.SystemDashboard.last7Days': '7 Days',
-  'NuwaxPC.Pages.SystemContentWebApplication.deleteSuccess':
-    'Deleted successfully',
-  'NuwaxPC.Pages.SystemContentWebApplication.deleteFailed': 'Delete failed',
-  'NuwaxPC.Pages.SystemContentWebApplication.view': 'View',
-  'NuwaxPC.Pages.SystemContentWebApplication.authorize': 'Authorize',
-  'NuwaxPC.Pages.SystemContentWebApplication.delete': 'Delete',
-  'NuwaxPC.Pages.SystemContentWebApplication.deleteConfirmTitle':
+  'PC.Pages.AntvX6Params.operatorContains': 'Contains',
+  'PC.Pages.AntvX6Params.operatorNotContains': 'Not Contains',
+  'PC.Pages.AntvX6Params.operatorMatchRegex': 'Regex Match',
+  'PC.Pages.AntvX6Params.operatorIsNull': 'Is Null',
+  'PC.Pages.AntvX6Params.operatorNotNull': 'Not Null',
+  'PC.Pages.AntvX6Params.operatorIn': 'In',
+  'PC.Pages.AntvX6Params.operatorNotIn': 'Not In',
+  'PC.Pages.SystemDashboard.pageTitle': 'System Overview',
+  'PC.Pages.SystemDashboard.totalUsers': 'Total Users',
+  'PC.Pages.SystemDashboard.todayNewUsers': 'Today New Users',
+  'PC.Pages.SystemDashboard.todayVisits': 'Today Visits',
+  'PC.Pages.SystemDashboard.last30DaysVisits': '30-Day Total Visits',
+  'PC.Pages.SystemDashboard.resourceSpace': 'Space',
+  'PC.Pages.SystemDashboard.resourceAgent': 'Agent',
+  'PC.Pages.SystemDashboard.resourceKnowledgeBase': 'Knowledge Base',
+  'PC.Pages.SystemDashboard.resourceWorkflow': 'Workflow',
+  'PC.Pages.SystemDashboard.resourceDataTable': 'Data Table',
+  'PC.Pages.SystemDashboard.resourceWebApplication': 'Web Application',
+  'PC.Pages.SystemDashboard.resourceModel': 'Model',
+  'PC.Pages.SystemDashboard.resourcePlugin': 'Plugin',
+  'PC.Pages.SystemDashboard.resourceSkill': 'Skill',
+  'PC.Pages.SystemDashboard.totalConversations': 'Total Conversations',
+  'PC.Pages.SystemDashboard.todayNewConversations': 'Today New Conversations',
+  'PC.Pages.SystemDashboard.userTrendTitle': 'User Growth Trend',
+  'PC.Pages.SystemDashboard.userTrendTooltip': 'New Users',
+  'PC.Pages.SystemDashboard.visitTrendTitle': '7-Day Visit Trend',
+  'PC.Pages.SystemDashboard.visitTrendTooltip': 'Visits',
+  'PC.Pages.SystemDashboard.last7Days': '7 Days',
+  'PC.Pages.SystemContentWebApplication.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SystemContentWebApplication.deleteFailed': 'Delete failed',
+  'PC.Pages.SystemContentWebApplication.view': 'View',
+  'PC.Pages.SystemContentWebApplication.authorize': 'Authorize',
+  'PC.Pages.SystemContentWebApplication.delete': 'Delete',
+  'PC.Pages.SystemContentWebApplication.deleteConfirmTitle':
     'Are you sure you want to delete {0}?',
-  'NuwaxPC.Pages.SystemContentWebApplication.deleteConfirmDescription':
+  'PC.Pages.SystemContentWebApplication.deleteConfirmDescription':
     'This action cannot be undone and all related data will be permanently deleted.',
-  'NuwaxPC.Pages.SystemContentWebApplication.columnName': 'Name',
-  'NuwaxPC.Pages.SystemContentWebApplication.searchName':
+  'PC.Pages.SystemContentWebApplication.columnName': 'Name',
+  'PC.Pages.SystemContentWebApplication.searchName':
     'Please enter web application name',
-  'NuwaxPC.Pages.SystemContentWebApplication.columnDescription': 'Description',
-  'NuwaxPC.Pages.SystemContentWebApplication.columnCreator': 'Creator',
-  'NuwaxPC.Pages.SystemContentWebApplication.columnPublishStatus':
-    'Publish Status',
-  'NuwaxPC.Pages.SystemContentWebApplication.statusDeveloping': 'To Publish',
-  'NuwaxPC.Pages.SystemContentWebApplication.statusApplying': 'Pending Review',
-  'NuwaxPC.Pages.SystemContentWebApplication.statusPublished': 'Published',
-  'NuwaxPC.Pages.SystemContentWebApplication.statusRejected': 'Rejected',
-  'NuwaxPC.Pages.SystemContentWebApplication.columnCreated': 'Created Time',
-  'NuwaxPC.Pages.SystemContentWebApplication.columnAccessControl':
-    'Access Control',
-  'NuwaxPC.Pages.SystemContentWebApplication.accessControlTooltip':
+  'PC.Pages.SystemContentWebApplication.columnDescription': 'Description',
+  'PC.Pages.SystemContentWebApplication.columnCreator': 'Creator',
+  'PC.Pages.SystemContentWebApplication.columnPublishStatus': 'Publish Status',
+  'PC.Pages.SystemContentWebApplication.statusDeveloping': 'To Publish',
+  'PC.Pages.SystemContentWebApplication.statusApplying': 'Pending Review',
+  'PC.Pages.SystemContentWebApplication.statusPublished': 'Published',
+  'PC.Pages.SystemContentWebApplication.statusRejected': 'Rejected',
+  'PC.Pages.SystemContentWebApplication.columnCreated': 'Created Time',
+  'PC.Pages.SystemContentWebApplication.columnAccessControl': 'Access Control',
+  'PC.Pages.SystemContentWebApplication.accessControlTooltip':
     'When enabled, web applications published to the system square require authorization before use.',
-  'NuwaxPC.Pages.SystemContentWebApplication.accessControlOff': 'Off',
-  'NuwaxPC.Pages.SystemContentWebApplication.accessControlOn': 'On',
-  'NuwaxPC.Pages.SystemContentWebApplication.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemContentWebApplication.pageTitle':
+  'PC.Pages.SystemContentWebApplication.accessControlOff': 'Off',
+  'PC.Pages.SystemContentWebApplication.accessControlOn': 'On',
+  'PC.Pages.SystemContentWebApplication.columnAction': 'Action',
+  'PC.Pages.SystemContentWebApplication.pageTitle':
     'Web Application Management',
-  'NuwaxPC.Pages.SystemOperationLog.columnType': 'Type',
-  'NuwaxPC.Pages.SystemOperationLog.placeholderType': 'Please select type',
-  'NuwaxPC.Pages.SystemOperationLog.columnActionType': 'Action Type',
-  'NuwaxPC.Pages.SystemOperationLog.placeholderActionType':
+  'PC.Pages.SystemOperationLog.columnType': 'Type',
+  'PC.Pages.SystemOperationLog.placeholderType': 'Please select type',
+  'PC.Pages.SystemOperationLog.columnActionType': 'Action Type',
+  'PC.Pages.SystemOperationLog.placeholderActionType':
     'Please select action type',
-  'NuwaxPC.Pages.SystemOperationLog.columnObjectName': 'Object Name',
-  'NuwaxPC.Pages.SystemOperationLog.placeholderObjectName':
+  'PC.Pages.SystemOperationLog.columnObjectName': 'Object Name',
+  'PC.Pages.SystemOperationLog.placeholderObjectName':
     'Please enter object name',
-  'NuwaxPC.Pages.SystemOperationLog.columnObjectSubtype': 'Object Subtype',
-  'NuwaxPC.Pages.SystemOperationLog.placeholderObjectSubtype':
+  'PC.Pages.SystemOperationLog.columnObjectSubtype': 'Object Subtype',
+  'PC.Pages.SystemOperationLog.placeholderObjectSubtype':
     'Please enter object subtype',
-  'NuwaxPC.Pages.SystemOperationLog.columnRequestParams': 'Request Params',
-  'NuwaxPC.Pages.SystemOperationLog.placeholderRequestParams':
+  'PC.Pages.SystemOperationLog.columnRequestParams': 'Request Params',
+  'PC.Pages.SystemOperationLog.placeholderRequestParams':
     'Separate keywords with spaces',
-  'NuwaxPC.Pages.SystemOperationLog.columnCreator': 'Creator',
-  'NuwaxPC.Pages.SystemOperationLog.placeholderCreator':
-    'Please enter username',
-  'NuwaxPC.Pages.SystemOperationLog.columnTimeRange': 'Time Range',
-  'NuwaxPC.Pages.SystemOperationLog.columnCreated': 'Created Time',
-  'NuwaxPC.Pages.SystemOperationLog.queryFailed': 'Query failed',
-  'NuwaxPC.Pages.SystemOperationLog.missingRequestIdForDetail':
+  'PC.Pages.SystemOperationLog.columnCreator': 'Creator',
+  'PC.Pages.SystemOperationLog.placeholderCreator': 'Please enter username',
+  'PC.Pages.SystemOperationLog.columnTimeRange': 'Time Range',
+  'PC.Pages.SystemOperationLog.columnCreated': 'Created Time',
+  'PC.Pages.SystemOperationLog.queryFailed': 'Query failed',
+  'PC.Pages.SystemOperationLog.missingRequestIdForDetail':
     'The record has no requestId. Details cannot be viewed.',
-  'NuwaxPC.Pages.SystemOperationLog.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemOperationLog.detail': 'Detail',
-  'NuwaxPC.Pages.SystemOperationLog.copySuccess': 'Copied successfully',
-  'NuwaxPC.Pages.SystemOperationLog.detailTitle': 'Log Detail',
-  'NuwaxPC.Pages.SystemOperationLog.basicInfo': 'Basic Information',
-  'NuwaxPC.Pages.SystemOperationLog.noData': 'No data',
-  'NuwaxPC.Pages.AppDevChatArea.agentTaskCancelled': 'Agent task cancelled',
-  'NuwaxPC.Pages.AppDevChatArea.cancelAgentTaskFailed':
+  'PC.Pages.SystemOperationLog.columnAction': 'Action',
+  'PC.Pages.SystemOperationLog.detail': 'Detail',
+  'PC.Pages.SystemOperationLog.copySuccess': 'Copied successfully',
+  'PC.Pages.SystemOperationLog.detailTitle': 'Log Detail',
+  'PC.Pages.SystemOperationLog.basicInfo': 'Basic Information',
+  'PC.Pages.SystemOperationLog.noData': 'No data',
+  'PC.Pages.AppDevChatArea.agentTaskCancelled': 'Agent task cancelled',
+  'PC.Pages.AppDevChatArea.cancelAgentTaskFailed':
     'Failed to cancel Agent task: {0}',
-  'NuwaxPC.Pages.AppDevChatArea.unknownError': 'Unknown error',
-  'NuwaxPC.Pages.AppDevChatArea.noPermissionForAiChat':
+  'PC.Pages.AppDevChatArea.unknownError': 'Unknown error',
+  'PC.Pages.AppDevChatArea.noPermissionForAiChat':
     'You do not have permission to use AI chat',
-  'NuwaxPC.Pages.AppDevChatArea.sendMessageFailed': 'Failed to send message',
-  'NuwaxPC.Pages.AppDevChatArea.thinking': 'Thinking...',
-  'NuwaxPC.Pages.AppDevChatArea.messageSendFailed': 'Message send failed',
-  'NuwaxPC.Pages.AppDevChatArea.aiThinkingProcess': 'AI Thinking Process',
-  'NuwaxPC.Pages.AppDevChatArea.dataResources': 'Data Resources',
-  'NuwaxPC.Pages.AppDevChatArea.addDataResource': 'Add Data Resource',
-  'NuwaxPC.Pages.AppDevChatArea.loadingHistorySessions':
-    'Loading history sessions',
-  'NuwaxPC.Pages.AppDevChatArea.loadingDescription': 'Please wait...',
-  'NuwaxPC.Pages.AppDevChatArea.startNewConversation':
-    'Start a New Conversation',
-  'NuwaxPC.Pages.AppDevChatArea.startNewConversationDescription':
+  'PC.Pages.AppDevChatArea.sendMessageFailed': 'Failed to send message',
+  'PC.Pages.AppDevChatArea.thinking': 'Thinking...',
+  'PC.Pages.AppDevChatArea.messageSendFailed': 'Message send failed',
+  'PC.Pages.AppDevChatArea.aiThinkingProcess': 'AI Thinking Process',
+  'PC.Pages.AppDevChatArea.dataResources': 'Data Resources',
+  'PC.Pages.AppDevChatArea.addDataResource': 'Add Data Resource',
+  'PC.Pages.AppDevChatArea.loadingHistorySessions': 'Loading history sessions',
+  'PC.Pages.AppDevChatArea.loadingDescription': 'Please wait...',
+  'PC.Pages.AppDevChatArea.startNewConversation': 'Start a New Conversation',
+  'PC.Pages.AppDevChatArea.startNewConversationDescription':
     'Ask the AI assistant to start your project development',
-  'NuwaxPC.Pages.AppDevChatArea.autoFixingProgress':
+  'PC.Pages.AppDevChatArea.autoFixingProgress':
     '({0}/{1}) Trying automatic fixes...',
-  'NuwaxPC.Pages.AppDevChat.toolCall': 'Tool call',
-  'NuwaxPC.Pages.AppDevChat.toolCallUpdate': 'Tool call update',
-  'NuwaxPC.Pages.AppDevChat.errorMessageTitle': 'Error',
-  'NuwaxPC.Pages.AppDevChat.stopAgentAndRestartDialog':
+  'PC.Pages.AppDevChat.toolCall': 'Tool call',
+  'PC.Pages.AppDevChat.toolCallUpdate': 'Tool call update',
+  'PC.Pages.AppDevChat.errorMessageTitle': 'Error',
+  'PC.Pages.AppDevChat.stopAgentAndRestartDialog':
     'Service exception. Stop Agent service and restart the conversation.',
-  'NuwaxPC.Pages.AppDevChat.agentServiceStopped': 'Agent service stopped',
-  'NuwaxPC.Pages.AppDevChat.stopAgentServiceFailedWithReason':
+  'PC.Pages.AppDevChat.agentServiceStopped': 'Agent service stopped',
+  'PC.Pages.AppDevChat.stopAgentServiceFailedWithReason':
     'Failed to stop Agent service: {0}',
-  'NuwaxPC.Pages.AppDevChat.stopAgentServiceFailed':
-    'Failed to stop Agent service',
-  'NuwaxPC.Pages.AppDevChat.agentServiceRunningDetected':
+  'PC.Pages.AppDevChat.stopAgentServiceFailed': 'Failed to stop Agent service',
+  'PC.Pages.AppDevChat.agentServiceRunningDetected':
     'A background Agent service is running',
-  'NuwaxPC.Pages.AppDevChat.stopRunningAgentServiceConfirm':
+  'PC.Pages.AppDevChat.stopRunningAgentServiceConfirm':
     'Stop the currently running Agent service?',
-  'NuwaxPC.Pages.AppDevChat.sendCancelled': 'Send cancelled',
-  'NuwaxPC.Pages.AppDevChat.serviceExceptionTryLater':
+  'PC.Pages.AppDevChat.sendCancelled': 'Send cancelled',
+  'PC.Pages.AppDevChat.serviceExceptionTryLater':
     'Service exception, please try again later',
-  'NuwaxPC.Pages.AppDevChat.aiAssistantConnectionFailed':
+  'PC.Pages.AppDevChat.aiAssistantConnectionFailed':
     'AI assistant connection failed',
-  'NuwaxPC.Pages.AppDevChat.inputMessageRequired': 'Please enter a message',
-  'NuwaxPC.Pages.AppDevDevLogConsole.clickToAddToChat': 'Click to add to chat',
-  'NuwaxPC.Pages.AppDevDevLogConsole.headerTitle': 'Dev Server Logs',
-  'NuwaxPC.Pages.AppDevDevLogConsole.latestLogsContainErrors':
+  'PC.Pages.AppDevChat.inputMessageRequired': 'Please enter a message',
+  'PC.Pages.AppDevDevLogConsole.clickToAddToChat': 'Click to add to chat',
+  'PC.Pages.AppDevDevLogConsole.headerTitle': 'Dev Server Logs',
+  'PC.Pages.AppDevDevLogConsole.latestLogsContainErrors':
     'Latest logs contain errors',
-  'NuwaxPC.Pages.AppDevDevLogConsole.quickIssueFix': 'Quick issue fix',
-  'NuwaxPC.Pages.AppDevDevLogConsole.refreshLogs': 'Refresh logs',
-  'NuwaxPC.Pages.AppDevDevLogConsole.clearLogs': 'Clear logs',
-  'NuwaxPC.Pages.AppDevDevLogConsole.closeLogConsole': 'Close log console',
-  'NuwaxPC.Pages.AppDevDevLogConsole.loadingLogs': 'Loading logs...',
-  'NuwaxPC.Pages.AppDevDevLogConsole.noLogData': 'No log data',
-  'NuwaxPC.Pages.AppDevContentViewer.loadingFileContentTitle':
+  'PC.Pages.AppDevDevLogConsole.quickIssueFix': 'Quick issue fix',
+  'PC.Pages.AppDevDevLogConsole.refreshLogs': 'Refresh logs',
+  'PC.Pages.AppDevDevLogConsole.clearLogs': 'Clear logs',
+  'PC.Pages.AppDevDevLogConsole.closeLogConsole': 'Close log console',
+  'PC.Pages.AppDevDevLogConsole.loadingLogs': 'Loading logs...',
+  'PC.Pages.AppDevDevLogConsole.noLogData': 'No log data',
+  'PC.Pages.AppDevContentViewer.loadingFileContentTitle':
     'Loading file content',
-  'NuwaxPC.Pages.AppDevContentViewer.loadingDescription': 'Please wait...',
-  'NuwaxPC.Pages.AppDevContentViewer.loadFileFailedTitle':
-    'Failed to load file',
-  'NuwaxPC.Pages.AppDevContentViewer.retry': 'Retry',
-  'NuwaxPC.Pages.AppDevContentViewer.noSelectedFileTitle': 'No file selected',
-  'NuwaxPC.Pages.AppDevContentViewer.noSelectedFileDescription':
+  'PC.Pages.AppDevContentViewer.loadingDescription': 'Please wait...',
+  'PC.Pages.AppDevContentViewer.loadFileFailedTitle': 'Failed to load file',
+  'PC.Pages.AppDevContentViewer.retry': 'Retry',
+  'PC.Pages.AppDevContentViewer.noSelectedFileTitle': 'No file selected',
+  'PC.Pages.AppDevContentViewer.noSelectedFileDescription':
     'Please select a file from the left file tree to preview',
-  'NuwaxPC.Pages.AppDevContentViewer.unsupportedFileTypeTitle':
+  'PC.Pages.AppDevContentViewer.unsupportedFileTypeTitle':
     'Cannot preview this file type',
-  'NuwaxPC.Pages.AppDevContentViewer.unsupportedFileTypeDescription':
+  'PC.Pages.AppDevContentViewer.unsupportedFileTypeDescription':
     'Preview is not supported for {0} files.',
-  'NuwaxPC.Pages.AppDevContentViewer.previewDisabledDescription':
+  'PC.Pages.AppDevContentViewer.previewDisabledDescription':
     'Please restore or switch to the latest version to preview',
-  'NuwaxPC.Pages.AppDevDesignViewer.saveOrResetBeforeAddToChat':
+  'PC.Pages.AppDevDesignViewer.saveOrResetBeforeAddToChat':
     'Please save or reset changes before adding selected elements to chat',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.title': 'Exception Handling',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.titleTooltip':
+  'PC.Pages.AntvX6ExceptionItem.title': 'Exception Handling',
+  'PC.Pages.AntvX6ExceptionItem.titleTooltip':
     'Configure timeout, retries, and exception handling mode. After streaming output starts, exceptions cannot trigger retries or jump to exception branches.',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.timeoutLabel': 'Timeout',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.timeoutTooltip':
+  'PC.Pages.AntvX6ExceptionItem.timeoutLabel': 'Timeout',
+  'PC.Pages.AntvX6ExceptionItem.timeoutTooltip':
     'Set the maximum waiting time for node execution',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.timeoutRequired': 'Please enter timeout',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.retryCountLabel': 'Retry Count',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.noRetry': 'No Retry',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.retryOnce': '1 time',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.retryTwice': '2 times',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.retryThrice': '3 times',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.handleTypeLabel':
-    'Exception Handling Mode',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.interruptFlow': 'Interrupt Flow',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.returnSpecificContent':
+  'PC.Pages.AntvX6ExceptionItem.timeoutRequired': 'Please enter timeout',
+  'PC.Pages.AntvX6ExceptionItem.retryCountLabel': 'Retry Count',
+  'PC.Pages.AntvX6ExceptionItem.noRetry': 'No Retry',
+  'PC.Pages.AntvX6ExceptionItem.retryOnce': '1 time',
+  'PC.Pages.AntvX6ExceptionItem.retryTwice': '2 times',
+  'PC.Pages.AntvX6ExceptionItem.retryThrice': '3 times',
+  'PC.Pages.AntvX6ExceptionItem.handleTypeLabel': 'Exception Handling Mode',
+  'PC.Pages.AntvX6ExceptionItem.interruptFlow': 'Interrupt Flow',
+  'PC.Pages.AntvX6ExceptionItem.returnSpecificContent':
     'Return Specific Content',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.executeExceptionFlow':
-    'Execute Exception Flow',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.customReturnContent':
-    'Custom Return Content',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.customReturnContentRequired':
+  'PC.Pages.AntvX6ExceptionItem.executeExceptionFlow': 'Execute Exception Flow',
+  'PC.Pages.AntvX6ExceptionItem.customReturnContent': 'Custom Return Content',
+  'PC.Pages.AntvX6ExceptionItem.customReturnContentRequired':
     'Please enter custom return content',
-  'NuwaxPC.Pages.AntvX6ExceptionItem.validJsonRequired':
-    'Please enter valid JSON',
-  'NuwaxPC.Pages.SystemRunningLogTable.columnType': 'Type',
-  'NuwaxPC.Pages.SystemRunningLogTable.targetTypeAgent': 'Agent',
-  'NuwaxPC.Pages.SystemRunningLogTable.targetTypePlugin': 'Plugin',
-  'NuwaxPC.Pages.SystemRunningLogTable.targetTypeWorkflow': 'Workflow',
-  'NuwaxPC.Pages.SystemRunningLogTable.placeholderType': 'Please select type',
-  'NuwaxPC.Pages.SystemRunningLogTable.columnObjectId': 'Object ID',
-  'NuwaxPC.Pages.SystemRunningLogTable.placeholderObjectId':
+  'PC.Pages.AntvX6ExceptionItem.validJsonRequired': 'Please enter valid JSON',
+  'PC.Pages.SystemRunningLogTable.columnType': 'Type',
+  'PC.Pages.SystemRunningLogTable.targetTypeAgent': 'Agent',
+  'PC.Pages.SystemRunningLogTable.targetTypePlugin': 'Plugin',
+  'PC.Pages.SystemRunningLogTable.targetTypeWorkflow': 'Workflow',
+  'PC.Pages.SystemRunningLogTable.placeholderType': 'Please select type',
+  'PC.Pages.SystemRunningLogTable.columnObjectId': 'Object ID',
+  'PC.Pages.SystemRunningLogTable.placeholderObjectId':
     'Please enter object ID',
-  'NuwaxPC.Pages.SystemRunningLogTable.columnObjectName': 'Object Name',
-  'NuwaxPC.Pages.SystemRunningLogTable.placeholderObjectName':
+  'PC.Pages.SystemRunningLogTable.columnObjectName': 'Object Name',
+  'PC.Pages.SystemRunningLogTable.placeholderObjectName':
     'Please enter object name',
-  'NuwaxPC.Pages.SystemRunningLogTable.columnRequestId': 'Request ID',
-  'NuwaxPC.Pages.SystemRunningLogTable.placeholderRequestId':
+  'PC.Pages.SystemRunningLogTable.columnRequestId': 'Request ID',
+  'PC.Pages.SystemRunningLogTable.placeholderRequestId':
     'Please enter request ID',
-  'NuwaxPC.Pages.SystemRunningLogTable.columnUserId': 'User ID',
-  'NuwaxPC.Pages.SystemRunningLogTable.placeholderUserIdIntegerOnly':
+  'PC.Pages.SystemRunningLogTable.columnUserId': 'User ID',
+  'PC.Pages.SystemRunningLogTable.placeholderUserIdIntegerOnly':
     'Please enter user ID. Only integers are supported',
-  'NuwaxPC.Pages.SystemRunningLogTable.columnUserName': 'User Name',
-  'NuwaxPC.Pages.SystemRunningLogTable.placeholderUserName':
-    'Please enter username',
-  'NuwaxPC.Pages.SystemRunningLogTable.columnConversationId': 'Conversation ID',
-  'NuwaxPC.Pages.SystemRunningLogTable.placeholderConversationId':
+  'PC.Pages.SystemRunningLogTable.columnUserName': 'User Name',
+  'PC.Pages.SystemRunningLogTable.placeholderUserName': 'Please enter username',
+  'PC.Pages.SystemRunningLogTable.columnConversationId': 'Conversation ID',
+  'PC.Pages.SystemRunningLogTable.placeholderConversationId':
     'Please enter conversation ID',
-  'NuwaxPC.Pages.SystemRunningLogTable.columnInput': 'Input',
-  'NuwaxPC.Pages.SystemRunningLogTable.columnOutput': 'Output',
-  'NuwaxPC.Pages.SystemRunningLogTable.placeholderKeywords':
+  'PC.Pages.SystemRunningLogTable.columnInput': 'Input',
+  'PC.Pages.SystemRunningLogTable.columnOutput': 'Output',
+  'PC.Pages.SystemRunningLogTable.placeholderKeywords':
     'Separate keywords with spaces',
-  'NuwaxPC.Pages.SystemRunningLogTable.columnTimeRange': 'Time Range',
-  'NuwaxPC.Pages.SystemRunningLogTable.columnInputToken': 'Input Token',
-  'NuwaxPC.Pages.SystemRunningLogTable.columnOutputToken': 'Output Token',
-  'NuwaxPC.Pages.SystemRunningLogTable.columnRequestTime': 'Request Time',
-  'NuwaxPC.Pages.SystemRunningLogTable.columnElapsedTime': 'Elapsed Time',
-  'NuwaxPC.Pages.SystemRunningLogTable.queryFailed': 'Query failed',
-  'NuwaxPC.Pages.SystemRunningLogTable.missingRequestIdForDetail':
+  'PC.Pages.SystemRunningLogTable.columnTimeRange': 'Time Range',
+  'PC.Pages.SystemRunningLogTable.columnInputToken': 'Input Token',
+  'PC.Pages.SystemRunningLogTable.columnOutputToken': 'Output Token',
+  'PC.Pages.SystemRunningLogTable.columnRequestTime': 'Request Time',
+  'PC.Pages.SystemRunningLogTable.columnElapsedTime': 'Elapsed Time',
+  'PC.Pages.SystemRunningLogTable.queryFailed': 'Query failed',
+  'PC.Pages.SystemRunningLogTable.missingRequestIdForDetail':
     'The record has no requestId. Details cannot be viewed.',
-  'NuwaxPC.Pages.SystemRunningLogTable.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemRunningLogTable.detail': 'Detail',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.switchVersionButton': 'Switch to v{0}',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.cancel': 'Cancel',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.devServerConnected':
+  'PC.Pages.SystemRunningLogTable.columnAction': 'Action',
+  'PC.Pages.SystemRunningLogTable.detail': 'Detail',
+  'PC.Pages.AppDevEditorHeaderRight.switchVersionButton': 'Switch to v{0}',
+  'PC.Pages.AppDevEditorHeaderRight.cancel': 'Cancel',
+  'PC.Pages.AppDevEditorHeaderRight.devServerConnected':
     'Development server connected',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.loading': 'Loading...',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.starting': 'Starting...',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.restarting': 'Restarting...',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.importing': 'Importing...',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.lastUpdated': 'Last updated: {0}',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.closeLog': 'Close log',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.viewLog': 'View log',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.currentTag': 'Current',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.menuImportProject': 'Import Project',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.menuRestartServer': 'Restart Server',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.menuFullscreenPreview':
+  'PC.Pages.AppDevEditorHeaderRight.loading': 'Loading...',
+  'PC.Pages.AppDevEditorHeaderRight.starting': 'Starting...',
+  'PC.Pages.AppDevEditorHeaderRight.restarting': 'Restarting...',
+  'PC.Pages.AppDevEditorHeaderRight.importing': 'Importing...',
+  'PC.Pages.AppDevEditorHeaderRight.lastUpdated': 'Last updated: {0}',
+  'PC.Pages.AppDevEditorHeaderRight.closeLog': 'Close log',
+  'PC.Pages.AppDevEditorHeaderRight.viewLog': 'View log',
+  'PC.Pages.AppDevEditorHeaderRight.currentTag': 'Current',
+  'PC.Pages.AppDevEditorHeaderRight.menuImportProject': 'Import Project',
+  'PC.Pages.AppDevEditorHeaderRight.menuRestartServer': 'Restart Server',
+  'PC.Pages.AppDevEditorHeaderRight.menuFullscreenPreview':
     'Fullscreen Preview',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.menuExportProject': 'Export Project',
-  'NuwaxPC.Pages.AppDevEditorHeaderRight.refreshPreview': 'Refresh Preview',
-  'NuwaxPC.Pages.AntvX6CommonNode.columnParamName': 'Parameter Name',
-  'NuwaxPC.Pages.AntvX6CommonNode.columnVariableValue': 'Variable Value',
-  'NuwaxPC.Pages.AntvX6CommonNode.fieldParamName': 'Parameter Name',
-  'NuwaxPC.Pages.AntvX6CommonNode.placeholderParamName':
+  'PC.Pages.AppDevEditorHeaderRight.menuExportProject': 'Export Project',
+  'PC.Pages.AppDevEditorHeaderRight.refreshPreview': 'Refresh Preview',
+  'PC.Pages.AntvX6CommonNode.columnParamName': 'Parameter Name',
+  'PC.Pages.AntvX6CommonNode.columnVariableValue': 'Variable Value',
+  'PC.Pages.AntvX6CommonNode.fieldParamName': 'Parameter Name',
+  'PC.Pages.AntvX6CommonNode.placeholderParamName':
     'Please enter parameter name',
-  'NuwaxPC.Pages.AntvX6CommonNode.fieldVariableName': 'Variable Name',
-  'NuwaxPC.Pages.AntvX6CommonNode.placeholderParamValue':
+  'PC.Pages.AntvX6CommonNode.fieldVariableName': 'Variable Name',
+  'PC.Pages.AntvX6CommonNode.placeholderParamValue':
     'Please enter parameter value',
-  'NuwaxPC.Pages.AntvX6CommonNode.columnParamValue': 'Parameter Value',
-  'NuwaxPC.Pages.AntvX6CommonNode.noDescription': 'No description',
-  'NuwaxPC.Pages.AntvX6CommonNode.otherBranchHint':
+  'PC.Pages.AntvX6CommonNode.columnParamValue': 'Parameter Value',
+  'PC.Pages.AntvX6CommonNode.noDescription': 'No description',
+  'PC.Pages.AntvX6CommonNode.otherBranchHint':
     'This option is hidden from users and is used when user replies are unrelated',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeAgent': 'Agent',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypePlugin': 'Plugin',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeWorkflow': 'Workflow',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeKnowledge':
-    'Knowledge Base',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeVariable': 'Variable',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeTable': 'Data Table',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeModel': 'Model',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeToolCall': 'Tool Call',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypePlan': 'Plan',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.labelType': 'Type',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.labelStatus': 'Status',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.statusSuccess': 'Success',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.labelName': 'Name',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.labelElapsed': 'Elapsed',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.labelStartTime': 'Start Time',
-  'NuwaxPC.Pages.SystemRunningLogNodeDetails.labelEndTime': 'End Time',
-  'NuwaxPC.Pages.AppDevDataResourceList.defaultDescPlugin':
+  'PC.Pages.SystemRunningLogNodeDetails.targetTypeAgent': 'Agent',
+  'PC.Pages.SystemRunningLogNodeDetails.targetTypePlugin': 'Plugin',
+  'PC.Pages.SystemRunningLogNodeDetails.targetTypeWorkflow': 'Workflow',
+  'PC.Pages.SystemRunningLogNodeDetails.targetTypeKnowledge': 'Knowledge Base',
+  'PC.Pages.SystemRunningLogNodeDetails.targetTypeVariable': 'Variable',
+  'PC.Pages.SystemRunningLogNodeDetails.targetTypeTable': 'Data Table',
+  'PC.Pages.SystemRunningLogNodeDetails.targetTypeModel': 'Model',
+  'PC.Pages.SystemRunningLogNodeDetails.targetTypeToolCall': 'Tool Call',
+  'PC.Pages.SystemRunningLogNodeDetails.targetTypePlan': 'Plan',
+  'PC.Pages.SystemRunningLogNodeDetails.labelType': 'Type',
+  'PC.Pages.SystemRunningLogNodeDetails.labelStatus': 'Status',
+  'PC.Pages.SystemRunningLogNodeDetails.statusSuccess': 'Success',
+  'PC.Pages.SystemRunningLogNodeDetails.labelName': 'Name',
+  'PC.Pages.SystemRunningLogNodeDetails.labelElapsed': 'Elapsed',
+  'PC.Pages.SystemRunningLogNodeDetails.labelStartTime': 'Start Time',
+  'PC.Pages.SystemRunningLogNodeDetails.labelEndTime': 'End Time',
+  'PC.Pages.AppDevDataResourceList.defaultDescPlugin':
     'Plugin resource for specific functions and services',
-  'NuwaxPC.Pages.AppDevDataResourceList.defaultDescWorkflow':
+  'PC.Pages.AppDevDataResourceList.defaultDescWorkflow':
     'Workflow resource for complex business orchestration',
-  'NuwaxPC.Pages.AppDevDataResourceList.defaultDescDataSource': 'Data source',
-  'NuwaxPC.Pages.AppDevDataResourceList.deleteTargetNotFound':
+  'PC.Pages.AppDevDataResourceList.defaultDescDataSource': 'Data source',
+  'PC.Pages.AppDevDataResourceList.deleteTargetNotFound':
     'Data source to delete was not found',
-  'NuwaxPC.Pages.AppDevDataResourceList.deleteConfirmContent':
+  'PC.Pages.AppDevDataResourceList.deleteConfirmContent':
     'Once deleted, this page will lose access to the data resource.',
-  'NuwaxPC.Pages.AppDevDataResourceList.confirmDelete': 'Confirm Delete',
-  'NuwaxPC.Pages.AppDevDataResourceList.cancel': 'Cancel',
-  'NuwaxPC.Pages.AppDevDataResourceList.delete': 'Delete',
-  'NuwaxPC.Pages.AntvX6EventHandlers.cannotPasteLoopNode':
+  'PC.Pages.AppDevDataResourceList.confirmDelete': 'Confirm Delete',
+  'PC.Pages.AppDevDataResourceList.cancel': 'Cancel',
+  'PC.Pages.AppDevDataResourceList.delete': 'Delete',
+  'PC.Pages.AntvX6EventHandlers.cannotPasteLoopNode':
     'Loop nodes cannot be pasted',
-  'NuwaxPC.Pages.AntvX6EventHandlers.cannotPasteStartNode':
+  'PC.Pages.AntvX6EventHandlers.cannotPasteStartNode':
     'Start node cannot be pasted',
-  'NuwaxPC.Pages.AntvX6EventHandlers.cannotPasteEndNode':
+  'PC.Pages.AntvX6EventHandlers.cannotPasteEndNode':
     'End node cannot be pasted',
-  'NuwaxPC.Pages.AntvX6EventHandlers.unsupportedCopyNodeType':
+  'PC.Pages.AntvX6EventHandlers.unsupportedCopyNodeType':
     'This node type does not support copy',
-  'NuwaxPC.Pages.AntvX6EventHandlers.nodeCopied': 'Node copied',
-  'NuwaxPC.Pages.AntvX6EventHandlers.copyNodeFirst': 'Please copy a node first',
-  'NuwaxPC.Pages.AntvX6EventHandlers.cannotDeleteLoopEdge':
+  'PC.Pages.AntvX6EventHandlers.nodeCopied': 'Node copied',
+  'PC.Pages.AntvX6EventHandlers.copyNodeFirst': 'Please copy a node first',
+  'PC.Pages.AntvX6EventHandlers.cannotDeleteLoopEdge':
     'Loop node edges cannot be deleted',
-  'NuwaxPC.Pages.AntvX6EventHandlers.cannotDeleteStartEndNodes':
+  'PC.Pages.AntvX6EventHandlers.cannotDeleteStartEndNodes':
     'Start and end nodes cannot be deleted',
-  'NuwaxPC.Pages.AntvX6EventHandlers.deleteLoopNodeConfirmTitle':
+  'PC.Pages.AntvX6EventHandlers.deleteLoopNodeConfirmTitle':
     'Are you sure you want to delete the loop node?',
-  'NuwaxPC.Pages.AntvX6EventHandlers.confirm': 'Confirm',
-  'NuwaxPC.Pages.AntvX6EventHandlers.cancel': 'Cancel',
-  'NuwaxPC.Pages.SystemMenuFormModal.addSuccess': 'Menu created successfully',
-  'NuwaxPC.Pages.SystemMenuFormModal.updateSuccess':
-    'Menu updated successfully',
-  'NuwaxPC.Pages.SystemMenuFormModal.sourceSystemBuiltIn': 'System Built-in',
-  'NuwaxPC.Pages.SystemMenuFormModal.sourceUserDefined': 'User Defined',
-  'NuwaxPC.Pages.SystemMenuFormModal.openInCurrentTab': 'Open in App',
-  'NuwaxPC.Pages.SystemMenuFormModal.openInNewTab': 'Open in New Tab',
-  'NuwaxPC.Pages.SystemMenuFormModal.imageTypeInvalid':
+  'PC.Pages.AntvX6EventHandlers.confirm': 'Confirm',
+  'PC.Pages.AntvX6EventHandlers.cancel': 'Cancel',
+  'PC.Pages.SystemMenuFormModal.addSuccess': 'Menu created successfully',
+  'PC.Pages.SystemMenuFormModal.updateSuccess': 'Menu updated successfully',
+  'PC.Pages.SystemMenuFormModal.sourceSystemBuiltIn': 'System Built-in',
+  'PC.Pages.SystemMenuFormModal.sourceUserDefined': 'User Defined',
+  'PC.Pages.SystemMenuFormModal.openInCurrentTab': 'Open in App',
+  'PC.Pages.SystemMenuFormModal.openInNewTab': 'Open in New Tab',
+  'PC.Pages.SystemMenuFormModal.imageTypeInvalid':
     'Please upload JPG, JPEG, PNG, or SVG image files',
-  'NuwaxPC.Pages.SystemMenuFormModal.imageSizeInvalid':
+  'PC.Pages.SystemMenuFormModal.imageSizeInvalid':
     'Image size cannot exceed 2MB',
-  'NuwaxPC.Pages.SystemMenuFormModal.editTitle': 'Edit Menu',
-  'NuwaxPC.Pages.SystemMenuFormModal.createTitle': 'Create Menu',
-  'NuwaxPC.Pages.SystemMenuFormModal.save': 'Save',
-  'NuwaxPC.Pages.SystemMenuFormModal.create': 'Create',
-  'NuwaxPC.Pages.SystemMenuFormModal.icon': 'Icon',
-  'NuwaxPC.Pages.SystemMenuFormModal.menuName': 'Menu Name',
-  'NuwaxPC.Pages.SystemMenuFormModal.menuNameRequired':
-    'Please enter menu name',
-  'NuwaxPC.Pages.SystemMenuFormModal.menuNamePlaceholder':
-    'Please enter menu name',
-  'NuwaxPC.Pages.SystemMenuFormModal.parentMenu': 'Parent Menu',
-  'NuwaxPC.Pages.SystemMenuFormModal.parentMenuPlaceholder':
+  'PC.Pages.SystemMenuFormModal.editTitle': 'Edit Menu',
+  'PC.Pages.SystemMenuFormModal.createTitle': 'Create Menu',
+  'PC.Pages.SystemMenuFormModal.save': 'Save',
+  'PC.Pages.SystemMenuFormModal.create': 'Create',
+  'PC.Pages.SystemMenuFormModal.icon': 'Icon',
+  'PC.Pages.SystemMenuFormModal.menuName': 'Menu Name',
+  'PC.Pages.SystemMenuFormModal.menuNameRequired': 'Please enter menu name',
+  'PC.Pages.SystemMenuFormModal.menuNamePlaceholder': 'Please enter menu name',
+  'PC.Pages.SystemMenuFormModal.parentMenu': 'Parent Menu',
+  'PC.Pages.SystemMenuFormModal.parentMenuPlaceholder':
     'Please select parent menu (None)',
-  'NuwaxPC.Pages.SystemMenuFormModal.routePath': 'Route Path',
-  'NuwaxPC.Pages.SystemMenuFormModal.routePathPatternInvalid':
+  'PC.Pages.SystemMenuFormModal.routePath': 'Route Path',
+  'PC.Pages.SystemMenuFormModal.routePathPatternInvalid':
     'Route path/URL can only contain letters, numbers, slashes, and common URL symbols (? # & = . _ - : % @ + space), e.g. /system/menu or https://example.com',
-  'NuwaxPC.Pages.SystemMenuFormModal.routePathLengthInvalid':
+  'PC.Pages.SystemMenuFormModal.routePathLengthInvalid':
     'Route path length cannot exceed 500 characters',
-  'NuwaxPC.Pages.SystemMenuFormModal.routePathTipStatic':
+  'PC.Pages.SystemMenuFormModal.routePathTipStatic':
     'Static route, e.g. /system/menu',
-  'NuwaxPC.Pages.SystemMenuFormModal.routePathTipDynamic':
+  'PC.Pages.SystemMenuFormModal.routePathTipDynamic':
     'Dynamic route, e.g. /space/:spaceId/develop',
-  'NuwaxPC.Pages.SystemMenuFormModal.routePathTipExternal':
+  'PC.Pages.SystemMenuFormModal.routePathTipExternal':
     'External URL, e.g. https://example.com',
-  'NuwaxPC.Pages.SystemMenuFormModal.routePathPlaceholder':
+  'PC.Pages.SystemMenuFormModal.routePathPlaceholder':
     'Please enter route path, e.g. /system/menu',
-  'NuwaxPC.Pages.SystemMenuFormModal.externalOpenType':
-    'External Link Open Type',
-  'NuwaxPC.Pages.SystemMenuFormModal.openTypePlaceholder':
-    'Please select open type',
-  'NuwaxPC.Pages.SystemMenuFormModal.source': 'Source',
-  'NuwaxPC.Pages.SystemMenuFormModal.sourcePlaceholder': 'Please select source',
-  'NuwaxPC.Pages.SystemMenuFormModal.sort': 'Sort',
-  'NuwaxPC.Pages.SystemMenuFormModal.sortPlaceholder': 'Please enter sort',
-  'NuwaxPC.Pages.SystemMenuFormModal.enable': 'Enable',
-  'NuwaxPC.Pages.SystemMenuFormModal.enableTooltip':
-    'Enable or disable this menu',
-  'NuwaxPC.Pages.SystemMenuFormModal.enabled': 'Enabled',
-  'NuwaxPC.Pages.SystemMenuFormModal.disabled': 'Disabled',
-  'NuwaxPC.Pages.SystemMenuFormModal.description': 'Description',
-  'NuwaxPC.Pages.SystemMenuFormModal.descriptionPlaceholder':
+  'PC.Pages.SystemMenuFormModal.externalOpenType': 'External Link Open Type',
+  'PC.Pages.SystemMenuFormModal.openTypePlaceholder': 'Please select open type',
+  'PC.Pages.SystemMenuFormModal.source': 'Source',
+  'PC.Pages.SystemMenuFormModal.sourcePlaceholder': 'Please select source',
+  'PC.Pages.SystemMenuFormModal.sort': 'Sort',
+  'PC.Pages.SystemMenuFormModal.sortPlaceholder': 'Please enter sort',
+  'PC.Pages.SystemMenuFormModal.enable': 'Enable',
+  'PC.Pages.SystemMenuFormModal.enableTooltip': 'Enable or disable this menu',
+  'PC.Pages.SystemMenuFormModal.enabled': 'Enabled',
+  'PC.Pages.SystemMenuFormModal.disabled': 'Disabled',
+  'PC.Pages.SystemMenuFormModal.description': 'Description',
+  'PC.Pages.SystemMenuFormModal.descriptionPlaceholder':
     'Please enter description',
-  'NuwaxPC.Pages.SystemMenuFormModal.bindResourceCode': 'Bind Resource Codes',
-  'NuwaxPC.Pages.SystemMenuFormModal.bindResourceCodeTooltip':
+  'PC.Pages.SystemMenuFormModal.bindResourceCode': 'Bind Resource Codes',
+  'PC.Pages.SystemMenuFormModal.bindResourceCodeTooltip':
     'Select resource permissions accessible by this menu',
-  'NuwaxPC.Pages.SystemMenuManage.deleteSuccess': 'Deleted successfully',
-  'NuwaxPC.Pages.SystemMenuManage.deleteMenuTitle': 'Delete Menu',
-  'NuwaxPC.Pages.SystemMenuManage.deleteMenuConfirm':
+  'PC.Pages.SystemMenuManage.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SystemMenuManage.deleteMenuTitle': 'Delete Menu',
+  'PC.Pages.SystemMenuManage.deleteMenuConfirm':
     'Are you sure to delete menu "{0}"?',
-  'NuwaxPC.Pages.SystemMenuManage.sortUpdateSuccess':
-    'Sort updated successfully',
-  'NuwaxPC.Pages.SystemMenuManage.dragFailedRetry': 'Drag failed, please retry',
-  'NuwaxPC.Pages.SystemMenuManage.columnSort': 'Sort',
-  'NuwaxPC.Pages.SystemMenuManage.columnMenuName': 'Menu Name',
-  'NuwaxPC.Pages.SystemMenuManage.columnCode': 'Code',
-  'NuwaxPC.Pages.SystemMenuManage.columnRoutePath': 'Route Path',
-  'NuwaxPC.Pages.SystemMenuManage.columnDescription': 'Description',
-  'NuwaxPC.Pages.SystemMenuManage.columnEnabled': 'Enabled',
-  'NuwaxPC.Pages.SystemMenuManage.enabled': 'Enable',
-  'NuwaxPC.Pages.SystemMenuManage.disabled': 'Disable',
-  'NuwaxPC.Pages.SystemMenuManage.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemMenuManage.noPermission': 'No permission',
-  'NuwaxPC.Pages.SystemMenuManage.actionAdd': 'Add',
-  'NuwaxPC.Pages.SystemMenuManage.actionEdit': 'Edit',
-  'NuwaxPC.Pages.SystemMenuManage.actionDelete': 'Delete',
-  'NuwaxPC.Pages.SystemMenuManage.systemBuiltinDeleteDisabled':
+  'PC.Pages.SystemMenuManage.sortUpdateSuccess': 'Sort updated successfully',
+  'PC.Pages.SystemMenuManage.dragFailedRetry': 'Drag failed, please retry',
+  'PC.Pages.SystemMenuManage.columnSort': 'Sort',
+  'PC.Pages.SystemMenuManage.columnMenuName': 'Menu Name',
+  'PC.Pages.SystemMenuManage.columnCode': 'Code',
+  'PC.Pages.SystemMenuManage.columnRoutePath': 'Route Path',
+  'PC.Pages.SystemMenuManage.columnDescription': 'Description',
+  'PC.Pages.SystemMenuManage.columnEnabled': 'Enabled',
+  'PC.Pages.SystemMenuManage.enabled': 'Enable',
+  'PC.Pages.SystemMenuManage.disabled': 'Disable',
+  'PC.Pages.SystemMenuManage.columnAction': 'Action',
+  'PC.Pages.SystemMenuManage.noPermission': 'No permission',
+  'PC.Pages.SystemMenuManage.actionAdd': 'Add',
+  'PC.Pages.SystemMenuManage.actionEdit': 'Edit',
+  'PC.Pages.SystemMenuManage.actionDelete': 'Delete',
+  'PC.Pages.SystemMenuManage.systemBuiltinDeleteDisabled':
     'System built-in menus cannot be deleted',
-  'NuwaxPC.Pages.SystemMenuManage.pageTitle': 'Menu Management',
-  'NuwaxPC.Pages.SystemMenuManage.addMenu': 'Add Menu',
-  'NuwaxPC.Pages.SystemMenuManage.noMenuData': 'No menu data',
-  'NuwaxPC.Pages.SystemMenuPermissionModal.saveSuccess':
+  'PC.Pages.SystemMenuManage.pageTitle': 'Menu Management',
+  'PC.Pages.SystemMenuManage.addMenu': 'Add Menu',
+  'PC.Pages.SystemMenuManage.noMenuData': 'No menu data',
+  'PC.Pages.SystemMenuPermissionModal.saveSuccess':
     'Menu permissions saved successfully',
-  'NuwaxPC.Pages.SystemMenuPermissionModal.titleWithName':
+  'PC.Pages.SystemMenuPermissionModal.titleWithName':
     'Menu Permission Config - {0}',
-  'NuwaxPC.Pages.SystemMenuPermissionModal.emptyMenuData': 'No menu data',
-  'NuwaxPC.Pages.SystemMenuPermissionModal.resourceLabelWithId': 'Resource {0}',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tabModel': 'Model',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tabModelTip':
+  'PC.Pages.SystemMenuPermissionModal.emptyMenuData': 'No menu data',
+  'PC.Pages.SystemMenuPermissionModal.resourceLabelWithId': 'Resource {0}',
+  'PC.Pages.SystemMenuDataPermissionModal.tabModel': 'Model',
+  'PC.Pages.SystemMenuDataPermissionModal.tabModelTip':
     'Models require authorization before use',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tabAgent': 'Agent',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.contentMgmtTip':
+  'PC.Pages.SystemMenuDataPermissionModal.tabAgent': 'Agent',
+  'PC.Pages.SystemMenuDataPermissionModal.contentMgmtTip':
     'Enable access control in content management and publish to system square before authorizing here',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tabWebApp': 'Web Application',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tabDevPermission':
+  'PC.Pages.SystemMenuDataPermissionModal.tabWebApp': 'Web Application',
+  'PC.Pages.SystemMenuDataPermissionModal.tabDevPermission':
     'Development Permissions',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.saveSuccess':
+  'PC.Pages.SystemMenuDataPermissionModal.saveSuccess':
     'Data permissions saved successfully',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.missingTargetId':
+  'PC.Pages.SystemMenuDataPermissionModal.missingTargetId':
     'Missing ID. Unable to save data permissions',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.emptySelectedModel':
+  'PC.Pages.SystemMenuDataPermissionModal.emptySelectedModel':
     'No selected models',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.searchAgentPlaceholder':
+  'PC.Pages.SystemMenuDataPermissionModal.searchAgentPlaceholder':
     'Search agents',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.emptySelectedAgent':
+  'PC.Pages.SystemMenuDataPermissionModal.emptySelectedAgent':
     'No selected agents',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.searchWebAppPlaceholder':
+  'PC.Pages.SystemMenuDataPermissionModal.searchWebAppPlaceholder':
     'Search web applications',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.emptySelectedWebApp':
+  'PC.Pages.SystemMenuDataPermissionModal.emptySelectedWebApp':
     'No selected web applications',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tokenLimitLabel':
-    'Daily token limit',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tokenLimitTip':
+  'PC.Pages.SystemMenuDataPermissionModal.tokenLimitLabel': 'Daily token limit',
+  'PC.Pages.SystemMenuDataPermissionModal.tokenLimitTip':
     'Daily token limit. -1 means no limit',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tokenLimitPlaceholder':
+  'PC.Pages.SystemMenuDataPermissionModal.tokenLimitPlaceholder':
     'Enter daily token limit',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxSpaceCountLabel':
-    'Max workspaces',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxSpaceCountTip':
+  'PC.Pages.SystemMenuDataPermissionModal.maxSpaceCountLabel': 'Max workspaces',
+  'PC.Pages.SystemMenuDataPermissionModal.maxSpaceCountTip':
     'Maximum number of workspaces. -1 means no limit',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxAgentCountLabel':
-    'Max agents',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxAgentCountTip':
+  'PC.Pages.SystemMenuDataPermissionModal.maxAgentCountLabel': 'Max agents',
+  'PC.Pages.SystemMenuDataPermissionModal.maxAgentCountTip':
     'Maximum number of agents. -1 means no limit',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxWebAppCountLabel':
+  'PC.Pages.SystemMenuDataPermissionModal.maxWebAppCountLabel':
     'Max web applications',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxWebAppCountTip':
+  'PC.Pages.SystemMenuDataPermissionModal.maxWebAppCountTip':
     'Maximum number of web applications. -1 means no limit',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountLabel':
+  'PC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountLabel':
     'Max knowledge bases',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountTip':
+  'PC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountTip':
     'Maximum number of knowledge bases. -1 means no limit',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbLabel':
+  'PC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbLabel':
     'Knowledge storage limit (GB)',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbTip':
+  'PC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbTip':
     '-1 means no limit, 0 means no permission, precision is 0.001GB, 1GB=1024MB, 1MB=1024KB',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxDataTableCountLabel':
+  'PC.Pages.SystemMenuDataPermissionModal.maxDataTableCountLabel':
     'Max data tables',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxDataTableCountTip':
+  'PC.Pages.SystemMenuDataPermissionModal.maxDataTableCountTip':
     'Maximum number of data tables. -1 means no limit',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountLabel':
+  'PC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountLabel':
     'Max scheduled tasks',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountTip':
+  'PC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountTip':
     'Maximum number of scheduled tasks. -1 means no limit',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentMemoryGbLabel':
+  'PC.Pages.SystemMenuDataPermissionModal.agentMemoryGbLabel':
     'Agent memory (GB)',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentMemoryGbTip':
+  'PC.Pages.SystemMenuDataPermissionModal.agentMemoryGbTip':
     'Agent memory (GB). Leave empty to use default 4GB',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentCpuCoresLabel':
+  'PC.Pages.SystemMenuDataPermissionModal.agentCpuCoresLabel':
     'Agent CPU cores',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentCpuCoresTip':
+  'PC.Pages.SystemMenuDataPermissionModal.agentCpuCoresTip':
     'Agent CPU cores (leave empty to use default value)',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitLabel':
+  'PC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitLabel':
     'General agent daily conversation limit',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitTip':
+  'PC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitTip':
     'General agent daily conversations. -1 means no limit',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitLabel':
+  'PC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitLabel':
     'Web app development daily conversation limit',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitTip':
+  'PC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitTip':
     'Web app development daily conversations. -1 means no limit',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.titleWithName':
+  'PC.Pages.SystemMenuDataPermissionModal.titleWithName':
     'Data Permission Settings - {0}',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.itemAdd': 'Add',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.itemAdded': 'Added',
-  'NuwaxPC.Pages.SystemMenuDataPermissionModal.itemRemove': 'Remove',
-  'NuwaxPC.Pages.AppDevPreview.devServerUrlUnavailable':
+  'PC.Pages.SystemMenuDataPermissionModal.itemAdd': 'Add',
+  'PC.Pages.SystemMenuDataPermissionModal.itemAdded': 'Added',
+  'PC.Pages.SystemMenuDataPermissionModal.itemRemove': 'Remove',
+  'PC.Pages.AppDevPreview.devServerUrlUnavailable':
     'Development server URL is unavailable',
-  'NuwaxPC.Pages.AppDevPreview.retryFailedCheckNetwork':
+  'PC.Pages.AppDevPreview.retryFailedCheckNetwork':
     'Retry failed, please check network connection',
-  'NuwaxPC.Pages.AppDevPreview.serverErrorWithCode': 'Server Error ({0})',
-  'NuwaxPC.Pages.AppDevPreview.serverStartFailedWithCode':
+  'PC.Pages.AppDevPreview.serverErrorWithCode': 'Server Error ({0})',
+  'PC.Pages.AppDevPreview.serverStartFailedWithCode':
     'Development server start failed ({0})',
-  'NuwaxPC.Pages.AppDevPreview.starting': 'Starting',
-  'NuwaxPC.Pages.AppDevPreview.importingAndRestarting':
+  'PC.Pages.AppDevPreview.starting': 'Starting',
+  'PC.Pages.AppDevPreview.importingAndRestarting':
     'Importing project and restarting development server, please wait...',
-  'NuwaxPC.Pages.AppDevPreview.startingEnvironment':
+  'PC.Pages.AppDevPreview.startingEnvironment':
     'Starting development environment, please wait...',
-  'NuwaxPC.Pages.AppDevPreview.developingPleaseWait':
-    'Generating, please wait...',
-  'NuwaxPC.Pages.AppDevPreview.refreshing': 'Refreshing...',
-  'NuwaxPC.Pages.AppDevPreview.refresh': 'Refresh',
-  'NuwaxPC.Pages.AppDevPreview.restartServer': 'Restart Server',
-  'NuwaxPC.Pages.AppDevPreview.restarting': 'Restarting...',
-  'NuwaxPC.Pages.AppDevPreview.restartService': 'Restart Service',
-  'NuwaxPC.Pages.AppDevPreview.saveOrResetBeforeRefresh':
+  'PC.Pages.AppDevPreview.developingPleaseWait': 'Generating, please wait...',
+  'PC.Pages.AppDevPreview.refreshing': 'Refreshing...',
+  'PC.Pages.AppDevPreview.refresh': 'Refresh',
+  'PC.Pages.AppDevPreview.restartServer': 'Restart Server',
+  'PC.Pages.AppDevPreview.restarting': 'Restarting...',
+  'PC.Pages.AppDevPreview.restartService': 'Restart Service',
+  'PC.Pages.AppDevPreview.saveOrResetBeforeRefresh':
     'Please save or reset changes before refreshing preview',
-  'NuwaxPC.Pages.AppDevPreview.previewLoadFailedCheckServerNetwork':
+  'PC.Pages.AppDevPreview.previewLoadFailedCheckServerNetwork':
     'Preview failed to load, please check development server status or network connection',
-  'NuwaxPC.Pages.AppDevPreview.projectIdMissingCannotSave':
+  'PC.Pages.AppDevPreview.projectIdMissingCannotSave':
     'Missing project ID, unable to save',
-  'NuwaxPC.Pages.AppDevPreview.noPendingChanges': 'No pending changes',
-  'NuwaxPC.Pages.AppDevPreview.processFileError': 'Error processing file {0}',
-  'NuwaxPC.Pages.AppDevPreview.saveSuccess': 'Saved successfully',
-  'NuwaxPC.Pages.AppDevPreview.saveFailedCheckConsole':
+  'PC.Pages.AppDevPreview.noPendingChanges': 'No pending changes',
+  'PC.Pages.AppDevPreview.processFileError': 'Error processing file {0}',
+  'PC.Pages.AppDevPreview.saveSuccess': 'Saved successfully',
+  'PC.Pages.AppDevPreview.saveFailedCheckConsole':
     'Save failed, please check console error messages',
-  'NuwaxPC.Pages.AppDevPreview.viewFullErrorInfo': 'View full error details',
-  'NuwaxPC.Pages.AppDevPreview.unsavedChanges': 'Unsaved changes',
-  'NuwaxPC.Pages.AppDevPreview.reset': 'Reset',
-  'NuwaxPC.Pages.AppDevPreview.save': 'Save',
-  'NuwaxPC.Pages.AntvX6ComplexNode.none': 'None',
-  'NuwaxPC.Pages.AntvX6ComplexNode.skills': 'Skills',
-  'NuwaxPC.Pages.AntvX6ComplexNode.input': 'Input',
-  'NuwaxPC.Pages.AntvX6ComplexNode.systemPromptTitle': 'System Prompt',
-  'NuwaxPC.Pages.AntvX6ComplexNode.systemPromptTooltip':
+  'PC.Pages.AppDevPreview.viewFullErrorInfo': 'View full error details',
+  'PC.Pages.AppDevPreview.unsavedChanges': 'Unsaved changes',
+  'PC.Pages.AppDevPreview.reset': 'Reset',
+  'PC.Pages.AppDevPreview.save': 'Save',
+  'PC.Pages.AntvX6ComplexNode.none': 'None',
+  'PC.Pages.AntvX6ComplexNode.skills': 'Skills',
+  'PC.Pages.AntvX6ComplexNode.input': 'Input',
+  'PC.Pages.AntvX6ComplexNode.systemPromptTitle': 'System Prompt',
+  'PC.Pages.AntvX6ComplexNode.systemPromptTooltip':
     'Provide system-level instructions for the conversation, such as role setting and response logic.',
-  'NuwaxPC.Pages.AntvX6ComplexNode.systemPromptPlaceholder':
+  'PC.Pages.AntvX6ComplexNode.systemPromptPlaceholder':
     'System prompt can reference input variables with {{var}}, {{var.child}}, or {{var[index]}}.',
-  'NuwaxPC.Pages.AntvX6ComplexNode.userPromptTitle': 'User Prompt',
-  'NuwaxPC.Pages.AntvX6ComplexNode.userPromptTooltip':
+  'PC.Pages.AntvX6ComplexNode.userPromptTitle': 'User Prompt',
+  'PC.Pages.AntvX6ComplexNode.userPromptTooltip':
     'Provide user instructions to the model, such as queries or text-based questions.',
-  'NuwaxPC.Pages.AntvX6ComplexNode.userPromptPlaceholder':
+  'PC.Pages.AntvX6ComplexNode.userPromptPlaceholder':
     'User prompt can reference input variables with {{var}}, {{var.child}}, or {{var[index]}}.',
-  'NuwaxPC.Pages.AntvX6ComplexNode.output': 'Output',
-  'NuwaxPC.Pages.AntvX6ComplexNode.promptOptimizeTitle': 'Prompt Optimization',
-  'NuwaxPC.Pages.AntvX6ComplexNode.intentMatchTitle': 'Intent Match',
-  'NuwaxPC.Pages.AntvX6ComplexNode.extraPromptTitle': 'Extra Prompt',
-  'NuwaxPC.Pages.AntvX6ComplexNode.extraPromptPlaceholder':
+  'PC.Pages.AntvX6ComplexNode.output': 'Output',
+  'PC.Pages.AntvX6ComplexNode.promptOptimizeTitle': 'Prompt Optimization',
+  'PC.Pages.AntvX6ComplexNode.intentMatchTitle': 'Intent Match',
+  'PC.Pages.AntvX6ComplexNode.extraPromptTitle': 'Extra Prompt',
+  'PC.Pages.AntvX6ComplexNode.extraPromptPlaceholder':
     'Support additional system prompts, for example, adding detailed examples for intent options to improve matching success.',
-  'NuwaxPC.Pages.AntvX6ComplexNode.questionTitle': 'Question',
-  'NuwaxPC.Pages.AntvX6ComplexNode.questionPlaceholder':
+  'PC.Pages.AntvX6ComplexNode.questionTitle': 'Question',
+  'PC.Pages.AntvX6ComplexNode.questionPlaceholder':
     'You can reference input variables with {{var}}.',
-  'NuwaxPC.Pages.AntvX6ComplexNode.answerTypeLabel': 'Answer Type',
-  'NuwaxPC.Pages.AntvX6ComplexNode.answerTypeText': 'Direct Answer',
-  'NuwaxPC.Pages.AntvX6ComplexNode.answerTypeSelect': 'Option Answer',
-  'NuwaxPC.Pages.AntvX6ComplexNode.optionContentTitle': 'Set Option Content',
-  'NuwaxPC.Pages.AntvX6ComplexNode.requestMethodAndPath':
-    'Request Method and Path',
-  'NuwaxPC.Pages.AntvX6ComplexNode.requestMethodPlaceholder': 'Request Method',
-  'NuwaxPC.Pages.AntvX6ComplexNode.urlPlaceholder': 'Please enter URL',
-  'NuwaxPC.Pages.AntvX6ComplexNode.requestContentTypeLabel':
-    'Request Content Type',
-  'NuwaxPC.Pages.AntvX6ComplexNode.requestTimeoutLabel': 'Request Timeout',
-  'NuwaxPC.Pages.AntvX6ComplexNode.requestTimeoutPlaceholder':
+  'PC.Pages.AntvX6ComplexNode.answerTypeLabel': 'Answer Type',
+  'PC.Pages.AntvX6ComplexNode.answerTypeText': 'Direct Answer',
+  'PC.Pages.AntvX6ComplexNode.answerTypeSelect': 'Option Answer',
+  'PC.Pages.AntvX6ComplexNode.optionContentTitle': 'Set Option Content',
+  'PC.Pages.AntvX6ComplexNode.requestMethodAndPath': 'Request Method and Path',
+  'PC.Pages.AntvX6ComplexNode.requestMethodPlaceholder': 'Request Method',
+  'PC.Pages.AntvX6ComplexNode.urlPlaceholder': 'Please enter URL',
+  'PC.Pages.AntvX6ComplexNode.requestContentTypeLabel': 'Request Content Type',
+  'PC.Pages.AntvX6ComplexNode.requestTimeoutLabel': 'Request Timeout',
+  'PC.Pages.AntvX6ComplexNode.requestTimeoutPlaceholder':
     'Please enter timeout duration',
-  'NuwaxPC.Pages.AntvX6ComplexNode.inputParams': 'Input Params',
-  'NuwaxPC.Pages.AntvX6ComplexNode.outputParams': 'Output Params',
-  'NuwaxPC.Pages.AntvX6Database.addCondition': 'Add Condition',
-  'NuwaxPC.Pages.AntvX6Database.and': 'AND',
-  'NuwaxPC.Pages.AntvX6Database.deleteCondition': 'Delete Condition',
-  'NuwaxPC.Pages.AntvX6Database.emptyConditionData':
-    'Current query data is empty',
-  'NuwaxPC.Pages.AntvX6Database.generateSqlTitle': 'Generate SQL Statement',
-  'NuwaxPC.Pages.AntvX6Database.or': 'OR',
-  'NuwaxPC.Pages.AntvX6Database.queryCondition': 'Query Condition',
-  'NuwaxPC.Pages.AntvX6Database.queryLimit': 'Query Limit',
-  'NuwaxPC.Pages.AntvX6Database.queryLimitPlaceholder':
-    'Please enter query limit',
-  'NuwaxPC.Pages.AntvX6Database.selectPlaceholder': 'Please select',
-  'NuwaxPC.Pages.AntvX6Database.selectUpdateFields': 'Select Update Fields',
-  'NuwaxPC.Pages.AntvX6Database.sqlPlaceholder':
+  'PC.Pages.AntvX6ComplexNode.inputParams': 'Input Params',
+  'PC.Pages.AntvX6ComplexNode.outputParams': 'Output Params',
+  'PC.Pages.AntvX6Database.addCondition': 'Add Condition',
+  'PC.Pages.AntvX6Database.and': 'AND',
+  'PC.Pages.AntvX6Database.deleteCondition': 'Delete Condition',
+  'PC.Pages.AntvX6Database.emptyConditionData': 'Current query data is empty',
+  'PC.Pages.AntvX6Database.generateSqlTitle': 'Generate SQL Statement',
+  'PC.Pages.AntvX6Database.or': 'OR',
+  'PC.Pages.AntvX6Database.queryCondition': 'Query Condition',
+  'PC.Pages.AntvX6Database.queryLimit': 'Query Limit',
+  'PC.Pages.AntvX6Database.queryLimitPlaceholder': 'Please enter query limit',
+  'PC.Pages.AntvX6Database.selectPlaceholder': 'Please select',
+  'PC.Pages.AntvX6Database.selectUpdateFields': 'Select Update Fields',
+  'PC.Pages.AntvX6Database.sqlPlaceholder':
     'You can reference output variables with {{var}}, {{var.child}}, and {{var[index]}}.',
-  'NuwaxPC.Pages.AntvX6Database.table': 'Data Table',
-  'NuwaxPC.Pages.AntvX6Database.updateCondition': 'Update Condition',
-  'NuwaxPC.Pages.AntvX6Database.variableValue': 'Variable Value',
-  'NuwaxPC.Pages.AntvX6VariableAggregation.noDescription': 'No description',
-  'NuwaxPC.Pages.AntvX6VariableAggregation.noUpstreamNodeOrParams':
+  'PC.Pages.AntvX6Database.table': 'Data Table',
+  'PC.Pages.AntvX6Database.updateCondition': 'Update Condition',
+  'PC.Pages.AntvX6Database.variableValue': 'Variable Value',
+  'PC.Pages.AntvX6VariableAggregation.noDescription': 'No description',
+  'PC.Pages.AntvX6VariableAggregation.noUpstreamNodeOrParams':
     'No upstream node linked or upstream node has no parameters',
-  'NuwaxPC.Pages.AntvX6VariableAggregation.selectVariable': 'Select variable',
-  'NuwaxPC.Pages.AntvX6VariableAggregation.groupNamePlaceholder': 'Group name',
-  'NuwaxPC.Pages.AntvX6VariableAggregation.emptyGroupInputHint':
+  'PC.Pages.AntvX6VariableAggregation.selectVariable': 'Select variable',
+  'PC.Pages.AntvX6VariableAggregation.groupNamePlaceholder': 'Group name',
+  'PC.Pages.AntvX6VariableAggregation.emptyGroupInputHint':
     'Click + to add variable reference',
-  'NuwaxPC.Pages.AntvX6VariableAggregation.strategyFirstNonNull':
+  'PC.Pages.AntvX6VariableAggregation.strategyFirstNonNull':
     'Return the first non-null value in each group',
-  'NuwaxPC.Pages.AntvX6VariableAggregation.strategyTitle':
-    'Aggregation Strategy',
-  'NuwaxPC.Pages.AntvX6VariableAggregation.groupConfigTitle':
-    'Group Configuration',
-  'NuwaxPC.Pages.AntvX6VariableAggregation.emptyGroupHint':
-    'Click + to add group',
-  'NuwaxPC.Pages.AntvX6VariableAggregation.outputTitle': 'Output',
-  'NuwaxPC.Pages.AntvX6NodeItem.add': 'Add',
-  'NuwaxPC.Pages.AntvX6NodeItem.addGroup': 'Add Group',
-  'NuwaxPC.Pages.AntvX6NodeItem.aggregationStrategy': 'Aggregation Strategy',
-  'NuwaxPC.Pages.AntvX6NodeItem.arrayJoinSymbolDescription':
+  'PC.Pages.AntvX6VariableAggregation.strategyTitle': 'Aggregation Strategy',
+  'PC.Pages.AntvX6VariableAggregation.groupConfigTitle': 'Group Configuration',
+  'PC.Pages.AntvX6VariableAggregation.emptyGroupHint': 'Click + to add group',
+  'PC.Pages.AntvX6VariableAggregation.outputTitle': 'Output',
+  'PC.Pages.AntvX6NodeItem.add': 'Add',
+  'PC.Pages.AntvX6NodeItem.addGroup': 'Add Group',
+  'PC.Pages.AntvX6NodeItem.aggregationStrategy': 'Aggregation Strategy',
+  'PC.Pages.AntvX6NodeItem.arrayJoinSymbolDescription':
     'Use symbols below to auto-join each item in an array.',
-  'NuwaxPC.Pages.AntvX6NodeItem.arrayJoinSymbolSetting':
+  'PC.Pages.AntvX6NodeItem.arrayJoinSymbolSetting':
     'Array Join Symbol Settings',
-  'NuwaxPC.Pages.AntvX6NodeItem.code': 'Code',
-  'NuwaxPC.Pages.AntvX6NodeItem.comma': 'Comma (,)',
-  'NuwaxPC.Pages.AntvX6NodeItem.delimiter': 'Delimiter',
-  'NuwaxPC.Pages.AntvX6NodeItem.firstNonNullOfEachGroup':
+  'PC.Pages.AntvX6NodeItem.code': 'Code',
+  'PC.Pages.AntvX6NodeItem.comma': 'Comma (,)',
+  'PC.Pages.AntvX6NodeItem.delimiter': 'Delimiter',
+  'PC.Pages.AntvX6NodeItem.firstNonNullOfEachGroup':
     'Return the first non-null value in each group',
-  'NuwaxPC.Pages.AntvX6NodeItem.fullStop': 'Full Stop (.)',
-  'NuwaxPC.Pages.AntvX6NodeItem.groupConfig': 'Group Configuration',
-  'NuwaxPC.Pages.AntvX6NodeItem.inputVariablePlaceholder':
+  'PC.Pages.AntvX6NodeItem.fullStop': 'Full Stop (.)',
+  'PC.Pages.AntvX6NodeItem.groupConfig': 'Group Configuration',
+  'PC.Pages.AntvX6NodeItem.inputVariablePlaceholder':
     'You can reference input variables with {{var}}.',
-  'NuwaxPC.Pages.AntvX6NodeItem.intermediateVariable': 'Intermediate Variable',
-  'NuwaxPC.Pages.AntvX6NodeItem.intermediateVariableTooltip':
+  'PC.Pages.AntvX6NodeItem.intermediateVariable': 'Intermediate Variable',
+  'PC.Pages.AntvX6NodeItem.intermediateVariableTooltip':
     'Variables can be shared across loop iterations and used to pass values between iterations.',
-  'NuwaxPC.Pages.AntvX6NodeItem.joinSymbol': 'Join Symbol',
-  'NuwaxPC.Pages.AntvX6NodeItem.loopArray': 'Loop Array',
-  'NuwaxPC.Pages.AntvX6NodeItem.loopSetting': 'Loop Settings',
-  'NuwaxPC.Pages.AntvX6NodeItem.loopSettingTooltip':
+  'PC.Pages.AntvX6NodeItem.joinSymbol': 'Join Symbol',
+  'PC.Pages.AntvX6NodeItem.loopArray': 'Loop Array',
+  'PC.Pages.AntvX6NodeItem.loopSetting': 'Loop Settings',
+  'PC.Pages.AntvX6NodeItem.loopSettingTooltip':
     'If an array is referenced, loop count equals the array length; if a fixed count is set, it uses that count; for infinite loop, combine with the "Break Loop" node.',
-  'NuwaxPC.Pages.AntvX6NodeItem.loopTimes': 'Loop Times',
-  'NuwaxPC.Pages.AntvX6NodeItem.loopTimesPlaceholder':
+  'PC.Pages.AntvX6NodeItem.loopTimes': 'Loop Times',
+  'PC.Pages.AntvX6NodeItem.loopTimesPlaceholder':
     'Please enter loop times as a positive integer',
-  'NuwaxPC.Pages.AntvX6NodeItem.newline': 'Newline (\\n)',
-  'NuwaxPC.Pages.AntvX6NodeItem.optionNamePlaceholder': 'Option Name',
-  'NuwaxPC.Pages.AntvX6NodeItem.optionValuePlaceholder': 'Option Value',
-  'NuwaxPC.Pages.AntvX6NodeItem.outputContent': 'Output Content',
-  'NuwaxPC.Pages.AntvX6NodeItem.outputContentPlaceholder':
+  'PC.Pages.AntvX6NodeItem.newline': 'Newline (\\n)',
+  'PC.Pages.AntvX6NodeItem.optionNamePlaceholder': 'Option Name',
+  'PC.Pages.AntvX6NodeItem.optionValuePlaceholder': 'Option Value',
+  'PC.Pages.AntvX6NodeItem.outputContent': 'Output Content',
+  'PC.Pages.AntvX6NodeItem.outputContentPlaceholder':
     'You can reference output variables with {{var}}, {{var.child}}, and {{var[index]}}.',
-  'NuwaxPC.Pages.AntvX6NodeItem.outputContentTooltip':
+  'PC.Pages.AntvX6NodeItem.outputContentTooltip':
     'You can reorganize output content in the input below. The model will prioritize this content.',
-  'NuwaxPC.Pages.AntvX6NodeItem.outputVariable': 'Output Variable',
-  'NuwaxPC.Pages.AntvX6NodeItem.returnText': 'Return Text',
-  'NuwaxPC.Pages.AntvX6NodeItem.returnVariable': 'Return Variable',
-  'NuwaxPC.Pages.AntvX6NodeItem.selectJoinSymbol': 'Please select join symbol',
-  'NuwaxPC.Pages.AntvX6NodeItem.selectSplitSymbol':
-    'Please select split symbol',
-  'NuwaxPC.Pages.AntvX6NodeItem.semicolon': 'Semicolon (;)',
-  'NuwaxPC.Pages.AntvX6NodeItem.setVariable': 'Set Variable',
-  'NuwaxPC.Pages.AntvX6NodeItem.getVariable': 'Get Variable',
-  'NuwaxPC.Pages.AntvX6NodeItem.space': 'Space ( )',
-  'NuwaxPC.Pages.AntvX6NodeItem.stringConcat': 'String Concat',
-  'NuwaxPC.Pages.AntvX6NodeItem.stringSplit': 'String Split',
-  'NuwaxPC.Pages.AntvX6NodeItem.tab': 'Tab (\\t)',
-  'NuwaxPC.Pages.AntvX6NodeConstants.defaultNodeName': 'Test',
-  'NuwaxPC.Pages.AntvX6NodeConstants.defaultNodeDescription': 'Test',
-  'NuwaxPC.Pages.AntvX6AutoSave.versionConflictMessage':
+  'PC.Pages.AntvX6NodeItem.outputVariable': 'Output Variable',
+  'PC.Pages.AntvX6NodeItem.returnText': 'Return Text',
+  'PC.Pages.AntvX6NodeItem.returnVariable': 'Return Variable',
+  'PC.Pages.AntvX6NodeItem.selectJoinSymbol': 'Please select join symbol',
+  'PC.Pages.AntvX6NodeItem.selectSplitSymbol': 'Please select split symbol',
+  'PC.Pages.AntvX6NodeItem.semicolon': 'Semicolon (;)',
+  'PC.Pages.AntvX6NodeItem.setVariable': 'Set Variable',
+  'PC.Pages.AntvX6NodeItem.getVariable': 'Get Variable',
+  'PC.Pages.AntvX6NodeItem.space': 'Space ( )',
+  'PC.Pages.AntvX6NodeItem.stringConcat': 'String Concat',
+  'PC.Pages.AntvX6NodeItem.stringSplit': 'String Split',
+  'PC.Pages.AntvX6NodeItem.tab': 'Tab (\\t)',
+  'PC.Pages.AntvX6NodeConstants.defaultNodeName': 'Test',
+  'PC.Pages.AntvX6NodeConstants.defaultNodeDescription': 'Test',
+  'PC.Pages.AntvX6AutoSave.versionConflictMessage':
     'Version conflict: workflow was modified in another window',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.addSuccess':
+  'PC.Pages.SystemPermissionResourceFormModal.addSuccess':
     'Resource created successfully',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.code': 'Resource Code',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.codePatternInvalid':
+  'PC.Pages.SystemPermissionResourceFormModal.code': 'Resource Code',
+  'PC.Pages.SystemPermissionResourceFormModal.codePatternInvalid':
     'Resource code must start with a letter and can only contain letters, numbers, and underscores',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.codePlaceholder':
+  'PC.Pages.SystemPermissionResourceFormModal.codePlaceholder':
     'Please enter resource code',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.codeTooltip':
+  'PC.Pages.SystemPermissionResourceFormModal.codeTooltip':
     'Resource code identifies a resource. It can be empty and will be auto-generated by system. Only letters, numbers, and underscores are allowed.',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.create': 'Create',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.createTitle':
-    'Create Resource',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.description': 'Description',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.descriptionPlaceholder':
+  'PC.Pages.SystemPermissionResourceFormModal.create': 'Create',
+  'PC.Pages.SystemPermissionResourceFormModal.createTitle': 'Create Resource',
+  'PC.Pages.SystemPermissionResourceFormModal.description': 'Description',
+  'PC.Pages.SystemPermissionResourceFormModal.descriptionPlaceholder':
     'Please enter description',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.editTitle': 'Edit Resource',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.enabled': 'Enabled',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.enabledTooltip':
+  'PC.Pages.SystemPermissionResourceFormModal.editTitle': 'Edit Resource',
+  'PC.Pages.SystemPermissionResourceFormModal.enabled': 'Enabled',
+  'PC.Pages.SystemPermissionResourceFormModal.enabledTooltip':
     'Whether to enable this resource',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.name': 'Resource Name',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.namePlaceholder':
+  'PC.Pages.SystemPermissionResourceFormModal.name': 'Resource Name',
+  'PC.Pages.SystemPermissionResourceFormModal.namePlaceholder':
     'Please enter resource name',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.nameRequired':
+  'PC.Pages.SystemPermissionResourceFormModal.nameRequired':
     'Please enter resource name',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.parentNode': 'Parent Node',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.parentNodePlaceholder':
+  'PC.Pages.SystemPermissionResourceFormModal.parentNode': 'Parent Node',
+  'PC.Pages.SystemPermissionResourceFormModal.parentNodePlaceholder':
     'Please select parent node (None)',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.routePath': 'Route Path',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.routePathLengthInvalid':
+  'PC.Pages.SystemPermissionResourceFormModal.routePath': 'Route Path',
+  'PC.Pages.SystemPermissionResourceFormModal.routePathLengthInvalid':
     'Route path length cannot exceed 500 characters',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.routePathPatternInvalid':
+  'PC.Pages.SystemPermissionResourceFormModal.routePathPatternInvalid':
     'Route path must start with a slash and can only contain letters, numbers, slashes, and common URL special characters (? # & = . _ - : % @ + space)',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.routePathPlaceholder':
+  'PC.Pages.SystemPermissionResourceFormModal.routePathPlaceholder':
     'Please enter route path, e.g. /system/menu',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.routePathTooltip':
+  'PC.Pages.SystemPermissionResourceFormModal.routePathTooltip':
     'Static route e.g. /system/menu; dynamic route e.g. /system/menu/:id',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.save': 'Save',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.sort': 'Sort',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.sortPlaceholder':
+  'PC.Pages.SystemPermissionResourceFormModal.save': 'Save',
+  'PC.Pages.SystemPermissionResourceFormModal.sort': 'Sort',
+  'PC.Pages.SystemPermissionResourceFormModal.sortPlaceholder':
     'Please enter sort',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.source': 'Source',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.sourcePlaceholder':
+  'PC.Pages.SystemPermissionResourceFormModal.source': 'Source',
+  'PC.Pages.SystemPermissionResourceFormModal.sourcePlaceholder':
     'Please select source',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.sourceSystemBuiltIn':
+  'PC.Pages.SystemPermissionResourceFormModal.sourceSystemBuiltIn':
     'System Built-in',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.sourceUserDefined':
+  'PC.Pages.SystemPermissionResourceFormModal.sourceUserDefined':
     'User Defined',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.switchDisabled': 'Disabled',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.switchEnabled': 'Enabled',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.type': 'Resource Type',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.typeComponent': 'Component',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.typeModule': 'Module',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.typePlaceholder':
+  'PC.Pages.SystemPermissionResourceFormModal.switchDisabled': 'Disabled',
+  'PC.Pages.SystemPermissionResourceFormModal.switchEnabled': 'Enabled',
+  'PC.Pages.SystemPermissionResourceFormModal.type': 'Resource Type',
+  'PC.Pages.SystemPermissionResourceFormModal.typeComponent': 'Component',
+  'PC.Pages.SystemPermissionResourceFormModal.typeModule': 'Module',
+  'PC.Pages.SystemPermissionResourceFormModal.typePlaceholder':
     'Please select resource type',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.typeRequired':
+  'PC.Pages.SystemPermissionResourceFormModal.typeRequired':
     'Please select resource type',
-  'NuwaxPC.Pages.SystemPermissionResourceFormModal.updateSuccess':
+  'PC.Pages.SystemPermissionResourceFormModal.updateSuccess':
     'Resource updated successfully',
-  'NuwaxPC.Pages.SystemPermissionResources.actionAdd': 'Add',
-  'NuwaxPC.Pages.SystemPermissionResources.actionDelete': 'Delete',
-  'NuwaxPC.Pages.SystemPermissionResources.actionEdit': 'Edit',
-  'NuwaxPC.Pages.SystemPermissionResources.addResource': 'Add Resource',
-  'NuwaxPC.Pages.SystemPermissionResources.columnAction': 'Action',
-  'NuwaxPC.Pages.SystemPermissionResources.columnCode': 'Code',
-  'NuwaxPC.Pages.SystemPermissionResources.columnDescription': 'Description',
-  'NuwaxPC.Pages.SystemPermissionResources.columnEnabled': 'Enabled',
-  'NuwaxPC.Pages.SystemPermissionResources.columnResourceName': 'Resource Name',
-  'NuwaxPC.Pages.SystemPermissionResources.columnRoutePath': 'Route Path',
-  'NuwaxPC.Pages.SystemPermissionResources.columnSort': 'Sort',
-  'NuwaxPC.Pages.SystemPermissionResources.columnType': 'Type',
-  'NuwaxPC.Pages.SystemPermissionResources.deleteResourceConfirm':
+  'PC.Pages.SystemPermissionResources.actionAdd': 'Add',
+  'PC.Pages.SystemPermissionResources.actionDelete': 'Delete',
+  'PC.Pages.SystemPermissionResources.actionEdit': 'Edit',
+  'PC.Pages.SystemPermissionResources.addResource': 'Add Resource',
+  'PC.Pages.SystemPermissionResources.columnAction': 'Action',
+  'PC.Pages.SystemPermissionResources.columnCode': 'Code',
+  'PC.Pages.SystemPermissionResources.columnDescription': 'Description',
+  'PC.Pages.SystemPermissionResources.columnEnabled': 'Enabled',
+  'PC.Pages.SystemPermissionResources.columnResourceName': 'Resource Name',
+  'PC.Pages.SystemPermissionResources.columnRoutePath': 'Route Path',
+  'PC.Pages.SystemPermissionResources.columnSort': 'Sort',
+  'PC.Pages.SystemPermissionResources.columnType': 'Type',
+  'PC.Pages.SystemPermissionResources.deleteResourceConfirm':
     'Are you sure to delete resource "{0}"?',
-  'NuwaxPC.Pages.SystemPermissionResources.deleteResourceTitle':
-    'Delete Resource',
-  'NuwaxPC.Pages.SystemPermissionResources.deleteSuccess':
-    'Deleted successfully',
-  'NuwaxPC.Pages.SystemPermissionResources.disabled': 'Disable',
-  'NuwaxPC.Pages.SystemPermissionResources.dragFailedRetry':
+  'PC.Pages.SystemPermissionResources.deleteResourceTitle': 'Delete Resource',
+  'PC.Pages.SystemPermissionResources.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SystemPermissionResources.disabled': 'Disable',
+  'PC.Pages.SystemPermissionResources.dragFailedRetry':
     'Drag failed, please retry',
-  'NuwaxPC.Pages.SystemPermissionResources.enabled': 'Enable',
-  'NuwaxPC.Pages.SystemPermissionResources.noPermission': 'No permission',
-  'NuwaxPC.Pages.SystemPermissionResources.noResourceData': 'No resource data',
-  'NuwaxPC.Pages.SystemPermissionResources.pageTitle':
+  'PC.Pages.SystemPermissionResources.enabled': 'Enable',
+  'PC.Pages.SystemPermissionResources.noPermission': 'No permission',
+  'PC.Pages.SystemPermissionResources.noResourceData': 'No resource data',
+  'PC.Pages.SystemPermissionResources.pageTitle':
     'Permission Resource Management',
-  'NuwaxPC.Pages.SystemPermissionResources.sortUpdateSuccess':
+  'PC.Pages.SystemPermissionResources.sortUpdateSuccess':
     'Sort updated successfully',
-  'NuwaxPC.Pages.SystemPermissionResources.systemBuiltinDeleteDenied':
+  'PC.Pages.SystemPermissionResources.systemBuiltinDeleteDenied':
     'System built-in resources cannot be deleted',
-  'NuwaxPC.Pages.SystemPermissionResources.systemBuiltinDisableDenied':
+  'PC.Pages.SystemPermissionResources.systemBuiltinDisableDenied':
     'System built-in resources cannot be disabled',
-  'NuwaxPC.Pages.SystemPermissionResources.systemBuiltinEditDenied':
+  'PC.Pages.SystemPermissionResources.systemBuiltinEditDenied':
     'System built-in resources cannot be edited',
-  'NuwaxPC.Pages.SystemPermissionResources.typeComponent': 'Component',
-  'NuwaxPC.Pages.SystemPermissionResources.typeModule': 'Module',
-  'NuwaxPC.Pages.AntvX6Library.defaultInputArgsDesc': 'Retrieval Keyword',
-  'NuwaxPC.Pages.AntvX6Library.knowledgeBase': 'Knowledge Base',
-  'NuwaxPC.Pages.AntvX6Library.maxRecallCount': 'Max Recall Count',
-  'NuwaxPC.Pages.AntvX6Library.maxRecallCountTooltip':
+  'PC.Pages.SystemPermissionResources.typeComponent': 'Component',
+  'PC.Pages.SystemPermissionResources.typeModule': 'Module',
+  'PC.Pages.AntvX6Library.defaultInputArgsDesc': 'Retrieval Keyword',
+  'PC.Pages.AntvX6Library.knowledgeBase': 'Knowledge Base',
+  'PC.Pages.AntvX6Library.maxRecallCount': 'Max Recall Count',
+  'PC.Pages.AntvX6Library.maxRecallCountTooltip':
     'Maximum number of paragraphs returned from the knowledge base to the model. Higher values return more content.',
-  'NuwaxPC.Pages.AntvX6Library.minMatchScore': 'Min Match Score',
-  'NuwaxPC.Pages.AntvX6Library.minMatchScoreTooltip':
+  'PC.Pages.AntvX6Library.minMatchScore': 'Min Match Score',
+  'PC.Pages.AntvX6Library.minMatchScoreTooltip':
     'Paragraphs are returned based on the configured matching score. Content below threshold is not recalled.',
-  'NuwaxPC.Pages.AntvX6Library.searchStrategy': 'Search Strategy',
-  'NuwaxPC.Pages.AntvX6Library.searchStrategyFullText': 'Full Text',
-  'NuwaxPC.Pages.AntvX6Library.searchStrategyMixed': 'Mixed',
-  'NuwaxPC.Pages.AntvX6Library.searchStrategySemantic': 'Semantic',
-  'NuwaxPC.Pages.AntvX6Library.searchStrategyTooltip':
+  'PC.Pages.AntvX6Library.searchStrategy': 'Search Strategy',
+  'PC.Pages.AntvX6Library.searchStrategyFullText': 'Full Text',
+  'PC.Pages.AntvX6Library.searchStrategyMixed': 'Mixed',
+  'PC.Pages.AntvX6Library.searchStrategySemantic': 'Semantic',
+  'PC.Pages.AntvX6Library.searchStrategyTooltip':
     'Retrieval strategy for obtaining knowledge from the knowledge base. Different strategies can improve answer accuracy and usability.',
-  'NuwaxPC.Pages.AntvX6RegisterNodes.exceptionWhen': 'On Exception',
-  'NuwaxPC.Pages.AntvX6RegisterNodes.failed': 'Run Failed',
-  'NuwaxPC.Pages.AntvX6RegisterNodes.input': 'Input',
-  'NuwaxPC.Pages.AntvX6RegisterNodes.optionLabel': 'Option {0}',
-  'NuwaxPC.Pages.AntvX6RegisterNodes.qaType': 'QA Type',
-  'NuwaxPC.Pages.AntvX6RegisterNodes.questionContent': 'Question Content',
-  'NuwaxPC.Pages.AntvX6RegisterNodes.replyQuestion':
-    'Please answer the question',
-  'NuwaxPC.Pages.AntvX6RegisterNodes.running': 'Running',
-  'NuwaxPC.Pages.AntvX6RegisterNodes.success': 'Run Succeeded',
-  'NuwaxPC.Pages.AntvX6RegisterNodes.unconfiguredContent':
-    'Content not configured',
-  'NuwaxPC.Pages.AntvX6RegisterNodes.unconfiguredInput': 'Input not configured',
-  'NuwaxPC.Pages.AntvX6RegisterNodes.unconfiguredIntent':
-    'Intent not configured',
-  'NuwaxPC.Pages.AntvX6RegisterNodes.unconfiguredQuestion':
+  'PC.Pages.AntvX6RegisterNodes.exceptionWhen': 'On Exception',
+  'PC.Pages.AntvX6RegisterNodes.failed': 'Run Failed',
+  'PC.Pages.AntvX6RegisterNodes.input': 'Input',
+  'PC.Pages.AntvX6RegisterNodes.optionLabel': 'Option {0}',
+  'PC.Pages.AntvX6RegisterNodes.qaType': 'QA Type',
+  'PC.Pages.AntvX6RegisterNodes.questionContent': 'Question Content',
+  'PC.Pages.AntvX6RegisterNodes.replyQuestion': 'Please answer the question',
+  'PC.Pages.AntvX6RegisterNodes.running': 'Running',
+  'PC.Pages.AntvX6RegisterNodes.success': 'Run Succeeded',
+  'PC.Pages.AntvX6RegisterNodes.unconfiguredContent': 'Content not configured',
+  'PC.Pages.AntvX6RegisterNodes.unconfiguredInput': 'Input not configured',
+  'PC.Pages.AntvX6RegisterNodes.unconfiguredIntent': 'Intent not configured',
+  'PC.Pages.AntvX6RegisterNodes.unconfiguredQuestion':
     'Question not configured',
-  'NuwaxPC.Pages.AntvX6RunResult.totalCount': 'Total: {0}',
-  'NuwaxPC.Pages.AntvX6RunResult.onlyShowErrors': 'Only show errors',
-  'NuwaxPC.Pages.AntvX6RunResult.batchVariables': 'Batch variables in this run',
-  'NuwaxPC.Pages.AppDevIndex.application': 'Application',
-  'NuwaxPC.Pages.AppDevIndex.back': 'Back',
-  'NuwaxPC.Pages.AppDevIndex.bindDataSourceFailed':
-    'Failed to bind data source',
-  'NuwaxPC.Pages.AppDevIndex.bindDataSourceSuccess':
+  'PC.Pages.AntvX6RunResult.totalCount': 'Total: {0}',
+  'PC.Pages.AntvX6RunResult.onlyShowErrors': 'Only show errors',
+  'PC.Pages.AntvX6RunResult.batchVariables': 'Batch variables in this run',
+  'PC.Pages.AppDevIndex.application': 'Application',
+  'PC.Pages.AppDevIndex.back': 'Back',
+  'PC.Pages.AppDevIndex.bindDataSourceFailed': 'Failed to bind data source',
+  'PC.Pages.AppDevIndex.bindDataSourceSuccess':
     'Data source bound successfully',
-  'NuwaxPC.Pages.AppDevIndex.bindDataSourceUnknownError':
+  'PC.Pages.AppDevIndex.bindDataSourceUnknownError':
     'Unknown error occurred while binding data source',
-  'NuwaxPC.Pages.AppDevIndex.clear': 'Clear',
-  'NuwaxPC.Pages.AppDevIndex.clickToPreview': 'Click to Preview',
-  'NuwaxPC.Pages.AppDevIndex.code': 'Code',
-  'NuwaxPC.Pages.AppDevIndex.confirmDeleteContent':
+  'PC.Pages.AppDevIndex.clear': 'Clear',
+  'PC.Pages.AppDevIndex.clickToPreview': 'Click to Preview',
+  'PC.Pages.AppDevIndex.code': 'Code',
+  'PC.Pages.AppDevIndex.confirmDeleteContent':
     'Are you sure you want to delete {0} "{1}"?',
-  'NuwaxPC.Pages.AppDevIndex.confirmDeleteTitle': 'Confirm Deletion',
-  'NuwaxPC.Pages.AppDevIndex.confirmImport': 'Confirm Import',
-  'NuwaxPC.Pages.AppDevIndex.currentProjectId': 'Current Project ID',
-  'NuwaxPC.Pages.AppDevIndex.delete': 'Delete',
-  'NuwaxPC.Pages.AppDevIndex.deleteFolderWarning':
+  'PC.Pages.AppDevIndex.confirmDeleteTitle': 'Confirm Deletion',
+  'PC.Pages.AppDevIndex.confirmImport': 'Confirm Import',
+  'PC.Pages.AppDevIndex.currentProjectId': 'Current Project ID',
+  'PC.Pages.AppDevIndex.delete': 'Delete',
+  'PC.Pages.AppDevIndex.deleteFolderWarning':
     'Warning: Deleting a folder will also delete all files and subfolders inside. This action cannot be undone.',
-  'NuwaxPC.Pages.AppDevIndex.deleteSuccessWithType':
-    'Successfully deleted {0}: {1}',
-  'NuwaxPC.Pages.AppDevIndex.deployingSubtitle':
+  'PC.Pages.AppDevIndex.deleteSuccessWithType': 'Successfully deleted {0}: {1}',
+  'PC.Pages.AppDevIndex.deployingSubtitle':
     'Please wait, this mask will close automatically after publishing completes',
-  'NuwaxPC.Pages.AppDevIndex.deployingTip': 'Publishing project...',
-  'NuwaxPC.Pages.AppDevIndex.exportFailed': 'Export failed',
-  'NuwaxPC.Pages.AppDevIndex.exportFailedWithError': 'Export failed: {0}',
-  'NuwaxPC.Pages.AppDevIndex.exportSuccess': 'Project exported successfully!',
-  'NuwaxPC.Pages.AppDevIndex.exportUnknownError':
+  'PC.Pages.AppDevIndex.deployingTip': 'Publishing project...',
+  'PC.Pages.AppDevIndex.exportFailed': 'Export failed',
+  'PC.Pages.AppDevIndex.exportFailedWithError': 'Export failed: {0}',
+  'PC.Pages.AppDevIndex.exportSuccess': 'Project exported successfully!',
+  'PC.Pages.AppDevIndex.exportUnknownError':
     'Unknown error occurred during export',
-  'NuwaxPC.Pages.AppDevIndex.filePath': 'File Path',
-  'NuwaxPC.Pages.AppDevIndex.filePathPlaceholder':
+  'PC.Pages.AppDevIndex.filePath': 'File Path',
+  'PC.Pages.AppDevIndex.filePathPlaceholder':
     'e.g. src/components/NewComponent.tsx',
-  'NuwaxPC.Pages.AppDevIndex.filePathTip':
+  'PC.Pages.AppDevIndex.filePathTip':
     'Enter a full file path including file name and extension, for example: src/components/NewComponent.tsx',
-  'NuwaxPC.Pages.AppDevIndex.fileSize': 'File Size',
-  'NuwaxPC.Pages.AppDevIndex.fileTypeFile': 'file',
-  'NuwaxPC.Pages.AppDevIndex.fileTypeFolder': 'folder',
-  'NuwaxPC.Pages.AppDevIndex.fileUploadFailed': 'File upload failed',
-  'NuwaxPC.Pages.AppDevIndex.fileUploadFailedWithError':
-    'File upload failed: {0}',
-  'NuwaxPC.Pages.AppDevIndex.fileUploadSuccess':
-    'File uploaded successfully: {0}',
-  'NuwaxPC.Pages.AppDevIndex.importProjectSuccess':
-    'Project imported successfully',
-  'NuwaxPC.Pages.AppDevIndex.importProjectTitle': 'Import Project',
-  'NuwaxPC.Pages.AppDevIndex.inputContentEmpty': 'Input content is empty',
-  'NuwaxPC.Pages.AppDevIndex.invalidProjectIdCannotBindDataSource':
+  'PC.Pages.AppDevIndex.fileSize': 'File Size',
+  'PC.Pages.AppDevIndex.fileTypeFile': 'file',
+  'PC.Pages.AppDevIndex.fileTypeFolder': 'folder',
+  'PC.Pages.AppDevIndex.fileUploadFailed': 'File upload failed',
+  'PC.Pages.AppDevIndex.fileUploadFailedWithError': 'File upload failed: {0}',
+  'PC.Pages.AppDevIndex.fileUploadSuccess': 'File uploaded successfully: {0}',
+  'PC.Pages.AppDevIndex.importProjectSuccess': 'Project imported successfully',
+  'PC.Pages.AppDevIndex.importProjectTitle': 'Import Project',
+  'PC.Pages.AppDevIndex.inputContentEmpty': 'Input content is empty',
+  'PC.Pages.AppDevIndex.invalidProjectIdCannotBindDataSource':
     'Project ID is missing or invalid. Unable to bind data source.',
-  'NuwaxPC.Pages.AppDevIndex.invalidProjectIdCannotDeploy':
+  'PC.Pages.AppDevIndex.invalidProjectIdCannotDeploy':
     'Project ID is missing or invalid. Unable to deploy.',
-  'NuwaxPC.Pages.AppDevIndex.invalidProjectIdCannotExport':
+  'PC.Pages.AppDevIndex.invalidProjectIdCannotExport':
     'Project ID is missing or invalid. Unable to export.',
-  'NuwaxPC.Pages.AppDevIndex.logAddedWaitingSend':
+  'PC.Pages.AppDevIndex.logAddedWaitingSend':
     'Log has been added, waiting to send',
-  'NuwaxPC.Pages.AppDevIndex.missingProjectIdDesc':
+  'PC.Pages.AppDevIndex.missingProjectIdDesc':
     'Please append a projectId parameter in URL, for example:',
-  'NuwaxPC.Pages.AppDevIndex.missingProjectIdExample':
+  'PC.Pages.AppDevIndex.missingProjectIdExample':
     '/space/your-space-id/app-dev/your-project-id',
-  'NuwaxPC.Pages.AppDevIndex.missingProjectIdMessage':
-    'Missing projectId parameter',
-  'NuwaxPC.Pages.AppDevIndex.notSet': 'Not set',
-  'NuwaxPC.Pages.AppDevIndex.onlyPluginWorkflowSupported':
+  'PC.Pages.AppDevIndex.missingProjectIdMessage': 'Missing projectId parameter',
+  'PC.Pages.AppDevIndex.notSet': 'Not set',
+  'PC.Pages.AppDevIndex.onlyPluginWorkflowSupported':
     'Only plugin and workflow data sources are supported',
-  'NuwaxPC.Pages.AppDevIndex.preview': 'Preview',
-  'NuwaxPC.Pages.AppDevIndex.publishComponentSuccessDesc':
+  'PC.Pages.AppDevIndex.preview': 'Preview',
+  'PC.Pages.AppDevIndex.publishComponentSuccessDesc':
     'Project has been built and published successfully!',
-  'NuwaxPC.Pages.AppDevIndex.publishComponentSuccessTitle':
+  'PC.Pages.AppDevIndex.publishComponentSuccessTitle':
     'Published as Component Successfully',
-  'NuwaxPC.Pages.AppDevIndex.publishFailed': 'Publish failed',
-  'NuwaxPC.Pages.AppDevIndex.publishFailedRetryAfterFix':
+  'PC.Pages.AppDevIndex.publishFailed': 'Publish failed',
+  'PC.Pages.AppDevIndex.publishFailedRetryAfterFix':
     'Publish failed. Please resolve errors and retry.',
-  'NuwaxPC.Pages.AppDevIndex.selectFile': 'Select File',
-  'NuwaxPC.Pages.AppDevIndex.selectFileFirst': 'Please select a file first',
-  'NuwaxPC.Pages.AppDevIndex.selectedFile': 'Selected File',
-  'NuwaxPC.Pages.AppDevIndex.selectedFileWithName': 'Selected file: {0}',
-  'NuwaxPC.Pages.AppDevIndex.singleFileUploadHint':
+  'PC.Pages.AppDevIndex.selectFile': 'Select File',
+  'PC.Pages.AppDevIndex.selectFileFirst': 'Please select a file first',
+  'PC.Pages.AppDevIndex.selectedFile': 'Selected File',
+  'PC.Pages.AppDevIndex.selectedFileWithName': 'Selected file: {0}',
+  'PC.Pages.AppDevIndex.singleFileUploadHint':
     'Any file format is supported. The file will be added to the specified path.',
-  'NuwaxPC.Pages.AppDevIndex.singleFileUploadTitle': 'Upload Single File',
-  'NuwaxPC.Pages.AppDevIndex.targetPathRequired': 'Target path cannot be empty',
-  'NuwaxPC.Pages.AppDevIndex.unknownError': 'Unknown error',
-  'NuwaxPC.Pages.AppDevIndex.unnamedProject': 'Unnamed Project',
-  'NuwaxPC.Pages.AppDevIndex.upload': 'Upload',
-  'NuwaxPC.Pages.AppDevIndex.uploadDragText':
+  'PC.Pages.AppDevIndex.singleFileUploadTitle': 'Upload Single File',
+  'PC.Pages.AppDevIndex.targetPathRequired': 'Target path cannot be empty',
+  'PC.Pages.AppDevIndex.unknownError': 'Unknown error',
+  'PC.Pages.AppDevIndex.unnamedProject': 'Unnamed Project',
+  'PC.Pages.AppDevIndex.upload': 'Upload',
+  'PC.Pages.AppDevIndex.uploadDragText':
     'Click or drag file to this area to select',
-  'NuwaxPC.Pages.AppDevIndex.uploadProject': 'Upload Project',
-  'NuwaxPC.Pages.AppDevIndex.uploadSizeLimitExceeded':
+  'PC.Pages.AppDevIndex.uploadProject': 'Upload Project',
+  'PC.Pages.AppDevIndex.uploadSizeLimitExceeded':
     'The total upload file size cannot exceed {0}MB',
-  'NuwaxPC.Pages.AppDevIndex.uploadZipHint':
+  'PC.Pages.AppDevIndex.uploadZipHint':
     'Only .zip archives are supported (will update current project)',
-  'NuwaxPC.Pages.AppDevIndex.zipOnly': 'Only .zip archive format is supported',
-  'NuwaxPC.Pages.AppDevDesignViewerTextAlign.reset': 'Reset',
-  'NuwaxPC.Pages.AppDevDesignViewerTextAlign.left': 'Align Left',
-  'NuwaxPC.Pages.AppDevDesignViewerTextAlign.center': 'Align Center',
-  'NuwaxPC.Pages.AppDevDesignViewerTextAlign.right': 'Align Right',
-  'NuwaxPC.Pages.AppDevDesignViewerTextAlign.justify': 'Justify',
-  'NuwaxPC.Pages.AppDevPageEditModal.coverImage': 'Cover Image',
-  'NuwaxPC.Pages.AppDevPageEditModal.coverImageTip':
+  'PC.Pages.AppDevIndex.zipOnly': 'Only .zip archive format is supported',
+  'PC.Pages.AppDevDesignViewerTextAlign.reset': 'Reset',
+  'PC.Pages.AppDevDesignViewerTextAlign.left': 'Align Left',
+  'PC.Pages.AppDevDesignViewerTextAlign.center': 'Align Center',
+  'PC.Pages.AppDevDesignViewerTextAlign.right': 'Align Right',
+  'PC.Pages.AppDevDesignViewerTextAlign.justify': 'Justify',
+  'PC.Pages.AppDevPageEditModal.coverImage': 'Cover Image',
+  'PC.Pages.AppDevPageEditModal.coverImageTip':
     'Recommended size 356px * 200px, ratio 16:9',
-  'NuwaxPC.Pages.AppDevPageEditModal.description': 'Description',
-  'NuwaxPC.Pages.AppDevPageEditModal.descriptionPlaceholder':
+  'PC.Pages.AppDevPageEditModal.description': 'Description',
+  'PC.Pages.AppDevPageEditModal.descriptionPlaceholder':
     'Please enter description',
-  'NuwaxPC.Pages.AppDevPageEditModal.editSuccess': 'Edited successfully',
-  'NuwaxPC.Pages.AppDevPageEditModal.icon': 'Icon',
-  'NuwaxPC.Pages.AppDevPageEditModal.modalTitle': 'Edit Application',
-  'NuwaxPC.Pages.AppDevPageEditModal.name': 'Name',
-  'NuwaxPC.Pages.AppDevPageEditModal.namePlaceholder': 'Please enter name',
-  'NuwaxPC.Pages.AppDevPageEditModal.nameRequired': 'Please enter name',
-  'NuwaxPC.Components.FileContextMenu.newFile': 'New File',
-  'NuwaxPC.Components.FileContextMenu.newFolder': 'New Folder',
-  'NuwaxPC.Components.FileContextMenu.rename': 'Rename',
-  'NuwaxPC.Components.FileContextMenu.uploadFile': 'Upload File',
-  'NuwaxPC.Components.FileContextMenu.delete': 'Delete',
-  'NuwaxPC.Components.FileContextMenu.download': 'Download',
-  'NuwaxPC.Components.FileContextMenu.exportPdf': 'Export as PDF',
-  'NuwaxPC.Components.FileContextMenu.importSkill': 'Import Skill',
-  'NuwaxPC.Components.MoreActionsMenu.importProject': 'Import Project',
-  'NuwaxPC.Components.MoreActionsMenu.restartComputer':
-    'Restart Agent Computer',
-  'NuwaxPC.Components.MoreActionsMenu.restartComputerTooltip':
+  'PC.Pages.AppDevPageEditModal.editSuccess': 'Edited successfully',
+  'PC.Pages.AppDevPageEditModal.icon': 'Icon',
+  'PC.Pages.AppDevPageEditModal.modalTitle': 'Edit Application',
+  'PC.Pages.AppDevPageEditModal.name': 'Name',
+  'PC.Pages.AppDevPageEditModal.namePlaceholder': 'Please enter name',
+  'PC.Pages.AppDevPageEditModal.nameRequired': 'Please enter name',
+  'PC.Components.FileContextMenu.newFile': 'New File',
+  'PC.Components.FileContextMenu.newFolder': 'New Folder',
+  'PC.Components.FileContextMenu.rename': 'Rename',
+  'PC.Components.FileContextMenu.uploadFile': 'Upload File',
+  'PC.Components.FileContextMenu.delete': 'Delete',
+  'PC.Components.FileContextMenu.download': 'Download',
+  'PC.Components.FileContextMenu.exportPdf': 'Export as PDF',
+  'PC.Components.FileContextMenu.importSkill': 'Import Skill',
+  'PC.Components.MoreActionsMenu.importProject': 'Import Project',
+  'PC.Components.MoreActionsMenu.restartComputer': 'Restart Agent Computer',
+  'PC.Components.MoreActionsMenu.restartComputerTooltip':
     'All running agents will be restarted',
-  'NuwaxPC.Components.MoreActionsMenu.restartAgent': 'Restart Agent',
-  'NuwaxPC.Components.MoreActionsMenu.restartAgentTooltip':
+  'PC.Components.MoreActionsMenu.restartAgent': 'Restart Agent',
+  'PC.Components.MoreActionsMenu.restartAgentTooltip':
     'Current agent will restart',
-  'NuwaxPC.Components.MoreActionsMenu.exportResult': 'Export Result',
-  'NuwaxPC.Components.ShareDesktopModal.permanent': 'Permanent',
-  'NuwaxPC.Components.ShareDesktopModal.minute1': '1 min',
-  'NuwaxPC.Components.ShareDesktopModal.minute5': '5 min',
-  'NuwaxPC.Components.ShareDesktopModal.minute10': '10 min',
-  'NuwaxPC.Components.ShareDesktopModal.minute20': '20 min',
-  'NuwaxPC.Components.ShareDesktopModal.minute30': '30 min',
-  'NuwaxPC.Components.ShareDesktopModal.minute40': '40 min',
-  'NuwaxPC.Components.ShareDesktopModal.minute50': '50 min',
-  'NuwaxPC.Components.ShareDesktopModal.hour1': '1 hour',
-  'NuwaxPC.Components.ShareDesktopModal.hour2': '2 hours',
-  'NuwaxPC.Components.ShareDesktopModal.hour4': '4 hours',
-  'NuwaxPC.Components.ShareDesktopModal.hour8': '8 hours',
-  'NuwaxPC.Components.ShareDesktopModal.hour16': '16 hours',
-  'NuwaxPC.Components.ShareDesktopModal.day1': '1 day',
-  'NuwaxPC.Components.ShareDesktopModal.conversationIdMissing':
+  'PC.Components.MoreActionsMenu.exportResult': 'Export Result',
+  'PC.Components.ShareDesktopModal.permanent': 'Permanent',
+  'PC.Components.ShareDesktopModal.minute1': '1 min',
+  'PC.Components.ShareDesktopModal.minute5': '5 min',
+  'PC.Components.ShareDesktopModal.minute10': '10 min',
+  'PC.Components.ShareDesktopModal.minute20': '20 min',
+  'PC.Components.ShareDesktopModal.minute30': '30 min',
+  'PC.Components.ShareDesktopModal.minute40': '40 min',
+  'PC.Components.ShareDesktopModal.minute50': '50 min',
+  'PC.Components.ShareDesktopModal.hour1': '1 hour',
+  'PC.Components.ShareDesktopModal.hour2': '2 hours',
+  'PC.Components.ShareDesktopModal.hour4': '4 hours',
+  'PC.Components.ShareDesktopModal.hour8': '8 hours',
+  'PC.Components.ShareDesktopModal.hour16': '16 hours',
+  'PC.Components.ShareDesktopModal.day1': '1 day',
+  'PC.Components.ShareDesktopModal.conversationIdMissing':
     'Conversation ID missing, unable to share',
-  'NuwaxPC.Components.ShareDesktopModal.desktopShareSuccess':
+  'PC.Components.ShareDesktopModal.desktopShareSuccess':
     'Desktop share successful, link copied to clipboard',
-  'NuwaxPC.Components.ShareDesktopModal.shareFailedRetry':
+  'PC.Components.ShareDesktopModal.shareFailedRetry':
     'Share failed, please retry later',
-  'NuwaxPC.Components.ShareDesktopModal.fileShareSuccess':
+  'PC.Components.ShareDesktopModal.fileShareSuccess':
     'Share successful, link copied to clipboard',
-  'NuwaxPC.Components.ShareDesktopModal.titleDesktop': 'Share Desktop',
-  'NuwaxPC.Components.ShareDesktopModal.titleFile': 'Share File',
-  'NuwaxPC.Components.ShareDesktopModal.generateShareLink':
-    'Generate Share Link',
-  'NuwaxPC.Components.ShareDesktopModal.validDuration': 'Valid Duration',
-  'NuwaxPC.Components.ShareDesktopModal.selectValidDuration':
+  'PC.Components.ShareDesktopModal.titleDesktop': 'Share Desktop',
+  'PC.Components.ShareDesktopModal.titleFile': 'Share File',
+  'PC.Components.ShareDesktopModal.generateShareLink': 'Generate Share Link',
+  'PC.Components.ShareDesktopModal.validDuration': 'Valid Duration',
+  'PC.Components.ShareDesktopModal.selectValidDuration':
     'Please select valid duration',
-  'NuwaxPC.Components.ShareDesktopModal.linkExpiresIn': 'Link expires in {0}',
-  'NuwaxPC.Components.ShareDesktopModal.linkPermanent':
-    'Link is permanently valid',
-  'NuwaxPC.Components.ShareDesktopModal.secondsUnit': '{0}s',
-  'NuwaxPC.Components.ShareDesktopModal.noticeTitle': 'Notice:',
-  'NuwaxPC.Components.ShareDesktopModal.noticeDescription':
+  'PC.Components.ShareDesktopModal.linkExpiresIn': 'Link expires in {0}',
+  'PC.Components.ShareDesktopModal.linkPermanent': 'Link is permanently valid',
+  'PC.Components.ShareDesktopModal.secondsUnit': '{0}s',
+  'PC.Components.ShareDesktopModal.noticeTitle': 'Notice:',
+  'PC.Components.ShareDesktopModal.noticeDescription':
     'The share link will be automatically copied to clipboard. Anyone with this link can access it. Share carefully and be aware of data risks.',
-  'NuwaxPC.Components.FilePathHeader.filePreview': 'File Preview',
-  'NuwaxPC.Components.FilePathHeader.collapseFileTree':
+  'PC.Components.FilePathHeader.filePreview': 'File Preview',
+  'PC.Components.FilePathHeader.collapseFileTree':
     'Click to collapse file tree',
-  'NuwaxPC.Components.FilePathHeader.expandFileTree':
-    'Click to expand file tree',
-  'NuwaxPC.Components.FilePathHeader.preview': 'Preview',
-  'NuwaxPC.Components.FilePathHeader.code': 'Code',
-  'NuwaxPC.Components.FilePathHeader.remote': 'Remote',
-  'NuwaxPC.Components.FilePathHeader.agentComputerSuffix': "'s Agent Computer",
-  'NuwaxPC.Components.FilePathHeader.exporting': 'Exporting...',
-  'NuwaxPC.Components.FilePathHeader.exportPdf': 'Export as PDF',
-  'NuwaxPC.Components.FilePathHeader.downloading': 'Downloading...',
-  'NuwaxPC.Components.FilePathHeader.download': 'Download',
-  'NuwaxPC.Components.FilePathHeader.share': 'Share',
-  'NuwaxPC.Components.FilePathHeader.exitFullscreen': 'Exit Fullscreen',
-  'NuwaxPC.Components.FilePathHeader.fullscreen': 'Fullscreen',
-  'NuwaxPC.Components.FilePathHeader.copy': 'Copy',
-  'NuwaxPC.Components.FilePathHeader.close': 'Close',
-  'NuwaxPC.Components.SearchView.searchPlaceholder': 'Search files...',
-  'NuwaxPC.Components.SearchView.noMatchingFiles': 'No matching files',
-  'NuwaxPC.Components.FileTree.noFiles': 'No files',
-  'NuwaxPC.Components.FileTreeView.noFilesToPreview':
+  'PC.Components.FilePathHeader.expandFileTree': 'Click to expand file tree',
+  'PC.Components.FilePathHeader.preview': 'Preview',
+  'PC.Components.FilePathHeader.code': 'Code',
+  'PC.Components.FilePathHeader.remote': 'Remote',
+  'PC.Components.FilePathHeader.agentComputerSuffix': "'s Agent Computer",
+  'PC.Components.FilePathHeader.exporting': 'Exporting...',
+  'PC.Components.FilePathHeader.exportPdf': 'Export as PDF',
+  'PC.Components.FilePathHeader.downloading': 'Downloading...',
+  'PC.Components.FilePathHeader.download': 'Download',
+  'PC.Components.FilePathHeader.share': 'Share',
+  'PC.Components.FilePathHeader.exitFullscreen': 'Exit Fullscreen',
+  'PC.Components.FilePathHeader.fullscreen': 'Fullscreen',
+  'PC.Components.FilePathHeader.copy': 'Copy',
+  'PC.Components.FilePathHeader.close': 'Close',
+  'PC.Components.SearchView.searchPlaceholder': 'Search files...',
+  'PC.Components.SearchView.noMatchingFiles': 'No matching files',
+  'PC.Components.FileTree.noFiles': 'No files',
+  'PC.Components.FileTreeView.noFilesToPreview':
     'No files available for preview',
-  'NuwaxPC.Components.FileTreeView.noMatchingFile':
+  'PC.Components.FileTreeView.noMatchingFile':
     'No matching file found. Please select a file from the file tree',
-  'NuwaxPC.Components.FileTreeView.selectFileToPreview':
+  'PC.Components.FileTreeView.selectFileToPreview':
     'Please select a file from the file tree to preview',
-  'NuwaxPC.Components.FileTreeView.cannotPreviewType':
+  'PC.Components.FileTreeView.cannotPreviewType':
     'Cannot preview this file type',
-  'NuwaxPC.Components.FileTreeView.unsupportedFormat':
+  'PC.Components.FileTreeView.unsupportedFormat':
     'Preview is not supported for .{0} format',
-  'NuwaxPC.Components.FileTreeView.fileRenaming':
+  'PC.Components.FileTreeView.fileRenaming':
     'File is being renamed, please try later',
-  'NuwaxPC.Components.FileTreeView.unsavedChangesSwitchFile':
+  'PC.Components.FileTreeView.unsavedChangesSwitchFile':
     'You have unsaved changes. Please save before switching files',
-  'NuwaxPC.Components.FileTreeView.unsavedChangesRename':
+  'PC.Components.FileTreeView.unsavedChangesRename':
     'You have unsaved changes. Please save before renaming',
-  'NuwaxPC.Components.FileTreeView.unsavedChangesUpload':
+  'PC.Components.FileTreeView.unsavedChangesUpload':
     'You have unsaved changes. Please save before uploading',
-  'NuwaxPC.Components.FileTreeView.unsavedChangesDelete':
+  'PC.Components.FileTreeView.unsavedChangesDelete':
     'You have unsaved changes. Please save before deleting',
-  'NuwaxPC.Components.FileTreeView.unsavedChangesCreateFile':
+  'PC.Components.FileTreeView.unsavedChangesCreateFile':
     'You have unsaved changes. Please save before creating a file',
-  'NuwaxPC.Components.FileTreeView.unsavedChangesCreateFolder':
+  'PC.Components.FileTreeView.unsavedChangesCreateFolder':
     'You have unsaved changes. Please save before creating a folder',
-  'NuwaxPC.Components.FileTreeView.downloading': 'Downloading',
-  'NuwaxPC.Components.FileTreeView.uploading': 'Uploading',
-  'NuwaxPC.Components.FileTreeView.exporting': 'Exporting',
-  'NuwaxPC.Components.FileTreeView.importing': 'Importing',
-  'NuwaxPC.Components.FileTreeView.files': 'Files',
-  'NuwaxPC.Components.FileTreeView.refreshing': 'Refreshing...',
-  'NuwaxPC.Components.FileTreeView.refreshFileTree': 'Refresh File Tree',
-  'NuwaxPC.Components.FileTreeView.restarting': 'Restarting...',
-  'NuwaxPC.Hooks.UseEcoMarket.confirmDelete':
+  'PC.Components.FileTreeView.downloading': 'Downloading',
+  'PC.Components.FileTreeView.uploading': 'Uploading',
+  'PC.Components.FileTreeView.exporting': 'Exporting',
+  'PC.Components.FileTreeView.importing': 'Importing',
+  'PC.Components.FileTreeView.files': 'Files',
+  'PC.Components.FileTreeView.refreshing': 'Refreshing...',
+  'PC.Components.FileTreeView.refreshFileTree': 'Refresh File Tree',
+  'PC.Components.FileTreeView.restarting': 'Restarting...',
+  'PC.Hooks.UseEcoMarket.confirmDelete':
     'Are you sure you want to delete this share?',
-  'NuwaxPC.Hooks.UseEventPolling.newVersionFound': 'New Version Available',
-  'NuwaxPC.Hooks.UseEventPolling.updatePrompt':
+  'PC.Hooks.UseEventPolling.newVersionFound': 'New Version Available',
+  'PC.Hooks.UseEventPolling.updatePrompt':
     'New version {0} detected. Update now?',
-  'NuwaxPC.Hooks.UseEventPolling.update': 'Update',
-  'NuwaxPC.Hooks.UseFileImport.unsupportedFileType':
+  'PC.Hooks.UseEventPolling.update': 'Update',
+  'PC.Hooks.UseFileImport.unsupportedFileType':
     'Only .zip, .skill files or SKILL.md files are supported',
-  'NuwaxPC.Hooks.UseFileImport.importSuccess': 'Import successful',
-  'NuwaxPC.Hooks.UseFileImport.importFailed': 'Import failed',
-  'NuwaxPC.Hooks.UseNavigationGuard.confirmLeave': 'Confirm Leave',
-  'NuwaxPC.Hooks.UseNavigationGuard.confirmLeaveMessage':
+  'PC.Hooks.UseFileImport.importSuccess': 'Import successful',
+  'PC.Hooks.UseFileImport.importFailed': 'Import failed',
+  'PC.Hooks.UseNavigationGuard.confirmLeave': 'Confirm Leave',
+  'PC.Hooks.UseNavigationGuard.confirmLeaveMessage':
     'Are you sure you want to leave the current page?',
-  'NuwaxPC.Hooks.UseNavigationGuard.discard': 'Discard',
-  'NuwaxPC.Hooks.UsePluginConfig.saveSuccess': 'Plugin saved successfully',
-  'NuwaxPC.Hooks.UseRestartDevServer.invalidProjectId':
+  'PC.Hooks.UseNavigationGuard.discard': 'Discard',
+  'PC.Hooks.UsePluginConfig.saveSuccess': 'Plugin saved successfully',
+  'PC.Hooks.UseRestartDevServer.invalidProjectId':
     'Project ID is missing or invalid, unable to restart',
-  'NuwaxPC.Hooks.UseRestartDevServer.restartFailed':
+  'PC.Hooks.UseRestartDevServer.restartFailed':
     'Failed to restart development server',
-  'NuwaxPC.Hooks.UseMcp.addItem': 'Add {0}',
-  'NuwaxPC.Hooks.UseTryRun.reconfigureParams':
+  'PC.Hooks.UseMcp.addItem': 'Add {0}',
+  'PC.Hooks.UseTryRun.reconfigureParams':
     'Please reconfigure input parameters and add sub-level',
-  'NuwaxPC.Hooks.UseMessageEventDelegate.pagePathConfigError':
+  'PC.Hooks.UseMessageEventDelegate.pagePathConfigError':
     'Page path configuration error',
-  'NuwaxPC.Hooks.UseMessageEventDelegate.pagePathParamConfigError':
+  'PC.Hooks.UseMessageEventDelegate.pagePathParamConfigError':
     'Page path parameter configuration error',
-  'NuwaxPC.Hooks.UseMessageEventDelegate.linkUrlConfigError':
+  'PC.Hooks.UseMessageEventDelegate.linkUrlConfigError':
     'Link URL configuration error',
-  'NuwaxPC.Hooks.UseMessageEventDelegate.page': 'Page',
-  'NuwaxPC.Hooks.UseSendCode.codeSent': 'Verification code sent',
+  'PC.Hooks.UseMessageEventDelegate.page': 'Page',
+  'PC.Hooks.UseSendCode.codeSent': 'Verification code sent',
 
   // SpaceKnowledge
-  'NuwaxPC.Pages.SpaceKnowledge.DocItem.analyzing': 'Analyzing',
-  'NuwaxPC.Pages.SpaceKnowledge.DocItem.segmentGenerating':
-    'Segment generating',
-  'NuwaxPC.Pages.SpaceKnowledge.DocItem.buildSuccess': 'Build success',
-  'NuwaxPC.Pages.SpaceKnowledge.DocItem.buildFailedRetry':
-    'Build failed, retry',
-  'NuwaxPC.Pages.SpaceKnowledge.DocItem.building': 'Building',
-  'NuwaxPC.Pages.SpaceKnowledge.DocWrap.search': 'Search',
-  'NuwaxPC.Pages.SpaceKnowledge.DocWrap.documentList': 'Document List',
-  'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.docCount': '{0} documents',
-  'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.doc': 'Document',
-  'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.qa': 'QA',
-  'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.addContent': 'Add Content',
-  'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.addQa': 'Add QA',
-  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.autoSegmentClean':
-    'Auto Segment & Clean',
-  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.autoSegmentCleanDesc':
+  'PC.Pages.SpaceKnowledge.DocItem.analyzing': 'Analyzing',
+  'PC.Pages.SpaceKnowledge.DocItem.segmentGenerating': 'Segment generating',
+  'PC.Pages.SpaceKnowledge.DocItem.buildSuccess': 'Build success',
+  'PC.Pages.SpaceKnowledge.DocItem.buildFailedRetry': 'Build failed, retry',
+  'PC.Pages.SpaceKnowledge.DocItem.building': 'Building',
+  'PC.Pages.SpaceKnowledge.DocWrap.search': 'Search',
+  'PC.Pages.SpaceKnowledge.DocWrap.documentList': 'Document List',
+  'PC.Pages.SpaceKnowledge.KnowledgeHeader.docCount': '{0} documents',
+  'PC.Pages.SpaceKnowledge.KnowledgeHeader.doc': 'Document',
+  'PC.Pages.SpaceKnowledge.KnowledgeHeader.qa': 'QA',
+  'PC.Pages.SpaceKnowledge.KnowledgeHeader.addContent': 'Add Content',
+  'PC.Pages.SpaceKnowledge.KnowledgeHeader.addQa': 'Add QA',
+  'PC.Pages.SpaceKnowledge.CreateSet.autoSegmentClean': 'Auto Segment & Clean',
+  'PC.Pages.SpaceKnowledge.CreateSet.autoSegmentCleanDesc':
     'Auto segmentation and preprocessing rules',
-  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.custom': 'Custom',
-  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.customDesc':
+  'PC.Pages.SpaceKnowledge.CreateSet.custom': 'Custom',
+  'PC.Pages.SpaceKnowledge.CreateSet.customDesc':
     'Custom segmentation rules, segment length and preprocessing rules',
-  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentDelimiter':
-    'Segment Delimiter',
-  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputSegmentDelimiter':
+  'PC.Pages.SpaceKnowledge.CreateSet.segmentDelimiter': 'Segment Delimiter',
+  'PC.Pages.SpaceKnowledge.CreateSet.inputSegmentDelimiter':
     'Enter segment delimiter',
-  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentDelimiterPlaceholder':
+  'PC.Pages.SpaceKnowledge.CreateSet.segmentDelimiterPlaceholder':
     'Enter segment delimiter, e.g. \\n for line break',
-  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentMaxLength':
-    'Max Segment Length',
-  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputRange100To5000':
+  'PC.Pages.SpaceKnowledge.CreateSet.segmentMaxLength': 'Max Segment Length',
+  'PC.Pages.SpaceKnowledge.CreateSet.inputRange100To5000':
     'Please enter a value between 100-5000',
-  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputValidNumber':
+  'PC.Pages.SpaceKnowledge.CreateSet.inputValidNumber':
     'Please enter a valid number!',
-  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentMaxLengthRange':
+  'PC.Pages.SpaceKnowledge.CreateSet.segmentMaxLengthRange':
     'Max segment length must be between 100 and 5000!',
-  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentOverlapPercent':
+  'PC.Pages.SpaceKnowledge.CreateSet.segmentOverlapPercent':
     'Segment Overlap %',
-  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputRange0To100':
+  'PC.Pages.SpaceKnowledge.CreateSet.inputRange0To100':
     'Please enter a value between 0-100',
-  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentOverlapRange':
+  'PC.Pages.SpaceKnowledge.CreateSet.segmentOverlapRange':
     'Segment overlap must be between 0 and 100!',
-  'NuwaxPC.Pages.SpaceKnowledge.TextFill.docName': 'Document Name',
-  'NuwaxPC.Pages.SpaceKnowledge.TextFill.inputDocName':
-    'Please enter document name',
-  'NuwaxPC.Pages.SpaceKnowledge.TextFill.docNamePlaceholder':
-    'Enter document name',
-  'NuwaxPC.Pages.SpaceKnowledge.TextFill.docContent': 'Document Content',
-  'NuwaxPC.Pages.SpaceKnowledge.TextFill.inputDocContent':
+  'PC.Pages.SpaceKnowledge.TextFill.docName': 'Document Name',
+  'PC.Pages.SpaceKnowledge.TextFill.inputDocName': 'Please enter document name',
+  'PC.Pages.SpaceKnowledge.TextFill.docNamePlaceholder': 'Enter document name',
+  'PC.Pages.SpaceKnowledge.TextFill.docContent': 'Document Content',
+  'PC.Pages.SpaceKnowledge.TextFill.inputDocContent':
     'Please enter document content',
-  'NuwaxPC.Pages.SpaceKnowledge.TextFill.docContentPlaceholder':
+  'PC.Pages.SpaceKnowledge.TextFill.docContentPlaceholder':
     'Enter document content',
-  'NuwaxPC.Pages.SpaceKnowledge.UploadFile.correctFileType':
+  'PC.Pages.SpaceKnowledge.UploadFile.correctFileType':
     'Please upload a valid file type',
-  'NuwaxPC.Pages.SpaceKnowledge.UploadFile.supportedFileTypes':
+  'PC.Pages.SpaceKnowledge.UploadFile.supportedFileTypes':
     'Please upload PDF, TXT, DOC, DOCX, MD, JSON, JPG, PNG, GIF, WEBP, SVG, HEIC, MP4, MKV, MOV, WEBM, MP3, AAC, WAV, FLAC, OGG, OPUS files!',
-  'NuwaxPC.Pages.SpaceKnowledge.UploadFile.fileSizeLimit100MB':
+  'PC.Pages.SpaceKnowledge.UploadFile.fileSizeLimit100MB':
     'File size cannot exceed 100MB!',
-  'NuwaxPC.Pages.SpaceKnowledge.UploadFile.clickOrDragToUpload':
+  'PC.Pages.SpaceKnowledge.UploadFile.clickOrDragToUpload':
     'Click to upload or drag documents here',
-  'NuwaxPC.Pages.SpaceKnowledge.UploadFile.uploadHint':
+  'PC.Pages.SpaceKnowledge.UploadFile.uploadHint':
     'Supports PDF, TXT, DOC, DOCX, MD, JSON, JPG, PNG, GIF, WEBP, SVG, HEIC, MP4, MKV, MOV, WEBM, MP3, AAC, WAV, FLAC, OGG, OPUS. Up to 300 files, each no larger than 100MB, PDF max 500 pages',
-  'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.docAddSuccess':
+  'PC.Pages.SpaceKnowledge.LocalCustomDocModal.docAddSuccess':
     'Document added successfully',
-  'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.addContent': 'Add Content',
-  'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.nextStep': 'Next',
-  'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.prevStep': 'Previous',
-  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.uploadFailedCheckFormat':
+  'PC.Pages.SpaceKnowledge.LocalCustomDocModal.addContent': 'Add Content',
+  'PC.Pages.SpaceKnowledge.LocalCustomDocModal.nextStep': 'Next',
+  'PC.Pages.SpaceKnowledge.LocalCustomDocModal.prevStep': 'Previous',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.uploadFailedCheckFormat':
     'Upload failed, please check the file format',
-  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.excelOnly':
+  'PC.Pages.SpaceKnowledge.QaBatchModal.excelOnly':
     'Only Excel files (.xlsx/.xls) are supported',
-  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.fileSizeLimit10MB':
+  'PC.Pages.SpaceKnowledge.QaBatchModal.fileSizeLimit10MB':
     'File size cannot exceed 10MB',
-  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.pleaseUploadFile':
+  'PC.Pages.SpaceKnowledge.QaBatchModal.pleaseUploadFile':
     'Please upload a file',
-  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.batchImportSuccess':
+  'PC.Pages.SpaceKnowledge.QaBatchModal.batchImportSuccess':
     'Batch import successful',
-  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.exportFailed': 'Export failed',
-  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateFailed':
+  'PC.Pages.SpaceKnowledge.QaBatchModal.exportFailed': 'Export failed',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateFailed':
     'Failed to download QA batch Excel template',
-  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.qaBatchImport': 'QA Batch Import',
-  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadExcelTemplate':
+  'PC.Pages.SpaceKnowledge.QaBatchModal.qaBatchImport': 'QA Batch Import',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.downloadExcelTemplate':
     'Download Excel Import Template',
-  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplate':
-    'Download Template',
-  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.confirmUpload': 'Confirm Upload',
-  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.clickOrDragToUpload':
+  'PC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplate': 'Download Template',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.confirmUpload': 'Confirm Upload',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.clickOrDragToUpload':
     'Click or drag files to this area to upload',
-  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.excelUploadHint':
+  'PC.Pages.SpaceKnowledge.QaBatchModal.excelUploadHint':
     'Only Excel files (.xlsx/.xls), size not exceeding 10MB',
-  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateHint':
+  'PC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateHint':
     'Please download the import template first, fill in according to the format and then upload',
-  'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.templateFileName':
+  'PC.Pages.SpaceKnowledge.QaBatchModal.templateFileName':
     'QA_Batch_Excel_Template.xlsx',
-  'NuwaxPC.Pages.SpaceKnowledge.QaModal.editQa': 'Edit QA',
-  'NuwaxPC.Pages.SpaceKnowledge.QaModal.addQa': 'Add QA',
-  'NuwaxPC.Pages.SpaceKnowledge.QaModal.question': 'Question',
-  'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputQuestion':
-    'Please enter a question',
-  'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputQuestionContent':
+  'PC.Pages.SpaceKnowledge.QaModal.editQa': 'Edit QA',
+  'PC.Pages.SpaceKnowledge.QaModal.addQa': 'Add QA',
+  'PC.Pages.SpaceKnowledge.QaModal.question': 'Question',
+  'PC.Pages.SpaceKnowledge.QaModal.inputQuestion': 'Please enter a question',
+  'PC.Pages.SpaceKnowledge.QaModal.inputQuestionContent':
     'Please enter question content',
-  'NuwaxPC.Pages.SpaceKnowledge.QaModal.answer': 'Answer',
-  'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputAnswer': 'Please enter an answer',
-  'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputAnswerContent':
+  'PC.Pages.SpaceKnowledge.QaModal.answer': 'Answer',
+  'PC.Pages.SpaceKnowledge.QaModal.inputAnswer': 'Please enter an answer',
+  'PC.Pages.SpaceKnowledge.QaModal.inputAnswerContent':
     'Please enter answer content',
-  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.question': 'Question',
-  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.answer': 'Answer',
-  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.vectorized': 'Vectorized',
-  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.completed': 'Completed',
-  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.building': 'Building',
-  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.action': 'Action',
-  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.confirmDeleteQa':
+  'PC.Pages.SpaceKnowledge.QaTableList.question': 'Question',
+  'PC.Pages.SpaceKnowledge.QaTableList.answer': 'Answer',
+  'PC.Pages.SpaceKnowledge.QaTableList.vectorized': 'Vectorized',
+  'PC.Pages.SpaceKnowledge.QaTableList.completed': 'Completed',
+  'PC.Pages.SpaceKnowledge.QaTableList.building': 'Building',
+  'PC.Pages.SpaceKnowledge.QaTableList.action': 'Action',
+  'PC.Pages.SpaceKnowledge.QaTableList.confirmDeleteQa':
     'Are you sure you want to delete this QA?',
-  'NuwaxPC.Pages.SpaceKnowledge.DocRename.updateSuccess':
-    'Updated successfully',
-  'NuwaxPC.Pages.SpaceKnowledge.DocRename.rename': 'Rename',
-  'NuwaxPC.Pages.SpaceKnowledge.DocRename.docNameRequired':
+  'PC.Pages.SpaceKnowledge.DocRename.updateSuccess': 'Updated successfully',
+  'PC.Pages.SpaceKnowledge.DocRename.rename': 'Rename',
+  'PC.Pages.SpaceKnowledge.DocRename.docNameRequired':
     'Document name cannot be empty',
-  'NuwaxPC.Pages.SpaceKnowledge.DocRename.inputDocName':
+  'PC.Pages.SpaceKnowledge.DocRename.inputDocName':
     'Please enter document name',
-  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.editRawSegment':
+  'PC.Pages.SpaceKnowledge.RawSegmentEditModal.editRawSegment':
     'Edit Raw Segment',
-  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.segmentContent':
+  'PC.Pages.SpaceKnowledge.RawSegmentEditModal.segmentContent':
     'Segment Content',
-  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.inputSegmentContent':
+  'PC.Pages.SpaceKnowledge.RawSegmentEditModal.inputSegmentContent':
     'Please enter segment content',
-  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.modifySuccess':
+  'PC.Pages.SpaceKnowledge.RawSegmentInfo.modifySuccess':
     'Modified successfully',
-  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.previewRawDoc':
+  'PC.Pages.SpaceKnowledge.RawSegmentInfo.previewRawDoc':
     'Preview Raw Document',
-  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.segmentProcessing':
+  'PC.Pages.SpaceKnowledge.RawSegmentInfo.segmentProcessing':
     'Segments are being processed',
-  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.edit': 'Edit',
-  'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.noSegment': 'No segments',
-  'NuwaxPC.Pages.SpaceKnowledge.Index.deleteDocSuccess':
+  'PC.Pages.SpaceKnowledge.RawSegmentInfo.edit': 'Edit',
+  'PC.Pages.SpaceKnowledge.RawSegmentInfo.noSegment': 'No segments',
+  'PC.Pages.SpaceKnowledge.Index.deleteDocSuccess':
     'Document deleted successfully',
-  'NuwaxPC.Pages.SpaceKnowledge.Index.confirmDeleteDoc':
+  'PC.Pages.SpaceKnowledge.Index.confirmDeleteDoc':
     'Are you sure you want to delete this document?',
-  'NuwaxPC.Pages.SpaceKnowledge.Index.deleteQaSuccess':
-    'QA deleted successfully',
-  'NuwaxPC.Pages.SpaceKnowledge.Index.searchQuestion': 'Search by question',
-  'NuwaxPC.Pages.SpaceKnowledge.Index.qaUpdateSuccess':
-    'QA updated successfully',
-  'NuwaxPC.Pages.SpaceKnowledge.Index.qaAddSuccess': 'QA added successfully',
+  'PC.Pages.SpaceKnowledge.Index.deleteQaSuccess': 'QA deleted successfully',
+  'PC.Pages.SpaceKnowledge.Index.searchQuestion': 'Search by question',
+  'PC.Pages.SpaceKnowledge.Index.qaUpdateSuccess': 'QA updated successfully',
+  'PC.Pages.SpaceKnowledge.Index.qaAddSuccess': 'QA added successfully',
 
   // SpaceLibrary - Index
-  'NuwaxPC.Pages.SpaceLibrary.Index.pageTitle': 'Component Library',
-  'NuwaxPC.Pages.SpaceLibrary.Index.searchComponent': 'Search components',
-  'NuwaxPC.Pages.SpaceLibrary.Index.addComponent': 'Component',
-  'NuwaxPC.Pages.SpaceLibrary.Index.noResults': 'No results found',
-  'NuwaxPC.Pages.SpaceLibrary.Index.pluginCopySuccess': 'Plugin copied successfully',
-  'NuwaxPC.Pages.SpaceLibrary.Index.pluginDeleteSuccess': 'Plugin deleted successfully',
-  'NuwaxPC.Pages.SpaceLibrary.Index.modelDeleteSuccess': 'Model deleted successfully',
-  'NuwaxPC.Pages.SpaceLibrary.Index.workflowCopySuccess': 'Workflow copied successfully',
-  'NuwaxPC.Pages.SpaceLibrary.Index.workflowDeleteSuccess': 'Workflow deleted successfully',
-  'NuwaxPC.Pages.SpaceLibrary.Index.knowledgeDeleteSuccess': 'Knowledge base deleted successfully',
-  'NuwaxPC.Pages.SpaceLibrary.Index.tableDeleteSuccess': 'Data table deleted successfully',
-  'NuwaxPC.Pages.SpaceLibrary.Index.tableCopySuccess': 'Data table copied successfully',
-  'NuwaxPC.Pages.SpaceLibrary.Index.confirmDeleteComponent': 'Are you sure you want to delete this component?',
-  'NuwaxPC.Pages.SpaceLibrary.Index.exportConfigTitle': 'Export Config - {0}',
-  'NuwaxPC.Pages.SpaceLibrary.Index.exportWorkflowConfigDesc': 'If it contains data tables or knowledge bases, the data itself will not be exported',
-  'NuwaxPC.Pages.SpaceLibrary.Index.exportTableConfigDesc': 'Only the data table structure will be exported, the data itself will not be exported',
+  'PC.Pages.SpaceLibrary.Index.pageTitle': 'Component Library',
+  'PC.Pages.SpaceLibrary.Index.searchComponent': 'Search components',
+  'PC.Pages.SpaceLibrary.Index.addComponent': 'Component',
+  'PC.Pages.SpaceLibrary.Index.noResults': 'No results found',
+  'PC.Pages.SpaceLibrary.Index.pluginCopySuccess': 'Plugin copied successfully',
+  'PC.Pages.SpaceLibrary.Index.pluginDeleteSuccess':
+    'Plugin deleted successfully',
+  'PC.Pages.SpaceLibrary.Index.modelDeleteSuccess':
+    'Model deleted successfully',
+  'PC.Pages.SpaceLibrary.Index.workflowCopySuccess':
+    'Workflow copied successfully',
+  'PC.Pages.SpaceLibrary.Index.workflowDeleteSuccess':
+    'Workflow deleted successfully',
+  'PC.Pages.SpaceLibrary.Index.knowledgeDeleteSuccess':
+    'Knowledge base deleted successfully',
+  'PC.Pages.SpaceLibrary.Index.tableDeleteSuccess':
+    'Data table deleted successfully',
+  'PC.Pages.SpaceLibrary.Index.tableCopySuccess':
+    'Data table copied successfully',
+  'PC.Pages.SpaceLibrary.Index.confirmDeleteComponent':
+    'Are you sure you want to delete this component?',
+  'PC.Pages.SpaceLibrary.Index.exportConfigTitle': 'Export Config - {0}',
+  'PC.Pages.SpaceLibrary.Index.exportWorkflowConfigDesc':
+    'If it contains data tables or knowledge bases, the data itself will not be exported',
+  'PC.Pages.SpaceLibrary.Index.exportTableConfigDesc':
+    'Only the data table structure will be exported, the data itself will not be exported',
 
   // SpaceLibrary - ComponentItem
-  'NuwaxPC.Pages.SpaceLibrary.ComponentItem.lastEdited': 'Last edited',
-  'NuwaxPC.Pages.SpaceLibrary.ComponentItem.enabled': 'Enabled',
-  'NuwaxPC.Pages.SpaceLibrary.ComponentItem.disabled': 'Disabled',
-  'NuwaxPC.Pages.SpaceLibrary.ComponentItem.published': 'Published',
+  'PC.Pages.SpaceLibrary.ComponentItem.lastEdited': 'Last edited',
+  'PC.Pages.SpaceLibrary.ComponentItem.enabled': 'Enabled',
+  'PC.Pages.SpaceLibrary.ComponentItem.disabled': 'Disabled',
+  'PC.Pages.SpaceLibrary.ComponentItem.published': 'Published',
 
   // SpaceLibrary - CreateModel
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.addModel': 'Add Model',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.updateModel': 'Update Model',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.testConnection': 'Test Connectivity',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.testConnectionSuccess': 'Model connection test successful',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.modelCreateSuccess': 'Model created successfully',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.modelUpdateSuccess': 'Model updated successfully',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.modelName': 'Model Name',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelName': 'Enter model name',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.modelIdentifier': 'Model Identifier',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelIdentifier': 'Enter model identifier',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.modelDescription': 'Model Description',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelDescription': 'Enter model description',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.modelType': 'Model Type',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.selectModelType': 'Please select model type',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.reasoningModel': 'Reasoning Model',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.yes': 'Yes',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.no': 'No',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.vectorDimension': 'Vector Dimension',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputVectorDimension': 'Enter vector dimension',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.maxOutputTokens': 'Max Output Tokens',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputMaxOutputTokens': 'Enter max output tokens',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.maxContextLength': 'Max Context Length',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputMaxContextLength': 'Enter max context length',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.functionCallSupport': 'Function Call Support',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.selectFunctionCallSupport': 'Select function call support',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.enableModel': 'Enable',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.disableTooltip': 'Once disabled, it can no longer be selected. Agents currently using it will not be affected',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.enable': 'Enable',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.disable': 'Disable',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.apiProtocol': 'API Protocol',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.selectApiProtocol': 'Select API protocol',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.apiConfig': 'API Configuration',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.callStrategy': 'Call Strategy',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.selectCallStrategy': 'Select call strategy',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.weight': 'Weight',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputWeight': 'Enter weight value',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputUrl': 'Enter URL',
-  'NuwaxPC.Pages.SpaceLibrary.CreateModel.inputApiKey': 'Enter API KEY',
+  'PC.Pages.SpaceLibrary.CreateModel.addModel': 'Add Model',
+  'PC.Pages.SpaceLibrary.CreateModel.updateModel': 'Update Model',
+  'PC.Pages.SpaceLibrary.CreateModel.testConnection': 'Test Connectivity',
+  'PC.Pages.SpaceLibrary.CreateModel.testConnectionSuccess':
+    'Model connection test successful',
+  'PC.Pages.SpaceLibrary.CreateModel.modelCreateSuccess':
+    'Model created successfully',
+  'PC.Pages.SpaceLibrary.CreateModel.modelUpdateSuccess':
+    'Model updated successfully',
+  'PC.Pages.SpaceLibrary.CreateModel.modelName': 'Model Name',
+  'PC.Pages.SpaceLibrary.CreateModel.inputModelName': 'Enter model name',
+  'PC.Pages.SpaceLibrary.CreateModel.modelIdentifier': 'Model Identifier',
+  'PC.Pages.SpaceLibrary.CreateModel.inputModelIdentifier':
+    'Enter model identifier',
+  'PC.Pages.SpaceLibrary.CreateModel.modelDescription': 'Model Description',
+  'PC.Pages.SpaceLibrary.CreateModel.inputModelDescription':
+    'Enter model description',
+  'PC.Pages.SpaceLibrary.CreateModel.modelType': 'Model Type',
+  'PC.Pages.SpaceLibrary.CreateModel.selectModelType':
+    'Please select model type',
+  'PC.Pages.SpaceLibrary.CreateModel.reasoningModel': 'Reasoning Model',
+  'PC.Pages.SpaceLibrary.CreateModel.yes': 'Yes',
+  'PC.Pages.SpaceLibrary.CreateModel.no': 'No',
+  'PC.Pages.SpaceLibrary.CreateModel.vectorDimension': 'Vector Dimension',
+  'PC.Pages.SpaceLibrary.CreateModel.inputVectorDimension':
+    'Enter vector dimension',
+  'PC.Pages.SpaceLibrary.CreateModel.maxOutputTokens': 'Max Output Tokens',
+  'PC.Pages.SpaceLibrary.CreateModel.inputMaxOutputTokens':
+    'Enter max output tokens',
+  'PC.Pages.SpaceLibrary.CreateModel.maxContextLength': 'Max Context Length',
+  'PC.Pages.SpaceLibrary.CreateModel.inputMaxContextLength':
+    'Enter max context length',
+  'PC.Pages.SpaceLibrary.CreateModel.functionCallSupport':
+    'Function Call Support',
+  'PC.Pages.SpaceLibrary.CreateModel.selectFunctionCallSupport':
+    'Select function call support',
+  'PC.Pages.SpaceLibrary.CreateModel.enableModel': 'Enable',
+  'PC.Pages.SpaceLibrary.CreateModel.disableTooltip':
+    'Once disabled, it can no longer be selected. Agents currently using it will not be affected',
+  'PC.Pages.SpaceLibrary.CreateModel.enable': 'Enable',
+  'PC.Pages.SpaceLibrary.CreateModel.disable': 'Disable',
+  'PC.Pages.SpaceLibrary.CreateModel.apiProtocol': 'API Protocol',
+  'PC.Pages.SpaceLibrary.CreateModel.selectApiProtocol': 'Select API protocol',
+  'PC.Pages.SpaceLibrary.CreateModel.apiConfig': 'API Configuration',
+  'PC.Pages.SpaceLibrary.CreateModel.callStrategy': 'Call Strategy',
+  'PC.Pages.SpaceLibrary.CreateModel.selectCallStrategy':
+    'Select call strategy',
+  'PC.Pages.SpaceLibrary.CreateModel.weight': 'Weight',
+  'PC.Pages.SpaceLibrary.CreateModel.inputWeight': 'Enter weight value',
+  'PC.Pages.SpaceLibrary.CreateModel.inputUrl': 'Enter URL',
+  'PC.Pages.SpaceLibrary.CreateModel.inputApiKey': 'Enter API KEY',
 
   // SpaceLibrary - IntranetModel
-  'NuwaxPC.Pages.SpaceLibrary.IntranetModel.description': 'Select "Intranet Model" to expose models on your local network to the platform. You only need to execute one command on your intranet server, and then you can configure your intranet address in the API URL configuration below',
-  'NuwaxPC.Pages.SpaceLibrary.IntranetModel.viewCommand': 'View Intranet Server Command',
-  'NuwaxPC.Pages.SpaceLibrary.IntranetModel.offlineStatus': 'Current status: Offline',
-  'NuwaxPC.Pages.SpaceLibrary.IntranetModel.refreshStatus': 'Refresh Status',
+  'PC.Pages.SpaceLibrary.IntranetModel.description':
+    'Select "Intranet Model" to expose models on your local network to the platform. You only need to execute one command on your intranet server, and then you can configure your intranet address in the API URL configuration below',
+  'PC.Pages.SpaceLibrary.IntranetModel.viewCommand':
+    'View Intranet Server Command',
+  'PC.Pages.SpaceLibrary.IntranetModel.offlineStatus':
+    'Current status: Offline',
+  'PC.Pages.SpaceLibrary.IntranetModel.refreshStatus': 'Refresh Status',
 
   // SpaceLibrary - IntranetServerCommand
-  'NuwaxPC.Pages.SpaceLibrary.IntranetServerCommand.modalTitle': 'Intranet Server Command',
-  'NuwaxPC.Pages.SpaceLibrary.IntranetServerCommand.windowsTitle': 'Windows (Execute in CMD window)',
-  'NuwaxPC.Pages.SpaceLibrary.IntranetServerCommand.windowsDownload': 'Windows 64-bit Client Download',
-  'NuwaxPC.Pages.SpaceLibrary.IntranetServerCommand.macTitle': 'Mac (Execute in Terminal)',
-  'NuwaxPC.Pages.SpaceLibrary.IntranetServerCommand.macDownload': 'Mac OS 64-bit Client Download',
-  'NuwaxPC.Pages.SpaceLibrary.IntranetServerCommand.linuxTitle': 'Linux (Execute in Terminal)',
-  'NuwaxPC.Pages.SpaceLibrary.IntranetServerCommand.linuxDownload': 'Linux 64-bit Client Download',
+  'PC.Pages.SpaceLibrary.IntranetServerCommand.modalTitle':
+    'Intranet Server Command',
+  'PC.Pages.SpaceLibrary.IntranetServerCommand.windowsTitle':
+    'Windows (Execute in CMD window)',
+  'PC.Pages.SpaceLibrary.IntranetServerCommand.windowsDownload':
+    'Windows 64-bit Client Download',
+  'PC.Pages.SpaceLibrary.IntranetServerCommand.macTitle':
+    'Mac (Execute in Terminal)',
+  'PC.Pages.SpaceLibrary.IntranetServerCommand.macDownload':
+    'Mac OS 64-bit Client Download',
+  'PC.Pages.SpaceLibrary.IntranetServerCommand.linuxTitle':
+    'Linux (Execute in Terminal)',
+  'PC.Pages.SpaceLibrary.IntranetServerCommand.linuxDownload':
+    'Linux 64-bit Client Download',
 
   // UserManage - Common
-  'NuwaxPC.Common.Global.noData': 'No data',
+  'PC.Common.Global.noData': 'No data',
 
   // UserManage - MessageSendModal
-  'NuwaxPC.Pages.UserManage.MessageSendModal.messageSendSuccess':
+  'PC.Pages.UserManage.MessageSendModal.messageSendSuccess':
     'Message sent successfully',
-  'NuwaxPC.Pages.UserManage.MessageSendModal.noUserFound':
-    'No matching users found',
-  'NuwaxPC.Pages.UserManage.MessageSendModal.pleaseInputMessage':
+  'PC.Pages.UserManage.MessageSendModal.noUserFound': 'No matching users found',
+  'PC.Pages.UserManage.MessageSendModal.pleaseInputMessage':
     'Please enter message content',
-  'NuwaxPC.Pages.UserManage.MessageSendModal.pleaseSelectMembers':
+  'PC.Pages.UserManage.MessageSendModal.pleaseSelectMembers':
     'Please select members to add',
-  'NuwaxPC.Pages.UserManage.MessageSendModal.addMessageUser':
+  'PC.Pages.UserManage.MessageSendModal.addMessageUser':
     'Add Message Recipients',
-  'NuwaxPC.Pages.UserManage.MessageSendModal.sendMessage': 'Send Message',
-  'NuwaxPC.Pages.UserManage.MessageSendModal.inputMessageContent':
+  'PC.Pages.UserManage.MessageSendModal.sendMessage': 'Send Message',
+  'PC.Pages.UserManage.MessageSendModal.inputMessageContent':
     'Enter message content',
-  'NuwaxPC.Pages.UserManage.MessageSendModal.searchUserPlaceholder':
+  'PC.Pages.UserManage.MessageSendModal.searchUserPlaceholder':
     'Enter username, email or phone number, press Enter to search',
-  'NuwaxPC.Pages.UserManage.MessageSendModal.selectAll': 'All',
-  'NuwaxPC.Pages.UserManage.MessageSendModal.selectedMembers':
+  'PC.Pages.UserManage.MessageSendModal.selectAll': 'All',
+  'PC.Pages.UserManage.MessageSendModal.selectedMembers':
     'Selected Members ({0})',
 
   // UserManage - DataPermissionModal
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.dataPermissionTitle':
+  'PC.Pages.UserManage.DataPermissionModal.dataPermissionTitle':
     'Data Permissions - {0}',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.dailyTokenLimit':
+  'PC.Pages.UserManage.DataPermissionModal.dailyTokenLimit':
     'Daily Token Limit',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.dailyTokenLimitTooltip':
+  'PC.Pages.UserManage.DataPermissionModal.dailyTokenLimitTooltip':
     'Daily token limit, -1 means unlimited',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.dailyTokenLimitPlaceholder':
+  'PC.Pages.UserManage.DataPermissionModal.dailyTokenLimitPlaceholder':
     'Enter daily token limit',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxSpaceCount':
+  'PC.Pages.UserManage.DataPermissionModal.maxSpaceCount':
     'Max Workspace Count',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxSpaceCountTooltip':
+  'PC.Pages.UserManage.DataPermissionModal.maxSpaceCountTooltip':
     'Max workspace count, -1 means unlimited',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxAgentCount':
-    'Max Agent Count',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxAgentCountTooltip':
+  'PC.Pages.UserManage.DataPermissionModal.maxAgentCount': 'Max Agent Count',
+  'PC.Pages.UserManage.DataPermissionModal.maxAgentCountTooltip':
     'Max agent count, -1 means unlimited',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxPageAppCount':
+  'PC.Pages.UserManage.DataPermissionModal.maxPageAppCount':
     'Max Web App Count',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxPageAppCountTooltip':
+  'PC.Pages.UserManage.DataPermissionModal.maxPageAppCountTooltip':
     'Max web app count, -1 means unlimited',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxKnowledgeCount':
+  'PC.Pages.UserManage.DataPermissionModal.maxKnowledgeCount':
     'Max Knowledge Base Count',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxKnowledgeCountTooltip':
+  'PC.Pages.UserManage.DataPermissionModal.maxKnowledgeCountTooltip':
     'Max knowledge base count, -1 means unlimited',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGb':
+  'PC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGb':
     'Knowledge Storage Limit (GB)',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGbTooltip':
+  'PC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGbTooltip':
     'Knowledge storage limit (GB), -1 means unlimited',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxDataTableCount':
+  'PC.Pages.UserManage.DataPermissionModal.maxDataTableCount':
     'Max Data Table Count',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxDataTableCountTooltip':
+  'PC.Pages.UserManage.DataPermissionModal.maxDataTableCountTooltip':
     'Max data table count, -1 means unlimited',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCount':
+  'PC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCount':
     'Max Scheduled Task Count',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCountTooltip':
+  'PC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCountTooltip':
     'Max scheduled task count, -1 means unlimited',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGb':
+  'PC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGb':
     'Agent Computer Memory (GB)',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGbTooltip':
+  'PC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGbTooltip':
     'Agent computer memory (GB, leave empty for default 4GB)',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerCpuCores':
+  'PC.Pages.UserManage.DataPermissionModal.agentComputerCpuCores':
     'Agent Computer CPU Cores',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerCpuCoresTooltip':
+  'PC.Pages.UserManage.DataPermissionModal.agentComputerCpuCoresTooltip':
     'Agent computer CPU cores (leave empty for default value)',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimit':
+  'PC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimit':
     'Daily Agent Chat Limit',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimitTooltip':
+  'PC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimitTooltip':
     'Daily agent chat limit, -1 means unlimited',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimit':
+  'PC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimit':
     'Daily Web App Chat Limit',
-  'NuwaxPC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimitTooltip':
+  'PC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimitTooltip':
     'Daily web app chat limit, -1 means unlimited',
 
   // UserManage - UserAuthModal
-  'NuwaxPC.Pages.UserManage.UserAuthModal.role': 'Role',
-  'NuwaxPC.Pages.UserManage.UserAuthModal.userGroup': 'User Group',
-  'NuwaxPC.Pages.UserManage.UserAuthModal.authTitle': 'Authorization - {0}',
-  'NuwaxPC.Pages.UserManage.UserAuthModal.selectAll': 'Select All',
-  'NuwaxPC.Pages.UserManage.UserAuthModal.deselectAll': 'Deselect All',
+  'PC.Pages.UserManage.UserAuthModal.role': 'Role',
+  'PC.Pages.UserManage.UserAuthModal.userGroup': 'User Group',
+  'PC.Pages.UserManage.UserAuthModal.authTitle': 'Authorization - {0}',
+  'PC.Pages.UserManage.UserAuthModal.selectAll': 'Select All',
+  'PC.Pages.UserManage.UserAuthModal.deselectAll': 'Deselect All',
 
   // UserManage - UserFormModal
-  'NuwaxPC.Pages.UserManage.UserFormModal.editUser': 'Edit User',
-  'NuwaxPC.Pages.UserManage.UserFormModal.addUser': 'Add User',
-  'NuwaxPC.Pages.UserManage.UserFormModal.userName': 'Username',
-  'NuwaxPC.Pages.UserManage.UserFormModal.inputUserName':
-    'Please enter username',
-  'NuwaxPC.Pages.UserManage.UserFormModal.nickName': 'Nickname',
-  'NuwaxPC.Pages.UserManage.UserFormModal.inputNickName':
+  'PC.Pages.UserManage.UserFormModal.editUser': 'Edit User',
+  'PC.Pages.UserManage.UserFormModal.addUser': 'Add User',
+  'PC.Pages.UserManage.UserFormModal.userName': 'Username',
+  'PC.Pages.UserManage.UserFormModal.inputUserName': 'Please enter username',
+  'PC.Pages.UserManage.UserFormModal.nickName': 'Nickname',
+  'PC.Pages.UserManage.UserFormModal.inputNickName':
     'Please enter nickname (full name)',
-  'NuwaxPC.Pages.UserManage.UserFormModal.phoneNumber': 'Phone Number',
-  'NuwaxPC.Pages.UserManage.UserFormModal.inputPhoneNumber':
+  'PC.Pages.UserManage.UserFormModal.phoneNumber': 'Phone Number',
+  'PC.Pages.UserManage.UserFormModal.inputPhoneNumber':
     'Please enter phone number',
-  'NuwaxPC.Pages.UserManage.UserFormModal.emailAddress': 'Email Address',
-  'NuwaxPC.Pages.UserManage.UserFormModal.inputEmailAddress':
+  'PC.Pages.UserManage.UserFormModal.emailAddress': 'Email Address',
+  'PC.Pages.UserManage.UserFormModal.inputEmailAddress':
     'Please enter email address',
-  'NuwaxPC.Pages.UserManage.UserFormModal.loginPassword': 'Login Password',
-  'NuwaxPC.Pages.UserManage.UserFormModal.inputLoginPassword':
+  'PC.Pages.UserManage.UserFormModal.loginPassword': 'Login Password',
+  'PC.Pages.UserManage.UserFormModal.inputLoginPassword':
     'Please enter login password',
-  'NuwaxPC.Pages.UserManage.UserFormModal.userType': 'User Type',
-  'NuwaxPC.Pages.UserManage.UserFormModal.admin': 'Admin',
-  'NuwaxPC.Pages.UserManage.UserFormModal.normalUser': 'Normal User',
+  'PC.Pages.UserManage.UserFormModal.userType': 'User Type',
+  'PC.Pages.UserManage.UserFormModal.admin': 'Admin',
+  'PC.Pages.UserManage.UserFormModal.normalUser': 'Normal User',
 
   // UserManage - UserViewMenuModal
-  'NuwaxPC.Pages.UserManage.UserViewMenuModal.viewMenuResourcePermission':
+  'PC.Pages.UserManage.UserViewMenuModal.viewMenuResourcePermission':
     'View Menu Resource Permissions',
-  'NuwaxPC.Pages.UserManage.UserViewMenuModal.resourceId': 'Resource {0}',
-  'NuwaxPC.Pages.UserManage.UserViewMenuModal.menuId': 'Menu {0}',
+  'PC.Pages.UserManage.UserViewMenuModal.resourceId': 'Resource {0}',
+  'PC.Pages.UserManage.UserViewMenuModal.menuId': 'Menu {0}',
 
   // UserManage - Index
-  'NuwaxPC.Pages.UserManage.Index.enableSuccess': 'Enabled successfully',
-  'NuwaxPC.Pages.UserManage.Index.disableSuccess': 'Disabled successfully',
-  'NuwaxPC.Pages.UserManage.Index.edit': 'Edit',
-  'NuwaxPC.Pages.UserManage.Index.disable': 'Disable',
-  'NuwaxPC.Pages.UserManage.Index.enable': 'Enable',
-  'NuwaxPC.Pages.UserManage.Index.auth': 'Authorize',
-  'NuwaxPC.Pages.UserManage.Index.viewMenuResourcePermission':
+  'PC.Pages.UserManage.Index.enableSuccess': 'Enabled successfully',
+  'PC.Pages.UserManage.Index.disableSuccess': 'Disabled successfully',
+  'PC.Pages.UserManage.Index.edit': 'Edit',
+  'PC.Pages.UserManage.Index.disable': 'Disable',
+  'PC.Pages.UserManage.Index.enable': 'Enable',
+  'PC.Pages.UserManage.Index.auth': 'Authorize',
+  'PC.Pages.UserManage.Index.viewMenuResourcePermission':
     'View Menu Permissions',
-  'NuwaxPC.Pages.UserManage.Index.viewDataPermission': 'View Data Permissions',
-  'NuwaxPC.Pages.UserManage.Index.userName': 'Username',
-  'NuwaxPC.Pages.UserManage.Index.userFullName': 'Full Name',
-  'NuwaxPC.Pages.UserManage.Index.nickName': 'Nickname',
-  'NuwaxPC.Pages.UserManage.Index.phoneNumber': 'Phone',
-  'NuwaxPC.Pages.UserManage.Index.email': 'Email',
-  'NuwaxPC.Pages.UserManage.Index.type': 'Type',
-  'NuwaxPC.Pages.UserManage.Index.admin': 'Admin',
-  'NuwaxPC.Pages.UserManage.Index.member': 'Member',
-  'NuwaxPC.Pages.UserManage.Index.status': 'Status',
-  'NuwaxPC.Pages.UserManage.Index.normal': 'Active',
-  'NuwaxPC.Pages.UserManage.Index.disabled': 'Disabled',
-  'NuwaxPC.Pages.UserManage.Index.joinTime': 'Join Time',
-  'NuwaxPC.Pages.UserManage.Index.action': 'Action',
-  'NuwaxPC.Pages.UserManage.Index.userManage': 'User Management',
-  'NuwaxPC.Pages.UserManage.Index.addUser': 'Add User',
-  'NuwaxPC.Pages.UserManage.Index.sendMessage': 'Send Message',
-  'NuwaxPC.Pages.UserManage.MessageSendModal.broadcast': 'Send to specified users',
-  'NuwaxPC.Pages.UserManage.MessageSendModal.systemMessage': 'System message (all users)',
+  'PC.Pages.UserManage.Index.viewDataPermission': 'View Data Permissions',
+  'PC.Pages.UserManage.Index.userName': 'Username',
+  'PC.Pages.UserManage.Index.userFullName': 'Full Name',
+  'PC.Pages.UserManage.Index.nickName': 'Nickname',
+  'PC.Pages.UserManage.Index.phoneNumber': 'Phone',
+  'PC.Pages.UserManage.Index.email': 'Email',
+  'PC.Pages.UserManage.Index.type': 'Type',
+  'PC.Pages.UserManage.Index.admin': 'Admin',
+  'PC.Pages.UserManage.Index.member': 'Member',
+  'PC.Pages.UserManage.Index.status': 'Status',
+  'PC.Pages.UserManage.Index.normal': 'Active',
+  'PC.Pages.UserManage.Index.disabled': 'Disabled',
+  'PC.Pages.UserManage.Index.joinTime': 'Join Time',
+  'PC.Pages.UserManage.Index.action': 'Action',
+  'PC.Pages.UserManage.Index.userManage': 'User Management',
+  'PC.Pages.UserManage.Index.addUser': 'Add User',
+  'PC.Pages.UserManage.Index.sendMessage': 'Send Message',
+  'PC.Pages.UserManage.MessageSendModal.broadcast': 'Send to specified users',
+  'PC.Pages.UserManage.MessageSendModal.systemMessage':
+    'System message (all users)',
 
   // Layouts - Setting
   // Layouts - Setting > ResetPassword
-  'NuwaxPC.Layouts.Setting.ResetPassword.title': 'Reset Password',
-  'NuwaxPC.Layouts.Setting.ResetPassword.newPassword': 'New Password',
-  'NuwaxPC.Layouts.Setting.ResetPassword.inputNewPassword':
+  'PC.Layouts.Setting.ResetPassword.title': 'Reset Password',
+  'PC.Layouts.Setting.ResetPassword.newPassword': 'New Password',
+  'PC.Layouts.Setting.ResetPassword.inputNewPassword':
     'Please enter new password!',
-  'NuwaxPC.Layouts.Setting.ResetPassword.inputCorrectPassword':
+  'PC.Layouts.Setting.ResetPassword.inputCorrectPassword':
     'Please enter a valid password!',
-  'NuwaxPC.Layouts.Setting.ResetPassword.confirmPassword': 'Confirm Password',
-  'NuwaxPC.Layouts.Setting.ResetPassword.inputConfirmPassword':
+  'PC.Layouts.Setting.ResetPassword.confirmPassword': 'Confirm Password',
+  'PC.Layouts.Setting.ResetPassword.inputConfirmPassword':
     'Please enter the password again!',
-  'NuwaxPC.Layouts.Setting.ResetPassword.passwordMismatch':
+  'PC.Layouts.Setting.ResetPassword.passwordMismatch':
     'Passwords do not match!',
-  'NuwaxPC.Layouts.Setting.ResetPassword.inputCorrectNewPassword':
+  'PC.Layouts.Setting.ResetPassword.inputCorrectNewPassword':
     'Please enter a valid new password!',
-  'NuwaxPC.Layouts.Setting.ResetPassword.placeholderNewPassword':
+  'PC.Layouts.Setting.ResetPassword.placeholderNewPassword':
     'Please enter new password',
-  'NuwaxPC.Layouts.Setting.ResetPassword.placeholderConfirmPassword':
+  'PC.Layouts.Setting.ResetPassword.placeholderConfirmPassword':
     'Please enter the password again',
-  'NuwaxPC.Layouts.Setting.ResetPassword.verificationCode': 'Verification Code',
-  'NuwaxPC.Layouts.Setting.ResetPassword.inputVerificationCode':
+  'PC.Layouts.Setting.ResetPassword.verificationCode': 'Verification Code',
+  'PC.Layouts.Setting.ResetPassword.inputVerificationCode':
     'Please enter verification code',
-  'NuwaxPC.Layouts.Setting.ResetPassword.inputCorrectCode':
+  'PC.Layouts.Setting.ResetPassword.inputCorrectCode':
     'Please enter a valid verification code!',
-  'NuwaxPC.Layouts.Setting.ResetPassword.placeholderCode':
+  'PC.Layouts.Setting.ResetPassword.placeholderCode':
     'Please enter verification code',
-  'NuwaxPC.Layouts.Setting.ResetPassword.sendCode': 'Send Code',
-  'NuwaxPC.Layouts.Setting.ResetPassword.submit': 'Confirm Change',
-  'NuwaxPC.Layouts.Setting.ResetPassword.resetSuccess': 'Reset successful',
+  'PC.Layouts.Setting.ResetPassword.sendCode': 'Send Code',
+  'PC.Layouts.Setting.ResetPassword.submit': 'Confirm Change',
+  'PC.Layouts.Setting.ResetPassword.resetSuccess': 'Reset successful',
 
   // Layouts - Setting > SettingEmail
-  'NuwaxPC.Layouts.Setting.SettingEmail.emailBindTitle': 'Email Binding',
-  'NuwaxPC.Layouts.Setting.SettingEmail.phoneBindTitle': 'Phone Binding',
-  'NuwaxPC.Layouts.Setting.SettingEmail.emailAddress': 'Email Address',
-  'NuwaxPC.Layouts.Setting.SettingEmail.phoneNumber': 'Phone Number',
-  'NuwaxPC.Layouts.Setting.SettingEmail.inputEmailAddress':
+  'PC.Layouts.Setting.SettingEmail.emailBindTitle': 'Email Binding',
+  'PC.Layouts.Setting.SettingEmail.phoneBindTitle': 'Phone Binding',
+  'PC.Layouts.Setting.SettingEmail.emailAddress': 'Email Address',
+  'PC.Layouts.Setting.SettingEmail.phoneNumber': 'Phone Number',
+  'PC.Layouts.Setting.SettingEmail.inputEmailAddress':
     'Please enter email address',
-  'NuwaxPC.Layouts.Setting.SettingEmail.inputPhoneNumber':
+  'PC.Layouts.Setting.SettingEmail.inputPhoneNumber':
     'Please enter phone number',
-  'NuwaxPC.Layouts.Setting.SettingEmail.inputCorrectEmail':
+  'PC.Layouts.Setting.SettingEmail.inputCorrectEmail':
     'Please enter a valid email address!',
-  'NuwaxPC.Layouts.Setting.SettingEmail.inputCorrectPhone':
+  'PC.Layouts.Setting.SettingEmail.inputCorrectPhone':
     'Please enter a valid phone number!',
-  'NuwaxPC.Layouts.Setting.SettingEmail.verificationCode': 'Verification Code',
-  'NuwaxPC.Layouts.Setting.SettingEmail.inputVerificationCode':
+  'PC.Layouts.Setting.SettingEmail.verificationCode': 'Verification Code',
+  'PC.Layouts.Setting.SettingEmail.inputVerificationCode':
     'Please enter verification code',
-  'NuwaxPC.Layouts.Setting.SettingEmail.inputCorrectCode':
+  'PC.Layouts.Setting.SettingEmail.inputCorrectCode':
     'Please enter a valid verification code!',
-  'NuwaxPC.Layouts.Setting.SettingEmail.placeholderCode':
+  'PC.Layouts.Setting.SettingEmail.placeholderCode':
     'Please enter verification code',
-  'NuwaxPC.Layouts.Setting.SettingEmail.sendCode': 'Send Code',
-  'NuwaxPC.Layouts.Setting.SettingEmail.bind': 'Bind',
-  'NuwaxPC.Layouts.Setting.SettingEmail.bindSuccess': 'Binding successful',
+  'PC.Layouts.Setting.SettingEmail.sendCode': 'Send Code',
+  'PC.Layouts.Setting.SettingEmail.bind': 'Bind',
+  'PC.Layouts.Setting.SettingEmail.bindSuccess': 'Binding successful',
 
   // Layouts - Setting > ThemeSwitchPanel
-  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.title': 'Theme Switch',
-  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.colorUpdateFailed':
+  'PC.Layouts.Setting.ThemeSwitchPanel.title': 'Theme Switch',
+  'PC.Layouts.Setting.ThemeSwitchPanel.colorUpdateFailed':
     'Failed to update theme color',
-  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.autoSwitchNav':
+  'PC.Layouts.Setting.ThemeSwitchPanel.autoSwitchNav':
     'Automatically switched to {0} navigation bar',
-  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.dark': 'dark',
-  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.light': 'light',
-  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.backgroundUpdateFailed':
+  'PC.Layouts.Setting.ThemeSwitchPanel.dark': 'dark',
+  'PC.Layouts.Setting.ThemeSwitchPanel.light': 'light',
+  'PC.Layouts.Setting.ThemeSwitchPanel.backgroundUpdateFailed':
     'Failed to update background image',
-  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.navStyleUpdateFailed':
+  'PC.Layouts.Setting.ThemeSwitchPanel.navStyleUpdateFailed':
     'Failed to update navigation style',
-  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.autoSwitchBackground':
+  'PC.Layouts.Setting.ThemeSwitchPanel.autoSwitchBackground':
     'Automatically switched to {0} to match {1} navigation bar',
-  'NuwaxPC.Layouts.Setting.ThemeSwitchPanel.navThemeToggleFailed':
+  'PC.Layouts.Setting.ThemeSwitchPanel.navThemeToggleFailed':
     'Failed to toggle navigation theme',
 
   // Layouts - Setting > UsageStatistics
-  'NuwaxPC.Layouts.Setting.UsageStatistics.title': 'Usage Statistics',
-  'NuwaxPC.Layouts.Setting.UsageStatistics.query': 'Query',
-  'NuwaxPC.Layouts.Setting.UsageStatistics.columnType': 'Type',
-  'NuwaxPC.Layouts.Setting.UsageStatistics.columnDaily': 'Daily',
-  'NuwaxPC.Layouts.Setting.UsageStatistics.columnOther': 'Other',
-  'NuwaxPC.Layouts.Setting.UsageStatistics.tokenLimit': 'Token Usage Limit',
-  'NuwaxPC.Layouts.Setting.UsageStatistics.agentPrompt': 'Agent Chat Count',
-  'NuwaxPC.Layouts.Setting.UsageStatistics.pagePrompt':
-    'Web App Dev Chat Count',
-  'NuwaxPC.Layouts.Setting.UsageStatistics.workspace':
-    'Workspace Creation Limit',
-  'NuwaxPC.Layouts.Setting.UsageStatistics.agent': 'Agent Creation Limit',
-  'NuwaxPC.Layouts.Setting.UsageStatistics.pageApp': 'Web App Creation Limit',
-  'NuwaxPC.Layouts.Setting.UsageStatistics.knowledgeBase':
+  'PC.Layouts.Setting.UsageStatistics.title': 'Usage Statistics',
+  'PC.Layouts.Setting.UsageStatistics.query': 'Query',
+  'PC.Layouts.Setting.UsageStatistics.columnType': 'Type',
+  'PC.Layouts.Setting.UsageStatistics.columnDaily': 'Daily',
+  'PC.Layouts.Setting.UsageStatistics.columnOther': 'Other',
+  'PC.Layouts.Setting.UsageStatistics.tokenLimit': 'Token Usage Limit',
+  'PC.Layouts.Setting.UsageStatistics.agentPrompt': 'Agent Chat Count',
+  'PC.Layouts.Setting.UsageStatistics.pagePrompt': 'Web App Dev Chat Count',
+  'PC.Layouts.Setting.UsageStatistics.workspace': 'Workspace Creation Limit',
+  'PC.Layouts.Setting.UsageStatistics.agent': 'Agent Creation Limit',
+  'PC.Layouts.Setting.UsageStatistics.pageApp': 'Web App Creation Limit',
+  'PC.Layouts.Setting.UsageStatistics.knowledgeBase':
     'Knowledge Base Creation Limit',
-  'NuwaxPC.Layouts.Setting.UsageStatistics.kbStorage':
+  'PC.Layouts.Setting.UsageStatistics.kbStorage':
     'Knowledge Base Storage Limit',
-  'NuwaxPC.Layouts.Setting.UsageStatistics.table': 'Data Table Creation Limit',
-  'NuwaxPC.Layouts.Setting.UsageStatistics.task':
-    'Scheduled Task Creation Limit',
-  'NuwaxPC.Layouts.Setting.UsageStatistics.sandboxMemory':
+  'PC.Layouts.Setting.UsageStatistics.table': 'Data Table Creation Limit',
+  'PC.Layouts.Setting.UsageStatistics.task': 'Scheduled Task Creation Limit',
+  'PC.Layouts.Setting.UsageStatistics.sandboxMemory':
     'Agent Computer Max Memory',
 
   // Common - additional keys
-  'NuwaxPC.Common.Global.submit': 'Submit',
-  'NuwaxPC.Common.Global.operation': 'Action',
-  'NuwaxPC.Common.Global.edit': 'Edit',
-  'NuwaxPC.Common.Global.delete': 'Delete',
-  'NuwaxPC.Common.Global.add': 'Add',
-  'NuwaxPC.Common.Global.import': 'Import',
-  'NuwaxPC.Common.Global.export': 'Export',
-  'NuwaxPC.Common.Global.pleaseInput': 'Please enter',
-  'NuwaxPC.Common.Global.nameEmpty': 'Name cannot be empty',
-  'NuwaxPC.Common.Global.deleteConfirmTitle': 'Delete Confirmation',
-  'NuwaxPC.Common.Global.deleteConfirmContent': 'Are you sure you want to delete?',
-  'NuwaxPC.Common.Global.selectTime': 'Please select time',
-  'NuwaxPC.Toast.Global.deletedSuccessfully': 'Deleted successfully',
-  'NuwaxPC.Toast.Global.modifiedSuccessfully': 'Modified successfully',
-  'NuwaxPC.Toast.Global.clearedSuccessfully': 'Cleared successfully',
-  'NuwaxPC.Toast.Global.importedSuccessfully': 'Imported successfully',
-  'NuwaxPC.Toast.Global.importFailedRetry': 'Import failed, please retry',
-  'NuwaxPC.Toast.Global.fileUploadFailedRetry':
-    'File upload failed, please retry',
+  'PC.Common.Global.submit': 'Submit',
+  'PC.Common.Global.operation': 'Action',
+  'PC.Common.Global.edit': 'Edit',
+  'PC.Common.Global.delete': 'Delete',
+  'PC.Common.Global.add': 'Add',
+  'PC.Common.Global.import': 'Import',
+  'PC.Common.Global.export': 'Export',
+  'PC.Common.Global.pleaseInput': 'Please enter',
+  'PC.Common.Global.nameEmpty': 'Name cannot be empty',
+  'PC.Common.Global.deleteConfirmTitle': 'Delete Confirmation',
+  'PC.Common.Global.deleteConfirmContent': 'Are you sure you want to delete?',
+  'PC.Common.Global.selectTime': 'Please select time',
+  'PC.Toast.Global.deletedSuccessfully': 'Deleted successfully',
+  'PC.Toast.Global.modifiedSuccessfully': 'Modified successfully',
+  'PC.Toast.Global.clearedSuccessfully': 'Cleared successfully',
+  'PC.Toast.Global.importedSuccessfully': 'Imported successfully',
+  'PC.Toast.Global.importFailedRetry': 'Import failed, please retry',
+  'PC.Toast.Global.fileUploadFailedRetry': 'File upload failed, please retry',
 
   // Pages - SpaceTable
-  'NuwaxPC.Pages.SpaceTable.Index.fieldNameValidate':
+  'PC.Pages.SpaceTable.Index.fieldNameValidate':
     'Field name can only contain letters, numbers, underscores, and must start with a letter',
-  'NuwaxPC.Pages.SpaceTable.Index.hint': 'Hint',
-  'NuwaxPC.Pages.SpaceTable.Index.structureModified':
+  'PC.Pages.SpaceTable.Index.hint': 'Hint',
+  'PC.Pages.SpaceTable.Index.structureModified':
     'Current table structure has been modified. Save changes?',
-  'NuwaxPC.Pages.SpaceTable.Index.discardChanges': 'Discard Changes',
-  'NuwaxPC.Pages.SpaceTable.Index.confirmSave': 'Save',
-  'NuwaxPC.Pages.SpaceTable.Index.modifyData': 'Edit Data',
-  'NuwaxPC.Pages.SpaceTable.Index.addData': 'Add Data',
-  'NuwaxPC.Pages.SpaceTable.Index.clearConfirm': 'Clear Confirmation',
-  'NuwaxPC.Pages.SpaceTable.AddAndModify.inputPlaceholder': 'Please enter {0}',
-  'NuwaxPC.Pages.SpaceTable.AddAndModify.defaultPlaceholder':
+  'PC.Pages.SpaceTable.Index.discardChanges': 'Discard Changes',
+  'PC.Pages.SpaceTable.Index.confirmSave': 'Save',
+  'PC.Pages.SpaceTable.Index.modifyData': 'Edit Data',
+  'PC.Pages.SpaceTable.Index.addData': 'Add Data',
+  'PC.Pages.SpaceTable.Index.clearConfirm': 'Clear Confirmation',
+  'PC.Pages.SpaceTable.AddAndModify.inputPlaceholder': 'Please enter {0}',
+  'PC.Pages.SpaceTable.AddAndModify.defaultPlaceholder':
     'Please enter default value for {0}',
-  'NuwaxPC.Pages.SpaceTable.AddAndModify.integerRange':
+  'PC.Pages.SpaceTable.AddAndModify.integerRange':
     'Range: [-2147483648, 2147483647]',
-  'NuwaxPC.Pages.SpaceTable.AddAndModify.numberPrecision':
+  'PC.Pages.SpaceTable.AddAndModify.numberPrecision':
     'Precision 20 digits, max 14 integer digits, max 6 decimal digits',
-  'NuwaxPC.Pages.SpaceTable.DataTable.totalCount': 'Total {0} records',
-  'NuwaxPC.Pages.SpaceTable.DataTable.itemsPerPage': ' / page',
-  'NuwaxPC.Pages.SpaceTable.DataTable.tabStructure': 'Structure',
-  'NuwaxPC.Pages.SpaceTable.DataTable.tabData': 'Data',
-  'NuwaxPC.Pages.SpaceTable.DeleteSure.warning':
+  'PC.Pages.SpaceTable.DataTable.totalCount': 'Total {0} records',
+  'PC.Pages.SpaceTable.DataTable.itemsPerPage': ' / page',
+  'PC.Pages.SpaceTable.DataTable.tabStructure': 'Structure',
+  'PC.Pages.SpaceTable.DataTable.tabData': 'Data',
+  'PC.Pages.SpaceTable.DeleteSure.warning':
     'Please delete carefully. All data will be lost after confirmation!',
-  'NuwaxPC.Pages.SpaceTable.DeleteSure.confirmAgain': 'Please confirm again',
-  'NuwaxPC.Pages.SpaceTable.DeleteSure.matchValidation':
+  'PC.Pages.SpaceTable.DeleteSure.confirmAgain': 'Please confirm again',
+  'PC.Pages.SpaceTable.DeleteSure.matchValidation':
     'Input must exactly match "{0}"',
-  'NuwaxPC.Pages.SpaceTable.DeleteSure.inputPlaceholder':
+  'PC.Pages.SpaceTable.DeleteSure.inputPlaceholder':
     'Please enter "{0}" to confirm deletion',
-  'NuwaxPC.Pages.SpaceTable.StructureTable.systemVariable': 'System Variable',
-  'NuwaxPC.Pages.SpaceTable.StructureTable.serial': 'No.',
-  'NuwaxPC.Pages.SpaceTable.StructureTable.fieldName': 'Field Name',
-  'NuwaxPC.Pages.SpaceTable.StructureTable.fieldDescription':
-    'Field Description',
-  'NuwaxPC.Pages.SpaceTable.StructureTable.fieldType': 'Field Type',
-  'NuwaxPC.Pages.SpaceTable.StructureTable.dataLength': 'Data Length',
-  'NuwaxPC.Pages.SpaceTable.StructureTable.required': 'Required',
-  'NuwaxPC.Pages.SpaceTable.StructureTable.unique': 'Unique',
-  'NuwaxPC.Pages.SpaceTable.StructureTable.enabled': 'Enabled',
-  'NuwaxPC.Pages.SpaceTable.StructureTable.defaultValue': 'Default Value',
-  'NuwaxPC.Pages.SpaceTable.StructureTable.inputFieldName':
+  'PC.Pages.SpaceTable.StructureTable.systemVariable': 'System Variable',
+  'PC.Pages.SpaceTable.StructureTable.serial': 'No.',
+  'PC.Pages.SpaceTable.StructureTable.fieldName': 'Field Name',
+  'PC.Pages.SpaceTable.StructureTable.fieldDescription': 'Field Description',
+  'PC.Pages.SpaceTable.StructureTable.fieldType': 'Field Type',
+  'PC.Pages.SpaceTable.StructureTable.dataLength': 'Data Length',
+  'PC.Pages.SpaceTable.StructureTable.required': 'Required',
+  'PC.Pages.SpaceTable.StructureTable.unique': 'Unique',
+  'PC.Pages.SpaceTable.StructureTable.enabled': 'Enabled',
+  'PC.Pages.SpaceTable.StructureTable.defaultValue': 'Default Value',
+  'PC.Pages.SpaceTable.StructureTable.inputFieldName':
     'Please enter field name',
-  'NuwaxPC.Pages.SpaceTable.StructureTable.inputFieldDescription':
+  'PC.Pages.SpaceTable.StructureTable.inputFieldDescription':
     'Please enter field description',
-  'NuwaxPC.Pages.SpaceTable.StructureTable.shortText': 'Short Text (0-255)',
-  'NuwaxPC.Pages.SpaceTable.StructureTable.mediumText': 'Long Text (0-16M)',
-  'NuwaxPC.Pages.SpaceTable.TableHeader.recordCount': '{0} records',
-  'NuwaxPC.Pages.SpaceTable.TableOperationBar.excelFileOnly':
+  'PC.Pages.SpaceTable.StructureTable.shortText': 'Short Text (0-255)',
+  'PC.Pages.SpaceTable.StructureTable.mediumText': 'Long Text (0-16M)',
+  'PC.Pages.SpaceTable.TableHeader.recordCount': '{0} records',
+  'PC.Pages.SpaceTable.TableOperationBar.excelFileOnly':
     'Please upload an Excel file (.xlsx or .xls format)',
-  'NuwaxPC.Pages.SpaceTable.TableOperationBar.fileSizeLimit':
+  'PC.Pages.SpaceTable.TableOperationBar.fileSizeLimit':
     'File size cannot exceed 100MB',
-  'NuwaxPC.Pages.SpaceTable.TableOperationBar.addField': 'Add Field',
-  'NuwaxPC.Pages.SpaceTable.TableOperationBar.clearAllData': 'Clear All Data',
-  'NuwaxPC.Pages.SpaceTable.ClearDataTooltip.clearDataToModify':
+  'PC.Pages.SpaceTable.TableOperationBar.addField': 'Add Field',
+  'PC.Pages.SpaceTable.TableOperationBar.clearAllData': 'Clear All Data',
+  'PC.Pages.SpaceTable.ClearDataTooltip.clearDataToModify':
     'Can be modified after clearing table data',
-  'NuwaxPC.Pages.EditAgent.EventList.emptyDescription':
+  'PC.Pages.EditAgent.EventList.emptyDescription':
     'Content returned by clicking on event binding can be sent to the model',
-  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.fillRequiredParams':
+  'PC.Pages.EditAgent.PreviewAndDebug.fillRequiredParams':
     'Please fill in the required parameters',
-  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.convIdNotFoundFilePreview':
+  'PC.Pages.EditAgent.PreviewAndDebug.convIdNotFoundFilePreview':
     'Conversation ID does not exist, unable to open file preview',
-  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.convIdNotFoundDesktop':
+  'PC.Pages.EditAgent.PreviewAndDebug.convIdNotFoundDesktop':
     'Conversation ID does not exist, unable to open agent computer',
-  'NuwaxPC.Pages.EditAgent.DebugDetails.title': 'Debug Details',
-  'NuwaxPC.Pages.EditAgent.DebugDetails.elapsedTime': 'Elapsed {0} ms',
-  'NuwaxPC.Pages.EditAgent.DebugDetails.calledComponents': 'Called Components',
-  'NuwaxPC.Pages.EditAgent.DebugDetails.output': 'Output',
+  'PC.Pages.EditAgent.DebugDetails.title': 'Debug Details',
+  'PC.Pages.EditAgent.DebugDetails.elapsedTime': 'Elapsed {0} ms',
+  'PC.Pages.EditAgent.DebugDetails.calledComponents': 'Called Components',
+  'PC.Pages.EditAgent.DebugDetails.output': 'Output',
 
   // Pages - EditAgent (main index)
-  'NuwaxPC.Pages.EditAgent.convIdNotFoundCreateFile':
+  'PC.Pages.EditAgent.convIdNotFoundCreateFile':
     'Conversation ID does not exist, unable to create file',
-  'NuwaxPC.Pages.EditAgent.deleteFileConfirmTitle':
+  'PC.Pages.EditAgent.deleteFileConfirmTitle':
     'Are you sure you want to delete this file?',
-  'NuwaxPC.Pages.EditAgent.convIdNotFoundDeleteFile':
+  'PC.Pages.EditAgent.convIdNotFoundDeleteFile':
     'Conversation ID does not exist, unable to delete file',
-  'NuwaxPC.Pages.EditAgent.fileNotFoundDelete':
-    'File not found, unable to delete',
-  'NuwaxPC.Pages.EditAgent.convIdNotFoundRenameFile':
+  'PC.Pages.EditAgent.fileNotFoundDelete': 'File not found, unable to delete',
+  'PC.Pages.EditAgent.convIdNotFoundRenameFile':
     'Conversation ID does not exist, unable to rename file',
-  'NuwaxPC.Pages.EditAgent.convIdNotFoundSaveFile':
+  'PC.Pages.EditAgent.convIdNotFoundSaveFile':
     'Conversation ID does not exist, unable to save file',
-  'NuwaxPC.Pages.EditAgent.convIdNotFoundUploadFile':
+  'PC.Pages.EditAgent.convIdNotFoundUploadFile':
     'Conversation ID does not exist, unable to upload file',
-  'NuwaxPC.Pages.EditAgent.uploadFileSizeExceed':
+  'PC.Pages.EditAgent.uploadFileSizeExceed':
     'Total upload file size cannot exceed {0}MB',
-  'NuwaxPC.Pages.EditAgent.uploadSuccess': 'Uploaded successfully',
-  'NuwaxPC.Pages.EditAgent.convIdNotFoundExport':
+  'PC.Pages.EditAgent.uploadSuccess': 'Uploaded successfully',
+  'PC.Pages.EditAgent.convIdNotFoundExport':
     'Development session ID does not exist or is invalid, unable to export',
-  'NuwaxPC.Pages.EditAgent.exportFailed': 'Export failed',
-  'NuwaxPC.Pages.EditAgent.exportSuccess': 'Exported successfully!',
-  'NuwaxPC.Pages.EditAgent.statUserCount': 'Chat Users',
-  'NuwaxPC.Pages.EditAgent.statConvCount': 'Chat Count',
-  'NuwaxPC.Pages.EditAgent.statCollectCount': 'Favorite Users',
-  'NuwaxPC.Pages.EditAgent.statLikeCount': 'Likes',
-  'NuwaxPC.Pages.EditAgent.exportConfigTitle': 'Export Config - {0}',
-  'NuwaxPC.Pages.EditAgent.exportConfigContent':
+  'PC.Pages.EditAgent.exportFailed': 'Export failed',
+  'PC.Pages.EditAgent.exportSuccess': 'Exported successfully!',
+  'PC.Pages.EditAgent.statUserCount': 'Chat Users',
+  'PC.Pages.EditAgent.statConvCount': 'Chat Count',
+  'PC.Pages.EditAgent.statCollectCount': 'Favorite Users',
+  'PC.Pages.EditAgent.statLikeCount': 'Likes',
+  'PC.Pages.EditAgent.exportConfigTitle': 'Export Config - {0}',
+  'PC.Pages.EditAgent.exportConfigContent':
     'If it contains data tables or knowledge bases, the data itself will not be exported',
-  'NuwaxPC.Pages.EditAgent.agentOverview': 'Agent Overview',
+  'PC.Pages.EditAgent.agentOverview': 'Agent Overview',
 
   // Pages - EditAgent > ArrangeTitle
-  'NuwaxPC.Pages.EditAgent.ArrangeTitle.selectChatModel':
+  'PC.Pages.EditAgent.ArrangeTitle.selectChatModel':
     'Please select a chat model',
-  'NuwaxPC.Pages.EditAgent.ArrangeTitle.arrange': 'Arrange',
+  'PC.Pages.EditAgent.ArrangeTitle.arrange': 'Arrange',
 
   // Pages - EditAgent > PreviewAndDebug > PreviewAndDebugHeader
-  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.previewAndDebug':
+  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.previewAndDebug':
     'Preview & Debug',
-  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.debug': 'Debug',
-  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openPreviewPage':
+  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.debug': 'Debug',
+  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openPreviewPage':
     'Open Preview Page',
-  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.closeFilePreview':
+  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.closeFilePreview':
     'Close File Preview',
-  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openFilePreview':
+  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openFilePreview':
     'Open File Preview',
-  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.closeAgentDesktop':
+  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.closeAgentDesktop':
     'Close Agent Desktop',
-  'NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openAgentDesktop':
+  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openAgentDesktop':
     'Open Agent Desktop',
 
   // Pages - EditAgent > DebugDetails > NodeDetails
-  'NuwaxPC.Pages.EditAgent.NodeDetails.typePlugin': 'Plugin',
-  'NuwaxPC.Pages.EditAgent.NodeDetails.typeWorkflow': 'Workflow',
-  'NuwaxPC.Pages.EditAgent.NodeDetails.typeKnowledge': 'Knowledge Base',
-  'NuwaxPC.Pages.EditAgent.NodeDetails.typeVariable': 'Variable',
-  'NuwaxPC.Pages.EditAgent.NodeDetails.typeTable': 'Data Table',
-  'NuwaxPC.Pages.EditAgent.NodeDetails.typeModel': 'Model',
-  'NuwaxPC.Pages.EditAgent.NodeDetails.typeMCP': 'MCP',
-  'NuwaxPC.Pages.EditAgent.NodeDetails.labelType': 'Type',
-  'NuwaxPC.Pages.EditAgent.NodeDetails.labelStatus': 'Status',
-  'NuwaxPC.Pages.EditAgent.NodeDetails.statusSuccess': 'Success',
-  'NuwaxPC.Pages.EditAgent.NodeDetails.labelName': 'Name',
-  'NuwaxPC.Pages.EditAgent.NodeDetails.labelDuration': 'Duration',
-  'NuwaxPC.Pages.EditAgent.NodeDetails.labelStartTime': 'Start Time',
-  'NuwaxPC.Pages.EditAgent.NodeDetails.labelEndTime': 'End Time',
+  'PC.Pages.EditAgent.NodeDetails.typePlugin': 'Plugin',
+  'PC.Pages.EditAgent.NodeDetails.typeWorkflow': 'Workflow',
+  'PC.Pages.EditAgent.NodeDetails.typeKnowledge': 'Knowledge Base',
+  'PC.Pages.EditAgent.NodeDetails.typeVariable': 'Variable',
+  'PC.Pages.EditAgent.NodeDetails.typeTable': 'Data Table',
+  'PC.Pages.EditAgent.NodeDetails.typeModel': 'Model',
+  'PC.Pages.EditAgent.NodeDetails.typeMCP': 'MCP',
+  'PC.Pages.EditAgent.NodeDetails.labelType': 'Type',
+  'PC.Pages.EditAgent.NodeDetails.labelStatus': 'Status',
+  'PC.Pages.EditAgent.NodeDetails.statusSuccess': 'Success',
+  'PC.Pages.EditAgent.NodeDetails.labelName': 'Name',
+  'PC.Pages.EditAgent.NodeDetails.labelDuration': 'Duration',
+  'PC.Pages.EditAgent.NodeDetails.labelStartTime': 'Start Time',
+  'PC.Pages.EditAgent.NodeDetails.labelEndTime': 'End Time',
 
   // Pages - EditAgent > AgentModelSetting
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.modelSetting': 'Model Settings',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.selectChatModel':
+  'PC.Pages.EditAgent.AgentModelSetting.modelSetting': 'Model Settings',
+  'PC.Pages.EditAgent.AgentModelSetting.selectChatModel':
     'Please select a chat model',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.chatModel': 'Chat Model',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.reasoningModelOptional':
+  'PC.Pages.EditAgent.AgentModelSetting.chatModel': 'Chat Model',
+  'PC.Pages.EditAgent.AgentModelSetting.reasoningModelOptional':
     'Reasoning Model (Optional)',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.selectReasoningModel':
+  'PC.Pages.EditAgent.AgentModelSetting.selectReasoningModel':
     'Please select a reasoning model',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.generateDiversity':
+  'PC.Pages.EditAgent.AgentModelSetting.generateDiversity':
     'Generation Diversity',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.precisionModeTitle':
-    'Precision Mode:',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.precisionModeDesc1':
+  'PC.Pages.EditAgent.AgentModelSetting.precisionModeTitle': 'Precision Mode:',
+  'PC.Pages.EditAgent.AgentModelSetting.precisionModeDesc1':
     'Strictly follows instructions to generate content',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.precisionModeDesc2':
+  'PC.Pages.EditAgent.AgentModelSetting.precisionModeDesc2':
     'Suitable for scenarios requiring accuracy, such as formal documents, code, etc.',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.balanceModeTitle': 'Balance Mode:',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.balanceModeDesc1':
+  'PC.Pages.EditAgent.AgentModelSetting.balanceModeTitle': 'Balance Mode:',
+  'PC.Pages.EditAgent.AgentModelSetting.balanceModeDesc1':
     'Seeks balance between creativity and precision',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.balanceModeDesc2':
+  'PC.Pages.EditAgent.AgentModelSetting.balanceModeDesc2':
     'Suitable for most daily applications, generating interesting yet rigorous content',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.creativeModeTitle': 'Creative Mode:',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.creativeModeDesc1':
+  'PC.Pages.EditAgent.AgentModelSetting.creativeModeTitle': 'Creative Mode:',
+  'PC.Pages.EditAgent.AgentModelSetting.creativeModeDesc1':
     'Inspires creativity and provides novel and unique ideas',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.creativeModeDesc2':
+  'PC.Pages.EditAgent.AgentModelSetting.creativeModeDesc2':
     'Suitable for scenarios requiring inspiration and unique perspectives, such as brainstorming, creative writing, etc.',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.customModeTitle': 'Custom Mode:',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.customModeDesc1':
+  'PC.Pages.EditAgent.AgentModelSetting.customModeTitle': 'Custom Mode:',
+  'PC.Pages.EditAgent.AgentModelSetting.customModeDesc1':
     'Customize generation through advanced settings',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.customModeDesc2':
+  'PC.Pages.EditAgent.AgentModelSetting.customModeDesc2':
     'Fine-tune according to needs for personalized optimization',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.generateRandomness':
+  'PC.Pages.EditAgent.AgentModelSetting.generateRandomness':
     'Generation Randomness',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.generateRandomnessTooltip':
+  'PC.Pages.EditAgent.AgentModelSetting.generateRandomnessTooltip':
     'Temperature: Increasing temperature makes the model output more diverse and creative, while decreasing temperature makes the output follow instructions more closely but reduces diversity. It is recommended not to adjust together with "Top p"',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.topPTooltip':
+  'PC.Pages.EditAgent.AgentModelSetting.topPTooltip':
     'Top p is the cumulative probability: The model selects from the highest probability words when generating output until the total probability of these words reaches the Top p value. This limits the model to only select high-probability words, thereby controlling output diversity. It is recommended not to adjust together with "Generation Randomness".',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.inputOutputSettings':
+  'PC.Pages.EditAgent.AgentModelSetting.inputOutputSettings':
     'Input & Output Settings',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.contextRoundsLabel':
-    'Context Rounds',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.contextRoundsTooltip':
+  'PC.Pages.EditAgent.AgentModelSetting.contextRoundsLabel': 'Context Rounds',
+  'PC.Pages.EditAgent.AgentModelSetting.contextRoundsTooltip':
     'Set the number of conversation history rounds included in the model context. More rounds improve multi-turn dialogue relevance but consume more tokens.',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.maxReplyLengthLabel':
+  'PC.Pages.EditAgent.AgentModelSetting.maxReplyLengthLabel':
     'Max Reply Length',
-  'NuwaxPC.Pages.EditAgent.AgentModelSetting.maxReplyLengthTooltip':
+  'PC.Pages.EditAgent.AgentModelSetting.maxReplyLengthTooltip':
     'Control the maximum token length of model output. Typically, 100 tokens equals approximately 150 Chinese characters.',
 
   // Pages - EditAgent > SystemTipsWord
-  'NuwaxPC.Pages.EditAgent.SystemTipsWord.systemPromptPlaceholder':
+  'PC.Pages.EditAgent.SystemTipsWord.systemPromptPlaceholder':
     'Enter system prompt to shape the model role',
-  'NuwaxPC.Pages.EditAgent.SystemTipsWord.userPromptPlaceholder':
+  'PC.Pages.EditAgent.SystemTipsWord.userPromptPlaceholder':
     'Enter user prompt, preset instructions, questions or requests',
-  'NuwaxPC.Pages.EditAgent.SystemTipsWord.systemPrompt': 'System Prompt',
-  'NuwaxPC.Pages.EditAgent.SystemTipsWord.userPrompt': 'User Prompt',
-  'NuwaxPC.Pages.EditAgent.SystemTipsWord.exitFullscreen': 'Exit Fullscreen',
-  'NuwaxPC.Pages.EditAgent.SystemTipsWord.fullscreenEdit': 'Fullscreen Edit',
-  'NuwaxPC.Pages.EditAgent.SystemTipsWord.autoOptimizeTooltip':
+  'PC.Pages.EditAgent.SystemTipsWord.systemPrompt': 'System Prompt',
+  'PC.Pages.EditAgent.SystemTipsWord.userPrompt': 'User Prompt',
+  'PC.Pages.EditAgent.SystemTipsWord.exitFullscreen': 'Exit Fullscreen',
+  'PC.Pages.EditAgent.SystemTipsWord.fullscreenEdit': 'Fullscreen Edit',
+  'PC.Pages.EditAgent.SystemTipsWord.autoOptimizeTooltip':
     'Auto-optimize prompt',
-  'NuwaxPC.Pages.EditAgent.SystemTipsWord.optimize': 'Optimize',
+  'PC.Pages.EditAgent.SystemTipsWord.optimize': 'Optimize',
 
   // Pages - SpacePageDevelop
-  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyModal.title': 'Reverse Proxy',
-  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.path': 'Path',
-  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.pathPlaceholder':
+  'PC.Pages.SpacePageDevelop.ReverseProxyModal.title': 'Reverse Proxy',
+  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.path': 'Path',
+  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.pathPlaceholder':
     'Please enter path',
-  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.backendAddress':
+  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.backendAddress':
     'Backend Address',
-  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.backendAddressPlaceholder':
+  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.backendAddressPlaceholder':
     'Please enter backend address',
-  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.addConfig':
-    'Add Config',
-  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.savedSuccessfully':
+  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.addConfig': 'Add Config',
+  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.savedSuccessfully':
     'Saved successfully',
-  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.duplicatePathError':
+  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.duplicatePathError':
     'Paths cannot be the same',
-  'NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.rootPathError':
+  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.rootPathError':
     'Root path / is built-in, no configuration needed',
-  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.addPath': 'Add Path',
-  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.editPath': 'Edit Path',
-  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathName': 'Path Name',
-  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathName':
+  'PC.Pages.SpacePageDevelop.AddPathModal.addPath': 'Add Path',
+  'PC.Pages.SpacePageDevelop.AddPathModal.editPath': 'Edit Path',
+  'PC.Pages.SpacePageDevelop.AddPathModal.pathName': 'Path Name',
+  'PC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathName':
     'Please enter path name',
-  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathUri': 'Path URI',
-  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathUri':
+  'PC.Pages.SpacePageDevelop.AddPathModal.pathUri': 'Path URI',
+  'PC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathUri':
     'Please enter path URI',
-  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathUriFormatError':
+  'PC.Pages.SpacePageDevelop.AddPathModal.pathUriFormatError':
     'Please enter a valid path URI, must start with /',
-  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathUriPlaceholder':
+  'PC.Pages.SpacePageDevelop.AddPathModal.pathUriPlaceholder':
     'Path URI, e.g. /detail/view or /detail/view/{id}',
-  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathDescription':
-    'Path Description',
-  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathDescriptionPlaceholder':
+  'PC.Pages.SpacePageDevelop.AddPathModal.pathDescription': 'Path Description',
+  'PC.Pages.SpacePageDevelop.AddPathModal.pathDescriptionPlaceholder':
     'Path description, e.g. Get detail information',
-  'NuwaxPC.Pages.SpacePageDevelop.AddPathModal.actionSuccess':
-    '{0} successfully',
-  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigModal.title':
-    'Path Params Config',
-  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigModal.addPath':
-    'Add Path',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.title':
+  'PC.Pages.SpacePageDevelop.AddPathModal.actionSuccess': '{0} successfully',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigModal.title': 'Path Params Config',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigModal.addPath': 'Add Path',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.title':
     'Domain Binding Management',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameTitle':
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameTitle':
     'Please resolve the domain to one of the following CNAME addresses',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameCnValue':
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameCnValue':
     'cn-cname.nuwax.com',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameCnDesc':
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameCnDesc':
     'For users in China, ICP filing is required',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameEnValue':
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameEnValue':
     'en-cname.nuwax.com',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameEnDesc':
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameEnDesc':
     'For overseas users, please comply with local laws and regulations',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.boundDomains':
-    'Bound Domains',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.domainCount':
-    '{0} domains',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.addDomain':
-    'Add New Domain',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.addSuccess':
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.boundDomains': 'Bound Domains',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.domainCount': '{0} domains',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.addDomain': 'Add New Domain',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.addSuccess':
     'Added successfully',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.modifySuccess':
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.modifySuccess':
     'Modified successfully',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.deleteSuccess':
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.deleteSuccess':
     'Deleted successfully',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.pleaseEnterDomain':
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.pleaseEnterDomain':
     'Please enter a domain',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.invalidDomainFormat':
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.invalidDomainFormat':
     'Please enter a valid domain format',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.editDomain':
-    'Edit Domain',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.domainInputPlaceholder':
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.editDomain': 'Edit Domain',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.domainInputPlaceholder':
     'Please enter domain, e.g. example.com',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameResolveHint':
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameResolveHint':
     'Please ensure the domain has completed CNAME resolution',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainTitle':
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainTitle':
     'Remove Domain Binding',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainContent':
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainContent':
     'Are you sure you want to remove domain',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainHint':
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainHint':
     'After removal, users will not be able to access this project via this domain. Re-binding and resolution required.',
-  'NuwaxPC.Models.ConversationInfo.restartAgentSuccess': 'Agent restarted successfully',
-  'NuwaxPC.Models.ConversationInfo.networkTimeoutError': 'Network timeout or service unavailable, please try again later',
-  'NuwaxPC.Models.ConversationInfo.taskConflictTitle': 'Notice',
-  'NuwaxPC.Models.ConversationInfo.taskConflictContent': 'The agent is currently executing a task. Do you want to pause the current task before sending a new request. Do you want to pause?',
-  'NuwaxPC.Models.DevCollectAgent.uncollectSuccess': 'Uncollected successfully',
-  'NuwaxPC.Models.UserInfo.getUserInfoFailed': 'Failed to get user info',
-  'NuwaxPC.Models.UserInfo.refreshUserInfoFailed': 'Failed to refresh user info',
-  'NuwaxPC.Models.WorkflowV3.defaultNodeName': 'Test',
-  'NuwaxPC.Models.WorkflowV3.defaultNodeDescription': 'Test',
-  'NuwaxPC.Models.Workflow.defaultNodeName': 'Test',
-  'NuwaxPC.Models.Workflow.defaultNodeDescription': 'Test',
-  'NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.confirmRemove':
+  'PC.Models.ConversationInfo.restartAgentSuccess':
+    'Agent restarted successfully',
+  'PC.Models.ConversationInfo.networkTimeoutError':
+    'Network timeout or service unavailable, please try again later',
+  'PC.Models.ConversationInfo.taskConflictTitle': 'Notice',
+  'PC.Models.ConversationInfo.taskConflictContent':
+    'The agent is currently executing a task. Do you want to pause the current task before sending a new request. Do you want to pause?',
+  'PC.Models.DevCollectAgent.uncollectSuccess': 'Uncollected successfully',
+  'PC.Models.UserInfo.getUserInfoFailed': 'Failed to get user info',
+  'PC.Models.UserInfo.refreshUserInfoFailed': 'Failed to refresh user info',
+  'PC.Models.WorkflowV3.defaultNodeName': 'Test',
+  'PC.Models.WorkflowV3.defaultNodeDescription': 'Test',
+  'PC.Models.Workflow.defaultNodeName': 'Test',
+  'PC.Models.Workflow.defaultNodeDescription': 'Test',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.confirmRemove':
     'Confirm Removal',
 
   // Pages - SpacePageDevelop - AuthConfigModal
-  'NuwaxPC.Pages.SpacePageDevelop.AuthConfigModal.authConfig': 'Auth Configuration',
-  'NuwaxPC.Pages.SpacePageDevelop.AuthConfigModal.allowAccessWithoutLogin': 'Allow Access Without Login',
-  'NuwaxPC.Pages.SpacePageDevelop.AuthConfigModal.pageIdNotExist': 'Page ID does not exist',
+  'PC.Pages.SpacePageDevelop.AuthConfigModal.authConfig': 'Auth Configuration',
+  'PC.Pages.SpacePageDevelop.AuthConfigModal.allowAccessWithoutLogin':
+    'Allow Access Without Login',
+  'PC.Pages.SpacePageDevelop.AuthConfigModal.pageIdNotExist':
+    'Page ID does not exist',
 
   // Pages - SpacePageDevelop - PageCreateModal
-  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.createApp': 'Create App',
-  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.name': 'Name',
-  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterName': 'Please enter name',
-  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.description': 'Description',
-  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterDescription': 'Please enter description',
-  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.icon': 'Icon',
-  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseUploadZip': 'Please upload a project zip file',
-  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.zipOnly': 'ZIP files only',
-  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.uploadDragText': 'Click or drag file to this area to upload',
+  'PC.Pages.SpacePageDevelop.PageCreateModal.createApp': 'Create App',
+  'PC.Pages.SpacePageDevelop.PageCreateModal.name': 'Name',
+  'PC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterName':
+    'Please enter name',
+  'PC.Pages.SpacePageDevelop.PageCreateModal.description': 'Description',
+  'PC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterDescription':
+    'Please enter description',
+  'PC.Pages.SpacePageDevelop.PageCreateModal.icon': 'Icon',
+  'PC.Pages.SpacePageDevelop.PageCreateModal.pleaseUploadZip':
+    'Please upload a project zip file',
+  'PC.Pages.SpacePageDevelop.PageCreateModal.zipOnly': 'ZIP files only',
+  'PC.Pages.SpacePageDevelop.PageCreateModal.uploadDragText':
+    'Click or drag file to this area to upload',
 
   // Pages - SpacePageDevelop - PathParamsConfigContent
-  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramName': 'Param Name',
-  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramNamePlaceholder': 'Please enter param name',
-  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescription': 'Param Description',
-  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescriptionPlaceholder': 'Please enter param description',
-  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.inputType': 'Input Type',
-  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.isRequired': 'Required',
-  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValue': 'Default Value',
-  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValuePlaceholder': 'Please enter default value',
-  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.enable': 'Enable',
-  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.action': 'Action',
-  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.noPathParams': 'No path params',
-  'NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.addParam': 'Add Param',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.paramName': 'Param Name',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.paramNamePlaceholder':
+    'Please enter param name',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescription':
+    'Param Description',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescriptionPlaceholder':
+    'Please enter param description',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.inputType': 'Input Type',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.isRequired': 'Required',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValue':
+    'Default Value',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValuePlaceholder':
+    'Please enter default value',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.enable': 'Enable',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.action': 'Action',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.noPathParams':
+    'No path params',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.addParam': 'Add Param',
 
   // Pages - SpacePageDevelop - Index
-  'NuwaxPC.Pages.SpacePageDevelop.Index.pageTitle': 'Page Development',
-  'NuwaxPC.Pages.SpacePageDevelop.Index.searchPlaceholder': 'Search page name',
-  'NuwaxPC.Pages.SpacePageDevelop.Index.create': 'Create',
-  'NuwaxPC.Pages.SpacePageDevelop.Index.viewDetails': 'View Details',
-  'NuwaxPC.Pages.SpacePageDevelop.Index.published': 'Published',
-  'NuwaxPC.Pages.SpacePageDevelop.Index.unpublished': 'Unpublished',
-  'NuwaxPC.Pages.SpacePageDevelop.Index.noResultsFound': 'No results found',
-  'NuwaxPC.Pages.SpacePageDevelop.Index.pageUrlNotExist': 'Page URL does not exist',
-  'NuwaxPC.Pages.SpacePageDevelop.Index.projectIdInvalidCannotExport': 'Invalid project ID, cannot export',
-  'NuwaxPC.Pages.SpacePageDevelop.Index.exportFailed': 'Export failed',
-  'NuwaxPC.Pages.SpacePageDevelop.Index.exportSuccess': 'Exported successfully',
-  'NuwaxPC.Pages.SpacePageDevelop.Index.exportUnknownError': 'Unknown export error',
-  'NuwaxPC.Pages.SpacePageDevelop.Index.exportFailedWithError': 'Export failed: {0}',
-  'NuwaxPC.Pages.SpacePageDevelop.Index.domainBindingConditionWarning': 'Domain binding is only available when the publish type is "App" and "Allow Access Without Login" is enabled',
-  'NuwaxPC.Pages.SpacePageDevelop.Index.confirmDeletePage': 'Are you sure you want to delete this page?',
+  'PC.Pages.SpacePageDevelop.Index.pageTitle': 'Page Development',
+  'PC.Pages.SpacePageDevelop.Index.searchPlaceholder': 'Search page name',
+  'PC.Pages.SpacePageDevelop.Index.create': 'Create',
+  'PC.Pages.SpacePageDevelop.Index.viewDetails': 'View Details',
+  'PC.Pages.SpacePageDevelop.Index.published': 'Published',
+  'PC.Pages.SpacePageDevelop.Index.unpublished': 'Unpublished',
+  'PC.Pages.SpacePageDevelop.Index.noResultsFound': 'No results found',
+  'PC.Pages.SpacePageDevelop.Index.pageUrlNotExist': 'Page URL does not exist',
+  'PC.Pages.SpacePageDevelop.Index.projectIdInvalidCannotExport':
+    'Invalid project ID, cannot export',
+  'PC.Pages.SpacePageDevelop.Index.exportFailed': 'Export failed',
+  'PC.Pages.SpacePageDevelop.Index.exportSuccess': 'Exported successfully',
+  'PC.Pages.SpacePageDevelop.Index.exportUnknownError': 'Unknown export error',
+  'PC.Pages.SpacePageDevelop.Index.exportFailedWithError': 'Export failed: {0}',
+  'PC.Pages.SpacePageDevelop.Index.domainBindingConditionWarning':
+    'Domain binding is only available when the publish type is "App" and "Allow Access Without Login" is enabled',
+  'PC.Pages.SpacePageDevelop.Index.confirmDeletePage':
+    'Are you sure you want to delete this page?',
 
   // Pages - IMChannel - Index
-  'NuwaxPC.Pages.IMChannel.Index.title': 'IM Bots',
-  'NuwaxPC.Pages.IMChannel.Index.searchPlaceholder': 'Search agent name',
-  'NuwaxPC.Pages.IMChannel.Index.add': 'Add',
-  'NuwaxPC.Pages.IMChannel.Index.addBot': 'Add Bot',
-  'NuwaxPC.Pages.IMChannel.Index.addApp': 'Add App',
+  'PC.Pages.IMChannel.Index.title': 'IM Bots',
+  'PC.Pages.IMChannel.Index.searchPlaceholder': 'Search agent name',
+  'PC.Pages.IMChannel.Index.add': 'Add',
+  'PC.Pages.IMChannel.Index.addBot': 'Add Bot',
+  'PC.Pages.IMChannel.Index.addApp': 'Add App',
 
   // Pages - IMChannel - PlatformList
-  'NuwaxPC.Pages.IMChannel.PlatformList.platformList': 'Platform List',
-  'NuwaxPC.Pages.IMChannel.PlatformList.robotCount': '{0} bots',
+  'PC.Pages.IMChannel.PlatformList.platformList': 'Platform List',
+  'PC.Pages.IMChannel.PlatformList.robotCount': '{0} bots',
 
   // Pages - IMChannel - CreateIMChannel
-  'NuwaxPC.Pages.IMChannel.CreateIMChannel.addSuccess':
-    'Added successfully',
-  'NuwaxPC.Pages.IMChannel.CreateIMChannel.editSuccess':
-    'Updated successfully',
-  'NuwaxPC.Pages.IMChannel.CreateIMChannel.testConnectionSuccess':
+  'PC.Pages.IMChannel.CreateIMChannel.addSuccess': 'Added successfully',
+  'PC.Pages.IMChannel.CreateIMChannel.editSuccess': 'Updated successfully',
+  'PC.Pages.IMChannel.CreateIMChannel.testConnectionSuccess':
     'Test connection successful',
-  'NuwaxPC.Pages.IMChannel.CreateIMChannel.edit': 'Edit',
-  'NuwaxPC.Pages.IMChannel.CreateIMChannel.add': 'Add',
-  'NuwaxPC.Pages.IMChannel.CreateIMChannel.app': 'App',
-  'NuwaxPC.Pages.IMChannel.CreateIMChannel.bot': 'Bot',
-  'NuwaxPC.Pages.IMChannel.CreateIMChannel.testConnectivity':
-    'Test Connectivity',
-  'NuwaxPC.Pages.IMChannel.CreateIMChannel.agent': 'Agent',
-  'NuwaxPC.Pages.IMChannel.CreateIMChannel.agentTooltip':
+  'PC.Pages.IMChannel.CreateIMChannel.edit': 'Edit',
+  'PC.Pages.IMChannel.CreateIMChannel.add': 'Add',
+  'PC.Pages.IMChannel.CreateIMChannel.app': 'App',
+  'PC.Pages.IMChannel.CreateIMChannel.bot': 'Bot',
+  'PC.Pages.IMChannel.CreateIMChannel.testConnectivity': 'Test Connectivity',
+  'PC.Pages.IMChannel.CreateIMChannel.agent': 'Agent',
+  'PC.Pages.IMChannel.CreateIMChannel.agentTooltip':
     'General agents will use your sandbox (computer) environment to execute tasks. Do not share the corresponding bot with others.',
-  'NuwaxPC.Pages.IMChannel.CreateIMChannel.outputMode': 'Output Mode',
-  'NuwaxPC.Pages.IMChannel.CreateIMChannel.outputModeTooltip':
+  'PC.Pages.IMChannel.CreateIMChannel.outputMode': 'Output Mode',
+  'PC.Pages.IMChannel.CreateIMChannel.outputModeTooltip':
     'When the bot replies to a message, whether to display text character by character or all at once.',
-  'NuwaxPC.Pages.IMChannel.CreateIMChannel.streamOutput':
+  'PC.Pages.IMChannel.CreateIMChannel.streamOutput':
     'Stream output (typewriter effect)',
-  'NuwaxPC.Pages.IMChannel.CreateIMChannel.onceOutput': 'One-time output',
-  'NuwaxPC.Pages.IMChannel.CreateIMChannel.enabledStatus': 'Enabled Status',
+  'PC.Pages.IMChannel.CreateIMChannel.onceOutput': 'One-time output',
+  'PC.Pages.IMChannel.CreateIMChannel.enabledStatus': 'Enabled Status',
 
   // Pages - IMChannel - DynamicChannelForm
-  'NuwaxPC.Pages.IMChannel.DynamicChannelForm.requiredField':
+  'PC.Pages.IMChannel.DynamicChannelForm.requiredField':
     'This field is required',
 
   // Pages - IMChannel - WechatIlinkForm
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.qrTimeoutWarning':
+  'PC.Pages.IMChannel.WechatIlinkForm.qrTimeoutWarning':
     'QR scan has stopped due to timeout, please get a new QR code',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.connectionSuccess':
+  'PC.Pages.IMChannel.WechatIlinkForm.connectionSuccess':
     'Connection successful',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.scanConfirmSuccess':
+  'PC.Pages.IMChannel.WechatIlinkForm.scanConfirmSuccess':
     'Scan confirmation successful',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.qrExpired':
+  'PC.Pages.IMChannel.WechatIlinkForm.qrExpired':
     'QR code has expired, please get a new one',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.getQrSuccess':
+  'PC.Pages.IMChannel.WechatIlinkForm.getQrSuccess':
     'QR code obtained successfully',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.statusNone': 'Not started',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.statusWait': 'Waiting to scan',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.statusScanned':
+  'PC.Pages.IMChannel.WechatIlinkForm.statusNone': 'Not started',
+  'PC.Pages.IMChannel.WechatIlinkForm.statusWait': 'Waiting to scan',
+  'PC.Pages.IMChannel.WechatIlinkForm.statusScanned':
     'Scanned, please confirm on your phone',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.statusConnected': 'Connected',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.statusExpired': 'Expired',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.scanToConnect':
-    'Scan to Connect',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.scanTooltip':
+  'PC.Pages.IMChannel.WechatIlinkForm.statusConnected': 'Connected',
+  'PC.Pages.IMChannel.WechatIlinkForm.statusExpired': 'Expired',
+  'PC.Pages.IMChannel.WechatIlinkForm.scanToConnect': 'Scan to Connect',
+  'PC.Pages.IMChannel.WechatIlinkForm.scanTooltip':
     'Click to get the QR code and scan it with WeChat on your phone.',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.fetchingQr':
-    'Fetching QR code...',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.scanSuccess':
-    'Scan successful',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.clickConfirmToSave':
+  'PC.Pages.IMChannel.WechatIlinkForm.fetchingQr': 'Fetching QR code...',
+  'PC.Pages.IMChannel.WechatIlinkForm.scanSuccess': 'Scan successful',
+  'PC.Pages.IMChannel.WechatIlinkForm.clickConfirmToSave':
     "Please click the 'Confirm' button below to save",
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.qrExpiredRefresh':
+  'PC.Pages.IMChannel.WechatIlinkForm.qrExpiredRefresh':
     'QR code expired, click to refresh',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.clickToGetQr':
+  'PC.Pages.IMChannel.WechatIlinkForm.clickToGetQr':
     'Please click the button below to get the QR code',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.status': 'Status',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.importantNotice':
-    'Important Notice',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.importantNoticeDesc':
+  'PC.Pages.IMChannel.WechatIlinkForm.status': 'Status',
+  'PC.Pages.IMChannel.WechatIlinkForm.importantNotice': 'Important Notice',
+  'PC.Pages.IMChannel.WechatIlinkForm.importantNoticeDesc':
     'After scanning and confirming with the same WeChat account for the second time, the original bot connection will be immediately invalidated. Please be sure to click the "Confirm" button below to save and activate the current configuration.',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.reGetQr': 'Get QR Code Again',
-  'NuwaxPC.Pages.IMChannel.WechatIlinkForm.getQr': 'Get QR Code',
+  'PC.Pages.IMChannel.WechatIlinkForm.reGetQr': 'Get QR Code Again',
+  'PC.Pages.IMChannel.WechatIlinkForm.getQr': 'Get QR Code',
 
   // Pages - IMChannel - CardList
-  'NuwaxPC.Pages.IMChannel.CardList.deleteContent':
+  'PC.Pages.IMChannel.CardList.deleteContent':
     'This action cannot be undone. Please proceed with caution.',
-  'NuwaxPC.Pages.IMChannel.CardList.smartBot': 'Smart Bot',
-  'NuwaxPC.Pages.IMChannel.CardList.enterpriseApp': 'Enterprise App',
-  'NuwaxPC.Pages.IMChannel.CardList.unboundAgent': 'No agent bound',
-  'NuwaxPC.Pages.IMChannel.CardList.bot': 'Bot',
-  'NuwaxPC.Pages.IMChannel.CardList.app': 'App',
-  'NuwaxPC.Pages.IMChannel.CardList.lastEdited': 'Last edited',
-  'NuwaxPC.Pages.IMChannel.CardList.edit': 'Edit',
-  'NuwaxPC.Pages.IMChannel.CardList.delete': 'Delete',
-  'NuwaxPC.Pages.IMChannel.CardList.confirmDelete':
-    'Confirm delete {0} {1}?',
-  'NuwaxPC.Pages.IMChannel.CardList.noMatchingResults':
-    'No matching results found',
-  'NuwaxPC.Pages.IMChannel.CardList.noResultsFound':
-    'No relevant results found',
-  'NuwaxPC.Pages.IMChannel.CardList.noKeywordResults':
+  'PC.Pages.IMChannel.CardList.smartBot': 'Smart Bot',
+  'PC.Pages.IMChannel.CardList.enterpriseApp': 'Enterprise App',
+  'PC.Pages.IMChannel.CardList.unboundAgent': 'No agent bound',
+  'PC.Pages.IMChannel.CardList.bot': 'Bot',
+  'PC.Pages.IMChannel.CardList.app': 'App',
+  'PC.Pages.IMChannel.CardList.lastEdited': 'Last edited',
+  'PC.Pages.IMChannel.CardList.edit': 'Edit',
+  'PC.Pages.IMChannel.CardList.delete': 'Delete',
+  'PC.Pages.IMChannel.CardList.confirmDelete': 'Confirm delete {0} {1}?',
+  'PC.Pages.IMChannel.CardList.noMatchingResults': 'No matching results found',
+  'PC.Pages.IMChannel.CardList.noResultsFound': 'No relevant results found',
+  'PC.Pages.IMChannel.CardList.noKeywordResults':
     'No bots or configurations found containing "{0}"',
-  'NuwaxPC.Pages.IMChannel.CardList.noRobotsDesc':
+  'PC.Pages.IMChannel.CardList.noRobotsDesc':
     'No bots under the current platform. Click the "Add Bot" button above to start creating',
-  'NuwaxPC.Pages.IMChannel.CardList.defaultPlatformName': 'this ',
+  'PC.Pages.IMChannel.CardList.defaultPlatformName': 'this ',
 
   // Pages - TeamSetting
-  'NuwaxPC.Pages.TeamSetting.roleOwner': 'Owner',
-  'NuwaxPC.Pages.TeamSetting.roleAdmin': 'Admin',
-  'NuwaxPC.Pages.TeamSetting.roleMember': 'Member',
-  'NuwaxPC.Pages.TeamSetting.myStatus': 'My Status: {0}',
-  'NuwaxPC.Pages.TeamSetting.memberManagement': 'Member Management',
-  'NuwaxPC.Pages.TeamSetting.spaceSetting': 'Space Settings',
+  'PC.Pages.TeamSetting.roleOwner': 'Owner',
+  'PC.Pages.TeamSetting.roleAdmin': 'Admin',
+  'PC.Pages.TeamSetting.roleMember': 'Member',
+  'PC.Pages.TeamSetting.myStatus': 'My Status: {0}',
+  'PC.Pages.TeamSetting.memberManagement': 'Member Management',
+  'PC.Pages.TeamSetting.spaceSetting': 'Space Settings',
 
   // Pages - TeamSetting - TransferSpace
-  'NuwaxPC.Pages.TeamSetting.TransferSpace.transferSuccess': 'Transfer successful',
-  'NuwaxPC.Pages.TeamSetting.TransferSpace.transferOwnershipTitle': 'Transfer Team Ownership',
-  'NuwaxPC.Pages.TeamSetting.TransferSpace.transferDescription': 'After transferring ownership, your status will change to Admin.',
-  'NuwaxPC.Pages.TeamSetting.TransferSpace.transferToLabel': 'Transfer ownership to',
-  'NuwaxPC.Pages.TeamSetting.TransferSpace.selectTeamMember': 'Please select a team member',
+  'PC.Pages.TeamSetting.TransferSpace.transferSuccess': 'Transfer successful',
+  'PC.Pages.TeamSetting.TransferSpace.transferOwnershipTitle':
+    'Transfer Team Ownership',
+  'PC.Pages.TeamSetting.TransferSpace.transferDescription':
+    'After transferring ownership, your status will change to Admin.',
+  'PC.Pages.TeamSetting.TransferSpace.transferToLabel': 'Transfer ownership to',
+  'PC.Pages.TeamSetting.TransferSpace.selectTeamMember':
+    'Please select a team member',
 
   // Pages - TeamSetting - ModifyTeam
-  'NuwaxPC.Pages.TeamSetting.ModifyTeam.editTeamProfile': 'Edit Team Profile',
-  'NuwaxPC.Pages.TeamSetting.ModifyTeam.teamDescription': 'By creating a team space, you can support collaboration and sharing of agents, plugins, workflows, large models, and knowledge bases within the team.',
-  'NuwaxPC.Pages.TeamSetting.ModifyTeam.teamNameLabel': 'Team Name',
-  'NuwaxPC.Pages.TeamSetting.ModifyTeam.teamNameRequired': 'Please enter team name',
-  'NuwaxPC.Pages.TeamSetting.ModifyTeam.descriptionLabel': 'Description',
-  'NuwaxPC.Pages.TeamSetting.ModifyTeam.descriptionPlaceholder': 'Describe the team',
+  'PC.Pages.TeamSetting.ModifyTeam.editTeamProfile': 'Edit Team Profile',
+  'PC.Pages.TeamSetting.ModifyTeam.teamDescription':
+    'By creating a team space, you can support collaboration and sharing of agents, plugins, workflows, large models, and knowledge bases within the team.',
+  'PC.Pages.TeamSetting.ModifyTeam.teamNameLabel': 'Team Name',
+  'PC.Pages.TeamSetting.ModifyTeam.teamNameRequired': 'Please enter team name',
+  'PC.Pages.TeamSetting.ModifyTeam.descriptionLabel': 'Description',
+  'PC.Pages.TeamSetting.ModifyTeam.descriptionPlaceholder': 'Describe the team',
 
   // Pages - TeamSetting - MemberManageTab
-  'NuwaxPC.Pages.TeamSetting.MemberManageTab.keyword': 'Keyword',
-  'NuwaxPC.Pages.TeamSetting.MemberManageTab.search': 'Search',
-  'NuwaxPC.Pages.TeamSetting.MemberManageTab.nickname': 'Nickname',
-  'NuwaxPC.Pages.TeamSetting.MemberManageTab.username': 'Username',
-  'NuwaxPC.Pages.TeamSetting.MemberManageTab.role': 'Role',
-  'NuwaxPC.Pages.TeamSetting.MemberManageTab.joinTime': 'Join Time',
-  'NuwaxPC.Pages.TeamSetting.MemberManageTab.action': 'Action',
-  'NuwaxPC.Pages.TeamSetting.MemberManageTab.delete': 'Delete',
-  'NuwaxPC.Pages.TeamSetting.MemberManageTab.confirmDelete': 'Confirm Delete',
-  'NuwaxPC.Pages.TeamSetting.MemberManageTab.confirmDeleteUser': 'Are you sure you want to delete this user?',
-  'NuwaxPC.Pages.TeamSetting.MemberManageTab.addMember': 'Add Member',
+  'PC.Pages.TeamSetting.MemberManageTab.keyword': 'Keyword',
+  'PC.Pages.TeamSetting.MemberManageTab.search': 'Search',
+  'PC.Pages.TeamSetting.MemberManageTab.nickname': 'Nickname',
+  'PC.Pages.TeamSetting.MemberManageTab.username': 'Username',
+  'PC.Pages.TeamSetting.MemberManageTab.role': 'Role',
+  'PC.Pages.TeamSetting.MemberManageTab.joinTime': 'Join Time',
+  'PC.Pages.TeamSetting.MemberManageTab.action': 'Action',
+  'PC.Pages.TeamSetting.MemberManageTab.delete': 'Delete',
+  'PC.Pages.TeamSetting.MemberManageTab.confirmDelete': 'Confirm Delete',
+  'PC.Pages.TeamSetting.MemberManageTab.confirmDeleteUser':
+    'Are you sure you want to delete this user?',
+  'PC.Pages.TeamSetting.MemberManageTab.addMember': 'Add Member',
 
   // Pages - TeamSetting - AddMember
-  'NuwaxPC.Pages.TeamSetting.AddMember.addSuccess': 'Added successfully',
-  'NuwaxPC.Pages.TeamSetting.AddMember.noUserFound': 'No matching users found',
-  'NuwaxPC.Pages.TeamSetting.AddMember.selectMemberWarning': 'Please select members to add',
-  'NuwaxPC.Pages.TeamSetting.AddMember.addNewMember': 'Add New Member',
-  'NuwaxPC.Pages.TeamSetting.AddMember.searchPlaceholder': 'Enter username, email, or phone number and press Enter to search',
-  'NuwaxPC.Pages.TeamSetting.AddMember.all': 'All',
-  'NuwaxPC.Pages.TeamSetting.AddMember.selectedMembers': 'Selected ({0})',
+  'PC.Pages.TeamSetting.AddMember.addSuccess': 'Added successfully',
+  'PC.Pages.TeamSetting.AddMember.noUserFound': 'No matching users found',
+  'PC.Pages.TeamSetting.AddMember.selectMemberWarning':
+    'Please select members to add',
+  'PC.Pages.TeamSetting.AddMember.addNewMember': 'Add New Member',
+  'PC.Pages.TeamSetting.AddMember.searchPlaceholder':
+    'Enter username, email, or phone number and press Enter to search',
+  'PC.Pages.TeamSetting.AddMember.all': 'All',
+  'PC.Pages.TeamSetting.AddMember.selectedMembers': 'Selected ({0})',
 
   // Pages - TeamSetting - RemoveSpace
-  'NuwaxPC.Pages.TeamSetting.RemoveSpace.deleteTeamTitle': 'Delete Team',
-  'NuwaxPC.Pages.TeamSetting.RemoveSpace.deleteWarning': 'Please delete with caution. After deletion, all data in the team will be lost.',
-  'NuwaxPC.Pages.TeamSetting.RemoveSpace.enterTeamNameLabel': 'Enter the team name to delete',
-  'NuwaxPC.Pages.TeamSetting.RemoveSpace.enterTeamNameRequired': 'Please enter the team name to delete',
-  'NuwaxPC.Pages.TeamSetting.RemoveSpace.teamNameMismatch': 'The entered team name does not match the team name to delete',
-  'NuwaxPC.Pages.TeamSetting.RemoveSpace.teamNamePlaceholder': 'Please enter team name',
+  'PC.Pages.TeamSetting.RemoveSpace.deleteTeamTitle': 'Delete Team',
+  'PC.Pages.TeamSetting.RemoveSpace.deleteWarning':
+    'Please delete with caution. After deletion, all data in the team will be lost.',
+  'PC.Pages.TeamSetting.RemoveSpace.enterTeamNameLabel':
+    'Enter the team name to delete',
+  'PC.Pages.TeamSetting.RemoveSpace.enterTeamNameRequired':
+    'Please enter the team name to delete',
+  'PC.Pages.TeamSetting.RemoveSpace.teamNameMismatch':
+    'The entered team name does not match the team name to delete',
+  'PC.Pages.TeamSetting.RemoveSpace.teamNamePlaceholder':
+    'Please enter team name',
 
   // Pages - TeamSetting - SpaceSettingTab
-  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.transferSpace': 'Transfer Space',
-  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.transferSpaceDescription': 'Transfer space ownership to another member. You will become an Admin after the transfer.',
-  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.transferSpaceBtn': 'Transfer Space',
-  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.deleteSpace': 'Delete Space',
-  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.deleteSpaceDescription': 'Once the space is deleted, all assets cannot be recovered. Please proceed with caution.',
-  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.deleteSpaceBtn': 'Delete Space',
-  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.developerFeatures': 'Developer Features',
-  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.developerFeaturesTooltip': 'When disabled, users will not be able to see "Agent Development" and "Component Library". Creators and admins are not affected.',
-  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublish': 'Receive External Space Publications',
-  'NuwaxPC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublishTooltip': 'When enabled, users with permission to this space can publish agents, plugins, and workflows developed in other spaces to this space\'s marketplace.',
+  'PC.Pages.TeamSetting.SpaceSettingTab.transferSpace': 'Transfer Space',
+  'PC.Pages.TeamSetting.SpaceSettingTab.transferSpaceDescription':
+    'Transfer space ownership to another member. You will become an Admin after the transfer.',
+  'PC.Pages.TeamSetting.SpaceSettingTab.transferSpaceBtn': 'Transfer Space',
+  'PC.Pages.TeamSetting.SpaceSettingTab.deleteSpace': 'Delete Space',
+  'PC.Pages.TeamSetting.SpaceSettingTab.deleteSpaceDescription':
+    'Once the space is deleted, all assets cannot be recovered. Please proceed with caution.',
+  'PC.Pages.TeamSetting.SpaceSettingTab.deleteSpaceBtn': 'Delete Space',
+  'PC.Pages.TeamSetting.SpaceSettingTab.developerFeatures':
+    'Developer Features',
+  'PC.Pages.TeamSetting.SpaceSettingTab.developerFeaturesTooltip':
+    'When disabled, users will not be able to see "Agent Development" and "Component Library". Creators and admins are not affected.',
+  'PC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublish':
+    'Receive External Space Publications',
+  'PC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublishTooltip':
+    "When enabled, users with permission to this space can publish agents, plugins, and workflows developed in other spaces to this space's marketplace.",
   // Pages - SpaceLibraryLog
-  'NuwaxPC.Pages.SpaceLibraryLog.Index.pageTitle': 'Log Query',
+  'PC.Pages.SpaceLibraryLog.Index.pageTitle': 'Log Query',
 
-  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.title': 'Log Details',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.elapsedTime': 'Elapsed {0} ms',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.tokenCount': '{0} Tokens',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.messageId': 'Message ID:',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.calledComponents': 'Called Components',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.nodeDetails': 'Node Details',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.input': 'Input',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.output': 'Output',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogDetailDrawer.executionProcess': 'Execution Process',
+  'PC.Pages.SpaceLibraryLog.LogDetailDrawer.title': 'Log Details',
+  'PC.Pages.SpaceLibraryLog.LogDetailDrawer.elapsedTime': 'Elapsed {0} ms',
+  'PC.Pages.SpaceLibraryLog.LogDetailDrawer.tokenCount': '{0} Tokens',
+  'PC.Pages.SpaceLibraryLog.LogDetailDrawer.messageId': 'Message ID:',
+  'PC.Pages.SpaceLibraryLog.LogDetailDrawer.calledComponents':
+    'Called Components',
+  'PC.Pages.SpaceLibraryLog.LogDetailDrawer.nodeDetails': 'Node Details',
+  'PC.Pages.SpaceLibraryLog.LogDetailDrawer.input': 'Input',
+  'PC.Pages.SpaceLibraryLog.LogDetailDrawer.output': 'Output',
+  'PC.Pages.SpaceLibraryLog.LogDetailDrawer.executionProcess':
+    'Execution Process',
 
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeAgent': 'Agent',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typePlugin': 'Plugin',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeWorkflow': 'Workflow',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeKnowledge': 'Knowledge Base',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeVariable': 'Variable',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeTable': 'Data Table',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeModel': 'Model',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeMCP': 'MCP',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeToolCall': 'Tool Call',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typePlan': 'Plan',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelType': 'Type',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelStatus': 'Status',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.statusSuccess': 'Success',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelName': 'Name',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelElapsedTime': 'Elapsed Time',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelStartTime': 'Start Time',
-  'NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelEndTime': 'End Time',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.typeAgent': 'Agent',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.typePlugin': 'Plugin',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.typeWorkflow': 'Workflow',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.typeKnowledge': 'Knowledge Base',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.typeVariable': 'Variable',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.typeTable': 'Data Table',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.typeModel': 'Model',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.typeMCP': 'MCP',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.typeToolCall': 'Tool Call',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.typePlan': 'Plan',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.labelType': 'Type',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.labelStatus': 'Status',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.statusSuccess': 'Success',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.labelName': 'Name',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.labelElapsedTime': 'Elapsed Time',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.labelStartTime': 'Start Time',
+  'PC.Pages.SpaceLibraryLog.NodeDetails.labelEndTime': 'End Time',
 
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colType': 'Type',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colTargetId': 'Target ID',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colTargetName': 'Target Name',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colRequestId': 'Request ID',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colUserId': 'User ID',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colUserName': 'Username',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colConversationId': 'Conversation ID',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colInput': 'Input Content',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colOutput': 'Output Content',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colTimeRange': 'Time Range',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colInputToken': 'Input Token',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colOutputToken': 'Output Token',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colRequestTime': 'Request Time',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colElapsedTime': 'Elapsed Time',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.colActions': 'Actions',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phSelectType': 'Please select type',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phTargetId': 'Please enter target ID',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phTargetName': 'Please enter target name',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phRequestId': 'Please enter request ID',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phUserId': 'Please enter user ID (integers only)',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phUserName': 'Please enter username',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phConversationId': 'Please enter conversation ID',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phInputContent': 'Multiple keywords separated by spaces, please enter content',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.phOutputContent': 'Multiple keywords separated by spaces, please enter content',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.viewConversationDetail': 'View conversation details',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.queryFailed': 'Query failed',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.noRequestIdWarning': 'This record is missing requestId and cannot view details',
-  'NuwaxPC.Pages.SpaceLibraryLog.LogProTable.actionDetail': 'Details',
+  'PC.Pages.SpaceLibraryLog.LogProTable.colType': 'Type',
+  'PC.Pages.SpaceLibraryLog.LogProTable.colTargetId': 'Target ID',
+  'PC.Pages.SpaceLibraryLog.LogProTable.colTargetName': 'Target Name',
+  'PC.Pages.SpaceLibraryLog.LogProTable.colRequestId': 'Request ID',
+  'PC.Pages.SpaceLibraryLog.LogProTable.colUserId': 'User ID',
+  'PC.Pages.SpaceLibraryLog.LogProTable.colUserName': 'Username',
+  'PC.Pages.SpaceLibraryLog.LogProTable.colConversationId': 'Conversation ID',
+  'PC.Pages.SpaceLibraryLog.LogProTable.colInput': 'Input Content',
+  'PC.Pages.SpaceLibraryLog.LogProTable.colOutput': 'Output Content',
+  'PC.Pages.SpaceLibraryLog.LogProTable.colTimeRange': 'Time Range',
+  'PC.Pages.SpaceLibraryLog.LogProTable.colInputToken': 'Input Token',
+  'PC.Pages.SpaceLibraryLog.LogProTable.colOutputToken': 'Output Token',
+  'PC.Pages.SpaceLibraryLog.LogProTable.colRequestTime': 'Request Time',
+  'PC.Pages.SpaceLibraryLog.LogProTable.colElapsedTime': 'Elapsed Time',
+  'PC.Pages.SpaceLibraryLog.LogProTable.colActions': 'Actions',
+  'PC.Pages.SpaceLibraryLog.LogProTable.phSelectType': 'Please select type',
+  'PC.Pages.SpaceLibraryLog.LogProTable.phTargetId': 'Please enter target ID',
+  'PC.Pages.SpaceLibraryLog.LogProTable.phTargetName':
+    'Please enter target name',
+  'PC.Pages.SpaceLibraryLog.LogProTable.phRequestId': 'Please enter request ID',
+  'PC.Pages.SpaceLibraryLog.LogProTable.phUserId':
+    'Please enter user ID (integers only)',
+  'PC.Pages.SpaceLibraryLog.LogProTable.phUserName': 'Please enter username',
+  'PC.Pages.SpaceLibraryLog.LogProTable.phConversationId':
+    'Please enter conversation ID',
+  'PC.Pages.SpaceLibraryLog.LogProTable.phInputContent':
+    'Multiple keywords separated by spaces, please enter content',
+  'PC.Pages.SpaceLibraryLog.LogProTable.phOutputContent':
+    'Multiple keywords separated by spaces, please enter content',
+  'PC.Pages.SpaceLibraryLog.LogProTable.viewConversationDetail':
+    'View conversation details',
+  'PC.Pages.SpaceLibraryLog.LogProTable.queryFailed': 'Query failed',
+  'PC.Pages.SpaceLibraryLog.LogProTable.noRequestIdWarning':
+    'This record is missing requestId and cannot view details',
+  'PC.Pages.SpaceLibraryLog.LogProTable.actionDetail': 'Details',
 
   // Pages - Square
-  'NuwaxPC.Pages.Square.Square.agent': 'Agent',
-  'NuwaxPC.Pages.Square.Square.pageApp': 'Web App',
-  'NuwaxPC.Pages.Square.Square.skill': 'Skill',
-  'NuwaxPC.Pages.Square.Square.plugin': 'Plugin',
-  'NuwaxPC.Pages.Square.Square.workflow': 'Workflow',
-  'NuwaxPC.Pages.Square.Square.template': 'Template',
-  'NuwaxPC.Pages.Square.Square.all': 'All',
-  'NuwaxPC.Pages.Square.Square.onlyOfficial': 'Official {0} only',
-  'NuwaxPC.Pages.Square.Square.defaultAgentNotConfigured': 'Default general agent is not configured for this site',
-  'NuwaxPC.Pages.Square.Square.bannerTitle': 'Everyone is an AI Designer',
-  'NuwaxPC.Pages.Square.Square.bannerSubtitle': 'Next-gen AI application design, development, and practice platform \n No code needed, easy creation, suitable for all users, supports multi-platform publishing and API',
-  'NuwaxPC.Pages.Square.Square.selectCategory': 'Select category',
-  'NuwaxPC.Pages.Square.Square.search': 'Search',
+  'PC.Pages.Square.Square.agent': 'Agent',
+  'PC.Pages.Square.Square.pageApp': 'Web App',
+  'PC.Pages.Square.Square.skill': 'Skill',
+  'PC.Pages.Square.Square.plugin': 'Plugin',
+  'PC.Pages.Square.Square.workflow': 'Workflow',
+  'PC.Pages.Square.Square.template': 'Template',
+  'PC.Pages.Square.Square.all': 'All',
+  'PC.Pages.Square.Square.onlyOfficial': 'Official {0} only',
+  'PC.Pages.Square.Square.defaultAgentNotConfigured':
+    'Default general agent is not configured for this site',
+  'PC.Pages.Square.Square.bannerTitle': 'Everyone is an AI Designer',
+  'PC.Pages.Square.Square.bannerSubtitle':
+    'Next-gen AI application design, development, and practice platform \n No code needed, easy creation, suitable for all users, supports multi-platform publishing and API',
+  'PC.Pages.Square.Square.selectCategory': 'Select category',
+  'PC.Pages.Square.Square.search': 'Search',
 
-  'NuwaxPC.Pages.Square.SingleAgent.startUsing': 'Start Using',
+  'PC.Pages.Square.SingleAgent.startUsing': 'Start Using',
 
-  'NuwaxPC.Pages.Square.SquareComponentInfo.publishedAt': 'Published on {0}',
+  'PC.Pages.Square.SquareComponentInfo.publishedAt': 'Published on {0}',
 
-  'NuwaxPC.Pages.Square.TemplateItem.publishedAt': 'Published on {0}',
+  'PC.Pages.Square.TemplateItem.publishedAt': 'Published on {0}',
 
-  'NuwaxPC.Pages.Square.WorkflowIdDetail.templateCopySuccess': 'Template copied successfully',
-  'NuwaxPC.Pages.Square.WorkflowIdDetail.paramName': 'Parameter Name',
-  'NuwaxPC.Pages.Square.WorkflowIdDetail.paramDescription': 'Parameter Description',
-  'NuwaxPC.Pages.Square.WorkflowIdDetail.paramType': 'Parameter Type',
-  'NuwaxPC.Pages.Square.WorkflowIdDetail.inputMethod': 'Input Method',
-  'NuwaxPC.Pages.Square.WorkflowIdDetail.required': 'Required',
-  'NuwaxPC.Pages.Square.WorkflowIdDetail.yes': 'Yes',
-  'NuwaxPC.Pages.Square.WorkflowIdDetail.no': 'No',
-  'NuwaxPC.Pages.Square.WorkflowIdDetail.defaultValue': 'Default Value',
-  'NuwaxPC.Pages.Square.WorkflowIdDetail.enabled': 'Enabled',
-  'NuwaxPC.Pages.Square.WorkflowIdDetail.workflowDescription': 'Workflow Description',
-  'NuwaxPC.Pages.Square.WorkflowIdDetail.copyTemplate': 'Copy Template',
-  'NuwaxPC.Pages.Square.WorkflowIdDetail.inputConfig': 'Input Configuration',
-  'NuwaxPC.Pages.Square.WorkflowIdDetail.outputConfig': 'Output Configuration',
+  'PC.Pages.Square.WorkflowIdDetail.templateCopySuccess':
+    'Template copied successfully',
+  'PC.Pages.Square.WorkflowIdDetail.paramName': 'Parameter Name',
+  'PC.Pages.Square.WorkflowIdDetail.paramDescription': 'Parameter Description',
+  'PC.Pages.Square.WorkflowIdDetail.paramType': 'Parameter Type',
+  'PC.Pages.Square.WorkflowIdDetail.inputMethod': 'Input Method',
+  'PC.Pages.Square.WorkflowIdDetail.required': 'Required',
+  'PC.Pages.Square.WorkflowIdDetail.yes': 'Yes',
+  'PC.Pages.Square.WorkflowIdDetail.no': 'No',
+  'PC.Pages.Square.WorkflowIdDetail.defaultValue': 'Default Value',
+  'PC.Pages.Square.WorkflowIdDetail.enabled': 'Enabled',
+  'PC.Pages.Square.WorkflowIdDetail.workflowDescription':
+    'Workflow Description',
+  'PC.Pages.Square.WorkflowIdDetail.copyTemplate': 'Copy Template',
+  'PC.Pages.Square.WorkflowIdDetail.inputConfig': 'Input Configuration',
+  'PC.Pages.Square.WorkflowIdDetail.outputConfig': 'Output Configuration',
 
-  'NuwaxPC.Pages.Square.SkillDetail.templateCopySuccess': 'Template copied successfully',
-  'NuwaxPC.Pages.Square.SkillDetail.skillIdInvalid': 'Skill ID is missing or invalid, cannot export',
-  'NuwaxPC.Pages.Square.SkillDetail.exportFailed': 'Export failed',
-  'NuwaxPC.Pages.Square.SkillDetail.exportSuccess': 'Export successful!',
-  'NuwaxPC.Pages.Square.SkillDetail.exportFailedRetry': 'Export failed, please try again',
-  'NuwaxPC.Pages.Square.SkillDetail.copyTemplate': 'Copy Template',
-  'NuwaxPC.Pages.Square.SkillDetail.downloadExport': 'Download Export',
+  'PC.Pages.Square.SkillDetail.templateCopySuccess':
+    'Template copied successfully',
+  'PC.Pages.Square.SkillDetail.skillIdInvalid':
+    'Skill ID is missing or invalid, cannot export',
+  'PC.Pages.Square.SkillDetail.exportFailed': 'Export failed',
+  'PC.Pages.Square.SkillDetail.exportSuccess': 'Export successful!',
+  'PC.Pages.Square.SkillDetail.exportFailedRetry':
+    'Export failed, please try again',
+  'PC.Pages.Square.SkillDetail.copyTemplate': 'Copy Template',
+  'PC.Pages.Square.SkillDetail.downloadExport': 'Download Export',
 
-  'NuwaxPC.Pages.Square.PluginDetail.paramName': 'Parameter Name',
-  'NuwaxPC.Pages.Square.PluginDetail.paramDescription': 'Parameter Description',
-  'NuwaxPC.Pages.Square.PluginDetail.paramType': 'Parameter Type',
-  'NuwaxPC.Pages.Square.PluginDetail.inputMethod': 'Input Method',
-  'NuwaxPC.Pages.Square.PluginDetail.required': 'Required',
-  'NuwaxPC.Pages.Square.PluginDetail.yes': 'Yes',
-  'NuwaxPC.Pages.Square.PluginDetail.no': 'No',
-  'NuwaxPC.Pages.Square.PluginDetail.defaultValue': 'Default Value',
-  'NuwaxPC.Pages.Square.PluginDetail.enabled': 'Enabled',
-  'NuwaxPC.Pages.Square.PluginDetail.pluginDescription': 'Plugin Description',
-  'NuwaxPC.Pages.Square.PluginDetail.inputConfig': 'Input Configuration',
-  'NuwaxPC.Pages.Square.PluginDetail.outputConfig': 'Output Configuration',
+  'PC.Pages.Square.PluginDetail.paramName': 'Parameter Name',
+  'PC.Pages.Square.PluginDetail.paramDescription': 'Parameter Description',
+  'PC.Pages.Square.PluginDetail.paramType': 'Parameter Type',
+  'PC.Pages.Square.PluginDetail.inputMethod': 'Input Method',
+  'PC.Pages.Square.PluginDetail.required': 'Required',
+  'PC.Pages.Square.PluginDetail.yes': 'Yes',
+  'PC.Pages.Square.PluginDetail.no': 'No',
+  'PC.Pages.Square.PluginDetail.defaultValue': 'Default Value',
+  'PC.Pages.Square.PluginDetail.enabled': 'Enabled',
+  'PC.Pages.Square.PluginDetail.pluginDescription': 'Plugin Description',
+  'PC.Pages.Square.PluginDetail.inputConfig': 'Input Configuration',
+  'PC.Pages.Square.PluginDetail.outputConfig': 'Output Configuration',
 
-  'NuwaxPC.Pages.Square.PluginHeader.cancelCollectSuccess': 'Uncollected successfully',
-  'NuwaxPC.Pages.Square.PluginHeader.collectSuccess': 'Collected successfully',
-  'NuwaxPC.Pages.Square.PluginHeader.publishedAt': 'Published on {0}',
-  'NuwaxPC.Pages.Square.PluginHeader.collectCount': 'Collect ({0})',
+  'PC.Pages.Square.PluginHeader.cancelCollectSuccess':
+    'Uncollected successfully',
+  'PC.Pages.Square.PluginHeader.collectSuccess': 'Collected successfully',
+  'PC.Pages.Square.PluginHeader.publishedAt': 'Published on {0}',
+  'PC.Pages.Square.PluginHeader.collectCount': 'Collect ({0})',
 
   // Pages - SpaceDevelop
-  'NuwaxPC.Pages.SpaceDevelop.Index.copySuccess': 'Copy created successfully',
-  'NuwaxPC.Pages.SpaceDevelop.Index.deleteSuccess': 'Deleted successfully',
-  'NuwaxPC.Pages.SpaceDevelop.Index.transferSuccess': 'Transferred successfully',
-  'NuwaxPC.Pages.SpaceDevelop.Index.statUserCount': 'Chat Users',
-  'NuwaxPC.Pages.SpaceDevelop.Index.statConvCount': 'Chat Count',
-  'NuwaxPC.Pages.SpaceDevelop.Index.statCollectCount': 'Favorite Users',
-  'NuwaxPC.Pages.SpaceDevelop.Index.statLikeCount': 'Likes',
-  'NuwaxPC.Pages.SpaceDevelop.Index.exportConfigTitle': 'Export Config - {0}',
-  'NuwaxPC.Pages.SpaceDevelop.Index.exportConfigContent': 'If it contains data tables or knowledge bases, the data itself will not be exported',
-  'NuwaxPC.Pages.SpaceDevelop.Index.deleteConfirmText': 'Are you sure you want to delete this agent?',
-  'NuwaxPC.Pages.SpaceDevelop.Index.agentFileOnly': 'Please upload a .agent file!',
-  'NuwaxPC.Pages.SpaceDevelop.Index.agentDevelop': 'Agent Development',
-  'NuwaxPC.Pages.SpaceDevelop.Index.searchAgent': 'Search agents',
-  'NuwaxPC.Pages.SpaceDevelop.Index.createAgent': 'Create Agent',
-  'NuwaxPC.Pages.SpaceDevelop.Index.noResults': 'No relevant results found',
-  'NuwaxPC.Pages.SpaceDevelop.Index.agentOverview': 'Agent Overview',
+  'PC.Pages.SpaceDevelop.Index.copySuccess': 'Copy created successfully',
+  'PC.Pages.SpaceDevelop.Index.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.SpaceDevelop.Index.transferSuccess': 'Transferred successfully',
+  'PC.Pages.SpaceDevelop.Index.statUserCount': 'Chat Users',
+  'PC.Pages.SpaceDevelop.Index.statConvCount': 'Chat Count',
+  'PC.Pages.SpaceDevelop.Index.statCollectCount': 'Favorite Users',
+  'PC.Pages.SpaceDevelop.Index.statLikeCount': 'Likes',
+  'PC.Pages.SpaceDevelop.Index.exportConfigTitle': 'Export Config - {0}',
+  'PC.Pages.SpaceDevelop.Index.exportConfigContent':
+    'If it contains data tables or knowledge bases, the data itself will not be exported',
+  'PC.Pages.SpaceDevelop.Index.deleteConfirmText':
+    'Are you sure you want to delete this agent?',
+  'PC.Pages.SpaceDevelop.Index.agentFileOnly': 'Please upload a .agent file!',
+  'PC.Pages.SpaceDevelop.Index.agentDevelop': 'Agent Development',
+  'PC.Pages.SpaceDevelop.Index.searchAgent': 'Search agents',
+  'PC.Pages.SpaceDevelop.Index.createAgent': 'Create Agent',
+  'PC.Pages.SpaceDevelop.Index.noResults': 'No relevant results found',
+  'PC.Pages.SpaceDevelop.Index.agentOverview': 'Agent Overview',
 
   // Pages - SpaceDevelop > ApplicationItem
-  'NuwaxPC.Pages.SpaceDevelop.ApplicationItem.lastEdited': 'Last edited',
-  'NuwaxPC.Pages.SpaceDevelop.ApplicationItem.published': 'Published',
-  'NuwaxPC.Pages.SpaceDevelop.ApplicationItem.taskType': 'General',
-  'NuwaxPC.Pages.SpaceDevelop.ApplicationItem.chatType': 'Q&A',
-  'NuwaxPC.Pages.SpaceDevelop.ApplicationItem.privateComputer': 'Private Computer',
+  'PC.Pages.SpaceDevelop.ApplicationItem.lastEdited': 'Last edited',
+  'PC.Pages.SpaceDevelop.ApplicationItem.published': 'Published',
+  'PC.Pages.SpaceDevelop.ApplicationItem.taskType': 'General',
+  'PC.Pages.SpaceDevelop.ApplicationItem.chatType': 'Q&A',
+  'PC.Pages.SpaceDevelop.ApplicationItem.privateComputer': 'Private Computer',
 
   // Pages - SpaceDevelop > CreateApiKeyModal
-  'NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.deleteConfirmText': 'Are you sure you want to delete this API Key?',
-  'NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.modalTitle': '{0} - API Key',
-  'NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.creator': 'Creator',
-  'NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.createdTime': 'Created Time',
-  'NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.devMode': 'Dev Mode',
-  'NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.devModeTooltip': 'When dev mode is enabled, unpublished changes will be reflected in real time.',
-  'NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.addApiKey': 'Add API Key',
+  'PC.Pages.SpaceDevelop.CreateApiKeyModal.deleteConfirmText':
+    'Are you sure you want to delete this API Key?',
+  'PC.Pages.SpaceDevelop.CreateApiKeyModal.modalTitle': '{0} - API Key',
+  'PC.Pages.SpaceDevelop.CreateApiKeyModal.creator': 'Creator',
+  'PC.Pages.SpaceDevelop.CreateApiKeyModal.createdTime': 'Created Time',
+  'PC.Pages.SpaceDevelop.CreateApiKeyModal.devMode': 'Dev Mode',
+  'PC.Pages.SpaceDevelop.CreateApiKeyModal.devModeTooltip':
+    'When dev mode is enabled, unpublished changes will be reflected in real time.',
+  'PC.Pages.SpaceDevelop.CreateApiKeyModal.addApiKey': 'Add API Key',
 
   // Pages - SpaceDevelop > CreateTempChatModal
-  'NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.deleteConfirmText': 'Are you sure you want to delete this link?',
-  'NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.modalTitle': '{0} - Temporary Chat Link Management',
-  'NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.linkAddress': 'Link Address',
-  'NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.qrCode': 'QR Code',
-  'NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.loginRequired': 'Login Required',
-  'NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.validity': 'Validity',
-  'NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.addLink': 'Add Link',
+  'PC.Pages.SpaceDevelop.CreateTempChatModal.deleteConfirmText':
+    'Are you sure you want to delete this link?',
+  'PC.Pages.SpaceDevelop.CreateTempChatModal.modalTitle':
+    '{0} - Temporary Chat Link Management',
+  'PC.Pages.SpaceDevelop.CreateTempChatModal.linkAddress': 'Link Address',
+  'PC.Pages.SpaceDevelop.CreateTempChatModal.qrCode': 'QR Code',
+  'PC.Pages.SpaceDevelop.CreateTempChatModal.loginRequired': 'Login Required',
+  'PC.Pages.SpaceDevelop.CreateTempChatModal.validity': 'Validity',
+  'PC.Pages.SpaceDevelop.CreateTempChatModal.addLink': 'Add Link',
 
   // Pages - SpaceDevelop > CopyChatWidgetCode
-  'NuwaxPC.Pages.SpaceDevelop.CopyChatWidgetCode.iframeCodeCopy': 'iframe code copy',
-  'NuwaxPC.Pages.SpaceDevelop.CopyChatWidgetCode.copySuccess': 'iframe code copied successfully',
-  'NuwaxPC.Pages.SpaceDevelop.CopyChatWidgetCode.copyCode': 'Copy code',
+  'PC.Pages.SpaceDevelop.CopyChatWidgetCode.iframeCodeCopy': 'iframe code copy',
+  'PC.Pages.SpaceDevelop.CopyChatWidgetCode.copySuccess':
+    'iframe code copied successfully',
+  'PC.Pages.SpaceDevelop.CopyChatWidgetCode.copyCode': 'Copy code',
 
   // Pages - SpaceLog
-  'NuwaxPC.Pages.SpaceLog.colMessageId': 'Message ID',
-  'NuwaxPC.Pages.SpaceLog.colConversationId': 'Conversation ID',
-  'NuwaxPC.Pages.SpaceLog.colUserUid': 'User UID',
-  'NuwaxPC.Pages.SpaceLog.colUserName': 'User Nickname (Username)',
-  'NuwaxPC.Pages.SpaceLog.colUserInput': 'User Input',
-  'NuwaxPC.Pages.SpaceLog.colOutput': 'Output',
-  'NuwaxPC.Pages.SpaceLog.colInputToken': 'Input Token',
-  'NuwaxPC.Pages.SpaceLog.colOutputToken': 'Output Token',
-  'NuwaxPC.Pages.SpaceLog.colRequestTime': 'Request Time',
-  'NuwaxPC.Pages.SpaceLog.colElapsedTime': 'Elapsed Time',
-  'NuwaxPC.Pages.SpaceLog.lblMessageId': 'Message ID',
-  'NuwaxPC.Pages.SpaceLog.phMessageId': 'Enter message ID',
-  'NuwaxPC.Pages.SpaceLog.lblUserUid': 'User UID',
-  'NuwaxPC.Pages.SpaceLog.phUserUid': 'Enter user UID',
-  'NuwaxPC.Pages.SpaceLog.lblConversationId': 'Conversation ID',
-  'NuwaxPC.Pages.SpaceLog.phConversationId': 'Enter conversation ID',
-  'NuwaxPC.Pages.SpaceLog.lblUserInput': 'User Input',
-  'NuwaxPC.Pages.SpaceLog.phUserInput': 'Separate multiple keywords with spaces, enter user message',
-  'NuwaxPC.Pages.SpaceLog.lblTimeRange': 'Time Range',
-  'NuwaxPC.Pages.SpaceLog.lblOutput': 'Output',
-  'NuwaxPC.Pages.SpaceLog.phOutput': 'Separate multiple keywords with spaces, enter output message to search',
-  'NuwaxPC.Pages.SpaceLog.btnSearch': 'Search',
-  'NuwaxPC.Pages.SpaceLog.btnReset': 'Reset',
-  'NuwaxPC.Pages.SpaceLog.paginationTotal': 'Total {0} items',
-  'NuwaxPC.Pages.SpaceLog.itemsPerPage': 'items / page',
+  'PC.Pages.SpaceLog.colMessageId': 'Message ID',
+  'PC.Pages.SpaceLog.colConversationId': 'Conversation ID',
+  'PC.Pages.SpaceLog.colUserUid': 'User UID',
+  'PC.Pages.SpaceLog.colUserName': 'User Nickname (Username)',
+  'PC.Pages.SpaceLog.colUserInput': 'User Input',
+  'PC.Pages.SpaceLog.colOutput': 'Output',
+  'PC.Pages.SpaceLog.colInputToken': 'Input Token',
+  'PC.Pages.SpaceLog.colOutputToken': 'Output Token',
+  'PC.Pages.SpaceLog.colRequestTime': 'Request Time',
+  'PC.Pages.SpaceLog.colElapsedTime': 'Elapsed Time',
+  'PC.Pages.SpaceLog.lblMessageId': 'Message ID',
+  'PC.Pages.SpaceLog.phMessageId': 'Enter message ID',
+  'PC.Pages.SpaceLog.lblUserUid': 'User UID',
+  'PC.Pages.SpaceLog.phUserUid': 'Enter user UID',
+  'PC.Pages.SpaceLog.lblConversationId': 'Conversation ID',
+  'PC.Pages.SpaceLog.phConversationId': 'Enter conversation ID',
+  'PC.Pages.SpaceLog.lblUserInput': 'User Input',
+  'PC.Pages.SpaceLog.phUserInput':
+    'Separate multiple keywords with spaces, enter user message',
+  'PC.Pages.SpaceLog.lblTimeRange': 'Time Range',
+  'PC.Pages.SpaceLog.lblOutput': 'Output',
+  'PC.Pages.SpaceLog.phOutput':
+    'Separate multiple keywords with spaces, enter output message to search',
+  'PC.Pages.SpaceLog.btnSearch': 'Search',
+  'PC.Pages.SpaceLog.btnReset': 'Reset',
+  'PC.Pages.SpaceLog.paginationTotal': 'Total {0} items',
+  'PC.Pages.SpaceLog.itemsPerPage': 'items / page',
 
   // Pages - SpaceLog > LogDetails
-  'NuwaxPC.Pages.SpaceLog.LogDetails.title': 'Log Details',
-  'NuwaxPC.Pages.SpaceLog.LogDetails.elapsedTime': 'Elapsed {0} ms',
-  'NuwaxPC.Pages.SpaceLog.LogDetails.messageIdLabel': 'Message ID:',
-  'NuwaxPC.Pages.SpaceLog.LogDetails.calledComponents': 'Called Components',
-  'NuwaxPC.Pages.SpaceLog.LogDetails.nodeDetails': 'Node Details',
-  'NuwaxPC.Pages.SpaceLog.LogDetails.input': 'Input',
-  'NuwaxPC.Pages.SpaceLog.LogDetails.output': 'Output',
+  'PC.Pages.SpaceLog.LogDetails.title': 'Log Details',
+  'PC.Pages.SpaceLog.LogDetails.elapsedTime': 'Elapsed {0} ms',
+  'PC.Pages.SpaceLog.LogDetails.messageIdLabel': 'Message ID:',
+  'PC.Pages.SpaceLog.LogDetails.calledComponents': 'Called Components',
+  'PC.Pages.SpaceLog.LogDetails.nodeDetails': 'Node Details',
+  'PC.Pages.SpaceLog.LogDetails.input': 'Input',
+  'PC.Pages.SpaceLog.LogDetails.output': 'Output',
 
   // Pages - SpaceLog > NodeDetails
-  'NuwaxPC.Pages.SpaceLog.NodeDetails.lblType': 'Type',
-  'NuwaxPC.Pages.SpaceLog.NodeDetails.lblStatus': 'Status',
-  'NuwaxPC.Pages.SpaceLog.NodeDetails.statusSuccess': 'Success',
-  'NuwaxPC.Pages.SpaceLog.NodeDetails.lblName': 'Name',
-  'NuwaxPC.Pages.SpaceLog.NodeDetails.lblElapsedTime': 'Elapsed Time',
-  'NuwaxPC.Pages.SpaceLog.NodeDetails.lblStartTime': 'Start Time',
-  'NuwaxPC.Pages.SpaceLog.NodeDetails.lblEndTime': 'End Time',
-  'NuwaxPC.Pages.SpaceLog.NodeDetails.labelSeparator': ': ',
-  'NuwaxPC.Pages.SpaceLog.NodeDetails.typePlugin': 'Plugin',
-  'NuwaxPC.Pages.SpaceLog.NodeDetails.typeWorkflow': 'Workflow',
-  'NuwaxPC.Pages.SpaceLog.NodeDetails.typeKnowledge': 'Knowledge Base',
-  'NuwaxPC.Pages.SpaceLog.NodeDetails.typeVariable': 'Variable',
-  'NuwaxPC.Pages.SpaceLog.NodeDetails.typeTable': 'Data Table',
-  'NuwaxPC.Pages.SpaceLog.NodeDetails.typeModel': 'Model',
+  'PC.Pages.SpaceLog.NodeDetails.lblType': 'Type',
+  'PC.Pages.SpaceLog.NodeDetails.lblStatus': 'Status',
+  'PC.Pages.SpaceLog.NodeDetails.statusSuccess': 'Success',
+  'PC.Pages.SpaceLog.NodeDetails.lblName': 'Name',
+  'PC.Pages.SpaceLog.NodeDetails.lblElapsedTime': 'Elapsed Time',
+  'PC.Pages.SpaceLog.NodeDetails.lblStartTime': 'Start Time',
+  'PC.Pages.SpaceLog.NodeDetails.lblEndTime': 'End Time',
+  'PC.Pages.SpaceLog.NodeDetails.labelSeparator': ': ',
+  'PC.Pages.SpaceLog.NodeDetails.typePlugin': 'Plugin',
+  'PC.Pages.SpaceLog.NodeDetails.typeWorkflow': 'Workflow',
+  'PC.Pages.SpaceLog.NodeDetails.typeKnowledge': 'Knowledge Base',
+  'PC.Pages.SpaceLog.NodeDetails.typeVariable': 'Variable',
+  'PC.Pages.SpaceLog.NodeDetails.typeTable': 'Data Table',
+  'PC.Pages.SpaceLog.NodeDetails.typeModel': 'Model',
 
   // Pages - SpaceTaskCenter
-  'NuwaxPC.Pages.SpaceTaskCenter.title': 'Task Center',
-  'NuwaxPC.Pages.SpaceTaskCenter.createTask': 'Create Task',
+  'PC.Pages.SpaceTaskCenter.title': 'Task Center',
+  'PC.Pages.SpaceTaskCenter.createTask': 'Create Task',
 
   // Components - FormListItem
-  'NuwaxPC.Components.FormListItem.conditionEqual': 'Equal to',
-  'NuwaxPC.Components.FormListItem.conditionNotEqual': 'Not equal to',
-  'NuwaxPC.Components.FormListItem.conditionGreaterThan': 'Greater than',
-  'NuwaxPC.Components.FormListItem.conditionGreaterThanOrEqual': 'Greater than or equal to',
-  'NuwaxPC.Components.FormListItem.conditionLessThan': 'Less than',
-  'NuwaxPC.Components.FormListItem.conditionLessThanOrEqual': 'Less than or equal to',
-  'NuwaxPC.Components.FormListItem.conditionLengthGreaterThan': 'Length greater than',
-  'NuwaxPC.Components.FormListItem.conditionLengthGreaterThanOrEqual': 'Length greater than or equal to',
-  'NuwaxPC.Components.FormListItem.conditionLengthLessThan': 'Length less than',
-  'NuwaxPC.Components.FormListItem.conditionLengthLessThanOrEqual': 'Length less than or equal to',
-  'NuwaxPC.Components.FormListItem.conditionContains': 'Contains',
-  'NuwaxPC.Components.FormListItem.conditionNotContains': 'Does not contain',
-  'NuwaxPC.Components.FormListItem.conditionMatchRegex': 'Matches regex',
-  'NuwaxPC.Components.FormListItem.conditionIsNull': 'Is empty',
-  'NuwaxPC.Components.FormListItem.conditionNotNull': 'Is not empty',
-  'NuwaxPC.Components.FormListItem.noDescription': 'No description',
-  'NuwaxPC.Components.FormListItem.noPreviousNodesOrParams': 'No upstream node connected or upstream node has no parameters',
-  'NuwaxPC.Components.FormListItem.inputOrReferenceParam': 'Enter or reference parameter',
-  'NuwaxPC.Components.FormListItem.variableName': 'Variable Name',
-  'NuwaxPC.Components.FormListItem.variableType': 'Variable Type',
-  'NuwaxPC.Components.FormListItem.outputFormat': 'Output Format',
-  'NuwaxPC.Components.FormListItem.outputFormatText': 'Text',
-  'NuwaxPC.Components.FormListItem.outputFormatTextDesc': 'Text: Use plain text format for response',
-  'NuwaxPC.Components.FormListItem.outputFormatMarkdownDesc': 'Markdown: Will guide the model to output in Markdown format',
-  'NuwaxPC.Components.FormListItem.outputFormatJsonDesc': 'JSON: Will guide the model to output in JSON format',
-  'NuwaxPC.Components.FormListItem.outputResult': 'Output result',
-  'NuwaxPC.Components.FormListItem.paramNamePlaceholder': 'Enter parameter name',
-  'NuwaxPC.Components.FormListItem.dataTypePlaceholder': 'Select data type',
-  'NuwaxPC.Components.FormListItem.addChildNode': 'Add child node',
-  'NuwaxPC.Components.FormListItem.addDescription': 'Add description',
-  'NuwaxPC.Components.FormListItem.isRequired': 'Required',
-  'NuwaxPC.Components.FormListItem.descriptionPlaceholder': 'Enter description',
+  'PC.Components.FormListItem.conditionEqual': 'Equal to',
+  'PC.Components.FormListItem.conditionNotEqual': 'Not equal to',
+  'PC.Components.FormListItem.conditionGreaterThan': 'Greater than',
+  'PC.Components.FormListItem.conditionGreaterThanOrEqual':
+    'Greater than or equal to',
+  'PC.Components.FormListItem.conditionLessThan': 'Less than',
+  'PC.Components.FormListItem.conditionLessThanOrEqual':
+    'Less than or equal to',
+  'PC.Components.FormListItem.conditionLengthGreaterThan':
+    'Length greater than',
+  'PC.Components.FormListItem.conditionLengthGreaterThanOrEqual':
+    'Length greater than or equal to',
+  'PC.Components.FormListItem.conditionLengthLessThan': 'Length less than',
+  'PC.Components.FormListItem.conditionLengthLessThanOrEqual':
+    'Length less than or equal to',
+  'PC.Components.FormListItem.conditionContains': 'Contains',
+  'PC.Components.FormListItem.conditionNotContains': 'Does not contain',
+  'PC.Components.FormListItem.conditionMatchRegex': 'Matches regex',
+  'PC.Components.FormListItem.conditionIsNull': 'Is empty',
+  'PC.Components.FormListItem.conditionNotNull': 'Is not empty',
+  'PC.Components.FormListItem.noDescription': 'No description',
+  'PC.Components.FormListItem.noPreviousNodesOrParams':
+    'No upstream node connected or upstream node has no parameters',
+  'PC.Components.FormListItem.inputOrReferenceParam':
+    'Enter or reference parameter',
+  'PC.Components.FormListItem.variableName': 'Variable Name',
+  'PC.Components.FormListItem.variableType': 'Variable Type',
+  'PC.Components.FormListItem.outputFormat': 'Output Format',
+  'PC.Components.FormListItem.outputFormatText': 'Text',
+  'PC.Components.FormListItem.outputFormatTextDesc':
+    'Text: Use plain text format for response',
+  'PC.Components.FormListItem.outputFormatMarkdownDesc':
+    'Markdown: Will guide the model to output in Markdown format',
+  'PC.Components.FormListItem.outputFormatJsonDesc':
+    'JSON: Will guide the model to output in JSON format',
+  'PC.Components.FormListItem.outputResult': 'Output result',
+  'PC.Components.FormListItem.paramNamePlaceholder': 'Enter parameter name',
+  'PC.Components.FormListItem.dataTypePlaceholder': 'Select data type',
+  'PC.Components.FormListItem.addChildNode': 'Add child node',
+  'PC.Components.FormListItem.addDescription': 'Add description',
+  'PC.Components.FormListItem.isRequired': 'Required',
+  'PC.Components.FormListItem.descriptionPlaceholder': 'Enter description',
 
   // Pages - MyComputerManage
-  'NuwaxPC.Pages.MyComputerManage.pageTitle': 'My Computers',
-  'NuwaxPC.Pages.MyComputerManage.filterAll': 'All',
-  'NuwaxPC.Pages.MyComputerManage.filterOnline': 'Online',
-  'NuwaxPC.Pages.MyComputerManage.filterOffline': 'Offline',
-  'NuwaxPC.Pages.MyComputerManage.filterDeactivated': 'Deactivated',
-  'NuwaxPC.Pages.MyComputerManage.addComputer': 'Add Computer',
-  'NuwaxPC.Pages.MyComputerManage.statusDeactivated': 'Deactivated',
-  'NuwaxPC.Pages.MyComputerManage.statusOnline': 'Online',
-  'NuwaxPC.Pages.MyComputerManage.statusOffline': 'Offline',
-  'NuwaxPC.Pages.MyComputerManage.deactivateTooltip': 'Once deactivated, the computer cannot be controlled by agents',
-  'NuwaxPC.Pages.MyComputerManage.sessionTooltip': 'Session',
-  'NuwaxPC.Pages.MyComputerManage.connectionKeyTooltip': 'Connection key for standalone client container deployment, click to copy',
-  'NuwaxPC.Pages.MyComputerManage.editTooltip': 'Edit',
-  'NuwaxPC.Pages.MyComputerManage.emptyComputerConfig': 'No computer configurations',
-  'NuwaxPC.Pages.MyComputerManage.deleteConfirmTitle': 'Confirm delete this computer?',
-  'NuwaxPC.Pages.MyComputerManage.deleteConfirmContent': 'This action cannot be undone. Please proceed with caution.',
+  'PC.Pages.MyComputerManage.pageTitle': 'My Computers',
+  'PC.Pages.MyComputerManage.filterAll': 'All',
+  'PC.Pages.MyComputerManage.filterOnline': 'Online',
+  'PC.Pages.MyComputerManage.filterOffline': 'Offline',
+  'PC.Pages.MyComputerManage.filterDeactivated': 'Deactivated',
+  'PC.Pages.MyComputerManage.addComputer': 'Add Computer',
+  'PC.Pages.MyComputerManage.statusDeactivated': 'Deactivated',
+  'PC.Pages.MyComputerManage.statusOnline': 'Online',
+  'PC.Pages.MyComputerManage.statusOffline': 'Offline',
+  'PC.Pages.MyComputerManage.deactivateTooltip':
+    'Once deactivated, the computer cannot be controlled by agents',
+  'PC.Pages.MyComputerManage.sessionTooltip': 'Session',
+  'PC.Pages.MyComputerManage.connectionKeyTooltip':
+    'Connection key for standalone client container deployment, click to copy',
+  'PC.Pages.MyComputerManage.editTooltip': 'Edit',
+  'PC.Pages.MyComputerManage.emptyComputerConfig': 'No computer configurations',
+  'PC.Pages.MyComputerManage.deleteConfirmTitle':
+    'Confirm delete this computer?',
+  'PC.Pages.MyComputerManage.deleteConfirmContent':
+    'This action cannot be undone. Please proceed with caution.',
 
   // Pages - MyComputerManage > EditComputerModal
-  'NuwaxPC.Pages.MyComputerManage.EditComputerModal.editTitle': 'Edit Computer Name',
-  'NuwaxPC.Pages.MyComputerManage.EditComputerModal.addTitle': 'Add Computer',
-  'NuwaxPC.Pages.MyComputerManage.EditComputerModal.nameLabel': 'Computer Name',
-  'NuwaxPC.Pages.MyComputerManage.EditComputerModal.namePlaceholder': 'Please enter computer name',
-  'NuwaxPC.Pages.MyComputerManage.EditComputerModal.nameRequired': 'Please enter computer name',
-  'NuwaxPC.Pages.MyComputerManage.EditComputerModal.nameMaxLength': 'Name cannot exceed 100 characters',
-  'NuwaxPC.Pages.MyComputerManage.EditComputerModal.maxAgentCountLabel': 'Max Active Agent Sessions',
-  'NuwaxPC.Pages.MyComputerManage.EditComputerModal.maxAgentCountPlaceholder': 'Please enter',
-  'NuwaxPC.Pages.MyComputerManage.EditComputerModal.maxAgentCountTooltip': 'Each agent session consumes hundreds of megabytes of memory. Please adjust according to the actual memory of the computer. When the configured limit is exceeded, the system will automatically stop idle sessions (sending a message to a stopped session will reactivate it).',
-  'NuwaxPC.Pages.MyComputerManage.EditComputerModal.maxAgentCountRequired': 'Please enter the max active agent sessions',
-  'NuwaxPC.Pages.MyComputerManage.EditComputerModal.maxAgentCountRange': 'Value range is 1 to 99999999',
-  'NuwaxPC.Pages.MyComputerManage.EditComputerModal.descriptionLabel': 'Description',
-  'NuwaxPC.Pages.MyComputerManage.EditComputerModal.descriptionPlaceholder': 'Please enter description',
+  'PC.Pages.MyComputerManage.EditComputerModal.editTitle': 'Edit Computer Name',
+  'PC.Pages.MyComputerManage.EditComputerModal.addTitle': 'Add Computer',
+  'PC.Pages.MyComputerManage.EditComputerModal.nameLabel': 'Computer Name',
+  'PC.Pages.MyComputerManage.EditComputerModal.namePlaceholder':
+    'Please enter computer name',
+  'PC.Pages.MyComputerManage.EditComputerModal.nameRequired':
+    'Please enter computer name',
+  'PC.Pages.MyComputerManage.EditComputerModal.nameMaxLength':
+    'Name cannot exceed 100 characters',
+  'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountLabel':
+    'Max Active Agent Sessions',
+  'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountPlaceholder':
+    'Please enter',
+  'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountTooltip':
+    'Each agent session consumes hundreds of megabytes of memory. Please adjust according to the actual memory of the computer. When the configured limit is exceeded, the system will automatically stop idle sessions (sending a message to a stopped session will reactivate it).',
+  'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountRequired':
+    'Please enter the max active agent sessions',
+  'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountRange':
+    'Value range is 1 to 99999999',
+  'PC.Pages.MyComputerManage.EditComputerModal.descriptionLabel': 'Description',
+  'PC.Pages.MyComputerManage.EditComputerModal.descriptionPlaceholder':
+    'Please enter description',
 
   // Toast - MyComputerManage
-  'NuwaxPC.Toast.MyComputerManage.enabled': 'Enabled',
-  'NuwaxPC.Toast.MyComputerManage.disabled': 'Disabled',
-  'NuwaxPC.Toast.MyComputerManage.operationFailed': 'Operation failed',
-  'NuwaxPC.Toast.MyComputerManage.modifiedSuccessfully': 'Modified successfully',
-  'NuwaxPC.Toast.MyComputerManage.createdSuccessfully': 'Created successfully',
-  'NuwaxPC.Toast.MyComputerManage.modifyFailed': 'Modification failed',
-  'NuwaxPC.Toast.MyComputerManage.createFailed': 'Creation failed',
-  'NuwaxPC.Toast.MyComputerManage.connectionKeyCopied': 'Client connection key copied',
+  'PC.Toast.MyComputerManage.enabled': 'Enabled',
+  'PC.Toast.MyComputerManage.disabled': 'Disabled',
+  'PC.Toast.MyComputerManage.operationFailed': 'Operation failed',
+  'PC.Toast.MyComputerManage.modifiedSuccessfully': 'Modified successfully',
+  'PC.Toast.MyComputerManage.createdSuccessfully': 'Created successfully',
+  'PC.Toast.MyComputerManage.modifyFailed': 'Modification failed',
+  'PC.Toast.MyComputerManage.createFailed': 'Creation failed',
+  'PC.Toast.MyComputerManage.connectionKeyCopied':
+    'Client connection key copied',
 
   // Pages - SpaceSkillManage
-  'NuwaxPC.Pages.SpaceSkillManage.pageTitle': 'Skill Management',
-  'NuwaxPC.Pages.SpaceSkillManage.deleteConfirmText': 'Are you sure you want to delete this skill?',
-  'NuwaxPC.Pages.SpaceSkillManage.skillInfoNotFound': 'Skill information not found',
-  'NuwaxPC.Pages.SpaceSkillManage.skillCopiedSuccessfully': 'Skill copied successfully',
-  'NuwaxPC.Pages.SpaceSkillManage.skillIdInvalidForExport': 'Skill ID is invalid or missing, cannot export',
-  'NuwaxPC.Pages.SpaceSkillManage.exportFailed': 'Export failed',
-  'NuwaxPC.Pages.SpaceSkillManage.exportSucceeded': 'Export successful!',
-  'NuwaxPC.Pages.SpaceSkillManage.exportFailedRetry': 'Export failed, please retry',
-  'NuwaxPC.Pages.SpaceSkillManage.importSucceeded': 'Import successful',
-  'NuwaxPC.Pages.SpaceSkillManage.importFailed': 'Import failed',
-  'NuwaxPC.Pages.SpaceSkillManage.exporting': 'Exporting',
+  'PC.Pages.SpaceSkillManage.pageTitle': 'Skill Management',
+  'PC.Pages.SpaceSkillManage.deleteConfirmText':
+    'Are you sure you want to delete this skill?',
+  'PC.Pages.SpaceSkillManage.skillInfoNotFound': 'Skill information not found',
+  'PC.Pages.SpaceSkillManage.skillCopiedSuccessfully':
+    'Skill copied successfully',
+  'PC.Pages.SpaceSkillManage.skillIdInvalidForExport':
+    'Skill ID is invalid or missing, cannot export',
+  'PC.Pages.SpaceSkillManage.exportFailed': 'Export failed',
+  'PC.Pages.SpaceSkillManage.exportSucceeded': 'Export successful!',
+  'PC.Pages.SpaceSkillManage.exportFailedRetry': 'Export failed, please retry',
+  'PC.Pages.SpaceSkillManage.importSucceeded': 'Import successful',
+  'PC.Pages.SpaceSkillManage.importFailed': 'Import failed',
+  'PC.Pages.SpaceSkillManage.exporting': 'Exporting',
 
   // Pages - SpaceSkillManage > CreateSkill
-  'NuwaxPC.Pages.SpaceSkillManage.CreateSkill.skillCreatedSuccessfully': 'Skill created successfully',
-  'NuwaxPC.Pages.SpaceSkillManage.CreateSkill.skillUpdatedSuccessfully': 'Skill updated successfully',
-  'NuwaxPC.Pages.SpaceSkillManage.CreateSkill.createSkill': 'Create Skill',
-  'NuwaxPC.Pages.SpaceSkillManage.CreateSkill.updateSkill': 'Update Skill',
-  'NuwaxPC.Pages.SpaceSkillManage.CreateSkill.nameLabel': 'Name',
-  'NuwaxPC.Pages.SpaceSkillManage.CreateSkill.pleaseInputSkillName': 'Please enter skill name',
-  'NuwaxPC.Pages.SpaceSkillManage.CreateSkill.nameMaxLength': 'Name cannot exceed 30 characters!',
-  'NuwaxPC.Pages.SpaceSkillManage.CreateSkill.inputSkillName': 'Enter skill name!',
-  'NuwaxPC.Pages.SpaceSkillManage.CreateSkill.inputSkillNamePlaceholder': 'Enter skill name',
-  'NuwaxPC.Pages.SpaceSkillManage.CreateSkill.descriptionLabel': 'Description',
-  'NuwaxPC.Pages.SpaceSkillManage.CreateSkill.descriptionPlaceholder': 'Enter a description to help the model understand when to invoke this skill',
+  'PC.Pages.SpaceSkillManage.CreateSkill.skillCreatedSuccessfully':
+    'Skill created successfully',
+  'PC.Pages.SpaceSkillManage.CreateSkill.skillUpdatedSuccessfully':
+    'Skill updated successfully',
+  'PC.Pages.SpaceSkillManage.CreateSkill.createSkill': 'Create Skill',
+  'PC.Pages.SpaceSkillManage.CreateSkill.updateSkill': 'Update Skill',
+  'PC.Pages.SpaceSkillManage.CreateSkill.nameLabel': 'Name',
+  'PC.Pages.SpaceSkillManage.CreateSkill.pleaseInputSkillName':
+    'Please enter skill name',
+  'PC.Pages.SpaceSkillManage.CreateSkill.nameMaxLength':
+    'Name cannot exceed 30 characters!',
+  'PC.Pages.SpaceSkillManage.CreateSkill.inputSkillName': 'Enter skill name!',
+  'PC.Pages.SpaceSkillManage.CreateSkill.inputSkillNamePlaceholder':
+    'Enter skill name',
+  'PC.Pages.SpaceSkillManage.CreateSkill.descriptionLabel': 'Description',
+  'PC.Pages.SpaceSkillManage.CreateSkill.descriptionPlaceholder':
+    'Enter a description to help the model understand when to invoke this skill',
 
   // Pages - SpaceSkillManage > SkillStatus
-  'NuwaxPC.Pages.SpaceSkillManage.SkillStatus.published': 'Published',
-  'NuwaxPC.Pages.SpaceSkillManage.SkillStatus.reviewing': 'Under Review',
-  'NuwaxPC.Pages.SpaceSkillManage.SkillStatus.developing': 'In Development',
-  'NuwaxPC.Pages.SpaceSkillManage.SkillStatus.rejected': 'Rejected',
+  'PC.Pages.SpaceSkillManage.SkillStatus.published': 'Published',
+  'PC.Pages.SpaceSkillManage.SkillStatus.reviewing': 'Under Review',
+  'PC.Pages.SpaceSkillManage.SkillStatus.developing': 'In Development',
+  'PC.Pages.SpaceSkillManage.SkillStatus.rejected': 'Rejected',
 
   // Pages - SpaceSkillManage > ComponentItem
-  'NuwaxPC.Pages.SpaceSkillManage.ComponentItem.lastEdited': 'Last edited',
+  'PC.Pages.SpaceSkillManage.ComponentItem.lastEdited': 'Last edited',
 
   // Pages - SpaceSkillManage > HeaderRightSlot
-  'NuwaxPC.Pages.SpaceSkillManage.HeaderRightSlot.skill': 'Skill',
+  'PC.Pages.SpaceSkillManage.HeaderRightSlot.skill': 'Skill',
 
   // Pages - SpaceSkillManage > ImportSkillProjectModal
-  'NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.pleaseSelectFile': 'Please select a file to import',
-  'NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileGetFailed': 'Failed to get file, please select again',
-  'NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileTypeUnsupported': 'Only .zip, .skill compressed file formats or SKILL.md file are supported',
-  'NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSizeExceeded': 'File size cannot exceed 20MB',
-  'NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.importSkill': 'Import Skill',
-  'NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.confirmImport': 'Confirm Import',
-  'NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.dragOrClickToSelect': 'Click or drag file to this area to select',
-  'NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.uploadHint': 'Only .zip, .skill compressed file formats or SKILL.md file are supported',
-  'NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSizeHint': 'File size cannot exceed 20MB',
-  'NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.selectedFile': 'Selected file: ',
-  'NuwaxPC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSize': 'File size: ',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.pleaseSelectFile':
+    'Please select a file to import',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileGetFailed':
+    'Failed to get file, please select again',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileTypeUnsupported':
+    'Only .zip, .skill compressed file formats or SKILL.md file are supported',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSizeExceeded':
+    'File size cannot exceed 20MB',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.importSkill':
+    'Import Skill',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.confirmImport':
+    'Confirm Import',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.dragOrClickToSelect':
+    'Click or drag file to this area to select',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.uploadHint':
+    'Only .zip, .skill compressed file formats or SKILL.md file are supported',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSizeHint':
+    'File size cannot exceed 20MB',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.selectedFile':
+    'Selected file: ',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSize': 'File size: ',
 
   // Pages - SpaceSkillManage > type
-  'NuwaxPC.Pages.SpaceSkillManage.type.copyToSpace': 'Copy to Space',
-  'NuwaxPC.Pages.SpaceSkillManage.type.exportSkill': 'Export Skill',
+  'PC.Pages.SpaceSkillManage.type.copyToSpace': 'Copy to Space',
+  'PC.Pages.SpaceSkillManage.type.exportSkill': 'Export Skill',
 
   // Pages - SpaceSkillManage > MainContent
-  'NuwaxPC.Pages.SpaceSkillManage.MainContent.noResultsFound': 'No results found',
+  'PC.Pages.SpaceSkillManage.MainContent.noResultsFound': 'No results found',
 
   // Pages - PublishAudit
-  'NuwaxPC.Pages.PublishAudit.pageTitle': 'Publish Audit',
-  'NuwaxPC.Pages.PublishAudit.colPublishName': 'Publish Name',
-  'NuwaxPC.Pages.PublishAudit.colPublishNamePlaceholder': 'Enter plugin, workflow, or agent name',
-  'NuwaxPC.Pages.PublishAudit.colType': 'Type',
-  'NuwaxPC.Pages.PublishAudit.typeAgent': 'Agent',
-  'NuwaxPC.Pages.PublishAudit.typePlugin': 'Plugin',
-  'NuwaxPC.Pages.PublishAudit.typeWorkflow': 'Workflow',
-  'NuwaxPC.Pages.PublishAudit.typeSkill': 'Skill',
-  'NuwaxPC.Pages.PublishAudit.colDescription': 'Description',
-  'NuwaxPC.Pages.PublishAudit.colVersionInfo': 'Version Info',
-  'NuwaxPC.Pages.PublishAudit.colPublisher': 'Publisher',
-  'NuwaxPC.Pages.PublishAudit.colStatus': 'Status',
-  'NuwaxPC.Pages.PublishAudit.statusApplying': 'Pending Review',
-  'NuwaxPC.Pages.PublishAudit.statusPassed': 'Approved',
-  'NuwaxPC.Pages.PublishAudit.statusRejected': 'Rejected',
-  'NuwaxPC.Pages.PublishAudit.colPublishTime': 'Publish Time',
-  'NuwaxPC.Pages.PublishAudit.colAction': 'Action',
-  'NuwaxPC.Pages.PublishAudit.actionPass': 'Approve',
-  'NuwaxPC.Pages.PublishAudit.actionReject': 'Reject',
-  'NuwaxPC.Pages.PublishAudit.actionView': 'View',
-  'NuwaxPC.Pages.PublishAudit.passAuditSuccess': 'Audit approved successfully',
+  'PC.Pages.PublishAudit.pageTitle': 'Publish Audit',
+  'PC.Pages.PublishAudit.colPublishName': 'Publish Name',
+  'PC.Pages.PublishAudit.colPublishNamePlaceholder':
+    'Enter plugin, workflow, or agent name',
+  'PC.Pages.PublishAudit.colType': 'Type',
+  'PC.Pages.PublishAudit.typeAgent': 'Agent',
+  'PC.Pages.PublishAudit.typePlugin': 'Plugin',
+  'PC.Pages.PublishAudit.typeWorkflow': 'Workflow',
+  'PC.Pages.PublishAudit.typeSkill': 'Skill',
+  'PC.Pages.PublishAudit.colDescription': 'Description',
+  'PC.Pages.PublishAudit.colVersionInfo': 'Version Info',
+  'PC.Pages.PublishAudit.colPublisher': 'Publisher',
+  'PC.Pages.PublishAudit.colStatus': 'Status',
+  'PC.Pages.PublishAudit.statusApplying': 'Pending Review',
+  'PC.Pages.PublishAudit.statusPassed': 'Approved',
+  'PC.Pages.PublishAudit.statusRejected': 'Rejected',
+  'PC.Pages.PublishAudit.colPublishTime': 'Publish Time',
+  'PC.Pages.PublishAudit.colAction': 'Action',
+  'PC.Pages.PublishAudit.actionPass': 'Approve',
+  'PC.Pages.PublishAudit.actionReject': 'Reject',
+  'PC.Pages.PublishAudit.actionView': 'View',
+  'PC.Pages.PublishAudit.passAuditSuccess': 'Audit approved successfully',
 
   // Pages - PublishAudit > RejectAuditModal
-  'NuwaxPC.Pages.PublishAudit.RejectAuditModal.title': 'Reject Audit',
-  'NuwaxPC.Pages.PublishAudit.RejectAuditModal.rejectSuccess': 'Audit rejected successfully',
-  'NuwaxPC.Pages.PublishAudit.RejectAuditModal.reasonLabel': 'Please enter the rejection reason',
-  'NuwaxPC.Pages.PublishAudit.RejectAuditModal.reasonRequired': 'Please enter the rejection reason',
-  'NuwaxPC.Pages.PublishAudit.RejectAuditModal.reasonPlaceholder': 'Please enter the rejection reason',
+  'PC.Pages.PublishAudit.RejectAuditModal.title': 'Reject Audit',
+  'PC.Pages.PublishAudit.RejectAuditModal.rejectSuccess':
+    'Audit rejected successfully',
+  'PC.Pages.PublishAudit.RejectAuditModal.reasonLabel':
+    'Please enter the rejection reason',
+  'PC.Pages.PublishAudit.RejectAuditModal.reasonRequired':
+    'Please enter the rejection reason',
+  'PC.Pages.PublishAudit.RejectAuditModal.reasonPlaceholder':
+    'Please enter the rejection reason',
 
   // Pages - GlobalModelManage
-  'NuwaxPC.Pages.GlobalModelManage.pageTitle': 'Public Model Management',
-  'NuwaxPC.Pages.GlobalModelManage.addModel': 'Add Model',
-  'NuwaxPC.Pages.GlobalModelManage.all': 'All',
-  'NuwaxPC.Pages.GlobalModelManage.chatText': 'Chat - Text',
-  'NuwaxPC.Pages.GlobalModelManage.embeddings': 'Embeddings',
-  'NuwaxPC.Pages.GlobalModelManage.chatMultiModal': 'Chat - Multimodal',
-  'NuwaxPC.Pages.GlobalModelManage.deleteFailed': 'Delete failed',
-  'NuwaxPC.Pages.GlobalModelManage.accessControlUpdateFailed': 'Failed to update access control status',
-  'NuwaxPC.Pages.GlobalModelManage.edit': 'Edit',
-  'NuwaxPC.Pages.GlobalModelManage.auth': 'Authorize',
-  'NuwaxPC.Pages.GlobalModelManage.deleteModel': 'Delete Model',
-  'NuwaxPC.Pages.GlobalModelManage.confirmDeleteModel': 'Are you sure you want to delete model {0}?',
-  'NuwaxPC.Pages.GlobalModelManage.columnModelName': 'Model Name',
-  'NuwaxPC.Pages.GlobalModelManage.columnType': 'Type',
-  'NuwaxPC.Pages.GlobalModelManage.columnModelId': 'Model ID',
-  'NuwaxPC.Pages.GlobalModelManage.columnDescription': 'Description',
-  'NuwaxPC.Pages.GlobalModelManage.columnStatus': 'Status',
-  'NuwaxPC.Pages.GlobalModelManage.statusEnabled': 'Enabled',
-  'NuwaxPC.Pages.GlobalModelManage.statusDisabled': 'Disabled',
-  'NuwaxPC.Pages.GlobalModelManage.columnCreator': 'Creator',
-  'NuwaxPC.Pages.GlobalModelManage.columnUpdateTime': 'Update Time',
-  'NuwaxPC.Pages.GlobalModelManage.columnAccessControl': 'Access Control',
-  'NuwaxPC.Pages.GlobalModelManage.accessControlTooltip': 'If enabled, authorization is required to use',
-  'NuwaxPC.Pages.GlobalModelManage.accessControlOff': 'Off',
-  'NuwaxPC.Pages.GlobalModelManage.accessControlOn': 'On',
-  'NuwaxPC.Pages.GlobalModelManage.columnActions': 'Actions',
-  'NuwaxPC.Pages.GlobalModelManage.fetchDataFailed': 'Failed to fetch data',
+  'PC.Pages.GlobalModelManage.pageTitle': 'Public Model Management',
+  'PC.Pages.GlobalModelManage.addModel': 'Add Model',
+  'PC.Pages.GlobalModelManage.all': 'All',
+  'PC.Pages.GlobalModelManage.chatText': 'Chat - Text',
+  'PC.Pages.GlobalModelManage.embeddings': 'Embeddings',
+  'PC.Pages.GlobalModelManage.chatMultiModal': 'Chat - Multimodal',
+  'PC.Pages.GlobalModelManage.deleteFailed': 'Delete failed',
+  'PC.Pages.GlobalModelManage.accessControlUpdateFailed':
+    'Failed to update access control status',
+  'PC.Pages.GlobalModelManage.edit': 'Edit',
+  'PC.Pages.GlobalModelManage.auth': 'Authorize',
+  'PC.Pages.GlobalModelManage.deleteModel': 'Delete Model',
+  'PC.Pages.GlobalModelManage.confirmDeleteModel':
+    'Are you sure you want to delete model {0}?',
+  'PC.Pages.GlobalModelManage.columnModelName': 'Model Name',
+  'PC.Pages.GlobalModelManage.columnType': 'Type',
+  'PC.Pages.GlobalModelManage.columnModelId': 'Model ID',
+  'PC.Pages.GlobalModelManage.columnDescription': 'Description',
+  'PC.Pages.GlobalModelManage.columnStatus': 'Status',
+  'PC.Pages.GlobalModelManage.statusEnabled': 'Enabled',
+  'PC.Pages.GlobalModelManage.statusDisabled': 'Disabled',
+  'PC.Pages.GlobalModelManage.columnCreator': 'Creator',
+  'PC.Pages.GlobalModelManage.columnUpdateTime': 'Update Time',
+  'PC.Pages.GlobalModelManage.columnAccessControl': 'Access Control',
+  'PC.Pages.GlobalModelManage.accessControlTooltip':
+    'If enabled, authorization is required to use',
+  'PC.Pages.GlobalModelManage.accessControlOff': 'Off',
+  'PC.Pages.GlobalModelManage.accessControlOn': 'On',
+  'PC.Pages.GlobalModelManage.columnActions': 'Actions',
+  'PC.Pages.GlobalModelManage.fetchDataFailed': 'Failed to fetch data',
 
   // Pages - SpacePluginTool
-  'NuwaxPC.Pages.SpacePluginTool.paramName': 'Parameter Name',
-  'NuwaxPC.Pages.SpacePluginTool.inputParamName': 'Enter parameter name, ensure clear meaning',
-  'NuwaxPC.Pages.SpacePluginTool.paramDescription': 'Parameter Description',
-  'NuwaxPC.Pages.SpacePluginTool.inputParamDescription': 'Enter parameter description for better AI understanding',
-  'NuwaxPC.Pages.SpacePluginTool.paramType': 'Parameter Type',
-  'NuwaxPC.Pages.SpacePluginTool.selectDataType': 'Select data type',
-  'NuwaxPC.Pages.SpacePluginTool.inputMode': 'Input Mode',
-  'NuwaxPC.Pages.SpacePluginTool.required': 'Required',
-  'NuwaxPC.Pages.SpacePluginTool.defaultValue': 'Default Value',
-  'NuwaxPC.Pages.SpacePluginTool.inputDefaultValue': 'Enter default value',
-  'NuwaxPC.Pages.SpacePluginTool.enable': 'Enable',
-  'NuwaxPC.Pages.SpacePluginTool.requiredParamTooltip': 'This parameter is required. Fill in a default value to enable this toggle',
-  'NuwaxPC.Pages.SpacePluginTool.action': 'Actions',
-  'NuwaxPC.Pages.SpacePluginTool.requestConfig': 'Request Configuration',
-  'NuwaxPC.Pages.SpacePluginTool.requestMethodAndPath': 'Request Method & Path',
-  'NuwaxPC.Pages.SpacePluginTool.selectRequestMethod': 'Select request method',
-  'NuwaxPC.Pages.SpacePluginTool.inputRequestPath': 'Enter request path',
-  'NuwaxPC.Pages.SpacePluginTool.requestContentFormat': 'Request Content Format',
-  'NuwaxPC.Pages.SpacePluginTool.selectRequestContentFormat': 'Select request content format',
-  'NuwaxPC.Pages.SpacePluginTool.requestTimeoutConfig': 'Request Timeout',
-  'NuwaxPC.Pages.SpacePluginTool.inputTimeoutConfig': 'Enter timeout configuration',
-  'NuwaxPC.Pages.SpacePluginTool.requestTimeoutPlaceholder': 'Request timeout in seconds',
-  'NuwaxPC.Pages.SpacePluginTool.inputConfig': 'Input Configuration',
-  'NuwaxPC.Pages.SpacePluginTool.outputConfig': 'Output Configuration',
-  'NuwaxPC.Pages.SpacePluginTool.autoAnalysis': 'Auto Analyze',
+  'PC.Pages.SpacePluginTool.paramName': 'Parameter Name',
+  'PC.Pages.SpacePluginTool.inputParamName':
+    'Enter parameter name, ensure clear meaning',
+  'PC.Pages.SpacePluginTool.paramDescription': 'Parameter Description',
+  'PC.Pages.SpacePluginTool.inputParamDescription':
+    'Enter parameter description for better AI understanding',
+  'PC.Pages.SpacePluginTool.paramType': 'Parameter Type',
+  'PC.Pages.SpacePluginTool.selectDataType': 'Select data type',
+  'PC.Pages.SpacePluginTool.inputMode': 'Input Mode',
+  'PC.Pages.SpacePluginTool.required': 'Required',
+  'PC.Pages.SpacePluginTool.defaultValue': 'Default Value',
+  'PC.Pages.SpacePluginTool.inputDefaultValue': 'Enter default value',
+  'PC.Pages.SpacePluginTool.enable': 'Enable',
+  'PC.Pages.SpacePluginTool.requiredParamTooltip':
+    'This parameter is required. Fill in a default value to enable this toggle',
+  'PC.Pages.SpacePluginTool.action': 'Actions',
+  'PC.Pages.SpacePluginTool.requestConfig': 'Request Configuration',
+  'PC.Pages.SpacePluginTool.requestMethodAndPath': 'Request Method & Path',
+  'PC.Pages.SpacePluginTool.selectRequestMethod': 'Select request method',
+  'PC.Pages.SpacePluginTool.inputRequestPath': 'Enter request path',
+  'PC.Pages.SpacePluginTool.requestContentFormat': 'Request Content Format',
+  'PC.Pages.SpacePluginTool.selectRequestContentFormat':
+    'Select request content format',
+  'PC.Pages.SpacePluginTool.requestTimeoutConfig': 'Request Timeout',
+  'PC.Pages.SpacePluginTool.inputTimeoutConfig': 'Enter timeout configuration',
+  'PC.Pages.SpacePluginTool.requestTimeoutPlaceholder':
+    'Request timeout in seconds',
+  'PC.Pages.SpacePluginTool.inputConfig': 'Input Configuration',
+  'PC.Pages.SpacePluginTool.outputConfig': 'Output Configuration',
+  'PC.Pages.SpacePluginTool.autoAnalysis': 'Auto Analyze',
 
   // Pages - SpacePluginTool > PluginHeader
-  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.code': 'Code',
-  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.published': 'Published',
-  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.unpublished': 'Unpublished',
-  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.configSavedAt': 'Config saved at {0}',
-  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.updateUnpublished': 'Updates unpublished',
-  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.tryRun': 'Try Run',
-  'NuwaxPC.Pages.SpacePluginTool.PluginHeader.publish': 'Publish',
+  'PC.Pages.SpacePluginTool.PluginHeader.code': 'Code',
+  'PC.Pages.SpacePluginTool.PluginHeader.published': 'Published',
+  'PC.Pages.SpacePluginTool.PluginHeader.unpublished': 'Unpublished',
+  'PC.Pages.SpacePluginTool.PluginHeader.configSavedAt': 'Config saved at {0}',
+  'PC.Pages.SpacePluginTool.PluginHeader.updateUnpublished':
+    'Updates unpublished',
+  'PC.Pages.SpacePluginTool.PluginHeader.tryRun': 'Try Run',
+  'PC.Pages.SpacePluginTool.PluginHeader.publish': 'Publish',
 
   // Layouts - DynamicMenusLayout
-  'NuwaxPC.Layouts.DynamicMenusLayout.newConversation': 'New Conversation',
-  'NuwaxPC.Layouts.DynamicMenusLayout.home': 'Home',
-  'NuwaxPC.Layouts.DynamicMenusLayout.more': 'More',
+  'PC.Layouts.DynamicMenusLayout.newConversation': 'New Conversation',
+  'PC.Layouts.DynamicMenusLayout.home': 'Home',
+  'PC.Layouts.DynamicMenusLayout.more': 'More',
 
   // Layouts - DynamicMenusLayout > CollapseButton
-  'NuwaxPC.Layouts.DynamicMenusLayout.CollapseButton.expandMenu': 'Expand Menu',
-  'NuwaxPC.Layouts.DynamicMenusLayout.CollapseButton.collapseMenu': 'Collapse Menu',
+  'PC.Layouts.DynamicMenusLayout.CollapseButton.expandMenu': 'Expand Menu',
+  'PC.Layouts.DynamicMenusLayout.CollapseButton.collapseMenu': 'Collapse Menu',
 
   // Layouts - DynamicMenusLayout > HomeSection
-  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.recentlyUsed': 'Recently Used',
-  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.noAgentUsed': 'You haven\'t used any agents yet',
-  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.exploreSquare': 'Go to the square and start your exploration journey~',
-  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.conversationHistory': 'Conversation History',
-  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.viewAll': 'View All',
-  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.lookRight': 'Look right 👉',
-  'NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.startFirstConversation': 'Enter instructions in the chat box to start your first conversation~',
+  'PC.Layouts.DynamicMenusLayout.HomeSection.recentlyUsed': 'Recently Used',
+  'PC.Layouts.DynamicMenusLayout.HomeSection.noAgentUsed':
+    "You haven't used any agents yet",
+  'PC.Layouts.DynamicMenusLayout.HomeSection.exploreSquare':
+    'Go to the square and start your exploration journey~',
+  'PC.Layouts.DynamicMenusLayout.HomeSection.conversationHistory':
+    'Conversation History',
+  'PC.Layouts.DynamicMenusLayout.HomeSection.viewAll': 'View All',
+  'PC.Layouts.DynamicMenusLayout.HomeSection.lookRight': 'Look right 👉',
+  'PC.Layouts.DynamicMenusLayout.HomeSection.startFirstConversation':
+    'Enter instructions in the chat box to start your first conversation~',
 
   // Layouts - DynamicMenusLayout > ConversationItem
-  'NuwaxPC.Layouts.DynamicMenusLayout.ConversationItem.executing': 'Executing',
+  'PC.Layouts.DynamicMenusLayout.ConversationItem.executing': 'Executing',
 
   // Layouts - DynamicMenusLayout > SpaceSection
-  'NuwaxPC.Layouts.DynamicMenusLayout.SpaceSection.personalSpace': 'Personal Space',
-  'NuwaxPC.Layouts.DynamicMenusLayout.SpaceSection.recentlyEdited': 'Recently Edited',
+  'PC.Layouts.DynamicMenusLayout.SpaceSection.personalSpace': 'Personal Space',
+  'PC.Layouts.DynamicMenusLayout.SpaceSection.recentlyEdited':
+    'Recently Edited',
 
   // Layouts - DynamicMenusLayout > DevCollect
-  'NuwaxPC.Layouts.DynamicMenusLayout.DevCollect.noCollection': 'No favorites yet',
-  'NuwaxPC.Layouts.DynamicMenusLayout.DevCollect.addByStar': 'Click the ⭐️ button to add content here~',
+  'PC.Layouts.DynamicMenusLayout.DevCollect.noCollection': 'No favorites yet',
+  'PC.Layouts.DynamicMenusLayout.DevCollect.addByStar':
+    'Click the ⭐️ button to add content here~',
 
   // Layouts - DynamicMenusLayout > CreateNewTeam
-  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.createSuccess': 'Created successfully',
-  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.createTeamSpace': 'Create Team Space',
-  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.teamSpaceTips': 'By creating a team space, projects, agents, plugins, workflows, and knowledge bases can be collaborated and shared within the team.',
-  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.teamName': 'Team Name',
-  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.pleaseInputTeamName': 'Please enter a team name',
-  'NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.description': 'Description',
+  'PC.Layouts.DynamicMenusLayout.CreateNewTeam.createSuccess':
+    'Created successfully',
+  'PC.Layouts.DynamicMenusLayout.CreateNewTeam.createTeamSpace':
+    'Create Team Space',
+  'PC.Layouts.DynamicMenusLayout.CreateNewTeam.teamSpaceTips':
+    'By creating a team space, projects, agents, plugins, workflows, and knowledge bases can be collaborated and shared within the team.',
+  'PC.Layouts.DynamicMenusLayout.CreateNewTeam.teamName': 'Team Name',
+  'PC.Layouts.DynamicMenusLayout.CreateNewTeam.pleaseInputTeamName':
+    'Please enter a team name',
+  'PC.Layouts.DynamicMenusLayout.CreateNewTeam.description': 'Description',
 
   // Layouts - DynamicMenusLayout > SquareSection
-  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.agent': 'Agent',
-  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.pageApp': 'Web App',
-  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.skill': 'Skill',
-  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.plugin': 'Plugin',
-  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.workflow': 'Workflow',
-  'NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.template': 'Template',
+  'PC.Layouts.DynamicMenusLayout.SquareSection.agent': 'Agent',
+  'PC.Layouts.DynamicMenusLayout.SquareSection.pageApp': 'Web App',
+  'PC.Layouts.DynamicMenusLayout.SquareSection.skill': 'Skill',
+  'PC.Layouts.DynamicMenusLayout.SquareSection.plugin': 'Plugin',
+  'PC.Layouts.DynamicMenusLayout.SquareSection.workflow': 'Workflow',
+  'PC.Layouts.DynamicMenusLayout.SquareSection.template': 'Template',
 
   // Layouts - DynamicMenusLayout > DynamicSecondMenu
-  'NuwaxPC.Layouts.DynamicMenusLayout.DynamicSecondMenu.pathResolveFailed': 'Failed to resolve path navigation, please check if the menu path exists',
+  'PC.Layouts.DynamicMenusLayout.DynamicSecondMenu.pathResolveFailed':
+    'Failed to resolve path navigation, please check if the menu path exists',
 
   // Hooks - UseAppDevFileManagement
-  'NuwaxPC.Hooks.UseAppDevFileManagement.editCanceled': 'Edit canceled',
-  'NuwaxPC.Hooks.UseAppDevFileManagement.loadFileFailed': 'Failed to load file {0}',
-  'NuwaxPC.Hooks.UseAppDevFileManagement.renameFailed': 'Rename failed',
-  'NuwaxPC.Hooks.UseAppDevFileManagement.renameFailedWithError': 'Rename failed: {0}',
+  'PC.Hooks.UseAppDevFileManagement.editCanceled': 'Edit canceled',
+  'PC.Hooks.UseAppDevFileManagement.loadFileFailed': 'Failed to load file {0}',
+  'PC.Hooks.UseAppDevFileManagement.renameFailed': 'Rename failed',
+  'PC.Hooks.UseAppDevFileManagement.renameFailedWithError':
+    'Rename failed: {0}',
 
   // Hooks - UseAppDevModelSelector
-  'NuwaxPC.Hooks.UseAppDevModelSelector.configCodingModel': 'Please configure a coding model in system management or component library. Select a model that supports the Anthropic protocol. Recommended: Zhipu Coding Solution https://bigmodel.cn/glm-coding',
-  'NuwaxPC.Hooks.UseAppDevModelSelector.loadModelListFailed': 'Failed to load model list, please refresh and try again',
-  'NuwaxPC.Hooks.UseAppDevModelSelector.notice': 'Notice',
+  'PC.Hooks.UseAppDevModelSelector.configCodingModel':
+    'Please configure a coding model in system management or component library. Select a model that supports the Anthropic protocol. Recommended: Zhipu Coding Solution https://bigmodel.cn/glm-coding',
+  'PC.Hooks.UseAppDevModelSelector.loadModelListFailed':
+    'Failed to load model list, please refresh and try again',
+  'PC.Hooks.UseAppDevModelSelector.notice': 'Notice',
 
   // Hooks - UseAppDevProjectInfo
-  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionBuild': 'Build',
-  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionChat': 'AI Chat',
-  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionCreateProject': 'Create Project',
-  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionDeploy': 'Deploy',
-  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionFileUpdate': 'File Update',
-  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionUnknown': 'Unknown Action',
-  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionUploadProject': 'Upload Project',
-  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionUploadSingleFile': 'Upload Single File',
-  'NuwaxPC.Hooks.UseAppDevProjectInfo.actionVersionRollback': 'Version Rollback',
-  'NuwaxPC.Hooks.UseAppDevProjectInfo.fetchProjectFailed': 'Unknown error occurred while fetching project details',
-  'NuwaxPC.Hooks.UseAppDevProjectInfo.noPermission': 'You do not have permission to access this project',
+  'PC.Hooks.UseAppDevProjectInfo.actionBuild': 'Build',
+  'PC.Hooks.UseAppDevProjectInfo.actionChat': 'AI Chat',
+  'PC.Hooks.UseAppDevProjectInfo.actionCreateProject': 'Create Project',
+  'PC.Hooks.UseAppDevProjectInfo.actionDeploy': 'Deploy',
+  'PC.Hooks.UseAppDevProjectInfo.actionFileUpdate': 'File Update',
+  'PC.Hooks.UseAppDevProjectInfo.actionUnknown': 'Unknown Action',
+  'PC.Hooks.UseAppDevProjectInfo.actionUploadProject': 'Upload Project',
+  'PC.Hooks.UseAppDevProjectInfo.actionUploadSingleFile': 'Upload Single File',
+  'PC.Hooks.UseAppDevProjectInfo.actionVersionRollback': 'Version Rollback',
+  'PC.Hooks.UseAppDevProjectInfo.fetchProjectFailed':
+    'Unknown error occurred while fetching project details',
+  'PC.Hooks.UseAppDevProjectInfo.noPermission':
+    'You do not have permission to access this project',
 
   // Hooks - UseAppDevServer
-  'NuwaxPC.Hooks.UseAppDevServer.devEnvStarted': 'Development environment started successfully',
-  'NuwaxPC.Hooks.UseAppDevServer.devServerRestarted': 'Development server restarted successfully',
-  'NuwaxPC.Hooks.UseAppDevServer.keepaliveFailed': 'Keepalive request failed',
-  'NuwaxPC.Hooks.UseAppDevServer.projectIdMissing': 'Project ID is missing or invalid, cannot restart',
-  'NuwaxPC.Hooks.UseAppDevServer.restartDevServerFailed': 'Failed to restart development server',
-  'NuwaxPC.Hooks.UseAppDevServer.startDevEnvFailed': 'Failed to start development environment',
+  'PC.Hooks.UseAppDevServer.devEnvStarted':
+    'Development environment started successfully',
+  'PC.Hooks.UseAppDevServer.devServerRestarted':
+    'Development server restarted successfully',
+  'PC.Hooks.UseAppDevServer.keepaliveFailed': 'Keepalive request failed',
+  'PC.Hooks.UseAppDevServer.projectIdMissing':
+    'Project ID is missing or invalid, cannot restart',
+  'PC.Hooks.UseAppDevServer.restartDevServerFailed':
+    'Failed to restart development server',
+  'PC.Hooks.UseAppDevServer.startDevEnvFailed':
+    'Failed to start development environment',
 
   // Hooks - UseAppDevVersionCompare
-  'NuwaxPC.Hooks.UseAppDevVersionCompare.projectIdNotExist': 'Project ID does not exist',
-  'NuwaxPC.Hooks.UseAppDevVersionCompare.projectIdOrVersionNotExist': 'Project ID or target version does not exist',
-  'NuwaxPC.Hooks.UseAppDevVersionCompare.versionCompareFailed': 'Version comparison failed: {0}',
-  'NuwaxPC.Hooks.UseAppDevVersionCompare.versionSwitchFailed': 'Version switch failed: {0}',
-  'NuwaxPC.Hooks.UseAppDevVersionCompare.versionSwitchSuccess': 'Version switched successfully',
+  'PC.Hooks.UseAppDevVersionCompare.projectIdNotExist':
+    'Project ID does not exist',
+  'PC.Hooks.UseAppDevVersionCompare.projectIdOrVersionNotExist':
+    'Project ID or target version does not exist',
+  'PC.Hooks.UseAppDevVersionCompare.versionCompareFailed':
+    'Version comparison failed: {0}',
+  'PC.Hooks.UseAppDevVersionCompare.versionSwitchFailed':
+    'Version switch failed: {0}',
+  'PC.Hooks.UseAppDevVersionCompare.versionSwitchSuccess':
+    'Version switched successfully',
 
   // Hooks - UseAutoErrorHandling
-  'NuwaxPC.Hooks.UseAutoErrorHandling.continueAutoHandling': 'Continue auto-handling this issue?',
-  'NuwaxPC.Hooks.UseAutoErrorHandling.iframeError': 'Preview page failed to load, please analyze and fix the error:\n\n```\n{0}\n```',
-  'NuwaxPC.Hooks.UseAutoErrorHandling.limitReached': 'Auto error handling limit reached',
-  'NuwaxPC.Hooks.UseAutoErrorHandling.logError': 'Please analyze the following logs and fix the errors:\n\n```\n{0}\n```',
-  'NuwaxPC.Hooks.UseAutoErrorHandling.whiteScreenError': 'White screen detected in preview, please analyze and fix the following error:\n\n```\n{0}\n```',
+  'PC.Hooks.UseAutoErrorHandling.continueAutoHandling':
+    'Continue auto-handling this issue?',
+  'PC.Hooks.UseAutoErrorHandling.iframeError':
+    'Preview page failed to load, please analyze and fix the error:\n\n```\n{0}\n```',
+  'PC.Hooks.UseAutoErrorHandling.limitReached':
+    'Auto error handling limit reached',
+  'PC.Hooks.UseAutoErrorHandling.logError':
+    'Please analyze the following logs and fix the errors:\n\n```\n{0}\n```',
+  'PC.Hooks.UseAutoErrorHandling.whiteScreenError':
+    'White screen detected in preview, please analyze and fix the following error:\n\n```\n{0}\n```',
 
   // Hooks - UseCopyTemplate
-  'NuwaxPC.Hooks.UseCopyTemplate.copySuccess': 'Template copied successfully',
+  'PC.Hooks.UseCopyTemplate.copySuccess': 'Template copied successfully',
 
   // Common - additional
-  'NuwaxPC.Common.Global.continue': 'Continue',
-  'NuwaxPC.Common.Global.unknownError': 'Unknown error',
+  'PC.Common.Global.continue': 'Continue',
+  'PC.Common.Global.unknownError': 'Unknown error',
 
   // Pages - SpaceMcpEdit
-  'NuwaxPC.Pages.SpaceMcpEdit.editMcpService': 'Edit MCP Service',
-  'NuwaxPC.Pages.SpaceMcpEdit.updateNotDeployed': 'Updates not deployed',
-  'NuwaxPC.Pages.SpaceMcpEdit.save': 'Save',
-  'NuwaxPC.Pages.SpaceMcpEdit.saveAndDeploy': 'Save & Deploy',
-  'NuwaxPC.Pages.SpaceMcpEdit.saveSuccess': 'MCP service saved successfully',
-  'NuwaxPC.Pages.SpaceMcpEdit.saveAndDeploySuccess': 'Saved and deployment submitted',
-  'NuwaxPC.Pages.SpaceMcpEdit.selectComponent': 'Please select a component',
-  'NuwaxPC.Pages.SpaceMcpEdit.inputServerConfig': 'Please enter MCP service configuration',
-  'NuwaxPC.Pages.SpaceMcpEdit.serviceName': 'Service Name',
-  'NuwaxPC.Pages.SpaceMcpEdit.inputServiceName': 'Please enter MCP service name',
-  'NuwaxPC.Pages.SpaceMcpEdit.serviceNamePlaceholder': 'MCP service name',
-  'NuwaxPC.Pages.SpaceMcpEdit.description': 'Description',
-  'NuwaxPC.Pages.SpaceMcpEdit.inputDescription': 'Please describe your MCP service',
-  'NuwaxPC.Pages.SpaceMcpEdit.descriptionPlaceholder': 'Describe your MCP service',
-  'NuwaxPC.Pages.SpaceMcpEdit.installMethod': 'Installation Method',
-  'NuwaxPC.Pages.SpaceMcpEdit.selectInstallMethod': 'Please select installation method',
-  'NuwaxPC.Pages.SpaceMcpEdit.mcpServiceConfig': 'MCP Service Configuration',
-  'NuwaxPC.Pages.SpaceMcpEdit.mcpConfigJsonTip': 'MCP service uses JSON configuration, ensure correct format before submitting',
-  'NuwaxPC.Pages.SpaceMcpEdit.invalidJsonFormat': 'Please enter valid JSON format',
-  'NuwaxPC.Pages.SpaceMcpEdit.componentSelect': 'Component Selection',
-  'NuwaxPC.Pages.SpaceMcpEdit.tryRun': 'Try Run',
-  'NuwaxPC.Pages.SpaceMcpEdit.paramName': 'Parameter Name',
-  'NuwaxPC.Pages.SpaceMcpEdit.paramValue': 'Parameter Value',
-  'NuwaxPC.Pages.SpaceMcpEdit.inputParamValue': 'Please enter parameter value',
-  'NuwaxPC.Pages.SpaceMcpEdit.operation': 'Action',
-  'NuwaxPC.Pages.SpaceMcpEdit.inputParams': 'Input Parameters',
-  'NuwaxPC.Pages.SpaceMcpEdit.run': 'Run',
-  'NuwaxPC.Pages.SpaceMcpEdit.debugResult': 'Debug Result',
-  'NuwaxPC.Pages.SpaceMcpEdit.debugResultPlaceholder': 'Debug results will be displayed here',
+  'PC.Pages.SpaceMcpEdit.editMcpService': 'Edit MCP Service',
+  'PC.Pages.SpaceMcpEdit.updateNotDeployed': 'Updates not deployed',
+  'PC.Pages.SpaceMcpEdit.save': 'Save',
+  'PC.Pages.SpaceMcpEdit.saveAndDeploy': 'Save & Deploy',
+  'PC.Pages.SpaceMcpEdit.saveSuccess': 'MCP service saved successfully',
+  'PC.Pages.SpaceMcpEdit.saveAndDeploySuccess':
+    'Saved and deployment submitted',
+  'PC.Pages.SpaceMcpEdit.selectComponent': 'Please select a component',
+  'PC.Pages.SpaceMcpEdit.inputServerConfig':
+    'Please enter MCP service configuration',
+  'PC.Pages.SpaceMcpEdit.serviceName': 'Service Name',
+  'PC.Pages.SpaceMcpEdit.inputServiceName': 'Please enter MCP service name',
+  'PC.Pages.SpaceMcpEdit.serviceNamePlaceholder': 'MCP service name',
+  'PC.Pages.SpaceMcpEdit.description': 'Description',
+  'PC.Pages.SpaceMcpEdit.inputDescription': 'Please describe your MCP service',
+  'PC.Pages.SpaceMcpEdit.descriptionPlaceholder': 'Describe your MCP service',
+  'PC.Pages.SpaceMcpEdit.installMethod': 'Installation Method',
+  'PC.Pages.SpaceMcpEdit.selectInstallMethod':
+    'Please select installation method',
+  'PC.Pages.SpaceMcpEdit.mcpServiceConfig': 'MCP Service Configuration',
+  'PC.Pages.SpaceMcpEdit.mcpConfigJsonTip':
+    'MCP service uses JSON configuration, ensure correct format before submitting',
+  'PC.Pages.SpaceMcpEdit.invalidJsonFormat': 'Please enter valid JSON format',
+  'PC.Pages.SpaceMcpEdit.componentSelect': 'Component Selection',
+  'PC.Pages.SpaceMcpEdit.tryRun': 'Try Run',
+  'PC.Pages.SpaceMcpEdit.paramName': 'Parameter Name',
+  'PC.Pages.SpaceMcpEdit.paramValue': 'Parameter Value',
+  'PC.Pages.SpaceMcpEdit.inputParamValue': 'Please enter parameter value',
+  'PC.Pages.SpaceMcpEdit.operation': 'Action',
+  'PC.Pages.SpaceMcpEdit.inputParams': 'Input Parameters',
+  'PC.Pages.SpaceMcpEdit.run': 'Run',
+  'PC.Pages.SpaceMcpEdit.debugResult': 'Debug Result',
+  'PC.Pages.SpaceMcpEdit.debugResultPlaceholder':
+    'Debug results will be displayed here',
 
   // Pages - SpaceMcpCreate
-  'NuwaxPC.Pages.SpaceMcpCreate.createMcpService': 'Create MCP Service',
+  'PC.Pages.SpaceMcpCreate.createMcpService': 'Create MCP Service',
 
   // Pages - SpaceMcpManage
-  'NuwaxPC.Pages.SpaceMcpManage.title': 'MCP Management',
-  'NuwaxPC.Pages.SpaceMcpManage.stopSuccess': 'Stopped successfully',
-  'NuwaxPC.Pages.SpaceMcpManage.confirmStopService': 'Are you sure you want to stop this service?',
-  'NuwaxPC.Pages.SpaceMcpManage.confirmDeleteService': 'Are you sure you want to delete this service?',
-  'NuwaxPC.Pages.SpaceMcpManage.searchPlaceholder': 'Search MCP services',
-  'NuwaxPC.Pages.SpaceMcpManage.createMcpService': 'Create MCP Service',
-  'NuwaxPC.Pages.SpaceMcpManage.noResults': 'No matching results found',
-  'NuwaxPC.Pages.SpaceMcpManage.publishedAt': 'Published at',
-  'NuwaxPC.Pages.SpaceMcpManage.createdAt': 'Created at',
-  'NuwaxPC.Pages.SpaceMcpManage.confirmRebuildConfig': 'Are you sure you want to regenerate the configuration?',
-  'NuwaxPC.Pages.SpaceMcpManage.serviceExportTitle': 'Service Export Management',
-  'NuwaxPC.Pages.SpaceMcpManage.configService': 'Service Configuration',
-  'NuwaxPC.Pages.SpaceMcpManage.configCopyTip': 'Copy the configuration below to use in any MCP-compatible client. If needed, click',
-  'NuwaxPC.Pages.SpaceMcpManage.rebuildConfig': 'Regenerate Configuration',
+  'PC.Pages.SpaceMcpManage.title': 'MCP Management',
+  'PC.Pages.SpaceMcpManage.stopSuccess': 'Stopped successfully',
+  'PC.Pages.SpaceMcpManage.confirmStopService':
+    'Are you sure you want to stop this service?',
+  'PC.Pages.SpaceMcpManage.confirmDeleteService':
+    'Are you sure you want to delete this service?',
+  'PC.Pages.SpaceMcpManage.searchPlaceholder': 'Search MCP services',
+  'PC.Pages.SpaceMcpManage.createMcpService': 'Create MCP Service',
+  'PC.Pages.SpaceMcpManage.noResults': 'No matching results found',
+  'PC.Pages.SpaceMcpManage.publishedAt': 'Published at',
+  'PC.Pages.SpaceMcpManage.createdAt': 'Created at',
+  'PC.Pages.SpaceMcpManage.confirmRebuildConfig':
+    'Are you sure you want to regenerate the configuration?',
+  'PC.Pages.SpaceMcpManage.serviceExportTitle': 'Service Export Management',
+  'PC.Pages.SpaceMcpManage.configService': 'Service Configuration',
+  'PC.Pages.SpaceMcpManage.configCopyTip':
+    'Copy the configuration below to use in any MCP-compatible client. If needed, click',
+  'PC.Pages.SpaceMcpManage.rebuildConfig': 'Regenerate Configuration',
 
   // Pages - MorePage.ApiKey
-  'NuwaxPC.Pages.MorePage.ApiKey.statusEnabled': 'Enabled',
-  'NuwaxPC.Pages.MorePage.ApiKey.statusDisabled': 'Disabled',
-  'NuwaxPC.Pages.MorePage.ApiKey.copiedToClipboard': 'API KEY copied to clipboard',
-  'NuwaxPC.Pages.MorePage.ApiKey.keyName': 'Key Name',
-  'NuwaxPC.Pages.MorePage.ApiKey.hide': 'Hide',
-  'NuwaxPC.Pages.MorePage.ApiKey.show': 'Show',
-  'NuwaxPC.Pages.MorePage.ApiKey.createdTime': 'Created Time',
-  'NuwaxPC.Pages.MorePage.ApiKey.expireTime': 'Expiration Time',
-  'NuwaxPC.Pages.MorePage.ApiKey.neverExpire': 'Never expires',
-  'NuwaxPC.Pages.MorePage.ApiKey.status': 'Status',
-  'NuwaxPC.Pages.MorePage.ApiKey.unknownStatus': 'Unknown',
-  'NuwaxPC.Pages.MorePage.ApiKey.actions': 'Actions',
-  'NuwaxPC.Pages.MorePage.ApiKey.callStats': 'Call Statistics',
-  'NuwaxPC.Pages.MorePage.ApiKey.permissionConfig': 'Permission Config',
-  'NuwaxPC.Pages.MorePage.ApiKey.edit': 'Edit',
-  'NuwaxPC.Pages.MorePage.ApiKey.delete': 'Delete',
-  'NuwaxPC.Pages.MorePage.ApiKey.confirmDeleteKey': 'Are you sure to delete key "{0}"?',
-  'NuwaxPC.Pages.MorePage.ApiKey.deleteWarning': 'This action cannot be undone. Please proceed with caution.',
-  'NuwaxPC.Pages.MorePage.ApiKey.deleteSuccess': 'Deleted successfully',
-  'NuwaxPC.Pages.MorePage.ApiKey.pageTitle': 'API Key Management',
-  'NuwaxPC.Pages.MorePage.ApiKey.pageTips': 'Manage your API keys and access permissions',
-  'NuwaxPC.Pages.MorePage.ApiKey.createKey': 'Create Key',
+  'PC.Pages.MorePage.ApiKey.statusEnabled': 'Enabled',
+  'PC.Pages.MorePage.ApiKey.statusDisabled': 'Disabled',
+  'PC.Pages.MorePage.ApiKey.copiedToClipboard': 'API KEY copied to clipboard',
+  'PC.Pages.MorePage.ApiKey.keyName': 'Key Name',
+  'PC.Pages.MorePage.ApiKey.hide': 'Hide',
+  'PC.Pages.MorePage.ApiKey.show': 'Show',
+  'PC.Pages.MorePage.ApiKey.createdTime': 'Created Time',
+  'PC.Pages.MorePage.ApiKey.expireTime': 'Expiration Time',
+  'PC.Pages.MorePage.ApiKey.neverExpire': 'Never expires',
+  'PC.Pages.MorePage.ApiKey.status': 'Status',
+  'PC.Pages.MorePage.ApiKey.unknownStatus': 'Unknown',
+  'PC.Pages.MorePage.ApiKey.actions': 'Actions',
+  'PC.Pages.MorePage.ApiKey.callStats': 'Call Statistics',
+  'PC.Pages.MorePage.ApiKey.permissionConfig': 'Permission Config',
+  'PC.Pages.MorePage.ApiKey.edit': 'Edit',
+  'PC.Pages.MorePage.ApiKey.delete': 'Delete',
+  'PC.Pages.MorePage.ApiKey.confirmDeleteKey':
+    'Are you sure to delete key "{0}"?',
+  'PC.Pages.MorePage.ApiKey.deleteWarning':
+    'This action cannot be undone. Please proceed with caution.',
+  'PC.Pages.MorePage.ApiKey.deleteSuccess': 'Deleted successfully',
+  'PC.Pages.MorePage.ApiKey.pageTitle': 'API Key Management',
+  'PC.Pages.MorePage.ApiKey.pageTips':
+    'Manage your API keys and access permissions',
+  'PC.Pages.MorePage.ApiKey.createKey': 'Create Key',
 
   // Pages - MorePage.ApiKeyPermission
-  'NuwaxPC.Pages.MorePage.ApiKeyPermission.permissionSaved': 'Permission configuration saved successfully',
-  'NuwaxPC.Pages.MorePage.ApiKeyPermission.title': 'Permission Config - {0}',
-  'NuwaxPC.Pages.MorePage.ApiKeyPermission.selectAll': 'Select All Permissions',
-  'NuwaxPC.Pages.MorePage.ApiKeyPermission.expandAll': 'Expand All',
-  'NuwaxPC.Pages.MorePage.ApiKeyPermission.collapseAll': 'Collapse All',
-  'NuwaxPC.Pages.MorePage.ApiKeyPermission.noPermissionDefs': 'No permission definitions',
+  'PC.Pages.MorePage.ApiKeyPermission.permissionSaved':
+    'Permission configuration saved successfully',
+  'PC.Pages.MorePage.ApiKeyPermission.title': 'Permission Config - {0}',
+  'PC.Pages.MorePage.ApiKeyPermission.selectAll': 'Select All Permissions',
+  'PC.Pages.MorePage.ApiKeyPermission.expandAll': 'Expand All',
+  'PC.Pages.MorePage.ApiKeyPermission.collapseAll': 'Collapse All',
+  'PC.Pages.MorePage.ApiKeyPermission.noPermissionDefs':
+    'No permission definitions',
 
   // Pages - MorePage.ApiKeyLogs
-  'NuwaxPC.Pages.MorePage.ApiKeyLogs.pageTitle': 'API Call Logs',
+  'PC.Pages.MorePage.ApiKeyLogs.pageTitle': 'API Call Logs',
 
   // Pages - EcosystemTemplate
-  'NuwaxPC.Pages.EcosystemTemplate.title': 'Templates',
-  'NuwaxPC.Pages.EcosystemTemplate.unnamedTemplate': 'Unnamed Template',
-  'NuwaxPC.Pages.EcosystemTemplate.noDescription': 'No description',
-  'NuwaxPC.Pages.EcosystemTemplate.fetchListFailed': 'Failed to fetch template list',
-  'NuwaxPC.Pages.EcosystemTemplate.updateFailed': 'Update failed',
-  'NuwaxPC.Pages.EcosystemTemplate.updateSuccess': 'Updated successfully',
-  'NuwaxPC.Pages.EcosystemTemplate.offlineFailed': 'Offline failed',
-  'NuwaxPC.Pages.EcosystemTemplate.offlineSuccess': 'Taken offline',
-  'NuwaxPC.Pages.EcosystemTemplate.createSuccess': 'Created successfully',
-  'NuwaxPC.Pages.EcosystemTemplate.fetchDataFailed': 'Failed to fetch data',
-  'NuwaxPC.Pages.EcosystemTemplate.agent': 'Agent',
-  'NuwaxPC.Pages.EcosystemTemplate.workflow': 'Workflow',
-  'NuwaxPC.Pages.EcosystemTemplate.pageApp': 'Web App',
-  'NuwaxPC.Pages.EcosystemTemplate.fetchDetailFailed': 'Failed to fetch details',
-  'NuwaxPC.Pages.EcosystemTemplate.templateOffline': 'Template taken offline',
-  'NuwaxPC.Pages.EcosystemTemplate.templateWithdrawn': 'Template publication withdrawn',
-  'NuwaxPC.Pages.EcosystemTemplate.searchPlaceholder': 'Search templates',
-  'NuwaxPC.Pages.EcosystemTemplate.createShare': 'Create Share',
-  'NuwaxPC.Pages.EcosystemTemplate.viewDetail': 'View Details',
+  'PC.Pages.EcosystemTemplate.title': 'Templates',
+  'PC.Pages.EcosystemTemplate.unnamedTemplate': 'Unnamed Template',
+  'PC.Pages.EcosystemTemplate.noDescription': 'No description',
+  'PC.Pages.EcosystemTemplate.fetchListFailed': 'Failed to fetch template list',
+  'PC.Pages.EcosystemTemplate.updateFailed': 'Update failed',
+  'PC.Pages.EcosystemTemplate.updateSuccess': 'Updated successfully',
+  'PC.Pages.EcosystemTemplate.offlineFailed': 'Offline failed',
+  'PC.Pages.EcosystemTemplate.offlineSuccess': 'Taken offline',
+  'PC.Pages.EcosystemTemplate.createSuccess': 'Created successfully',
+  'PC.Pages.EcosystemTemplate.fetchDataFailed': 'Failed to fetch data',
+  'PC.Pages.EcosystemTemplate.agent': 'Agent',
+  'PC.Pages.EcosystemTemplate.workflow': 'Workflow',
+  'PC.Pages.EcosystemTemplate.pageApp': 'Web App',
+  'PC.Pages.EcosystemTemplate.fetchDetailFailed': 'Failed to fetch details',
+  'PC.Pages.EcosystemTemplate.templateOffline': 'Template taken offline',
+  'PC.Pages.EcosystemTemplate.templateWithdrawn':
+    'Template publication withdrawn',
+  'PC.Pages.EcosystemTemplate.searchPlaceholder': 'Search templates',
+  'PC.Pages.EcosystemTemplate.createShare': 'Create Share',
+  'PC.Pages.EcosystemTemplate.viewDetail': 'View Details',
 
   // Pages - EcosystemPlugin
-  'NuwaxPC.Pages.EcosystemPlugin.title': 'Plugins',
-  'NuwaxPC.Pages.EcosystemPlugin.unnamedPlugin': 'Unnamed Plugin',
-  'NuwaxPC.Pages.EcosystemPlugin.noDescription': 'No description',
-  'NuwaxPC.Pages.EcosystemPlugin.fetchListFailed': 'Failed to fetch plugin list',
-  'NuwaxPC.Pages.EcosystemPlugin.operationFailed': 'Operation failed',
-  'NuwaxPC.Pages.EcosystemPlugin.updateSuccess': 'Updated successfully',
-  'NuwaxPC.Pages.EcosystemPlugin.updateFailed': 'Update failed',
-  'NuwaxPC.Pages.EcosystemPlugin.offlineFailed': 'Offline failed',
-  'NuwaxPC.Pages.EcosystemPlugin.offlineSuccess': 'Taken offline',
-  'NuwaxPC.Pages.EcosystemPlugin.createSuccess': 'Created successfully',
-  'NuwaxPC.Pages.EcosystemPlugin.fetchDataFailed': 'Failed to fetch data',
-  'NuwaxPC.Pages.EcosystemPlugin.fetchDetailFailed': 'Failed to fetch plugin details',
-  'NuwaxPC.Pages.EcosystemPlugin.pluginOffline': 'Plugin taken offline',
-  'NuwaxPC.Pages.EcosystemPlugin.pluginWithdrawn': 'Plugin publication withdrawn',
-  'NuwaxPC.Pages.EcosystemPlugin.searchPlaceholder': 'Search plugins',
-  'NuwaxPC.Pages.EcosystemPlugin.createShare': 'Create Share',
+  'PC.Pages.EcosystemPlugin.title': 'Plugins',
+  'PC.Pages.EcosystemPlugin.unnamedPlugin': 'Unnamed Plugin',
+  'PC.Pages.EcosystemPlugin.noDescription': 'No description',
+  'PC.Pages.EcosystemPlugin.fetchListFailed': 'Failed to fetch plugin list',
+  'PC.Pages.EcosystemPlugin.operationFailed': 'Operation failed',
+  'PC.Pages.EcosystemPlugin.updateSuccess': 'Updated successfully',
+  'PC.Pages.EcosystemPlugin.updateFailed': 'Update failed',
+  'PC.Pages.EcosystemPlugin.offlineFailed': 'Offline failed',
+  'PC.Pages.EcosystemPlugin.offlineSuccess': 'Taken offline',
+  'PC.Pages.EcosystemPlugin.createSuccess': 'Created successfully',
+  'PC.Pages.EcosystemPlugin.fetchDataFailed': 'Failed to fetch data',
+  'PC.Pages.EcosystemPlugin.fetchDetailFailed':
+    'Failed to fetch plugin details',
+  'PC.Pages.EcosystemPlugin.pluginOffline': 'Plugin taken offline',
+  'PC.Pages.EcosystemPlugin.pluginWithdrawn': 'Plugin publication withdrawn',
+  'PC.Pages.EcosystemPlugin.searchPlaceholder': 'Search plugins',
+  'PC.Pages.EcosystemPlugin.createShare': 'Create Share',
 
   // Pages - PublishedManage
-  'NuwaxPC.Pages.PublishedManage.pageTitle': 'Published Management',
-  'NuwaxPC.Pages.PublishedManage.view': 'View',
-  'NuwaxPC.Pages.PublishedManage.offShelf': 'Unpublish',
-  'NuwaxPC.Pages.PublishedManage.publishName': 'Publish Name',
-  'NuwaxPC.Pages.PublishedManage.searchNamePlaceholder': 'Enter plugin, workflow or agent name',
-  'NuwaxPC.Pages.PublishedManage.type': 'Type',
-  'NuwaxPC.Pages.PublishedManage.typeAgent': 'Agent',
-  'NuwaxPC.Pages.PublishedManage.typePlugin': 'Plugin',
-  'NuwaxPC.Pages.PublishedManage.typeWorkflow': 'Workflow',
-  'NuwaxPC.Pages.PublishedManage.typeSkill': 'Skill',
-  'NuwaxPC.Pages.PublishedManage.description': 'Description',
-  'NuwaxPC.Pages.PublishedManage.versionInfo': 'Version Info',
-  'NuwaxPC.Pages.PublishedManage.publisher': 'Publisher',
-  'NuwaxPC.Pages.PublishedManage.publishTime': 'Publish Time',
-  'NuwaxPC.Pages.PublishedManage.actions': 'Actions',
-  'NuwaxPC.Pages.PublishedManage.fetchDataFailed': 'Failed to fetch data',
+  'PC.Pages.PublishedManage.pageTitle': 'Published Management',
+  'PC.Pages.PublishedManage.view': 'View',
+  'PC.Pages.PublishedManage.offShelf': 'Unpublish',
+  'PC.Pages.PublishedManage.publishName': 'Publish Name',
+  'PC.Pages.PublishedManage.searchNamePlaceholder':
+    'Enter plugin, workflow or agent name',
+  'PC.Pages.PublishedManage.type': 'Type',
+  'PC.Pages.PublishedManage.typeAgent': 'Agent',
+  'PC.Pages.PublishedManage.typePlugin': 'Plugin',
+  'PC.Pages.PublishedManage.typeWorkflow': 'Workflow',
+  'PC.Pages.PublishedManage.typeSkill': 'Skill',
+  'PC.Pages.PublishedManage.description': 'Description',
+  'PC.Pages.PublishedManage.versionInfo': 'Version Info',
+  'PC.Pages.PublishedManage.publisher': 'Publisher',
+  'PC.Pages.PublishedManage.publishTime': 'Publish Time',
+  'PC.Pages.PublishedManage.actions': 'Actions',
+  'PC.Pages.PublishedManage.fetchDataFailed': 'Failed to fetch data',
 
   // Pages - PublishedManage.OffshelfModal
-  'NuwaxPC.Pages.PublishedManage.OffshelfModal.offShelfSuccess': 'Unpublished successfully',
-  'NuwaxPC.Pages.PublishedManage.OffshelfModal.title': 'Unpublish',
-  'NuwaxPC.Pages.PublishedManage.OffshelfModal.reasonLabel': 'Please enter the reason for unpublishing',
-  'NuwaxPC.Pages.PublishedManage.OffshelfModal.reasonRequired': 'Please enter the reason for unpublishing',
-  'NuwaxPC.Pages.PublishedManage.OffshelfModal.reasonPlaceholder': 'Please enter the reason for unpublishing',
+  'PC.Pages.PublishedManage.OffshelfModal.offShelfSuccess':
+    'Unpublished successfully',
+  'PC.Pages.PublishedManage.OffshelfModal.title': 'Unpublish',
+  'PC.Pages.PublishedManage.OffshelfModal.reasonLabel':
+    'Please enter the reason for unpublishing',
+  'PC.Pages.PublishedManage.OffshelfModal.reasonRequired':
+    'Please enter the reason for unpublishing',
+  'PC.Pages.PublishedManage.OffshelfModal.reasonPlaceholder':
+    'Please enter the reason for unpublishing',
 
   // Pages - SpaceSquare
-  'NuwaxPC.Pages.SpaceSquare.title': 'Space Square',
-  'NuwaxPC.Pages.SpaceSquare.confirmOffShelf': 'Are you sure you want to unpublish this {0}?',
-  'NuwaxPC.Pages.SpaceSquare.offShelf': 'Unpublish',
-  'NuwaxPC.Pages.SpaceSquare.agent': 'Agent',
-  'NuwaxPC.Pages.SpaceSquare.template': 'Template',
-  'NuwaxPC.Pages.SpaceSquare.plugin': 'Plugin',
-  'NuwaxPC.Pages.SpaceSquare.workflow': 'Workflow',
-  'NuwaxPC.Pages.SpaceSquare.skill': 'Skill',
+  'PC.Pages.SpaceSquare.title': 'Space Square',
+  'PC.Pages.SpaceSquare.confirmOffShelf':
+    'Are you sure you want to unpublish this {0}?',
+  'PC.Pages.SpaceSquare.offShelf': 'Unpublish',
+  'PC.Pages.SpaceSquare.agent': 'Agent',
+  'PC.Pages.SpaceSquare.template': 'Template',
+  'PC.Pages.SpaceSquare.plugin': 'Plugin',
+  'PC.Pages.SpaceSquare.workflow': 'Workflow',
+  'PC.Pages.SpaceSquare.skill': 'Skill',
 
   // Pages - EcosystemMcp
-  'NuwaxPC.Pages.EcosystemMcp.title': 'MCP',
-  'NuwaxPC.Pages.EcosystemMcp.unnamedMcp': 'Unnamed MCP',
-  'NuwaxPC.Pages.EcosystemMcp.noDescription': 'No description',
-  'NuwaxPC.Pages.EcosystemMcp.fetchDetailFailed': 'Failed to fetch MCP details',
-  'NuwaxPC.Pages.EcosystemMcp.operationFailed': 'Operation failed',
-  'NuwaxPC.Pages.EcosystemMcp.enableSuccess': 'Enabled successfully',
-  'NuwaxPC.Pages.EcosystemMcp.disableFailed': 'Disable failed',
-  'NuwaxPC.Pages.EcosystemMcp.disableSuccess': 'Disabled successfully',
-  'NuwaxPC.Pages.EcosystemMcp.searchPlaceholder': 'Search MCP',
+  'PC.Pages.EcosystemMcp.title': 'MCP',
+  'PC.Pages.EcosystemMcp.unnamedMcp': 'Unnamed MCP',
+  'PC.Pages.EcosystemMcp.noDescription': 'No description',
+  'PC.Pages.EcosystemMcp.fetchDetailFailed': 'Failed to fetch MCP details',
+  'PC.Pages.EcosystemMcp.operationFailed': 'Operation failed',
+  'PC.Pages.EcosystemMcp.enableSuccess': 'Enabled successfully',
+  'PC.Pages.EcosystemMcp.disableFailed': 'Disable failed',
+  'PC.Pages.EcosystemMcp.disableSuccess': 'Disabled successfully',
+  'PC.Pages.EcosystemMcp.searchPlaceholder': 'Search MCP',
 
   // Components - ParamsSetting
-  'NuwaxPC.Components.ParamsSetting.paramName': 'Parameter Name',
-  'NuwaxPC.Components.ParamsSetting.paramType': 'Parameter Type',
-  'NuwaxPC.Components.ParamsSetting.required': 'Required',
-  'NuwaxPC.Components.ParamsSetting.notRequired': 'Optional',
-  'NuwaxPC.Components.ParamsSetting.defaultValue': 'Default Value',
-  'NuwaxPC.Components.ParamsSetting.pleaseFill': 'Please fill in',
-  'NuwaxPC.Components.ParamsSetting.enable': 'Enable',
-  'NuwaxPC.Components.ParamsSetting.enableTooltip': 'When a parameter is disabled, the model will not be able to see it. If the parameter has a default value and is invisible, the agent will only use the set value when called.',
-  'NuwaxPC.Components.ParamsSetting.requiredParamTooltip': 'This is a required parameter. The switch will be available after filling in a default value.',
+  'PC.Components.ParamsSetting.paramName': 'Parameter Name',
+  'PC.Components.ParamsSetting.paramType': 'Parameter Type',
+  'PC.Components.ParamsSetting.required': 'Required',
+  'PC.Components.ParamsSetting.notRequired': 'Optional',
+  'PC.Components.ParamsSetting.defaultValue': 'Default Value',
+  'PC.Components.ParamsSetting.pleaseFill': 'Please fill in',
+  'PC.Components.ParamsSetting.enable': 'Enable',
+  'PC.Components.ParamsSetting.enableTooltip':
+    'When a parameter is disabled, the model will not be able to see it. If the parameter has a default value and is invisible, the agent will only use the set value when called.',
+  'PC.Components.ParamsSetting.requiredParamTooltip':
+    'This is a required parameter. The switch will be available after filling in a default value.',
 
   // Components - CollapseComponentList
-  'NuwaxPC.Components.CollapseComponentList.pluginDesc': 'Plugins enable the agent to call external APIs, such as searching information, browsing web pages, generating images, etc., expanding the agent\'s capabilities and use cases.',
-  'NuwaxPC.Components.CollapseComponentList.workflowDesc': 'Workflows support combining plugins, large language models, code blocks, and other functions in a visual way to achieve complex and stable business process orchestration, such as travel planning, report analysis, etc.',
-  'NuwaxPC.Components.CollapseComponentList.mcpDesc': 'The agent can connect to various service APIs through the standardized protocol (MCP) and initiate calls.',
-  'NuwaxPC.Components.CollapseComponentList.tableDesc': 'Organize data in a table structure to implement functions such as bookmarks and book management.',
-  'NuwaxPC.Components.CollapseComponentList.pageDesc': 'Pages are the visual interface of the agent, through which users can interact with the agent.',
-  'NuwaxPC.Components.CollapseComponentList.skillDesc': 'Skills are the agent\'s capabilities, through which users can interact with the agent.',
-  'NuwaxPC.Components.CollapseComponentList.settings': 'Settings',
-  'NuwaxPC.Components.CollapseComponentList.delete': 'Delete',
+  'PC.Components.CollapseComponentList.pluginDesc':
+    "Plugins enable the agent to call external APIs, such as searching information, browsing web pages, generating images, etc., expanding the agent's capabilities and use cases.",
+  'PC.Components.CollapseComponentList.workflowDesc':
+    'Workflows support combining plugins, large language models, code blocks, and other functions in a visual way to achieve complex and stable business process orchestration, such as travel planning, report analysis, etc.',
+  'PC.Components.CollapseComponentList.mcpDesc':
+    'The agent can connect to various service APIs through the standardized protocol (MCP) and initiate calls.',
+  'PC.Components.CollapseComponentList.tableDesc':
+    'Organize data in a table structure to implement functions such as bookmarks and book management.',
+  'PC.Components.CollapseComponentList.pageDesc':
+    'Pages are the visual interface of the agent, through which users can interact with the agent.',
+  'PC.Components.CollapseComponentList.skillDesc':
+    "Skills are the agent's capabilities, through which users can interact with the agent.",
+  'PC.Components.CollapseComponentList.settings': 'Settings',
+  'PC.Components.CollapseComponentList.delete': 'Delete',
 
   // Components - McpCollapseComponentList
-  'NuwaxPC.Components.McpCollapseComponentList.agentDesc': 'The agent is responsible for receiving user task requests, performing intelligent analysis and decision-making, coordinating the collaborative work of various modules, and ultimately providing response results.',
-  'NuwaxPC.Components.McpCollapseComponentList.pluginDesc': 'Plugins enable the agent to call external APIs, such as searching information, browsing web pages, generating images, etc., expanding the agent\'s capabilities and use cases.',
-  'NuwaxPC.Components.McpCollapseComponentList.workflowDesc': 'Workflows support combining plugins, large language models, code blocks, and other functions in a visual way to achieve complex and stable business process orchestration, such as travel planning, report analysis, etc.',
-  'NuwaxPC.Components.McpCollapseComponentList.knowledgeDesc': 'After uploading documents, URLs, and third-party data sources as text knowledge bases, when users send messages, the agent can reference the content in the text knowledge to answer user questions.',
-  'NuwaxPC.Components.McpCollapseComponentList.tableDesc': 'Organize data in a table structure to implement functions such as bookmarks and book management.',
-  'NuwaxPC.Components.McpCollapseComponentList.delete': 'Delete',
+  'PC.Components.McpCollapseComponentList.agentDesc':
+    'The agent is responsible for receiving user task requests, performing intelligent analysis and decision-making, coordinating the collaborative work of various modules, and ultimately providing response results.',
+  'PC.Components.McpCollapseComponentList.pluginDesc':
+    "Plugins enable the agent to call external APIs, such as searching information, browsing web pages, generating images, etc., expanding the agent's capabilities and use cases.",
+  'PC.Components.McpCollapseComponentList.workflowDesc':
+    'Workflows support combining plugins, large language models, code blocks, and other functions in a visual way to achieve complex and stable business process orchestration, such as travel planning, report analysis, etc.',
+  'PC.Components.McpCollapseComponentList.knowledgeDesc':
+    'After uploading documents, URLs, and third-party data sources as text knowledge bases, when users send messages, the agent can reference the content in the text knowledge to answer user questions.',
+  'PC.Components.McpCollapseComponentList.tableDesc':
+    'Organize data in a table structure to implement functions such as bookmarks and book management.',
+  'PC.Components.McpCollapseComponentList.delete': 'Delete',
 
   // Components - EcosystemSelectCategory
-  'NuwaxPC.Components.EcosystemSelectCategory.all': 'All',
-  'NuwaxPC.Components.EcosystemSelectCategory.pleaseSelectCategory': 'Please select a category',
+  'PC.Components.EcosystemSelectCategory.all': 'All',
+  'PC.Components.EcosystemSelectCategory.pleaseSelectCategory':
+    'Please select a category',
 
   // Components - FoldWrap
-  'NuwaxPC.Components.FoldWrap.pleaseInputNodeName': 'Please enter node name',
-  'NuwaxPC.Components.FoldWrap.pleaseInputNodeDesc': 'Please enter node description',
-  'NuwaxPC.Components.FoldWrap.noContent': 'No content',
+  'PC.Components.FoldWrap.pleaseInputNodeName': 'Please enter node name',
+  'PC.Components.FoldWrap.pleaseInputNodeDesc': 'Please enter node description',
+  'PC.Components.FoldWrap.noContent': 'No content',
 
   // Components - ShowStand
-  'NuwaxPC.Components.ShowStand.title': 'Showcase',
+  'PC.Components.ShowStand.title': 'Showcase',
 
   // Components - SlateVariableEditor
-  'NuwaxPC.Components.SlateVariableEditor.variable': 'Variable',
-  'NuwaxPC.Components.SlateVariableEditor.placeholder': 'Please enter content...',
+  'PC.Components.SlateVariableEditor.variable': 'Variable',
+  'PC.Components.SlateVariableEditor.placeholder': 'Please enter content...',
 
   // Components - NewConversationSet
-  'NuwaxPC.Components.NewConversationSet.conversationSettings': 'Conversation Settings',
-  'NuwaxPC.Components.NewConversationSet.startConversation': 'Start Conversation',
-  'NuwaxPC.Components.NewConversationSet.settingsLockedHint': 'Once the conversation starts, the settings cannot be modified.',
-  'NuwaxPC.Components.NewConversationSet.pleaseSelectField': 'Please select {0}',
-  'NuwaxPC.Components.NewConversationSet.pleaseInputField': 'Please enter {0}',
+  'PC.Components.NewConversationSet.conversationSettings':
+    'Conversation Settings',
+  'PC.Components.NewConversationSet.startConversation': 'Start Conversation',
+  'PC.Components.NewConversationSet.settingsLockedHint':
+    'Once the conversation starts, the settings cannot be modified.',
+  'PC.Components.NewConversationSet.pleaseSelectField': 'Please select {0}',
+  'PC.Components.NewConversationSet.pleaseInputField': 'Please enter {0}',
 
   // Components - UploadImportConfig
-  'NuwaxPC.Components.UploadImportConfig.importSuccess': 'Configuration imported successfully',
-  'NuwaxPC.Components.UploadImportConfig.uploadFailed': '{0} upload failed',
-  'NuwaxPC.Components.UploadImportConfig.notice': 'Notice',
-  'NuwaxPC.Components.UploadImportConfig.checkConfigHint': 'If the configuration contains plugins or MCP, please check the related configuration after import to ensure correct operation.',
-  'NuwaxPC.Components.UploadImportConfig.invalidFileType': 'Please upload a .table, .workflow or .plugin file!',
-  'NuwaxPC.Components.UploadImportConfig.importConfig': 'Import Configuration',
+  'PC.Components.UploadImportConfig.importSuccess':
+    'Configuration imported successfully',
+  'PC.Components.UploadImportConfig.uploadFailed': '{0} upload failed',
+  'PC.Components.UploadImportConfig.notice': 'Notice',
+  'PC.Components.UploadImportConfig.checkConfigHint':
+    'If the configuration contains plugins or MCP, please check the related configuration after import to ensure correct operation.',
+  'PC.Components.UploadImportConfig.invalidFileType':
+    'Please upload a .table, .workflow or .plugin file!',
+  'PC.Components.UploadImportConfig.importConfig': 'Import Configuration',
 
   // Components - ComputerTypeSelector
-  'NuwaxPC.Components.ComputerTypeSelector.noComputerAvailable': 'No computer available',
-  'NuwaxPC.Components.ComputerTypeSelector.computerUnavailable': 'Computer unavailable',
-  'NuwaxPC.Components.ComputerTypeSelector.personalComputerUnavailable': 'Personal computer unavailable',
-  'NuwaxPC.Components.ComputerTypeSelector.selectComputer': 'Select computer',
+  'PC.Components.ComputerTypeSelector.noComputerAvailable':
+    'No computer available',
+  'PC.Components.ComputerTypeSelector.computerUnavailable':
+    'Computer unavailable',
+  'PC.Components.ComputerTypeSelector.personalComputerUnavailable':
+    'Personal computer unavailable',
+  'PC.Components.ComputerTypeSelector.selectComputer': 'Select computer',
 
   // Components - PluginCardDetail
-  'NuwaxPC.Components.PluginCardDetail.back': 'Back',
-  'NuwaxPC.Components.PluginCardDetail.newVersion': 'New version available',
-  'NuwaxPC.Components.PluginCardDetail.version': 'Version',
-  'NuwaxPC.Components.PluginCardDetail.publishDate': 'Publish Date',
-  'NuwaxPC.Components.PluginCardDetail.author': 'Author',
-  'NuwaxPC.Components.PluginCardDetail.uninstall': 'Uninstall',
-  'NuwaxPC.Components.PluginCardDetail.install': 'Install',
-  'NuwaxPC.Components.PluginCardDetail.pluginDescription': 'Plugin Description',
-  'NuwaxPC.Components.PluginCardDetail.detailedInfo': 'Detailed Information',
-  'NuwaxPC.Components.PluginCardDetail.pluginName': 'Plugin Name',
-  'NuwaxPC.Components.PluginCardDetail.supportedPlatforms': 'Supported Platforms',
+  'PC.Components.PluginCardDetail.back': 'Back',
+  'PC.Components.PluginCardDetail.newVersion': 'New version available',
+  'PC.Components.PluginCardDetail.version': 'Version',
+  'PC.Components.PluginCardDetail.publishDate': 'Publish Date',
+  'PC.Components.PluginCardDetail.author': 'Author',
+  'PC.Components.PluginCardDetail.uninstall': 'Uninstall',
+  'PC.Components.PluginCardDetail.install': 'Install',
+  'PC.Components.PluginCardDetail.pluginDescription': 'Plugin Description',
+  'PC.Components.PluginCardDetail.detailedInfo': 'Detailed Information',
+  'PC.Components.PluginCardDetail.pluginName': 'Plugin Name',
+  'PC.Components.PluginCardDetail.supportedPlatforms': 'Supported Platforms',
 
   // Components - XProTable
-  'NuwaxPC.Components.XProTable.index': 'Index',
-  'NuwaxPC.Components.XProTable.reset': 'Reset',
-  'NuwaxPC.Components.XProTable.query': 'Query',
+  'PC.Components.XProTable.index': 'Index',
+  'PC.Components.XProTable.reset': 'Reset',
+  'PC.Components.XProTable.query': 'Query',
 
   // Components - OperationBtn
-  'NuwaxPC.Components.OperationBtn.confirmAction': 'Confirm Action',
-  'NuwaxPC.Components.OperationBtn.confirmActionDesc': 'Are you sure you want to perform this action?',
+  'PC.Components.OperationBtn.confirmAction': 'Confirm Action',
+  'PC.Components.OperationBtn.confirmActionDesc':
+    'Are you sure you want to perform this action?',
 
   // Components - CodeEditor
-  'NuwaxPC.Components.CodeEditor.loadingEditor': 'Loading editor...',
-  'NuwaxPC.Components.CodeEditor.codeAssistant': 'Code Assistant',
+  'PC.Components.CodeEditor.loadingEditor': 'Loading editor...',
+  'PC.Components.CodeEditor.codeAssistant': 'Code Assistant',
 
   // Components - PluginTryRunModal
-  'NuwaxPC.Components.PluginTryRunModal.paramName': 'Parameter Name',
-  'NuwaxPC.Components.PluginTryRunModal.paramValue': 'Parameter Value',
-  'NuwaxPC.Components.PluginTryRunModal.pleaseInputParamValue': 'Please enter parameter value',
-  'NuwaxPC.Components.PluginTryRunModal.tryRun': 'Try Run',
-  'NuwaxPC.Components.PluginTryRunModal.inputParams': 'Input Parameters',
-  'NuwaxPC.Components.PluginTryRunModal.run': 'Run',
-  'NuwaxPC.Components.PluginTryRunModal.debugResult': 'Debug Result',
-  'NuwaxPC.Components.PluginTryRunModal.debugResultPlaceholder': 'Debug results will be displayed here',
+  'PC.Components.PluginTryRunModal.paramName': 'Parameter Name',
+  'PC.Components.PluginTryRunModal.paramValue': 'Parameter Value',
+  'PC.Components.PluginTryRunModal.pleaseInputParamValue':
+    'Please enter parameter value',
+  'PC.Components.PluginTryRunModal.tryRun': 'Try Run',
+  'PC.Components.PluginTryRunModal.inputParams': 'Input Parameters',
+  'PC.Components.PluginTryRunModal.run': 'Run',
+  'PC.Components.PluginTryRunModal.debugResult': 'Debug Result',
+  'PC.Components.PluginTryRunModal.debugResultPlaceholder':
+    'Debug results will be displayed here',
 
   // Components - PluginAutoAnalysis
-  'NuwaxPC.Components.PluginAutoAnalysis.paramName': 'Parameter Name',
-  'NuwaxPC.Components.PluginAutoAnalysis.paramValue': 'Parameter Value',
-  'NuwaxPC.Components.PluginAutoAnalysis.pleaseInputParamValue': 'Please enter parameter value',
-  'NuwaxPC.Components.PluginAutoAnalysis.autoAnalysis': 'Auto Analysis',
-  'NuwaxPC.Components.PluginAutoAnalysis.inputParams': 'Input Parameters',
+  'PC.Components.PluginAutoAnalysis.paramName': 'Parameter Name',
+  'PC.Components.PluginAutoAnalysis.paramValue': 'Parameter Value',
+  'PC.Components.PluginAutoAnalysis.pleaseInputParamValue':
+    'Please enter parameter value',
+  'PC.Components.PluginAutoAnalysis.autoAnalysis': 'Auto Analysis',
+  'PC.Components.PluginAutoAnalysis.inputParams': 'Input Parameters',
 
   // Components - RecommendList
-  'NuwaxPC.Components.RecommendList.pagePreview': 'Page Preview',
-  'NuwaxPC.Components.RecommendList.pagePathParamError': 'Page path parameter configuration error',
-  'NuwaxPC.Components.RecommendList.pagePathConfigError': 'Page path configuration error',
-  'NuwaxPC.Components.RecommendList.linkAddressConfigError': 'Link address configuration error',
+  'PC.Components.RecommendList.pagePreview': 'Page Preview',
+  'PC.Components.RecommendList.pagePathParamError':
+    'Page path parameter configuration error',
+  'PC.Components.RecommendList.pagePathConfigError':
+    'Page path configuration error',
+  'PC.Components.RecommendList.linkAddressConfigError':
+    'Link address configuration error',
 
   // Components - ExampleNavigation
-  'NuwaxPC.Components.ExampleNavigation.exampleCenter': 'Example Center',
-  'NuwaxPC.Components.ExampleNavigation.backgroundStyle': 'Background Style Switch',
-  'NuwaxPC.Components.ExampleNavigation.navigationTokenGuide': 'Navigation Token Guide',
-  'NuwaxPC.Components.ExampleNavigation.antdShowcase': 'Ant Design Showcase',
-  'NuwaxPC.Components.ExampleNavigation.home': 'Home',
-  'NuwaxPC.Components.ExampleNavigation.back': 'Back',
+  'PC.Components.ExampleNavigation.exampleCenter': 'Example Center',
+  'PC.Components.ExampleNavigation.backgroundStyle': 'Background Style Switch',
+  'PC.Components.ExampleNavigation.navigationTokenGuide':
+    'Navigation Token Guide',
+  'PC.Components.ExampleNavigation.antdShowcase': 'Ant Design Showcase',
+  'PC.Components.ExampleNavigation.home': 'Home',
+  'PC.Components.ExampleNavigation.back': 'Back',
 
   // Components - PromptOptimizeModal
-  'NuwaxPC.Components.PromptOptimizeModal.replace': 'Replace',
-  'NuwaxPC.Components.PromptOptimizeModal.exit': 'Exit',
-  'NuwaxPC.Components.PromptOptimizeModal.defaultOptimizePrompt': 'A smart robot that can provide work help and suggestions',
-  'NuwaxPC.Components.PromptOptimizeModal.autoOptimize': 'Auto Optimize',
-  'NuwaxPC.Components.PromptOptimizeModal.promptPlaceholder': 'Please describe your prompt requirements, such as role definition, skill requirements, etc.',
+  'PC.Components.PromptOptimizeModal.replace': 'Replace',
+  'PC.Components.PromptOptimizeModal.exit': 'Exit',
+  'PC.Components.PromptOptimizeModal.defaultOptimizePrompt':
+    'A smart robot that can provide work help and suggestions',
+  'PC.Components.PromptOptimizeModal.autoOptimize': 'Auto Optimize',
+  'PC.Components.PromptOptimizeModal.promptPlaceholder':
+    'Please describe your prompt requirements, such as role definition, skill requirements, etc.',
 
   // Components - OtherAction
-  'NuwaxPC.Components.OtherAction.confirmDeleteLoopNode': 'Are you sure you want to delete the loop node?',
-  'NuwaxPC.Components.OtherAction.rename': 'Rename',
-  'NuwaxPC.Components.OtherAction.createCopy': 'Create Copy',
-  'NuwaxPC.Components.OtherAction.testNode': 'Test this node',
+  'PC.Components.OtherAction.confirmDeleteLoopNode':
+    'Are you sure you want to delete the loop node?',
+  'PC.Components.OtherAction.rename': 'Rename',
+  'PC.Components.OtherAction.createCopy': 'Create Copy',
+  'PC.Components.OtherAction.testNode': 'Test this node',
 
   // Components - ModelSetting
-  'NuwaxPC.Components.ModelSetting.pleaseSelectModel': 'Please select a model',
-  'NuwaxPC.Components.ModelSetting.precisionMode': 'Precision',
-  'NuwaxPC.Components.ModelSetting.balancedMode': 'Balanced',
-  'NuwaxPC.Components.ModelSetting.creativeMode': 'Creative',
-  'NuwaxPC.Components.ModelSetting.customMode': 'Custom',
-  'NuwaxPC.Components.ModelSetting.model': 'Model',
-  'NuwaxPC.Components.ModelSetting.generateDiversity': 'Generation Diversity',
-  'NuwaxPC.Components.ModelSetting.advancedSettings': 'Advanced Settings',
-  'NuwaxPC.Components.ModelSetting.generateRandomness': 'Randomness',
-  'NuwaxPC.Components.ModelSetting.temperatureDesc': "Temperature: Raising the temperature makes the model's output more diverse and creative. Conversely, lowering the temperature makes the output more instruction-following but less diverse. It is recommended not to adjust it together with 'Top p'.",
-  'NuwaxPC.Components.ModelSetting.topPDesc': "Top p is the cumulative probability: When generating output, the model selects from the highest probability words until the cumulative probability reaches the Top p value. This limits the model to only select these high-probability words, thus controlling output diversity. It is recommended not to adjust it together with 'Randomness'.",
-  'NuwaxPC.Components.ModelSetting.inputOutputSettings': 'Input & Output Settings',
-  'NuwaxPC.Components.ModelSetting.maxReplyLength': 'Max Reply Length',
-  'NuwaxPC.Components.ModelSetting.maxTokensDesc': 'Controls the upper limit of the model output Tokens length. Typically, 100 Tokens is approximately equal to 150 Chinese characters.',
+  'PC.Components.ModelSetting.pleaseSelectModel': 'Please select a model',
+  'PC.Components.ModelSetting.precisionMode': 'Precision',
+  'PC.Components.ModelSetting.balancedMode': 'Balanced',
+  'PC.Components.ModelSetting.creativeMode': 'Creative',
+  'PC.Components.ModelSetting.customMode': 'Custom',
+  'PC.Components.ModelSetting.model': 'Model',
+  'PC.Components.ModelSetting.generateDiversity': 'Generation Diversity',
+  'PC.Components.ModelSetting.advancedSettings': 'Advanced Settings',
+  'PC.Components.ModelSetting.generateRandomness': 'Randomness',
+  'PC.Components.ModelSetting.temperatureDesc':
+    "Temperature: Raising the temperature makes the model's output more diverse and creative. Conversely, lowering the temperature makes the output more instruction-following but less diverse. It is recommended not to adjust it together with 'Top p'.",
+  'PC.Components.ModelSetting.topPDesc':
+    "Top p is the cumulative probability: When generating output, the model selects from the highest probability words until the cumulative probability reaches the Top p value. This limits the model to only select these high-probability words, thus controlling output diversity. It is recommended not to adjust it together with 'Randomness'.",
+  'PC.Components.ModelSetting.inputOutputSettings': 'Input & Output Settings',
+  'PC.Components.ModelSetting.maxReplyLength': 'Max Reply Length',
+  'PC.Components.ModelSetting.maxTokensDesc':
+    'Controls the upper limit of the model output Tokens length. Typically, 100 Tokens is approximately equal to 150 Chinese characters.',
 
   // Components - MoveCopyComponent
-  'NuwaxPC.Components.MoveCopyComponent.move': 'Move',
-  'NuwaxPC.Components.MoveCopyComponent.copy': 'Copy',
-  'NuwaxPC.Components.MoveCopyComponent.agent': 'Agent',
-  'NuwaxPC.Components.MoveCopyComponent.page': 'Page',
-  'NuwaxPC.Components.MoveCopyComponent.plugin': 'Plugin',
-  'NuwaxPC.Components.MoveCopyComponent.workflow': 'Workflow',
-  'NuwaxPC.Components.MoveCopyComponent.skill': 'Skill',
-  'NuwaxPC.Components.MoveCopyComponent.component': 'Component',
-  'NuwaxPC.Components.MoveCopyComponent.selectTargetSpace': 'Select target space to ',
+  'PC.Components.MoveCopyComponent.move': 'Move',
+  'PC.Components.MoveCopyComponent.copy': 'Copy',
+  'PC.Components.MoveCopyComponent.agent': 'Agent',
+  'PC.Components.MoveCopyComponent.page': 'Page',
+  'PC.Components.MoveCopyComponent.plugin': 'Plugin',
+  'PC.Components.MoveCopyComponent.workflow': 'Workflow',
+  'PC.Components.MoveCopyComponent.skill': 'Skill',
+  'PC.Components.MoveCopyComponent.component': 'Component',
+  'PC.Components.MoveCopyComponent.selectTargetSpace':
+    'Select target space to ',
 
   // Components - SelectComponent
-  'NuwaxPC.Components.SelectComponent.add': 'Add ',
-  'NuwaxPC.Components.SelectComponent.userAvatar': 'User avatar',
-  'NuwaxPC.Components.SelectComponent.publishedAt': 'Published ',
-  'NuwaxPC.Components.SelectComponent.added': 'Added',
-  'NuwaxPC.Components.SelectComponent.addBtn': 'Add',
-  'NuwaxPC.Components.SelectComponent.search': 'Search',
+  'PC.Components.SelectComponent.add': 'Add ',
+  'PC.Components.SelectComponent.userAvatar': 'User avatar',
+  'PC.Components.SelectComponent.publishedAt': 'Published ',
+  'PC.Components.SelectComponent.added': 'Added',
+  'PC.Components.SelectComponent.addBtn': 'Add',
+  'PC.Components.SelectComponent.search': 'Search',
 
   // Components - Skill
-  'NuwaxPC.Components.Skill.settings': 'Settings',
-  'NuwaxPC.Components.Skill.configInputParams': 'Configure Input Parameters',
-  'NuwaxPC.Components.Skill.paramName': 'Parameter Name',
-  'NuwaxPC.Components.Skill.defaultValue': 'Default Value',
-  'NuwaxPC.Components.Skill.enable': 'Enable',
-  'NuwaxPC.Components.Skill.enableDesc': 'When a parameter is set to invisible, the model will not be able to see it. If the parameter has a default value and is invisible, the agent will only use this set value by default when calling the plugin',
-  'NuwaxPC.Components.Skill.remove': 'Remove',
+  'PC.Components.Skill.settings': 'Settings',
+  'PC.Components.Skill.configInputParams': 'Configure Input Parameters',
+  'PC.Components.Skill.paramName': 'Parameter Name',
+  'PC.Components.Skill.defaultValue': 'Default Value',
+  'PC.Components.Skill.enable': 'Enable',
+  'PC.Components.Skill.enableDesc':
+    'When a parameter is set to invisible, the model will not be able to see it. If the parameter has a default value and is invisible, the agent will only use this set value by default when calling the plugin',
+  'PC.Components.Skill.remove': 'Remove',
 
   // Components - AgentContent
-  'NuwaxPC.Components.AgentContent.from': 'From',
+  'PC.Components.AgentContent.from': 'From',
 
   // Components - TimedTask
-  'NuwaxPC.Components.TimedTask.taskCancelled': 'Timed task cancelled',
-  'NuwaxPC.Components.TimedTask.inProgress': 'In Progress',
-  'NuwaxPC.Components.TimedTask.cancelled': 'Cancelled',
-  'NuwaxPC.Components.TimedTask.timedTask': 'Timed Tasks',
-  'NuwaxPC.Components.TimedTask.addTask': 'Add',
+  'PC.Components.TimedTask.taskCancelled': 'Timed task cancelled',
+  'PC.Components.TimedTask.inProgress': 'In Progress',
+  'PC.Components.TimedTask.cancelled': 'Cancelled',
+  'PC.Components.TimedTask.timedTask': 'Timed Tasks',
+  'PC.Components.TimedTask.addTask': 'Add',
 
   // Components - HistoryConversation
-  'NuwaxPC.Components.HistoryConversation.title': 'History Conversations',
+  'PC.Components.HistoryConversation.title': 'History Conversations',
 
   // Components - EcosystemCard
-  'NuwaxPC.Components.EcosystemCard.enabled': 'Enabled',
-  'NuwaxPC.Components.EcosystemCard.versionUpdate': 'New version available',
+  'PC.Components.EcosystemCard.enabled': 'Enabled',
+  'PC.Components.EcosystemCard.versionUpdate': 'New version available',
 
   // Components - EcosystemDetailDrawer
-  'NuwaxPC.Components.EcosystemDetailDrawer.updateConfig': 'Update Config',
-  'NuwaxPC.Components.EcosystemDetailDrawer.update': 'Update',
-  'NuwaxPC.Components.EcosystemDetailDrawer.saveConfigAndEnable': 'Save Config & Enable',
-  'NuwaxPC.Components.EcosystemDetailDrawer.enable': 'Enable',
-  'NuwaxPC.Components.EcosystemDetailDrawer.enablePublishOfficialTip': 'After enabling, it will be published to the official service list',
-  'NuwaxPC.Components.EcosystemDetailDrawer.enablePublishSquareTip': 'After enabling, it will be published to the system marketplace',
-  'NuwaxPC.Components.EcosystemDetailDrawer.disableOfficialTip': 'After disabling, it will no longer be visible in the official service list',
-  'NuwaxPC.Components.EcosystemDetailDrawer.disableSquareTip': 'After disabling, it will no longer be visible in the marketplace {0}',
-  'NuwaxPC.Components.EcosystemDetailDrawer.disable': 'Disable',
-  'NuwaxPC.Components.EcosystemDetailDrawer.pleaseInput': 'Please input {0}',
-  'NuwaxPC.Components.EcosystemDetailDrawer.newVersionUpdate': 'New version available',
-  'NuwaxPC.Components.EcosystemDetailDrawer.fromAuthor': 'From {0}',
-  'NuwaxPC.Components.EcosystemDetailDrawer.usageDoc': 'Documentation',
+  'PC.Components.EcosystemDetailDrawer.updateConfig': 'Update Config',
+  'PC.Components.EcosystemDetailDrawer.update': 'Update',
+  'PC.Components.EcosystemDetailDrawer.saveConfigAndEnable':
+    'Save Config & Enable',
+  'PC.Components.EcosystemDetailDrawer.enable': 'Enable',
+  'PC.Components.EcosystemDetailDrawer.enablePublishOfficialTip':
+    'After enabling, it will be published to the official service list',
+  'PC.Components.EcosystemDetailDrawer.enablePublishSquareTip':
+    'After enabling, it will be published to the system marketplace',
+  'PC.Components.EcosystemDetailDrawer.disableOfficialTip':
+    'After disabling, it will no longer be visible in the official service list',
+  'PC.Components.EcosystemDetailDrawer.disableSquareTip':
+    'After disabling, it will no longer be visible in the marketplace {0}',
+  'PC.Components.EcosystemDetailDrawer.disable': 'Disable',
+  'PC.Components.EcosystemDetailDrawer.pleaseInput': 'Please input {0}',
+  'PC.Components.EcosystemDetailDrawer.newVersionUpdate':
+    'New version available',
+  'PC.Components.EcosystemDetailDrawer.fromAuthor': 'From {0}',
+  'PC.Components.EcosystemDetailDrawer.usageDoc': 'Documentation',
 
   // Components - EcosystemShareModal
-  'NuwaxPC.Components.EcosystemShareModal.paramName': 'Parameter Name',
-  'NuwaxPC.Components.EcosystemShareModal.paramDesc': 'Parameter Description',
-  'NuwaxPC.Components.EcosystemShareModal.required': 'Required',
-  'NuwaxPC.Components.EcosystemShareModal.saveAndPublish': 'Save & Publish',
-  'NuwaxPC.Components.EcosystemShareModal.offline': 'Offline',
-  'NuwaxPC.Components.EcosystemShareModal.withdrawPublish': 'Withdraw',
-  'NuwaxPC.Components.EcosystemShareModal.saveDraft': 'Save Draft',
-  'NuwaxPC.Components.EcosystemShareModal.editShare': 'Edit Share',
-  'NuwaxPC.Components.EcosystemShareModal.createShare': 'Create Share',
-  'NuwaxPC.Components.EcosystemShareModal.componentInfo': '{0} Info',
-  'NuwaxPC.Components.EcosystemShareModal.addComponent': 'Add {0}',
-  'NuwaxPC.Components.EcosystemShareModal.pleaseSelectComponent': 'Please select {0}',
-  'NuwaxPC.Components.EcosystemShareModal.pleaseSelectComponentFirst': 'Please select {0} first',
-  'NuwaxPC.Components.EcosystemShareModal.publisherInfo': 'Publisher Info',
-  'NuwaxPC.Components.EcosystemShareModal.pleaseInputPublisherInfo': 'Please input publisher info',
-  'NuwaxPC.Components.EcosystemShareModal.publisherInfoPlaceholder': 'Please input publisher info, e.g. Nuwa Official',
-  'NuwaxPC.Components.EcosystemShareModal.pluginParams': 'Plugin Parameters',
-  'NuwaxPC.Components.EcosystemShareModal.usageDoc': 'Documentation',
-  'NuwaxPC.Components.EcosystemShareModal.pleaseInputUsageDoc': 'Please input documentation',
-  'NuwaxPC.Components.EcosystemShareModal.usageDocPlaceholder': 'Please input documentation (Markdown supported)',
+  'PC.Components.EcosystemShareModal.paramName': 'Parameter Name',
+  'PC.Components.EcosystemShareModal.paramDesc': 'Parameter Description',
+  'PC.Components.EcosystemShareModal.required': 'Required',
+  'PC.Components.EcosystemShareModal.saveAndPublish': 'Save & Publish',
+  'PC.Components.EcosystemShareModal.offline': 'Offline',
+  'PC.Components.EcosystemShareModal.withdrawPublish': 'Withdraw',
+  'PC.Components.EcosystemShareModal.saveDraft': 'Save Draft',
+  'PC.Components.EcosystemShareModal.editShare': 'Edit Share',
+  'PC.Components.EcosystemShareModal.createShare': 'Create Share',
+  'PC.Components.EcosystemShareModal.componentInfo': '{0} Info',
+  'PC.Components.EcosystemShareModal.addComponent': 'Add {0}',
+  'PC.Components.EcosystemShareModal.pleaseSelectComponent':
+    'Please select {0}',
+  'PC.Components.EcosystemShareModal.pleaseSelectComponentFirst':
+    'Please select {0} first',
+  'PC.Components.EcosystemShareModal.publisherInfo': 'Publisher Info',
+  'PC.Components.EcosystemShareModal.pleaseInputPublisherInfo':
+    'Please input publisher info',
+  'PC.Components.EcosystemShareModal.publisherInfoPlaceholder':
+    'Please input publisher info, e.g. Nuwa Official',
+  'PC.Components.EcosystemShareModal.pluginParams': 'Plugin Parameters',
+  'PC.Components.EcosystemShareModal.usageDoc': 'Documentation',
+  'PC.Components.EcosystemShareModal.pleaseInputUsageDoc':
+    'Please input documentation',
+  'PC.Components.EcosystemShareModal.usageDocPlaceholder':
+    'Please input documentation (Markdown supported)',
 
   // Components - ChatTitleActions
-  'NuwaxPC.Components.ChatTitleActions.incompleteAgentInfo': 'Agent information is incomplete',
-  'NuwaxPC.Components.ChatTitleActions.uncollected': 'Removed from favorites',
-  'NuwaxPC.Components.ChatTitleActions.uncollectFailed': 'Failed to remove from favorites',
-  'NuwaxPC.Components.ChatTitleActions.collected': 'Added to favorites',
-  'NuwaxPC.Components.ChatTitleActions.collectFailed': 'Failed to add to favorites',
-  'NuwaxPC.Components.ChatTitleActions.shareLinkCopied': 'Share link copied to clipboard',
-  'NuwaxPC.Components.ChatTitleActions.noShareLink': 'No share link available',
-  'NuwaxPC.Components.ChatTitleActions.templateCopySuccess': 'Template copied successfully',
-  'NuwaxPC.Components.ChatTitleActions.share': 'Share',
-  'NuwaxPC.Components.ChatTitleActions.collect': 'Favorite',
-  'NuwaxPC.Components.ChatTitleActions.copyTemplate': 'Copy Template',
+  'PC.Components.ChatTitleActions.incompleteAgentInfo':
+    'Agent information is incomplete',
+  'PC.Components.ChatTitleActions.uncollected': 'Removed from favorites',
+  'PC.Components.ChatTitleActions.uncollectFailed':
+    'Failed to remove from favorites',
+  'PC.Components.ChatTitleActions.collected': 'Added to favorites',
+  'PC.Components.ChatTitleActions.collectFailed': 'Failed to add to favorites',
+  'PC.Components.ChatTitleActions.shareLinkCopied':
+    'Share link copied to clipboard',
+  'PC.Components.ChatTitleActions.noShareLink': 'No share link available',
+  'PC.Components.ChatTitleActions.templateCopySuccess':
+    'Template copied successfully',
+  'PC.Components.ChatTitleActions.share': 'Share',
+  'PC.Components.ChatTitleActions.collect': 'Favorite',
+  'PC.Components.ChatTitleActions.copyTemplate': 'Copy Template',
 
   // Components - AgentConversation
-  'NuwaxPC.Components.AgentConversation.title': 'Related Conversations',
-  'NuwaxPC.Components.AgentConversation.viewMore': 'View More',
-  'NuwaxPC.Components.AgentConversation.emptyDesc': 'No related conversations',
+  'PC.Components.AgentConversation.title': 'Related Conversations',
+  'PC.Components.AgentConversation.viewMore': 'View More',
+  'PC.Components.AgentConversation.emptyDesc': 'No related conversations',
 
   // Components - CreateTimedTask
-  'NuwaxPC.Components.CreateTimedTask.createSuccess': 'Timed task created successfully',
-  'NuwaxPC.Components.CreateTimedTask.updateSuccess': 'Timed task updated successfully',
-  'NuwaxPC.Components.CreateTimedTask.createTitle': 'Create Timed Task',
-  'NuwaxPC.Components.CreateTimedTask.updateTitle': 'Update Timed Task',
-  'NuwaxPC.Components.CreateTimedTask.timedPeriod': 'Timed Period',
-  'NuwaxPC.Components.CreateTimedTask.taskName': 'Task Name',
-  'NuwaxPC.Components.CreateTimedTask.pleaseInputTaskName': 'Please input task name',
-  'NuwaxPC.Components.CreateTimedTask.taskContent': 'Task Content',
-  'NuwaxPC.Components.CreateTimedTask.pleaseInputTaskContent': 'Please input task content',
-  'NuwaxPC.Components.CreateTimedTask.taskContentPlaceholder': 'Please input the task information to execute. The more detailed the information, the higher the success rate',
+  'PC.Components.CreateTimedTask.createSuccess':
+    'Timed task created successfully',
+  'PC.Components.CreateTimedTask.updateSuccess':
+    'Timed task updated successfully',
+  'PC.Components.CreateTimedTask.createTitle': 'Create Timed Task',
+  'PC.Components.CreateTimedTask.updateTitle': 'Update Timed Task',
+  'PC.Components.CreateTimedTask.timedPeriod': 'Timed Period',
+  'PC.Components.CreateTimedTask.taskName': 'Task Name',
+  'PC.Components.CreateTimedTask.pleaseInputTaskName': 'Please input task name',
+  'PC.Components.CreateTimedTask.taskContent': 'Task Content',
+  'PC.Components.CreateTimedTask.pleaseInputTaskContent':
+    'Please input task content',
+  'PC.Components.CreateTimedTask.taskContentPlaceholder':
+    'Please input the task information to execute. The more detailed the information, the higher the success rate',
 
   // Components - TaskList
-  'NuwaxPC.Components.TaskList.noInProgressTasks': 'No in-progress tasks',
-  'NuwaxPC.Components.TaskList.noCancelledTasks': 'No cancelled tasks',
-  'NuwaxPC.Components.TaskList.confirmCancelTask': 'Are you sure you want to cancel this timed task?',
+  'PC.Components.TaskList.noInProgressTasks': 'No in-progress tasks',
+  'PC.Components.TaskList.noCancelledTasks': 'No cancelled tasks',
+  'PC.Components.TaskList.confirmCancelTask':
+    'Are you sure you want to cancel this timed task?',
 
   // Components - NewMonaco
-  'NuwaxPC.Components.NewMonaco.code': 'Code',
-  'NuwaxPC.Components.NewMonaco.pleaseSelectLanguage': 'Please select language',
+  'PC.Components.NewMonaco.code': 'Code',
+  'PC.Components.NewMonaco.pleaseSelectLanguage': 'Please select language',
 
   // Components - Monaco
-  'NuwaxPC.Components.Monaco.code': 'Code',
-  'NuwaxPC.Components.Monaco.pleaseSelectLanguage': 'Please select language',
+  'PC.Components.Monaco.code': 'Code',
+  'PC.Components.Monaco.pleaseSelectLanguage': 'Please select language',
 
   // Components - CodeOptimizeModal
-  'NuwaxPC.Components.CodeOptimizeModal.replace': 'Replace',
-  'NuwaxPC.Components.CodeOptimizeModal.exit': 'Exit',
-  'NuwaxPC.Components.CodeOptimizeModal.placeholder': 'Please describe your specific business requirements in detail',
+  'PC.Components.CodeOptimizeModal.replace': 'Replace',
+  'PC.Components.CodeOptimizeModal.exit': 'Exit',
+  'PC.Components.CodeOptimizeModal.placeholder':
+    'Please describe your specific business requirements in detail',
 
   // Components - MonacoEditor
-  'NuwaxPC.Components.MonacoEditor.loadingEditor': 'Loading editor...',
-  'NuwaxPC.Components.MonacoEditor.loadingEditorDesc': 'Please wait, Monaco Editor is initializing',
-  'NuwaxPC.Components.MonacoEditor.selectFileToEdit': 'Select a file to edit',
-  'NuwaxPC.Components.MonacoEditor.selectFileToEditDesc': 'Select a file from the file tree on the left, or create a new file to start editing',
+  'PC.Components.MonacoEditor.loadingEditor': 'Loading editor...',
+  'PC.Components.MonacoEditor.loadingEditorDesc':
+    'Please wait, Monaco Editor is initializing',
+  'PC.Components.MonacoEditor.selectFileToEdit': 'Select a file to edit',
+  'PC.Components.MonacoEditor.selectFileToEditDesc':
+    'Select a file from the file tree on the left, or create a new file to start editing',
 
   // Components - CreateNewPlugin
-  'NuwaxPC.Components.CreateNewPlugin.pluginCreated': 'Plugin created',
-  'NuwaxPC.Components.CreateNewPlugin.pluginUpdated': 'Plugin updated successfully',
-  'NuwaxPC.Components.CreateNewPlugin.createPlugin': 'Create Plugin',
-  'NuwaxPC.Components.CreateNewPlugin.updatePlugin': 'Update Plugin',
-  'NuwaxPC.Components.CreateNewPlugin.pluginName': 'Plugin Name',
-  'NuwaxPC.Components.CreateNewPlugin.pleaseInputPluginName': 'Please input plugin name',
-  'NuwaxPC.Components.CreateNewPlugin.nameMaxChars': 'Name cannot exceed 30 characters!',
-  'NuwaxPC.Components.CreateNewPlugin.pleaseInputPluginNameBang': 'Please input plugin name!',
-  'NuwaxPC.Components.CreateNewPlugin.placeholderPluginName': 'Please input a plugin name that is clear and complies with platform guidelines',
-  'NuwaxPC.Components.CreateNewPlugin.pluginDescription': 'Plugin Description',
-  'NuwaxPC.Components.CreateNewPlugin.pleaseInputPluginDesc': 'Please input the main features and usage scenarios of the plugin',
-  'NuwaxPC.Components.CreateNewPlugin.placeholderPluginDesc': 'Please input the main features and usage scenarios of the plugin, ensuring the content complies with platform guidelines. This helps users/models better understand',
-  'NuwaxPC.Components.CreateNewPlugin.pluginCreateTool': 'Plugin Tool Creation Method',
-  'NuwaxPC.Components.CreateNewPlugin.pleaseSelectPluginCreateTool': 'Please select a plugin tool creation method',
-  'NuwaxPC.Components.CreateNewPlugin.ideRuntime': 'IDE Runtime',
-  'NuwaxPC.Components.CreateNewPlugin.pleaseSelectPluginMode': 'Please select plugin mode',
+  'PC.Components.CreateNewPlugin.pluginCreated': 'Plugin created',
+  'PC.Components.CreateNewPlugin.pluginUpdated': 'Plugin updated successfully',
+  'PC.Components.CreateNewPlugin.createPlugin': 'Create Plugin',
+  'PC.Components.CreateNewPlugin.updatePlugin': 'Update Plugin',
+  'PC.Components.CreateNewPlugin.pluginName': 'Plugin Name',
+  'PC.Components.CreateNewPlugin.pleaseInputPluginName':
+    'Please input plugin name',
+  'PC.Components.CreateNewPlugin.nameMaxChars':
+    'Name cannot exceed 30 characters!',
+  'PC.Components.CreateNewPlugin.pleaseInputPluginNameBang':
+    'Please input plugin name!',
+  'PC.Components.CreateNewPlugin.placeholderPluginName':
+    'Please input a plugin name that is clear and complies with platform guidelines',
+  'PC.Components.CreateNewPlugin.pluginDescription': 'Plugin Description',
+  'PC.Components.CreateNewPlugin.pleaseInputPluginDesc':
+    'Please input the main features and usage scenarios of the plugin',
+  'PC.Components.CreateNewPlugin.placeholderPluginDesc':
+    'Please input the main features and usage scenarios of the plugin, ensuring the content complies with platform guidelines. This helps users/models better understand',
+  'PC.Components.CreateNewPlugin.pluginCreateTool':
+    'Plugin Tool Creation Method',
+  'PC.Components.CreateNewPlugin.pleaseSelectPluginCreateTool':
+    'Please select a plugin tool creation method',
+  'PC.Components.CreateNewPlugin.ideRuntime': 'IDE Runtime',
+  'PC.Components.CreateNewPlugin.pleaseSelectPluginMode':
+    'Please select plugin mode',
 
   // Components - CreateWorkflow
-  'NuwaxPC.Components.CreateWorkflow.workflowCreated': 'Workflow created successfully',
-  'NuwaxPC.Components.CreateWorkflow.workflowUpdated': 'Workflow updated successfully',
-  'NuwaxPC.Components.CreateWorkflow.createWorkflow': 'Create Workflow',
-  'NuwaxPC.Components.CreateWorkflow.updateWorkflow': 'Update Workflow',
-  'NuwaxPC.Components.CreateWorkflow.name': 'Name',
-  'NuwaxPC.Components.CreateWorkflow.pleaseInputWorkflowName': 'Please input workflow name',
-  'NuwaxPC.Components.CreateWorkflow.nameMaxChars': 'Name cannot exceed 30 characters!',
-  'NuwaxPC.Components.CreateWorkflow.pleaseInputWorkflowNameBang': 'Please input workflow name!',
-  'NuwaxPC.Components.CreateWorkflow.placeholderWorkflowName': 'Input workflow name',
-  'NuwaxPC.Components.CreateWorkflow.description': 'Description',
-  'NuwaxPC.Components.CreateWorkflow.placeholderWorkflowDesc': 'Please input a description so the model understands when to invoke this workflow',
-  'NuwaxPC.Components.CreateWorkflow.icon': 'Icon',
+  'PC.Components.CreateWorkflow.workflowCreated':
+    'Workflow created successfully',
+  'PC.Components.CreateWorkflow.workflowUpdated':
+    'Workflow updated successfully',
+  'PC.Components.CreateWorkflow.createWorkflow': 'Create Workflow',
+  'PC.Components.CreateWorkflow.updateWorkflow': 'Update Workflow',
+  'PC.Components.CreateWorkflow.name': 'Name',
+  'PC.Components.CreateWorkflow.pleaseInputWorkflowName':
+    'Please input workflow name',
+  'PC.Components.CreateWorkflow.nameMaxChars':
+    'Name cannot exceed 30 characters!',
+  'PC.Components.CreateWorkflow.pleaseInputWorkflowNameBang':
+    'Please input workflow name!',
+  'PC.Components.CreateWorkflow.placeholderWorkflowName': 'Input workflow name',
+  'PC.Components.CreateWorkflow.description': 'Description',
+  'PC.Components.CreateWorkflow.placeholderWorkflowDesc':
+    'Please input a description so the model understands when to invoke this workflow',
+  'PC.Components.CreateWorkflow.icon': 'Icon',
 
   // Components - CreatedItem
-  'NuwaxPC.Components.CreatedItem.create': 'Create',
-  'NuwaxPC.Components.CreatedItem.update': 'Edit',
-  'NuwaxPC.Components.CreatedItem.dataTable': 'Data Table',
-  'NuwaxPC.Components.CreatedItem.knowledge': 'Knowledge Base',
-  'NuwaxPC.Components.CreatedItem.plugin': 'Plugin',
-  'NuwaxPC.Components.CreatedItem.workflow': 'Workflow',
-  'NuwaxPC.Components.CreatedItem.name': 'Name',
-  'NuwaxPC.Components.CreatedItem.pleaseInputName': 'Please input name',
-  'NuwaxPC.Components.CreatedItem.nameMaxChars': 'Name cannot exceed 30 characters!',
-  'NuwaxPC.Components.CreatedItem.pleaseInputNameBang': 'Please input name!',
-  'NuwaxPC.Components.CreatedItem.placeholderName': 'Please input name',
-  'NuwaxPC.Components.CreatedItem.description': 'Description',
-  'NuwaxPC.Components.CreatedItem.placeholderDesc': 'Please input description',
-  'NuwaxPC.Components.CreatedItem.toolCreateMethod': 'Tool Creation Method',
-  'NuwaxPC.Components.CreatedItem.ideRuntime': 'IDE Runtime',
+  'PC.Components.CreatedItem.create': 'Create',
+  'PC.Components.CreatedItem.update': 'Edit',
+  'PC.Components.CreatedItem.dataTable': 'Data Table',
+  'PC.Components.CreatedItem.knowledge': 'Knowledge Base',
+  'PC.Components.CreatedItem.plugin': 'Plugin',
+  'PC.Components.CreatedItem.workflow': 'Workflow',
+  'PC.Components.CreatedItem.name': 'Name',
+  'PC.Components.CreatedItem.pleaseInputName': 'Please input name',
+  'PC.Components.CreatedItem.nameMaxChars': 'Name cannot exceed 30 characters!',
+  'PC.Components.CreatedItem.pleaseInputNameBang': 'Please input name!',
+  'PC.Components.CreatedItem.placeholderName': 'Please input name',
+  'PC.Components.CreatedItem.description': 'Description',
+  'PC.Components.CreatedItem.placeholderDesc': 'Please input description',
+  'PC.Components.CreatedItem.toolCreateMethod': 'Tool Creation Method',
+  'PC.Components.CreatedItem.ideRuntime': 'IDE Runtime',
 
   // Components - TiptapVariableInput
-  'NuwaxPC.Components.TiptapVariableInput.placeholder': 'Type @ or { to get started',
+  'PC.Components.TiptapVariableInput.placeholder': 'Type @ or { to get started',
 
   // Components - VariableList
-  'NuwaxPC.Components.VariableList.noMatchingVariable': 'No matching variable found',
-  'NuwaxPC.Components.VariableList.tabVariables': 'Variables',
-  'NuwaxPC.Components.VariableList.tabTools': 'Tools',
-  'NuwaxPC.Components.VariableList.tabSkills': 'Skills',
+  'PC.Components.VariableList.noMatchingVariable': 'No matching variable found',
+  'PC.Components.VariableList.tabVariables': 'Variables',
+  'PC.Components.VariableList.tabTools': 'Tools',
+  'PC.Components.VariableList.tabSkills': 'Skills',
 
   // Components - MarkdownCustomProcess
-  'NuwaxPC.Components.MarkdownCustomProcess.noData': 'No data available',
-  'NuwaxPC.Components.MarkdownCustomProcess.noName': 'No name',
-  'NuwaxPC.Components.MarkdownCustomProcess.viewDetail': 'View details',
-  'NuwaxPC.Components.MarkdownCustomProcess.closePreview': 'Close preview',
-  'NuwaxPC.Components.MarkdownCustomProcess.previewPage': 'Preview page',
-  'NuwaxPC.Components.MarkdownCustomProcess.collapse': 'Collapse',
-  'NuwaxPC.Components.MarkdownCustomProcess.expand': 'Expand',
-  'NuwaxPC.Components.MarkdownCustomProcess.copyDetailData': 'Copy detail data',
-  'NuwaxPC.Components.MarkdownCustomProcess.copyFailedRetry': 'Failed to copy detail data, please retry',
+  'PC.Components.MarkdownCustomProcess.noData': 'No data available',
+  'PC.Components.MarkdownCustomProcess.noName': 'No name',
+  'PC.Components.MarkdownCustomProcess.viewDetail': 'View details',
+  'PC.Components.MarkdownCustomProcess.closePreview': 'Close preview',
+  'PC.Components.MarkdownCustomProcess.previewPage': 'Preview page',
+  'PC.Components.MarkdownCustomProcess.collapse': 'Collapse',
+  'PC.Components.MarkdownCustomProcess.expand': 'Expand',
+  'PC.Components.MarkdownCustomProcess.copyDetailData': 'Copy detail data',
+  'PC.Components.MarkdownCustomProcess.copyFailedRetry':
+    'Failed to copy detail data, please retry',
 
   // Components - SharedIcon
-  'NuwaxPC.Components.SharedIcon.published': 'Published',
-  'NuwaxPC.Components.SharedIcon.reviewing': 'Under Review',
-  'NuwaxPC.Components.SharedIcon.offline': 'Offline',
-  'NuwaxPC.Components.SharedIcon.draft': 'Draft',
-  'NuwaxPC.Components.SharedIcon.rejected': 'Rejected',
+  'PC.Components.SharedIcon.published': 'Published',
+  'PC.Components.SharedIcon.reviewing': 'Under Review',
+  'PC.Components.SharedIcon.offline': 'Offline',
+  'PC.Components.SharedIcon.draft': 'Draft',
+  'PC.Components.SharedIcon.rejected': 'Rejected',
 
   // Components - ActivatedIcon
-  'NuwaxPC.Components.ActivatedIcon.activated': 'Activated',
+  'PC.Components.ActivatedIcon.activated': 'Activated',
 
   // Components - ChatView
-  'NuwaxPC.Components.ChatView.copy': 'Copy',
+  'PC.Components.ChatView.copy': 'Copy',
 
   // Components - CustomFormModal
-  'NuwaxPC.Components.CustomFormModal.cancel': 'Cancel',
+  'PC.Components.CustomFormModal.cancel': 'Cancel',
 
   // Components - MarkdownRenderer
-  'NuwaxPC.Components.MarkdownRenderer.thinking': 'Thinking',
-  'NuwaxPC.Components.MarkdownRenderer.thought': 'Thought',
+  'PC.Components.MarkdownRenderer.thinking': 'Thinking',
+  'PC.Components.MarkdownRenderer.thought': 'Thought',
 
   // Components - PageCard
-  'NuwaxPC.Components.PageCard.activated': 'Activated',
-  'NuwaxPC.Components.PageCard.newVersion': 'New version available',
-  'NuwaxPC.Components.PageCard.noPreview': 'No preview available',
-  'NuwaxPC.Components.PageCard.startUsing': 'Start Using',
-  'NuwaxPC.Components.PageCard.createdAt': 'Created at',
+  'PC.Components.PageCard.activated': 'Activated',
+  'PC.Components.PageCard.newVersion': 'New version available',
+  'PC.Components.PageCard.noPreview': 'No preview available',
+  'PC.Components.PageCard.startUsing': 'Start Using',
+  'PC.Components.PageCard.createdAt': 'Created at',
 
   // Components - PluginConfigTitle
-  'NuwaxPC.Components.PluginConfigTitle.addParam': 'Add Parameter',
+  'PC.Components.PluginConfigTitle.addParam': 'Add Parameter',
 
   // Components - genCustomPlugin
-  'NuwaxPC.Components.genCustomPlugin.table': 'Table',
+  'PC.Components.genCustomPlugin.table': 'Table',
 
   // Components - Skill database
-  'NuwaxPC.Components.Skill.database.collapse': 'Collapse',
+  'PC.Components.Skill.database.collapse': 'Collapse',
 
   // Components - SqlOptimizeModal
-  'NuwaxPC.Components.SqlOptimizeModal.replace': 'Replace',
-  'NuwaxPC.Components.SqlOptimizeModal.exit': 'Exit',
-  'NuwaxPC.Components.SqlOptimizeModal.placeholder': 'Please describe your SQL query requirements in detail',
+  'PC.Components.SqlOptimizeModal.replace': 'Replace',
+  'PC.Components.SqlOptimizeModal.exit': 'Exit',
+  'PC.Components.SqlOptimizeModal.placeholder':
+    'Please describe your SQL query requirements in detail',
 
   // Components - SubmitButton
-  'NuwaxPC.Components.SubmitButton.confirm': 'Confirm',
+  'PC.Components.SubmitButton.confirm': 'Confirm',
 
   // Components - MentionList
-  'NuwaxPC.Components.MentionList.noMatch': 'No matches found',
+  'PC.Components.MentionList.noMatch': 'No matches found',
 
   // Components - TiptapVariableInput - useVariableTree
-  'NuwaxPC.Components.useVariableTree.tools': 'Tools',
-  'NuwaxPC.Components.useVariableTree.skills': 'Skills',
+  'PC.Components.useVariableTree.tools': 'Tools',
+  'PC.Components.useVariableTree.skills': 'Skills',
 
   // Components - CurrentPublishItem
-  'NuwaxPC.Components.CurrentPublishItem.publishedAt': 'Published at',
-  'NuwaxPC.Components.CurrentPublishItem.offShelf': 'Off Shelf',
-  'NuwaxPC.Components.CurrentPublishItem.reviewing': 'Under Review',
-  'NuwaxPC.Components.CurrentPublishItem.hasBeenOffShelf': 'Off Shelf',
+  'PC.Components.CurrentPublishItem.publishedAt': 'Published at',
+  'PC.Components.CurrentPublishItem.offShelf': 'Off Shelf',
+  'PC.Components.CurrentPublishItem.reviewing': 'Under Review',
+  'PC.Components.CurrentPublishItem.hasBeenOffShelf': 'Off Shelf',
 
   // Components - VersionHistory
-  'NuwaxPC.Components.VersionHistory.agent': 'Agent',
-  'NuwaxPC.Components.VersionHistory.plugin': 'Plugin',
-  'NuwaxPC.Components.VersionHistory.workflow': 'Workflow',
-  'NuwaxPC.Components.VersionHistory.offShelfSuccess': 'Successfully taken off shelf',
-  'NuwaxPC.Components.VersionHistory.confirmOffShelf': 'Are you sure you want to take this {0} off shelf?',
-  'NuwaxPC.Components.VersionHistory.currentPublish': 'Current Publish',
-  'NuwaxPC.Components.VersionHistory.arrangeAndPublishRecord': 'Arrangement & Publish Records',
-  'NuwaxPC.Components.VersionHistory.noVersionHistory': 'No version history',
-  'NuwaxPC.Components.VersionHistory.versionHistoryTip': 'Version history is automatically saved when you modify the project',
-  'NuwaxPC.Components.VersionHistory.versionHistory': 'Version History',
+  'PC.Components.VersionHistory.agent': 'Agent',
+  'PC.Components.VersionHistory.plugin': 'Plugin',
+  'PC.Components.VersionHistory.workflow': 'Workflow',
+  'PC.Components.VersionHistory.offShelfSuccess':
+    'Successfully taken off shelf',
+  'PC.Components.VersionHistory.confirmOffShelf':
+    'Are you sure you want to take this {0} off shelf?',
+  'PC.Components.VersionHistory.currentPublish': 'Current Publish',
+  'PC.Components.VersionHistory.arrangeAndPublishRecord':
+    'Arrangement & Publish Records',
+  'PC.Components.VersionHistory.noVersionHistory': 'No version history',
+  'PC.Components.VersionHistory.versionHistoryTip':
+    'Version history is automatically saved when you modify the project',
+  'PC.Components.VersionHistory.versionHistory': 'Version History',
 
   // Components - SelectList
-  'NuwaxPC.Components.SelectList.pleaseSelect': 'Please select',
+  'PC.Components.SelectList.pleaseSelect': 'Please select',
 
   // Components - PublishComponentModal
-  'NuwaxPC.Components.PublishComponentModal.selectPublishScope': 'Select publish scope',
+  'PC.Components.PublishComponentModal.selectPublishScope':
+    'Select publish scope',
 
   // Layouts - HistoryConversation
-  'NuwaxPC.Layouts.HistoryConversation.title': 'History Conversations',
+  'PC.Layouts.HistoryConversation.title': 'History Conversations',
 
   // Layouts - InfiniteList
-  'NuwaxPC.Layouts.InfiniteList.allDataLoaded': 'All data loaded',
+  'PC.Layouts.InfiniteList.allDataLoaded': 'All data loaded',
 
   // Pages - AppDev DesignViewer
-  'NuwaxPC.Pages.AppDevDesignViewer.selectElementToEdit': 'Select a page element on the right to edit',
-  'NuwaxPC.Pages.AppDevDesignViewer.textContent': 'Text Content',
-  'NuwaxPC.Pages.AppDevDesignViewer.font': 'Font',
-  'NuwaxPC.Pages.AppDevDesignViewer.fontWeight': 'Weight',
-  'NuwaxPC.Pages.AppDevDesignViewer.fontSize': 'Font Size',
-  'NuwaxPC.Pages.AppDevDesignViewer.lineHeight': 'Line Height',
-  'NuwaxPC.Pages.AppDevDesignViewer.letterSpacing': 'Letter Spacing',
-  'NuwaxPC.Pages.AppDevDesignViewer.alignment': 'Alignment',
-  'NuwaxPC.Pages.AppDevDesignViewer.textColor': 'Text Color',
-  'NuwaxPC.Pages.AppDevDesignViewer.background': 'Background',
-  'NuwaxPC.Pages.AppDevDesignViewer.layout': 'Layout',
-  'NuwaxPC.Pages.AppDevDesignViewer.margin': 'Margin',
-  'NuwaxPC.Pages.AppDevDesignViewer.padding': 'Padding',
-  'NuwaxPC.Pages.AppDevDesignViewer.border': 'Border',
-  'NuwaxPC.Pages.AppDevDesignViewer.borderColor': 'Border Color',
-  'NuwaxPC.Pages.AppDevDesignViewer.borderStyle': 'Border Style',
-  'NuwaxPC.Pages.AppDevDesignViewer.borderWidth': 'Border Width',
-  'NuwaxPC.Pages.AppDevDesignViewer.appearance': 'Appearance',
-  'NuwaxPC.Pages.AppDevDesignViewer.opacity': 'Opacity',
-  'NuwaxPC.Pages.AppDevDesignViewer.borderRadius': 'Border Radius',
-  'NuwaxPC.Pages.AppDevDesignViewer.shadow': 'Shadow',
+  'PC.Pages.AppDevDesignViewer.selectElementToEdit':
+    'Select a page element on the right to edit',
+  'PC.Pages.AppDevDesignViewer.textContent': 'Text Content',
+  'PC.Pages.AppDevDesignViewer.font': 'Font',
+  'PC.Pages.AppDevDesignViewer.fontWeight': 'Weight',
+  'PC.Pages.AppDevDesignViewer.fontSize': 'Font Size',
+  'PC.Pages.AppDevDesignViewer.lineHeight': 'Line Height',
+  'PC.Pages.AppDevDesignViewer.letterSpacing': 'Letter Spacing',
+  'PC.Pages.AppDevDesignViewer.alignment': 'Alignment',
+  'PC.Pages.AppDevDesignViewer.textColor': 'Text Color',
+  'PC.Pages.AppDevDesignViewer.background': 'Background',
+  'PC.Pages.AppDevDesignViewer.layout': 'Layout',
+  'PC.Pages.AppDevDesignViewer.margin': 'Margin',
+  'PC.Pages.AppDevDesignViewer.padding': 'Padding',
+  'PC.Pages.AppDevDesignViewer.border': 'Border',
+  'PC.Pages.AppDevDesignViewer.borderColor': 'Border Color',
+  'PC.Pages.AppDevDesignViewer.borderStyle': 'Border Style',
+  'PC.Pages.AppDevDesignViewer.borderWidth': 'Border Width',
+  'PC.Pages.AppDevDesignViewer.appearance': 'Appearance',
+  'PC.Pages.AppDevDesignViewer.opacity': 'Opacity',
+  'PC.Pages.AppDevDesignViewer.borderRadius': 'Border Radius',
+  'PC.Pages.AppDevDesignViewer.shadow': 'Shadow',
 
   // Pages - SpacePluginCloudTool
-  'NuwaxPC.Pages.SpacePluginCloudTool.inputConfig': 'Input Config',
-  'NuwaxPC.Pages.SpacePluginCloudTool.outputConfig': 'Output Config',
-  'NuwaxPC.Pages.SpacePluginCloudTool.autoAnalysis': 'Auto Analysis',
-  'NuwaxPC.Pages.SpacePluginCloudTool.paramName': 'Parameter Name',
-  'NuwaxPC.Pages.SpacePluginCloudTool.paramDesc': 'Parameter Description',
-  'NuwaxPC.Pages.SpacePluginCloudTool.paramType': 'Parameter Type',
-  'NuwaxPC.Pages.SpacePluginCloudTool.paramNamePlaceholder': 'Enter parameter name, ensure clarity',
-  'NuwaxPC.Pages.SpacePluginCloudTool.paramDescPlaceholder': 'Enter parameter description, ensure detail for better AI understanding',
-  'NuwaxPC.Pages.SpacePluginCloudTool.selectDataType': 'Select data type',
-  'NuwaxPC.Pages.SpacePluginCloudTool.isRequired': 'Required',
-  'NuwaxPC.Pages.SpacePluginCloudTool.defaultValue': 'Default Value',
-  'NuwaxPC.Pages.SpacePluginCloudTool.inputDefaultValue': 'Enter default value',
-  'NuwaxPC.Pages.SpacePluginCloudTool.enable': 'Enable',
-  'NuwaxPC.Pages.SpacePluginCloudTool.requiredParamTip': 'This is a required parameter, the switch is available after filling in the default value',
-  'NuwaxPC.Pages.SpacePluginCloudTool.operation': 'Operation',
+  'PC.Pages.SpacePluginCloudTool.inputConfig': 'Input Config',
+  'PC.Pages.SpacePluginCloudTool.outputConfig': 'Output Config',
+  'PC.Pages.SpacePluginCloudTool.autoAnalysis': 'Auto Analysis',
+  'PC.Pages.SpacePluginCloudTool.paramName': 'Parameter Name',
+  'PC.Pages.SpacePluginCloudTool.paramDesc': 'Parameter Description',
+  'PC.Pages.SpacePluginCloudTool.paramType': 'Parameter Type',
+  'PC.Pages.SpacePluginCloudTool.paramNamePlaceholder':
+    'Enter parameter name, ensure clarity',
+  'PC.Pages.SpacePluginCloudTool.paramDescPlaceholder':
+    'Enter parameter description, ensure detail for better AI understanding',
+  'PC.Pages.SpacePluginCloudTool.selectDataType': 'Select data type',
+  'PC.Pages.SpacePluginCloudTool.isRequired': 'Required',
+  'PC.Pages.SpacePluginCloudTool.defaultValue': 'Default Value',
+  'PC.Pages.SpacePluginCloudTool.inputDefaultValue': 'Enter default value',
+  'PC.Pages.SpacePluginCloudTool.enable': 'Enable',
+  'PC.Pages.SpacePluginCloudTool.requiredParamTip':
+    'This is a required parameter, the switch is available after filling in the default value',
+  'PC.Pages.SpacePluginCloudTool.operation': 'Operation',
 
   // Layouts - MobileMenu
-  'NuwaxPC.Layouts.MobileMenu.menuMask': 'Menu Mask',
+  'PC.Layouts.MobileMenu.menuMask': 'Menu Mask',
 
   // Layouts - Message
-  'NuwaxPC.Layouts.Message.noMessages': 'No messages',
+  'PC.Layouts.Message.noMessages': 'No messages',
 
   // Utils - PptxFallbackRenderer
-  'NuwaxPC.Utils.PptxFallbackRenderer.parseFailed': 'PPTX file parse failed',
-  'NuwaxPC.Utils.PptxFallbackRenderer.previewAlt': 'Presentation Preview',
-  'NuwaxPC.Utils.PptxFallbackRenderer.coverPreview': 'Presentation Cover Preview',
-  'NuwaxPC.Utils.PptxFallbackRenderer.slideCount': '{0} slides in total',
-  'NuwaxPC.Utils.PptxFallbackRenderer.complexFormatNotice': 'This PPTX file has a complex format and full preview is not supported.<br>It is recommended to download and view in PowerPoint.',
+  'PC.Utils.PptxFallbackRenderer.parseFailed': 'PPTX file parse failed',
+  'PC.Utils.PptxFallbackRenderer.previewAlt': 'Presentation Preview',
+  'PC.Utils.PptxFallbackRenderer.coverPreview': 'Presentation Cover Preview',
+  'PC.Utils.PptxFallbackRenderer.slideCount': '{0} slides in total',
+  'PC.Utils.PptxFallbackRenderer.complexFormatNotice':
+    'This PPTX file has a complex format and full preview is not supported.<br>It is recommended to download and view in PowerPoint.',
 
   // Utils - Clipboard
-  'NuwaxPC.Utils.Clipboard.copyFailed': 'Copy failed, please copy manually',
-  'NuwaxPC.Utils.Clipboard.copySuccess': 'Copied successfully',
-  'NuwaxPC.Utils.Clipboard.noContent': 'No content to copy',
+  'PC.Utils.Clipboard.copyFailed': 'Copy failed, please copy manually',
+  'PC.Utils.Clipboard.copySuccess': 'Copied successfully',
+  'PC.Utils.Clipboard.noContent': 'No content to copy',
 
   // Utils - FetchEventSource
-  'NuwaxPC.Utils.FetchEventSource.sseConnectionFailed': 'SSE connection failed',
+  'PC.Utils.FetchEventSource.sseConnectionFailed': 'SSE connection failed',
 
   // Utils - HtmlToPdf
-  'NuwaxPC.Utils.HtmlToPdf.cannotCreatePrintEnv': 'Cannot create print environment',
-  'NuwaxPC.Utils.HtmlToPdf.cannotAccessIframeDoc': 'Cannot access iframe document',
+  'PC.Utils.HtmlToPdf.cannotCreatePrintEnv': 'Cannot create print environment',
+  'PC.Utils.HtmlToPdf.cannotAccessIframeDoc': 'Cannot access iframe document',
 
   // Utils - FileTree
-  'NuwaxPC.Utils.FileTree.emptyFileCannotExportPdf': 'File content is empty, cannot export PDF',
-  'NuwaxPC.Utils.FileTree.pdfExportSuccess': 'PDF exported successfully',
-  'NuwaxPC.Utils.FileTree.downloadFailed': 'Download failed',
-  'NuwaxPC.Utils.FileTree.downloadFailedRetry': 'Download failed, please retry',
+  'PC.Utils.FileTree.emptyFileCannotExportPdf':
+    'File content is empty, cannot export PDF',
+  'PC.Utils.FileTree.pdfExportSuccess': 'PDF exported successfully',
+  'PC.Utils.FileTree.downloadFailed': 'Download failed',
+  'PC.Utils.FileTree.downloadFailedRetry': 'Download failed, please retry',
 
   // Utils - AntCustom
-  'NuwaxPC.Utils.AntCustom.okText': 'OK',
-  'NuwaxPC.Utils.AntCustom.cancelText': 'Cancel',
+  'PC.Utils.AntCustom.okText': 'OK',
+  'PC.Utils.AntCustom.cancelText': 'Cancel',
 
   // Utils - Mcp
-  'NuwaxPC.Utils.Mcp.pendingDeploy': 'Pending Deploy',
-  'NuwaxPC.Utils.Mcp.deploying': 'Deploying',
-  'NuwaxPC.Utils.Mcp.deployed': 'Deployed',
-  'NuwaxPC.Utils.Mcp.deployFailed': 'Deploy Failed',
-  'NuwaxPC.Utils.Mcp.stopped': 'Stopped',
+  'PC.Utils.Mcp.pendingDeploy': 'Pending Deploy',
+  'PC.Utils.Mcp.deploying': 'Deploying',
+  'PC.Utils.Mcp.deployed': 'Deployed',
+  'PC.Utils.Mcp.deployFailed': 'Deploy Failed',
+  'PC.Utils.Mcp.stopped': 'Stopped',
 
   // Utils - ChatUtils
-  'NuwaxPC.Utils.ChatUtils.errorOccurred': 'Error occurred',
-  'NuwaxPC.Utils.ChatUtils.cancelled': 'Cancelled',
-  'NuwaxPC.Utils.ChatUtils.newConversation': 'New Conversation',
+  'PC.Utils.ChatUtils.errorOccurred': 'Error occurred',
+  'PC.Utils.ChatUtils.cancelled': 'Cancelled',
+  'PC.Utils.ChatUtils.newConversation': 'New Conversation',
 
   // Utils - Common
-  'NuwaxPC.Utils.Common.yearsAgo': '{0} years ago',
-  'NuwaxPC.Utils.Common.lastYear': 'Last year',
-  'NuwaxPC.Utils.Common.monthsAgo': '{0} months ago',
-  'NuwaxPC.Utils.Common.daysAgo': '{0} days ago',
-  'NuwaxPC.Utils.Common.dayBeforeYesterday': 'Day before yesterday',
-  'NuwaxPC.Utils.Common.yesterday': 'Yesterday',
-  'NuwaxPC.Utils.Common.hoursAgo': '{0} hours ago',
-  'NuwaxPC.Utils.Common.minutesAgo': '{0} minutes ago',
-  'NuwaxPC.Utils.Common.justNow': 'Just now',
-  'NuwaxPC.Utils.Common.emptyInput': 'Input is empty or not a string',
-  'NuwaxPC.Utils.Common.invalidJsonFormat': 'Invalid JSON format',
+  'PC.Utils.Common.yearsAgo': '{0} years ago',
+  'PC.Utils.Common.lastYear': 'Last year',
+  'PC.Utils.Common.monthsAgo': '{0} months ago',
+  'PC.Utils.Common.daysAgo': '{0} days ago',
+  'PC.Utils.Common.dayBeforeYesterday': 'Day before yesterday',
+  'PC.Utils.Common.yesterday': 'Yesterday',
+  'PC.Utils.Common.hoursAgo': '{0} hours ago',
+  'PC.Utils.Common.minutesAgo': '{0} minutes ago',
+  'PC.Utils.Common.justNow': 'Just now',
+  'PC.Utils.Common.emptyInput': 'Input is empty or not a string',
+  'PC.Utils.Common.invalidJsonFormat': 'Invalid JSON format',
 
   // Utils - MermaidExporter
-  'NuwaxPC.Utils.MermaidExporter.svgExportSuccess': 'SVG exported successfully',
-  'NuwaxPC.Utils.MermaidExporter.svgExportFailed': 'SVG export failed',
-  'NuwaxPC.Utils.MermaidExporter.pngExportSuccess': 'PNG exported successfully',
-  'NuwaxPC.Utils.MermaidExporter.pngExportFailed': 'PNG export failed',
+  'PC.Utils.MermaidExporter.svgExportSuccess': 'SVG exported successfully',
+  'PC.Utils.MermaidExporter.svgExportFailed': 'SVG export failed',
+  'PC.Utils.MermaidExporter.pngExportSuccess': 'PNG exported successfully',
+  'PC.Utils.MermaidExporter.pngExportFailed': 'PNG export failed',
 
   // Components - PermissionMask
-  'NuwaxPC.Components.PermissionMask.noAgentPermission': 'No agent usage permission',
+  'PC.Components.PermissionMask.noAgentPermission': 'No agent usage permission',
 
   // Components - EcosystemDetailDrawer
-  'NuwaxPC.Components.EcosystemDetailDrawer.plugin': 'Plugin',
+  'PC.Components.EcosystemDetailDrawer.plugin': 'Plugin',
 
   // Components - EcosystemShareModal
-  'NuwaxPC.Components.EcosystemShareModal.plugin': 'Plugin',
+  'PC.Components.EcosystemShareModal.plugin': 'Plugin',
 
   // Components - ModelBox
-  'NuwaxPC.Components.ModelBox.search': 'Search',
+  'PC.Components.ModelBox.search': 'Search',
 
   // Components - SkillCopy
-  'NuwaxPC.Components.SkillCopy.editParams': 'Edit Parameters',
+  'PC.Components.SkillCopy.editParams': 'Edit Parameters',
 
   // Components - TiptapVariableInput
-  'NuwaxPC.Components.TiptapVariableInput.tools': 'Tools',
-  'NuwaxPC.Components.TiptapVariableInput.skills': 'Skills',
+  'PC.Components.TiptapVariableInput.tools': 'Tools',
+  'PC.Components.TiptapVariableInput.skills': 'Skills',
 
   // Constants - Theme
-  'NuwaxPC.Constants.Theme.colorBlue': 'Blue',
-  'NuwaxPC.Constants.Theme.colorRed': 'Red',
-  'NuwaxPC.Constants.Theme.colorOrange': 'Orange',
-  'NuwaxPC.Constants.Theme.colorGreen': 'Green',
-  'NuwaxPC.Constants.Theme.colorPurple': 'Purple',
-  'NuwaxPC.Constants.Theme.colorPink': 'Pink',
-  'NuwaxPC.Constants.Theme.bgStarryNight': 'Starry Night',
-  'NuwaxPC.Constants.Theme.bgStarryNightDesc': 'Dark background, suitable for dark layout',
-  'NuwaxPC.Constants.Theme.bgCloudyDay': 'Cloudy Day',
-  'NuwaxPC.Constants.Theme.bgCloudyDayDesc': 'Light background, suitable for light layout',
-  'NuwaxPC.Constants.Theme.bgForestDawn': 'Forest Dawn',
-  'NuwaxPC.Constants.Theme.bgForestDawnDesc': 'Bright background, suitable for light layout',
-  'NuwaxPC.Constants.Theme.bgDeepSeaNight': 'Deep Sea Night',
-  'NuwaxPC.Constants.Theme.bgDeepSeaNightDesc': 'Dark background, suitable for dark layout',
-  'NuwaxPC.Constants.Theme.bgDreamyPurple': 'Dreamy Purple',
-  'NuwaxPC.Constants.Theme.bgDreamyPurpleDesc': 'Dark tone background, suitable for dark layout',
-  'NuwaxPC.Constants.Theme.bgWarmSunshine': 'Warm Sunshine',
-  'NuwaxPC.Constants.Theme.bgWarmSunshineDesc': 'Warm tones, suitable for light layout',
-  'NuwaxPC.Constants.Theme.bgNightCity': 'Night City',
-  'NuwaxPC.Constants.Theme.bgNightCityDesc': 'City night view, suitable for dark layout',
-  'NuwaxPC.Constants.Theme.bgFreshBlueSky': 'Fresh Blue Sky',
-  'NuwaxPC.Constants.Theme.bgFreshBlueSkyDesc': 'Fresh and bright, suitable for light layout',
+  'PC.Constants.Theme.colorBlue': 'Blue',
+  'PC.Constants.Theme.colorRed': 'Red',
+  'PC.Constants.Theme.colorOrange': 'Orange',
+  'PC.Constants.Theme.colorGreen': 'Green',
+  'PC.Constants.Theme.colorPurple': 'Purple',
+  'PC.Constants.Theme.colorPink': 'Pink',
+  'PC.Constants.Theme.bgStarryNight': 'Starry Night',
+  'PC.Constants.Theme.bgStarryNightDesc':
+    'Dark background, suitable for dark layout',
+  'PC.Constants.Theme.bgCloudyDay': 'Cloudy Day',
+  'PC.Constants.Theme.bgCloudyDayDesc':
+    'Light background, suitable for light layout',
+  'PC.Constants.Theme.bgForestDawn': 'Forest Dawn',
+  'PC.Constants.Theme.bgForestDawnDesc':
+    'Bright background, suitable for light layout',
+  'PC.Constants.Theme.bgDeepSeaNight': 'Deep Sea Night',
+  'PC.Constants.Theme.bgDeepSeaNightDesc':
+    'Dark background, suitable for dark layout',
+  'PC.Constants.Theme.bgDreamyPurple': 'Dreamy Purple',
+  'PC.Constants.Theme.bgDreamyPurpleDesc':
+    'Dark tone background, suitable for dark layout',
+  'PC.Constants.Theme.bgWarmSunshine': 'Warm Sunshine',
+  'PC.Constants.Theme.bgWarmSunshineDesc':
+    'Warm tones, suitable for light layout',
+  'PC.Constants.Theme.bgNightCity': 'Night City',
+  'PC.Constants.Theme.bgNightCityDesc':
+    'City night view, suitable for dark layout',
+  'PC.Constants.Theme.bgFreshBlueSky': 'Fresh Blue Sky',
+  'PC.Constants.Theme.bgFreshBlueSkyDesc':
+    'Fresh and bright, suitable for light layout',
 };

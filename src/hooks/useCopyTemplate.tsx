@@ -1,6 +1,6 @@
 import MoveCopyComponent from '@/components/MoveCopyComponent';
-import { apiPublishTemplateCopy } from '@/services/publish';
 import { dict } from '@/services/i18nRuntime';
+import { apiPublishTemplateCopy } from '@/services/publish';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import { ApplicationMoreActionEnum } from '@/types/enums/space';
 import { PublishTemplateCopyParams } from '@/types/interfaces/publish';
@@ -45,7 +45,7 @@ export const useCopyTemplate = (): UseCopyTemplateReturn => {
       manual: true,
       debounceInterval: 300,
       onSuccess: (data: number, params: PublishTemplateCopyParams[]) => {
-        message.success(dict('NuwaxPC.Hooks.UseCopyTemplate.copySuccess'));
+        message.success(dict('PC.Hooks.UseCopyTemplate.copySuccess'));
         // 关闭弹窗
         setOpenMove(false);
         // 目标空间ID

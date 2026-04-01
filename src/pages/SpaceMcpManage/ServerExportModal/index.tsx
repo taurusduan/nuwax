@@ -1,7 +1,7 @@
-import { dict } from '@/services/i18nRuntime';
 import copyImage from '@/assets/images/copy.png';
 import Loading from '@/components/custom/Loading';
 import TooltipIcon from '@/components/custom/TooltipIcon';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiMcpServerConfigExport,
   apiMcpServerConfigRefresh,
@@ -79,12 +79,12 @@ const ServerExportModal: React.FC<ServerExportModalProps> = ({
   // 重新生成配置
   const handleRebuildConfig = () => {
     confirm({
-      title: dict('NuwaxPC.Pages.SpaceMcpManage.confirmRebuildConfig'),
+      title: dict('PC.Pages.SpaceMcpManage.confirmRebuildConfig'),
       icon: <ExclamationCircleFilled />,
       content: name,
-      okText: dict('NuwaxPC.Common.Global.confirm'),
+      okText: dict('PC.Common.Global.confirm'),
       maskClosable: true,
-      cancelText: dict('NuwaxPC.Common.Global.cancel'),
+      cancelText: dict('PC.Common.Global.cancel'),
       onOk() {
         confirmRebuildConfig();
       },
@@ -102,13 +102,13 @@ const ServerExportModal: React.FC<ServerExportModalProps> = ({
   }, [open, mcpId]);
 
   const handleCopy = () => {
-    message.success(dict('NuwaxPC.Toast.Global.copiedSuccessfully'));
+    message.success(dict('PC.Toast.Global.copiedSuccessfully'));
   };
 
   return (
     <Modal
       width={560}
-      title={`${name}-${dict('NuwaxPC.Pages.SpaceMcpManage.serviceExportTitle')}`}
+      title={`${name}-${dict('PC.Pages.SpaceMcpManage.serviceExportTitle')}`}
       classNames={{
         content: cx(styles.container),
         header: cx(styles.container),
@@ -119,17 +119,17 @@ const ServerExportModal: React.FC<ServerExportModalProps> = ({
       footer={null}
       onCancel={onCancel}
     >
-      <h5 className={cx(styles.title)}>{dict('NuwaxPC.Pages.SpaceMcpManage.configService')}</h5>
+      <h5 className={cx(styles.title)}>
+        {dict('PC.Pages.SpaceMcpManage.configService')}
+      </h5>
       <div className={cx(styles.desc, 'flex', 'items-center')}>
-        <span>
-          {dict('NuwaxPC.Pages.SpaceMcpManage.configCopyTip')}
-        </span>
+        <span>{dict('PC.Pages.SpaceMcpManage.configCopyTip')}</span>
         <Button
           type="link"
           className={cx(styles['rebuild-config'])}
           onClick={handleRebuildConfig}
         >
-          {dict('NuwaxPC.Pages.SpaceMcpManage.rebuildConfig')}
+          {dict('PC.Pages.SpaceMcpManage.rebuildConfig')}
         </Button>
       </div>
       <div className={cx(styles['config-box'], 'relative')}>
@@ -139,7 +139,7 @@ const ServerExportModal: React.FC<ServerExportModalProps> = ({
           <>
             <CopyToClipboard text={config} onCopy={handleCopy}>
               <TooltipIcon
-                title={dict('NuwaxPC.Common.Global.copy')}
+                title={dict('PC.Common.Global.copy')}
                 icon={
                   <img className={styles['copy-img']} src={copyImage} alt="" />
                 }

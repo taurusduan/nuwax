@@ -90,12 +90,12 @@ const SkillDetails: React.FC = () => {
    * @returns {boolean} true-可以继续执行，false-有未保存更改，需要阻止执行
    */
   const handleCheckUnsavedChanges = (
-    text: string = t('NuwaxPC.Pages.SkillDetails.actionPublish'),
+    text: string = t('PC.Pages.SkillDetails.actionPublish'),
   ): boolean => {
     // 检查是否有未保存的文件修改
     const _hasUnsavedChanges = hasUnsavedChanges();
     if (_hasUnsavedChanges) {
-      message.warning(t('NuwaxPC.Pages.SkillDetails.saveBeforeAction', text));
+      message.warning(t('PC.Pages.SkillDetails.saveBeforeAction', text));
       return false; // 有未保存更改，阻止执行
     }
     return true; // 没有未保存更改，可以继续执行
@@ -121,7 +121,7 @@ const SkillDetails: React.FC = () => {
       try {
         const { code } = await apiSkillUpdate(newSkillInfo);
         if (code === SUCCESS_CODE) {
-          message.success(t('NuwaxPC.Pages.SkillDetails.saveSuccess'));
+          message.success(t('PC.Pages.SkillDetails.saveSuccess'));
           return true;
         }
         return false;
@@ -137,10 +137,10 @@ const SkillDetails: React.FC = () => {
   useNavigationGuard({
     condition: hasUnsavedChanges,
     onConfirm: saveUnsavedFiles,
-    title: t('NuwaxPC.Pages.SkillDetails.unsavedTitle'),
-    message: t('NuwaxPC.Pages.SkillDetails.unsavedLeaveMessage'),
-    confirmText: t('NuwaxPC.Pages.SkillDetails.saveAndLeave'),
-    discardText: t('NuwaxPC.Pages.SkillDetails.leaveWithoutSaving'),
+    title: t('PC.Pages.SkillDetails.unsavedTitle'),
+    message: t('PC.Pages.SkillDetails.unsavedLeaveMessage'),
+    confirmText: t('PC.Pages.SkillDetails.saveAndLeave'),
+    discardText: t('PC.Pages.SkillDetails.leaveWithoutSaving'),
   });
 
   // 查询技能信息
@@ -203,7 +203,7 @@ const SkillDetails: React.FC = () => {
 
       setIsImportingProject(false);
       if (code === SUCCESS_CODE) {
-        message.success(t('NuwaxPC.Pages.SkillDetails.importSuccess'));
+        message.success(t('PC.Pages.SkillDetails.importSuccess'));
         setOpenImportSkillProject(false);
         // 刷新技能信息
         runSkillInfo(skillId);
@@ -218,12 +218,12 @@ const SkillDetails: React.FC = () => {
   // 导入项目
   const handleImportProject = async () => {
     if (!skillId) {
-      message.error(t('NuwaxPC.Pages.SkillDetails.skillIdRequired'));
+      message.error(t('PC.Pages.SkillDetails.skillIdRequired'));
       return;
     }
 
     if (!spaceId) {
-      message.error(t('NuwaxPC.Pages.SkillDetails.spaceIdRequired'));
+      message.error(t('PC.Pages.SkillDetails.spaceIdRequired'));
       return;
     }
 
@@ -241,7 +241,7 @@ const SkillDetails: React.FC = () => {
     filePaths: string[],
   ) => {
     if (!skillId) {
-      message.error(t('NuwaxPC.Pages.SkillDetails.skillIdRequired'));
+      message.error(t('PC.Pages.SkillDetails.skillIdRequired'));
       return;
     }
 
@@ -250,7 +250,7 @@ const SkillDetails: React.FC = () => {
 
     // 上传文件总大小限制为20MB
     if (totalSize > SKILL_MAX_FILE_SIZE) {
-      message.error(t('NuwaxPC.Pages.SkillDetails.uploadSizeLimitExceeded'));
+      message.error(t('PC.Pages.SkillDetails.uploadSizeLimitExceeded'));
       return;
     }
 
@@ -263,7 +263,7 @@ const SkillDetails: React.FC = () => {
       });
 
       if (code === SUCCESS_CODE) {
-        message.success(t('NuwaxPC.Pages.SkillDetails.uploadSuccess'));
+        message.success(t('PC.Pages.SkillDetails.uploadSuccess'));
         // 刷新项目详情
         runSkillInfo(skillId);
       }
@@ -276,7 +276,7 @@ const SkillDetails: React.FC = () => {
   const handleExportProject = async () => {
     // 检查项目ID是否有效
     if (!skillId) {
-      message.warning(t('NuwaxPC.Pages.SkillDetails.invalidSkillIdForExport'));
+      message.warning(t('PC.Pages.SkillDetails.invalidSkillIdForExport'));
       return;
     }
 
@@ -288,7 +288,7 @@ const SkillDetails: React.FC = () => {
       if (!result.success) {
         // 导出失败，显示错误信息
         const errorMessage =
-          result.error?.message || t('NuwaxPC.Pages.SkillDetails.exportFailed');
+          result.error?.message || t('PC.Pages.SkillDetails.exportFailed');
         message.warning(errorMessage);
         setLoadingExportProject(false);
         return;
@@ -299,7 +299,7 @@ const SkillDetails: React.FC = () => {
         const filename = `skill-${skillId}.zip`;
         // 导出整个项目压缩包
         exportWholeProjectZip(result, filename);
-        message.success(t('NuwaxPC.Pages.SkillDetails.exportSuccess'));
+        message.success(t('PC.Pages.SkillDetails.exportSuccess'));
       }
     } catch (error) {
       console.error('Failed to export project:', error);
@@ -312,7 +312,7 @@ const SkillDetails: React.FC = () => {
   const handleDeleteFile = async (fileNode: FileNode): Promise<boolean> => {
     return new Promise((resolve) => {
       modalConfirm(
-        t('NuwaxPC.Pages.SkillDetails.confirmDeleteFile'),
+        t('PC.Pages.SkillDetails.confirmDeleteFile'),
         fileNode.name,
         async () => {
           try {
@@ -332,7 +332,7 @@ const SkillDetails: React.FC = () => {
                 (item) => item.fileId === fileNode.id,
               );
               if (!currentFile) {
-                message.error(t('NuwaxPC.Pages.SkillDetails.fileNotFound'));
+                message.error(t('PC.Pages.SkillDetails.fileNotFound'));
                 resolve(false);
                 return;
               }
@@ -354,7 +354,7 @@ const SkillDetails: React.FC = () => {
             if (code === SUCCESS_CODE) {
               // 重新查询技能信息，因为更新了文件名或文件夹名称，需要刷新文件树
               runSkillInfo(skillId);
-              message.success(t('NuwaxPC.Pages.SkillDetails.deleteSuccess'));
+              message.success(t('PC.Pages.SkillDetails.deleteSuccess'));
               resolve(true);
             } else {
               resolve(false);
@@ -378,7 +378,7 @@ const SkillDetails: React.FC = () => {
     newName: string,
   ): Promise<boolean> => {
     if (!skillInfo) {
-      message.error(t('NuwaxPC.Pages.SkillDetails.skillInfoMissing'));
+      message.error(t('PC.Pages.SkillDetails.skillInfoMissing'));
       return false;
     }
 
@@ -500,9 +500,7 @@ const SkillDetails: React.FC = () => {
   // 编辑技能信息
   const handleEditSkill = () => {
     // 检查是否有未保存的文件修改，如果有则阻止执行
-    if (
-      !handleCheckUnsavedChanges(t('NuwaxPC.Pages.SkillDetails.actionEdit'))
-    ) {
+    if (!handleCheckUnsavedChanges(t('PC.Pages.SkillDetails.actionEdit'))) {
       return;
     }
     setEditSkillModalOpen(true);
@@ -536,7 +534,7 @@ const SkillDetails: React.FC = () => {
       <TipsBox
         className={cx(styles['mt-12'])}
         visible={loadingExportProject}
-        text={t('NuwaxPC.Pages.SkillDetails.exporting')}
+        text={t('PC.Pages.SkillDetails.exporting')}
       />
 
       <div className={cx('flex', 'flex-1', 'overflow-y')}>

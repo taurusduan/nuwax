@@ -18,7 +18,7 @@ const LongMemoryContent: React.FC<LongMemoryContentProps> = ({
   return (
     <div className={cx(styles.container)}>
       <p className={cx(textClassName)}>
-        {t('NuwaxPC.Pages.AgentArrangeLongMemoryContent.description')}
+        {t('PC.Pages.AgentArrangeLongMemoryContent.description')}
       </p>
       {/*<div className={cx('flex')}>*/}
       {/*  <Checkbox disabled={openLongMemory === OpenCloseEnum.Close}>*/}

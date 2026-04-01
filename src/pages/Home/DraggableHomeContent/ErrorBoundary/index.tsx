@@ -32,14 +32,14 @@ class DragErrorBoundary extends React.Component<
       return (
         <div className="flex items-center justify-center h-64">
           <div className="text-center">
-            <h3>{dict('NuwaxPC.Pages.HomeDrag.errorTitle')}</h3>
-            <p>{dict('NuwaxPC.Pages.HomeDrag.errorDescription')}</p>
+            <h3>{dict('PC.Pages.HomeDrag.errorTitle')}</h3>
+            <p>{dict('PC.Pages.HomeDrag.errorDescription')}</p>
             <button
               type="button"
               onClick={() => window.location.reload()}
               className="mt-2 px-4 py-2 bg-blue-500 text-white rounded"
             >
-              {dict('NuwaxPC.Pages.HomeDrag.refreshPage')}
+              {dict('PC.Pages.HomeDrag.refreshPage')}
             </button>
           </div>
         </div>

@@ -73,7 +73,7 @@ const PageSettingModal: React.FC<PageSettingModalProps> = ({
               runUpdate(pageNotHomeIndexData).catch((error) => {
                 console.error(
                   t(
-                    'NuwaxPC.Pages.AgentArrangePageSettingModal.updateOtherPageFailed',
+                    'PC.Pages.AgentArrangePageSettingModal.updateOtherPageFailed',
                   ),
                   error,
                 );
@@ -95,13 +95,13 @@ const PageSettingModal: React.FC<PageSettingModalProps> = ({
         bindConfig: componentInfo?.bindConfig,
       } as AgentPageUpdateParams;
       await runUpdate(data);
-      message.success(t('NuwaxPC.Toast.Global.savedSuccessfully'));
+      message.success(t('PC.Toast.Global.savedSuccessfully'));
     } catch (error) {
       console.error(
-        t('NuwaxPC.Pages.AgentArrangePageSettingModal.saveConfigFailed'),
+        t('PC.Pages.AgentArrangePageSettingModal.saveConfigFailed'),
         error,
       );
-      message.error(t('NuwaxPC.Pages.AgentArrangePageSettingModal.saveFailed'));
+      message.error(t('PC.Pages.AgentArrangePageSettingModal.saveFailed'));
     }
   };
 
@@ -148,15 +148,13 @@ const PageSettingModal: React.FC<PageSettingModalProps> = ({
       modalRender={() => (
         <div className={cx(styles.container, 'flex', 'overflow-hide')}>
           <div className={cx(styles.left)}>
-            <h3>{t('NuwaxPC.Pages.AgentArrangePageSettingModal.title')}</h3>
+            <h3>{t('PC.Pages.AgentArrangePageSettingModal.title')}</h3>
             <ul>
               {PAGE_SETTING_ACTIONS.map((item) => {
                 const actionLabel =
                   item.type === PageSettingEnum.Visible_To_LLM
-                    ? t(
-                        'NuwaxPC.Pages.AgentArrangePageSettingModal.visibleToLlm',
-                      )
-                    : t('NuwaxPC.Pages.AgentArrangePageSettingModal.homeIndex');
+                    ? t('PC.Pages.AgentArrangePageSettingModal.visibleToLlm')
+                    : t('PC.Pages.AgentArrangePageSettingModal.homeIndex');
                 return (
                   <li
                     key={item.type}

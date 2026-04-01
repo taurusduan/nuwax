@@ -224,8 +224,9 @@ export default function EcosystemMcp() {
     const isAll = activeTab === TabTypeEnum.ALL;
     return {
       icon: config.icon || '',
-      title: config.name || dict('NuwaxPC.Pages.EcosystemMcp.unnamedMcp'),
-      description: config.description || dict('NuwaxPC.Pages.EcosystemMcp.noDescription'),
+      title: config.name || dict('PC.Pages.EcosystemMcp.unnamedMcp'),
+      description:
+        config.description || dict('PC.Pages.EcosystemMcp.noDescription'),
       isNewVersion: config.isNewVersion,
       author: config.author || '',
       targetType: config.targetType as AgentComponentTypeEnum,
@@ -253,7 +254,7 @@ export default function EcosystemMcp() {
           setDrawerVisible(true);
         }
       } catch (error) {
-        message.error(dict('NuwaxPC.Pages.EcosystemMcp.fetchDetailFailed'));
+        message.error(dict('PC.Pages.EcosystemMcp.fetchDetailFailed'));
       }
     }
   };
@@ -263,8 +264,9 @@ export default function EcosystemMcp() {
   ): EcosystemDetailDrawerData => {
     return {
       icon: config.icon || '',
-      title: config.name || dict('NuwaxPC.Pages.EcosystemMcp.unnamedMcp'),
-      description: config.description || dict('NuwaxPC.Pages.EcosystemMcp.noDescription'),
+      title: config.name || dict('PC.Pages.EcosystemMcp.unnamedMcp'),
+      description:
+        config.description || dict('PC.Pages.EcosystemMcp.noDescription'),
       // isNewVersion: true,
       isNewVersion: config.isNewVersion || false,
       author: config.author || '',
@@ -304,13 +306,13 @@ export default function EcosystemMcp() {
         configJson,
       });
     } catch (error) {
-      message.error(dict('NuwaxPC.Pages.EcosystemMcp.operationFailed'));
+      message.error(dict('PC.Pages.EcosystemMcp.operationFailed'));
       return false;
     }
 
     if (result) {
       setDrawerVisible(false);
-      message.success(dict('NuwaxPC.Pages.EcosystemMcp.enableSuccess'));
+      message.success(dict('PC.Pages.EcosystemMcp.enableSuccess'));
       handleMcpList();
       return true;
     }
@@ -329,11 +331,11 @@ export default function EcosystemMcp() {
       // 如果是已发布状态，调用下线接口
       result = await disableClientConfig(selectedDetailInfo.uid);
     } catch (error) {
-      message.error(dict('NuwaxPC.Pages.EcosystemMcp.disableFailed'));
+      message.error(dict('PC.Pages.EcosystemMcp.disableFailed'));
       return false;
     }
     if (result) {
-      message.success(dict('NuwaxPC.Pages.EcosystemMcp.disableSuccess'));
+      message.success(dict('PC.Pages.EcosystemMcp.disableSuccess'));
       setDrawerVisible(false);
       handleMcpList();
       return true;
@@ -354,7 +356,9 @@ export default function EcosystemMcp() {
       >
         <header className={cx(styles.header)}>
           <Space>
-            <h3 className={cx(styles.title)}>{dict('NuwaxPC.Pages.EcosystemMcp.title')}</h3>
+            <h3 className={cx(styles.title)}>
+              {dict('PC.Pages.EcosystemMcp.title')}
+            </h3>
             <Segmented
               className={cx(styles.segmented)}
               options={SPACE_SQUARE_SEGMENTED_LIST}
@@ -370,7 +374,7 @@ export default function EcosystemMcp() {
           </Space>
           <Search
             className={cx(styles.searchInput)}
-            placeholder={dict('NuwaxPC.Pages.EcosystemMcp.searchPlaceholder')}
+            placeholder={dict('PC.Pages.EcosystemMcp.searchPlaceholder')}
             value={searchKeyword}
             onChange={(e) => setSearchKeyword(e.target.value)}
             // 点击搜索图标、清除图标，或按下回车键时的回调
@@ -412,7 +416,7 @@ export default function EcosystemMcp() {
           <div
             className={cx('flex', 'flex-1', 'items-center', 'content-center')}
           >
-            <Empty description={dict('NuwaxPC.Common.Global.emptyData')} />
+            <Empty description={dict('PC.Common.Global.emptyData')} />
           </div>
         )}
       </div>

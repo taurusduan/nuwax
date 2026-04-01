@@ -49,9 +49,13 @@ const SeeDetailModal: React.FC<SeeDetailModalProps> = ({
             <CopyIconButton
               data={data}
               jsonSpace={2}
-              tooltipTitle={dict('NuwaxPC.Components.MarkdownCustomProcess.copyDetailData')}
-              successMessage={dict('NuwaxPC.Toast.Global.copiedSuccessfully')}
-              errorMessage={dict('NuwaxPC.Components.MarkdownCustomProcess.copyFailedRetry')}
+              tooltipTitle={dict(
+                'PC.Components.MarkdownCustomProcess.copyDetailData',
+              )}
+              successMessage={dict('PC.Toast.Global.copiedSuccessfully')}
+              errorMessage={dict(
+                'PC.Components.MarkdownCustomProcess.copyFailedRetry',
+              )}
             />
           </div>
         </div>

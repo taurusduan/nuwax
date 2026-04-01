@@ -111,7 +111,7 @@ const TargetAuthModal: React.FC<TargetAuthModalProps> = ({
     {
       manual: true,
       onSuccess: () => {
-        message.success(t('NuwaxPC.Toast.SystemTargetAuthModal.authorized'));
+        message.success(t('PC.Toast.SystemTargetAuthModal.authorized'));
         setLoading(false);
         onCancel();
       },
@@ -193,7 +193,7 @@ const TargetAuthModal: React.FC<TargetAuthModalProps> = ({
   const tabItems = [
     {
       key: 'role',
-      label: t('NuwaxPC.Pages.SystemTargetAuthModal.roleTab'),
+      label: t('PC.Pages.SystemTargetAuthModal.roleTab'),
       children: (
         <div className={cx(styles.tabContent)}>
           {roleList && roleList.length > 0 ? (
@@ -215,7 +215,7 @@ const TargetAuthModal: React.FC<TargetAuthModalProps> = ({
               <Empty
                 description={
                   <span>
-                    {t('NuwaxPC.Pages.SystemTargetAuthModal.emptyPrefix')}{' '}
+                    {t('PC.Pages.SystemTargetAuthModal.emptyPrefix')}{' '}
                     <Button
                       type="link"
                       size="small"
@@ -225,9 +225,9 @@ const TargetAuthModal: React.FC<TargetAuthModalProps> = ({
                         onCancel();
                       }}
                     >
-                      {t('NuwaxPC.Pages.SystemTargetAuthModal.roleManagement')}
+                      {t('PC.Pages.SystemTargetAuthModal.roleManagement')}
                     </Button>{' '}
-                    {t('NuwaxPC.Pages.SystemTargetAuthModal.createRole')}
+                    {t('PC.Pages.SystemTargetAuthModal.createRole')}
                   </span>
                 }
               />
@@ -238,7 +238,7 @@ const TargetAuthModal: React.FC<TargetAuthModalProps> = ({
     },
     {
       key: 'group',
-      label: t('NuwaxPC.Pages.SystemTargetAuthModal.userGroupTab'),
+      label: t('PC.Pages.SystemTargetAuthModal.userGroupTab'),
       children: (
         <div className={cx(styles.tabContent)}>
           {groupList && groupList.length > 0 ? (
@@ -260,7 +260,7 @@ const TargetAuthModal: React.FC<TargetAuthModalProps> = ({
               <Empty
                 description={
                   <span>
-                    {t('NuwaxPC.Pages.SystemTargetAuthModal.emptyPrefix')}{' '}
+                    {t('PC.Pages.SystemTargetAuthModal.emptyPrefix')}{' '}
                     <Button
                       type="link"
                       size="small"
@@ -272,11 +272,9 @@ const TargetAuthModal: React.FC<TargetAuthModalProps> = ({
                         onCancel();
                       }}
                     >
-                      {t(
-                        'NuwaxPC.Pages.SystemTargetAuthModal.userGroupManagement',
-                      )}
+                      {t('PC.Pages.SystemTargetAuthModal.userGroupManagement')}
                     </Button>{' '}
-                    {t('NuwaxPC.Pages.SystemTargetAuthModal.createUserGroup')}
+                    {t('PC.Pages.SystemTargetAuthModal.createUserGroup')}
                   </span>
                 }
               />
@@ -310,11 +308,8 @@ const TargetAuthModal: React.FC<TargetAuthModalProps> = ({
     <Modal
       title={
         targetName
-          ? t(
-              'NuwaxPC.Pages.SystemTargetAuthModal.authorizeWithName',
-              targetName,
-            )
-          : t('NuwaxPC.Pages.SystemTargetAuthModal.authorize')
+          ? t('PC.Pages.SystemTargetAuthModal.authorizeWithName', targetName)
+          : t('PC.Pages.SystemTargetAuthModal.authorize')
       }
       open={open}
       confirmLoading={loading}
@@ -340,8 +335,8 @@ const TargetAuthModal: React.FC<TargetAuthModalProps> = ({
             onClick={selectAllConfig.onSelectAll}
           >
             {selectAllConfig.isAllSelected
-              ? t('NuwaxPC.Pages.SystemTargetAuthModal.clearAll')
-              : t('NuwaxPC.Pages.SystemTargetAuthModal.selectAll')}
+              ? t('PC.Pages.SystemTargetAuthModal.clearAll')
+              : t('PC.Pages.SystemTargetAuthModal.selectAll')}
           </Button>
         )}
       </div>

@@ -161,12 +161,12 @@ const FilePathHeader: React.FC<FilePathHeaderProps> = ({
       {/* 文件树展开/折叠图标 */}
       {viewMode !== 'desktop' && (
         <div className={cx('flex', 'items-center', 'gap-4')}>
-          <span>{dict('NuwaxPC.Components.FilePathHeader.filePreview')}</span>
+          <span>{dict('PC.Components.FilePathHeader.filePreview')}</span>
           <Tooltip
             title={
               isFileTreeVisible
-                ? dict('NuwaxPC.Components.FilePathHeader.collapseFileTree')
-                : dict('NuwaxPC.Components.FilePathHeader.expandFileTree')
+                ? dict('PC.Components.FilePathHeader.collapseFileTree')
+                : dict('PC.Components.FilePathHeader.expandFileTree')
             }
           >
             <Button
@@ -224,13 +224,11 @@ const FilePathHeader: React.FC<FilePathHeaderProps> = ({
                       onChange={onViewFileTypeChange}
                       options={[
                         {
-                          label: dict(
-                            'NuwaxPC.Components.FilePathHeader.preview',
-                          ),
+                          label: dict('PC.Components.FilePathHeader.preview'),
                           value: 'preview',
                         },
                         {
-                          label: dict('NuwaxPC.Components.FilePathHeader.code'),
+                          label: dict('PC.Components.FilePathHeader.code'),
                           value: 'code',
                         },
                       ]}
@@ -253,10 +251,8 @@ const FilePathHeader: React.FC<FilePathHeaderProps> = ({
                   `${
                     userInfo?.nickName ||
                     userInfo?.userName ||
-                    dict('NuwaxPC.Components.FilePathHeader.remote')
-                  }${dict(
-                    'NuwaxPC.Components.FilePathHeader.agentComputerSuffix',
-                  )}`}
+                    dict('PC.Components.FilePathHeader.remote')
+                  }${dict('PC.Components.FilePathHeader.agentComputerSuffix')}`}
               </div>
             </div>
           )}
@@ -272,10 +268,10 @@ const FilePathHeader: React.FC<FilePathHeaderProps> = ({
             onClick={onSaveFiles}
             loading={isSavingFiles}
           >
-            {dict('NuwaxPC.Common.Global.save')}
+            {dict('PC.Common.Global.save')}
           </Button>
           <Button size="small" type="default" onClick={onCancelSaveFiles}>
-            {dict('NuwaxPC.Common.Global.cancel')}
+            {dict('PC.Common.Global.cancel')}
           </Button>
         </div>
       )}
@@ -295,8 +291,8 @@ const FilePathHeader: React.FC<FilePathHeaderProps> = ({
               <Tooltip
                 title={
                   isExportingPdf
-                    ? dict('NuwaxPC.Components.FilePathHeader.exporting')
-                    : dict('NuwaxPC.Components.FilePathHeader.exportPdf')
+                    ? dict('PC.Components.FilePathHeader.exporting')
+                    : dict('PC.Components.FilePathHeader.exportPdf')
                 }
               >
                 {' '}
@@ -318,8 +314,8 @@ const FilePathHeader: React.FC<FilePathHeaderProps> = ({
             <Tooltip
               title={
                 isDownloadingFile
-                  ? dict('NuwaxPC.Components.FilePathHeader.downloading')
-                  : dict('NuwaxPC.Components.FilePathHeader.download')
+                  ? dict('PC.Components.FilePathHeader.downloading')
+                  : dict('PC.Components.FilePathHeader.download')
               }
             >
               <Button
@@ -341,7 +337,7 @@ const FilePathHeader: React.FC<FilePathHeaderProps> = ({
 
           {/* 复制内容 */}
           {!!targetNode?.content && viewMode === 'preview' && (
-            <Tooltip title={dict('NuwaxPC.Components.FilePathHeader.copy')}>
+            <Tooltip title={dict('PC.Components.FilePathHeader.copy')}>
               <Button
                 type="text"
                 size="small"
@@ -350,9 +346,7 @@ const FilePathHeader: React.FC<FilePathHeaderProps> = ({
                 }
                 onClick={() => {
                   copyTextToClipboard(targetNode?.content || '', () => {
-                    message.success(
-                      dict('NuwaxPC.Toast.Global.copiedSuccessfully'),
-                    );
+                    message.success(dict('PC.Toast.Global.copiedSuccessfully'));
                   });
                 }}
                 className={styles.actionButton}
@@ -369,7 +363,7 @@ const FilePathHeader: React.FC<FilePathHeaderProps> = ({
               (viewMode === 'desktop' ||
                 (targetNode?.fileProxyUrl && viewMode === 'preview')) && (
                 <Tooltip
-                  title={dict('NuwaxPC.Components.FilePathHeader.share')}
+                  title={dict('PC.Components.FilePathHeader.share')}
                   placement="bottom"
                 >
                   <Button
@@ -392,8 +386,8 @@ const FilePathHeader: React.FC<FilePathHeaderProps> = ({
               <Tooltip
                 title={
                   isFullscreen
-                    ? dict('NuwaxPC.Components.FilePathHeader.exitFullscreen')
-                    : dict('NuwaxPC.Components.FilePathHeader.fullscreen')
+                    ? dict('PC.Components.FilePathHeader.exitFullscreen')
+                    : dict('PC.Components.FilePathHeader.fullscreen')
                 }
                 placement="bottom"
                 key={isFullscreen ? 'exit' : 'enter'}
@@ -431,9 +425,7 @@ const FilePathHeader: React.FC<FilePathHeaderProps> = ({
               <>
                 <div className={styles.divider} />
                 {/* 关闭 */}
-                <Tooltip
-                  title={dict('NuwaxPC.Components.FilePathHeader.close')}
-                >
+                <Tooltip title={dict('PC.Components.FilePathHeader.close')}>
                   <Button
                     type="text"
                     size="small"

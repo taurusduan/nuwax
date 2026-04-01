@@ -42,7 +42,7 @@ const MoreActionsMenu: React.FC<MoreActionsProps> = ({
               icon: (
                 <SvgIcon name="icons-common-import" style={{ fontSize: 16 }} />
               ),
-              label: dict('NuwaxPC.Components.MoreActionsMenu.importProject'),
+              label: dict('PC.Components.MoreActionsMenu.importProject'),
               onClick: onImportProject,
             },
             {
@@ -64,11 +64,11 @@ const MoreActionsMenu: React.FC<MoreActionsProps> = ({
               label: (
                 <div className="flex items-center">
                   <span>
-                    {dict('NuwaxPC.Components.MoreActionsMenu.restartComputer')}
+                    {dict('PC.Components.MoreActionsMenu.restartComputer')}
                   </span>
                   <TooltipIcon
                     title={dict(
-                      'NuwaxPC.Components.MoreActionsMenu.restartComputerTooltip',
+                      'PC.Components.MoreActionsMenu.restartComputerTooltip',
                     )}
                     icon={<InfoCircleOutlined />}
                   />
@@ -90,11 +90,11 @@ const MoreActionsMenu: React.FC<MoreActionsProps> = ({
               label: (
                 <div className="flex items-center">
                   <span>
-                    {dict('NuwaxPC.Components.MoreActionsMenu.restartAgent')}
+                    {dict('PC.Components.MoreActionsMenu.restartAgent')}
                   </span>
                   <TooltipIcon
                     title={dict(
-                      'NuwaxPC.Components.MoreActionsMenu.restartAgentTooltip',
+                      'PC.Components.MoreActionsMenu.restartAgentTooltip',
                     )}
                     icon={<InfoCircleOutlined />}
                   />
@@ -119,7 +119,7 @@ const MoreActionsMenu: React.FC<MoreActionsProps> = ({
                   style={{ fontSize: 16 }}
                 />
               ),
-              label: dict('NuwaxPC.Components.MoreActionsMenu.exportResult'),
+              label: dict('PC.Components.MoreActionsMenu.exportResult'),
               onClick: onExportProject,
             },
           ]

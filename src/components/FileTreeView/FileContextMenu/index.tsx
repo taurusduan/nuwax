@@ -235,14 +235,14 @@ const FileContextMenu: React.FC<FileContextMenuProps> = ({
           // 文件夹菜单项
           {
             key: 'createFile',
-            label: dict('NuwaxPC.Components.FileContextMenu.newFile'),
+            label: dict('PC.Components.FileContextMenu.newFile'),
             icon: <FileAddOutlined />,
             onClick: handleCreateFile,
             disabled: !onCreateFile,
           },
           {
             key: 'createFolder',
-            label: dict('NuwaxPC.Components.FileContextMenu.newFolder'),
+            label: dict('PC.Components.FileContextMenu.newFolder'),
             icon: <FolderAddOutlined />,
             onClick: handleCreateFolder,
             disabled: !onCreateFolder,
@@ -253,14 +253,14 @@ const FileContextMenu: React.FC<FileContextMenuProps> = ({
           },
           {
             key: 'rename',
-            label: dict('NuwaxPC.Components.FileContextMenu.rename'),
+            label: dict('PC.Components.FileContextMenu.rename'),
             icon: <EditOutlined />,
             onClick: handleRename,
             disabled: !onRename,
           },
           {
             key: 'upload',
-            label: dict('NuwaxPC.Components.FileContextMenu.uploadFile'),
+            label: dict('PC.Components.FileContextMenu.uploadFile'),
             icon: <UploadOutlined />,
             onClick: handleUpload,
             disabled: !onUploadFiles || targetNode?.name?.startsWith('.'),
@@ -271,7 +271,7 @@ const FileContextMenu: React.FC<FileContextMenuProps> = ({
           },
           {
             key: 'delete',
-            label: dict('NuwaxPC.Components.FileContextMenu.delete'),
+            label: dict('PC.Components.FileContextMenu.delete'),
             icon: <DeleteOutlined />,
             onClick: handleDelete,
             danger: true,
@@ -281,7 +281,7 @@ const FileContextMenu: React.FC<FileContextMenuProps> = ({
           // 文件菜单项（不包含新建选项）
           {
             key: 'rename',
-            label: dict('NuwaxPC.Components.FileContextMenu.rename'),
+            label: dict('PC.Components.FileContextMenu.rename'),
             icon: <EditOutlined />,
             onClick: handleRename,
             disabled: !onRename,
@@ -291,7 +291,7 @@ const FileContextMenu: React.FC<FileContextMenuProps> = ({
             ? [
                 {
                   key: 'download',
-                  label: dict('NuwaxPC.Components.FileContextMenu.download'),
+                  label: dict('PC.Components.FileContextMenu.download'),
                   icon: <DownloadOutlined />,
                   onClick: handleDownload,
                 },
@@ -302,9 +302,7 @@ const FileContextMenu: React.FC<FileContextMenuProps> = ({
                   ? [
                       {
                         key: 'exportPdf',
-                        label: dict(
-                          'NuwaxPC.Components.FileContextMenu.exportPdf',
-                        ),
+                        label: dict('PC.Components.FileContextMenu.exportPdf'),
                         icon: <FilePdfOutlined />,
                         onClick: handleExportPdf,
                       },
@@ -314,7 +312,7 @@ const FileContextMenu: React.FC<FileContextMenuProps> = ({
             : []),
           {
             key: 'upload',
-            label: dict('NuwaxPC.Components.FileContextMenu.uploadFile'),
+            label: dict('PC.Components.FileContextMenu.uploadFile'),
             icon: <UploadOutlined />,
             onClick: handleUpload,
             disabled: !onUploadFiles || targetNode?.name?.startsWith('.'),
@@ -325,7 +323,7 @@ const FileContextMenu: React.FC<FileContextMenuProps> = ({
           },
           {
             key: 'delete',
-            label: dict('NuwaxPC.Components.FileContextMenu.delete'),
+            label: dict('PC.Components.FileContextMenu.delete'),
             icon: <DeleteOutlined />,
             onClick: handleDelete,
             danger: true,
@@ -335,14 +333,14 @@ const FileContextMenu: React.FC<FileContextMenuProps> = ({
         // 空白区域菜单项
         {
           key: 'createFile',
-          label: dict('NuwaxPC.Components.FileContextMenu.newFile'),
+          label: dict('PC.Components.FileContextMenu.newFile'),
           icon: <FileAddOutlined />,
           onClick: handleCreateFile,
           disabled: !onCreateFile,
         },
         {
           key: 'createFolder',
-          label: dict('NuwaxPC.Components.FileContextMenu.newFolder'),
+          label: dict('PC.Components.FileContextMenu.newFolder'),
           icon: <FolderAddOutlined />,
           onClick: handleCreateFolder,
           disabled: !onCreateFolder,
@@ -352,7 +350,7 @@ const FileContextMenu: React.FC<FileContextMenuProps> = ({
           ? [
               {
                 key: 'importProject',
-                label: dict('NuwaxPC.Components.FileContextMenu.importSkill'),
+                label: dict('PC.Components.FileContextMenu.importSkill'),
                 icon: <ImportOutlined />,
                 onClick: onImportProject,
               },
@@ -364,7 +362,7 @@ const FileContextMenu: React.FC<FileContextMenuProps> = ({
         },
         {
           key: 'upload',
-          label: dict('NuwaxPC.Components.FileContextMenu.uploadFile'),
+          label: dict('PC.Components.FileContextMenu.uploadFile'),
           icon: <UploadOutlined />,
           onClick: handleUpload,
           disabled: !onUploadFiles,

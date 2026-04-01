@@ -38,7 +38,7 @@ const SettingAccount: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: UserUpdateParams[]) => {
-      message.success(dict('NuwaxPC.Toast.Global.savedSuccessfully'));
+      message.success(dict('PC.Toast.Global.savedSuccessfully'));
       const _userInfo = cloneDeep(userInfo);
       if (params[0]?.avatar) {
         _userInfo.avatar = params[0].avatar;
@@ -75,7 +75,7 @@ const SettingAccount: React.FC = () => {
       manual: true,
       onSuccess: () => {
         setCurrentLang(language);
-        message.success(dict('NuwaxPC.Toast.Global.languageSavedReload'));
+        message.success(dict('PC.Toast.Global.languageSavedReload'));
         window.location.reload();
       },
     },
@@ -103,7 +103,7 @@ const SettingAccount: React.FC = () => {
 
   // 复制成功回调
   const handleCopy = () => {
-    message.success(dict('NuwaxPC.Toast.Global.copiedSuccessfully'));
+    message.success(dict('PC.Toast.Global.copiedSuccessfully'));
   };
 
   // 格式化过期时间
@@ -168,7 +168,7 @@ const SettingAccount: React.FC = () => {
 
   return (
     <div className={cx(styles.container)}>
-      <h3>{dict('NuwaxPC.Pages.Setting.accountTitle')}</h3>
+      <h3>{dict('PC.Pages.Setting.accountTitle')}</h3>
       <UploadAvatar
         imageUrl={userInfo?.avatar}
         className={cx(styles.avatar)}
@@ -181,64 +181,59 @@ const SettingAccount: React.FC = () => {
         requiredMark={customizeRequiredNoStarMark}
         onFinish={onSaveUsername}
       >
-        <Form.Item label={dict('NuwaxPC.Pages.Setting.userName')}>
+        <Form.Item label={dict('PC.Pages.Setting.userName')}>
           <Form.Item
             noStyle
             name="userName"
             rules={[
               {
                 required: true,
-                message: dict('NuwaxPC.Pages.Setting.inputUserName'),
+                message: dict('PC.Pages.Setting.inputUserName'),
               },
             ]}
           >
             <Input
               rootClassName={cx(styles.input)}
-              placeholder={dict('NuwaxPC.Pages.Setting.inputUserName')}
+              placeholder={dict('PC.Pages.Setting.inputUserName')}
               showCount
               maxLength={50}
             />
           </Form.Item>
           <Form.Item noStyle>
             <Button type="primary" loading={loading} htmlType="submit">
-              {dict('NuwaxPC.Common.Global.save')}
+              {dict('PC.Common.Global.save')}
             </Button>
           </Form.Item>
         </Form.Item>
-        <Form.Item label={dict('NuwaxPC.Pages.Setting.nickName')}>
+        <Form.Item label={dict('PC.Pages.Setting.nickName')}>
           <Form.Item noStyle name="nickName">
             <Input
               rootClassName={cx(styles.input)}
-              placeholder={dict('NuwaxPC.Pages.Setting.inputNickName')}
+              placeholder={dict('PC.Pages.Setting.inputNickName')}
               showCount
               maxLength={50}
             />
           </Form.Item>
           <Form.Item noStyle>
             <Button type="primary" loading={loading} htmlType="submit">
-              {dict('NuwaxPC.Common.Global.save')}
+              {dict('PC.Common.Global.save')}
             </Button>
           </Form.Item>
         </Form.Item>
       </Form>
-      <h4 className={cx(styles.name)}>{dict('NuwaxPC.Pages.Setting.phone')}</h4>
+      <h4 className={cx(styles.name)}>{dict('PC.Pages.Setting.phone')}</h4>
       <span className={cx(styles.text, styles['mb-30'])}>
         {userInfo?.phone}
       </span>
-      <h4 className={cx(styles.name)}>{dict('NuwaxPC.Pages.Setting.email')}</h4>
+      <h4 className={cx(styles.name)}>{dict('PC.Pages.Setting.email')}</h4>
       <span className={cx(styles.text, styles['mb-30'])}>
-        {userInfo?.email || dict('NuwaxPC.Pages.Setting.bindPending')}
+        {userInfo?.email || dict('PC.Pages.Setting.bindPending')}
       </span>
       <h4 className={cx(styles.name)}>
-        {dict('NuwaxPC.Pages.Setting.dynamicCode')}
+        {dict('PC.Pages.Setting.dynamicCode')}
         {expireTime && (
           <span className={cx(styles.expireTime)}>
-            (
-            {dict(
-              'NuwaxPC.Pages.Setting.expiresAt',
-              formatExpireTime(expireTime),
-            )}
-            )
+            ({dict('PC.Pages.Setting.expiresAt', formatExpireTime(expireTime))})
           </span>
         )}
       </h4>
@@ -248,7 +243,7 @@ const SettingAccount: React.FC = () => {
           text={dynamicCode ? String(dynamicCode) : ''}
           onCopy={handleCopy}
         >
-          <Tooltip title={dict('NuwaxPC.Common.Global.copy')}>
+          <Tooltip title={dict('PC.Common.Global.copy')}>
             <Button
               size="small"
               type="link"
@@ -257,7 +252,7 @@ const SettingAccount: React.FC = () => {
             />
           </Tooltip>
         </CopyToClipboard>
-        <Tooltip title={dict('NuwaxPC.Common.Global.refresh')}>
+        <Tooltip title={dict('PC.Common.Global.refresh')}>
           <Button
             size="small"
             type="link"
@@ -269,12 +264,12 @@ const SettingAccount: React.FC = () => {
         </Tooltip>
       </div>
       <h4 className={cx(styles.name, styles['mt-30'])}>
-        {dict('NuwaxPC.Pages.Setting.language')}
+        {dict('PC.Pages.Setting.language')}
       </h4>
       <div className={cx(styles['language-row'])}>
         <Select
           className={cx(styles['language-select'])}
-          placeholder={dict('NuwaxPC.Pages.Setting.selectLanguage')}
+          placeholder={dict('PC.Pages.Setting.selectLanguage')}
           options={languageOptions}
           value={language || undefined}
           onChange={(value) => setLanguage((value || '').toLowerCase())}
@@ -286,7 +281,7 @@ const SettingAccount: React.FC = () => {
           loading={languageSaving}
           disabled={!language}
         >
-          {dict('NuwaxPC.Common.Global.save')}
+          {dict('PC.Common.Global.save')}
         </Button>
       </div>
     </div>

@@ -13,6 +13,7 @@ import {
   apiAgentConversationMessageList,
   apiAgentConversationUpdate,
 } from '@/services/agentConfig';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiEnsurePod,
   apiGetStaticFileList,
@@ -68,7 +69,6 @@ import {
 } from '@/types/interfaces/vncDesktop';
 import { extractTaskResult } from '@/utils';
 import { modalConfirm } from '@/utils/ant-custom';
-import { dict } from '@/services/i18nRuntime';
 import { isEmptyObject } from '@/utils/common';
 import eventBus from '@/utils/eventBus';
 import { createSSEConnection } from '@/utils/fetchEventSourceConversationInfo';
@@ -260,7 +260,9 @@ export default () => {
       onSuccess: (result: RequestResponse<null>) => {
         const { code } = result;
         if (code === SUCCESS_CODE) {
-          message.success(dict('NuwaxPC.Models.ConversationInfo.restartAgentSuccess'));
+          message.success(
+            dict('PC.Models.ConversationInfo.restartAgentSuccess'),
+          );
         }
       },
     },
@@ -1005,8 +1007,8 @@ export default () => {
             (!data?.success && data?.error?.includes('正在执行任务'))
           ) {
             modalConfirm(
-              dict('NuwaxPC.Models.ConversationInfo.taskConflictTitle'),
-              dict('NuwaxPC.Models.ConversationInfo.taskConflictContent'),
+              dict('PC.Models.ConversationInfo.taskConflictTitle'),
+              dict('PC.Models.ConversationInfo.taskConflictContent'),
               () => {
                 if (params?.conversationId) {
                   runStopConversation(params?.conversationId.toString());
@@ -1160,7 +1162,7 @@ export default () => {
         perfLifecycle.onCloseRenderComplete();
       },
       onError: () => {
-        message.error(dict('NuwaxPC.Models.ConversationInfo.networkTimeoutError'));
+        message.error(dict('PC.Models.ConversationInfo.networkTimeoutError'));
         // 将当前会话的loading状态的消息改为Error状态
         const list =
           messageListRef.current?.map((info: MessageInfo) => {

@@ -17,7 +17,7 @@ const PluginInNode: React.FC<NodeDisposeProps> = ({ form }) => {
             <div className="node-item-style">
               <TreeInput
                 form={form}
-                title={t('NuwaxPC.Pages.AntvX6Data.input')}
+                title={t('PC.Pages.AntvX6Data.input')}
                 params={form.getFieldValue('inputArgs')}
               />
             </div>
@@ -30,7 +30,7 @@ const PluginInNode: React.FC<NodeDisposeProps> = ({ form }) => {
           form.getFieldValue('outputArgs') && (
             <>
               <div className="node-title-style margin-bottom">
-                {t('NuwaxPC.Pages.AntvX6Data.output')}
+                {t('PC.Pages.AntvX6Data.output')}
               </div>
               <TreeOutput treeData={form.getFieldValue('outputArgs')} />
             </>

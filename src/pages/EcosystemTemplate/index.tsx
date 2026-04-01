@@ -20,7 +20,6 @@ import {
 } from '@/constants/ecosystem.constants';
 import { ICON_MORE } from '@/constants/images.constants';
 import useEcoMarket from '@/hooks/useEcoMarket';
-import { dict } from '@/services/i18nRuntime';
 import {
   createClientConfigDraft,
   disableClientConfig,
@@ -33,6 +32,7 @@ import {
   updateClientConfigDraft,
   withdrawClientConfig,
 } from '@/services/ecosystem';
+import { dict } from '@/services/i18nRuntime';
 import {
   AgentAddComponentStatusEnum,
   AgentComponentTypeEnum,
@@ -231,7 +231,7 @@ export default function EcosystemTemplate() {
         setPluginData(result);
       } catch (error) {
         console.error('获取模板列表失败:', error);
-        message.error(dict('NuwaxPC.Pages.EcosystemTemplate.fetchListFailed'));
+        message.error(dict('PC.Pages.EcosystemTemplate.fetchListFailed'));
       } finally {
         setLoading(false);
       }
@@ -316,8 +316,9 @@ export default function EcosystemTemplate() {
     const isMyShare = activeTab === TabTypeEnum.SHARED;
     return {
       icon: config.icon || '',
-      title: config.name || dict('NuwaxPC.Pages.EcosystemTemplate.unnamedTemplate'),
-      description: config.description || dict('NuwaxPC.Pages.EcosystemTemplate.noDescription'),
+      title: config.name || dict('PC.Pages.EcosystemTemplate.unnamedTemplate'),
+      description:
+        config.description || dict('PC.Pages.EcosystemTemplate.noDescription'),
       isNewVersion: config.isNewVersion,
       author: config.author || '',
       targetType: config.targetType as AgentComponentTypeEnum,
@@ -335,8 +336,9 @@ export default function EcosystemTemplate() {
   ): EcosystemDetailDrawerData => {
     return {
       icon: config.icon || '',
-      title: config.name || dict('NuwaxPC.Pages.EcosystemTemplate.unnamedTemplate'),
-      description: config.description || dict('NuwaxPC.Pages.EcosystemTemplate.noDescription'),
+      title: config.name || dict('PC.Pages.EcosystemTemplate.unnamedTemplate'),
+      description:
+        config.description || dict('PC.Pages.EcosystemTemplate.noDescription'),
       isNewVersion: config.isNewVersion || false,
       author: config.author || '',
       dataType: config.dataType as EcosystemDataTypeEnum,
@@ -376,16 +378,16 @@ export default function EcosystemTemplate() {
         configParamJson: JSON.stringify(values),
       });
     } catch (error) {
-      message.error(dict('NuwaxPC.Pages.EcosystemTemplate.updateFailed'));
+      message.error(dict('PC.Pages.EcosystemTemplate.updateFailed'));
       return false;
     }
     if (result) {
       setDrawerVisible(false);
-      message.success(dict('NuwaxPC.Pages.EcosystemTemplate.updateSuccess'));
+      message.success(dict('PC.Pages.EcosystemTemplate.updateSuccess'));
       refreshPluginList();
       return true;
     }
-    message.error(dict('NuwaxPC.Pages.EcosystemTemplate.updateFailed'));
+    message.error(dict('PC.Pages.EcosystemTemplate.updateFailed'));
     return false;
   };
 
@@ -399,16 +401,16 @@ export default function EcosystemTemplate() {
       // 如果是已发布状态，调用下线接口
       result = await disableClientConfig(selectedPlugin.uid);
     } catch (error) {
-      message.error(dict('NuwaxPC.Pages.EcosystemTemplate.offlineFailed'));
+      message.error(dict('PC.Pages.EcosystemTemplate.offlineFailed'));
       return false;
     }
     if (result) {
-      message.success(dict('NuwaxPC.Pages.EcosystemTemplate.offlineSuccess'));
+      message.success(dict('PC.Pages.EcosystemTemplate.offlineSuccess'));
       setDrawerVisible(false);
       refreshPluginList();
       return true;
     }
-    message.error(dict('NuwaxPC.Pages.EcosystemTemplate.offlineFailed'));
+    message.error(dict('PC.Pages.EcosystemTemplate.offlineFailed'));
     return false;
   };
 
@@ -488,7 +490,11 @@ export default function EcosystemTemplate() {
       }
 
       if (result) {
-        message.success(isEditMode ? dict('NuwaxPC.Pages.EcosystemTemplate.updateSuccess') : dict('NuwaxPC.Pages.EcosystemTemplate.createSuccess'));
+        message.success(
+          isEditMode
+            ? dict('PC.Pages.EcosystemTemplate.updateSuccess')
+            : dict('PC.Pages.EcosystemTemplate.createSuccess'),
+        );
         refreshPluginListAndReset();
         return true;
       } else {
@@ -557,7 +563,7 @@ export default function EcosystemTemplate() {
       }
     } catch (error) {
       console.error('获取数据失败:', error);
-      message.error(dict('NuwaxPC.Pages.EcosystemTemplate.fetchDataFailed'));
+      message.error(dict('PC.Pages.EcosystemTemplate.fetchDataFailed'));
     } finally {
       setLoading(false);
     }
@@ -582,15 +588,15 @@ export default function EcosystemTemplate() {
     items: [
       {
         key: AgentComponentTypeEnum.Agent,
-        label: dict('NuwaxPC.Pages.EcosystemTemplate.agent'),
+        label: dict('PC.Pages.EcosystemTemplate.agent'),
       },
       {
         key: AgentComponentTypeEnum.Workflow,
-        label: dict('NuwaxPC.Pages.EcosystemTemplate.workflow'),
+        label: dict('PC.Pages.EcosystemTemplate.workflow'),
       },
       {
         key: AgentComponentTypeEnum.Page,
-        label: dict('NuwaxPC.Pages.EcosystemTemplate.pageApp'),
+        label: dict('PC.Pages.EcosystemTemplate.pageApp'),
       },
     ],
     onClick: (e: any) => {
@@ -672,7 +678,7 @@ export default function EcosystemTemplate() {
             setDrawerVisible(true);
           }
         } catch (error) {
-          message.error(dict('NuwaxPC.Pages.EcosystemTemplate.fetchDetailFailed'));
+          message.error(dict('PC.Pages.EcosystemTemplate.fetchDetailFailed'));
         }
       }
     }
@@ -688,7 +694,7 @@ export default function EcosystemTemplate() {
     }
 
     if (result) {
-      message.success(dict('NuwaxPC.Pages.EcosystemTemplate.templateOffline'));
+      message.success(dict('PC.Pages.EcosystemTemplate.templateOffline'));
       refreshPluginList();
       return true;
     }
@@ -705,7 +711,7 @@ export default function EcosystemTemplate() {
     }
 
     if (result) {
-      message.success(dict('NuwaxPC.Pages.EcosystemTemplate.templateWithdrawn'));
+      message.success(dict('PC.Pages.EcosystemTemplate.templateWithdrawn'));
       refreshPluginList();
       return true;
     }
@@ -741,7 +747,7 @@ export default function EcosystemTemplate() {
         <div className={cx(styles.headerRight)}>
           <Search
             className={cx(styles.searchInput)}
-            placeholder={dict('NuwaxPC.Pages.EcosystemTemplate.searchPlaceholder')}
+            placeholder={dict('PC.Pages.EcosystemTemplate.searchPlaceholder')}
             value={searchKeyword}
             onChange={(e) => setSearchKeyword(e.target.value)}
             onSearch={handleSearch}
@@ -751,7 +757,7 @@ export default function EcosystemTemplate() {
           <Dropdown menu={menuProps}>
             <Button type="primary">
               <PlusOutlined />
-              {dict('NuwaxPC.Pages.EcosystemTemplate.createShare')}
+              {dict('PC.Pages.EcosystemTemplate.createShare')}
               <DownOutlined />
             </Button>
           </Dropdown>
@@ -762,7 +768,7 @@ export default function EcosystemTemplate() {
       <div className={cx(styles.headerRight)}>
         <Search
           className={cx(styles.searchInput)}
-          placeholder={dict('NuwaxPC.Pages.EcosystemTemplate.searchPlaceholder')}
+          placeholder={dict('PC.Pages.EcosystemTemplate.searchPlaceholder')}
           value={searchKeyword}
           onChange={(e) => setSearchKeyword(e.target.value)}
           onSearch={handleSearch}
@@ -796,7 +802,9 @@ export default function EcosystemTemplate() {
       >
         <div className={cx(styles.header)}>
           <Space>
-            <h3 className={cx(styles.title)}>{dict('NuwaxPC.Pages.EcosystemTemplate.title')}</h3>
+            <h3 className={cx(styles.title)}>
+              {dict('PC.Pages.EcosystemTemplate.title')}
+            </h3>
             <Segmented
               className={cx(styles.segmented)}
               options={SPACE_SQUARE_SEGMENTED_LIST}
@@ -870,7 +878,9 @@ export default function EcosystemTemplate() {
                         avatar={''}
                         userName={config.author || ''}
                         created={config.created || ''}
-                        overlayText={dict('NuwaxPC.Pages.EcosystemTemplate.viewDetail')}
+                        overlayText={dict(
+                          'PC.Pages.EcosystemTemplate.viewDetail',
+                        )}
                         isNewVersion={config.isNewVersion}
                         isEnabled={
                           activeTab === TabTypeEnum.ALL
@@ -958,7 +968,7 @@ export default function EcosystemTemplate() {
                   'items-center',
                   'content-center',
                 )}
-                description={dict('NuwaxPC.Common.Global.emptyData')}
+                description={dict('PC.Common.Global.emptyData')}
               />
             </div>
           )}

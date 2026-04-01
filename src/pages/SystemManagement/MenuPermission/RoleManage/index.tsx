@@ -152,7 +152,7 @@ const RoleManage: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(t('NuwaxPC.Pages.SystemRoleManage.deleteSuccess'));
+      message.success(t('PC.Pages.SystemRoleManage.deleteSuccess'));
       actionRef.current?.reload();
     },
   });
@@ -201,8 +201,8 @@ const RoleManage: React.FC = () => {
   // Confirm delete.
   const handleDeleteConfirm = (roleInfo: RoleInfo) => {
     modalConfirm(
-      t('NuwaxPC.Pages.SystemRoleManage.deleteRoleTitle'),
-      t('NuwaxPC.Pages.SystemRoleManage.deleteRoleConfirm', roleInfo.name),
+      t('PC.Pages.SystemRoleManage.deleteRoleTitle'),
+      t('PC.Pages.SystemRoleManage.deleteRoleConfirm', roleInfo.name),
       () => {
         runDelete(roleInfo.id);
         return new Promise((resolve) => {
@@ -263,7 +263,7 @@ const RoleManage: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(t('NuwaxPC.Pages.SystemRoleManage.sortUpdated'));
+      message.success(t('PC.Pages.SystemRoleManage.sortUpdated'));
       isDraggingRef.current = false;
       originalDataRef.current = null;
     },
@@ -323,7 +323,7 @@ const RoleManage: React.FC = () => {
   // Table columns.
   const columns: ProColumns<RoleInfo & { key: number }>[] = [
     {
-      title: t('NuwaxPC.Pages.SystemRoleManage.columnSort'),
+      title: t('PC.Pages.SystemRoleManage.columnSort'),
       key: 'sort',
       align: 'center',
       width: 80,
@@ -332,7 +332,7 @@ const RoleManage: React.FC = () => {
       render: () => <DragHandle />,
     },
     {
-      title: t('NuwaxPC.Pages.SystemRoleManage.columnRoleName'),
+      title: t('PC.Pages.SystemRoleManage.columnRoleName'),
       dataIndex: 'name',
       key: 'name',
       width: 200,
@@ -340,14 +340,14 @@ const RoleManage: React.FC = () => {
       valueType: 'text',
     },
     {
-      title: t('NuwaxPC.Pages.SystemRoleManage.columnCode'),
+      title: t('PC.Pages.SystemRoleManage.columnCode'),
       dataIndex: 'code',
       key: 'code',
       width: 150,
       valueType: 'text',
     },
     {
-      title: t('NuwaxPC.Pages.SystemRoleManage.columnDescription'),
+      title: t('PC.Pages.SystemRoleManage.columnDescription'),
       dataIndex: 'description',
       key: 'description',
       ellipsis: true,
@@ -357,8 +357,8 @@ const RoleManage: React.FC = () => {
     {
       title: (
         <span>
-          {t('NuwaxPC.Pages.SystemRoleManage.columnStatus')}
-          <Tooltip title={t('NuwaxPC.Pages.SystemRoleManage.statusTooltip')}>
+          {t('PC.Pages.SystemRoleManage.columnStatus')}
+          <Tooltip title={t('PC.Pages.SystemRoleManage.statusTooltip')}>
             <InfoCircleOutlined
               style={{ marginLeft: 4, color: '#999', cursor: 'help' }}
             />
@@ -375,15 +375,15 @@ const RoleManage: React.FC = () => {
         <Tooltip
           title={
             record.source === RoleSourceEnum.SystemBuiltIn
-              ? t('NuwaxPC.Pages.SystemRoleManage.builtInCannotDisable')
+              ? t('PC.Pages.SystemRoleManage.builtInCannotDisable')
               : ''
           }
         >
           <Switch
             disabled={record.source === RoleSourceEnum.SystemBuiltIn}
             checked={record.status === RoleStatusEnum.Enabled}
-            checkedChildren={t('NuwaxPC.Pages.SystemRoleManage.enabled')}
-            unCheckedChildren={t('NuwaxPC.Pages.SystemRoleManage.disabled')}
+            checkedChildren={t('PC.Pages.SystemRoleManage.enabled')}
+            unCheckedChildren={t('PC.Pages.SystemRoleManage.disabled')}
             loading={updateStatusLoadingMap[record.id] || false}
             onChange={(checked) => handleUpdateStatus(record, checked)}
           />
@@ -391,7 +391,7 @@ const RoleManage: React.FC = () => {
       ),
     },
     {
-      title: t('NuwaxPC.Pages.SystemRoleManage.columnAction'),
+      title: t('PC.Pages.SystemRoleManage.columnAction'),
       key: 'action',
       align: 'center',
       width: 260,
@@ -406,9 +406,9 @@ const RoleManage: React.FC = () => {
           hasPermissionByMenuCode('role_manage', 'role_manage_modify') &&
           !isSystemBuiltIn;
         const editTooltip = isSystemBuiltIn
-          ? t('NuwaxPC.Pages.SystemRoleManage.builtInCannotEdit')
+          ? t('PC.Pages.SystemRoleManage.builtInCannotEdit')
           : !hasPermissionByMenuCode('role_manage', 'role_manage_modify')
-          ? t('NuwaxPC.Pages.SystemRoleManage.noPermission')
+          ? t('PC.Pages.SystemRoleManage.noPermission')
           : '';
 
         // Delete permission checks.
@@ -416,22 +416,22 @@ const RoleManage: React.FC = () => {
           hasPermissionByMenuCode('role_manage', 'role_manage_delete') &&
           !isSystemBuiltIn;
         const deleteTooltip = isSystemBuiltIn
-          ? t('NuwaxPC.Pages.SystemRoleManage.builtInCannotDelete')
+          ? t('PC.Pages.SystemRoleManage.builtInCannotDelete')
           : !hasPermissionByMenuCode('role_manage', 'role_manage_delete')
-          ? t('NuwaxPC.Pages.SystemRoleManage.noPermission')
+          ? t('PC.Pages.SystemRoleManage.noPermission')
           : '';
 
         // Build more actions menu.
         const moreActionList: CustomPopoverItem[] = [
           {
             key: 'edit',
-            label: t('NuwaxPC.Pages.SystemRoleManage.edit'),
+            label: t('PC.Pages.SystemRoleManage.edit'),
             disabled: !canEdit,
             tooltip: editTooltip,
           },
           {
             key: 'delete',
-            label: t('NuwaxPC.Pages.SystemRoleManage.delete'),
+            label: t('PC.Pages.SystemRoleManage.delete'),
             disabled: !canDelete,
             tooltip: deleteTooltip,
           },
@@ -454,7 +454,7 @@ const RoleManage: React.FC = () => {
             <Tooltip
               title={
                 !hasPermissionByMenuCode('role_manage', 'role_manage_bind_user')
-                  ? t('NuwaxPC.Pages.SystemRoleManage.noPermission')
+                  ? t('PC.Pages.SystemRoleManage.noPermission')
                   : ''
               }
             >
@@ -469,13 +469,13 @@ const RoleManage: React.FC = () => {
                 }
                 onClick={() => handleBindUser(record)}
               >
-                {t('NuwaxPC.Pages.SystemRoleManage.bindUser')}
+                {t('PC.Pages.SystemRoleManage.bindUser')}
               </Button>
             </Tooltip>
             <Tooltip
               title={
                 !hasPermissionByMenuCode('role_manage', 'role_manage_bind_menu')
-                  ? t('NuwaxPC.Pages.SystemRoleManage.noPermission')
+                  ? t('PC.Pages.SystemRoleManage.noPermission')
                   : ''
               }
             >
@@ -490,13 +490,13 @@ const RoleManage: React.FC = () => {
                 }
                 onClick={() => handleMenuPermission(record)}
               >
-                {t('NuwaxPC.Pages.SystemRoleManage.menuPermission')}
+                {t('PC.Pages.SystemRoleManage.menuPermission')}
               </Button>
             </Tooltip>
             <Tooltip
               title={
                 !hasPermissionByMenuCode('role_manage', 'role_manage_bind_data')
-                  ? t('NuwaxPC.Pages.SystemRoleManage.noPermission')
+                  ? t('PC.Pages.SystemRoleManage.noPermission')
                   : ''
               }
             >
@@ -511,7 +511,7 @@ const RoleManage: React.FC = () => {
                 }
                 onClick={() => handleDataPermission(record)}
               >
-                {t('NuwaxPC.Pages.SystemRoleManage.dataPermission')}
+                {t('PC.Pages.SystemRoleManage.dataPermission')}
               </Button>
             </Tooltip>
             <CustomPopover
@@ -528,7 +528,7 @@ const RoleManage: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={t('NuwaxPC.Pages.SystemRoleManage.pageTitle')}
+      title={t('PC.Pages.SystemRoleManage.pageTitle')}
       hideScroll
       rightSlot={
         hasPermissionByMenuCode('role_manage', 'role_manage_add') && (
@@ -538,7 +538,7 @@ const RoleManage: React.FC = () => {
             icon={<PlusOutlined />}
             onClick={handleAdd}
           >
-            {t('NuwaxPC.Pages.SystemRoleManage.addRole')}
+            {t('PC.Pages.SystemRoleManage.addRole')}
           </Button>
         )
       }
@@ -585,7 +585,7 @@ const RoleManage: React.FC = () => {
             locale={{
               emptyText: (
                 <Empty
-                  description={t('NuwaxPC.Pages.SystemRoleManage.emptyData')}
+                  description={t('PC.Pages.SystemRoleManage.emptyData')}
                   image={Empty.PRESENTED_IMAGE_SIMPLE}
                   className={cx(styles.empty)}
                 />

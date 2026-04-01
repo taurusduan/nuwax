@@ -1,7 +1,7 @@
+import { dict } from '@/services/i18nRuntime';
 import type { SubmitButtonProps } from '@/types/interfaces/common';
 import { Button, Form } from 'antd';
 import classNames from 'classnames';
-import { dict } from '@/services/i18nRuntime';
 import React, { useEffect, useState } from 'react';
 import styles from './index.less';
 
@@ -36,7 +36,7 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
       className={cx(!submittable && styles['confirm-btn'], styles.btn)}
       disabled={disabled || !submittable}
     >
-      {okText || dict('NuwaxPC.Components.SubmitButton.confirm')}
+      {okText || dict('PC.Components.SubmitButton.confirm')}
     </Button>
   );
 };

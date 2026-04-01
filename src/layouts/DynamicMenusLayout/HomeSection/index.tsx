@@ -133,7 +133,7 @@ const HomeSection: React.FC<{
       <ConditionRender condition={usedAgentList !== undefined}>
         <div className={cx(styles['title-row'])}>
           <h3 className={cx(styles.title)} style={{ marginTop: 0 }}>
-            {dict('NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.recentlyUsed')}
+            {dict('PC.Layouts.DynamicMenusLayout.HomeSection.recentlyUsed')}
           </h3>
         </div>
         {usedAgentList?.length ? (
@@ -149,22 +149,29 @@ const HomeSection: React.FC<{
           </div>
         ) : (
           <>
-            <div className={cx(styles['no-used'])}>{dict('NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.noAgentUsed')}</div>
             <div className={cx(styles['no-used'])}>
-              {dict('NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.exploreSquare')}
+              {dict('PC.Layouts.DynamicMenusLayout.HomeSection.noAgentUsed')}
+            </div>
+            <div className={cx(styles['no-used'])}>
+              {dict('PC.Layouts.DynamicMenusLayout.HomeSection.exploreSquare')}
             </div>
           </>
         )}
       </ConditionRender>
       <ConditionRender condition={conversationList !== undefined}>
         <div className={cx(styles['title-row'])}>
-          <h3 className={cx(styles.title)}>{dict('NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.conversationHistory')}</h3>
+          <h3 className={cx(styles.title)}>
+            {dict(
+              'PC.Layouts.DynamicMenusLayout.HomeSection.conversationHistory',
+            )}
+          </h3>
           <ConditionRender condition={conversationList?.length}>
             <span
               className={cx(styles['more-conversation'])}
               onClick={handleAllConversation}
             >
-              {dict('NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.viewAll')} <RightOutlined />
+              {dict('PC.Layouts.DynamicMenusLayout.HomeSection.viewAll')}{' '}
+              <RightOutlined />
             </span>
           </ConditionRender>
         </div>
@@ -184,9 +191,13 @@ const HomeSection: React.FC<{
             )
           ) : (
             <>
-              <div className={cx(styles['no-used'])}>{dict('NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.lookRight')}</div>
               <div className={cx(styles['no-used'])}>
-                {dict('NuwaxPC.Layouts.DynamicMenusLayout.HomeSection.startFirstConversation')}
+                {dict('PC.Layouts.DynamicMenusLayout.HomeSection.lookRight')}
+              </div>
+              <div className={cx(styles['no-used'])}>
+                {dict(
+                  'PC.Layouts.DynamicMenusLayout.HomeSection.startFirstConversation',
+                )}
               </div>
             </>
           )}

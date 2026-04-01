@@ -70,9 +70,9 @@ const getDataPermissionTabItems = (): TabsProps['items'] => [
     key: 'model',
     label: (
       <span>
-        {t('NuwaxPC.Pages.SystemMenuDataPermissionModal.tabModel')}
+        {t('PC.Pages.SystemMenuDataPermissionModal.tabModel')}
         <Tooltip
-          title={t('NuwaxPC.Pages.SystemMenuDataPermissionModal.tabModelTip')}
+          title={t('PC.Pages.SystemMenuDataPermissionModal.tabModelTip')}
         >
           <InfoCircleOutlined
             style={{ marginLeft: 4, color: '#999', cursor: 'help' }}
@@ -85,11 +85,9 @@ const getDataPermissionTabItems = (): TabsProps['items'] => [
     key: 'agent',
     label: (
       <span>
-        {t('NuwaxPC.Pages.SystemMenuDataPermissionModal.tabAgent')}
+        {t('PC.Pages.SystemMenuDataPermissionModal.tabAgent')}
         <Tooltip
-          title={t(
-            'NuwaxPC.Pages.SystemMenuDataPermissionModal.contentMgmtTip',
-          )}
+          title={t('PC.Pages.SystemMenuDataPermissionModal.contentMgmtTip')}
         >
           <InfoCircleOutlined
             style={{ marginLeft: 4, color: '#999', cursor: 'help' }}
@@ -102,11 +100,9 @@ const getDataPermissionTabItems = (): TabsProps['items'] => [
     key: 'page',
     label: (
       <span>
-        {t('NuwaxPC.Pages.SystemMenuDataPermissionModal.tabWebApp')}
+        {t('PC.Pages.SystemMenuDataPermissionModal.tabWebApp')}
         <Tooltip
-          title={t(
-            'NuwaxPC.Pages.SystemMenuDataPermissionModal.contentMgmtTip',
-          )}
+          title={t('PC.Pages.SystemMenuDataPermissionModal.contentMgmtTip')}
         >
           <InfoCircleOutlined
             style={{ marginLeft: 4, color: '#999', cursor: 'help' }}
@@ -117,7 +113,7 @@ const getDataPermissionTabItems = (): TabsProps['items'] => [
   },
   {
     key: 'dataPermission',
-    label: t('NuwaxPC.Pages.SystemMenuDataPermissionModal.tabDevPermission'),
+    label: t('PC.Pages.SystemMenuDataPermissionModal.tabDevPermission'),
   },
 ];
 
@@ -505,7 +501,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
       debounceInterval: 300,
       onSuccess: () => {
         message.success(
-          t('NuwaxPC.Pages.SystemMenuDataPermissionModal.saveSuccess'),
+          t('PC.Pages.SystemMenuDataPermissionModal.saveSuccess'),
         );
         onCancel();
       },
@@ -515,7 +511,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
   const handleOk = async () => {
     if (!targetId) {
       message.error(
-        t('NuwaxPC.Pages.SystemMenuDataPermissionModal.missingTargetId'),
+        t('PC.Pages.SystemMenuDataPermissionModal.missingTargetId'),
       );
       return;
     }
@@ -658,9 +654,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           ))
         ) : (
           <div className={cx(styles.empty)}>
-            {t(
-              'NuwaxPC.Pages.SystemMenuDataPermissionModal.emptySelectedModel',
-            )}
+            {t('PC.Pages.SystemMenuDataPermissionModal.emptySelectedModel')}
           </div>
         )}
       </div>
@@ -684,7 +678,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
         <Input.Search
           key="agentSearch"
           placeholder={t(
-            'NuwaxPC.Pages.SystemMenuDataPermissionModal.searchAgentPlaceholder',
+            'PC.Pages.SystemMenuDataPermissionModal.searchAgentPlaceholder',
           )}
           allowClear
           className={cx(styles.searchInput)}
@@ -758,9 +752,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           ))
         ) : (
           <div className={cx(styles.empty)}>
-            {t(
-              'NuwaxPC.Pages.SystemMenuDataPermissionModal.emptySelectedAgent',
-            )}
+            {t('PC.Pages.SystemMenuDataPermissionModal.emptySelectedAgent')}
           </div>
         )}
       </div>
@@ -783,7 +775,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
         <Input.Search
           key="pageSearch"
           placeholder={t(
-            'NuwaxPC.Pages.SystemMenuDataPermissionModal.searchWebAppPlaceholder',
+            'PC.Pages.SystemMenuDataPermissionModal.searchWebAppPlaceholder',
           )}
           allowClear
           className={cx(styles.searchInput)}
@@ -857,9 +849,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           ))
         ) : (
           <div className={cx(styles.empty)}>
-            {t(
-              'NuwaxPC.Pages.SystemMenuDataPermissionModal.emptySelectedWebApp',
-            )}
+            {t('PC.Pages.SystemMenuDataPermissionModal.emptySelectedWebApp')}
           </div>
         )}
       </div>
@@ -886,19 +876,19 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           <Col span={12}>
             <Form.Item
               label={t(
-                'NuwaxPC.Pages.SystemMenuDataPermissionModal.tokenLimitLabel',
+                'PC.Pages.SystemMenuDataPermissionModal.tokenLimitLabel',
               )}
               name={['tokenLimit', 'limitPerDay']}
               tooltip={{
                 icon: <InfoCircleOutlined />,
                 title: t(
-                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tokenLimitTip',
+                  'PC.Pages.SystemMenuDataPermissionModal.tokenLimitTip',
                 ),
               }}
             >
               <InputNumber
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.tokenLimitPlaceholder',
+                  'PC.Pages.SystemMenuDataPermissionModal.tokenLimitPlaceholder',
                 )}
                 className={cx('w-full')}
                 min={-1}
@@ -909,13 +899,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           <Col span={12}>
             <Form.Item
               label={t(
-                'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxSpaceCountLabel',
+                'PC.Pages.SystemMenuDataPermissionModal.maxSpaceCountLabel',
               )}
               name="maxSpaceCount"
               tooltip={{
                 icon: <InfoCircleOutlined />,
                 title: t(
-                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxSpaceCountTip',
+                  'PC.Pages.SystemMenuDataPermissionModal.maxSpaceCountTip',
                 ),
               }}
             >
@@ -925,13 +915,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           <Col span={12}>
             <Form.Item
               label={t(
-                'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxAgentCountLabel',
+                'PC.Pages.SystemMenuDataPermissionModal.maxAgentCountLabel',
               )}
               name="maxAgentCount"
               tooltip={{
                 icon: <InfoCircleOutlined />,
                 title: t(
-                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxAgentCountTip',
+                  'PC.Pages.SystemMenuDataPermissionModal.maxAgentCountTip',
                 ),
               }}
             >
@@ -941,13 +931,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           <Col span={12}>
             <Form.Item
               label={t(
-                'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxWebAppCountLabel',
+                'PC.Pages.SystemMenuDataPermissionModal.maxWebAppCountLabel',
               )}
               name="maxPageAppCount"
               tooltip={{
                 icon: <InfoCircleOutlined />,
                 title: t(
-                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxWebAppCountTip',
+                  'PC.Pages.SystemMenuDataPermissionModal.maxWebAppCountTip',
                 ),
               }}
             >
@@ -957,13 +947,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           <Col span={12}>
             <Form.Item
               label={t(
-                'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountLabel',
+                'PC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountLabel',
               )}
               name="maxKnowledgeCount"
               tooltip={{
                 icon: <InfoCircleOutlined />,
                 title: t(
-                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountTip',
+                  'PC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountTip',
                 ),
               }}
             >
@@ -973,13 +963,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           <Col span={12}>
             <Form.Item
               label={t(
-                'NuwaxPC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbLabel',
+                'PC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbLabel',
               )}
               name="knowledgeStorageLimitGb"
               tooltip={{
                 icon: <InfoCircleOutlined />,
                 title: t(
-                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbTip',
+                  'PC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbTip',
                 ),
               }}
             >
@@ -1006,13 +996,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           <Col span={12}>
             <Form.Item
               label={t(
-                'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxDataTableCountLabel',
+                'PC.Pages.SystemMenuDataPermissionModal.maxDataTableCountLabel',
               )}
               name="maxDataTableCount"
               tooltip={{
                 icon: <InfoCircleOutlined />,
                 title: t(
-                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxDataTableCountTip',
+                  'PC.Pages.SystemMenuDataPermissionModal.maxDataTableCountTip',
                 ),
               }}
             >
@@ -1022,13 +1012,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           <Col span={12}>
             <Form.Item
               label={t(
-                'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountLabel',
+                'PC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountLabel',
               )}
               name="maxScheduledTaskCount"
               tooltip={{
                 icon: <InfoCircleOutlined />,
                 title: t(
-                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountTip',
+                  'PC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountTip',
                 ),
               }}
             >
@@ -1038,14 +1028,14 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           <Col span={12}>
             <Form.Item
               label={t(
-                'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentMemoryGbLabel',
+                'PC.Pages.SystemMenuDataPermissionModal.agentMemoryGbLabel',
               )}
               name="agentComputerMemoryGb"
               initialValue={4}
               tooltip={{
                 icon: <InfoCircleOutlined />,
                 title: t(
-                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentMemoryGbTip',
+                  'PC.Pages.SystemMenuDataPermissionModal.agentMemoryGbTip',
                 ),
               }}
             >
@@ -1055,14 +1045,14 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           <Col span={12}>
             <Form.Item
               label={t(
-                'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentCpuCoresLabel',
+                'PC.Pages.SystemMenuDataPermissionModal.agentCpuCoresLabel',
               )}
               name="agentComputerCpuCores"
               initialValue={2}
               tooltip={{
                 icon: <InfoCircleOutlined />,
                 title: t(
-                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentCpuCoresTip',
+                  'PC.Pages.SystemMenuDataPermissionModal.agentCpuCoresTip',
                 ),
               }}
             >
@@ -1072,13 +1062,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           <Col span={12}>
             <Form.Item
               label={t(
-                'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitLabel',
+                'PC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitLabel',
               )}
               name="agentDailyPromptLimit"
               tooltip={{
                 icon: <InfoCircleOutlined />,
                 title: t(
-                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitTip',
+                  'PC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitTip',
                 ),
               }}
             >
@@ -1088,13 +1078,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           <Col span={12}>
             <Form.Item
               label={t(
-                'NuwaxPC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitLabel',
+                'PC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitLabel',
               )}
               name="pageDailyPromptLimit"
               tooltip={{
                 icon: <InfoCircleOutlined />,
                 title: t(
-                  'NuwaxPC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitTip',
+                  'PC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitTip',
                 ),
               }}
             >
@@ -1120,14 +1110,14 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
   return (
     <Modal
       title={t(
-        'NuwaxPC.Pages.SystemMenuDataPermissionModal.titleWithName',
+        'PC.Pages.SystemMenuDataPermissionModal.titleWithName',
         name || '',
       )}
       open={open}
       onCancel={onCancel}
       onOk={handleOk}
-      okText={t('NuwaxPC.Common.Global.confirm')}
-      cancelText={t('NuwaxPC.Common.Global.cancel')}
+      okText={t('PC.Common.Global.confirm')}
+      cancelText={t('PC.Common.Global.cancel')}
       confirmLoading={bindLoading}
       width={1000}
     >

@@ -23,9 +23,7 @@ const VersionAction: React.FC<VersionActionProps> = ({
       setHistoryLoading(true);
       const res = await service.apiRestoreWorkflowVersion(item.id);
       if (res.code === Constant.success) {
-        message.success(
-          dict('NuwaxPC.Pages.AntvX6VersionAction.restoreSuccess'),
-        );
+        message.success(dict('PC.Pages.AntvX6VersionAction.restoreSuccess'));
         setHistoryLoading(false);
         onRefresh();
         onClose();
@@ -66,7 +64,7 @@ const VersionAction: React.FC<VersionActionProps> = ({
             loading={historyLoading}
             onClick={() => handleRestoreVersion(data)}
           >
-            {dict('NuwaxPC.Pages.AntvX6VersionAction.restore')}
+            {dict('PC.Pages.AntvX6VersionAction.restore')}
           </Button>
         </div>
       )}

@@ -23,17 +23,17 @@ const TextFill: React.FC<TextFillProps> = ({ form }) => {
     >
       <Form.Item
         name="name"
-        label={dict('NuwaxPC.Pages.SpaceKnowledge.TextFill.docName')}
+        label={dict('PC.Pages.SpaceKnowledge.TextFill.docName')}
         rules={[
           {
             required: true,
-            message: dict('NuwaxPC.Pages.SpaceKnowledge.TextFill.inputDocName'),
+            message: dict('PC.Pages.SpaceKnowledge.TextFill.inputDocName'),
           },
         ]}
       >
         <Input
           placeholder={dict(
-            'NuwaxPC.Pages.SpaceKnowledge.TextFill.docNamePlaceholder',
+            'PC.Pages.SpaceKnowledge.TextFill.docNamePlaceholder',
           )}
           showCount
           maxLength={100}
@@ -41,19 +41,17 @@ const TextFill: React.FC<TextFillProps> = ({ form }) => {
       </Form.Item>
       <Form.Item
         name="fileContent"
-        label={dict('NuwaxPC.Pages.SpaceKnowledge.TextFill.docContent')}
+        label={dict('PC.Pages.SpaceKnowledge.TextFill.docContent')}
         rules={[
           {
             required: true,
-            message: dict(
-              'NuwaxPC.Pages.SpaceKnowledge.TextFill.inputDocContent',
-            ),
+            message: dict('PC.Pages.SpaceKnowledge.TextFill.inputDocContent'),
           },
         ]}
       >
         <TextArea
           placeholder={dict(
-            'NuwaxPC.Pages.SpaceKnowledge.TextFill.docContentPlaceholder',
+            'PC.Pages.SpaceKnowledge.TextFill.docContentPlaceholder',
           )}
           autoSize={{ minRows: 6, maxRows: 8 }}
         />

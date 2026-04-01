@@ -110,7 +110,7 @@ const LocalCustomDocModal: React.FC<LocalCustomDocModalProps> = ({
     debounceInterval: 300,
     onSuccess: () => {
       message.success(
-        dict('NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.docAddSuccess'),
+        dict('PC.Pages.SpaceKnowledge.LocalCustomDocModal.docAddSuccess'),
       );
       handleClear();
       onConfirm();
@@ -123,7 +123,7 @@ const LocalCustomDocModal: React.FC<LocalCustomDocModalProps> = ({
     debounceInterval: 300,
     onSuccess: () => {
       message.success(
-        dict('NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.docAddSuccess'),
+        dict('PC.Pages.SpaceKnowledge.LocalCustomDocModal.docAddSuccess'),
       );
       handleClear();
       onConfirm();
@@ -239,7 +239,7 @@ const LocalCustomDocModal: React.FC<LocalCustomDocModalProps> = ({
         return (
           <div className={cx('flex', 'content-end', styles.gap)}>
             <Button onClick={onCancel}>
-              {dict('NuwaxPC.Common.Global.cancel')}
+              {dict('PC.Common.Global.cancel')}
             </Button>
             <Button
               onClick={handleUploadOrTextInput}
@@ -250,9 +250,7 @@ const LocalCustomDocModal: React.FC<LocalCustomDocModalProps> = ({
                   : false
               }
             >
-              {dict(
-                'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.nextStep',
-              )}
+              {dict('PC.Pages.SpaceKnowledge.LocalCustomDocModal.nextStep')}
             </Button>
           </div>
         );
@@ -264,14 +262,10 @@ const LocalCustomDocModal: React.FC<LocalCustomDocModalProps> = ({
                 setCurrent(KnowledgeTextStepEnum.Upload_Or_Text_Fill)
               }
             >
-              {dict(
-                'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.prevStep',
-              )}
+              {dict('PC.Pages.SpaceKnowledge.LocalCustomDocModal.prevStep')}
             </Button>
             <Button onClick={handleConfirmCreateSet} type="primary">
-              {dict(
-                'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.nextStep',
-              )}
+              {dict('PC.Pages.SpaceKnowledge.LocalCustomDocModal.nextStep')}
             </Button>
           </div>
         );
@@ -283,9 +277,7 @@ const LocalCustomDocModal: React.FC<LocalCustomDocModalProps> = ({
                 setCurrent(KnowledgeTextStepEnum.Create_Segmented_Set)
               }
             >
-              {dict(
-                'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.prevStep',
-              )}
+              {dict('PC.Pages.SpaceKnowledge.LocalCustomDocModal.prevStep')}
             </Button>
             <Button
               onClick={
@@ -295,7 +287,7 @@ const LocalCustomDocModal: React.FC<LocalCustomDocModalProps> = ({
               }
               type="primary"
             >
-              {dict('NuwaxPC.Common.Global.confirm')}
+              {dict('PC.Common.Global.confirm')}
             </Button>
           </div>
         );
@@ -333,9 +325,7 @@ const LocalCustomDocModal: React.FC<LocalCustomDocModalProps> = ({
   }, []);
   return (
     <Modal
-      title={dict(
-        'NuwaxPC.Pages.SpaceKnowledge.LocalCustomDocModal.addContent',
-      )}
+      title={dict('PC.Pages.SpaceKnowledge.LocalCustomDocModal.addContent')}
       destroyOnHidden
       classNames={{
         content: cx(styles.container),

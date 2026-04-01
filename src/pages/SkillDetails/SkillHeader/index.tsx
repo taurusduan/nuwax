@@ -82,7 +82,7 @@ const SkillHeader: React.FC<SkillHeaderProps> = ({
 
         {skillInfo?.publishStatus === PublishStatusEnum.Published && (
           <TooltipIcon
-            title={t('NuwaxPC.Pages.SkillDetailsHeader.published')}
+            title={t('PC.Pages.SkillDetailsHeader.published')}
             icon={<CheckCircleFilled className={cx(styles.circle)} />}
           />
         )}
@@ -96,7 +96,7 @@ const SkillHeader: React.FC<SkillHeaderProps> = ({
               color="volcano"
               className={cx(styles['volcano'])}
             >
-              {t('NuwaxPC.Pages.SkillDetailsHeader.updatesNotPublished')}
+              {t('PC.Pages.SkillDetailsHeader.updatesNotPublished')}
             </Tag>
           )}
         <MoreActionsMenu
@@ -117,7 +117,7 @@ const SkillHeader: React.FC<SkillHeaderProps> = ({
           onClick={onPublish}
           disabled={!skillInfo}
         >
-          {t('NuwaxPC.Pages.SkillDetailsHeader.publish')}
+          {t('PC.Pages.SkillDetailsHeader.publish')}
         </Button>
       </div>
     </header>

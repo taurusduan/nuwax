@@ -89,7 +89,7 @@ const VariableSelector: React.FC<VariableSelectorProps> = ({
         <Popover
           content={
             nodeData.description ||
-            t('NuwaxPC.Pages.AntvX6VariableAggregation.noDescription')
+            t('PC.Pages.AntvX6VariableAggregation.noDescription')
           }
         >
           <InfoCircleOutlined
@@ -114,9 +114,7 @@ const VariableSelector: React.FC<VariableSelectorProps> = ({
           key: 'no-data',
           label: (
             <div className="no-data-tip">
-              {t(
-                'NuwaxPC.Pages.AntvX6VariableAggregation.noUpstreamNodeOrParams',
-              )}
+              {t('PC.Pages.AntvX6VariableAggregation.noUpstreamNodeOrParams')}
             </div>
           ),
           disabled: true,
@@ -192,7 +190,7 @@ const VariableSelector: React.FC<VariableSelectorProps> = ({
         </Tag>
       ) : (
         <span className="placeholder-text">
-          {t('NuwaxPC.Pages.AntvX6VariableAggregation.selectVariable')}
+          {t('PC.Pages.AntvX6VariableAggregation.selectVariable')}
         </span>
       )}
       <Dropdown

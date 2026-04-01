@@ -1,6 +1,6 @@
 import CopyButton from '@/components/base/CopyButton';
-import type { ChatBottomMoreProps } from '@/types/interfaces/common';
 import { dict } from '@/services/i18nRuntime';
+import type { ChatBottomMoreProps } from '@/types/interfaces/common';
 import { message } from 'antd';
 import classNames from 'classnames';
 import React from 'react';
@@ -14,7 +14,7 @@ const ChatBottomMore: React.FC<ChatBottomMoreProps> = ({ messageInfo }) => {
   const { text } = messageInfo || {};
 
   const handleCopy = () => {
-    message.success(dict('NuwaxPC.Toast.Global.copiedSuccessfully'));
+    message.success(dict('PC.Toast.Global.copiedSuccessfully'));
   };
 
   // 如果消息内容为空，则不显示复制按钮
@@ -33,7 +33,7 @@ const ChatBottomMore: React.FC<ChatBottomMoreProps> = ({ messageInfo }) => {
     >
       <div className={cx('flex', styles['more-action'])}>
         <CopyButton text={text || ''} onCopy={handleCopy}>
-          {dict('NuwaxPC.Common.Global.copy')}
+          {dict('PC.Common.Global.copy')}
         </CopyButton>
       </div>
     </div>

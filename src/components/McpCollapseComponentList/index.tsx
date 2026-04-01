@@ -22,27 +22,27 @@ const McpCollapseComponentList: React.FC<McpCollapseComponentListProps> = ({
     switch (type) {
       case AgentComponentTypeEnum.Agent:
         return {
-          text: dict('NuwaxPC.Components.McpCollapseComponentList.agentDesc'),
+          text: dict('PC.Components.McpCollapseComponentList.agentDesc'),
           image: agentImage,
         };
       case AgentComponentTypeEnum.Plugin:
         return {
-          text: dict('NuwaxPC.Components.McpCollapseComponentList.pluginDesc'),
+          text: dict('PC.Components.McpCollapseComponentList.pluginDesc'),
           image: pluginImage,
         };
       case AgentComponentTypeEnum.Workflow:
         return {
-          text: dict('NuwaxPC.Components.McpCollapseComponentList.workflowDesc'),
+          text: dict('PC.Components.McpCollapseComponentList.workflowDesc'),
           image: workflowImage,
         };
       case AgentComponentTypeEnum.Knowledge:
         return {
-          text: dict('NuwaxPC.Components.McpCollapseComponentList.knowledgeDesc'),
+          text: dict('PC.Components.McpCollapseComponentList.knowledgeDesc'),
           image: knowledgeImage,
         };
       case AgentComponentTypeEnum.Table:
         return {
-          text: dict('NuwaxPC.Components.McpCollapseComponentList.tableDesc'),
+          text: dict('PC.Components.McpCollapseComponentList.tableDesc'),
           image: databaseImage,
         };
     }
@@ -57,7 +57,7 @@ const McpCollapseComponentList: React.FC<McpCollapseComponentListProps> = ({
         defaultImage={getInfo(type)?.image}
         extra={
           <TooltipIcon
-            title={dict('NuwaxPC.Components.McpCollapseComponentList.delete')}
+            title={dict('PC.Components.McpCollapseComponentList.delete')}
             icon={<DeleteOutlined className={'cursor-pointer'} />}
             onClick={() => onDel(item.targetId, item.type)}
           />

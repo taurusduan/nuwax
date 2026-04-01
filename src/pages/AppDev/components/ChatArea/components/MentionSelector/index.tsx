@@ -326,12 +326,12 @@ const MentionSelector = React.forwardRef<
             {
               type: 'action',
               key: 'files',
-              label: t('NuwaxPC.Pages.AppDevMentionSelector.filesAndFolders'),
+              label: t('PC.Pages.AppDevMentionSelector.filesAndFolders'),
             },
             {
               type: 'action',
               key: 'datasources',
-              label: t('NuwaxPC.Pages.AppDevMentionSelector.dataSources'),
+              label: t('PC.Pages.AppDevMentionSelector.dataSources'),
             },
           ];
           return [...recentItems, ...mainItems];
@@ -866,8 +866,8 @@ const MentionSelector = React.forwardRef<
         <>
           <div className={styles['mention-section-title']}>
             {hasRealRecentItems
-              ? t('NuwaxPC.Pages.AppDevMentionSelector.recent')
-              : t('NuwaxPC.Pages.AppDevMentionSelector.recommended')}
+              ? t('PC.Pages.AppDevMentionSelector.recent')
+              : t('PC.Pages.AppDevMentionSelector.recommended')}
           </div>
           <div className={styles['mention-list']}>
             {recentItems.map((item, index) => (
@@ -898,9 +898,7 @@ const MentionSelector = React.forwardRef<
                       {item.description ||
                         (item.dataSource
                           ? getDefaultDescription(item.dataSource.type)
-                          : t(
-                              'NuwaxPC.Pages.AppDevMentionSelector.dataSources',
-                            ))}
+                          : t('PC.Pages.AppDevMentionSelector.dataSources'))}
                     </div>
                   ) : item.path ? (
                     <div className={styles['mention-item-desc']}>
@@ -923,21 +921,17 @@ const MentionSelector = React.forwardRef<
       const mainItems = [
         {
           key: 'files',
-          label: t('NuwaxPC.Pages.AppDevMentionSelector.filesAndFolders'),
+          label: t('PC.Pages.AppDevMentionSelector.filesAndFolders'),
           icon: <FileOutlined />,
           onClick: handleFilesClick,
-          description: t(
-            'NuwaxPC.Pages.AppDevMentionSelector.browseProjectFiles',
-          ),
+          description: t('PC.Pages.AppDevMentionSelector.browseProjectFiles'),
         },
         {
           key: 'datasources',
-          label: t('NuwaxPC.Pages.AppDevMentionSelector.dataSources'),
+          label: t('PC.Pages.AppDevMentionSelector.dataSources'),
           icon: <DatabaseOutlined />,
           onClick: handleDataSourcesClick,
-          description: t(
-            'NuwaxPC.Pages.AppDevMentionSelector.workflowPluginEtc',
-          ),
+          description: t('PC.Pages.AppDevMentionSelector.workflowPluginEtc'),
         },
       ];
 
@@ -1007,9 +1001,7 @@ const MentionSelector = React.forwardRef<
         return (
           <div className={styles['mention-content']}>
             <Empty
-              description={t(
-                'NuwaxPC.Pages.AppDevMentionSelector.noMatchedResult',
-              )}
+              description={t('PC.Pages.AppDevMentionSelector.noMatchedResult')}
               className={styles['mention-empty']}
             />
           </div>
@@ -1022,7 +1014,7 @@ const MentionSelector = React.forwardRef<
           {flattenedFiles.length > 0 && (
             <>
               <div className={styles['mention-section-title']}>
-                {t('NuwaxPC.Pages.AppDevMentionSelector.files')}
+                {t('PC.Pages.AppDevMentionSelector.files')}
               </div>
               <div className={styles['mention-list']}>
                 {flattenedFiles.map((file, index) => (
@@ -1056,7 +1048,7 @@ const MentionSelector = React.forwardRef<
           {flattenedFolders.length > 0 && (
             <>
               <div className={styles['mention-section-title']}>
-                {t('NuwaxPC.Pages.AppDevMentionSelector.folders')}
+                {t('PC.Pages.AppDevMentionSelector.folders')}
               </div>
               <div className={styles['mention-list']}>
                 {flattenedFolders.map((folder, index) => (
@@ -1090,7 +1082,7 @@ const MentionSelector = React.forwardRef<
           {filteredDataSources.length > 0 && (
             <>
               <div className={styles['mention-section-title']}>
-                {t('NuwaxPC.Pages.AppDevMentionSelector.dataSources')}
+                {t('PC.Pages.AppDevMentionSelector.dataSources')}
               </div>
               <div className={styles['mention-list']}>
                 {filteredDataSources.map((ds, index) => (
@@ -1137,15 +1129,15 @@ const MentionSelector = React.forwardRef<
                 className={styles['mention-back']}
                 onClick={handleBackToMain}
               >
-                {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
+                {t('PC.Pages.AppDevMentionSelector.back')}
               </span>
               <span className={styles['mention-title']}>
-                {t('NuwaxPC.Pages.AppDevMentionSelector.fileList')}
+                {t('PC.Pages.AppDevMentionSelector.fileList')}
               </span>
             </div>
             <Empty
               description={t(
-                'NuwaxPC.Pages.AppDevMentionSelector.noMatchedFileOrFolder',
+                'PC.Pages.AppDevMentionSelector.noMatchedFileOrFolder',
               )}
               className={styles['mention-empty']}
             />
@@ -1157,10 +1149,10 @@ const MentionSelector = React.forwardRef<
         <div className={styles['mention-content']}>
           <div className={styles['mention-header']}>
             <span className={styles['mention-back']} onClick={handleBackToMain}>
-              {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
+              {t('PC.Pages.AppDevMentionSelector.back')}
             </span>
             <span className={styles['mention-title']}>
-              {t('NuwaxPC.Pages.AppDevMentionSelector.fileList')}
+              {t('PC.Pages.AppDevMentionSelector.fileList')}
             </span>
           </div>
           <div className={styles['mention-list']}>
@@ -1226,15 +1218,15 @@ const MentionSelector = React.forwardRef<
                 className={styles['mention-back']}
                 onClick={handleBackToMain}
               >
-                {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
+                {t('PC.Pages.AppDevMentionSelector.back')}
               </span>
               <span className={styles['mention-title']}>
-                {t('NuwaxPC.Pages.AppDevMentionSelector.dataSources')}
+                {t('PC.Pages.AppDevMentionSelector.dataSources')}
               </span>
             </div>
             <Empty
               description={t(
-                'NuwaxPC.Pages.AppDevMentionSelector.noDataSourcesFound',
+                'PC.Pages.AppDevMentionSelector.noDataSourcesFound',
               )}
               className={styles['mention-empty']}
             />
@@ -1246,10 +1238,10 @@ const MentionSelector = React.forwardRef<
         <div className={styles['mention-content']}>
           <div className={styles['mention-header']}>
             <span className={styles['mention-back']} onClick={handleBackToMain}>
-              {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
+              {t('PC.Pages.AppDevMentionSelector.back')}
             </span>
             <span className={styles['mention-title']}>
-              {t('NuwaxPC.Pages.AppDevMentionSelector.dataSources')}
+              {t('PC.Pages.AppDevMentionSelector.dataSources')}
             </span>
           </div>
           <div className={styles['mention-list']}>
@@ -1273,7 +1265,7 @@ const MentionSelector = React.forwardRef<
                     </div>
                     <div className={styles['mention-item-desc']}>
                       {t(
-                        'NuwaxPC.Pages.AppDevMentionSelector.categoryItemCount',
+                        'PC.Pages.AppDevMentionSelector.categoryItemCount',
                         String(groupedDataSources[category].length),
                       )}
                     </div>
@@ -1299,15 +1291,15 @@ const MentionSelector = React.forwardRef<
                 className={styles['mention-back']}
                 onClick={handleBackToMain}
               >
-                {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
+                {t('PC.Pages.AppDevMentionSelector.back')}
               </span>
               <span className={styles['mention-title']}>
-                {t('NuwaxPC.Pages.AppDevMentionSelector.dataSources')}
+                {t('PC.Pages.AppDevMentionSelector.dataSources')}
               </span>
             </div>
             <Empty
               description={t(
-                'NuwaxPC.Pages.AppDevMentionSelector.noDataSourcesFound',
+                'PC.Pages.AppDevMentionSelector.noDataSourcesFound',
               )}
               className={styles['mention-empty']}
             />
@@ -1319,10 +1311,10 @@ const MentionSelector = React.forwardRef<
         <div className={styles['mention-content']}>
           <div className={styles['mention-header']}>
             <span className={styles['mention-back']} onClick={handleBackToMain}>
-              {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
+              {t('PC.Pages.AppDevMentionSelector.back')}
             </span>
             <span className={styles['mention-title']}>
-              {t('NuwaxPC.Pages.AppDevMentionSelector.dataSources')}
+              {t('PC.Pages.AppDevMentionSelector.dataSources')}
             </span>
           </div>
           <div className={styles['mention-list']}>
@@ -1366,7 +1358,7 @@ const MentionSelector = React.forwardRef<
                 className={styles['mention-back']}
                 onClick={() => setViewType('datasources')}
               >
-                {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
+                {t('PC.Pages.AppDevMentionSelector.back')}
               </span>
               <span className={styles['mention-title']}>
                 {getDataSourceTypeName(selectedCategory)}
@@ -1374,7 +1366,7 @@ const MentionSelector = React.forwardRef<
             </div>
             <Empty
               description={t(
-                'NuwaxPC.Pages.AppDevMentionSelector.noDataSourcesFound',
+                'PC.Pages.AppDevMentionSelector.noDataSourcesFound',
               )}
               className={styles['mention-empty']}
             />
@@ -1389,7 +1381,7 @@ const MentionSelector = React.forwardRef<
               className={styles['mention-back']}
               onClick={() => setViewType('datasources')}
             >
-              {t('NuwaxPC.Pages.AppDevMentionSelector.back')}
+              {t('PC.Pages.AppDevMentionSelector.back')}
             </span>
             <span className={styles['mention-title']}>
               {getDataSourceTypeName(selectedCategory)}

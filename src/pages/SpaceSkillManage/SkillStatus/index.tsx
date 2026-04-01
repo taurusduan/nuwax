@@ -9,13 +9,29 @@ export default function SkillStatus({
 }) {
   switch (publishStatus) {
     case PublishStatusEnum.Published:
-      return <Tag color="green">{dict('NuwaxPC.Pages.SpaceSkillManage.SkillStatus.published')}</Tag>;
+      return (
+        <Tag color="green">
+          {dict('PC.Pages.SpaceSkillManage.SkillStatus.published')}
+        </Tag>
+      );
     case PublishStatusEnum.Applying:
-      return <Tag color="blue">{dict('NuwaxPC.Pages.SpaceSkillManage.SkillStatus.reviewing')}</Tag>;
+      return (
+        <Tag color="blue">
+          {dict('PC.Pages.SpaceSkillManage.SkillStatus.reviewing')}
+        </Tag>
+      );
     case PublishStatusEnum.Developing:
-      return <Tag color="orange">{dict('NuwaxPC.Pages.SpaceSkillManage.SkillStatus.developing')}</Tag>;
+      return (
+        <Tag color="orange">
+          {dict('PC.Pages.SpaceSkillManage.SkillStatus.developing')}
+        </Tag>
+      );
     case PublishStatusEnum.Rejected:
-      return <Tag color="red">{dict('NuwaxPC.Pages.SpaceSkillManage.SkillStatus.rejected')}</Tag>;
+      return (
+        <Tag color="red">
+          {dict('PC.Pages.SpaceSkillManage.SkillStatus.rejected')}
+        </Tag>
+      );
     default:
       return <Tag color="default">-</Tag>;
   }

@@ -102,11 +102,11 @@ const KnowledgeSetting: React.FC<KnowledgeSettingProps> = ({
     () => [
       {
         value: InvokeTypeEnum.AUTO,
-        label: t('NuwaxPC.Pages.AgentArrangeInvokeType.optionAuto'),
+        label: t('PC.Pages.AgentArrangeInvokeType.optionAuto'),
       },
       {
         value: InvokeTypeEnum.ON_DEMAND,
-        label: t('NuwaxPC.Pages.AgentArrangeInvokeType.optionOnDemand'),
+        label: t('PC.Pages.AgentArrangeInvokeType.optionOnDemand'),
       },
     ],
     [],
@@ -116,15 +116,15 @@ const KnowledgeSetting: React.FC<KnowledgeSettingProps> = ({
     () => [
       {
         value: SearchStrategyEnum.MIXED,
-        label: t('NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchMixed'),
+        label: t('PC.Pages.AgentArrangeKnowledgeSetting.searchMixed'),
       },
       {
         value: SearchStrategyEnum.SEMANTIC,
-        label: t('NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchSemantic'),
+        label: t('PC.Pages.AgentArrangeKnowledgeSetting.searchSemantic'),
       },
       {
         value: SearchStrategyEnum.FULL_TEXT,
-        label: t('NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchFullText'),
+        label: t('PC.Pages.AgentArrangeKnowledgeSetting.searchFullText'),
       },
     ],
     [],
@@ -134,11 +134,11 @@ const KnowledgeSetting: React.FC<KnowledgeSettingProps> = ({
     () => [
       {
         value: NoneRecallReplyTypeEnum.DEFAULT,
-        label: t('NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallDefault'),
+        label: t('PC.Pages.AgentArrangeKnowledgeSetting.noRecallDefault'),
       },
       {
         value: NoneRecallReplyTypeEnum.CUSTOM,
-        label: t('NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallCustom'),
+        label: t('PC.Pages.AgentArrangeKnowledgeSetting.noRecallCustom'),
       },
     ],
     [],
@@ -146,22 +146,20 @@ const KnowledgeSetting: React.FC<KnowledgeSettingProps> = ({
 
   return (
     <Modal
-      title={t('NuwaxPC.Pages.AgentArrangeKnowledgeSetting.title')}
+      title={t('PC.Pages.AgentArrangeKnowledgeSetting.title')}
       open={open}
       footer={null}
       onCancel={onCancel}
     >
       <div className={cx(styles.container)}>
         <h3 className={cx(styles.title)}>
-          {t('NuwaxPC.Pages.AgentArrangeKnowledgeSetting.recallSection')}
+          {t('PC.Pages.AgentArrangeKnowledgeSetting.recallSection')}
         </h3>
         {/*调用方式*/}
         <div className={cx('flex', 'mb-16')}>
           <LabelIcon
-            label={t('NuwaxPC.Pages.AgentArrangeKnowledgeSetting.invokeType')}
-            title={t(
-              'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.invokeTypeTip',
-            )}
+            label={t('PC.Pages.AgentArrangeKnowledgeSetting.invokeType')}
+            title={t('PC.Pages.AgentArrangeKnowledgeSetting.invokeTypeTip')}
           />
           <Radio.Group
             onChange={(e) =>
@@ -174,12 +172,8 @@ const KnowledgeSetting: React.FC<KnowledgeSettingProps> = ({
         {/*搜索策略*/}
         <div className={cx('flex', 'mb-16')}>
           <LabelIcon
-            label={t(
-              'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchStrategy',
-            )}
-            title={t(
-              'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.searchStrategyTip',
-            )}
+            label={t('PC.Pages.AgentArrangeKnowledgeSetting.searchStrategy')}
+            title={t('PC.Pages.AgentArrangeKnowledgeSetting.searchStrategyTip')}
           />
           <Radio.Group
             onChange={(e) =>
@@ -192,12 +186,8 @@ const KnowledgeSetting: React.FC<KnowledgeSettingProps> = ({
         {/*最大召回数量*/}
         <div className={cx('flex', 'mb-16')}>
           <LabelIcon
-            label={t(
-              'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.maxRecallCount',
-            )}
-            title={t(
-              'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.maxRecallCountTip',
-            )}
+            label={t('PC.Pages.AgentArrangeKnowledgeSetting.maxRecallCount')}
+            title={t('PC.Pages.AgentArrangeKnowledgeSetting.maxRecallCountTip')}
           />
           <SliderNumber
             min={1}
@@ -209,11 +199,9 @@ const KnowledgeSetting: React.FC<KnowledgeSettingProps> = ({
         {/*最小匹配度*/}
         <div className={cx('flex', 'mb-16')}>
           <LabelIcon
-            label={t(
-              'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegree',
-            )}
+            label={t('PC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegree')}
             title={t(
-              'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegreeTip',
+              'PC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegreeTip',
             )}
           />
           <SliderNumber
@@ -226,17 +214,13 @@ const KnowledgeSetting: React.FC<KnowledgeSettingProps> = ({
         </div>
         <Divider />
         <h3 className={cx(styles.title)}>
-          {t('NuwaxPC.Pages.AgentArrangeKnowledgeSetting.replySection')}
+          {t('PC.Pages.AgentArrangeKnowledgeSetting.replySection')}
         </h3>
         {/*无召回回复*/}
         <div className={cx('flex', 'mb-16')}>
           <LabelIcon
-            label={t(
-              'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallReply',
-            )}
-            title={t(
-              'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyTip',
-            )}
+            label={t('PC.Pages.AgentArrangeKnowledgeSetting.noRecallReply')}
+            title={t('PC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyTip')}
           />
           <Radio.Group
             onChange={(e) =>
@@ -254,7 +238,7 @@ const KnowledgeSetting: React.FC<KnowledgeSettingProps> = ({
         >
           <Input.TextArea
             placeholder={t(
-              'NuwaxPC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyPlaceholder',
+              'PC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyPlaceholder',
             )}
             value={componentBindConfig.noneRecallReply}
             onChange={(e) =>

@@ -188,7 +188,12 @@ const InputOrReference: React.FC<InputOrReferenceProps> = ({
     return (
       <div className="tree-custom-title-style">
         <span title="">{nodeData.name}</span>
-        <Popover content={nodeData.description || dict('NuwaxPC.Components.FormListItem.noDescription')}>
+        <Popover
+          content={
+            nodeData.description ||
+            dict('PC.Components.FormListItem.noDescription')
+          }
+        >
           <InfoCircleOutlined
             title=""
             style={{ marginLeft: '4px', fontSize: 12, cursor: 'help' }}
@@ -302,7 +307,7 @@ const InputOrReference: React.FC<InputOrReferenceProps> = ({
           popupClassName: 'inputOrReferencePopup',
           label: (
             <div style={{ padding: 8, color: 'red' }}>
-              {dict('NuwaxPC.Components.FormListItem.noPreviousNodesOrParams')}
+              {dict('PC.Components.FormListItem.noPreviousNodesOrParams')}
             </div>
           ),
           disabled: true,
@@ -339,7 +344,10 @@ const InputOrReference: React.FC<InputOrReferenceProps> = ({
           </Tag>
         ) : (
           <Input
-            placeholder={placeholder || dict('NuwaxPC.Components.FormListItem.inputOrReferenceParam')}
+            placeholder={
+              placeholder ||
+              dict('PC.Components.FormListItem.inputOrReferenceParam')
+            }
             style={{ marginRight: 8 }}
             size="small"
             disabled={isDisabled}
@@ -351,7 +359,10 @@ const InputOrReference: React.FC<InputOrReferenceProps> = ({
         )
       ) : (
         <Input
-          placeholder={placeholder || dict('NuwaxPC.Components.FormListItem.inputOrReferenceParam')}
+          placeholder={
+            placeholder ||
+            dict('PC.Components.FormListItem.inputOrReferenceParam')
+          }
           style={{ marginRight: 8 }}
           size="small"
           disabled={isDisabled}

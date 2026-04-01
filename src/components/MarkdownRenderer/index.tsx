@@ -77,7 +77,9 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = memo(
               >
                 <BulbOutlined className={styles['thinking-icon']} />
                 <span className={styles['thinking-title']}>
-                  {!isThinkingFinished ? dict('NuwaxPC.Components.MarkdownRenderer.thinking') : dict('NuwaxPC.Components.MarkdownRenderer.thought')}
+                  {!isThinkingFinished
+                    ? dict('PC.Components.MarkdownRenderer.thinking')
+                    : dict('PC.Components.MarkdownRenderer.thought')}
                 </span>
                 <DownOutlined
                   className={cx(styles['expand-icon'], {

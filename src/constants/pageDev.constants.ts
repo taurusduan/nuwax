@@ -11,11 +11,11 @@ import {
 export const PAGE_DEVELOP_CREATE_TYPE_LIST = [
   {
     value: PageDevelopCreateTypeEnum.Online_Develop,
-    label: dict('NuwaxPC.Constants.PageDev.onlineCreate'),
+    label: dict('PC.Constants.PageDev.onlineCreate'),
   },
   {
     value: PageDevelopCreateTypeEnum.Import_Project,
-    label: dict('NuwaxPC.Constants.PageDev.localImport'),
+    label: dict('PC.Constants.PageDev.localImport'),
   },
   // {
   //   value: PageDevelopCreateTypeEnum.Reverse_Proxy,
@@ -27,15 +27,15 @@ export const PAGE_DEVELOP_CREATE_TYPE_LIST = [
 export const PAGE_DEVELOP_ALL_TYPE = [
   {
     value: PageDevelopSelectTypeEnum.All_Type,
-    label: dict('NuwaxPC.Constants.Space.allTypes'),
+    label: dict('PC.Constants.Space.allTypes'),
   },
   {
     value: PageDevelopSelectTypeEnum.AGENT,
-    label: dict('NuwaxPC.Constants.PageDev.smartApp'),
+    label: dict('PC.Constants.PageDev.smartApp'),
   },
   {
     value: PageDevelopSelectTypeEnum.PAGE,
-    label: dict('NuwaxPC.Constants.PageDev.pageComponent'),
+    label: dict('PC.Constants.PageDev.pageComponent'),
   },
 ];
 
@@ -43,11 +43,11 @@ export const PAGE_DEVELOP_ALL_TYPE = [
 export const REVERSE_PROXY_ACTIONS = [
   {
     type: ReverseProxyEnum.Dev,
-    label: dict('NuwaxPC.Constants.PageDev.devDebug'),
+    label: dict('PC.Constants.PageDev.devDebug'),
   },
   {
     type: ReverseProxyEnum.Production,
-    label: dict('NuwaxPC.Constants.PageDev.production'),
+    label: dict('PC.Constants.PageDev.production'),
   },
 ];
 
@@ -59,31 +59,31 @@ export const PAGE_DEVELOP_MORE_ACTIONS = [
   // },
   {
     value: PageDevelopMoreActionEnum.Path_Params_Config,
-    label: dict('NuwaxPC.Constants.PageDev.pathParamsConfig'),
+    label: dict('PC.Constants.PageDev.pathParamsConfig'),
   },
   {
     value: PageDevelopMoreActionEnum.Auth_Config,
-    label: dict('NuwaxPC.Constants.PageDev.authConfig'),
+    label: dict('PC.Constants.PageDev.authConfig'),
   },
   {
     value: PageDevelopMoreActionEnum.Domain_Binding,
-    label: dict('NuwaxPC.Constants.PageDev.domainBinding'),
+    label: dict('PC.Constants.PageDev.domainBinding'),
   },
   {
     value: PageDevelopMoreActionEnum.Page_Preview,
-    label: dict('NuwaxPC.Constants.PageDev.pagePreview'),
+    label: dict('PC.Constants.PageDev.pagePreview'),
   },
   {
     value: PageDevelopMoreActionEnum.Copy_To_Space,
-    label: dict('NuwaxPC.Constants.Space.copyToSpace'),
+    label: dict('PC.Constants.Space.copyToSpace'),
   },
   {
     value: PageDevelopMoreActionEnum.Export_Project,
-    label: dict('NuwaxPC.Constants.PageDev.exportProject'),
+    label: dict('PC.Constants.PageDev.exportProject'),
   },
   {
     value: PageDevelopMoreActionEnum.Delete,
-    label: dict('NuwaxPC.Common.Global.delete'),
+    label: dict('PC.Common.Global.delete'),
   },
 ];
 
@@ -91,10 +91,10 @@ export const PAGE_DEVELOP_MORE_ACTIONS = [
 export const PAGE_DEVELOP_PUBLISH_TYPE_LIST = [
   {
     value: PageDevelopPublishTypeEnum.PAGE,
-    label: dict('NuwaxPC.Constants.PageDev.publishAsComponent'),
+    label: dict('PC.Constants.PageDev.publishAsComponent'),
   },
   {
     value: PageDevelopPublishTypeEnum.AGENT,
-    label: dict('NuwaxPC.Constants.PageDev.publishAsApp'),
+    label: dict('PC.Constants.PageDev.publishAsApp'),
   },
 ];

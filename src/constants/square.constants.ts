@@ -5,19 +5,19 @@ import { SquareTemplateTargetTypeEnum } from '@/types/enums/square';
 const SQUARE_TEMPLATE_SEGMENTED_LIST_ALL = [
   {
     value: SquareTemplateTargetTypeEnum.ChatBot,
-    label: dict('NuwaxPC.Common.Global.agent'),
+    label: dict('PC.Common.Global.agent'),
   },
   {
     value: SquareTemplateTargetTypeEnum.PageApp,
-    label: dict('NuwaxPC.Constants.Ecosystem.webApp'),
+    label: dict('PC.Constants.Ecosystem.webApp'),
   },
   {
     value: SquareTemplateTargetTypeEnum.Workflow,
-    label: dict('NuwaxPC.Common.Global.workflow'),
+    label: dict('PC.Common.Global.workflow'),
   },
   {
     value: SquareTemplateTargetTypeEnum.Skill,
-    label: dict('NuwaxPC.Common.Global.skill'),
+    label: dict('PC.Common.Global.skill'),
   },
 ];
 

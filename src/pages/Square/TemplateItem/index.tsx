@@ -3,13 +3,13 @@ import pluginImage from '@/assets/images/plugin_image.png';
 import workflowImage from '@/assets/images/workflow_image.png';
 import AgentType from '@/components/base/AgentType';
 import CardWrapper from '@/components/business-component/CardWrapper';
+import { dict } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import { SquareAgentTypeEnum } from '@/types/enums/square';
 import { TemplateItemProps } from '@/types/interfaces/square';
 import classNames from 'classnames';
 import dayjs from 'dayjs';
 import React, { useEffect, useMemo, useState } from 'react';
-import { dict } from '@/services/i18nRuntime';
 
 const cx = classNames;
 
@@ -68,7 +68,10 @@ const TemplateItem: React.FC<TemplateItemProps> = ({
       onClick={onClick}
       extra={
         <span className={cx('text-ellipsis', 'flex-1')}>
-          {dict('NuwaxPC.Pages.Square.TemplateItem.publishedAt', dayjs(created).format('YYYY-MM-DD'))}
+          {dict(
+            'PC.Pages.Square.TemplateItem.publishedAt',
+            dayjs(created).format('YYYY-MM-DD'),
+          )}
         </span>
       }
       footer={

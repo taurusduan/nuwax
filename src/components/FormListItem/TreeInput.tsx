@@ -20,8 +20,8 @@ const TreeInput: React.FC<TreeInputProps> = ({
   options,
   showAdd,
   showDelete,
-  descText = dict('NuwaxPC.Components.FormListItem.variableType'),
-  nameText = dict('NuwaxPC.Components.FormListItem.variableName'),
+  descText = dict('PC.Components.FormListItem.variableType'),
+  nameText = dict('PC.Components.FormListItem.variableName'),
 }) => {
   const [treeData, setTreeData] = useState<InputAndOutConfig[]>(params || []);
   const { setIsModified, referenceList } = useWorkflowModel();
@@ -110,7 +110,10 @@ const TreeInput: React.FC<TreeInputProps> = ({
         <div className="flex-1 flex items-center">
           <span className="margin-right-6 font-12 ">{nodeData.name}</span>
           <TooltipIcon
-            title={nodeData.description || dict('NuwaxPC.Components.FormListItem.noDescription')}
+            title={
+              nodeData.description ||
+              dict('PC.Components.FormListItem.noDescription')
+            }
             icon={<InfoCircleOutlined />}
           />
         </div>

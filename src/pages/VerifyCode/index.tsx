@@ -251,15 +251,15 @@ const VerifyCode: React.FC = () => {
           </div>
           <h3>
             {phoneOrEmail?.includes('@')
-              ? dict('NuwaxPC.Pages.VerifyCode.inputEmailCode')
-              : dict('NuwaxPC.Pages.VerifyCode.inputSmsCode')}
+              ? dict('PC.Pages.VerifyCode.inputEmailCode')
+              : dict('PC.Pages.VerifyCode.inputSmsCode')}
           </h3>
           <p>
             {dict(
-              'NuwaxPC.Pages.VerifyCode.codeSentTo',
+              'PC.Pages.VerifyCode.codeSentTo',
               phoneOrEmail?.includes('@')
-                ? dict('NuwaxPC.Pages.VerifyCode.yourEmail')
-                : dict('NuwaxPC.Pages.VerifyCode.yourPhone'),
+                ? dict('PC.Pages.VerifyCode.yourEmail')
+                : dict('PC.Pages.VerifyCode.yourPhone'),
               `${!phoneOrEmail?.includes('@') ? areaCode : ''} ${phoneOrEmail}`,
             )}
           </p>
@@ -283,9 +283,7 @@ const VerifyCode: React.FC = () => {
           <div className={cx(styles['count-down-container'])}>
             {countDown > 0 && (
               <span className={styles['count-down']}>
-                {`${countDown}${dict(
-                  'NuwaxPC.Pages.VerifyCode.countdownSuffix',
-                )}`}
+                {`${countDown}${dict('PC.Pages.VerifyCode.countdownSuffix')}`}
               </span>
             )}
             <span
@@ -296,7 +294,7 @@ const VerifyCode: React.FC = () => {
               )}
               onClick={handleClickReSendCode}
             >
-              {dict('NuwaxPC.Pages.VerifyCode.resend')}
+              {dict('PC.Pages.VerifyCode.resend')}
             </span>
           </div>
         </div>

@@ -66,21 +66,21 @@ const getCreatedTabLabel = (
 ): string => {
   switch (key) {
     case AgentComponentTypeEnum.Plugin:
-      return t('NuwaxPC.Components.Created.tabPlugin');
+      return t('PC.Components.Created.tabPlugin');
     case AgentComponentTypeEnum.Workflow:
-      return t('NuwaxPC.Components.Created.tabWorkflow');
+      return t('PC.Components.Created.tabWorkflow');
     case AgentComponentTypeEnum.Knowledge:
-      return t('NuwaxPC.Components.Created.tabKnowledge');
+      return t('PC.Components.Created.tabKnowledge');
     case AgentComponentTypeEnum.Table:
-      return t('NuwaxPC.Components.Created.tabTable');
+      return t('PC.Components.Created.tabTable');
     case AgentComponentTypeEnum.Agent:
-      return t('NuwaxPC.Components.Created.tabAgent');
+      return t('PC.Components.Created.tabAgent');
     case AgentComponentTypeEnum.MCP:
-      return t('NuwaxPC.Components.Created.tabMcp');
+      return t('PC.Components.Created.tabMcp');
     case AgentComponentTypeEnum.Page:
-      return t('NuwaxPC.Components.Created.tabPage');
+      return t('PC.Components.Created.tabPage');
     case AgentComponentTypeEnum.Skill:
-      return t('NuwaxPC.Components.Created.tabSkill');
+      return t('PC.Components.Created.tabSkill');
     default:
       return fallbackLabel;
   }
@@ -145,83 +145,77 @@ const Created: React.FC<CreatedProp> = ({
   const items: MenuItem[] = [
     {
       key: 'all', // 子项也需要唯一的 key
-      label: t('NuwaxPC.Components.Created.all'),
+      label: t('PC.Components.Created.all'),
     },
     {
       key: 'library',
-      label: t('NuwaxPC.Components.Created.libraryWithLabel', selectedLabel),
+      label: t('PC.Components.Created.libraryWithLabel', selectedLabel),
     },
     {
       key: 'collect',
-      label: t('NuwaxPC.Components.Created.collect'),
+      label: t('PC.Components.Created.collect'),
     },
     {
       key: 'official',
-      label: t(
-        'NuwaxPC.Components.Created.officialOnlyWithLabel',
-        selectedLabel,
-      ),
+      label: t('PC.Components.Created.officialOnlyWithLabel', selectedLabel),
     },
   ].filter((item) => !isSpaceOnly || item.key === 'library');
 
   const pageItem = [
     {
       key: 'all', // 子项也需要唯一的 key
-      label: t('NuwaxPC.Components.Created.all'),
+      label: t('PC.Components.Created.all'),
     },
   ];
 
   const agentItem = [
     {
       key: 'all',
-      label: t('NuwaxPC.Components.Created.all'),
+      label: t('PC.Components.Created.all'),
     },
     {
       key: 'library',
-      label: t('NuwaxPC.Components.Created.currentSpaceAgent'),
+      label: t('PC.Components.Created.currentSpaceAgent'),
     },
   ].filter((item) => !isSpaceOnly || item.key === 'library');
 
   const knowledgeItem = [
     {
       key: 'all', // 子项也需要唯一的 key
-      label: t('NuwaxPC.Components.Created.all'),
+      label: t('PC.Components.Created.all'),
     },
     {
       key: 1,
-      label: t('NuwaxPC.Components.Created.document'),
+      label: t('PC.Components.Created.document'),
     },
   ];
 
   const databaseItem = [
     {
       key: 'all', // 子项也需要唯一的 key
-      label: t('NuwaxPC.Components.Created.libraryDataTable'),
+      label: t('PC.Components.Created.libraryDataTable'),
     },
   ];
 
   const mcpItem = [
     {
       key: 'all', // 子项也需要唯一的 key
-      label: t('NuwaxPC.Components.Created.all'),
+      label: t('PC.Components.Created.all'),
     },
     {
       key: 'custom',
-      label: t('NuwaxPC.Components.Created.customService'),
+      label: t('PC.Components.Created.customService'),
     },
   ];
 
   const skillItem = [
     {
       key: 'all', // 子项也需要唯一的 key
-      label: t('NuwaxPC.Components.Created.all'),
+      label: t('PC.Components.Created.all'),
     },
     {
       key: 'official',
-      label: t(
-        'NuwaxPC.Components.Created.officialOnlyWithLabel',
-        selectedLabel,
-      ),
+      label: t('PC.Components.Created.officialOnlyWithLabel', selectedLabel),
     },
   ];
 
@@ -600,7 +594,7 @@ const Created: React.FC<CreatedProp> = ({
   const title = (
     <div className={cx('dis-left', styles['created-title'])}>
       <h3 className={styles['created-title-text']}>
-        {t('NuwaxPC.Components.Created.addTitle')}
+        {t('PC.Components.Created.addTitle')}
       </h3>
       <Segmented
         value={selected.key}
@@ -753,15 +747,12 @@ const Created: React.FC<CreatedProp> = ({
                   require('@/assets/images/avatar.png')
                 }
                 style={{ borderRadius: '50%' }}
-                alt={t('NuwaxPC.Components.Created.userAvatar')}
+                alt={t('PC.Components.Created.userAvatar')}
               />
               <span>{item.publishUser?.nickName}</span>
               <Divider type="vertical" />
               <span>
-                {t(
-                  'NuwaxPC.Components.Created.publishedAt',
-                  getTime(item.created!),
-                )}
+                {t('PC.Components.Created.publishedAt', getTime(item.created!))}
               </span>
               {![
                 AgentComponentTypeEnum.Knowledge,
@@ -804,8 +795,8 @@ const Created: React.FC<CreatedProp> = ({
           disabled={isCurrentLoading ? false : isAddedState}
         >
           {isAddedState
-            ? t('NuwaxPC.Components.Created.added')
-            : t('NuwaxPC.Components.Created.add')}
+            ? t('PC.Components.Created.added')
+            : t('PC.Components.Created.add')}
         </Button>
       </div>
     );
@@ -851,7 +842,7 @@ const Created: React.FC<CreatedProp> = ({
               allowClear
               value={search}
               variant="filled"
-              placeholder={t('NuwaxPC.Components.Created.search')}
+              placeholder={t('PC.Components.Created.search')}
               prefix={<SearchOutlined />}
               onChange={(e) => {
                 setSearch(e.target.value);
@@ -886,7 +877,7 @@ const Created: React.FC<CreatedProp> = ({
               block
               onClick={() => handleClickCreate(selected.key, spaceId)}
             >
-              {t('NuwaxPC.Components.Created.createWithLabel', selectedLabel)}
+              {t('PC.Components.Created.createWithLabel', selectedLabel)}
             </Button>
           </div>
           {/* 下方的菜单 */}
@@ -923,8 +914,8 @@ const Created: React.FC<CreatedProp> = ({
               <Empty
                 description={
                   doSearching.searching
-                    ? t('NuwaxPC.Components.Created.emptyWithSearch')
-                    : t('NuwaxPC.Components.Created.empty')
+                    ? t('PC.Components.Created.emptyWithSearch')
+                    : t('PC.Components.Created.empty')
                 }
               />
             </div>

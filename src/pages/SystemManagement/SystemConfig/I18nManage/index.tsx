@@ -18,10 +18,10 @@ const I18nManage: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={dict('NuwaxPC.Pages.SystemConfigI18n.manageTitle')}
+      title={dict('PC.Pages.SystemConfigI18n.manageTitle')}
       extraContent={
         <Button type="primary" onClick={() => refresh()}>
-          {dict('NuwaxPC.Common.Global.refresh')}
+          {dict('PC.Common.Global.refresh')}
         </Button>
       }
     >
@@ -32,45 +32,45 @@ const I18nManage: React.FC = () => {
         pagination={false}
         columns={[
           {
-            title: dict('NuwaxPC.Pages.SystemConfigI18n.columnName'),
+            title: dict('PC.Pages.SystemConfigI18n.columnName'),
             dataIndex: 'name',
           },
           {
-            title: dict('NuwaxPC.Pages.SystemConfigI18n.columnLang'),
+            title: dict('PC.Pages.SystemConfigI18n.columnLang'),
             dataIndex: 'lang',
           },
           {
-            title: dict('NuwaxPC.Pages.SystemConfigI18n.columnDefault'),
+            title: dict('PC.Pages.SystemConfigI18n.columnDefault'),
             dataIndex: 'isDefault',
             render: (isDefault) =>
               isDefault === 1 ? (
                 <Tag color="success">
-                  {dict('NuwaxPC.Pages.SystemConfigI18n.defaultYes')}
+                  {dict('PC.Pages.SystemConfigI18n.defaultYes')}
                 </Tag>
               ) : (
-                <Tag>{dict('NuwaxPC.Pages.SystemConfigI18n.defaultNo')}</Tag>
+                <Tag>{dict('PC.Pages.SystemConfigI18n.defaultNo')}</Tag>
               ),
           },
           {
-            title: dict('NuwaxPC.Pages.SystemConfigI18n.columnStatus'),
+            title: dict('PC.Pages.SystemConfigI18n.columnStatus'),
             dataIndex: 'status',
             render: (status) =>
               status === 1 ? (
                 <Tag color="processing">
-                  {dict('NuwaxPC.Pages.SystemConfigI18n.statusEnabled')}
+                  {dict('PC.Pages.SystemConfigI18n.statusEnabled')}
                 </Tag>
               ) : (
                 <Tag color="default">
-                  {dict('NuwaxPC.Pages.SystemConfigI18n.statusDisabled')}
+                  {dict('PC.Pages.SystemConfigI18n.statusDisabled')}
                 </Tag>
               ),
           },
           {
-            title: dict('NuwaxPC.Pages.SystemConfigI18n.columnSort'),
+            title: dict('PC.Pages.SystemConfigI18n.columnSort'),
             dataIndex: 'sort',
           },
           {
-            title: dict('NuwaxPC.Pages.SystemConfigI18n.columnModified'),
+            title: dict('PC.Pages.SystemConfigI18n.columnModified'),
             dataIndex: 'modified',
           },
         ]}

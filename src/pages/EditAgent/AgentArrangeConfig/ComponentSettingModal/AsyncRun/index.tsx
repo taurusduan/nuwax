@@ -27,7 +27,7 @@ const AsyncRun: React.FC<AsyncRunProps> = ({
   useEffect(() => {
     setContent(
       asyncReplyContent ||
-        t('NuwaxPC.Pages.AgentArrangeAsyncRun.defaultReplyContent'),
+        t('PC.Pages.AgentArrangeAsyncRun.defaultReplyContent'),
     );
     setSelected(async || DefaultSelectedEnum.No);
   }, [async, asyncReplyContent]);
@@ -64,7 +64,7 @@ const AsyncRun: React.FC<AsyncRunProps> = ({
       <div className={cx('flex-1', styles.content)}>
         <header className={cx('flex', 'items-center', styles.header)}>
           <h3 className={cx('flex-1')}>
-            {t('NuwaxPC.Pages.AgentArrangeAsyncRun.title')}
+            {t('PC.Pages.AgentArrangeAsyncRun.title')}
           </h3>
           <Switch
             checked={selected === DefaultSelectedEnum.Yes}
@@ -72,12 +72,12 @@ const AsyncRun: React.FC<AsyncRunProps> = ({
           />
         </header>
         <p className={cx(styles.desc)}>
-          {t('NuwaxPC.Pages.AgentArrangeAsyncRun.description')}
+          {t('PC.Pages.AgentArrangeAsyncRun.description')}
         </p>
         <ConditionRender condition={selected}>
           <LabelStar
             className={cx(styles['reply-content'])}
-            label={t('NuwaxPC.Pages.AgentArrangeAsyncRun.replyContent')}
+            label={t('PC.Pages.AgentArrangeAsyncRun.replyContent')}
           />
           <Input.TextArea
             className={cx('dispose-textarea-count')}
@@ -85,7 +85,7 @@ const AsyncRun: React.FC<AsyncRunProps> = ({
               textarea: cx(styles.textarea),
             }}
             placeholder={t(
-              'NuwaxPC.Pages.AgentArrangeAsyncRun.replyContentPlaceholder',
+              'PC.Pages.AgentArrangeAsyncRun.replyContentPlaceholder',
             )}
             autoSize={{ minRows: 5, maxRows: 6 }}
             maxLength={1000}
@@ -95,7 +95,7 @@ const AsyncRun: React.FC<AsyncRunProps> = ({
           />
           <ConditionRender condition={!content}>
             <p className={cx(styles.tips)}>
-              {t('NuwaxPC.Pages.AgentArrangeAsyncRun.replyContentRequired')}
+              {t('PC.Pages.AgentArrangeAsyncRun.replyContentRequired')}
             </p>
           </ConditionRender>
         </ConditionRender>
@@ -108,7 +108,7 @@ const AsyncRun: React.FC<AsyncRunProps> = ({
           className={cx({ [styles['btn-disabled']]: disabled })}
           disabled={disabled}
         >
-          {t('NuwaxPC.Common.Global.save')}
+          {t('PC.Common.Global.save')}
         </Button>
       </footer>
     </div>

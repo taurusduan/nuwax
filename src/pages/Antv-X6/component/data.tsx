@@ -12,7 +12,7 @@ const DataAdd: React.FC<NodeDisposeProps> = ({ form }) => {
     <div>
       <div className="node-item-style">
         <TreeInput
-          title={dict('NuwaxPC.Pages.AntvX6Data.input')}
+          title={dict('PC.Pages.AntvX6Data.input')}
           form={form}
           params={form.getFieldValue('inputArgs')}
         />
@@ -23,7 +23,7 @@ const DataAdd: React.FC<NodeDisposeProps> = ({ form }) => {
           form.getFieldValue('outputArgs') && (
             <>
               <div className="node-title-style margin-bottom">
-                {dict('NuwaxPC.Pages.AntvX6Data.output')}
+                {dict('PC.Pages.AntvX6Data.output')}
               </div>
               <TreeOutput treeData={form.getFieldValue('outputArgs')} />
             </>

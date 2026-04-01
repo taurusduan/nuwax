@@ -2,6 +2,7 @@ import pluginImage from '@/assets/images/plugin_image.png';
 import workflowImage from '@/assets/images/workflow_image.png';
 import CardWrapper from '@/components/business-component/CardWrapper';
 import { ICON_STAR, ICON_STAR_FILL } from '@/constants/images.constants';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiPublishedPluginCollect,
   apiPublishedPluginUnCollect,
@@ -17,7 +18,6 @@ import { SquareComponentInfoProps } from '@/types/interfaces/square';
 import classNames from 'classnames';
 import dayjs from 'dayjs';
 import React from 'react';
-import { dict } from '@/services/i18nRuntime';
 import { useRequest } from 'umi';
 import styles from './index.less';
 
@@ -145,7 +145,10 @@ const SquareComponentInfo: React.FC<SquareComponentInfoProps> = ({
       onClick={onClick}
       extra={
         <span className={cx('text-ellipsis', 'flex-1', styles.time)}>
-          {dict('NuwaxPC.Pages.Square.SquareComponentInfo.publishedAt', dayjs(created).format('YYYY-MM-DD'))}
+          {dict(
+            'PC.Pages.Square.SquareComponentInfo.publishedAt',
+            dayjs(created).format('YYYY-MM-DD'),
+          )}
         </span>
       }
       footer={

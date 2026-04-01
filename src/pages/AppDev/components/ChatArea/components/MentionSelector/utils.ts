@@ -91,13 +91,11 @@ export const getDataSourceTypeName = (
 ): string => {
   switch (type) {
     case 'workflow':
-      return t('NuwaxPC.Pages.AppDevMentionSelector.dataSourceTypeWorkflow');
+      return t('PC.Pages.AppDevMentionSelector.dataSourceTypeWorkflow');
     case 'plugin':
-      return t('NuwaxPC.Pages.AppDevMentionSelector.dataSourceTypePlugin');
+      return t('PC.Pages.AppDevMentionSelector.dataSourceTypePlugin');
     case 'reverse_proxy':
-      return t(
-        'NuwaxPC.Pages.AppDevMentionSelector.dataSourceTypeReverseProxy',
-      );
+      return t('PC.Pages.AppDevMentionSelector.dataSourceTypeReverseProxy');
     default:
       return type;
   }
@@ -113,13 +111,13 @@ export const getDefaultDescription = (
 ): string => {
   switch (type) {
     case 'plugin':
-      return t('NuwaxPC.Pages.AppDevMentionSelector.defaultDescPlugin');
+      return t('PC.Pages.AppDevMentionSelector.defaultDescPlugin');
     case 'workflow':
-      return t('NuwaxPC.Pages.AppDevMentionSelector.defaultDescWorkflow');
+      return t('PC.Pages.AppDevMentionSelector.defaultDescWorkflow');
     case 'reverse_proxy':
-      return t('NuwaxPC.Pages.AppDevMentionSelector.defaultDescReverseProxy');
+      return t('PC.Pages.AppDevMentionSelector.defaultDescReverseProxy');
     default:
-      return t('NuwaxPC.Pages.AppDevMentionSelector.defaultDescDataSource');
+      return t('PC.Pages.AppDevMentionSelector.defaultDescDataSource');
   }
 };
 

@@ -26,11 +26,11 @@ const getStatusName = (status?: string) => {
 
   switch (status) {
     case TeamStatusEnum.Owner:
-      return dict('NuwaxPC.Pages.TeamSetting.roleOwner');
+      return dict('PC.Pages.TeamSetting.roleOwner');
     case TeamStatusEnum.Admin:
-      return dict('NuwaxPC.Pages.TeamSetting.roleAdmin');
+      return dict('PC.Pages.TeamSetting.roleAdmin');
     default:
-      return dict('NuwaxPC.Pages.TeamSetting.roleMember');
+      return dict('PC.Pages.TeamSetting.roleMember');
   }
 };
 
@@ -56,7 +56,7 @@ const TeamSetting: React.FC = () => {
   const { run: runEdit } = useRequest(apiUpdateSpaceTeam, {
     manual: true,
     onSuccess: (_: null, params: UpdateSpaceTeamParams[]) => {
-      message.success(dict('NuwaxPC.Toast.Global.modifiedSuccessfully'));
+      message.success(dict('PC.Toast.Global.modifiedSuccessfully'));
       const _info = {
         ...spaceDetailInfo,
         ...params[0],
@@ -93,7 +93,7 @@ const TeamSetting: React.FC = () => {
   const tabs: TabsProps['items'] = [
     {
       key: 'MemberManage',
-      label: dict('NuwaxPC.Pages.TeamSetting.memberManagement'),
+      label: dict('PC.Pages.TeamSetting.memberManagement'),
       children: (
         <MemberManageTab
           spaceId={spaceId}
@@ -105,7 +105,7 @@ const TeamSetting: React.FC = () => {
       ? [
           {
             key: 'SpaceSetting',
-            label: dict('NuwaxPC.Pages.TeamSetting.spaceSetting'),
+            label: dict('PC.Pages.TeamSetting.spaceSetting'),
             children: (
               <SpaceSettingTab
                 spaceId={spaceId}
@@ -146,7 +146,10 @@ const TeamSetting: React.FC = () => {
             )}
           </h1>
           <p className={cx('font-14')}>
-            {dict('NuwaxPC.Pages.TeamSetting.myStatus').replace('{0}', getStatusName(spaceDetailInfo?.currentUserRole))}
+            {dict('PC.Pages.TeamSetting.myStatus').replace(
+              '{0}',
+              getStatusName(spaceDetailInfo?.currentUserRole),
+            )}
           </p>
         </section>
       </section>

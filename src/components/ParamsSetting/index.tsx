@@ -182,7 +182,7 @@ const ParamsSetting: React.FC<ParamsSettingProps> = ({
   // 入参配置columns
   const inputColumns: TableColumnsType<BindConfigWithSub> = [
     {
-      title: dict('NuwaxPC.Components.ParamsSetting.paramName'),
+      title: dict('PC.Components.ParamsSetting.paramName'),
       dataIndex: 'name',
       key: 'name',
       className: 'flex items-center table-params-name-td',
@@ -203,7 +203,7 @@ const ParamsSetting: React.FC<ParamsSettingProps> = ({
       ),
     },
     {
-      title: dict('NuwaxPC.Components.ParamsSetting.paramType'),
+      title: dict('PC.Components.ParamsSetting.paramType'),
       dataIndex: 'dataType',
       key: 'dataType',
       width: 120,
@@ -212,18 +212,20 @@ const ParamsSetting: React.FC<ParamsSettingProps> = ({
       ),
     },
     {
-      title: dict('NuwaxPC.Components.ParamsSetting.required'),
+      title: dict('PC.Components.ParamsSetting.required'),
       dataIndex: 'require',
       key: 'require',
       width: 85,
       render: (value: boolean) => (
         <div className={cx('h-full', 'flex', 'items-center')}>
-          {value ? dict('NuwaxPC.Components.ParamsSetting.required') : dict('NuwaxPC.Components.ParamsSetting.notRequired')}
+          {value
+            ? dict('PC.Components.ParamsSetting.required')
+            : dict('PC.Components.ParamsSetting.notRequired')}
         </div>
       ),
     },
     {
-      title: dict('NuwaxPC.Components.ParamsSetting.defaultValue'),
+      title: dict('PC.Components.ParamsSetting.defaultValue'),
       key: 'default',
       width: 232,
       render: (_, record) => (
@@ -244,7 +246,7 @@ const ParamsSetting: React.FC<ParamsSettingProps> = ({
             {isShowInput(record) ? (
               <Input
                 rootClassName={cx(styles.select)}
-                placeholder={dict('NuwaxPC.Components.ParamsSetting.pleaseFill')}
+                placeholder={dict('PC.Components.ParamsSetting.pleaseFill')}
                 disabled={isDefaultValueDisabled(record)}
                 value={record.bindValue}
                 onChange={(e) =>
@@ -253,7 +255,7 @@ const ParamsSetting: React.FC<ParamsSettingProps> = ({
               />
             ) : (
               <Select
-                placeholder={dict('NuwaxPC.Common.Global.pleaseSelect')}
+                placeholder={dict('PC.Common.Global.pleaseSelect')}
                 disabled={isDefaultValueDisabled(record)}
                 rootClassName={cx(styles.select)}
                 popupMatchSelectWidth={false}
@@ -271,11 +273,9 @@ const ParamsSetting: React.FC<ParamsSettingProps> = ({
     {
       title: (
         <>
-          <span>{dict('NuwaxPC.Components.ParamsSetting.enable')}</span>
+          <span>{dict('PC.Components.ParamsSetting.enable')}</span>
           <Popover
-            content={
-              dict('NuwaxPC.Components.ParamsSetting.enableTooltip')
-            }
+            content={dict('PC.Components.ParamsSetting.enableTooltip')}
             styles={{
               body: { width: '300px' },
             }}
@@ -294,7 +294,7 @@ const ParamsSetting: React.FC<ParamsSettingProps> = ({
             title={
               record.require &&
               !record.bindValue &&
-              dict('NuwaxPC.Components.ParamsSetting.requiredParamTooltip')
+              dict('PC.Components.ParamsSetting.requiredParamTooltip')
             }
           >
             <Switch
@@ -345,7 +345,7 @@ const ParamsSetting: React.FC<ParamsSettingProps> = ({
           className={cx({ [styles['btn-disabled']]: disabled })}
           disabled={disabled}
         >
-          {dict('NuwaxPC.Common.Global.save')}
+          {dict('PC.Common.Global.save')}
         </Button>
       </footer>
     </div>

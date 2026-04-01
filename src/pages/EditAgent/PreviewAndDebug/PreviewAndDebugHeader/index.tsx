@@ -1,8 +1,8 @@
 import { SvgIcon } from '@/components/base';
 import ConditionRender from '@/components/ConditionRender';
 import TooltipIcon from '@/components/custom/TooltipIcon';
-import { EditAgentShowType } from '@/types/enums/space';
 import { dict } from '@/services/i18nRuntime';
+import { EditAgentShowType } from '@/types/enums/space';
 import classNames from 'classnames';
 import React from 'react';
 import { useModel } from 'umi';
@@ -53,13 +53,19 @@ const PreviewAndDebugHeader: React.FC<PreviewAndDebugHeaderProps> = ({
         styles.container,
       )}
     >
-      <h3>{dict('NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.previewAndDebug')}</h3>
+      <h3>
+        {dict(
+          'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.previewAndDebug',
+        )}
+      </h3>
       <div className={cx('flex', 'items-center')}>
         {(showType === EditAgentShowType.Version_History ||
           showType === EditAgentShowType.Show_Stand ||
           showType === EditAgentShowType.Hide) && (
           <TooltipIcon
-            title={dict('NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.debug')}
+            title={dict(
+              'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.debug',
+            )}
             className={cx(styles['icon-box'])}
             icon={<SvgIcon name="icons-common-debug" />}
             onClick={onPressDebug}
@@ -69,7 +75,9 @@ const PreviewAndDebugHeader: React.FC<PreviewAndDebugHeaderProps> = ({
         {/*打开预览页面*/}
         {isShowPreview && (
           <TooltipIcon
-            title={dict('NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openPreviewPage')}
+            title={dict(
+              'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openPreviewPage',
+            )}
             className={cx(styles['icon-box'])}
             icon={<SvgIcon name="icons-nav-ecosystem" />}
             onClick={onShowPreview}
@@ -83,8 +91,12 @@ const PreviewAndDebugHeader: React.FC<PreviewAndDebugHeaderProps> = ({
             <TooltipIcon
               title={
                 isFileTreeVisible && viewMode === 'preview'
-                  ? dict('NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.closeFilePreview')
-                  : dict('NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openFilePreview')
+                  ? dict(
+                      'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.closeFilePreview',
+                    )
+                  : dict(
+                      'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openFilePreview',
+                    )
               }
               className={cx(styles['icon-box'], {
                 [styles['active']]: isFileTreeVisible && viewMode === 'preview',
@@ -98,8 +110,12 @@ const PreviewAndDebugHeader: React.FC<PreviewAndDebugHeaderProps> = ({
               <TooltipIcon
                 title={
                   isFileTreeVisible && viewMode === 'desktop'
-                    ? dict('NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.closeAgentDesktop')
-                    : dict('NuwaxPC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openAgentDesktop')
+                    ? dict(
+                        'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.closeAgentDesktop',
+                      )
+                    : dict(
+                        'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openAgentDesktop',
+                      )
                 }
                 className={cx(styles['icon-box'], {
                   [styles['active']]:

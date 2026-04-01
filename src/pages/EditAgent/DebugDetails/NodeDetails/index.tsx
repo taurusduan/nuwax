@@ -1,7 +1,7 @@
 import { EllipsisTooltip } from '@/components/custom/EllipsisTooltip';
+import { dict } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import type { NodeDetailsProps } from '@/types/interfaces/agentConfig';
-import { dict } from '@/services/i18nRuntime';
 import classNames from 'classnames';
 import dayjs from 'dayjs';
 import type React from 'react';
@@ -33,19 +33,19 @@ export const NodeDetails: React.FC<NodeDetailsProps> = ({ node }) => {
   const nodeTypeName = useMemo(() => {
     switch (node?.type) {
       case AgentComponentTypeEnum.Plugin:
-        return dict('NuwaxPC.Pages.EditAgent.NodeDetails.typePlugin');
+        return dict('PC.Pages.EditAgent.NodeDetails.typePlugin');
       case AgentComponentTypeEnum.Workflow:
-        return dict('NuwaxPC.Pages.EditAgent.NodeDetails.typeWorkflow');
+        return dict('PC.Pages.EditAgent.NodeDetails.typeWorkflow');
       case AgentComponentTypeEnum.Knowledge:
-        return dict('NuwaxPC.Pages.EditAgent.NodeDetails.typeKnowledge');
+        return dict('PC.Pages.EditAgent.NodeDetails.typeKnowledge');
       case AgentComponentTypeEnum.Variable:
-        return dict('NuwaxPC.Pages.EditAgent.NodeDetails.typeVariable');
+        return dict('PC.Pages.EditAgent.NodeDetails.typeVariable');
       case AgentComponentTypeEnum.Table:
-        return dict('NuwaxPC.Pages.EditAgent.NodeDetails.typeTable');
+        return dict('PC.Pages.EditAgent.NodeDetails.typeTable');
       case AgentComponentTypeEnum.Model:
-        return dict('NuwaxPC.Pages.EditAgent.NodeDetails.typeModel');
+        return dict('PC.Pages.EditAgent.NodeDetails.typeModel');
       case AgentComponentTypeEnum.MCP:
-        return dict('NuwaxPC.Pages.EditAgent.NodeDetails.typeMCP');
+        return dict('PC.Pages.EditAgent.NodeDetails.typeMCP');
       default:
         return '--';
     }
@@ -54,20 +54,32 @@ export const NodeDetails: React.FC<NodeDetailsProps> = ({ node }) => {
   return (
     <>
       <div className={cx(styles.container)}>
-        {renderDetailItem(dict('NuwaxPC.Pages.EditAgent.NodeDetails.labelType'), nodeTypeName)}
-        {renderDetailItem(dict('NuwaxPC.Pages.EditAgent.NodeDetails.labelStatus'), dict('NuwaxPC.Pages.EditAgent.NodeDetails.statusSuccess'))}
-        {renderDetailItem(dict('NuwaxPC.Pages.EditAgent.NodeDetails.labelName'), node?.name as string)}
-        {renderDetailItem(dict('NuwaxPC.Pages.EditAgent.NodeDetails.labelDuration'), time)}
+        {renderDetailItem(
+          dict('PC.Pages.EditAgent.NodeDetails.labelType'),
+          nodeTypeName,
+        )}
+        {renderDetailItem(
+          dict('PC.Pages.EditAgent.NodeDetails.labelStatus'),
+          dict('PC.Pages.EditAgent.NodeDetails.statusSuccess'),
+        )}
+        {renderDetailItem(
+          dict('PC.Pages.EditAgent.NodeDetails.labelName'),
+          node?.name as string,
+        )}
+        {renderDetailItem(
+          dict('PC.Pages.EditAgent.NodeDetails.labelDuration'),
+          time,
+        )}
       </div>
       {renderDetailItem(
-        dict('NuwaxPC.Pages.EditAgent.NodeDetails.labelStartTime'),
+        dict('PC.Pages.EditAgent.NodeDetails.labelStartTime'),
         node?.startTime
           ? dayjs(node?.startTime).format('YYYY-MM-DD HH:mm')
           : '',
         styles['mt-10'],
       )}
       {renderDetailItem(
-        dict('NuwaxPC.Pages.EditAgent.NodeDetails.labelEndTime'),
+        dict('PC.Pages.EditAgent.NodeDetails.labelEndTime'),
         node?.endTime ? dayjs(node?.endTime).format('YYYY-MM-DD HH:mm') : '',
         styles['mt-10'],
       )}

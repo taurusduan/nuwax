@@ -154,7 +154,7 @@ const CodeOptimizeModal: React.FC<
               onReplace?.(messageList?.[messageList?.length - 1]?.text)
             }
           >
-            {dict('NuwaxPC.Components.CodeOptimizeModal.replace')}
+            {dict('PC.Components.CodeOptimizeModal.replace')}
           </Button>
           <Button
             onClick={(e) => {
@@ -163,7 +163,7 @@ const CodeOptimizeModal: React.FC<
             }}
             className={cx(styles['btn'], 'ml-10 ')}
           >
-            {dict('NuwaxPC.Components.CodeOptimizeModal.exit')}
+            {dict('PC.Components.CodeOptimizeModal.exit')}
           </Button>
         </div>
       ) : (
@@ -178,7 +178,7 @@ const CodeOptimizeModal: React.FC<
             onChange={(e) => setMessage(e.target.value)}
             rootClassName={styles.input}
             onPressEnter={handlePressEnter}
-            placeholder={dict('NuwaxPC.Components.CodeOptimizeModal.placeholder')}
+            placeholder={dict('PC.Components.CodeOptimizeModal.placeholder')}
             autoSize={{ minRows: 1, maxRows: 3 }}
           />
 

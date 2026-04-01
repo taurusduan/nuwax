@@ -34,9 +34,9 @@ const DocItem: React.FC<DocItemProps> = ({
       const status: KnowledgeDocumentStatus = {
         docStatus: DocStatusEnum.ANALYZING_RAW,
         docStatusCode: DocStatusCodeEnum.ANALYZING_RAW,
-        docStatusDesc: dict('NuwaxPC.Pages.SpaceKnowledge.DocItem.analyzing'),
+        docStatusDesc: dict('PC.Pages.SpaceKnowledge.DocItem.analyzing'),
         docStatusReason: dict(
-          'NuwaxPC.Pages.SpaceKnowledge.DocItem.segmentGenerating',
+          'PC.Pages.SpaceKnowledge.DocItem.segmentGenerating',
         ),
       };
       onSetAnalyzed(id, status);
@@ -126,7 +126,7 @@ const DocItem: React.FC<DocItemProps> = ({
 
       {info.docStatusCode === DocStatusCodeEnum.ANALYZED ? (
         <span className={cx(styles.analyzing, styles['analyzing-success'])}>
-          {dict('NuwaxPC.Pages.SpaceKnowledge.DocItem.buildSuccess')}
+          {dict('PC.Pages.SpaceKnowledge.DocItem.buildSuccess')}
         </span>
       ) : info.docStatusCode === DocStatusCodeEnum.ANALYZE_FAILED ? (
         <Button
@@ -136,11 +136,11 @@ const DocItem: React.FC<DocItemProps> = ({
           danger
           onClick={handleAutoRetry}
         >
-          {dict('NuwaxPC.Pages.SpaceKnowledge.DocItem.buildFailedRetry')}
+          {dict('PC.Pages.SpaceKnowledge.DocItem.buildFailedRetry')}
         </Button>
       ) : (
         <span className={cx(styles.analyzing)}>
-          {dict('NuwaxPC.Pages.SpaceKnowledge.DocItem.building')}
+          {dict('PC.Pages.SpaceKnowledge.DocItem.building')}
         </span>
       )}
     </li>

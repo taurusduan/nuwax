@@ -100,7 +100,7 @@ const SelectTarget: React.FC<SelectTargetProps> = ({
             {
               required: true,
               message: t(
-                'NuwaxPC.Pages.SpaceTaskSelectTargetFormItem.selectLabel',
+                'PC.Pages.SpaceTaskSelectTargetFormItem.selectLabel',
                 label,
               ),
               type: 'object',

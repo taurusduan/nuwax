@@ -65,67 +65,67 @@ const UsageStatistics: React.FC = () => {
       const rows: UsageTableItem[] = [
         {
           key: 'token',
-          type: dict('NuwaxPC.Layouts.Setting.UsageStatistics.tokenLimit'),
+          type: dict('PC.Layouts.Setting.UsageStatistics.tokenLimit'),
           daily: formatUsageInfo(usage.todayTokenUsage),
           other: '--',
         },
         {
           key: 'agentPrompt',
-          type: dict('NuwaxPC.Layouts.Setting.UsageStatistics.agentPrompt'),
+          type: dict('PC.Layouts.Setting.UsageStatistics.agentPrompt'),
           daily: formatUsageInfo(usage.todayAgentPromptUsage),
           other: '--',
         },
         {
           key: 'pagePrompt',
-          type: dict('NuwaxPC.Layouts.Setting.UsageStatistics.pagePrompt'),
+          type: dict('PC.Layouts.Setting.UsageStatistics.pagePrompt'),
           daily: formatUsageInfo(usage.todayPageAppPromptUsage),
           other: '--',
         },
         {
           key: 'workspace',
-          type: dict('NuwaxPC.Layouts.Setting.UsageStatistics.workspace'),
+          type: dict('PC.Layouts.Setting.UsageStatistics.workspace'),
           daily: '--',
           other: formatUsageInfo(usage.newWorkspaceUsage),
         },
         {
           key: 'agent',
-          type: dict('NuwaxPC.Layouts.Setting.UsageStatistics.agent'),
+          type: dict('PC.Layouts.Setting.UsageStatistics.agent'),
           daily: '--',
           other: formatUsageInfo(usage.newAgentUsage),
         },
         {
           key: 'pageApp',
-          type: dict('NuwaxPC.Layouts.Setting.UsageStatistics.pageApp'),
+          type: dict('PC.Layouts.Setting.UsageStatistics.pageApp'),
           daily: '--',
           other: formatUsageInfo(usage.newPageAppUsage),
         },
         {
           key: 'knowledgeBase',
-          type: dict('NuwaxPC.Layouts.Setting.UsageStatistics.knowledgeBase'),
+          type: dict('PC.Layouts.Setting.UsageStatistics.knowledgeBase'),
           daily: '--',
           other: formatUsageInfo(usage.newKnowledgeBaseUsage),
         },
         {
           key: 'kbStorage',
-          type: dict('NuwaxPC.Layouts.Setting.UsageStatistics.kbStorage'),
+          type: dict('PC.Layouts.Setting.UsageStatistics.kbStorage'),
           daily: '--',
           other: formatUsageInfo(usage.knowledgeBaseStorageUsage),
         },
         {
           key: 'table',
-          type: dict('NuwaxPC.Layouts.Setting.UsageStatistics.table'),
+          type: dict('PC.Layouts.Setting.UsageStatistics.table'),
           daily: '--',
           other: formatUsageInfo(usage.newTableUsage),
         },
         {
           key: 'task',
-          type: dict('NuwaxPC.Layouts.Setting.UsageStatistics.task'),
+          type: dict('PC.Layouts.Setting.UsageStatistics.task'),
           daily: '--',
           other: formatUsageInfo(usage.newTaskUsage),
         },
         {
           key: 'sandboxMemory',
-          type: dict('NuwaxPC.Layouts.Setting.UsageStatistics.sandboxMemory'),
+          type: dict('PC.Layouts.Setting.UsageStatistics.sandboxMemory'),
           daily: '--',
           other: formatUsageInfo(usage.sandboxMemoryLimit),
         },
@@ -146,19 +146,19 @@ const UsageStatistics: React.FC = () => {
 
   const columns: ProColumns<UsageTableItem>[] = [
     {
-      title: dict('NuwaxPC.Layouts.Setting.UsageStatistics.columnType'),
+      title: dict('PC.Layouts.Setting.UsageStatistics.columnType'),
       dataIndex: 'type',
       key: 'type',
       width: 220,
     },
     {
-      title: dict('NuwaxPC.Layouts.Setting.UsageStatistics.columnDaily'),
+      title: dict('PC.Layouts.Setting.UsageStatistics.columnDaily'),
       dataIndex: 'daily',
       key: 'daily',
       width: 200,
     },
     {
-      title: dict('NuwaxPC.Layouts.Setting.UsageStatistics.columnOther'),
+      title: dict('PC.Layouts.Setting.UsageStatistics.columnOther'),
       dataIndex: 'other',
       key: 'other',
       width: 200,
@@ -167,7 +167,7 @@ const UsageStatistics: React.FC = () => {
 
   return (
     <div className={cx(styles.container)}>
-      <h3>{dict('NuwaxPC.Layouts.Setting.UsageStatistics.title')}</h3>
+      <h3>{dict('PC.Layouts.Setting.UsageStatistics.title')}</h3>
       <div className={cx('text-right')}>
         <Button
           type="primary"
@@ -176,7 +176,7 @@ const UsageStatistics: React.FC = () => {
             actionRef.current?.reload?.();
           }}
         >
-          {dict('NuwaxPC.Layouts.Setting.UsageStatistics.query')}
+          {dict('PC.Layouts.Setting.UsageStatistics.query')}
         </Button>
       </div>
       <XProTable<UsageTableItem>

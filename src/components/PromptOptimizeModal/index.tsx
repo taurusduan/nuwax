@@ -175,10 +175,10 @@ const PromptOptimizeModal: React.FC<
               onReplace?.(messageList?.[messageList?.length - 1]?.text)
             }
           >
-            {dict('NuwaxPC.Components.PromptOptimizeModal.replace')}
+            {dict('PC.Components.PromptOptimizeModal.replace')}
           </Button>
           <Button onClick={handleExit} className={cx(styles['btn'], 'ml-10 ')}>
-            {dict('NuwaxPC.Components.PromptOptimizeModal.exit')}
+            {dict('PC.Components.PromptOptimizeModal.exit')}
           </Button>
         </div>
       ) : (
@@ -188,11 +188,12 @@ const PromptOptimizeModal: React.FC<
           onClick={() =>
             // 如果有默认文本就优化默认文本
             handleSendMessage(
-              defaultValue || dict('NuwaxPC.Components.PromptOptimizeModal.defaultOptimizePrompt'),
+              defaultValue ||
+                dict('PC.Components.PromptOptimizeModal.defaultOptimizePrompt'),
             )
           }
         >
-          {dict('NuwaxPC.Components.PromptOptimizeModal.autoOptimize')}
+          {dict('PC.Components.PromptOptimizeModal.autoOptimize')}
         </Button>
       )}
       <div className={cx(styles.footer, 'flex', 'items-center')}>
@@ -204,7 +205,9 @@ const PromptOptimizeModal: React.FC<
             onChange={(e) => setMessage(e.target.value)}
             rootClassName={styles.input}
             onPressEnter={handlePressEnter}
-            placeholder={dict('NuwaxPC.Components.PromptOptimizeModal.promptPlaceholder')}
+            placeholder={dict(
+              'PC.Components.PromptOptimizeModal.promptPlaceholder',
+            )}
             autoSize={{ minRows: 1, maxRows: 3 }}
           />
           <Button

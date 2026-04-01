@@ -51,7 +51,7 @@ const CopyButton: React.FC<CopyButtonProps> = ({
   style,
   disabled = false,
   icon,
-  children={dict('NuwaxPC.Common.Global.copy')}
+  children = dict('PC.Common.Global.copy'),
   tooltipText,
   showSuccessMsg = true,
   jsonSpace = 2,

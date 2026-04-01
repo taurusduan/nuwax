@@ -31,9 +31,7 @@ const ResetPassword: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(
-        dict('NuwaxPC.Layouts.Setting.ResetPassword.resetSuccess'),
-      );
+      message.success(dict('PC.Layouts.Setting.ResetPassword.resetSuccess'));
       form.resetFields();
       setCountDown(0);
       onClearTimer();
@@ -64,7 +62,7 @@ const ResetPassword: React.FC = () => {
 
   return (
     <div className={cx(styles.container)}>
-      <h3>{dict('NuwaxPC.Layouts.Setting.ResetPassword.title')}</h3>
+      <h3>{dict('PC.Layouts.Setting.ResetPassword.title')}</h3>
       <Form
         layout="vertical"
         form={form}
@@ -74,12 +72,12 @@ const ResetPassword: React.FC = () => {
       >
         <Form.Item
           name="password"
-          label={dict('NuwaxPC.Layouts.Setting.ResetPassword.newPassword')}
+          label={dict('PC.Layouts.Setting.ResetPassword.newPassword')}
           rules={[
             {
               required: true,
               message: dict(
-                'NuwaxPC.Layouts.Setting.ResetPassword.inputNewPassword',
+                'PC.Layouts.Setting.ResetPassword.inputNewPassword',
               ),
             },
             {
@@ -90,7 +88,7 @@ const ResetPassword: React.FC = () => {
                 return Promise.reject(
                   new Error(
                     dict(
-                      'NuwaxPC.Layouts.Setting.ResetPassword.inputCorrectPassword',
+                      'PC.Layouts.Setting.ResetPassword.inputCorrectPassword',
                     ),
                   ),
                 );
@@ -100,18 +98,18 @@ const ResetPassword: React.FC = () => {
         >
           <Input.Password
             placeholder={dict(
-              'NuwaxPC.Layouts.Setting.ResetPassword.placeholderNewPassword',
+              'PC.Layouts.Setting.ResetPassword.placeholderNewPassword',
             )}
           />
         </Form.Item>
         <Form.Item
           name="newPassword"
-          label={dict('NuwaxPC.Layouts.Setting.ResetPassword.confirmPassword')}
+          label={dict('PC.Layouts.Setting.ResetPassword.confirmPassword')}
           rules={[
             {
               required: true,
               message: dict(
-                'NuwaxPC.Layouts.Setting.ResetPassword.inputConfirmPassword',
+                'PC.Layouts.Setting.ResetPassword.inputConfirmPassword',
               ),
             },
             ({ getFieldValue }) => ({
@@ -123,16 +121,14 @@ const ResetPassword: React.FC = () => {
                 if (_password && _password !== value) {
                   return Promise.reject(
                     new Error(
-                      dict(
-                        'NuwaxPC.Layouts.Setting.ResetPassword.passwordMismatch',
-                      ),
+                      dict('PC.Layouts.Setting.ResetPassword.passwordMismatch'),
                     ),
                   );
                 }
                 return Promise.reject(
                   new Error(
                     dict(
-                      'NuwaxPC.Layouts.Setting.ResetPassword.inputCorrectNewPassword',
+                      'PC.Layouts.Setting.ResetPassword.inputCorrectNewPassword',
                     ),
                   ),
                 );
@@ -142,18 +138,18 @@ const ResetPassword: React.FC = () => {
         >
           <Input.Password
             placeholder={dict(
-              'NuwaxPC.Layouts.Setting.ResetPassword.placeholderConfirmPassword',
+              'PC.Layouts.Setting.ResetPassword.placeholderConfirmPassword',
             )}
           />
         </Form.Item>
         <Form.Item
           name="code"
-          label={dict('NuwaxPC.Layouts.Setting.ResetPassword.verificationCode')}
+          label={dict('PC.Layouts.Setting.ResetPassword.verificationCode')}
           rules={[
             {
               required: true,
               message: dict(
-                'NuwaxPC.Layouts.Setting.ResetPassword.inputVerificationCode',
+                'PC.Layouts.Setting.ResetPassword.inputVerificationCode',
               ),
             },
             {
@@ -163,9 +159,7 @@ const ResetPassword: React.FC = () => {
                 }
                 return Promise.reject(
                   new Error(
-                    dict(
-                      'NuwaxPC.Layouts.Setting.ResetPassword.inputCorrectCode',
-                    ),
+                    dict('PC.Layouts.Setting.ResetPassword.inputCorrectCode'),
                   ),
                 );
               },
@@ -176,7 +170,7 @@ const ResetPassword: React.FC = () => {
             <Input
               rootClassName={styles.input}
               placeholder={dict(
-                'NuwaxPC.Layouts.Setting.ResetPassword.placeholderCode',
+                'PC.Layouts.Setting.ResetPassword.placeholderCode',
               )}
             />
             {countDown < 60 && countDown > 0 ? (
@@ -189,14 +183,14 @@ const ResetPassword: React.FC = () => {
                 type="primary"
                 onClick={handleSendCode}
               >
-                {dict('NuwaxPC.Layouts.Setting.ResetPassword.sendCode')}
+                {dict('PC.Layouts.Setting.ResetPassword.sendCode')}
               </Button>
             )}
           </div>
         </Form.Item>
         <Form.Item>
           <Button block type="primary" htmlType="submit" loading={loading}>
-            {dict('NuwaxPC.Layouts.Setting.ResetPassword.submit')}
+            {dict('PC.Layouts.Setting.ResetPassword.submit')}
           </Button>
         </Form.Item>
       </Form>

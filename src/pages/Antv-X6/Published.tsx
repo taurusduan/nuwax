@@ -45,32 +45,29 @@ const Published: React.FC<PublishedProp> = ({
   return (
     <Modal
       open={open}
-      title={dict('NuwaxPC.Pages.AntvX6Published.title')}
+      title={dict('PC.Pages.AntvX6Published.title')}
       keyboard={false} //是否能使用sec关闭
       maskClosable={false} //点击蒙版层是否可以关闭
       onCancel={onCancel}
       confirmLoading={loading}
-      cancelText={dict('NuwaxPC.Common.Global.cancel')}
-      okText={dict('NuwaxPC.Common.Global.confirm')}
+      cancelText={dict('PC.Common.Global.cancel')}
+      okText={dict('PC.Common.Global.confirm')}
       onOk={() => {
         form.submit();
       }}
     >
       <Form form={form} layout="vertical" onFinish={onFinish}>
-        <Form.Item
-          name="scope"
-          label={dict('NuwaxPC.Pages.AntvX6Published.scope')}
-        >
+        <Form.Item name="scope" label={dict('PC.Pages.AntvX6Published.scope')}>
           <Radio.Group options={PLUGIN_PUBLISH_OPTIONS} />
         </Form.Item>
         <Form.Item
           name="remark"
-          label={dict('NuwaxPC.Pages.AntvX6Published.releaseNote')}
+          label={dict('PC.Pages.AntvX6Published.releaseNote')}
         >
           <Input.TextArea
             autoSize={{ minRows: 3, maxRows: 5 }}
             placeholder={dict(
-              'NuwaxPC.Pages.AntvX6Published.releaseNotePlaceholder',
+              'PC.Pages.AntvX6Published.releaseNotePlaceholder',
             )}
           ></Input.TextArea>
         </Form.Item>

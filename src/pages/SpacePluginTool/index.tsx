@@ -13,8 +13,8 @@ import {
 } from '@/constants/library.constants';
 import usePluginConfig from '@/hooks/usePluginConfig';
 import { dataTypes } from '@/pages/Antv-X6/params';
-import { apiPluginHttpUpdate, apiPluginInfo } from '@/services/plugin';
 import { dict } from '@/services/i18nRuntime';
+import { apiPluginHttpUpdate, apiPluginInfo } from '@/services/plugin';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import {
   CreateUpdateModeEnum,
@@ -136,25 +136,27 @@ const SpacePluginTool: React.FC = () => {
   // 入参配置columns
   const inputColumns: TableColumnsType<BindConfigWithSub> = [
     {
-      title: <LabelStar label={dict('NuwaxPC.Pages.SpacePluginTool.paramName')} />,
+      title: <LabelStar label={dict('PC.Pages.SpacePluginTool.paramName')} />,
       dataIndex: 'name',
       key: 'name',
       className: 'flex items-center',
       render: (value, record) => (
         <Input
-          placeholder={dict('NuwaxPC.Pages.SpacePluginTool.inputParamName')}
+          placeholder={dict('PC.Pages.SpacePluginTool.inputParamName')}
           value={value}
           onChange={(e) => handleInputValue(record.key, 'name', e.target.value)}
         />
       ),
     },
     {
-      title: <LabelStar label={dict('NuwaxPC.Pages.SpacePluginTool.paramDescription')} />,
+      title: (
+        <LabelStar label={dict('PC.Pages.SpacePluginTool.paramDescription')} />
+      ),
       dataIndex: 'description',
       key: 'description',
       render: (value, record) => (
         <Input
-          placeholder={dict('NuwaxPC.Pages.SpacePluginTool.inputParamDescription')}
+          placeholder={dict('PC.Pages.SpacePluginTool.inputParamDescription')}
           value={value}
           onChange={(e) =>
             handleInputValue(record.key, 'description', e.target.value)
@@ -163,7 +165,7 @@ const SpacePluginTool: React.FC = () => {
       ),
     },
     {
-      title: <LabelStar label={dict('NuwaxPC.Pages.SpacePluginTool.paramType')} />,
+      title: <LabelStar label={dict('PC.Pages.SpacePluginTool.paramType')} />,
       dataIndex: 'dataType',
       key: 'dataType',
       width: 120,
@@ -178,12 +180,12 @@ const SpacePluginTool: React.FC = () => {
           onChange={(value) => {
             handleInputValue(record.key, 'dataType', CascaderChange(value));
           }}
-          placeholder={dict('NuwaxPC.Pages.SpacePluginTool.selectDataType')}
+          placeholder={dict('PC.Pages.SpacePluginTool.selectDataType')}
         />
       ),
     },
     {
-      title: <LabelStar label={dict('NuwaxPC.Pages.SpacePluginTool.inputMode')} />,
+      title: <LabelStar label={dict('PC.Pages.SpacePluginTool.inputMode')} />,
       dataIndex: 'inputType',
       key: 'inputType',
       width: 120,
@@ -200,7 +202,7 @@ const SpacePluginTool: React.FC = () => {
         ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpacePluginTool.required'),
+      title: dict('PC.Pages.SpacePluginTool.required'),
       dataIndex: 'require',
       key: 'require',
       width: 100,
@@ -215,13 +217,13 @@ const SpacePluginTool: React.FC = () => {
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpacePluginTool.defaultValue'),
+      title: dict('PC.Pages.SpacePluginTool.defaultValue'),
       dataIndex: 'bindValue',
       key: 'bindValue',
       width: 150,
       render: (value, record) => (
         <Input
-          placeholder={dict('NuwaxPC.Pages.SpacePluginTool.inputDefaultValue')}
+          placeholder={dict('PC.Pages.SpacePluginTool.inputDefaultValue')}
           disabled={
             DataTypeEnum.Object === record.dataType ||
             DataTypeEnum.Array_Object === record.dataType ||
@@ -236,7 +238,7 @@ const SpacePluginTool: React.FC = () => {
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpacePluginTool.enable'),
+      title: dict('PC.Pages.SpacePluginTool.enable'),
       dataIndex: 'enable',
       key: 'enable',
       width: 70,
@@ -246,7 +248,7 @@ const SpacePluginTool: React.FC = () => {
           title={
             record.require &&
             !record.bindValue &&
-            dict('NuwaxPC.Pages.SpacePluginTool.requiredParamTooltip')
+            dict('PC.Pages.SpacePluginTool.requiredParamTooltip')
           }
         >
           <Checkbox
@@ -260,7 +262,7 @@ const SpacePluginTool: React.FC = () => {
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpacePluginTool.action'),
+      title: dict('PC.Pages.SpacePluginTool.action'),
       key: 'action',
       width: 80,
       align: 'right',
@@ -289,14 +291,14 @@ const SpacePluginTool: React.FC = () => {
   // 出参配置columns
   const outputColumns: TableColumnsType<BindConfigWithSub> = [
     {
-      title: <LabelStar label={dict('NuwaxPC.Pages.SpacePluginTool.paramName')} />,
+      title: <LabelStar label={dict('PC.Pages.SpacePluginTool.paramName')} />,
       dataIndex: 'name',
       key: 'name',
       width: 430,
       className: 'flex items-center',
       render: (value, record) => (
         <Input
-          placeholder={dict('NuwaxPC.Pages.SpacePluginTool.inputParamName')}
+          placeholder={dict('PC.Pages.SpacePluginTool.inputParamName')}
           value={value}
           onChange={(e) =>
             handleOutputValue(record.key, 'name', e.target.value)
@@ -305,12 +307,14 @@ const SpacePluginTool: React.FC = () => {
       ),
     },
     {
-      title: <LabelStar label={dict('NuwaxPC.Pages.SpacePluginTool.paramDescription')} />,
+      title: (
+        <LabelStar label={dict('PC.Pages.SpacePluginTool.paramDescription')} />
+      ),
       dataIndex: 'description',
       key: 'description',
       render: (value, record) => (
         <Input
-          placeholder={dict('NuwaxPC.Pages.SpacePluginTool.inputParamDescription')}
+          placeholder={dict('PC.Pages.SpacePluginTool.inputParamDescription')}
           onChange={(e) =>
             handleOutputValue(record.key, 'description', e.target.value)
           }
@@ -319,7 +323,7 @@ const SpacePluginTool: React.FC = () => {
       ),
     },
     {
-      title: <LabelStar label={dict('NuwaxPC.Pages.SpacePluginTool.paramType')} />,
+      title: <LabelStar label={dict('PC.Pages.SpacePluginTool.paramType')} />,
       dataIndex: 'dataType',
       key: 'dataType',
       width: 120,
@@ -334,12 +338,12 @@ const SpacePluginTool: React.FC = () => {
           onChange={(value) => {
             handleOutputValue(record.key, 'dataType', CascaderChange(value));
           }}
-          placeholder={dict('NuwaxPC.Pages.SpacePluginTool.selectDataType')}
+          placeholder={dict('PC.Pages.SpacePluginTool.selectDataType')}
         />
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpacePluginTool.enable'),
+      title: dict('PC.Pages.SpacePluginTool.enable'),
       dataIndex: 'enable',
       key: 'enable',
       width: 70,
@@ -354,7 +358,7 @@ const SpacePluginTool: React.FC = () => {
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpacePluginTool.action'),
+      title: dict('PC.Pages.SpacePluginTool.action'),
       key: 'action',
       width: 80,
       align: 'right',
@@ -432,7 +436,9 @@ const SpacePluginTool: React.FC = () => {
           onPublish={handlePublish}
         />
         <div className={cx(styles['main-container'], 'scroll-container')}>
-          <h3 className={cx(styles.title, 'mb-12')}>{dict('NuwaxPC.Pages.SpacePluginTool.requestConfig')}</h3>
+          <h3 className={cx(styles.title, 'mb-12')}>
+            {dict('PC.Pages.SpacePluginTool.requestConfig')}
+          </h3>
           <Form
             form={form}
             initialValues={{
@@ -443,40 +449,78 @@ const SpacePluginTool: React.FC = () => {
             layout="vertical"
             requiredMark={customizeRequiredMark}
           >
-            <Form.Item label={<LabelStar label={dict('NuwaxPC.Pages.SpacePluginTool.requestMethodAndPath')} />}>
+            <Form.Item
+              label={
+                <LabelStar
+                  label={dict('PC.Pages.SpacePluginTool.requestMethodAndPath')}
+                />
+              }
+            >
               <div className={cx('flex')}>
                 <Form.Item name="method" noStyle>
                   <Select
                     rootClassName={cx(styles['request-select'])}
                     options={REQUEST_METHOD}
-                    placeholder={dict('NuwaxPC.Pages.SpacePluginTool.selectRequestMethod')}
+                    placeholder={dict(
+                      'PC.Pages.SpacePluginTool.selectRequestMethod',
+                    )}
                   />
                 </Form.Item>
                 <Form.Item
                   name="url"
-                  rules={[{ required: true, message: dict('NuwaxPC.Pages.SpacePluginTool.inputRequestPath') }]}
+                  rules={[
+                    {
+                      required: true,
+                      message: dict(
+                        'PC.Pages.SpacePluginTool.inputRequestPath',
+                      ),
+                    },
+                  ]}
                   noStyle
                 >
-                  <Input placeholder={dict('NuwaxPC.Pages.SpacePluginTool.inputRequestPath')} />
+                  <Input
+                    placeholder={dict(
+                      'PC.Pages.SpacePluginTool.inputRequestPath',
+                    )}
+                  />
                 </Form.Item>
               </div>
             </Form.Item>
             <Form.Item
               name="contentType"
-              label={dict('NuwaxPC.Pages.SpacePluginTool.requestContentFormat')}
-              rules={[{ required: true, message: dict('NuwaxPC.Pages.SpacePluginTool.selectRequestContentFormat') }]}
+              label={dict('PC.Pages.SpacePluginTool.requestContentFormat')}
+              rules={[
+                {
+                  required: true,
+                  message: dict(
+                    'PC.Pages.SpacePluginTool.selectRequestContentFormat',
+                  ),
+                },
+              ]}
             >
               <Radio.Group options={REQUEST_CONTENT_FORMAT} />
             </Form.Item>
             <Form.Item
               name="timeout"
-              label={dict('NuwaxPC.Pages.SpacePluginTool.requestTimeoutConfig')}
-              rules={[{ required: true, message: dict('NuwaxPC.Pages.SpacePluginTool.inputTimeoutConfig') }]}
+              label={dict('PC.Pages.SpacePluginTool.requestTimeoutConfig')}
+              rules={[
+                {
+                  required: true,
+                  message: dict('PC.Pages.SpacePluginTool.inputTimeoutConfig'),
+                },
+              ]}
             >
-              <Input placeholder={dict('NuwaxPC.Pages.SpacePluginTool.requestTimeoutPlaceholder')} />
+              <Input
+                placeholder={dict(
+                  'PC.Pages.SpacePluginTool.requestTimeoutPlaceholder',
+                )}
+              />
             </Form.Item>
           </Form>
-          <PluginConfigTitle title={dict('NuwaxPC.Pages.SpacePluginTool.inputConfig')} onClick={handleInputConfigAdd} />
+          <PluginConfigTitle
+            title={dict('PC.Pages.SpacePluginTool.inputConfig')}
+            onClick={handleInputConfigAdd}
+          />
           <Table<BindConfigWithSub>
             className={cx(
               styles['table-wrap'],
@@ -494,9 +538,13 @@ const SpacePluginTool: React.FC = () => {
             }}
           />
           <PluginConfigTitle
-            title={dict('NuwaxPC.Pages.SpacePluginTool.outputConfig')}
+            title={dict('PC.Pages.SpacePluginTool.outputConfig')}
             onClick={handleOutputConfigAdd}
-            extra={<Button onClick={handleAutoResolve}>{dict('NuwaxPC.Pages.SpacePluginTool.autoAnalysis')}</Button>}
+            extra={
+              <Button onClick={handleAutoResolve}>
+                {dict('PC.Pages.SpacePluginTool.autoAnalysis')}
+              </Button>
+            }
           />
           <Table<BindConfigWithSub>
             className={cx(styles['table-wrap'], 'overflow-hide')}

@@ -1,4 +1,3 @@
-import { dict } from '@/services/i18nRuntime';
 import ButtonToggle from '@/components/ButtonToggle';
 import Loading from '@/components/custom/Loading';
 import SelectList from '@/components/custom/SelectList';
@@ -7,6 +6,7 @@ import {
   MCP_MANAGE_SEGMENTED_LIST,
 } from '@/constants/mcp.constants';
 import { CREATE_LIST } from '@/constants/space.constants';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiMcpDelete,
   apiMcpList,
@@ -198,7 +198,7 @@ const SpaceLibrary: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: number[]) => {
-      message.success(dict('NuwaxPC.Pages.SpaceMcpManage.stopSuccess'));
+      message.success(dict('PC.Pages.SpaceMcpManage.stopSuccess'));
       const [id] = params;
       handleStopServiceSuccess(id);
     },
@@ -218,7 +218,7 @@ const SpaceLibrary: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: number[]) => {
-      message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
+      message.success(dict('PC.Toast.Global.deletedSuccessfully'));
       const [id] = params;
       handleDelSuccess(id);
     },
@@ -299,12 +299,12 @@ const SpaceLibrary: React.FC = () => {
       // 停止服务
       case McpMoreActionEnum.Stop_Service:
         confirm({
-          title: dict('NuwaxPC.Pages.SpaceMcpManage.confirmStopService'),
+          title: dict('PC.Pages.SpaceMcpManage.confirmStopService'),
           icon: <ExclamationCircleFilled />,
           content: info.name,
-          okText: dict('NuwaxPC.Common.Global.confirm'),
+          okText: dict('PC.Common.Global.confirm'),
           maskClosable: true,
-          cancelText: dict('NuwaxPC.Common.Global.cancel'),
+          cancelText: dict('PC.Common.Global.cancel'),
           onOk() {
             runMcpStop(info.id);
           },
@@ -313,12 +313,12 @@ const SpaceLibrary: React.FC = () => {
       // 删除
       case McpMoreActionEnum.Del:
         confirm({
-          title: dict('NuwaxPC.Pages.SpaceMcpManage.confirmDeleteService'),
+          title: dict('PC.Pages.SpaceMcpManage.confirmDeleteService'),
           icon: <ExclamationCircleFilled />,
           content: info.name,
-          okText: dict('NuwaxPC.Common.Global.confirm'),
+          okText: dict('PC.Common.Global.confirm'),
           maskClosable: true,
-          cancelText: dict('NuwaxPC.Common.Global.cancel'),
+          cancelText: dict('PC.Common.Global.cancel'),
           onOk() {
             runMcpDelete(info.id);
           },
@@ -383,7 +383,9 @@ const SpaceLibrary: React.FC = () => {
       >
         <div style={{ flex: 1 }}>
           <Space>
-            <h3 className={cx(styles.title)}>{dict('NuwaxPC.Pages.SpaceMcpManage.title')}</h3>
+            <h3 className={cx(styles.title)}>
+              {dict('PC.Pages.SpaceMcpManage.title')}
+            </h3>
             {segmentedValue === McpManageSegmentedEnum.Custom && (
               <>
                 <SelectList
@@ -413,7 +415,7 @@ const SpaceLibrary: React.FC = () => {
         <div style={{ flex: 1, display: 'flex' }}>
           <Input
             rootClassName={cx(styles.input)}
-            placeholder={dict('NuwaxPC.Pages.SpaceMcpManage.searchPlaceholder')}
+            placeholder={dict('PC.Pages.SpaceMcpManage.searchPlaceholder')}
             value={keyword}
             onChange={handleQueryAgent}
             prefix={<SearchOutlined />}
@@ -421,7 +423,7 @@ const SpaceLibrary: React.FC = () => {
             onClear={handleClearKeyword}
           />
           <Button type="primary" icon={<PlusOutlined />} onClick={handleCreate}>
-            {dict('NuwaxPC.Pages.SpaceMcpManage.createMcpService')}
+            {dict('PC.Pages.SpaceMcpManage.createMcpService')}
           </Button>
         </div>
       </div>
@@ -448,7 +450,7 @@ const SpaceLibrary: React.FC = () => {
         </div>
       ) : (
         <div className={cx('flex', 'h-full', 'items-center', 'content-center')}>
-          <Empty description={dict('NuwaxPC.Pages.SpaceMcpManage.noResults')} />
+          <Empty description={dict('PC.Pages.SpaceMcpManage.noResults')} />
         </div>
       )}
       <ServerExportModal

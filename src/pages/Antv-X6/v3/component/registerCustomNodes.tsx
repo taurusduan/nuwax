@@ -90,7 +90,7 @@ const QANode: React.FC<{ data: ChildNode }> = ({ data }) => {
     <div className="qa-node-content-style">
       <div className="dis-left">
         <span className="text-right qa-title-style">
-          {t('NuwaxPC.Pages.AntvX6RegisterNodes.input')}
+          {t('PC.Pages.AntvX6RegisterNodes.input')}
         </span>
         {inputArgs?.slice(0, 2).map((item, index) => (
           <Tag key={`inputArgs-${item.name}-${index}`}>{item.name}</Tag>
@@ -99,23 +99,20 @@ const QANode: React.FC<{ data: ChildNode }> = ({ data }) => {
           <Tag>+{inputArgs.length - 2}</Tag>
         )}
         {!inputArgs && (
-          <span>
-            {t('NuwaxPC.Pages.AntvX6RegisterNodes.unconfiguredInput')}
-          </span>
+          <span>{t('PC.Pages.AntvX6RegisterNodes.unconfiguredInput')}</span>
         )}
       </div>
       <div className="dis-left">
         <span className="text-right qa-title-style">
-          {t('NuwaxPC.Pages.AntvX6RegisterNodes.questionContent')}
+          {t('PC.Pages.AntvX6RegisterNodes.questionContent')}
         </span>
         <span className="question-content-style">
-          {question ||
-            t('NuwaxPC.Pages.AntvX6RegisterNodes.unconfiguredQuestion')}
+          {question || t('PC.Pages.AntvX6RegisterNodes.unconfiguredQuestion')}
         </span>
       </div>
       <div className="dis-left">
         <span className="text-right qa-title-style">
-          {t('NuwaxPC.Pages.AntvX6RegisterNodes.qaType')}
+          {t('PC.Pages.AntvX6RegisterNodes.qaType')}
         </span>
         <span>{answerTypeMap[answerType]}</span>
       </div>
@@ -127,14 +124,11 @@ const QANode: React.FC<{ data: ChildNode }> = ({ data }) => {
           >
             <span className="text-right qa-title-style"></span>
             <Tag>
-              {t(
-                'NuwaxPC.Pages.AntvX6RegisterNodes.optionLabel',
-                String(index + 1),
-              )}
+              {t('PC.Pages.AntvX6RegisterNodes.optionLabel', String(index + 1))}
             </Tag>
             <span className="qa-content-style">
               {item.content ||
-                t('NuwaxPC.Pages.AntvX6RegisterNodes.unconfiguredContent')}
+                t('PC.Pages.AntvX6RegisterNodes.unconfiguredContent')}
             </span>
           </div>
         ))}
@@ -150,14 +144,11 @@ const IntentRecognitionNode: React.FC<{ data: ChildNode }> = ({ data }) => {
       {intentConfigs?.map((item, index) => (
         <div className="dis-left" key={index}>
           <span className="qa-title-style">
-            {t(
-              'NuwaxPC.Pages.AntvX6RegisterNodes.optionLabel',
-              String(index + 1),
-            )}
+            {t('PC.Pages.AntvX6RegisterNodes.optionLabel', String(index + 1))}
           </span>
           <span className="qa-content-style">
             {item.intent ||
-              t('NuwaxPC.Pages.AntvX6RegisterNodes.unconfiguredIntent')}
+              t('PC.Pages.AntvX6RegisterNodes.unconfiguredIntent')}
           </span>
         </div>
       ))}
@@ -244,19 +235,19 @@ const NodeRunResult: React.FC<{
       case statusList.some(
         (status) => status === RunResultStatusEnum.STOP_WAIT_ANSWER,
       ):
-        return t('NuwaxPC.Pages.AntvX6RegisterNodes.replyQuestion');
+        return t('PC.Pages.AntvX6RegisterNodes.replyQuestion');
       case statusList.some(
         (status) => status === RunResultStatusEnum.EXECUTING,
       ):
-        return t('NuwaxPC.Pages.AntvX6RegisterNodes.running');
+        return t('PC.Pages.AntvX6RegisterNodes.running');
       case statusList.some((status) => status === RunResultStatusEnum.FAILED):
-        return t('NuwaxPC.Pages.AntvX6RegisterNodes.failed');
+        return t('PC.Pages.AntvX6RegisterNodes.failed');
       case statusList.every(
         (status) => status === RunResultStatusEnum.FINISHED,
       ):
-        return t('NuwaxPC.Pages.AntvX6RegisterNodes.success');
+        return t('PC.Pages.AntvX6RegisterNodes.success');
       default:
-        return t('NuwaxPC.Pages.AntvX6RegisterNodes.failed');
+        return t('PC.Pages.AntvX6RegisterNodes.failed');
     }
   }, [data]);
 
@@ -289,7 +280,7 @@ const ExceptionHandle: React.FC<{
   return (
     <div className="exception-handle-style">
       <span className="exception-handle-title">
-        {t('NuwaxPC.Pages.AntvX6RegisterNodes.exceptionWhen')}
+        {t('PC.Pages.AntvX6RegisterNodes.exceptionWhen')}
       </span>
       <p className="exception-handle-content">
         {

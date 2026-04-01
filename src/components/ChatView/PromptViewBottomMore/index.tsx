@@ -1,7 +1,7 @@
 import CopyButton from '@/components/base/CopyButton';
 import ConditionRender from '@/components/ConditionRender';
-import { MessageInfo } from '@/types/interfaces/conversationInfo';
 import { dict } from '@/services/i18nRuntime';
+import { MessageInfo } from '@/types/interfaces/conversationInfo';
 import { CopyOutlined } from '@ant-design/icons';
 import { message } from 'antd';
 import classNames from 'classnames';
@@ -23,7 +23,7 @@ const PromptViewBottomMore: React.FC<PromptViewBottomMoreProps> = ({
   const { text, finalResult } = messageInfo || {};
 
   const handleCopy = () => {
-    message.success(dict('NuwaxPC.Toast.Global.copiedSuccessfully'));
+    message.success(dict('PC.Toast.Global.copiedSuccessfully'));
   };
 
   return (
@@ -52,7 +52,7 @@ const PromptViewBottomMore: React.FC<PromptViewBottomMoreProps> = ({
           onCopy={handleCopy}
           icon={<CopyOutlined />}
         >
-          {dict('NuwaxPC.Common.Global.copy')}
+          {dict('PC.Common.Global.copy')}
         </CopyButton>
       </div>
     </div>

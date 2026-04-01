@@ -57,7 +57,10 @@ const ChatView: React.FC<ChatViewProps> = memo(
       switch (messageInfo?.role) {
         case AssistantRoleEnum.USER:
           return {
-            name: _userInfo?.nickName || _userInfo?.userName || dict('NuwaxPC.Components.ChatView.guest'),
+            name:
+              _userInfo?.nickName ||
+              _userInfo?.userName ||
+              dict('PC.Components.ChatView.guest'),
             avatar: _userInfo?.avatar || avatar,
           };
         case AssistantRoleEnum.ASSISTANT:
@@ -74,7 +77,7 @@ const ChatView: React.FC<ChatViewProps> = memo(
     })();
 
     const handleTextCopy = () => {
-      message.success(dict('NuwaxPC.Toast.Global.copiedSuccessfully'));
+      message.success(dict('PC.Toast.Global.copiedSuccessfully'));
     };
 
     const trim = useCallback((text: string) => {
@@ -175,7 +178,7 @@ const ChatView: React.FC<ChatViewProps> = memo(
                   text={messageInfo.text || ''}
                   onCopy={handleTextCopy}
                 >
-                  {dict('NuwaxPC.Components.ChatView.copy')}
+                  {dict('PC.Components.ChatView.copy')}
                 </CopyButton>
               </div>
             </div>

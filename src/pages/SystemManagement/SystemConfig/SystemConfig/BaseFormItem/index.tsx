@@ -117,9 +117,7 @@ export default function BaseFormItem({
         validator: (_: any, value: string[]) => {
           if (value.length === 0 || value.some((item) => item === '')) {
             return Promise.reject(
-              new Error(
-                t('NuwaxPC.Pages.SystemConfigBaseFormItem.enterDomain'),
-              ),
+              new Error(t('PC.Pages.SystemConfigBaseFormItem.enterDomain')),
             );
           }
           return Promise.resolve();

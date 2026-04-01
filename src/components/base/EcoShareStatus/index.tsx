@@ -11,19 +11,19 @@ interface EcoShareStatusProps {
 
 const EcoShareStatusMap = {
   [EcosystemShareStatusEnum.DRAFT]: {
-    title: dict('NuwaxPC.Components.EcoShareStatus.draft'),
+    title: dict('PC.Components.EcoShareStatus.draft'),
   },
   [EcosystemShareStatusEnum.REVIEWING]: {
-    title: dict('NuwaxPC.Components.EcoShareStatus.reviewing'),
+    title: dict('PC.Components.EcoShareStatus.reviewing'),
   },
   [EcosystemShareStatusEnum.PUBLISHED]: {
-    title: dict('NuwaxPC.Components.EcoShareStatus.published'),
+    title: dict('PC.Components.EcoShareStatus.published'),
   },
   [EcosystemShareStatusEnum.OFFLINE]: {
-    title: dict('NuwaxPC.Components.EcoShareStatus.offline'),
+    title: dict('PC.Components.EcoShareStatus.offline'),
   },
   [EcosystemShareStatusEnum.REJECTED]: {
-    title: dict('NuwaxPC.Components.EcoShareStatus.rejected'),
+    title: dict('PC.Components.EcoShareStatus.rejected'),
   },
 };
 

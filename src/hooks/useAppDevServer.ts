@@ -90,8 +90,8 @@ export const useAppDevServer = ({
         const successMessage =
           response?.message ||
           (operation === 'start'
-            ? dict('NuwaxPC.Hooks.UseAppDevServer.devEnvStarted')
-            : dict('NuwaxPC.Hooks.UseAppDevServer.devServerRestarted'));
+            ? dict('PC.Hooks.UseAppDevServer.devEnvStarted')
+            : dict('PC.Hooks.UseAppDevServer.devServerRestarted'));
 
         let messageText = '';
         if (shouldShowMessage) {
@@ -114,8 +114,8 @@ export const useAppDevServer = ({
           response?.message ||
           `${
             operation === 'start'
-              ? dict('NuwaxPC.Hooks.UseAppDevServer.startDevEnvFailed')
-              : dict('NuwaxPC.Hooks.UseAppDevServer.restartDevServerFailed')
+              ? dict('PC.Hooks.UseAppDevServer.startDevEnvFailed')
+              : dict('PC.Hooks.UseAppDevServer.restartDevServerFailed')
           }`;
         const errorCode = response?.code || 'UNKNOWN_ERROR';
         setServerMessage(errorMessage);
@@ -192,7 +192,8 @@ export const useAppDevServer = ({
 
     if (!isSuccess) {
       // 【关键变更】接口返回非成功状态码，设置错误信息和错误码
-      const errorMessage = response?.message || dict('NuwaxPC.Hooks.UseAppDevServer.keepaliveFailed');
+      const errorMessage =
+        response?.message || dict('PC.Hooks.UseAppDevServer.keepaliveFailed');
       const errorCode = response?.code || 'KEEPALIVE_ERROR';
       console.warn('[useAppDevServer] keepAlive failed:', {
         code: errorCode,
@@ -354,7 +355,7 @@ export const useAppDevServer = ({
       setIsStarting(false);
       setIsRunning(false);
       setServerMessage(
-        error?.message || dict('NuwaxPC.Hooks.UseAppDevServer.startDevEnvFailed'),
+        error?.message || dict('PC.Hooks.UseAppDevServer.startDevEnvFailed'),
       );
       setServerErrorCode(error?.code || 'START_ERROR');
       onServerStatusChange?.(false);
@@ -379,9 +380,12 @@ export const useAppDevServer = ({
     async (shouldSwitchTab: boolean = false) => {
       if (!projectId) {
         if (shouldSwitchTab) {
-          message.error(dict('NuwaxPC.Hooks.UseAppDevServer.projectIdMissing'));
+          message.error(dict('PC.Hooks.UseAppDevServer.projectIdMissing'));
         }
-        return { success: false, message: dict('NuwaxPC.Hooks.UseAppDevServer.projectIdMissing') };
+        return {
+          success: false,
+          message: dict('PC.Hooks.UseAppDevServer.projectIdMissing'),
+        };
       }
       let finalResult;
 
@@ -428,7 +432,8 @@ export const useAppDevServer = ({
         setIsRunning(false);
 
         const errorMessage =
-          error?.message || dict('NuwaxPC.Hooks.UseAppDevServer.restartDevServerFailed');
+          error?.message ||
+          dict('PC.Hooks.UseAppDevServer.restartDevServerFailed');
         const errorCode = error?.code || 'RESTART_ERROR';
         setServerMessage(errorMessage);
         setServerErrorCode(errorCode);

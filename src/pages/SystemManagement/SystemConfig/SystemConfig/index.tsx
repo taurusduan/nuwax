@@ -72,13 +72,13 @@ const SystemConfig: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={t('NuwaxPC.Pages.SystemConfig.pageTitle')}
+      title={t('PC.Pages.SystemConfig.pageTitle')}
       hideScroll
       extraContent={
         <div style={{ padding: '0 24px 24px' }}>
           {hasPermission('system_setting_save') && (
             <Button type="primary" onClick={handleSave}>
-              {t('NuwaxPC.Common.Global.save')}
+              {t('PC.Common.Global.save')}
             </Button>
           )}
         </div>

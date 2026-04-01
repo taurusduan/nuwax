@@ -187,7 +187,7 @@ const SpacePageDevelop: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: number[]) => {
-      message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
+      message.success(dict('PC.Toast.Global.deletedSuccessfully'));
       const projectId = params[0];
       const _pageList = pageList.filter((item) => item.projectId !== projectId);
       setPageList(_pageList);
@@ -315,9 +315,7 @@ const SpacePageDevelop: React.FC = () => {
         const url = `${process.env.BASE_URL}${result.pageUrl}`;
         window.open(url, '_blank');
       } else {
-        message.error(
-          dict('NuwaxPC.Pages.SpacePageDevelop.Index.pageUrlNotExist'),
-        );
+        message.error(dict('PC.Pages.SpacePageDevelop.Index.pageUrlNotExist'));
       }
     },
   });
@@ -329,9 +327,7 @@ const SpacePageDevelop: React.FC = () => {
     // 检查项目ID是否有效
     if (!projectId) {
       message.warning(
-        dict(
-          'NuwaxPC.Pages.SpacePageDevelop.Index.projectIdInvalidCannotExport',
-        ),
+        dict('PC.Pages.SpacePageDevelop.Index.projectIdInvalidCannotExport'),
       );
       return;
     }
@@ -343,7 +339,7 @@ const SpacePageDevelop: React.FC = () => {
         // 导出失败，显示错误信息
         const errorMessage =
           result.error?.message ||
-          dict('NuwaxPC.Pages.SpacePageDevelop.Index.exportFailed');
+          dict('PC.Pages.SpacePageDevelop.Index.exportFailed');
         message.warning(errorMessage);
         return;
       }
@@ -351,20 +347,19 @@ const SpacePageDevelop: React.FC = () => {
       const filename = `project-${projectId}.zip`;
       // 导出整个项目压缩包
       exportWholeProjectZip(result, filename);
-      message.success(
-        dict('NuwaxPC.Pages.SpacePageDevelop.Index.exportSuccess'),
-      );
+      message.success(dict('PC.Pages.SpacePageDevelop.Index.exportSuccess'));
     } catch (error) {
       // 改进错误处理，兼容不同的错误格式
       const errorMessage =
         (error as any)?.message ||
         (error as any)?.toString() ||
-        dict('NuwaxPC.Pages.SpacePageDevelop.Index.exportUnknownError');
+        dict('PC.Pages.SpacePageDevelop.Index.exportUnknownError');
 
       message.error(
-        dict(
-          'NuwaxPC.Pages.SpacePageDevelop.Index.exportFailedWithError',
-        ).replace('{0}', errorMessage),
+        dict('PC.Pages.SpacePageDevelop.Index.exportFailedWithError').replace(
+          '{0}',
+          errorMessage,
+        ),
       );
     }
   }, []);
@@ -378,9 +373,7 @@ const SpacePageDevelop: React.FC = () => {
       !(publishType === String(PageDevelopSelectTypeEnum.AGENT) && !needLogin)
     ) {
       message.warning(
-        dict(
-          'NuwaxPC.Pages.SpacePageDevelop.Index.domainBindingConditionWarning',
-        ),
+        dict('PC.Pages.SpacePageDevelop.Index.domainBindingConditionWarning'),
       );
     } else {
       setOpenDomainBindingModal(true);
@@ -424,7 +417,7 @@ const SpacePageDevelop: React.FC = () => {
       // 删除页面项目
       case PageDevelopMoreActionEnum.Delete:
         modalConfirm(
-          dict('NuwaxPC.Pages.SpacePageDevelop.Index.confirmDeletePage'),
+          dict('PC.Pages.SpacePageDevelop.Index.confirmDeletePage'),
           info.name,
           () => {
             runPageDelete(info.projectId);
@@ -478,7 +471,7 @@ const SpacePageDevelop: React.FC = () => {
       <div className={cx(styles['header-area'])}>
         <div className={cx(styles['header-left'])}>
           <h3 className={cx(styles.title)}>
-            {dict('NuwaxPC.Pages.SpacePageDevelop.Index.pageTitle')}
+            {dict('PC.Pages.SpacePageDevelop.Index.pageTitle')}
           </h3>
           <SelectList
             value={type}
@@ -501,7 +494,7 @@ const SpacePageDevelop: React.FC = () => {
           <Input
             rootClassName={cx(styles.input)}
             placeholder={dict(
-              'NuwaxPC.Pages.SpacePageDevelop.Index.searchPlaceholder',
+              'PC.Pages.SpacePageDevelop.Index.searchPlaceholder',
             )}
             value={keyword}
             onChange={handleQueryPage}
@@ -516,7 +509,7 @@ const SpacePageDevelop: React.FC = () => {
             onClick={handleClickPopoverItem}
           >
             <Button type="primary" icon={<PlusOutlined />}>
-              {dict('NuwaxPC.Pages.SpacePageDevelop.Index.create')}
+              {dict('PC.Pages.SpacePageDevelop.Index.create')}
             </Button>
           </CustomPopover>
         </div>
@@ -556,7 +549,7 @@ const SpacePageDevelop: React.FC = () => {
                 userName={info.creatorNickName || info.creatorName}
                 created={info.created}
                 overlayText={dict(
-                  'NuwaxPC.Pages.SpacePageDevelop.Index.viewDetails',
+                  'PC.Pages.SpacePageDevelop.Index.viewDetails',
                 )}
                 onClick={() => handleClickCard(info)}
                 footerInner={
@@ -577,10 +570,8 @@ const SpacePageDevelop: React.FC = () => {
                     )}
                   >
                     {info.buildRunning
-                      ? dict('NuwaxPC.Pages.SpacePageDevelop.Index.published')
-                      : dict(
-                          'NuwaxPC.Pages.SpacePageDevelop.Index.unpublished',
-                        )}
+                      ? dict('PC.Pages.SpacePageDevelop.Index.published')
+                      : dict('PC.Pages.SpacePageDevelop.Index.unpublished')}
                   </div>
                 }
               />
@@ -590,9 +581,7 @@ const SpacePageDevelop: React.FC = () => {
       ) : (
         <div className={cx('flex', 'h-full', 'items-center', 'content-center')}>
           <Empty
-            description={dict(
-              'NuwaxPC.Pages.SpacePageDevelop.Index.noResultsFound',
-            )}
+            description={dict('PC.Pages.SpacePageDevelop.Index.noResultsFound')}
           />
         </div>
       )}

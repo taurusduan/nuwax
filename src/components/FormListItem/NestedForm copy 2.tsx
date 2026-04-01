@@ -34,7 +34,7 @@ const NodeRender: React.FC<TreeFormItemProps> = ({
         noStyle
       >
         <Input
-          placeholder={dict('NuwaxPC.Components.FormListItem.paramNamePlaceholder')}
+          placeholder={dict('PC.Components.FormListItem.paramNamePlaceholder')}
           style={{ flex: 1, marginRight: 8 }}
         />
       </Form.Item>
@@ -47,7 +47,7 @@ const NodeRender: React.FC<TreeFormItemProps> = ({
         <Cascader
           options={dataTypes}
           style={{ width: 80, marginRight: 8 }}
-          placeholder={dict('NuwaxPC.Components.FormListItem.dataTypePlaceholder')}
+          placeholder={dict('PC.Components.FormListItem.dataTypePlaceholder')}
           displayRender={(label) => label[label.length - 1]}
           onChange={(value, selectedOptions) => {
             // 获取最后一级的 value
@@ -70,7 +70,12 @@ const NodeRender: React.FC<TreeFormItemProps> = ({
           <Popover
             content={
               <Form.Item name={[field.name, 'description']} noStyle>
-                <Input.TextArea rows={3} placeholder={dict('NuwaxPC.Components.FormListItem.descriptionPlaceholder')} />
+                <Input.TextArea
+                  rows={3}
+                  placeholder={dict(
+                    'PC.Components.FormListItem.descriptionPlaceholder',
+                  )}
+                />
               </Form.Item>
             }
             trigger="click"

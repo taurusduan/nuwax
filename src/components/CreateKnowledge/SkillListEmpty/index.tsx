@@ -8,7 +8,10 @@ const cx = classNames.bind(styles);
 const SkillListEmpty: React.FC<{
   title?: string;
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
-}> = ({ title = dict('NuwaxPC.Components.CreateKnowledge.selectWorkflow'), onClick }) => (
+}> = ({
+  title = dict('PC.Components.CreateKnowledge.selectWorkflow'),
+  onClick,
+}) => (
   <div className={cx(styles['workflow-desc'])} onClick={onClick}>
     {title}
   </div>

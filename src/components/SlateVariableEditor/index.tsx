@@ -1,5 +1,5 @@
-import { css } from '@emotion/css';
 import { dict } from '@/services/i18nRuntime';
+import { css } from '@emotion/css';
 import { useCallback, useMemo, useState } from 'react';
 import { createEditor, Editor, Range, Transforms } from 'slate';
 import { withHistory } from 'slate-history';
@@ -74,7 +74,10 @@ export default function SlateVariableEditor({ variables }) {
         );
         if (beforeText.endsWith('{')) {
           event.preventDefault();
-          insertVariable(editor, variables[0] || dict('NuwaxPC.Components.SlateVariableEditor.variable'));
+          insertVariable(
+            editor,
+            variables[0] || dict('PC.Components.SlateVariableEditor.variable'),
+          );
         }
       }
     }
@@ -92,7 +95,7 @@ export default function SlateVariableEditor({ variables }) {
       <Slate editor={editor} value={value} onChange={setValue}>
         <Editable
           renderElement={renderElement}
-          placeholder={dict('NuwaxPC.Components.SlateVariableEditor.placeholder')}
+          placeholder={dict('PC.Components.SlateVariableEditor.placeholder')}
           onKeyDown={handleKeyDown}
         />
       </Slate>

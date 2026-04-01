@@ -82,11 +82,11 @@ export default function useEventPolling(): React.ReactElement | null {
 
     // 显示版本更新提示（居中显示）
     modal.confirm({
-      title: dict('NuwaxPC.Hooks.UseEventPolling.newVersionFound'),
+      title: dict('PC.Hooks.UseEventPolling.newVersionFound'),
       icon: React.createElement(ExclamationCircleFilled),
-      content: dict('NuwaxPC.Hooks.UseEventPolling.updatePrompt', newVersion),
-      okText: dict('NuwaxPC.Hooks.UseEventPolling.update'),
-      cancelText: dict('NuwaxPC.Common.Global.cancel'),
+      content: dict('PC.Hooks.UseEventPolling.updatePrompt', newVersion),
+      okText: dict('PC.Hooks.UseEventPolling.update'),
+      cancelText: dict('PC.Common.Global.cancel'),
       centered: true, // 弹窗居中显示
       maskClosable: true, // 允许点击遮罩关闭，点击遮罩时会触发 onCancel
       onOk: () => {

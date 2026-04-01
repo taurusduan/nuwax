@@ -44,32 +44,32 @@ import { BarsOutlined } from '@ant-design/icons';
 export const TASK_CENTER_MORE_ACTION: CustomPopoverItem[] = [
   {
     action: TaskCenterMoreActionEnum.Record,
-    label: dict('NuwaxPC.Constants.Library.execRecord'),
+    label: dict('PC.Constants.Library.execRecord'),
     type: TaskCenterMoreActionEnum.Record,
   },
   {
     action: TaskCenterMoreActionEnum.Edit,
-    label: dict('NuwaxPC.Common.Global.edit'),
+    label: dict('PC.Common.Global.edit'),
     type: TaskCenterMoreActionEnum.Edit,
   },
   {
     action: TaskCenterMoreActionEnum.Enable,
-    label: dict('NuwaxPC.Common.Global.enable'),
+    label: dict('PC.Common.Global.enable'),
     type: TaskCenterMoreActionEnum.Enable,
   },
   {
     action: TaskCenterMoreActionEnum.Disable,
-    label: dict('NuwaxPC.Common.Global.disable'),
+    label: dict('PC.Common.Global.disable'),
     type: TaskCenterMoreActionEnum.Disable,
   },
   {
     action: TaskCenterMoreActionEnum.Execute,
-    label: dict('NuwaxPC.Constants.Library.manualExec'),
+    label: dict('PC.Constants.Library.manualExec'),
     type: TaskCenterMoreActionEnum.Execute,
   },
   {
     action: TaskCenterMoreActionEnum.Delete,
-    label: dict('NuwaxPC.Common.Global.delete'),
+    label: dict('PC.Common.Global.delete'),
     isDel: true,
     type: TaskCenterMoreActionEnum.Delete,
   },
@@ -88,44 +88,44 @@ export const COMPONENT_MORE_ACTION: CustomPopoverItem[] = [
   // 工作流
   {
     action: ApplicationMoreActionEnum.Copy_To_Space,
-    label: dict('NuwaxPC.Constants.Space.copyToSpace'),
+    label: dict('PC.Constants.Space.copyToSpace'),
     type: ComponentTypeEnum.Workflow,
   },
   {
     action: ApplicationMoreActionEnum.Export_Config,
-    label: dict('NuwaxPC.Constants.Space.exportConfig'),
+    label: dict('PC.Constants.Space.exportConfig'),
     type: ComponentTypeEnum.Workflow,
   },
   {
     action: ApplicationMoreActionEnum.Log,
-    label: dict('NuwaxPC.Common.Global.log'),
+    label: dict('PC.Common.Global.log'),
     type: ComponentTypeEnum.Workflow,
   },
   {
     action: ApplicationMoreActionEnum.Del,
-    label: dict('NuwaxPC.Common.Global.delete'),
+    label: dict('PC.Common.Global.delete'),
     isDel: true,
     type: ComponentTypeEnum.Workflow,
   },
   // 插件
   {
     action: ApplicationMoreActionEnum.Copy_To_Space,
-    label: dict('NuwaxPC.Constants.Space.copyToSpace'),
+    label: dict('PC.Constants.Space.copyToSpace'),
     type: ComponentTypeEnum.Plugin,
   },
   {
     action: ApplicationMoreActionEnum.Export_Config,
-    label: dict('NuwaxPC.Constants.Space.exportConfig'),
+    label: dict('PC.Constants.Space.exportConfig'),
     type: ComponentTypeEnum.Plugin,
   },
   {
     action: ApplicationMoreActionEnum.Log,
-    label: dict('NuwaxPC.Common.Global.log'),
+    label: dict('PC.Common.Global.log'),
     type: ComponentTypeEnum.Plugin,
   },
   {
     action: ApplicationMoreActionEnum.Del,
-    label: dict('NuwaxPC.Common.Global.delete'),
+    label: dict('PC.Common.Global.delete'),
     isDel: true,
     type: ComponentTypeEnum.Plugin,
   },
@@ -134,31 +134,31 @@ export const COMPONENT_MORE_ACTION: CustomPopoverItem[] = [
   // { type: ApplicationMoreActionEnum.Statistics, label: '统计' },
   {
     action: ApplicationMoreActionEnum.Del,
-    label: dict('NuwaxPC.Common.Global.delete'),
+    label: dict('PC.Common.Global.delete'),
     isDel: true,
     type: ComponentTypeEnum.Knowledge,
   },
   // 数据表
   {
     action: ApplicationMoreActionEnum.Copy,
-    label: dict('NuwaxPC.Common.Global.copy'),
+    label: dict('PC.Common.Global.copy'),
     type: ComponentTypeEnum.Table,
   },
   {
     action: ApplicationMoreActionEnum.Export_Config,
-    label: dict('NuwaxPC.Constants.Space.exportConfig'),
+    label: dict('PC.Constants.Space.exportConfig'),
     type: ComponentTypeEnum.Table,
   },
   {
     action: ApplicationMoreActionEnum.Del,
-    label: dict('NuwaxPC.Common.Global.delete'),
+    label: dict('PC.Common.Global.delete'),
     isDel: true,
     type: ComponentTypeEnum.Table,
   },
   // 模型
   {
     action: ApplicationMoreActionEnum.Del,
-    label: dict('NuwaxPC.Common.Global.delete'),
+    label: dict('PC.Common.Global.delete'),
     isDel: true,
     type: ComponentTypeEnum.Model,
   },
@@ -168,11 +168,11 @@ export const COMPONENT_MORE_ACTION: CustomPopoverItem[] = [
 export const PLUGIN_CREATE_TOOL = [
   {
     value: PluginTypeEnum.HTTP,
-    label: dict('NuwaxPC.Constants.Library.createByHttp'),
+    label: dict('PC.Constants.Library.createByHttp'),
   },
   {
     value: PluginTypeEnum.CODE,
-    label: dict('NuwaxPC.Constants.Library.createByCloudCode'),
+    label: dict('PC.Constants.Library.createByCloudCode'),
   },
 ];
 
@@ -212,7 +212,7 @@ export const REQUEST_METHOD = [
 export const REQUEST_CONTENT_FORMAT = [
   {
     value: HttpContentTypeEnum.OTHER,
-    label: dict('NuwaxPC.Constants.Library.none'),
+    label: dict('PC.Constants.Library.none'),
   },
   {
     value: HttpContentTypeEnum.FORM_DATA,
@@ -252,9 +252,9 @@ export const AFFERENT_MODE_LIST = [
 export const KNOWLEDGE_TEXT_IMPORT_TYPE = [
   {
     value: KnowledgeTextImportEnum.Local_Doc,
-    label: dict('NuwaxPC.Constants.Library.localDoc'),
+    label: dict('PC.Constants.Library.localDoc'),
     icon: <ICON_LOCAL_DOC />,
-    desc: dict('NuwaxPC.Constants.Library.localDocDesc'),
+    desc: dict('PC.Constants.Library.localDocDesc'),
   },
   // {
   //   value: KnowledgeTextImportEnum.Online_Doc,
@@ -264,9 +264,9 @@ export const KNOWLEDGE_TEXT_IMPORT_TYPE = [
   // },
   {
     value: KnowledgeTextImportEnum.Custom,
-    label: dict('NuwaxPC.Common.Global.custom'),
+    label: dict('PC.Common.Global.custom'),
     icon: <ICON_CUSTOM_DOC />,
-    desc: dict('NuwaxPC.Common.Global.custom'),
+    desc: dict('PC.Common.Global.custom'),
   },
 ];
 
@@ -274,40 +274,40 @@ export const KNOWLEDGE_TEXT_IMPORT_TYPE = [
 export const KNOWLEDGE_QA_IMPORT_TYPE = [
   {
     value: KnowledgeTextImportEnum.Custom,
-    label: dict('NuwaxPC.Constants.Library.manualAdd'),
+    label: dict('PC.Constants.Library.manualAdd'),
     icon: <ICON_CUSTOM_DOC />,
-    desc: dict('NuwaxPC.Constants.Library.manualAdd'),
+    desc: dict('PC.Constants.Library.manualAdd'),
   },
   {
     value: KnowledgeTextImportEnum.Local_Doc,
-    label: dict('NuwaxPC.Constants.Library.batchImport'),
+    label: dict('PC.Constants.Library.batchImport'),
     icon: <ICON_LOCAL_DOC />,
-    desc: dict('NuwaxPC.Constants.Library.batchImportDesc'),
+    desc: dict('PC.Constants.Library.batchImportDesc'),
   },
 ];
 // 知识库-本地文档添加内容-步骤列表
 export const KNOWLEDGE_LOCAL_DOC_LIST = [
   {
-    title: dict('NuwaxPC.Constants.Library.upload'),
+    title: dict('PC.Constants.Library.upload'),
   },
   {
-    title: dict('NuwaxPC.Constants.Library.createSettings'),
+    title: dict('PC.Constants.Library.createSettings'),
   },
   {
-    title: dict('NuwaxPC.Constants.Library.dataProcess'),
+    title: dict('PC.Constants.Library.dataProcess'),
   },
 ];
 
 // 知识库-自定义文档添加内容-步骤列表
 export const KNOWLEDGE_CUSTOM_DOC_LIST = [
   {
-    title: dict('NuwaxPC.Constants.Library.textFill'),
+    title: dict('PC.Constants.Library.textFill'),
   },
   {
-    title: dict('NuwaxPC.Constants.Library.segmentSettings'),
+    title: dict('PC.Constants.Library.segmentSettings'),
   },
   {
-    title: dict('NuwaxPC.Constants.Library.dataProcess'),
+    title: dict('PC.Constants.Library.dataProcess'),
   },
 ];
 
@@ -317,31 +317,31 @@ export const COMPONENT_LIST = [
     type: ComponentTypeEnum.Plugin,
     defaultImage: pluginImage,
     icon: <ICON_PLUGIN />,
-    text: dict('NuwaxPC.Common.Global.plugin'),
+    text: dict('PC.Common.Global.plugin'),
   },
   {
     type: ComponentTypeEnum.Knowledge,
     defaultImage: knowledgeImage,
     icon: <ICON_KNOWLEDGE />,
-    text: dict('NuwaxPC.Common.Global.knowledge'),
+    text: dict('PC.Common.Global.knowledge'),
   },
   {
     type: ComponentTypeEnum.Workflow,
     defaultImage: workflowImage,
     icon: <ICON_WORKFLOW />,
-    text: dict('NuwaxPC.Common.Global.workflow'),
+    text: dict('PC.Common.Global.workflow'),
   },
   {
     type: ComponentTypeEnum.Table,
     defaultImage: databaseImage,
     icon: <ICON_DATABASE />,
-    text: dict('NuwaxPC.Common.Global.dataTable'),
+    text: dict('PC.Common.Global.dataTable'),
   },
   {
     type: ComponentTypeEnum.Model,
     defaultImage: modelImage,
     icon: <ICON_MODEL />,
-    text: dict('NuwaxPC.Common.Global.model'),
+    text: dict('PC.Common.Global.model'),
   },
 ];
 
@@ -349,7 +349,7 @@ export const COMPONENT_LIST = [
 export const MODEL_NETWORK_TYPE_LIST = [
   {
     value: ModelNetworkTypeEnum.Internet,
-    label: dict('NuwaxPC.Constants.Library.publicModel'),
+    label: dict('PC.Constants.Library.publicModel'),
   },
   // {
   //   value: ModelNetworkTypeEnum.Intranet,
@@ -361,73 +361,73 @@ export const MODEL_NETWORK_TYPE_LIST = [
 export const MODEL_STRATEGY_LIST = [
   {
     value: ModelStrategyEnum.RoundRobin,
-    label: dict('NuwaxPC.Constants.Library.roundRobin'),
+    label: dict('PC.Constants.Library.roundRobin'),
   },
   {
     value: ModelStrategyEnum.WeightedRoundRobin,
-    label: dict('NuwaxPC.Constants.Library.weightedRoundRobin'),
+    label: dict('PC.Constants.Library.weightedRoundRobin'),
   },
   {
     value: ModelStrategyEnum.LeastConnections,
-    label: dict('NuwaxPC.Constants.Library.weightedLeastConn'),
+    label: dict('PC.Constants.Library.weightedLeastConn'),
   },
   {
     value: ModelStrategyEnum.Random,
-    label: dict('NuwaxPC.Constants.Library.random'),
+    label: dict('PC.Constants.Library.random'),
   },
   {
     value: ModelStrategyEnum.ResponseTime,
-    label: dict('NuwaxPC.Constants.Library.responseTime'),
+    label: dict('PC.Constants.Library.responseTime'),
   },
 ];
 // 模型类型
 export const MODEL_TYPE_LIST = [
   {
     value: ModelTypeEnum.Completions,
-    label: dict('NuwaxPC.Constants.Library.textCompletion'),
+    label: dict('PC.Constants.Library.textCompletion'),
   },
   {
     value: ModelTypeEnum.Chat,
-    label: dict('NuwaxPC.Constants.Library.chatText'),
+    label: dict('PC.Constants.Library.chatText'),
   },
   {
     value: ModelTypeEnum.Edits,
-    label: dict('NuwaxPC.Constants.Library.textEdit'),
+    label: dict('PC.Constants.Library.textEdit'),
   },
   {
     value: ModelTypeEnum.Images,
-    label: dict('NuwaxPC.Constants.Library.imageProcess'),
+    label: dict('PC.Constants.Library.imageProcess'),
   },
   {
     value: ModelTypeEnum.Multi,
-    label: dict('NuwaxPC.Constants.Library.chatMultimodal'),
+    label: dict('PC.Constants.Library.chatMultimodal'),
   },
   {
     value: ModelTypeEnum.Embeddings,
-    label: dict('NuwaxPC.Constants.Library.vectorEmbedding'),
+    label: dict('PC.Constants.Library.vectorEmbedding'),
   },
   {
     value: ModelTypeEnum.Audio,
-    label: dict('NuwaxPC.Constants.Library.audioProcess'),
+    label: dict('PC.Constants.Library.audioProcess'),
   },
   {
     value: ModelTypeEnum.Other,
-    label: dict('NuwaxPC.Common.Global.other'),
+    label: dict('PC.Common.Global.other'),
   },
 ];
 // 函数调用支持
 export const MODEL_FUNCTION_CALL_LIST = [
   {
     value: ModelFunctionCallEnum.CallSupported,
-    label: dict('NuwaxPC.Constants.Library.supportFuncCall'),
+    label: dict('PC.Constants.Library.supportFuncCall'),
   },
   {
     value: ModelFunctionCallEnum.StreamCallSupported,
-    label: dict('NuwaxPC.Constants.Library.supportStreamFuncCall'),
+    label: dict('PC.Constants.Library.supportStreamFuncCall'),
   },
   {
     value: ModelFunctionCallEnum.Unsupported,
-    label: dict('NuwaxPC.Constants.Library.unsupportFuncCall'),
+    label: dict('PC.Constants.Library.unsupportFuncCall'),
   },
 ];
 // 模型接口协议
@@ -453,49 +453,53 @@ export const MODEL_API_PROTOCOL_LIST = [
 // 插件
 export const PLUGIN_CODE_SEGMENTED_LIST = [
   {
-    label: dict('NuwaxPC.Constants.Library.metadata'),
+    label: dict('PC.Constants.Library.metadata'),
     value: PluginCodeModeEnum.Metadata,
     icon: <BarsOutlined />,
   },
-  { label: dict('NuwaxPC.Constants.Library.code'), value: PluginCodeModeEnum.Code, icon: <ICON_CODE /> },
+  {
+    label: dict('PC.Constants.Library.code'),
+    value: PluginCodeModeEnum.Code,
+    icon: <ICON_CODE />,
+  },
 ];
 
 // 知识库分段标识符列表
 export const KNOWLEDGE_SEGMENT_IDENTIFIER_LIST = [
   {
-    label: dict('NuwaxPC.Constants.Library.segNewline'),
+    label: dict('PC.Constants.Library.segNewline'),
     value: KnowledgeSegmentIdentifierEnum.Line_Feed,
   },
   {
-    label: dict('NuwaxPC.Constants.Library.segTwoNewline'),
+    label: dict('PC.Constants.Library.segTwoNewline'),
     value: KnowledgeSegmentIdentifierEnum.Two_Line_Feed,
   },
   {
-    label: dict('NuwaxPC.Constants.Library.segChinesePeriod'),
+    label: dict('PC.Constants.Library.segChinesePeriod'),
     value: KnowledgeSegmentIdentifierEnum.Chinese_Sentence,
   },
   {
-    label: dict('NuwaxPC.Constants.Library.segChineseExclamation'),
+    label: dict('PC.Constants.Library.segChineseExclamation'),
     value: KnowledgeSegmentIdentifierEnum.Chinese_Exclamation,
   },
   {
-    label: dict('NuwaxPC.Constants.Library.segEnglishPeriod'),
+    label: dict('PC.Constants.Library.segEnglishPeriod'),
     value: KnowledgeSegmentIdentifierEnum.English_Sentence,
   },
   {
-    label: dict('NuwaxPC.Constants.Library.segEnglishExclamation'),
+    label: dict('PC.Constants.Library.segEnglishExclamation'),
     value: KnowledgeSegmentIdentifierEnum.English_Exclamation,
   },
   {
-    label: dict('NuwaxPC.Constants.Library.segChineseQuestion'),
+    label: dict('PC.Constants.Library.segChineseQuestion'),
     value: KnowledgeSegmentIdentifierEnum.Chinese_Question_Mark,
   },
   {
-    label: dict('NuwaxPC.Constants.Library.segEnglishQuestion'),
+    label: dict('PC.Constants.Library.segEnglishQuestion'),
     value: KnowledgeSegmentIdentifierEnum.English_Question_Mark,
   },
   {
-    label: dict('NuwaxPC.Common.Global.custom'),
+    label: dict('PC.Common.Global.custom'),
     value: KnowledgeSegmentIdentifierEnum.Custom,
   },
 ];

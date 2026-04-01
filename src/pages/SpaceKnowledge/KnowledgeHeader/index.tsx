@@ -67,7 +67,7 @@ const KnowledgeHeader: React.FC<KnowledgeHeaderProps> = ({
             <span className={cx(styles.box)}>{`${fileSize}`}</span>
             <span className={cx(styles.box)}>
               {dict(
-                'NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.docCount',
+                'PC.Pages.SpaceKnowledge.KnowledgeHeader.docCount',
                 docCount,
               )}
             </span>
@@ -89,10 +89,10 @@ const KnowledgeHeader: React.FC<KnowledgeHeaderProps> = ({
         onChange={handleChange}
       >
         <Radio value={KnowledgeDocTypeEnum.DOC}>
-          {dict('NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.doc')}
+          {dict('PC.Pages.SpaceKnowledge.KnowledgeHeader.doc')}
         </Radio>
         <Radio value={KnowledgeDocTypeEnum.QA}>
-          {dict('NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.qa')}
+          {dict('PC.Pages.SpaceKnowledge.KnowledgeHeader.qa')}
         </Radio>
       </Radio.Group>
       {/* </div> */}
@@ -112,7 +112,7 @@ const KnowledgeHeader: React.FC<KnowledgeHeaderProps> = ({
               icon={<DownOutlined className={cx(styles['dropdown-icon'])} />}
               iconPosition="end"
             >
-              {dict('NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.addContent')}
+              {dict('PC.Pages.SpaceKnowledge.KnowledgeHeader.addContent')}
             </Button>
           </CustomPopover>
         ) : (
@@ -122,7 +122,7 @@ const KnowledgeHeader: React.FC<KnowledgeHeaderProps> = ({
               icon={<DownOutlined className={cx(styles['dropdown-icon'])} />}
               iconPosition="end"
             >
-              {dict('NuwaxPC.Pages.SpaceKnowledge.KnowledgeHeader.addQa')}
+              {dict('PC.Pages.SpaceKnowledge.KnowledgeHeader.addQa')}
             </Button>
           </CustomPopover>
         )}

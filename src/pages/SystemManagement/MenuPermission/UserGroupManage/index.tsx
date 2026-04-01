@@ -161,7 +161,7 @@ const UserGroupManage: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(t('NuwaxPC.Pages.SystemUserGroupManage.deleteSuccess'));
+      message.success(t('PC.Pages.SystemUserGroupManage.deleteSuccess'));
       actionRef.current?.reload();
     },
   });
@@ -261,8 +261,8 @@ const UserGroupManage: React.FC = () => {
   // Confirm delete.
   const handleDeleteConfirm = (userGroup: UserGroupInfo) => {
     modalConfirm(
-      t('NuwaxPC.Pages.SystemUserGroupManage.deleteTitle'),
-      t('NuwaxPC.Pages.SystemUserGroupManage.deleteConfirm', userGroup.name),
+      t('PC.Pages.SystemUserGroupManage.deleteTitle'),
+      t('PC.Pages.SystemUserGroupManage.deleteConfirm', userGroup.name),
       () => {
         runDelete(userGroup?.id);
         return new Promise((resolve) => {
@@ -277,7 +277,7 @@ const UserGroupManage: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(t('NuwaxPC.Pages.SystemUserGroupManage.sortUpdated'));
+      message.success(t('PC.Pages.SystemUserGroupManage.sortUpdated'));
       isDraggingRef.current = false;
       originalDataRef.current = null;
     },
@@ -339,7 +339,7 @@ const UserGroupManage: React.FC = () => {
   // Table columns.
   const columns: ProColumns<UserGroupInfo & { key: number }>[] = [
     {
-      title: t('NuwaxPC.Pages.SystemUserGroupManage.columnSort'),
+      title: t('PC.Pages.SystemUserGroupManage.columnSort'),
       key: 'sort',
       align: 'center',
       width: 80,
@@ -348,7 +348,7 @@ const UserGroupManage: React.FC = () => {
       render: () => <DragHandle />,
     },
     {
-      title: t('NuwaxPC.Pages.SystemUserGroupManage.columnName'),
+      title: t('PC.Pages.SystemUserGroupManage.columnName'),
       dataIndex: 'name',
       key: 'name',
       width: 200,
@@ -356,14 +356,14 @@ const UserGroupManage: React.FC = () => {
       valueType: 'text',
     },
     {
-      title: t('NuwaxPC.Pages.SystemUserGroupManage.columnCode'),
+      title: t('PC.Pages.SystemUserGroupManage.columnCode'),
       dataIndex: 'code',
       key: 'code',
       width: 150,
       valueType: 'text',
     },
     {
-      title: t('NuwaxPC.Pages.SystemUserGroupManage.columnDescription'),
+      title: t('PC.Pages.SystemUserGroupManage.columnDescription'),
       dataIndex: 'description',
       key: 'description',
       width: 300,
@@ -373,8 +373,8 @@ const UserGroupManage: React.FC = () => {
     {
       title: (
         <span>
-          {t('NuwaxPC.Pages.SystemUserGroupManage.columnStatus')}
-          <Tooltip title={t('NuwaxPC.Pages.SystemUserGroupManage.statusTip')}>
+          {t('PC.Pages.SystemUserGroupManage.columnStatus')}
+          <Tooltip title={t('PC.Pages.SystemUserGroupManage.statusTip')}>
             <InfoCircleOutlined
               style={{ marginLeft: 4, color: '#999', cursor: 'help' }}
             />
@@ -391,17 +391,15 @@ const UserGroupManage: React.FC = () => {
         <Tooltip
           title={
             record.source === UserGroupSourceEnum.SystemBuiltIn
-              ? t('NuwaxPC.Pages.SystemUserGroupManage.builtInCannotDisable')
+              ? t('PC.Pages.SystemUserGroupManage.builtInCannotDisable')
               : ''
           }
         >
           <Switch
             disabled={record.source === UserGroupSourceEnum.SystemBuiltIn}
             checked={record.status === UserGroupStatusEnum.Enabled}
-            checkedChildren={t('NuwaxPC.Pages.SystemUserGroupManage.enabled')}
-            unCheckedChildren={t(
-              'NuwaxPC.Pages.SystemUserGroupManage.disabled',
-            )}
+            checkedChildren={t('PC.Pages.SystemUserGroupManage.enabled')}
+            unCheckedChildren={t('PC.Pages.SystemUserGroupManage.disabled')}
             loading={updateStatusLoadingMap[record.id] || false}
             onChange={(checked) => handleUpdateStatus(record, checked)}
           />
@@ -409,7 +407,7 @@ const UserGroupManage: React.FC = () => {
       ),
     },
     {
-      title: t('NuwaxPC.Pages.SystemUserGroupManage.columnAction'),
+      title: t('PC.Pages.SystemUserGroupManage.columnAction'),
       key: 'action',
       align: 'center',
       width: 260,
@@ -427,12 +425,12 @@ const UserGroupManage: React.FC = () => {
             'user_group_manage_modify',
           ) && !isSystemBuiltIn;
         const editTooltip = isSystemBuiltIn
-          ? t('NuwaxPC.Pages.SystemUserGroupManage.builtInCannotEdit')
+          ? t('PC.Pages.SystemUserGroupManage.builtInCannotEdit')
           : !hasPermissionByMenuCode(
               'user_group_manage',
               'user_group_manage_modify',
             )
-          ? t('NuwaxPC.Pages.SystemUserGroupManage.noPermission')
+          ? t('PC.Pages.SystemUserGroupManage.noPermission')
           : '';
 
         // Delete permission checks.
@@ -442,25 +440,25 @@ const UserGroupManage: React.FC = () => {
             'user_group_manage_delete',
           ) && !isSystemBuiltIn;
         const deleteTooltip = isSystemBuiltIn
-          ? t('NuwaxPC.Pages.SystemUserGroupManage.builtInCannotDelete')
+          ? t('PC.Pages.SystemUserGroupManage.builtInCannotDelete')
           : !hasPermissionByMenuCode(
               'user_group_manage',
               'user_group_manage_delete',
             )
-          ? t('NuwaxPC.Pages.SystemUserGroupManage.noPermission')
+          ? t('PC.Pages.SystemUserGroupManage.noPermission')
           : '';
 
         // Build more actions menu.
         const moreActionList: CustomPopoverItem[] = [
           {
             key: 'edit',
-            label: t('NuwaxPC.Pages.SystemUserGroupManage.edit'),
+            label: t('PC.Pages.SystemUserGroupManage.edit'),
             disabled: !canEdit,
             tooltip: editTooltip,
           },
           {
             key: 'delete',
-            label: t('NuwaxPC.Pages.SystemUserGroupManage.delete'),
+            label: t('PC.Pages.SystemUserGroupManage.delete'),
             disabled: !canDelete,
             tooltip: deleteTooltip,
           },
@@ -486,7 +484,7 @@ const UserGroupManage: React.FC = () => {
                   'user_group_manage',
                   'user_group_manage_bind_user',
                 )
-                  ? t('NuwaxPC.Pages.SystemUserGroupManage.noPermission')
+                  ? t('PC.Pages.SystemUserGroupManage.noPermission')
                   : ''
               }
             >
@@ -501,7 +499,7 @@ const UserGroupManage: React.FC = () => {
                 }
                 onClick={() => handleBindUser(record)}
               >
-                {t('NuwaxPC.Pages.SystemUserGroupManage.bindUser')}
+                {t('PC.Pages.SystemUserGroupManage.bindUser')}
               </Button>
             </Tooltip>
             <Tooltip
@@ -510,7 +508,7 @@ const UserGroupManage: React.FC = () => {
                   'user_group_manage',
                   'user_group_manage_bind_menu',
                 )
-                  ? t('NuwaxPC.Pages.SystemUserGroupManage.noPermission')
+                  ? t('PC.Pages.SystemUserGroupManage.noPermission')
                   : ''
               }
             >
@@ -525,7 +523,7 @@ const UserGroupManage: React.FC = () => {
                 }
                 onClick={() => handleMenuPermission(record)}
               >
-                {t('NuwaxPC.Pages.SystemUserGroupManage.menuPermission')}
+                {t('PC.Pages.SystemUserGroupManage.menuPermission')}
               </Button>
             </Tooltip>
             <Tooltip
@@ -534,7 +532,7 @@ const UserGroupManage: React.FC = () => {
                   'user_group_manage',
                   'user_group_manage_bind_data',
                 )
-                  ? t('NuwaxPC.Pages.SystemUserGroupManage.noPermission')
+                  ? t('PC.Pages.SystemUserGroupManage.noPermission')
                   : ''
               }
             >
@@ -549,7 +547,7 @@ const UserGroupManage: React.FC = () => {
                 }
                 onClick={() => handleDataPermission(record)}
               >
-                {t('NuwaxPC.Pages.SystemUserGroupManage.dataPermission')}
+                {t('PC.Pages.SystemUserGroupManage.dataPermission')}
               </Button>
             </Tooltip>
             <CustomPopover
@@ -566,7 +564,7 @@ const UserGroupManage: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={t('NuwaxPC.Pages.SystemUserGroupManage.pageTitle')}
+      title={t('PC.Pages.SystemUserGroupManage.pageTitle')}
       hideScroll
       rightSlot={
         hasPermissionByMenuCode(
@@ -579,7 +577,7 @@ const UserGroupManage: React.FC = () => {
             icon={<PlusOutlined />}
             onClick={handleAdd}
           >
-            {t('NuwaxPC.Pages.SystemUserGroupManage.add')}
+            {t('PC.Pages.SystemUserGroupManage.add')}
           </Button>
         )
       }
@@ -626,7 +624,7 @@ const UserGroupManage: React.FC = () => {
             locale={{
               emptyText: (
                 <Empty
-                  description={t('NuwaxPC.Pages.SystemUserGroupManage.empty')}
+                  description={t('PC.Pages.SystemUserGroupManage.empty')}
                   image={Empty.PRESENTED_IMAGE_SIMPLE}
                   className={cx(styles.empty)}
                 />

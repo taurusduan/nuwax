@@ -162,7 +162,7 @@ const MenuManage: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(t('NuwaxPC.Pages.SystemMenuManage.deleteSuccess'));
+      message.success(t('PC.Pages.SystemMenuManage.deleteSuccess'));
       actionRef.current?.reload();
     },
   });
@@ -198,8 +198,8 @@ const MenuManage: React.FC = () => {
   // 处理删除确认
   const handleDeleteConfirm = (menu: MenuNodeInfo) => {
     modalConfirm(
-      t('NuwaxPC.Pages.SystemMenuManage.deleteMenuTitle'),
-      t('NuwaxPC.Pages.SystemMenuManage.deleteMenuConfirm', menu.name),
+      t('PC.Pages.SystemMenuManage.deleteMenuTitle'),
+      t('PC.Pages.SystemMenuManage.deleteMenuConfirm', menu.name),
       () => {
         runDelete(menu?.id);
         return new Promise((resolve) => {
@@ -293,7 +293,7 @@ const MenuManage: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(t('NuwaxPC.Pages.SystemMenuManage.sortUpdateSuccess'));
+      message.success(t('PC.Pages.SystemMenuManage.sortUpdateSuccess'));
       // 标记拖拽完成，允许 postData 正常同步数据
       isDraggingRef.current = false;
       // 清空原始数据引用
@@ -726,7 +726,7 @@ const MenuManage: React.FC = () => {
 
     if (!hasActive) {
       // 如果节点没有被正确插入，恢复原数据并提示错误
-      message.error(t('NuwaxPC.Pages.SystemMenuManage.dragFailedRetry'));
+      message.error(t('PC.Pages.SystemMenuManage.dragFailedRetry'));
       isDraggingRef.current = false;
       originalDataRef.current = null;
       return;
@@ -791,7 +791,7 @@ const MenuManage: React.FC = () => {
   // 定义表格列
   const columns: ProColumns<MenuNodeInfo & { key: number }>[] = [
     {
-      title: t('NuwaxPC.Pages.SystemMenuManage.columnSort'),
+      title: t('PC.Pages.SystemMenuManage.columnSort'),
       key: 'sort',
       align: 'center',
       width: 80,
@@ -819,7 +819,7 @@ const MenuManage: React.FC = () => {
     //   ),
     // },
     {
-      title: t('NuwaxPC.Pages.SystemMenuManage.columnMenuName'),
+      title: t('PC.Pages.SystemMenuManage.columnMenuName'),
       dataIndex: 'name',
       key: 'name',
       width: 200,
@@ -861,7 +861,7 @@ const MenuManage: React.FC = () => {
       },
     },
     {
-      title: t('NuwaxPC.Pages.SystemMenuManage.columnCode'),
+      title: t('PC.Pages.SystemMenuManage.columnCode'),
       dataIndex: 'code',
       key: 'code',
       width: 200,
@@ -869,7 +869,7 @@ const MenuManage: React.FC = () => {
       ellipsis: true,
     },
     {
-      title: t('NuwaxPC.Pages.SystemMenuManage.columnRoutePath'),
+      title: t('PC.Pages.SystemMenuManage.columnRoutePath'),
       dataIndex: 'path',
       key: 'path',
       width: 200,
@@ -879,7 +879,7 @@ const MenuManage: React.FC = () => {
         record.path || '--',
     },
     {
-      title: t('NuwaxPC.Pages.SystemMenuManage.columnDescription'),
+      title: t('PC.Pages.SystemMenuManage.columnDescription'),
       dataIndex: 'description',
       key: 'description',
       ellipsis: true,
@@ -887,7 +887,7 @@ const MenuManage: React.FC = () => {
       hideInSearch: true,
     },
     {
-      title: t('NuwaxPC.Pages.SystemMenuManage.columnEnabled'),
+      title: t('PC.Pages.SystemMenuManage.columnEnabled'),
       dataIndex: 'status',
       key: 'status',
       align: 'center',
@@ -899,8 +899,8 @@ const MenuManage: React.FC = () => {
         <Switch
           checked={record.status === MenuEnabledEnum.Enabled}
           loading={updateVisibleLoadingMap[record.id] || false}
-          checkedChildren={t('NuwaxPC.Pages.SystemMenuManage.enabled')}
-          unCheckedChildren={t('NuwaxPC.Pages.SystemMenuManage.disabled')}
+          checkedChildren={t('PC.Pages.SystemMenuManage.enabled')}
+          unCheckedChildren={t('PC.Pages.SystemMenuManage.disabled')}
           onChange={(checked) => {
             const newStatus = checked
               ? MenuEnabledEnum.Enabled
@@ -914,7 +914,7 @@ const MenuManage: React.FC = () => {
       ),
     },
     {
-      title: t('NuwaxPC.Pages.SystemMenuManage.columnAction'),
+      title: t('PC.Pages.SystemMenuManage.columnAction'),
       key: 'action',
       align: 'center',
       width: 180,
@@ -925,7 +925,7 @@ const MenuManage: React.FC = () => {
           <Tooltip
             title={
               !hasPermissionByMenuCode('menu_manage', 'menu_manage_add')
-                ? t('NuwaxPC.Pages.SystemMenuManage.noPermission')
+                ? t('PC.Pages.SystemMenuManage.noPermission')
                 : ''
             }
           >
@@ -937,7 +937,7 @@ const MenuManage: React.FC = () => {
               }
               onClick={() => handleAddChild(record)}
             >
-              {t('NuwaxPC.Pages.SystemMenuManage.actionAdd')}
+              {t('PC.Pages.SystemMenuManage.actionAdd')}
             </Button>
           </Tooltip>
 
@@ -945,7 +945,7 @@ const MenuManage: React.FC = () => {
           <Tooltip
             title={
               !hasPermissionByMenuCode('menu_manage', 'menu_manage_modify')
-                ? t('NuwaxPC.Pages.SystemMenuManage.noPermission')
+                ? t('PC.Pages.SystemMenuManage.noPermission')
                 : ''
             }
           >
@@ -957,18 +957,16 @@ const MenuManage: React.FC = () => {
               }
               onClick={() => handleEdit(record)}
             >
-              {t('NuwaxPC.Pages.SystemMenuManage.actionEdit')}
+              {t('PC.Pages.SystemMenuManage.actionEdit')}
             </Button>
           </Tooltip>
 
           <Tooltip
             title={
               record.source === MenuSourceEnum.SystemBuiltIn
-                ? t(
-                    'NuwaxPC.Pages.SystemMenuManage.systemBuiltinDeleteDisabled',
-                  )
+                ? t('PC.Pages.SystemMenuManage.systemBuiltinDeleteDisabled')
                 : !hasPermissionByMenuCode('menu_manage', 'menu_manage_delete')
-                ? t('NuwaxPC.Pages.SystemMenuManage.noPermission')
+                ? t('PC.Pages.SystemMenuManage.noPermission')
                 : ''
             }
           >
@@ -981,7 +979,7 @@ const MenuManage: React.FC = () => {
               }
               onClick={() => handleDeleteConfirm(record)}
             >
-              {t('NuwaxPC.Pages.SystemMenuManage.actionDelete')}
+              {t('PC.Pages.SystemMenuManage.actionDelete')}
             </Button>
           </Tooltip>
         </Space>
@@ -991,7 +989,7 @@ const MenuManage: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={t('NuwaxPC.Pages.SystemMenuManage.pageTitle')}
+      title={t('PC.Pages.SystemMenuManage.pageTitle')}
       hideScroll
       rightSlot={
         hasPermissionByMenuCode('menu_manage', 'menu_manage_add') && (
@@ -1001,7 +999,7 @@ const MenuManage: React.FC = () => {
             icon={<PlusOutlined />}
             onClick={handleAdd}
           >
-            {t('NuwaxPC.Pages.SystemMenuManage.addMenu')}
+            {t('PC.Pages.SystemMenuManage.addMenu')}
           </Button>
         )
       }
@@ -1065,7 +1063,7 @@ const MenuManage: React.FC = () => {
             locale={{
               emptyText: (
                 <Empty
-                  description={t('NuwaxPC.Pages.SystemMenuManage.noMenuData')}
+                  description={t('PC.Pages.SystemMenuManage.noMenuData')}
                   image={Empty.PRESENTED_IMAGE_SIMPLE}
                   className={cx(styles.empty)}
                 />

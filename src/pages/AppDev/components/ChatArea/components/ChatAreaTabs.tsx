@@ -86,7 +86,7 @@ const ChatAreaTabs: React.FC<ChatAreaTabsProps> = ({
         }
         options={[
           {
-            label: dict('NuwaxPC.Pages.AppDevChatArea.chatTab'),
+            label: dict('PC.Pages.AppDevChatArea.chatTab'),
             value: 'chat',
           },
           ...(isSupportDesignMode
@@ -100,7 +100,7 @@ const ChatAreaTabs: React.FC<ChatAreaTabsProps> = ({
                           style={{ fontSize: 12, marginRight: 4 }}
                         />
                       ) : null}
-                      {dict('NuwaxPC.Pages.AppDevChatArea.designTab')}
+                      {dict('PC.Pages.AppDevChatArea.designTab')}
                     </div>
                   ),
                   value: 'design',
@@ -109,7 +109,7 @@ const ChatAreaTabs: React.FC<ChatAreaTabsProps> = ({
               ]
             : []),
           {
-            label: dict('NuwaxPC.Pages.AppDevChatArea.dataTab'),
+            label: dict('PC.Pages.AppDevChatArea.dataTab'),
             value: 'data',
           },
         ]}

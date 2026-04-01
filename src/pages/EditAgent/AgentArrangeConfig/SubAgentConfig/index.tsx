@@ -85,7 +85,7 @@ const SubAgentConfig: React.FC<SubAgentConfigProps> = ({
       {/* 空状态 */}
       {!processedAgents?.length && (
         <p className={cx(styles['empty-text'])}>
-          {t('NuwaxPC.Pages.AgentArrangeSubAgentConfig.empty')}
+          {t('PC.Pages.AgentArrangeSubAgentConfig.empty')}
         </p>
       )}
 
@@ -100,7 +100,7 @@ const SubAgentConfig: React.FC<SubAgentConfigProps> = ({
               <h3 className={cx(styles['agent-name'])}>
                 {agent.name ||
                   t(
-                    'NuwaxPC.Pages.AgentArrangeSubAgentConfig.defaultNameWithIndex',
+                    'PC.Pages.AgentArrangeSubAgentConfig.defaultNameWithIndex',
                     String(index + 1),
                   )}
               </h3>
@@ -111,12 +111,12 @@ const SubAgentConfig: React.FC<SubAgentConfigProps> = ({
           </div>
           <div className={cx(styles['agent-actions'])}>
             <TooltipIcon
-              title={t('NuwaxPC.Pages.AgentArrangeSubAgentConfig.edit')}
+              title={t('PC.Pages.AgentArrangeSubAgentConfig.edit')}
               icon={<EditOutlined className="cursor-pointer" />}
               onClick={() => handleEdit(index)}
             />
             <TooltipIcon
-              title={t('NuwaxPC.Pages.AgentArrangeSubAgentConfig.delete')}
+              title={t('PC.Pages.AgentArrangeSubAgentConfig.delete')}
               icon={<DeleteOutlined className="cursor-pointer" />}
               onClick={() => handleDelete(index)}
             />

@@ -122,7 +122,7 @@ const EcosystemCard: React.FC<EcosystemCardProps> = ({
         <div
           className={cx(styles['position-top-right'], styles['activated-text'])}
         >
-          {dict('NuwaxPC.Components.EcosystemCard.enabled')}
+          {dict('PC.Components.EcosystemCard.enabled')}
         </div>
       )}
       {isNewVersion && (
@@ -132,7 +132,7 @@ const EcosystemCard: React.FC<EcosystemCardProps> = ({
             styles['new-version-text'],
           )}
         >
-          {dict('NuwaxPC.Components.EcosystemCard.versionUpdate')}
+          {dict('PC.Components.EcosystemCard.versionUpdate')}
         </div>
       )}
       <header className={cx('flex', styles.header)}>
@@ -166,7 +166,7 @@ const EcosystemCard: React.FC<EcosystemCardProps> = ({
             <div
               className={cx('flex', 'items-center', styles['from-author-box'])}
             >
-              <span>{dict("NuwaxPC.Components.AgentContent.from")}</span>
+              <span>{dict('PC.Components.AgentContent.from')}</span>
               <span className={cx('flex-1', 'text-ellipsis')}>{author}</span>
             </div>
             {shareStatus && <SharedIcon shareStatus={shareStatus} />}

@@ -12,7 +12,7 @@ const ResourceGrid: React.FC<ResourceGridProps> = ({ resources, loading }) => {
     <Card
       className={cx(styles['resource-grid'])}
       bordered={false}
-      title={dict('NuwaxPC.Pages.SystemDashboard.resourceOverview')}
+      title={dict('PC.Pages.SystemDashboard.resourceOverview')}
     >
       <div className={cx(styles['resource-list'])}>
         {(loading ? Array.from({ length: 8 }) : resources).map(

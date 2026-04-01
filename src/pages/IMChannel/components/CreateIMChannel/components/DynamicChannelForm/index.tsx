@@ -15,7 +15,12 @@ const DynamicChannelForm: React.FC<DynamicChannelFormProps> = ({
   platform,
   type,
 }) => {
-  const commonRules = [{ required: true, message: dict('NuwaxPC.Pages.IMChannel.DynamicChannelForm.requiredField') }];
+  const commonRules = [
+    {
+      required: true,
+      message: dict('PC.Pages.IMChannel.DynamicChannelForm.requiredField'),
+    },
+  ];
   const maxProps = { maxLength: 100, showCount: true, allowClear: false };
 
   if (!platform) return null;

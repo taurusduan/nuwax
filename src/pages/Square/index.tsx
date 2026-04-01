@@ -5,6 +5,7 @@ import Loading from '@/components/custom/Loading';
 import PageCard from '@/components/PageCard';
 import { TENANT_CONFIG_INFO } from '@/constants/home.constants';
 import useSpaceSquare from '@/hooks/useSpaceSquare';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiPublishedAgentList,
   apiPublishedPluginList,
@@ -31,7 +32,6 @@ import { Empty, Input, message, Select } from 'antd';
 import { SearchProps } from 'antd/es/input';
 import classNames from 'classnames';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { dict } from '@/services/i18nRuntime';
 import { history, useLocation, useModel, useRequest } from 'umi';
 import styles from './index.less';
 import SingleAgent from './SingleAgent';
@@ -56,7 +56,9 @@ const Square: React.FC = () => {
   const [configInfo, setConfigInfo] = useState<TenantConfigInfo>();
   const [loading, setLoading] = useState<boolean>(false);
   // 标题
-  const [title, setTitle] = useState<string>(dict('NuwaxPC.Pages.Square.Square.agent'));
+  const [title, setTitle] = useState<string>(
+    dict('PC.Pages.Square.Square.agent'),
+  );
 
   // 过滤官方标识
   const [filterOfficial, setFilterOfficial] = useState<FilterOfficialEnum>(
@@ -64,8 +66,14 @@ const Square: React.FC = () => {
   );
   // 过滤官方标识内容
   const FILTER_OFFICIAL = [
-    { value: FilterOfficialEnum.All, label: dict('NuwaxPC.Pages.Square.Square.all') },
-    { value: FilterOfficialEnum.Official, label: dict('NuwaxPC.Pages.Square.Square.onlyOfficial', title) },
+    {
+      value: FilterOfficialEnum.All,
+      label: dict('PC.Pages.Square.Square.all'),
+    },
+    {
+      value: FilterOfficialEnum.Official,
+      label: dict('PC.Pages.Square.Square.onlyOfficial', title),
+    },
   ];
 
   // 分类名称
@@ -105,7 +113,7 @@ const Square: React.FC = () => {
     const agentId = tenantConfigInfo?.defaultTaskAgentId;
     if (!agentId) {
       // 站点默认通用型智能体未配置
-      message.warning(dict('NuwaxPC.Pages.Square.Square.defaultAgentNotConfigured'));
+      message.warning(dict('PC.Pages.Square.Square.defaultAgentNotConfigured'));
       return;
     }
     history.push(
@@ -155,23 +163,23 @@ const Square: React.FC = () => {
     // 分类类型
     switch (cate_type) {
       case SquareAgentTypeEnum.Agent:
-        setTitle(dict('NuwaxPC.Pages.Square.Square.agent'));
+        setTitle(dict('PC.Pages.Square.Square.agent'));
         apiUrlRef.current = apiPublishedAgentList;
         break;
       case SquareAgentTypeEnum.PageApp:
-        setTitle(dict('NuwaxPC.Pages.Square.Square.pageApp'));
+        setTitle(dict('PC.Pages.Square.Square.pageApp'));
         apiUrlRef.current = apiPublishedAgentList;
         break;
       case SquareAgentTypeEnum.Skill:
-        setTitle(dict('NuwaxPC.Pages.Square.Square.skill'));
+        setTitle(dict('PC.Pages.Square.Square.skill'));
         apiUrlRef.current = apiPublishedSkillList;
         break;
       case SquareAgentTypeEnum.Plugin:
-        setTitle(dict('NuwaxPC.Pages.Square.Square.plugin'));
+        setTitle(dict('PC.Pages.Square.Square.plugin'));
         apiUrlRef.current = apiPublishedPluginList;
         break;
       case SquareAgentTypeEnum.Workflow:
-        setTitle(dict('NuwaxPC.Pages.Square.Square.workflow'));
+        setTitle(dict('PC.Pages.Square.Square.workflow'));
         apiUrlRef.current = apiPublishedWorkflowList;
         break;
       // 模板模式下，根据分类名称设置标题
@@ -179,19 +187,19 @@ const Square: React.FC = () => {
         {
           switch (cate_name) {
             case SquareTemplateTargetTypeEnum.PageApp:
-              setTitle(dict('NuwaxPC.Pages.Square.Square.pageApp'));
+              setTitle(dict('PC.Pages.Square.Square.pageApp'));
               break;
             case SquareTemplateTargetTypeEnum.ChatBot:
-              setTitle(dict('NuwaxPC.Pages.Square.Square.agent'));
+              setTitle(dict('PC.Pages.Square.Square.agent'));
               break;
             case SquareTemplateTargetTypeEnum.Workflow:
-              setTitle(dict('NuwaxPC.Pages.Square.Square.workflow'));
+              setTitle(dict('PC.Pages.Square.Square.workflow'));
               break;
             case SquareTemplateTargetTypeEnum.Skill:
-              setTitle(dict('NuwaxPC.Pages.Square.Square.skill'));
+              setTitle(dict('PC.Pages.Square.Square.skill'));
               break;
             default:
-              setTitle(dict('NuwaxPC.Pages.Square.Square.template'));
+              setTitle(dict('PC.Pages.Square.Square.template'));
               break;
           }
           apiUrlRef.current = apiPublishedTemplateList;
@@ -385,11 +393,12 @@ const Square: React.FC = () => {
         }}
       >
         <h3 className={cx('text-ellipsis-2')}>
-          {configInfo?.squareBannerText || dict('NuwaxPC.Pages.Square.Square.bannerTitle')}
+          {configInfo?.squareBannerText ||
+            dict('PC.Pages.Square.Square.bannerTitle')}
         </h3>
         <p className={cx('text-ellipsis-2')}>
           {configInfo?.squareBannerSubText ||
-            dict('NuwaxPC.Pages.Square.Square.bannerSubtitle')}
+            dict('PC.Pages.Square.Square.bannerSubtitle')}
         </p>
       </header>
       <div
@@ -408,7 +417,7 @@ const Square: React.FC = () => {
                 options={templateListTabs}
                 value={activeKeyRef.current}
                 style={{ width: 160, marginLeft: 10 }}
-                placeholder={dict('NuwaxPC.Pages.Square.Square.selectCategory')}
+                placeholder={dict('PC.Pages.Square.Square.selectCategory')}
                 allowClear
                 onChange={(value) => handleTabClick(value as React.Key)}
               />
@@ -432,7 +441,7 @@ const Square: React.FC = () => {
         <Input.Search
           className={cx(styles['search-input'])}
           key={categoryNameRef.current}
-          placeholder={dict('NuwaxPC.Pages.Square.Square.search')}
+          placeholder={dict('PC.Pages.Square.Square.search')}
           allowClear
           value={keyword}
           onSearch={onSearch}
@@ -585,7 +594,7 @@ const Square: React.FC = () => {
                     'items-center',
                     'content-center',
                   )}
-                  description={dict('NuwaxPC.Common.Global.emptyData')}
+                  description={dict('PC.Common.Global.emptyData')}
                 />
               </div>
             )}

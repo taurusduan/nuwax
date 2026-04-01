@@ -76,7 +76,7 @@ const BaseTab = forwardRef(
         }
       });
       await apiSystemConfigUpdate(params);
-      message.success(t('NuwaxPC.Pages.SystemConfig.saveSuccess'));
+      message.success(t('PC.Pages.SystemConfig.saveSuccess'));
       refresh();
     };
 

@@ -19,7 +19,10 @@ export const NodeDetails: React.FC<NodeDetailsProps> = ({ node }) => {
   ) => {
     return (
       <div className={cx('flex', styles.box, className)}>
-        <span className={cx(styles.label)}>{label}{dict('NuwaxPC.Pages.SpaceLog.NodeDetails.labelSeparator')}</span>
+        <span className={cx(styles.label)}>
+          {label}
+          {dict('PC.Pages.SpaceLog.NodeDetails.labelSeparator')}
+        </span>
         <EllipsisTooltip
           text={value || '--'}
           className={cx(styles.value, 'flex-1')}
@@ -33,17 +36,17 @@ export const NodeDetails: React.FC<NodeDetailsProps> = ({ node }) => {
   const nodeTypeName = useMemo(() => {
     switch (node?.type) {
       case AgentComponentTypeEnum.Plugin:
-        return dict('NuwaxPC.Pages.SpaceLog.NodeDetails.typePlugin');
+        return dict('PC.Pages.SpaceLog.NodeDetails.typePlugin');
       case AgentComponentTypeEnum.Workflow:
-        return dict('NuwaxPC.Pages.SpaceLog.NodeDetails.typeWorkflow');
+        return dict('PC.Pages.SpaceLog.NodeDetails.typeWorkflow');
       case AgentComponentTypeEnum.Knowledge:
-        return dict('NuwaxPC.Pages.SpaceLog.NodeDetails.typeKnowledge');
+        return dict('PC.Pages.SpaceLog.NodeDetails.typeKnowledge');
       case AgentComponentTypeEnum.Variable:
-        return dict('NuwaxPC.Pages.SpaceLog.NodeDetails.typeVariable');
+        return dict('PC.Pages.SpaceLog.NodeDetails.typeVariable');
       case AgentComponentTypeEnum.Table:
-        return dict('NuwaxPC.Pages.SpaceLog.NodeDetails.typeTable');
+        return dict('PC.Pages.SpaceLog.NodeDetails.typeTable');
       case AgentComponentTypeEnum.Model:
-        return dict('NuwaxPC.Pages.SpaceLog.NodeDetails.typeModel');
+        return dict('PC.Pages.SpaceLog.NodeDetails.typeModel');
       case AgentComponentTypeEnum.MCP:
         return 'MCP';
       default:
@@ -54,13 +57,25 @@ export const NodeDetails: React.FC<NodeDetailsProps> = ({ node }) => {
   return (
     <>
       <div className={cx(styles.container)}>
-        {renderDetailItem(dict('NuwaxPC.Pages.SpaceLog.NodeDetails.lblType'), nodeTypeName)}
-        {renderDetailItem(dict('NuwaxPC.Pages.SpaceLog.NodeDetails.lblStatus'), dict('NuwaxPC.Pages.SpaceLog.NodeDetails.statusSuccess'))}
-        {renderDetailItem(dict('NuwaxPC.Pages.SpaceLog.NodeDetails.lblName'), node?.name as string)}
-        {renderDetailItem(dict('NuwaxPC.Pages.SpaceLog.NodeDetails.lblElapsedTime'), time)}
+        {renderDetailItem(
+          dict('PC.Pages.SpaceLog.NodeDetails.lblType'),
+          nodeTypeName,
+        )}
+        {renderDetailItem(
+          dict('PC.Pages.SpaceLog.NodeDetails.lblStatus'),
+          dict('PC.Pages.SpaceLog.NodeDetails.statusSuccess'),
+        )}
+        {renderDetailItem(
+          dict('PC.Pages.SpaceLog.NodeDetails.lblName'),
+          node?.name as string,
+        )}
+        {renderDetailItem(
+          dict('PC.Pages.SpaceLog.NodeDetails.lblElapsedTime'),
+          time,
+        )}
       </div>
       {renderDetailItem(
-        dict('NuwaxPC.Pages.SpaceLog.NodeDetails.lblStartTime'),
+        dict('PC.Pages.SpaceLog.NodeDetails.lblStartTime'),
         node?.startTime
           ? dayjs(node?.startTime).format('YYYY-MM-DD HH:mm')
           : '',
@@ -68,7 +83,7 @@ export const NodeDetails: React.FC<NodeDetailsProps> = ({ node }) => {
       )}
       <div />
       {renderDetailItem(
-        dict('NuwaxPC.Pages.SpaceLog.NodeDetails.lblEndTime'),
+        dict('PC.Pages.SpaceLog.NodeDetails.lblEndTime'),
         node?.endTime ? dayjs(node?.endTime).format('YYYY-MM-DD HH:mm') : '',
         styles['mt-10'],
       )}

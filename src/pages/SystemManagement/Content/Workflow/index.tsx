@@ -58,12 +58,11 @@ const Workflow: React.FC = () => {
   const handleDelete = useCallback(async (record: SystemWorkflowInfo) => {
     const response = await apiSystemResourceWorkflowDelete({ id: record.id });
     if (response.code === SUCCESS_CODE) {
-      message.success(t('NuwaxPC.Pages.SystemContentWorkflow.deleteSuccess'));
+      message.success(t('PC.Pages.SystemContentWorkflow.deleteSuccess'));
       actionRef.current?.reload();
     } else {
       message.error(
-        response.message ||
-          t('NuwaxPC.Pages.SystemContentWorkflow.deleteFailed'),
+        response.message || t('PC.Pages.SystemContentWorkflow.deleteFailed'),
       );
     }
   }, []);
@@ -75,20 +74,20 @@ const Workflow: React.FC = () => {
     (record: SystemWorkflowInfo): ActionItem<SystemWorkflowInfo>[] => [
       {
         key: 'view',
-        label: t('NuwaxPC.Pages.SystemContentWorkflow.view'),
+        label: t('PC.Pages.SystemContentWorkflow.view'),
         disabled: !hasPermission('content_workflow_query_detail'),
         onClick: handleView,
       },
       {
         key: 'delete',
-        label: t('NuwaxPC.Pages.SystemContentWorkflow.delete'),
+        label: t('PC.Pages.SystemContentWorkflow.delete'),
         confirm: {
           title: t(
-            'NuwaxPC.Pages.SystemContentWorkflow.deleteConfirmTitle',
+            'PC.Pages.SystemContentWorkflow.deleteConfirmTitle',
             record.name,
           ),
           description: t(
-            'NuwaxPC.Pages.SystemContentWorkflow.deleteConfirmDescription',
+            'PC.Pages.SystemContentWorkflow.deleteConfirmDescription',
           ),
         },
         disabled: !hasPermission('content_workflow_delete'),
@@ -103,31 +102,31 @@ const Workflow: React.FC = () => {
    */
   const columns: ProColumns<SystemWorkflowInfo>[] = [
     {
-      title: t('NuwaxPC.Pages.SystemContentWorkflow.columnName'),
+      title: t('PC.Pages.SystemContentWorkflow.columnName'),
       dataIndex: 'name',
       width: 180,
       ellipsis: true,
       fieldProps: {
-        placeholder: t('NuwaxPC.Pages.SystemContentWorkflow.searchName'),
+        placeholder: t('PC.Pages.SystemContentWorkflow.searchName'),
         allowClear: true,
       },
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentWorkflow.columnDescription'),
+      title: t('PC.Pages.SystemContentWorkflow.columnDescription'),
       dataIndex: 'description',
       width: 250,
       ellipsis: true,
       hideInSearch: true,
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentWorkflow.columnCreator'),
+      title: t('PC.Pages.SystemContentWorkflow.columnCreator'),
       dataIndex: 'creatorName',
       width: 120,
       ellipsis: true,
       hideInSearch: false,
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentWorkflow.columnCreated'),
+      title: t('PC.Pages.SystemContentWorkflow.columnCreated'),
       dataIndex: 'created',
       align: 'center',
       width: 170,
@@ -135,7 +134,7 @@ const Workflow: React.FC = () => {
       valueType: 'dateTime',
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentWorkflow.columnAction'),
+      title: t('PC.Pages.SystemContentWorkflow.columnAction'),
       valueType: 'option',
       fixed: 'right',
       align: 'center',
@@ -174,7 +173,7 @@ const Workflow: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={t('NuwaxPC.Pages.SystemContentWorkflow.pageTitle')}
+      title={t('PC.Pages.SystemContentWorkflow.pageTitle')}
       hideScroll
     >
       <XProTable<SystemWorkflowInfo>

@@ -48,11 +48,11 @@ interface UserGroupFormModalProps {
 // User-group source options. 1: System built-in, 2: User-defined.
 const USER_GROUP_SOURCE_OPTIONS = [
   {
-    label: t('NuwaxPC.Pages.SystemUserGroupFormModal.sourceSystemBuiltIn'),
+    label: t('PC.Pages.SystemUserGroupFormModal.sourceSystemBuiltIn'),
     value: UserGroupSourceEnum.SystemBuiltIn,
   },
   {
-    label: t('NuwaxPC.Pages.SystemUserGroupFormModal.sourceUserDefined'),
+    label: t('PC.Pages.SystemUserGroupFormModal.sourceUserDefined'),
     value: UserGroupSourceEnum.UserDefined,
   },
 ];
@@ -78,9 +78,7 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
     {
       manual: true,
       onSuccess: () => {
-        message.success(
-          t('NuwaxPC.Toast.SystemUserGroupFormModal.createSuccess'),
-        );
+        message.success(t('PC.Toast.SystemUserGroupFormModal.createSuccess'));
         onSuccess();
       },
     },
@@ -92,9 +90,7 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
     {
       manual: true,
       onSuccess: () => {
-        message.success(
-          t('NuwaxPC.Toast.SystemUserGroupFormModal.updateSuccess'),
-        );
+        message.success(t('PC.Toast.SystemUserGroupFormModal.updateSuccess'));
         onSuccess();
       },
     },
@@ -158,7 +154,7 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
       }
     } catch (error) {
       console.error(
-        `${t('NuwaxPC.Pages.SystemUserGroupFormModal.formValidateFailed')}:`,
+        `${t('PC.Pages.SystemUserGroupFormModal.formValidateFailed')}:`,
         error,
       );
     }
@@ -169,15 +165,15 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
       form={form}
       title={
         isEdit
-          ? t('NuwaxPC.Pages.SystemUserGroupFormModal.editTitle')
-          : t('NuwaxPC.Pages.SystemUserGroupFormModal.createTitle')
+          ? t('PC.Pages.SystemUserGroupFormModal.editTitle')
+          : t('PC.Pages.SystemUserGroupFormModal.createTitle')
       }
       open={open}
       loading={loading}
       okText={
         isEdit
-          ? t('NuwaxPC.Pages.SystemUserGroupFormModal.save')
-          : t('NuwaxPC.Pages.SystemUserGroupFormModal.create')
+          ? t('PC.Pages.SystemUserGroupFormModal.save')
+          : t('PC.Pages.SystemUserGroupFormModal.create')
       }
       width={650}
       onCancel={onCancel}
@@ -196,20 +192,18 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
         <Row gutter={16}>
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemUserGroupFormModal.name')}
+              label={t('PC.Pages.SystemUserGroupFormModal.name')}
               name="name"
               rules={[
                 {
                   required: true,
-                  message: t(
-                    'NuwaxPC.Pages.SystemUserGroupFormModal.nameRequired',
-                  ),
+                  message: t('PC.Pages.SystemUserGroupFormModal.nameRequired'),
                 },
               ]}
             >
               <Input
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemUserGroupFormModal.namePlaceholder',
+                  'PC.Pages.SystemUserGroupFormModal.namePlaceholder',
                 )}
                 maxLength={50}
                 showCount
@@ -219,24 +213,24 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
 
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemUserGroupFormModal.maxUserCount')}
+              label={t('PC.Pages.SystemUserGroupFormModal.maxUserCount')}
               name="maxUserCount"
               rules={[
                 {
                   required: true,
                   message: t(
-                    'NuwaxPC.Pages.SystemUserGroupFormModal.maxUserCountRequired',
+                    'PC.Pages.SystemUserGroupFormModal.maxUserCountRequired',
                   ),
                 },
               ]}
               tooltip={{
-                title: t('NuwaxPC.Pages.SystemUserGroupFormModal.maxValueTip'),
+                title: t('PC.Pages.SystemUserGroupFormModal.maxValueTip'),
                 icon: <InfoCircleOutlined />,
               }}
             >
               <InputNumber
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemUserGroupFormModal.maxUserCountPlaceholder',
+                  'PC.Pages.SystemUserGroupFormModal.maxUserCountPlaceholder',
                 )}
                 className={cx('w-full')}
                 min={1}
@@ -247,12 +241,12 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
 
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemUserGroupFormModal.source')}
+              label={t('PC.Pages.SystemUserGroupFormModal.source')}
               name="source"
             >
               <Select
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemUserGroupFormModal.sourcePlaceholder',
+                  'PC.Pages.SystemUserGroupFormModal.sourcePlaceholder',
                 )}
                 disabled
                 options={USER_GROUP_SOURCE_OPTIONS}
@@ -262,13 +256,13 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
 
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemUserGroupFormModal.sort')}
+              label={t('PC.Pages.SystemUserGroupFormModal.sort')}
               name="sortIndex"
               className={cx(styles.fieldItem)}
             >
               <InputNumber
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemUserGroupFormModal.sortPlaceholder',
+                  'PC.Pages.SystemUserGroupFormModal.sortPlaceholder',
                 )}
                 className={cx('w-full')}
                 min={1}
@@ -279,20 +273,18 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
 
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemUserGroupFormModal.status')}
+              label={t('PC.Pages.SystemUserGroupFormModal.status')}
               name="status"
               valuePropName="checked"
               tooltip={{
-                title: t('NuwaxPC.Pages.SystemUserGroupFormModal.statusTip'),
+                title: t('PC.Pages.SystemUserGroupFormModal.statusTip'),
                 icon: <InfoCircleOutlined />,
               }}
             >
               <Switch
-                checkedChildren={t(
-                  'NuwaxPC.Pages.SystemUserGroupFormModal.enabled',
-                )}
+                checkedChildren={t('PC.Pages.SystemUserGroupFormModal.enabled')}
                 unCheckedChildren={t(
-                  'NuwaxPC.Pages.SystemUserGroupFormModal.disabled',
+                  'PC.Pages.SystemUserGroupFormModal.disabled',
                 )}
               />
             </Form.Item>
@@ -300,12 +292,12 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
         </Row>
 
         <Form.Item
-          label={t('NuwaxPC.Pages.SystemUserGroupFormModal.description')}
+          label={t('PC.Pages.SystemUserGroupFormModal.description')}
           name="description"
         >
           <TextArea
             placeholder={t(
-              'NuwaxPC.Pages.SystemUserGroupFormModal.descriptionPlaceholder',
+              'PC.Pages.SystemUserGroupFormModal.descriptionPlaceholder',
             )}
             className="dispose-textarea-count"
             autoSize={{ minRows: 3, maxRows: 5 }}

@@ -123,7 +123,7 @@ const SelectTarget: React.FC<SelectTargetProps> = ({ value, onChange }) => {
       ),
       extra: (
         <TooltipIcon
-          title={t('NuwaxPC.Pages.SystemTaskSelectTarget.addItem', item.label)}
+          title={t('PC.Pages.SystemTaskSelectTarget.addItem', item.label)}
           onClick={(e) => handlerComponentPlus(e, item.type)}
         />
       ),

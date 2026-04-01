@@ -174,35 +174,35 @@ const SpaceLog: React.FC = () => {
   // 入参配置columns
   const inputColumns: TableColumnsType<logInfo> = [
     {
-      title: dict('NuwaxPC.Pages.SpaceLog.colMessageId'),
+      title: dict('PC.Pages.SpaceLog.colMessageId'),
       dataIndex: 'messageId',
       key: 'messageId',
       width: 150,
       ellipsis: true,
     },
     {
-      title: dict('NuwaxPC.Pages.SpaceLog.colConversationId'),
+      title: dict('PC.Pages.SpaceLog.colConversationId'),
       dataIndex: 'conversationId',
       key: 'conversationId',
       width: 100,
       ellipsis: true,
     },
     {
-      title: dict('NuwaxPC.Pages.SpaceLog.colUserUid'),
+      title: dict('PC.Pages.SpaceLog.colUserUid'),
       dataIndex: 'userUid',
       key: 'userUid',
       width: 100,
       ellipsis: true,
     },
     {
-      title: dict('NuwaxPC.Pages.SpaceLog.colUserName'),
+      title: dict('PC.Pages.SpaceLog.colUserName'),
       dataIndex: 'userName',
       key: 'userName',
       width: 180,
       ellipsis: true,
     },
     {
-      title: dict('NuwaxPC.Pages.SpaceLog.colUserInput'),
+      title: dict('PC.Pages.SpaceLog.colUserInput'),
       dataIndex: 'userInput',
       key: 'userInput',
       minWidth: 150,
@@ -212,7 +212,7 @@ const SpaceLog: React.FC = () => {
       },
     },
     {
-      title: dict('NuwaxPC.Pages.SpaceLog.colOutput'),
+      title: dict('PC.Pages.SpaceLog.colOutput'),
       dataIndex: 'output',
       key: 'output',
       minWidth: 150,
@@ -222,21 +222,21 @@ const SpaceLog: React.FC = () => {
       },
     },
     {
-      title: dict('NuwaxPC.Pages.SpaceLog.colInputToken'),
+      title: dict('PC.Pages.SpaceLog.colInputToken'),
       dataIndex: 'inputToken',
       key: 'inputToken',
       width: 100,
       align: 'center',
     },
     {
-      title: dict('NuwaxPC.Pages.SpaceLog.colOutputToken'),
+      title: dict('PC.Pages.SpaceLog.colOutputToken'),
       dataIndex: 'outputToken',
       key: 'outputToken',
       width: 100,
       align: 'center',
     },
     {
-      title: dict('NuwaxPC.Pages.SpaceLog.colRequestTime'),
+      title: dict('PC.Pages.SpaceLog.colRequestTime'),
       dataIndex: 'requestStartTime',
       key: 'requestStartTime',
       width: 160,
@@ -245,7 +245,7 @@ const SpaceLog: React.FC = () => {
       },
     },
     {
-      title: dict('NuwaxPC.Pages.SpaceLog.colElapsedTime'),
+      title: dict('PC.Pages.SpaceLog.colElapsedTime'),
       dataIndex: 'elapsedTimeMs',
       key: 'elapsedTimeMs',
       width: 100,
@@ -290,41 +290,43 @@ const SpaceLog: React.FC = () => {
               <Col span={8}>
                 <Form.Item
                   name="messageId"
-                  label={dict('NuwaxPC.Pages.SpaceLog.lblMessageId')}
+                  label={dict('PC.Pages.SpaceLog.lblMessageId')}
                   labelCol={{ flex: '70px' }}
                 >
-                  <Input placeholder={dict('NuwaxPC.Pages.SpaceLog.phMessageId')} />
+                  <Input placeholder={dict('PC.Pages.SpaceLog.phMessageId')} />
                 </Form.Item>
                 <Form.Item
                   name="userUid"
-                  label={dict('NuwaxPC.Pages.SpaceLog.lblUserUid')}
+                  label={dict('PC.Pages.SpaceLog.lblUserUid')}
                   labelCol={{ flex: '70px' }}
                   className={cx('mb-0')}
                 >
-                  <Input placeholder={dict('NuwaxPC.Pages.SpaceLog.phUserUid')} />
+                  <Input placeholder={dict('PC.Pages.SpaceLog.phUserUid')} />
                 </Form.Item>
               </Col>
               <Col span={8}>
                 <Form.Item
                   name="conversationId"
-                  label={dict('NuwaxPC.Pages.SpaceLog.lblConversationId')}
+                  label={dict('PC.Pages.SpaceLog.lblConversationId')}
                   labelCol={{ flex: '70px' }}
                 >
-                  <Input placeholder={dict('NuwaxPC.Pages.SpaceLog.phConversationId')} />
+                  <Input
+                    placeholder={dict('PC.Pages.SpaceLog.phConversationId')}
+                  />
                 </Form.Item>
                 <Form.Item
                   name="userInputString"
-                  label={dict('NuwaxPC.Pages.SpaceLog.lblUserInput')}
+                  label={dict('PC.Pages.SpaceLog.lblUserInput')}
                   labelCol={{ flex: '70px' }}
                   className={cx('mb-0')}
                 >
-                  <Input placeholder={dict('NuwaxPC.Pages.SpaceLog.phUserInput')} />
+                  <Input placeholder={dict('PC.Pages.SpaceLog.phUserInput')} />
                 </Form.Item>
               </Col>
               <Col span={8}>
                 <Form.Item
                   name="timeRange"
-                  label={dict('NuwaxPC.Pages.SpaceLog.lblTimeRange')}
+                  label={dict('PC.Pages.SpaceLog.lblTimeRange')}
                   labelCol={{ flex: '70px' }}
                 >
                   <RangePicker
@@ -341,11 +343,11 @@ const SpaceLog: React.FC = () => {
                 </Form.Item>
                 <Form.Item
                   name="outputString"
-                  label={dict('NuwaxPC.Pages.SpaceLog.lblOutput')}
+                  label={dict('PC.Pages.SpaceLog.lblOutput')}
                   labelCol={{ flex: '70px' }}
                   className={cx('mb-0')}
                 >
-                  <Input placeholder={dict('NuwaxPC.Pages.SpaceLog.phOutput')} />
+                  <Input placeholder={dict('PC.Pages.SpaceLog.phOutput')} />
                 </Form.Item>
               </Col>
             </Row>
@@ -353,10 +355,10 @@ const SpaceLog: React.FC = () => {
           <div className={cx(styles.line)} />
           <div className={cx('flex', 'flex-col', 'content-between')}>
             <Button type="primary" htmlType="submit">
-              {dict('NuwaxPC.Pages.SpaceLog.btnSearch')}
+              {dict('PC.Pages.SpaceLog.btnSearch')}
             </Button>
             <Button htmlType="reset" onClick={handleReset}>
-              {dict('NuwaxPC.Pages.SpaceLog.btnReset')}
+              {dict('PC.Pages.SpaceLog.btnReset')}
             </Button>
           </div>
         </Form>
@@ -379,9 +381,10 @@ const SpaceLog: React.FC = () => {
               ...pagination,
               showSizeChanger: true,
               onChange: handlePaginationChange,
-              showTotal: (total) => dict('NuwaxPC.Pages.SpaceLog.paginationTotal', total),
+              showTotal: (total) =>
+                dict('PC.Pages.SpaceLog.paginationTotal', total),
               locale: {
-                items_per_page: dict('NuwaxPC.Pages.SpaceLog.itemsPerPage'),
+                items_per_page: dict('PC.Pages.SpaceLog.itemsPerPage'),
               },
             }}
           />

@@ -73,8 +73,8 @@ const ResourceItem: React.FC<ResourceItemProps> = ({
             onClick={() => onAdd(targetId)}
           >
             {isAdded
-              ? t('NuwaxPC.Pages.SystemMenuDataPermissionModal.itemAdded')
-              : t('NuwaxPC.Pages.SystemMenuDataPermissionModal.itemAdd')}
+              ? t('PC.Pages.SystemMenuDataPermissionModal.itemAdded')
+              : t('PC.Pages.SystemMenuDataPermissionModal.itemAdd')}
           </Button>
         )}
         {onDelete && (
@@ -84,7 +84,7 @@ const ResourceItem: React.FC<ResourceItemProps> = ({
             className={cx(styles.btn)}
             onClick={() => onDelete(targetId)}
           >
-            {t('NuwaxPC.Pages.SystemMenuDataPermissionModal.itemRemove')}
+            {t('PC.Pages.SystemMenuDataPermissionModal.itemRemove')}
           </Button>
         )}
       </div>

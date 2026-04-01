@@ -75,7 +75,7 @@ const Header: React.FC<HeaderProp> = ({
               />
             </Popover>
             {publishStatus === 'Published' && (
-              <Popover content={t('NuwaxPC.Pages.AntvX6Header.published')}>
+              <Popover content={t('PC.Pages.AntvX6Header.published')}>
                 <CheckCircleFilled
                   className="mr-6"
                   style={{ color: '#00B23C', fontSize: '16px' }}
@@ -93,20 +93,20 @@ const Header: React.FC<HeaderProp> = ({
       <div className="header-tag-style">
         <Tag color="default" bordered={false}>
           {t(
-            'NuwaxPC.Pages.AntvX6Header.autoSavedAt',
+            'PC.Pages.AntvX6Header.autoSavedAt',
             getTime(modified ?? new Date().toString()),
           )}
         </Tag>
 
         {publishDate === null && (
           <Tag color="#EBECF5" style={{ color: 'rgba(15,21,40,0.82)' }}>
-            {t('NuwaxPC.Pages.AntvX6Header.unpublished')}
+            {t('PC.Pages.AntvX6Header.unpublished')}
           </Tag>
         )}
 
         {publishDate !== null && publishDate !== modified && (
           <Tag bordered={false} color="volcano">
-            {t('NuwaxPC.Pages.AntvX6Header.updatedNotPublished')}
+            {t('PC.Pages.AntvX6Header.updatedNotPublished')}
           </Tag>
         )}
       </div>
@@ -121,8 +121,8 @@ const Header: React.FC<HeaderProp> = ({
         loading={isValidLoading}
       >
         {isValidLoading
-          ? t('NuwaxPC.Pages.AntvX6Header.validating')
-          : t('NuwaxPC.Pages.AntvX6Header.publish')}
+          ? t('PC.Pages.AntvX6Header.validating')
+          : t('PC.Pages.AntvX6Header.publish')}
       </Button>
     </div>
   );

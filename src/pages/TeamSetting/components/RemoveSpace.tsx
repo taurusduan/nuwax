@@ -38,7 +38,7 @@ const RemoveSpace: React.FC<RemoveSpaceProps> = ({
       setLoading(true);
     },
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
+      message.success(dict('PC.Toast.Global.deletedSuccessfully'));
       onConfirmRemove?.();
     },
     onFinally: () => {
@@ -61,7 +61,7 @@ const RemoveSpace: React.FC<RemoveSpaceProps> = ({
     <CustomFormModal
       loading={loading}
       form={form}
-      title={dict('NuwaxPC.Pages.TeamSetting.RemoveSpace.deleteTeamTitle')}
+      title={dict('PC.Pages.TeamSetting.RemoveSpace.deleteTeamTitle')}
       open={open}
       classNames={{
         footer: cx('team-setting-remove-modal-footer'),
@@ -76,7 +76,7 @@ const RemoveSpace: React.FC<RemoveSpaceProps> = ({
             styles['team-setting-modal-warning'],
           )}
         >
-          {dict('NuwaxPC.Pages.TeamSetting.RemoveSpace.deleteWarning')}
+          {dict('PC.Pages.TeamSetting.RemoveSpace.deleteWarning')}
         </p>
         <Form
           form={form}
@@ -87,22 +87,34 @@ const RemoveSpace: React.FC<RemoveSpaceProps> = ({
         >
           <Form.Item
             name="name"
-            label={dict('NuwaxPC.Pages.TeamSetting.RemoveSpace.enterTeamNameLabel')}
+            label={dict('PC.Pages.TeamSetting.RemoveSpace.enterTeamNameLabel')}
             rules={[
-              { message: dict('NuwaxPC.Pages.TeamSetting.RemoveSpace.enterTeamNameRequired') },
+              {
+                message: dict(
+                  'PC.Pages.TeamSetting.RemoveSpace.enterTeamNameRequired',
+                ),
+              },
               {
                 validator: (_, value) => {
                   if (value === name) {
                     return Promise.resolve();
                   }
                   return Promise.reject(
-                    new Error(dict('NuwaxPC.Pages.TeamSetting.RemoveSpace.teamNameMismatch')),
+                    new Error(
+                      dict('PC.Pages.TeamSetting.RemoveSpace.teamNameMismatch'),
+                    ),
                   );
                 },
               },
             ]}
           >
-            <Input placeholder={dict('NuwaxPC.Pages.TeamSetting.RemoveSpace.teamNamePlaceholder')} showCount maxLength={50} />
+            <Input
+              placeholder={dict(
+                'PC.Pages.TeamSetting.RemoveSpace.teamNamePlaceholder',
+              )}
+              showCount
+              maxLength={50}
+            />
           </Form.Item>
         </Form>
       </>

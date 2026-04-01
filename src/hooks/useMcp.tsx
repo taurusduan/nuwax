@@ -150,7 +150,7 @@ const useMcp = () => {
       ),
       extra: (
         <TooltipIcon
-          title={dict('NuwaxPC.Hooks.UseMcp.addItem', item.label)}
+          title={dict('PC.Hooks.UseMcp.addItem', item.label)}
           onClick={(e) => handlerComponentPlus(e, item.type)}
         />
       ),

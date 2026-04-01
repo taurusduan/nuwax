@@ -1,8 +1,8 @@
 import LabelStar from '@/components/LabelStar';
 import { COMMON_TABLE_STYLE } from '@/constants/layout.constants';
 import { AFFERENT_MODE_LIST } from '@/constants/library.constants';
-import { apiPageSavePathArgs } from '@/services/pageDev';
 import { dict } from '@/services/i18nRuntime';
+import { apiPageSavePathArgs } from '@/services/pageDev';
 import { InputTypeEnum } from '@/types/enums/common';
 import { BindConfigWithSub } from '@/types/interfaces/common';
 import { PageArgConfig } from '@/types/interfaces/pageDev';
@@ -83,7 +83,7 @@ const PathParamsConfigContent: React.FC<PathParamsConfigContentProps> = ({
     debounceWait: 300,
     onSuccess: (_: null, params: PageArgConfig[]) => {
       setLoading(false);
-      message.success(dict('NuwaxPC.Toast.Global.savedSuccessfully'));
+      message.success(dict('PC.Toast.Global.savedSuccessfully'));
       const info = params[0];
       onConfirmSave(info);
     },
@@ -121,25 +121,41 @@ const PathParamsConfigContent: React.FC<PathParamsConfigContentProps> = ({
   // 入参配置columns
   const inputColumns: TableColumnsType<BindConfigWithSub> = [
     {
-      title: <LabelStar label={dict('NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramName')} />,
+      title: (
+        <LabelStar
+          label={dict(
+            'PC.Pages.SpacePageDevelop.PathParamsConfigContent.paramName',
+          )}
+        />
+      ),
       dataIndex: 'name',
       key: 'name',
       className: 'flex items-center',
       render: (value, record) => (
         <Input
-          placeholder={dict('NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramNamePlaceholder')}
+          placeholder={dict(
+            'PC.Pages.SpacePageDevelop.PathParamsConfigContent.paramNamePlaceholder',
+          )}
           value={value}
           onChange={(e) => handleInputValue(record.key, 'name', e.target.value)}
         />
       ),
     },
     {
-      title: <LabelStar label={dict('NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescription')} />,
+      title: (
+        <LabelStar
+          label={dict(
+            'PC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescription',
+          )}
+        />
+      ),
       dataIndex: 'description',
       key: 'description',
       render: (value, record) => (
         <Input
-          placeholder={dict('NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescriptionPlaceholder')}
+          placeholder={dict(
+            'PC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescriptionPlaceholder',
+          )}
           value={value}
           onChange={(e) =>
             handleInputValue(record.key, 'description', e.target.value)
@@ -148,7 +164,13 @@ const PathParamsConfigContent: React.FC<PathParamsConfigContentProps> = ({
       ),
     },
     {
-      title: <LabelStar label={dict('NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.inputType')} />,
+      title: (
+        <LabelStar
+          label={dict(
+            'PC.Pages.SpacePageDevelop.PathParamsConfigContent.inputType',
+          )}
+        />
+      ),
       dataIndex: 'inputType',
       key: 'inputType',
       width: 120,
@@ -165,7 +187,9 @@ const PathParamsConfigContent: React.FC<PathParamsConfigContentProps> = ({
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.isRequired'),
+      title: dict(
+        'PC.Pages.SpacePageDevelop.PathParamsConfigContent.isRequired',
+      ),
       dataIndex: 'require',
       key: 'require',
       width: 100,
@@ -182,13 +206,17 @@ const PathParamsConfigContent: React.FC<PathParamsConfigContentProps> = ({
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValue'),
+      title: dict(
+        'PC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValue',
+      ),
       dataIndex: 'bindValue',
       key: 'bindValue',
       width: 150,
       render: (value, record) => (
         <Input
-          placeholder={dict('NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValuePlaceholder')}
+          placeholder={dict(
+            'PC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValuePlaceholder',
+          )}
           value={value}
           onChange={(e) =>
             handleInputValue(record.key, 'bindValue', e.target.value)
@@ -197,7 +225,7 @@ const PathParamsConfigContent: React.FC<PathParamsConfigContentProps> = ({
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.enable'),
+      title: dict('PC.Pages.SpacePageDevelop.PathParamsConfigContent.enable'),
       dataIndex: 'enable',
       key: 'enable',
       width: 70,
@@ -215,7 +243,7 @@ const PathParamsConfigContent: React.FC<PathParamsConfigContentProps> = ({
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.action'),
+      title: dict('PC.Pages.SpacePageDevelop.PathParamsConfigContent.action'),
       key: 'action',
       width: 80,
       align: 'center',
@@ -235,7 +263,11 @@ const PathParamsConfigContent: React.FC<PathParamsConfigContentProps> = ({
     <div className={cx(styles.container, 'flex', 'flex-col')}>
       {!currentPathParam ? (
         <div className={cx('h-full', 'flex', 'items-center', 'content-center')}>
-          <Empty description={dict('NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.noPathParams')} />
+          <Empty
+            description={dict(
+              'PC.Pages.SpacePageDevelop.PathParamsConfigContent.noPathParams',
+            )}
+          />
         </div>
       ) : (
         <>
@@ -244,7 +276,7 @@ const PathParamsConfigContent: React.FC<PathParamsConfigContentProps> = ({
             icon={<PlusOutlined />}
             onClick={handleInputConfigAdd}
           >
-            {dict('NuwaxPC.Pages.SpacePageDevelop.PathParamsConfigContent.addParam')}
+            {dict('PC.Pages.SpacePageDevelop.PathParamsConfigContent.addParam')}
           </Button>
 
           <Table<BindConfigWithSub>
@@ -259,7 +291,7 @@ const PathParamsConfigContent: React.FC<PathParamsConfigContentProps> = ({
           />
           <footer className={cx(styles.footer)}>
             <Button type="primary" onClick={handleSave} loading={loading}>
-              {dict('NuwaxPC.Common.Global.save')}
+              {dict('PC.Common.Global.save')}
             </Button>
           </footer>
         </>

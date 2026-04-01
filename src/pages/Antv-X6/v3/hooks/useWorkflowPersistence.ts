@@ -137,7 +137,7 @@ export const useWorkflowPersistence = ({
             'Version conflict: workflow was modified in another window',
           );
           setSaveStatus(SaveStatusEnum.Failed);
-          setSaveError(t('NuwaxPC.Pages.AntvX6Persistence.versionConflict'));
+          setSaveError(t('PC.Pages.AntvX6Persistence.versionConflict'));
 
           // 防止重复弹出版本冲突弹窗，且组件必须处于挂载状态
           if (
@@ -146,12 +146,10 @@ export const useWorkflowPersistence = ({
           ) {
             isVersionConflictModalVisibleRef.current = true;
             Modal.confirm({
-              title: t('NuwaxPC.Pages.AntvX6Persistence.versionConflictTitle'),
-              content: t(
-                'NuwaxPC.Pages.AntvX6Persistence.versionConflictContent',
-              ),
-              okText: t('NuwaxPC.Pages.AntvX6Persistence.forceOverwrite'),
-              cancelText: t('NuwaxPC.Pages.AntvX6Persistence.cancel'),
+              title: t('PC.Pages.AntvX6Persistence.versionConflictTitle'),
+              content: t('PC.Pages.AntvX6Persistence.versionConflictContent'),
+              okText: t('PC.Pages.AntvX6Persistence.forceOverwrite'),
+              cancelText: t('PC.Pages.AntvX6Persistence.cancel'),
               onOk: () => {
                 // 用户确认强制覆盖
                 isVersionConflictModalVisibleRef.current = false;
@@ -173,7 +171,7 @@ export const useWorkflowPersistence = ({
           // 更新保存状态为失败
           setSaveStatus(SaveStatusEnum.Failed);
           setSaveError(
-            _res.message || t('NuwaxPC.Pages.AntvX6Persistence.saveFailed'),
+            _res.message || t('PC.Pages.AntvX6Persistence.saveFailed'),
           );
           return false;
         }
@@ -184,7 +182,7 @@ export const useWorkflowPersistence = ({
         setSaveError(
           error instanceof Error
             ? error.message
-            : t('NuwaxPC.Pages.AntvX6Persistence.networkSaveFailed'),
+            : t('PC.Pages.AntvX6Persistence.networkSaveFailed'),
         );
         return false;
       }

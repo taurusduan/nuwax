@@ -99,7 +99,10 @@ const MenuListItem: React.FC<MenuListItemProps> = ({
       </span>
       <div className={cx('flex-1', 'text-ellipsis', styles.name)}>{name}</div>
       {onCancelCollect && (
-        <CustomPopover list={[{ label: dict('NuwaxPC.Components.MenuListItem.cancelCollect') }]} onClick={onCancelCollect}>
+        <CustomPopover
+          list={[{ label: dict('PC.Components.MenuListItem.cancelCollect') }]}
+          onClick={onCancelCollect}
+        >
           <EllipsisOutlined className={cx(styles.collectIcon)} />
         </CustomPopover>
       )}

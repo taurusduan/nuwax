@@ -76,7 +76,7 @@ const Database: React.FC<NodeDisposeProps> = ({
       {type === 'TableSQL' && (
         <div className="node-item-style">
           <InputAndOut
-            title={t('NuwaxPC.Pages.AntvX6Data.input')}
+            title={t('PC.Pages.AntvX6Data.input')}
             fieldConfigs={outPutConfigs}
             inputItemName={InputItemNameEnum.inputArgs}
             form={form}
@@ -88,10 +88,10 @@ const Database: React.FC<NodeDisposeProps> = ({
         <div className="node-item-style">
           <p className="node-title-style">
             {type === 'TableDataDelete'
-              ? t('NuwaxPC.Pages.AntvX6Database.deleteCondition')
+              ? t('PC.Pages.AntvX6Database.deleteCondition')
               : type === 'TableDataUpdate'
-              ? t('NuwaxPC.Pages.AntvX6Database.updateCondition')
-              : t('NuwaxPC.Pages.AntvX6Database.queryCondition')}
+              ? t('PC.Pages.AntvX6Database.updateCondition')
+              : t('PC.Pages.AntvX6Database.queryCondition')}
           </p>
           <Form.Item>
             <Space>
@@ -118,11 +118,11 @@ const Database: React.FC<NodeDisposeProps> = ({
                           }}
                           options={[
                             {
-                              label: t('NuwaxPC.Pages.AntvX6Database.and'),
+                              label: t('PC.Pages.AntvX6Database.and'),
                               value: 'AND',
                             },
                             {
-                              label: t('NuwaxPC.Pages.AntvX6Database.or'),
+                              label: t('PC.Pages.AntvX6Database.or'),
                               value: 'OR',
                             },
                           ]}
@@ -175,7 +175,7 @@ const Database: React.FC<NodeDisposeProps> = ({
                                     >
                                       <Select
                                         placeholder={t(
-                                          'NuwaxPC.Pages.AntvX6Database.selectPlaceholder',
+                                          'PC.Pages.AntvX6Database.selectPlaceholder',
                                         )}
                                         options={form.getFieldValue(
                                           'tableFields',
@@ -228,7 +228,7 @@ const Database: React.FC<NodeDisposeProps> = ({
                       ) : (
                         <Empty
                           description={t(
-                            'NuwaxPC.Pages.AntvX6Database.emptyConditionData',
+                            'PC.Pages.AntvX6Database.emptyConditionData',
                           )}
                         />
                       )}
@@ -244,7 +244,7 @@ const Database: React.FC<NodeDisposeProps> = ({
                         }}
                         icon={<PlusOutlined />}
                       >
-                        {t('NuwaxPC.Pages.AntvX6Database.addCondition')}
+                        {t('PC.Pages.AntvX6Database.addCondition')}
                       </Button>
                     </div>
                   );
@@ -260,15 +260,15 @@ const Database: React.FC<NodeDisposeProps> = ({
           <TreeInput
             title={
               type === 'TableDataAdd'
-                ? t('NuwaxPC.Pages.AntvX6Data.input')
-                : t('NuwaxPC.Pages.AntvX6Database.selectUpdateFields')
+                ? t('PC.Pages.AntvX6Data.input')
+                : t('PC.Pages.AntvX6Database.selectUpdateFields')
             }
             form={form}
             options={form.getFieldValue('tableFields') || []}
             showAdd={type === 'TableDataUpdate'}
             params={form.getFieldValue('inputArgs') || []}
             showDelete={type === 'TableDataUpdate'}
-            descText={t('NuwaxPC.Pages.AntvX6Database.variableValue')}
+            descText={t('PC.Pages.AntvX6Database.variableValue')}
           />
         </div>
       )}
@@ -276,16 +276,14 @@ const Database: React.FC<NodeDisposeProps> = ({
         <div className="node-item-style">
           <div className=" margin-bottom">
             <span className="node-title-style ">
-              {t('NuwaxPC.Pages.AntvX6Database.queryLimit')}
+              {t('PC.Pages.AntvX6Database.queryLimit')}
             </span>
           </div>
           <Form.Item name="limit">
             <InputNumber
               min={1}
               max={1000}
-              placeholder={t(
-                'NuwaxPC.Pages.AntvX6Database.queryLimitPlaceholder',
-              )}
+              placeholder={t('PC.Pages.AntvX6Database.queryLimitPlaceholder')}
             />
           </Form.Item>
         </div>
@@ -294,7 +292,7 @@ const Database: React.FC<NodeDisposeProps> = ({
       <div className="node-item-style">
         <div className="dis-sb margin-bottom ">
           <span className="node-title-style">
-            {t('NuwaxPC.Pages.AntvX6Database.table')}
+            {t('PC.Pages.AntvX6Database.table')}
           </span>
         </div>
         {form.getFieldValue('tableId') ? (
@@ -320,7 +318,7 @@ const Database: React.FC<NodeDisposeProps> = ({
             onExpand
             onOptimize
             onOptimizeClick={onOpenCreated}
-            placeholder={t('NuwaxPC.Pages.AntvX6Database.sqlPlaceholder')}
+            placeholder={t('PC.Pages.AntvX6Database.sqlPlaceholder')}
             variables={transformToPromptVariables(
               inputArgs.filter(
                 (item: InputAndOutConfig) =>
@@ -338,7 +336,7 @@ const Database: React.FC<NodeDisposeProps> = ({
           {/* TODO: this output field key may need adjustment (`inputArgs`). */}
           <CustomTree
             key={`${type}-${id}-outputArgs`}
-            title={t('NuwaxPC.Pages.AntvX6Data.output')}
+            title={t('PC.Pages.AntvX6Data.output')}
             inputItemName={'outputArgs'}
             params={nodeConfig?.outputArgs || []}
             form={form}
@@ -352,7 +350,7 @@ const Database: React.FC<NodeDisposeProps> = ({
             form.getFieldValue('outputArgs') && (
               <>
                 <div className="node-title-style margin-bottom">
-                  {t('NuwaxPC.Pages.AntvX6Data.output')}
+                  {t('PC.Pages.AntvX6Data.output')}
                 </div>
                 <TreeOutput treeData={form.getFieldValue('outputArgs')} />
               </>
@@ -361,7 +359,7 @@ const Database: React.FC<NodeDisposeProps> = ({
         </Form.Item>
       )}
       <SqlOptimizeModal
-        title={t('NuwaxPC.Pages.AntvX6Database.generateSqlTitle')}
+        title={t('PC.Pages.AntvX6Database.generateSqlTitle')}
         open={open}
         onCancel={() => {
           setOpen(false);

@@ -58,7 +58,7 @@ const HistoryConversation: React.FC<HistoryConversationProps> = ({
 
   return (
     <Modal
-      title={<p>{dict('NuwaxPC.Components.HistoryConversation.title')}</p>}
+      title={<p>{dict('PC.Components.HistoryConversation.title')}</p>}
       width={600}
       footer={null}
       maskClosable

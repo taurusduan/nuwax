@@ -58,9 +58,7 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
       setLoading(true);
       const resp = await apiAddTimedTask(data);
       if (resp?.code === SUCCESS_CODE) {
-        message.success(
-          t('NuwaxPC.Pages.SystemTaskCreateTimedTask.createSuccess'),
-        );
+        message.success(t('PC.Pages.SystemTaskCreateTimedTask.createSuccess'));
         onCancel?.();
         onConfirm?.();
       }
@@ -75,9 +73,7 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
       setLoading(true);
       const resp = await apiSystemTaskUpdate(data);
       if (resp?.code === SUCCESS_CODE) {
-        message.success(
-          t('NuwaxPC.Pages.SystemTaskCreateTimedTask.updateSuccess'),
-        );
+        message.success(t('PC.Pages.SystemTaskCreateTimedTask.updateSuccess'));
         onCancel?.();
         onConfirm?.();
       }
@@ -129,7 +125,7 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
     // 最终校验：指定时间不能早于当前时间
     if (isSpecificTime && lockTime && dayjs(lockTime).isBefore(dayjs())) {
       message.warning(
-        t('NuwaxPC.Pages.SystemTaskCreateTimedTask.specificTimeMustBeFuture'),
+        t('PC.Pages.SystemTaskCreateTimedTask.specificTimeMustBeFuture'),
       );
       return;
     }
@@ -307,8 +303,8 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
       form={form}
       title={
         mode === CreateUpdateModeEnum.Create
-          ? t('NuwaxPC.Pages.SystemTaskCreateTimedTask.createTitle')
-          : t('NuwaxPC.Pages.SystemTaskCreateTimedTask.updateTitle')
+          ? t('PC.Pages.SystemTaskCreateTimedTask.createTitle')
+          : t('PC.Pages.SystemTaskCreateTimedTask.updateTitle')
       }
       classNames={{
         content: cx(styles.container),
@@ -334,7 +330,7 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
           name="cron"
           label={
             <LabelStar
-              label={t('NuwaxPC.Pages.SystemTaskCreateTimedTask.timedPeriod')}
+              label={t('PC.Pages.SystemTaskCreateTimedTask.timedPeriod')}
             />
           }
         >
@@ -343,20 +339,16 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
 
         <Form.Item
           name="taskName"
-          label={t('NuwaxPC.Pages.SystemTaskCreateTimedTask.taskName')}
+          label={t('PC.Pages.SystemTaskCreateTimedTask.taskName')}
           rules={[
             {
               required: true,
-              message: t(
-                'NuwaxPC.Pages.SystemTaskCreateTimedTask.enterTaskName',
-              ),
+              message: t('PC.Pages.SystemTaskCreateTimedTask.enterTaskName'),
             },
           ]}
         >
           <Input
-            placeholder={t(
-              'NuwaxPC.Pages.SystemTaskCreateTimedTask.enterTaskName',
-            )}
+            placeholder={t('PC.Pages.SystemTaskCreateTimedTask.enterTaskName')}
             showCount
             maxLength={100}
           />
@@ -366,7 +358,7 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
         <SelectTargetFormItem
           form={form}
           name="taskTarget"
-          label={t('NuwaxPC.Pages.SystemTaskCreateTimedTask.taskTarget')}
+          label={t('PC.Pages.SystemTaskCreateTimedTask.taskTarget')}
           mode={mode}
           onChange={handleChangeTarget}
         />
@@ -376,45 +368,39 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
           <>
             <Form.Item
               name="keepConversation"
-              label={t(
-                'NuwaxPC.Pages.SystemTaskCreateTimedTask.keepConversation',
-              )}
+              label={t('PC.Pages.SystemTaskCreateTimedTask.keepConversation')}
               tooltip={t(
-                'NuwaxPC.Pages.SystemTaskCreateTimedTask.keepConversationTooltip',
+                'PC.Pages.SystemTaskCreateTimedTask.keepConversationTooltip',
               )}
               rules={[
                 {
                   required: true,
                   message: t(
-                    'NuwaxPC.Pages.SystemTaskCreateTimedTask.selectKeepConversation',
+                    'PC.Pages.SystemTaskCreateTimedTask.selectKeepConversation',
                   ),
                 },
               ]}
             >
               <Switch
-                checkedChildren={t(
-                  'NuwaxPC.Pages.SystemTaskCreateTimedTask.yes',
-                )}
-                unCheckedChildren={t(
-                  'NuwaxPC.Pages.SystemTaskCreateTimedTask.no',
-                )}
+                checkedChildren={t('PC.Pages.SystemTaskCreateTimedTask.yes')}
+                unCheckedChildren={t('PC.Pages.SystemTaskCreateTimedTask.no')}
               />
             </Form.Item>
             <Form.Item
               name="message"
-              label={t('NuwaxPC.Pages.SystemTaskCreateTimedTask.taskContent')}
+              label={t('PC.Pages.SystemTaskCreateTimedTask.taskContent')}
               rules={[
                 {
                   required: true,
                   message: t(
-                    'NuwaxPC.Pages.SystemTaskCreateTimedTask.enterTaskContent',
+                    'PC.Pages.SystemTaskCreateTimedTask.enterTaskContent',
                   ),
                 },
               ]}
             >
               <Input.TextArea
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemTaskCreateTimedTask.taskContentPlaceholder',
+                  'PC.Pages.SystemTaskCreateTimedTask.taskContentPlaceholder',
                 )}
                 showCount
                 autoSize={{ minRows: 3, maxRows: 6 }}
@@ -429,14 +415,14 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
           name="variables"
           label={
             variables && Array.isArray(variables) && variables.length > 0
-              ? t('NuwaxPC.Pages.SystemTaskCreateTimedTask.parameterConfig')
+              ? t('PC.Pages.SystemTaskCreateTimedTask.parameterConfig')
               : ''
           }
           rules={[
             {
               required: false,
               message: t(
-                'NuwaxPC.Pages.SystemTaskCreateTimedTask.fillParameterConfig',
+                'PC.Pages.SystemTaskCreateTimedTask.fillParameterConfig',
               ),
               type: 'array',
             },

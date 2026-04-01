@@ -1,5 +1,5 @@
-import { apiPageBatchConfigProxy } from '@/services/pageDev';
 import { dict } from '@/services/i18nRuntime';
+import { apiPageBatchConfigProxy } from '@/services/pageDev';
 import {
   ProxyConfig,
   ReverseProxyContentConfigProps,
@@ -53,7 +53,11 @@ const ReverseProxyContentConfig: React.FC<ReverseProxyContentConfigProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.savedSuccessfully'));
+      message.success(
+        dict(
+          'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.savedSuccessfully',
+        ),
+      );
       setLoading(false);
       onConfirm(allProxyConfigs);
     },
@@ -68,7 +72,11 @@ const ReverseProxyContentConfig: React.FC<ReverseProxyContentConfigProps> = ({
     // 判断路径是否存在重复
     const isExistSamePath = hasDuplicate(currentProxyConfigs || [], 'path');
     if (isExistSamePath) {
-      message.error(dict('NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.duplicatePathError'));
+      message.error(
+        dict(
+          'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.duplicatePathError',
+        ),
+      );
       setLoading(false);
       return;
     }
@@ -76,7 +84,11 @@ const ReverseProxyContentConfig: React.FC<ReverseProxyContentConfigProps> = ({
     // 是否包含根目录
     const isRootPath = currentProxyConfigs?.some((item) => item.path === '/');
     if (isRootPath) {
-      message.error(dict('NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.rootPathError'));
+      message.error(
+        dict(
+          'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.rootPathError',
+        ),
+      );
       setLoading(false);
       return;
     }
@@ -143,22 +155,28 @@ const ReverseProxyContentConfig: React.FC<ReverseProxyContentConfigProps> = ({
   // 入参配置columns
   const inputColumns: TableColumnsType<ProxyConfig> = [
     {
-      title: dict('NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.path'),
+      title: dict('PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.path'),
       dataIndex: 'path',
       render: (_, record) => (
         <Input
-          placeholder={dict('NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.pathPlaceholder')}
+          placeholder={dict(
+            'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.pathPlaceholder',
+          )}
           value={record.path}
           onChange={(e) => handleInputValue(record.key, 'path', e.target.value)}
         />
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.backendAddress'),
+      title: dict(
+        'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.backendAddress',
+      ),
       dataIndex: 'backends',
       render: (_, record) => (
         <Input
-          placeholder={dict('NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.backendAddressPlaceholder')}
+          placeholder={dict(
+            'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.backendAddressPlaceholder',
+          )}
           value={record.backends[0].backend}
           onChange={(e) =>
             handleInputValue(record.key, 'backends', e.target.value)
@@ -169,7 +187,9 @@ const ReverseProxyContentConfig: React.FC<ReverseProxyContentConfigProps> = ({
     {
       title: () => (
         <Button icon={<PlusOutlined />} onClick={handleAddConfig}>
-          {dict('NuwaxPC.Pages.SpacePageDevelop.ReverseProxyContentConfig.addConfig')}
+          {dict(
+            'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.addConfig',
+          )}
         </Button>
       ),
       dataIndex: 'action',
@@ -200,7 +220,7 @@ const ReverseProxyContentConfig: React.FC<ReverseProxyContentConfigProps> = ({
       />
       <footer className={cx('text-right', 'mb-16', 'px-16')}>
         <Button type="primary" onClick={handleSave} loading={loading}>
-          {dict('NuwaxPC.Common.Global.save')}
+          {dict('PC.Common.Global.save')}
         </Button>
       </footer>
     </div>

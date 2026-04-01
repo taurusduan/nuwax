@@ -1,8 +1,8 @@
+import { dict } from '@/services/i18nRuntime';
 import type { SelectListType } from '@/types/interfaces/common';
 import { CheckOutlined } from '@ant-design/icons';
 import { Flex, Select } from 'antd';
 import classNames from 'classnames';
-import { dict } from '@/services/i18nRuntime';
 import React from 'react';
 import styles from './index.less';
 
@@ -27,7 +27,7 @@ const SelectList: React.FC<SelectListType> = (props) => {
       rootClassName={cx(styles.container, className)}
       value={value}
       prefix={prefix}
-      placeholder={placeholder || dict('NuwaxPC.Components.SelectList.pleaseSelect')}
+      placeholder={placeholder || dict('PC.Components.SelectList.pleaseSelect')}
       disabled={disabled}
       onChange={onChange}
       allowClear={allowClear}

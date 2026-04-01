@@ -64,11 +64,11 @@ const Space: React.FC = () => {
   const handleDelete = useCallback(async (record: SystemSpaceInfo) => {
     const response = await apiSystemResourceSpaceDelete({ id: record.id });
     if (response.code === SUCCESS_CODE) {
-      message.success(t('NuwaxPC.Pages.SystemContentSpace.deleteSuccess'));
+      message.success(t('PC.Pages.SystemContentSpace.deleteSuccess'));
       actionRef.current?.reload();
     } else {
       message.error(
-        response.message || t('NuwaxPC.Pages.SystemContentSpace.deleteFailed'),
+        response.message || t('PC.Pages.SystemContentSpace.deleteFailed'),
       );
     }
   }, []);
@@ -80,20 +80,20 @@ const Space: React.FC = () => {
     (record: SystemSpaceInfo): ActionItem<SystemSpaceInfo>[] => [
       {
         key: 'view',
-        label: t('NuwaxPC.Pages.SystemContentSpace.view'),
+        label: t('PC.Pages.SystemContentSpace.view'),
         disabled: !hasPermission('content_space_query_detail'),
         onClick: handleView,
       },
       {
         key: 'delete',
-        label: t('NuwaxPC.Pages.SystemContentSpace.delete'),
+        label: t('PC.Pages.SystemContentSpace.delete'),
         confirm: {
           title: t(
-            'NuwaxPC.Pages.SystemContentSpace.deleteConfirmTitle',
+            'PC.Pages.SystemContentSpace.deleteConfirmTitle',
             record.name,
           ),
           description: t(
-            'NuwaxPC.Pages.SystemContentSpace.deleteConfirmDescription',
+            'PC.Pages.SystemContentSpace.deleteConfirmDescription',
           ),
         },
         disabled: !hasPermission('content_space_delete'),
@@ -108,31 +108,31 @@ const Space: React.FC = () => {
    */
   const columns: ProColumns<SystemSpaceInfo>[] = [
     {
-      title: t('NuwaxPC.Pages.SystemContentSpace.columnName'),
+      title: t('PC.Pages.SystemContentSpace.columnName'),
       dataIndex: 'name',
       width: 180,
       ellipsis: true,
       fieldProps: {
-        placeholder: t('NuwaxPC.Pages.SystemContentSpace.searchName'),
+        placeholder: t('PC.Pages.SystemContentSpace.searchName'),
         allowClear: true,
       },
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentSpace.columnDescription'),
+      title: t('PC.Pages.SystemContentSpace.columnDescription'),
       dataIndex: 'description',
       width: 250,
       ellipsis: true,
       hideInSearch: true, // 不参与搜索
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentSpace.columnCreator'),
+      title: t('PC.Pages.SystemContentSpace.columnCreator'),
       dataIndex: 'creatorName',
       width: 120,
       ellipsis: true,
       hideInSearch: false,
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentSpace.columnCreated'),
+      title: t('PC.Pages.SystemContentSpace.columnCreated'),
       dataIndex: 'created',
       align: 'center',
       width: 170,
@@ -140,7 +140,7 @@ const Space: React.FC = () => {
       valueType: 'dateTime',
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentSpace.columnAction'),
+      title: t('PC.Pages.SystemContentSpace.columnAction'),
       valueType: 'option',
       fixed: 'right',
       align: 'center',
@@ -179,7 +179,7 @@ const Space: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={t('NuwaxPC.Pages.SystemContentSpace.pageTitle')}
+      title={t('PC.Pages.SystemContentSpace.pageTitle')}
       hideScroll
     >
       <XProTable<SystemSpaceInfo>

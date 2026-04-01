@@ -1,6 +1,5 @@
 import ChatInputHome from '@/components/ChatInputHome';
 import Loading from '@/components/custom/Loading';
-import { dict } from '@/services/i18nRuntime';
 import useConversation from '@/hooks/useConversation';
 import useSelectedComponent from '@/hooks/useSelectedComponent';
 import {
@@ -9,6 +8,7 @@ import {
   apiPublishedAgentInfo,
   apiUnCollectAgent,
 } from '@/services/agentDev';
+import { dict } from '@/services/i18nRuntime';
 import { AgentTypeEnum } from '@/types/enums/space';
 import { AgentDetailDto, GuidQuestionDto } from '@/types/interfaces/agent';
 import type {
@@ -131,7 +131,7 @@ const Home: React.FC = () => {
     skillIds?: number[],
   ) => {
     if (!tenantConfigInfo) {
-      message.warning(dict('NuwaxPC.Pages.Home.noTenantInfo'));
+      message.warning(dict('PC.Pages.Home.noTenantInfo'));
       return;
     }
 
@@ -223,7 +223,7 @@ const Home: React.FC = () => {
     if (item.type === 'Link') {
       // 打开外链
       if (!item.url) {
-        antdMessage.error(dict('NuwaxPC.Pages.Home.linkConfigError'));
+        antdMessage.error(dict('PC.Pages.Home.linkConfigError'));
         return;
       }
       window.open(item.url, '_blank');

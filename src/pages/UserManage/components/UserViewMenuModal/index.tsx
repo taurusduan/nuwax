@@ -98,7 +98,7 @@ const UserViewMenuModal: React.FC<UserViewMenuModalProps> = ({
       title:
         resource.name ||
         dict(
-          'NuwaxPC.Pages.UserManage.UserViewMenuModal.resourceId',
+          'PC.Pages.UserManage.UserViewMenuModal.resourceId',
           String(resource.id),
         ),
       key: resource.id,
@@ -202,7 +202,7 @@ const UserViewMenuModal: React.FC<UserViewMenuModalProps> = ({
             title:
               menu.name ||
               dict(
-                'NuwaxPC.Pages.UserManage.UserViewMenuModal.menuId',
+                'PC.Pages.UserManage.UserViewMenuModal.menuId',
                 String(menu.id),
               ), // 只保存菜单名称，资源树在 titleRender 中渲染
             key: menu.id,
@@ -238,7 +238,7 @@ const UserViewMenuModal: React.FC<UserViewMenuModalProps> = ({
     <CustomFormModal
       form={form}
       title={dict(
-        'NuwaxPC.Pages.UserManage.UserViewMenuModal.viewMenuResourcePermission',
+        'PC.Pages.UserManage.UserViewMenuModal.viewMenuResourcePermission',
       )}
       open={open}
       onCancel={onCancel}
@@ -280,7 +280,7 @@ const UserViewMenuModal: React.FC<UserViewMenuModalProps> = ({
           />
         ) : (
           <div className={cx(styles.empty)}>
-            {dict('NuwaxPC.Common.Global.noData')}
+            {dict('PC.Common.Global.noData')}
           </div>
         )}
       </div>

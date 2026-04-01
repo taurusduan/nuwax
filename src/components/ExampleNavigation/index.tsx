@@ -2,6 +2,7 @@
  * 示例页面导航组件
  * 提供示例页面之间的快速导航
  */
+import { dict } from '@/services/i18nRuntime';
 import {
   AppstoreOutlined,
   ArrowLeftOutlined,
@@ -10,7 +11,6 @@ import {
 } from '@ant-design/icons';
 import { Breadcrumb, Button, Space, Typography } from 'antd';
 import React from 'react';
-import { dict } from '@/services/i18nRuntime';
 import { history } from 'umi';
 import './index.less';
 
@@ -44,22 +44,22 @@ interface ExampleNavigationProps {
  */
 const examplePages = [
   {
-    title: dict('NuwaxPC.Components.ExampleNavigation.exampleCenter'),
+    title: dict('PC.Components.ExampleNavigation.exampleCenter'),
     path: '/examples',
     icon: <AppstoreOutlined />,
   },
   {
-    title: dict('NuwaxPC.Components.ExampleNavigation.backgroundStyle'),
+    title: dict('PC.Components.ExampleNavigation.backgroundStyle'),
     path: '/examples/background-style',
     icon: <AppstoreOutlined />,
   },
   {
-    title: dict('NuwaxPC.Components.ExampleNavigation.navigationTokenGuide'),
+    title: dict('PC.Components.ExampleNavigation.navigationTokenGuide'),
     path: '/examples/navigation-token',
     icon: <AppstoreOutlined />,
   },
   {
-    title: dict('NuwaxPC.Components.ExampleNavigation.antdShowcase'),
+    title: dict('PC.Components.ExampleNavigation.antdShowcase'),
     path: '/examples/antd-showcase',
     icon: <AppstoreOutlined />,
   },
@@ -82,7 +82,7 @@ const ExampleNavigation: React.FC<ExampleNavigationProps> = ({
         title: (
           <Space>
             <HomeOutlined />
-            <span>{dict('NuwaxPC.Components.ExampleNavigation.home')}</span>
+            <span>{dict('PC.Components.ExampleNavigation.home')}</span>
           </Space>
         ),
         href: '/',
@@ -91,7 +91,7 @@ const ExampleNavigation: React.FC<ExampleNavigationProps> = ({
         title: (
           <Space>
             <AppstoreOutlined />
-            <span>{dict('NuwaxPC.Components.ExampleNavigation.exampleCenter')}</span>
+            <span>{dict('PC.Components.ExampleNavigation.exampleCenter')}</span>
           </Space>
         ),
         href: '/examples',
@@ -158,7 +158,7 @@ const ExampleNavigation: React.FC<ExampleNavigationProps> = ({
               onClick={() => history.push(backPath)}
               className="back-button"
             >
-              {dict('NuwaxPC.Components.ExampleNavigation.back')}
+              {dict('PC.Components.ExampleNavigation.back')}
             </Button>
           )}
 

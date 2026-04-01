@@ -1,5 +1,6 @@
 import ToggleWrap from '@/components/ToggleWrap';
 import { apiAgentConfigHistoryList } from '@/services/agentConfig';
+import { dict } from '@/services/i18nRuntime';
 import { apiPluginConfigHistoryList } from '@/services/plugin';
 import { apiPublishItemList, apiPublishOffShelf } from '@/services/publish';
 import { apiSkillConfigHistoryList } from '@/services/skill';
@@ -15,7 +16,6 @@ import {
 import { ExclamationCircleFilled } from '@ant-design/icons';
 import { Drawer, Empty, message, Modal } from 'antd';
 import classNames from 'classnames';
-import { dict } from '@/services/i18nRuntime';
 import React, { useEffect, useState } from 'react';
 import { useRequest } from 'umi';
 import ConditionRender from '../ConditionRender';
@@ -50,10 +50,10 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
   // 组件类型
   const componentType =
     targetType === AgentComponentTypeEnum.Agent
-      ? dict('NuwaxPC.Components.VersionHistory.agent')
+      ? dict('PC.Components.VersionHistory.agent')
       : targetType === AgentComponentTypeEnum.Plugin
-      ? dict('NuwaxPC.Components.VersionHistory.plugin')
-      : dict('NuwaxPC.Components.VersionHistory.workflow');
+      ? dict('PC.Components.VersionHistory.plugin')
+      : dict('PC.Components.VersionHistory.workflow');
 
   // 请求接口
   const apiUrl =
@@ -101,7 +101,7 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: PublishOffShelfParams[]) => {
-      message.success(dict('NuwaxPC.Components.VersionHistory.offShelfSuccess'));
+      message.success(dict('PC.Components.VersionHistory.offShelfSuccess'));
       offShelfSuccess(params[0].publishId);
     },
   });
@@ -130,12 +130,15 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
     }
 
     Modal.confirm({
-      title: dict('NuwaxPC.Components.VersionHistory.confirmOffShelf', componentType),
+      title: dict(
+        'PC.Components.VersionHistory.confirmOffShelf',
+        componentType,
+      ),
       icon: <ExclamationCircleFilled />,
       content: targetName,
-      okText: dict('NuwaxPC.Components.SubmitButton.confirm'),
+      okText: dict('PC.Components.SubmitButton.confirm'),
       maskClosable: true,
-      cancelText: dict('NuwaxPC.Common.Global.cancel'),
+      cancelText: dict('PC.Common.Global.cancel'),
       onOk() {
         runOffShelf({
           targetType,
@@ -156,7 +159,9 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
           permissions?.includes(PermissionsEnum.Publish) && publishList?.length
         }
       >
-        <h5 className={cx(styles.title)}>{dict('NuwaxPC.Components.VersionHistory.currentPublish')}</h5>
+        <h5 className={cx(styles.title)}>
+          {dict('PC.Components.VersionHistory.currentPublish')}
+        </h5>
         {publishList?.map((info: PublishItemInfo) => (
           <CurrentPublishItem
             key={info.publishId}
@@ -165,7 +170,9 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
           />
         ))}
       </ConditionRender>
-      <h5 className={cx(styles.title)}>{dict('NuwaxPC.Components.VersionHistory.arrangeAndPublishRecord')}</h5>
+      <h5 className={cx(styles.title)}>
+        {dict('PC.Components.VersionHistory.arrangeAndPublishRecord')}
+      </h5>
       {versionHistoryList?.map((item) => (
         <PublishRecordItem
           key={item.id}
@@ -177,11 +184,11 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
   ) : (
     <div className={cx('flex', 'h-full', 'items-center', 'content-center')}>
       <Empty
-        description={dict('NuwaxPC.Components.VersionHistory.noVersionHistory')}
+        description={dict('PC.Components.VersionHistory.noVersionHistory')}
         image={Empty.PRESENTED_IMAGE_SIMPLE}
       >
         <div style={{ color: '#8c8c8c', fontSize: '12px', marginTop: '8px' }}>
-          {dict('NuwaxPC.Components.VersionHistory.versionHistoryTip')}
+          {dict('PC.Components.VersionHistory.versionHistoryTip')}
         </div>
       </Empty>
     </div>
@@ -197,7 +204,9 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
         closable
         title={
           <div>
-            <div style={{ fontSize: '16px', fontWeight: 600 }}>{dict('NuwaxPC.Components.VersionHistory.versionHistory')}</div>
+            <div style={{ fontSize: '16px', fontWeight: 600 }}>
+              {dict('PC.Components.VersionHistory.versionHistory')}
+            </div>
             <div
               style={{ fontSize: '12px', color: '#8c8c8c', marginTop: '4px' }}
             >
@@ -217,7 +226,7 @@ const VersionHistory: React.FC<VersionHistoryProps> = ({
 
   return (
     <ToggleWrap
-      title={dict('NuwaxPC.Components.VersionHistory.versionHistory')}
+      title={dict('PC.Components.VersionHistory.versionHistory')}
       visible={visible}
       onClose={onClose}
       headerClassName={headerClassName}

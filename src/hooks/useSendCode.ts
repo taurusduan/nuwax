@@ -9,7 +9,7 @@ const useSendCode = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Hooks.UseSendCode.codeSent'));
+      message.success(dict('PC.Hooks.UseSendCode.codeSent'));
     },
   });
 

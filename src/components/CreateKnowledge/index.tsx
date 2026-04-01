@@ -5,6 +5,7 @@ import CustomFormModal from '@/components/CustomFormModal';
 import OverrideTextArea from '@/components/OverrideTextArea';
 import UploadAvatar from '@/components/UploadAvatar';
 import { CREATED_TABS } from '@/constants/common.constants';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiKnowledgeConfigAdd,
   apiKnowledgeConfigDetail,
@@ -31,7 +32,6 @@ import type {
 } from '@/types/interfaces/knowledge';
 import { ModelConfigInfo } from '@/types/interfaces/model';
 import { customizeRequiredMark } from '@/utils/form';
-import { dict } from '@/services/i18nRuntime';
 import { Form, FormProps, Input, message, Select } from 'antd';
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
@@ -83,7 +83,7 @@ const CreateKnowledge: React.FC<CreateKnowledgeProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: (result: number) => {
-      message.success(dict('NuwaxPC.Components.CreateKnowledge.createSuccess'));
+      message.success(dict('PC.Components.CreateKnowledge.createSuccess'));
       setLoading(false);
       onCancel();
       history.push(`/space/${spaceId}/knowledge/${result}`);
@@ -98,7 +98,7 @@ const CreateKnowledge: React.FC<CreateKnowledgeProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: KnowledgeConfigUpdateParams[]) => {
-      message.success(dict('NuwaxPC.Components.CreateKnowledge.updateSuccess'));
+      message.success(dict('PC.Components.CreateKnowledge.updateSuccess'));
       setLoading(false);
       const info = params[0];
       onConfirm?.(info);
@@ -249,8 +249,8 @@ const CreateKnowledge: React.FC<CreateKnowledgeProps> = ({
         form={form}
         title={
           mode === CreateUpdateModeEnum.Create
-            ? dict('NuwaxPC.Components.CreateKnowledge.createTitle')
-            : dict('NuwaxPC.Components.CreateKnowledge.updateTitle')
+            ? dict('PC.Components.CreateKnowledge.createTitle')
+            : dict('PC.Components.CreateKnowledge.updateTitle')
         }
         open={open}
         loading={loading}
@@ -272,26 +272,50 @@ const CreateKnowledge: React.FC<CreateKnowledgeProps> = ({
         >
           <Form.Item
             name="name"
-            label={dict('NuwaxPC.Components.CreateKnowledge.nameLabel')}
-            rules={[{ required: true, message: dict('NuwaxPC.Components.CreateKnowledge.nameRequired') }]}
+            label={dict('PC.Components.CreateKnowledge.nameLabel')}
+            rules={[
+              {
+                required: true,
+                message: dict('PC.Components.CreateKnowledge.nameRequired'),
+              },
+            ]}
           >
-            <Input placeholder={dict('NuwaxPC.Components.CreateKnowledge.namePlaceholder')} showCount maxLength={100} />
+            <Input
+              placeholder={dict(
+                'PC.Components.CreateKnowledge.namePlaceholder',
+              )}
+              showCount
+              maxLength={100}
+            />
           </Form.Item>
           <OverrideTextArea
             name="description"
-            label={dict('NuwaxPC.Components.CreateKnowledge.descriptionLabel')}
+            label={dict('PC.Components.CreateKnowledge.descriptionLabel')}
             initialValue={knowledgeInfo?.description}
-            placeholder={dict('NuwaxPC.Components.CreateKnowledge.descriptionPlaceholder')}
+            placeholder={dict(
+              'PC.Components.CreateKnowledge.descriptionPlaceholder',
+            )}
             maxLength={10000}
           />
           <Form.Item
             name="embeddingModelId"
-            label={dict('NuwaxPC.Components.CreateKnowledge.embeddingModelLabel')}
-            rules={[{ required: true, message: dict('NuwaxPC.Components.CreateKnowledge.embeddingModelRequired') }]}
-            tooltip={dict('NuwaxPC.Components.CreateKnowledge.embeddingModelTooltip')}
+            label={dict('PC.Components.CreateKnowledge.embeddingModelLabel')}
+            rules={[
+              {
+                required: true,
+                message: dict(
+                  'PC.Components.CreateKnowledge.embeddingModelRequired',
+                ),
+              },
+            ]}
+            tooltip={dict(
+              'PC.Components.CreateKnowledge.embeddingModelTooltip',
+            )}
           >
             <SelectList
-              placeholder={dict('NuwaxPC.Components.CreateKnowledge.embeddingModelPlaceholder')}
+              placeholder={dict(
+                'PC.Components.CreateKnowledge.embeddingModelPlaceholder',
+              )}
               /*disabled={mode === CreateUpdateModeEnum.Update}*/
               options={modelConfigList}
               allowClear
@@ -300,15 +324,25 @@ const CreateKnowledge: React.FC<CreateKnowledgeProps> = ({
 
           <Form.Item
             name="dataParsingMethod"
-            label={dict('NuwaxPC.Components.CreateKnowledge.dataParsingMethodLabel')}
-            tooltip={dict('NuwaxPC.Components.CreateKnowledge.dataParsingMethodTooltip')}
+            label={dict('PC.Components.CreateKnowledge.dataParsingMethodLabel')}
+            tooltip={dict(
+              'PC.Components.CreateKnowledge.dataParsingMethodTooltip',
+            )}
           >
             <Select
               style={{ width: '100%' }}
-              placeholder={dict('NuwaxPC.Components.CreateKnowledge.dataParsingMethodPlaceholder')}
+              placeholder={dict(
+                'PC.Components.CreateKnowledge.dataParsingMethodPlaceholder',
+              )}
               options={[
-                { value: 'default', label: dict('NuwaxPC.Components.CreateKnowledge.systemDefault') },
-                { value: 'workflow', label: dict('NuwaxPC.Components.CreateKnowledge.customWorkflow') },
+                {
+                  value: 'default',
+                  label: dict('PC.Components.CreateKnowledge.systemDefault'),
+                },
+                {
+                  value: 'workflow',
+                  label: dict('PC.Components.CreateKnowledge.customWorkflow'),
+                },
               ]}
             />
           </Form.Item>
@@ -325,7 +359,10 @@ const CreateKnowledge: React.FC<CreateKnowledgeProps> = ({
             </Form.Item>
           )}
 
-          <Form.Item name="icon" label={dict('NuwaxPC.Components.CreateKnowledge.iconLabel')}>
+          <Form.Item
+            name="icon"
+            label={dict('PC.Components.CreateKnowledge.iconLabel')}
+          >
             <UploadAvatar
               className={cx(styles['upload-box'])}
               onUploadSuccess={setImageUrl}

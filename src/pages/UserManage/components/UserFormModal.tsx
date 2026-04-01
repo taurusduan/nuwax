@@ -65,13 +65,13 @@ const UserFormModal: React.FC<UserFormModalProps> = ({
       onCancel={onCancel}
       title={
         isEdit
-          ? dict('NuwaxPC.Pages.UserManage.UserFormModal.editUser')
-          : dict('NuwaxPC.Pages.UserManage.UserFormModal.addUser')
+          ? dict('PC.Pages.UserManage.UserFormModal.editUser')
+          : dict('PC.Pages.UserManage.UserFormModal.addUser')
       }
       destroyOnHidden
       footer={[
         <Button key="cancel" onClick={onCancel}>
-          {dict('NuwaxPC.Common.Global.cancel')}
+          {dict('PC.Common.Global.cancel')}
         </Button>,
         <Button
           key="confirm"
@@ -79,82 +79,82 @@ const UserFormModal: React.FC<UserFormModalProps> = ({
           loading={isLoading}
           onClick={handleOk}
         >
-          {dict('NuwaxPC.Common.Global.confirm')}
+          {dict('PC.Common.Global.confirm')}
         </Button>,
       ]}
     >
       <Form form={form} layout="vertical" requiredMark={customizeRequiredMark}>
         <Form.Item
-          label={dict('NuwaxPC.Pages.UserManage.UserFormModal.userName')}
+          label={dict('PC.Pages.UserManage.UserFormModal.userName')}
           name="userName"
         >
           <Input
             placeholder={dict(
-              'NuwaxPC.Pages.UserManage.UserFormModal.inputUserName',
+              'PC.Pages.UserManage.UserFormModal.inputUserName',
             )}
           />
         </Form.Item>
         <Form.Item
-          label={dict('NuwaxPC.Pages.UserManage.UserFormModal.nickName')}
+          label={dict('PC.Pages.UserManage.UserFormModal.nickName')}
           name="nickName"
         >
           <Input
             placeholder={dict(
-              'NuwaxPC.Pages.UserManage.UserFormModal.inputNickName',
+              'PC.Pages.UserManage.UserFormModal.inputNickName',
             )}
           />
         </Form.Item>
         <Form.Item
-          label={dict('NuwaxPC.Pages.UserManage.UserFormModal.phoneNumber')}
+          label={dict('PC.Pages.UserManage.UserFormModal.phoneNumber')}
           name="phone"
         >
           <Input
             placeholder={dict(
-              'NuwaxPC.Pages.UserManage.UserFormModal.inputPhoneNumber',
+              'PC.Pages.UserManage.UserFormModal.inputPhoneNumber',
             )}
           />
         </Form.Item>
         <Form.Item
-          label={dict('NuwaxPC.Pages.UserManage.UserFormModal.emailAddress')}
+          label={dict('PC.Pages.UserManage.UserFormModal.emailAddress')}
           name="email"
         >
           <Input
             placeholder={dict(
-              'NuwaxPC.Pages.UserManage.UserFormModal.inputEmailAddress',
+              'PC.Pages.UserManage.UserFormModal.inputEmailAddress',
             )}
           />
         </Form.Item>
         {!isEdit && (
           <Form.Item
-            label={dict('NuwaxPC.Pages.UserManage.UserFormModal.loginPassword')}
+            label={dict('PC.Pages.UserManage.UserFormModal.loginPassword')}
             name="password"
             rules={[
               {
                 required: true,
                 message: dict(
-                  'NuwaxPC.Pages.UserManage.UserFormModal.inputLoginPassword',
+                  'PC.Pages.UserManage.UserFormModal.inputLoginPassword',
                 ),
               },
             ]}
           >
             <Input.Password
               placeholder={dict(
-                'NuwaxPC.Pages.UserManage.UserFormModal.inputLoginPassword',
+                'PC.Pages.UserManage.UserFormModal.inputLoginPassword',
               )}
             />
           </Form.Item>
         )}
         <Form.Item
-          label={dict('NuwaxPC.Pages.UserManage.UserFormModal.userType')}
+          label={dict('PC.Pages.UserManage.UserFormModal.userType')}
           name="role"
           initialValue={UserRoleEnum.Admin}
         >
           <Radio.Group>
             <Radio value={UserRoleEnum.Admin}>
-              {dict('NuwaxPC.Pages.UserManage.UserFormModal.admin')}
+              {dict('PC.Pages.UserManage.UserFormModal.admin')}
             </Radio>
             <Radio value={UserRoleEnum.User}>
-              {dict('NuwaxPC.Pages.UserManage.UserFormModal.normalUser')}
+              {dict('PC.Pages.UserManage.UserFormModal.normalUser')}
             </Radio>
           </Radio.Group>
         </Form.Item>

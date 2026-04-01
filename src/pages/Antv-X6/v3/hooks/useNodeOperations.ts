@@ -655,7 +655,7 @@ export const useNodeOperations = ({
 
       if (foldWrapItem.type === NodeTypeEnum.Loop || foldWrapItem.loopNodeId) {
         if (_params.type === NodeTypeEnum.Loop) {
-          message.warning(t('NuwaxPC.Pages.AntvX6Workflow.cannotNestLoop'));
+          message.warning(t('PC.Pages.AntvX6Workflow.cannotNestLoop'));
           return;
         }
         _params.loopNodeId =
@@ -734,17 +734,14 @@ export const useNodeOperations = ({
         } else {
           // API 失败：显示错误消息并阻止添加节点
           message.error(
-            apiRes.message ||
-              t('NuwaxPC.Pages.AntvX6NodeOperations.addNodeFailed'),
+            apiRes.message || t('PC.Pages.AntvX6NodeOperations.addNodeFailed'),
           );
           console.error('[V3] Add node API failed:', apiRes.message);
           return;
         }
       } catch (error) {
         // 网络异常：显示错误消息并阻止添加节点
-        message.error(
-          t('NuwaxPC.Pages.AntvX6NodeOperations.addNodeNetworkError'),
-        );
+        message.error(t('PC.Pages.AntvX6NodeOperations.addNodeNetworkError'));
         console.error('[V3] Add node API exception:', error);
         return;
       }
@@ -891,15 +888,12 @@ export const useNodeOperations = ({
           }
         } else {
           message.error(
-            _res.message ||
-              t('NuwaxPC.Pages.AntvX6NodeOperations.copyNodeFailed'),
+            _res.message || t('PC.Pages.AntvX6NodeOperations.copyNodeFailed'),
           );
         }
       } catch (error) {
         console.error('[V3] Copy node API exception:', error);
-        message.error(
-          t('NuwaxPC.Pages.AntvX6NodeOperations.copyNodeNetworkError'),
-        );
+        message.error(t('PC.Pages.AntvX6NodeOperations.copyNodeNetworkError'));
       }
     },
     [graphRef, changeUpdateTime],
@@ -962,8 +956,7 @@ export const useNodeOperations = ({
         }
       } else {
         message.error(
-          res.message ||
-            t('NuwaxPC.Pages.AntvX6NodeOperations.deleteNodeFailed'),
+          res.message || t('PC.Pages.AntvX6NodeOperations.deleteNodeFailed'),
         );
       }
     },
@@ -1042,9 +1035,7 @@ export const useNodeOperations = ({
           },
         };
       } else {
-        message.warning(
-          t('NuwaxPC.Pages.AntvX6Workflow.unsupportedComponentType'),
-        );
+        message.warning(t('PC.Pages.AntvX6Workflow.unsupportedComponentType'));
         return;
       }
 

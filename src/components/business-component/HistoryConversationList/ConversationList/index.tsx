@@ -137,7 +137,7 @@ const ConversationList = React.forwardRef<
                 <span className={styles.topic}>{item.topic}</span>
                 <Tooltip
                   title={t(
-                    'NuwaxPC.Components.HistoryConversationList.editTitleTooltip',
+                    'PC.Components.HistoryConversationList.editTitleTooltip',
                   )}
                   mouseEnterDelay={0.5}
                 >
@@ -153,15 +153,13 @@ const ConversationList = React.forwardRef<
               <div className={styles['right-area']}>
                 <span className={styles.date}>
                   {dayjs(item.modified).format(
-                    t(
-                      'NuwaxPC.Components.HistoryConversationList.dateTimeFormat',
-                    ),
+                    t('PC.Components.HistoryConversationList.dateTimeFormat'),
                   )}
                 </span>
                 <Space className={styles.actions} size={12}>
                   <Tooltip
                     title={t(
-                      'NuwaxPC.Components.HistoryConversationList.deleteTooltip',
+                      'PC.Components.HistoryConversationList.deleteTooltip',
                     )}
                     mouseEnterDelay={0.5}
                   >
@@ -179,14 +177,12 @@ const ConversationList = React.forwardRef<
             <div className={styles['summary-wrapper']}>
               <div className={styles.summary}>
                 {item.summary ||
-                  t('NuwaxPC.Components.HistoryConversationList.summaryEmpty')}
+                  t('PC.Components.HistoryConversationList.summaryEmpty')}
               </div>
               <div className={styles['tag-wrapper']}>
                 <div className={styles['agent-tag-bottom']}>
                   {item.agent?.name ||
-                    t(
-                      'NuwaxPC.Components.HistoryConversationList.agentFallback',
-                    )}
+                    t('PC.Components.HistoryConversationList.agentFallback')}
                 </div>
               </div>
             </div>
@@ -199,7 +195,7 @@ const ConversationList = React.forwardRef<
         )}
         {!hasMore && list.length > 0 && (
           <div className={styles.nomore}>
-            {t('NuwaxPC.Components.HistoryConversationList.noMoreData')}
+            {t('PC.Components.HistoryConversationList.noMoreData')}
           </div>
         )}
       </div>

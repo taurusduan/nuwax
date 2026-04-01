@@ -41,25 +41,25 @@ export const NodeDetails: React.FC<NodeDetailsProps> = ({ node }) => {
   const nodeTypeName = useMemo(() => {
     switch (node?.targetType) {
       case AgentComponentTypeEnum.Agent:
-        return dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeAgent');
+        return dict('PC.Pages.SpaceLibraryLog.NodeDetails.typeAgent');
       case AgentComponentTypeEnum.Plugin:
-        return dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typePlugin');
+        return dict('PC.Pages.SpaceLibraryLog.NodeDetails.typePlugin');
       case AgentComponentTypeEnum.Workflow:
-        return dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeWorkflow');
+        return dict('PC.Pages.SpaceLibraryLog.NodeDetails.typeWorkflow');
       case AgentComponentTypeEnum.Knowledge:
-        return dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeKnowledge');
+        return dict('PC.Pages.SpaceLibraryLog.NodeDetails.typeKnowledge');
       case AgentComponentTypeEnum.Variable:
-        return dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeVariable');
+        return dict('PC.Pages.SpaceLibraryLog.NodeDetails.typeVariable');
       case AgentComponentTypeEnum.Table:
-        return dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeTable');
+        return dict('PC.Pages.SpaceLibraryLog.NodeDetails.typeTable');
       case AgentComponentTypeEnum.Model:
-        return dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeModel');
+        return dict('PC.Pages.SpaceLibraryLog.NodeDetails.typeModel');
       case AgentComponentTypeEnum.MCP:
-        return dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeMCP');
+        return dict('PC.Pages.SpaceLibraryLog.NodeDetails.typeMCP');
       case AgentComponentTypeEnum.ToolCall:
-        return dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typeToolCall');
+        return dict('PC.Pages.SpaceLibraryLog.NodeDetails.typeToolCall');
       case AgentComponentTypeEnum.Plan:
-        return dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.typePlan');
+        return dict('PC.Pages.SpaceLibraryLog.NodeDetails.typePlan');
       default:
         return '--';
     }
@@ -68,13 +68,25 @@ export const NodeDetails: React.FC<NodeDetailsProps> = ({ node }) => {
   return (
     <>
       <div className={cx(styles.container)}>
-        {renderDetailItem(dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelType'), nodeTypeName)}
-        {renderDetailItem(dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelStatus'), dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.statusSuccess'))}
-        {renderDetailItem(dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelName'), node?.targetName as string)}
-        {renderDetailItem(dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelElapsedTime'), time)}
+        {renderDetailItem(
+          dict('PC.Pages.SpaceLibraryLog.NodeDetails.labelType'),
+          nodeTypeName,
+        )}
+        {renderDetailItem(
+          dict('PC.Pages.SpaceLibraryLog.NodeDetails.labelStatus'),
+          dict('PC.Pages.SpaceLibraryLog.NodeDetails.statusSuccess'),
+        )}
+        {renderDetailItem(
+          dict('PC.Pages.SpaceLibraryLog.NodeDetails.labelName'),
+          node?.targetName as string,
+        )}
+        {renderDetailItem(
+          dict('PC.Pages.SpaceLibraryLog.NodeDetails.labelElapsedTime'),
+          time,
+        )}
       </div>
       {renderDetailItem(
-        dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelStartTime'),
+        dict('PC.Pages.SpaceLibraryLog.NodeDetails.labelStartTime'),
         node?.requestStartTime
           ? dayjs(node?.requestStartTime).format('YYYY-MM-DD HH:mm')
           : '',
@@ -82,7 +94,7 @@ export const NodeDetails: React.FC<NodeDetailsProps> = ({ node }) => {
       )}
       <div />
       {renderDetailItem(
-        dict('NuwaxPC.Pages.SpaceLibraryLog.NodeDetails.labelEndTime'),
+        dict('PC.Pages.SpaceLibraryLog.NodeDetails.labelEndTime'),
         node?.requestEndTime
           ? dayjs(node?.requestEndTime).format('YYYY-MM-DD HH:mm')
           : '',

@@ -146,12 +146,10 @@ const SubAgentEditModal: React.FC<SubAgentEditModalProps> = ({
   const handleCancel = () => {
     if (hasChanges) {
       Modal.confirm({
-        title: t('NuwaxPC.Pages.AgentArrangeSubAgentEditModal.cancelTitle'),
-        content: t('NuwaxPC.Pages.AgentArrangeSubAgentEditModal.cancelContent'),
-        okText: t('NuwaxPC.Pages.AgentArrangeSubAgentEditModal.cancelConfirm'),
-        cancelText: t(
-          'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.keepEditing',
-        ),
+        title: t('PC.Pages.AgentArrangeSubAgentEditModal.cancelTitle'),
+        content: t('PC.Pages.AgentArrangeSubAgentEditModal.cancelContent'),
+        okText: t('PC.Pages.AgentArrangeSubAgentEditModal.cancelConfirm'),
+        cancelText: t('PC.Pages.AgentArrangeSubAgentEditModal.keepEditing'),
         onOk: onCancel,
       });
     } else {
@@ -185,12 +183,10 @@ const SubAgentEditModal: React.FC<SubAgentEditModalProps> = ({
       <div className={cx('flex', 'items-center', 'gap-xs')}>
         <span>
           {isEdit
-            ? t('NuwaxPC.Pages.AgentArrangeSubAgentEditModal.editTitle')
-            : t('NuwaxPC.Pages.AgentArrangeSubAgentEditModal.createTitle')}
+            ? t('PC.Pages.AgentArrangeSubAgentEditModal.editTitle')
+            : t('PC.Pages.AgentArrangeSubAgentEditModal.createTitle')}
         </span>
-        <Tooltip
-          title={t('NuwaxPC.Pages.AgentArrangeSubAgentEditModal.viewDoc')}
-        >
+        <Tooltip title={t('PC.Pages.AgentArrangeSubAgentEditModal.viewDoc')}>
           <LinkOutlined
             className={cx(styles['doc-link-icon'])}
             onClick={handleOpenDoc}
@@ -200,8 +196,8 @@ const SubAgentEditModal: React.FC<SubAgentEditModalProps> = ({
       <Tooltip
         title={
           isFullscreen
-            ? t('NuwaxPC.Pages.AgentArrangeSubAgentEditModal.exitFullscreen')
-            : t('NuwaxPC.Pages.AgentArrangeSubAgentEditModal.enterFullscreen')
+            ? t('PC.Pages.AgentArrangeSubAgentEditModal.exitFullscreen')
+            : t('PC.Pages.AgentArrangeSubAgentEditModal.enterFullscreen')
         }
         open={fullscreenTooltipOpen}
         onOpenChange={setFullscreenTooltipOpen}
@@ -235,8 +231,8 @@ const SubAgentEditModal: React.FC<SubAgentEditModalProps> = ({
       onOk={handleConfirm}
       onCancel={handleCancel}
       width={isFullscreen ? '100vw' : 600}
-      okText={t('NuwaxPC.Common.Global.confirm')}
-      cancelText={t('NuwaxPC.Common.Global.cancel')}
+      okText={t('PC.Common.Global.confirm')}
+      cancelText={t('PC.Common.Global.cancel')}
       closable={false}
       className={cx(isFullscreen && styles['fullscreen-modal'])}
       styles={{
@@ -252,7 +248,7 @@ const SubAgentEditModal: React.FC<SubAgentEditModalProps> = ({
             value={prompt}
             onChange={setPrompt}
             placeholder={t(
-              'NuwaxPC.Pages.AgentArrangeSubAgentEditModal.promptPlaceholder',
+              'PC.Pages.AgentArrangeSubAgentEditModal.promptPlaceholder',
             )}
             enableHistory={true}
             className={cx(

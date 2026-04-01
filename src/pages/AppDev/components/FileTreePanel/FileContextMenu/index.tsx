@@ -122,14 +122,14 @@ const FileContextMenu: React.FC<FileContextMenuProps> = ({
         // 文件/文件夹菜单项
         {
           key: 'rename',
-          label: t('NuwaxPC.Pages.AppDevFileTreeContextMenu.rename'),
+          label: t('PC.Pages.AppDevFileTreeContextMenu.rename'),
           icon: <EditOutlined />,
           onClick: handleRename,
           disabled: !onRename,
         },
         {
           key: 'upload',
-          label: t('NuwaxPC.Pages.AppDevFileTreeContextMenu.uploadFile'),
+          label: t('PC.Pages.AppDevFileTreeContextMenu.uploadFile'),
           icon: <UploadOutlined />,
           onClick: handleUpload,
           disabled: !onUploadSingleFile || targetNode.name.startsWith('.'),
@@ -140,7 +140,7 @@ const FileContextMenu: React.FC<FileContextMenuProps> = ({
         },
         {
           key: 'delete',
-          label: t('NuwaxPC.Pages.AppDevFileTreeContextMenu.delete'),
+          label: t('PC.Pages.AppDevFileTreeContextMenu.delete'),
           icon: <DeleteOutlined />,
           onClick: handleDelete,
           danger: true,
@@ -150,14 +150,14 @@ const FileContextMenu: React.FC<FileContextMenuProps> = ({
         // 空白区域菜单项
         {
           key: 'uploadProject',
-          label: t('NuwaxPC.Pages.AppDevFileTreeContextMenu.importProject'),
+          label: t('PC.Pages.AppDevFileTreeContextMenu.importProject'),
           icon: <ImportOutlined />,
           onClick: handleUploadProject,
           disabled: !onUploadProject,
         },
         {
           key: 'upload',
-          label: t('NuwaxPC.Pages.AppDevFileTreeContextMenu.uploadFile'),
+          label: t('PC.Pages.AppDevFileTreeContextMenu.uploadFile'),
           icon: <UploadOutlined />,
           onClick: handleUpload,
           disabled: !onUploadSingleFile,

@@ -79,14 +79,12 @@ const WebApplication: React.FC = () => {
   const handleDelete = useCallback(async (record: SystemWebappInfo) => {
     const response = await apiSystemResourceWebappDelete({ id: record.id });
     if (response.code === SUCCESS_CODE) {
-      message.success(
-        t('NuwaxPC.Pages.SystemContentWebApplication.deleteSuccess'),
-      );
+      message.success(t('PC.Pages.SystemContentWebApplication.deleteSuccess'));
       actionRef.current?.reload();
     } else {
       message.error(
         response.message ||
-          t('NuwaxPC.Pages.SystemContentWebApplication.deleteFailed'),
+          t('PC.Pages.SystemContentWebApplication.deleteFailed'),
       );
     }
   }, []);
@@ -129,7 +127,7 @@ const WebApplication: React.FC = () => {
       const actions: ActionItem<SystemWebappInfo>[] = [
         {
           key: 'view',
-          label: t('NuwaxPC.Pages.SystemContentWebApplication.view'),
+          label: t('PC.Pages.SystemContentWebApplication.view'),
           disabled: !hasPermission('content_page_app_query_detail'),
           onClick: handleView,
         },
@@ -143,7 +141,7 @@ const WebApplication: React.FC = () => {
       ) {
         actions.push({
           key: 'auth',
-          label: t('NuwaxPC.Pages.SystemContentWebApplication.authorize'),
+          label: t('PC.Pages.SystemContentWebApplication.authorize'),
           disabled: !hasPermission('content_page_app_access_control'),
           onClick: handleAuth,
         });
@@ -151,14 +149,14 @@ const WebApplication: React.FC = () => {
 
       actions.push({
         key: 'delete',
-        label: t('NuwaxPC.Pages.SystemContentWebApplication.delete'),
+        label: t('PC.Pages.SystemContentWebApplication.delete'),
         confirm: {
           title: t(
-            'NuwaxPC.Pages.SystemContentWebApplication.deleteConfirmTitle',
+            'PC.Pages.SystemContentWebApplication.deleteConfirmTitle',
             record.name,
           ),
           description: t(
-            'NuwaxPC.Pages.SystemContentWebApplication.deleteConfirmDescription',
+            'PC.Pages.SystemContentWebApplication.deleteConfirmDescription',
           ),
         },
         disabled: !hasPermission('content_page_app_delete'),
@@ -175,31 +173,31 @@ const WebApplication: React.FC = () => {
    */
   const columns: ProColumns<SystemWebappInfo>[] = [
     {
-      title: t('NuwaxPC.Pages.SystemContentWebApplication.columnName'),
+      title: t('PC.Pages.SystemContentWebApplication.columnName'),
       dataIndex: 'name',
       width: 180,
       ellipsis: true,
       fieldProps: {
-        placeholder: t('NuwaxPC.Pages.SystemContentWebApplication.searchName'),
+        placeholder: t('PC.Pages.SystemContentWebApplication.searchName'),
         allowClear: true,
       },
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentWebApplication.columnDescription'),
+      title: t('PC.Pages.SystemContentWebApplication.columnDescription'),
       dataIndex: 'description',
       width: 250,
       ellipsis: true,
       hideInSearch: true,
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentWebApplication.columnCreator'),
+      title: t('PC.Pages.SystemContentWebApplication.columnCreator'),
       dataIndex: 'creatorName',
       width: 120,
       ellipsis: true,
       hideInSearch: false,
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentWebApplication.columnPublishStatus'),
+      title: t('PC.Pages.SystemContentWebApplication.columnPublishStatus'),
       dataIndex: 'publishStatus',
       align: 'center',
       width: 100,
@@ -207,23 +205,23 @@ const WebApplication: React.FC = () => {
       render: (_, record: SystemWebappInfo) => {
         const statusMap: Record<PublishStatusEnum, string> = {
           [PublishStatusEnum.Developing]: t(
-            'NuwaxPC.Pages.SystemContentWebApplication.statusDeveloping',
+            'PC.Pages.SystemContentWebApplication.statusDeveloping',
           ),
           [PublishStatusEnum.Applying]: t(
-            'NuwaxPC.Pages.SystemContentWebApplication.statusApplying',
+            'PC.Pages.SystemContentWebApplication.statusApplying',
           ),
           [PublishStatusEnum.Published]: t(
-            'NuwaxPC.Pages.SystemContentWebApplication.statusPublished',
+            'PC.Pages.SystemContentWebApplication.statusPublished',
           ),
           [PublishStatusEnum.Rejected]: t(
-            'NuwaxPC.Pages.SystemContentWebApplication.statusRejected',
+            'PC.Pages.SystemContentWebApplication.statusRejected',
           ),
         };
         return statusMap[record.publishStatus] || '--';
       },
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentWebApplication.columnCreated'),
+      title: t('PC.Pages.SystemContentWebApplication.columnCreated'),
       dataIndex: 'created',
       align: 'center',
       width: 170,
@@ -231,21 +229,19 @@ const WebApplication: React.FC = () => {
       valueType: 'dateTime',
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentWebApplication.columnAccessControl'),
-      tooltip: t(
-        'NuwaxPC.Pages.SystemContentWebApplication.accessControlTooltip',
-      ),
+      title: t('PC.Pages.SystemContentWebApplication.columnAccessControl'),
+      tooltip: t('PC.Pages.SystemContentWebApplication.accessControlTooltip'),
       dataIndex: 'accessControl',
       align: 'center',
       width: 100,
       fixed: 'right',
       valueEnum: {
         [AccessControlEnum.NoFilter]: {
-          text: t('NuwaxPC.Pages.SystemContentWebApplication.accessControlOff'),
+          text: t('PC.Pages.SystemContentWebApplication.accessControlOff'),
           status: 'Default',
         },
         [AccessControlEnum.Filter]: {
-          text: t('NuwaxPC.Pages.SystemContentWebApplication.accessControlOn'),
+          text: t('PC.Pages.SystemContentWebApplication.accessControlOn'),
           status: 'Processing',
         },
       },
@@ -259,7 +255,7 @@ const WebApplication: React.FC = () => {
       ),
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentWebApplication.columnAction'),
+      title: t('PC.Pages.SystemContentWebApplication.columnAction'),
       valueType: 'option',
       fixed: 'right',
       align: 'center',
@@ -300,7 +296,7 @@ const WebApplication: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={t('NuwaxPC.Pages.SystemContentWebApplication.pageTitle')}
+      title={t('PC.Pages.SystemContentWebApplication.pageTitle')}
       hideScroll
     >
       <XProTable<SystemWebappInfo>

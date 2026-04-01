@@ -102,7 +102,7 @@ const SandboxConfig: React.FC = () => {
       setSavingLoading(true);
       const res = await apiUpdateSandboxGlobalConfig(values);
       if (res.code === SUCCESS_CODE) {
-        message.success(t('NuwaxPC.Toast.Global.savedSuccessfully'));
+        message.success(t('PC.Toast.Global.savedSuccessfully'));
       }
     } finally {
       setSavingLoading(false);
@@ -115,14 +115,14 @@ const SandboxConfig: React.FC = () => {
       const res = await apiTestSandboxConnectivity(id);
       if (res.code === SUCCESS_CODE) {
         message.success(
-          t('NuwaxPC.Pages.SystemConfigSandboxConfig.connectivitySuccess'),
+          t('PC.Pages.SystemConfigSandboxConfig.connectivitySuccess'),
         );
       } else {
         message.error(
           t(
-            'NuwaxPC.Pages.SystemConfigSandboxConfig.connectivityFailed',
+            'PC.Pages.SystemConfigSandboxConfig.connectivityFailed',
             res.message ||
-              t('NuwaxPC.Pages.SystemConfigSandboxConfig.connectionException'),
+              t('PC.Pages.SystemConfigSandboxConfig.connectionException'),
           ),
         );
       }
@@ -138,28 +138,25 @@ const SandboxConfig: React.FC = () => {
   // Enable/disable sandbox configuration
   const handleToggleSandbox = (record: SandboxItem) => {
     const actionText = record.isActive
-      ? t('NuwaxPC.Pages.SystemConfigSandboxConfig.disable')
-      : t('NuwaxPC.Pages.SystemConfigSandboxConfig.enable');
+      ? t('PC.Pages.SystemConfigSandboxConfig.disable')
+      : t('PC.Pages.SystemConfigSandboxConfig.enable');
     Modal.confirm({
       title: t(
-        'NuwaxPC.Pages.SystemConfigSandboxConfig.toggleConfirmTitle',
+        'PC.Pages.SystemConfigSandboxConfig.toggleConfirmTitle',
         actionText,
       ),
       content: t(
-        'NuwaxPC.Pages.SystemConfigSandboxConfig.toggleConfirmContent',
+        'PC.Pages.SystemConfigSandboxConfig.toggleConfirmContent',
         actionText,
         record.name,
       ),
-      okText: t('NuwaxPC.Common.Global.confirm'),
-      cancelText: t('NuwaxPC.Common.Global.cancel'),
+      okText: t('PC.Common.Global.confirm'),
+      cancelText: t('PC.Common.Global.cancel'),
       onOk: async () => {
         const res = await apiToggleSystemSandboxConfig(record.id);
         if (res.code === SUCCESS_CODE) {
           message.success(
-            t(
-              'NuwaxPC.Pages.SystemConfigSandboxConfig.toggleSuccess',
-              actionText,
-            ),
+            t('PC.Pages.SystemConfigSandboxConfig.toggleSuccess', actionText),
           );
           fetchSandboxList();
         }
@@ -180,8 +177,8 @@ const SandboxConfig: React.FC = () => {
       if (res.code === SUCCESS_CODE) {
         message.success(
           modalMode === 'add'
-            ? t('NuwaxPC.Pages.SystemConfigSandboxConfig.addSuccess')
-            : t('NuwaxPC.Toast.Global.savedSuccessfully'),
+            ? t('PC.Pages.SystemConfigSandboxConfig.addSuccess')
+            : t('PC.Toast.Global.savedSuccessfully'),
         );
         setModalVisible(false);
         fetchSandboxList();
@@ -195,7 +192,7 @@ const SandboxConfig: React.FC = () => {
 
   const columns: ProColumns<SandboxItem>[] = [
     {
-      title: t('NuwaxPC.Pages.SystemConfigSandboxConfig.columnName'),
+      title: t('PC.Pages.SystemConfigSandboxConfig.columnName'),
       dataIndex: 'name',
       render: (_: any, record: SandboxItem) => (
         <div className={styles['sandbox-item']}>
@@ -212,7 +209,7 @@ const SandboxConfig: React.FC = () => {
       ),
     },
     {
-      title: t('NuwaxPC.Pages.SystemConfigSandboxConfig.columnUsage'),
+      title: t('PC.Pages.SystemConfigSandboxConfig.columnUsage'),
       dataIndex: 'usage',
       render: (_: any, record: SandboxItem) => {
         // Current user count is not fully returned by backend; use available values.
@@ -241,7 +238,7 @@ const SandboxConfig: React.FC = () => {
             </div>
             <div className={styles['usage-label']}>
               {t(
-                'NuwaxPC.Pages.SystemConfigSandboxConfig.usagePercentInUse',
+                'PC.Pages.SystemConfigSandboxConfig.usagePercentInUse',
                 String(Math.round(percent)),
               )}
             </div>
@@ -250,7 +247,7 @@ const SandboxConfig: React.FC = () => {
       },
     },
     {
-      title: t('NuwaxPC.Pages.SystemConfigSandboxConfig.columnOnlineStatus'),
+      title: t('PC.Pages.SystemConfigSandboxConfig.columnOnlineStatus'),
       dataIndex: 'online',
       minWidth: 120,
       render: (_, record) => (
@@ -262,15 +259,15 @@ const SandboxConfig: React.FC = () => {
         >
           <span className={styles.dot} />
           {record.online ? (
-            <span>{t('NuwaxPC.Pages.SystemConfigSandboxConfig.online')}</span>
+            <span>{t('PC.Pages.SystemConfigSandboxConfig.online')}</span>
           ) : (
-            <span>{t('NuwaxPC.Pages.SystemConfigSandboxConfig.offline')}</span>
+            <span>{t('PC.Pages.SystemConfigSandboxConfig.offline')}</span>
           )}
         </div>
       ),
     },
     {
-      title: t('NuwaxPC.Pages.SystemConfigSandboxConfig.columnActiveStatus'),
+      title: t('PC.Pages.SystemConfigSandboxConfig.columnActiveStatus'),
       dataIndex: 'isActive',
       minWidth: 120,
       render: (_, record) => (
@@ -282,15 +279,15 @@ const SandboxConfig: React.FC = () => {
         >
           <span className={styles.dot} />
           {record.isActive ? (
-            <span>{t('NuwaxPC.Pages.SystemConfigSandboxConfig.enabled')}</span>
+            <span>{t('PC.Pages.SystemConfigSandboxConfig.enabled')}</span>
           ) : (
-            <span>{t('NuwaxPC.Pages.SystemConfigSandboxConfig.disabled')}</span>
+            <span>{t('PC.Pages.SystemConfigSandboxConfig.disabled')}</span>
           )}
         </div>
       ),
     },
     {
-      title: t('NuwaxPC.Pages.SystemConfigSandboxConfig.columnAction'),
+      title: t('PC.Pages.SystemConfigSandboxConfig.columnAction'),
       valueType: 'option',
       width: 190,
       render: (_, record) => (
@@ -298,8 +295,8 @@ const SandboxConfig: React.FC = () => {
           <Tooltip
             title={
               record.isActive
-                ? t('NuwaxPC.Pages.SystemConfigSandboxConfig.disable')
-                : t('NuwaxPC.Pages.SystemConfigSandboxConfig.enable')
+                ? t('PC.Pages.SystemConfigSandboxConfig.disable')
+                : t('PC.Pages.SystemConfigSandboxConfig.enable')
             }
           >
             <div
@@ -315,9 +312,7 @@ const SandboxConfig: React.FC = () => {
             </div>
           </Tooltip>
           <Tooltip
-            title={t(
-              'NuwaxPC.Pages.SystemConfigSandboxConfig.connectivityTest',
-            )}
+            title={t('PC.Pages.SystemConfigSandboxConfig.connectivityTest')}
           >
             <div
               className={cx(styles['action-btn'], {
@@ -334,7 +329,7 @@ const SandboxConfig: React.FC = () => {
               )}
             </div>
           </Tooltip>
-          <Tooltip title={t('NuwaxPC.Pages.SystemConfigSandboxConfig.edit')}>
+          <Tooltip title={t('PC.Pages.SystemConfigSandboxConfig.edit')}>
             <div
               className={cx(styles['action-btn'], {
                 [styles.disabled]: !hasPermission('sandbox_config_modify'),
@@ -349,7 +344,7 @@ const SandboxConfig: React.FC = () => {
               <EditOutlined />
             </div>
           </Tooltip>
-          <Tooltip title={t('NuwaxPC.Pages.SystemConfigSandboxConfig.delete')}>
+          <Tooltip title={t('PC.Pages.SystemConfigSandboxConfig.delete')}>
             <div
               className={cx(styles['action-btn'], {
                 [styles.disabled]: !hasPermission('sandbox_config_delete'),
@@ -358,20 +353,18 @@ const SandboxConfig: React.FC = () => {
                 if (!hasPermission('sandbox_config_delete')) return;
                 Modal.confirm({
                   title: t(
-                    'NuwaxPC.Pages.SystemConfigSandboxConfig.deleteConfirmTitle',
+                    'PC.Pages.SystemConfigSandboxConfig.deleteConfirmTitle',
                   ),
                   content: t(
-                    'NuwaxPC.Pages.SystemConfigSandboxConfig.deleteConfirmContent',
+                    'PC.Pages.SystemConfigSandboxConfig.deleteConfirmContent',
                   ),
-                  okText: t('NuwaxPC.Common.Global.confirm'),
-                  cancelText: t('NuwaxPC.Common.Global.cancel'),
+                  okText: t('PC.Common.Global.confirm'),
+                  cancelText: t('PC.Common.Global.cancel'),
                   onOk: async () => {
                     const res = await apiDeleteSandboxConfig(record.id);
                     if (res.code === SUCCESS_CODE) {
                       message.success(
-                        t(
-                          'NuwaxPC.Pages.SystemConfigSandboxConfig.deleteSuccess',
-                        ),
+                        t('PC.Pages.SystemConfigSandboxConfig.deleteSuccess'),
                       );
                       fetchSandboxList();
                     }
@@ -389,7 +382,7 @@ const SandboxConfig: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={t('NuwaxPC.Pages.SystemConfigSandboxConfig.pageTitle')}
+      title={t('PC.Pages.SystemConfigSandboxConfig.pageTitle')}
       rightSlot={
         hasPermission('sandbox_config_add') && (
           <Button
@@ -401,7 +394,7 @@ const SandboxConfig: React.FC = () => {
               setModalVisible(true);
             }}
           >
-            {t('NuwaxPC.Pages.SystemConfigSandboxConfig.addSandbox')}
+            {t('PC.Pages.SystemConfigSandboxConfig.addSandbox')}
           </Button>
         )
       }
@@ -412,7 +405,7 @@ const SandboxConfig: React.FC = () => {
           <Spin spinning={globalConfigLoading}>
             <div className={styles['config-header']}>
               <div className={styles['section-title']}>
-                {t('NuwaxPC.Pages.SystemConfigSandboxConfig.globalConfig')}
+                {t('PC.Pages.SystemConfigSandboxConfig.globalConfig')}
               </div>
               {hasPermission('sandbox_config_save') && (
                 <Button
@@ -420,15 +413,13 @@ const SandboxConfig: React.FC = () => {
                   loading={savingLoading}
                   onClick={handleGlobalSave}
                 >
-                  {t('NuwaxPC.Common.Global.save')}
+                  {t('PC.Common.Global.save')}
                 </Button>
               )}
             </div>
             <Form form={form} layout="inline">
               <Form.Item
-                label={t(
-                  'NuwaxPC.Pages.SystemConfigSandboxConfig.perUserMemory',
-                )}
+                label={t('PC.Pages.SystemConfigSandboxConfig.perUserMemory')}
               >
                 <Space>
                   <Form.Item name="perUserMemoryGB" noStyle initialValue={4}>
@@ -440,12 +431,12 @@ const SandboxConfig: React.FC = () => {
                     />
                   </Form.Item>
                   <span style={{ color: '#999' }}>
-                    {t('NuwaxPC.Pages.SystemConfigSandboxConfig.unitGb')}
+                    {t('PC.Pages.SystemConfigSandboxConfig.unitGb')}
                   </span>
                 </Space>
               </Form.Item>
               <Form.Item
-                label={t('NuwaxPC.Pages.SystemConfigSandboxConfig.perUserCpu')}
+                label={t('PC.Pages.SystemConfigSandboxConfig.perUserCpu')}
                 style={{ marginLeft: 40 }}
               >
                 <Space>
@@ -458,7 +449,7 @@ const SandboxConfig: React.FC = () => {
                     />
                   </Form.Item>
                   <span style={{ color: '#999' }}>
-                    {t('NuwaxPC.Pages.SystemConfigSandboxConfig.unitCore')}
+                    {t('PC.Pages.SystemConfigSandboxConfig.unitCore')}
                   </span>
                 </Space>
               </Form.Item>
@@ -480,13 +471,13 @@ const SandboxConfig: React.FC = () => {
           <div className={styles['footer-info']}>
             <span>
               {t(
-                'NuwaxPC.Pages.SystemConfigSandboxConfig.totalSandboxCount',
+                'PC.Pages.SystemConfigSandboxConfig.totalSandboxCount',
                 String(sandboxList.length),
               )}
             </span>
             <span>
               {t(
-                'NuwaxPC.Pages.SystemConfigSandboxConfig.onlineSandboxCount',
+                'PC.Pages.SystemConfigSandboxConfig.onlineSandboxCount',
                 String(sandboxList.filter((i) => i.online).length),
               )}
             </span>

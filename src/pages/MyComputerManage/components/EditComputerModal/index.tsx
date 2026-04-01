@@ -42,7 +42,11 @@ const EditComputerModal: React.FC<EditComputerModalProps> = ({
 
   return (
     <XModalForm
-      title={initialData ? dict('NuwaxPC.Pages.MyComputerManage.EditComputerModal.editTitle') : dict('NuwaxPC.Pages.MyComputerManage.EditComputerModal.addTitle')}
+      title={
+        initialData
+          ? dict('PC.Pages.MyComputerManage.EditComputerModal.editTitle')
+          : dict('PC.Pages.MyComputerManage.EditComputerModal.addTitle')
+      }
       width={480}
       open={open}
       form={form}
@@ -53,8 +57,8 @@ const EditComputerModal: React.FC<EditComputerModalProps> = ({
       }}
       submitter={{
         searchConfig: {
-          resetText: dict('NuwaxPC.Common.Global.cancel'),
-          submitText: dict('NuwaxPC.Common.Global.confirm'),
+          resetText: dict('PC.Common.Global.cancel'),
+          submitText: dict('PC.Common.Global.confirm'),
         },
       }}
       onFinish={async (values: any) => {
@@ -64,11 +68,23 @@ const EditComputerModal: React.FC<EditComputerModalProps> = ({
     >
       <ProFormText
         name="name"
-        label={dict('NuwaxPC.Pages.MyComputerManage.EditComputerModal.nameLabel')}
-        placeholder={dict('NuwaxPC.Pages.MyComputerManage.EditComputerModal.namePlaceholder')}
+        label={dict('PC.Pages.MyComputerManage.EditComputerModal.nameLabel')}
+        placeholder={dict(
+          'PC.Pages.MyComputerManage.EditComputerModal.namePlaceholder',
+        )}
         rules={[
-          { required: true, message: dict('NuwaxPC.Pages.MyComputerManage.EditComputerModal.nameRequired') },
-          { max: 100, message: dict('NuwaxPC.Pages.MyComputerManage.EditComputerModal.nameMaxLength') },
+          {
+            required: true,
+            message: dict(
+              'PC.Pages.MyComputerManage.EditComputerModal.nameRequired',
+            ),
+          },
+          {
+            max: 100,
+            message: dict(
+              'PC.Pages.MyComputerManage.EditComputerModal.nameMaxLength',
+            ),
+          },
         ]}
         fieldProps={{
           maxLength: 100,
@@ -78,16 +94,29 @@ const EditComputerModal: React.FC<EditComputerModalProps> = ({
       {initialData && (
         <ProFormDigit
           name="maxAgentCount"
-          label={dict('NuwaxPC.Pages.MyComputerManage.EditComputerModal.maxAgentCountLabel')}
-          placeholder={dict('NuwaxPC.Pages.MyComputerManage.EditComputerModal.maxAgentCountPlaceholder')}
-          tooltip={dict('NuwaxPC.Pages.MyComputerManage.EditComputerModal.maxAgentCountTooltip')}
+          label={dict(
+            'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountLabel',
+          )}
+          placeholder={dict(
+            'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountPlaceholder',
+          )}
+          tooltip={dict(
+            'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountTooltip',
+          )}
           rules={[
-            { required: true, message: dict('NuwaxPC.Pages.MyComputerManage.EditComputerModal.maxAgentCountRequired') },
+            {
+              required: true,
+              message: dict(
+                'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountRequired',
+              ),
+            },
             {
               type: 'number',
               min: 1,
               max: 99999999,
-              message: dict('NuwaxPC.Pages.MyComputerManage.EditComputerModal.maxAgentCountRange'),
+              message: dict(
+                'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountRange',
+              ),
             },
           ]}
           fieldProps={{
@@ -99,8 +128,12 @@ const EditComputerModal: React.FC<EditComputerModalProps> = ({
       )}
       <ProFormTextArea
         name="description"
-        label={dict('NuwaxPC.Pages.MyComputerManage.EditComputerModal.descriptionLabel')}
-        placeholder={dict('NuwaxPC.Pages.MyComputerManage.EditComputerModal.descriptionPlaceholder')}
+        label={dict(
+          'PC.Pages.MyComputerManage.EditComputerModal.descriptionLabel',
+        )}
+        placeholder={dict(
+          'PC.Pages.MyComputerManage.EditComputerModal.descriptionPlaceholder',
+        )}
         fieldProps={{
           maxLength: 200,
           showCount: true,

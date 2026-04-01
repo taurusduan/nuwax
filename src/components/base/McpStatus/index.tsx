@@ -20,23 +20,23 @@ interface McpStatusProps {
 const McpStatusMap: Record<string, { icon: React.ReactNode; title: string }> = {
   [DeployStatusEnum.Initialization]: {
     icon: <ICON_INITIALIZATION />,
-    title: dict('NuwaxPC.Components.McpStatus.pendingDeploy'),
+    title: dict('PC.Components.McpStatus.pendingDeploy'),
   },
   [DeployStatusEnum.Deploying]: {
     icon: <ICON_DEPLOYING />,
-    title: dict('NuwaxPC.Components.McpStatus.deploying'),
+    title: dict('PC.Components.McpStatus.deploying'),
   },
   [DeployStatusEnum.Deployed]: {
     icon: <ICON_DEPLOYED />,
-    title: dict('NuwaxPC.Components.McpStatus.deployed'),
+    title: dict('PC.Components.McpStatus.deployed'),
   },
   [DeployStatusEnum.DeployFailed]: {
     icon: <ICON_DEPLOY_FAILED />,
-    title: dict('NuwaxPC.Components.McpStatus.deployFailed'),
+    title: dict('PC.Components.McpStatus.deployFailed'),
   },
   [DeployStatusEnum.Stopped]: {
     icon: <ICON_STOPPED />,
-    title: dict('NuwaxPC.Components.McpStatus.stopped'),
+    title: dict('PC.Components.McpStatus.stopped'),
   },
 };
 

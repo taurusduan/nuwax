@@ -48,7 +48,7 @@ const TaskManage: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={dict('NuwaxPC.Pages.SystemTaskManage.pageTitle')}
+      title={dict('PC.Pages.SystemTaskManage.pageTitle')}
       hideScroll={true}
     >
       {/* 主要内容区域 */}

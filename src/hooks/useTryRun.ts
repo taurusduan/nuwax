@@ -160,7 +160,7 @@ const useTryRun = () => {
             {
               bindValue: '',
               dataType: DataTypeEnum.String,
-              description: dict('NuwaxPC.Hooks.UseTryRun.reconfigureParams'),
+              description: dict('PC.Hooks.UseTryRun.reconfigureParams'),
               enable: record.enable,
               inputType: InputTypeEnum.Query,
               key: subItemKey,

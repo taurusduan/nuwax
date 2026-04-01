@@ -83,7 +83,7 @@ const FileOperatingMask: React.FC<FileOperatingMaskProps> = ({
               lineHeight: '24px',
             }}
           >
-            {tip || dict('NuwaxPC.Pages.AppDevFileOperatingMask.defaultTip')}
+            {tip || dict('PC.Pages.AppDevFileOperatingMask.defaultTip')}
           </div>
           {subtitle && (
             <div

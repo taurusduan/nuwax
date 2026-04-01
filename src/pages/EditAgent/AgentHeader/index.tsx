@@ -84,7 +84,7 @@ const AgentHeader: React.FC<AgentHeaderProps> = ({
       key: 'showStand',
       label: (
         <div onClick={onToggleShowStand}>
-          {dict('NuwaxPC.Pages.AgentEdit.showStand')}
+          {dict('PC.Pages.AgentEdit.showStand')}
         </div>
       ),
     },
@@ -92,7 +92,7 @@ const AgentHeader: React.FC<AgentHeaderProps> = ({
       key: 'versionHistory',
       label: (
         <div onClick={onToggleVersionHistory}>
-          {dict('NuwaxPC.Pages.AgentEdit.versionHistory')}
+          {dict('PC.Pages.AgentEdit.versionHistory')}
         </div>
       ),
     },
@@ -140,7 +140,7 @@ const AgentHeader: React.FC<AgentHeaderProps> = ({
         <div className={cx('flex', 'items-center', styles['save-time-box'])}>
           <span className={cx(styles['save-time'])}>
             {dict(
-              'NuwaxPC.Pages.AgentEdit.draftAutoSavedAt',
+              'PC.Pages.AgentEdit.draftAutoSavedAt',
               dayjs(agentConfigInfo?.modified).format('HH:mm'),
             )}
           </span>
@@ -154,7 +154,7 @@ const AgentHeader: React.FC<AgentHeaderProps> = ({
                 color="volcano"
                 className={cx(styles['volcano'])}
               >
-                {dict('NuwaxPC.Pages.AgentEdit.unpublishedChanges')}
+                {dict('PC.Pages.AgentEdit.unpublishedChanges')}
               </Tag>
             )}
         </div>
@@ -178,7 +178,7 @@ const AgentHeader: React.FC<AgentHeaderProps> = ({
           onClick={onPublish}
           disabled={disabledBtn}
         >
-          {dict('NuwaxPC.Pages.AgentEdit.publish')}
+          {dict('PC.Pages.AgentEdit.publish')}
         </Button>
       </div>
     </header>

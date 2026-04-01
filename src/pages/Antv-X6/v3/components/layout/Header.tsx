@@ -112,7 +112,7 @@ const Header: React.FC<HeaderProp> = ({
           return (
             <Tag color="default" bordered={false}>
               {t(
-                'NuwaxPC.Pages.AntvX6Header.autoSavedAt',
+                'PC.Pages.AntvX6Header.autoSavedAt',
                 getTime(
                   lastSaveTime?.toString() ?? modified ?? new Date().toString(),
                 ),
@@ -122,14 +122,14 @@ const Header: React.FC<HeaderProp> = ({
         }
         return (
           <Tag color="processing" bordered={false} icon={<LoadingOutlined />}>
-            {t('NuwaxPC.Pages.AntvX6Header.saving')}
+            {t('PC.Pages.AntvX6Header.saving')}
           </Tag>
         );
       case SaveStatusEnum.Saved:
         return (
           <Tag color="default" bordered={false}>
             {t(
-              'NuwaxPC.Pages.AntvX6Header.autoSavedAt',
+              'PC.Pages.AntvX6Header.autoSavedAt',
               getTime(
                 lastSaveTime?.toString() ?? modified ?? new Date().toString(),
               ),
@@ -141,8 +141,7 @@ const Header: React.FC<HeaderProp> = ({
           <div className="flex items-center gap-8" style={{ marginRight: 8 }}>
             <Tooltip
               title={
-                saveError ||
-                t('NuwaxPC.Pages.AntvX6Header.saveFailedCheckNetwork')
+                saveError || t('PC.Pages.AntvX6Header.saveFailedCheckNetwork')
               }
             >
               <Tag
@@ -150,7 +149,7 @@ const Header: React.FC<HeaderProp> = ({
                 bordered={false}
                 icon={<ExclamationCircleFilled />}
               >
-                {t('NuwaxPC.Pages.AntvX6Header.saveFailed')}
+                {t('PC.Pages.AntvX6Header.saveFailed')}
               </Tag>
             </Tooltip>
             {onManualSave && (
@@ -159,7 +158,7 @@ const Header: React.FC<HeaderProp> = ({
                 onClick={() => onManualSave?.()}
                 size="small"
               >
-                {t('NuwaxPC.Pages.AntvX6Header.retrySave')}
+                {t('PC.Pages.AntvX6Header.retrySave')}
               </Button>
             )}
           </div>
@@ -168,7 +167,7 @@ const Header: React.FC<HeaderProp> = ({
         return (
           <div className="flex items-center gap-8" style={{ marginRight: 8 }}>
             <Tag color="warning" bordered={false}>
-              {t('NuwaxPC.Pages.AntvX6Header.unsavedChanges')}
+              {t('PC.Pages.AntvX6Header.unsavedChanges')}
             </Tag>
             {onManualSave && (
               <Button
@@ -176,7 +175,7 @@ const Header: React.FC<HeaderProp> = ({
                 onClick={() => onManualSave?.()}
                 size="small"
               >
-                {t('NuwaxPC.Pages.AntvX6Header.saveNow')}
+                {t('PC.Pages.AntvX6Header.saveNow')}
               </Button>
             )}
           </div>
@@ -185,7 +184,7 @@ const Header: React.FC<HeaderProp> = ({
         return (
           <Tag color="default" bordered={false}>
             {t(
-              'NuwaxPC.Pages.AntvX6Header.autoSavedAt',
+              'PC.Pages.AntvX6Header.autoSavedAt',
               getTime(modified ?? new Date().toString()),
             )}
           </Tag>
@@ -221,7 +220,7 @@ const Header: React.FC<HeaderProp> = ({
               />
             </Popover>
             {publishStatus === 'Published' && (
-              <Popover content={t('NuwaxPC.Pages.AntvX6Header.published')}>
+              <Popover content={t('PC.Pages.AntvX6Header.published')}>
                 <CheckCircleFilled
                   className="mr-6"
                   style={{ color: '#00B23C', fontSize: '16px' }}
@@ -239,20 +238,20 @@ const Header: React.FC<HeaderProp> = ({
       <div className="header-tag-style flex items-center gap-8">
         {/* <Tag color="#C9CDD4">
               {publishStatus === 'Published'
-                ? t('NuwaxPC.Pages.AntvX6Header.published')
-                : t('NuwaxPC.Pages.AntvX6Header.unpublished')}
+                ? t('PC.Pages.AntvX6Header.published')
+                : t('PC.Pages.AntvX6Header.unpublished')}
             </Tag> */}
         {renderSaveStatus()}
 
         {publishDate === null && (
           <Tag color="#EBECF5" style={{ color: 'rgba(15,21,40,0.82)' }}>
-            {t('NuwaxPC.Pages.AntvX6Header.unpublished')}
+            {t('PC.Pages.AntvX6Header.unpublished')}
           </Tag>
         )}
 
         {publishDate !== null && publishDate !== modified && (
           <Tag bordered={false} color="volcano">
-            {t('NuwaxPC.Pages.AntvX6Header.updatedNotPublished')}
+            {t('PC.Pages.AntvX6Header.updatedNotPublished')}
           </Tag>
         )}
       </div>
@@ -262,7 +261,7 @@ const Header: React.FC<HeaderProp> = ({
         style={{ display: 'flex', gap: '16px' }}
       >
         <Tooltip
-          title={t('NuwaxPC.Pages.AntvX6Header.undoWithShortcut', undoShortcut)}
+          title={t('PC.Pages.AntvX6Header.undoWithShortcut', undoShortcut)}
         >
           <UndoOutlined
             style={{
@@ -274,7 +273,7 @@ const Header: React.FC<HeaderProp> = ({
           />
         </Tooltip>
         <Tooltip
-          title={t('NuwaxPC.Pages.AntvX6Header.redoWithShortcut', redoShortcut)}
+          title={t('PC.Pages.AntvX6Header.redoWithShortcut', redoShortcut)}
         >
           <RedoOutlined
             style={{
@@ -298,8 +297,8 @@ const Header: React.FC<HeaderProp> = ({
         loading={isValidLoading}
       >
         {isValidLoading
-          ? t('NuwaxPC.Pages.AntvX6Header.validating')
-          : t('NuwaxPC.Pages.AntvX6Header.publish')}
+          ? t('PC.Pages.AntvX6Header.validating')
+          : t('PC.Pages.AntvX6Header.publish')}
       </Button>
     </div>
   );

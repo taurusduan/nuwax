@@ -73,22 +73,20 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
         case 'EXECUTING':
           return {
             color: 'processing' as const,
-            text: t('NuwaxPC.Pages.SystemTaskCenterProTable.statusExecuting'),
+            text: t('PC.Pages.SystemTaskCenterProTable.statusExecuting'),
             isEnded: false,
           };
         case 'CREATE':
           return {
             color: 'warning' as const,
-            text: t(
-              'NuwaxPC.Pages.SystemTaskCenterProTable.statusCreatedWaiting',
-            ),
+            text: t('PC.Pages.SystemTaskCenterProTable.statusCreatedWaiting'),
             isEnded: false,
           };
         case 'CONTINUE':
           return {
             color: 'success' as const,
             text: t(
-              'NuwaxPC.Pages.SystemTaskCenterProTable.statusSuccessWaitingNext',
+              'PC.Pages.SystemTaskCenterProTable.statusSuccessWaitingNext',
             ),
             isEnded: false,
           };
@@ -96,7 +94,7 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
           return {
             color: 'error' as const,
             text: t(
-              'NuwaxPC.Pages.SystemTaskCenterProTable.statusFailedWaitingNext',
+              'PC.Pages.SystemTaskCenterProTable.statusFailedWaitingNext',
             ),
             isEnded: false,
           };
@@ -104,13 +102,13 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
         case 'COMPLETE':
           return {
             color: 'default' as const,
-            text: t('NuwaxPC.Pages.SystemTaskCenterProTable.statusEndedNoMore'),
+            text: t('PC.Pages.SystemTaskCenterProTable.statusEndedNoMore'),
             isEnded: true,
           };
         case 'OVERFLOW_MAX_EXEC_TIMES':
           return {
             color: 'default' as const,
-            text: t('NuwaxPC.Pages.SystemTaskCenterProTable.statusEndedNoMore'),
+            text: t('PC.Pages.SystemTaskCenterProTable.statusEndedNoMore'),
             isEnded: false,
           };
         default:
@@ -194,7 +192,7 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
         const resp = await apiSystemTaskExecute(id);
         if (resp?.code === SUCCESS_CODE) {
           message.success(
-            t('NuwaxPC.Pages.SystemTaskCenterProTable.executeTaskSuccess'),
+            t('PC.Pages.SystemTaskCenterProTable.executeTaskSuccess'),
           );
           refreshList();
         }
@@ -210,7 +208,7 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
         const resp = await apiSystemTaskEnable(id);
         if (resp?.code === SUCCESS_CODE) {
           message.success(
-            t('NuwaxPC.Pages.SystemTaskCenterProTable.enableTaskSuccess'),
+            t('PC.Pages.SystemTaskCenterProTable.enableTaskSuccess'),
           );
           refreshList();
         }
@@ -226,7 +224,7 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
         const resp = await apiSystemTaskCancel(id);
         if (resp?.code === SUCCESS_CODE) {
           message.success(
-            t('NuwaxPC.Pages.SystemTaskCenterProTable.disableTaskSuccess'),
+            t('PC.Pages.SystemTaskCenterProTable.disableTaskSuccess'),
           );
           refreshList();
         }
@@ -242,7 +240,7 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
         const resp = await apiSystemTaskDelete(id);
         if (resp?.code === SUCCESS_CODE) {
           message.success(
-            t('NuwaxPC.Pages.SystemTaskCenterProTable.deleteTaskSuccess'),
+            t('PC.Pages.SystemTaskCenterProTable.deleteTaskSuccess'),
           );
           refreshList();
         }
@@ -253,50 +251,46 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
     const columns: ProColumns<TaskInfo>[] = useMemo(
       () => [
         {
-          title: t('NuwaxPC.Pages.SystemTaskCenterProTable.taskType'),
+          title: t('PC.Pages.SystemTaskCenterProTable.taskType'),
           dataIndex: 'targetType',
           width: 110,
           hideInSearch: true,
           valueType: 'select',
           valueEnum: {
             [AgentComponentTypeEnum.Agent]: {
-              text: t('NuwaxPC.Pages.SystemTaskCenterProTable.agent'),
+              text: t('PC.Pages.SystemTaskCenterProTable.agent'),
             },
             [AgentComponentTypeEnum.Workflow]: {
-              text: t('NuwaxPC.Pages.SystemTaskCenterProTable.workflow'),
+              text: t('PC.Pages.SystemTaskCenterProTable.workflow'),
             },
           },
           fieldProps: {
-            placeholder: t(
-              'NuwaxPC.Pages.SystemTaskCenterProTable.selectTaskType',
-            ),
+            placeholder: t('PC.Pages.SystemTaskCenterProTable.selectTaskType'),
             allowClear: true,
           },
           render: (_: any, record: TaskInfo) => {
             const type = record.targetType;
             const text =
               type === AgentComponentTypeEnum.Agent
-                ? t('NuwaxPC.Pages.SystemTaskCenterProTable.agent')
+                ? t('PC.Pages.SystemTaskCenterProTable.agent')
                 : type === AgentComponentTypeEnum.Workflow
-                ? t('NuwaxPC.Pages.SystemTaskCenterProTable.workflow')
+                ? t('PC.Pages.SystemTaskCenterProTable.workflow')
                 : type || '-';
             return text;
           },
         },
         {
-          title: t('NuwaxPC.Pages.SystemTaskCenterProTable.taskName'),
+          title: t('PC.Pages.SystemTaskCenterProTable.taskName'),
           dataIndex: 'taskName',
           width: 200,
           ellipsis: true,
           fieldProps: {
-            placeholder: t(
-              'NuwaxPC.Pages.SystemTaskCenterProTable.enterTaskName',
-            ),
+            placeholder: t('PC.Pages.SystemTaskCenterProTable.enterTaskName'),
             allowClear: true,
           },
         },
         {
-          title: t('NuwaxPC.Pages.SystemTaskCenterProTable.taskTarget'),
+          title: t('PC.Pages.SystemTaskCenterProTable.taskTarget'),
           dataIndex: 'targetName',
           hideInSearch: true,
           ellipsis: true,
@@ -311,7 +305,7 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
           },
         },
         {
-          title: t('NuwaxPC.Pages.SystemTaskCenterProTable.taskStatus'),
+          title: t('PC.Pages.SystemTaskCenterProTable.taskStatus'),
           dataIndex: 'status',
           width: 200,
           hideInSearch: true,
@@ -321,48 +315,44 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
           },
         },
         {
-          title: t('NuwaxPC.Pages.SystemTaskCenterProTable.executionTimes'),
+          title: t('PC.Pages.SystemTaskCenterProTable.executionTimes'),
           dataIndex: 'execTimes',
           width: 90,
           hideInSearch: true,
         },
         {
-          title: t(
-            'NuwaxPC.Pages.SystemTaskCenterProTable.latestExecutionTime',
-          ),
+          title: t('PC.Pages.SystemTaskCenterProTable.latestExecutionTime'),
           dataIndex: 'latestExecTime',
           width: 170,
           hideInSearch: true,
           valueType: 'dateTime',
         },
         {
-          title: t('NuwaxPC.Pages.SystemTaskCenterProTable.nextExecutionTime'),
+          title: t('PC.Pages.SystemTaskCenterProTable.nextExecutionTime'),
           dataIndex: 'lockTime',
           width: 170,
           hideInSearch: true,
           valueType: 'dateTime',
         },
         {
-          title: t('NuwaxPC.Pages.SystemTaskCenterProTable.creator'),
+          title: t('PC.Pages.SystemTaskCenterProTable.creator'),
           dataIndex: ['creator', 'userName'],
           ellipsis: true,
           width: 170,
           fieldProps: {
-            placeholder: t(
-              'NuwaxPC.Pages.SystemTaskCenterProTable.enterCreator',
-            ),
+            placeholder: t('PC.Pages.SystemTaskCenterProTable.enterCreator'),
             allowClear: true,
           },
         },
         {
-          title: t('NuwaxPC.Pages.SystemTaskCenterProTable.createdTime'),
+          title: t('PC.Pages.SystemTaskCenterProTable.createdTime'),
           dataIndex: 'created',
           width: 170,
           hideInSearch: true,
           valueType: 'dateTime',
         },
         {
-          title: t('NuwaxPC.Pages.SystemTaskCenterProTable.actions'),
+          title: t('PC.Pages.SystemTaskCenterProTable.actions'),
           align: 'center',
           valueType: 'option',
           fixed: 'right',
@@ -376,46 +366,44 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
                 actions={[
                   {
                     key: 'execute',
-                    label: t(
-                      'NuwaxPC.Pages.SystemTaskCenterProTable.manualExecute',
-                    ),
+                    label: t('PC.Pages.SystemTaskCenterProTable.manualExecute'),
                     disabled: !hasPermission('task_manage_execute_manual'),
                     onClick: () => handleExecuteTask(record.id),
                   },
                   {
                     key: 'enable',
-                    label: t('NuwaxPC.Pages.SystemTaskCenterProTable.enable'),
+                    label: t('PC.Pages.SystemTaskCenterProTable.enable'),
                     visible: () => isEnded,
                     disabled: !hasPermission('task_manage_enable'),
                     confirm: {
                       title: t(
-                        'NuwaxPC.Pages.SystemTaskCenterProTable.confirmEnableTask',
+                        'PC.Pages.SystemTaskCenterProTable.confirmEnableTask',
                       ),
                     },
                     onClick: () => handleEnableTask(record.id),
                   },
                   {
                     key: 'disable',
-                    label: t('NuwaxPC.Pages.SystemTaskCenterProTable.disable'),
+                    label: t('PC.Pages.SystemTaskCenterProTable.disable'),
                     visible: () => !isEnded,
                     disabled: !hasPermission('task_manage_cancel'),
                     confirm: {
                       title: t(
-                        'NuwaxPC.Pages.SystemTaskCenterProTable.confirmDisableTask',
+                        'PC.Pages.SystemTaskCenterProTable.confirmDisableTask',
                       ),
                     },
                     onClick: () => handleDisableTask(record.id),
                   },
                   {
                     key: 'edit',
-                    label: t('NuwaxPC.Pages.SystemTaskCenterProTable.edit'),
+                    label: t('PC.Pages.SystemTaskCenterProTable.edit'),
                     disabled: !hasPermission('task_manage_modify'),
                     onClick: () => onEdit(record),
                   },
                   {
                     key: 'record',
                     label: t(
-                      'NuwaxPC.Pages.SystemTaskCenterProTable.executionRecord',
+                      'PC.Pages.SystemTaskCenterProTable.executionRecord',
                     ),
                     disabled: !hasPermission('task_manage_execute_record'),
                     onClick: () => {
@@ -429,11 +417,11 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
                   },
                   {
                     key: 'delete',
-                    label: t('NuwaxPC.Pages.SystemTaskCenterProTable.delete'),
+                    label: t('PC.Pages.SystemTaskCenterProTable.delete'),
                     disabled: !hasPermission('task_manage_delete'),
                     confirm: {
                       title: t(
-                        'NuwaxPC.Pages.SystemTaskCenterProTable.confirmDeleteTask',
+                        'PC.Pages.SystemTaskCenterProTable.confirmDeleteTask',
                       ),
                     },
                     onClick: () => handleDeleteTask(record.id),

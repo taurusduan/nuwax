@@ -18,7 +18,7 @@ const McpEditItem: React.FC<McpEditItemProps> = ({
       <header className={cx('flex', 'items-center', 'content-between')}>
         <h6 className={cx(styles.name)}>{name}</h6>
         <Button className={cx(styles.btn)} onClick={onClick}>
-          {dict('NuwaxPC.Pages.SpaceMcpEdit.tryRun')}
+          {dict('PC.Pages.SpaceMcpEdit.tryRun')}
         </Button>
       </header>
       <p className={cx(styles.desc, 'text-ellipsis-3')}>{description}</p>

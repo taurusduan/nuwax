@@ -73,13 +73,11 @@ const ResourceFormModal: React.FC<ResourceFormModalProps> = ({
   const resourceTypeOptions = useMemo(
     () => [
       {
-        label: t('NuwaxPC.Pages.SystemPermissionResourceFormModal.typeModule'),
+        label: t('PC.Pages.SystemPermissionResourceFormModal.typeModule'),
         value: ResourceTypeEnum.Module,
       },
       {
-        label: t(
-          'NuwaxPC.Pages.SystemPermissionResourceFormModal.typeComponent',
-        ),
+        label: t('PC.Pages.SystemPermissionResourceFormModal.typeComponent'),
         value: ResourceTypeEnum.Component,
       },
     ],
@@ -89,13 +87,13 @@ const ResourceFormModal: React.FC<ResourceFormModalProps> = ({
     () => [
       {
         label: t(
-          'NuwaxPC.Pages.SystemPermissionResourceFormModal.sourceSystemBuiltIn',
+          'PC.Pages.SystemPermissionResourceFormModal.sourceSystemBuiltIn',
         ),
         value: ResourceSourceEnum.SystemBuiltIn,
       },
       {
         label: t(
-          'NuwaxPC.Pages.SystemPermissionResourceFormModal.sourceUserDefined',
+          'PC.Pages.SystemPermissionResourceFormModal.sourceUserDefined',
         ),
         value: ResourceSourceEnum.UserDefined,
       },
@@ -110,7 +108,7 @@ const ResourceFormModal: React.FC<ResourceFormModalProps> = ({
       manual: true,
       onSuccess: () => {
         message.success(
-          t('NuwaxPC.Pages.SystemPermissionResourceFormModal.addSuccess'),
+          t('PC.Pages.SystemPermissionResourceFormModal.addSuccess'),
         );
         onSuccess();
       },
@@ -124,7 +122,7 @@ const ResourceFormModal: React.FC<ResourceFormModalProps> = ({
       manual: true,
       onSuccess: () => {
         message.success(
-          t('NuwaxPC.Pages.SystemPermissionResourceFormModal.updateSuccess'),
+          t('PC.Pages.SystemPermissionResourceFormModal.updateSuccess'),
         );
         onSuccess();
       },
@@ -262,15 +260,15 @@ const ResourceFormModal: React.FC<ResourceFormModalProps> = ({
       form={form}
       title={
         isEdit
-          ? t('NuwaxPC.Pages.SystemPermissionResourceFormModal.editTitle')
-          : t('NuwaxPC.Pages.SystemPermissionResourceFormModal.createTitle')
+          ? t('PC.Pages.SystemPermissionResourceFormModal.editTitle')
+          : t('PC.Pages.SystemPermissionResourceFormModal.createTitle')
       }
       open={open}
       loading={loading}
       okText={
         isEdit
-          ? t('NuwaxPC.Pages.SystemPermissionResourceFormModal.save')
-          : t('NuwaxPC.Pages.SystemPermissionResourceFormModal.create')
+          ? t('PC.Pages.SystemPermissionResourceFormModal.save')
+          : t('PC.Pages.SystemPermissionResourceFormModal.create')
       }
       width={650}
       onCancel={onCancel}
@@ -289,19 +287,19 @@ const ResourceFormModal: React.FC<ResourceFormModalProps> = ({
         <Row gutter={16}>
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemPermissionResourceFormModal.code')}
+              label={t('PC.Pages.SystemPermissionResourceFormModal.code')}
               name="code"
               rules={[
                 {
                   pattern: /^[a-zA-Z][a-zA-Z0-9_]*$/,
                   message: t(
-                    'NuwaxPC.Pages.SystemPermissionResourceFormModal.codePatternInvalid',
+                    'PC.Pages.SystemPermissionResourceFormModal.codePatternInvalid',
                   ),
                 },
               ]}
               tooltip={{
                 title: t(
-                  'NuwaxPC.Pages.SystemPermissionResourceFormModal.codeTooltip',
+                  'PC.Pages.SystemPermissionResourceFormModal.codeTooltip',
                 ),
                 icon: <InfoCircleOutlined />,
               }}
@@ -309,7 +307,7 @@ const ResourceFormModal: React.FC<ResourceFormModalProps> = ({
               <Input
                 disabled={isEdit}
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemPermissionResourceFormModal.codePlaceholder',
+                  'PC.Pages.SystemPermissionResourceFormModal.codePlaceholder',
                 )}
                 maxLength={100}
                 showCount
@@ -318,20 +316,20 @@ const ResourceFormModal: React.FC<ResourceFormModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemPermissionResourceFormModal.name')}
+              label={t('PC.Pages.SystemPermissionResourceFormModal.name')}
               name="name"
               rules={[
                 {
                   required: true,
                   message: t(
-                    'NuwaxPC.Pages.SystemPermissionResourceFormModal.nameRequired',
+                    'PC.Pages.SystemPermissionResourceFormModal.nameRequired',
                   ),
                 },
               ]}
             >
               <Input
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemPermissionResourceFormModal.namePlaceholder',
+                  'PC.Pages.SystemPermissionResourceFormModal.namePlaceholder',
                 )}
                 maxLength={50}
                 showCount
@@ -340,13 +338,13 @@ const ResourceFormModal: React.FC<ResourceFormModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemPermissionResourceFormModal.type')}
+              label={t('PC.Pages.SystemPermissionResourceFormModal.type')}
               name="type"
               rules={[
                 {
                   required: true,
                   message: t(
-                    'NuwaxPC.Pages.SystemPermissionResourceFormModal.typeRequired',
+                    'PC.Pages.SystemPermissionResourceFormModal.typeRequired',
                   ),
                 },
               ]}
@@ -354,7 +352,7 @@ const ResourceFormModal: React.FC<ResourceFormModalProps> = ({
               <Select
                 disabled={isEdit}
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemPermissionResourceFormModal.typePlaceholder',
+                  'PC.Pages.SystemPermissionResourceFormModal.typePlaceholder',
                 )}
                 options={resourceTypeOptions}
               />
@@ -362,12 +360,12 @@ const ResourceFormModal: React.FC<ResourceFormModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemPermissionResourceFormModal.sort')}
+              label={t('PC.Pages.SystemPermissionResourceFormModal.sort')}
               name="sortIndex"
             >
               <InputNumber
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemPermissionResourceFormModal.sortPlaceholder',
+                  'PC.Pages.SystemPermissionResourceFormModal.sortPlaceholder',
                 )}
                 className={cx('w-full')}
                 min={1}
@@ -377,14 +375,12 @@ const ResourceFormModal: React.FC<ResourceFormModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label={t(
-                'NuwaxPC.Pages.SystemPermissionResourceFormModal.parentNode',
-              )}
+              label={t('PC.Pages.SystemPermissionResourceFormModal.parentNode')}
               name="parentId"
             >
               <TreeSelect
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemPermissionResourceFormModal.parentNodePlaceholder',
+                  'PC.Pages.SystemPermissionResourceFormModal.parentNodePlaceholder',
                 )}
                 treeData={treeSelectData}
                 allowClear
@@ -400,49 +396,45 @@ const ResourceFormModal: React.FC<ResourceFormModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label={t(
-                'NuwaxPC.Pages.SystemPermissionResourceFormModal.routePath',
-              )}
+              label={t('PC.Pages.SystemPermissionResourceFormModal.routePath')}
               name="path"
               rules={[
                 {
                   pattern: /^\/[a-zA-Z0-9/?#&=._:@%+ -]+$/,
                   message: t(
-                    'NuwaxPC.Pages.SystemPermissionResourceFormModal.routePathPatternInvalid',
+                    'PC.Pages.SystemPermissionResourceFormModal.routePathPatternInvalid',
                   ),
                 },
                 {
                   max: 500,
                   message: t(
-                    'NuwaxPC.Pages.SystemPermissionResourceFormModal.routePathLengthInvalid',
+                    'PC.Pages.SystemPermissionResourceFormModal.routePathLengthInvalid',
                   ),
                 },
               ]}
               tooltip={{
                 title: t(
-                  'NuwaxPC.Pages.SystemPermissionResourceFormModal.routePathTooltip',
+                  'PC.Pages.SystemPermissionResourceFormModal.routePathTooltip',
                 ),
                 icon: <InfoCircleOutlined />,
               }}
             >
               <Input
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemPermissionResourceFormModal.routePathPlaceholder',
+                  'PC.Pages.SystemPermissionResourceFormModal.routePathPlaceholder',
                 )}
               />
             </Form.Item>
           </Col>
           <Col span={12}>
             <Form.Item
-              label={t(
-                'NuwaxPC.Pages.SystemPermissionResourceFormModal.source',
-              )}
+              label={t('PC.Pages.SystemPermissionResourceFormModal.source')}
               name="source"
             >
               <Select
                 disabled
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemPermissionResourceFormModal.sourcePlaceholder',
+                  'PC.Pages.SystemPermissionResourceFormModal.sourcePlaceholder',
                 )}
                 options={resourceSourceOptions}
               />
@@ -450,38 +442,34 @@ const ResourceFormModal: React.FC<ResourceFormModalProps> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label={t(
-                'NuwaxPC.Pages.SystemPermissionResourceFormModal.enabled',
-              )}
+              label={t('PC.Pages.SystemPermissionResourceFormModal.enabled')}
               name="status"
               valuePropName="checked"
               tooltip={{
                 title: t(
-                  'NuwaxPC.Pages.SystemPermissionResourceFormModal.enabledTooltip',
+                  'PC.Pages.SystemPermissionResourceFormModal.enabledTooltip',
                 ),
                 icon: <InfoCircleOutlined />,
               }}
             >
               <Switch
                 checkedChildren={t(
-                  'NuwaxPC.Pages.SystemPermissionResourceFormModal.switchEnabled',
+                  'PC.Pages.SystemPermissionResourceFormModal.switchEnabled',
                 )}
                 unCheckedChildren={t(
-                  'NuwaxPC.Pages.SystemPermissionResourceFormModal.switchDisabled',
+                  'PC.Pages.SystemPermissionResourceFormModal.switchDisabled',
                 )}
               />
             </Form.Item>
           </Col>
         </Row>
         <Form.Item
-          label={t(
-            'NuwaxPC.Pages.SystemPermissionResourceFormModal.description',
-          )}
+          label={t('PC.Pages.SystemPermissionResourceFormModal.description')}
           name="description"
         >
           <TextArea
             placeholder={t(
-              'NuwaxPC.Pages.SystemPermissionResourceFormModal.descriptionPlaceholder',
+              'PC.Pages.SystemPermissionResourceFormModal.descriptionPlaceholder',
             )}
             className="dispose-textarea-count"
             autoSize={{ minRows: 3, maxRows: 5 }}

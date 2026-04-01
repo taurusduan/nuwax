@@ -131,8 +131,8 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
 
   // 占位符消息轮播
   const placeholderMessages = [
-    t('NuwaxPC.Pages.AppDevChatInput.placeholderAbility1'),
-    t('NuwaxPC.Pages.AppDevChatInput.placeholderAbility2'),
+    t('PC.Pages.AppDevChatInput.placeholderAbility1'),
+    t('PC.Pages.AppDevChatInput.placeholderAbility2'),
   ];
 
   // 使用占位符轮播 Hook
@@ -413,7 +413,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
       }
 
       if (pendingChanges?.length > 0) {
-        message.error(t('NuwaxPC.Pages.AppDevChatInput.pendingChangesError'));
+        message.error(t('PC.Pages.AppDevChatInput.pendingChangesError'));
         return;
       }
 
@@ -475,7 +475,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
     }
 
     if (pendingChanges?.length > 0) {
-      message.error(t('NuwaxPC.Pages.AppDevChatInput.pendingChangesError'));
+      message.error(t('PC.Pages.AppDevChatInput.pendingChangesError'));
       return;
     }
 
@@ -570,7 +570,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
         if (imageFiles.length === 0) {
           message.warning(
             t(
-              'NuwaxPC.Pages.AppDevChatInput.maxPrototypeImageWarning',
+              'PC.Pages.AppDevChatInput.maxPrototypeImageWarning',
               String(MAX_IMAGE_COUNT),
               String(currentCount),
               String(MAX_IMAGE_COUNT - currentCount),
@@ -587,7 +587,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
           name:
             file.name ||
             t(
-              'NuwaxPC.Pages.AppDevChatInput.pasteImageFileName',
+              'PC.Pages.AppDevChatInput.pasteImageFileName',
               String(Date.now()),
               String(index + 1),
             ),
@@ -685,7 +685,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
       if (failCount > 0) {
         message.warning(
           t(
-            'NuwaxPC.Pages.AppDevChatInput.uploadResultSummary',
+            'PC.Pages.AppDevChatInput.uploadResultSummary',
             String(successCount),
             String(failCount),
           ),
@@ -761,7 +761,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
         <div
           className={cx('flex-1', 'flex', 'flex-col', 'gap-6', 'overflow-hide')}
         >
-          <h4>{t('NuwaxPC.Pages.AppDevChatInput.codingModel')}</h4>
+          <h4>{t('PC.Pages.AppDevChatInput.codingModel')}</h4>
           <SelectList
             className={cx(styles['select-list'])}
             options={getModeOptions(modelSelector?.models?.chatModelList)}
@@ -772,7 +772,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
         <div
           className={cx('flex-1', 'flex', 'flex-col', 'gap-6', 'overflow-hide')}
         >
-          <h4>{t('NuwaxPC.Pages.AppDevChatInput.visionModelOptional')}</h4>
+          <h4>{t('PC.Pages.AppDevChatInput.visionModelOptional')}</h4>
           <SelectList
             className={cx(styles['select-list'])}
             allowClear
@@ -791,14 +791,14 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
         {/*附件文件列表*/}
         <ConditionRender condition={attachmentFiles?.length}>
           <h5 className={cx(styles['file-title'])}>
-            {t('NuwaxPC.Pages.AppDevChatInput.attachmentFiles')}
+            {t('PC.Pages.AppDevChatInput.attachmentFiles')}
           </h5>
           <ChatUploadFile files={attachmentFiles} onDel={handleDelFile} />
         </ConditionRender>
         {/*附件文件列表*/}
         <ConditionRender condition={attachmentPrototypeImages?.length}>
           <h5 className={cx(styles['file-title'])}>
-            {t('NuwaxPC.Pages.AppDevChatInput.prototypeImages')}
+            {t('PC.Pages.AppDevChatInput.prototypeImages')}
           </h5>
           <ChatUploadFile
             files={attachmentPrototypeImages}
@@ -808,7 +808,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
         {/*已选择的提及项（文件/数据源）*/}
         <ConditionRender condition={selectedMentions?.length}>
           <h5 className={cx(styles['file-title'])}>
-            {t('NuwaxPC.Pages.AppDevChatInput.mentionsTitle')}
+            {t('PC.Pages.AppDevChatInput.mentionsTitle')}
           </h5>
           <div
             className={cx(
@@ -998,7 +998,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
               showUploadList={false}
               maxCount={MAX_IMAGE_COUNT}
             >
-              <Tooltip title={t('NuwaxPC.Pages.AppDevChatInput.uploadFile')}>
+              <Tooltip title={t('PC.Pages.AppDevChatInput.uploadFile')}>
                 <Button
                   type="text"
                   className={cx(styles['svg-icon'], {
@@ -1031,7 +1031,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
               maxCount={MAX_IMAGE_COUNT}
             >
               <Tooltip
-                title={t('NuwaxPC.Pages.AppDevChatInput.uploadPrototypeImage')}
+                title={t('PC.Pages.AppDevChatInput.uploadPrototypeImage')}
               >
                 <Button
                   type="text"
@@ -1050,7 +1050,7 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
           </div>
           <div className={cx('flex', 'items-center', 'content-end', 'gap-10')}>
             {/* 大模型选择 */}
-            <Tooltip title={t('NuwaxPC.Pages.AppDevChatInput.model')}>
+            <Tooltip title={t('PC.Pages.AppDevChatInput.model')}>
               <Popover
                 content={<PopoverContent />}
                 trigger="click"
@@ -1076,8 +1076,8 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
               <Tooltip
                 title={
                   isStoppingTask
-                    ? t('NuwaxPC.Pages.AppDevChatInput.stopping')
-                    : t('NuwaxPC.Pages.AppDevChatInput.cancelAiTask')
+                    ? t('PC.Pages.AppDevChatInput.stopping')
+                    : t('PC.Pages.AppDevChatInput.cancelAiTask')
                 }
               >
                 <span

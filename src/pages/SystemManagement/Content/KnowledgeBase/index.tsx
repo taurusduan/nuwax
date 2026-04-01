@@ -58,14 +58,12 @@ const KnowledgeBase: React.FC = () => {
   const handleDelete = useCallback(async (record: SystemKnowledgeInfo) => {
     const response = await apiSystemResourceKnowledgeDelete({ id: record.id });
     if (response.code === SUCCESS_CODE) {
-      message.success(
-        t('NuwaxPC.Pages.SystemContentKnowledgeBase.deleteSuccess'),
-      );
+      message.success(t('PC.Pages.SystemContentKnowledgeBase.deleteSuccess'));
       actionRef.current?.reload();
     } else {
       message.error(
         response.message ||
-          t('NuwaxPC.Pages.SystemContentKnowledgeBase.deleteFailed'),
+          t('PC.Pages.SystemContentKnowledgeBase.deleteFailed'),
       );
     }
   }, []);
@@ -77,20 +75,20 @@ const KnowledgeBase: React.FC = () => {
     (record: SystemKnowledgeInfo): ActionItem<SystemKnowledgeInfo>[] => [
       {
         key: 'view',
-        label: t('NuwaxPC.Pages.SystemContentKnowledgeBase.view'),
+        label: t('PC.Pages.SystemContentKnowledgeBase.view'),
         disabled: !hasPermission('content_knowledge_query_detail'),
         onClick: handleView,
       },
       {
         key: 'delete',
-        label: t('NuwaxPC.Pages.SystemContentKnowledgeBase.delete'),
+        label: t('PC.Pages.SystemContentKnowledgeBase.delete'),
         confirm: {
           title: t(
-            'NuwaxPC.Pages.SystemContentKnowledgeBase.deleteConfirmTitle',
+            'PC.Pages.SystemContentKnowledgeBase.deleteConfirmTitle',
             record.name,
           ),
           description: t(
-            'NuwaxPC.Pages.SystemContentKnowledgeBase.deleteConfirmDescription',
+            'PC.Pages.SystemContentKnowledgeBase.deleteConfirmDescription',
           ),
         },
         disabled: !hasPermission('content_knowledge_delete'),
@@ -105,31 +103,31 @@ const KnowledgeBase: React.FC = () => {
    */
   const columns: ProColumns<SystemKnowledgeInfo>[] = [
     {
-      title: t('NuwaxPC.Pages.SystemContentKnowledgeBase.columnName'),
+      title: t('PC.Pages.SystemContentKnowledgeBase.columnName'),
       dataIndex: 'name',
       width: 180,
       ellipsis: true,
       fieldProps: {
-        placeholder: t('NuwaxPC.Pages.SystemContentKnowledgeBase.searchName'),
+        placeholder: t('PC.Pages.SystemContentKnowledgeBase.searchName'),
         allowClear: true,
       },
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentKnowledgeBase.columnDescription'),
+      title: t('PC.Pages.SystemContentKnowledgeBase.columnDescription'),
       dataIndex: 'description',
       width: 250,
       ellipsis: true,
       hideInSearch: true,
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentKnowledgeBase.columnCreator'),
+      title: t('PC.Pages.SystemContentKnowledgeBase.columnCreator'),
       dataIndex: 'creatorName',
       width: 120,
       ellipsis: true,
       hideInSearch: false,
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentKnowledgeBase.columnCreated'),
+      title: t('PC.Pages.SystemContentKnowledgeBase.columnCreated'),
       dataIndex: 'created',
       align: 'center',
       width: 170,
@@ -137,7 +135,7 @@ const KnowledgeBase: React.FC = () => {
       valueType: 'dateTime',
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentKnowledgeBase.columnAction'),
+      title: t('PC.Pages.SystemContentKnowledgeBase.columnAction'),
       valueType: 'option',
       fixed: 'right',
       align: 'center',
@@ -176,7 +174,7 @@ const KnowledgeBase: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={t('NuwaxPC.Pages.SystemContentKnowledgeBase.pageTitle')}
+      title={t('PC.Pages.SystemContentKnowledgeBase.pageTitle')}
       hideScroll
     >
       <XProTable<SystemKnowledgeInfo>

@@ -32,7 +32,7 @@ const SettingEmail: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: BindEmailParams[]) => {
-      message.success(dict('NuwaxPC.Layouts.Setting.SettingEmail.bindSuccess'));
+      message.success(dict('PC.Layouts.Setting.SettingEmail.bindSuccess'));
       form.resetFields();
       setCountDown(0);
       onClearTimer();
@@ -76,8 +76,8 @@ const SettingEmail: React.FC = () => {
     <div className={cx(styles.container)}>
       <h3>
         {authType
-          ? dict('NuwaxPC.Layouts.Setting.SettingEmail.emailBindTitle')
-          : dict('NuwaxPC.Layouts.Setting.SettingEmail.phoneBindTitle')}
+          ? dict('PC.Layouts.Setting.SettingEmail.emailBindTitle')
+          : dict('PC.Layouts.Setting.SettingEmail.phoneBindTitle')}
       </h3>
       <Form
         layout="vertical"
@@ -90,15 +90,15 @@ const SettingEmail: React.FC = () => {
           name={authType ? 'email' : 'phone'}
           label={
             authType
-              ? dict('NuwaxPC.Layouts.Setting.SettingEmail.emailAddress')
-              : dict('NuwaxPC.Layouts.Setting.SettingEmail.phoneNumber')
+              ? dict('PC.Layouts.Setting.SettingEmail.emailAddress')
+              : dict('PC.Layouts.Setting.SettingEmail.phoneNumber')
           }
           rules={[
             {
               required: true,
               message: authType
-                ? dict('NuwaxPC.Layouts.Setting.SettingEmail.inputEmailAddress')
-                : dict('NuwaxPC.Layouts.Setting.SettingEmail.inputPhoneNumber'),
+                ? dict('PC.Layouts.Setting.SettingEmail.inputEmailAddress')
+                : dict('PC.Layouts.Setting.SettingEmail.inputPhoneNumber'),
             },
             {
               validator(_, value) {
@@ -109,7 +109,7 @@ const SettingEmail: React.FC = () => {
                     : Promise.reject(
                         new Error(
                           dict(
-                            'NuwaxPC.Layouts.Setting.SettingEmail.inputCorrectEmail',
+                            'PC.Layouts.Setting.SettingEmail.inputCorrectEmail',
                           ),
                         ),
                       );
@@ -119,7 +119,7 @@ const SettingEmail: React.FC = () => {
                     : Promise.reject(
                         new Error(
                           dict(
-                            'NuwaxPC.Layouts.Setting.SettingEmail.inputCorrectPhone',
+                            'PC.Layouts.Setting.SettingEmail.inputCorrectPhone',
                           ),
                         ),
                       );
@@ -131,19 +131,19 @@ const SettingEmail: React.FC = () => {
           <Input
             placeholder={
               authType
-                ? dict('NuwaxPC.Layouts.Setting.SettingEmail.inputEmailAddress')
-                : dict('NuwaxPC.Layouts.Setting.SettingEmail.inputPhoneNumber')
+                ? dict('PC.Layouts.Setting.SettingEmail.inputEmailAddress')
+                : dict('PC.Layouts.Setting.SettingEmail.inputPhoneNumber')
             }
           />
         </Form.Item>
         <Form.Item
           name="code"
-          label={dict('NuwaxPC.Layouts.Setting.SettingEmail.verificationCode')}
+          label={dict('PC.Layouts.Setting.SettingEmail.verificationCode')}
           rules={[
             {
               required: true,
               message: dict(
-                'NuwaxPC.Layouts.Setting.SettingEmail.inputVerificationCode',
+                'PC.Layouts.Setting.SettingEmail.inputVerificationCode',
               ),
             },
             {
@@ -153,9 +153,7 @@ const SettingEmail: React.FC = () => {
                 }
                 return Promise.reject(
                   new Error(
-                    dict(
-                      'NuwaxPC.Layouts.Setting.SettingEmail.inputCorrectCode',
-                    ),
+                    dict('PC.Layouts.Setting.SettingEmail.inputCorrectCode'),
                   ),
                 );
               },
@@ -166,7 +164,7 @@ const SettingEmail: React.FC = () => {
             <Input
               rootClassName={styles.input}
               placeholder={dict(
-                'NuwaxPC.Layouts.Setting.SettingEmail.placeholderCode',
+                'PC.Layouts.Setting.SettingEmail.placeholderCode',
               )}
             />
             {countDown < 60 && countDown > 0 ? (
@@ -179,14 +177,14 @@ const SettingEmail: React.FC = () => {
                 type="primary"
                 onClick={handleSendCode}
               >
-                {dict('NuwaxPC.Layouts.Setting.SettingEmail.sendCode')}
+                {dict('PC.Layouts.Setting.SettingEmail.sendCode')}
               </Button>
             )}
           </div>
         </Form.Item>
         <Form.Item>
           <Button block type="primary" htmlType="submit" loading={loading}>
-            {dict('NuwaxPC.Layouts.Setting.SettingEmail.bind')}
+            {dict('PC.Layouts.Setting.SettingEmail.bind')}
           </Button>
         </Form.Item>
       </Form>

@@ -31,23 +31,23 @@ export const ECOSYSTEM_MARKET_LIST = [
   {
     type: EcosystemMarketEnum.Plugin,
     icon: <SvgIcon name="icons-nav-plugins" />,
-    text: dict('NuwaxPC.Common.Global.plugin'),
+    text: dict('PC.Common.Global.plugin'),
   },
   {
     type: EcosystemMarketEnum.Template,
     icon: <SvgIcon name="icons-nav-template" />,
-    text: dict('NuwaxPC.Common.Global.template'),
+    text: dict('PC.Common.Global.template'),
     list: [
       {
-        text: dict('NuwaxPC.Common.Global.agent'),
+        text: dict('PC.Common.Global.agent'),
         type: AgentComponentTypeEnum.Agent,
       },
       {
-        text: dict('NuwaxPC.Common.Global.workflow'),
+        text: dict('PC.Common.Global.workflow'),
         type: AgentComponentTypeEnum.Workflow,
       },
       {
-        text: dict('NuwaxPC.Constants.Ecosystem.webApp'),
+        text: dict('PC.Constants.Ecosystem.webApp'),
         type: AgentComponentTypeEnum.PageApp,
       },
     ],
@@ -63,37 +63,37 @@ export const COMPONENT_LIST: {
   {
     type: AgentComponentTypeEnum.Plugin,
     defaultImage: pluginImage,
-    text: dict('NuwaxPC.Common.Global.plugin'),
+    text: dict('PC.Common.Global.plugin'),
   },
   {
     type: AgentComponentTypeEnum.Knowledge,
     defaultImage: knowledgeImage,
-    text: dict('NuwaxPC.Common.Global.knowledge'),
+    text: dict('PC.Common.Global.knowledge'),
   },
   {
     type: AgentComponentTypeEnum.Workflow,
     defaultImage: workflowImage,
-    text: dict('NuwaxPC.Common.Global.workflow'),
+    text: dict('PC.Common.Global.workflow'),
   },
   {
     type: AgentComponentTypeEnum.Table,
     defaultImage: databaseImage,
-    text: dict('NuwaxPC.Common.Global.dataTable'),
+    text: dict('PC.Common.Global.dataTable'),
   },
   {
     type: AgentComponentTypeEnum.Model,
     defaultImage: modelImage,
-    text: dict('NuwaxPC.Common.Global.model'),
+    text: dict('PC.Common.Global.model'),
   },
   {
     type: AgentComponentTypeEnum.Agent,
     defaultImage: agentImage,
-    text: dict('NuwaxPC.Common.Global.agent'),
+    text: dict('PC.Common.Global.agent'),
   },
   {
     type: AgentComponentTypeEnum.Variable,
     defaultImage: variableImage,
-    text: dict('NuwaxPC.Constants.Common.variable'),
+    text: dict('PC.Constants.Common.variable'),
   },
   {
     type: AgentComponentTypeEnum.MCP,
@@ -103,7 +103,7 @@ export const COMPONENT_LIST: {
   {
     type: AgentComponentTypeEnum.Page,
     defaultImage: pageImage,
-    text: dict('NuwaxPC.Constants.Ecosystem.webApp'),
+    text: dict('PC.Constants.Ecosystem.webApp'),
   },
 ];
 
@@ -127,15 +127,15 @@ export const TabTypeEnum: {
 export const TabItems: TabsProps['items'] = [
   {
     key: TabTypeEnum.ALL,
-    label: dict('NuwaxPC.Common.Global.all'),
+    label: dict('PC.Common.Global.all'),
   },
   {
     key: TabTypeEnum.ENABLED,
-    label: dict('NuwaxPC.Constants.Ecosystem.enabled'),
+    label: dict('PC.Constants.Ecosystem.enabled'),
   },
   {
     key: TabTypeEnum.SHARED,
-    label: dict('NuwaxPC.Constants.Ecosystem.myShares'),
+    label: dict('PC.Constants.Ecosystem.myShares'),
   },
 ];
 
@@ -143,31 +143,55 @@ export const TabItems: TabsProps['items'] = [
 export const ECO_MCP_TAB_ITEMS: TabsProps['items'] = [
   {
     key: EcosystemTabTypeEnum.ALL,
-    label: dict('NuwaxPC.Common.Global.all'),
+    label: dict('PC.Common.Global.all'),
   },
   {
     key: EcosystemTabTypeEnum.ENABLED,
-    label: dict('NuwaxPC.Constants.Ecosystem.enabled'),
+    label: dict('PC.Constants.Ecosystem.enabled'),
   },
 ];
 
 // MCP分类
 export const ECO_MCP_CATEGORY_OPTIONS = [
-  { label: dict('NuwaxPC.Common.Global.all'), value: 'All' },
-  { label: dict('NuwaxPC.Constants.Ecosystem.catLifeServices'), value: 'LifeServices' },
-  { label: dict('NuwaxPC.Constants.Ecosystem.catComputerOps'), value: 'ComputerOperations' },
-  { label: dict('NuwaxPC.Constants.Ecosystem.catPersonalKnowledge'), value: 'PersonalKnowledge' },
-  { label: dict('NuwaxPC.Constants.Ecosystem.catBusinessEfficiency'), value: 'BusinessEfficiency' },
-  { label: dict('NuwaxPC.Constants.Ecosystem.catSocialMedia'), value: 'SocialMedia' },
-  { label: dict('NuwaxPC.Constants.Ecosystem.catEcommerce'), value: 'E-commercePlatforms' },
-  { label: dict('NuwaxPC.Constants.Ecosystem.catFinancialServices'), value: 'FinancialServices' },
-  { label: dict('NuwaxPC.Constants.Ecosystem.catTechDev'), value: 'TechnologyDevelopment' },
-  { label: dict('NuwaxPC.Common.Global.other'), value: 'Other' },
+  { label: dict('PC.Common.Global.all'), value: 'All' },
+  {
+    label: dict('PC.Constants.Ecosystem.catLifeServices'),
+    value: 'LifeServices',
+  },
+  {
+    label: dict('PC.Constants.Ecosystem.catComputerOps'),
+    value: 'ComputerOperations',
+  },
+  {
+    label: dict('PC.Constants.Ecosystem.catPersonalKnowledge'),
+    value: 'PersonalKnowledge',
+  },
+  {
+    label: dict('PC.Constants.Ecosystem.catBusinessEfficiency'),
+    value: 'BusinessEfficiency',
+  },
+  {
+    label: dict('PC.Constants.Ecosystem.catSocialMedia'),
+    value: 'SocialMedia',
+  },
+  {
+    label: dict('PC.Constants.Ecosystem.catEcommerce'),
+    value: 'E-commercePlatforms',
+  },
+  {
+    label: dict('PC.Constants.Ecosystem.catFinancialServices'),
+    value: 'FinancialServices',
+  },
+  {
+    label: dict('PC.Constants.Ecosystem.catTechDev'),
+    value: 'TechnologyDevelopment',
+  },
+  { label: dict('PC.Common.Global.other'), value: 'Other' },
 ];
 
 export const ECO_TYPE_TITLE_MAP = {
-  [EcosystemDataTypeEnum.PLUGIN]: dict('NuwaxPC.Common.Global.plugin'),
-  [EcosystemDataTypeEnum.TEMPLATE]: dict('NuwaxPC.Common.Global.template'),
+  [EcosystemDataTypeEnum.PLUGIN]: dict('PC.Common.Global.plugin'),
+  [EcosystemDataTypeEnum.TEMPLATE]: dict('PC.Common.Global.template'),
   [EcosystemDataTypeEnum.MCP]: 'MCP',
 };
 
@@ -176,19 +200,19 @@ export const ECO_TYPE_TITLE_MAP = {
  */
 export const ECO_TEMPLATE_SHARE_STATUS_OPTIONS = [
   {
-    label: dict('NuwaxPC.Common.Global.all'),
+    label: dict('PC.Common.Global.all'),
     value: -1,
   },
   {
-    label: dict('NuwaxPC.Common.Global.published'),
+    label: dict('PC.Common.Global.published'),
     value: 3,
   },
   {
-    label: dict('NuwaxPC.Constants.Ecosystem.underReview'),
+    label: dict('PC.Constants.Ecosystem.underReview'),
     value: 2,
   },
   {
-    label: dict('NuwaxPC.Constants.Ecosystem.offline'),
+    label: dict('PC.Constants.Ecosystem.offline'),
     value: 4,
   },
 ];
@@ -196,7 +220,7 @@ export const ECO_TEMPLATE_SHARE_STATUS_OPTIONS = [
 // 生态市场更多操作列表
 export const EcoMarketActionList: CustomPopoverItem[] = [
   {
-    label: dict('NuwaxPC.Common.Global.delete'),
+    label: dict('PC.Common.Global.delete'),
     isDel: true,
   },
 ];

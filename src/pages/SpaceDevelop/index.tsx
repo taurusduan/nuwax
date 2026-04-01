@@ -18,6 +18,7 @@ import {
   apiAgentDelete,
   apiAgentTransfer,
 } from '@/services/agentConfig';
+import { dict } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import { PublishStatusEnum } from '@/types/enums/common';
 import {
@@ -32,7 +33,6 @@ import {
   CustomPopoverItem,
   FileType,
 } from '@/types/interfaces/common';
-import { dict } from '@/services/i18nRuntime';
 import { modalConfirm } from '@/utils/ant-custom';
 import { exportConfigFile } from '@/utils/exportImportFile';
 import { jumpToAgent } from '@/utils/router';
@@ -180,7 +180,7 @@ const SpaceDevelop: React.FC = () => {
     debounceInterval: 300,
     onSuccess: (data: number, params: number[]) => {
       setCopyToSpaceLoading(false);
-      message.success(dict('NuwaxPC.Pages.SpaceDevelop.Index.copySuccess'));
+      message.success(dict('PC.Pages.SpaceDevelop.Index.copySuccess'));
       // 关闭弹窗
       setOpenMove(false);
       // 目标空间ID
@@ -213,7 +213,7 @@ const SpaceDevelop: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Pages.SpaceDevelop.Index.deleteSuccess'));
+      message.success(dict('PC.Pages.SpaceDevelop.Index.deleteSuccess'));
       handleDelAgent();
       runEdit({
         size: 5,
@@ -239,7 +239,7 @@ const SpaceDevelop: React.FC = () => {
     debounceInterval: 300,
     onSuccess: () => {
       setTransferLoading(false);
-      message.success(dict('NuwaxPC.Pages.SpaceDevelop.Index.transferSuccess'));
+      message.success(dict('PC.Pages.SpaceDevelop.Index.transferSuccess'));
       handleDelAgent();
       setOpenMove(false);
       setCurrentAgentInfo(null);
@@ -334,19 +334,19 @@ const SpaceDevelop: React.FC = () => {
       agentInfo?.agentStatistics;
     const analyzeList = [
       {
-        label: dict('NuwaxPC.Pages.SpaceDevelop.Index.statUserCount'),
+        label: dict('PC.Pages.SpaceDevelop.Index.statUserCount'),
         value: userCount,
       },
       {
-        label: dict('NuwaxPC.Pages.SpaceDevelop.Index.statConvCount'),
+        label: dict('PC.Pages.SpaceDevelop.Index.statConvCount'),
         value: convCount,
       },
       {
-        label: dict('NuwaxPC.Pages.SpaceDevelop.Index.statCollectCount'),
+        label: dict('PC.Pages.SpaceDevelop.Index.statCollectCount'),
         value: collectCount,
       },
       {
-        label: dict('NuwaxPC.Pages.SpaceDevelop.Index.statLikeCount'),
+        label: dict('PC.Pages.SpaceDevelop.Index.statLikeCount'),
         value: likeCount,
       },
     ];
@@ -385,8 +385,11 @@ const SpaceDevelop: React.FC = () => {
       // 导出配置
       case ApplicationMoreActionEnum.Export_Config:
         modalConfirm(
-          dict('NuwaxPC.Pages.SpaceDevelop.Index.exportConfigTitle', agentInfo?.name),
-          dict('NuwaxPC.Pages.SpaceDevelop.Index.exportConfigContent'),
+          dict(
+            'PC.Pages.SpaceDevelop.Index.exportConfigTitle',
+            agentInfo?.name,
+          ),
+          dict('PC.Pages.SpaceDevelop.Index.exportConfigContent'),
           () => {
             exportConfigFile(id, AgentComponentTypeEnum.Agent);
             return new Promise((resolve) => {
@@ -402,12 +405,16 @@ const SpaceDevelop: React.FC = () => {
         );
         break;
       case ApplicationMoreActionEnum.Del:
-        modalConfirm(dict('NuwaxPC.Pages.SpaceDevelop.Index.deleteConfirmText'), agentInfo?.name, () => {
-          runDel(id);
-          return new Promise((resolve) => {
-            setTimeout(resolve, 1000);
-          });
-        });
+        modalConfirm(
+          dict('PC.Pages.SpaceDevelop.Index.deleteConfirmText'),
+          agentInfo?.name,
+          () => {
+            runDel(id);
+            return new Promise((resolve) => {
+              setTimeout(resolve, 1000);
+            });
+          },
+        );
         break;
     }
   };
@@ -428,7 +435,7 @@ const SpaceDevelop: React.FC = () => {
     const fileName = file.name.toLocaleLowerCase();
     const isValidFile = fileName.endsWith('.agent');
     if (!isValidFile) {
-      message.error(dict('NuwaxPC.Pages.SpaceDevelop.Index.agentFileOnly'));
+      message.error(dict('PC.Pages.SpaceDevelop.Index.agentFileOnly'));
     }
     return isValidFile || Upload.LIST_IGNORE;
   };
@@ -443,7 +450,9 @@ const SpaceDevelop: React.FC = () => {
     <div className={cx(styles.container, 'h-full', 'flex', 'flex-col')}>
       <div className={cx(styles['header-area'])}>
         <div className={cx(styles['header-left'])}>
-          <h3 className={cx(styles.title)}>{dict('NuwaxPC.Pages.SpaceDevelop.Index.agentDevelop')}</h3>
+          <h3 className={cx(styles.title)}>
+            {dict('PC.Pages.SpaceDevelop.Index.agentDevelop')}
+          </h3>
           <SelectList
             value={agentType}
             options={AGENT_TYPE_LIST_DEV}
@@ -465,7 +474,7 @@ const SpaceDevelop: React.FC = () => {
         <div className={cx(styles['header-right'])}>
           <Input
             rootClassName={cx(styles.input)}
-            placeholder={dict('NuwaxPC.Pages.SpaceDevelop.Index.searchAgent')}
+            placeholder={dict('PC.Pages.SpaceDevelop.Index.searchAgent')}
             value={keyword}
             onChange={handleQueryAgent}
             prefix={<SearchOutlined />}
@@ -482,7 +491,7 @@ const SpaceDevelop: React.FC = () => {
           {/* 创建智能体按钮：如果只有一种类型则直接创建，否则显示下拉选择 */}
           <CustomPopover list={AGENT_TYPE_LIST} onClick={handlerClickAgentType}>
             <Button type="primary" icon={<PlusOutlined />}>
-              {dict('NuwaxPC.Pages.SpaceDevelop.Index.createAgent')}
+              {dict('PC.Pages.SpaceDevelop.Index.createAgent')}
             </Button>
           </CustomPopover>
         </div>
@@ -511,7 +520,7 @@ const SpaceDevelop: React.FC = () => {
         </div>
       ) : (
         <div className={cx('flex', 'items-center', 'content-center', 'h-full')}>
-          <Empty description={dict('NuwaxPC.Pages.SpaceDevelop.Index.noResults')} />
+          <Empty description={dict('PC.Pages.SpaceDevelop.Index.noResults')} />
         </div>
       )}
 
@@ -519,7 +528,7 @@ const SpaceDevelop: React.FC = () => {
       <AnalyzeStatistics
         open={openAnalyze}
         onCancel={() => setOpenAnalyze(false)}
-        title={dict('NuwaxPC.Pages.SpaceDevelop.Index.agentOverview')}
+        title={dict('PC.Pages.SpaceDevelop.Index.agentOverview')}
         list={agentStatistics}
       />
       {/*智能体迁移弹窗*/}

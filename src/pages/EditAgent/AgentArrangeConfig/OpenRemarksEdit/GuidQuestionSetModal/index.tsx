@@ -72,7 +72,7 @@ const GuidQuestionSetModal: React.FC<GuidQuestionSetModalProps> = ({
     debounceInterval: 1000,
     onSuccess: (_: null, params: AgentConfigUpdateParams[]) => {
       message.success(
-        t('NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.updateSuccess'),
+        t('PC.Pages.AgentArrangeGuidQuestionSetModal.updateSuccess'),
       );
       const { guidQuestionDtos } = params[0];
       onConfirm?.(guidQuestionDtos);
@@ -191,7 +191,7 @@ const GuidQuestionSetModal: React.FC<GuidQuestionSetModalProps> = ({
       if (requireArgEmptyItem) {
         message.error(
           t(
-            'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.requiredParamEmpty',
+            'PC.Pages.AgentArrangeGuidQuestionSetModal.requiredParamEmpty',
             requireArgEmptyItem.name,
           ),
         );
@@ -280,15 +280,15 @@ const GuidQuestionSetModal: React.FC<GuidQuestionSetModalProps> = ({
     () => [
       {
         value: GuidQuestionSetTypeEnum.Question,
-        label: t('NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typeQuestion'),
+        label: t('PC.Pages.AgentArrangeGuidQuestionSetModal.typeQuestion'),
       },
       {
         value: GuidQuestionSetTypeEnum.Page,
-        label: t('NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typePage'),
+        label: t('PC.Pages.AgentArrangeGuidQuestionSetModal.typePage'),
       },
       {
         value: GuidQuestionSetTypeEnum.Link,
-        label: t('NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typeLink'),
+        label: t('PC.Pages.AgentArrangeGuidQuestionSetModal.typeLink'),
       },
     ],
     [],
@@ -297,7 +297,7 @@ const GuidQuestionSetModal: React.FC<GuidQuestionSetModalProps> = ({
   // 入参配置columns
   const inputColumns: TableColumnsType<BindConfigWithSub> = [
     {
-      title: t('NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramName'),
+      title: t('PC.Pages.AgentArrangeGuidQuestionSetModal.paramName'),
       dataIndex: 'name',
       key: 'name',
       width: 200,
@@ -314,37 +314,35 @@ const GuidQuestionSetModal: React.FC<GuidQuestionSetModalProps> = ({
       title: () => (
         <div className={cx('h-full', 'flex', 'items-center')}>
           <span>
-            {t('NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramValue')}
+            {t('PC.Pages.AgentArrangeGuidQuestionSetModal.paramValue')}
           </span>
           <TooltipIcon
             title={
               <>
                 <div>
-                  {t(
-                    'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramValueTip',
-                  )}
+                  {t('PC.Pages.AgentArrangeGuidQuestionSetModal.paramValueTip')}
                 </div>
                 <div>
                   {t(
-                    'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.agentIdVariable',
+                    'PC.Pages.AgentArrangeGuidQuestionSetModal.agentIdVariable',
                   )}{' '}
                   {'{{'}AGENT_ID{'}}'}
                 </div>
                 <div>
                   {t(
-                    'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.systemUserIdVariable',
+                    'PC.Pages.AgentArrangeGuidQuestionSetModal.systemUserIdVariable',
                   )}{' '}
                   {'{{'}SYS_USER_ID{'}}'}
                 </div>
                 <div>
                   {t(
-                    'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.userUidVariable',
+                    'PC.Pages.AgentArrangeGuidQuestionSetModal.userUidVariable',
                   )}{' '}
                   {'{{'}USER_UID{'}}'}
                 </div>
                 <div>
                   {t(
-                    'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.userNameVariable',
+                    'PC.Pages.AgentArrangeGuidQuestionSetModal.userNameVariable',
                   )}{' '}
                   {'{{'}USER_NAME{'}}'}
                 </div>
@@ -360,7 +358,7 @@ const GuidQuestionSetModal: React.FC<GuidQuestionSetModalProps> = ({
           <Input
             allowClear
             placeholder={t(
-              'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.paramValuePlaceholder',
+              'PC.Pages.AgentArrangeGuidQuestionSetModal.paramValuePlaceholder',
               record.description || '',
             )}
             value={record.bindValue}
@@ -376,7 +374,7 @@ const GuidQuestionSetModal: React.FC<GuidQuestionSetModalProps> = ({
   return (
     <CustomFormModal
       form={form}
-      title={t('NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.title')}
+      title={t('PC.Pages.AgentArrangeGuidQuestionSetModal.title')}
       open={open}
       loading={loading}
       onCancel={onCancel}
@@ -395,7 +393,7 @@ const GuidQuestionSetModal: React.FC<GuidQuestionSetModalProps> = ({
       >
         <Form.Item
           name="icon"
-          label={t('NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.icon')}
+          label={t('PC.Pages.AgentArrangeGuidQuestionSetModal.icon')}
         >
           <UploadAvatar
             onUploadSuccess={handleUploadSuccess}
@@ -405,21 +403,19 @@ const GuidQuestionSetModal: React.FC<GuidQuestionSetModalProps> = ({
         </Form.Item>
         <Form.Item
           name="info"
-          label={t(
-            'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.displayInfo',
-          )}
+          label={t('PC.Pages.AgentArrangeGuidQuestionSetModal.displayInfo')}
           rules={[
             {
               required: true,
               message: t(
-                'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoRequired',
+                'PC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoRequired',
               ),
             },
           ]}
         >
           <Input
             placeholder={t(
-              'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoPlaceholder',
+              'PC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoPlaceholder',
             )}
             showCount
             maxLength={30}
@@ -427,11 +423,11 @@ const GuidQuestionSetModal: React.FC<GuidQuestionSetModalProps> = ({
         </Form.Item>
         <Form.Item
           name="type"
-          label={t('NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.type')}
+          label={t('PC.Pages.AgentArrangeGuidQuestionSetModal.type')}
         >
           <SelectList
             placeholder={t(
-              'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.typePlaceholder',
+              'PC.Pages.AgentArrangeGuidQuestionSetModal.typePlaceholder',
             )}
             options={guidQuestionTypeOptions}
             onChange={handleChangeType}
@@ -440,19 +436,19 @@ const GuidQuestionSetModal: React.FC<GuidQuestionSetModalProps> = ({
         {type === GuidQuestionSetTypeEnum.Page ? (
           <Form.Item
             name="pageUriId"
-            label={t('NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.pagePath')}
+            label={t('PC.Pages.AgentArrangeGuidQuestionSetModal.pagePath')}
             rules={[
               {
                 required: true,
                 message: t(
-                  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.pagePathRequired',
+                  'PC.Pages.AgentArrangeGuidQuestionSetModal.pagePathRequired',
                 ),
               },
             ]}
           >
             <SelectList
               placeholder={t(
-                'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.pagePathPlaceholder',
+                'PC.Pages.AgentArrangeGuidQuestionSetModal.pagePathPlaceholder',
               )}
               options={pathList as any}
               onChange={changePagePath}
@@ -462,14 +458,12 @@ const GuidQuestionSetModal: React.FC<GuidQuestionSetModalProps> = ({
           type === GuidQuestionSetTypeEnum.Link && (
             <Form.Item
               name="url"
-              label={t(
-                'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.linkUrl',
-              )}
+              label={t('PC.Pages.AgentArrangeGuidQuestionSetModal.linkUrl')}
               rules={[
                 {
                   required: true,
                   message: t(
-                    'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlRequired',
+                    'PC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlRequired',
                   ),
                 },
                 {
@@ -480,7 +474,7 @@ const GuidQuestionSetModal: React.FC<GuidQuestionSetModalProps> = ({
                     return Promise.reject(
                       new Error(
                         t(
-                          'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlInvalid',
+                          'PC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlInvalid',
                         ),
                       ),
                     );
@@ -505,11 +499,11 @@ const GuidQuestionSetModal: React.FC<GuidQuestionSetModalProps> = ({
                 onClick={() => setIsActive(!isActive)}
               />
               <span className={cx('user-select-none')}>
-                {t('NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.input')}
+                {t('PC.Pages.AgentArrangeGuidQuestionSetModal.input')}
               </span>
               <TooltipIcon
                 title={t(
-                  'NuwaxPC.Pages.AgentArrangeGuidQuestionSetModal.configInputArgs',
+                  'PC.Pages.AgentArrangeGuidQuestionSetModal.configInputArgs',
                 )}
                 icon={<InfoCircleOutlined />}
               />

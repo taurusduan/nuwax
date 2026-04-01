@@ -31,7 +31,7 @@ const McpInstallTypeMap: Record<
     styleClassName: styles['streamable-http'],
   },
   [McpInstallTypeEnum.COMPONENT]: {
-    title: dict('NuwaxPC.Components.McpInstallType.componentLibrary'),
+    title: dict('PC.Components.McpInstallType.componentLibrary'),
     styleClassName: styles.component,
   },
 };

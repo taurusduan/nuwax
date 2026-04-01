@@ -95,9 +95,7 @@ const PageCreateModal: React.FC<PageCreateModalProps> = ({
       // 校验文件是否存在
       if (!file) {
         message.error(
-          dict(
-            'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseUploadZip',
-          ),
+          dict('PC.Pages.SpacePageDevelop.PageCreateModal.pleaseUploadZip'),
         );
         return;
       }
@@ -107,7 +105,7 @@ const PageCreateModal: React.FC<PageCreateModalProps> = ({
 
       if (!isZip) {
         message.error(
-          dict('NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.zipOnly'),
+          dict('PC.Pages.SpacePageDevelop.PageCreateModal.zipOnly'),
         );
         return;
       }
@@ -176,7 +174,7 @@ const PageCreateModal: React.FC<PageCreateModalProps> = ({
 
       if (!isZip) {
         message.error(
-          dict('NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.zipOnly'),
+          dict('PC.Pages.SpacePageDevelop.PageCreateModal.zipOnly'),
         );
         return Upload.LIST_IGNORE; // 阻止文件被添加到fileList
       }
@@ -215,7 +213,7 @@ const PageCreateModal: React.FC<PageCreateModalProps> = ({
     <CustomFormModal
       form={form}
       open={open}
-      title={dict('NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.createApp')}
+      title={dict('PC.Pages.SpacePageDevelop.PageCreateModal.createApp')}
       loading={loading}
       classNames={{
         content: styles['modal-content'],
@@ -235,19 +233,19 @@ const PageCreateModal: React.FC<PageCreateModalProps> = ({
       >
         <Form.Item
           name="projectName"
-          label={dict('NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.name')}
+          label={dict('PC.Pages.SpacePageDevelop.PageCreateModal.name')}
           rules={[
             {
               required: true,
               message: dict(
-                'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterName',
+                'PC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterName',
               ),
             },
           ]}
         >
           <Input
             placeholder={dict(
-              'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterName',
+              'PC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterName',
             )}
             showCount
             maxLength={50}
@@ -255,17 +253,15 @@ const PageCreateModal: React.FC<PageCreateModalProps> = ({
         </Form.Item>
         <OverrideTextArea
           name="projectDesc"
-          label={dict(
-            'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.description',
-          )}
+          label={dict('PC.Pages.SpacePageDevelop.PageCreateModal.description')}
           placeholder={dict(
-            'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterDescription',
+            'PC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterDescription',
           )}
           maxLength={200}
         />
         <Form.Item
           name="icon"
-          label={dict('NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.icon')}
+          label={dict('PC.Pages.SpacePageDevelop.PageCreateModal.icon')}
         >
           <UploadAvatar
             onUploadSuccess={uploadIconSuccess}
@@ -285,11 +281,11 @@ const PageCreateModal: React.FC<PageCreateModalProps> = ({
               </p>
               <p className="ant-upload-text">
                 {dict(
-                  'NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.uploadDragText',
+                  'PC.Pages.SpacePageDevelop.PageCreateModal.uploadDragText',
                 )}
               </p>
               <p className="ant-upload-hint">
-                {dict('NuwaxPC.Pages.SpacePageDevelop.PageCreateModal.zipOnly')}
+                {dict('PC.Pages.SpacePageDevelop.PageCreateModal.zipOnly')}
               </p>
             </Dragger>
           </Form.Item>

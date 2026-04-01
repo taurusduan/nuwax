@@ -58,11 +58,11 @@ const SkillPage: React.FC = () => {
   const handleDelete = useCallback(async (record: SystemSkillInfo) => {
     const response = await apiSystemResourceSkillDelete({ id: record.id });
     if (response.code === SUCCESS_CODE) {
-      message.success(t('NuwaxPC.Pages.SystemContentSkill.deleteSuccess'));
+      message.success(t('PC.Pages.SystemContentSkill.deleteSuccess'));
       actionRef.current?.reload();
     } else {
       message.error(
-        response.message || t('NuwaxPC.Pages.SystemContentSkill.deleteFailed'),
+        response.message || t('PC.Pages.SystemContentSkill.deleteFailed'),
       );
     }
   }, []);
@@ -74,20 +74,20 @@ const SkillPage: React.FC = () => {
     (record: SystemSkillInfo): ActionItem<SystemSkillInfo>[] => [
       {
         key: 'view',
-        label: t('NuwaxPC.Pages.SystemContentSkill.view'),
+        label: t('PC.Pages.SystemContentSkill.view'),
         disabled: !hasPermission('content_skill_query_detail'),
         onClick: handleView,
       },
       {
         key: 'delete',
-        label: t('NuwaxPC.Pages.SystemContentSkill.delete'),
+        label: t('PC.Pages.SystemContentSkill.delete'),
         confirm: {
           title: t(
-            'NuwaxPC.Pages.SystemContentSkill.deleteConfirmTitle',
+            'PC.Pages.SystemContentSkill.deleteConfirmTitle',
             record.name,
           ),
           description: t(
-            'NuwaxPC.Pages.SystemContentSkill.deleteConfirmDescription',
+            'PC.Pages.SystemContentSkill.deleteConfirmDescription',
           ),
         },
         disabled: !hasPermission('content_skill_delete'),
@@ -102,31 +102,31 @@ const SkillPage: React.FC = () => {
    */
   const columns: ProColumns<SystemSkillInfo>[] = [
     {
-      title: t('NuwaxPC.Pages.SystemContentSkill.columnName'),
+      title: t('PC.Pages.SystemContentSkill.columnName'),
       dataIndex: 'name',
       width: 180,
       ellipsis: true,
       fieldProps: {
-        placeholder: t('NuwaxPC.Pages.SystemContentSkill.searchName'),
+        placeholder: t('PC.Pages.SystemContentSkill.searchName'),
         allowClear: true,
       },
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentSkill.columnDescription'),
+      title: t('PC.Pages.SystemContentSkill.columnDescription'),
       dataIndex: 'description',
       width: 250,
       ellipsis: true,
       hideInSearch: true,
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentSkill.columnCreator'),
+      title: t('PC.Pages.SystemContentSkill.columnCreator'),
       dataIndex: 'creatorName',
       width: 120,
       ellipsis: true,
       hideInSearch: false,
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentSkill.columnCreated'),
+      title: t('PC.Pages.SystemContentSkill.columnCreated'),
       dataIndex: 'created',
       align: 'center',
       width: 170,
@@ -134,7 +134,7 @@ const SkillPage: React.FC = () => {
       valueType: 'dateTime',
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentSkill.columnAction'),
+      title: t('PC.Pages.SystemContentSkill.columnAction'),
       valueType: 'option',
       fixed: 'right',
       align: 'center',
@@ -173,7 +173,7 @@ const SkillPage: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={t('NuwaxPC.Pages.SystemContentSkill.pageTitle')}
+      title={t('PC.Pages.SystemContentSkill.pageTitle')}
       hideScroll
     >
       <XProTable<SystemSkillInfo>

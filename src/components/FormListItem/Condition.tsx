@@ -5,33 +5,81 @@ import { Form, Select } from 'antd';
 // import { useModel } from 'umi';
 
 const options = [
-  { label: dict('NuwaxPC.Components.FormListItem.conditionEqual'), value: 'EQUAL', displayValue: '=' },
-  { label: dict('NuwaxPC.Components.FormListItem.conditionNotEqual'), value: 'NOT_EQUAL', displayValue: '≠' },
-  { label: dict('NuwaxPC.Components.FormListItem.conditionGreaterThan'), value: 'GREATER_THAN', displayValue: '>' },
   {
-    label: dict('NuwaxPC.Components.FormListItem.conditionGreaterThanOrEqual'),
+    label: dict('PC.Components.FormListItem.conditionEqual'),
+    value: 'EQUAL',
+    displayValue: '=',
+  },
+  {
+    label: dict('PC.Components.FormListItem.conditionNotEqual'),
+    value: 'NOT_EQUAL',
+    displayValue: '≠',
+  },
+  {
+    label: dict('PC.Components.FormListItem.conditionGreaterThan'),
+    value: 'GREATER_THAN',
+    displayValue: '>',
+  },
+  {
+    label: dict('PC.Components.FormListItem.conditionGreaterThanOrEqual'),
     value: 'GREATER_THAN_OR_EQUAL',
     displayValue: '≥',
   },
-  { label: dict('NuwaxPC.Components.FormListItem.conditionLessThan'), value: 'LESS_THAN', displayValue: '<' },
-  { label: dict('NuwaxPC.Components.FormListItem.conditionLessThanOrEqual'), value: 'LESS_THAN_OR_EQUAL', displayValue: '≤' },
-  { label: dict('NuwaxPC.Components.FormListItem.conditionLengthGreaterThan'), value: 'LENGTH_GREATER_THAN', displayValue: '>' },
   {
-    label: dict('NuwaxPC.Components.FormListItem.conditionLengthGreaterThanOrEqual'),
+    label: dict('PC.Components.FormListItem.conditionLessThan'),
+    value: 'LESS_THAN',
+    displayValue: '<',
+  },
+  {
+    label: dict('PC.Components.FormListItem.conditionLessThanOrEqual'),
+    value: 'LESS_THAN_OR_EQUAL',
+    displayValue: '≤',
+  },
+  {
+    label: dict('PC.Components.FormListItem.conditionLengthGreaterThan'),
+    value: 'LENGTH_GREATER_THAN',
+    displayValue: '>',
+  },
+  {
+    label: dict('PC.Components.FormListItem.conditionLengthGreaterThanOrEqual'),
     value: 'LENGTH_GREATER_THAN_OR_EQUAL',
     displayValue: '≥',
   },
-  { label: dict('NuwaxPC.Components.FormListItem.conditionLengthLessThan'), value: 'LENGTH_LESS_THAN', displayValue: '<' },
   {
-    label: dict('NuwaxPC.Components.FormListItem.conditionLengthLessThanOrEqual'),
+    label: dict('PC.Components.FormListItem.conditionLengthLessThan'),
+    value: 'LENGTH_LESS_THAN',
+    displayValue: '<',
+  },
+  {
+    label: dict('PC.Components.FormListItem.conditionLengthLessThanOrEqual'),
     value: 'LENGTH_LESS_THAN_OR_EQUAL',
     displayValue: '≤',
   },
-  { label: dict('NuwaxPC.Components.FormListItem.conditionContains'), value: 'CONTAINS', displayValue: '⊃' },
-  { label: dict('NuwaxPC.Components.FormListItem.conditionNotContains'), value: 'NOT_CONTAINS', displayValue: '⊅' },
-  { label: dict('NuwaxPC.Components.FormListItem.conditionMatchRegex'), value: 'MATCH_REGEX', displayValue: '~' },
-  { label: dict('NuwaxPC.Components.FormListItem.conditionIsNull'), value: 'IS_NULL', displayValue: '∅' },
-  { label: dict('NuwaxPC.Components.FormListItem.conditionNotNull'), value: 'NOT_NULL', displayValue: '!∅' },
+  {
+    label: dict('PC.Components.FormListItem.conditionContains'),
+    value: 'CONTAINS',
+    displayValue: '⊃',
+  },
+  {
+    label: dict('PC.Components.FormListItem.conditionNotContains'),
+    value: 'NOT_CONTAINS',
+    displayValue: '⊅',
+  },
+  {
+    label: dict('PC.Components.FormListItem.conditionMatchRegex'),
+    value: 'MATCH_REGEX',
+    displayValue: '~',
+  },
+  {
+    label: dict('PC.Components.FormListItem.conditionIsNull'),
+    value: 'IS_NULL',
+    displayValue: '∅',
+  },
+  {
+    label: dict('PC.Components.FormListItem.conditionNotNull'),
+    value: 'NOT_NULL',
+    displayValue: '!∅',
+  },
 ];
 
 const ConditionItem: React.FC<ConditionProps> = ({
@@ -97,7 +145,7 @@ const ConditionItem: React.FC<ConditionProps> = ({
           popupMatchSelectWidth={false}
           options={options}
           optionLabelProp="displayValue"
-          placeholder={dict('NuwaxPC.Common.Global.pleaseSelect')}
+          placeholder={dict('PC.Common.Global.pleaseSelect')}
           style={{ width: 55 }}
           onChange={changeConditionType}
         ></Select>

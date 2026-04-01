@@ -3,11 +3,11 @@
  * 基于 Tiptap 的变量输入组件，支持 @ mentions 和 { 变量插入
  */
 
+import { dict } from '@/services/i18nRuntime';
 import { TextSelection } from '@tiptap/pm/state';
 import type { Editor } from '@tiptap/react';
 import { EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import { dict } from '@/services/i18nRuntime';
 import { theme } from 'antd';
 import { isEqual } from 'lodash';
 import React, { useEffect, useMemo, useRef } from 'react';
@@ -42,7 +42,7 @@ const TiptapVariableInputInner: React.FC<TiptapVariableInputProps> = ({
   variables = [],
   skills = [],
   mentions = [],
-  placeholder = dict('NuwaxPC.Components.TiptapVariableInput.placeholder'),
+  placeholder = dict('PC.Components.TiptapVariableInput.placeholder'),
   disabled = false,
   readonly = false,
   className,

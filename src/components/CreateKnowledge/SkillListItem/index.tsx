@@ -26,7 +26,10 @@ const SkillListItem: React.FC<{
     </div>
     <div className={cx(styles['mask-layer-style'])}>
       <div style={{ color: '#fff', backgroundColor: 'transparent' }}>
-        <Popover content={dict('NuwaxPC.Components.CreateKnowledge.remove')} trigger="hover">
+        <Popover
+          content={dict('PC.Components.CreateKnowledge.remove')}
+          trigger="hover"
+        >
           <DeleteOutlined
             className="ml-12  white"
             style={{ cursor: 'pointer' }}

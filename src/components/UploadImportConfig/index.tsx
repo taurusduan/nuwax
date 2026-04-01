@@ -30,13 +30,18 @@ const UploadImportConfig: React.FC<UploadImportConfigProps> = ({
       const code = info.file.response?.code;
       if (code === SUCCESS_CODE) {
         onUploadSuccess?.();
-        message.success(dict('NuwaxPC.Components.UploadImportConfig.importSuccess'));
+        message.success(dict('PC.Components.UploadImportConfig.importSuccess'));
       } else {
         message.warning(info.file.response?.message);
       }
     } else if (info.file.status === 'error') {
       setLoading(false);
-      message.error(dict('NuwaxPC.Components.UploadImportConfig.uploadFailed').replace('{0}', info.file.name));
+      message.error(
+        dict('PC.Components.UploadImportConfig.uploadFailed').replace(
+          '{0}',
+          info.file.name,
+        ),
+      );
     }
   };
 
@@ -44,11 +49,10 @@ const UploadImportConfig: React.FC<UploadImportConfigProps> = ({
     e.stopPropagation();
     e.preventDefault();
     Modal.confirm({
-      title: dict('NuwaxPC.Components.UploadImportConfig.notice'),
-      content:
-        dict('NuwaxPC.Components.UploadImportConfig.checkConfigHint'),
-      okText: dict('NuwaxPC.Common.Global.confirm'),
-      cancelText: dict('NuwaxPC.Common.Global.cancel'),
+      title: dict('PC.Components.UploadImportConfig.notice'),
+      content: dict('PC.Components.UploadImportConfig.checkConfigHint'),
+      okText: dict('PC.Common.Global.confirm'),
+      cancelText: dict('PC.Common.Global.cancel'),
       onOk: () => {
         // 手动触发文件选择
         if (buttonRef.current) {
@@ -71,7 +75,7 @@ const UploadImportConfig: React.FC<UploadImportConfigProps> = ({
       fileName.endsWith('.workflow') ||
       fileName.endsWith('.plugin');
     if (!isValidFile) {
-      message.error(dict('NuwaxPC.Components.UploadImportConfig.invalidFileType'));
+      message.error(dict('PC.Components.UploadImportConfig.invalidFileType'));
     }
     return isValidFile || Upload.LIST_IGNORE;
   };
@@ -93,7 +97,7 @@ const UploadImportConfig: React.FC<UploadImportConfigProps> = ({
         <Button ref={buttonRef} />
       </Upload>
       <Button loading={loading} icon={<UploadOutlined />} onClick={handleClick}>
-        {dict('NuwaxPC.Components.UploadImportConfig.importConfig')}
+        {dict('PC.Components.UploadImportConfig.importConfig')}
       </Button>
     </>
   );

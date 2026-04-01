@@ -951,7 +951,7 @@ const Workflow: React.FC = () => {
     // typeLoop
     if (foldWrapItem.type === NodeTypeEnum.Loop || foldWrapItem.loopNodeId) {
       if (_params.type === NodeTypeEnum.Loop) {
-        message.warning(t('NuwaxPC.Pages.AntvX6Workflow.cannotNestLoop'));
+        message.warning(t('PC.Pages.AntvX6Workflow.cannotNestLoop'));
         return false;
       }
       _params.loopNodeId =
@@ -1109,9 +1109,7 @@ const Workflow: React.FC = () => {
         },
       };
     } else {
-      message.warning(
-        t('NuwaxPC.Pages.AntvX6Workflow.unsupportedComponentType'),
-      );
+      message.warning(t('PC.Pages.AntvX6Workflow.unsupportedComponentType'));
       return;
     }
 
@@ -1883,7 +1881,7 @@ const WorkflowEntry: React.FC = () => {
           >
             <Spin
               size="large"
-              tip={t('NuwaxPC.Pages.AntvX6Workflow.loadingV3Version')}
+              tip={t('PC.Pages.AntvX6Workflow.loadingV3Version')}
             />
           </div>
         }

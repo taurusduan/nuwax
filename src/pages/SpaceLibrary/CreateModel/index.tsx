@@ -7,12 +7,12 @@ import {
   MODEL_STRATEGY_LIST,
   MODEL_TYPE_LIST,
 } from '@/constants/library.constants';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiModelInfo,
   apiModelSave,
   apiModelTestConnectivity,
 } from '@/services/modelConfig';
-import { dict } from '@/services/i18nRuntime';
 import { CreateUpdateModeEnum } from '@/types/enums/common';
 import {
   ModelApiProtocolEnum,
@@ -102,7 +102,9 @@ const CreateModel: React.FC<CreateModelProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.testConnectionSuccess'));
+      message.success(
+        dict('PC.Pages.SpaceLibrary.CreateModel.testConnectionSuccess'),
+      );
       setLoadingTestConnection(false);
     },
     onError: () => {
@@ -123,8 +125,8 @@ const CreateModel: React.FC<CreateModelProps> = ({
     onSuccess: (_: null, params: ModelSaveParams[]) => {
       message.success(
         mode === CreateUpdateModeEnum.Create
-          ? dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.modelCreateSuccess')
-          : dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.modelUpdateSuccess'),
+          ? dict('PC.Pages.SpaceLibrary.CreateModel.modelCreateSuccess')
+          : dict('PC.Pages.SpaceLibrary.CreateModel.modelUpdateSuccess'),
       );
       setLoading(false);
       const info = params[0];
@@ -170,7 +172,11 @@ const CreateModel: React.FC<CreateModelProps> = ({
 
   return (
     <Modal
-      title={mode === CreateUpdateModeEnum.Create ? dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.addModel') : dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.updateModel')}
+      title={
+        mode === CreateUpdateModeEnum.Create
+          ? dict('PC.Pages.SpaceLibrary.CreateModel.addModel')
+          : dict('PC.Pages.SpaceLibrary.CreateModel.updateModel')
+      }
       open={open}
       classNames={{
         content: cx(styles.container),
@@ -191,10 +197,10 @@ const CreateModel: React.FC<CreateModelProps> = ({
             )}
             disabled={!submittable}
           >
-            {dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.testConnection')}
+            {dict('PC.Pages.SpaceLibrary.CreateModel.testConnection')}
           </Button>
           <Button className={cx(styles.btn)} type="default" onClick={onCancel}>
-            {dict('NuwaxPC.Common.Global.cancel')}
+            {dict('PC.Common.Global.cancel')}
           </Button>
           <Button
             type="primary"
@@ -203,7 +209,7 @@ const CreateModel: React.FC<CreateModelProps> = ({
             className={cx(!submittable && styles['confirm-btn'], styles.btn)}
             disabled={!submittable}
           >
-            {dict('NuwaxPC.Common.Global.confirm')}
+            {dict('PC.Common.Global.confirm')}
           </Button>
         </>
       }
@@ -233,27 +239,58 @@ const CreateModel: React.FC<CreateModelProps> = ({
           <Form.Item
             className={cx('flex-1')}
             name="name"
-            label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.modelName')}
-            rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelName') }]}
+            label={dict('PC.Pages.SpaceLibrary.CreateModel.modelName')}
+            rules={[
+              {
+                required: true,
+                message: dict(
+                  'PC.Pages.SpaceLibrary.CreateModel.inputModelName',
+                ),
+              },
+            ]}
           >
-            <Input placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelName')} />
+            <Input
+              placeholder={dict(
+                'PC.Pages.SpaceLibrary.CreateModel.inputModelName',
+              )}
+            />
           </Form.Item>
           <Form.Item
             className={cx('flex-1')}
             name="model"
-            label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.modelIdentifier')}
-            rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelIdentifier') }]}
+            label={dict('PC.Pages.SpaceLibrary.CreateModel.modelIdentifier')}
+            rules={[
+              {
+                required: true,
+                message: dict(
+                  'PC.Pages.SpaceLibrary.CreateModel.inputModelIdentifier',
+                ),
+              },
+            ]}
           >
-            <Input placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelIdentifier')} />
+            <Input
+              placeholder={dict(
+                'PC.Pages.SpaceLibrary.CreateModel.inputModelIdentifier',
+              )}
+            />
           </Form.Item>
         </div>
         <Form.Item
           name="description"
-          label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.modelDescription')}
-          rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelDescription') }]}
+          label={dict('PC.Pages.SpaceLibrary.CreateModel.modelDescription')}
+          rules={[
+            {
+              required: true,
+              message: dict(
+                'PC.Pages.SpaceLibrary.CreateModel.inputModelDescription',
+              ),
+            },
+          ]}
         >
           <Input.TextArea
-            placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputModelDescription')}
+            placeholder={dict(
+              'PC.Pages.SpaceLibrary.CreateModel.inputModelDescription',
+            )}
             className="dispose-textarea-count"
             showCount
             maxLength={100}
@@ -263,9 +300,16 @@ const CreateModel: React.FC<CreateModelProps> = ({
         <div className={cx('flex', styles['gap-16'])}>
           <Form.Item
             name="type"
-            label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.modelType')}
+            label={dict('PC.Pages.SpaceLibrary.CreateModel.modelType')}
             className={cx('flex-1')}
-            rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.selectModelType') }]}
+            rules={[
+              {
+                required: true,
+                message: dict(
+                  'PC.Pages.SpaceLibrary.CreateModel.selectModelType',
+                ),
+              },
+            ]}
           >
             <Select
               onChange={setModelType}
@@ -276,19 +320,27 @@ const CreateModel: React.FC<CreateModelProps> = ({
                   ModelTypeEnum.Multi,
                 ].includes(v.value),
               )}
-              placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.selectModelType')}
+              placeholder={dict(
+                'PC.Pages.SpaceLibrary.CreateModel.selectModelType',
+              )}
             />
           </Form.Item>
           {modelType !== ModelTypeEnum.Embeddings && (
             <Form.Item
               name="isReasonModel"
               className={cx('flex-1')}
-              label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.reasoningModel')}
+              label={dict('PC.Pages.SpaceLibrary.CreateModel.reasoningModel')}
             >
               <Radio.Group
                 options={[
-                  { label: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.yes'), value: 1 },
-                  { label: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.no'), value: 0 },
+                  {
+                    label: dict('PC.Pages.SpaceLibrary.CreateModel.yes'),
+                    value: 1,
+                  },
+                  {
+                    label: dict('PC.Pages.SpaceLibrary.CreateModel.no'),
+                    value: 0,
+                  },
                 ]}
               />
             </Form.Item>
@@ -296,9 +348,16 @@ const CreateModel: React.FC<CreateModelProps> = ({
           <ConditionRender condition={modelType === ModelTypeEnum.Embeddings}>
             <Form.Item
               name="dimension"
-              label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.vectorDimension')}
+              label={dict('PC.Pages.SpaceLibrary.CreateModel.vectorDimension')}
               className={cx('flex-1')}
-              rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputVectorDimension') }]}
+              rules={[
+                {
+                  required: true,
+                  message: dict(
+                    'PC.Pages.SpaceLibrary.CreateModel.inputVectorDimension',
+                  ),
+                },
+              ]}
             >
               <InputNumber className={cx('w-full')} min={0} />
             </Form.Item>
@@ -310,28 +369,53 @@ const CreateModel: React.FC<CreateModelProps> = ({
             <Form.Item
               name="maxTokens"
               className={cx('flex-1')}
-              label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.maxOutputTokens')}
-              rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputMaxOutputTokens') }]}
+              label={dict('PC.Pages.SpaceLibrary.CreateModel.maxOutputTokens')}
+              rules={[
+                {
+                  required: true,
+                  message: dict(
+                    'PC.Pages.SpaceLibrary.CreateModel.inputMaxOutputTokens',
+                  ),
+                },
+              ]}
             >
               <InputNumber className={cx('w-full')} min={0} />
             </Form.Item>
             <Form.Item
               name="maxContextTokens"
               className={cx('flex-1')}
-              label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.maxContextLength')}
-              rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputMaxContextLength') }]}
+              label={dict('PC.Pages.SpaceLibrary.CreateModel.maxContextLength')}
+              rules={[
+                {
+                  required: true,
+                  message: dict(
+                    'PC.Pages.SpaceLibrary.CreateModel.inputMaxContextLength',
+                  ),
+                },
+              ]}
             >
               <InputNumber className={cx('w-full')} min={0} />
             </Form.Item>
           </div>
           <Form.Item
             name="functionCall"
-            label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.functionCallSupport')}
-            rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.functionCallSupport') }]}
+            label={dict(
+              'PC.Pages.SpaceLibrary.CreateModel.functionCallSupport',
+            )}
+            rules={[
+              {
+                required: true,
+                message: dict(
+                  'PC.Pages.SpaceLibrary.CreateModel.functionCallSupport',
+                ),
+              },
+            ]}
           >
             <Select
               options={MODEL_FUNCTION_CALL_LIST}
-              placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.selectFunctionCallSupport')}
+              placeholder={dict(
+                'PC.Pages.SpaceLibrary.CreateModel.selectFunctionCallSupport',
+              )}
             />
           </Form.Item>
         </ConditionRender>
@@ -341,9 +425,11 @@ const CreateModel: React.FC<CreateModelProps> = ({
           name="enabled"
           label={
             <div className={cx('flex', 'items-center')}>
-              <span>{dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.enableModel')}</span>
+              <span>
+                {dict('PC.Pages.SpaceLibrary.CreateModel.enableModel')}
+              </span>
               <TooltipIcon
-                title={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.disableTooltip')}
+                title={dict('PC.Pages.SpaceLibrary.CreateModel.disableTooltip')}
                 icon={<InfoCircleOutlined />}
               />
             </div>
@@ -351,45 +437,77 @@ const CreateModel: React.FC<CreateModelProps> = ({
         >
           <Radio.Group
             options={[
-              { label: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.enable'), value: ModelComponentStatusEnum.Enabled },
-              { label: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.disable'), value: ModelComponentStatusEnum.Disabled },
+              {
+                label: dict('PC.Pages.SpaceLibrary.CreateModel.enable'),
+                value: ModelComponentStatusEnum.Enabled,
+              },
+              {
+                label: dict('PC.Pages.SpaceLibrary.CreateModel.disable'),
+                value: ModelComponentStatusEnum.Disabled,
+              },
             ]}
           />
         </Form.Item>
 
         <Form.Item
           name="apiProtocol"
-          label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.apiProtocol')}
-          rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.selectApiProtocol') }]}
+          label={dict('PC.Pages.SpaceLibrary.CreateModel.apiProtocol')}
+          rules={[
+            {
+              required: true,
+              message: dict(
+                'PC.Pages.SpaceLibrary.CreateModel.selectApiProtocol',
+              ),
+            },
+          ]}
         >
           <Select
             options={MODEL_API_PROTOCOL_LIST}
-            placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.selectApiProtocol')}
+            placeholder={dict(
+              'PC.Pages.SpaceLibrary.CreateModel.selectApiProtocol',
+            )}
           />
         </Form.Item>
         {/* 隐藏调用策略, 但不去掉，默认选择轮询 -- start */}
-        <Form.Item label={<LabelStar label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.apiConfig')} />} noStyle>
+        <Form.Item
+          label={
+            <LabelStar
+              label={dict('PC.Pages.SpaceLibrary.CreateModel.apiConfig')}
+            />
+          }
+          noStyle
+        >
           <div className={cx(styles.hide)}>
             <Form.Item noStyle>
-              <p>{dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.callStrategy')}</p>
+              <p>{dict('PC.Pages.SpaceLibrary.CreateModel.callStrategy')}</p>
             </Form.Item>
             <Form.Item
               className={cx('mb-0')}
               noStyle
               name="strategy"
-              rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.apiConfig') }]}
+              rules={[
+                {
+                  required: true,
+                  message: dict('PC.Pages.SpaceLibrary.CreateModel.apiConfig'),
+                },
+              ]}
             >
               <Select
                 options={MODEL_STRATEGY_LIST}
                 rootClassName={styles.select}
-                placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.selectCallStrategy')}
+                placeholder={dict(
+                  'PC.Pages.SpaceLibrary.CreateModel.selectCallStrategy',
+                )}
               />
             </Form.Item>
           </div>
         </Form.Item>
         {/* 隐藏调用策略 -- end */}
         <Form.Item noStyle>
-          <LabelStar label={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.apiConfig')} className={cx(styles['weight-600'])} />
+          <LabelStar
+            label={dict('PC.Pages.SpaceLibrary.CreateModel.apiConfig')}
+            className={cx(styles['weight-600'])}
+          />
         </Form.Item>
         <Form.List name="apiInfoList">
           {(fields, { add, remove }) => (
@@ -404,25 +522,62 @@ const CreateModel: React.FC<CreateModelProps> = ({
                     {...restField}
                     label={key === 0 ? 'URL' : ''}
                     name={[name, 'url']}
-                    rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputUrl') }]}
+                    rules={[
+                      {
+                        required: true,
+                        message: dict(
+                          'PC.Pages.SpaceLibrary.CreateModel.inputUrl',
+                        ),
+                      },
+                    ]}
                   >
-                    <Input placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputUrl')} />
+                    <Input
+                      placeholder={dict(
+                        'PC.Pages.SpaceLibrary.CreateModel.inputUrl',
+                      )}
+                    />
                   </Form.Item>
                   <Form.Item
                     {...restField}
                     label={key === 0 ? 'API KEY' : ''}
                     name={[name, 'key']}
-                    rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputApiKey') }]}
+                    rules={[
+                      {
+                        required: true,
+                        message: dict(
+                          'PC.Pages.SpaceLibrary.CreateModel.inputApiKey',
+                        ),
+                      },
+                    ]}
                   >
-                    <Input placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputApiKey')} />
+                    <Input
+                      placeholder={dict(
+                        'PC.Pages.SpaceLibrary.CreateModel.inputApiKey',
+                      )}
+                    />
                   </Form.Item>
                   <Form.Item
                     {...restField}
-                    label={key === 0 ? dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.weight') : ''}
+                    label={
+                      key === 0
+                        ? dict('PC.Pages.SpaceLibrary.CreateModel.weight')
+                        : ''
+                    }
                     name={[name, 'weight']}
-                    rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputWeight') }]}
+                    rules={[
+                      {
+                        required: true,
+                        message: dict(
+                          'PC.Pages.SpaceLibrary.CreateModel.inputWeight',
+                        ),
+                      },
+                    ]}
                   >
-                    <InputNumber placeholder={dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputWeight')} />
+                    <InputNumber
+                      placeholder={dict(
+                        'PC.Pages.SpaceLibrary.CreateModel.inputWeight',
+                      )}
+                    />
                   </Form.Item>
                   <Form.Item
                     label={
@@ -434,7 +589,14 @@ const CreateModel: React.FC<CreateModelProps> = ({
                         ''
                       )
                     }
-                    rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceLibrary.CreateModel.inputWeight') }]}
+                    rules={[
+                      {
+                        required: true,
+                        message: dict(
+                          'PC.Pages.SpaceLibrary.CreateModel.inputWeight',
+                        ),
+                      },
+                    ]}
                   >
                     {key !== 0 && (
                       <DeleteOutlined onClick={() => remove(name)} />

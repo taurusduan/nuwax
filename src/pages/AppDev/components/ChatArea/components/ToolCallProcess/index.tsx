@@ -49,35 +49,34 @@ const ToolCallProcess: React.FC<ToolCallProcessProps> = ({
     // 根据 type 添加不同的前缀
     const typePrefix =
       type === 'tool_call_update'
-        ? t('NuwaxPC.Pages.AppDevToolCallProcess.updatePrefix')
+        ? t('PC.Pages.AppDevToolCallProcess.updatePrefix')
         : '';
 
     switch (kind) {
       case 'read':
         return `${typePrefix}${t(
-          'NuwaxPC.Pages.AppDevToolCallProcess.readFile',
+          'PC.Pages.AppDevToolCallProcess.readFile',
           `${filePath}${lineInfo}`,
         )}`;
       case 'edit':
         return `${typePrefix}${t(
-          'NuwaxPC.Pages.AppDevToolCallProcess.editFile',
+          'PC.Pages.AppDevToolCallProcess.editFile',
           `${filePath}${lineInfo}`,
         )}`;
       case 'write':
         return `${typePrefix}${t(
-          'NuwaxPC.Pages.AppDevToolCallProcess.createFile',
+          'PC.Pages.AppDevToolCallProcess.createFile',
           filePath,
         )}`;
       case 'execute':
         return `${typePrefix}${t(
-          'NuwaxPC.Pages.AppDevToolCallProcess.executeCommand',
-          title ||
-            t('NuwaxPC.Pages.AppDevToolCallProcess.executeCommandDefault'),
+          'PC.Pages.AppDevToolCallProcess.executeCommand',
+          title || t('PC.Pages.AppDevToolCallProcess.executeCommandDefault'),
         )}`;
       default:
         return `${typePrefix}${t(
-          'NuwaxPC.Pages.AppDevToolCallProcess.genericCall',
-          title || t('NuwaxPC.Pages.AppDevToolCallProcess.toolCallDefault'),
+          'PC.Pages.AppDevToolCallProcess.genericCall',
+          title || t('PC.Pages.AppDevToolCallProcess.toolCallDefault'),
           `${filePath}${lineInfo}`,
         )}`;
     }
@@ -87,13 +86,13 @@ const ToolCallProcess: React.FC<ToolCallProcessProps> = ({
   const getStatusText = () => {
     switch (status) {
       case 'completed':
-        return t('NuwaxPC.Pages.AppDevToolCallProcess.statusCompleted');
+        return t('PC.Pages.AppDevToolCallProcess.statusCompleted');
       case 'in_progress':
-        return t('NuwaxPC.Pages.AppDevToolCallProcess.statusInProgress');
+        return t('PC.Pages.AppDevToolCallProcess.statusInProgress');
       case 'failed':
-        return t('NuwaxPC.Pages.AppDevToolCallProcess.statusFailed');
+        return t('PC.Pages.AppDevToolCallProcess.statusFailed');
       default:
-        return t('NuwaxPC.Pages.AppDevToolCallProcess.statusPending');
+        return t('PC.Pages.AppDevToolCallProcess.statusPending');
     }
   };
 
@@ -307,13 +306,13 @@ const ToolCallProcess: React.FC<ToolCallProcessProps> = ({
               <div className={styles.noContent}>
                 <div className={styles.statusInfo}>
                   <span className={styles.statusLabel}>
-                    {t('NuwaxPC.Pages.AppDevToolCallProcess.statusLabel')}
+                    {t('PC.Pages.AppDevToolCallProcess.statusLabel')}
                   </span>
                   <span className={styles.statusValue}>{getStatusText()}</span>
                 </div>
                 <div className={styles.timeInfo}>
                   <span className={styles.timeLabel}>
-                    {t('NuwaxPC.Pages.AppDevToolCallProcess.timeLabel')}
+                    {t('PC.Pages.AppDevToolCallProcess.timeLabel')}
                   </span>
                   <span className={styles.timeValue}>
                     {new Date(timestamp).toLocaleString()}
@@ -322,12 +321,10 @@ const ToolCallProcess: React.FC<ToolCallProcessProps> = ({
                 {type === 'tool_call_update' && (
                   <div className={styles.updateInfo}>
                     <span className={styles.updateLabel}>
-                      {t('NuwaxPC.Pages.AppDevToolCallProcess.typeLabel')}
+                      {t('PC.Pages.AppDevToolCallProcess.typeLabel')}
                     </span>
                     <span className={styles.updateValue}>
-                      {t(
-                        'NuwaxPC.Pages.AppDevToolCallProcess.toolCallUpdateType',
-                      )}
+                      {t('PC.Pages.AppDevToolCallProcess.toolCallUpdateType')}
                     </span>
                   </div>
                 )}

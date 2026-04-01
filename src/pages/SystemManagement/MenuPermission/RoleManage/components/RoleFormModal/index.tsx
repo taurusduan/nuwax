@@ -48,11 +48,11 @@ interface RoleFormModalProps {
 // Role source options. 1: System built-in, 2: User-defined.
 const ROLE_SOURCE_OPTIONS = [
   {
-    label: t('NuwaxPC.Pages.SystemRoleFormModal.roleSourceSystemBuiltIn'),
+    label: t('PC.Pages.SystemRoleFormModal.roleSourceSystemBuiltIn'),
     value: RoleSourceEnum.SystemBuiltIn,
   },
   {
-    label: t('NuwaxPC.Pages.SystemRoleFormModal.roleSourceUserDefined'),
+    label: t('PC.Pages.SystemRoleFormModal.roleSourceUserDefined'),
     value: RoleSourceEnum.UserDefined,
   },
 ];
@@ -90,7 +90,7 @@ const RoleFormModal: React.FC<RoleFormModalProps> = ({
   const { run: runAddRole, loading: addLoading } = useRequest(apiAddRole, {
     manual: true,
     onSuccess: () => {
-      message.success(t('NuwaxPC.Toast.SystemRoleFormModal.createSuccess'));
+      message.success(t('PC.Toast.SystemRoleFormModal.createSuccess'));
       onSuccess();
     },
   });
@@ -101,7 +101,7 @@ const RoleFormModal: React.FC<RoleFormModalProps> = ({
     {
       manual: true,
       onSuccess: () => {
-        message.success(t('NuwaxPC.Toast.SystemRoleFormModal.editSuccess'));
+        message.success(t('PC.Toast.SystemRoleFormModal.editSuccess'));
         onSuccess();
       },
     },
@@ -148,7 +148,7 @@ const RoleFormModal: React.FC<RoleFormModalProps> = ({
       }
     } catch (error) {
       console.error(
-        `${t('NuwaxPC.Pages.SystemRoleFormModal.formValidateFailed')}:`,
+        `${t('PC.Pages.SystemRoleFormModal.formValidateFailed')}:`,
         error,
       );
     }
@@ -159,15 +159,15 @@ const RoleFormModal: React.FC<RoleFormModalProps> = ({
       form={form}
       title={
         isEdit
-          ? t('NuwaxPC.Pages.SystemRoleFormModal.editTitle')
-          : t('NuwaxPC.Pages.SystemRoleFormModal.createTitle')
+          ? t('PC.Pages.SystemRoleFormModal.editTitle')
+          : t('PC.Pages.SystemRoleFormModal.createTitle')
       }
       open={open}
       loading={loading}
       okText={
         isEdit
-          ? t('NuwaxPC.Pages.SystemRoleFormModal.save')
-          : t('NuwaxPC.Pages.SystemRoleFormModal.create')
+          ? t('PC.Pages.SystemRoleFormModal.save')
+          : t('PC.Pages.SystemRoleFormModal.create')
       }
       width={650}
       onCancel={onCancel}
@@ -186,20 +186,18 @@ const RoleFormModal: React.FC<RoleFormModalProps> = ({
         <Row gutter={16}>
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemRoleFormModal.roleName')}
+              label={t('PC.Pages.SystemRoleFormModal.roleName')}
               name="name"
               rules={[
                 {
                   required: true,
-                  message: t(
-                    'NuwaxPC.Pages.SystemRoleFormModal.roleNameRequired',
-                  ),
+                  message: t('PC.Pages.SystemRoleFormModal.roleNameRequired'),
                 },
               ]}
             >
               <Input
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemRoleFormModal.roleNamePlaceholder',
+                  'PC.Pages.SystemRoleFormModal.roleNamePlaceholder',
                 )}
                 maxLength={50}
                 showCount
@@ -209,12 +207,12 @@ const RoleFormModal: React.FC<RoleFormModalProps> = ({
 
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemRoleFormModal.source')}
+              label={t('PC.Pages.SystemRoleFormModal.source')}
               name="source"
             >
               <Select
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemRoleFormModal.sourcePlaceholder',
+                  'PC.Pages.SystemRoleFormModal.sourcePlaceholder',
                 )}
                 disabled
                 options={ROLE_SOURCE_OPTIONS}
@@ -224,13 +222,11 @@ const RoleFormModal: React.FC<RoleFormModalProps> = ({
 
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemRoleFormModal.sort')}
+              label={t('PC.Pages.SystemRoleFormModal.sort')}
               name="sortIndex"
             >
               <InputNumber
-                placeholder={t(
-                  'NuwaxPC.Pages.SystemRoleFormModal.sortPlaceholder',
-                )}
+                placeholder={t('PC.Pages.SystemRoleFormModal.sortPlaceholder')}
                 className={cx('w-full')}
                 min={1}
                 max={10000}
@@ -240,30 +236,28 @@ const RoleFormModal: React.FC<RoleFormModalProps> = ({
 
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemRoleFormModal.status')}
+              label={t('PC.Pages.SystemRoleFormModal.status')}
               name="status"
               valuePropName="checked"
               tooltip={{
-                title: t('NuwaxPC.Pages.SystemRoleFormModal.statusTooltip'),
+                title: t('PC.Pages.SystemRoleFormModal.statusTooltip'),
                 icon: <InfoCircleOutlined />,
               }}
             >
               <Switch
-                checkedChildren={t('NuwaxPC.Pages.SystemRoleFormModal.enabled')}
-                unCheckedChildren={t(
-                  'NuwaxPC.Pages.SystemRoleFormModal.disabled',
-                )}
+                checkedChildren={t('PC.Pages.SystemRoleFormModal.enabled')}
+                unCheckedChildren={t('PC.Pages.SystemRoleFormModal.disabled')}
               />
             </Form.Item>
           </Col>
         </Row>
         <Form.Item
-          label={t('NuwaxPC.Pages.SystemRoleFormModal.description')}
+          label={t('PC.Pages.SystemRoleFormModal.description')}
           name="description"
         >
           <TextArea
             placeholder={t(
-              'NuwaxPC.Pages.SystemRoleFormModal.descriptionPlaceholder',
+              'PC.Pages.SystemRoleFormModal.descriptionPlaceholder',
             )}
             className="dispose-textarea-count"
             autoSize={{ minRows: 3, maxRows: 5 }}

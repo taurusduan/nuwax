@@ -65,15 +65,15 @@ const cx = classNames.bind(styles);
 const TABS: TabConfig[] = [
   {
     key: 'all',
-    label: t('NuwaxPC.Components.ChatInputHomeMentionPopup.tabAll'),
+    label: t('PC.Components.ChatInputHomeMentionPopup.tabAll'),
   },
   {
     key: 'recent',
-    label: t('NuwaxPC.Components.ChatInputHomeMentionPopup.tabRecent'),
+    label: t('PC.Components.ChatInputHomeMentionPopup.tabRecent'),
   },
   {
     key: 'favorite',
-    label: t('NuwaxPC.Components.ChatInputHomeMentionPopup.tabFavorite'),
+    label: t('PC.Components.ChatInputHomeMentionPopup.tabFavorite'),
   },
 ];
 
@@ -731,7 +731,7 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
               ref={searchInputRef}
               className={styles['mention-search-input']}
               placeholder={t(
-                'NuwaxPC.Components.ChatInputHomeMentionPopup.searchSkill',
+                'PC.Components.ChatInputHomeMentionPopup.searchSkill',
               )}
               allowClear
               value={searchInputValue}
@@ -768,18 +768,14 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
         >
           {activeTabData.loading && currentItems.length === 0 ? (
             <div className={styles['mention-empty']}>
-              {t('NuwaxPC.Components.ChatInputHomeMentionPopup.loading')}
+              {t('PC.Components.ChatInputHomeMentionPopup.loading')}
             </div>
           ) : currentItems.length === 0 ? (
             // 空状态
             <div className={styles['mention-empty']}>
               {activeTab === 'favorite'
-                ? t(
-                    'NuwaxPC.Components.ChatInputHomeMentionPopup.emptyFavorite',
-                  )
-                : t(
-                    'NuwaxPC.Components.ChatInputHomeMentionPopup.emptyNotFound',
-                  )}
+                ? t('PC.Components.ChatInputHomeMentionPopup.emptyFavorite')
+                : t('PC.Components.ChatInputHomeMentionPopup.emptyNotFound')}
             </div>
           ) : (
             // 列表项渲染，直接使用接口返回的 SkillInfoForAt 结构
@@ -821,7 +817,7 @@ const MentionPopup = React.forwardRef<MentionPopupHandle, MentionPopupProps>(
             activeTabData.page > 1 &&
             currentItems.length > 0 && (
               <div className={styles['mention-empty']}>
-                {t('NuwaxPC.Components.ChatInputHomeMentionPopup.loadingMore')}
+                {t('PC.Components.ChatInputHomeMentionPopup.loadingMore')}
               </div>
             )}
         </div>

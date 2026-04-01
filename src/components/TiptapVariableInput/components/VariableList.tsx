@@ -389,7 +389,7 @@ const VariableList: React.FC<VariableListProps> = ({
             textAlign: 'center',
           }}
         >
-          {dict('NuwaxPC.Components.VariableList.noMatchingVariable')}
+          {dict('PC.Components.VariableList.noMatchingVariable')}
         </div>
       );
     }
@@ -478,7 +478,7 @@ const VariableList: React.FC<VariableListProps> = ({
     if (regularVariables.length > 0) {
       items.push({
         key: 'variables',
-        label: dict('NuwaxPC.Components.VariableList.tabVariables'),
+        label: dict('PC.Components.VariableList.tabVariables'),
         children: renderTree(
           transformToTreeDataForTree(regularVariables, token),
         ),
@@ -488,7 +488,7 @@ const VariableList: React.FC<VariableListProps> = ({
     if (toolVariables.length > 0) {
       items.push({
         key: 'tools',
-        label: dict('NuwaxPC.Components.VariableList.tabTools'),
+        label: dict('PC.Components.VariableList.tabTools'),
         children: renderTree(transformToTreeDataForTree(toolVariables, token)),
       });
     }
@@ -496,7 +496,7 @@ const VariableList: React.FC<VariableListProps> = ({
     if (skillVariables.length > 0) {
       items.push({
         key: 'skills',
-        label: dict('NuwaxPC.Components.VariableList.tabSkills'),
+        label: dict('PC.Components.VariableList.tabSkills'),
         children: renderTree(transformToTreeDataForTree(skillVariables, token)),
       });
     }

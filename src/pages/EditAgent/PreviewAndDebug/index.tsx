@@ -361,7 +361,7 @@ const PreviewAndDebug: React.FC<PreviewAndDebugProps> = ({
     // 变量参数为空，不发送消息
     if (wholeDisabled) {
       form.validateFields(); // 触发表单验证以显示error
-      message.warning(dict('NuwaxPC.Pages.PreviewAndDebug.fillRequiredParams'));
+      message.warning(dict('PC.Pages.PreviewAndDebug.fillRequiredParams'));
       return;
     }
     // 标记用户已发送消息
@@ -402,7 +402,7 @@ const PreviewAndDebug: React.FC<PreviewAndDebugProps> = ({
     const convId = devConversationIdRef.current;
     if (!convId) {
       message.warning(
-        dict('NuwaxPC.Pages.PreviewAndDebug.convIdNotFoundFilePreview'),
+        dict('PC.Pages.PreviewAndDebug.convIdNotFoundFilePreview'),
       );
       return;
     }
@@ -429,9 +429,7 @@ const PreviewAndDebug: React.FC<PreviewAndDebugProps> = ({
   const handleOpenDesktopPanel = () => {
     const convId = devConversationIdRef.current;
     if (!convId) {
-      message.warning(
-        dict('NuwaxPC.Pages.PreviewAndDebug.convIdNotFoundDesktop'),
-      );
+      message.warning(dict('PC.Pages.PreviewAndDebug.convIdNotFoundDesktop'));
       return;
     }
 
@@ -568,7 +566,7 @@ const PreviewAndDebug: React.FC<PreviewAndDebugProps> = ({
                         {loadingMore ? (
                           <span>
                             <LoadingOutlined style={{ marginRight: 8 }} />
-                            {dict('NuwaxPC.Pages.Chat.loadingHistoryConversation')}
+                            {dict('PC.Pages.Chat.loadingHistoryConversation')}
                           </span>
                         ) : null}
                       </div>
@@ -602,7 +600,7 @@ const PreviewAndDebug: React.FC<PreviewAndDebugProps> = ({
                       )}
                     >
                       <LoadingOutlined />
-                      <span>{dict('NuwaxPC.Pages.Chat.agentExecutingWait')}</span>
+                      <span>{dict('PC.Pages.Chat.agentExecutingWait')}</span>
                     </div>
                   )}
                 </>
@@ -666,7 +664,9 @@ const PreviewAndDebug: React.FC<PreviewAndDebugProps> = ({
               agentSandboxId={conversationInfo?.agent?.sandboxId}
               hasPermission={conversationInfo?.agent?.hasPermission}
               maskText={
-                conversationInfo?.agent?.hasPermission ? '' : dict('NuwaxPC.Components.ChatInputHome.noAgentPermission')
+                conversationInfo?.agent?.hasPermission
+                  ? ''
+                  : dict('PC.Components.ChatInputHome.noAgentPermission')
               }
               fixedSelection={
                 !!conversationInfo?.agent?.sandboxId ||
@@ -676,7 +676,9 @@ const PreviewAndDebug: React.FC<PreviewAndDebugProps> = ({
               isPersonalComputer={!!conversationInfo?.agent?.sandboxId}
               // 禁用 @ 提及功能 (编排页面不支持 @ 提及功能)
               enableMention={false}
-              placeholder={dict('NuwaxPC.Components.ChatInputHomeMentionEditor.placeholderWithoutMention')}
+              placeholder={dict(
+                'PC.Components.ChatInputHomeMentionEditor.placeholderWithoutMention',
+              )}
             />
           </div>
         </div>

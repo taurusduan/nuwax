@@ -16,7 +16,7 @@ import VariableGroupItem from './VariableGroupItem';
 const VariableAggregationNode: React.FC<NodeDisposeProps> = ({ form, id }) => {
   const strategyOptions = [
     {
-      label: t('NuwaxPC.Pages.AntvX6VariableAggregation.strategyFirstNonNull'),
+      label: t('PC.Pages.AntvX6VariableAggregation.strategyFirstNonNull'),
       value: 'FIRST_NON_NULL',
     },
   ];
@@ -65,7 +65,7 @@ const VariableAggregationNode: React.FC<NodeDisposeProps> = ({ form, id }) => {
     <>
       <div className="node-item-style">
         <div className="node-title-style margin-bottom">
-          {t('NuwaxPC.Pages.AntvX6VariableAggregation.strategyTitle')}
+          {t('PC.Pages.AntvX6VariableAggregation.strategyTitle')}
         </div>
         <Form.Item name="aggregationStrategy">
           <select className="ant-select ant-select-sm aggregation-strategy-select">
@@ -81,7 +81,7 @@ const VariableAggregationNode: React.FC<NodeDisposeProps> = ({ form, id }) => {
       <div className="node-item-style">
         <div className="dis-sb margin-bottom">
           <span className="node-title-style">
-            {t('NuwaxPC.Pages.AntvX6VariableAggregation.groupConfigTitle')}
+            {t('PC.Pages.AntvX6VariableAggregation.groupConfigTitle')}
           </span>
           <Button
             onClick={handleAddGroup}
@@ -112,7 +112,7 @@ const VariableAggregationNode: React.FC<NodeDisposeProps> = ({ form, id }) => {
 
         {variableGroups.length === 0 && (
           <div className="empty-state-tip">
-            {t('NuwaxPC.Pages.AntvX6VariableAggregation.emptyGroupHint')}
+            {t('PC.Pages.AntvX6VariableAggregation.emptyGroupHint')}
           </div>
         )}
       </div>
@@ -121,7 +121,7 @@ const VariableAggregationNode: React.FC<NodeDisposeProps> = ({ form, id }) => {
       {processedOutputArgs.length > 0 && (
         <>
           <div className="node-title-style margin-bottom">
-            {t('NuwaxPC.Pages.AntvX6VariableAggregation.outputTitle')}
+            {t('PC.Pages.AntvX6VariableAggregation.outputTitle')}
           </div>
           <TreeOutput treeData={processedOutputArgs} />
         </>

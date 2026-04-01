@@ -131,7 +131,7 @@ const VersionCompareMode: React.FC<VersionCompareProps> = ({
   const switchButtonText = useMemo(
     () =>
       t(
-        'NuwaxPC.Pages.AppDevEditorHeaderRight.switchVersionButton',
+        'PC.Pages.AppDevEditorHeaderRight.switchVersionButton',
         String(targetVersion ?? '-'),
       ),
     [targetVersion],
@@ -145,7 +145,7 @@ const VersionCompareMode: React.FC<VersionCompareProps> = ({
         className={styles.versionDropdownButton}
       />
       <Button onClick={onCancelCompare} disabled={buttonsDisabled}>
-        {t('NuwaxPC.Pages.AppDevEditorHeaderRight.cancel')}
+        {t('PC.Pages.AppDevEditorHeaderRight.cancel')}
       </Button>
       <Button
         type="primary"
@@ -214,37 +214,37 @@ const PreviewStatusInfo: React.FC<PreviewStatusProps> = ({
     <div className={styles.previewStatusInfo}>
       {isConnectedState && (
         <span className={styles.statusBadge}>
-          {t('NuwaxPC.Pages.AppDevEditorHeaderRight.devServerConnected')}
+          {t('PC.Pages.AppDevEditorHeaderRight.devServerConnected')}
         </span>
       )}
       {isLoadingState && (
         <span className={styles.loadingBadge}>
           <SyncOutlined spin style={{ fontSize: 12 }} />
-          {t('NuwaxPC.Pages.AppDevEditorHeaderRight.loading')}
+          {t('PC.Pages.AppDevEditorHeaderRight.loading')}
         </span>
       )}
       {isStarting && (
         <span className={styles.loadingBadge}>
           <SyncOutlined spin style={{ fontSize: 12 }} />
-          {t('NuwaxPC.Pages.AppDevEditorHeaderRight.starting')}
+          {t('PC.Pages.AppDevEditorHeaderRight.starting')}
         </span>
       )}
       {isRestarting && (
         <span className={styles.loadingBadge}>
           <SyncOutlined spin style={{ fontSize: 12 }} />
-          {t('NuwaxPC.Pages.AppDevEditorHeaderRight.restarting')}
+          {t('PC.Pages.AppDevEditorHeaderRight.restarting')}
         </span>
       )}
       {isProjectUploading && (
         <span className={styles.loadingBadge}>
           <SyncOutlined spin style={{ fontSize: 12 }} />
-          {t('NuwaxPC.Pages.AppDevEditorHeaderRight.importing')}
+          {t('PC.Pages.AppDevEditorHeaderRight.importing')}
         </span>
       )}
       {lastRefreshed && (
         <span className={styles.lastUpdated}>
           {t(
-            'NuwaxPC.Pages.AppDevEditorHeaderRight.lastUpdated',
+            'PC.Pages.AppDevEditorHeaderRight.lastUpdated',
             lastRefreshed.toLocaleTimeString(),
           )}
         </span>
@@ -305,7 +305,7 @@ const VersionSelector: React.FC<VersionSelectorProps> = ({
                 style={{ marginLeft: 8, fontSize: '10px' }}
               >
                 {isCurrentVersion
-                  ? t('NuwaxPC.Pages.AppDevEditorHeaderRight.currentTag')
+                  ? t('PC.Pages.AppDevEditorHeaderRight.currentTag')
                   : getActionText(version.action)}
               </Tag>
             </div>
@@ -374,9 +374,9 @@ const ConsoleButton: React.FC<ConsoleButtonProps> = ({
   // 工具提示文本
   const tooltipText = useMemo(() => {
     if (showDevLogConsole) {
-      return t('NuwaxPC.Pages.AppDevEditorHeaderRight.closeLog');
+      return t('PC.Pages.AppDevEditorHeaderRight.closeLog');
     }
-    return t('NuwaxPC.Pages.AppDevEditorHeaderRight.viewLog');
+    return t('PC.Pages.AppDevEditorHeaderRight.viewLog');
   }, [showDevLogConsole]);
 
   // 是否有错误
@@ -430,7 +430,7 @@ const MoreActionsMenu: React.FC<MoreActionsProps> = ({
       {
         key: 'import',
         icon: <SvgIcon name="icons-common-import" style={{ fontSize: 16 }} />,
-        label: t('NuwaxPC.Pages.AppDevEditorHeaderRight.menuImportProject'),
+        label: t('PC.Pages.AppDevEditorHeaderRight.menuImportProject'),
         onClick: onImportProject,
         // disabled: isChatLoading || !hasPermission('page_app_import'),
         disabled: isChatLoading,
@@ -448,7 +448,7 @@ const MoreActionsMenu: React.FC<MoreActionsProps> = ({
       {
         key: 'restart',
         icon: <SvgIcon name="icons-common-restart" style={{ fontSize: 16 }} />,
-        label: t('NuwaxPC.Pages.AppDevEditorHeaderRight.menuRestartServer'),
+        label: t('PC.Pages.AppDevEditorHeaderRight.menuRestartServer'),
         onClick: onRestartServer,
         // disabled: isChatLoading || !hasPermission('page_app_restart_server'),
         disabled: isChatLoading,
@@ -458,7 +458,7 @@ const MoreActionsMenu: React.FC<MoreActionsProps> = ({
         icon: (
           <SvgIcon name="icons-common-fullscreen" style={{ fontSize: 16 }} />
         ),
-        label: t('NuwaxPC.Pages.AppDevEditorHeaderRight.menuFullscreenPreview'),
+        label: t('PC.Pages.AppDevEditorHeaderRight.menuFullscreenPreview'),
         onClick: onFullscreenPreview,
         disabled: isChatLoading,
       },
@@ -468,7 +468,7 @@ const MoreActionsMenu: React.FC<MoreActionsProps> = ({
       {
         key: 'export',
         icon: <SvgIcon name="icons-common-download" style={{ fontSize: 16 }} />,
-        label: t('NuwaxPC.Pages.AppDevEditorHeaderRight.menuExportProject'),
+        label: t('PC.Pages.AppDevEditorHeaderRight.menuExportProject'),
         onClick: onExportProject,
         // disabled: isChatLoading || !hasPermission('page_app_export'),
         disabled: isChatLoading,
@@ -576,7 +576,7 @@ const EditorHeaderRight: React.FC<EditorHeaderRightProps> = ({
           {/* 刷新按钮 */}
           {shouldShowPreviewStatus && (
             <Tooltip
-              title={t('NuwaxPC.Pages.AppDevEditorHeaderRight.refreshPreview')}
+              title={t('PC.Pages.AppDevEditorHeaderRight.refreshPreview')}
             >
               <Button
                 type="text"

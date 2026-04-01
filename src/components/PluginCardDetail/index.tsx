@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import {
   Button,
   Card,
@@ -8,7 +9,6 @@ import {
   Typography,
 } from 'antd';
 import React from 'react';
-import { dict } from '@/services/i18nRuntime';
 import type { PluginCardProps } from '../EcosystemCard';
 import styles from './index.less';
 
@@ -57,7 +57,7 @@ const PluginCardDetail: React.FC<PluginDetailProps> = ({
   return (
     <Card className={styles.detailCard}>
       <Button type="link" className={styles.backButton} onClick={onBack}>
-        {dict('NuwaxPC.Components.PluginCardDetail.back')}
+        {dict('PC.Components.PluginCardDetail.back')}
       </Button>
 
       <div className={styles.header}>
@@ -71,14 +71,21 @@ const PluginCardDetail: React.FC<PluginDetailProps> = ({
             </Title>
             {isNew && (
               <Tag color="red" className={styles.newTag}>
-                {dict('NuwaxPC.Components.PluginCardDetail.newVersion')}
+                {dict('PC.Components.PluginCardDetail.newVersion')}
               </Tag>
             )}
           </div>
           <Space size={16} className={styles.metaInfo}>
-            <Text type="secondary">{dict('NuwaxPC.Components.PluginCardDetail.version')}: {version}</Text>
-            <Text type="secondary">{dict('NuwaxPC.Components.PluginCardDetail.publishDate')}: {publishDate}</Text>
-            <Text type="secondary">{dict('NuwaxPC.Components.PluginCardDetail.author')}: {author}</Text>
+            <Text type="secondary">
+              {dict('PC.Components.PluginCardDetail.version')}: {version}
+            </Text>
+            <Text type="secondary">
+              {dict('PC.Components.PluginCardDetail.publishDate')}:{' '}
+              {publishDate}
+            </Text>
+            <Text type="secondary">
+              {dict('PC.Components.PluginCardDetail.author')}: {author}
+            </Text>
           </Space>
           <Space size={8} wrap className={styles.categories}>
             {categories.map((category, index) => (
@@ -92,7 +99,9 @@ const PluginCardDetail: React.FC<PluginDetailProps> = ({
             className={styles.actionButton}
             onClick={onToggleEnable}
           >
-            {isEnabled ? dict('NuwaxPC.Components.PluginCardDetail.uninstall') : dict('NuwaxPC.Components.PluginCardDetail.install')}
+            {isEnabled
+              ? dict('PC.Components.PluginCardDetail.uninstall')
+              : dict('PC.Components.PluginCardDetail.install')}
           </Button>
         </div>
       </div>
@@ -100,20 +109,44 @@ const PluginCardDetail: React.FC<PluginDetailProps> = ({
       <Divider />
 
       <div className={styles.descriptionSection}>
-        <Title level={5}>{dict('NuwaxPC.Components.PluginCardDetail.pluginDescription')}</Title>
+        <Title level={5}>
+          {dict('PC.Components.PluginCardDetail.pluginDescription')}
+        </Title>
         <Paragraph className={styles.description}>{description}</Paragraph>
       </div>
 
       <Divider />
 
       <div className={styles.detailsSection}>
-        <Title level={5}>{dict('NuwaxPC.Components.PluginCardDetail.detailedInfo')}</Title>
+        <Title level={5}>
+          {dict('PC.Components.PluginCardDetail.detailedInfo')}
+        </Title>
         <Descriptions column={1} bordered>
-          <Descriptions.Item label={dict('NuwaxPC.Components.PluginCardDetail.pluginName')}>{title}</Descriptions.Item>
-          <Descriptions.Item label={dict('NuwaxPC.Components.PluginCardDetail.version')}>{version}</Descriptions.Item>
-          <Descriptions.Item label={dict('NuwaxPC.Components.PluginCardDetail.publishDate')}>{publishDate}</Descriptions.Item>
-          <Descriptions.Item label={dict('NuwaxPC.Components.PluginCardDetail.author')}>{author}</Descriptions.Item>
-          <Descriptions.Item label={dict('NuwaxPC.Components.PluginCardDetail.supportedPlatforms')}>Web</Descriptions.Item>
+          <Descriptions.Item
+            label={dict('PC.Components.PluginCardDetail.pluginName')}
+          >
+            {title}
+          </Descriptions.Item>
+          <Descriptions.Item
+            label={dict('PC.Components.PluginCardDetail.version')}
+          >
+            {version}
+          </Descriptions.Item>
+          <Descriptions.Item
+            label={dict('PC.Components.PluginCardDetail.publishDate')}
+          >
+            {publishDate}
+          </Descriptions.Item>
+          <Descriptions.Item
+            label={dict('PC.Components.PluginCardDetail.author')}
+          >
+            {author}
+          </Descriptions.Item>
+          <Descriptions.Item
+            label={dict('PC.Components.PluginCardDetail.supportedPlatforms')}
+          >
+            Web
+          </Descriptions.Item>
         </Descriptions>
       </div>
     </Card>

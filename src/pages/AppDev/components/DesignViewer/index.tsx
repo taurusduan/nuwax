@@ -657,7 +657,7 @@ const DesignViewer = forwardRef<DesignViewerRef, DesignViewerProps>(
     const handleAddToChat = (payload: any) => {
       if (pendingChanges?.length > 0) {
         message.error(
-          t('NuwaxPC.Pages.AppDevDesignViewer.saveOrResetBeforeAddToChat'),
+          t('PC.Pages.AppDevDesignViewer.saveOrResetBeforeAddToChat'),
         );
         return;
       }

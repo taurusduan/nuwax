@@ -49,7 +49,7 @@ const SpaceTaskCenter: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={dict('NuwaxPC.Pages.SpaceTaskCenter.title')}
+      title={dict('PC.Pages.SpaceTaskCenter.title')}
       hideScroll={true}
       rightSlot={
         <Button
@@ -58,7 +58,7 @@ const SpaceTaskCenter: React.FC = () => {
           icon={<PlusOutlined />}
           onClick={handleCreateTask}
         >
-          {dict('NuwaxPC.Pages.SpaceTaskCenter.createTask')}
+          {dict('PC.Pages.SpaceTaskCenter.createTask')}
         </Button>
       }
     >

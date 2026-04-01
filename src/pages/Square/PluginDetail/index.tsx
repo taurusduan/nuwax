@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import { apiPublishedPluginInfo } from '@/services/plugin';
 import { SquareAgentTypeEnum } from '@/types/enums/square';
 import { BindConfigWithSub } from '@/types/interfaces/common';
@@ -6,7 +7,6 @@ import type { TableColumnsType } from 'antd';
 import { Divider, Empty, Table } from 'antd';
 import classNames from 'classnames';
 import React, { useEffect } from 'react';
-import { dict } from '@/services/i18nRuntime';
 import { useParams, useRequest } from 'umi';
 import PluginHeader from './PluginHeader';
 import styles from './index.less';
@@ -36,73 +36,79 @@ const SpacePluginDetail: React.FC = ({}) => {
   // 入参配置columns
   const inputColumns: TableColumnsType<BindConfigWithSub> = [
     {
-      title: dict('NuwaxPC.Pages.Square.PluginDetail.paramName'),
+      title: dict('PC.Pages.Square.PluginDetail.paramName'),
       dataIndex: 'name',
       key: 'name',
       width: 200,
       ellipsis: true,
     },
     {
-      title: dict('NuwaxPC.Pages.Square.PluginDetail.paramDescription'),
+      title: dict('PC.Pages.Square.PluginDetail.paramDescription'),
       dataIndex: 'description',
       key: 'description',
       width: 260,
       ellipsis: true,
     },
     {
-      title: dict('NuwaxPC.Pages.Square.PluginDetail.paramType'),
+      title: dict('PC.Pages.Square.PluginDetail.paramType'),
       dataIndex: 'dataType',
       key: 'dataType',
       width: 120,
     },
     {
-      title: dict('NuwaxPC.Pages.Square.PluginDetail.inputMethod'),
+      title: dict('PC.Pages.Square.PluginDetail.inputMethod'),
       dataIndex: 'inputType',
       key: 'inputType',
       width: 120,
     },
     {
-      title: dict('NuwaxPC.Pages.Square.PluginDetail.required'),
+      title: dict('PC.Pages.Square.PluginDetail.required'),
       dataIndex: 'require',
       key: 'require',
       width: 100,
       align: 'center',
-      render: (text) => (text ? dict('NuwaxPC.Pages.Square.PluginDetail.yes') : dict('NuwaxPC.Pages.Square.PluginDetail.no')),
+      render: (text) =>
+        text
+          ? dict('PC.Pages.Square.PluginDetail.yes')
+          : dict('PC.Pages.Square.PluginDetail.no'),
     },
     {
-      title: dict('NuwaxPC.Pages.Square.PluginDetail.defaultValue'),
+      title: dict('PC.Pages.Square.PluginDetail.defaultValue'),
       dataIndex: 'bindValue',
       key: 'bindValue',
       width: 150,
     },
     {
-      title: dict('NuwaxPC.Pages.Square.PluginDetail.enabled'),
+      title: dict('PC.Pages.Square.PluginDetail.enabled'),
       dataIndex: 'enable',
       key: 'enable',
       width: 70,
       align: 'center',
-      render: (text) => (text ? dict('NuwaxPC.Pages.Square.PluginDetail.yes') : dict('NuwaxPC.Pages.Square.PluginDetail.no')),
+      render: (text) =>
+        text
+          ? dict('PC.Pages.Square.PluginDetail.yes')
+          : dict('PC.Pages.Square.PluginDetail.no'),
     },
   ];
 
   // 出参配置columns
   const outputColumns: TableColumnsType<BindConfigWithSub> = [
     {
-      title: dict('NuwaxPC.Pages.Square.PluginDetail.paramName'),
+      title: dict('PC.Pages.Square.PluginDetail.paramName'),
       dataIndex: 'name',
       key: 'name',
       width: 430,
       ellipsis: true,
     },
     {
-      title: dict('NuwaxPC.Pages.Square.PluginDetail.paramDescription'),
+      title: dict('PC.Pages.Square.PluginDetail.paramDescription'),
       dataIndex: 'description',
       key: 'description',
       width: 300,
       ellipsis: true,
     },
     {
-      title: dict('NuwaxPC.Pages.Square.PluginDetail.paramType'),
+      title: dict('PC.Pages.Square.PluginDetail.paramType'),
       dataIndex: 'dataType',
       key: 'dataType',
       width: 120,
@@ -118,12 +124,16 @@ const SpacePluginDetail: React.FC = ({}) => {
         />
       )}
       <div className={cx(styles['main-container'], 'scroll-container')}>
-        <span className={cx(styles.title)}>{dict('NuwaxPC.Pages.Square.PluginDetail.pluginDescription')}</span>
+        <span className={cx(styles.title)}>
+          {dict('PC.Pages.Square.PluginDetail.pluginDescription')}
+        </span>
         <p className={cx(styles.desc, 'text-ellipsis-2')}>
           {pluginInfo?.description}
         </p>
         <Divider style={{ margin: '20px 0' }} />
-        <span className={cx(styles.title)}>{dict('NuwaxPC.Pages.Square.PluginDetail.inputConfig')}</span>
+        <span className={cx(styles.title)}>
+          {dict('PC.Pages.Square.PluginDetail.inputConfig')}
+        </span>
         <Table
           className={cx(styles['table-wrap'], 'overflow-hide')}
           columns={inputColumns}
@@ -135,7 +145,9 @@ const SpacePluginDetail: React.FC = ({}) => {
             defaultExpandAllRows: true,
           }}
         />
-        <span className={cx(styles.title)}>{dict('NuwaxPC.Pages.Square.PluginDetail.outputConfig')}</span>
+        <span className={cx(styles.title)}>
+          {dict('PC.Pages.Square.PluginDetail.outputConfig')}
+        </span>
         {pluginInfo?.outputArgs?.length > 0 ? (
           <Table<BindConfigWithSub>
             className={cx(styles['table-wrap'], 'overflow-hide')}
@@ -157,7 +169,7 @@ const SpacePluginDetail: React.FC = ({}) => {
               'content-center',
             )}
           >
-            <Empty description={dict('NuwaxPC.Common.Global.emptyData')} />
+            <Empty description={dict('PC.Common.Global.emptyData')} />
           </div>
         )}
       </div>

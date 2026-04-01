@@ -1,5 +1,5 @@
-import { TableFieldInfo } from '@/types/interfaces/dataTable';
 import { dict } from '@/services/i18nRuntime';
+import { TableFieldInfo } from '@/types/interfaces/dataTable';
 import { Tooltip } from 'antd';
 import { PropsWithChildren } from 'react';
 
@@ -18,7 +18,13 @@ const ClearDataTooltip: React.FC<PropsWithChildren<ClearDataTooltipProps>> = ({
   if (!disabled) {
     return children;
   }
-  return <Tooltip title={dict('NuwaxPC.Pages.SpaceTable.ClearDataTooltip.clearDataToModify')}>{children}</Tooltip>;
+  return (
+    <Tooltip
+      title={dict('PC.Pages.SpaceTable.ClearDataTooltip.clearDataToModify')}
+    >
+      {children}
+    </Tooltip>
+  );
 };
 
 export default ClearDataTooltip;

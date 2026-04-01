@@ -35,7 +35,7 @@ const EventList: React.FC<EventListProps> = ({
     </div>
   ) : (
     <p className={cx(textClassName)}>
-      {dict('NuwaxPC.Pages.EditAgent.EventList.emptyDescription')}
+      {dict('PC.Pages.EditAgent.EventList.emptyDescription')}
     </p>
   );
 };

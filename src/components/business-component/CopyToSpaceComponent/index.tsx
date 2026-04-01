@@ -71,7 +71,7 @@ const CopyToSpaceComponent: React.FC<CopyToSpaceComponentProps> = ({
       debounceInterval: 300,
       onSuccess: (data: any, params: PageCopyParams[]) => {
         message.success(
-          t('NuwaxPC.Components.CopyToSpaceComponent.pageCopySuccess'),
+          t('PC.Components.CopyToSpaceComponent.pageCopySuccess'),
         );
         setInternalLoading(false);
         // 关闭弹窗
@@ -96,7 +96,7 @@ const CopyToSpaceComponent: React.FC<CopyToSpaceComponentProps> = ({
       debounceInterval: 300,
       onSuccess: (data: number, params: PublishTemplateCopyParams[]) => {
         message.success(
-          t('NuwaxPC.Components.CopyToSpaceComponent.templateCopySuccess'),
+          t('PC.Components.CopyToSpaceComponent.templateCopySuccess'),
         );
         setInternalLoading(false);
         // 关闭弹窗

@@ -145,10 +145,10 @@ const ThemeConfig: React.FC = () => {
     if (backgroundConfig) {
       message.info(
         t(
-          'NuwaxPC.Pages.SystemThemeConfig.autoSwitchedNavModePreview',
+          'PC.Pages.SystemThemeConfig.autoSwitchedNavModePreview',
           newLayoutStyle === ThemeLayoutColorStyle.DARK
-            ? t('NuwaxPC.Pages.SystemThemeConfig.darkMode')
-            : t('NuwaxPC.Pages.SystemThemeConfig.lightMode'),
+            ? t('PC.Pages.SystemThemeConfig.darkMode')
+            : t('PC.Pages.SystemThemeConfig.lightMode'),
         ),
       );
     }
@@ -196,11 +196,11 @@ const ThemeConfig: React.FC = () => {
         // 显示背景自动匹配提示
         message.info(
           t(
-            'NuwaxPC.Pages.SystemThemeConfig.autoSwitchedBackgroundPreview',
+            'PC.Pages.SystemThemeConfig.autoSwitchedBackgroundPreview',
             matchingBackground.name,
             newLayoutStyle === ThemeLayoutColorStyle.DARK
-              ? t('NuwaxPC.Pages.SystemThemeConfig.darkMode')
-              : t('NuwaxPC.Pages.SystemThemeConfig.lightMode'),
+              ? t('PC.Pages.SystemThemeConfig.darkMode')
+              : t('PC.Pages.SystemThemeConfig.lightMode'),
           ),
         );
       }
@@ -231,7 +231,7 @@ const ThemeConfig: React.FC = () => {
         templateConfig: JSON.stringify(themeConfig),
       });
 
-      message.success(t('NuwaxPC.Pages.SystemThemeConfig.saveSuccess'));
+      message.success(t('PC.Pages.SystemThemeConfig.saveSuccess'));
       console.log('Saved theme config:', themeConfig);
 
       // 页面刷新后检查
@@ -250,7 +250,7 @@ const ThemeConfig: React.FC = () => {
     setPreviewNavigationStyle('style1' as any);
     setPreviewLayoutStyle(ThemeLayoutColorStyle.LIGHT);
     setPreviewIsNavigationDark(false);
-    message.info(t('NuwaxPC.Pages.SystemThemeConfig.resetPreview'));
+    message.info(t('PC.Pages.SystemThemeConfig.resetPreview'));
   };
 
   // 恢复到已保存状态（页面加载状态）
@@ -282,16 +282,16 @@ const ThemeConfig: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={t('NuwaxPC.Pages.SystemThemeConfig.pageTitle')}
+      title={t('PC.Pages.SystemThemeConfig.pageTitle')}
       extraContent={
         <div style={{ padding: '12px 6px' }}>
           {hasPermission('system_theme_config_save') && (
             <>
               <Button type="primary" onClick={handleSave}>
-                {t('NuwaxPC.Pages.SystemThemeConfig.saveConfig')}
+                {t('PC.Pages.SystemThemeConfig.saveConfig')}
               </Button>
               <Button style={{ marginLeft: 12 }} onClick={handleReset}>
-                {t('NuwaxPC.Pages.SystemThemeConfig.resetDefault')}
+                {t('PC.Pages.SystemThemeConfig.resetDefault')}
               </Button>
             </>
           )}

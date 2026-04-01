@@ -1,6 +1,6 @@
 import CopyButton from '@/components/base/CopyButton';
-import { ChatSampleBottomProps } from '@/types/interfaces/conversationInfo';
 import { dict } from '@/services/i18nRuntime';
+import { ChatSampleBottomProps } from '@/types/interfaces/conversationInfo';
 import { formatTimeAgo } from '@/utils/common';
 import { message } from 'antd';
 import classNames from 'classnames';
@@ -17,7 +17,7 @@ const ChatSampleBottom: React.FC<ChatSampleBottomProps> = ({ messageInfo }) => {
 
   // 复制消息
   const handleCopy = () => {
-    message.success(dict('NuwaxPC.Toast.Global.copiedSuccessfully'));
+    message.success(dict('PC.Toast.Global.copiedSuccessfully'));
   };
 
   // 更新时间的函数
@@ -60,7 +60,7 @@ const ChatSampleBottom: React.FC<ChatSampleBottomProps> = ({ messageInfo }) => {
       <div className={cx('flex', styles['more-action'])}>
         {!!messageInfo?.text && (
           <CopyButton text={messageInfo?.text} onCopy={handleCopy}>
-            {dict('NuwaxPC.Common.Global.copy')}
+            {dict('PC.Common.Global.copy')}
           </CopyButton>
         )}
       </div>

@@ -51,7 +51,7 @@ const REQUEST_METHOD_OPTIONS = [
 // HTTP content type options.
 const REQUEST_CONTENT_TYPE_OPTIONS = [
   {
-    label: t('NuwaxPC.Pages.AntvX6ComplexNode.none'),
+    label: t('PC.Pages.AntvX6ComplexNode.none'),
     value: HttpContentTypeEnum.OTHER,
     style: { marginTop: 3, marginBottom: 3 },
   },
@@ -206,7 +206,7 @@ const ModelNode: React.FC<NodeDisposeProps> = ({
       {/* Skills module */}
       <div className="dis-sb">
         <span className="node-title-style">
-          {t('NuwaxPC.Pages.AntvX6ComplexNode.skills')}
+          {t('PC.Pages.AntvX6ComplexNode.skills')}
         </span>
         <Button
           icon={<PlusOutlined />}
@@ -236,7 +236,7 @@ const ModelNode: React.FC<NodeDisposeProps> = ({
       {/* Input parameters */}
       <div className="node-item-style">
         <InputAndOut
-          title={t('NuwaxPC.Pages.AntvX6ComplexNode.input')}
+          title={t('PC.Pages.AntvX6ComplexNode.input')}
           fieldConfigs={outPutConfigs}
           inputItemName={InputItemNameEnum.inputArgs}
           form={form}
@@ -247,9 +247,9 @@ const ModelNode: React.FC<NodeDisposeProps> = ({
         <ExpandableInputTextarea
           title={
             <>
-              {t('NuwaxPC.Pages.AntvX6ComplexNode.systemPromptTitle')}
+              {t('PC.Pages.AntvX6ComplexNode.systemPromptTitle')}
               <TooltipIcon
-                title={t('NuwaxPC.Pages.AntvX6ComplexNode.systemPromptTooltip')}
+                title={t('PC.Pages.AntvX6ComplexNode.systemPromptTooltip')}
                 icon={<ExclamationCircleOutlined />}
               ></TooltipIcon>
             </>
@@ -258,9 +258,7 @@ const ModelNode: React.FC<NodeDisposeProps> = ({
           onExpand
           onOptimize
           onOptimizeClick={() => setShow(true)}
-          placeholder={t(
-            'NuwaxPC.Pages.AntvX6ComplexNode.systemPromptPlaceholder',
-          )}
+          placeholder={t('PC.Pages.AntvX6ComplexNode.systemPromptPlaceholder')}
           variables={transformToPromptVariables(
             variables,
             referenceList?.argMap,
@@ -273,9 +271,9 @@ const ModelNode: React.FC<NodeDisposeProps> = ({
         <ExpandableInputTextarea
           title={
             <>
-              {t('NuwaxPC.Pages.AntvX6ComplexNode.userPromptTitle')}
+              {t('PC.Pages.AntvX6ComplexNode.userPromptTitle')}
               <TooltipIcon
-                title={t('NuwaxPC.Pages.AntvX6ComplexNode.userPromptTooltip')}
+                title={t('PC.Pages.AntvX6ComplexNode.userPromptTooltip')}
                 icon={<ExclamationCircleOutlined />}
               ></TooltipIcon>
             </>
@@ -284,9 +282,7 @@ const ModelNode: React.FC<NodeDisposeProps> = ({
           onExpand
           // onOptimize
           // onOptimizeClick={() => setShow(true)}
-          placeholder={t(
-            'NuwaxPC.Pages.AntvX6ComplexNode.userPromptPlaceholder',
-          )}
+          placeholder={t('PC.Pages.AntvX6ComplexNode.userPromptPlaceholder')}
           variables={transformToPromptVariables(
             variables,
             referenceList?.argMap,
@@ -298,7 +294,7 @@ const ModelNode: React.FC<NodeDisposeProps> = ({
       <Form.Item shouldUpdate name={'outputArgs'}>
         <CustomTree
           key={`${type}-${id}-outputArgs`}
-          title={t('NuwaxPC.Pages.AntvX6ComplexNode.output')}
+          title={t('PC.Pages.AntvX6ComplexNode.output')}
           notShowTitle
           form={form}
           params={nodeConfig?.outputArgs || []}
@@ -315,7 +311,7 @@ const ModelNode: React.FC<NodeDisposeProps> = ({
         tabs={skillCreatedTabs}
       />
       <PromptOptimizeModal
-        title={t('NuwaxPC.Pages.AntvX6ComplexNode.promptOptimizeTitle')}
+        title={t('PC.Pages.AntvX6ComplexNode.promptOptimizeTitle')}
         open={show}
         onCancel={() => {
           setShow(false);
@@ -350,7 +346,7 @@ const IntentionNode: React.FC<NodeDisposeProps> = ({ form }) => {
       {/* Input parameters */}
       <div className="node-item-style">
         <InputAndOut
-          title={t('NuwaxPC.Pages.AntvX6ComplexNode.input')}
+          title={t('PC.Pages.AntvX6ComplexNode.input')}
           fieldConfigs={outPutConfigs}
           inputItemName={InputItemNameEnum.inputArgs}
           form={form}
@@ -359,7 +355,7 @@ const IntentionNode: React.FC<NodeDisposeProps> = ({ form }) => {
       {/* Intent matching */}
       <div className="node-item-style">
         <FormList
-          title={t('NuwaxPC.Pages.AntvX6ComplexNode.intentMatchTitle')}
+          title={t('PC.Pages.AntvX6ComplexNode.intentMatchTitle')}
           form={form}
           field="intent"
           hasUuid
@@ -371,13 +367,11 @@ const IntentionNode: React.FC<NodeDisposeProps> = ({ form }) => {
       {/* Extra prompt */}
       <div className="node-item-style">
         <ExpandableInputTextarea
-          title={t('NuwaxPC.Pages.AntvX6ComplexNode.extraPromptTitle')}
+          title={t('PC.Pages.AntvX6ComplexNode.extraPromptTitle')}
           // inputFieldName="systemPrompt"
           inputFieldName="extraPrompt"
           onExpand
-          placeholder={t(
-            'NuwaxPC.Pages.AntvX6ComplexNode.extraPromptPlaceholder',
-          )}
+          placeholder={t('PC.Pages.AntvX6ComplexNode.extraPromptPlaceholder')}
           variables={transformToPromptVariables(
             (
               Form.useWatch(InputItemNameEnum.inputArgs, {
@@ -398,7 +392,7 @@ const IntentionNode: React.FC<NodeDisposeProps> = ({ form }) => {
           form.getFieldValue('outputArgs') && (
             <>
               <div className="node-title-style margin-bottom">
-                {t('NuwaxPC.Pages.AntvX6ComplexNode.output')}
+                {t('PC.Pages.AntvX6ComplexNode.output')}
               </div>
               <TreeOutput treeData={form.getFieldValue('outputArgs')} />
             </>
@@ -432,7 +426,7 @@ const QuestionsNode: React.FC<NodeDisposeProps> = ({
         {
           uuid: uuidv4(),
           index: 1,
-          content: t('NuwaxPC.Pages.AntvX6CommonNode.otherBranchHint'),
+          content: t('PC.Pages.AntvX6CommonNode.otherBranchHint'),
           nextNodeIds: [],
         },
       ];
@@ -465,7 +459,7 @@ const QuestionsNode: React.FC<NodeDisposeProps> = ({
       {/* Input parameters */}
       <div className="node-item-style">
         <InputAndOut
-          title={t('NuwaxPC.Pages.AntvX6ComplexNode.input')}
+          title={t('PC.Pages.AntvX6ComplexNode.input')}
           fieldConfigs={outPutConfigs}
           inputItemName={InputItemNameEnum.inputArgs}
           form={form}
@@ -474,10 +468,10 @@ const QuestionsNode: React.FC<NodeDisposeProps> = ({
       {/* Question */}
       <div className="node-item-style">
         <ExpandableInputTextarea
-          title={t('NuwaxPC.Pages.AntvX6ComplexNode.questionTitle')}
+          title={t('PC.Pages.AntvX6ComplexNode.questionTitle')}
           inputFieldName="question"
           onExpand
-          placeholder={t('NuwaxPC.Pages.AntvX6ComplexNode.questionPlaceholder')}
+          placeholder={t('PC.Pages.AntvX6ComplexNode.questionPlaceholder')}
           variables={transformToPromptVariables(
             (
               Form.useWatch(InputItemNameEnum.inputArgs, {
@@ -495,7 +489,7 @@ const QuestionsNode: React.FC<NodeDisposeProps> = ({
       {/* Answer type */}
       <div className="node-item-style">
         <Form.Item
-          label={t('NuwaxPC.Pages.AntvX6ComplexNode.answerTypeLabel')}
+          label={t('PC.Pages.AntvX6ComplexNode.answerTypeLabel')}
           name={'answerType'}
         >
           <Radio.Group
@@ -505,10 +499,10 @@ const QuestionsNode: React.FC<NodeDisposeProps> = ({
           >
             <Space direction="vertical">
               <Radio value={'TEXT'}>
-                {t('NuwaxPC.Pages.AntvX6ComplexNode.answerTypeText')}
+                {t('PC.Pages.AntvX6ComplexNode.answerTypeText')}
               </Radio>
               <Radio value={'SELECT'}>
-                {t('NuwaxPC.Pages.AntvX6ComplexNode.answerTypeSelect')}
+                {t('PC.Pages.AntvX6ComplexNode.answerTypeSelect')}
               </Radio>
             </Space>
           </Radio.Group>
@@ -521,7 +515,7 @@ const QuestionsNode: React.FC<NodeDisposeProps> = ({
           form.getFieldValue('answerType') === 'TEXT' ? (
             <CustomTree
               key={`${type}-${id}-outputArgs`}
-              title={t('NuwaxPC.Pages.AntvX6ComplexNode.output')}
+              title={t('PC.Pages.AntvX6ComplexNode.output')}
               form={form}
               params={nodeConfig?.outputArgs || []}
               inputItemName={'outputArgs'}
@@ -535,7 +529,7 @@ const QuestionsNode: React.FC<NodeDisposeProps> = ({
         {() =>
           form.getFieldValue('answerType') === 'SELECT' ? (
             <FormList
-              title={t('NuwaxPC.Pages.AntvX6ComplexNode.optionContentTitle')}
+              title={t('PC.Pages.AntvX6ComplexNode.optionContentTitle')}
               form={form}
               field="content"
               inputItemName={InputItemNameEnum.options}
@@ -562,24 +556,20 @@ const HttpToolNode: React.FC<NodeDisposeProps> = ({
     <div>
       {/* Request config */}
       <div className="node-item-style">
-        <Form.Item
-          label={t('NuwaxPC.Pages.AntvX6ComplexNode.requestMethodAndPath')}
-        >
+        <Form.Item label={t('PC.Pages.AntvX6ComplexNode.requestMethodAndPath')}>
           <div className="dis-sb">
             <Form.Item name="method" noStyle>
               <Select
                 style={{ width: '30%', marginRight: '10px' }}
                 options={REQUEST_METHOD_OPTIONS}
                 placeholder={t(
-                  'NuwaxPC.Pages.AntvX6ComplexNode.requestMethodPlaceholder',
+                  'PC.Pages.AntvX6ComplexNode.requestMethodPlaceholder',
                 )}
               />
             </Form.Item>
             <Form.Item name="url" noStyle>
               <Input
-                placeholder={t(
-                  'NuwaxPC.Pages.AntvX6ComplexNode.urlPlaceholder',
-                )}
+                placeholder={t('PC.Pages.AntvX6ComplexNode.urlPlaceholder')}
               />
             </Form.Item>
           </div>
@@ -588,7 +578,7 @@ const HttpToolNode: React.FC<NodeDisposeProps> = ({
       <div className="node-item-style">
         <Form.Item
           name="contentType"
-          label={t('NuwaxPC.Pages.AntvX6ComplexNode.requestContentTypeLabel')}
+          label={t('PC.Pages.AntvX6ComplexNode.requestContentTypeLabel')}
         >
           <Radio.Group
             className="margin-bottom"
@@ -598,12 +588,12 @@ const HttpToolNode: React.FC<NodeDisposeProps> = ({
       </div>
       <div className="node-item-style">
         <Form.Item
-          label={t('NuwaxPC.Pages.AntvX6ComplexNode.requestTimeoutLabel')}
+          label={t('PC.Pages.AntvX6ComplexNode.requestTimeoutLabel')}
           name="timeout"
         >
           <Input
             placeholder={t(
-              'NuwaxPC.Pages.AntvX6ComplexNode.requestTimeoutPlaceholder',
+              'PC.Pages.AntvX6ComplexNode.requestTimeoutPlaceholder',
             )}
             addonAfter="s"
           ></Input>
@@ -612,7 +602,7 @@ const HttpToolNode: React.FC<NodeDisposeProps> = ({
       {/* Input params */}
       <div className="has-child-node">
         <p className="node-title-bold-style">
-          {t('NuwaxPC.Pages.AntvX6ComplexNode.inputParams')}
+          {t('PC.Pages.AntvX6ComplexNode.inputParams')}
         </p>
         <div className="node-item-style">
           <InputAndOut
@@ -645,7 +635,7 @@ const HttpToolNode: React.FC<NodeDisposeProps> = ({
       <Form.Item name={'outputArgs'}>
         <CustomTree
           key={`${type}-${id}-outputArgs`}
-          title={t('NuwaxPC.Pages.AntvX6ComplexNode.outputParams')}
+          title={t('PC.Pages.AntvX6ComplexNode.outputParams')}
           form={form}
           inputItemName="outputArgs"
           params={outputParams}

@@ -8,6 +8,7 @@ import {
 } from '@/constants/agent.constants';
 import { apiAgentComponentModelUpdate } from '@/services/agentConfig';
 // import { AgentEngineEnum } from '@/types/enums/agent';
+import { dict } from '@/services/i18nRuntime';
 import { TooltipTitleTypeEnum } from '@/types/enums/common';
 import { UpdateModeComponentEnum } from '@/types/enums/library';
 import {
@@ -30,7 +31,6 @@ import React, {
   useState,
 } from 'react';
 import { useModel } from 'umi';
-import { dict } from '@/services/i18nRuntime';
 import styles from './index.less';
 
 const cx = classnames.bind(styles);
@@ -277,7 +277,7 @@ const AgentModelSetting: React.FC<
   if (agentConfigInfo?.type === AgentTypeEnum.TaskAgent) {
     return (
       <Modal
-        title={dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.modelSetting')}
+        title={dict('PC.Pages.EditAgent.AgentModelSetting.modelSetting')}
         classNames={{
           content: cx(styles['modal-wrapper2']),
         }}
@@ -289,7 +289,9 @@ const AgentModelSetting: React.FC<
           {/* 会话模型选择 */}
           <div className="flex-1">
             <SelectList
-              placeholder={dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.selectChatModel')}
+              placeholder={dict(
+                'PC.Pages.EditAgent.AgentModelSetting.selectChatModel',
+              )}
               className={cx(styles.select2)}
               onChange={handleChangeModelTarget}
               options={modelConfigList}
@@ -303,7 +305,7 @@ const AgentModelSetting: React.FC<
 
   return (
     <Modal
-      title={dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.modelSetting')}
+      title={dict('PC.Pages.EditAgent.AgentModelSetting.modelSetting')}
       classNames={{
         content: cx(styles['modal-wrapper']),
       }}
@@ -313,9 +315,13 @@ const AgentModelSetting: React.FC<
     >
       <Flex gap={20}>
         <div className="flex-1">
-          <h3 className={cx(styles.title)}>{dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.chatModel')}</h3>
+          <h3 className={cx(styles.title)}>
+            {dict('PC.Pages.EditAgent.AgentModelSetting.chatModel')}
+          </h3>
           <SelectList
-            placeholder={dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.selectChatModel')}
+            placeholder={dict(
+              'PC.Pages.EditAgent.AgentModelSetting.selectChatModel',
+            )}
             className={cx(styles.select)}
             onChange={handleChangeModelTarget}
             options={modelConfigList}
@@ -323,9 +329,15 @@ const AgentModelSetting: React.FC<
           />
         </div>
         <div className="flex-1">
-          <h3 className={cx(styles.title)}>{dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.reasoningModelOptional')}</h3>
+          <h3 className={cx(styles.title)}>
+            {dict(
+              'PC.Pages.EditAgent.AgentModelSetting.reasoningModelOptional',
+            )}
+          </h3>
           <SelectList
-            placeholder={dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.selectReasoningModel')}
+            placeholder={dict(
+              'PC.Pages.EditAgent.AgentModelSetting.selectReasoningModel',
+            )}
             className={cx(styles.select)}
             onChange={(value) => handleChange(value, 'reasoningModelId')}
             options={reasonModelList}
@@ -335,22 +347,52 @@ const AgentModelSetting: React.FC<
         </div>
       </Flex>
       <h3 className={cx(styles.title, 'flex', 'items-center')}>
-        {dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.generateDiversity')}
+        {dict('PC.Pages.EditAgent.AgentModelSetting.generateDiversity')}
         <TooltipIcon
           title={
             <>
-              <h4 className={cx(styles['generate-name'])}>{dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.precisionModeTitle')}</h4>
-              <p>{dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.precisionModeDesc1')}</p>
-              <p>{dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.precisionModeDesc2')}</p>
-              <h4 className={cx(styles['generate-name'])}>{dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.balanceModeTitle')}</h4>
-              <p>{dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.balanceModeDesc1')}</p>
-              <p>{dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.balanceModeDesc2')}</p>
-              <h4 className={cx(styles['generate-name'])}>{dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.creativeModeTitle')}</h4>
-              <p>{dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.creativeModeDesc1')}</p>
-              <p>{dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.creativeModeDesc2')}</p>
-              <h4 className={cx(styles['generate-name'])}>{dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.customModeTitle')}</h4>
-              <p>{dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.customModeDesc1')}</p>
-              <p>{dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.customModeDesc2')}</p>
+              <h4 className={cx(styles['generate-name'])}>
+                {dict(
+                  'PC.Pages.EditAgent.AgentModelSetting.precisionModeTitle',
+                )}
+              </h4>
+              <p>
+                {dict(
+                  'PC.Pages.EditAgent.AgentModelSetting.precisionModeDesc1',
+                )}
+              </p>
+              <p>
+                {dict(
+                  'PC.Pages.EditAgent.AgentModelSetting.precisionModeDesc2',
+                )}
+              </p>
+              <h4 className={cx(styles['generate-name'])}>
+                {dict('PC.Pages.EditAgent.AgentModelSetting.balanceModeTitle')}
+              </h4>
+              <p>
+                {dict('PC.Pages.EditAgent.AgentModelSetting.balanceModeDesc1')}
+              </p>
+              <p>
+                {dict('PC.Pages.EditAgent.AgentModelSetting.balanceModeDesc2')}
+              </p>
+              <h4 className={cx(styles['generate-name'])}>
+                {dict('PC.Pages.EditAgent.AgentModelSetting.creativeModeTitle')}
+              </h4>
+              <p>
+                {dict('PC.Pages.EditAgent.AgentModelSetting.creativeModeDesc1')}
+              </p>
+              <p>
+                {dict('PC.Pages.EditAgent.AgentModelSetting.creativeModeDesc2')}
+              </p>
+              <h4 className={cx(styles['generate-name'])}>
+                {dict('PC.Pages.EditAgent.AgentModelSetting.customModeTitle')}
+              </h4>
+              <p>
+                {dict('PC.Pages.EditAgent.AgentModelSetting.customModeDesc1')}
+              </p>
+              <p>
+                {dict('PC.Pages.EditAgent.AgentModelSetting.customModeDesc2')}
+              </p>
             </>
           }
           icon={<InfoCircleOutlined />}
@@ -367,8 +409,12 @@ const AgentModelSetting: React.FC<
       {/*生成随机性;0-1*/}
       <div className={cx('flex', 'mb-16')}>
         <LabelIcon
-          label={dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.generateRandomness')}
-          title={dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.generateRandomnessTooltip')}
+          label={dict(
+            'PC.Pages.EditAgent.AgentModelSetting.generateRandomness',
+          )}
+          title={dict(
+            'PC.Pages.EditAgent.AgentModelSetting.generateRandomnessTooltip',
+          )}
         />
         <SliderNumber
           min={0}
@@ -381,8 +427,8 @@ const AgentModelSetting: React.FC<
       {/*累计概率: 模型在生成输出时会从概率最高的词汇开始选择;0-1*/}
       <div className={cx('flex', 'mb-16')}>
         <LabelIcon
-          label=”Top p”
-          title={dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.topPTooltip')}
+          label="Top p"
+          title={dict('PC.Pages.EditAgent.AgentModelSetting.topPTooltip')}
         />
         <SliderNumber
           min={0}
@@ -392,12 +438,18 @@ const AgentModelSetting: React.FC<
           onChange={(value) => handleChange(value, 'topP')}
         />
       </div>
-      <h3 className={cx(styles.title)}>{dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.inputOutputSettings')}</h3>
+      <h3 className={cx(styles.title)}>
+        {dict('PC.Pages.EditAgent.AgentModelSetting.inputOutputSettings')}
+      </h3>
       {/*上下文轮数*/}
       <div className={cx('flex', 'mb-16')}>
         <LabelIcon
-          label={dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.contextRoundsLabel')}
-          title={dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.contextRoundsTooltip')}
+          label={dict(
+            'PC.Pages.EditAgent.AgentModelSetting.contextRoundsLabel',
+          )}
+          title={dict(
+            'PC.Pages.EditAgent.AgentModelSetting.contextRoundsTooltip',
+          )}
         />
         <SliderNumber
           min={0}
@@ -410,8 +462,12 @@ const AgentModelSetting: React.FC<
       {/*最大生成长度*/}
       <div className={cx('flex', 'mb-16')}>
         <LabelIcon
-          label={dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.maxReplyLengthLabel')}
-          title={dict('NuwaxPC.Pages.EditAgent.AgentModelSetting.maxReplyLengthTooltip')}
+          label={dict(
+            'PC.Pages.EditAgent.AgentModelSetting.maxReplyLengthLabel',
+          )}
+          title={dict(
+            'PC.Pages.EditAgent.AgentModelSetting.maxReplyLengthTooltip',
+          )}
         />
         <SliderNumber
           min={1}

@@ -80,7 +80,7 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
         value: item.typeName,
       })),
       {
-        label: t('NuwaxPC.Pages.SystemTaskTimedPeriodSelector.specificTime'),
+        label: t('PC.Pages.SystemTaskTimedPeriodSelector.specificTime'),
         value: 'SpecificTime',
       },
     ];
@@ -177,7 +177,7 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
         rules={[
           {
             required: true,
-            message: t('NuwaxPC.Pages.SystemTaskTimedPeriodSelector.enter'),
+            message: t('PC.Pages.SystemTaskTimedPeriodSelector.enter'),
           },
         ]}
       >
@@ -194,7 +194,7 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
           rules={[
             {
               required: true,
-              message: t('NuwaxPC.Pages.SystemTaskTimedPeriodSelector.enter'),
+              message: t('PC.Pages.SystemTaskTimedPeriodSelector.enter'),
             },
           ]}
         >
@@ -214,7 +214,7 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
             {
               required: true,
               message: t(
-                'NuwaxPC.Pages.SystemTaskTimedPeriodSelector.selectSpecificTime',
+                'PC.Pages.SystemTaskTimedPeriodSelector.selectSpecificTime',
               ),
             },
             {
@@ -223,7 +223,7 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
                   return Promise.reject(
                     new Error(
                       t(
-                        'NuwaxPC.Pages.SystemTaskTimedPeriodSelector.specificTimeMustBeFuture',
+                        'PC.Pages.SystemTaskTimedPeriodSelector.specificTimeMustBeFuture',
                       ),
                     ),
                   );
@@ -236,7 +236,7 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
           <DatePicker
             showTime
             placeholder={t(
-              'NuwaxPC.Pages.SystemTaskTimedPeriodSelector.selectDateTime',
+              'PC.Pages.SystemTaskTimedPeriodSelector.selectDateTime',
             )}
             style={{ width: 200 }}
           />

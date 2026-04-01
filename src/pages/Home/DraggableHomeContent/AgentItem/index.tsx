@@ -49,13 +49,13 @@ const AgentItem: React.FC<AgentItemProps> = ({
     if (info?.publishUser?.userName) {
       return info.publishUser.userName;
     }
-    return dict('NuwaxPC.Pages.HomeDrag.unknownUser');
+    return dict('PC.Pages.HomeDrag.unknownUser');
   };
 
   // 获取智能体描述
   const getDescription = () => {
     if (!info?.description) {
-      return dict('NuwaxPC.Pages.HomeDrag.noDescription');
+      return dict('PC.Pages.HomeDrag.noDescription');
     }
     return info.description;
   };
@@ -64,14 +64,16 @@ const AgentItem: React.FC<AgentItemProps> = ({
     <div
       className={cx(styles.container)}
       onClick={onItemClick}
-      title={`${info?.name || dict('NuwaxPC.Pages.HomeDrag.agent')} - ${getDescription()}`}
+      title={`${
+        info?.name || dict('PC.Pages.HomeDrag.agent')
+      } - ${getDescription()}`}
     >
       {/* 智能体头像 */}
       <div className={styles['img-wrapper']}>
         <img
           className={cx(styles.img)}
           src={imageError ? agentImage : info.icon || agentImage}
-          alt={info?.name || dict('NuwaxPC.Pages.HomeDrag.agentAvatar')}
+          alt={info?.name || dict('PC.Pages.HomeDrag.agentAvatar')}
           onError={handleImageError}
           loading="lazy"
         />
@@ -87,17 +89,17 @@ const AgentItem: React.FC<AgentItemProps> = ({
             expandable: false,
             symbol: '...',
           }}
-          title={info?.name || dict('NuwaxPC.Pages.HomeDrag.agentName')}
+          title={info?.name || dict('PC.Pages.HomeDrag.agentName')}
           className={styles['title-section']}
         >
-          {info?.name || dict('NuwaxPC.Pages.HomeDrag.unnamedAgent')}
+          {info?.name || dict('PC.Pages.HomeDrag.unnamedAgent')}
         </Typography.Title>
 
         {/* 用户信息区域 */}
         <div className={styles['source-section']}>
           <p className={cx(styles.source)}>
             {/* <UserOutlined className={styles['user-icon']} /> */}
-            {dict('NuwaxPC.Pages.HomeDrag.from')} {getUserDisplayName()}
+            {dict('PC.Pages.HomeDrag.from')} {getUserDisplayName()}
           </p>
         </div>
       </div>
@@ -109,7 +111,11 @@ const AgentItem: React.FC<AgentItemProps> = ({
           [styles.collecting]: isCollecting,
         })}
         onClick={handlerCollect}
-        title={info.collect ? dict('NuwaxPC.Pages.HomeDrag.cancelCollect') : dict('NuwaxPC.Pages.HomeDrag.collect')}
+        title={
+          info.collect
+            ? dict('PC.Pages.HomeDrag.cancelCollect')
+            : dict('PC.Pages.HomeDrag.collect')
+        }
       >
         <StarFilled
           className={cx(styles['star-icon'], {

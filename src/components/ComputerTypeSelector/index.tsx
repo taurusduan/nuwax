@@ -1,9 +1,9 @@
 import { SUCCESS_CODE } from '@/constants/codes.constants';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiGetUserSelectableSandboxList,
   apiSaveSelectedSandbox,
 } from '@/services/systemManage';
-import { dict } from '@/services/i18nRuntime';
 import { CheckOutlined } from '@ant-design/icons';
 import { Dropdown, MenuProps, Spin } from 'antd';
 import classNames from 'classnames';
@@ -25,7 +25,7 @@ const cx = classNames.bind(styles);
  */
 const NO_COMPUTER_OPTION: ComputerOption = {
   id: '',
-  name: dict('NuwaxPC.Components.ComputerTypeSelector.noComputerAvailable'),
+  name: dict('PC.Components.ComputerTypeSelector.noComputerAvailable'),
   description: '',
 };
 
@@ -34,7 +34,7 @@ const NO_COMPUTER_OPTION: ComputerOption = {
  */
 const UNAVAILABLE_OPTION: ComputerOption = {
   id: '',
-  name: dict('NuwaxPC.Components.ComputerTypeSelector.computerUnavailable'),
+  name: dict('PC.Components.ComputerTypeSelector.computerUnavailable'),
   description: '',
 };
 
@@ -43,7 +43,7 @@ const UNAVAILABLE_OPTION: ComputerOption = {
  */
 const PERSONAL_COMPUTER_UNAVAILABLE_OPTION: ComputerOption = {
   id: '',
-  name: dict('NuwaxPC.Components.ComputerTypeSelector.personalComputerUnavailable'),
+  name: dict('PC.Components.ComputerTypeSelector.personalComputerUnavailable'),
   description: '',
 };
 
@@ -200,7 +200,11 @@ const ComputerTypeSelector: React.FC<ComputerTypeSelectorProps> = ({
       return computerList[0];
     }
     // 未初始化时显示默认文本
-    return { id: '', name: dict('NuwaxPC.Components.ComputerTypeSelector.selectComputer'), description: '' };
+    return {
+      id: '',
+      name: dict('PC.Components.ComputerTypeSelector.selectComputer'),
+      description: '',
+    };
   }, [value, computerList, unavailable, initialized, fixedSelection]);
 
   // 处理选择
@@ -246,7 +250,9 @@ const ComputerTypeSelector: React.FC<ComputerTypeSelectorProps> = ({
         label: (
           <div className={cx(styles['menu-item'])}>
             <Spin size="small" />
-            <span style={{ marginLeft: 8 }}>{dict('NuwaxPC.Common.Global.loading')}</span>
+            <span style={{ marginLeft: 8 }}>
+              {dict('PC.Common.Global.loading')}
+            </span>
           </div>
         ),
         disabled: true,
@@ -288,7 +294,9 @@ const ComputerTypeSelector: React.FC<ComputerTypeSelectorProps> = ({
           <div
             className={cx(styles['menu-item'], styles['menu-item-disabled'])}
           >
-            <span className={cx(styles['item-name'])}>{dict('NuwaxPC.Components.ComputerTypeSelector.noComputerAvailable')}</span>
+            <span className={cx(styles['item-name'])}>
+              {dict('PC.Components.ComputerTypeSelector.noComputerAvailable')}
+            </span>
           </div>
         ),
         disabled: true,

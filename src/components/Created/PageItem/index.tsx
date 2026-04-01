@@ -46,13 +46,13 @@ const PageItem: React.FC<PageItemProps> = ({
             <img
               src={item?.creatorAvatar || require('@/assets/images/avatar.png')}
               style={{ borderRadius: '50%' }}
-              alt={t('NuwaxPC.Components.CreatedPageItem.avatarAlt')}
+              alt={t('PC.Components.CreatedPageItem.avatarAlt')}
             />
             <span>{item.creatorNickName}</span>
             <Divider type="vertical" />
             <span>
               {t(
-                'NuwaxPC.Components.CreatedPageItem.createdAt',
+                'PC.Components.CreatedPageItem.createdAt',
                 getTime(item.created!),
               )}
             </span>
@@ -71,8 +71,8 @@ const PageItem: React.FC<PageItemProps> = ({
         loading={isCurrentLoading}
       >
         {isAddedState
-          ? t('NuwaxPC.Components.CreatedPageItem.added')
-          : t('NuwaxPC.Components.CreatedPageItem.add')}
+          ? t('PC.Components.CreatedPageItem.added')
+          : t('PC.Components.CreatedPageItem.add')}
       </Button>
     </div>
   );

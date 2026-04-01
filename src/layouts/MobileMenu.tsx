@@ -40,7 +40,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
     {isOpen && (
       <div
         className={styles.mobileMenuMask}
-        aria-label={dict('NuwaxPC.Layouts.MobileMenu.menuMask')}
+        aria-label={dict('PC.Layouts.MobileMenu.menuMask')}
         tabIndex={-1}
         onClick={onToggle}
         role="button"

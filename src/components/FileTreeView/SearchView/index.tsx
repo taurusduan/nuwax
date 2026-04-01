@@ -148,7 +148,7 @@ const SearchView: React.FC<SearchViewProps> = ({
       {/* 搜索栏 */}
       <div className={cx(styles['search-bar'])}>
         <Input
-          placeholder={dict('NuwaxPC.Components.SearchView.searchPlaceholder')}
+          placeholder={dict('PC.Components.SearchView.searchPlaceholder')}
           className={cx(styles['search-input'])}
           prefix={<SearchOutlined className={cx(styles['search-icon'])} />}
           value={searchValue}
@@ -198,7 +198,7 @@ const SearchView: React.FC<SearchViewProps> = ({
             // 没有搜索结果时显示提示
             <div className={cx(styles['search-empty'])}>
               <div className={cx(styles['empty-text'])}>
-                {dict('NuwaxPC.Components.SearchView.noMatchingFiles')}
+                {dict('PC.Components.SearchView.noMatchingFiles')}
               </div>
             </div>
           )}

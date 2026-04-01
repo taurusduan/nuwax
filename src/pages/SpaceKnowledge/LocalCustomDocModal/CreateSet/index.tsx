@@ -47,12 +47,8 @@ const CreateSet: React.FC<CreateSetProps> = ({
         )}
         onClick={() => onChoose(true)}
       >
-        <h3>
-          {dict('NuwaxPC.Pages.SpaceKnowledge.CreateSet.autoSegmentClean')}
-        </h3>
-        <p>
-          {dict('NuwaxPC.Pages.SpaceKnowledge.CreateSet.autoSegmentCleanDesc')}
-        </p>
+        <h3>{dict('PC.Pages.SpaceKnowledge.CreateSet.autoSegmentClean')}</h3>
+        <p>{dict('PC.Pages.SpaceKnowledge.CreateSet.autoSegmentCleanDesc')}</p>
       </div>
       <div
         className={cx(styles['set-box'], 'px-16', 'py-16', 'cursor-pointer', {
@@ -60,8 +56,8 @@ const CreateSet: React.FC<CreateSetProps> = ({
         })}
         onClick={() => onChoose(false)}
       >
-        <h3>{dict('NuwaxPC.Pages.SpaceKnowledge.CreateSet.custom')}</h3>
-        <p>{dict('NuwaxPC.Pages.SpaceKnowledge.CreateSet.customDesc')}</p>
+        <h3>{dict('PC.Pages.SpaceKnowledge.CreateSet.custom')}</h3>
+        <p>{dict('PC.Pages.SpaceKnowledge.CreateSet.customDesc')}</p>
         <div
           className={cx({
             [styles['custom-set-hide']]: autoSegmentConfigFlag,
@@ -82,7 +78,7 @@ const CreateSet: React.FC<CreateSetProps> = ({
               label={
                 <LabelStar
                   label={dict(
-                    'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentDelimiter',
+                    'PC.Pages.SpaceKnowledge.CreateSet.segmentDelimiter',
                   )}
                 />
               }
@@ -111,14 +107,14 @@ const CreateSet: React.FC<CreateSetProps> = ({
                     {
                       required: true,
                       message: dict(
-                        'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputSegmentDelimiter',
+                        'PC.Pages.SpaceKnowledge.CreateSet.inputSegmentDelimiter',
                       ),
                     },
                   ]}
                 >
                   <Input
                     placeholder={dict(
-                      'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentDelimiterPlaceholder',
+                      'PC.Pages.SpaceKnowledge.CreateSet.segmentDelimiterPlaceholder',
                     )}
                   />
                 </Form.Item>
@@ -126,14 +122,12 @@ const CreateSet: React.FC<CreateSetProps> = ({
             </Form.Item>
             <Form.Item
               name="words"
-              label={dict(
-                'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentMaxLength',
-              )}
+              label={dict('PC.Pages.SpaceKnowledge.CreateSet.segmentMaxLength')}
               rules={[
                 {
                   required: true,
                   message: dict(
-                    'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputRange100To5000',
+                    'PC.Pages.SpaceKnowledge.CreateSet.inputRange100To5000',
                   ),
                 },
                 {
@@ -148,7 +142,7 @@ const CreateSet: React.FC<CreateSetProps> = ({
                       return Promise.reject(
                         new Error(
                           dict(
-                            'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputValidNumber',
+                            'PC.Pages.SpaceKnowledge.CreateSet.inputValidNumber',
                           ),
                         ),
                       );
@@ -156,7 +150,7 @@ const CreateSet: React.FC<CreateSetProps> = ({
                     return Promise.reject(
                       new Error(
                         dict(
-                          'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentMaxLengthRange',
+                          'PC.Pages.SpaceKnowledge.CreateSet.segmentMaxLengthRange',
                         ),
                       ),
                     );
@@ -166,20 +160,20 @@ const CreateSet: React.FC<CreateSetProps> = ({
             >
               <Input
                 placeholder={dict(
-                  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputRange100To5000',
+                  'PC.Pages.SpaceKnowledge.CreateSet.inputRange100To5000',
                 )}
               />
             </Form.Item>
             <Form.Item
               name="overlaps"
               label={dict(
-                'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentOverlapPercent',
+                'PC.Pages.SpaceKnowledge.CreateSet.segmentOverlapPercent',
               )}
               rules={[
                 {
                   required: true,
                   message: dict(
-                    'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputRange0To100',
+                    'PC.Pages.SpaceKnowledge.CreateSet.inputRange0To100',
                   ),
                 },
                 {
@@ -194,7 +188,7 @@ const CreateSet: React.FC<CreateSetProps> = ({
                       return Promise.reject(
                         new Error(
                           dict(
-                            'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputValidNumber',
+                            'PC.Pages.SpaceKnowledge.CreateSet.inputValidNumber',
                           ),
                         ),
                       );
@@ -202,7 +196,7 @@ const CreateSet: React.FC<CreateSetProps> = ({
                     return Promise.reject(
                       new Error(
                         dict(
-                          'NuwaxPC.Pages.SpaceKnowledge.CreateSet.segmentOverlapRange',
+                          'PC.Pages.SpaceKnowledge.CreateSet.segmentOverlapRange',
                         ),
                       ),
                     );
@@ -212,7 +206,7 @@ const CreateSet: React.FC<CreateSetProps> = ({
             >
               <Input
                 placeholder={dict(
-                  'NuwaxPC.Pages.SpaceKnowledge.CreateSet.inputRange0To100',
+                  'PC.Pages.SpaceKnowledge.CreateSet.inputRange0To100',
                 )}
               />
             </Form.Item>

@@ -1,6 +1,6 @@
 import CustomFormModal from '@/components/CustomFormModal';
-import { apiPageAddPath, apiPageUpdatePath } from '@/services/pageDev';
 import { dict } from '@/services/i18nRuntime';
+import { apiPageAddPath, apiPageUpdatePath } from '@/services/pageDev';
 import { CreateUpdateModeEnum } from '@/types/enums/common';
 import {
   AddPathModalProps,
@@ -25,9 +25,10 @@ const AddPathModal: React.FC<AddPathModalProps> = ({
   const [form] = Form.useForm();
   const [loading, setLoading] = useState<boolean>(false);
 
-  const title = mode === CreateUpdateModeEnum.Create
-    ? dict('NuwaxPC.Pages.SpacePageDevelop.AddPathModal.addPath')
-    : dict('NuwaxPC.Pages.SpacePageDevelop.AddPathModal.editPath');
+  const title =
+    mode === CreateUpdateModeEnum.Create
+      ? dict('PC.Pages.SpacePageDevelop.AddPathModal.addPath')
+      : dict('PC.Pages.SpacePageDevelop.AddPathModal.editPath');
 
   useEffect(() => {
     if (open && editPathInfo) {
@@ -40,7 +41,12 @@ const AddPathModal: React.FC<AddPathModalProps> = ({
   }, [open, editPathInfo]);
 
   const handleSuccess = (info: PageAddPathParams) => {
-    message.success(dict('NuwaxPC.Pages.SpacePageDevelop.AddPathModal.actionSuccess').replace('{0}', title));
+    message.success(
+      dict('PC.Pages.SpacePageDevelop.AddPathModal.actionSuccess').replace(
+        '{0}',
+        title,
+      ),
+    );
     setLoading(false);
     onConfirm(info, editPathInfo);
   };
@@ -108,23 +114,45 @@ const AddPathModal: React.FC<AddPathModalProps> = ({
       >
         <Form.Item
           name="name"
-          label={dict('NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathName')}
-          rules={[{ required: true, message: dict('NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathName') }]}
+          label={dict('PC.Pages.SpacePageDevelop.AddPathModal.pathName')}
+          rules={[
+            {
+              required: true,
+              message: dict(
+                'PC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathName',
+              ),
+            },
+          ]}
         >
-          <Input placeholder={dict('NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathName')} showCount maxLength={50} />
+          <Input
+            placeholder={dict(
+              'PC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathName',
+            )}
+            showCount
+            maxLength={50}
+          />
         </Form.Item>
         <Form.Item
           name="pageUri"
-          label={dict('NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathUri')}
+          label={dict('PC.Pages.SpacePageDevelop.AddPathModal.pathUri')}
           rules={[
-            { required: true, message: dict('NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathUri') },
+            {
+              required: true,
+              message: dict(
+                'PC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathUri',
+              ),
+            },
             {
               validator(_, value) {
                 if (!value || value.startsWith('/')) {
                   return Promise.resolve();
                 }
                 return Promise.reject(
-                  new Error(dict('NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathUriFormatError')),
+                  new Error(
+                    dict(
+                      'PC.Pages.SpacePageDevelop.AddPathModal.pathUriFormatError',
+                    ),
+                  ),
                 );
               },
             },
@@ -132,14 +160,21 @@ const AddPathModal: React.FC<AddPathModalProps> = ({
         >
           <Input
             disabled={mode === CreateUpdateModeEnum.Update}
-            placeholder={dict('NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathUriPlaceholder')}
+            placeholder={dict(
+              'PC.Pages.SpacePageDevelop.AddPathModal.pathUriPlaceholder',
+            )}
             showCount
             maxLength={200}
           />
         </Form.Item>
-        <Form.Item name="description" label={dict('NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathDescription')}>
+        <Form.Item
+          name="description"
+          label={dict('PC.Pages.SpacePageDevelop.AddPathModal.pathDescription')}
+        >
           <Input.TextArea
-            placeholder={dict('NuwaxPC.Pages.SpacePageDevelop.AddPathModal.pathDescriptionPlaceholder')}
+            placeholder={dict(
+              'PC.Pages.SpacePageDevelop.AddPathModal.pathDescriptionPlaceholder',
+            )}
             autoSize={{ minRows: 4, maxRows: 6 }}
           />
         </Form.Item>

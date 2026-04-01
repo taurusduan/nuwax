@@ -191,12 +191,13 @@ const ApplicationItem: React.FC<ApplicationItemProps> = ({
       extra={
         <>
           <span className={cx('text-ellipsis', 'flex-1')}>
-            {dict('NuwaxPC.Pages.SpaceDevelop.ApplicationItem.lastEdited')} {dayjs(agentConfigInfo.modified).format('MM-DD HH:mm')}
+            {dict('PC.Pages.SpaceDevelop.ApplicationItem.lastEdited')}{' '}
+            {dayjs(agentConfigInfo.modified).format('MM-DD HH:mm')}
           </span>
           {agentConfigInfo?.publishStatus === PublishStatusEnum.Published && (
             <span className={cx('flex', 'items-center', 'gap-4')}>
               <ICON_SUCCESS />
-              {dict('NuwaxPC.Pages.SpaceDevelop.ApplicationItem.published')}
+              {dict('PC.Pages.SpaceDevelop.ApplicationItem.published')}
             </span>
           )}
         </>
@@ -214,13 +215,19 @@ const ApplicationItem: React.FC<ApplicationItemProps> = ({
             className={cx('flex', 'items-center', 'cursor-pointer', 'gap-10')}
           >
             {agentConfigInfo.type === AgentTypeEnum.TaskAgent ? (
-              <Tag color="orange">{dict('NuwaxPC.Pages.SpaceDevelop.ApplicationItem.taskType')}</Tag>
+              <Tag color="orange">
+                {dict('PC.Pages.SpaceDevelop.ApplicationItem.taskType')}
+              </Tag>
             ) : (
-              <Tag color="green">{dict('NuwaxPC.Pages.SpaceDevelop.ApplicationItem.chatType')}</Tag>
+              <Tag color="green">
+                {dict('PC.Pages.SpaceDevelop.ApplicationItem.chatType')}
+              </Tag>
             )}
             {/* 个人电脑 */}
             {agentConfigInfo?.extra?.private && (
-              <Tag color="blue">{dict('NuwaxPC.Pages.SpaceDevelop.ApplicationItem.privateComputer')}</Tag>
+              <Tag color="blue">
+                {dict('PC.Pages.SpaceDevelop.ApplicationItem.privateComputer')}
+              </Tag>
             )}
           </div>
           <div className={cx('flex', 'items-center', 'gap-10')}>

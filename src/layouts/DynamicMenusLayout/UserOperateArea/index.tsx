@@ -45,19 +45,19 @@ const UserOperateArea: React.FC<UserOperateAreaType> = ({ menus, onClick }) => {
     const _userOperateArea = cloneDeep(USER_OPERATE_AREA);
     return _userOperateArea.map((item: UserOperateAreaItemType) => {
       if (item.type === UserOperatorAreaEnum.Document) {
-        item.title = dict('NuwaxPC.Components.UserOperate.documents');
+        item.title = dict('PC.Components.UserOperate.documents');
       }
       if (item.type === UserOperatorAreaEnum.Computer) {
-        item.title = dict('NuwaxPC.Components.UserOperate.myComputer');
+        item.title = dict('PC.Components.UserOperate.myComputer');
       }
       if (item.type === UserOperatorAreaEnum.Message) {
         item.title =
           unreadCount > 0
             ? dict(
-                'NuwaxPC.Components.UserOperate.unreadMessageCount',
+                'PC.Components.UserOperate.unreadMessageCount',
                 String(unreadCount),
               )
-            : dict('NuwaxPC.Components.UserOperate.noUnreadMessage');
+            : dict('PC.Components.UserOperate.noUnreadMessage');
       }
       return item;
     });

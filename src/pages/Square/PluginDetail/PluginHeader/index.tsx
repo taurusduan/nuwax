@@ -14,6 +14,7 @@ import {
   apiPublishedWorkflowUnCollect,
 } from '@/services/square';
 
+import { dict } from '@/services/i18nRuntime';
 import { SquareAgentTypeEnum } from '@/types/enums/square';
 import type {
   PublishPluginInfo,
@@ -25,7 +26,6 @@ import { message, Space } from 'antd';
 import classNames from 'classnames';
 import dayjs from 'dayjs';
 import React, { useState } from 'react';
-import { dict } from '@/services/i18nRuntime';
 import { useRequest } from 'umi';
 import styles from './index.less';
 
@@ -77,7 +77,9 @@ const PluginHeader: React.FC<PluginHeaderProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Pages.Square.PluginHeader.cancelCollectSuccess'));
+      message.success(
+        dict('PC.Pages.Square.PluginHeader.cancelCollectSuccess'),
+      );
     },
   });
   // 开发智能体收藏
@@ -85,7 +87,7 @@ const PluginHeader: React.FC<PluginHeaderProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Pages.Square.PluginHeader.collectSuccess'));
+      message.success(dict('PC.Pages.Square.PluginHeader.collectSuccess'));
     },
   });
 
@@ -147,7 +149,10 @@ const PluginHeader: React.FC<PluginHeaderProps> = ({
               </ConditionRender>
             </div>
             <span className={cx(styles['update-time'])}>
-              {dict('NuwaxPC.Pages.Square.PluginHeader.publishedAt', dayjs(targetInfo?.created).format('YYYY-MM-DD HH:mm'))}
+              {dict(
+                'PC.Pages.Square.PluginHeader.publishedAt',
+                dayjs(targetInfo?.created).format('YYYY-MM-DD HH:mm'),
+              )}
             </span>
           </div>
         </div>
@@ -159,7 +164,9 @@ const PluginHeader: React.FC<PluginHeaderProps> = ({
           {extraBeforeCollect}
           {/*收藏与取消收藏*/}
           <CollectStar devCollected={collect} onClick={handlerCollect} />
-          <span className={cx(styles['collect'])}>{dict('NuwaxPC.Pages.Square.PluginHeader.collectCount', String(count))}</span>
+          <span className={cx(styles['collect'])}>
+            {dict('PC.Pages.Square.PluginHeader.collectCount', String(count))}
+          </span>
         </Space>
       </div>
     </header>

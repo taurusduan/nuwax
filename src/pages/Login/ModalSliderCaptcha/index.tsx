@@ -1,5 +1,5 @@
-import { dict } from '@/services/i18nRuntime';
 import pic from '@/assets/images/pic.jpeg';
+import { dict } from '@/services/i18nRuntime';
 import type { ModalSliderCaptchaType } from '@/types/interfaces/login';
 import {
   LoadingOutlined,
@@ -63,7 +63,7 @@ const ModalSliderCaptcha: React.FC<ModalSliderCaptchaType> = ({
     <Modal
       open={open}
       onCancel={() => onCancel(false)}
-      title={dict('NuwaxPC.Pages.Login.captchaTitle')}
+      title={dict('PC.Pages.Login.captchaTitle')}
       footer={false}
       destroyOnHidden
       width={318}
@@ -84,11 +84,11 @@ const ModalSliderCaptcha: React.FC<ModalSliderCaptchaType> = ({
           refresh: <RedditOutlined />,
         }}
         tipText={{
-          default: dict('NuwaxPC.Pages.Login.captchaDefault'),
-          loading: dict('NuwaxPC.Pages.Login.captchaLoading'),
-          moving: dict('NuwaxPC.Pages.Login.captchaMoving'),
-          verifying: dict('NuwaxPC.Pages.Login.captchaVerifying'),
-          error: dict('NuwaxPC.Pages.Login.captchaError'),
+          default: dict('PC.Pages.Login.captchaDefault'),
+          loading: dict('PC.Pages.Login.captchaLoading'),
+          moving: dict('PC.Pages.Login.captchaMoving'),
+          verifying: dict('PC.Pages.Login.captchaVerifying'),
+          error: dict('PC.Pages.Login.captchaError'),
         }}
       />
     </Modal>

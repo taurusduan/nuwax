@@ -101,7 +101,11 @@ const CollapseButton: React.FC = () => {
 
   return (
     <Tooltip
-      title={isSecondMenuCollapsed ? dict('NuwaxPC.Layouts.DynamicMenusLayout.CollapseButton.expandMenu') : dict('NuwaxPC.Layouts.DynamicMenusLayout.CollapseButton.collapseMenu')}
+      title={
+        isSecondMenuCollapsed
+          ? dict('PC.Layouts.DynamicMenusLayout.CollapseButton.expandMenu')
+          : dict('PC.Layouts.DynamicMenusLayout.CollapseButton.collapseMenu')
+      }
       placement="right"
       arrow={false}
     >

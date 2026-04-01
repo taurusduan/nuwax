@@ -2,8 +2,8 @@ import workflowIcon from '@/assets/images/workflow_image.png';
 import CustomFormModal from '@/components/CustomFormModal';
 import OverrideTextArea from '@/components/OverrideTextArea';
 import UploadAvatar from '@/components/UploadAvatar';
-import { apiAddWorkflow, apiUpdateWorkflow } from '@/services/library';
 import { dict } from '@/services/i18nRuntime';
+import { apiAddWorkflow, apiUpdateWorkflow } from '@/services/library';
 import { CreateUpdateModeEnum } from '@/types/enums/common';
 import type {
   CreateWorkflowProps,
@@ -43,7 +43,7 @@ const CreateWorkflow: React.FC<CreateWorkflowProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: (result: number) => {
-      message.success(dict('NuwaxPC.Components.CreateWorkflow.workflowCreated'));
+      message.success(dict('PC.Components.CreateWorkflow.workflowCreated'));
       onCancel();
       history.push(`/space/${spaceId}/workflow/${result}`);
     },
@@ -54,7 +54,7 @@ const CreateWorkflow: React.FC<CreateWorkflowProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: UpdateWorkflowParams[]) => {
-      message.success(dict('NuwaxPC.Components.CreateWorkflow.workflowUpdated'));
+      message.success(dict('PC.Components.CreateWorkflow.workflowUpdated'));
       const info = params[0];
       onConfirm?.(info as WorkflowBaseInfo);
       onCancel(); // 关闭对话框
@@ -97,7 +97,7 @@ const CreateWorkflow: React.FC<CreateWorkflowProps> = ({
       if (onUpdate) {
         const success = await onUpdate(updateParams);
         if (success) {
-          message.success(dict('NuwaxPC.Components.CreateWorkflow.workflowUpdated'));
+          message.success(dict('PC.Components.CreateWorkflow.workflowUpdated'));
           onConfirm?.(updateParams);
           onCancel();
         }
@@ -118,7 +118,11 @@ const CreateWorkflow: React.FC<CreateWorkflowProps> = ({
   return (
     <CustomFormModal
       form={form}
-      title={type === CreateUpdateModeEnum.Create ? dict('NuwaxPC.Components.CreateWorkflow.createWorkflow') : dict('NuwaxPC.Components.CreateWorkflow.updateWorkflow')}
+      title={
+        type === CreateUpdateModeEnum.Create
+          ? dict('PC.Components.CreateWorkflow.createWorkflow')
+          : dict('PC.Components.CreateWorkflow.updateWorkflow')
+      }
       classNames={{
         content: cx(styles.container),
         header: cx(styles.header),
@@ -136,32 +140,58 @@ const CreateWorkflow: React.FC<CreateWorkflowProps> = ({
       >
         <Form.Item
           name="name"
-          label={dict('NuwaxPC.Components.CreateWorkflow.name')}
+          label={dict('PC.Components.CreateWorkflow.name')}
           rules={[
-            { required: true, message: dict('NuwaxPC.Components.CreateWorkflow.pleaseInputWorkflowName') },
+            {
+              required: true,
+              message: dict(
+                'PC.Components.CreateWorkflow.pleaseInputWorkflowName',
+              ),
+            },
             {
               validator(_, value) {
                 if (!value || value?.length <= 30) {
                   return Promise.resolve();
                 }
                 if (value?.length > 30) {
-                  return Promise.reject(new Error(dict('NuwaxPC.Components.CreateWorkflow.nameMaxChars')));
+                  return Promise.reject(
+                    new Error(
+                      dict('PC.Components.CreateWorkflow.nameMaxChars'),
+                    ),
+                  );
                 }
-                return Promise.reject(new Error(dict('NuwaxPC.Components.CreateWorkflow.pleaseInputWorkflowNameBang')));
+                return Promise.reject(
+                  new Error(
+                    dict(
+                      'PC.Components.CreateWorkflow.pleaseInputWorkflowNameBang',
+                    ),
+                  ),
+                );
               },
             },
           ]}
         >
-          <Input placeholder={dict('NuwaxPC.Components.CreateWorkflow.placeholderWorkflowName')} showCount maxLength={30} />
+          <Input
+            placeholder={dict(
+              'PC.Components.CreateWorkflow.placeholderWorkflowName',
+            )}
+            showCount
+            maxLength={30}
+          />
         </Form.Item>
         <OverrideTextArea
           name="description"
-          label={dict('NuwaxPC.Components.CreateWorkflow.description')}
+          label={dict('PC.Components.CreateWorkflow.description')}
           initialValue={description}
-          placeholder={dict('NuwaxPC.Components.CreateWorkflow.placeholderWorkflowDesc')}
+          placeholder={dict(
+            'PC.Components.CreateWorkflow.placeholderWorkflowDesc',
+          )}
           maxLength={10000}
         />
-        <Form.Item name="icon" label={dict('NuwaxPC.Components.CreateWorkflow.icon')}>
+        <Form.Item
+          name="icon"
+          label={dict('PC.Components.CreateWorkflow.icon')}
+        >
           <UploadAvatar
             onUploadSuccess={setImageUrl}
             imageUrl={imageUrl}

@@ -318,8 +318,7 @@ export const useAppDevChat = ({
                     ...msg,
                     text: insertToolCallBlock(msg.text || '', data.toolCallId, {
                       toolCallId: data.toolCallId,
-                      title:
-                        data.title || t('NuwaxPC.Pages.AppDevChat.toolCall'),
+                      title: data.title || t('PC.Pages.AppDevChat.toolCall'),
                       kind: data.kind || 'execute',
                       status: data.status,
                       content: data.content,
@@ -354,8 +353,7 @@ export const useAppDevChat = ({
                       {
                         toolCallId: data.toolCallId,
                         title:
-                          data.title ||
-                          t('NuwaxPC.Pages.AppDevChat.toolCallUpdate'),
+                          data.title || t('PC.Pages.AppDevChat.toolCallUpdate'),
                         kind: data.kind || 'execute',
                         status: data.status,
                         content: data.content,
@@ -403,9 +401,9 @@ export const useAppDevChat = ({
             //弹窗提示错误消息 强制用户关闭对话框并让用户确认停止Agent服务
             Modal.confirm({
               maskClosable: false,
-              title: t('NuwaxPC.Pages.AppDevChat.errorMessageTitle'),
+              title: t('PC.Pages.AppDevChat.errorMessageTitle'),
               content:
-                t('NuwaxPC.Pages.AppDevChat.stopAgentAndRestartDialog') +
+                t('PC.Pages.AppDevChat.stopAgentAndRestartDialog') +
                 (data?.code ? `(${data?.code})` : ''),
               onOk: () => {
                 return new Promise((resolve, reject) => {
@@ -413,15 +411,15 @@ export const useAppDevChat = ({
                     .then((stopResponse) => {
                       if (stopResponse.code === '0000') {
                         message.success(
-                          t('NuwaxPC.Pages.AppDevChat.agentServiceStopped'),
+                          t('PC.Pages.AppDevChat.agentServiceStopped'),
                         );
                         resolve(true);
                       } else {
                         message.error(
                           t(
-                            'NuwaxPC.Pages.AppDevChat.stopAgentServiceFailedWithReason',
+                            'PC.Pages.AppDevChat.stopAgentServiceFailedWithReason',
                             stopResponse.message ||
-                              t('NuwaxPC.Pages.AppDevChatArea.unknownError'),
+                              t('PC.Pages.AppDevChatArea.unknownError'),
                           ),
                         );
                         reject();
@@ -429,7 +427,7 @@ export const useAppDevChat = ({
                     })
                     .catch(() => {
                       message.error(
-                        t('NuwaxPC.Pages.AppDevChat.stopAgentServiceFailed'),
+                        t('PC.Pages.AppDevChat.stopAgentServiceFailed'),
                       );
                       reject();
                     });
@@ -598,8 +596,8 @@ export const useAppDevChat = ({
     (projectId: string, doNext: () => void) => {
       // 显示确认对话框
       Modal.confirm({
-        title: t('NuwaxPC.Pages.AppDevChat.agentServiceRunningDetected'),
-        content: t('NuwaxPC.Pages.AppDevChat.stopRunningAgentServiceConfirm'),
+        title: t('PC.Pages.AppDevChat.agentServiceRunningDetected'),
+        content: t('PC.Pages.AppDevChat.stopRunningAgentServiceConfirm'),
         maskClosable: false,
         onOk: () => {
           return new Promise((resolve, reject) => {
@@ -607,17 +605,15 @@ export const useAppDevChat = ({
             cancelAgentTask(projectId)
               .then((stopResponse) => {
                 if (stopResponse.code === '0000') {
-                  message.success(
-                    t('NuwaxPC.Pages.AppDevChat.agentServiceStopped'),
-                  );
+                  message.success(t('PC.Pages.AppDevChat.agentServiceStopped'));
                   doNext();
                   resolve(true);
                 } else {
                   message.error(
                     t(
-                      'NuwaxPC.Pages.AppDevChat.stopAgentServiceFailedWithReason',
+                      'PC.Pages.AppDevChat.stopAgentServiceFailedWithReason',
                       stopResponse.message ||
-                        t('NuwaxPC.Pages.AppDevChatArea.unknownError'),
+                        t('PC.Pages.AppDevChatArea.unknownError'),
                     ),
                   );
                   cancelChat();
@@ -625,9 +621,7 @@ export const useAppDevChat = ({
                 }
               })
               .catch(() => {
-                message.error(
-                  t('NuwaxPC.Pages.AppDevChat.stopAgentServiceFailed'),
-                );
+                message.error(t('PC.Pages.AppDevChat.stopAgentServiceFailed'));
                 cancelChat();
                 reject();
               });
@@ -635,7 +629,7 @@ export const useAppDevChat = ({
         },
         onCancel: () => {
           // 用户取消停止Agent服务，不发送消息，不增加计数
-          message.info(t('NuwaxPC.Pages.AppDevChat.sendCancelled'));
+          message.info(t('PC.Pages.AppDevChat.sendCancelled'));
           cancelChat();
         },
       });
@@ -714,7 +708,7 @@ export const useAppDevChat = ({
               markStreamingMessageError(
                 prev,
                 requestId,
-                t('NuwaxPC.Pages.AppDevChat.serviceExceptionTryLater'),
+                t('PC.Pages.AppDevChat.serviceExceptionTryLater'),
               ),
             );
           }
@@ -737,7 +731,7 @@ export const useAppDevChat = ({
           markStreamingMessageError(
             prev,
             requestId,
-            t('NuwaxPC.Pages.AppDevChat.aiAssistantConnectionFailed'),
+            t('PC.Pages.AppDevChat.aiAssistantConnectionFailed'),
           ),
         );
       },
@@ -871,7 +865,7 @@ export const useAppDevChat = ({
     ) => {
       // 验证：prompt（输入内容）是必填的
       if (!chatInput.trim()) {
-        message.warning(t('NuwaxPC.Pages.AppDevChat.inputMessageRequired'));
+        message.warning(t('PC.Pages.AppDevChat.inputMessageRequired'));
         return;
       }
 

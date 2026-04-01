@@ -47,11 +47,11 @@ const UploadAvatar: React.FC<UploadAvatarProps> = (props) => {
     const isJpgOrPng =
       type === 'image/jpeg' || type === 'image/jpg' || type === 'image/png';
     if (!isJpgOrPng) {
-      message.error(dict('NuwaxPC.Toast.UploadAvatar.invalidType'));
+      message.error(dict('PC.Toast.UploadAvatar.invalidType'));
     }
     const isLt2M = size / 1024 / 1024 < 2;
     if (!isLt2M) {
-      message.error(dict('NuwaxPC.Toast.UploadAvatar.invalidSize'));
+      message.error(dict('PC.Toast.UploadAvatar.invalidSize'));
     }
     return (isJpgOrPng && isLt2M) || Upload.LIST_IGNORE;
   };

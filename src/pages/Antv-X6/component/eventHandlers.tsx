@@ -51,21 +51,15 @@ const bindEventHandlers = ({
           node.type === NodeTypeEnum.LoopEnd ||
           node.type === NodeTypeEnum.Loop
         ) {
-          message.error(
-            t('NuwaxPC.Pages.AntvX6EventHandlers.cannotPasteLoopNode'),
-          );
+          message.error(t('PC.Pages.AntvX6EventHandlers.cannotPasteLoopNode'));
           return;
         }
         if (node.type === NodeTypeEnum.Start) {
-          message.error(
-            t('NuwaxPC.Pages.AntvX6EventHandlers.cannotPasteStartNode'),
-          );
+          message.error(t('PC.Pages.AntvX6EventHandlers.cannotPasteStartNode'));
           return;
         }
         if (node.type === NodeTypeEnum.End) {
-          message.error(
-            t('NuwaxPC.Pages.AntvX6EventHandlers.cannotPasteEndNode'),
-          );
+          message.error(t('PC.Pages.AntvX6EventHandlers.cannotPasteEndNode'));
           return;
         }
 
@@ -174,7 +168,7 @@ const bindEventHandlers = ({
 
         if (!isEdgeDeletable(sourceNode, targetNode)) {
           message.warning(
-            t('NuwaxPC.Pages.AntvX6EventHandlers.cannotDeleteLoopEdge'),
+            t('PC.Pages.AntvX6EventHandlers.cannotDeleteLoopEdge'),
           );
           return;
         }
@@ -241,7 +235,7 @@ const bindEventHandlers = ({
       } else {
         if (isResistNodeType.includes(_cell.getData().type)) {
           message.warning(
-            t('NuwaxPC.Pages.AntvX6EventHandlers.cannotDeleteStartEndNodes'),
+            t('PC.Pages.AntvX6EventHandlers.cannotDeleteStartEndNodes'),
           );
           return;
         }
@@ -255,10 +249,10 @@ const bindEventHandlers = ({
             // 弹出确认框
             modal.confirm({
               title: t(
-                'NuwaxPC.Pages.AntvX6EventHandlers.deleteLoopNodeConfirmTitle',
+                'PC.Pages.AntvX6EventHandlers.deleteLoopNodeConfirmTitle',
               ),
-              okText: t('NuwaxPC.Pages.AntvX6EventHandlers.confirm'),
-              cancelText: t('NuwaxPC.Pages.AntvX6EventHandlers.cancel'),
+              okText: t('PC.Pages.AntvX6EventHandlers.confirm'),
+              cancelText: t('PC.Pages.AntvX6EventHandlers.cancel'),
               onOk: () => {
                 removeNode(_cell.id, _cell.getData()); // 调用删除节点的函数
                 graph.removeCells(cells); // 删除选中的单元格

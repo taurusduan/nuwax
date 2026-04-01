@@ -49,11 +49,8 @@ const CategoryModal: React.FC<CategoryModalProps> = ({
     <XModalForm
       title={
         mode === 'add'
-          ? t('NuwaxPC.Pages.SystemConfigCategoryModal.addTitle', categoryLabel)
-          : t(
-              'NuwaxPC.Pages.SystemConfigCategoryModal.editTitle',
-              categoryLabel,
-            )
+          ? t('PC.Pages.SystemConfigCategoryModal.addTitle', categoryLabel)
+          : t('PC.Pages.SystemConfigCategoryModal.editTitle', categoryLabel)
       }
       open={open}
       form={form}
@@ -65,26 +62,24 @@ const CategoryModal: React.FC<CategoryModalProps> = ({
       }}
       submitter={{
         searchConfig: {
-          resetText: t('NuwaxPC.Common.Global.cancel'),
-          submitText: t('NuwaxPC.Common.Global.save'),
+          resetText: t('PC.Common.Global.cancel'),
+          submitText: t('PC.Common.Global.save'),
         },
       }}
       onFinish={onFinish}
     >
       <ProFormText
         name="name"
-        label={t('NuwaxPC.Pages.SystemConfigCategoryModal.name')}
-        placeholder={t(
-          'NuwaxPC.Pages.SystemConfigCategoryModal.namePlaceholder',
-        )}
+        label={t('PC.Pages.SystemConfigCategoryModal.name')}
+        placeholder={t('PC.Pages.SystemConfigCategoryModal.namePlaceholder')}
         rules={[
           {
             required: true,
-            message: t('NuwaxPC.Pages.SystemConfigCategoryModal.nameRequired'),
+            message: t('PC.Pages.SystemConfigCategoryModal.nameRequired'),
           },
           {
             max: 100,
-            message: t('NuwaxPC.Pages.SystemConfigCategoryModal.nameMaxLength'),
+            message: t('PC.Pages.SystemConfigCategoryModal.nameMaxLength'),
           },
         ]}
         fieldProps={{
@@ -94,24 +89,20 @@ const CategoryModal: React.FC<CategoryModalProps> = ({
       />
       <ProFormText
         name="code"
-        label={t('NuwaxPC.Pages.SystemConfigCategoryModal.code')}
-        placeholder={t(
-          'NuwaxPC.Pages.SystemConfigCategoryModal.codePlaceholder',
-        )}
+        label={t('PC.Pages.SystemConfigCategoryModal.code')}
+        placeholder={t('PC.Pages.SystemConfigCategoryModal.codePlaceholder')}
         rules={[
           {
             required: true,
-            message: t('NuwaxPC.Pages.SystemConfigCategoryModal.codeRequired'),
+            message: t('PC.Pages.SystemConfigCategoryModal.codeRequired'),
           },
           {
             max: 100,
-            message: t('NuwaxPC.Pages.SystemConfigCategoryModal.codeMaxLength'),
+            message: t('PC.Pages.SystemConfigCategoryModal.codeMaxLength'),
           },
           {
             pattern: /^[a-zA-Z_$][a-zA-Z0-9_$]*$/,
-            message: t(
-              'NuwaxPC.Pages.SystemConfigCategoryModal.codePatternInvalid',
-            ),
+            message: t('PC.Pages.SystemConfigCategoryModal.codePatternInvalid'),
           },
         ]}
         fieldProps={{
@@ -121,15 +112,15 @@ const CategoryModal: React.FC<CategoryModalProps> = ({
       />
       <ProFormTextArea
         name="description"
-        label={t('NuwaxPC.Pages.SystemConfigCategoryModal.description')}
+        label={t('PC.Pages.SystemConfigCategoryModal.description')}
         placeholder={t(
-          'NuwaxPC.Pages.SystemConfigCategoryModal.descriptionPlaceholder',
+          'PC.Pages.SystemConfigCategoryModal.descriptionPlaceholder',
         )}
         rules={[
           {
             max: 100,
             message: t(
-              'NuwaxPC.Pages.SystemConfigCategoryModal.descriptionMaxLength',
+              'PC.Pages.SystemConfigCategoryModal.descriptionMaxLength',
             ),
           },
         ]}

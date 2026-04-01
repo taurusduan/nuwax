@@ -168,7 +168,7 @@ const RunResult: React.FC<RunResultProps> = ({
           <CopyIconButton
             data={obj}
             jsonSpace={2}
-            tooltipTitle={t('NuwaxPC.Common.Global.copy')}
+            tooltipTitle={t('PC.Common.Global.copy')}
           />
         </div>
         <div className={cx(styles.runResultSectionContent, 'overflow-y')}>
@@ -202,10 +202,10 @@ const RunResult: React.FC<RunResultProps> = ({
           <span className={cx(styles.statusText)}>
             {title ||
               (loading
-                ? t('NuwaxPC.Pages.AntvX6RegisterNodes.running')
+                ? t('PC.Pages.AntvX6RegisterNodes.running')
                 : success
-                ? t('NuwaxPC.Pages.AntvX6RegisterNodes.success')
-                : t('NuwaxPC.Pages.AntvX6RegisterNodes.failed'))}
+                ? t('PC.Pages.AntvX6RegisterNodes.success')
+                : t('PC.Pages.AntvX6RegisterNodes.failed'))}
           </span>
           {!loading && <span className={cx(styles.runTime)}>{time}</span>}
         </div>
@@ -223,12 +223,12 @@ const RunResult: React.FC<RunResultProps> = ({
         <div className={cx(styles.runResultBody)}>
           <div className={cx(styles.runResultInfo)}>
             <div className={cx(styles.totalCount)}>
-              {t('NuwaxPC.Pages.AntvX6RunResult.totalCount', String(total))}
+              {t('PC.Pages.AntvX6RunResult.totalCount', String(total))}
             </div>
             {total > 1 && !success && (
               <div className={cx(styles.onlyErrorCheckbox)}>
                 <Checkbox checked={onlyError} onChange={handleOnlyErrorChange}>
-                  {t('NuwaxPC.Pages.AntvX6RunResult.onlyShowErrors')}
+                  {t('PC.Pages.AntvX6RunResult.onlyShowErrors')}
                 </Checkbox>
               </div>
             )}
@@ -238,11 +238,11 @@ const RunResult: React.FC<RunResultProps> = ({
           {Object.keys(batchVariables).length > 0 && (
             <div className={cx(styles.runResultBatch)}>
               <div className={cx(styles.runResultBatchHeader)}>
-                <span>{t('NuwaxPC.Pages.AntvX6RunResult.batchVariables')}</span>
+                <span>{t('PC.Pages.AntvX6RunResult.batchVariables')}</span>
                 <CopyIconButton
                   data={batchVariables}
                   jsonSpace={2}
-                  tooltipTitle={t('NuwaxPC.Common.Global.copy')}
+                  tooltipTitle={t('PC.Common.Global.copy')}
                 />
               </div>
               <div className={cx(styles.runResultSectionContent, 'overflow-y')}>
@@ -251,8 +251,8 @@ const RunResult: React.FC<RunResultProps> = ({
             </div>
           )}
 
-          {renderKeyValue(inputParams, t('NuwaxPC.Pages.AntvX6Data.input'))}
-          {renderKeyValue(outputResult, t('NuwaxPC.Pages.AntvX6Data.output'))}
+          {renderKeyValue(inputParams, t('PC.Pages.AntvX6Data.input'))}
+          {renderKeyValue(outputResult, t('PC.Pages.AntvX6Data.output'))}
         </div>
       )}
     </div>

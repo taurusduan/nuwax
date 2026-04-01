@@ -211,7 +211,7 @@ const usePluginConfig = () => {
   // 更新成功
   const handleUpdateSuccess = () => {
     if (isClickSaveBtnRef.current) {
-      message.success(dict('NuwaxPC.Hooks.UsePluginConfig.saveSuccess'));
+      message.success(dict('PC.Hooks.UsePluginConfig.saveSuccess'));
       isClickSaveBtnRef.current = false;
     }
     // 更新修改时间

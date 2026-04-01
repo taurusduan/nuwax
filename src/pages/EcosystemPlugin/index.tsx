@@ -176,7 +176,7 @@ export default function EcosystemPlugin() {
         setPluginData(result);
       } catch (error) {
         console.error('获取插件列表失败:', error);
-        message.error(dict('NuwaxPC.Pages.EcosystemPlugin.fetchListFailed'));
+        message.error(dict('PC.Pages.EcosystemPlugin.fetchListFailed'));
       } finally {
         setLoading(false);
       }
@@ -213,8 +213,9 @@ export default function EcosystemPlugin() {
     const isAll = activeTab === TabTypeEnum.ALL;
     return {
       icon: config.icon || '',
-      title: config.name || dict('NuwaxPC.Pages.EcosystemPlugin.unnamedPlugin'),
-      description: config.description || dict('NuwaxPC.Pages.EcosystemPlugin.noDescription'),
+      title: config.name || dict('PC.Pages.EcosystemPlugin.unnamedPlugin'),
+      description:
+        config.description || dict('PC.Pages.EcosystemPlugin.noDescription'),
       isNewVersion: config.isNewVersion,
       author: config.author || '',
       targetType: config.targetType as AgentComponentTypeEnum,
@@ -232,8 +233,9 @@ export default function EcosystemPlugin() {
   ): EcosystemDetailDrawerData => {
     return {
       icon: config.icon || '',
-      title: config.name || dict('NuwaxPC.Pages.EcosystemPlugin.unnamedPlugin'),
-      description: config.description || dict('NuwaxPC.Pages.EcosystemPlugin.noDescription'),
+      title: config.name || dict('PC.Pages.EcosystemPlugin.unnamedPlugin'),
+      description:
+        config.description || dict('PC.Pages.EcosystemPlugin.noDescription'),
       // isNewVersion: true,
       isNewVersion: config.isNewVersion || false,
       author: config.author || '',
@@ -274,16 +276,16 @@ export default function EcosystemPlugin() {
         configParamJson: JSON.stringify(values),
       });
     } catch (error) {
-      message.error(dict('NuwaxPC.Pages.EcosystemPlugin.operationFailed'));
+      message.error(dict('PC.Pages.EcosystemPlugin.operationFailed'));
       return false;
     }
     if (result) {
       setDrawerVisible(false);
-      message.success(dict('NuwaxPC.Pages.EcosystemPlugin.updateSuccess'));
+      message.success(dict('PC.Pages.EcosystemPlugin.updateSuccess'));
       refreshPluginList();
       return true;
     }
-    message.error(dict('NuwaxPC.Pages.EcosystemPlugin.updateFailed'));
+    message.error(dict('PC.Pages.EcosystemPlugin.updateFailed'));
     return false;
   };
 
@@ -299,16 +301,16 @@ export default function EcosystemPlugin() {
       // 如果是已发布状态，调用下线接口
       result = await disableClientConfig(selectedPlugin.uid);
     } catch (error) {
-      message.error(dict('NuwaxPC.Pages.EcosystemPlugin.offlineFailed'));
+      message.error(dict('PC.Pages.EcosystemPlugin.offlineFailed'));
       return false;
     }
     if (result) {
-      message.success(dict('NuwaxPC.Pages.EcosystemPlugin.offlineSuccess'));
+      message.success(dict('PC.Pages.EcosystemPlugin.offlineSuccess'));
       setDrawerVisible(false);
       refreshPluginList();
       return true;
     }
-    message.error(dict('NuwaxPC.Pages.EcosystemPlugin.offlineFailed'));
+    message.error(dict('PC.Pages.EcosystemPlugin.offlineFailed'));
     return false;
   };
 
@@ -377,16 +379,20 @@ export default function EcosystemPlugin() {
       }
 
       if (result) {
-        message.success(isEditMode ? dict('NuwaxPC.Pages.EcosystemPlugin.updateSuccess') : dict('NuwaxPC.Pages.EcosystemPlugin.createSuccess'));
+        message.success(
+          isEditMode
+            ? dict('PC.Pages.EcosystemPlugin.updateSuccess')
+            : dict('PC.Pages.EcosystemPlugin.createSuccess'),
+        );
         refreshPluginListAndReset();
         return true;
       } else {
-        message.error(dict('NuwaxPC.Pages.EcosystemPlugin.operationFailed'));
+        message.error(dict('PC.Pages.EcosystemPlugin.operationFailed'));
         return false;
       }
     } catch (error) {
       console.error('保存分享失败:', error);
-      message.error(dict('NuwaxPC.Pages.EcosystemPlugin.operationFailed'));
+      message.error(dict('PC.Pages.EcosystemPlugin.operationFailed'));
       return false;
     }
   };
@@ -424,7 +430,7 @@ export default function EcosystemPlugin() {
       }
     } catch (error) {
       console.error('获取数据失败:', error);
-      message.error(dict('NuwaxPC.Pages.EcosystemPlugin.fetchDataFailed'));
+      message.error(dict('PC.Pages.EcosystemPlugin.fetchDataFailed'));
     } finally {
       setLoading(false);
     }
@@ -526,7 +532,7 @@ export default function EcosystemPlugin() {
             setDrawerVisible(true);
           }
         } catch (error) {
-          message.error(dict('NuwaxPC.Pages.EcosystemPlugin.fetchDetailFailed'));
+          message.error(dict('PC.Pages.EcosystemPlugin.fetchDetailFailed'));
         }
       }
     }
@@ -541,7 +547,7 @@ export default function EcosystemPlugin() {
       return false;
     }
     if (result) {
-      message.success(dict('NuwaxPC.Pages.EcosystemPlugin.pluginOffline'));
+      message.success(dict('PC.Pages.EcosystemPlugin.pluginOffline'));
       refreshPluginList();
       return true;
     }
@@ -556,7 +562,7 @@ export default function EcosystemPlugin() {
       return false;
     }
     if (result) {
-      message.success(dict('NuwaxPC.Pages.EcosystemPlugin.pluginWithdrawn'));
+      message.success(dict('PC.Pages.EcosystemPlugin.pluginWithdrawn'));
       refreshPluginList();
       return true;
     }
@@ -596,7 +602,9 @@ export default function EcosystemPlugin() {
       >
         <div className={cx(styles.header)}>
           <Space>
-            <h3 className={cx(styles.title)}>{dict('NuwaxPC.Pages.EcosystemPlugin.title')}</h3>
+            <h3 className={cx(styles.title)}>
+              {dict('PC.Pages.EcosystemPlugin.title')}
+            </h3>
             <Segmented
               className={cx(styles.segmented)}
               options={SPACE_SQUARE_SEGMENTED_LIST}
@@ -622,7 +630,7 @@ export default function EcosystemPlugin() {
           <div className={cx(styles.headerRight)}>
             <Search
               className={cx(styles.searchInput)}
-              placeholder={dict('NuwaxPC.Pages.EcosystemPlugin.searchPlaceholder')}
+              placeholder={dict('PC.Pages.EcosystemPlugin.searchPlaceholder')}
               value={searchKeyword}
               onChange={(e) => setSearchKeyword(e.target.value)}
               onSearch={handleSearch}
@@ -636,7 +644,7 @@ export default function EcosystemPlugin() {
                 onClick={handleCreateShare}
                 icon={<PlusOutlined />}
               >
-                {dict('NuwaxPC.Pages.EcosystemPlugin.createShare')}
+                {dict('PC.Pages.EcosystemPlugin.createShare')}
               </Button>
             )}
           </div>
@@ -715,7 +723,7 @@ export default function EcosystemPlugin() {
                   'items-center',
                   'content-center',
                 )}
-                description={dict('NuwaxPC.Common.Global.emptyData')}
+                description={dict('PC.Common.Global.emptyData')}
               />
             </div>
           )}

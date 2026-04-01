@@ -54,7 +54,7 @@ const StencilContent = ({ dragChild, isLoop = false }: Prop) => {
   return (
     <div className="stencil-content">
       <p className="stencil-title">
-        {t('NuwaxPC.Pages.AntvX6Stencil.nodeSelectorTitle')}
+        {t('PC.Pages.AntvX6Stencil.nodeSelectorTitle')}
       </p>
       {/* 渲染 stencil 列表 */}
       <div className="stencil-list-style">

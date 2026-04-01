@@ -76,7 +76,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Toast.Global.modifiedSuccessfully'));
+      message.success(dict('PC.Toast.Global.modifiedSuccessfully'));
     },
   });
 
@@ -85,7 +85,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: [number, number]) => {
-      message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
+      message.success(dict('PC.Toast.Global.deletedSuccessfully'));
       // 删除成功后，从数据源中过滤掉该项
       const [id] = params;
       const _dataSource = dataSource?.filter(
@@ -96,7 +96,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
   });
 
   const handleCopy = () => {
-    message.success(dict('NuwaxPC.Toast.Global.copiedSuccessfully'));
+    message.success(dict('PC.Toast.Global.copiedSuccessfully'));
   };
 
   useEffect(() => {
@@ -139,12 +139,16 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
 
   // 删除确认
   const handleDelConfirm = (id: number, agentId: number, chatUrl: string) => {
-    modalConfirm(dict('NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.deleteConfirmText'), chatUrl, () => {
-      handleDel(id, agentId);
-      return new Promise((resolve) => {
-        setTimeout(resolve, 1000);
-      });
-    });
+    modalConfirm(
+      dict('PC.Pages.SpaceDevelop.CreateTempChatModal.deleteConfirmText'),
+      chatUrl,
+      () => {
+        handleDel(id, agentId);
+        return new Promise((resolve) => {
+          setTimeout(resolve, 1000);
+        });
+      },
+    );
   };
 
   // 显示二维码弹窗
@@ -156,7 +160,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
   // 入参配置columns
   const inputColumns: TableColumnsType<AgentTempChatDto> = [
     {
-      title: dict('NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.linkAddress'),
+      title: dict('PC.Pages.SpaceDevelop.CreateTempChatModal.linkAddress'),
       dataIndex: 'chatUrl',
       key: 'chatUrl',
       className: 'flex',
@@ -174,7 +178,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
             className={cx(styles['chat-url'], 'flex-1')}
           />
           <CopyToClipboard text={value || ''} onCopy={handleCopy}>
-            <Tooltip title={dict('NuwaxPC.Common.Global.copy')}>
+            <Tooltip title={dict('PC.Common.Global.copy')}>
               <span
                 className={cx(
                   styles['img-box'],
@@ -193,7 +197,9 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
               </span>
             </Tooltip>
           </CopyToClipboard>
-          <Tooltip title={dict('NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.qrCode')}>
+          <Tooltip
+            title={dict('PC.Pages.SpaceDevelop.CreateTempChatModal.qrCode')}
+          >
             <span
               className={cx(
                 styles['img-box'],
@@ -216,7 +222,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.loginRequired'),
+      title: dict('PC.Pages.SpaceDevelop.CreateTempChatModal.loginRequired'),
       dataIndex: 'requireLogin',
       key: 'requireLogin',
       width: 85,
@@ -233,7 +239,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.validity'),
+      title: dict('PC.Pages.SpaceDevelop.CreateTempChatModal.validity'),
       key: 'expire',
       width: 210,
       render: (_, record) => (
@@ -252,7 +258,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
       ),
     },
     {
-      title: dict('NuwaxPC.Common.Global.operation'),
+      title: dict('PC.Common.Global.operation'),
       width: 80,
       key: 'action',
       align: 'center',
@@ -286,7 +292,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
         }}
         title={
           <div className={cx('text-ellipsis')} style={{ width: '400px' }}>
-            {dict('NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.modalTitle', name)}
+            {dict('PC.Pages.SpaceDevelop.CreateTempChatModal.modalTitle', name)}
           </div>
         }
         open={open}
@@ -307,7 +313,9 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
             y: 450,
           }}
           locale={{
-            emptyText: <Empty description={dict('NuwaxPC.Common.Global.emptyData')} />,
+            emptyText: (
+              <Empty description={dict('PC.Common.Global.emptyData')} />
+            ),
           }}
           footer={() => (
             <Button
@@ -315,7 +323,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
               loading={loading}
               icon={<PlusOutlined />}
             >
-              {dict('NuwaxPC.Pages.SpaceDevelop.CreateTempChatModal.addLink')}
+              {dict('PC.Pages.SpaceDevelop.CreateTempChatModal.addLink')}
             </Button>
           )}
         />

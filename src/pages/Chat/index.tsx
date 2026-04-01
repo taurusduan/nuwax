@@ -374,9 +374,9 @@ const Chat: React.FC = () => {
     // 只有通用型智能体在会话活跃时才启用导航拦截，会话型智能体不需要
     enabled:
       isConversationActive && effectiveAgent?.type === AgentTypeEnum.TaskAgent,
-    title: t('NuwaxPC.Pages.Chat.taskExecuting'),
-    message: t('NuwaxPC.Pages.Chat.leaveTaskWarning'),
-    discardText: t('NuwaxPC.Pages.Chat.confirmLeave'),
+    title: t('PC.Pages.Chat.taskExecuting'),
+    message: t('PC.Pages.Chat.leaveTaskWarning'),
+    discardText: t('PC.Pages.Chat.confirmLeave'),
   });
 
   // 聊天会话框是否禁用，不能发送消息
@@ -417,7 +417,7 @@ const Chat: React.FC = () => {
     if (agent && agent?.expandPageArea && agent?.pageHomeIndex) {
       // 自动触发预览
       showPagePreview({
-        name: t('NuwaxPC.Pages.Chat.pagePreview'),
+        name: t('PC.Pages.Chat.pagePreview'),
         uri: process.env.BASE_URL + agent?.pageHomeIndex,
         params: {},
         executeId: '',
@@ -699,10 +699,12 @@ const Chat: React.FC = () => {
           selectedComputerId: null, // 显式清除 location.state 中的 selectedComputerId
         });
       } else {
-        throw new Error(res.message || t('NuwaxPC.Pages.Chat.createConversationFailed'));
+        throw new Error(
+          res.message || t('PC.Pages.Chat.createConversationFailed'),
+        );
       }
     } catch (error: any) {
-      message.error(error.message || t('NuwaxPC.Pages.Chat.clearAndCreateFailed'));
+      message.error(error.message || t('PC.Pages.Chat.clearAndCreateFailed'));
       setClearLoading(false);
       setIsLoadingOtherInterface(false);
     }
@@ -831,9 +833,7 @@ const Chat: React.FC = () => {
     newName: string,
   ): Promise<boolean> => {
     if (!id) {
-      messageAntd.warning(
-        t('NuwaxPC.Pages.Chat.conversationIdMissingCreateFile'),
-      );
+      messageAntd.warning(t('PC.Pages.Chat.conversationIdMissingCreateFile'));
       return false;
     }
 
@@ -881,7 +881,7 @@ const Chat: React.FC = () => {
   const handleDeleteFile = async (fileNode: FileNode): Promise<boolean> => {
     return new Promise((resolve) => {
       modalConfirm(
-        t('NuwaxPC.Pages.Chat.confirmDeleteFile'),
+        t('PC.Pages.Chat.confirmDeleteFile'),
         fileNode.name,
         async () => {
           try {
@@ -902,7 +902,7 @@ const Chat: React.FC = () => {
                 (item: StaticFileInfo) => item.fileId === fileNode.id,
               );
               if (!currentFile) {
-                messageAntd.error(t('NuwaxPC.Pages.Chat.fileNotFoundDelete'));
+                messageAntd.error(t('PC.Pages.Chat.fileNotFoundDelete'));
                 resolve(false);
                 return;
               }
@@ -924,7 +924,7 @@ const Chat: React.FC = () => {
             if (code === SUCCESS_CODE) {
               // 重新查询文件树列表，因为更新了文件名或文件夹名称，需要刷新文件树
               handleRefreshFileList(id);
-              messageAntd.success(t('NuwaxPC.Pages.Chat.deleteSuccess'));
+              messageAntd.success(t('PC.Pages.Chat.deleteSuccess'));
               resolve(true);
             } else {
               resolve(false);
@@ -1006,7 +1006,7 @@ const Chat: React.FC = () => {
     filePaths: string[],
   ) => {
     if (!id) {
-      messageAntd.warning(t('NuwaxPC.Pages.Chat.conversationIdMissingUpload'));
+      messageAntd.warning(t('PC.Pages.Chat.conversationIdMissingUpload'));
       return;
     }
 
@@ -1017,7 +1017,7 @@ const Chat: React.FC = () => {
     // 如果超过最大上传文件大小，则提示错误
     if (isExceedLimitSize) {
       messageAntd.warning(
-        t('NuwaxPC.Pages.Chat.uploadSizeLimitExceeded', maxFileSize),
+        t('PC.Pages.Chat.uploadSizeLimitExceeded', maxFileSize),
       );
       return;
     }
@@ -1031,7 +1031,7 @@ const Chat: React.FC = () => {
       });
 
       if (code === SUCCESS_CODE) {
-        messageAntd.success(t('NuwaxPC.Pages.Chat.uploadSuccess'));
+        messageAntd.success(t('PC.Pages.Chat.uploadSuccess'));
         // 刷新项目详情
         await handleRefreshFileList(id);
       }
@@ -1044,7 +1044,7 @@ const Chat: React.FC = () => {
   const handleExportProject = async () => {
     // 检查项目ID是否有效
     if (!id) {
-      messageAntd.warning(t('NuwaxPC.Pages.Chat.invalidConversationIdExport'));
+      messageAntd.warning(t('PC.Pages.Chat.invalidConversationIdExport'));
       return;
     }
 
@@ -1054,7 +1054,7 @@ const Chat: React.FC = () => {
       if (!result.success) {
         // 导出失败，显示错误信息
         const errorMessage =
-          result.error?.message || t('NuwaxPC.Pages.Chat.exportFailed');
+          result.error?.message || t('PC.Pages.Chat.exportFailed');
         messageAntd.warning(errorMessage);
         return;
       }
@@ -1062,7 +1062,7 @@ const Chat: React.FC = () => {
       const filename = `chat-${id}.zip`;
       // 导出整个项目压缩包
       exportWholeProjectZip(result, filename);
-      messageAntd.success(t('NuwaxPC.Pages.Chat.exportSuccess'));
+      messageAntd.success(t('PC.Pages.Chat.exportSuccess'));
     } catch (error) {
       console.error('Failed to export project:', error);
     }
@@ -1087,7 +1087,7 @@ const Chat: React.FC = () => {
                 condition={isAppSidebarMode && !isAppSidebarVisible}
               >
                 <TooltipIcon
-                  title={t('NuwaxPC.Pages.Chat.expandNavigation')}
+                  title={t('PC.Pages.Chat.expandNavigation')}
                   className={cx(styles['icon-box'])}
                   icon={
                     <SvgIcon
@@ -1100,7 +1100,7 @@ const Chat: React.FC = () => {
 
                 {/* 新建会话 */}
                 <TooltipIcon
-                  title={t('NuwaxPC.Pages.Chat.newConversation')}
+                  title={t('PC.Pages.Chat.newConversation')}
                   className={cx(styles['icon-box'])}
                   icon={
                     <SvgIcon
@@ -1116,7 +1116,7 @@ const Chat: React.FC = () => {
               {/* 当文件树显示时，也显示这个按钮，用于关闭文件树并打开 AgentSidebar */}
               {!isAppSidebarMode && !isSidebarVisible && !isMobile && (
                 <TooltipIcon
-                  title={t('NuwaxPC.Pages.Chat.viewAgentDetails')}
+                  title={t('PC.Pages.Chat.viewAgentDetails')}
                   className={cx(styles['icon-box'])}
                   icon={
                     <SvgIcon
@@ -1142,7 +1142,7 @@ const Chat: React.FC = () => {
                 !!effectiveAgent?.pageHomeIndex &&
                 !pagePreviewData && (
                   <TooltipIcon
-                    title={t('NuwaxPC.Pages.Chat.openPreviewPage')}
+                    title={t('PC.Pages.Chat.openPreviewPage')}
                     className={cx(styles['icon-box'])}
                     icon={
                       <SvgIcon
@@ -1165,8 +1165,8 @@ const Chat: React.FC = () => {
                   <TooltipIcon
                     title={
                       isFileTreeVisible && viewMode === 'preview'
-                        ? t('NuwaxPC.Pages.Chat.closeFilePreview')
-                        : t('NuwaxPC.Pages.Chat.openFilePreview')
+                        ? t('PC.Pages.Chat.closeFilePreview')
+                        : t('PC.Pages.Chat.openFilePreview')
                     }
                     className={cx(styles['icon-box'], {
                       [styles['active']]:
@@ -1190,8 +1190,8 @@ const Chat: React.FC = () => {
                     <TooltipIcon
                       title={
                         isFileTreeVisible && viewMode === 'desktop'
-                          ? t('NuwaxPC.Pages.Chat.closeAgentDesktop')
-                          : t('NuwaxPC.Pages.Chat.openAgentDesktop')
+                          ? t('PC.Pages.Chat.closeAgentDesktop')
+                          : t('PC.Pages.Chat.openAgentDesktop')
                       }
                       className={cx(styles['icon-box'], {
                         [styles['active']]:
@@ -1245,7 +1245,7 @@ const Chat: React.FC = () => {
                       {loadingMore ? (
                         <span>
                           <LoadingOutlined style={{ marginRight: 8 }} />
-                          {t('NuwaxPC.Pages.Chat.loadingHistoryConversation')}
+                          {t('PC.Pages.Chat.loadingHistoryConversation')}
                         </span>
                       ) : null}
                     </div>
@@ -1283,9 +1283,7 @@ const Chat: React.FC = () => {
                         )}
                       >
                         <LoadingOutlined />
-                        <span>
-                          {t('NuwaxPC.Pages.Chat.agentExecutingWait')}
-                        </span>
+                        <span>{t('PC.Pages.Chat.agentExecutingWait')}</span>
                       </div>
                     )}
                   </>
@@ -1346,7 +1344,7 @@ const Chat: React.FC = () => {
               }
               // 计算蒙层可见性与文案
               hasPermission={effectiveAgent?.hasPermission}
-              maskText={t('NuwaxPC.Pages.Chat.noAgentPermission')}
+              maskText={t('PC.Pages.Chat.noAgentPermission')}
               fixedSelection={
                 !!conversationInfo?.agent?.sandboxId ||
                 !!conversationInfo?.sandboxServerId ||
@@ -1497,7 +1495,7 @@ const Chat: React.FC = () => {
                         effectiveAgent?.allowCopy === AllowCopyEnum.Yes
                       }
                       onCopyClick={() => setOpenCopyModal(true)}
-                      copyButtonText={t('NuwaxPC.Pages.Chat.copyTemplate')}
+                      copyButtonText={t('PC.Pages.Chat.copyTemplate')}
                       copyButtonClassName={styles['copy-btn']}
                     />
                     {/* 复制模板弹窗 */}

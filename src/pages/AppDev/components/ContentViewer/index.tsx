@@ -176,10 +176,8 @@ const ContentViewer: React.FC<ContentViewerProps> = ({
       return (
         <AppDevEmptyState
           type="loading"
-          title={t('NuwaxPC.Pages.AppDevContentViewer.loadingFileContentTitle')}
-          description={t(
-            'NuwaxPC.Pages.AppDevContentViewer.loadingDescription',
-          )}
+          title={t('PC.Pages.AppDevContentViewer.loadingFileContentTitle')}
+          description={t('PC.Pages.AppDevContentViewer.loadingDescription')}
         />
       );
     }
@@ -188,11 +186,11 @@ const ContentViewer: React.FC<ContentViewerProps> = ({
       return (
         <AppDevEmptyState
           type="error"
-          title={t('NuwaxPC.Pages.AppDevContentViewer.loadFileFailedTitle')}
+          title={t('PC.Pages.AppDevContentViewer.loadFileFailedTitle')}
           description={fileContentError}
           buttons={[
             {
-              text: t('NuwaxPC.Pages.AppDevContentViewer.retry'),
+              text: t('PC.Pages.AppDevContentViewer.retry'),
               onClick: onRefreshFile,
             },
           ]}
@@ -204,9 +202,9 @@ const ContentViewer: React.FC<ContentViewerProps> = ({
       return (
         <AppDevEmptyState
           type="no-file"
-          title={t('NuwaxPC.Pages.AppDevContentViewer.noSelectedFileTitle')}
+          title={t('PC.Pages.AppDevContentViewer.noSelectedFileTitle')}
           description={t(
-            'NuwaxPC.Pages.AppDevContentViewer.noSelectedFileDescription',
+            'PC.Pages.AppDevContentViewer.noSelectedFileDescription',
           )}
         />
       );
@@ -240,11 +238,9 @@ const ContentViewer: React.FC<ContentViewerProps> = ({
             // 不支持预览的文件类型
             <AppDevEmptyState
               type="error"
-              title={t(
-                'NuwaxPC.Pages.AppDevContentViewer.unsupportedFileTypeTitle',
-              )}
+              title={t('PC.Pages.AppDevContentViewer.unsupportedFileTypeTitle')}
               description={t(
-                'NuwaxPC.Pages.AppDevContentViewer.unsupportedFileTypeDescription',
+                'PC.Pages.AppDevContentViewer.unsupportedFileTypeDescription',
                 selectedFileId.split('.').pop() || selectedFileId,
               )}
             />
@@ -284,11 +280,9 @@ const ContentViewer: React.FC<ContentViewerProps> = ({
           ) : (
             <AppDevEmptyState
               type="error"
-              title={t(
-                'NuwaxPC.Pages.AppDevContentViewer.unsupportedFileTypeTitle',
-              )}
+              title={t('PC.Pages.AppDevContentViewer.unsupportedFileTypeTitle')}
               description={t(
-                'NuwaxPC.Pages.AppDevContentViewer.unsupportedFileTypeDescription',
+                'PC.Pages.AppDevContentViewer.unsupportedFileTypeDescription',
                 selectedFileId.split('.').pop() || selectedFileId,
               )}
             />
@@ -320,9 +314,9 @@ const ContentViewer: React.FC<ContentViewerProps> = ({
       return (
         <AppDevEmptyState
           type="no-file"
-          title={t('NuwaxPC.Pages.AppDevContentViewer.noSelectedFileTitle')}
+          title={t('PC.Pages.AppDevContentViewer.noSelectedFileTitle')}
           description={t(
-            'NuwaxPC.Pages.AppDevContentViewer.noSelectedFileDescription',
+            'PC.Pages.AppDevContentViewer.noSelectedFileDescription',
           )}
         />
       );
@@ -352,11 +346,9 @@ const ContentViewer: React.FC<ContentViewerProps> = ({
           {!isPreviewable && !hasContents ? (
             <AppDevEmptyState
               type="error"
-              title={t(
-                'NuwaxPC.Pages.AppDevContentViewer.unsupportedFileTypeTitle',
-              )}
+              title={t('PC.Pages.AppDevContentViewer.unsupportedFileTypeTitle')}
               description={t(
-                'NuwaxPC.Pages.AppDevContentViewer.unsupportedFileTypeDescription',
+                'PC.Pages.AppDevContentViewer.unsupportedFileTypeDescription',
                 selectedFileId.split('.').pop() || selectedFileId,
               )}
             />
@@ -388,11 +380,9 @@ const ContentViewer: React.FC<ContentViewerProps> = ({
           ) : (
             <AppDevEmptyState
               type="error"
-              title={t(
-                'NuwaxPC.Pages.AppDevContentViewer.unsupportedFileTypeTitle',
-              )}
+              title={t('PC.Pages.AppDevContentViewer.unsupportedFileTypeTitle')}
               description={t(
-                'NuwaxPC.Pages.AppDevContentViewer.unsupportedFileTypeDescription',
+                'PC.Pages.AppDevContentViewer.unsupportedFileTypeDescription',
                 selectedFileId,
               )}
             />
@@ -409,7 +399,7 @@ const ContentViewer: React.FC<ContentViewerProps> = ({
         type="no-preview-url"
         title={VERSION_CONSTANTS.PREVIEW_DISABLED_MESSAGE}
         description={t(
-          'NuwaxPC.Pages.AppDevContentViewer.previewDisabledDescription',
+          'PC.Pages.AppDevContentViewer.previewDisabledDescription',
         )}
       />
     );

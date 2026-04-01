@@ -1,10 +1,10 @@
+import { dict } from '@/services/i18nRuntime';
 import {
   apiCustomPageCreateDomain,
   apiCustomPageDeleteDomain,
   apiCustomPageGetDomainList,
   apiCustomPageUpdateDomain,
 } from '@/services/pageDev';
-import { dict } from '@/services/i18nRuntime';
 import type {
   DomainBindingModalProps,
   DomainInfo,
@@ -56,7 +56,9 @@ const DomainBindingModal: React.FC<DomainBindingModalProps> = ({
   const { run: runAddDomain } = useRequest(apiCustomPageCreateDomain, {
     manual: true,
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.addSuccess'));
+      message.success(
+        dict('PC.Pages.SpacePageDevelop.DomainBindingModal.addSuccess'),
+      );
       setNewDomain('');
       setIsModalOpen(false);
       setSubmitLoading(false);
@@ -73,7 +75,9 @@ const DomainBindingModal: React.FC<DomainBindingModalProps> = ({
   const { run: runUpdateDomain } = useRequest(apiCustomPageUpdateDomain, {
     manual: true,
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.modifySuccess'));
+      message.success(
+        dict('PC.Pages.SpacePageDevelop.DomainBindingModal.modifySuccess'),
+      );
       setNewDomain('');
       setEditingDomain(null);
       setIsModalOpen(false);
@@ -91,7 +95,9 @@ const DomainBindingModal: React.FC<DomainBindingModalProps> = ({
   const { run: runDeleteDomain } = useRequest(apiCustomPageDeleteDomain, {
     manual: true,
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.deleteSuccess'));
+      message.success(
+        dict('PC.Pages.SpacePageDevelop.DomainBindingModal.deleteSuccess'),
+      );
       // 重新查询列表
       runGetDomains(projectId);
       onSuccess?.();
@@ -109,14 +115,20 @@ const DomainBindingModal: React.FC<DomainBindingModalProps> = ({
   // 处理提交（新增或修改）
   const handleSubmit = useCallback(() => {
     if (!newDomain.trim()) {
-      message.warning(dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.pleaseEnterDomain'));
+      message.warning(
+        dict('PC.Pages.SpacePageDevelop.DomainBindingModal.pleaseEnterDomain'),
+      );
       return;
     }
     // 常规域名格式验证
     const domainRegex =
       /^[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?)*\.[a-zA-Z]{2,}$/;
     if (!domainRegex.test(newDomain.trim())) {
-      message.warning(dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.invalidDomainFormat'));
+      message.warning(
+        dict(
+          'PC.Pages.SpacePageDevelop.DomainBindingModal.invalidDomainFormat',
+        ),
+      );
       return;
     }
     setSubmitLoading(true);
@@ -131,22 +143,30 @@ const DomainBindingModal: React.FC<DomainBindingModalProps> = ({
   const handleDeleteDomain = useCallback(
     (domain: DomainInfo) => {
       Modal.confirm({
-        title: dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainTitle'),
+        title: dict(
+          'PC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainTitle',
+        ),
         icon: <ExclamationCircleFilled />,
         content: (
           <div>
-            {dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainContent')}{' '}
+            {dict(
+              'PC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainContent',
+            )}{' '}
             <span style={{ color: '#ff4d4f', fontWeight: 'bold' }}>
               {domain.domain}
             </span>{' '}
             <div style={{ marginTop: 8, color: '#666', fontSize: 13 }}>
-              {dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainHint')}
+              {dict(
+                'PC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainHint',
+              )}
             </div>
           </div>
         ),
-        okText: dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.confirmRemove'),
+        okText: dict(
+          'PC.Pages.SpacePageDevelop.DomainBindingModal.confirmRemove',
+        ),
         okType: 'danger',
-        cancelText: dict('NuwaxPC.Common.Global.cancel'),
+        cancelText: dict('PC.Common.Global.cancel'),
         onOk: () => {
           runDeleteDomain({ id: domain.id });
         },
@@ -179,7 +199,7 @@ const DomainBindingModal: React.FC<DomainBindingModalProps> = ({
   return (
     <>
       <Modal
-        title={dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.title')}
+        title={dict('PC.Pages.SpacePageDevelop.DomainBindingModal.title')}
         open={open}
         onCancel={onCancel}
         width={600}
@@ -189,7 +209,7 @@ const DomainBindingModal: React.FC<DomainBindingModalProps> = ({
           {/* CNAME 配置提示区域 */}
           <div className={cx(styles['cname-section'])}>
             <div className={cx(styles['cname-title'])}>
-              {dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameTitle')}
+              {dict('PC.Pages.SpacePageDevelop.DomainBindingModal.cnameTitle')}
             </div>
             <div className={cx(styles['cname-item'])}>
               {/* <span className={cx(styles['cname-tag'], styles['cn-tag'])}>
@@ -197,10 +217,14 @@ const DomainBindingModal: React.FC<DomainBindingModalProps> = ({
               </span> */}
               <div className={cx(styles['cname-info'])}>
                 <div className={cx(styles['cname-value'])}>
-                  {dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameCnValue')}
+                  {dict(
+                    'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameCnValue',
+                  )}
                 </div>
                 <div className={cx(styles['cname-desc'])}>
-                  {dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameCnDesc')}
+                  {dict(
+                    'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameCnDesc',
+                  )}
                 </div>
               </div>
             </div>
@@ -210,10 +234,14 @@ const DomainBindingModal: React.FC<DomainBindingModalProps> = ({
               </span> */}
               <div className={cx(styles['cname-info'])}>
                 <div className={cx(styles['cname-value'])}>
-                  {dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameEnValue')}
+                  {dict(
+                    'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameEnValue',
+                  )}
                 </div>
                 <div className={cx(styles['cname-desc'])}>
-                  {dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameEnDesc')}
+                  {dict(
+                    'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameEnDesc',
+                  )}
                 </div>
               </div>
             </div>
@@ -221,9 +249,15 @@ const DomainBindingModal: React.FC<DomainBindingModalProps> = ({
 
           {/* 已绑定域名列表 */}
           <div className={cx(styles['domain-list-header'])}>
-            <span className={cx(styles['header-title'])}>{dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.boundDomains')}</span>
+            <span className={cx(styles['header-title'])}>
+              {dict(
+                'PC.Pages.SpacePageDevelop.DomainBindingModal.boundDomains',
+              )}
+            </span>
             <span className={cx(styles['domain-count'])}>
-              {dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.domainCount').replace('{0}', String(domains.length))}
+              {dict(
+                'PC.Pages.SpacePageDevelop.DomainBindingModal.domainCount',
+              ).replace('{0}', String(domains.length))}
             </span>
           </div>
 
@@ -265,14 +299,18 @@ const DomainBindingModal: React.FC<DomainBindingModalProps> = ({
             icon={<PlusOutlined />}
             onClick={handleOpenAdd}
           >
-            {dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.addDomain')}
+            {dict('PC.Pages.SpacePageDevelop.DomainBindingModal.addDomain')}
           </Button>
         </div>
       </Modal>
 
       {/* 新增/修改域名弹窗 */}
       <Modal
-        title={editingDomain ? dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.editDomain') : dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.addDomain')}
+        title={
+          editingDomain
+            ? dict('PC.Pages.SpacePageDevelop.DomainBindingModal.editDomain')
+            : dict('PC.Pages.SpacePageDevelop.DomainBindingModal.addDomain')
+        }
         open={isModalOpen}
         onCancel={handleCancel}
         onOk={handleSubmit}
@@ -281,13 +319,17 @@ const DomainBindingModal: React.FC<DomainBindingModalProps> = ({
       >
         <div style={{ padding: '20px 0' }}>
           <Input
-            placeholder={dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.domainInputPlaceholder')}
+            placeholder={dict(
+              'PC.Pages.SpacePageDevelop.DomainBindingModal.domainInputPlaceholder',
+            )}
             value={newDomain}
             onChange={(e) => setNewDomain(e.target.value)}
             onPressEnter={handleSubmit}
           />
           <div style={{ marginTop: 8, color: '#999', fontSize: 12 }}>
-            {dict('NuwaxPC.Pages.SpacePageDevelop.DomainBindingModal.cnameResolveHint')}
+            {dict(
+              'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameResolveHint',
+            )}
           </div>
         </div>
       </Modal>

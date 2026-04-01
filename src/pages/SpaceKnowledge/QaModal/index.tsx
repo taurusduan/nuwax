@@ -60,8 +60,8 @@ const QaModal: React.FC<QaModalProps> = ({
       open={open}
       title={
         data?.id
-          ? dict('NuwaxPC.Pages.SpaceKnowledge.QaModal.editQa')
-          : dict('NuwaxPC.Pages.SpaceKnowledge.QaModal.addQa')
+          ? dict('PC.Pages.SpaceKnowledge.QaModal.editQa')
+          : dict('PC.Pages.SpaceKnowledge.QaModal.addQa')
       }
       confirmLoading={loading}
       onCancel={handleCancel}
@@ -77,13 +77,11 @@ const QaModal: React.FC<QaModalProps> = ({
       >
         <Form.Item
           name="question"
-          label={dict('NuwaxPC.Pages.SpaceKnowledge.QaModal.question')}
+          label={dict('PC.Pages.SpaceKnowledge.QaModal.question')}
           rules={[
             {
               required: true,
-              message: dict(
-                'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputQuestion',
-              ),
+              message: dict('PC.Pages.SpaceKnowledge.QaModal.inputQuestion'),
             },
           ]}
         >
@@ -91,7 +89,7 @@ const QaModal: React.FC<QaModalProps> = ({
             className="dispose-textarea-count"
             autoSize={{ minRows: 5, maxRows: 8 }}
             placeholder={dict(
-              'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputQuestionContent',
+              'PC.Pages.SpaceKnowledge.QaModal.inputQuestionContent',
             )}
             showCount
             maxLength={500}
@@ -99,11 +97,11 @@ const QaModal: React.FC<QaModalProps> = ({
         </Form.Item>
         <Form.Item
           name="answer"
-          label={dict('NuwaxPC.Pages.SpaceKnowledge.QaModal.answer')}
+          label={dict('PC.Pages.SpaceKnowledge.QaModal.answer')}
           rules={[
             {
               required: true,
-              message: dict('NuwaxPC.Pages.SpaceKnowledge.QaModal.inputAnswer'),
+              message: dict('PC.Pages.SpaceKnowledge.QaModal.inputAnswer'),
             },
           ]}
         >
@@ -111,7 +109,7 @@ const QaModal: React.FC<QaModalProps> = ({
             className="dispose-textarea-count"
             autoSize={{ minRows: 5, maxRows: 8 }}
             placeholder={dict(
-              'NuwaxPC.Pages.SpaceKnowledge.QaModal.inputAnswerContent',
+              'PC.Pages.SpaceKnowledge.QaModal.inputAnswerContent',
             )}
             showCount
             maxLength={5000}

@@ -83,19 +83,23 @@ const RunOver: React.FC<RunOverProps> = ({
         {completedProcesses.map((info, index) => (
           <div key={index} className={cx(styles.row, 'flex', 'items-center')}>
             <SolutionOutlined />
-            <span
-              className={cx('flex-1', 'text-ellipsis')}
-            >{dict('NuwaxPC.Components.RunOver.called', info.name)}</span>
+            <span className={cx('flex-1', 'text-ellipsis')}>
+              {dict('PC.Components.RunOver.called', info.name)}
+            </span>
             <span>{getTime(info.result.endTime, info.result.startTime)}</span>
           </div>
         ))}
 
         {messageInfo?.status === MessageStatusEnum.Complete && (
-          <span className={cx(styles.summary)}>{dict('NuwaxPC.Components.RunOver.runComplete', String(runTime))}</span>
+          <span className={cx(styles.summary)}>
+            {dict('PC.Components.RunOver.runComplete', String(runTime))}
+          </span>
         )}
 
         {messageInfo?.status === MessageStatusEnum.Error && (
-          <span className={cx(styles.error)}>{dict('NuwaxPC.Components.RunOver.runError')}</span>
+          <span className={cx(styles.error)}>
+            {dict('PC.Components.RunOver.runError')}
+          </span>
         )}
       </div>
     );
@@ -128,7 +132,9 @@ const RunOver: React.FC<RunOverProps> = ({
         {isThinking ? (
           <>
             <LoadingOutlined className={cx(styles.successColor)} />
-            <span className={cx(styles['status-name'])}>{dict('NuwaxPC.Components.RunOver.thinking')}</span>
+            <span className={cx(styles['status-name'])}>
+              {dict('PC.Components.RunOver.thinking')}
+            </span>
           </>
         ) : messageInfo?.status === MessageStatusEnum.Loading ||
           messageInfo?.status === MessageStatusEnum.Incomplete ? (
@@ -137,19 +143,17 @@ const RunOver: React.FC<RunOverProps> = ({
             {showStatusDesc && lastProcessInfo && (
               <span className={cx(styles['status-name'])}>
                 {lastProcessInfo.status === ProcessingEnum.EXECUTING
-                  ? dict('NuwaxPC.Components.RunOver.calling')
-                  : dict('NuwaxPC.Components.RunOver.called', '')}
+                  ? dict('PC.Components.RunOver.calling')
+                  : dict('PC.Components.RunOver.called', '')}
                 {lastProcessInfo.name}
               </span>
             )}
           </>
         ) : messageInfo?.status === MessageStatusEnum.Error ? (
-          <span>{dict('NuwaxPC.Components.RunOver.runError')}</span>
-        ) : messageInfo?.status ===
-          MessageStatusEnum.Stopped? // <span>已中断</span>
-        null : (
+          <span>{dict('PC.Components.RunOver.runError')}</span>
+        ) : messageInfo?.status === MessageStatusEnum.Stopped ? null : ( // <span>已中断</span>
           <span>
-            {dict('NuwaxPC.Components.RunOver.runComplete')}
+            {dict('PC.Components.RunOver.runComplete')}
             <DownOutlined className={cx(styles.icon)} />
           </span>
         )}

@@ -1,9 +1,9 @@
+import { dict } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import type { CreatedNodeItem } from '@/types/interfaces/common';
 import { InputAndOutConfig } from '@/types/interfaces/node';
 import { SkillDisposeProps, SkillProps } from '@/types/interfaces/workflow';
 import { getImg } from '@/utils/workflow';
-import { dict } from '@/services/i18nRuntime';
 import {
   DeleteOutlined,
   // DownOutlined,
@@ -78,19 +78,23 @@ export const SkillDispose: React.FC<SkillDisposeProps> = ({
       onCancel={() => onCancel()}
       className="skill-dispose-modal-style"
       width={800}
-      footer={() => <Button onClick={handleOk}>{dict('NuwaxPC.Common.Global.save')}</Button>}
+      footer={() => (
+        <Button onClick={handleOk}>{dict('PC.Common.Global.save')}</Button>
+      )}
     >
       <div className="skill-dispose-container flex ">
         {/* 左侧部分 */}
         <div className="skill-dispose-left">
-          <div className="skill-dispose-left-title">{dict('NuwaxPC.Components.Skill.settings')}</div>
+          <div className="skill-dispose-left-title">
+            {dict('PC.Components.Skill.settings')}
+          </div>
           <p
             className={`skill-menu-style ${
               selectMenu === 'input' ? 'select-menu' : ''
             }`}
             onClick={() => setSelectMenu('input')}
           >
-            {dict('NuwaxPC.Components.Skill.configInputParams')}
+            {dict('PC.Components.Skill.configInputParams')}
           </p>
           {/* <p
             className={`skill-menu-style ${
@@ -106,14 +110,16 @@ export const SkillDispose: React.FC<SkillDisposeProps> = ({
           {selectMenu === 'input' && (
             <div>
               <div className="dis-sb content-item-style content-title-style">
-                <span className="flex-1">{dict('NuwaxPC.Components.Skill.paramName')}</span>
-                <span className="content-center-item-style">{dict('NuwaxPC.Components.Skill.defaultValue')}</span>
+                <span className="flex-1">
+                  {dict('PC.Components.Skill.paramName')}
+                </span>
+                <span className="content-center-item-style">
+                  {dict('PC.Components.Skill.defaultValue')}
+                </span>
                 <p className="content-right-item-style flex">
-                  <span>{dict('NuwaxPC.Components.Skill.enable')}</span>
+                  <span>{dict('PC.Components.Skill.enable')}</span>
                   <Popover
-                    content={
-                      dict('NuwaxPC.Components.Skill.enableDesc')
-                    }
+                    content={dict('PC.Components.Skill.enableDesc')}
                     styles={{
                       body: {
                         width: '300px',
@@ -327,7 +333,10 @@ export const SkillList: React.FC<SkillProps> = ({
                 >
                   <InfoCircleOutlined className="white" />
                 </Popover>
-                <Popover content={dict('NuwaxPC.Components.SkillCopy.editParams')} trigger="hover">
+                <Popover
+                  content={dict('PC.Components.SkillCopy.editParams')}
+                  trigger="hover"
+                >
                   <SettingOutlined
                     className="ml-12 cursor-pointer white"
                     onClick={() => {
@@ -336,7 +345,10 @@ export const SkillList: React.FC<SkillProps> = ({
                     }}
                   />
                 </Popover>
-                <Popover content={dict('NuwaxPC.Components.Skill.remove')} trigger="hover">
+                <Popover
+                  content={dict('PC.Components.Skill.remove')}
+                  trigger="hover"
+                >
                   <DeleteOutlined
                     className="ml-12  white"
                     onClick={() => handleDelete(item)}
@@ -373,7 +385,10 @@ export const SkillList: React.FC<SkillProps> = ({
                   className="skill-item-dispose-style"
                   style={{ color: '#fff', backgroundColor: 'transparent' }}
                 >
-                  <Popover content={dict('NuwaxPC.Components.Skill.remove')} trigger="hover">
+                  <Popover
+                    content={dict('PC.Components.Skill.remove')}
+                    trigger="hover"
+                  >
                     <DeleteOutlined
                       className="ml-12  white"
                       onClick={() => handleDelete(item)}

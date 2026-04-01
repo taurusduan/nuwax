@@ -30,27 +30,27 @@ import { TabsProps } from 'antd';
 export const LIBRARY_ALL_RESOURCE = [
   {
     value: ComponentTypeEnum.Workflow,
-    label: dict('NuwaxPC.Common.Global.workflow'),
+    label: dict('PC.Common.Global.workflow'),
     icon: <ICON_WORKFLOW />,
   },
   {
     value: ComponentTypeEnum.Plugin,
-    label: dict('NuwaxPC.Common.Global.plugin'),
+    label: dict('PC.Common.Global.plugin'),
     icon: <ICON_PLUGIN />,
   },
   {
     value: ComponentTypeEnum.Knowledge,
-    label: dict('NuwaxPC.Common.Global.knowledge'),
+    label: dict('PC.Common.Global.knowledge'),
     icon: <ICON_KNOWLEDGE />,
   },
   {
     value: ComponentTypeEnum.Table,
-    label: dict('NuwaxPC.Common.Global.dataTable'),
+    label: dict('PC.Common.Global.dataTable'),
     icon: <ICON_TABLE />,
   },
   {
     value: ComponentTypeEnum.Model,
-    label: dict('NuwaxPC.Common.Global.model'),
+    label: dict('PC.Common.Global.model'),
     icon: <ICON_MODEL />,
   },
 ];
@@ -59,16 +59,15 @@ export const LIBRARY_ALL_RESOURCE = [
 const AGENT_TYPE_LIST_ALL = [
   {
     value: AgentTypeEnum.ChatBot,
-    label: dict('NuwaxPC.Constants.Space.chatBotType'),
+    label: dict('PC.Constants.Space.chatBotType'),
     // icon: <ICON_AGENT />,
-    tooltip: dict('NuwaxPC.Constants.Space.chatBotTypeTooltip'),
+    tooltip: dict('PC.Constants.Space.chatBotTypeTooltip'),
   },
   {
     value: AgentTypeEnum.TaskAgent,
-    label: dict('NuwaxPC.Constants.Space.taskAgentType'),
+    label: dict('PC.Constants.Space.taskAgentType'),
     // icon: <ICON_AGENT />,
-    tooltip:
-      dict('NuwaxPC.Constants.Space.taskAgentTypeTooltip'),
+    tooltip: dict('PC.Constants.Space.taskAgentTypeTooltip'),
   },
 ];
 
@@ -79,11 +78,11 @@ export const AGENT_TYPE_LIST = AGENT_TYPE_LIST_ALL;
 export const SKILL_ALL_RESOURCE = [
   {
     value: CreateSkillWayEnum.Create,
-    label: dict('NuwaxPC.Constants.Space.createSkill'),
+    label: dict('PC.Constants.Space.createSkill'),
   },
   {
     value: CreateSkillWayEnum.Import,
-    label: dict('NuwaxPC.Constants.Space.importSkill'),
+    label: dict('PC.Constants.Space.importSkill'),
   },
 ];
 
@@ -91,7 +90,7 @@ export const SKILL_ALL_RESOURCE = [
 export const LIBRARY_ALL_TYPE = [
   {
     value: ComponentTypeEnum.All_Type,
-    label: dict('NuwaxPC.Constants.Space.allTypes'),
+    label: dict('PC.Constants.Space.allTypes'),
     icon: null,
   },
   ...LIBRARY_ALL_RESOURCE,
@@ -101,67 +100,113 @@ export const LIBRARY_ALL_TYPE = [
 export const TASK_ALL_TYPE = [
   {
     value: ComponentTypeEnum.All_Type,
-    label: dict('NuwaxPC.Constants.Space.allTypes'),
+    label: dict('PC.Constants.Space.allTypes'),
     icon: null,
   },
   // 智能体
   {
     value: AgentComponentTypeEnum.Agent,
-    label: dict('NuwaxPC.Common.Global.agent'),
+    label: dict('PC.Common.Global.agent'),
     icon: null,
   },
   // 工作流
   {
     value: AgentComponentTypeEnum.Workflow,
-    label: dict('NuwaxPC.Common.Global.workflow'),
+    label: dict('PC.Common.Global.workflow'),
     icon: null,
   },
 ];
 
 // 过滤状态
 export const FILTER_STATUS = [
-  { value: FilterStatusEnum.All, label: dict('NuwaxPC.Common.Global.all') },
-  { value: FilterStatusEnum.Published, label: dict('NuwaxPC.Common.Global.published') },
+  { value: FilterStatusEnum.All, label: dict('PC.Common.Global.all') },
+  {
+    value: FilterStatusEnum.Published,
+    label: dict('PC.Common.Global.published'),
+  },
 ];
 
 // 网页应用开发 - 过滤状态
 export const FILTER_STATUS_DEV = [
-  { value: FilterStatusEnum.All, label: dict('NuwaxPC.Common.Global.all') },
-  { value: FilterStatusEnum.Published, label: dict('NuwaxPC.Common.Global.published') },
-  { value: FilterStatusEnum.Unpublished, label: dict('NuwaxPC.Common.Global.unpublished') },
+  { value: FilterStatusEnum.All, label: dict('PC.Common.Global.all') },
+  {
+    value: FilterStatusEnum.Published,
+    label: dict('PC.Common.Global.published'),
+  },
+  {
+    value: FilterStatusEnum.Unpublished,
+    label: dict('PC.Common.Global.unpublished'),
+  },
 ];
 
 // 智能体开发 - 智能体类型（全部/问答型/通用型）
 export const AGENT_TYPE_LIST_DEV = [
-  { value: AgentTypeEnum.All, label: dict('NuwaxPC.Common.Global.all') },
-  { value: AgentTypeEnum.ChatBot, label: dict('NuwaxPC.Constants.Space.chatBotType') },
-  { value: AgentTypeEnum.TaskAgent, label: dict('NuwaxPC.Constants.Space.taskAgentType') },
+  { value: AgentTypeEnum.All, label: dict('PC.Common.Global.all') },
+  {
+    value: AgentTypeEnum.ChatBot,
+    label: dict('PC.Constants.Space.chatBotType'),
+  },
+  {
+    value: AgentTypeEnum.TaskAgent,
+    label: dict('PC.Constants.Space.taskAgentType'),
+  },
 ];
 
 // 过滤创建者
 export const CREATE_LIST = [
-  { value: CreateListEnum.All_Person, label: dict('NuwaxPC.Constants.Space.everyone') },
-  { value: CreateListEnum.Me, label: dict('NuwaxPC.Constants.Space.createdByMe') },
+  {
+    value: CreateListEnum.All_Person,
+    label: dict('PC.Constants.Space.everyone'),
+  },
+  { value: CreateListEnum.Me, label: dict('PC.Constants.Space.createdByMe') },
 ];
 
 // 应用开发更多操作
 export const APPLICATION_MORE_ACTION = [
-  { type: ApplicationMoreActionEnum.Analyze, label: dict('NuwaxPC.Constants.Space.analyze') },
-  { type: ApplicationMoreActionEnum.Copy_To_Space, label: dict('NuwaxPC.Constants.Space.copyToSpace') },
-  { type: ApplicationMoreActionEnum.Move, label: dict('NuwaxPC.Constants.Space.migrate') },
-  { type: ApplicationMoreActionEnum.Temporary_Session, label: dict('NuwaxPC.Constants.Space.temporarySession') },
+  {
+    type: ApplicationMoreActionEnum.Analyze,
+    label: dict('PC.Constants.Space.analyze'),
+  },
+  {
+    type: ApplicationMoreActionEnum.Copy_To_Space,
+    label: dict('PC.Constants.Space.copyToSpace'),
+  },
+  {
+    type: ApplicationMoreActionEnum.Move,
+    label: dict('PC.Constants.Space.migrate'),
+  },
+  {
+    type: ApplicationMoreActionEnum.Temporary_Session,
+    label: dict('PC.Constants.Space.temporarySession'),
+  },
   { type: ApplicationMoreActionEnum.API_Key, label: 'API Key' },
-  { type: ApplicationMoreActionEnum.Export_Config, label: dict('NuwaxPC.Constants.Space.exportConfig') },
-  { type: ApplicationMoreActionEnum.Log, label: dict('NuwaxPC.Common.Global.log') },
-  { type: ApplicationMoreActionEnum.Del, label: dict('NuwaxPC.Common.Global.delete'), isDel: true },
+  {
+    type: ApplicationMoreActionEnum.Export_Config,
+    label: dict('PC.Constants.Space.exportConfig'),
+  },
+  { type: ApplicationMoreActionEnum.Log, label: dict('PC.Common.Global.log') },
+  {
+    type: ApplicationMoreActionEnum.Del,
+    label: dict('PC.Common.Global.delete'),
+    isDel: true,
+  },
 ];
 
 // 应用开发更多操作（详情页）
 export const APPLICATION_MORE_ACTION_DETAIL = [
-  { type: ApplicationMoreActionEnum.Analyze, label: dict('NuwaxPC.Constants.Space.analyze') },
-  { type: ApplicationMoreActionEnum.Temporary_Session, label: dict('NuwaxPC.Constants.Space.temporarySession') },
-  { type: ApplicationMoreActionEnum.Export_Config, label: dict('NuwaxPC.Constants.Space.exportConfig') },
-  { type: ApplicationMoreActionEnum.Log, label: dict('NuwaxPC.Common.Global.log') },
+  {
+    type: ApplicationMoreActionEnum.Analyze,
+    label: dict('PC.Constants.Space.analyze'),
+  },
+  {
+    type: ApplicationMoreActionEnum.Temporary_Session,
+    label: dict('PC.Constants.Space.temporarySession'),
+  },
+  {
+    type: ApplicationMoreActionEnum.Export_Config,
+    label: dict('PC.Constants.Space.exportConfig'),
+  },
+  { type: ApplicationMoreActionEnum.Log, label: dict('PC.Common.Global.log') },
 ];
 
 // 工作空间应用列表（layout二级菜单）
@@ -169,47 +214,47 @@ const SPACE_APPLICATION_LIST_ALL: SpaceApplicationList[] = [
   {
     type: SpaceApplicationListEnum.Application_Develop,
     icon: <SvgIcon name="icons-nav-stars" />,
-    text: dict('NuwaxPC.Constants.Space.agentDev'),
+    text: dict('PC.Constants.Space.agentDev'),
   },
   {
     type: SpaceApplicationListEnum.Page_Develop,
     icon: <SvgIcon name="icons-common-console" />,
-    text: dict('NuwaxPC.Constants.Space.webAppDev'),
+    text: dict('PC.Constants.Space.webAppDev'),
   },
   {
     type: SpaceApplicationListEnum.Component_Library,
     icon: <SvgIcon name="icons-nav-components" />,
-    text: dict('NuwaxPC.Constants.Space.componentLibrary'),
+    text: dict('PC.Constants.Space.componentLibrary'),
   },
   {
     type: SpaceApplicationListEnum.Skill_Manage,
     icon: <SvgIcon name="icons-nav-skill" />,
-    text: dict('NuwaxPC.Constants.Space.skillManage'),
+    text: dict('PC.Constants.Space.skillManage'),
   },
   {
     type: SpaceApplicationListEnum.MCP_Manage,
     icon: <SvgIcon name="icons-nav-mcp" />,
-    text: dict('NuwaxPC.Constants.Space.mcpManage'),
+    text: dict('PC.Constants.Space.mcpManage'),
   },
   {
     type: SpaceApplicationListEnum.Task_Center,
     icon: <SvgIcon name="icons-nav-task-time" />,
-    text: dict('NuwaxPC.Constants.Space.taskCenter'),
+    text: dict('PC.Constants.Space.taskCenter'),
   },
   {
     type: SpaceApplicationListEnum.Library_Log,
     icon: <SvgIcon name="icons-chat-history" />,
-    text: dict('NuwaxPC.Constants.Space.logQuery'),
+    text: dict('PC.Constants.Space.logQuery'),
   },
   {
     type: SpaceApplicationListEnum.Space_Square,
     icon: <SvgIcon name="icons-nav-space_square" />,
-    text: dict('NuwaxPC.Constants.Space.spaceSquare'),
+    text: dict('PC.Constants.Space.spaceSquare'),
   },
   {
     type: SpaceApplicationListEnum.Team_Setting,
     icon: <SvgIcon name="icons-nav-settings" />,
-    text: dict('NuwaxPC.Constants.Space.memberAndSettings'),
+    text: dict('PC.Constants.Space.memberAndSettings'),
   },
 ];
 
@@ -219,11 +264,11 @@ export const SPACE_APPLICATION_LIST = SPACE_APPLICATION_LIST_ALL;
 // 创建智能体列表
 export const CREATE_AGENT_LIST = [
   {
-    label: dict('NuwaxPC.Constants.Space.standardCreate'),
+    label: dict('PC.Constants.Space.standardCreate'),
     value: CreateAgentEnum.Standard,
   },
   {
-    label: dict('NuwaxPC.Constants.Space.aiCreate'),
+    label: dict('PC.Constants.Space.aiCreate'),
     value: CreateAgentEnum.AI,
   },
 ];
@@ -231,11 +276,11 @@ export const CREATE_AGENT_LIST = [
 // 是否开启列表,可用值:Open,Close
 export const ENABLE_LIST = [
   {
-    label: dict('NuwaxPC.Common.Global.enable'),
+    label: dict('PC.Common.Global.enable'),
     value: OpenCloseEnum.Open,
   },
   {
-    label: dict('NuwaxPC.Common.Global.disable'),
+    label: dict('PC.Common.Global.disable'),
     value: OpenCloseEnum.Close,
   },
 ];
@@ -244,27 +289,27 @@ export const ENABLE_LIST = [
 export const COMPONENT_SETTING_ACTIONS = [
   {
     type: ComponentSettingEnum.Params,
-    label: dict('NuwaxPC.Constants.Space.params'),
+    label: dict('PC.Constants.Space.params'),
   },
   {
     type: ComponentSettingEnum.Method_Call,
-    label: dict('NuwaxPC.Constants.Space.callMethod'),
+    label: dict('PC.Constants.Space.callMethod'),
   },
   {
     type: ComponentSettingEnum.Output_Way,
-    label: dict('NuwaxPC.Constants.Space.outputWay'),
+    label: dict('PC.Constants.Space.outputWay'),
   },
   {
     type: ComponentSettingEnum.Async_Run,
-    label: dict('NuwaxPC.Constants.Space.asyncRun'),
+    label: dict('PC.Constants.Space.asyncRun'),
   },
   {
     type: ComponentSettingEnum.Exception_Handling,
-    label: dict('NuwaxPC.Constants.Space.exceptionHandling'),
+    label: dict('PC.Constants.Space.exceptionHandling'),
   },
   {
     type: ComponentSettingEnum.Card_Bind,
-    label: dict('NuwaxPC.Constants.Space.cardBind'),
+    label: dict('PC.Constants.Space.cardBind'),
   },
   // {
   //   type: ComponentSettingEnum.SubAgent,
@@ -276,11 +321,11 @@ export const COMPONENT_SETTING_ACTIONS = [
 export const PAGE_SETTING_ACTIONS = [
   {
     type: PageSettingEnum.Visible_To_LLM,
-    label: dict('NuwaxPC.Constants.Space.visibleToModel'),
+    label: dict('PC.Constants.Space.visibleToModel'),
   },
   {
     type: PageSettingEnum.Home_Index,
-    label: dict('NuwaxPC.Constants.Space.defaultHome'),
+    label: dict('PC.Constants.Space.defaultHome'),
   },
 ];
 
@@ -307,23 +352,23 @@ export const PLUGIN_OUTPUT_CONFIG = {
 const SPACE_SQUARE_TABS_ALL: TabsProps['items'] = [
   {
     key: SquareAgentTypeEnum.Agent,
-    label: dict('NuwaxPC.Common.Global.agent'),
+    label: dict('PC.Common.Global.agent'),
   },
   {
     key: SquareAgentTypeEnum.Plugin,
-    label: dict('NuwaxPC.Common.Global.plugin'),
+    label: dict('PC.Common.Global.plugin'),
   },
   {
     key: SquareAgentTypeEnum.Workflow,
-    label: dict('NuwaxPC.Common.Global.workflow'),
+    label: dict('PC.Common.Global.workflow'),
   },
   {
     key: SquareAgentTypeEnum.Skill,
-    label: dict('NuwaxPC.Common.Global.skill'),
+    label: dict('PC.Common.Global.skill'),
   },
   {
     key: SquareAgentTypeEnum.Template,
-    label: dict('NuwaxPC.Common.Global.template'),
+    label: dict('PC.Common.Global.template'),
   },
 ];
 

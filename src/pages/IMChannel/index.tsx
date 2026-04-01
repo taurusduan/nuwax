@@ -1,6 +1,9 @@
 import CustomPopover from '@/components/CustomPopover';
 import WorkspaceLayout from '@/components/WorkspaceLayout';
+import { SUCCESS_CODE } from '@/constants/codes.constants';
 import { IMPlatformEnum } from '@/constants/imChannel.constants';
+import { dict } from '@/services/i18nRuntime';
+import { apiIMConfigChannelStatistics } from '@/services/imChannel';
 import { CreateUpdateModeEnum } from '@/types/enums/common';
 import { CustomPopoverItem } from '@/types/interfaces/common';
 import { IMChannelInfo, IMChannelTypeEnum } from '@/types/interfaces/imChannel';
@@ -21,18 +24,14 @@ const cx = classNames.bind(styles);
 // 新增资源列表
 const IM_CHANNEL_ADD_RESOURCES = [
   {
-    label: dict('NuwaxPC.Pages.IMChannel.Index.addBot'),
+    label: dict('PC.Pages.IMChannel.Index.addBot'),
     value: IMChannelTypeEnum.Bot,
   },
   {
-    label: dict('NuwaxPC.Pages.IMChannel.Index.addApp'),
+    label: dict('PC.Pages.IMChannel.Index.addApp'),
     value: IMChannelTypeEnum.App,
   },
 ];
-
-import { SUCCESS_CODE } from '@/constants/codes.constants';
-import { apiIMConfigChannelStatistics } from '@/services/imChannel';
-import { dict } from '@/services/i18nRuntime';
 
 const IMChannel: React.FC = () => {
   const params = useParams() as any;
@@ -127,12 +126,12 @@ const IMChannel: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={dict('NuwaxPC.Pages.IMChannel.Index.title')}
+      title={dict('PC.Pages.IMChannel.Index.title')}
       hideScroll={true}
       rightSlot={
         <Space size={12}>
           <Input.Search
-            placeholder={dict('NuwaxPC.Pages.IMChannel.Index.searchPlaceholder')}
+            placeholder={dict('PC.Pages.IMChannel.Index.searchPlaceholder')}
             value={keyword}
             allowClear
             onSearch={setKeyword}
@@ -146,7 +145,7 @@ const IMChannel: React.FC = () => {
                 onClick={handleClickPopoverItem}
               >
                 <Button type="primary" icon={<PlusOutlined />}>
-                  {dict('NuwaxPC.Pages.IMChannel.Index.add')}
+                  {dict('PC.Pages.IMChannel.Index.add')}
                 </Button>
               </CustomPopover>
             ) : (
@@ -155,7 +154,7 @@ const IMChannel: React.FC = () => {
                 icon={<PlusOutlined />}
                 onClick={() => handleCreate(IMChannelTypeEnum.Bot)}
               >
-                {dict('NuwaxPC.Pages.IMChannel.Index.addBot')}
+                {dict('PC.Pages.IMChannel.Index.addBot')}
               </Button>
             )
           ) : null}

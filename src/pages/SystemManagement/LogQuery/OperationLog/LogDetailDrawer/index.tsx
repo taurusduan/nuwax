@@ -55,7 +55,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
     }
   };
   const handleCopy = () => {
-    message.success(t('NuwaxPC.Pages.SystemOperationLog.copySuccess'));
+    message.success(t('PC.Pages.SystemOperationLog.copySuccess'));
   };
 
   useEffect(() => {
@@ -65,7 +65,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
   return (
     <Drawer
       className={styles.drawer}
-      title={t('NuwaxPC.Pages.SystemOperationLog.detailTitle')}
+      title={t('PC.Pages.SystemOperationLog.detailTitle')}
       placement="right"
       open={open}
       onClose={onClose}
@@ -81,40 +81,38 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
       ) : !!operationLogInfoDetail ? (
         <>
           <ProDescriptions
-            title={t('NuwaxPC.Pages.SystemOperationLog.basicInfo')}
+            title={t('PC.Pages.SystemOperationLog.basicInfo')}
             column={1}
             dataSource={operationLogInfoDetail}
             style={{ padding: '14px' }}
             columns={[
               {
-                title: t('NuwaxPC.Pages.SystemOperationLog.columnType'),
+                title: t('PC.Pages.SystemOperationLog.columnType'),
                 dataIndex: 'systemName',
                 render: (text: any) => text || '-',
               },
               {
-                title: t('NuwaxPC.Pages.SystemOperationLog.columnActionType'),
+                title: t('PC.Pages.SystemOperationLog.columnActionType'),
                 dataIndex: 'action',
                 render: (text: any) => text || '-',
               },
               {
-                title: t('NuwaxPC.Pages.SystemOperationLog.columnObjectName'),
+                title: t('PC.Pages.SystemOperationLog.columnObjectName'),
                 dataIndex: 'object',
                 render: (text: any) => text || '-',
               },
               {
-                title: t(
-                  'NuwaxPC.Pages.SystemOperationLog.columnObjectSubtype',
-                ),
+                title: t('PC.Pages.SystemOperationLog.columnObjectSubtype'),
                 dataIndex: 'operateContent',
                 render: (text: any) => text || '-',
               },
               {
-                title: t('NuwaxPC.Pages.SystemOperationLog.columnCreator'),
+                title: t('PC.Pages.SystemOperationLog.columnCreator'),
                 dataIndex: 'creator',
                 render: (text: any) => text || '-',
               },
               {
-                title: t('NuwaxPC.Pages.SystemOperationLog.columnCreated'),
+                title: t('PC.Pages.SystemOperationLog.columnCreated'),
                 dataIndex: 'created',
                 render: (text: any) => {
                   if (!text) return '-';
@@ -126,7 +124,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
 
           <div className={cx(styles.wrap, styles['render-container'])}>
             <h5 className={cx(styles.title)}>
-              {t('NuwaxPC.Pages.SystemOperationLog.columnRequestParams')}&nbsp;
+              {t('PC.Pages.SystemOperationLog.columnRequestParams')}&nbsp;
               <CopyToClipboard
                 text={operationLogInfoDetail?.extraContent || ''}
                 onCopy={handleCopy}
@@ -139,7 +137,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
         </>
       ) : (
         <div className={cx('flex', 'h-full', 'items-center', 'content-center')}>
-          <Empty description={t('NuwaxPC.Pages.SystemOperationLog.noData')} />
+          <Empty description={t('PC.Pages.SystemOperationLog.noData')} />
         </div>
       )}
     </Drawer>

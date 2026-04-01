@@ -28,9 +28,9 @@ export const AGENT_ENGINE_OPTIONS = [
     value: AgentEngineEnum.Default,
     label: (
       <span className={'flex items-center'}>
-        <span>{dict('NuwaxPC.Constants.Agent.default')}</span>
+        <span>{dict('PC.Constants.Agent.default')}</span>
         <TooltipIcon
-          title={dict('NuwaxPC.Constants.Agent.defaultEngineTooltip')}
+          title={dict('PC.Constants.Agent.defaultEngineTooltip')}
           icon={<InfoCircleOutlined />}
         />
       </span>
@@ -42,7 +42,7 @@ export const AGENT_ENGINE_OPTIONS = [
       <span className={'flex items-center'}>
         <span>NuwaxCli</span>
         <TooltipIcon
-          title={dict('NuwaxPC.Constants.Agent.nuwaxCliEngineTooltip')}
+          title={dict('PC.Constants.Agent.nuwaxCliEngineTooltip')}
           icon={<InfoCircleOutlined />}
         />
       </span>
@@ -54,19 +54,19 @@ export const AGENT_ENGINE_OPTIONS = [
 export const CALL_METHOD_OPTIONS = [
   {
     value: InvokeTypeEnum.AUTO,
-    label: dict('NuwaxPC.Constants.Agent.autoInvoke'),
+    label: dict('PC.Constants.Agent.autoInvoke'),
   },
   {
     value: InvokeTypeEnum.ON_DEMAND,
-    label: dict('NuwaxPC.Constants.Agent.onDemand'),
+    label: dict('PC.Constants.Agent.onDemand'),
   },
   {
     value: InvokeTypeEnum.MANUAL,
-    label: dict('NuwaxPC.Constants.Agent.manualSelect'),
+    label: dict('PC.Constants.Agent.manualSelect'),
   },
   {
     value: InvokeTypeEnum.MANUAL_ON_DEMAND,
-    label: dict('NuwaxPC.Constants.Agent.manualSelectOnDemand'),
+    label: dict('PC.Constants.Agent.manualSelectOnDemand'),
   },
 ];
 
@@ -74,11 +74,11 @@ export const CALL_METHOD_OPTIONS = [
 export const SKILL_METHOD_OPTIONS = [
   {
     value: InvokeTypeEnum.ON_DEMAND,
-    label: dict('NuwaxPC.Constants.Agent.onDemand'),
+    label: dict('PC.Constants.Agent.onDemand'),
   },
   {
     value: InvokeTypeEnum.MANUAL_ON_DEMAND, // 手动选择+按需调用 (技能时，代表手动选择)
-    label: dict('NuwaxPC.Constants.Agent.manualSelect'),
+    label: dict('PC.Constants.Agent.manualSelect'),
   },
 ];
 
@@ -86,11 +86,11 @@ export const SKILL_METHOD_OPTIONS = [
 export const CALL_DEFAULT_SELECTED = [
   {
     value: DefaultSelectedEnum.No,
-    label: dict('NuwaxPC.Common.Global.no'),
+    label: dict('PC.Common.Global.no'),
   },
   {
     value: DefaultSelectedEnum.Yes,
-    label: dict('NuwaxPC.Common.Global.yes'),
+    label: dict('PC.Common.Global.yes'),
   },
 ];
 
@@ -98,11 +98,11 @@ export const CALL_DEFAULT_SELECTED = [
 export const OUTPUT_WAY_OPTIONS = [
   {
     value: OutputDirectlyEnum.No,
-    label: dict('NuwaxPC.Common.Global.no'),
+    label: dict('PC.Common.Global.no'),
   },
   {
     value: OutputDirectlyEnum.Yes,
-    label: dict('NuwaxPC.Common.Global.yes'),
+    label: dict('PC.Common.Global.yes'),
   },
 ];
 
@@ -112,9 +112,9 @@ export const SEARCH_STRATEGY_OPTIONS = [
     value: SearchStrategyEnum.MIXED,
     label: (
       <span className={'flex items-center'}>
-        <span>{dict('NuwaxPC.Constants.Agent.mixed')}</span>
+        <span>{dict('PC.Constants.Agent.mixed')}</span>
         <TooltipIcon
-          title={dict('NuwaxPC.Constants.Agent.mixedTooltip')}
+          title={dict('PC.Constants.Agent.mixedTooltip')}
           icon={<InfoCircleOutlined />}
         />
       </span>
@@ -124,9 +124,9 @@ export const SEARCH_STRATEGY_OPTIONS = [
     value: SearchStrategyEnum.SEMANTIC,
     label: (
       <span className={'flex items-center'}>
-        <span>{dict('NuwaxPC.Constants.Agent.semantic')}</span>
+        <span>{dict('PC.Constants.Agent.semantic')}</span>
         <TooltipIcon
-          title={dict('NuwaxPC.Constants.Agent.semanticTooltip')}
+          title={dict('PC.Constants.Agent.semanticTooltip')}
           icon={<InfoCircleOutlined />}
         />
       </span>
@@ -136,9 +136,9 @@ export const SEARCH_STRATEGY_OPTIONS = [
     value: SearchStrategyEnum.FULL_TEXT,
     label: (
       <span className={'flex items-center'}>
-        <span>{dict('NuwaxPC.Constants.Agent.fullText')}</span>
+        <span>{dict('PC.Constants.Agent.fullText')}</span>
         <TooltipIcon
-          title={dict('NuwaxPC.Constants.Agent.fullTextTooltip')}
+          title={dict('PC.Constants.Agent.fullTextTooltip')}
           icon={<InfoCircleOutlined />}
         />
       </span>
@@ -150,11 +150,11 @@ export const SEARCH_STRATEGY_OPTIONS = [
 export const NO_RECALL_RESPONSE = [
   {
     value: NoneRecallReplyTypeEnum.DEFAULT,
-    label: dict('NuwaxPC.Constants.Agent.defaultRecall'),
+    label: dict('PC.Constants.Agent.defaultRecall'),
   },
   {
     value: NoneRecallReplyTypeEnum.CUSTOM,
-    label: dict('NuwaxPC.Common.Global.custom'),
+    label: dict('PC.Common.Global.custom'),
   },
 ];
 
@@ -162,20 +162,32 @@ export const NO_RECALL_RESPONSE = [
 export const BIND_CARD_STYLE_LIST = [
   {
     value: BindCardStyleEnum.SINGLE,
-    label: dict('NuwaxPC.Constants.Agent.singleCard'),
+    label: dict('PC.Constants.Agent.singleCard'),
   },
   {
     value: BindCardStyleEnum.LIST,
-    label: dict('NuwaxPC.Constants.Agent.verticalList'),
+    label: dict('PC.Constants.Agent.verticalList'),
   },
 ];
 
 // 生成多样性选项
 export const GENERATE_DIVERSITY_OPTIONS = [
-  { label: dict('NuwaxPC.Constants.Agent.precisionMode'), value: UpdateModeComponentEnum.Precision },
-  { label: dict('NuwaxPC.Constants.Agent.balancedMode'), value: UpdateModeComponentEnum.Balanced },
-  { label: dict('NuwaxPC.Constants.Agent.creativeMode'), value: UpdateModeComponentEnum.Creative },
-  { label: dict('NuwaxPC.Common.Global.custom'), value: UpdateModeComponentEnum.Customization },
+  {
+    label: dict('PC.Constants.Agent.precisionMode'),
+    value: UpdateModeComponentEnum.Precision,
+  },
+  {
+    label: dict('PC.Constants.Agent.balancedMode'),
+    value: UpdateModeComponentEnum.Balanced,
+  },
+  {
+    label: dict('PC.Constants.Agent.creativeMode'),
+    value: UpdateModeComponentEnum.Creative,
+  },
+  {
+    label: dict('PC.Common.Global.custom'),
+    value: UpdateModeComponentEnum.Customization,
+  },
 ];
 
 // 生产多样性
@@ -203,11 +215,11 @@ export const GENERATE_DIVERSITY_OPTION_VALUE = {
 export const PLUGIN_PUBLISH_OPTIONS = [
   {
     value: PluginPublishScopeEnum.Tenant,
-    label: dict('NuwaxPC.Constants.Agent.global'),
+    label: dict('PC.Constants.Agent.global'),
   },
   {
     value: PluginPublishScopeEnum.Space,
-    label: dict('NuwaxPC.Constants.Agent.workspace'),
+    label: dict('PC.Constants.Agent.workspace'),
   },
 ];
 
@@ -215,27 +227,27 @@ export const PLUGIN_PUBLISH_OPTIONS = [
 export const AGENT_VARIABLES_INPUT_OPTIONS = [
   {
     value: InputTypeEnum.Text,
-    label: dict('NuwaxPC.Constants.Agent.singleLineText'),
+    label: dict('PC.Constants.Agent.singleLineText'),
   },
   {
     value: InputTypeEnum.Paragraph,
-    label: dict('NuwaxPC.Constants.Agent.paragraph'),
+    label: dict('PC.Constants.Agent.paragraph'),
   },
   {
     value: InputTypeEnum.Number,
-    label: dict('NuwaxPC.Constants.Agent.number'),
+    label: dict('PC.Constants.Agent.number'),
   },
   {
     value: InputTypeEnum.Select,
-    label: dict('NuwaxPC.Constants.Agent.singleSelect'),
+    label: dict('PC.Constants.Agent.singleSelect'),
   },
   {
     value: InputTypeEnum.MultipleSelect,
-    label: dict('NuwaxPC.Constants.Agent.multiSelect'),
+    label: dict('PC.Constants.Agent.multiSelect'),
   },
   {
     value: InputTypeEnum.AutoRecognition,
-    label: dict('NuwaxPC.Constants.Agent.smartRecognition'),
+    label: dict('PC.Constants.Agent.smartRecognition'),
   },
 ];
 
@@ -262,15 +274,15 @@ export const SIDEBAR_WIDTH = 368 + 32;
 export const GUID_QUESTION_SET_OPTIONS = [
   {
     value: GuidQuestionSetTypeEnum.Question,
-    label: dict('NuwaxPC.Constants.Agent.questionGuide'),
+    label: dict('PC.Constants.Agent.questionGuide'),
   },
   {
     value: GuidQuestionSetTypeEnum.Page,
-    label: dict('NuwaxPC.Constants.Agent.extPagePath'),
+    label: dict('PC.Constants.Agent.extPagePath'),
   },
   {
     value: GuidQuestionSetTypeEnum.Link,
-    label: dict('NuwaxPC.Constants.Agent.externalLink'),
+    label: dict('PC.Constants.Agent.externalLink'),
   },
 ];
 
@@ -278,11 +290,11 @@ export const GUID_QUESTION_SET_OPTIONS = [
 export const EVENT_BIND_RESPONSE_ACTION_OPTIONS = [
   {
     value: EventBindResponseActionEnum.Page,
-    label: dict('NuwaxPC.Constants.Agent.extPageOpen'),
+    label: dict('PC.Constants.Agent.extPageOpen'),
   },
   {
     value: EventBindResponseActionEnum.Link,
-    label: dict('NuwaxPC.Constants.Agent.extLinkRedirect'),
+    label: dict('PC.Constants.Agent.extLinkRedirect'),
   },
 ];
 
@@ -290,15 +302,15 @@ export const EVENT_BIND_RESPONSE_ACTION_OPTIONS = [
 export const EVENT_LIST = [
   {
     value: EventListEnum.Edit,
-    label: dict('NuwaxPC.Common.Global.edit'),
+    label: dict('PC.Common.Global.edit'),
   },
   {
     value: EventListEnum.InsertSystemPrompt,
-    label: dict('NuwaxPC.Constants.Agent.insertToPrompt'),
+    label: dict('PC.Constants.Agent.insertToPrompt'),
   },
   {
     value: EventListEnum.Delete,
-    label: dict('NuwaxPC.Common.Global.delete'),
+    label: dict('PC.Common.Global.delete'),
   },
 ];
 
@@ -306,11 +318,11 @@ export const EVENT_LIST = [
 export const VISIBLE_TO_LLM_OPTIONS = [
   {
     value: VisibleToLLMEnum.No,
-    label: dict('NuwaxPC.Common.Global.no'),
+    label: dict('PC.Common.Global.no'),
   },
   {
     value: VisibleToLLMEnum.Yes,
-    label: dict('NuwaxPC.Common.Global.yes'),
+    label: dict('PC.Common.Global.yes'),
   },
 ];
 
@@ -318,20 +330,22 @@ export const VISIBLE_TO_LLM_OPTIONS = [
 export const HOME_INDEX_OPTIONS = [
   {
     value: HomeIndexEnum.No,
-    label: dict('NuwaxPC.Common.Global.no'),
+    label: dict('PC.Common.Global.no'),
   },
   {
     value: HomeIndexEnum.Yes,
-    label: dict('NuwaxPC.Common.Global.yes'),
+    label: dict('PC.Common.Global.yes'),
   },
 ];
 
 // 智能体组件类型映射
 export const AGENT_COMPONENT_TYPE_MAP = {
-  [AgentComponentTypeEnum.Agent]: { text: dict('NuwaxPC.Common.Global.agent') },
-  [AgentComponentTypeEnum.Plugin]: { text: dict('NuwaxPC.Common.Global.plugin') },
-  [AgentComponentTypeEnum.Workflow]: { text: dict('NuwaxPC.Common.Global.workflow') },
+  [AgentComponentTypeEnum.Agent]: { text: dict('PC.Common.Global.agent') },
+  [AgentComponentTypeEnum.Plugin]: { text: dict('PC.Common.Global.plugin') },
+  [AgentComponentTypeEnum.Workflow]: {
+    text: dict('PC.Common.Global.workflow'),
+  },
   [AgentComponentTypeEnum.MCP]: { text: 'MCP' },
-  [AgentComponentTypeEnum.Model]: { text: dict('NuwaxPC.Common.Global.model') },
+  [AgentComponentTypeEnum.Model]: { text: dict('PC.Common.Global.model') },
   [AgentComponentTypeEnum.ApiKey]: { text: 'ApiKey' },
 };

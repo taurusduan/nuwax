@@ -1,6 +1,5 @@
 import { dict } from '@/services/i18nRuntime';
 import { EcosystemShareStatusEnum } from '@/types/interfaces/ecosystem';
-import { dict } from '@/services/i18nRuntime';
 import classNames from 'classnames';
 import {
   ICON_EDIT,
@@ -28,35 +27,45 @@ export default function SharedIcon({
         return (
           <div className={cx(styles.container)}>
             <ICON_PUBLISHED />
-            <span className={styles.text}>{dict('NuwaxPC.Components.SharedIcon.published')}</span>
+            <span className={styles.text}>
+              {dict('PC.Components.SharedIcon.published')}
+            </span>
           </div>
         );
       case EcosystemShareStatusEnum.REVIEWING:
         return (
           <div className={cx(styles.container)}>
             <ICON_SEAL />
-            <span className={styles.text}>{dict('NuwaxPC.Components.SharedIcon.reviewing')}</span>
+            <span className={styles.text}>
+              {dict('PC.Components.SharedIcon.reviewing')}
+            </span>
           </div>
         );
       case EcosystemShareStatusEnum.OFFLINE:
         return (
           <div className={cx(styles.container)}>
             <ICON_OFFLINED />
-            <span className={styles.text}>{dict('NuwaxPC.Components.SharedIcon.offline')}</span>
+            <span className={styles.text}>
+              {dict('PC.Components.SharedIcon.offline')}
+            </span>
           </div>
         );
       case EcosystemShareStatusEnum.DRAFT:
         return (
           <div className={cx(styles.container)}>
             <ICON_EDIT />
-            <span className={styles.text}>{dict('NuwaxPC.Components.SharedIcon.draft')}</span>
+            <span className={styles.text}>
+              {dict('PC.Components.SharedIcon.draft')}
+            </span>
           </div>
         );
       case EcosystemShareStatusEnum.REJECTED:
         return (
           <div className={cx(styles.container)}>
             <ICON_REJECTED />
-            <span className={styles.text}>{dict('NuwaxPC.Components.SharedIcon.rejected')}</span>
+            <span className={styles.text}>
+              {dict('PC.Components.SharedIcon.rejected')}
+            </span>
           </div>
         );
       default:

@@ -4,7 +4,10 @@ import { dict } from '@/services/i18nRuntime';
 
 const SpaceLibraryLog = () => {
   return (
-    <WorkspaceLayout title={dict('NuwaxPC.Pages.SpaceLibraryLog.Index.pageTitle')} hideScroll={true}>
+    <WorkspaceLayout
+      title={dict('PC.Pages.SpaceLibraryLog.Index.pageTitle')}
+      hideScroll={true}
+    >
       <LogProTable />
     </WorkspaceLayout>
   );

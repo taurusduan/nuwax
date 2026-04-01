@@ -2,8 +2,8 @@ import CustomPopover from '@/components/CustomPopover';
 import InfiniteScrollDiv from '@/components/custom/InfiniteScrollDiv';
 import Loading from '@/components/custom/Loading';
 import useSpaceSquare from '@/hooks/useSpaceSquare';
-import { apiPublishOffShelf } from '@/services/publish';
 import { dict } from '@/services/i18nRuntime';
+import { apiPublishOffShelf } from '@/services/publish';
 import {
   apiPublishedAgentList,
   apiPublishedPluginList,
@@ -204,12 +204,12 @@ const SpaceSection: React.FC = () => {
   ) => {
     const { targetId, name, targetType, id: publishId } = info;
     Modal.confirm({
-      title: dict('NuwaxPC.Pages.SpaceSquare.confirmOffShelf', componentTypeName),
+      title: dict('PC.Pages.SpaceSquare.confirmOffShelf', componentTypeName),
       icon: <ExclamationCircleFilled />,
       content: name,
-      okText: dict('NuwaxPC.Common.Global.confirm'),
+      okText: dict('PC.Common.Global.confirm'),
       maskClosable: true,
-      cancelText: dict('NuwaxPC.Common.Global.cancel'),
+      cancelText: dict('PC.Common.Global.cancel'),
       onOk() {
         targetComponentTypeRef.current = componentType;
         runOffShelf({
@@ -231,7 +231,7 @@ const SpaceSection: React.FC = () => {
   ) => {
     return (
       <CustomPopover
-        list={[{ label: dict('NuwaxPC.Pages.SpaceSquare.offShelf') }]}
+        list={[{ label: dict('PC.Pages.SpaceSquare.offShelf') }]}
         onClick={() =>
           handleOffShelf(
             componentTypeName,
@@ -254,7 +254,7 @@ const SpaceSection: React.FC = () => {
           <SingleAgent
             key={index}
             publishedItemInfo={item}
-            extra={getExtra(dict('NuwaxPC.Pages.SpaceSquare.agent'), item, type)}
+            extra={getExtra(dict('PC.Pages.SpaceSquare.agent'), item, type)}
             onToggleCollectSuccess={handleToggleCollectSuccess}
             onClick={() =>
               handleClick(item.targetId, item.targetType, item, 'space')
@@ -269,7 +269,12 @@ const SpaceSection: React.FC = () => {
           <TemplateItem
             key={index}
             publishedItemInfo={item}
-            extra={getExtra(dict('NuwaxPC.Pages.SpaceSquare.template'), item, type, true)}
+            extra={getExtra(
+              dict('PC.Pages.SpaceSquare.template'),
+              item,
+              type,
+              true,
+            )}
             onClick={() =>
               handleClick(item.targetId, item.targetType, item, 'space')
             }
@@ -280,13 +285,13 @@ const SpaceSection: React.FC = () => {
         let componentTypeName = '';
         switch (type) {
           case SquareAgentTypeEnum.Plugin:
-            componentTypeName = dict('NuwaxPC.Pages.SpaceSquare.plugin');
+            componentTypeName = dict('PC.Pages.SpaceSquare.plugin');
             break;
           case SquareAgentTypeEnum.Workflow:
-            componentTypeName = dict('NuwaxPC.Pages.SpaceSquare.workflow');
+            componentTypeName = dict('PC.Pages.SpaceSquare.workflow');
             break;
           case SquareAgentTypeEnum.Skill:
-            componentTypeName = dict('NuwaxPC.Pages.SpaceSquare.skill');
+            componentTypeName = dict('PC.Pages.SpaceSquare.skill');
             break;
           default:
             componentTypeName = '';
@@ -359,7 +364,9 @@ const SpaceSection: React.FC = () => {
   return (
     <div className={cx(styles.container, 'flex', 'flex-col')}>
       <Space style={{ marginBottom: 15 }}>
-        <h3 className={cx(styles.title)}>{dict('NuwaxPC.Pages.SpaceSquare.title')}</h3>
+        <h3 className={cx(styles.title)}>
+          {dict('PC.Pages.SpaceSquare.title')}
+        </h3>
         <Segmented
           className={cx(styles.segmented)}
           options={spaceSquareSegmentedList}
@@ -388,7 +395,7 @@ const SpaceSection: React.FC = () => {
         </div>
       ) : (
         <div className={cx('flex', 'h-full', 'items-center', 'content-center')}>
-          <Empty description={dict('NuwaxPC.Common.Global.emptyData')} />
+          <Empty description={dict('PC.Common.Global.emptyData')} />
         </div>
       )}
     </div>

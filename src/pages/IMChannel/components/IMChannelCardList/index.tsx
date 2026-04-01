@@ -7,11 +7,11 @@ import {
   IM_PLATFORM_LABEL_MAP,
   IMPlatformEnum,
 } from '@/constants/imChannel.constants';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiDeleteIMConfigChannel,
   apiIMConfigChannelList,
 } from '@/services/imChannel';
-import { dict } from '@/services/i18nRuntime';
 import { IMChannelInfo, IMChannelTypeEnum } from '@/types/interfaces/imChannel';
 import {
   DeleteOutlined,
@@ -175,15 +175,15 @@ const IMChannelCardList = forwardRef<
     Modal.confirm({
       title,
       icon: <ExclamationCircleOutlined />,
-      content: dict('NuwaxPC.Pages.IMChannel.CardList.deleteContent'),
-      okText: dict('NuwaxPC.Common.Global.confirm'),
+      content: dict('PC.Pages.IMChannel.CardList.deleteContent'),
+      okText: dict('PC.Common.Global.confirm'),
       okType: 'danger',
-      cancelText: dict('NuwaxPC.Common.Global.cancel'),
+      cancelText: dict('PC.Common.Global.cancel'),
       onOk: async () => {
         try {
           const res = await apiDeleteIMConfigChannel(id);
           if (res.code === SUCCESS_CODE) {
-            message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
+            message.success(dict('PC.Toast.Global.deletedSuccessfully'));
             setAllRobots((prev) => prev.filter((item) => item.id !== id));
             onDeleteSuccess?.(channel);
           }
@@ -199,10 +199,13 @@ const IMChannelCardList = forwardRef<
       IM_PLATFORM_ICON_MAP[record.channel as IMPlatformEnum] || '';
 
     const platformName =
-      IM_PLATFORM_LABEL_MAP[record.channel as IMPlatformEnum] || dict('NuwaxPC.Pages.IMChannel.CardList.defaultPlatformName');
+      IM_PLATFORM_LABEL_MAP[record.channel as IMPlatformEnum] ||
+      dict('PC.Pages.IMChannel.CardList.defaultPlatformName');
     // const isEnabled = record.enabled;
     const isBot = record.targetType === IMChannelTypeEnum.Bot;
-    const typeLabel = isBot ? dict('NuwaxPC.Pages.IMChannel.CardList.smartBot') : dict('NuwaxPC.Pages.IMChannel.CardList.enterpriseApp');
+    const typeLabel = isBot
+      ? dict('PC.Pages.IMChannel.CardList.smartBot')
+      : dict('PC.Pages.IMChannel.CardList.enterpriseApp');
 
     return (
       <CardWrapper
@@ -214,14 +217,17 @@ const IMChannelCardList = forwardRef<
             style={{ width: '100%', gap: 8 }}
           >
             <span className="text-ellipsis" style={{ flex: 1 }}>
-              {record.agentName || dict('NuwaxPC.Pages.IMChannel.CardList.unboundAgent')}
+              {record.agentName ||
+                dict('PC.Pages.IMChannel.CardList.unboundAgent')}
             </span>
             {record.channel === IMPlatformEnum.Wework && (
               <Tag
                 color={isBot ? 'blue' : 'green'}
                 style={{ marginRight: 0, flexShrink: 0 }}
               >
-                {isBot ? dict('NuwaxPC.Pages.IMChannel.CardList.bot') : dict('NuwaxPC.Pages.IMChannel.CardList.app')}
+                {isBot
+                  ? dict('PC.Pages.IMChannel.CardList.bot')
+                  : dict('PC.Pages.IMChannel.CardList.app')}
               </Tag>
             )}
           </div>
@@ -233,7 +239,8 @@ const IMChannelCardList = forwardRef<
         extra={
           <div className={cx(styles.extra)}>
             <span className={cx(styles.time)}>
-              {dict('NuwaxPC.Pages.IMChannel.CardList.lastEdited')} {dayjs(record.modified).format('MM-DD HH:mm')}
+              {dict('PC.Pages.IMChannel.CardList.lastEdited')}{' '}
+              {dayjs(record.modified).format('MM-DD HH:mm')}
             </span>
           </div>
         }
@@ -250,7 +257,7 @@ const IMChannelCardList = forwardRef<
                 />
               </Tooltip> */}
             <div className={cx(styles.actions)}>
-              <Tooltip title={dict('NuwaxPC.Pages.IMChannel.CardList.edit')}>
+              <Tooltip title={dict('PC.Pages.IMChannel.CardList.edit')}>
                 <Button
                   className="action-btn edit-btn"
                   icon={<EditOutlined />}
@@ -260,7 +267,7 @@ const IMChannelCardList = forwardRef<
                   }}
                 />
               </Tooltip>
-              <Tooltip title={dict('NuwaxPC.Pages.IMChannel.CardList.delete')}>
+              <Tooltip title={dict('PC.Pages.IMChannel.CardList.delete')}>
                 <Button
                   className="action-btn delete-btn"
                   icon={<DeleteOutlined />}
@@ -269,7 +276,11 @@ const IMChannelCardList = forwardRef<
                     handleDelete(
                       record.id,
                       record.channel,
-                      dict('NuwaxPC.Pages.IMChannel.CardList.confirmDelete', platformName, typeLabel),
+                      dict(
+                        'PC.Pages.IMChannel.CardList.confirmDelete',
+                        platformName,
+                        typeLabel,
+                      ),
                     );
                   }}
                 />
@@ -290,12 +301,16 @@ const IMChannelCardList = forwardRef<
     return (
       <div className={cx(styles.emptyWrapper)}>
         <AppDevEmptyState
-          type=”no-data”
-          title={isSearchEmpty ? dict('NuwaxPC.Pages.IMChannel.CardList.noMatchingResults') : dict('NuwaxPC.Pages.IMChannel.CardList.noResultsFound')}
+          type="no-data"
+          title={
+            isSearchEmpty
+              ? dict('PC.Pages.IMChannel.CardList.noMatchingResults')
+              : dict('PC.Pages.IMChannel.CardList.noResultsFound')
+          }
           description={
             isSearchEmpty
-              ? dict('NuwaxPC.Pages.IMChannel.CardList.noKeywordResults', keyword)
-              : dict('NuwaxPC.Pages.IMChannel.CardList.noRobotsDesc')
+              ? dict('PC.Pages.IMChannel.CardList.noKeywordResults', keyword)
+              : dict('PC.Pages.IMChannel.CardList.noRobotsDesc')
           }
         />
       </div>

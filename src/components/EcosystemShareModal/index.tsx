@@ -1,6 +1,7 @@
 import { SkillList } from '@/components/Skill';
 import { COMPONENT_LIST } from '@/constants/ecosystem.constants';
 import { apiPublishedAgentInfo } from '@/services/agentDev';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiPublishedPluginInfo,
   apiPublishedWorkflowInfo,
@@ -26,7 +27,6 @@ import classNames from 'classnames';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useRequest } from 'umi';
 import styles from './index.less';
-import { dict } from '@/services/i18nRuntime';
 
 const cx = classNames.bind(styles);
 export interface PluginParam {
@@ -112,7 +112,7 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
   const [form] = Form.useForm();
   const [configParam, setConfigParam] = useState<PluginParam[]>([]);
   const [suffixInfo, setSuffixInfo] = useState<any>({
-    name: dict('NuwaxPC.Components.EcosystemShareModal.plugin'),
+    name: dict('PC.Components.EcosystemShareModal.plugin'),
     targetType: AgentComponentTypeEnum.Plugin,
   });
   const [pluginError, setPluginError] = useState(false);
@@ -262,7 +262,7 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
   // 入参配置columns
   const inputColumns: any = [
     {
-      title: dict('NuwaxPC.Components.EcosystemShareModal.paramName'),
+      title: dict('PC.Components.EcosystemShareModal.paramName'),
       dataIndex: 'name',
       key: 'name',
       width: '30%',
@@ -271,7 +271,7 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
       },
     },
     {
-      title: dict('NuwaxPC.Components.EcosystemShareModal.paramDesc'),
+      title: dict('PC.Components.EcosystemShareModal.paramDesc'),
       dataIndex: 'description',
       key: 'description',
       width: '50%',
@@ -280,7 +280,7 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
       },
     },
     {
-      title: dict('NuwaxPC.Components.EcosystemShareModal.required'),
+      title: dict('PC.Components.EcosystemShareModal.required'),
       dataIndex: 'value',
       key: 'value',
       width: '20%',
@@ -365,9 +365,11 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
       if (!data) {
         return (
           <Space>
-            <Button onClick={handleClose}>{dict('NuwaxPC.Common.Global.cancel')}</Button>
+            <Button onClick={handleClose}>
+              {dict('PC.Common.Global.cancel')}
+            </Button>
             <Button type="primary" onClick={() => handleSave(false)}>
-              {dict('NuwaxPC.Components.EcosystemShareModal.saveAndPublish')}
+              {dict('PC.Components.EcosystemShareModal.saveAndPublish')}
             </Button>
           </Space>
         );
@@ -381,7 +383,9 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
 
       return (
         <Space>
-          <Button onClick={handleClose}>{dict('NuwaxPC.Common.Global.cancel')}</Button>
+          <Button onClick={handleClose}>
+            {dict('PC.Common.Global.cancel')}
+          </Button>
           {isEdit && (isPublished || isReviewing) && (
             <Button
               onClick={() => {
@@ -390,7 +394,7 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
                 }
               }}
             >
-              {dict('NuwaxPC.Components.EcosystemShareModal.offline')}
+              {dict('PC.Components.EcosystemShareModal.offline')}
             </Button>
           )}
           {isEdit && isReviewing && (
@@ -401,14 +405,16 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
                 }
               }}
             >
-              {dict('NuwaxPC.Components.EcosystemShareModal.withdrawPublish')}
+              {dict('PC.Components.EcosystemShareModal.withdrawPublish')}
             </Button>
           )}
           {isDraft && (
-            <Button onClick={() => handleSave(true)}>{dict('NuwaxPC.Components.EcosystemShareModal.saveDraft')}</Button>
+            <Button onClick={() => handleSave(true)}>
+              {dict('PC.Components.EcosystemShareModal.saveDraft')}
+            </Button>
           )}
           <Button type="primary" onClick={() => handleSave(false)}>
-            {dict('NuwaxPC.Components.EcosystemShareModal.saveAndPublish')}
+            {dict('PC.Components.EcosystemShareModal.saveAndPublish')}
           </Button>
         </Space>
       );
@@ -427,7 +433,9 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
     <Modal
       title={
         <div className={cx(styles.modalTitle)}>
-          {isEdit ? dict('NuwaxPC.Components.EcosystemShareModal.editShare') : dict('NuwaxPC.Components.EcosystemShareModal.createShare')}
+          {isEdit
+            ? dict('PC.Components.EcosystemShareModal.editShare')
+            : dict('PC.Components.EcosystemShareModal.createShare')}
         </div>
       }
       centered
@@ -443,10 +451,22 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
               className={cx(styles.sectionTitle)}
               style={{ display: 'flex', alignItems: 'center' }}
             >
-              <div>{dict('NuwaxPC.Components.EcosystemShareModal.componentInfo', suffixInfo.name)}</div>
+              <div>
+                {dict(
+                  'PC.Components.EcosystemShareModal.componentInfo',
+                  suffixInfo.name,
+                )}
+              </div>
               {!disabledSkill && (
                 <Popover
-                  content={<div>{dict('NuwaxPC.Components.EcosystemShareModal.addComponent', suffixInfo.name)}</div>}
+                  content={
+                    <div>
+                      {dict(
+                        'PC.Components.EcosystemShareModal.addComponent',
+                        suffixInfo.name,
+                      )}
+                    </div>
+                  }
                   trigger="hover"
                 >
                   <Button
@@ -469,7 +489,15 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
             {/* 隐藏的表单项用于存储 plugin 值 */}
             <Form.Item
               name="plugin"
-              rules={[{ required: true, message: dict('NuwaxPC.Components.EcosystemShareModal.pleaseSelectComponent', suffixInfo.name) }]}
+              rules={[
+                {
+                  required: true,
+                  message: dict(
+                    'PC.Components.EcosystemShareModal.pleaseSelectComponent',
+                    suffixInfo.name,
+                  ),
+                },
+              ]}
               hidden
             >
               <Input type="hidden" />
@@ -494,14 +522,20 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
                           onAddComponent();
                         }}
                       >
-                        {dict('NuwaxPC.Components.EcosystemShareModal.pleaseSelectComponentFirst', suffixInfo.name)}
+                        {dict(
+                          'PC.Components.EcosystemShareModal.pleaseSelectComponentFirst',
+                          suffixInfo.name,
+                        )}
                       </div>
                       {pluginError && (
                         <div
                           className={cx(styles.pluginError)}
                           style={{ marginBottom: 24 }}
                         >
-                          {dict('NuwaxPC.Components.EcosystemShareModal.pleaseSelectComponentFirst', suffixInfo.name)}
+                          {dict(
+                            'PC.Components.EcosystemShareModal.pleaseSelectComponentFirst',
+                            suffixInfo.name,
+                          )}
                         </div>
                       )}
                     </>
@@ -542,13 +576,24 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
           </div>
 
           <div className={cx(styles.section)}>
-            <div className={cx(styles.sectionTitle)}>{dict('NuwaxPC.Components.EcosystemShareModal.publisherInfo')}</div>
+            <div className={cx(styles.sectionTitle)}>
+              {dict('PC.Components.EcosystemShareModal.publisherInfo')}
+            </div>
             <Form.Item
               name="author"
-              rules={[{ required: true, message: dict('NuwaxPC.Components.EcosystemShareModal.pleaseInputPublisherInfo') }]}
+              rules={[
+                {
+                  required: true,
+                  message: dict(
+                    'PC.Components.EcosystemShareModal.pleaseInputPublisherInfo',
+                  ),
+                },
+              ]}
             >
               <Input
-                placeholder={dict('NuwaxPC.Components.EcosystemShareModal.publisherInfoPlaceholder')}
+                placeholder={dict(
+                  'PC.Components.EcosystemShareModal.publisherInfoPlaceholder',
+                )}
                 maxLength={30}
                 showCount
               />
@@ -556,7 +601,9 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
           </div>
           {isPlugin && (
             <div className={cx(styles.section)}>
-              <div className={cx(styles.sectionTitle)}>{dict('NuwaxPC.Components.EcosystemShareModal.pluginParams')}</div>
+              <div className={cx(styles.sectionTitle)}>
+                {dict('PC.Components.EcosystemShareModal.pluginParams')}
+              </div>
               <Table<BindConfigWithSub>
                 size="small"
                 className={cx(styles.tableWrap, 'overflow-hide')}
@@ -573,13 +620,24 @@ const EcosystemShareModal: React.FC<EcosystemShareModalProps> = ({
           )}
 
           <div className={cx(styles.section)}>
-            <div className={cx(styles.sectionTitle)}>{dict('NuwaxPC.Components.EcosystemShareModal.usageDoc')}</div>
+            <div className={cx(styles.sectionTitle)}>
+              {dict('PC.Components.EcosystemShareModal.usageDoc')}
+            </div>
             <Form.Item
               name="publishDoc"
-              rules={[{ required: true, message: dict('NuwaxPC.Components.EcosystemShareModal.pleaseInputUsageDoc') }]}
+              rules={[
+                {
+                  required: true,
+                  message: dict(
+                    'PC.Components.EcosystemShareModal.pleaseInputUsageDoc',
+                  ),
+                },
+              ]}
             >
               <Input.TextArea
-                placeholder={dict('NuwaxPC.Components.EcosystemShareModal.usageDocPlaceholder')}
+                placeholder={dict(
+                  'PC.Components.EcosystemShareModal.usageDocPlaceholder',
+                )}
                 autoSize={{ minRows: 5, maxRows: 5 }}
                 className={cx(styles.docTextarea)}
               />

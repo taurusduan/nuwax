@@ -253,28 +253,24 @@ const ComponentSettingModal: React.FC<ComponentSettingModalProps> = ({
         return item;
       });
     });
-    message.success(t('NuwaxPC.Toast.Global.savedSuccessfully'));
+    message.success(t('PC.Toast.Global.savedSuccessfully'));
   };
 
   const getTooltip = () => {
     if (currentComponentInfo?.type === AgentComponentTypeEnum.Skill) {
       return (
         <div>
-          <p>{t('NuwaxPC.Pages.AgentArrangeInvokeType.onDemandDescription')}</p>
-          <p>
-            {t('NuwaxPC.Pages.AgentArrangeInvokeType.skillManualDescription')}
-          </p>
+          <p>{t('PC.Pages.AgentArrangeInvokeType.onDemandDescription')}</p>
+          <p>{t('PC.Pages.AgentArrangeInvokeType.skillManualDescription')}</p>
         </div>
       );
     }
     return (
       <div>
-        <p>{t('NuwaxPC.Pages.AgentArrangeInvokeType.autoDescription')}</p>
-        <p>{t('NuwaxPC.Pages.AgentArrangeInvokeType.onDemandDescription')}</p>
-        <p>{t('NuwaxPC.Pages.AgentArrangeInvokeType.manualDescription')}</p>
-        <p>
-          {t('NuwaxPC.Pages.AgentArrangeInvokeType.manualOnDemandDescription')}
-        </p>
+        <p>{t('PC.Pages.AgentArrangeInvokeType.autoDescription')}</p>
+        <p>{t('PC.Pages.AgentArrangeInvokeType.onDemandDescription')}</p>
+        <p>{t('PC.Pages.AgentArrangeInvokeType.manualDescription')}</p>
+        <p>{t('PC.Pages.AgentArrangeInvokeType.manualOnDemandDescription')}</p>
       </div>
     );
   };
@@ -360,7 +356,7 @@ const ComponentSettingModal: React.FC<ComponentSettingModalProps> = ({
       modalRender={() => (
         <div className={cx(styles.container, 'flex', 'overflow-hide')}>
           <div className={cx(styles.left)}>
-            <h3>{t('NuwaxPC.Pages.AgentArrangeComponentSetting.title')}</h3>
+            <h3>{t('PC.Pages.AgentArrangeComponentSetting.title')}</h3>
             <ul>
               {settingActionList.map((item) => {
                 // 数据表组件不展示方法调用

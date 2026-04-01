@@ -53,7 +53,10 @@ const FormItemsRender: React.FC<FormItemRenderProps> = ({
                   ? [
                       {
                         required: true,
-                        message: dict('NuwaxPC.Components.TestRun.fieldRequired', item.name),
+                        message: dict(
+                          'PC.Components.TestRun.fieldRequired',
+                          item.name,
+                        ),
                       },
                     ]
                   : []

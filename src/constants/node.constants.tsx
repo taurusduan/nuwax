@@ -1,3 +1,4 @@
+import { dict } from '@/services/i18nRuntime';
 import {
   AnswerTypeEnum,
   CompareTypeEnum,
@@ -6,7 +7,6 @@ import {
   NodeTypeEnum,
 } from '@/types/enums/common';
 import { FoldFormIdEnum, VariableConfigTypeEnum } from '@/types/enums/node';
-import { dict } from '@/services/i18nRuntime';
 import { ChildNode } from '@/types/interfaces/graph';
 
 // 有试运行的节点
@@ -28,9 +28,9 @@ export const testRunList = [
 ];
 
 export const branchTypeMap = {
-  IF: dict('NuwaxPC.Constants.Node.if'),
-  ELSE_IF: dict('NuwaxPC.Constants.Node.elseIf'),
-  ELSE: dict('NuwaxPC.Constants.Node.else'),
+  IF: dict('PC.Constants.Node.if'),
+  ELSE_IF: dict('PC.Constants.Node.elseIf'),
+  ELSE: dict('PC.Constants.Node.else'),
 };
 export const GENERAL_NODE = NodeShapeEnum.General;
 export const LOOP_NODE = NodeShapeEnum.Loop;
@@ -38,15 +38,15 @@ export const LOOP_NODE = NodeShapeEnum.Loop;
 // 异常处理类型 label 映射
 export const EXCEPTION_HANDLE_OPTIONS = [
   {
-    label: dict('NuwaxPC.Constants.Node.interruptFlow'),
+    label: dict('PC.Constants.Node.interruptFlow'),
     value: ExceptionHandleTypeEnum.INTERRUPT,
   },
   {
-    label: dict('NuwaxPC.Constants.Node.returnSpecificContent'),
+    label: dict('PC.Constants.Node.returnSpecificContent'),
     value: ExceptionHandleTypeEnum.SPECIFIC_CONTENT,
   },
   {
-    label: dict('NuwaxPC.Constants.Node.execExceptionFlow'),
+    label: dict('PC.Constants.Node.execExceptionFlow'),
     value: ExceptionHandleTypeEnum.EXECUTE_EXCEPTION_FLOW,
   },
 ];
@@ -71,10 +71,10 @@ export const EXCEPTION_NODES_TYPE = [
 ];
 
 export const RETRY_COUNT_OPTIONS = [
-  { label: dict('NuwaxPC.Constants.Node.noRetry'), value: 0 },
-  { label: dict('NuwaxPC.Constants.Node.retryOnce'), value: 1 },
-  { label: dict('NuwaxPC.Constants.Node.retryTwice'), value: 2 },
-  { label: dict('NuwaxPC.Constants.Node.retryThreeTimes'), value: 3 },
+  { label: dict('PC.Constants.Node.noRetry'), value: 0 },
+  { label: dict('PC.Constants.Node.retryOnce'), value: 1 },
+  { label: dict('PC.Constants.Node.retryTwice'), value: 2 },
+  { label: dict('PC.Constants.Node.retryThreeTimes'), value: 3 },
 ];
 
 export const compareTypeMap = {
@@ -92,8 +92,8 @@ export const compareTypeMap = {
 };
 
 export const answerTypeMap = {
-  [AnswerTypeEnum.TEXT]: dict('NuwaxPC.Constants.Node.directAnswer'),
-  [AnswerTypeEnum.SELECT]: dict('NuwaxPC.Constants.Node.optionAnswer'),
+  [AnswerTypeEnum.TEXT]: dict('PC.Constants.Node.directAnswer'),
+  [AnswerTypeEnum.SELECT]: dict('PC.Constants.Node.optionAnswer'),
 };
 export const DEFAULT_NODE_CONFIG = {
   newNodeOffsetX: 100, // 新增节点时，x轴的间距
@@ -184,6 +184,12 @@ export const DEFAULT_DRAWER_FORM: ChildNode = {
 export const SKILL_FORM_KEY = 'skillComponentConfigs';
 
 export const VARIABLE_CONFIG_TYPE_OPTIONS = [
-  { label: dict('NuwaxPC.Constants.Node.setVariable'), value: VariableConfigTypeEnum.SET_VARIABLE },
-  { label: dict('NuwaxPC.Constants.Node.getVariable'), value: VariableConfigTypeEnum.GET_VARIABLE },
+  {
+    label: dict('PC.Constants.Node.setVariable'),
+    value: VariableConfigTypeEnum.SET_VARIABLE,
+  },
+  {
+    label: dict('PC.Constants.Node.getVariable'),
+    value: VariableConfigTypeEnum.GET_VARIABLE,
+  },
 ];

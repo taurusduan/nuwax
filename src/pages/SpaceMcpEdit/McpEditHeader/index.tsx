@@ -1,5 +1,5 @@
-import { dict } from '@/services/i18nRuntime';
 import { MCP_EDIT_HEAD_MENU_LIST } from '@/constants/mcp.constants';
+import { dict } from '@/services/i18nRuntime';
 import {
   DeployStatusEnum,
   McpEditHeadMenusEnum,
@@ -66,7 +66,9 @@ const McpEditHeader: React.FC<McpEditHeaderProps> = ({
           onClick={() => jumpBack(`/space/${spaceId}/mcp`)}
         >
           <LeftOutlined className={cx('hover-box', styles.icon)} />
-          <span className={styles.name}>{dict('NuwaxPC.Pages.SpaceMcpEdit.editMcpService')}</span>
+          <span className={styles.name}>
+            {dict('PC.Pages.SpaceMcpEdit.editMcpService')}
+          </span>
         </div>
         <div className={cx('flex', 'items-center', 'gap-10')}>
           <span className={cx(styles['deploy-status'])}>
@@ -108,7 +110,9 @@ const McpEditHeader: React.FC<McpEditHeaderProps> = ({
           ) &&
           mcpInfo.deployed !== null &&
           dayjs(mcpInfo.deployed).isBefore(mcpInfo.modified) && (
-            <span className={cx(styles.text)}>{dict('NuwaxPC.Pages.SpaceMcpEdit.updateNotDeployed')}</span>
+            <span className={cx(styles.text)}>
+              {dict('PC.Pages.SpaceMcpEdit.updateNotDeployed')}
+            </span>
           )}
         <Button
           className={cx({
@@ -122,7 +126,7 @@ const McpEditHeader: React.FC<McpEditHeaderProps> = ({
             !mcpInfo?.permissions?.includes(McpPermissionsEnum.EditOrDeploy)
           }
         >
-          {dict('NuwaxPC.Pages.SpaceMcpEdit.save')}
+          {dict('PC.Pages.SpaceMcpEdit.save')}
         </Button>
         <Button
           type="primary"
@@ -132,7 +136,7 @@ const McpEditHeader: React.FC<McpEditHeaderProps> = ({
             !mcpInfo?.permissions?.includes(McpPermissionsEnum.EditOrDeploy)
           }
         >
-          {dict('NuwaxPC.Pages.SpaceMcpEdit.saveAndDeploy')}
+          {dict('PC.Pages.SpaceMcpEdit.saveAndDeploy')}
         </Button>
       </div>
     </header>

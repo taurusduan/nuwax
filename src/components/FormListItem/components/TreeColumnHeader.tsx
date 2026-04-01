@@ -21,13 +21,15 @@ const TreeColumnHeader: React.FC<TreeColumnHeaderProps> = ({
 }) => {
   return (
     <div className={'dis-left font-12 mb-6 font-color-gray07'}>
-      <span className="flex-1 ">{dict('NuwaxPC.Components.FormListItem.variableName')}</span>
+      <span className="flex-1 ">
+        {dict('PC.Components.FormListItem.variableName')}
+      </span>
       <span
         style={{
           width: 80 + (showCheck ? 60 : 50) + (isBody ? 62 : 0),
         }}
       >
-        {dict('NuwaxPC.Components.FormListItem.variableType')}
+        {dict('PC.Components.FormListItem.variableType')}
       </span>
     </div>
   );

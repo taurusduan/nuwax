@@ -35,7 +35,7 @@ const DocRename: React.FC<DocRenameProps> = ({
       debounceInterval: 300,
       onSuccess: (_: null, params: KnowledgeDocumentUpdateDocNameParams[]) => {
         message.success(
-          dict('NuwaxPC.Pages.SpaceKnowledge.DocRename.updateSuccess'),
+          dict('PC.Pages.SpaceKnowledge.DocRename.updateSuccess'),
         );
         setHovered(false);
         const { docId, name } = params[0];
@@ -62,7 +62,7 @@ const DocRename: React.FC<DocRenameProps> = ({
 
   return (
     <TooltipIcon
-      title={dict('NuwaxPC.Pages.SpaceKnowledge.DocRename.rename')}
+      title={dict('PC.Pages.SpaceKnowledge.DocRename.rename')}
       type={TooltipTitleTypeEnum.Blank}
       icon={
         <Popover
@@ -81,12 +81,12 @@ const DocRename: React.FC<DocRenameProps> = ({
               <Form.Item
                 className={cx(styles.input, 'mb-16')}
                 name="name"
-                label={dict('NuwaxPC.Pages.SpaceKnowledge.DocRename.rename')}
+                label={dict('PC.Pages.SpaceKnowledge.DocRename.rename')}
                 rules={[
                   {
                     required: true,
                     message: dict(
-                      'NuwaxPC.Pages.SpaceKnowledge.DocRename.docNameRequired',
+                      'PC.Pages.SpaceKnowledge.DocRename.docNameRequired',
                     ),
                   },
                 ]}
@@ -94,7 +94,7 @@ const DocRename: React.FC<DocRenameProps> = ({
                 <Input.TextArea
                   className="dispose-textarea-count"
                   placeholder={dict(
-                    'NuwaxPC.Pages.SpaceKnowledge.DocRename.inputDocName',
+                    'PC.Pages.SpaceKnowledge.DocRename.inputDocName',
                   )}
                   maxLength={100}
                   showCount
@@ -103,7 +103,7 @@ const DocRename: React.FC<DocRenameProps> = ({
               </Form.Item>
               <Form.Item className={cx('flex', 'content-end', 'mb-6')}>
                 <Button htmlType="submit" type="primary">
-                  {dict('NuwaxPC.Common.Global.confirm')}
+                  {dict('PC.Common.Global.confirm')}
                 </Button>
               </Form.Item>
             </Form>

@@ -401,7 +401,7 @@ const AppDev: React.FC = () => {
   const handleAddLogToChat = useCallback(
     (content: string, isAuto?: boolean, callback?: () => void) => {
       if (!content.trim()) {
-        message.warning(t('NuwaxPC.Pages.AppDevIndex.inputContentEmpty'));
+        message.warning(t('PC.Pages.AppDevIndex.inputContentEmpty'));
         return;
       }
 
@@ -461,7 +461,7 @@ const AppDev: React.FC = () => {
         return;
       }
       // 显示成功提示
-      message.success(t('NuwaxPC.Pages.AppDevIndex.logAddedWaitingSend'));
+      message.success(t('PC.Pages.AppDevIndex.logAddedWaitingSend'));
     },
     [chat],
   );
@@ -638,9 +638,7 @@ const AppDev: React.FC = () => {
    */
   const handlePublishComponent = useCallback(async () => {
     if (!hasValidProjectId || !projectId) {
-      message.error(
-        t('NuwaxPC.Pages.AppDevIndex.invalidProjectIdCannotDeploy'),
-      );
+      message.error(t('PC.Pages.AppDevIndex.invalidProjectIdCannotDeploy'));
       return;
     }
 
@@ -659,12 +657,10 @@ const AppDev: React.FC = () => {
         const { prodServerUrl } = result.data;
         // 显示部署结果 - 垂直居中显示
         Modal.success({
-          title: t('NuwaxPC.Pages.AppDevIndex.publishComponentSuccessTitle'),
+          title: t('PC.Pages.AppDevIndex.publishComponentSuccessTitle'),
           content: (
             <div>
-              <p>
-                {t('NuwaxPC.Pages.AppDevIndex.publishComponentSuccessDesc')}
-              </p>
+              <p>{t('PC.Pages.AppDevIndex.publishComponentSuccessDesc')}</p>
               {prodServerUrl && (
                 <p>
                   <a
@@ -672,7 +668,7 @@ const AppDev: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {t('NuwaxPC.Pages.AppDevIndex.clickToPreview')}
+                    {t('PC.Pages.AppDevIndex.clickToPreview')}
                   </a>
                 </p>
               )}
@@ -683,12 +679,12 @@ const AppDev: React.FC = () => {
         projectInfo.refreshProjectInfo();
       } else {
         message.error(
-          result.message || t('NuwaxPC.Pages.AppDevIndex.publishFailed'),
+          result.message || t('PC.Pages.AppDevIndex.publishFailed'),
         );
       }
     } catch (error) {
       // request请求中设置了skipErrorHandler: true, 跳过了错误处理
-      message.error(t('NuwaxPC.Pages.AppDevIndex.publishFailedRetryAfterFix'));
+      message.error(t('PC.Pages.AppDevIndex.publishFailedRetryAfterFix'));
     } finally {
       setIsDeploying(false);
     }
@@ -708,9 +704,7 @@ const AppDev: React.FC = () => {
    */
   const handleBeforePublish = async () => {
     if (!hasValidProjectId || !projectId) {
-      message.error(
-        t('NuwaxPC.Pages.AppDevIndex.invalidProjectIdCannotDeploy'),
-      );
+      message.error(t('PC.Pages.AppDevIndex.invalidProjectIdCannotDeploy'));
       return;
     }
     // 先关闭弹窗，再显示 loading 效果（与发布成组件一致）
@@ -741,9 +735,7 @@ const AppDev: React.FC = () => {
   const handleExportProject = useCallback(async () => {
     // 检查项目ID是否有效
     if (!hasValidProjectId || !projectId) {
-      message.warning(
-        t('NuwaxPC.Pages.AppDevIndex.invalidProjectIdCannotExport'),
-      );
+      message.warning(t('PC.Pages.AppDevIndex.invalidProjectIdCannotExport'));
       return;
     }
 
@@ -755,7 +747,7 @@ const AppDev: React.FC = () => {
       if (!result.success) {
         // 导出失败，显示错误信息
         const errorMessage =
-          result.error?.message || t('NuwaxPC.Pages.AppDevIndex.exportFailed');
+          result.error?.message || t('PC.Pages.AppDevIndex.exportFailed');
         message.warning(errorMessage);
         return;
       }
@@ -789,16 +781,16 @@ const AppDev: React.FC = () => {
       // 清理URL对象
       window.URL.revokeObjectURL(url);
 
-      message.success(t('NuwaxPC.Pages.AppDevIndex.exportSuccess'));
+      message.success(t('PC.Pages.AppDevIndex.exportSuccess'));
     } catch (error) {
       // 改进错误处理，兼容不同的错误格式
       const errorMessage =
         (error as any)?.message ||
         (error as any)?.toString() ||
-        t('NuwaxPC.Pages.AppDevIndex.exportUnknownError');
+        t('PC.Pages.AppDevIndex.exportUnknownError');
 
       message.error(
-        t('NuwaxPC.Pages.AppDevIndex.exportFailedWithError', errorMessage),
+        t('PC.Pages.AppDevIndex.exportFailedWithError', errorMessage),
       );
     } finally {
       // setIsExporting(false); // 暂时注释掉，后续可能需要
@@ -828,7 +820,7 @@ const AppDev: React.FC = () => {
       // 检查项目ID是否有效
       if (!hasValidProjectId || !projectId) {
         message.error(
-          t('NuwaxPC.Pages.AppDevIndex.invalidProjectIdCannotBindDataSource'),
+          t('PC.Pages.AppDevIndex.invalidProjectIdCannotBindDataSource'),
         );
         return;
       }
@@ -838,9 +830,7 @@ const AppDev: React.FC = () => {
         item.targetType !== AgentComponentTypeEnum.Plugin &&
         item.targetType !== AgentComponentTypeEnum.Workflow
       ) {
-        message.warning(
-          t('NuwaxPC.Pages.AppDevIndex.onlyPluginWorkflowSupported'),
-        );
+        message.warning(t('PC.Pages.AppDevIndex.onlyPluginWorkflowSupported'));
         return;
       }
 
@@ -872,7 +862,7 @@ const AppDev: React.FC = () => {
 
         // 检查绑定结果
         if (result?.code === SUCCESS_CODE) {
-          message.success(t('NuwaxPC.Pages.AppDevIndex.bindDataSourceSuccess'));
+          message.success(t('PC.Pages.AppDevIndex.bindDataSourceSuccess'));
 
           // 更新处于loading状态的组件列表
           setAddComponents((list) => {
@@ -892,15 +882,14 @@ const AppDev: React.FC = () => {
             list.filter((info) => info.targetId !== item.targetId),
           );
           const errorMessage =
-            result?.message ||
-            t('NuwaxPC.Pages.AppDevIndex.bindDataSourceFailed');
+            result?.message || t('PC.Pages.AppDevIndex.bindDataSourceFailed');
           throw new Error(errorMessage);
         }
       } catch (error: any) {
         const errorMessage =
           error?.message ||
           error?.toString() ||
-          t('NuwaxPC.Pages.AppDevIndex.bindDataSourceUnknownError');
+          t('PC.Pages.AppDevIndex.bindDataSourceUnknownError');
         message.error(errorMessage);
       }
     },
@@ -945,7 +934,7 @@ const AppDev: React.FC = () => {
    */
   const handleUploadProject = useCallback(async () => {
     if (!selectedFile) {
-      message.error(t('NuwaxPC.Pages.AppDevIndex.selectFileFirst'));
+      message.error(t('PC.Pages.AppDevIndex.selectFileFirst'));
       return;
     }
 
@@ -956,10 +945,7 @@ const AppDev: React.FC = () => {
     // 如果超过最大上传文件大小，则提示错误
     if (isExceedLimitSize) {
       message.error(
-        t(
-          'NuwaxPC.Pages.AppDevIndex.uploadSizeLimitExceeded',
-          String(maxFileSize),
-        ),
+        t('PC.Pages.AppDevIndex.uploadSizeLimitExceeded', String(maxFileSize)),
       );
       return;
     }
@@ -971,13 +957,12 @@ const AppDev: React.FC = () => {
         file: selectedFile,
         projectId: projectId || undefined,
         projectName:
-          workspace.projectName ||
-          t('NuwaxPC.Pages.AppDevIndex.unnamedProject'),
+          workspace.projectName || t('PC.Pages.AppDevIndex.unnamedProject'),
         spaceId: spaceId ? Number(spaceId) : undefined,
       });
 
       if (result?.success && result?.data) {
-        message.success(t('NuwaxPC.Pages.AppDevIndex.importProjectSuccess'));
+        message.success(t('PC.Pages.AppDevIndex.importProjectSuccess'));
         setIsUploadModalVisible(false);
         setSelectedFile(null);
 
@@ -1019,7 +1004,7 @@ const AppDev: React.FC = () => {
     const isZip = file.name?.toLowerCase().endsWith('.zip');
 
     if (!isZip) {
-      message.error(t('NuwaxPC.Pages.AppDevIndex.zipOnly'));
+      message.error(t('PC.Pages.AppDevIndex.zipOnly'));
       return false;
     }
 
@@ -1117,7 +1102,7 @@ const AppDev: React.FC = () => {
         if (isExceedLimitSize) {
           message.error(
             t(
-              'NuwaxPC.Pages.AppDevIndex.uploadSizeLimitExceeded',
+              'PC.Pages.AppDevIndex.uploadSizeLimitExceeded',
               String(maxFileSize),
             ),
           );
@@ -1250,7 +1235,7 @@ const AppDev: React.FC = () => {
       }
 
       if (!targetPath.trim()) {
-        message.error(t('NuwaxPC.Pages.AppDevIndex.targetPathRequired'));
+        message.error(t('PC.Pages.AppDevIndex.targetPathRequired'));
         return false;
       }
 
@@ -1267,23 +1252,23 @@ const AppDev: React.FC = () => {
         );
         if (success) {
           message.success(
-            t('NuwaxPC.Pages.AppDevIndex.fileUploadSuccess', fileName),
+            t('PC.Pages.AppDevIndex.fileUploadSuccess', fileName),
           );
           handleRestartDevServer();
           // 刷新项目详情(刷新版本列表)
           projectInfo.refreshProjectInfo();
           return true;
         } else {
-          message.error(t('NuwaxPC.Pages.AppDevIndex.fileUploadFailed'));
+          message.error(t('PC.Pages.AppDevIndex.fileUploadFailed'));
           return false;
         }
       } catch (error) {
         message.error(
           t(
-            'NuwaxPC.Pages.AppDevIndex.fileUploadFailedWithError',
+            'PC.Pages.AppDevIndex.fileUploadFailedWithError',
             error instanceof Error
               ? error.message
-              : t('NuwaxPC.Pages.AppDevIndex.unknownError'),
+              : t('PC.Pages.AppDevIndex.unknownError'),
           ),
         );
         return false;
@@ -1305,11 +1290,11 @@ const AppDev: React.FC = () => {
       if (success) {
         const deleteType =
           nodeToDelete.type === 'folder'
-            ? t('NuwaxPC.Pages.AppDevIndex.fileTypeFolder')
-            : t('NuwaxPC.Pages.AppDevIndex.fileTypeFile');
+            ? t('PC.Pages.AppDevIndex.fileTypeFolder')
+            : t('PC.Pages.AppDevIndex.fileTypeFile');
         message.success(
           t(
-            'NuwaxPC.Pages.AppDevIndex.deleteSuccessWithType',
+            'PC.Pages.AppDevIndex.deleteSuccessWithType',
             deleteType,
             nodeToDelete.name,
           ),
@@ -1388,13 +1373,11 @@ const AppDev: React.FC = () => {
     return (
       <div className={styles.errorContainer}>
         <Alert
-          message={t('NuwaxPC.Pages.AppDevIndex.missingProjectIdMessage')}
+          message={t('PC.Pages.AppDevIndex.missingProjectIdMessage')}
           description={
             <div>
-              <p>{t('NuwaxPC.Pages.AppDevIndex.missingProjectIdDesc')}</p>
-              <code>
-                {t('NuwaxPC.Pages.AppDevIndex.missingProjectIdExample')}
-              </code>
+              <p>{t('PC.Pages.AppDevIndex.missingProjectIdDesc')}</p>
+              <code>{t('PC.Pages.AppDevIndex.missingProjectIdExample')}</code>
             </div>
           }
           type="warning"
@@ -1406,10 +1389,10 @@ const AppDev: React.FC = () => {
                 onClick={() => setIsUploadModalVisible(true)}
                 disabled={chat.isChatLoading} // 新增：聊天加载时禁用
               >
-                {t('NuwaxPC.Pages.AppDevIndex.uploadProject')}
+                {t('PC.Pages.AppDevIndex.uploadProject')}
               </Button>
               <Button onClick={() => window.history.back()}>
-                {t('NuwaxPC.Pages.AppDevIndex.back')}
+                {t('PC.Pages.AppDevIndex.back')}
               </Button>
             </Space>
           }
@@ -1442,13 +1425,9 @@ const AppDev: React.FC = () => {
         visible={
           isDeploying || (isFileOperating && shouldShowFileOperatingMask)
         }
-        tip={
-          isDeploying ? t('NuwaxPC.Pages.AppDevIndex.deployingTip') : undefined
-        }
+        tip={isDeploying ? t('PC.Pages.AppDevIndex.deployingTip') : undefined}
         subtitle={
-          isDeploying
-            ? t('NuwaxPC.Pages.AppDevIndex.deployingSubtitle')
-            : undefined
+          isDeploying ? t('PC.Pages.AppDevIndex.deployingSubtitle') : undefined
         }
         icon={
           isDeploying ? (
@@ -1555,9 +1534,7 @@ const AppDev: React.FC = () => {
                     options={[
                       {
                         label: (
-                          <Tooltip
-                            title={t('NuwaxPC.Pages.AppDevIndex.preview')}
-                          >
+                          <Tooltip title={t('PC.Pages.AppDevIndex.preview')}>
                             <SvgIcon
                               name="icons-common-preview"
                               style={{ fontSize: 18 }}
@@ -1568,7 +1545,7 @@ const AppDev: React.FC = () => {
                       },
                       {
                         label: (
-                          <Tooltip title={t('NuwaxPC.Pages.AppDevIndex.code')}>
+                          <Tooltip title={t('PC.Pages.AppDevIndex.code')}>
                             <SvgIcon
                               name="icons-common-code"
                               style={{ fontSize: 18 }}
@@ -1829,7 +1806,7 @@ const AppDev: React.FC = () => {
 
         {/* 上传项目模态框 */}
         <Modal
-          title={t('NuwaxPC.Pages.AppDevIndex.importProjectTitle')}
+          title={t('PC.Pages.AppDevIndex.importProjectTitle')}
           open={isUploadModalVisible && !chat.isChatLoading}
           // ⚠️ 不用 onOk，按钮自身 onClick 处理
           onOk={undefined}
@@ -1846,7 +1823,7 @@ const AppDev: React.FC = () => {
               }}
               disabled={isFileOperating}
             >
-              {t('NuwaxPC.Common.Global.cancel')}
+              {t('PC.Common.Global.cancel')}
             </Button>,
             <Button
               key="confirm"
@@ -1864,7 +1841,7 @@ const AppDev: React.FC = () => {
                 }
               }}
             >
-              {t('NuwaxPC.Pages.AppDevIndex.confirmImport')}
+              {t('PC.Pages.AppDevIndex.confirmImport')}
             </Button>,
           ]}
           width={500}
@@ -1883,10 +1860,10 @@ const AppDev: React.FC = () => {
                 <UploadOutlined />
               </p>
               <p className="ant-upload-text">
-                {t('NuwaxPC.Pages.AppDevIndex.uploadDragText')}
+                {t('PC.Pages.AppDevIndex.uploadDragText')}
               </p>
               <p className="ant-upload-hint">
-                {t('NuwaxPC.Pages.AppDevIndex.uploadZipHint')}
+                {t('PC.Pages.AppDevIndex.uploadZipHint')}
               </p>
             </Upload.Dragger>
             {selectedFile && (
@@ -1898,14 +1875,12 @@ const AppDev: React.FC = () => {
                   borderRadius: 6,
                 }}
               >
-                <Text strong>
-                  {t('NuwaxPC.Pages.AppDevIndex.selectedFile')}
-                </Text>
+                <Text strong>{t('PC.Pages.AppDevIndex.selectedFile')}</Text>
                 <br />
                 <Text>{selectedFile.name}</Text>
                 <br />
                 <Text type="secondary">
-                  {t('NuwaxPC.Pages.AppDevIndex.fileSize')}:
+                  {t('PC.Pages.AppDevIndex.fileSize')}:
                   {(selectedFile.size / 1024 / 1024).toFixed(2)} MB
                 </Text>
               </div>
@@ -1915,7 +1890,7 @@ const AppDev: React.FC = () => {
 
         {/* 单文件上传模态框 */}
         <Modal
-          title={t('NuwaxPC.Pages.AppDevIndex.singleFileUploadTitle')}
+          title={t('PC.Pages.AppDevIndex.singleFileUploadTitle')}
           open={isSingleFileUploadModalVisible && !chat.isChatLoading} // 新增：聊天加载时禁用
           onCancel={handleCancelSingleFileUpload}
           footer={[
@@ -1924,7 +1899,7 @@ const AppDev: React.FC = () => {
               onClick={handleCancelSingleFileUpload}
               disabled={isFileOperating}
             >
-              {t('NuwaxPC.Common.Global.cancel')}
+              {t('PC.Common.Global.cancel')}
             </Button>,
             <Button
               key="submit"
@@ -1935,7 +1910,7 @@ const AppDev: React.FC = () => {
                 !uploadFile || !singleFilePath.trim() || isFileOperating
               }
             >
-              {t('NuwaxPC.Pages.AppDevIndex.upload')}
+              {t('PC.Pages.AppDevIndex.upload')}
             </Button>,
           ]}
           width={500}
@@ -1946,24 +1921,24 @@ const AppDev: React.FC = () => {
           <Space direction="vertical" style={{ width: '100%' }}>
             <div>
               <Text>
-                {t('NuwaxPC.Pages.AppDevIndex.currentProjectId')}:
-                {projectId || t('NuwaxPC.Pages.AppDevIndex.notSet')}
+                {t('PC.Pages.AppDevIndex.currentProjectId')}:
+                {projectId || t('PC.Pages.AppDevIndex.notSet')}
               </Text>
             </div>
             <div>
-              <Text strong>{t('NuwaxPC.Pages.AppDevIndex.filePath')}:</Text>
+              <Text strong>{t('PC.Pages.AppDevIndex.filePath')}:</Text>
               <div style={{ marginTop: 4, fontSize: '12px', color: '#666' }}>
-                {t('NuwaxPC.Pages.AppDevIndex.filePathTip')}
+                {t('PC.Pages.AppDevIndex.filePathTip')}
               </div>
               <Input
-                placeholder={t('NuwaxPC.Pages.AppDevIndex.filePathPlaceholder')}
+                placeholder={t('PC.Pages.AppDevIndex.filePathPlaceholder')}
                 value={singleFilePath}
                 onChange={(e) => setSingleFilePath(e.target.value)}
                 style={{ marginTop: 8 }}
               />
             </div>
             <div>
-              <Text strong>{t('NuwaxPC.Pages.AppDevIndex.selectFile')}:</Text>
+              <Text strong>{t('PC.Pages.AppDevIndex.selectFile')}:</Text>
               <Upload.Dragger
                 beforeUpload={(file) => {
                   handleSelectSingleFile(file);
@@ -1977,17 +1952,17 @@ const AppDev: React.FC = () => {
                   <UploadOutlined />
                 </p>
                 <p className="ant-upload-text">
-                  {t('NuwaxPC.Pages.AppDevIndex.uploadDragText')}
+                  {t('PC.Pages.AppDevIndex.uploadDragText')}
                 </p>
                 <p className="ant-upload-hint">
-                  {t('NuwaxPC.Pages.AppDevIndex.singleFileUploadHint')}
+                  {t('PC.Pages.AppDevIndex.singleFileUploadHint')}
                 </p>
               </Upload.Dragger>
               {uploadFile && (
                 <div style={{ marginTop: 8 }}>
                   <Alert
                     message={t(
-                      'NuwaxPC.Pages.AppDevIndex.selectedFileWithName',
+                      'PC.Pages.AppDevIndex.selectedFileWithName',
                       uploadFile.name,
                     )}
                     type="success"
@@ -1998,7 +1973,7 @@ const AppDev: React.FC = () => {
                         size="small"
                         onClick={() => setUploadFile(null)}
                       >
-                        {t('NuwaxPC.Pages.AppDevIndex.clear')}
+                        {t('PC.Pages.AppDevIndex.clear')}
                       </Button>
                     }
                   />
@@ -2010,13 +1985,13 @@ const AppDev: React.FC = () => {
 
         {/* 删除确认对话框 */}
         <Modal
-          title={t('NuwaxPC.Pages.AppDevIndex.confirmDeleteTitle')}
+          title={t('PC.Pages.AppDevIndex.confirmDeleteTitle')}
           open={deleteModalVisible}
           // ⚠️ 不再用 onOk，按钮自身 onClick 处理
           onOk={undefined}
           onCancel={handleDeleteCancel}
-          okText={t('NuwaxPC.Pages.AppDevIndex.delete')}
-          cancelText={t('NuwaxPC.Common.Global.cancel')}
+          okText={t('PC.Pages.AppDevIndex.delete')}
+          cancelText={t('PC.Common.Global.cancel')}
           okButtonProps={{
             danger: true,
             // 禁用逻辑统一用 isFileOperating，loading 由全局 mask 处理
@@ -2032,7 +2007,7 @@ const AppDev: React.FC = () => {
               onClick={handleDeleteCancel}
               disabled={isFileOperating}
             >
-              {t('NuwaxPC.Common.Global.cancel')}
+              {t('PC.Common.Global.cancel')}
             </Button>,
             <Button
               key="confirm"
@@ -2050,22 +2025,22 @@ const AppDev: React.FC = () => {
                 }
               }}
             >
-              {t('NuwaxPC.Pages.AppDevIndex.delete')}
+              {t('PC.Pages.AppDevIndex.delete')}
             </Button>,
           ]}
         >
           <p>
             {t(
-              'NuwaxPC.Pages.AppDevIndex.confirmDeleteContent',
+              'PC.Pages.AppDevIndex.confirmDeleteContent',
               nodeToDelete?.type === 'folder'
-                ? t('NuwaxPC.Pages.AppDevIndex.fileTypeFolder')
-                : t('NuwaxPC.Pages.AppDevIndex.fileTypeFile'),
+                ? t('PC.Pages.AppDevIndex.fileTypeFolder')
+                : t('PC.Pages.AppDevIndex.fileTypeFile'),
               nodeToDelete?.name || '',
             )}
           </p>
           {nodeToDelete?.type === 'folder' && (
             <p style={{ color: '#ff4d4f', fontSize: '12px' }}>
-              {t('NuwaxPC.Pages.AppDevIndex.deleteFolderWarning')}
+              {t('PC.Pages.AppDevIndex.deleteFolderWarning')}
             </p>
           )}
         </Modal>
@@ -2094,7 +2069,7 @@ const AppDev: React.FC = () => {
       />
       {/*发布智能体弹窗*/}
       <PublishComponentModal
-        title={t('NuwaxPC.Pages.AppDevIndex.application')}
+        title={t('PC.Pages.AppDevIndex.application')}
         targetId={projectInfo.projectInfoState.projectInfo?.devAgentId || 0}
         open={openPublishComponentModal}
         onBeforePublishFn={handleBeforePublish}

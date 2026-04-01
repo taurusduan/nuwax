@@ -44,7 +44,7 @@ export async function parsePPTX(pptxData: any): Promise<PPTXParseResult> {
     };
   } catch (error) {
     console.error('[PPTX Fallback] Parse error:', error);
-    throw new Error(dict('NuwaxPC.Utils.PptxFallbackRenderer.parseFailed'));
+    throw new Error(dict('PC.Utils.PptxFallbackRenderer.parseFailed'));
   }
 }
 
@@ -87,7 +87,7 @@ export function renderFallback(
 
     const img = document.createElement('img');
     img.src = parseResult.thumbnail;
-    img.alt = dict('NuwaxPC.Utils.PptxFallbackRenderer.previewAlt');
+    img.alt = dict('PC.Utils.PptxFallbackRenderer.previewAlt');
     img.style.cssText = `
       max-width: 100%;
       max-height: 500px;
@@ -98,7 +98,9 @@ export function renderFallback(
     `;
 
     const thumbnailLabel = document.createElement('div');
-    thumbnailLabel.textContent = dict('NuwaxPC.Utils.PptxFallbackRenderer.coverPreview');
+    thumbnailLabel.textContent = dict(
+      'PC.Utils.PptxFallbackRenderer.coverPreview',
+    );
     thumbnailLabel.style.cssText = `
       color: #666;
       font-size: 13px;
@@ -124,7 +126,9 @@ export function renderFallback(
   `;
 
   const slideCountText = document.createElement('div');
-  slideCountText.textContent = dict('NuwaxPC.Utils.PptxFallbackRenderer.slideCount').replace('{0}', String(parseResult.slideCount));
+  slideCountText.textContent = dict(
+    'PC.Utils.PptxFallbackRenderer.slideCount',
+  ).replace('{0}', String(parseResult.slideCount));
   slideCountText.style.cssText = `
     color: #262626;
     font-size: 14px;
@@ -132,7 +136,7 @@ export function renderFallback(
   `;
 
   const notice = document.createElement('div');
-  notice.innerHTML = dict('NuwaxPC.Utils.PptxFallbackRenderer.complexFormatNotice');
+  notice.innerHTML = dict('PC.Utils.PptxFallbackRenderer.complexFormatNotice');
   notice.style.cssText = `
     color: #8c8c8c;
     font-size: 12px;

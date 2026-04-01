@@ -87,11 +87,11 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
   const menuSourceOptions = useMemo(
     () => [
       {
-        label: t('NuwaxPC.Pages.SystemMenuFormModal.sourceSystemBuiltIn'),
+        label: t('PC.Pages.SystemMenuFormModal.sourceSystemBuiltIn'),
         value: MenuSourceEnum.SystemBuiltIn,
       },
       {
-        label: t('NuwaxPC.Pages.SystemMenuFormModal.sourceUserDefined'),
+        label: t('PC.Pages.SystemMenuFormModal.sourceUserDefined'),
         value: MenuSourceEnum.UserDefined,
       },
     ],
@@ -100,11 +100,11 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
   const openTypeOptions = useMemo(
     () => [
       {
-        label: t('NuwaxPC.Pages.SystemMenuFormModal.openInCurrentTab'),
+        label: t('PC.Pages.SystemMenuFormModal.openInCurrentTab'),
         value: OpenTypeEnum.CurrentTab,
       },
       {
-        label: t('NuwaxPC.Pages.SystemMenuFormModal.openInNewTab'),
+        label: t('PC.Pages.SystemMenuFormModal.openInNewTab'),
         value: OpenTypeEnum.NewTab,
       },
     ],
@@ -116,7 +116,7 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(t('NuwaxPC.Pages.SystemMenuFormModal.addSuccess'));
+      message.success(t('PC.Pages.SystemMenuFormModal.addSuccess'));
       onSuccess();
     },
   });
@@ -128,7 +128,7 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
       manual: true,
       debounceInterval: 300,
       onSuccess: () => {
-        message.success(t('NuwaxPC.Pages.SystemMenuFormModal.updateSuccess'));
+        message.success(t('PC.Pages.SystemMenuFormModal.updateSuccess'));
         onSuccess();
       },
     },
@@ -428,11 +428,11 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
       type === 'image/png' ||
       type === 'image/svg+xml';
     if (!isJpgOrPng) {
-      message.error(t('NuwaxPC.Pages.SystemMenuFormModal.imageTypeInvalid'));
+      message.error(t('PC.Pages.SystemMenuFormModal.imageTypeInvalid'));
     }
     const isLt2M = size / 1024 / 1024 < 2;
     if (!isLt2M) {
-      message.error(t('NuwaxPC.Pages.SystemMenuFormModal.imageSizeInvalid'));
+      message.error(t('PC.Pages.SystemMenuFormModal.imageSizeInvalid'));
     }
     return (isJpgOrPng && isLt2M) || Upload.LIST_IGNORE;
   };
@@ -442,15 +442,15 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
       form={form}
       title={
         isEdit
-          ? t('NuwaxPC.Pages.SystemMenuFormModal.editTitle')
-          : t('NuwaxPC.Pages.SystemMenuFormModal.createTitle')
+          ? t('PC.Pages.SystemMenuFormModal.editTitle')
+          : t('PC.Pages.SystemMenuFormModal.createTitle')
       }
       open={open}
       loading={loading}
       okText={
         isEdit
-          ? t('NuwaxPC.Pages.SystemMenuFormModal.save')
-          : t('NuwaxPC.Pages.SystemMenuFormModal.create')
+          ? t('PC.Pages.SystemMenuFormModal.save')
+          : t('PC.Pages.SystemMenuFormModal.create')
       }
       width={650}
       onCancel={onCancel}
@@ -466,10 +466,7 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
         className={cx(styles.form)}
       >
         {/* 基本信息 */}
-        <Form.Item
-          name="icon"
-          label={t('NuwaxPC.Pages.SystemMenuFormModal.icon')}
-        >
+        <Form.Item name="icon" label={t('PC.Pages.SystemMenuFormModal.icon')}>
           <UploadAvatar
             onUploadSuccess={setImageUrl}
             imageUrl={imageUrl}
@@ -480,20 +477,18 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
         <Row gutter={16}>
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemMenuFormModal.menuName')}
+              label={t('PC.Pages.SystemMenuFormModal.menuName')}
               name="name"
               rules={[
                 {
                   required: true,
-                  message: t(
-                    'NuwaxPC.Pages.SystemMenuFormModal.menuNameRequired',
-                  ),
+                  message: t('PC.Pages.SystemMenuFormModal.menuNameRequired'),
                 },
               ]}
             >
               <Input
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemMenuFormModal.menuNamePlaceholder',
+                  'PC.Pages.SystemMenuFormModal.menuNamePlaceholder',
                 )}
                 maxLength={50}
                 showCount
@@ -503,12 +498,12 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
 
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemMenuFormModal.parentMenu')}
+              label={t('PC.Pages.SystemMenuFormModal.parentMenu')}
               name="parentId"
             >
               <TreeSelect
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemMenuFormModal.parentMenuPlaceholder',
+                  'PC.Pages.SystemMenuFormModal.parentMenuPlaceholder',
                 )}
                 treeData={menuTreeSelectData}
                 allowClear
@@ -525,19 +520,19 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
 
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemMenuFormModal.routePath')}
+              label={t('PC.Pages.SystemMenuFormModal.routePath')}
               name="path"
               rules={[
                 {
                   pattern: /^[a-zA-Z0-9/?#&=._:@%+ -]+$/,
                   message: t(
-                    'NuwaxPC.Pages.SystemMenuFormModal.routePathPatternInvalid',
+                    'PC.Pages.SystemMenuFormModal.routePathPatternInvalid',
                   ),
                 },
                 {
                   max: 500,
                   message: t(
-                    'NuwaxPC.Pages.SystemMenuFormModal.routePathLengthInvalid',
+                    'PC.Pages.SystemMenuFormModal.routePathLengthInvalid',
                   ),
                 },
               ]}
@@ -545,19 +540,13 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
                 title: (
                   <>
                     <div>
-                      {t(
-                        'NuwaxPC.Pages.SystemMenuFormModal.routePathTipStatic',
-                      )}
+                      {t('PC.Pages.SystemMenuFormModal.routePathTipStatic')}
                     </div>
                     <div>
-                      {t(
-                        'NuwaxPC.Pages.SystemMenuFormModal.routePathTipDynamic',
-                      )}
+                      {t('PC.Pages.SystemMenuFormModal.routePathTipDynamic')}
                     </div>
                     <div>
-                      {t(
-                        'NuwaxPC.Pages.SystemMenuFormModal.routePathTipExternal',
-                      )}
+                      {t('PC.Pages.SystemMenuFormModal.routePathTipExternal')}
                     </div>
                   </>
                 ),
@@ -566,7 +555,7 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
             >
               <Input
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemMenuFormModal.routePathPlaceholder',
+                  'PC.Pages.SystemMenuFormModal.routePathPlaceholder',
                 )}
               />
             </Form.Item>
@@ -574,12 +563,12 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
 
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemMenuFormModal.externalOpenType')}
+              label={t('PC.Pages.SystemMenuFormModal.externalOpenType')}
               name="openType"
             >
               <Select
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemMenuFormModal.openTypePlaceholder',
+                  'PC.Pages.SystemMenuFormModal.openTypePlaceholder',
                 )}
                 options={openTypeOptions}
               />
@@ -588,13 +577,13 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
 
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemMenuFormModal.source')}
+              label={t('PC.Pages.SystemMenuFormModal.source')}
               name="source"
             >
               <Select
                 disabled
                 placeholder={t(
-                  'NuwaxPC.Pages.SystemMenuFormModal.sourcePlaceholder',
+                  'PC.Pages.SystemMenuFormModal.sourcePlaceholder',
                 )}
                 options={menuSourceOptions}
               />
@@ -603,13 +592,11 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
 
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemMenuFormModal.sort')}
+              label={t('PC.Pages.SystemMenuFormModal.sort')}
               name="sortIndex"
             >
               <InputNumber
-                placeholder={t(
-                  'NuwaxPC.Pages.SystemMenuFormModal.sortPlaceholder',
-                )}
+                placeholder={t('PC.Pages.SystemMenuFormModal.sortPlaceholder')}
                 className={cx('w-full')}
                 min={1}
                 max={10000}
@@ -619,31 +606,29 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
 
           <Col span={12}>
             <Form.Item
-              label={t('NuwaxPC.Pages.SystemMenuFormModal.enable')}
+              label={t('PC.Pages.SystemMenuFormModal.enable')}
               name="status"
               valuePropName="checked"
               tooltip={{
-                title: t('NuwaxPC.Pages.SystemMenuFormModal.enableTooltip'),
+                title: t('PC.Pages.SystemMenuFormModal.enableTooltip'),
                 icon: <InfoCircleOutlined />,
               }}
             >
               <Switch
-                checkedChildren={t('NuwaxPC.Pages.SystemMenuFormModal.enabled')}
-                unCheckedChildren={t(
-                  'NuwaxPC.Pages.SystemMenuFormModal.disabled',
-                )}
+                checkedChildren={t('PC.Pages.SystemMenuFormModal.enabled')}
+                unCheckedChildren={t('PC.Pages.SystemMenuFormModal.disabled')}
               />
             </Form.Item>
           </Col>
         </Row>
 
         <Form.Item
-          label={t('NuwaxPC.Pages.SystemMenuFormModal.description')}
+          label={t('PC.Pages.SystemMenuFormModal.description')}
           name="description"
         >
           <TextArea
             placeholder={t(
-              'NuwaxPC.Pages.SystemMenuFormModal.descriptionPlaceholder',
+              'PC.Pages.SystemMenuFormModal.descriptionPlaceholder',
             )}
             className="dispose-textarea-count"
             autoSize={{ minRows: 3, maxRows: 5 }}
@@ -654,11 +639,9 @@ const MenuFormModal: React.FC<MenuFormModalProps> = ({
 
         {/* 关联资源码 */}
         <Form.Item
-          label={t('NuwaxPC.Pages.SystemMenuFormModal.bindResourceCode')}
+          label={t('PC.Pages.SystemMenuFormModal.bindResourceCode')}
           tooltip={{
-            title: t(
-              'NuwaxPC.Pages.SystemMenuFormModal.bindResourceCodeTooltip',
-            ),
+            title: t('PC.Pages.SystemMenuFormModal.bindResourceCodeTooltip'),
             icon: <InfoCircleOutlined />,
           }}
         >

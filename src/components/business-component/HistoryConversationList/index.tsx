@@ -77,13 +77,13 @@ const HistoryConversationList: React.FC<HistoryConversationListProps> = ({
     const trimmedTopic = newTopic.trim();
     if (!trimmedTopic) {
       message.warning(
-        t('NuwaxPC.Components.HistoryConversationList.renameTitleEmpty'),
+        t('PC.Components.HistoryConversationList.renameTitleEmpty'),
       );
       return;
     }
     if (trimmedTopic.length > 50) {
       message.warning(
-        t('NuwaxPC.Components.HistoryConversationList.renameTitleTooLong'),
+        t('PC.Components.HistoryConversationList.renameTitleTooLong'),
       );
       return;
     }
@@ -102,7 +102,7 @@ const HistoryConversationList: React.FC<HistoryConversationListProps> = ({
           limit: 20,
         });
         message.success(
-          t('NuwaxPC.Components.HistoryConversationList.renameSuccess'),
+          t('PC.Components.HistoryConversationList.renameSuccess'),
         );
         setRenameModalVisible(false);
       }
@@ -130,7 +130,7 @@ const HistoryConversationList: React.FC<HistoryConversationListProps> = ({
           limit: 20,
         });
         message.success(
-          t('NuwaxPC.Components.HistoryConversationList.deleteSuccess'),
+          t('PC.Components.HistoryConversationList.deleteSuccess'),
         );
         setDeleteModalVisible(false);
       }
@@ -151,13 +151,13 @@ const HistoryConversationList: React.FC<HistoryConversationListProps> = ({
       </div>
       <div className={cx(styles['main-content'])}>
         <div className={cx(styles.title)}>
-          {t('NuwaxPC.Components.HistoryConversationList.pageTitle')}
+          {t('PC.Components.HistoryConversationList.pageTitle')}
         </div>
         <div className={cx(styles['search-input'])}>
           <Input
             prefix={<SearchOutlined style={{ color: '#999', fontSize: 16 }} />}
             placeholder={t(
-              'NuwaxPC.Components.HistoryConversationList.searchPlaceholder',
+              'PC.Components.HistoryConversationList.searchPlaceholder',
             )}
             value={keyword}
             onChange={onStartSearch}
@@ -178,14 +178,14 @@ const HistoryConversationList: React.FC<HistoryConversationListProps> = ({
       </div>
 
       <Modal
-        title={t('NuwaxPC.Components.HistoryConversationList.renameModalTitle')}
+        title={t('PC.Components.HistoryConversationList.renameModalTitle')}
         open={renameModalVisible}
         onOk={handleRenameSubmit}
         onCancel={() => setRenameModalVisible(false)}
         confirmLoading={submitting}
         okButtonProps={{ disabled: !newTopic.trim() }}
-        okText={t('NuwaxPC.Common.Global.confirm')}
-        cancelText={t('NuwaxPC.Common.Global.cancel')}
+        okText={t('PC.Common.Global.confirm')}
+        cancelText={t('PC.Common.Global.cancel')}
         destroyOnHidden
         centered
       >
@@ -194,7 +194,7 @@ const HistoryConversationList: React.FC<HistoryConversationListProps> = ({
             value={newTopic}
             onChange={(e) => setNewTopic(e.target.value)}
             placeholder={t(
-              'NuwaxPC.Components.HistoryConversationList.renamePlaceholder',
+              'PC.Components.HistoryConversationList.renamePlaceholder',
             )}
             maxLength={50}
             autoFocus
@@ -209,13 +209,13 @@ const HistoryConversationList: React.FC<HistoryConversationListProps> = ({
       </Modal>
 
       <Modal
-        title={t('NuwaxPC.Components.HistoryConversationList.deleteModalTitle')}
+        title={t('PC.Components.HistoryConversationList.deleteModalTitle')}
         open={deleteModalVisible}
         onOk={handleDeleteSubmit}
         onCancel={() => setDeleteModalVisible(false)}
         confirmLoading={submitting}
-        okText={t('NuwaxPC.Common.Global.confirm')}
-        cancelText={t('NuwaxPC.Common.Global.cancel')}
+        okText={t('PC.Common.Global.confirm')}
+        cancelText={t('PC.Common.Global.cancel')}
         okButtonProps={{ danger: true }}
         destroyOnHidden
         centered
@@ -227,7 +227,7 @@ const HistoryConversationList: React.FC<HistoryConversationListProps> = ({
             fontSize: 14,
           }}
         >
-          {t('NuwaxPC.Components.HistoryConversationList.deleteModalContent')}
+          {t('PC.Components.HistoryConversationList.deleteModalContent')}
         </div>
       </Modal>
     </div>

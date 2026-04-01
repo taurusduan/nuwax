@@ -23,11 +23,11 @@ const OutputWay: React.FC<OutputWayProps> = ({ directOutput, onSaveSet }) => {
     () => [
       {
         value: OutputDirectlyEnum.No,
-        label: t('NuwaxPC.Pages.AgentArrangeOutputWay.optionNo'),
+        label: t('PC.Pages.AgentArrangeOutputWay.optionNo'),
       },
       {
         value: OutputDirectlyEnum.Yes,
-        label: t('NuwaxPC.Pages.AgentArrangeOutputWay.optionYes'),
+        label: t('PC.Pages.AgentArrangeOutputWay.optionYes'),
       },
     ],
     [],
@@ -52,8 +52,8 @@ const OutputWay: React.FC<OutputWayProps> = ({ directOutput, onSaveSet }) => {
     <div className={cx(styles.container, 'flex', 'flex-col')}>
       <div className={cx('flex-1', styles.content)}>
         <h3 className={cx('gap-6', 'flex', 'items-center')}>
-          <span>{t('NuwaxPC.Pages.AgentArrangeOutputWay.title')}</span>
-          <Tooltip title={t('NuwaxPC.Pages.AgentArrangeOutputWay.tooltip')}>
+          <span>{t('PC.Pages.AgentArrangeOutputWay.title')}</span>
+          <Tooltip title={t('PC.Pages.AgentArrangeOutputWay.tooltip')}>
             <ExclamationCircleOutlined className={cx(styles.icon)} />
           </Tooltip>
         </h3>
@@ -65,7 +65,7 @@ const OutputWay: React.FC<OutputWayProps> = ({ directOutput, onSaveSet }) => {
       </div>
       <footer className={cx(styles.footer)}>
         <Button type="primary" onClick={handleSave} loading={loading}>
-          {t('NuwaxPC.Common.Global.save')}
+          {t('PC.Common.Global.save')}
         </Button>
       </footer>
     </div>

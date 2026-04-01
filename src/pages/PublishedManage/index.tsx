@@ -5,8 +5,8 @@ import {
 } from '@/components/ProComponents';
 import WorkspaceLayout from '@/components/WorkspaceLayout';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
-import { apiPublishList } from '@/services/publishManage';
 import { dict } from '@/services/i18nRuntime';
+import { apiPublishList } from '@/services/publishManage';
 import { SquareAgentTypeEnum } from '@/types/enums/square';
 import type { PublishListInfo } from '@/types/interfaces/publishManage';
 import type {
@@ -83,13 +83,13 @@ const PublishedManage: React.FC = () => {
     return [
       {
         key: 'view',
-        label: dict('NuwaxPC.Pages.PublishedManage.view'),
+        label: dict('PC.Pages.PublishedManage.view'),
         disabled: !hasPermission('published_manage_query_detail'),
         onClick: handleView,
       },
       {
         key: 'offShelf',
-        label: dict('NuwaxPC.Pages.PublishedManage.offShelf'),
+        label: dict('PC.Pages.PublishedManage.offShelf'),
         disabled: !hasPermission('published_manage_offline'),
         onClick: (r) => handleOffShelf(r.id),
       },
@@ -98,51 +98,61 @@ const PublishedManage: React.FC = () => {
 
   const columns: ProColumns<PublishListInfo>[] = [
     {
-      title: dict('NuwaxPC.Pages.PublishedManage.publishName'),
+      title: dict('PC.Pages.PublishedManage.publishName'),
       dataIndex: 'name',
       width: 200,
-      fieldProps: { placeholder: dict('NuwaxPC.Pages.PublishedManage.searchNamePlaceholder') },
+      fieldProps: {
+        placeholder: dict('PC.Pages.PublishedManage.searchNamePlaceholder'),
+      },
     },
     {
-      title: dict('NuwaxPC.Pages.PublishedManage.type'),
+      title: dict('PC.Pages.PublishedManage.type'),
       dataIndex: 'targetType',
       width: 100,
       valueType: 'select',
       valueEnum: {
-        [SquareAgentTypeEnum.Agent]: { text: dict('NuwaxPC.Pages.PublishedManage.typeAgent') },
+        [SquareAgentTypeEnum.Agent]: {
+          text: dict('PC.Pages.PublishedManage.typeAgent'),
+        },
         // [SquareAgentTypeEnum.PageApp]: { text: '网页应用' },
-        [SquareAgentTypeEnum.Plugin]: { text: dict('NuwaxPC.Pages.PublishedManage.typePlugin') },
-        [SquareAgentTypeEnum.Workflow]: { text: dict('NuwaxPC.Pages.PublishedManage.typeWorkflow') },
-        [SquareAgentTypeEnum.Skill]: { text: dict('NuwaxPC.Pages.PublishedManage.typeSkill') },
+        [SquareAgentTypeEnum.Plugin]: {
+          text: dict('PC.Pages.PublishedManage.typePlugin'),
+        },
+        [SquareAgentTypeEnum.Workflow]: {
+          text: dict('PC.Pages.PublishedManage.typeWorkflow'),
+        },
+        [SquareAgentTypeEnum.Skill]: {
+          text: dict('PC.Pages.PublishedManage.typeSkill'),
+        },
       },
     },
     {
-      title: dict('NuwaxPC.Pages.PublishedManage.description'),
+      title: dict('PC.Pages.PublishedManage.description'),
       dataIndex: 'description',
       width: 200,
       hideInSearch: true,
     },
     {
-      title: dict('NuwaxPC.Pages.PublishedManage.versionInfo'),
+      title: dict('PC.Pages.PublishedManage.versionInfo'),
       dataIndex: 'remark',
       width: 200,
       hideInSearch: true,
     },
     {
-      title: dict('NuwaxPC.Pages.PublishedManage.publisher'),
+      title: dict('PC.Pages.PublishedManage.publisher'),
       dataIndex: ['publishUser', 'userName'],
       width: 150,
       hideInSearch: true,
     },
     {
-      title: dict('NuwaxPC.Pages.PublishedManage.publishTime'),
+      title: dict('PC.Pages.PublishedManage.publishTime'),
       dataIndex: 'created',
       width: 180,
       hideInSearch: true,
       valueType: 'dateTime',
     },
     {
-      title: dict('NuwaxPC.Pages.PublishedManage.actions'),
+      title: dict('PC.Pages.PublishedManage.actions'),
       valueType: 'option',
       width: 120,
       align: 'center',
@@ -165,7 +175,9 @@ const PublishedManage: React.FC = () => {
     });
 
     if (response.code !== SUCCESS_CODE) {
-      message.error(response.message || dict('NuwaxPC.Pages.PublishedManage.fetchDataFailed'));
+      message.error(
+        response.message || dict('PC.Pages.PublishedManage.fetchDataFailed'),
+      );
     }
 
     return {
@@ -176,7 +188,10 @@ const PublishedManage: React.FC = () => {
   };
 
   return (
-    <WorkspaceLayout title={dict('NuwaxPC.Pages.PublishedManage.pageTitle')} hideScroll>
+    <WorkspaceLayout
+      title={dict('PC.Pages.PublishedManage.pageTitle')}
+      hideScroll
+    >
       <XProTable<PublishListInfo>
         actionRef={actionRef}
         formRef={formRef}

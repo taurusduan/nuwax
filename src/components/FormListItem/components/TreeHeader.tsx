@@ -54,19 +54,36 @@ const TreeHeader: React.FC<TreeHeaderProps> = ({
                     }}
                     content={
                       <ul>
-                        <li>{dict('NuwaxPC.Components.FormListItem.outputFormatTextDesc')}</li>
-                        <li>{dict('NuwaxPC.Components.FormListItem.outputFormatMarkdownDesc')}</li>
-                        <li>{dict('NuwaxPC.Components.FormListItem.outputFormatJsonDesc')}</li>
+                        <li>
+                          {dict(
+                            'PC.Components.FormListItem.outputFormatTextDesc',
+                          )}
+                        </li>
+                        <li>
+                          {dict(
+                            'PC.Components.FormListItem.outputFormatMarkdownDesc',
+                          )}
+                        </li>
+                        <li>
+                          {dict(
+                            'PC.Components.FormListItem.outputFormatJsonDesc',
+                          )}
+                        </li>
                       </ul>
                     }
                   >
                     <InfoCircleOutlined />
                   </Popover>
-                  <span className="ml-10">{dict('NuwaxPC.Components.FormListItem.outputFormat')}</span>
+                  <span className="ml-10">
+                    {dict('PC.Components.FormListItem.outputFormat')}
+                  </span>
                 </div>
               }
               options={[
-                { label: dict('NuwaxPC.Components.FormListItem.outputFormatText'), value: 'Text' },
+                {
+                  label: dict('PC.Components.FormListItem.outputFormatText'),
+                  value: 'Text',
+                },
                 { label: 'Markdown', value: 'Markdown' },
                 { label: 'JSON', value: 'JSON' },
               ]}
@@ -78,7 +95,9 @@ const TreeHeader: React.FC<TreeHeaderProps> = ({
                     {
                       key: uuidv4(),
                       name: 'output',
-                      description: dict('NuwaxPC.Components.FormListItem.outputResult'),
+                      description: dict(
+                        'PC.Components.FormListItem.outputResult',
+                      ),
                       dataType: DataTypeEnum.String,
                       require: false,
                       systemVariable: false,

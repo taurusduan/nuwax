@@ -53,7 +53,7 @@ const KnowledgeTextList: React.FC<KnowledgeTextListProps> = ({
 
   return !list?.length ? (
     <p className={cx(textClassName)}>
-      {t('NuwaxPC.Pages.AgentArrangeKnowledgeTextList.emptyDescription')}
+      {t('PC.Pages.AgentArrangeKnowledgeTextList.emptyDescription')}
     </p>
   ) : (
     <>
@@ -73,12 +73,12 @@ const KnowledgeTextList: React.FC<KnowledgeTextListProps> = ({
                 onClick={() => handleClick(item)}
               >
                 {item?.bindConfig?.invokeType === InvokeTypeEnum.AUTO
-                  ? t('NuwaxPC.Pages.AgentArrangeInvokeType.optionAuto')
-                  : t('NuwaxPC.Pages.AgentArrangeInvokeType.optionOnDemand')}
+                  ? t('PC.Pages.AgentArrangeInvokeType.optionAuto')
+                  : t('PC.Pages.AgentArrangeInvokeType.optionOnDemand')}
                 <CaretDownOutlined />
               </span>
               <TooltipIcon
-                title={t('NuwaxPC.Pages.AgentArrangeKnowledgeTextList.remove')}
+                title={t('PC.Pages.AgentArrangeKnowledgeTextList.remove')}
                 icon={
                   isDeling(item.targetId, item.type) ? (
                     <LoadingOutlined />

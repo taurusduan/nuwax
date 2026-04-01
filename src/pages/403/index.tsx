@@ -17,10 +17,10 @@ const LicenseExpiredPage: React.FC = () => {
       <Result
         status="403"
         title="403"
-        subTitle={dict('NuwaxPC.Pages.Error403.licenseExpired')}
+        subTitle={dict('PC.Pages.Error403.licenseExpired')}
         extra={
           <Button type="primary" onClick={() => history.push('/')}>
-            {dict('NuwaxPC.Common.Global.backHome')}
+            {dict('PC.Common.Global.backHome')}
           </Button>
         }
       />

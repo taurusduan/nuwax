@@ -20,7 +20,7 @@ import '../index.less';
 import { TreeOutput } from './commonNode';
 
 const DEFAULT_INPUT_ARGS_DESC_KEY =
-  'NuwaxPC.Pages.AntvX6Library.defaultInputArgsDesc';
+  'PC.Pages.AntvX6Library.defaultInputArgsDesc';
 const KBC_FORM_KEY = 'knowledgeBaseConfigs';
 const KBC_INPUT_ARGS_KEY = 'inputArgs';
 // Knowledge base node.
@@ -115,7 +115,7 @@ const KnowledgeNode: React.FC<NodeDisposeProps> = ({
       {/* Input args */}
       <div className="node-item-style">
         <TreeInput
-          title={t('NuwaxPC.Pages.AntvX6Data.input')}
+          title={t('PC.Pages.AntvX6Data.input')}
           form={form}
           params={inputArgs}
           key={`${type}-${id}-${KBC_INPUT_ARGS_KEY}`}
@@ -126,7 +126,7 @@ const KnowledgeNode: React.FC<NodeDisposeProps> = ({
       <div className="node-item-style">
         <div className="dis-sb margin-bottom">
           <span className="node-title-style">
-            {t('NuwaxPC.Pages.AntvX6Library.knowledgeBase')}
+            {t('PC.Pages.AntvX6Library.knowledgeBase')}
           </span>
           <Button
             icon={<PlusOutlined />}
@@ -153,9 +153,9 @@ const KnowledgeNode: React.FC<NodeDisposeProps> = ({
       <div className="knowledge-node-box node-item-style">
         <div className="dis-sb mb-16">
           <div className="knowlegenow-left-title flex items-center">
-            <span>{t('NuwaxPC.Pages.AntvX6Library.searchStrategy')}</span>
+            <span>{t('PC.Pages.AntvX6Library.searchStrategy')}</span>
             <TooltipIcon
-              title={t('NuwaxPC.Pages.AntvX6Library.searchStrategyTooltip')}
+              title={t('PC.Pages.AntvX6Library.searchStrategyTooltip')}
               icon={<InfoCircleOutlined />}
             />
           </div>
@@ -164,19 +164,15 @@ const KnowledgeNode: React.FC<NodeDisposeProps> = ({
               className="flex-1"
               options={[
                 {
-                  label: t(
-                    'NuwaxPC.Pages.AntvX6Library.searchStrategySemantic',
-                  ),
+                  label: t('PC.Pages.AntvX6Library.searchStrategySemantic'),
                   value: 'SEMANTIC',
                 },
                 {
-                  label: t('NuwaxPC.Pages.AntvX6Library.searchStrategyMixed'),
+                  label: t('PC.Pages.AntvX6Library.searchStrategyMixed'),
                   value: 'MIXED',
                 },
                 {
-                  label: t(
-                    'NuwaxPC.Pages.AntvX6Library.searchStrategyFullText',
-                  ),
+                  label: t('PC.Pages.AntvX6Library.searchStrategyFullText'),
                   value: 'FULL_TEXT',
                 },
               ]}
@@ -185,9 +181,9 @@ const KnowledgeNode: React.FC<NodeDisposeProps> = ({
         </div>
         <div className="dis-sb mb-16">
           <div className="knowlegenow-left-title flex items-center">
-            <span>{t('NuwaxPC.Pages.AntvX6Library.maxRecallCount')}</span>
+            <span>{t('PC.Pages.AntvX6Library.maxRecallCount')}</span>
             <TooltipIcon
-              title={t('NuwaxPC.Pages.AntvX6Library.maxRecallCountTooltip')}
+              title={t('PC.Pages.AntvX6Library.maxRecallCountTooltip')}
               icon={<InfoCircleOutlined />}
             />
           </div>
@@ -203,9 +199,9 @@ const KnowledgeNode: React.FC<NodeDisposeProps> = ({
         </div>
         <div className="dis-sb ">
           <div className="knowlegenow-left-title flex items-center">
-            <span>{t('NuwaxPC.Pages.AntvX6Library.minMatchScore')}</span>
+            <span>{t('PC.Pages.AntvX6Library.minMatchScore')}</span>
             <TooltipIcon
-              title={t('NuwaxPC.Pages.AntvX6Library.minMatchScoreTooltip')}
+              title={t('PC.Pages.AntvX6Library.minMatchScoreTooltip')}
               icon={<InfoCircleOutlined />}
             />
           </div>
@@ -227,7 +223,7 @@ const KnowledgeNode: React.FC<NodeDisposeProps> = ({
           form.getFieldValue('outputArgs') && (
             <>
               <div className="node-title-style margin-bottom">
-                {t('NuwaxPC.Pages.AntvX6Data.output')}
+                {t('PC.Pages.AntvX6Data.output')}
               </div>
               <TreeOutput treeData={form.getFieldValue('outputArgs')} />
             </>

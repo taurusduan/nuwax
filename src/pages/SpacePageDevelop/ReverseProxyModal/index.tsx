@@ -67,7 +67,7 @@ const ReverseProxyModal: React.FC<ReverseProxyModalProps> = ({
         <div className={cx(styles.container, 'flex', 'overflow-hide')}>
           {/* 左侧部分 */}
           <div className={cx(styles.left)}>
-            <h3>{dict('NuwaxPC.Pages.SpacePageDevelop.ReverseProxyModal.title')}</h3>
+            <h3>{dict('PC.Pages.SpacePageDevelop.ReverseProxyModal.title')}</h3>
             <ul>
               {list.map((item) => {
                 return (

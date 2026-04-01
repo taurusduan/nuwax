@@ -68,7 +68,7 @@ const NewConversationSet: React.FC<NewConversationSetProps> = ({
         content = (
           <Input
             variant="filled"
-            placeholder={description || dict('NuwaxPC.Common.Global.pleaseInput')}
+            placeholder={description || dict('PC.Common.Global.pleaseInput')}
             allowClear
           />
         );
@@ -79,7 +79,7 @@ const NewConversationSet: React.FC<NewConversationSetProps> = ({
         content = (
           <Input.TextArea
             variant="filled"
-            placeholder={description || dict('NuwaxPC.Common.Global.pleaseInput')}
+            placeholder={description || dict('PC.Common.Global.pleaseInput')}
             allowClear
           />
         );
@@ -90,7 +90,7 @@ const NewConversationSet: React.FC<NewConversationSetProps> = ({
           <InputNumber
             variant="filled"
             className="w-full"
-            placeholder={description || dict('NuwaxPC.Common.Global.pleaseInput')}
+            placeholder={description || dict('PC.Common.Global.pleaseInput')}
           />
         );
         break;
@@ -104,14 +104,19 @@ const NewConversationSet: React.FC<NewConversationSetProps> = ({
             multiple={inputType === InputTypeEnum.MultipleSelect}
             maxTagCount="responsive"
             showCheckedStrategy={SHOW_CHILD}
-            placeholder={description || dict('NuwaxPC.Common.Global.pleaseSelect')}
+            placeholder={description || dict('PC.Common.Global.pleaseSelect')}
             options={item.selectConfig?.options || []}
             allowClear
           />
         );
         break;
       default:
-        content = <Input placeholder={description || dict('NuwaxPC.Common.Global.pleaseInput')} allowClear />;
+        content = (
+          <Input
+            placeholder={description || dict('PC.Common.Global.pleaseInput')}
+            allowClear
+          />
+        );
     }
 
     return { isSelect, content };
@@ -126,7 +131,9 @@ const NewConversationSet: React.FC<NewConversationSetProps> = ({
       <header
         className={cx(styles.header, 'flex', 'items-center', 'content-between')}
       >
-        <span>{dict('NuwaxPC.Components.NewConversationSet.conversationSettings')}</span>
+        <span>
+          {dict('PC.Components.NewConversationSet.conversationSettings')}
+        </span>
         <ConditionRender condition={isFilled}>
           <span
             className={cx(styles.text, 'cursor-pointer')}
@@ -164,8 +171,12 @@ const NewConversationSet: React.FC<NewConversationSetProps> = ({
                   {
                     required: require,
                     message: isSelect
-                      ? dict('NuwaxPC.Components.NewConversationSet.pleaseSelectField').replace('{0}', displayName)
-                      : dict('NuwaxPC.Components.NewConversationSet.pleaseInputField').replace('{0}', displayName),
+                      ? dict(
+                          'PC.Components.NewConversationSet.pleaseSelectField',
+                        ).replace('{0}', displayName)
+                      : dict(
+                          'PC.Components.NewConversationSet.pleaseInputField',
+                        ).replace('{0}', displayName),
                   },
                 ]}
               >
@@ -176,13 +187,15 @@ const NewConversationSet: React.FC<NewConversationSetProps> = ({
           <ConditionRender condition={showSubmitButton}>
             <Form.Item>
               <Button type="primary" htmlType="submit" block>
-                {dict('NuwaxPC.Components.NewConversationSet.startConversation')}
+                {dict('PC.Components.NewConversationSet.startConversation')}
               </Button>
             </Form.Item>
           </ConditionRender>
         </Form>
         <ConditionRender condition={disabled}>
-          <p className={cx(styles.desc)}>{dict('NuwaxPC.Components.NewConversationSet.settingsLockedHint')}</p>
+          <p className={cx(styles.desc)}>
+            {dict('PC.Components.NewConversationSet.settingsLockedHint')}
+          </p>
         </ConditionRender>
       </div>
     </div>

@@ -16,7 +16,11 @@ const ActivatedIcon: React.FC<ActivatedIconProps> = ({ size = 40 }) => {
       className={cx(styles['activated-icon'])}
       style={{ width: size, height: size }}
     >
-      <Image preview={false} src={ActivatedImage} alt={dict('NuwaxPC.Components.ActivatedIcon.activated')} />
+      <Image
+        preview={false}
+        src={ActivatedImage}
+        alt={dict('PC.Components.ActivatedIcon.activated')}
+      />
     </div>
   );
 };

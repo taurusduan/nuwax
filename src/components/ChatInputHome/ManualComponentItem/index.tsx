@@ -24,15 +24,15 @@ const isInfoContains = (item: AgentManualComponentInfo, keywords: string[]) => {
 };
 
 const getNetworkKeywords = () => [
-  t('NuwaxPC.Components.ChatInputHomeManualComponentItem.keywordNetwork'),
-  t('NuwaxPC.Components.ChatInputHomeManualComponentItem.keywordSearch'),
+  t('PC.Components.ChatInputHomeManualComponentItem.keywordNetwork'),
+  t('PC.Components.ChatInputHomeManualComponentItem.keywordSearch'),
   'network',
   'search',
 ];
 
 const getThinkingKeywords = () => [
-  t('NuwaxPC.Components.ChatInputHomeManualComponentItem.keywordReasoning'),
-  t('NuwaxPC.Components.ChatInputHomeManualComponentItem.keywordThinking'),
+  t('PC.Components.ChatInputHomeManualComponentItem.keywordReasoning'),
+  t('PC.Components.ChatInputHomeManualComponentItem.keywordThinking'),
   'reasoning',
   'thinking',
 ];
@@ -51,11 +51,11 @@ const isShowIcon = (name: string) => {
   return (
     containsKeyword(
       name,
-      t('NuwaxPC.Components.ChatInputHomeManualComponentItem.keywordThinking'),
+      t('PC.Components.ChatInputHomeManualComponentItem.keywordThinking'),
     ) ||
     containsKeyword(
       name,
-      t('NuwaxPC.Components.ChatInputHomeManualComponentItem.keywordNetwork'),
+      t('PC.Components.ChatInputHomeManualComponentItem.keywordNetwork'),
     ) ||
     containsKeyword(name, 'thinking') ||
     containsKeyword(name, 'network')

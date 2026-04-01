@@ -32,10 +32,10 @@ export class MermaidExporter {
       const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
       this.downloadBlob(blob, filename);
 
-      message.success(dict('NuwaxPC.Utils.MermaidExporter.svgExportSuccess'));
+      message.success(dict('PC.Utils.MermaidExporter.svgExportSuccess'));
     } catch (error) {
       console.error('SVG export error:', error);
-      message.error(dict('NuwaxPC.Utils.MermaidExporter.svgExportFailed'));
+      message.error(dict('PC.Utils.MermaidExporter.svgExportFailed'));
       throw error;
     }
   }
@@ -64,10 +64,10 @@ export class MermaidExporter {
       const pngBlob = await this.svgToPng(svg, scale, backgroundColor);
       this.downloadBlob(pngBlob, filename);
 
-      message.success(dict('NuwaxPC.Utils.MermaidExporter.pngExportSuccess'));
+      message.success(dict('PC.Utils.MermaidExporter.pngExportSuccess'));
     } catch (error) {
       console.error('PNG export error:', error);
-      message.error(dict('NuwaxPC.Utils.MermaidExporter.pngExportFailed'));
+      message.error(dict('PC.Utils.MermaidExporter.pngExportFailed'));
       throw error;
     }
   }
@@ -102,10 +102,10 @@ export class MermaidExporter {
       const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
 
       this.downloadBlob(blob, filename);
-      message.success(dict('NuwaxPC.Utils.MermaidExporter.svgExportSuccess'));
+      message.success(dict('PC.Utils.MermaidExporter.svgExportSuccess'));
     } catch (error) {
       console.error('SVG export error:', error);
-      message.error(dict('NuwaxPC.Utils.MermaidExporter.svgExportFailed'));
+      message.error(dict('PC.Utils.MermaidExporter.svgExportFailed'));
     }
   }
 
@@ -173,10 +173,10 @@ export class MermaidExporter {
       );
 
       this.downloadBlob(blob, filename);
-      message.success(dict('NuwaxPC.Utils.MermaidExporter.pngExportSuccess'));
+      message.success(dict('PC.Utils.MermaidExporter.pngExportSuccess'));
     } catch (error) {
       console.error('PNG export error:', error);
-      message.error(dict('NuwaxPC.Utils.MermaidExporter.pngExportFailed'));
+      message.error(dict('PC.Utils.MermaidExporter.pngExportFailed'));
     }
   }
 
@@ -736,7 +736,7 @@ export class MermaidExporter {
         canvas.toBlob((blob) => {
           if (blob) {
             this.downloadBlob(blob, filename);
-            message.success(dict('NuwaxPC.Utils.MermaidExporter.pngExportSuccess'));
+            message.success(dict('PC.Utils.MermaidExporter.pngExportSuccess'));
           }
         }, 'image/png');
       };
@@ -746,7 +746,7 @@ export class MermaidExporter {
       )}`;
     } catch (error) {
       console.error('PNG export failed:', error);
-      message.error(dict('NuwaxPC.Utils.MermaidExporter.pngExportFailed'));
+      message.error(dict('PC.Utils.MermaidExporter.pngExportFailed'));
     }
   }
 }

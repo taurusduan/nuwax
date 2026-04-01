@@ -6,9 +6,9 @@ import Loading from '@/components/custom/Loading';
 import LabelStar from '@/components/LabelStar';
 import UploadAvatar from '@/components/UploadAvatar';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
-import { dict } from '@/services/i18nRuntime';
 import { MCP_INSTALL_TYPE_LIST } from '@/constants/mcp.constants';
 import useMcp from '@/hooks/useMcp';
+import { dict } from '@/services/i18nRuntime';
 import { apiMcpDetail, apiMcpUpdate } from '@/services/mcp';
 import { AgentAddComponentStatusEnum } from '@/types/enums/agent';
 import {
@@ -140,7 +140,9 @@ const SpaceMcpCreate: React.FC = () => {
     onSuccess: (_: null, params: McpUpdateParams[]) => {
       const currentMcpDetailInfo = params[0];
       const { withDeploy } = currentMcpDetailInfo;
-      const text = withDeploy ? dict('NuwaxPC.Pages.SpaceMcpEdit.saveAndDeploySuccess') : dict('NuwaxPC.Pages.SpaceMcpEdit.saveSuccess');
+      const text = withDeploy
+        ? dict('PC.Pages.SpaceMcpEdit.saveAndDeploySuccess')
+        : dict('PC.Pages.SpaceMcpEdit.saveSuccess');
       message.success(text);
       setSaveDeployLoading(false);
       setSaveLoading(false);
@@ -235,11 +237,11 @@ const SpaceMcpCreate: React.FC = () => {
     // 组件库
     if (installType === McpInstallTypeEnum.COMPONENT) {
       if (!mcpConfigComponentList?.length) {
-        message.warning(dict('NuwaxPC.Pages.SpaceMcpEdit.selectComponent'));
+        message.warning(dict('PC.Pages.SpaceMcpEdit.selectComponent'));
         return;
       }
     } else if (!serverConfig) {
-      message.warning(dict('NuwaxPC.Pages.SpaceMcpEdit.inputServerConfig'));
+      message.warning(dict('PC.Pages.SpaceMcpEdit.inputServerConfig'));
       return;
     }
 
@@ -359,21 +361,37 @@ const SpaceMcpCreate: React.FC = () => {
                 >
                   <Form.Item
                     name="name"
-                    label={dict('NuwaxPC.Pages.SpaceMcpEdit.serviceName')}
-                    rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceMcpEdit.inputServiceName') }]}
+                    label={dict('PC.Pages.SpaceMcpEdit.serviceName')}
+                    rules={[
+                      {
+                        required: true,
+                        message: dict('PC.Pages.SpaceMcpEdit.inputServiceName'),
+                      },
+                    ]}
                   >
-                    <Input placeholder={dict('NuwaxPC.Pages.SpaceMcpEdit.serviceNamePlaceholder')} showCount maxLength={30} />
+                    <Input
+                      placeholder={dict(
+                        'PC.Pages.SpaceMcpEdit.serviceNamePlaceholder',
+                      )}
+                      showCount
+                      maxLength={30}
+                    />
                   </Form.Item>
                   <Form.Item
                     name="description"
-                    label={dict('NuwaxPC.Pages.SpaceMcpEdit.description')}
+                    label={dict('PC.Pages.SpaceMcpEdit.description')}
                     rules={[
-                      { required: true, message: dict('NuwaxPC.Pages.SpaceMcpEdit.inputDescription') },
+                      {
+                        required: true,
+                        message: dict('PC.Pages.SpaceMcpEdit.inputDescription'),
+                      },
                     ]}
                   >
                     <Input.TextArea
                       className="dispose-textarea-count"
-                      placeholder={dict('NuwaxPC.Pages.SpaceMcpEdit.descriptionPlaceholder')}
+                      placeholder={dict(
+                        'PC.Pages.SpaceMcpEdit.descriptionPlaceholder',
+                      )}
                       showCount
                       maxLength={10000}
                       autoSize={{ minRows: 3, maxRows: 5 }}
@@ -381,8 +399,15 @@ const SpaceMcpCreate: React.FC = () => {
                   </Form.Item>
                   <Form.Item
                     name="installType"
-                    label={dict('NuwaxPC.Pages.SpaceMcpEdit.installMethod')}
-                    rules={[{ required: true, message: dict('NuwaxPC.Pages.SpaceMcpEdit.selectInstallMethod') }]}
+                    label={dict('PC.Pages.SpaceMcpEdit.installMethod')}
+                    rules={[
+                      {
+                        required: true,
+                        message: dict(
+                          'PC.Pages.SpaceMcpEdit.selectInstallMethod',
+                        ),
+                      },
+                    ]}
                   >
                     <Radio.Group disabled options={MCP_INSTALL_TYPE_LIST} />
                   </Form.Item>
@@ -394,16 +419,20 @@ const SpaceMcpCreate: React.FC = () => {
                       name="serverConfig"
                       label={
                         <div className={cx('flex', 'items-center')}>
-                          <span>{dict('NuwaxPC.Pages.SpaceMcpEdit.mcpServiceConfig')}</span>
+                          <span>
+                            {dict('PC.Pages.SpaceMcpEdit.mcpServiceConfig')}
+                          </span>
                           <span className={cx(styles['sub-title'])}>
-                            {dict('NuwaxPC.Pages.SpaceMcpEdit.mcpConfigJsonTip')}
+                            {dict('PC.Pages.SpaceMcpEdit.mcpConfigJsonTip')}
                           </span>
                         </div>
                       }
                       rules={[
                         {
                           required: true,
-                          message: dict('NuwaxPC.Pages.SpaceMcpEdit.inputServerConfig'),
+                          message: dict(
+                            'PC.Pages.SpaceMcpEdit.inputServerConfig',
+                          ),
                         },
                         {
                           validator: (_, value) => {
@@ -412,7 +441,11 @@ const SpaceMcpCreate: React.FC = () => {
                             }
                             if (!isValidJSON(value)) {
                               return Promise.reject(
-                                new Error(dict('NuwaxPC.Pages.SpaceMcpEdit.invalidJsonFormat')),
+                                new Error(
+                                  dict(
+                                    'PC.Pages.SpaceMcpEdit.invalidJsonFormat',
+                                  ),
+                                ),
                               );
                             }
                             return Promise.resolve();
@@ -430,7 +463,11 @@ const SpaceMcpCreate: React.FC = () => {
                   ) : (
                     <Form.Item
                       name="components"
-                      label={<LabelStar label={dict('NuwaxPC.Pages.SpaceMcpEdit.componentSelect')} />}
+                      label={
+                        <LabelStar
+                          label={dict('PC.Pages.SpaceMcpEdit.componentSelect')}
+                        />
+                      }
                     >
                       <ConfigOptionCollapse
                         className={cx(styles['collapse-container'])}

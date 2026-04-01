@@ -31,12 +31,12 @@ interface ControlPanelProps {
   testRunLoading: boolean;
 }
 const options = [
-  { label: t('NuwaxPC.Pages.AntvX6ControlPanel.zoomIn10Percent'), value: '+' },
+  { label: t('PC.Pages.AntvX6ControlPanel.zoomIn10Percent'), value: '+' },
   {
-    label: t('NuwaxPC.Pages.AntvX6ControlPanel.zoomOut10Percent'),
+    label: t('PC.Pages.AntvX6ControlPanel.zoomOut10Percent'),
     value: '-',
   },
-  { label: t('NuwaxPC.Pages.AntvX6ControlPanel.fitCanvas'), value: -1 },
+  { label: t('PC.Pages.AntvX6ControlPanel.fitCanvas'), value: -1 },
   //添加分割线
   {
     label: (
@@ -54,10 +54,10 @@ const options = [
     disabled: true,
     style: { padding: 0, cursor: 'default' },
   },
-  { label: t('NuwaxPC.Pages.AntvX6ControlPanel.zoom50Percent'), value: 0.5 },
-  { label: t('NuwaxPC.Pages.AntvX6ControlPanel.zoom100Percent'), value: 1 },
-  { label: t('NuwaxPC.Pages.AntvX6ControlPanel.zoom150Percent'), value: 1.5 },
-  { label: t('NuwaxPC.Pages.AntvX6ControlPanel.zoom200Percent'), value: 2 },
+  { label: t('PC.Pages.AntvX6ControlPanel.zoom50Percent'), value: 0.5 },
+  { label: t('PC.Pages.AntvX6ControlPanel.zoom100Percent'), value: 1 },
+  { label: t('PC.Pages.AntvX6ControlPanel.zoom150Percent'), value: 1.5 },
+  { label: t('PC.Pages.AntvX6ControlPanel.zoom200Percent'), value: 2 },
 ];
 
 const ControlPanel: React.FC<ControlPanelProps> = ({
@@ -129,7 +129,7 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
           />
           {/* 添加缩放到适配画布 */}
           <Popover
-            content={t('NuwaxPC.Pages.AntvX6ControlPanel.fitCanvas')}
+            content={t('PC.Pages.AntvX6ControlPanel.fitCanvas')}
             trigger={['hover']}
             mouseEnterDelay={1}
           >
@@ -164,13 +164,13 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
               type="primary"
               onClick={() => setOpen(true)}
             >
-              {t('NuwaxPC.Pages.AntvX6ControlPanel.addNode')}
+              {t('PC.Pages.AntvX6ControlPanel.addNode')}
             </Button>
           </Popover>
         </div>
         <div className="action-section" style={{ marginLeft: 18 }}>
           <ToolOutlined
-            title={t('NuwaxPC.Pages.AntvX6ControlPanel.debug')}
+            title={t('PC.Pages.AntvX6ControlPanel.debug')}
             style={{ paddingRight: 12, paddingLeft: 12 }}
           />
           <Button
@@ -180,7 +180,7 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
             color="green"
             onClick={handleTestRun}
           >
-            {t('NuwaxPC.Pages.AntvX6ControlPanel.testRun')}
+            {t('PC.Pages.AntvX6ControlPanel.testRun')}
           </Button>
         </div>
       </div>

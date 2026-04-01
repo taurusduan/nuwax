@@ -211,7 +211,7 @@ const RawSegmentInfo: React.FC<RawSegmentInfoProps> = ({
           ),
         );
         message.success(
-          dict('NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.modifySuccess'),
+          dict('PC.Pages.SpaceKnowledge.RawSegmentInfo.modifySuccess'),
         );
         setIsModalOpen(false);
         setCurrentEditItem(null);
@@ -242,7 +242,7 @@ const RawSegmentInfo: React.FC<RawSegmentInfoProps> = ({
           {documentInfo?.docUrl && (
             <Tooltip
               title={dict(
-                'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.previewRawDoc',
+                'PC.Pages.SpaceKnowledge.RawSegmentInfo.previewRawDoc',
               )}
             >
               <EyeOutlined
@@ -274,9 +274,7 @@ const RawSegmentInfo: React.FC<RawSegmentInfoProps> = ({
           )}
         >
           <span>
-            {dict(
-              'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.segmentProcessing',
-            )}
+            {dict('PC.Pages.SpaceKnowledge.RawSegmentInfo.segmentProcessing')}
           </span>
         </div>
       ) : loading ? (
@@ -336,7 +334,7 @@ const RawSegmentInfo: React.FC<RawSegmentInfoProps> = ({
                   >
                     <Tooltip
                       title={dict(
-                        'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.edit',
+                        'PC.Pages.SpaceKnowledge.RawSegmentInfo.edit',
                       )}
                     >
                       <EditOutlined />
@@ -351,7 +349,7 @@ const RawSegmentInfo: React.FC<RawSegmentInfoProps> = ({
         <div className={cx('flex', 'flex-1', 'items-center', 'content-center')}>
           <Empty
             description={dict(
-              'NuwaxPC.Pages.SpaceKnowledge.RawSegmentInfo.noSegment',
+              'PC.Pages.SpaceKnowledge.RawSegmentInfo.noSegment',
             )}
           />
         </div>

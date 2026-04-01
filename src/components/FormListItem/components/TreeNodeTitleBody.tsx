@@ -76,7 +76,9 @@ const TreeNodeTitleBody: React.FC<TreeNodeTitleBodyProps> = memo(
             defaultValue={nodeData.name}
             onBlur={(e) => onUpdateField(nodeData.key, 'name', e.target.value)}
             disabled={nodeData.systemVariable}
-            placeholder={dict('NuwaxPC.Components.FormListItem.paramNamePlaceholder')}
+            placeholder={dict(
+              'PC.Components.FormListItem.paramNamePlaceholder',
+            )}
             className="tree-form-name flex-1"
             style={{
               backgroundColor: nodeData.systemVariable ? '#f5f5f5' : undefined,
@@ -95,7 +97,7 @@ const TreeNodeTitleBody: React.FC<TreeNodeTitleBodyProps> = memo(
             }}
             changeOnSelect={true}
             placement={'bottomRight'}
-            placeholder={dict('NuwaxPC.Components.FormListItem.dataTypePlaceholder')}
+            placeholder={dict('PC.Components.FormListItem.dataTypePlaceholder')}
             style={{
               width: '100%',
               backgroundColor: '#f5f5f5', // 禁用状态的背景色
@@ -126,7 +128,7 @@ const TreeNodeTitleBody: React.FC<TreeNodeTitleBodyProps> = memo(
         >
           {/* 添加子节点按钮 - Body场景下的特殊逻辑 */}
           {canAddChild && (
-            <Tooltip title={dict('NuwaxPC.Components.FormListItem.addChildNode')}>
+            <Tooltip title={dict('PC.Components.FormListItem.addChildNode')}>
               <Button
                 type="text"
                 className="tree-icon-style"
@@ -153,7 +155,7 @@ const TreeNodeTitleBody: React.FC<TreeNodeTitleBodyProps> = memo(
             }
             trigger="click"
           >
-            <Tooltip title={dict('NuwaxPC.Components.FormListItem.addDescription')}>
+            <Tooltip title={dict('PC.Components.FormListItem.addDescription')}>
               <Button
                 type="text"
                 className="tree-icon-style"
@@ -165,7 +167,7 @@ const TreeNodeTitleBody: React.FC<TreeNodeTitleBodyProps> = memo(
 
           {/* 必填复选框 */}
           {showCheck && (
-            <Tooltip title={dict('NuwaxPC.Components.FormListItem.isRequired')}>
+            <Tooltip title={dict('PC.Components.FormListItem.isRequired')}>
               <Checkbox
                 checked={nodeData.require}
                 onChange={(e) => onUpdateRequire(nodeData, e.target.checked)}
@@ -175,7 +177,7 @@ const TreeNodeTitleBody: React.FC<TreeNodeTitleBodyProps> = memo(
           )}
 
           {/* 删除按钮 */}
-          <Tooltip title={dict('NuwaxPC.Common.Global.delete')}>
+          <Tooltip title={dict('PC.Common.Global.delete')}>
             <Button
               type="text"
               disabled={nodeData.systemVariable}

@@ -17,10 +17,10 @@ const Index: React.FC = () => {
       <Result
         status="404"
         title="404"
-        subTitle={dict('NuwaxPC.Pages.Error404.pageNotFound')}
+        subTitle={dict('PC.Pages.Error404.pageNotFound')}
         extra={
           <Button type="primary" onClick={() => history.push('/')}>
-            {dict('NuwaxPC.Common.Global.backHome')}
+            {dict('PC.Common.Global.backHome')}
           </Button>
         }
       />

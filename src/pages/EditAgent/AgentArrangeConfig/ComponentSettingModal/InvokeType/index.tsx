@@ -54,24 +54,24 @@ const InvokeType: React.FC<InvokeTypeProps> = ({
       if (value === InvokeTypeEnum.AUTO) {
         return {
           value,
-          label: t('NuwaxPC.Pages.AgentArrangeInvokeType.optionAuto'),
+          label: t('PC.Pages.AgentArrangeInvokeType.optionAuto'),
         };
       }
       if (value === InvokeTypeEnum.ON_DEMAND) {
         return {
           value,
-          label: t('NuwaxPC.Pages.AgentArrangeInvokeType.optionOnDemand'),
+          label: t('PC.Pages.AgentArrangeInvokeType.optionOnDemand'),
         };
       }
       if (value === InvokeTypeEnum.MANUAL) {
         return {
           value,
-          label: t('NuwaxPC.Pages.AgentArrangeInvokeType.optionManual'),
+          label: t('PC.Pages.AgentArrangeInvokeType.optionManual'),
         };
       }
       return {
         value,
-        label: t('NuwaxPC.Pages.AgentArrangeInvokeType.optionManualOnDemand'),
+        label: t('PC.Pages.AgentArrangeInvokeType.optionManualOnDemand'),
       };
     });
   }, [options]);
@@ -80,11 +80,11 @@ const InvokeType: React.FC<InvokeTypeProps> = ({
     () => [
       {
         value: DefaultSelectedEnum.No,
-        label: t('NuwaxPC.Pages.AgentArrangeInvokeType.optionNo'),
+        label: t('PC.Pages.AgentArrangeInvokeType.optionNo'),
       },
       {
         value: DefaultSelectedEnum.Yes,
-        label: t('NuwaxPC.Pages.AgentArrangeInvokeType.optionYes'),
+        label: t('PC.Pages.AgentArrangeInvokeType.optionYes'),
       },
     ],
     [],
@@ -92,12 +92,10 @@ const InvokeType: React.FC<InvokeTypeProps> = ({
 
   const defaultTooltip = (
     <div>
-      <p>{t('NuwaxPC.Pages.AgentArrangeInvokeType.autoDescription')}</p>
-      <p>{t('NuwaxPC.Pages.AgentArrangeInvokeType.onDemandDescription')}</p>
-      <p>{t('NuwaxPC.Pages.AgentArrangeInvokeType.manualDescription')}</p>
-      <p>
-        {t('NuwaxPC.Pages.AgentArrangeInvokeType.manualOnDemandDescription')}
-      </p>
+      <p>{t('PC.Pages.AgentArrangeInvokeType.autoDescription')}</p>
+      <p>{t('PC.Pages.AgentArrangeInvokeType.onDemandDescription')}</p>
+      <p>{t('PC.Pages.AgentArrangeInvokeType.manualDescription')}</p>
+      <p>{t('PC.Pages.AgentArrangeInvokeType.manualOnDemandDescription')}</p>
     </div>
   );
 
@@ -126,7 +124,7 @@ const InvokeType: React.FC<InvokeTypeProps> = ({
     <div className={cx(styles.container, 'flex', 'flex-col')}>
       <div className={cx('flex-1', styles.content)}>
         <h3 className={cx('gap-6', 'flex', 'items-center')}>
-          <span>{t('NuwaxPC.Pages.AgentArrangeInvokeType.title')}</span>
+          <span>{t('PC.Pages.AgentArrangeInvokeType.title')}</span>
           <Tooltip title={tooltip || defaultTooltip}>
             <ExclamationCircleOutlined className={cx(styles.icon)} />
           </Tooltip>
@@ -144,7 +142,7 @@ const InvokeType: React.FC<InvokeTypeProps> = ({
           }
         >
           <h3 className={cx('mt-16')}>
-            {t('NuwaxPC.Pages.AgentArrangeInvokeType.defaultSelected')}
+            {t('PC.Pages.AgentArrangeInvokeType.defaultSelected')}
           </h3>
           <Radio.Group
             options={defaultSelectedOptions}
@@ -158,18 +156,14 @@ const InvokeType: React.FC<InvokeTypeProps> = ({
           condition={isSkill && type === InvokeTypeEnum.MANUAL_ON_DEMAND}
         >
           <h3 className={cx('gap-6', 'flex', 'items-center', 'mt-16')}>
-            <span>{t('NuwaxPC.Pages.AgentArrangeInvokeType.alias')}</span>
-            <Tooltip
-              title={t('NuwaxPC.Pages.AgentArrangeInvokeType.aliasTooltip')}
-            >
+            <span>{t('PC.Pages.AgentArrangeInvokeType.alias')}</span>
+            <Tooltip title={t('PC.Pages.AgentArrangeInvokeType.aliasTooltip')}>
               <ExclamationCircleOutlined className={cx(styles.icon)} />
             </Tooltip>
           </h3>
           <Input
             className={cx(styles['alias-input'])}
-            placeholder={t(
-              'NuwaxPC.Pages.AgentArrangeInvokeType.aliasPlaceholder',
-            )}
+            placeholder={t('PC.Pages.AgentArrangeInvokeType.aliasPlaceholder')}
             value={alias}
             onChange={(e) => setAlias(e.target.value)}
           />
@@ -177,7 +171,7 @@ const InvokeType: React.FC<InvokeTypeProps> = ({
       </div>
       <footer className={cx(styles.footer)}>
         <Button type="primary" onClick={handleSave} loading={loading}>
-          {t('NuwaxPC.Common.Global.save')}
+          {t('PC.Common.Global.save')}
         </Button>
       </footer>
     </div>

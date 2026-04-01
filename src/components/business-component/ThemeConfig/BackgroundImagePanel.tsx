@@ -45,14 +45,14 @@ const BackgroundImagePanel: React.FC<BackgroundImagePanelProps> = ({
   return (
     <div className={cx(styles.backgroundImagePanel)}>
       <h3 className={cx(styles.panelTitle)}>
-        {t('NuwaxPC.Components.ThemeConfigBackgroundImagePanel.panelTitle')}
+        {t('PC.Components.ThemeConfigBackgroundImagePanel.panelTitle')}
       </h3>
 
       {/* 系统自带背景图片 */}
       <div className={cx(styles.systemBackgroundsSection)}>
         <h4>
           {t(
-            'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.systemSectionTitle',
+            'PC.Components.ThemeConfigBackgroundImagePanel.systemSectionTitle',
           )}
         </h4>
         {backgroundImages.length > 0 ? (
@@ -76,7 +76,7 @@ const BackgroundImagePanel: React.FC<BackgroundImagePanelProps> = ({
         ) : (
           <Empty
             description={t(
-              'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.emptyAvailable',
+              'PC.Components.ThemeConfigBackgroundImagePanel.emptyAvailable',
             )}
             image={Empty.PRESENTED_IMAGE_SIMPLE}
           />
@@ -88,7 +88,7 @@ const BackgroundImagePanel: React.FC<BackgroundImagePanelProps> = ({
         <div className={cx(styles.customBackgroundsSection)}>
           <h4>
             {t(
-              'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.customSectionTitle',
+              'PC.Components.ThemeConfigBackgroundImagePanel.customSectionTitle',
             )}
           </h4>
           <div className={cx(styles.customBackgroundGrid)}>
@@ -105,7 +105,7 @@ const BackgroundImagePanel: React.FC<BackgroundImagePanelProps> = ({
                       <PlusOutlined className={cx(styles.uploadIcon)} />
                       <span className={cx(styles.uploadText)}>
                         {t(
-                          'NuwaxPC.Components.ThemeConfigBackgroundImagePanel.uploadImage',
+                          'PC.Components.ThemeConfigBackgroundImagePanel.uploadImage',
                         )}
                       </span>
                     </div>

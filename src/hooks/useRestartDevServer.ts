@@ -63,7 +63,7 @@ export const useRestartDevServer = ({
 
       if (!projectId) {
         const errorMessage = dict(
-          'NuwaxPC.Hooks.UseRestartDevServer.invalidProjectId',
+          'PC.Hooks.UseRestartDevServer.invalidProjectId',
         );
         if (showMessage) {
           message.error(errorMessage);
@@ -104,8 +104,7 @@ export const useRestartDevServer = ({
         finalResult = result;
       } catch (error: any) {
         const errorMessage =
-          error?.message ||
-          dict('NuwaxPC.Hooks.UseRestartDevServer.restartFailed');
+          error?.message || dict('PC.Hooks.UseRestartDevServer.restartFailed');
         if (showMessage) {
           message.error(errorMessage);
         }

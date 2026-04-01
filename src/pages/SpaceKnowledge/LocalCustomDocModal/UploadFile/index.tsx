@@ -49,9 +49,7 @@ const UploadFile: React.FC<UploadFileProps> = ({
   const beforeUploadDefault = (file: FileType) => {
     const { name, size } = file;
     if (!name.includes('.')) {
-      message.error(
-        dict('NuwaxPC.Pages.SpaceKnowledge.UploadFile.correctFileType'),
-      );
+      message.error(dict('PC.Pages.SpaceKnowledge.UploadFile.correctFileType'));
       return false;
     }
     const splitList = name.split('.');
@@ -60,13 +58,13 @@ const UploadFile: React.FC<UploadFileProps> = ({
     const isFile = UPLOAD_FILE_SUFFIX.includes(suffix);
     if (!isFile) {
       message.error(
-        dict('NuwaxPC.Pages.SpaceKnowledge.UploadFile.supportedFileTypes'),
+        dict('PC.Pages.SpaceKnowledge.UploadFile.supportedFileTypes'),
       );
     }
     const isLt100M = size / 1024 / 1024 < 100;
     if (!isLt100M) {
       message.error(
-        dict('NuwaxPC.Pages.SpaceKnowledge.UploadFile.fileSizeLimit100MB'),
+        dict('PC.Pages.SpaceKnowledge.UploadFile.fileSizeLimit100MB'),
       );
     }
     return (isFile && isLt100M) || Upload.LIST_IGNORE;
@@ -95,10 +93,10 @@ const UploadFile: React.FC<UploadFileProps> = ({
           <UploadOutlined />
         </p>
         <p className="ant-upload-text">
-          {dict('NuwaxPC.Pages.SpaceKnowledge.UploadFile.clickOrDragToUpload')}
+          {dict('PC.Pages.SpaceKnowledge.UploadFile.clickOrDragToUpload')}
         </p>
         <p className="ant-upload-hint">
-          {dict('NuwaxPC.Pages.SpaceKnowledge.UploadFile.uploadHint')}
+          {dict('PC.Pages.SpaceKnowledge.UploadFile.uploadHint')}
         </p>
       </Dragger>
     </div>

@@ -79,12 +79,11 @@ const Agent: React.FC = () => {
   const handleDelete = useCallback(async (record: SystemAgentInfo) => {
     const response = await apiSystemResourceAgentDelete({ id: record.id });
     if (response.code === SUCCESS_CODE) {
-      message.success(dict('NuwaxPC.Pages.SystemContentAgent.deleteSuccess'));
+      message.success(dict('PC.Pages.SystemContentAgent.deleteSuccess'));
       actionRef.current?.reload();
     } else {
       message.error(
-        response.message ||
-          dict('NuwaxPC.Pages.SystemContentAgent.deleteFailed'),
+        response.message || dict('PC.Pages.SystemContentAgent.deleteFailed'),
       );
     }
   }, []);
@@ -125,7 +124,7 @@ const Agent: React.FC = () => {
       const actions: ActionItem<SystemAgentInfo>[] = [
         {
           key: 'view',
-          label: dict('NuwaxPC.Pages.SystemContentAgent.view'),
+          label: dict('PC.Pages.SystemContentAgent.view'),
           disabled: !hasPermission('content_agent_query_detail'),
           onClick: handleView,
         },
@@ -139,7 +138,7 @@ const Agent: React.FC = () => {
       ) {
         actions.push({
           key: 'auth',
-          label: dict('NuwaxPC.Pages.SystemContentAgent.authorize'),
+          label: dict('PC.Pages.SystemContentAgent.authorize'),
           disabled: !hasPermission('content_agent_access_control'),
           onClick: handleAuth,
         });
@@ -147,14 +146,14 @@ const Agent: React.FC = () => {
 
       actions.push({
         key: 'delete',
-        label: dict('NuwaxPC.Pages.SystemContentAgent.delete'),
+        label: dict('PC.Pages.SystemContentAgent.delete'),
         confirm: {
           title: dict(
-            'NuwaxPC.Pages.SystemContentAgent.deleteConfirmTitle',
+            'PC.Pages.SystemContentAgent.deleteConfirmTitle',
             record.name,
           ),
           description: dict(
-            'NuwaxPC.Pages.SystemContentAgent.deleteConfirmDescription',
+            'PC.Pages.SystemContentAgent.deleteConfirmDescription',
           ),
         },
         disabled: !hasPermission('content_agent_delete'),
@@ -171,31 +170,31 @@ const Agent: React.FC = () => {
    */
   const columns: ProColumns<SystemAgentInfo>[] = [
     {
-      title: dict('NuwaxPC.Pages.SystemContentAgent.columnName'),
+      title: dict('PC.Pages.SystemContentAgent.columnName'),
       dataIndex: 'name',
       width: 180,
       ellipsis: true,
       fieldProps: {
-        placeholder: dict('NuwaxPC.Pages.SystemContentAgent.searchName'),
+        placeholder: dict('PC.Pages.SystemContentAgent.searchName'),
         allowClear: true,
       },
     },
     {
-      title: dict('NuwaxPC.Pages.SystemContentAgent.columnDescription'),
+      title: dict('PC.Pages.SystemContentAgent.columnDescription'),
       dataIndex: 'description',
       width: 250,
       ellipsis: true,
       hideInSearch: true,
     },
     {
-      title: dict('NuwaxPC.Pages.SystemContentAgent.columnCreator'),
+      title: dict('PC.Pages.SystemContentAgent.columnCreator'),
       dataIndex: 'creatorName',
       width: 120,
       ellipsis: true,
       hideInSearch: false,
     },
     {
-      title: dict('NuwaxPC.Pages.SystemContentAgent.columnPublishStatus'),
+      title: dict('PC.Pages.SystemContentAgent.columnPublishStatus'),
       dataIndex: 'publishStatus',
       align: 'center',
       width: 100,
@@ -203,23 +202,23 @@ const Agent: React.FC = () => {
       render: (_, record: SystemAgentInfo) => {
         const statusMap: Record<PublishStatusEnum, string> = {
           [PublishStatusEnum.Developing]: dict(
-            'NuwaxPC.Pages.SystemContentAgent.statusDeveloping',
+            'PC.Pages.SystemContentAgent.statusDeveloping',
           ),
           [PublishStatusEnum.Applying]: dict(
-            'NuwaxPC.Pages.SystemContentAgent.statusApplying',
+            'PC.Pages.SystemContentAgent.statusApplying',
           ),
           [PublishStatusEnum.Published]: dict(
-            'NuwaxPC.Pages.SystemContentAgent.statusPublished',
+            'PC.Pages.SystemContentAgent.statusPublished',
           ),
           [PublishStatusEnum.Rejected]: dict(
-            'NuwaxPC.Pages.SystemContentAgent.statusRejected',
+            'PC.Pages.SystemContentAgent.statusRejected',
           ),
         };
         return statusMap[record.publishStatus] || '--';
       },
     },
     {
-      title: dict('NuwaxPC.Pages.SystemContentAgent.columnCreated'),
+      title: dict('PC.Pages.SystemContentAgent.columnCreated'),
       dataIndex: 'created',
       align: 'center',
       width: 170,
@@ -227,19 +226,19 @@ const Agent: React.FC = () => {
       valueType: 'dateTime',
     },
     {
-      title: dict('NuwaxPC.Pages.SystemContentAgent.columnAccessControl'),
-      tooltip: dict('NuwaxPC.Pages.SystemContentAgent.accessControlTooltip'),
+      title: dict('PC.Pages.SystemContentAgent.columnAccessControl'),
+      tooltip: dict('PC.Pages.SystemContentAgent.accessControlTooltip'),
       dataIndex: 'accessControl',
       align: 'center',
       width: 100,
       fixed: 'right',
       valueEnum: {
         [AccessControlEnum.NoFilter]: {
-          text: dict('NuwaxPC.Pages.SystemContentAgent.accessControlOff'),
+          text: dict('PC.Pages.SystemContentAgent.accessControlOff'),
           status: 'Default',
         },
         [AccessControlEnum.Filter]: {
-          text: dict('NuwaxPC.Pages.SystemContentAgent.accessControlOn'),
+          text: dict('PC.Pages.SystemContentAgent.accessControlOn'),
           status: 'Processing',
         },
       },
@@ -253,7 +252,7 @@ const Agent: React.FC = () => {
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SystemContentAgent.columnAction'),
+      title: dict('PC.Pages.SystemContentAgent.columnAction'),
       valueType: 'option',
       fixed: 'right',
       align: 'center',
@@ -294,7 +293,7 @@ const Agent: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={dict('NuwaxPC.Pages.SystemContentAgent.pageTitle')}
+      title={dict('PC.Pages.SystemContentAgent.pageTitle')}
       hideScroll
     >
       <XProTable<SystemAgentInfo>

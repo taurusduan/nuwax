@@ -1,7 +1,7 @@
 import defaultAvatar from '@/assets/images/avatar.png';
+import { dict } from '@/services/i18nRuntime';
 import classNames from 'classnames';
 import dayjs from 'dayjs';
-import { dict } from '@/services/i18nRuntime';
 import React from 'react';
 import ConditionRender from '../ConditionRender';
 import styles from './index.less';
@@ -58,7 +58,7 @@ const PageCard: React.FC<PageCardProps> = ({
         <div
           className={cx(styles['position-top-right'], styles['activated-text'])}
         >
-          {dict('NuwaxPC.Components.PageCard.activated')}
+          {dict('PC.Components.PageCard.activated')}
         </div>
       )}
       {isNewVersion && (
@@ -68,7 +68,7 @@ const PageCard: React.FC<PageCardProps> = ({
             styles['new-version-text'],
           )}
         >
-          {dict('NuwaxPC.Components.PageCard.newVersion')}
+          {dict('PC.Components.PageCard.newVersion')}
         </div>
       )}
       {extra}
@@ -88,7 +88,7 @@ const PageCard: React.FC<PageCardProps> = ({
               styles['no-screenshot'],
             )}
           >
-            {dict('NuwaxPC.Components.PageCard.noPreview')}
+            {dict('PC.Components.PageCard.noPreview')}
           </div>
         )}
         {/* 阴影覆盖区域 */}
@@ -101,7 +101,7 @@ const PageCard: React.FC<PageCardProps> = ({
           )}
         >
           <span className={cx(styles['image-overlay-text'])}>
-            {overlayText || dict('NuwaxPC.Components.PageCard.startUsing')}
+            {overlayText || dict('PC.Components.PageCard.startUsing')}
           </span>
         </div>
       </div>
@@ -134,7 +134,8 @@ const PageCard: React.FC<PageCardProps> = ({
             {/* 创建时间 */}
             <ConditionRender condition={created}>
               <span className={cx(styles.time, 'text-ellipsis')}>
-                {dict('NuwaxPC.Components.PageCard.createdAt')} {dayjs(created).format('YYYY-MM-DD')}
+                {dict('PC.Components.PageCard.createdAt')}{' '}
+                {dayjs(created).format('YYYY-MM-DD')}
               </span>
             </ConditionRender>
           </div>

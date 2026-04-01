@@ -26,34 +26,34 @@ const CollapseComponentList: React.FC<CollapseComponentListProps> = ({
     switch (type) {
       case AgentComponentTypeEnum.Plugin:
         return {
-          text: dict('NuwaxPC.Components.CollapseComponentList.pluginDesc'),
+          text: dict('PC.Components.CollapseComponentList.pluginDesc'),
           image: pluginImage,
         };
       case AgentComponentTypeEnum.Workflow:
         return {
-          text: dict('NuwaxPC.Components.CollapseComponentList.workflowDesc'),
+          text: dict('PC.Components.CollapseComponentList.workflowDesc'),
           image: workflowImage,
         };
       case AgentComponentTypeEnum.MCP:
         return {
-          text: dict('NuwaxPC.Components.CollapseComponentList.mcpDesc'),
+          text: dict('PC.Components.CollapseComponentList.mcpDesc'),
           image: mcpImage,
         };
       case AgentComponentTypeEnum.Table:
         return {
-          text: dict('NuwaxPC.Components.CollapseComponentList.tableDesc'),
+          text: dict('PC.Components.CollapseComponentList.tableDesc'),
           image: databaseImage,
         };
       // 页面
       case AgentComponentTypeEnum.Page:
         return {
-          text: dict('NuwaxPC.Components.CollapseComponentList.pageDesc'),
+          text: dict('PC.Components.CollapseComponentList.pageDesc'),
           image: databaseImage,
         };
       // 技能
       case AgentComponentTypeEnum.Skill:
         return {
-          text: dict('NuwaxPC.Components.CollapseComponentList.skillDesc'),
+          text: dict('PC.Components.CollapseComponentList.skillDesc'),
           image: databaseImage,
         };
     }
@@ -93,12 +93,12 @@ const CollapseComponentList: React.FC<CollapseComponentListProps> = ({
         extra={
           <>
             <TooltipIcon
-              title={dict('NuwaxPC.Components.CollapseComponentList.settings')}
+              title={dict('PC.Components.CollapseComponentList.settings')}
               icon={<ICON_SETTING className={'cursor-pointer'} />}
               onClick={() => onSet(item.id)}
             />
             <TooltipIcon
-              title={dict('NuwaxPC.Components.CollapseComponentList.delete')}
+              title={dict('PC.Components.CollapseComponentList.delete')}
               icon={
                 isDeling(item.id, item.targetId, item.type) ? (
                   <LoadingOutlined />

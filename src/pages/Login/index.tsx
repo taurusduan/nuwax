@@ -102,8 +102,8 @@ const Login: React.FC = () => {
       {
         required: true,
         message: isEmailAuth
-          ? dict('NuwaxPC.Pages.Login.inputEmailRequired')
-          : dict('NuwaxPC.Pages.Login.inputPhoneRequired'),
+          ? dict('PC.Pages.Login.inputEmailRequired')
+          : dict('PC.Pages.Login.inputPhoneRequired'),
       },
       {
         validator(_: any, value: string) {
@@ -111,15 +111,11 @@ const Login: React.FC = () => {
           if (isEmailAuth) {
             return isValidEmail(value)
               ? Promise.resolve()
-              : Promise.reject(
-                  new Error(dict('NuwaxPC.Pages.Login.invalidEmail')),
-                );
+              : Promise.reject(new Error(dict('PC.Pages.Login.invalidEmail')));
           } else {
             return isValidPhone(value)
               ? Promise.resolve()
-              : Promise.reject(
-                  new Error(dict('NuwaxPC.Pages.Login.invalidPhone')),
-                );
+              : Promise.reject(new Error(dict('PC.Pages.Login.invalidPhone')));
           }
         },
       },
@@ -129,7 +125,7 @@ const Login: React.FC = () => {
   const passwordRules = [
     {
       required: true,
-      message: dict('NuwaxPC.Pages.Login.passwordRequired'),
+      message: dict('PC.Pages.Login.passwordRequired'),
     },
     {
       validator(_: any, value: string) {
@@ -137,7 +133,7 @@ const Login: React.FC = () => {
           return Promise.resolve();
         }
         return Promise.reject(
-          new Error(dict('NuwaxPC.Pages.Login.invalidPassword')),
+          new Error(dict('PC.Pages.Login.invalidPassword')),
         );
       },
     },
@@ -206,11 +202,11 @@ const Login: React.FC = () => {
   const onFinish: FormProps<LoginFieldType>['onFinish'] = () => {
     if (!checked) {
       return confirm({
-        title: dict('NuwaxPC.Pages.Login.serviceAgreementTitle'),
+        title: dict('PC.Pages.Login.serviceAgreementTitle'),
         icon: <ExclamationCircleFilled />,
         content: <SiteProtocol />,
-        okText: dict('NuwaxPC.Pages.Login.serviceAgreementAgree'),
-        cancelText: dict('NuwaxPC.Pages.Login.serviceAgreementDisagree'),
+        okText: dict('PC.Pages.Login.serviceAgreementAgree'),
+        cancelText: dict('PC.Pages.Login.serviceAgreementDisagree'),
         onOk() {
           setChecked(true);
           doLogin();
@@ -228,11 +224,11 @@ const Login: React.FC = () => {
   // 分段器切换登录方式
   const options: SegmentedItemType[] = [
     {
-      label: dict('NuwaxPC.Pages.Login.passwordLogin'),
+      label: dict('PC.Pages.Login.passwordLogin'),
       value: LoginTypeEnum.Password + '',
     },
     {
-      label: dict('NuwaxPC.Pages.Login.codeLoginOrRegister'),
+      label: dict('PC.Pages.Login.codeLoginOrRegister'),
       value: LoginTypeEnum.Code + '',
     },
   ];
@@ -275,7 +271,7 @@ const Login: React.FC = () => {
                 <Form.Item>
                   <Title level={3} style={{ marginTop: 48 }}>
                     {dict(
-                      'NuwaxPC.Pages.Login.welcome',
+                      'PC.Pages.Login.welcome',
                       tenantConfigInfo?.siteName || '',
                     )}
                   </Title>
@@ -284,15 +280,11 @@ const Login: React.FC = () => {
                   {tenantConfigInfo?.authType === 3 ? (
                     <Input
                       rootClassName={cx(styles.input)}
-                      placeholder={dict(
-                        'NuwaxPC.Pages.Login.inputEmailPlaceholder',
-                      )}
+                      placeholder={dict('PC.Pages.Login.inputEmailPlaceholder')}
                     />
                   ) : (
                     <Input
-                      placeholder={dict(
-                        'NuwaxPC.Pages.Login.inputPhonePlaceholder',
-                      )}
+                      placeholder={dict('PC.Pages.Login.inputPhonePlaceholder')}
                       rootClassName={cx(styles.input, styles['current-input'])}
                       addonBefore={
                         <div className={cx(styles.icon, 'flex', 'flex-col')}>
@@ -311,7 +303,7 @@ const Login: React.FC = () => {
                       rootClassName={cx(styles.input)}
                       autoComplete="off"
                       placeholder={dict(
-                        'NuwaxPC.Pages.Login.inputPasswordPlaceholder',
+                        'PC.Pages.Login.inputPasswordPlaceholder',
                       )}
                     />
                   </Form.Item>
@@ -326,8 +318,8 @@ const Login: React.FC = () => {
                     loading={loading}
                   >
                     {loginType === LoginTypeEnum.Password
-                      ? dict('NuwaxPC.Pages.Login.login')
-                      : dict('NuwaxPC.Pages.Login.nextStep')}
+                      ? dict('PC.Pages.Login.login')
+                      : dict('PC.Pages.Login.nextStep')}
                   </Button>
                 </Form.Item>
                 <Form.Item

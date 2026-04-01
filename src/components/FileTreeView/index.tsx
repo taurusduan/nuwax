@@ -366,9 +366,7 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
 
           // 文件没有内容或需要重新加载
           if (isRenamingFile) {
-            message.warning(
-              dict('NuwaxPC.Components.FileTreeView.fileRenaming'),
-            );
+            message.warning(dict('PC.Components.FileTreeView.fileRenaming'));
             return;
           }
 
@@ -378,7 +376,7 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
            */
           if (changeFiles?.length > 0) {
             message.warning(
-              dict('NuwaxPC.Components.FileTreeView.unsavedChangesSwitchFile'),
+              dict('PC.Components.FileTreeView.unsavedChangesSwitchFile'),
             );
             return;
           }
@@ -724,7 +722,7 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
     const handleRenameFromMenu = (node: FileNode) => {
       if (!node?.fileProxyUrl && changeFiles?.length > 0) {
         message.warning(
-          dict('NuwaxPC.Components.FileTreeView.unsavedChangesRename'),
+          dict('PC.Components.FileTreeView.unsavedChangesRename'),
         );
         return;
       }
@@ -838,7 +836,7 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
     const handleUploadFromMenu = async (node: FileNode | null) => {
       if (!node?.fileProxyUrl && changeFiles?.length > 0) {
         message.warning(
-          dict('NuwaxPC.Components.FileTreeView.unsavedChangesUpload'),
+          dict('PC.Components.FileTreeView.unsavedChangesUpload'),
         );
         return;
       }
@@ -906,7 +904,7 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
     const handleDelete = async (node: FileNode) => {
       if (!node?.fileProxyUrl && changeFiles?.length > 0) {
         message.warning(
-          dict('NuwaxPC.Components.FileTreeView.unsavedChangesDelete'),
+          dict('PC.Components.FileTreeView.unsavedChangesDelete'),
         );
         return;
       }
@@ -999,7 +997,7 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
     const handleCreateFile = (parentNode: FileNode | null) => {
       if (changeFiles?.length > 0) {
         message.warning(
-          dict('NuwaxPC.Components.FileTreeView.unsavedChangesCreateFile'),
+          dict('PC.Components.FileTreeView.unsavedChangesCreateFile'),
         );
         return;
       }
@@ -1012,7 +1010,7 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
     const handleCreateFolder = (parentNode: FileNode | null) => {
       if (changeFiles?.length > 0) {
         message.warning(
-          dict('NuwaxPC.Components.FileTreeView.unsavedChangesCreateFolder'),
+          dict('PC.Components.FileTreeView.unsavedChangesCreateFolder'),
         );
         return;
       }
@@ -1383,9 +1381,7 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
             showTitle={false}
             showIcon={false}
             showButtons={false}
-            description={dict(
-              'NuwaxPC.Components.FileTreeView.noFilesToPreview',
-            )}
+            description={dict('PC.Components.FileTreeView.noFilesToPreview')}
           />
         );
       }
@@ -1397,7 +1393,7 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
             showTitle={false}
             showIcon={false}
             showButtons={false}
-            description={dict('NuwaxPC.Components.FileTreeView.noMatchingFile')}
+            description={dict('PC.Components.FileTreeView.noMatchingFile')}
           />
         );
       }
@@ -1410,9 +1406,7 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
             showTitle={false}
             showIcon={false}
             showButtons={false}
-            description={dict(
-              'NuwaxPC.Components.FileTreeView.selectFileToPreview',
-            )}
+            description={dict('PC.Components.FileTreeView.selectFileToPreview')}
           />
         );
       }
@@ -1496,10 +1490,10 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
         return (
           <AppDevEmptyState
             type="error"
-            title={dict('NuwaxPC.Components.FileTreeView.cannotPreviewType')}
+            title={dict('PC.Components.FileTreeView.cannotPreviewType')}
             showButtons={false}
             description={dict(
-              'NuwaxPC.Components.FileTreeView.unsupportedFormat',
+              'PC.Components.FileTreeView.unsupportedFormat',
               fileExtension,
             )}
           />
@@ -1736,19 +1730,19 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
                 {/* 操作提示框 */}
                 <TipsBox
                   visible={isDownloadingFile}
-                  text={dict('NuwaxPC.Components.FileTreeView.downloading')}
+                  text={dict('PC.Components.FileTreeView.downloading')}
                 />
                 <TipsBox
                   visible={isUploadingFiles}
-                  text={dict('NuwaxPC.Components.FileTreeView.uploading')}
+                  text={dict('PC.Components.FileTreeView.uploading')}
                 />
                 <TipsBox
                   visible={isExportingProjecting}
-                  text={dict('NuwaxPC.Components.FileTreeView.exporting')}
+                  text={dict('PC.Components.FileTreeView.exporting')}
                 />
                 <TipsBox
                   visible={isImportingProject}
-                  text={dict('NuwaxPC.Components.FileTreeView.importing')}
+                  text={dict('PC.Components.FileTreeView.importing')}
                 />
 
                 <div
@@ -1759,7 +1753,7 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
                     styles['file-tree-header'],
                   )}
                 >
-                  <span>{dict('NuwaxPC.Components.FileTreeView.files')}</span>
+                  <span>{dict('PC.Components.FileTreeView.files')}</span>
 
                   {/* 刷新文件树 */}
                   {/* 是否显示刷新按钮 */}
@@ -1768,10 +1762,8 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
                     <Tooltip
                       title={
                         isRefreshingFileTree
-                          ? dict('NuwaxPC.Components.FileTreeView.refreshing')
-                          : dict(
-                              'NuwaxPC.Components.FileTreeView.refreshFileTree',
-                            )
+                          ? dict('PC.Components.FileTreeView.refreshing')
+                          : dict('PC.Components.FileTreeView.refreshFileTree')
                       }
                     >
                       <Button
@@ -1826,7 +1818,7 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
                 <div className={cx(styles['loading-overlay'])}>
                   <Spin size="large" className={cx(styles['loading-spin'])} />
                   <span className={cx(styles['loading-text'])}>
-                    {dict('NuwaxPC.Components.FileTreeView.restarting')}
+                    {dict('PC.Components.FileTreeView.restarting')}
                   </span>
                 </div>
               </div>

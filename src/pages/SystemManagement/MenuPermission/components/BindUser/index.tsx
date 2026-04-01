@@ -167,9 +167,7 @@ const BindUser: React.FC<BindUserProps> = ({
     debounceInterval: 300,
     onSuccess: (data: SearchUserInfo[]) => {
       if (!data?.length) {
-        message.warning(
-          t('NuwaxPC.Pages.SystemMenuBindUser.userNotFoundBySearch'),
-        );
+        message.warning(t('PC.Pages.SystemMenuBindUser.userNotFoundBySearch'));
         setLeftMember(null);
         return;
       }
@@ -413,7 +411,7 @@ const BindUser: React.FC<BindUserProps> = ({
 
   return (
     <Modal
-      title={t('NuwaxPC.Pages.SystemMenuBindUser.bindUserWithName', name)}
+      title={t('PC.Pages.SystemMenuBindUser.bindUserWithName', name)}
       open={open}
       classNames={{
         content: cx(styles['add-member-modal-content']),
@@ -423,7 +421,7 @@ const BindUser: React.FC<BindUserProps> = ({
       onCancel={onCancel}
       footer={
         <Button type="primary" onClick={onCancel}>
-          {t('NuwaxPC.Pages.SystemMenuBindUser.close')}
+          {t('PC.Pages.SystemMenuBindUser.close')}
         </Button>
       }
     >
@@ -431,9 +429,7 @@ const BindUser: React.FC<BindUserProps> = ({
         {/* 左侧：搜索并选择成员 */}
         <div className={cx(styles['add-member-left-column'], 'flex-1')}>
           <Input.Search
-            placeholder={t(
-              'NuwaxPC.Pages.SystemMenuBindUser.leftSearchPlaceholder',
-            )}
+            placeholder={t('PC.Pages.SystemMenuBindUser.leftSearchPlaceholder')}
             allowClear
             onSearch={handleLeftSearch}
           />
@@ -453,7 +449,7 @@ const BindUser: React.FC<BindUserProps> = ({
         <div className={cx('flex-1', styles.rightColumn)}>
           <Input.Search
             placeholder={t(
-              'NuwaxPC.Pages.SystemMenuBindUser.rightSearchPlaceholder',
+              'PC.Pages.SystemMenuBindUser.rightSearchPlaceholder',
             )}
             allowClear
             value={rightSearchKeyword}
@@ -489,7 +485,7 @@ const BindUser: React.FC<BindUserProps> = ({
                   'h-full',
                 )}
               >
-                <Empty description={t('NuwaxPC.Common.Global.emptyData')} />
+                <Empty description={t('PC.Common.Global.emptyData')} />
               </div>
             ) : open && isScrollReady ? (
               // 滚动加载时使用 InfiniteScrollDiv，它会自动显示底部的加载动画

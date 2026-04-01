@@ -50,7 +50,7 @@ const StartNode: React.FC<NodeDisposeProps> = ({
     <Form.Item name={'inputArgs'}>
       <CustomTree
         key={`${type}-${id}-inputArgs`}
-        title={t('NuwaxPC.Pages.AntvX6Data.input')}
+        title={t('PC.Pages.AntvX6Data.input')}
         inputItemName={'inputArgs'}
         params={nodeConfig?.inputArgs || []}
         form={form}
@@ -65,7 +65,7 @@ const DocumentExtractionNode: React.FC<NodeDisposeProps> = ({ form }) => {
     <>
       <div className="node-item-style">
         <InputAndOut
-          title={t('NuwaxPC.Pages.AntvX6Data.input')}
+          title={t('PC.Pages.AntvX6Data.input')}
           fieldConfigs={outPutConfigs}
           inputItemName={InputItemNameEnum.inputArgs}
           form={form}
@@ -79,7 +79,7 @@ const DocumentExtractionNode: React.FC<NodeDisposeProps> = ({ form }) => {
           form.getFieldValue('outputArgs') && (
             <>
               <div className="node-title-style margin-bottom">
-                {t('NuwaxPC.Pages.AntvX6Data.output')}
+                {t('PC.Pages.AntvX6Data.output')}
               </div>
               <TreeOutput treeData={form.getFieldValue('outputArgs')} />
             </>
@@ -95,10 +95,10 @@ const EndNode: React.FC<NodeDisposeProps> = ({ form, type }) => {
   const { referenceList } = useModel('workflow');
   const segOptions = [
     {
-      label: t('NuwaxPC.Pages.AntvX6NodeItem.returnVariable'),
+      label: t('PC.Pages.AntvX6NodeItem.returnVariable'),
       value: 'VARIABLE',
     },
-    { label: t('NuwaxPC.Pages.AntvX6NodeItem.returnText'), value: 'TEXT' },
+    { label: t('PC.Pages.AntvX6NodeItem.returnText'), value: 'TEXT' },
   ];
   const outputArgs =
     Form.useWatch(InputItemNameEnum.outputArgs, {
@@ -126,7 +126,7 @@ const EndNode: React.FC<NodeDisposeProps> = ({ form, type }) => {
         }
       >
         <InputAndOut
-          title={t('NuwaxPC.Pages.AntvX6NodeItem.outputVariable')}
+          title={t('PC.Pages.AntvX6NodeItem.outputVariable')}
           form={form}
           fieldConfigs={outPutConfigs}
           showCopy={true}
@@ -140,11 +140,9 @@ const EndNode: React.FC<NodeDisposeProps> = ({ form, type }) => {
             <>
               <div className="dis-sb margin-bottom">
                 <span className="node-title-style gap-6 flex items-center">
-                  {t('NuwaxPC.Pages.AntvX6NodeItem.outputContent')}
+                  {t('PC.Pages.AntvX6NodeItem.outputContent')}
                   <TooltipIcon
-                    title={t(
-                      'NuwaxPC.Pages.AntvX6NodeItem.outputContentTooltip',
-                    )}
+                    title={t('PC.Pages.AntvX6NodeItem.outputContentTooltip')}
                     icon={<ExclamationCircleOutlined />}
                   />
                 </span>
@@ -157,7 +155,7 @@ const EndNode: React.FC<NodeDisposeProps> = ({ form, type }) => {
               >
                 <TiptapVariableInput
                   placeholder={t(
-                    'NuwaxPC.Pages.AntvX6NodeItem.outputContentPlaceholder',
+                    'PC.Pages.AntvX6NodeItem.outputContentPlaceholder',
                   )}
                   style={{
                     minHeight: '80px',
@@ -186,9 +184,9 @@ const CycleNode: React.FC<NodeDisposeProps> = ({ form }) => {
     <div>
       <div className="node-item-style">
         <span className="node-title-style margin-bottom gap-6 flex items-center">
-          {t('NuwaxPC.Pages.AntvX6NodeItem.loopSetting')}
+          {t('PC.Pages.AntvX6NodeItem.loopSetting')}
           <TooltipIcon
-            title={t('NuwaxPC.Pages.AntvX6NodeItem.loopSettingTooltip')}
+            title={t('PC.Pages.AntvX6NodeItem.loopSettingTooltip')}
             icon={<ExclamationCircleOutlined />}
           />
         </span>
@@ -213,14 +211,14 @@ const CycleNode: React.FC<NodeDisposeProps> = ({ form }) => {
             return (
               <div className="node-item-style">
                 <div className="node-title-style margin-bottom">
-                  {t('NuwaxPC.Pages.AntvX6NodeItem.loopTimes')}
+                  {t('PC.Pages.AntvX6NodeItem.loopTimes')}
                 </div>
                 <Form.Item name="loopTimes">
                   <InputNumber
                     size="small"
                     style={{ width: '100%', marginBottom: '10px' }}
                     placeholder={t(
-                      'NuwaxPC.Pages.AntvX6NodeItem.loopTimesPlaceholder',
+                      'PC.Pages.AntvX6NodeItem.loopTimesPlaceholder',
                     )}
                     min={1}
                     precision={0}
@@ -232,7 +230,7 @@ const CycleNode: React.FC<NodeDisposeProps> = ({ form }) => {
             return (
               <div className="node-item-style">
                 <InputAndOut
-                  title={t('NuwaxPC.Pages.AntvX6NodeItem.loopArray')}
+                  title={t('PC.Pages.AntvX6NodeItem.loopArray')}
                   fieldConfigs={outPutConfigs}
                   inputItemName={InputItemNameEnum.inputArgs}
                   form={form}
@@ -247,11 +245,9 @@ const CycleNode: React.FC<NodeDisposeProps> = ({ form }) => {
         <InputAndOut
           title={
             <>
-              {t('NuwaxPC.Pages.AntvX6NodeItem.intermediateVariable')}
+              {t('PC.Pages.AntvX6NodeItem.intermediateVariable')}
               <TooltipIcon
-                title={t(
-                  'NuwaxPC.Pages.AntvX6NodeItem.intermediateVariableTooltip',
-                )}
+                title={t('PC.Pages.AntvX6NodeItem.intermediateVariableTooltip')}
                 icon={<ExclamationCircleOutlined />}
               />
             </>
@@ -264,7 +260,7 @@ const CycleNode: React.FC<NodeDisposeProps> = ({ form }) => {
       </div>
 
       <InputAndOut
-        title={t('NuwaxPC.Pages.AntvX6Data.output')}
+        title={t('PC.Pages.AntvX6Data.output')}
         fieldConfigs={outPutConfigs}
         inputItemName={InputItemNameEnum.outputArgs}
         form={form}
@@ -293,7 +289,7 @@ const VariableNode: React.FC<NodeDisposeProps> = ({ form }) => {
           isSetVariable ? (
             <div className="node-item-style">
               <InputAndOut
-                title={t('NuwaxPC.Pages.AntvX6NodeItem.setVariable')}
+                title={t('PC.Pages.AntvX6NodeItem.setVariable')}
                 fieldConfigs={outPutConfigs}
                 inputItemName={InputItemNameEnum.inputArgs}
                 form={form}
@@ -306,7 +302,7 @@ const VariableNode: React.FC<NodeDisposeProps> = ({ form }) => {
         {() =>
           !isSetVariable ? (
             <OtherFormList
-              title={t('NuwaxPC.Pages.AntvX6NodeItem.outputVariable')}
+              title={t('PC.Pages.AntvX6NodeItem.outputVariable')}
               fieldConfigs={outPutConfigs}
               inputItemName={InputItemNameEnum.outputArgs}
               form={form}
@@ -319,7 +315,7 @@ const VariableNode: React.FC<NodeDisposeProps> = ({ form }) => {
           isSetVariable ? (
             <>
               <div className="node-title-style margin-bottom">
-                {t('NuwaxPC.Pages.AntvX6Data.output')}
+                {t('PC.Pages.AntvX6Data.output')}
               </div>
               <TreeOutput
                 treeData={[
@@ -346,7 +342,7 @@ const VariableNode: React.FC<NodeDisposeProps> = ({ form }) => {
 const VariableAggregationNode: React.FC<NodeDisposeProps> = ({ form }) => {
   const strategyOptions = [
     {
-      label: t('NuwaxPC.Pages.AntvX6NodeItem.firstNonNullOfEachGroup'),
+      label: t('PC.Pages.AntvX6NodeItem.firstNonNullOfEachGroup'),
       value: 'FIRST_NON_NULL',
     },
   ];
@@ -434,7 +430,7 @@ const VariableAggregationNode: React.FC<NodeDisposeProps> = ({ form }) => {
     <>
       <div className="node-item-style">
         <div className="node-title-style margin-bottom">
-          {t('NuwaxPC.Pages.AntvX6NodeItem.aggregationStrategy')}
+          {t('PC.Pages.AntvX6NodeItem.aggregationStrategy')}
         </div>
         <Form.Item name="aggregationStrategy" initialValue="FIRST_NON_NULL">
           <Select options={strategyOptions} />
@@ -444,7 +440,7 @@ const VariableAggregationNode: React.FC<NodeDisposeProps> = ({ form }) => {
       <div className="node-item-style">
         <div className="dis-sb margin-bottom">
           <span className="node-title-style">
-            {t('NuwaxPC.Pages.AntvX6NodeItem.groupConfig')}
+            {t('PC.Pages.AntvX6NodeItem.groupConfig')}
           </span>
         </div>
         {variableGroups?.map((group, index) => (
@@ -498,7 +494,7 @@ const VariableAggregationNode: React.FC<NodeDisposeProps> = ({ form }) => {
           icon={<PlusOutlined />}
           onClick={handleAddGroup}
         >
-          {t('NuwaxPC.Pages.AntvX6NodeItem.addGroup')}
+          {t('PC.Pages.AntvX6NodeItem.addGroup')}
         </Button>
       </div>
 
@@ -508,7 +504,7 @@ const VariableAggregationNode: React.FC<NodeDisposeProps> = ({ form }) => {
           return outputArgs.length > 0 ? (
             <>
               <div className="node-title-style margin-bottom">
-                {t('NuwaxPC.Pages.AntvX6Data.output')}
+                {t('PC.Pages.AntvX6Data.output')}
               </div>
               <TreeOutput treeData={outputArgs} />
             </>
@@ -523,17 +519,17 @@ const VariableAggregationNode: React.FC<NodeDisposeProps> = ({ form }) => {
 const TextProcessingNode: React.FC<NodeDisposeProps> = ({ form }) => {
   const { referenceList } = useModel('workflow');
   const textTypeOptions = [
-    { label: t('NuwaxPC.Pages.AntvX6NodeItem.stringConcat'), value: 'CONCAT' },
-    { label: t('NuwaxPC.Pages.AntvX6NodeItem.stringSplit'), value: 'SPLIT' },
+    { label: t('PC.Pages.AntvX6NodeItem.stringConcat'), value: 'CONCAT' },
+    { label: t('PC.Pages.AntvX6NodeItem.stringSplit'), value: 'SPLIT' },
   ];
 
   const [options, setOptions] = useState([
-    { value: '\\n', label: t('NuwaxPC.Pages.AntvX6NodeItem.newline') },
-    { value: '\\t', label: t('NuwaxPC.Pages.AntvX6NodeItem.tab') },
-    { value: '。', label: t('NuwaxPC.Pages.AntvX6NodeItem.fullStop') },
-    { value: ',', label: t('NuwaxPC.Pages.AntvX6NodeItem.comma') },
-    { value: ';', label: t('NuwaxPC.Pages.AntvX6NodeItem.semicolon') },
-    { value: '&nbsp;', label: t('NuwaxPC.Pages.AntvX6NodeItem.space') },
+    { value: '\\n', label: t('PC.Pages.AntvX6NodeItem.newline') },
+    { value: '\\t', label: t('PC.Pages.AntvX6NodeItem.tab') },
+    { value: '。', label: t('PC.Pages.AntvX6NodeItem.fullStop') },
+    { value: ',', label: t('PC.Pages.AntvX6NodeItem.comma') },
+    { value: ';', label: t('PC.Pages.AntvX6NodeItem.semicolon') },
+    { value: '&nbsp;', label: t('PC.Pages.AntvX6NodeItem.space') },
   ]);
 
   const [newItem, setNewItem] = useState({
@@ -586,7 +582,7 @@ const TextProcessingNode: React.FC<NodeDisposeProps> = ({ form }) => {
       </Form.Item>
       <div className="node-item-style">
         <InputAndOut
-          title={t('NuwaxPC.Pages.AntvX6Data.input')}
+          title={t('PC.Pages.AntvX6Data.input')}
           fieldConfigs={outPutConfigs}
           inputItemName={InputItemNameEnum.inputArgs}
           form={form}
@@ -598,31 +594,29 @@ const TextProcessingNode: React.FC<NodeDisposeProps> = ({ form }) => {
             <div className="node-item-style">
               <div className="dis-sb margin-bottom">
                 <span className="node-title-style">
-                  {t('NuwaxPC.Pages.AntvX6NodeItem.stringConcat')}
+                  {t('PC.Pages.AntvX6NodeItem.stringConcat')}
                 </span>
                 <Popover
                   placement="topRight"
                   content={
                     <>
                       <p className="node-title-style">
-                        {t(
-                          'NuwaxPC.Pages.AntvX6NodeItem.arrayJoinSymbolSetting',
-                        )}
+                        {t('PC.Pages.AntvX6NodeItem.arrayJoinSymbolSetting')}
                       </p>
                       <p>
                         {t(
-                          'NuwaxPC.Pages.AntvX6NodeItem.arrayJoinSymbolDescription',
+                          'PC.Pages.AntvX6NodeItem.arrayJoinSymbolDescription',
                         )}
                       </p>
                       <p className="array-link-setting-select-label">
-                        {t('NuwaxPC.Pages.AntvX6NodeItem.joinSymbol')}
+                        {t('PC.Pages.AntvX6NodeItem.joinSymbol')}
                       </p>
                       <Form.Item name="join">
                         <Select
                           options={options}
                           allowClear
                           placeholder={t(
-                            'NuwaxPC.Pages.AntvX6NodeItem.selectJoinSymbol',
+                            'PC.Pages.AntvX6NodeItem.selectJoinSymbol',
                           )}
                           popupRender={(menu) => (
                             <>
@@ -636,7 +630,7 @@ const TextProcessingNode: React.FC<NodeDisposeProps> = ({ form }) => {
                                   <Input
                                     value={newItem.label}
                                     placeholder={t(
-                                      'NuwaxPC.Pages.AntvX6NodeItem.optionNamePlaceholder',
+                                      'PC.Pages.AntvX6NodeItem.optionNamePlaceholder',
                                     )}
                                     onChange={(e) =>
                                       setNewItem({
@@ -649,7 +643,7 @@ const TextProcessingNode: React.FC<NodeDisposeProps> = ({ form }) => {
                                   <Input
                                     value={newItem.value}
                                     placeholder={t(
-                                      'NuwaxPC.Pages.AntvX6NodeItem.optionValuePlaceholder',
+                                      'PC.Pages.AntvX6NodeItem.optionValuePlaceholder',
                                     )}
                                     onChange={(e) =>
                                       setNewItem({
@@ -660,7 +654,7 @@ const TextProcessingNode: React.FC<NodeDisposeProps> = ({ form }) => {
                                     onKeyDown={(e) => e.stopPropagation()} // Stop key bubbling.
                                   />
                                   <Button type="primary" onClick={addItem}>
-                                    {t('NuwaxPC.Pages.AntvX6NodeItem.add')}
+                                    {t('PC.Pages.AntvX6NodeItem.add')}
                                   </Button>
                                 </Space>
                               </div>
@@ -684,7 +678,7 @@ const TextProcessingNode: React.FC<NodeDisposeProps> = ({ form }) => {
               >
                 <TiptapVariableInput
                   placeholder={t(
-                    'NuwaxPC.Pages.AntvX6NodeItem.inputVariablePlaceholder',
+                    'PC.Pages.AntvX6NodeItem.inputVariablePlaceholder',
                   )}
                   style={{
                     minHeight: '80px',
@@ -707,14 +701,12 @@ const TextProcessingNode: React.FC<NodeDisposeProps> = ({ form }) => {
           form.getFieldValue('textHandleType') === 'SPLIT' ? (
             <div className="node-item-style">
               <span className="node-title-style">
-                {t('NuwaxPC.Pages.AntvX6NodeItem.delimiter')}
+                {t('PC.Pages.AntvX6NodeItem.delimiter')}
               </span>
               <Form.Item name="splits">
                 <Select
                   allowClear
-                  placeholder={t(
-                    'NuwaxPC.Pages.AntvX6NodeItem.selectSplitSymbol',
-                  )}
+                  placeholder={t('PC.Pages.AntvX6NodeItem.selectSplitSymbol')}
                   mode={'multiple'}
                   maxTagCount={3}
                   popupRender={(menu) => (
@@ -726,7 +718,7 @@ const TextProcessingNode: React.FC<NodeDisposeProps> = ({ form }) => {
                           <Input
                             value={newItem.label}
                             placeholder={t(
-                              'NuwaxPC.Pages.AntvX6NodeItem.optionNamePlaceholder',
+                              'PC.Pages.AntvX6NodeItem.optionNamePlaceholder',
                             )}
                             onChange={(e) =>
                               setNewItem({
@@ -739,7 +731,7 @@ const TextProcessingNode: React.FC<NodeDisposeProps> = ({ form }) => {
                           <Input
                             value={newItem.value}
                             placeholder={t(
-                              'NuwaxPC.Pages.AntvX6NodeItem.optionValuePlaceholder',
+                              'PC.Pages.AntvX6NodeItem.optionValuePlaceholder',
                             )}
                             onChange={(e) =>
                               setNewItem({
@@ -750,7 +742,7 @@ const TextProcessingNode: React.FC<NodeDisposeProps> = ({ form }) => {
                             onKeyDown={(e) => e.stopPropagation()} // Stop key bubbling.
                           />
                           <Button type="primary" onClick={addItem}>
-                            {t('NuwaxPC.Pages.AntvX6NodeItem.add')}
+                            {t('PC.Pages.AntvX6NodeItem.add')}
                           </Button>
                         </Space>
                       </div>
@@ -769,7 +761,7 @@ const TextProcessingNode: React.FC<NodeDisposeProps> = ({ form }) => {
           form.getFieldValue('outputArgs') && (
             <>
               <div className="node-title-style margin-bottom">
-                {t('NuwaxPC.Pages.AntvX6Data.output')}
+                {t('PC.Pages.AntvX6Data.output')}
               </div>
               <TreeOutput
                 treeData={
@@ -826,7 +818,7 @@ const CodeNode: React.FC<NodeDisposeProps> = ({
     <>
       <div className="node-item-style">
         <InputAndOut
-          title={t('NuwaxPC.Pages.AntvX6Data.input')}
+          title={t('PC.Pages.AntvX6Data.input')}
           fieldConfigs={outPutConfigs}
           inputItemName={InputItemNameEnum.inputArgs}
           form={form}
@@ -836,7 +828,7 @@ const CodeNode: React.FC<NodeDisposeProps> = ({
         <div>
           <div className="dis-sb margin-bottom">
             <span className="node-title-style ">
-              {t('NuwaxPC.Pages.AntvX6NodeItem.code')}
+              {t('PC.Pages.AntvX6NodeItem.code')}
             </span>
             <Button
               icon={<ExpandAltOutlined />}
@@ -858,7 +850,7 @@ const CodeNode: React.FC<NodeDisposeProps> = ({
         </div>
       </div>
       <CustomTree
-        title={t('NuwaxPC.Pages.AntvX6Data.output')}
+        title={t('PC.Pages.AntvX6Data.output')}
         key={`${type}-${id}-outputArgs`}
         params={nodeConfig?.outputArgs || []}
         form={form}

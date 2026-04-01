@@ -173,9 +173,7 @@ const EventBindModal: React.FC<EventBindModalProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(
-        t('NuwaxPC.Pages.AgentArrangeEventBindModal.updateSuccess'),
-      );
+      message.success(t('PC.Pages.AgentArrangeEventBindModal.updateSuccess'));
       onConfirm();
       setLoading(false);
     },
@@ -272,7 +270,7 @@ const EventBindModal: React.FC<EventBindModalProps> = ({
   // 入参配置columns
   const inputColumns: TableColumnsType<BindConfigWithSub> = [
     {
-      title: t('NuwaxPC.Pages.AgentArrangeEventBindModal.paramName'),
+      title: t('PC.Pages.AgentArrangeEventBindModal.paramName'),
       dataIndex: 'name',
       key: 'name',
       width: 200,
@@ -285,37 +283,29 @@ const EventBindModal: React.FC<EventBindModalProps> = ({
     {
       title: () => (
         <div className={cx('h-full', 'flex', 'items-center')}>
-          <span>
-            {t('NuwaxPC.Pages.AgentArrangeEventBindModal.paramValue')}
-          </span>
+          <span>{t('PC.Pages.AgentArrangeEventBindModal.paramValue')}</span>
           <TooltipIcon
             title={
               <>
                 <div>
-                  {t('NuwaxPC.Pages.AgentArrangeEventBindModal.paramValueTip')}
+                  {t('PC.Pages.AgentArrangeEventBindModal.paramValueTip')}
                 </div>
                 <div>
-                  {t(
-                    'NuwaxPC.Pages.AgentArrangeEventBindModal.agentIdVariable',
-                  )}{' '}
+                  {t('PC.Pages.AgentArrangeEventBindModal.agentIdVariable')}{' '}
                   {'{{'}AGENT_ID{'}}'}
                 </div>
                 <div>
                   {t(
-                    'NuwaxPC.Pages.AgentArrangeEventBindModal.systemUserIdVariable',
+                    'PC.Pages.AgentArrangeEventBindModal.systemUserIdVariable',
                   )}{' '}
                   {'{{'}SYS_USER_ID{'}}'}
                 </div>
                 <div>
-                  {t(
-                    'NuwaxPC.Pages.AgentArrangeEventBindModal.userUidVariable',
-                  )}{' '}
+                  {t('PC.Pages.AgentArrangeEventBindModal.userUidVariable')}{' '}
                   {'{{'}USER_UID{'}}'}
                 </div>
                 <div>
-                  {t(
-                    'NuwaxPC.Pages.AgentArrangeEventBindModal.userNameVariable',
-                  )}{' '}
+                  {t('PC.Pages.AgentArrangeEventBindModal.userNameVariable')}{' '}
                   {'{{'}USER_NAME{'}}'}
                 </div>
               </>
@@ -330,7 +320,7 @@ const EventBindModal: React.FC<EventBindModalProps> = ({
           <Input
             allowClear
             placeholder={t(
-              'NuwaxPC.Pages.AgentArrangeEventBindModal.paramValuePlaceholder',
+              'PC.Pages.AgentArrangeEventBindModal.paramValuePlaceholder',
               record.description || '',
             )}
             value={record.bindValue}
@@ -349,14 +339,12 @@ const EventBindModal: React.FC<EventBindModalProps> = ({
       if (item.value === EventBindResponseActionEnum.Page) {
         return {
           ...item,
-          label: t(
-            'NuwaxPC.Pages.AgentArrangeEventBindModal.responseActionPage',
-          ),
+          label: t('PC.Pages.AgentArrangeEventBindModal.responseActionPage'),
         };
       }
       return {
         ...item,
-        label: t('NuwaxPC.Pages.AgentArrangeEventBindModal.responseActionLink'),
+        label: t('PC.Pages.AgentArrangeEventBindModal.responseActionLink'),
       };
     });
 
@@ -370,7 +358,7 @@ const EventBindModal: React.FC<EventBindModalProps> = ({
   return (
     <CustomFormModal
       form={form}
-      title={t('NuwaxPC.Pages.AgentArrangeEventBindModal.title')}
+      title={t('PC.Pages.AgentArrangeEventBindModal.title')}
       open={open}
       loading={loading}
       onCancel={onCancel}
@@ -389,31 +377,31 @@ const EventBindModal: React.FC<EventBindModalProps> = ({
       >
         <Form.Item
           name="name"
-          label={t('NuwaxPC.Pages.AgentArrangeEventBindModal.eventName')}
+          label={t('PC.Pages.AgentArrangeEventBindModal.eventName')}
           rules={[
             {
               required: true,
               message: t(
-                'NuwaxPC.Pages.AgentArrangeEventBindModal.eventNameRequired',
+                'PC.Pages.AgentArrangeEventBindModal.eventNameRequired',
               ),
             },
           ]}
         >
           <Input
             placeholder={t(
-              'NuwaxPC.Pages.AgentArrangeEventBindModal.eventNamePlaceholder',
+              'PC.Pages.AgentArrangeEventBindModal.eventNamePlaceholder',
             )}
             allowClear
           />
         </Form.Item>
         <Form.Item
           name="identification"
-          label={t('NuwaxPC.Pages.AgentArrangeEventBindModal.eventCode')}
+          label={t('PC.Pages.AgentArrangeEventBindModal.eventCode')}
           rules={[
             {
               required: true,
               message: t(
-                'NuwaxPC.Pages.AgentArrangeEventBindModal.eventCodeRequired',
+                'PC.Pages.AgentArrangeEventBindModal.eventCodeRequired',
               ),
             },
             {
@@ -423,9 +411,7 @@ const EventBindModal: React.FC<EventBindModalProps> = ({
                 }
                 return Promise.reject(
                   new Error(
-                    t(
-                      'NuwaxPC.Pages.AgentArrangeEventBindModal.eventCodeInvalid',
-                    ),
+                    t('PC.Pages.AgentArrangeEventBindModal.eventCodeInvalid'),
                   ),
                 );
               },
@@ -434,18 +420,18 @@ const EventBindModal: React.FC<EventBindModalProps> = ({
         >
           <Input
             placeholder={t(
-              'NuwaxPC.Pages.AgentArrangeEventBindModal.eventCodePlaceholder',
+              'PC.Pages.AgentArrangeEventBindModal.eventCodePlaceholder',
             )}
             allowClear
           />
         </Form.Item>
         <Form.Item
           name="type"
-          label={t('NuwaxPC.Pages.AgentArrangeEventBindModal.responseAction')}
+          label={t('PC.Pages.AgentArrangeEventBindModal.responseAction')}
         >
           <SelectList
             placeholder={t(
-              'NuwaxPC.Pages.AgentArrangeEventBindModal.responseActionPlaceholder',
+              'PC.Pages.AgentArrangeEventBindModal.responseActionPlaceholder',
             )}
             options={responseActionList}
             value={type}
@@ -455,12 +441,12 @@ const EventBindModal: React.FC<EventBindModalProps> = ({
         {type === EventBindResponseActionEnum.Page ? (
           <Form.Item
             name="pageUriId"
-            label={t('NuwaxPC.Pages.AgentArrangeEventBindModal.pagePath')}
+            label={t('PC.Pages.AgentArrangeEventBindModal.pagePath')}
             rules={[
               {
                 required: true,
                 message: t(
-                  'NuwaxPC.Pages.AgentArrangeEventBindModal.pagePathRequired',
+                  'PC.Pages.AgentArrangeEventBindModal.pagePathRequired',
                 ),
               },
             ]}
@@ -468,7 +454,7 @@ const EventBindModal: React.FC<EventBindModalProps> = ({
             {/* 页面路径 */}
             <SelectList
               placeholder={t(
-                'NuwaxPC.Pages.AgentArrangeEventBindModal.pagePathPlaceholder',
+                'PC.Pages.AgentArrangeEventBindModal.pagePathPlaceholder',
               )}
               options={pathList as any}
               onChange={changePagePath}
@@ -478,12 +464,12 @@ const EventBindModal: React.FC<EventBindModalProps> = ({
           type === EventBindResponseActionEnum.Link && (
             <Form.Item
               name="url"
-              label={t('NuwaxPC.Pages.AgentArrangeEventBindModal.linkUrl')}
+              label={t('PC.Pages.AgentArrangeEventBindModal.linkUrl')}
               rules={[
                 {
                   required: true,
                   message: t(
-                    'NuwaxPC.Pages.AgentArrangeEventBindModal.linkUrlRequired',
+                    'PC.Pages.AgentArrangeEventBindModal.linkUrlRequired',
                   ),
                 },
                 {
@@ -493,9 +479,7 @@ const EventBindModal: React.FC<EventBindModalProps> = ({
                     }
                     return Promise.reject(
                       new Error(
-                        t(
-                          'NuwaxPC.Pages.AgentArrangeEventBindModal.linkUrlInvalid',
-                        ),
+                        t('PC.Pages.AgentArrangeEventBindModal.linkUrlInvalid'),
                       ),
                     );
                   },
@@ -519,12 +503,10 @@ const EventBindModal: React.FC<EventBindModalProps> = ({
                 onClick={() => setIsActive(!isActive)}
               />
               <span className={cx('user-select-none')}>
-                {t('NuwaxPC.Pages.AgentArrangeEventBindModal.input')}
+                {t('PC.Pages.AgentArrangeEventBindModal.input')}
               </span>
               <TooltipIcon
-                title={t(
-                  'NuwaxPC.Pages.AgentArrangeEventBindModal.configInputArgs',
-                )}
+                title={t('PC.Pages.AgentArrangeEventBindModal.configInputArgs')}
                 icon={<InfoCircleOutlined />}
               />
             </div>

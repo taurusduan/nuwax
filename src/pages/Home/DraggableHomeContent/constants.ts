@@ -6,19 +6,19 @@ export const DRAG_TYPES = {
 } as const;
 
 export const HOVER_TEXTS = {
-  CATEGORY: dict('NuwaxPC.Pages.HomeDrag.hoverCategory'),
-  AGENT: dict('NuwaxPC.Pages.HomeDrag.hoverAgent'),
+  CATEGORY: dict('PC.Pages.HomeDrag.hoverCategory'),
+  AGENT: dict('PC.Pages.HomeDrag.hoverAgent'),
 } as const;
 
 // 添加其他可能的常量
 export const LOADING_MESSAGES = {
-  UPDATING_SORT: dict('NuwaxPC.Pages.HomeDrag.updatingSort'),
+  UPDATING_SORT: dict('PC.Pages.HomeDrag.updatingSort'),
 } as const;
 
 export const SUCCESS_MESSAGES = {
-  SORT_SUCCESS: dict('NuwaxPC.Pages.HomeDrag.sortSuccess'),
+  SORT_SUCCESS: dict('PC.Pages.HomeDrag.sortSuccess'),
 } as const;
 
 export const ERROR_MESSAGES = {
-  SORT_FAILED: dict('NuwaxPC.Pages.HomeDrag.sortFailed'),
+  SORT_FAILED: dict('PC.Pages.HomeDrag.sortFailed'),
 } as const;

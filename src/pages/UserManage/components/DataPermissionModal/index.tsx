@@ -252,7 +252,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           <div
             className={cx('flex', 'items-center', 'content-center', 'h-full')}
           >
-            <Empty description={dict('NuwaxPC.Common.Global.noData')} />
+            <Empty description={dict('PC.Common.Global.noData')} />
           </div>
         );
       case 'agent':
@@ -277,7 +277,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           <div
             className={cx('flex', 'items-center', 'content-center', 'h-full')}
           >
-            <Empty description={dict('NuwaxPC.Common.Global.noData')} />
+            <Empty description={dict('PC.Common.Global.noData')} />
           </div>
         );
       case 'page':
@@ -302,7 +302,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
           <div
             className={cx('flex', 'items-center', 'content-center', 'h-full')}
           >
-            <Empty description={dict('NuwaxPC.Common.Global.noData')} />
+            <Empty description={dict('PC.Common.Global.noData')} />
           </div>
         );
       case 'dataPermission':
@@ -318,19 +318,19 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
                 <Col span={12}>
                   <Form.Item
                     label={dict(
-                      'NuwaxPC.Pages.UserManage.DataPermissionModal.dailyTokenLimit',
+                      'PC.Pages.UserManage.DataPermissionModal.dailyTokenLimit',
                     )}
                     name={['tokenLimit', 'limitPerDay']}
                     tooltip={{
                       icon: <InfoCircleOutlined />,
                       title: dict(
-                        'NuwaxPC.Pages.UserManage.DataPermissionModal.dailyTokenLimitTooltip',
+                        'PC.Pages.UserManage.DataPermissionModal.dailyTokenLimitTooltip',
                       ),
                     }}
                   >
                     <InputNumber
                       placeholder={dict(
-                        'NuwaxPC.Pages.UserManage.DataPermissionModal.dailyTokenLimitPlaceholder',
+                        'PC.Pages.UserManage.DataPermissionModal.dailyTokenLimitPlaceholder',
                       )}
                       className={cx('w-full')}
                       min={-1}
@@ -342,13 +342,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
                 <Col span={12}>
                   <Form.Item
                     label={dict(
-                      'NuwaxPC.Pages.UserManage.DataPermissionModal.maxSpaceCount',
+                      'PC.Pages.UserManage.DataPermissionModal.maxSpaceCount',
                     )}
                     name="maxSpaceCount"
                     tooltip={{
                       icon: <InfoCircleOutlined />,
                       title: dict(
-                        'NuwaxPC.Pages.UserManage.DataPermissionModal.maxSpaceCountTooltip',
+                        'PC.Pages.UserManage.DataPermissionModal.maxSpaceCountTooltip',
                       ),
                     }}
                   >
@@ -359,13 +359,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
                 <Col span={12}>
                   <Form.Item
                     label={dict(
-                      'NuwaxPC.Pages.UserManage.DataPermissionModal.maxAgentCount',
+                      'PC.Pages.UserManage.DataPermissionModal.maxAgentCount',
                     )}
                     name="maxAgentCount"
                     tooltip={{
                       icon: <InfoCircleOutlined />,
                       title: dict(
-                        'NuwaxPC.Pages.UserManage.DataPermissionModal.maxAgentCountTooltip',
+                        'PC.Pages.UserManage.DataPermissionModal.maxAgentCountTooltip',
                       ),
                     }}
                   >
@@ -376,13 +376,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
                 <Col span={12}>
                   <Form.Item
                     label={dict(
-                      'NuwaxPC.Pages.UserManage.DataPermissionModal.maxPageAppCount',
+                      'PC.Pages.UserManage.DataPermissionModal.maxPageAppCount',
                     )}
                     name="maxPageAppCount"
                     tooltip={{
                       icon: <InfoCircleOutlined />,
                       title: dict(
-                        'NuwaxPC.Pages.UserManage.DataPermissionModal.maxPageAppCountTooltip',
+                        'PC.Pages.UserManage.DataPermissionModal.maxPageAppCountTooltip',
                       ),
                     }}
                   >
@@ -393,13 +393,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
                 <Col span={12}>
                   <Form.Item
                     label={dict(
-                      'NuwaxPC.Pages.UserManage.DataPermissionModal.maxKnowledgeCount',
+                      'PC.Pages.UserManage.DataPermissionModal.maxKnowledgeCount',
                     )}
                     name="maxKnowledgeCount"
                     tooltip={{
                       icon: <InfoCircleOutlined />,
                       title: dict(
-                        'NuwaxPC.Pages.UserManage.DataPermissionModal.maxKnowledgeCountTooltip',
+                        'PC.Pages.UserManage.DataPermissionModal.maxKnowledgeCountTooltip',
                       ),
                     }}
                   >
@@ -410,13 +410,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
                 <Col span={12}>
                   <Form.Item
                     label={dict(
-                      'NuwaxPC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGb',
+                      'PC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGb',
                     )}
                     name="knowledgeStorageLimitGb"
                     tooltip={{
                       icon: <InfoCircleOutlined />,
                       title: dict(
-                        'NuwaxPC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGbTooltip',
+                        'PC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGbTooltip',
                       ),
                     }}
                   >
@@ -427,13 +427,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
                 <Col span={12}>
                   <Form.Item
                     label={dict(
-                      'NuwaxPC.Pages.UserManage.DataPermissionModal.maxDataTableCount',
+                      'PC.Pages.UserManage.DataPermissionModal.maxDataTableCount',
                     )}
                     name="maxDataTableCount"
                     tooltip={{
                       icon: <InfoCircleOutlined />,
                       title: dict(
-                        'NuwaxPC.Pages.UserManage.DataPermissionModal.maxDataTableCountTooltip',
+                        'PC.Pages.UserManage.DataPermissionModal.maxDataTableCountTooltip',
                       ),
                     }}
                   >
@@ -444,13 +444,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
                 <Col span={12}>
                   <Form.Item
                     label={dict(
-                      'NuwaxPC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCount',
+                      'PC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCount',
                     )}
                     name="maxScheduledTaskCount"
                     tooltip={{
                       icon: <InfoCircleOutlined />,
                       title: dict(
-                        'NuwaxPC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCountTooltip',
+                        'PC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCountTooltip',
                       ),
                     }}
                   >
@@ -461,14 +461,14 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
                 <Col span={12}>
                   <Form.Item
                     label={dict(
-                      'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGb',
+                      'PC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGb',
                     )}
                     name="agentComputerMemoryGb"
                     initialValue={4}
                     tooltip={{
                       icon: <InfoCircleOutlined />,
                       title: dict(
-                        'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGbTooltip',
+                        'PC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGbTooltip',
                       ),
                     }}
                   >
@@ -479,14 +479,14 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
                 <Col span={12}>
                   <Form.Item
                     label={dict(
-                      'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerCpuCores',
+                      'PC.Pages.UserManage.DataPermissionModal.agentComputerCpuCores',
                     )}
                     name="agentComputerCpuCores"
                     initialValue={2}
                     tooltip={{
                       icon: <InfoCircleOutlined />,
                       title: dict(
-                        'NuwaxPC.Pages.UserManage.DataPermissionModal.agentComputerCpuCoresTooltip',
+                        'PC.Pages.UserManage.DataPermissionModal.agentComputerCpuCoresTooltip',
                       ),
                     }}
                   >
@@ -497,13 +497,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
                 <Col span={12}>
                   <Form.Item
                     label={dict(
-                      'NuwaxPC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimit',
+                      'PC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimit',
                     )}
                     name="agentDailyPromptLimit"
                     tooltip={{
                       icon: <InfoCircleOutlined />,
                       title: dict(
-                        'NuwaxPC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimitTooltip',
+                        'PC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimitTooltip',
                       ),
                     }}
                   >
@@ -514,13 +514,13 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
                 <Col span={12}>
                   <Form.Item
                     label={dict(
-                      'NuwaxPC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimit',
+                      'PC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimit',
                     )}
                     name="pageDailyPromptLimit"
                     tooltip={{
                       icon: <InfoCircleOutlined />,
                       title: dict(
-                        'NuwaxPC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimitTooltip',
+                        'PC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimitTooltip',
                       ),
                     }}
                   >
@@ -539,7 +539,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
   return (
     <Modal
       title={dict(
-        'NuwaxPC.Pages.UserManage.DataPermissionModal.dataPermissionTitle',
+        'PC.Pages.UserManage.DataPermissionModal.dataPermissionTitle',
         userName || '',
       )}
       open={open}

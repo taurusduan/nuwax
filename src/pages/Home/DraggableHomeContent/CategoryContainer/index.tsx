@@ -188,7 +188,7 @@ const CategoryContainer: React.FC<CategoryContainerProps> = ({
         />
       </div>
       <div className={cx(styles['tab-right'])}>
-        <Tooltip title={dict('NuwaxPC.Pages.HomeDrag.dragAgentTip')}>
+        <Tooltip title={dict('PC.Pages.HomeDrag.dragAgentTip')}>
           <ExclamationCircleOutlined className={cx(styles.icon)} />
         </Tooltip>
       </div>

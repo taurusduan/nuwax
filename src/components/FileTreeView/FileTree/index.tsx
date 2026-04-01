@@ -422,7 +422,7 @@ const FileTree: React.FC<FileTreeProps> = ({
             'h-full',
           )}
         >
-          {dict('NuwaxPC.Components.FileTree.noFiles')}
+          {dict('PC.Components.FileTree.noFiles')}
         </div>
       )}
     </div>

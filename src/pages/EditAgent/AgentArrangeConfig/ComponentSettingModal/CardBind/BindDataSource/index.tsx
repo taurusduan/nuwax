@@ -213,11 +213,11 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
     () => [
       {
         value: BindCardStyleEnum.SINGLE,
-        label: t('NuwaxPC.Pages.AgentArrangeCardBindDataSource.optionSingle'),
+        label: t('PC.Pages.AgentArrangeCardBindDataSource.optionSingle'),
       },
       {
         value: BindCardStyleEnum.LIST,
-        label: t('NuwaxPC.Pages.AgentArrangeCardBindDataSource.optionList'),
+        label: t('PC.Pages.AgentArrangeCardBindDataSource.optionList'),
       },
     ],
     [],
@@ -232,7 +232,7 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
         requiredMark={customizeRequiredMark}
       >
         <Form.Item
-          label={t('NuwaxPC.Pages.AgentArrangeCardBindDataSource.selectStyle')}
+          label={t('PC.Pages.AgentArrangeCardBindDataSource.selectStyle')}
         >
           <Radio.Group
             onChange={onChangeCardStyle}
@@ -246,7 +246,7 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
               label={
                 <LabelStar
                   label={t(
-                    'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardListMaxLength',
+                    'PC.Pages.AgentArrangeCardBindDataSource.cardListMaxLength',
                   )}
                 />
               }
@@ -254,7 +254,7 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
                 {
                   required: true,
                   message: t(
-                    'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardListMaxLengthPlaceholder',
+                    'PC.Pages.AgentArrangeCardBindDataSource.cardListMaxLengthPlaceholder',
                   ),
                 },
               ]}
@@ -263,16 +263,14 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
                 value={cardListLen}
                 onChange={(value) => setCardListLen(value)}
                 placeholder={t(
-                  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardListMaxLengthPlaceholder',
+                  'PC.Pages.AgentArrangeCardBindDataSource.cardListMaxLengthPlaceholder',
                 )}
                 max={20}
                 min={1}
               />
             </Form.Item>
             <Form.Item
-              label={t(
-                'NuwaxPC.Pages.AgentArrangeCardBindDataSource.bindArray',
-              )}
+              label={t('PC.Pages.AgentArrangeCardBindDataSource.bindArray')}
             >
               <Select
                 allowClear
@@ -288,7 +286,7 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
                 }}
                 onClick={() => setOpenBindArray(true)}
                 placeholder={t(
-                  'NuwaxPC.Pages.AgentArrangeCardBindDataSource.bindArrayPlaceholder',
+                  'PC.Pages.AgentArrangeCardBindDataSource.bindArrayPlaceholder',
                 )}
                 popupRender={() =>
                   bindArray?.length > 0 ? (
@@ -308,7 +306,7 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
                       }}
                     />
                   ) : (
-                    <Empty description={t('NuwaxPC.Common.Global.emptyData')} />
+                    <Empty description={t('PC.Common.Global.emptyData')} />
                   )
                 }
               />
@@ -316,9 +314,7 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
           </>
         )}
         <Form.Item
-          label={t(
-            'NuwaxPC.Pages.AgentArrangeCardBindDataSource.bindListItemData',
-          )}
+          label={t('PC.Pages.AgentArrangeCardBindDataSource.bindListItemData')}
         >
           {argList?.map((info, index) => (
             <Form.Item key={info.key} className={cx('mb-16')}>
@@ -354,13 +350,11 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
                         }}
                       />
                     ) : (
-                      <Empty
-                        description={t('NuwaxPC.Common.Global.emptyData')}
-                      />
+                      <Empty description={t('PC.Common.Global.emptyData')} />
                     )
                   }
                   placeholder={
-                    info.placeholder || t('NuwaxPC.Common.Global.pleaseSelect')
+                    info.placeholder || t('PC.Common.Global.pleaseSelect')
                   }
                 />
               </div>
@@ -368,12 +362,10 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
           ))}
         </Form.Item>
         <Form.Item
-          label={t(
-            'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardClickJump',
-          )}
+          label={t('PC.Pages.AgentArrangeCardBindDataSource.cardClickJump')}
           tooltip={{
             title: t(
-              'NuwaxPC.Pages.AgentArrangeCardBindDataSource.cardClickJumpTooltip',
+              'PC.Pages.AgentArrangeCardBindDataSource.cardClickJumpTooltip',
             ),
             icon: <InfoCircleOutlined />,
           }}
@@ -419,7 +411,7 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
                 />
               )}
               placeholder={t(
-                'NuwaxPC.Pages.AgentArrangeCardBindDataSource.urlDataSourcePlaceholder',
+                'PC.Pages.AgentArrangeCardBindDataSource.urlDataSourcePlaceholder',
               )}
             />
           </ConditionRender>
@@ -427,7 +419,7 @@ const BindDataSource: React.FC<BindDataSourceProps> = ({
       </Form>
       <footer className={cx(styles.footer)}>
         <Button type="primary" onClick={handleSave} loading={loading}>
-          {t('NuwaxPC.Common.Global.save')}
+          {t('PC.Common.Global.save')}
         </Button>
       </footer>
     </div>

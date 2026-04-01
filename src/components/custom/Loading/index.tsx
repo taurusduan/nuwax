@@ -1,7 +1,7 @@
+import { dict } from '@/services/i18nRuntime';
 import { LoadingOutlined } from '@ant-design/icons';
 import classNames from 'classnames';
 import React from 'react';
-import { dict } from '@/services/i18nRuntime';
 import styles from './index.less';
 
 const cx = classNames.bind(styles);
@@ -23,7 +23,7 @@ const Loading: React.FC<LoadingProps> = ({ className }) => {
       )}
     >
       <LoadingOutlined />
-      <span>{dict('NuwaxPC.Common.Global.loading')}</span>
+      <span>{dict('PC.Common.Global.loading')}</span>
     </div>
   );
 };

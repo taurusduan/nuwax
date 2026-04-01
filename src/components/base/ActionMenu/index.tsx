@@ -51,7 +51,7 @@ export interface ActionMenuProps {
 const ActionMenu: React.FC<ActionMenuProps> = ({
   actions,
   visibleCount = 3,
-  moreText = dict('NuwaxPC.Components.ActionMenu.more'),
+  moreText = dict('PC.Components.ActionMenu.more'),
   moreIcon = 'icons-more',
   showArrow = true,
   className,

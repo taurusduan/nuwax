@@ -48,23 +48,31 @@ const SpaceSettingTab: React.FC<SpaceSettingTabProps> = ({
 
   return (
     <>
-      <h3 className={cx('font-weight', 'mb-6')}>{dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.transferSpace')}</h3>
+      <h3 className={cx('font-weight', 'mb-6')}>
+        {dict('PC.Pages.TeamSetting.SpaceSettingTab.transferSpace')}
+      </h3>
       <p className={cx('mb-6')}>
-        {dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.transferSpaceDescription')}
+        {dict('PC.Pages.TeamSetting.SpaceSettingTab.transferSpaceDescription')}
       </p>
-      <Button type=”primary” className={cx('mb-16')} onClick={transferSpace}>
-        {dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.transferSpaceBtn')}
+      <Button type="primary" className={cx('mb-16')} onClick={transferSpace}>
+        {dict('PC.Pages.TeamSetting.SpaceSettingTab.transferSpaceBtn')}
       </Button>
-      <h3 className={cx('font-weight', 'mb-6')}>{dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.deleteSpace')}</h3>
-      <p className={cx('mb-6')}>{dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.deleteSpaceDescription')}</p>
-      <Button type=”primary” className={cx('mb-16')} onClick={removeSpace}>
-        {dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.deleteSpaceBtn')}
+      <h3 className={cx('font-weight', 'mb-6')}>
+        {dict('PC.Pages.TeamSetting.SpaceSettingTab.deleteSpace')}
+      </h3>
+      <p className={cx('mb-6')}>
+        {dict('PC.Pages.TeamSetting.SpaceSettingTab.deleteSpaceDescription')}
+      </p>
+      <Button type="primary" className={cx('mb-16')} onClick={removeSpace}>
+        {dict('PC.Pages.TeamSetting.SpaceSettingTab.deleteSpaceBtn')}
       </Button>
       <h3 className={cx('font-weight', 'mb-6', 'flex', 'items-center')}>
-        {dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.developerFeatures')}
+        {dict('PC.Pages.TeamSetting.SpaceSettingTab.developerFeatures')}
         <TooltipIcon
           icon={<InfoCircleOutlined />}
-          title={dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.developerFeaturesTooltip')}
+          title={dict(
+            'PC.Pages.TeamSetting.SpaceSettingTab.developerFeaturesTooltip',
+          )}
         />
       </h3>
       <Switch
@@ -73,10 +81,12 @@ const SpaceSettingTab: React.FC<SpaceSettingTabProps> = ({
         onChange={(checked) => onChange('allowDevelop', checked)}
       />
       <h3 className={cx('font-weight', 'mb-6', 'flex', 'items-center')}>
-        {dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublish')}
+        {dict('PC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublish')}
         <TooltipIcon
           icon={<InfoCircleOutlined />}
-          title={dict('NuwaxPC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublishTooltip')}
+          title={dict(
+            'PC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublishTooltip',
+          )}
         />
       </h3>
       <Switch

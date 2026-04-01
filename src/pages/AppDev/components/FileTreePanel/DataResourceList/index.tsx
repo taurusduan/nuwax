@@ -23,11 +23,11 @@ import styles from './index.less';
 const getDefaultDescription = (type: string): string => {
   switch (type) {
     case 'plugin':
-      return t('NuwaxPC.Pages.AppDevDataResourceList.defaultDescPlugin');
+      return t('PC.Pages.AppDevDataResourceList.defaultDescPlugin');
     case 'workflow':
-      return t('NuwaxPC.Pages.AppDevDataResourceList.defaultDescWorkflow');
+      return t('PC.Pages.AppDevDataResourceList.defaultDescWorkflow');
     default:
-      return t('NuwaxPC.Pages.AppDevDataResourceList.defaultDescDataSource');
+      return t('PC.Pages.AppDevDataResourceList.defaultDescDataSource');
   }
 };
 
@@ -144,17 +144,15 @@ const DataResourceList: React.FC<DataResourceListProps> = ({
   const handleDelete = async (resourceId: number) => {
     const resource = resources.find((r) => r.id === resourceId);
     if (!resource) {
-      message.error(
-        t('NuwaxPC.Pages.AppDevDataResourceList.deleteTargetNotFound'),
-      );
+      message.error(t('PC.Pages.AppDevDataResourceList.deleteTargetNotFound'));
       return;
     }
 
     // 显示二次确认弹窗
     Modal.confirm({
-      content: t('NuwaxPC.Pages.AppDevDataResourceList.deleteConfirmContent'),
-      okText: t('NuwaxPC.Pages.AppDevDataResourceList.confirmDelete'),
-      cancelText: t('NuwaxPC.Pages.AppDevDataResourceList.cancel'),
+      content: t('PC.Pages.AppDevDataResourceList.deleteConfirmContent'),
+      okText: t('PC.Pages.AppDevDataResourceList.confirmDelete'),
+      cancelText: t('PC.Pages.AppDevDataResourceList.cancel'),
       okType: 'danger',
       icon: null,
       onOk: async () => {
@@ -233,7 +231,7 @@ const DataResourceList: React.FC<DataResourceListProps> = ({
           showImage={true}
           extra={
             <TooltipIcon
-              title={t('NuwaxPC.Pages.AppDevDataResourceList.delete')}
+              title={t('PC.Pages.AppDevDataResourceList.delete')}
               icon={
                 isLoading ? (
                   <LoadingOutlined />

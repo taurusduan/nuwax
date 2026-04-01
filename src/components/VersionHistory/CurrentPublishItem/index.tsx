@@ -1,8 +1,8 @@
+import { dict } from '@/services/i18nRuntime';
 import { PublishStatusEnum } from '@/types/enums/common';
 import { CurrentPublishItemProps } from '@/types/interfaces/publish';
 import classNames from 'classnames';
 import dayjs from 'dayjs';
-import { dict } from '@/services/i18nRuntime';
 import React from 'react';
 import styles from './index.less';
 
@@ -28,9 +28,9 @@ const CurrentPublishItem: React.FC<CurrentPublishItemProps> = ({
           {info?.description}
         </span>
         <span className={cx(styles['p-time'], 'text-ellipsis')}>
-          {`${
-            info?.publishUser?.nickName || info?.publishUser?.userName
-          }${dict('NuwaxPC.Components.CurrentPublishItem.publishedAt')}${dayjs(info?.publishDate).format('YYYY-MM-DD HH:mm')}`}
+          {`${info?.publishUser?.nickName || info?.publishUser?.userName}${dict(
+            'PC.Components.CurrentPublishItem.publishedAt',
+          )}${dayjs(info?.publishDate).format('YYYY-MM-DD HH:mm')}`}
         </span>
       </div>
       <div
@@ -54,10 +54,10 @@ const CurrentPublishItem: React.FC<CurrentPublishItemProps> = ({
       >
         {`${
           info?.publishStatus === PublishStatusEnum.Published
-            ? dict('NuwaxPC.Components.CurrentPublishItem.offShelf')
+            ? dict('PC.Components.CurrentPublishItem.offShelf')
             : info?.publishStatus === PublishStatusEnum.Applying
-            ? dict('NuwaxPC.Components.CurrentPublishItem.reviewing')
-            : dict('NuwaxPC.Components.CurrentPublishItem.hasBeenOffShelf')
+            ? dict('PC.Components.CurrentPublishItem.reviewing')
+            : dict('PC.Components.CurrentPublishItem.hasBeenOffShelf')
         }`}
       </div>
     </div>

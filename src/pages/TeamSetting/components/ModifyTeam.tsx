@@ -62,7 +62,7 @@ const ModifyTeam: React.FC<EditSpaceProps> = ({
   const { run: runEdit } = useRequest(apiUpdateSpaceTeam, {
     manual: true,
     onSuccess: async () => {
-      message.success(dict('NuwaxPC.Toast.Global.modifiedSuccessfully'));
+      message.success(dict('PC.Toast.Global.modifiedSuccessfully'));
       onConfirmEdit?.();
       setLoading(false);
       // 更新空间列表
@@ -88,7 +88,7 @@ const ModifyTeam: React.FC<EditSpaceProps> = ({
   return (
     <CustomFormModal
       form={form}
-      title={dict('NuwaxPC.Pages.TeamSetting.ModifyTeam.editTeamProfile')}
+      title={dict('PC.Pages.TeamSetting.ModifyTeam.editTeamProfile')}
       open={open}
       loading={loading}
       onCancel={cancelModal}
@@ -96,7 +96,7 @@ const ModifyTeam: React.FC<EditSpaceProps> = ({
     >
       <>
         <p className={cx(styles['team-setting-modal-description'])}>
-          {dict('NuwaxPC.Pages.TeamSetting.ModifyTeam.teamDescription')}
+          {dict('PC.Pages.TeamSetting.ModifyTeam.teamDescription')}
         </p>
         <Form
           form={form}
@@ -114,16 +114,31 @@ const ModifyTeam: React.FC<EditSpaceProps> = ({
           </Form.Item>
           <Form.Item
             name="name"
-            label={dict('NuwaxPC.Pages.TeamSetting.ModifyTeam.teamNameLabel')}
-            rules={[{ required: true, message: dict('NuwaxPC.Pages.TeamSetting.ModifyTeam.teamNameRequired') }]}
+            label={dict('PC.Pages.TeamSetting.ModifyTeam.teamNameLabel')}
+            rules={[
+              {
+                required: true,
+                message: dict(
+                  'PC.Pages.TeamSetting.ModifyTeam.teamNameRequired',
+                ),
+              },
+            ]}
           >
-            <Input placeholder={dict('NuwaxPC.Pages.TeamSetting.ModifyTeam.teamNameRequired')} showCount maxLength={50} />
+            <Input
+              placeholder={dict(
+                'PC.Pages.TeamSetting.ModifyTeam.teamNameRequired',
+              )}
+              showCount
+              maxLength={50}
+            />
           </Form.Item>
           <OverrideTextArea
             name="description"
-            label={dict('NuwaxPC.Pages.TeamSetting.ModifyTeam.descriptionLabel')}
+            label={dict('PC.Pages.TeamSetting.ModifyTeam.descriptionLabel')}
             initialValue={spaceData?.description}
-            placeholder={dict('NuwaxPC.Pages.TeamSetting.ModifyTeam.descriptionPlaceholder')}
+            placeholder={dict(
+              'PC.Pages.TeamSetting.ModifyTeam.descriptionPlaceholder',
+            )}
             maxLength={2000}
           />
         </Form>

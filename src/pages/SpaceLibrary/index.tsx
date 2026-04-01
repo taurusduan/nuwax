@@ -217,9 +217,7 @@ const SpaceLibrary: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: (data: number, params: number[]) => {
-      message.success(
-        dict('NuwaxPC.Pages.SpaceLibrary.Index.pluginCopySuccess'),
-      );
+      message.success(dict('PC.Pages.SpaceLibrary.Index.pluginCopySuccess'));
       setLoadingPlugin(false);
       // 复制到空间成功后处理数据
       handleCopyToSpaceSuccess({
@@ -247,9 +245,7 @@ const SpaceLibrary: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: number[]) => {
-      message.success(
-        dict('NuwaxPC.Pages.SpaceLibrary.Index.pluginDeleteSuccess'),
-      );
+      message.success(dict('PC.Pages.SpaceLibrary.Index.pluginDeleteSuccess'));
       const id = params[0];
       handleDel(id);
     },
@@ -260,9 +256,7 @@ const SpaceLibrary: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: number[]) => {
-      message.success(
-        dict('NuwaxPC.Pages.SpaceLibrary.Index.modelDeleteSuccess'),
-      );
+      message.success(dict('PC.Pages.SpaceLibrary.Index.modelDeleteSuccess'));
       const id = params[0];
       handleDel(id);
     },
@@ -273,9 +267,7 @@ const SpaceLibrary: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: (data: number, params: number[]) => {
-      message.success(
-        dict('NuwaxPC.Pages.SpaceLibrary.Index.workflowCopySuccess'),
-      );
+      message.success(dict('PC.Pages.SpaceLibrary.Index.workflowCopySuccess'));
       setLoadingWorkflow(false);
       // 复制到空间成功后处理数据
       handleCopyToSpaceSuccess({
@@ -295,7 +287,7 @@ const SpaceLibrary: React.FC = () => {
     debounceInterval: 300,
     onSuccess: (_: null, params: number[]) => {
       message.success(
-        dict('NuwaxPC.Pages.SpaceLibrary.Index.workflowDeleteSuccess'),
+        dict('PC.Pages.SpaceLibrary.Index.workflowDeleteSuccess'),
       );
       const id = params[0];
       handleDel(id);
@@ -308,7 +300,7 @@ const SpaceLibrary: React.FC = () => {
     debounceInterval: 300,
     onSuccess: (_: null, params: number[]) => {
       message.success(
-        dict('NuwaxPC.Pages.SpaceLibrary.Index.knowledgeDeleteSuccess'),
+        dict('PC.Pages.SpaceLibrary.Index.knowledgeDeleteSuccess'),
       );
       const id = params[0];
       handleDel(id);
@@ -320,9 +312,7 @@ const SpaceLibrary: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: number[]) => {
-      message.success(
-        dict('NuwaxPC.Pages.SpaceLibrary.Index.tableDeleteSuccess'),
-      );
+      message.success(dict('PC.Pages.SpaceLibrary.Index.tableDeleteSuccess'));
       const id = params[0];
       handleDel(id);
     },
@@ -333,9 +323,7 @@ const SpaceLibrary: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(
-        dict('NuwaxPC.Pages.SpaceLibrary.Index.tableCopySuccess'),
-      );
+      message.success(dict('PC.Pages.SpaceLibrary.Index.tableCopySuccess'));
       runComponent(spaceId);
     },
   });
@@ -459,7 +447,7 @@ const SpaceLibrary: React.FC = () => {
   const showDeleteConfirm = (type: ComponentTypeEnum, info: ComponentInfo) => {
     const { id, name } = info;
     modalConfirm(
-      dict('NuwaxPC.Pages.SpaceLibrary.Index.confirmDeleteComponent'),
+      dict('PC.Pages.SpaceLibrary.Index.confirmDeleteComponent'),
       name,
       () => {
         switch (type) {
@@ -540,10 +528,10 @@ const SpaceLibrary: React.FC = () => {
       case ApplicationMoreActionEnum.Export_Config:
         modalConfirm(
           dict(
-            'NuwaxPC.Pages.SpaceLibrary.Index.exportConfigTitle',
+            'PC.Pages.SpaceLibrary.Index.exportConfigTitle',
             info?.name || '',
           ),
-          dict('NuwaxPC.Pages.SpaceLibrary.Index.exportWorkflowConfigDesc'),
+          dict('PC.Pages.SpaceLibrary.Index.exportWorkflowConfigDesc'),
           () => {
             exportConfigFile(info.id, AgentComponentTypeEnum.Workflow);
             return new Promise((resolve) => {
@@ -564,10 +552,10 @@ const SpaceLibrary: React.FC = () => {
       case ApplicationMoreActionEnum.Export_Config:
         modalConfirm(
           dict(
-            'NuwaxPC.Pages.SpaceLibrary.Index.exportConfigTitle',
+            'PC.Pages.SpaceLibrary.Index.exportConfigTitle',
             info?.name || '',
           ),
-          dict('NuwaxPC.Pages.SpaceLibrary.Index.exportTableConfigDesc'),
+          dict('PC.Pages.SpaceLibrary.Index.exportTableConfigDesc'),
           () => {
             exportConfigFile(info.id, AgentComponentTypeEnum.Table);
             return new Promise((resolve) => {
@@ -674,7 +662,7 @@ const SpaceLibrary: React.FC = () => {
       <div className={cx(styles['header-area'])}>
         <div className={cx(styles['header-left'])}>
           <h3 className={cx(styles.title)}>
-            {dict('NuwaxPC.Pages.SpaceLibrary.Index.pageTitle')}
+            {dict('PC.Pages.SpaceLibrary.Index.pageTitle')}
           </h3>
           <SelectList
             value={type}
@@ -696,9 +684,7 @@ const SpaceLibrary: React.FC = () => {
         <div className={cx(styles['header-right'])}>
           <Input
             rootClassName={cx(styles.input)}
-            placeholder={dict(
-              'NuwaxPC.Pages.SpaceLibrary.Index.searchComponent',
-            )}
+            placeholder={dict('PC.Pages.SpaceLibrary.Index.searchComponent')}
             value={keyword}
             onChange={handleQueryAgent}
             prefix={<SearchOutlined />}
@@ -716,7 +702,7 @@ const SpaceLibrary: React.FC = () => {
             onClick={handleClickPopoverItem}
           >
             <Button type="primary" icon={<PlusOutlined />}>
-              {dict('NuwaxPC.Pages.SpaceLibrary.Index.addComponent')}
+              {dict('PC.Pages.SpaceLibrary.Index.addComponent')}
             </Button>
           </CustomPopover>
         </div>
@@ -743,9 +729,7 @@ const SpaceLibrary: React.FC = () => {
         </div>
       ) : (
         <div className={cx('flex', 'h-full', 'items-center', 'content-center')}>
-          <Empty
-            description={dict('NuwaxPC.Pages.SpaceLibrary.Index.noResults')}
-          />
+          <Empty description={dict('PC.Pages.SpaceLibrary.Index.noResults')} />
         </div>
       )}
       {/*新建插件弹窗*/}

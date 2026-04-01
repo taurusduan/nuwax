@@ -583,7 +583,7 @@ const initGraph = ({
 
       if ((isStartNode && isIn) || (isEndNode && !isIn)) {
         message.warning(
-          t('NuwaxPC.Pages.AntvX6Graph.cannotQuickAddNodeForLoopBoundary'),
+          t('PC.Pages.AntvX6Graph.cannotQuickAddNodeForLoopBoundary'),
         );
         return;
       }

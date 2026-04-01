@@ -233,7 +233,7 @@ const htmlToPdfByPrint = async (
 
   if (!iframeDoc || !iframeWindow) {
     document.body.removeChild(iframe);
-    throw new Error(dict('NuwaxPC.Utils.HtmlToPdf.cannotCreatePrintEnv'));
+    throw new Error(dict('PC.Utils.HtmlToPdf.cannotCreatePrintEnv'));
   }
 
   iframeDoc.open();
@@ -308,7 +308,7 @@ export const htmlToPdf = async (
     // 写入 HTML 内容到 iframe
     const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
     if (!iframeDoc) {
-      throw new Error(dict('NuwaxPC.Utils.HtmlToPdf.cannotAccessIframeDoc'));
+      throw new Error(dict('PC.Utils.HtmlToPdf.cannotAccessIframeDoc'));
     }
 
     iframeDoc.open();

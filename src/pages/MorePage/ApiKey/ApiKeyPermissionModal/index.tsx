@@ -223,7 +223,9 @@ const ApiKeyPermissionModal: React.FC<ApiKeyPermissionModalProps> = ({
       });
 
       if (res.success) {
-        message.success(dict('NuwaxPC.Pages.MorePage.ApiKeyPermission.permissionSaved'));
+        message.success(
+          dict('PC.Pages.MorePage.ApiKeyPermission.permissionSaved'),
+        );
         onSuccess?.();
         onOpenChange(false);
       }
@@ -236,7 +238,11 @@ const ApiKeyPermissionModal: React.FC<ApiKeyPermissionModalProps> = ({
 
   return (
     <Modal
-      title={<Title level={4}>{dict('NuwaxPC.Pages.MorePage.ApiKeyPermission.title', record?.name || '')}</Title>}
+      title={
+        <Title level={4}>
+          {dict('PC.Pages.MorePage.ApiKeyPermission.title', record?.name || '')}
+        </Title>
+      }
       open={open}
       onCancel={() => onOpenChange(false)}
       onOk={handleSave}
@@ -261,14 +267,14 @@ const ApiKeyPermissionModal: React.FC<ApiKeyPermissionModalProps> = ({
               checked={isAllChecked}
               onChange={(e) => handleSelectAll(e.target.checked)}
             >
-              {dict('NuwaxPC.Pages.MorePage.ApiKeyPermission.selectAll')}
+              {dict('PC.Pages.MorePage.ApiKeyPermission.selectAll')}
             </Checkbox>
             <Space>
               <Button size="small" onClick={() => setExpandedKeys(allKeys)}>
-                {dict('NuwaxPC.Pages.MorePage.ApiKeyPermission.expandAll')}
+                {dict('PC.Pages.MorePage.ApiKeyPermission.expandAll')}
               </Button>
               <Button size="small" onClick={() => setExpandedKeys([])}>
-                {dict('NuwaxPC.Pages.MorePage.ApiKeyPermission.collapseAll')}
+                {dict('PC.Pages.MorePage.ApiKeyPermission.collapseAll')}
               </Button>
             </Space>
           </div>
@@ -297,7 +303,13 @@ const ApiKeyPermissionModal: React.FC<ApiKeyPermissionModalProps> = ({
                 blockNode
               />
             ) : (
-              !loading && <Empty description={dict('NuwaxPC.Pages.MorePage.ApiKeyPermission.noPermissionDefs')} />
+              !loading && (
+                <Empty
+                  description={dict(
+                    'PC.Pages.MorePage.ApiKeyPermission.noPermissionDefs',
+                  )}
+                />
+              )
             )}
           </div>
         </div>

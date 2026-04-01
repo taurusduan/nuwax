@@ -20,12 +20,16 @@ import { FIRST_MENU_WIDTH_STYLE2 } from './layout.constants';
  * 定义可选择的主题色选项
  */
 export const THEME_COLOR_CONFIGS = [
-  { color: '#5147ff', name: dict('NuwaxPC.Constants.Theme.colorBlue'), isDefault: true },
-  { color: '#ff4d4f', name: dict('NuwaxPC.Constants.Theme.colorRed') },
-  { color: '#fa8c16', name: dict('NuwaxPC.Constants.Theme.colorOrange') },
-  { color: '#52c41a', name: dict('NuwaxPC.Constants.Theme.colorGreen') },
-  { color: '#722ed1', name: dict('NuwaxPC.Constants.Theme.colorPurple') },
-  { color: '#eb2f96', name: dict('NuwaxPC.Constants.Theme.colorPink') },
+  {
+    color: '#5147ff',
+    name: dict('PC.Constants.Theme.colorBlue'),
+    isDefault: true,
+  },
+  { color: '#ff4d4f', name: dict('PC.Constants.Theme.colorRed') },
+  { color: '#fa8c16', name: dict('PC.Constants.Theme.colorOrange') },
+  { color: '#52c41a', name: dict('PC.Constants.Theme.colorGreen') },
+  { color: '#722ed1', name: dict('PC.Constants.Theme.colorPurple') },
+  { color: '#eb2f96', name: dict('PC.Constants.Theme.colorPink') },
 ] as const;
 
 /**
@@ -66,59 +70,59 @@ export const DEFAULT_THEME_CONFIG = {
 export const THEME_BACKGROUND_CONFIGS: ThemeBackgroundConfig[] = [
   {
     id: 'bg-variant-1',
-    name: dict('NuwaxPC.Constants.Theme.bgStarryNight'),
+    name: dict('PC.Constants.Theme.bgStarryNight'),
     url: '/bg/bg-variant-1.png',
     layoutStyle: ThemeLayoutColorStyle.LIGHT,
-    description: dict('NuwaxPC.Constants.Theme.bgStarryNightDesc'),
+    description: dict('PC.Constants.Theme.bgStarryNightDesc'),
   },
   {
     id: 'bg-variant-2',
-    name: dict('NuwaxPC.Constants.Theme.bgCloudyDay'),
+    name: dict('PC.Constants.Theme.bgCloudyDay'),
     url: '/bg/bg-variant-2.png',
     layoutStyle: ThemeLayoutColorStyle.LIGHT,
-    description: dict('NuwaxPC.Constants.Theme.bgCloudyDayDesc'),
+    description: dict('PC.Constants.Theme.bgCloudyDayDesc'),
   },
   {
     id: 'bg-variant-3',
-    name: dict('NuwaxPC.Constants.Theme.bgForestDawn'),
+    name: dict('PC.Constants.Theme.bgForestDawn'),
     url: '/bg/bg-variant-3.png',
     layoutStyle: ThemeLayoutColorStyle.DARK,
-    description: dict('NuwaxPC.Constants.Theme.bgForestDawnDesc'),
+    description: dict('PC.Constants.Theme.bgForestDawnDesc'),
   },
   {
     id: 'bg-variant-4',
-    name: dict('NuwaxPC.Constants.Theme.bgDeepSeaNight'),
+    name: dict('PC.Constants.Theme.bgDeepSeaNight'),
     url: '/bg/bg-variant-4.png',
     layoutStyle: ThemeLayoutColorStyle.DARK,
-    description: dict('NuwaxPC.Constants.Theme.bgDeepSeaNightDesc'),
+    description: dict('PC.Constants.Theme.bgDeepSeaNightDesc'),
   },
   {
     id: 'bg-variant-5',
-    name: dict('NuwaxPC.Constants.Theme.bgDreamyPurple'),
+    name: dict('PC.Constants.Theme.bgDreamyPurple'),
     url: '/bg/bg-variant-5.png',
     layoutStyle: ThemeLayoutColorStyle.LIGHT,
-    description: dict('NuwaxPC.Constants.Theme.bgDreamyPurpleDesc'),
+    description: dict('PC.Constants.Theme.bgDreamyPurpleDesc'),
   },
   {
     id: 'bg-variant-6',
-    name: dict('NuwaxPC.Constants.Theme.bgWarmSunshine'),
+    name: dict('PC.Constants.Theme.bgWarmSunshine'),
     url: '/bg/bg-variant-6.png',
     layoutStyle: ThemeLayoutColorStyle.DARK,
-    description: dict('NuwaxPC.Constants.Theme.bgWarmSunshineDesc'),
+    description: dict('PC.Constants.Theme.bgWarmSunshineDesc'),
   },
   {
     id: 'bg-variant-7',
-    name: dict('NuwaxPC.Constants.Theme.bgNightCity'),
+    name: dict('PC.Constants.Theme.bgNightCity'),
     url: '/bg/bg-variant-7.png',
     layoutStyle: ThemeLayoutColorStyle.DARK,
-    description: dict('NuwaxPC.Constants.Theme.bgNightCityDesc'),
+    description: dict('PC.Constants.Theme.bgNightCityDesc'),
   },
   {
     id: 'bg-variant-8',
-    name: dict('NuwaxPC.Constants.Theme.bgFreshBlueSky'),
+    name: dict('PC.Constants.Theme.bgFreshBlueSky'),
     url: '/bg/bg-variant-8.png',
     layoutStyle: ThemeLayoutColorStyle.LIGHT,
-    description: dict('NuwaxPC.Constants.Theme.bgFreshBlueSkyDesc'),
+    description: dict('PC.Constants.Theme.bgFreshBlueSkyDesc'),
   },
 ];
 

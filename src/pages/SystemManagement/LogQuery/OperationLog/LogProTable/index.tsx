@@ -49,19 +49,19 @@ const LogProTable: React.FC = () => {
   const columns: ProColumns<OperationLogInfo>[] = useMemo(
     () => [
       {
-        title: t('NuwaxPC.Pages.SystemOperationLog.columnType'),
+        title: t('PC.Pages.SystemOperationLog.columnType'),
         dataIndex: 'systemCode',
         width: 140,
         valueType: 'select',
         request: createOptionsRequest(apiOperationLogSystemCodeOptions),
         hideInTable: false,
         fieldProps: {
-          placeholder: t('NuwaxPC.Pages.SystemOperationLog.placeholderType'),
+          placeholder: t('PC.Pages.SystemOperationLog.placeholderType'),
           allowClear: true,
         },
       },
       {
-        title: t('NuwaxPC.Pages.SystemOperationLog.columnActionType'),
+        title: t('PC.Pages.SystemOperationLog.columnActionType'),
         dataIndex: 'action',
         width: 140,
         valueType: 'select',
@@ -69,36 +69,32 @@ const LogProTable: React.FC = () => {
           d.map((i) => ({ label: i.label, value: i.label })),
         ),
         fieldProps: {
-          placeholder: t(
-            'NuwaxPC.Pages.SystemOperationLog.placeholderActionType',
-          ),
+          placeholder: t('PC.Pages.SystemOperationLog.placeholderActionType'),
           allowClear: true,
         },
       },
       {
-        title: t('NuwaxPC.Pages.SystemOperationLog.columnObjectName'),
+        title: t('PC.Pages.SystemOperationLog.columnObjectName'),
         dataIndex: 'object',
         width: 140,
         ellipsis: true,
         fieldProps: {
-          placeholder: t(
-            'NuwaxPC.Pages.SystemOperationLog.placeholderObjectName',
-          ),
+          placeholder: t('PC.Pages.SystemOperationLog.placeholderObjectName'),
         },
       },
       {
-        title: t('NuwaxPC.Pages.SystemOperationLog.columnObjectSubtype'),
+        title: t('PC.Pages.SystemOperationLog.columnObjectSubtype'),
         dataIndex: 'operateContent',
         width: 140,
         ellipsis: true,
         fieldProps: {
           placeholder: t(
-            'NuwaxPC.Pages.SystemOperationLog.placeholderObjectSubtype',
+            'PC.Pages.SystemOperationLog.placeholderObjectSubtype',
           ),
         },
       },
       {
-        title: t('NuwaxPC.Pages.SystemOperationLog.columnRequestParams'),
+        title: t('PC.Pages.SystemOperationLog.columnRequestParams'),
         dataIndex: 'extraContent',
         minWidth: 150,
         width: 220,
@@ -109,27 +105,27 @@ const LogProTable: React.FC = () => {
         ),
         fieldProps: {
           placeholder: t(
-            'NuwaxPC.Pages.SystemOperationLog.placeholderRequestParams',
+            'PC.Pages.SystemOperationLog.placeholderRequestParams',
           ),
         },
       },
       {
-        title: t('NuwaxPC.Pages.SystemOperationLog.columnCreator'),
+        title: t('PC.Pages.SystemOperationLog.columnCreator'),
         dataIndex: 'creator',
         width: 180,
         ellipsis: true,
         fieldProps: {
-          placeholder: t('NuwaxPC.Pages.SystemOperationLog.placeholderCreator'),
+          placeholder: t('PC.Pages.SystemOperationLog.placeholderCreator'),
         },
       },
       {
-        title: t('NuwaxPC.Pages.SystemOperationLog.columnTimeRange'),
+        title: t('PC.Pages.SystemOperationLog.columnTimeRange'),
         dataIndex: 'createTimeRange',
         valueType: 'dateTimeRange',
         hideInTable: true,
       },
       {
-        title: t('NuwaxPC.Pages.SystemOperationLog.columnCreated'),
+        title: t('PC.Pages.SystemOperationLog.columnCreated'),
         dataIndex: 'created',
         width: 170,
         valueType: 'dateTime',
@@ -203,7 +199,7 @@ const LogProTable: React.FC = () => {
         !resp.success
       ) {
         message.error(
-          resp.message || t('NuwaxPC.Pages.SystemOperationLog.queryFailed'),
+          resp.message || t('PC.Pages.SystemOperationLog.queryFailed'),
         );
         return { data: [], total: 0, success: false };
       }
@@ -229,7 +225,7 @@ const LogProTable: React.FC = () => {
   const handleOpenDetails = useCallback((record: OperationLogInfo) => {
     if (!record?.id) {
       message.warning(
-        t('NuwaxPC.Pages.SystemOperationLog.missingRequestIdForDetail'),
+        t('PC.Pages.SystemOperationLog.missingRequestIdForDetail'),
       );
       return;
     }
@@ -242,7 +238,7 @@ const LogProTable: React.FC = () => {
     return [
       ...columns,
       {
-        title: t('NuwaxPC.Pages.SystemOperationLog.columnAction'),
+        title: t('PC.Pages.SystemOperationLog.columnAction'),
         valueType: 'option',
         width: 90,
         fixed: 'right',
@@ -257,7 +253,7 @@ const LogProTable: React.FC = () => {
                 handleOpenDetails(record);
               }}
             >
-              {t('NuwaxPC.Pages.SystemOperationLog.detail')}
+              {t('PC.Pages.SystemOperationLog.detail')}
             </Button>
           );
         },

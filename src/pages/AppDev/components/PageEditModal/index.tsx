@@ -37,7 +37,7 @@ const PageEditModal: React.FC<PageEditModalProps> = ({
   const { run: runUpdatePage } = useRequest(apiPageUpdateProject, {
     manual: true,
     onSuccess: () => {
-      message.success(t('NuwaxPC.Pages.AppDevPageEditModal.editSuccess'));
+      message.success(t('PC.Pages.AppDevPageEditModal.editSuccess'));
       onConfirm();
       setLoading(false);
     },
@@ -106,7 +106,7 @@ const PageEditModal: React.FC<PageEditModalProps> = ({
     <CustomFormModal
       form={form}
       open={open}
-      title={t('NuwaxPC.Pages.AppDevPageEditModal.modalTitle')}
+      title={t('PC.Pages.AppDevPageEditModal.modalTitle')}
       loading={loading}
       classNames={{
         content: styles['modal-content'],
@@ -126,32 +126,27 @@ const PageEditModal: React.FC<PageEditModalProps> = ({
       >
         <Form.Item
           name="projectName"
-          label={t('NuwaxPC.Pages.AppDevPageEditModal.name')}
+          label={t('PC.Pages.AppDevPageEditModal.name')}
           rules={[
             {
               required: true,
-              message: t('NuwaxPC.Pages.AppDevPageEditModal.nameRequired'),
+              message: t('PC.Pages.AppDevPageEditModal.nameRequired'),
             },
           ]}
         >
           <Input
-            placeholder={t('NuwaxPC.Pages.AppDevPageEditModal.namePlaceholder')}
+            placeholder={t('PC.Pages.AppDevPageEditModal.namePlaceholder')}
             showCount
             maxLength={50}
           />
         </Form.Item>
         <OverrideTextArea
           name="projectDesc"
-          label={t('NuwaxPC.Pages.AppDevPageEditModal.description')}
-          placeholder={t(
-            'NuwaxPC.Pages.AppDevPageEditModal.descriptionPlaceholder',
-          )}
+          label={t('PC.Pages.AppDevPageEditModal.description')}
+          placeholder={t('PC.Pages.AppDevPageEditModal.descriptionPlaceholder')}
           maxLength={200}
         />
-        <Form.Item
-          name="icon"
-          label={t('NuwaxPC.Pages.AppDevPageEditModal.icon')}
-        >
+        <Form.Item name="icon" label={t('PC.Pages.AppDevPageEditModal.icon')}>
           <UploadAvatar
             onUploadSuccess={uploadIconSuccess}
             imageUrl={imageUrl}
@@ -162,9 +157,9 @@ const PageEditModal: React.FC<PageEditModalProps> = ({
           name="coverImg"
           label={
             <div className={cx('flex', 'gap-10', 'items-center')}>
-              <span>{t('NuwaxPC.Pages.AppDevPageEditModal.coverImage')}</span>
+              <span>{t('PC.Pages.AppDevPageEditModal.coverImage')}</span>
               <span className={cx(styles['text-tip'])}>
-                {t('NuwaxPC.Pages.AppDevPageEditModal.coverImageTip')}
+                {t('PC.Pages.AppDevPageEditModal.coverImageTip')}
               </span>
             </div>
           }

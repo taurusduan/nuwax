@@ -214,7 +214,7 @@ const SpaceTable = () => {
         validateTableName(item.fieldName),
       );
       if (!isFieldNameValidate) {
-        message.error(dict('NuwaxPC.Pages.SpaceTable.Index.fieldNameValidate'));
+        message.error(dict('PC.Pages.SpaceTable.Index.fieldNameValidate'));
         cancelCallback?.();
         return;
       }
@@ -225,7 +225,7 @@ const SpaceTable = () => {
       };
       await apiUpdateTableDefinition(_params);
       setLoading(false);
-      message.success(dict('NuwaxPC.Toast.Global.savedSuccessfully'));
+      message.success(dict('PC.Toast.Global.savedSuccessfully'));
       // 保存成功后，调用成功回调
       if (successCallback) {
         successCallback();
@@ -335,7 +335,7 @@ const SpaceTable = () => {
 
     // 确保必需字段不为空
     if (!name) {
-      message.error(dict('NuwaxPC.Common.Global.nameEmpty'));
+      message.error(dict('PC.Common.Global.nameEmpty'));
       return;
     }
 
@@ -346,7 +346,7 @@ const SpaceTable = () => {
       id: tableDetail.id,
     };
     await apiUpdateTableName(_params);
-    message.success(dict('NuwaxPC.Toast.Global.modifiedSuccessfully'));
+    message.success(dict('PC.Toast.Global.modifiedSuccessfully'));
     setEditTableLoading(false);
     setTableDetail({
       ...(tableDetail as TableDefineDetails),
@@ -359,14 +359,18 @@ const SpaceTable = () => {
 
   // 删除数据表业务数据
   const handleDeleteTableBusinessData = async (id: number) => {
-    modalConfirm(dict('NuwaxPC.Common.Global.deleteConfirmTitle'), dict('NuwaxPC.Common.Global.deleteConfirmContent'), async () => {
-      await apiTableDeleteBusinessData(tableId, id);
-      message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
-      getTableBusinessData(pagination.current, pagination.pageSize);
-      return new Promise((resolve) => {
-        setTimeout(resolve, 1000);
-      });
-    });
+    modalConfirm(
+      dict('PC.Common.Global.deleteConfirmTitle'),
+      dict('PC.Common.Global.deleteConfirmContent'),
+      async () => {
+        await apiTableDeleteBusinessData(tableId, id);
+        message.success(dict('PC.Toast.Global.deletedSuccessfully'));
+        getTableBusinessData(pagination.current, pagination.pageSize);
+        return new Promise((resolve) => {
+          setTimeout(resolve, 1000);
+        });
+      },
+    );
   };
 
   // 切换页码或者每页显示的条数
@@ -377,7 +381,7 @@ const SpaceTable = () => {
   // 确认清空数据表
   const handleConfirmClear = async () => {
     await apiClearBusinessData(tableId);
-    message.success(dict('NuwaxPC.Toast.Global.clearedSuccessfully'));
+    message.success(dict('PC.Toast.Global.clearedSuccessfully'));
     setTableData([]);
     setPagination({ total: 0, current: 1, pageSize: 15 });
     setOpenDelete(false);
@@ -404,12 +408,12 @@ const SpaceTable = () => {
           setImportLoading(false);
           return;
         }
-        message.success(dict('NuwaxPC.Toast.Global.importedSuccessfully'));
+        message.success(dict('PC.Toast.Global.importedSuccessfully'));
         // 重新查询数据表的业务数据
         getTableBusinessData();
         setPagination({ ...pagination, current: 1 });
       } catch (error) {
-        message.error(dict('NuwaxPC.Toast.Global.importFailedRetry'));
+        message.error(dict('PC.Toast.Global.importFailedRetry'));
       } finally {
         setImportLoading(false);
         processingFileRef.current = null; // 重置处理状态
@@ -418,7 +422,7 @@ const SpaceTable = () => {
 
     // 处理上传错误
     if (info.file.status === 'error') {
-      message.error(dict('NuwaxPC.Toast.Global.fileUploadFailedRetry'));
+      message.error(dict('PC.Toast.Global.fileUploadFailedRetry'));
       setImportLoading(false);
       processingFileRef.current = null; // 重置处理状态
     }
@@ -448,9 +452,9 @@ const SpaceTable = () => {
   // 弹出确认框，确认保存或者放弃变更
   const onModalConfirm = (key: string) => {
     Modal.confirm({
-      title: dict('NuwaxPC.Pages.SpaceTable.Index.hint'),
+      title: dict('PC.Pages.SpaceTable.Index.hint'),
       icon: <ExclamationCircleFilled />,
-      content: dict('NuwaxPC.Pages.SpaceTable.Index.structureModified'),
+      content: dict('PC.Pages.SpaceTable.Index.structureModified'),
       maskClosable: true,
       footer: (
         <div className="flex content-end gap-10 mt-16">
@@ -459,9 +463,11 @@ const SpaceTable = () => {
               Modal.destroyAll();
             }}
           >
-            {dict('NuwaxPC.Common.Global.cancel')}
+            {dict('PC.Common.Global.cancel')}
           </Button>
-          <Button onClick={() => onModalCancel(key)}>{dict('NuwaxPC.Pages.SpaceTable.Index.discardChanges')}</Button>
+          <Button onClick={() => onModalCancel(key)}>
+            {dict('PC.Pages.SpaceTable.Index.discardChanges')}
+          </Button>
           <Button
             type="primary"
             onClick={() => {
@@ -474,7 +480,7 @@ const SpaceTable = () => {
               );
             }}
           >
-            {dict('NuwaxPC.Pages.SpaceTable.Index.confirmSave')}
+            {dict('PC.Pages.SpaceTable.Index.confirmSave')}
           </Button>
         </div>
       ),
@@ -614,7 +620,11 @@ const SpaceTable = () => {
       </div>
       <AddAndModify
         open={editTableDataVisible}
-        title={initialValues ? dict('NuwaxPC.Pages.SpaceTable.Index.modifyData') : dict('NuwaxPC.Pages.SpaceTable.Index.addData')}
+        title={
+          initialValues
+            ? dict('PC.Pages.SpaceTable.Index.modifyData')
+            : dict('PC.Pages.SpaceTable.Index.addData')
+        }
         onSubmit={handleCreateUpdateData}
         formList={formList}
         initialValues={initialValues}
@@ -642,7 +652,7 @@ const SpaceTable = () => {
         onSure={handleConfirmClear}
         onCancel={() => setOpenDelete(false)}
         open={openDelete}
-        title={dict('NuwaxPC.Pages.SpaceTable.Index.clearConfirm')}
+        title={dict('PC.Pages.SpaceTable.Index.clearConfirm')}
         sureText={tableDetail?.tableName || ''}
       />
     </div>

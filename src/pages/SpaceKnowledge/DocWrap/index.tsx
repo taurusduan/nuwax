@@ -72,14 +72,14 @@ const DocWrap: React.FC<DocWrapProps> = ({
   return (
     <div className={cx(styles.container, 'h-full', 'flex', 'flex-col')}>
       <Input.Search
-        placeholder={dict('NuwaxPC.Pages.SpaceKnowledge.DocWrap.search')}
+        placeholder={dict('PC.Pages.SpaceKnowledge.DocWrap.search')}
         size="large"
         onChange={(e) => onChange(e.target.value)}
         allowClear
         prefix={<SearchOutlined className={cx(styles['search-icon'])} />}
       />
       <p className={cx(styles['document-title'])}>
-        {dict('NuwaxPC.Pages.SpaceKnowledge.DocWrap.documentList')}
+        {dict('PC.Pages.SpaceKnowledge.DocWrap.documentList')}
       </p>
       {loading ? (
         <Loading />

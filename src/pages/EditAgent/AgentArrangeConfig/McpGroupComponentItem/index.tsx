@@ -45,7 +45,7 @@ const McpGroupComponentItem: React.FC<McpGroupComponentItemProps> = ({
         >
           <span>
             {t(
-              'NuwaxPC.Pages.AgentArrangeMcpGroupComponentItem.toolsWithCount',
+              'PC.Pages.AgentArrangeMcpGroupComponentItem.toolsWithCount',
               String(item.children.length),
             )}
           </span>

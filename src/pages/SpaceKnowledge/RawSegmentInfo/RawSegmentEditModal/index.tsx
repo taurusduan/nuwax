@@ -38,9 +38,7 @@ const RawSegmentEditModal: React.FC<RawSegmentEditModalProps> = ({
 
   return (
     <Modal
-      title={dict(
-        'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.editRawSegment',
-      )}
+      title={dict('PC.Pages.SpaceKnowledge.RawSegmentEditModal.editRawSegment')}
       open={open}
       onOk={handleOk}
       onCancel={onCancel}
@@ -51,13 +49,13 @@ const RawSegmentEditModal: React.FC<RawSegmentEditModalProps> = ({
         <Form.Item
           name="rawTxt"
           label={dict(
-            'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.segmentContent',
+            'PC.Pages.SpaceKnowledge.RawSegmentEditModal.segmentContent',
           )}
           rules={[
             {
               required: true,
               message: dict(
-                'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.inputSegmentContent',
+                'PC.Pages.SpaceKnowledge.RawSegmentEditModal.inputSegmentContent',
               ),
             },
             // { max: 2000, message: '分段内容不能超过2000个字符' },
@@ -66,7 +64,7 @@ const RawSegmentEditModal: React.FC<RawSegmentEditModalProps> = ({
           <Input.TextArea
             rows={16}
             placeholder={dict(
-              'NuwaxPC.Pages.SpaceKnowledge.RawSegmentEditModal.inputSegmentContent',
+              'PC.Pages.SpaceKnowledge.RawSegmentEditModal.inputSegmentContent',
             )}
             showCount
             // maxLength={2000}

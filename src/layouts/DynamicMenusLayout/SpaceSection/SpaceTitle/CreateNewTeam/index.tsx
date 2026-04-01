@@ -4,8 +4,8 @@ import OverrideTextArea from '@/components/OverrideTextArea';
 import UploadAvatar from '@/components/UploadAvatar';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
 import { SPACE_ID } from '@/constants/home.constants';
-import { apiCreateSpaceTeam } from '@/services/workspace';
 import { dict } from '@/services/i18nRuntime';
+import { apiCreateSpaceTeam } from '@/services/workspace';
 import type { CreateNewTeamProps } from '@/types/interfaces/layouts';
 import { MenuItemDto } from '@/types/interfaces/menu';
 import type { CreateSpaceTeamParams } from '@/types/interfaces/workspace';
@@ -38,7 +38,9 @@ const CreateNewTeam: React.FC<CreateNewTeamProps> = ({ open, onCancel }) => {
     manual: true,
     debounceInterval: 300,
     onSuccess: async (result: number) => {
-      message.success(dict('NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.createSuccess'));
+      message.success(
+        dict('PC.Layouts.DynamicMenusLayout.CreateNewTeam.createSuccess'),
+      );
       setImageUrl('');
       // 关闭弹窗
       onCancel();
@@ -127,7 +129,9 @@ const CreateNewTeam: React.FC<CreateNewTeamProps> = ({ open, onCancel }) => {
   return (
     <CustomFormModal
       form={form}
-      title={dict('NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.createTeamSpace')}
+      title={dict(
+        'PC.Layouts.DynamicMenusLayout.CreateNewTeam.createTeamSpace',
+      )}
       open={open}
       onCancel={onCancel}
       loading={loading}
@@ -135,7 +139,7 @@ const CreateNewTeam: React.FC<CreateNewTeamProps> = ({ open, onCancel }) => {
     >
       <div className={cx('flex', 'flex-col', 'items-center', 'py-16')}>
         <p className={cx(styles['create-team-tips'])}>
-          {dict('NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.teamSpaceTips')}
+          {dict('PC.Layouts.DynamicMenusLayout.CreateNewTeam.teamSpaceTips')}
         </p>
         <UploadAvatar
           className={styles['upload-box']}
@@ -154,12 +158,30 @@ const CreateNewTeam: React.FC<CreateNewTeamProps> = ({ open, onCancel }) => {
         >
           <Form.Item
             name="name"
-            label={dict('NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.teamName')}
-            rules={[{ required: true, message: dict('NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.pleaseInputTeamName') }]}
+            label={dict('PC.Layouts.DynamicMenusLayout.CreateNewTeam.teamName')}
+            rules={[
+              {
+                required: true,
+                message: dict(
+                  'PC.Layouts.DynamicMenusLayout.CreateNewTeam.pleaseInputTeamName',
+                ),
+              },
+            ]}
           >
-            <Input placeholder={dict('NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.pleaseInputTeamName')} showCount maxLength={50} />
+            <Input
+              placeholder={dict(
+                'PC.Layouts.DynamicMenusLayout.CreateNewTeam.pleaseInputTeamName',
+              )}
+              showCount
+              maxLength={50}
+            />
           </Form.Item>
-          <OverrideTextArea name="description" label={dict('NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.description')} />
+          <OverrideTextArea
+            name="description"
+            label={dict(
+              'PC.Layouts.DynamicMenusLayout.CreateNewTeam.description',
+            )}
+          />
         </Form>
       </div>
     </CustomFormModal>

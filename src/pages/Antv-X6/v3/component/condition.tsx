@@ -48,7 +48,7 @@ const ConditionNode: React.FC<NodeDisposeProps> = ({ form }) => {
                 {/* Header */}
                 <div className="dis-sb margin-bottom">
                   <span className="node-title-style">
-                    {t('NuwaxPC.Pages.AntvX6Condition.branchTitle')}
+                    {t('PC.Pages.AntvX6Condition.branchTitle')}
                   </span>
                   <Button
                     icon={<PlusOutlined />}
@@ -108,7 +108,7 @@ const ConditionNode: React.FC<NodeDisposeProps> = ({ form }) => {
                                 </span>
                                 <Tag color="#C9CDD4">
                                   {t(
-                                    'NuwaxPC.Pages.AntvX6Condition.priority',
+                                    'PC.Pages.AntvX6Condition.priority',
                                     index + 1,
                                   )}
                                 </Tag>
@@ -182,13 +182,13 @@ const ConditionNode: React.FC<NodeDisposeProps> = ({ form }) => {
                                             options={[
                                               {
                                                 label: t(
-                                                  'NuwaxPC.Pages.AntvX6Condition.and',
+                                                  'PC.Pages.AntvX6Condition.and',
                                                 ),
                                                 value: 'AND',
                                               },
                                               {
                                                 label: t(
-                                                  'NuwaxPC.Pages.AntvX6Condition.or',
+                                                  'PC.Pages.AntvX6Condition.or',
                                                 ),
                                                 value: 'OR',
                                               },
@@ -262,7 +262,7 @@ const ConditionNode: React.FC<NodeDisposeProps> = ({ form }) => {
                                                           'bindValue',
                                                         ]}
                                                         placeholder={t(
-                                                          'NuwaxPC.Pages.AntvX6Condition.referencePlaceholder',
+                                                          'PC.Pages.AntvX6Condition.referencePlaceholder',
                                                         )}
                                                         style={{
                                                           width:
@@ -330,9 +330,7 @@ const ConditionNode: React.FC<NodeDisposeProps> = ({ form }) => {
                                           }}
                                           icon={<PlusOutlined />}
                                         >
-                                          {t(
-                                            'NuwaxPC.Pages.AntvX6Condition.add',
-                                          )}
+                                          {t('PC.Pages.AntvX6Condition.add')}
                                         </Button>
                                       </div>
                                     );
@@ -347,7 +345,7 @@ const ConditionNode: React.FC<NodeDisposeProps> = ({ form }) => {
                   }
                   return (
                     <div key={item.name} className="condition-card-style">
-                      {t('NuwaxPC.Pages.AntvX6Condition.else')}
+                      {t('PC.Pages.AntvX6Condition.else')}
                     </div>
                   );
                 })}

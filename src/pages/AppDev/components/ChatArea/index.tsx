@@ -210,14 +210,14 @@ const ChatArea: React.FC<ChatAreaProps> = ({
       const response = await cancelAgentTask(projectId);
 
       if (response && response.success) {
-        message.success(t('NuwaxPC.Pages.AppDevChatArea.agentTaskCancelled'));
+        message.success(t('PC.Pages.AppDevChatArea.agentTaskCancelled'));
         // 调用原有的取消聊天功能
         chat.cancelChat();
       } else {
         message.error(
           t(
-            'NuwaxPC.Pages.AppDevChatArea.cancelAgentTaskFailed',
-            response?.message || t('NuwaxPC.Pages.AppDevChatArea.unknownError'),
+            'PC.Pages.AppDevChatArea.cancelAgentTaskFailed',
+            response?.message || t('PC.Pages.AppDevChatArea.unknownError'),
           ),
         );
       }
@@ -272,7 +272,7 @@ const ChatArea: React.FC<ChatAreaProps> = ({
     ) => {
       // 权限检查
       if (!hasPermissionByMenuCode('page_app_dev', 'page_app_ai_chat')) {
-        message.error(t('NuwaxPC.Pages.AppDevChatArea.noPermissionForAiChat'));
+        message.error(t('PC.Pages.AppDevChatArea.noPermissionForAiChat'));
         return;
       }
 
@@ -421,7 +421,7 @@ const ChatArea: React.FC<ChatAreaProps> = ({
           onUpdateDataSources(_selectedDataSources);
         }
       } catch (error) {
-        message.error(t('NuwaxPC.Pages.AppDevChatArea.sendMessageFailed'));
+        message.error(t('PC.Pages.AppDevChatArea.sendMessageFailed'));
       } finally {
         // 延迟重置发送状态，给用户反馈
         setTimeout(() => {
@@ -548,16 +548,14 @@ const ChatArea: React.FC<ChatAreaProps> = ({
             {isLoading && !isStreaming && (
               <div className={styles.loadingIndicator}>
                 <Spin size="small" />
-                <span>{t('NuwaxPC.Pages.AppDevChatArea.thinking')}</span>
+                <span>{t('PC.Pages.AppDevChatArea.thinking')}</span>
               </div>
             )}
 
             {/* 错误状态 */}
             {isError && (
               <div className={styles.errorIndicator}>
-                <span>
-                  {t('NuwaxPC.Pages.AppDevChatArea.messageSendFailed')}
-                </span>
+                <span>{t('PC.Pages.AppDevChatArea.messageSendFailed')}</span>
               </div>
             )}
 
@@ -569,7 +567,7 @@ const ChatArea: React.FC<ChatAreaProps> = ({
                   onClick={() => toggleThinkingExpansion(message.id)}
                 >
                   <span className={styles.thinkingTitle}>
-                    {t('NuwaxPC.Pages.AppDevChatArea.aiThinkingProcess')}
+                    {t('PC.Pages.AppDevChatArea.aiThinkingProcess')}
                   </span>
                   <span className={styles.expandIcon}>
                     {isThinkingExpanded ? '▼' : '▶'}
@@ -694,11 +692,9 @@ const ChatArea: React.FC<ChatAreaProps> = ({
             <div className={styles.dataSourceContainer}>
               <div className={styles.dataSourceHeader}>
                 <span className={styles.dataSourceTitle}>
-                  {t('NuwaxPC.Pages.AppDevChatArea.dataResources')}
+                  {t('PC.Pages.AppDevChatArea.dataResources')}
                 </span>
-                <Tooltip
-                  title={t('NuwaxPC.Pages.AppDevChatArea.addDataResource')}
-                >
+                <Tooltip title={t('PC.Pages.AppDevChatArea.addDataResource')}>
                   <Button
                     type="text"
                     className={styles.addButton}
@@ -764,7 +760,7 @@ const ChatArea: React.FC<ChatAreaProps> = ({
                   >
                     <span>
                       <LoadingOutlined style={{ marginRight: 8 }} />
-                      {t('NuwaxPC.Pages.AppDevChatArea.loadingHistorySessions')}
+                      {t('PC.Pages.AppDevChatArea.loadingHistorySessions')}
                     </span>
                   </div>
                 )}
@@ -772,19 +768,15 @@ const ChatArea: React.FC<ChatAreaProps> = ({
               {chat.isLoadingHistory ? (
                 <AppDevEmptyState
                   type="loading"
-                  title={t(
-                    'NuwaxPC.Pages.AppDevChatArea.loadingHistorySessions',
-                  )}
-                  description={t(
-                    'NuwaxPC.Pages.AppDevChatArea.loadingDescription',
-                  )}
+                  title={t('PC.Pages.AppDevChatArea.loadingHistorySessions')}
+                  description={t('PC.Pages.AppDevChatArea.loadingDescription')}
                 />
               ) : !chat.chatMessages || chat.chatMessages.length === 0 ? (
                 <AppDevEmptyState
                   type="conversation-empty"
-                  title={t('NuwaxPC.Pages.AppDevChatArea.startNewConversation')}
+                  title={t('PC.Pages.AppDevChatArea.startNewConversation')}
                   description={t(
-                    'NuwaxPC.Pages.AppDevChatArea.startNewConversationDescription',
+                    'PC.Pages.AppDevChatArea.startNewConversationDescription',
                   )}
                 />
               ) : (
@@ -815,7 +807,7 @@ const ChatArea: React.FC<ChatAreaProps> = ({
         {autoErrorRetryCount > 0 && chat.isChatLoading && (
           <Tooltip
             title={t(
-              'NuwaxPC.Pages.AppDevChatArea.autoFixingProgress',
+              'PC.Pages.AppDevChatArea.autoFixingProgress',
               String(autoErrorRetryCount),
               '3',
             )}

@@ -38,7 +38,7 @@ const QaTableList = forwardRef<QaTableListRef, QaTableListProps>(
         fixed: 'left',
       },
       {
-        title: dict('NuwaxPC.Pages.SpaceKnowledge.QaTableList.question'),
+        title: dict('PC.Pages.SpaceKnowledge.QaTableList.question'),
         dataIndex: 'question',
         render: (text: string) => {
           return (
@@ -49,7 +49,7 @@ const QaTableList = forwardRef<QaTableListRef, QaTableListProps>(
         },
       },
       {
-        title: dict('NuwaxPC.Pages.SpaceKnowledge.QaTableList.answer'),
+        title: dict('PC.Pages.SpaceKnowledge.QaTableList.answer'),
         dataIndex: 'answer',
         render: (text: string) => {
           return (
@@ -60,7 +60,7 @@ const QaTableList = forwardRef<QaTableListRef, QaTableListProps>(
         },
       },
       {
-        title: dict('NuwaxPC.Pages.SpaceKnowledge.QaTableList.vectorized'),
+        title: dict('PC.Pages.SpaceKnowledge.QaTableList.vectorized'),
         dataIndex: 'hasEmbedding',
         width: 100,
         fixed: 'right',
@@ -68,19 +68,19 @@ const QaTableList = forwardRef<QaTableListRef, QaTableListProps>(
           if (value) {
             return (
               <Tag color="success">
-                {dict('NuwaxPC.Pages.SpaceKnowledge.QaTableList.completed')}
+                {dict('PC.Pages.SpaceKnowledge.QaTableList.completed')}
               </Tag>
             );
           }
           return (
             <Tag color="processing">
-              {dict('NuwaxPC.Pages.SpaceKnowledge.QaTableList.building')}
+              {dict('PC.Pages.SpaceKnowledge.QaTableList.building')}
             </Tag>
           );
         },
       },
       {
-        title: dict('NuwaxPC.Pages.SpaceKnowledge.QaTableList.action'),
+        title: dict('PC.Pages.SpaceKnowledge.QaTableList.action'),
         dataIndex: 'action',
         width: 100,
         align: 'center',
@@ -95,13 +95,13 @@ const QaTableList = forwardRef<QaTableListRef, QaTableListProps>(
               />
               <Popconfirm
                 title={dict(
-                  'NuwaxPC.Pages.SpaceKnowledge.QaTableList.confirmDeleteQa',
+                  'PC.Pages.SpaceKnowledge.QaTableList.confirmDeleteQa',
                 )}
                 description={record.question}
                 icon={<ExclamationCircleFilled />}
                 onConfirm={() => props.onDelete(record)}
-                okText={dict('NuwaxPC.Common.Global.confirm')}
-                cancelText={dict('NuwaxPC.Common.Global.cancel')}
+                okText={dict('PC.Common.Global.confirm')}
+                cancelText={dict('PC.Common.Global.cancel')}
               >
                 <Button type="text" icon={<DeleteOutlined />} />
               </Popconfirm>
@@ -224,7 +224,7 @@ const QaTableList = forwardRef<QaTableListRef, QaTableListProps>(
             }}
           />
         ) : (
-          <Empty description={dict('NuwaxPC.Common.Global.noData')} />
+          <Empty description={dict('PC.Common.Global.noData')} />
         )}
       </div>
     );

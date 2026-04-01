@@ -48,7 +48,7 @@
 
 ### D-008 key 命名规范（一次性切换）
 
-- 决策：统一采用 `{Client}.{Scope}.{Domain}.{key}`，并将既有 `System.*` 一次性切换为 `NuwaxPC.*`
+- 决策：统一采用 `{Client}.{Scope}.{Domain}.{key}`，并将既有 `System.*` 一次性切换为 `PC.*`
 - 原因：避免双轨长期并存，减少后续维护与联调成本
 - 影响：
   - 前端 `dict()` 与最小词典均按新规范维护
@@ -120,7 +120,7 @@
 
 ### D-018 变量输入类型 key 复用策略
 
-- 决策：`CreateVariables/index.tsx` 与 `CreateVariableModal/index.tsx` 统一复用 `NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputType*` 一组 key
+- 决策：`CreateVariables/index.tsx` 与 `CreateVariableModal/index.tsx` 统一复用 `PC.Pages.AgentArrangeCreateVariableModal.inputType*` 一组 key
 - 原因：两处展示的是同一业务枚举（`InputTypeEnum`），分裂 key 会增加维护与联调成本
 - 影响：
   - 词典维护单源化，新增输入类型时只需补一组 key
@@ -240,7 +240,7 @@
 
 ### D-033 Antv 持久化与历史提示统一 key 化
 
-- 决策：`useNodeOperations`、`useWorkflowHistory`、`useWorkflowPersistence` 的用户可见提示统一切换为 `t(...)`，并由 `NuwaxPC.Pages.AntvX6NodeOperations.* / AntvX6History.* / AntvX6Persistence.*` 承载
+- 决策：`useNodeOperations`、`useWorkflowHistory`、`useWorkflowPersistence` 的用户可见提示统一切换为 `t(...)`，并由 `PC.Pages.AntvX6NodeOperations.* / AntvX6History.* / AntvX6Persistence.*` 承载
 - 原因：这些 Hook 中存在高频操作提示（新增/复制/删除失败、撤销/重做不可用、版本冲突确认），若保留硬编码会持续在多语言扫描中反复出现
 - 影响：
   - 节点操作、历史操作、冲突弹窗链路进入统一词典管理
@@ -304,7 +304,7 @@
 
 ### D-041 Created 列表子组件按组件域拆分
 
-- 决策：`Created` 组件下首批子组件采用 `NuwaxPC.Components.CreatedMcpItem.*`、`CreatedMcpTools.*`、`CreatedPageItem.*` 三个域，不放入 `Pages` 域
+- 决策：`Created` 组件下首批子组件采用 `PC.Components.CreatedMcpItem.*`、`CreatedMcpTools.*`、`CreatedPageItem.*` 三个域，不放入 `Pages` 域
 - 原因：这批组件是跨页面复用的通用构件，按组件域命名更符合 `{Client}.{Scope}.{Domain}.{key}` 规范，也便于后续在不同页面复用
 - 影响：
   - `Created` 复用链路（组件库/页面库）的基础文案进入统一词典
@@ -312,7 +312,7 @@
 
 ### D-042 Created 标签名由类型映射驱动
 
-- 决策：`Created/index.tsx` 不再直接依赖 `CREATED_TABS` 的 `label` 字面量展示文案，统一通过 `getCreatedTabLabel(type)` 映射到 `NuwaxPC.Components.Created.tab*`
+- 决策：`Created/index.tsx` 不再直接依赖 `CREATED_TABS` 的 `label` 字面量展示文案，统一通过 `getCreatedTabLabel(type)` 映射到 `PC.Components.Created.tab*`
 - 原因：`CREATED_TABS` 常量中存在历史中文标签，若直接渲染会导致英文环境无法生效；按类型映射可在不改全局常量的前提下先完成组件侧多语言接入
 - 影响：
   - 分段标签、动态模板文案（如“创建{0}”“仅查看官方{0}”）可在中英文间稳定切换
@@ -392,7 +392,7 @@
 
 ### D-052 Chat 文件操作提示集中到 Pages.Chat 域
 
-- 决策：`Chat/index.tsx` 文件操作与导出链路文案统一使用 `NuwaxPC.Pages.Chat.*`
+- 决策：`Chat/index.tsx` 文件操作与导出链路文案统一使用 `PC.Pages.Chat.*`
 - 原因：该页面包含大量文件树交互提示，分散在函数内难以维护，集中域有助于后续批量替换
 - 影响：
   - 新建/删除/上传/导出的提示统一可配置
@@ -408,7 +408,7 @@
 
 ### D-054 Chat 控制条与运行态提示归并到 Pages.Chat 域
 
-- 决策：`Chat/index.tsx` 顶部控制条与运行态提示文案统一使用 `NuwaxPC.Pages.Chat.*` key，包括预览页、文件预览、智能体电脑、历史加载、执行中、权限遮罩、复制模板
+- 决策：`Chat/index.tsx` 顶部控制条与运行态提示文案统一使用 `PC.Pages.Chat.*` key，包括预览页、文件预览、智能体电脑、历史加载、执行中、权限遮罩、复制模板
 - 原因：该页面交互入口密集且跨多个条件分支，若不统一域管理，后续批量治理容易遗漏
 - 影响：
   - 交互提示文案集中在同一词典域，联调与补词效率更高
@@ -456,7 +456,7 @@
 
 ### D-060 AppDevEmptyState 作为组件域样板先全量 key 化
 
-- 决策：将 `AppDevEmptyState` 的默认 UI 文案一次性迁移到 `NuwaxPC.Components.AppDevEmptyState.*`，组件内部默认值统一调用 `t(...)`
+- 决策：将 `AppDevEmptyState` 的默认 UI 文案一次性迁移到 `PC.Components.AppDevEmptyState.*`，组件内部默认值统一调用 `t(...)`
 - 原因：该组件被 `AppDev` 多处页面复用，是 `business-component` 的高频入口，先做样板可放大覆盖面并统一后续调用习惯
 - 影响：
   - 组件默认文案不再含硬编码中文，支持后端词典和本地默认词典双路径
@@ -464,7 +464,7 @@
 
 ### D-061 历史会话与页面预览统一归并 Components 域
 
-- 决策：`HistoryConversationList` 与 `PagePreviewIframe` 的用户可见文案统一迁移到 `NuwaxPC.Components.*` 域；内部日志文本统一英文
+- 决策：`HistoryConversationList` 与 `PagePreviewIframe` 的用户可见文案统一迁移到 `PC.Components.*` 域；内部日志文本统一英文
 - 原因：两个组件分别承担会话管理与页面预览核心交互，且都存在历史中文硬编码与兜底文本，容易在跨页面复用时遗漏
 - 影响：
   - 历史会话重命名/删除流、页面预览工具栏文案可由词典统一维护
@@ -480,7 +480,7 @@
 
 ### D-063 FilePreview 错误映射集中 key 化
 
-- 决策：`FilePreview` 中 `getLocalizedErrorMessage` 返回值全部迁移到 `NuwaxPC.Components.FilePreview.*`，并同步覆盖页面态文案（空/载入/失败/不支持）
+- 决策：`FilePreview` 中 `getLocalizedErrorMessage` 返回值全部迁移到 `PC.Components.FilePreview.*`，并同步覆盖页面态文案（空/载入/失败/不支持）
 - 原因：该函数是文件预览错误提示的集中出口，不统一 key 化会导致多个文件类型分支持续漏接入
 - 影响：
   - 文档/表格/PDF/PPT/图片与通用错误提示都可由词典统一管理
@@ -496,7 +496,7 @@
 
 ### D-065 hooks 返回消息统一纳入 Components 域
 
-- 决策：`useDataResourceManagement` 的 `message.*` 与 `DataResourceOperationResult.message` 统一使用 `NuwaxPC.Components.DataResourceManagement.*`
+- 决策：`useDataResourceManagement` 的 `message.*` 与 `DataResourceOperationResult.message` 统一使用 `PC.Components.DataResourceManagement.*`
 - 原因：该 Hook 既触发 UI 提示又向上游返回 message，若两套文本来源不同会导致展示不一致
 - 影响：
   - 页面提示与上层结果处理读取同一词典来源，减少语义分叉

@@ -67,98 +67,92 @@ const LogProTable: React.FC = () => {
     () => [
       {
         width: 100,
-        title: t('NuwaxPC.Pages.SystemRunningLogTable.columnType'),
+        title: t('PC.Pages.SystemRunningLogTable.columnType'),
         dataIndex: 'targetType',
         valueType: 'select',
         valueEnum: {
           [AgentComponentTypeEnum.Agent]: {
-            text: t('NuwaxPC.Pages.SystemRunningLogTable.targetTypeAgent'),
+            text: t('PC.Pages.SystemRunningLogTable.targetTypeAgent'),
           },
           [AgentComponentTypeEnum.Plugin]: {
-            text: t('NuwaxPC.Pages.SystemRunningLogTable.targetTypePlugin'),
+            text: t('PC.Pages.SystemRunningLogTable.targetTypePlugin'),
           },
           [AgentComponentTypeEnum.Workflow]: {
-            text: t('NuwaxPC.Pages.SystemRunningLogTable.targetTypeWorkflow'),
+            text: t('PC.Pages.SystemRunningLogTable.targetTypeWorkflow'),
           },
           [AgentComponentTypeEnum.MCP]: { text: 'MCP' },
         },
         hideInTable: false,
         initialValue: targetTypeFromUrl,
         fieldProps: {
-          placeholder: t('NuwaxPC.Pages.SystemRunningLogTable.placeholderType'),
+          placeholder: t('PC.Pages.SystemRunningLogTable.placeholderType'),
           allowClear: true,
         },
       },
       {
-        title: t('NuwaxPC.Pages.SystemRunningLogTable.columnObjectId'),
+        title: t('PC.Pages.SystemRunningLogTable.columnObjectId'),
         dataIndex: 'targetId',
         width: 140,
         ellipsis: true,
         initialValue: targetIdFromUrl,
         fieldProps: {
-          placeholder: t(
-            'NuwaxPC.Pages.SystemRunningLogTable.placeholderObjectId',
-          ),
+          placeholder: t('PC.Pages.SystemRunningLogTable.placeholderObjectId'),
         },
       },
       {
-        title: t('NuwaxPC.Pages.SystemRunningLogTable.columnObjectName'),
+        title: t('PC.Pages.SystemRunningLogTable.columnObjectName'),
         dataIndex: 'targetName',
         width: 140,
         ellipsis: true,
         fieldProps: {
           placeholder: t(
-            'NuwaxPC.Pages.SystemRunningLogTable.placeholderObjectName',
+            'PC.Pages.SystemRunningLogTable.placeholderObjectName',
           ),
         },
       },
       {
-        title: t('NuwaxPC.Pages.SystemRunningLogTable.columnRequestId'),
+        title: t('PC.Pages.SystemRunningLogTable.columnRequestId'),
         dataIndex: 'requestId',
         width: 160,
         ellipsis: true,
         hideInTable: false,
         fieldProps: {
-          placeholder: t(
-            'NuwaxPC.Pages.SystemRunningLogTable.placeholderRequestId',
-          ),
+          placeholder: t('PC.Pages.SystemRunningLogTable.placeholderRequestId'),
         },
       },
       {
-        title: t('NuwaxPC.Pages.SystemRunningLogTable.columnUserId'),
+        title: t('PC.Pages.SystemRunningLogTable.columnUserId'),
         dataIndex: 'userId',
         width: 100,
         ellipsis: true,
         fieldProps: getIntegerOnlyFieldProps(
-          t('NuwaxPC.Pages.SystemRunningLogTable.placeholderUserIdIntegerOnly'),
+          t('PC.Pages.SystemRunningLogTable.placeholderUserIdIntegerOnly'),
           18,
         ),
       },
       {
-        title: t('NuwaxPC.Pages.SystemRunningLogTable.columnUserName'),
+        title: t('PC.Pages.SystemRunningLogTable.columnUserName'),
         dataIndex: 'userName',
         width: 180,
         ellipsis: true,
         fieldProps: {
-          placeholder: t(
-            'NuwaxPC.Pages.SystemRunningLogTable.placeholderUserName',
-          ),
+          placeholder: t('PC.Pages.SystemRunningLogTable.placeholderUserName'),
         },
       },
       {
-        title: t('NuwaxPC.Pages.SystemRunningLogTable.columnConversationId'),
+        title: t('PC.Pages.SystemRunningLogTable.columnConversationId'),
         dataIndex: 'conversationId',
         width: 140,
         ellipsis: true,
         fieldProps: {
           placeholder: t(
-            'NuwaxPC.Pages.SystemRunningLogTable.placeholderConversationId',
+            'PC.Pages.SystemRunningLogTable.placeholderConversationId',
           ),
         },
       },
 
       {
-        title: t('NuwaxPC.Pages.SystemRunningLogTable.columnInput'),
+        title: t('PC.Pages.SystemRunningLogTable.columnInput'),
         dataIndex: 'input',
         minWidth: 150,
         width: 220,
@@ -168,13 +162,11 @@ const LogProTable: React.FC = () => {
           <LimitedTooltip formatJson>{record?.input}</LimitedTooltip>
         ),
         fieldProps: {
-          placeholder: t(
-            'NuwaxPC.Pages.SystemRunningLogTable.placeholderKeywords',
-          ),
+          placeholder: t('PC.Pages.SystemRunningLogTable.placeholderKeywords'),
         },
       },
       {
-        title: t('NuwaxPC.Pages.SystemRunningLogTable.columnOutput'),
+        title: t('PC.Pages.SystemRunningLogTable.columnOutput'),
         dataIndex: 'output',
         minWidth: 150,
         width: 220,
@@ -184,34 +176,32 @@ const LogProTable: React.FC = () => {
           <LimitedTooltip formatJson>{record?.output}</LimitedTooltip>
         ),
         fieldProps: {
-          placeholder: t(
-            'NuwaxPC.Pages.SystemRunningLogTable.placeholderKeywords',
-          ),
+          placeholder: t('PC.Pages.SystemRunningLogTable.placeholderKeywords'),
         },
       },
 
       {
-        title: t('NuwaxPC.Pages.SystemRunningLogTable.columnTimeRange'),
+        title: t('PC.Pages.SystemRunningLogTable.columnTimeRange'),
         dataIndex: 'createTimeRange',
         valueType: 'dateTimeRange',
         hideInTable: true,
       },
       {
-        title: t('NuwaxPC.Pages.SystemRunningLogTable.columnInputToken'),
+        title: t('PC.Pages.SystemRunningLogTable.columnInputToken'),
         dataIndex: 'inputToken',
         width: 100,
         align: 'center',
         search: false,
       },
       {
-        title: t('NuwaxPC.Pages.SystemRunningLogTable.columnOutputToken'),
+        title: t('PC.Pages.SystemRunningLogTable.columnOutputToken'),
         dataIndex: 'outputToken',
         width: 100,
         align: 'center',
         search: false,
       },
       {
-        title: t('NuwaxPC.Pages.SystemRunningLogTable.columnRequestTime'),
+        title: t('PC.Pages.SystemRunningLogTable.columnRequestTime'),
         dataIndex: 'requestStartTime',
         width: 180,
         valueType: 'dateTime',
@@ -222,7 +212,7 @@ const LogProTable: React.FC = () => {
         // },
       },
       {
-        title: t('NuwaxPC.Pages.SystemRunningLogTable.columnElapsedTime'),
+        title: t('PC.Pages.SystemRunningLogTable.columnElapsedTime'),
         key: 'elapsedTimeMs',
         width: 110,
         align: 'center',
@@ -315,8 +305,7 @@ const LogProTable: React.FC = () => {
           !resp.success
         ) {
           message.error(
-            resp.message ||
-              t('NuwaxPC.Pages.SystemRunningLogTable.queryFailed'),
+            resp.message || t('PC.Pages.SystemRunningLogTable.queryFailed'),
           );
           return { data: [], total: 0, success: false };
         }
@@ -344,7 +333,7 @@ const LogProTable: React.FC = () => {
   const handleOpenDetails = useCallback((record: SpaceLogInfo) => {
     if (!record?.id) {
       message.warning(
-        t('NuwaxPC.Pages.SystemRunningLogTable.missingRequestIdForDetail'),
+        t('PC.Pages.SystemRunningLogTable.missingRequestIdForDetail'),
       );
       return;
     }
@@ -357,7 +346,7 @@ const LogProTable: React.FC = () => {
     return [
       ...columns,
       {
-        title: t('NuwaxPC.Pages.SystemRunningLogTable.columnAction'),
+        title: t('PC.Pages.SystemRunningLogTable.columnAction'),
         valueType: 'option',
         width: 90,
         fixed: 'right',
@@ -369,7 +358,7 @@ const LogProTable: React.FC = () => {
               actions={[
                 {
                   key: 'detail',
-                  label: t('NuwaxPC.Pages.SystemRunningLogTable.detail'),
+                  label: t('PC.Pages.SystemRunningLogTable.detail'),
                   disabled: !hasPermission('system_running_log_query_detail'),
                   onClick: () => handleOpenDetails(record),
                 },

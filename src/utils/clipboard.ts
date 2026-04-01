@@ -22,9 +22,9 @@ const STYLES = {
 
 // 错误信息常量
 const getMessages = () => ({
-  COPY_FAILED: dict('NuwaxPC.Utils.Clipboard.copyFailed'),
-  COPY_SUCCESS: dict('NuwaxPC.Utils.Clipboard.copySuccess'),
-  NO_CONTENT: dict('NuwaxPC.Utils.Clipboard.noContent'),
+  COPY_FAILED: dict('PC.Utils.Clipboard.copyFailed'),
+  COPY_SUCCESS: dict('PC.Utils.Clipboard.copySuccess'),
+  NO_CONTENT: dict('PC.Utils.Clipboard.noContent'),
 });
 
 /**

@@ -1,8 +1,8 @@
-import { dict } from '@/services/i18nRuntime';
 import ParamsNameLabel from '@/components/ParamsNameLabel';
 import { ARRAY_ITEM } from '@/constants/common.constants';
 import { ICON_ADD_TR } from '@/constants/images.constants';
 import useTryRun from '@/hooks/useTryRun';
+import { dict } from '@/services/i18nRuntime';
 import { apiMcpTryRun } from '@/services/mcp';
 import { DataTypeEnum } from '@/types/enums/common';
 import { McpExecuteTypeEnum } from '@/types/enums/mcp';
@@ -79,7 +79,7 @@ const McpTryRunModal: React.FC<McpTryRunModalProps> = ({
   // 入参配置columns
   const inputColumns: TableColumnsType<BindConfigWithSub> = [
     {
-      title: dict('NuwaxPC.Pages.SpaceMcpEdit.paramName'),
+      title: dict('PC.Pages.SpaceMcpEdit.paramName'),
       dataIndex: 'name',
       key: 'name',
       className: 'flex',
@@ -92,7 +92,7 @@ const McpTryRunModal: React.FC<McpTryRunModalProps> = ({
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpaceMcpEdit.paramValue'),
+      title: dict('PC.Pages.SpaceMcpEdit.paramValue'),
       dataIndex: 'description',
       key: 'description',
       render: (_: string, record: BindConfigWithSub) => (
@@ -103,7 +103,7 @@ const McpTryRunModal: React.FC<McpTryRunModalProps> = ({
             <Input
               value={record.bindValue}
               onChange={(e) => handleChangeInputValue(record, e.target.value)}
-              placeholder={dict('NuwaxPC.Pages.SpaceMcpEdit.inputParamValue')}
+              placeholder={dict('PC.Pages.SpaceMcpEdit.inputParamValue')}
             />
           )}
           <p className={cx(styles['param-desc'])}>{record.description}</p>
@@ -111,7 +111,7 @@ const McpTryRunModal: React.FC<McpTryRunModalProps> = ({
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpaceMcpEdit.operation'),
+      title: dict('PC.Pages.SpaceMcpEdit.operation'),
       key: 'action',
       width: 60,
       align: 'center',
@@ -179,7 +179,7 @@ const McpTryRunModal: React.FC<McpTryRunModalProps> = ({
               styles.header,
             )}
           >
-            <h3>{dict('NuwaxPC.Pages.SpaceMcpEdit.tryRun')}</h3>
+            <h3>{dict('PC.Pages.SpaceMcpEdit.tryRun')}</h3>
             <CloseOutlined
               className={cx('cursor-pointer')}
               onClick={handleCancel}
@@ -191,7 +191,9 @@ const McpTryRunModal: React.FC<McpTryRunModalProps> = ({
           >
             {/*左侧内容*/}
             <div className={cx('flex-1', 'flex', 'flex-col')}>
-              <h3 className={cx(styles['p-title'])}>{name} {dict('NuwaxPC.Pages.SpaceMcpEdit.inputParams')}</h3>
+              <h3 className={cx(styles['p-title'])}>
+                {name} {dict('PC.Pages.SpaceMcpEdit.inputParams')}
+              </h3>
               <Table<BindConfigWithSub>
                 className={cx(styles['table-wrap'])}
                 columns={inputColumns}
@@ -214,7 +216,7 @@ const McpTryRunModal: React.FC<McpTryRunModalProps> = ({
                       onClick={handleRunTest}
                       loading={loading}
                     >
-                      {dict('NuwaxPC.Pages.SpaceMcpEdit.run')}
+                      {dict('PC.Pages.SpaceMcpEdit.run')}
                     </Button>
                   </div>
                 )}
@@ -222,7 +224,9 @@ const McpTryRunModal: React.FC<McpTryRunModalProps> = ({
             </div>
             {/*右侧内容*/}
             <div className={cx('flex-1', 'flex', 'flex-col', 'overflow-hide')}>
-              <h3 className={cx(styles['p-title'])}>{name} {dict('NuwaxPC.Pages.SpaceMcpEdit.debugResult')}</h3>
+              <h3 className={cx(styles['p-title'])}>
+                {name} {dict('PC.Pages.SpaceMcpEdit.debugResult')}
+              </h3>
               <div
                 className={cx(
                   'flex-1',
@@ -242,7 +246,7 @@ const McpTryRunModal: React.FC<McpTryRunModalProps> = ({
                     )}
                   >
                     <LoadingOutlined />
-                    <span>{dict('NuwaxPC.Common.Global.loading')}</span>
+                    <span>{dict('PC.Common.Global.loading')}</span>
                   </div>
                 ) : result ? (
                   <div
@@ -266,7 +270,7 @@ const McpTryRunModal: React.FC<McpTryRunModalProps> = ({
                       'content-center',
                     )}
                   >
-                    {dict('NuwaxPC.Pages.SpaceMcpEdit.debugResultPlaceholder')}
+                    {dict('PC.Pages.SpaceMcpEdit.debugResultPlaceholder')}
                   </div>
                 )}
               </div>

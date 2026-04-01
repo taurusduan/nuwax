@@ -43,9 +43,8 @@ export const useAppDevModelSelector = (
         // 如果没有编码模型列表，则提示用户先配置默认聊天模型
         if (!chatModelList?.length) {
           Modal.confirm({
-            title: dict('NuwaxPC.Hooks.UseAppDevModelSelector.notice'),
-            content:
-              dict('NuwaxPC.Hooks.UseAppDevModelSelector.configCodingModel'),
+            title: dict('PC.Hooks.UseAppDevModelSelector.notice'),
+            content: dict('PC.Hooks.UseAppDevModelSelector.configCodingModel'),
             // 核心代码：通过样式隐藏取消按钮
             cancelButtonProps: { style: { display: 'none' } },
             onOk() {
@@ -58,7 +57,9 @@ export const useAppDevModelSelector = (
       }
     } catch (error) {
       console.error('Failed to load model list:', error);
-      message.error(dict('NuwaxPC.Hooks.UseAppDevModelSelector.loadModelListFailed'));
+      message.error(
+        dict('PC.Hooks.UseAppDevModelSelector.loadModelListFailed'),
+      );
     } finally {
       setIsLoadingModels(false);
     }

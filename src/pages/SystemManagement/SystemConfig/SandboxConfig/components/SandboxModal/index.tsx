@@ -52,8 +52,8 @@ const SandboxModal: React.FC<SandboxModalProps> = ({
     <XModalForm
       title={
         mode === 'add'
-          ? t('NuwaxPC.Pages.SystemConfigSandboxModal.addTitle')
-          : t('NuwaxPC.Pages.SystemConfigSandboxModal.editTitle')
+          ? t('PC.Pages.SystemConfigSandboxModal.addTitle')
+          : t('PC.Pages.SystemConfigSandboxModal.editTitle')
       }
       open={open}
       form={form}
@@ -65,27 +65,25 @@ const SandboxModal: React.FC<SandboxModalProps> = ({
       }}
       submitter={{
         searchConfig: {
-          resetText: t('NuwaxPC.Common.Global.cancel'),
-          submitText: t('NuwaxPC.Common.Global.save'),
+          resetText: t('PC.Common.Global.cancel'),
+          submitText: t('PC.Common.Global.save'),
         },
       }}
       onFinish={onFinish}
     >
       <ProFormText
         name="name"
-        label={t('NuwaxPC.Pages.SystemConfigSandboxModal.name')}
-        placeholder={t(
-          'NuwaxPC.Pages.SystemConfigSandboxModal.namePlaceholder',
-        )}
+        label={t('PC.Pages.SystemConfigSandboxModal.name')}
+        placeholder={t('PC.Pages.SystemConfigSandboxModal.namePlaceholder')}
         colProps={{ span: 24 }}
         rules={[
           {
             required: true,
-            message: t('NuwaxPC.Pages.SystemConfigSandboxModal.nameRequired'),
+            message: t('PC.Pages.SystemConfigSandboxModal.nameRequired'),
           },
           {
             max: 100,
-            message: t('NuwaxPC.Pages.SystemConfigSandboxModal.nameMaxLength'),
+            message: t('PC.Pages.SystemConfigSandboxModal.nameMaxLength'),
           },
         ]}
         fieldProps={{
@@ -95,23 +93,21 @@ const SandboxModal: React.FC<SandboxModalProps> = ({
       />
       <ProFormText
         name={['configValue', 'hostWithScheme']}
-        label={t('NuwaxPC.Pages.SystemConfigSandboxModal.host')}
-        placeholder={t(
-          'NuwaxPC.Pages.SystemConfigSandboxModal.hostPlaceholder',
-        )}
+        label={t('PC.Pages.SystemConfigSandboxModal.host')}
+        placeholder={t('PC.Pages.SystemConfigSandboxModal.hostPlaceholder')}
         colProps={{ span: 24 }}
         rules={[
           {
             required: true,
-            message: t('NuwaxPC.Pages.SystemConfigSandboxModal.hostRequired'),
+            message: t('PC.Pages.SystemConfigSandboxModal.hostRequired'),
           },
           {
             max: 255,
-            message: t('NuwaxPC.Pages.SystemConfigSandboxModal.hostMaxLength'),
+            message: t('PC.Pages.SystemConfigSandboxModal.hostMaxLength'),
           },
           {
             pattern: /^https?:\/\/.+/,
-            message: t('NuwaxPC.Pages.SystemConfigSandboxModal.hostInvalid'),
+            message: t('PC.Pages.SystemConfigSandboxModal.hostInvalid'),
           },
         ]}
         fieldProps={{
@@ -121,37 +117,33 @@ const SandboxModal: React.FC<SandboxModalProps> = ({
       />
       <ProFormDigit
         name={['configValue', 'agentPort']}
-        label={t('NuwaxPC.Pages.SystemConfigSandboxModal.agentPort')}
+        label={t('PC.Pages.SystemConfigSandboxModal.agentPort')}
         placeholder="9086"
         colProps={{ span: 8 }}
         fieldProps={{ precision: 0, min: 1, max: 65535 }}
         rules={[
           {
             required: true,
-            message: t(
-              'NuwaxPC.Pages.SystemConfigSandboxModal.agentPortRequired',
-            ),
+            message: t('PC.Pages.SystemConfigSandboxModal.agentPortRequired'),
           },
         ]}
       />
       <ProFormDigit
         name={['configValue', 'vncPort']}
-        label={t('NuwaxPC.Pages.SystemConfigSandboxModal.vncPort')}
+        label={t('PC.Pages.SystemConfigSandboxModal.vncPort')}
         placeholder="9088"
         colProps={{ span: 8 }}
         fieldProps={{ precision: 0, min: 1, max: 65535 }}
         rules={[
           {
             required: true,
-            message: t(
-              'NuwaxPC.Pages.SystemConfigSandboxModal.vncPortRequired',
-            ),
+            message: t('PC.Pages.SystemConfigSandboxModal.vncPortRequired'),
           },
         ]}
       />
       <ProFormDigit
         name={['configValue', 'fileServerPort']}
-        label={t('NuwaxPC.Pages.SystemConfigSandboxModal.fileServerPort')}
+        label={t('PC.Pages.SystemConfigSandboxModal.fileServerPort')}
         placeholder="60001"
         colProps={{ span: 8 }}
         fieldProps={{ precision: 0, min: 1, max: 65535 }}
@@ -159,17 +151,15 @@ const SandboxModal: React.FC<SandboxModalProps> = ({
           {
             required: true,
             message: t(
-              'NuwaxPC.Pages.SystemConfigSandboxModal.fileServerPortRequired',
+              'PC.Pages.SystemConfigSandboxModal.fileServerPortRequired',
             ),
           },
         ]}
       />
       <ProFormText
         name={['configValue', 'apiKey']}
-        label={t('NuwaxPC.Pages.SystemConfigSandboxModal.apiKey')}
-        placeholder={t(
-          'NuwaxPC.Pages.SystemConfigSandboxModal.apiKeyPlaceholder',
-        )}
+        label={t('PC.Pages.SystemConfigSandboxModal.apiKey')}
+        placeholder={t('PC.Pages.SystemConfigSandboxModal.apiKeyPlaceholder')}
         colProps={{ span: 24 }}
         fieldProps={{
           maxLength: 128,
@@ -178,21 +168,19 @@ const SandboxModal: React.FC<SandboxModalProps> = ({
       />
       <ProFormDigit
         name={['configValue', 'maxUsers']}
-        label={t('NuwaxPC.Pages.SystemConfigSandboxModal.maxUsers')}
+        label={t('PC.Pages.SystemConfigSandboxModal.maxUsers')}
         placeholder="30"
         colProps={{ span: 8 }}
         fieldProps={{ precision: 0, min: 1, max: 9999 }}
         rules={[
           {
             required: true,
-            message: t(
-              'NuwaxPC.Pages.SystemConfigSandboxModal.maxUsersRequired',
-            ),
+            message: t('PC.Pages.SystemConfigSandboxModal.maxUsersRequired'),
           },
           {
             type: 'number',
             max: 9999,
-            message: t('NuwaxPC.Pages.SystemConfigSandboxModal.maxUsersMax'),
+            message: t('PC.Pages.SystemConfigSandboxModal.maxUsersMax'),
           },
         ]}
       />

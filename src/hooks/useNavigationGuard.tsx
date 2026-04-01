@@ -73,12 +73,12 @@ export function useNavigationGuard(
   const {
     condition,
     onConfirm,
-    title = dict('NuwaxPC.Hooks.UseNavigationGuard.confirmLeave'),
-    message = dict('NuwaxPC.Hooks.UseNavigationGuard.confirmLeaveMessage'),
+    title = dict('PC.Hooks.UseNavigationGuard.confirmLeave'),
+    message = dict('PC.Hooks.UseNavigationGuard.confirmLeaveMessage'),
     enabled = true,
-    confirmText = dict('NuwaxPC.Common.Global.confirm'),
-    discardText = dict('NuwaxPC.Hooks.UseNavigationGuard.discard'),
-    cancelText = dict('NuwaxPC.Common.Global.cancel'),
+    confirmText = dict('PC.Common.Global.confirm'),
+    discardText = dict('PC.Hooks.UseNavigationGuard.discard'),
+    cancelText = dict('PC.Common.Global.cancel'),
     showCancelButton = false,
   } = options;
 

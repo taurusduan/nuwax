@@ -84,7 +84,7 @@ const NewMonaco: React.FC<MonacoProps> = ({
                   display: 'inline-block',
                 }}
               >
-                {dict('NuwaxPC.Components.NewMonaco.code')}
+                {dict('PC.Components.NewMonaco.code')}
               </span>
               {!disabledSwitchLanguage && (
                 <Select
@@ -93,7 +93,9 @@ const NewMonaco: React.FC<MonacoProps> = ({
                   onChange={handleLanguageChange}
                   options={LANGUAGE_OPTIONS}
                   size="small"
-                  placeholder={dict('NuwaxPC.Components.NewMonaco.pleaseSelectLanguage')}
+                  placeholder={dict(
+                    'PC.Components.NewMonaco.pleaseSelectLanguage',
+                  )}
                 />
               )}
             </Space>

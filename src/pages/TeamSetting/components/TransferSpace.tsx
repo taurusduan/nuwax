@@ -62,7 +62,9 @@ const TransferSpace: React.FC<RemoveSpaceProps> = ({
       setLoading(true);
     },
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Pages.TeamSetting.TransferSpace.transferSuccess'));
+      message.success(
+        dict('PC.Pages.TeamSetting.TransferSpace.transferSuccess'),
+      );
       onConfirmTransfer?.();
     },
     onFinally: () => {
@@ -95,7 +97,7 @@ const TransferSpace: React.FC<RemoveSpaceProps> = ({
   return (
     <CustomFormModal
       form={form}
-      title={dict('NuwaxPC.Pages.TeamSetting.TransferSpace.transferOwnershipTitle')}
+      title={dict('PC.Pages.TeamSetting.TransferSpace.transferOwnershipTitle')}
       open={open}
       loading={loading}
       onCancel={cancelModal}
@@ -103,7 +105,7 @@ const TransferSpace: React.FC<RemoveSpaceProps> = ({
     >
       <>
         <p className={cx(styles['team-setting-modal-description'])}>
-          {dict('NuwaxPC.Pages.TeamSetting.TransferSpace.transferDescription')}
+          {dict('PC.Pages.TeamSetting.TransferSpace.transferDescription')}
         </p>
         <Form
           form={form}
@@ -114,17 +116,21 @@ const TransferSpace: React.FC<RemoveSpaceProps> = ({
         >
           <Form.Item
             name="targetUserId"
-            label={dict('NuwaxPC.Pages.TeamSetting.TransferSpace.transferToLabel')}
+            label={dict('PC.Pages.TeamSetting.TransferSpace.transferToLabel')}
             rules={[
               {
                 required: true,
-                message: dict('NuwaxPC.Pages.TeamSetting.TransferSpace.selectTeamMember'),
+                message: dict(
+                  'PC.Pages.TeamSetting.TransferSpace.selectTeamMember',
+                ),
               },
             ]}
           >
             <Select
               options={selectOptions}
-              placeholder={dict('NuwaxPC.Pages.TeamSetting.TransferSpace.selectTeamMember')}
+              placeholder={dict(
+                'PC.Pages.TeamSetting.TransferSpace.selectTeamMember',
+              )}
             ></Select>
           </Form.Item>
         </Form>

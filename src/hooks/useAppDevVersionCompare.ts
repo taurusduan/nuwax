@@ -164,7 +164,9 @@ export const useAppDevVersionCompare = ({
   const startVersionCompare = useCallback(
     async (version: number) => {
       if (!projectId) {
-        message.error(dict('NuwaxPC.Hooks.UseAppDevVersionCompare.projectIdNotExist'));
+        message.error(
+          dict('PC.Hooks.UseAppDevVersionCompare.projectIdNotExist'),
+        );
         return;
       }
 
@@ -188,7 +190,10 @@ export const useAppDevVersionCompare = ({
         }
       } catch (error: any) {
         message.error(
-          dict('NuwaxPC.Hooks.UseAppDevVersionCompare.versionCompareFailed', error.message || dict('NuwaxPC.Common.Global.unknownError')),
+          dict(
+            'PC.Hooks.UseAppDevVersionCompare.versionCompareFailed',
+            error.message || dict('PC.Common.Global.unknownError'),
+          ),
         );
       } finally {
         setIsLoadingVersion(false);
@@ -212,7 +217,9 @@ export const useAppDevVersionCompare = ({
    */
   const confirmVersionSwitch = useCallback(async () => {
     if (!projectId || !targetVersion) {
-      message.error(dict('NuwaxPC.Hooks.UseAppDevVersionCompare.projectIdOrVersionNotExist'));
+      message.error(
+        dict('PC.Hooks.UseAppDevVersionCompare.projectIdOrVersionNotExist'),
+      );
       return;
     }
 
@@ -230,13 +237,18 @@ export const useAppDevVersionCompare = ({
         // 调用成功回调
         onVersionSwitchSuccess?.();
 
-        message.success(dict('NuwaxPC.Hooks.UseAppDevVersionCompare.versionSwitchSuccess'));
+        message.success(
+          dict('PC.Hooks.UseAppDevVersionCompare.versionSwitchSuccess'),
+        );
       } else {
         throw new Error(response?.message || 'Version switch failed');
       }
     } catch (error: any) {
       message.error(
-        dict('NuwaxPC.Hooks.UseAppDevVersionCompare.versionSwitchFailed', error.message || dict('NuwaxPC.Common.Global.unknownError')),
+        dict(
+          'PC.Hooks.UseAppDevVersionCompare.versionSwitchFailed',
+          error.message || dict('PC.Common.Global.unknownError'),
+        ),
       );
     } finally {
       setIsSwitching(false);

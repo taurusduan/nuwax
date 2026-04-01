@@ -54,7 +54,7 @@ const StencilContent = ({ dragChild, isLoop = false }: Prop) => {
       {/* Search input placeholder */}
       {/* <Input placeholder="Search" prefix={<SearchOutlined />} /> */}
       <p className="stencil-title">
-        {t('NuwaxPC.Pages.AntvX6Stencil.nodeSelectorTitle')}
+        {t('PC.Pages.AntvX6Stencil.nodeSelectorTitle')}
       </p>
       {/* Render stencil list */}
       <div className="stencil-list-style">

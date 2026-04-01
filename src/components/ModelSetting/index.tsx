@@ -1,5 +1,5 @@
-import service from '@/services/workflow';
 import { dict } from '@/services/i18nRuntime';
+import service from '@/services/workflow';
 import type {
   GroupModelItem,
   ModelListItemProps,
@@ -92,7 +92,7 @@ export const GroupedOptionSelect: React.FC<ModelSettingProp> = ({
   return (
     <Form.Item name={'modelId'}>
       <Select
-        placeholder={dict('NuwaxPC.Components.ModelSetting.pleaseSelectModel')}
+        placeholder={dict('PC.Components.ModelSetting.pleaseSelectModel')}
         style={{ width: '100%', marginTop: '10px' }}
         className="input-style"
         labelRender={labelRender}
@@ -136,10 +136,16 @@ export const GroupedOptionSelect: React.FC<ModelSettingProp> = ({
 };
 
 const options = [
-  { label: dict('NuwaxPC.Components.ModelSetting.precisionMode'), value: 'Precision' },
-  { label: dict('NuwaxPC.Components.ModelSetting.balancedMode'), value: 'Balanced' },
-  { label: dict('NuwaxPC.Components.ModelSetting.creativeMode'), value: 'Creative' },
-  { label: dict('NuwaxPC.Components.ModelSetting.customMode'), value: 'Customization' },
+  {
+    label: dict('PC.Components.ModelSetting.precisionMode'),
+    value: 'Precision',
+  },
+  { label: dict('PC.Components.ModelSetting.balancedMode'), value: 'Balanced' },
+  { label: dict('PC.Components.ModelSetting.creativeMode'), value: 'Creative' },
+  {
+    label: dict('PC.Components.ModelSetting.customMode'),
+    value: 'Customization',
+  },
 ];
 
 const typeOptionValue = {
@@ -259,9 +265,13 @@ export const ModelSetting: React.FC<ModelSettingProp> = ({ form }) => {
   return (
     <>
       <div className="model-dispose-mode-style">
-        <div className="model-title-style border-bottom">{dict('NuwaxPC.Components.ModelSetting.model')}</div>
+        <div className="model-title-style border-bottom">
+          {dict('PC.Components.ModelSetting.model')}
+        </div>
         <div className="dis-sb margin-top-10">
-          <span className="dispose-title-style">{dict('NuwaxPC.Components.ModelSetting.generateDiversity')}</span>
+          <span className="dispose-title-style">
+            {dict('PC.Components.ModelSetting.generateDiversity')}
+          </span>
           <div className="dis-left">
             <Form.Item name={'mode'} style={{ marginBottom: 0 }}>
               <Radio.Group
@@ -277,7 +287,7 @@ export const ModelSetting: React.FC<ModelSettingProp> = ({ form }) => {
               onClick={() => setShowMore(!showMore)}
               className="right-content-style"
             >
-              <span>{dict('NuwaxPC.Components.ModelSetting.advancedSettings')}</span>
+              <span>{dict('PC.Components.ModelSetting.advancedSettings')}</span>
               {showMore ? <CaretUpFilled /> : <CaretDownFilled />}
             </div>
           </div>
@@ -288,9 +298,9 @@ export const ModelSetting: React.FC<ModelSettingProp> = ({ form }) => {
             min={0}
             max={1}
             step={0.1}
-            title={dict('NuwaxPC.Components.ModelSetting.generateRandomness')}
+            title={dict('PC.Components.ModelSetting.generateRandomness')}
             configKey="temperature"
-            content={dict('NuwaxPC.Components.ModelSetting.temperatureDesc')}
+            content={dict('PC.Components.ModelSetting.temperatureDesc')}
           />
           <Content
             form={form}
@@ -299,19 +309,21 @@ export const ModelSetting: React.FC<ModelSettingProp> = ({ form }) => {
             step={0.1}
             title={'Top P'}
             configKey="topP"
-            content={dict('NuwaxPC.Components.ModelSetting.topPDesc')}
+            content={dict('PC.Components.ModelSetting.topPDesc')}
           />
         </div>
         <Divider />
-        <div className="dispose-title-style">{dict('NuwaxPC.Components.ModelSetting.inputOutputSettings')}</div>
+        <div className="dispose-title-style">
+          {dict('PC.Components.ModelSetting.inputOutputSettings')}
+        </div>
         <Content
           form={form}
           min={5}
           max={currentMaxTokens}
           step={1}
-          title={dict('NuwaxPC.Components.ModelSetting.maxReplyLength')}
+          title={dict('PC.Components.ModelSetting.maxReplyLength')}
           configKey="maxTokens"
-          content={dict('NuwaxPC.Components.ModelSetting.maxTokensDesc')}
+          content={dict('PC.Components.ModelSetting.maxTokensDesc')}
         />
       </div>
     </>
@@ -326,7 +338,9 @@ export const ModelSelected: React.FC<ModelSettingProp> = ({
   return (
     <div className="node-item-style">
       <div className="dis-sb">
-        <span className="node-title-style">{dict('NuwaxPC.Components.ModelSetting.model')}</span>
+        <span className="node-title-style">
+          {dict('PC.Components.ModelSetting.model')}
+        </span>
         <Popover
           content={<ModelSetting form={form} />}
           trigger="click"

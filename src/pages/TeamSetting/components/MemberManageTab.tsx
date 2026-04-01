@@ -1,10 +1,10 @@
 import { TableActions, XProTable } from '@/components/ProComponents';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiDeleteSpaceUser,
   apiGetSpaceUserList,
 } from '@/services/teamSetting';
-import { dict } from '@/services/i18nRuntime';
 import { TeamStatusEnum } from '@/types/enums/teamSetting';
 import type { SpaceUserInfo } from '@/types/interfaces/teamSetting';
 import { PlusOutlined } from '@ant-design/icons';
@@ -57,56 +57,64 @@ const MemberManageTab: React.FC<MemberManageTabProps> = ({ spaceId, role }) => {
   const removeUser = async (userId: number) => {
     const resp = await apiDeleteSpaceUser({ userId, spaceId });
     if (resp.code === SUCCESS_CODE) {
-      message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
+      message.success(dict('PC.Toast.Global.deletedSuccessfully'));
       actionRef.current?.reload();
     }
   };
 
   const columns: ProColumns<SpaceUserInfo>[] = [
     {
-      title: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.keyword'),
+      title: dict('PC.Pages.TeamSetting.MemberManageTab.keyword'),
       dataIndex: 'kw',
       hideInTable: true,
       fieldProps: {
-        placeholder: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.search'),
+        placeholder: dict('PC.Pages.TeamSetting.MemberManageTab.search'),
       },
     },
     {
-      title: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.nickname'),
+      title: dict('PC.Pages.TeamSetting.MemberManageTab.nickname'),
       dataIndex: 'nickName',
       search: false,
     },
     {
-      title: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.username'),
+      title: dict('PC.Pages.TeamSetting.MemberManageTab.username'),
       dataIndex: 'userName',
       search: false,
     },
     {
-      title: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.role'),
+      title: dict('PC.Pages.TeamSetting.MemberManageTab.role'),
       dataIndex: 'role',
       valueType: 'select',
       valueEnum: {
-        [TeamStatusEnum.Owner]: { text: dict('NuwaxPC.Pages.TeamSetting.roleOwner') },
-        [TeamStatusEnum.Admin]: { text: dict('NuwaxPC.Pages.TeamSetting.roleAdmin') },
-        [TeamStatusEnum.User]: { text: dict('NuwaxPC.Pages.TeamSetting.roleMember') },
+        [TeamStatusEnum.Owner]: {
+          text: dict('PC.Pages.TeamSetting.roleOwner'),
+        },
+        [TeamStatusEnum.Admin]: {
+          text: dict('PC.Pages.TeamSetting.roleAdmin'),
+        },
+        [TeamStatusEnum.User]: {
+          text: dict('PC.Pages.TeamSetting.roleMember'),
+        },
       },
       render: (_: any, record: SpaceUserInfo) => {
         const role = record.role;
-        let text = dict('NuwaxPC.Pages.TeamSetting.roleMember');
-        if (role === TeamStatusEnum.Owner) text = dict('NuwaxPC.Pages.TeamSetting.roleOwner');
-        if (role === TeamStatusEnum.Admin) text = dict('NuwaxPC.Pages.TeamSetting.roleAdmin');
+        let text = dict('PC.Pages.TeamSetting.roleMember');
+        if (role === TeamStatusEnum.Owner)
+          text = dict('PC.Pages.TeamSetting.roleOwner');
+        if (role === TeamStatusEnum.Admin)
+          text = dict('PC.Pages.TeamSetting.roleAdmin');
         return text;
       },
     },
     {
-      title: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.joinTime'),
+      title: dict('PC.Pages.TeamSetting.MemberManageTab.joinTime'),
       dataIndex: 'created',
       search: false,
       width: 180,
       valueType: 'dateTime',
     },
     {
-      title: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.action'),
+      title: dict('PC.Pages.TeamSetting.MemberManageTab.action'),
       valueType: 'option',
       align: 'center',
       width: 160,
@@ -117,10 +125,14 @@ const MemberManageTab: React.FC<MemberManageTabProps> = ({ spaceId, role }) => {
           actions={[
             {
               key: 'delete',
-              label: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.delete'),
+              label: dict('PC.Pages.TeamSetting.MemberManageTab.delete'),
               confirm: {
-                title: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.confirmDelete'),
-                description: dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.confirmDeleteUser'),
+                title: dict(
+                  'PC.Pages.TeamSetting.MemberManageTab.confirmDelete',
+                ),
+                description: dict(
+                  'PC.Pages.TeamSetting.MemberManageTab.confirmDeleteUser',
+                ),
               },
               onClick: () => removeUser(record.userId),
             },
@@ -145,7 +157,7 @@ const MemberManageTab: React.FC<MemberManageTabProps> = ({ spaceId, role }) => {
               icon={<PlusOutlined />}
               onClick={() => setOpenAddMemberModal(true)}
             >
-              {dict('NuwaxPC.Pages.TeamSetting.MemberManageTab.addMember')}
+              {dict('PC.Pages.TeamSetting.MemberManageTab.addMember')}
             </Button>
           ),
         ]}

@@ -62,14 +62,20 @@ const CreatedItem: React.FC<CreatedItemProp> = ({
   //   title
   const getTitle = () => {
     const _mode = {
-      [CreateUpdateModeEnum.Create]: dict('NuwaxPC.Components.CreatedItem.create'),
-      [CreateUpdateModeEnum.Update]: dict('NuwaxPC.Components.CreatedItem.update'),
+      [CreateUpdateModeEnum.Create]: dict('PC.Components.CreatedItem.create'),
+      [CreateUpdateModeEnum.Update]: dict('PC.Components.CreatedItem.update'),
     };
     const _type = {
-      [AgentComponentTypeEnum.Table]: dict('NuwaxPC.Components.CreatedItem.dataTable'),
-      [AgentComponentTypeEnum.Knowledge]: dict('NuwaxPC.Components.CreatedItem.knowledge'),
-      [AgentComponentTypeEnum.Plugin]: dict('NuwaxPC.Components.CreatedItem.plugin'),
-      [AgentComponentTypeEnum.Workflow]: dict('NuwaxPC.Components.CreatedItem.workflow'),
+      [AgentComponentTypeEnum.Table]: dict(
+        'PC.Components.CreatedItem.dataTable',
+      ),
+      [AgentComponentTypeEnum.Knowledge]: dict(
+        'PC.Components.CreatedItem.knowledge',
+      ),
+      [AgentComponentTypeEnum.Plugin]: dict('PC.Components.CreatedItem.plugin'),
+      [AgentComponentTypeEnum.Workflow]: dict(
+        'PC.Components.CreatedItem.workflow',
+      ),
     };
     return `${_mode[mode]}${_type[type]}`;
   };
@@ -127,31 +133,44 @@ const CreatedItem: React.FC<CreatedItemProp> = ({
         )}
         <Form.Item
           name="name"
-          label={dict('NuwaxPC.Components.CreatedItem.name')}
+          label={dict('PC.Components.CreatedItem.name')}
           rules={[
-            { required: true, message: dict('NuwaxPC.Components.CreatedItem.pleaseInputName') },
+            {
+              required: true,
+              message: dict('PC.Components.CreatedItem.pleaseInputName'),
+            },
             {
               validator(_, value) {
                 if (!value || value?.length <= 30) {
                   return Promise.resolve();
                 }
                 if (value?.length > 30) {
-                  return Promise.reject(new Error(dict('NuwaxPC.Components.CreatedItem.nameMaxChars')));
+                  return Promise.reject(
+                    new Error(dict('PC.Components.CreatedItem.nameMaxChars')),
+                  );
                 }
-                return Promise.reject(new Error(dict('NuwaxPC.Components.CreatedItem.pleaseInputNameBang')));
+                return Promise.reject(
+                  new Error(
+                    dict('PC.Components.CreatedItem.pleaseInputNameBang'),
+                  ),
+                );
               },
             },
           ]}
         >
-          <Input placeholder={dict('NuwaxPC.Components.CreatedItem.placeholderName')} showCount maxLength={30} />
+          <Input
+            placeholder={dict('PC.Components.CreatedItem.placeholderName')}
+            showCount
+            maxLength={30}
+          />
         </Form.Item>
         <Form.Item
           name="description"
-          label={dict('NuwaxPC.Components.CreatedItem.description')}
+          label={dict('PC.Components.CreatedItem.description')}
           className="position-relative"
         >
           <Input.TextArea
-            placeholder={dict('NuwaxPC.Components.CreatedItem.placeholderDesc')}
+            placeholder={dict('PC.Components.CreatedItem.placeholderDesc')}
             autoSize={{ minRows: 3, maxRows: 6 }}
             maxLength={10000}
             showCount
@@ -176,14 +195,21 @@ const CreatedItem: React.FC<CreatedItemProp> = ({
         )}
         {type === AgentComponentTypeEnum.Plugin && (
           <>
-            <Form.Item shouldUpdate label={dict('NuwaxPC.Components.CreatedItem.toolCreateMethod')} name="type">
+            <Form.Item
+              shouldUpdate
+              label={dict('PC.Components.CreatedItem.toolCreateMethod')}
+              name="type"
+            >
               <Radio.Group options={PLUGIN_CREATE_TOOL}></Radio.Group>
             </Form.Item>
             {/* IDE 运行时 */}
             <Form.Item shouldUpdate>
               {() =>
                 form.getFieldValue('type') === 'CODE' && (
-                  <Form.Item label={dict('NuwaxPC.Components.CreatedItem.ideRuntime')} name="codeLang">
+                  <Form.Item
+                    label={dict('PC.Components.CreatedItem.ideRuntime')}
+                    name="codeLang"
+                  >
                     <SelectList options={CLOUD_BASE_CODE_OPTIONS} />
                   </Form.Item>
                 )

@@ -61,14 +61,14 @@ const Setting: React.FC = () => {
         if (loading) {
           return (
             <div className={cx(styles.loading)}>
-              {dict('NuwaxPC.Common.Global.loading')}
+              {dict('PC.Common.Global.loading')}
             </div>
           );
         }
         if (!tenantThemeConfig) {
           return (
             <div className={cx(styles.error)}>
-              {dict('NuwaxPC.Pages.Setting.themeLoadFailed')}
+              {dict('PC.Pages.Setting.themeLoadFailed')}
             </div>
           );
         }
@@ -85,17 +85,17 @@ const Setting: React.FC = () => {
   const getActionLabel = (type: SettingActionEnum) => {
     switch (type) {
       case SettingActionEnum.Account:
-        return dict('NuwaxPC.Pages.Setting.accountTitle');
+        return dict('PC.Pages.Setting.accountTitle');
       case SettingActionEnum.Email_Bind:
         return authType
-          ? dict('NuwaxPC.Pages.Setting.emailBind')
-          : dict('NuwaxPC.Pages.Setting.phoneBind');
+          ? dict('PC.Pages.Setting.emailBind')
+          : dict('PC.Pages.Setting.phoneBind');
       case SettingActionEnum.Reset_Password:
-        return dict('NuwaxPC.Pages.Setting.resetPassword');
+        return dict('PC.Pages.Setting.resetPassword');
       case SettingActionEnum.Theme_Switch:
-        return dict('NuwaxPC.Pages.Setting.themeSwitch');
+        return dict('PC.Pages.Setting.themeSwitch');
       case SettingActionEnum.Usage_Statistics:
-        return dict('NuwaxPC.Pages.Setting.usageStatistics');
+        return dict('PC.Pages.Setting.usageStatistics');
       default:
         return '';
     }
@@ -110,7 +110,7 @@ const Setting: React.FC = () => {
       modalRender={() => (
         <div className={cx(styles.container, 'flex', 'overflow-hide')}>
           <div className={cx(styles.left)}>
-            <h3>{dict('NuwaxPC.Pages.Setting.profileTitle')}</h3>
+            <h3>{dict('PC.Pages.Setting.profileTitle')}</h3>
             <ul>
               {SETTING_ACTIONS.map((item) => (
                 <li

@@ -88,7 +88,9 @@ const ThemeSwitchPanel: React.FC<ThemeSwitchPanelProps> = ({
       setHasUserSwitchThemeFlag();
     } catch (error) {
       console.error('更新主题色失败:', error);
-      message.error(dict('NuwaxPC.Layouts.Setting.ThemeSwitchPanel.colorUpdateFailed'));
+      message.error(
+        dict('PC.Layouts.Setting.ThemeSwitchPanel.colorUpdateFailed'),
+      );
     }
   };
 
@@ -104,17 +106,20 @@ const ThemeSwitchPanel: React.FC<ThemeSwitchPanelProps> = ({
       );
       if (backgroundConfig) {
         const layoutStyle = backgroundConfig.layoutStyle;
-        const themeLabel = layoutStyle === ThemeLayoutColorStyle.DARK
-          ? dict('NuwaxPC.Layouts.Setting.ThemeSwitchPanel.dark')
-          : dict('NuwaxPC.Layouts.Setting.ThemeSwitchPanel.light');
+        const themeLabel =
+          layoutStyle === ThemeLayoutColorStyle.DARK
+            ? dict('PC.Layouts.Setting.ThemeSwitchPanel.dark')
+            : dict('PC.Layouts.Setting.ThemeSwitchPanel.light');
         message.info(
-          dict('NuwaxPC.Layouts.Setting.ThemeSwitchPanel.autoSwitchNav', themeLabel),
+          dict('PC.Layouts.Setting.ThemeSwitchPanel.autoSwitchNav', themeLabel),
         );
         setHasUserSwitchThemeFlag();
       }
     } catch (error) {
       console.error('更新背景图失败:', error);
-      message.error(dict('NuwaxPC.Layouts.Setting.ThemeSwitchPanel.backgroundUpdateFailed'));
+      message.error(
+        dict('PC.Layouts.Setting.ThemeSwitchPanel.backgroundUpdateFailed'),
+      );
     }
   };
 
@@ -125,7 +130,9 @@ const ThemeSwitchPanel: React.FC<ThemeSwitchPanelProps> = ({
       setHasUserSwitchThemeFlag();
     } catch (error) {
       console.error('更新导航风格失败:', error);
-      message.error(dict('NuwaxPC.Layouts.Setting.ThemeSwitchPanel.navStyleUpdateFailed'));
+      message.error(
+        dict('PC.Layouts.Setting.ThemeSwitchPanel.navStyleUpdateFailed'),
+      );
     }
   };
 
@@ -154,24 +161,33 @@ const ThemeSwitchPanel: React.FC<ThemeSwitchPanelProps> = ({
           }
 
           // 显示背景自动匹配提示
-          const themeLabel = themeData.layoutStyle === ThemeLayoutColorStyle.DARK
-            ? dict('NuwaxPC.Layouts.Setting.ThemeSwitchPanel.dark')
-            : dict('NuwaxPC.Layouts.Setting.ThemeSwitchPanel.light');
+          const themeLabel =
+            themeData.layoutStyle === ThemeLayoutColorStyle.DARK
+              ? dict('PC.Layouts.Setting.ThemeSwitchPanel.dark')
+              : dict('PC.Layouts.Setting.ThemeSwitchPanel.light');
           message.info(
-            dict('NuwaxPC.Layouts.Setting.ThemeSwitchPanel.autoSwitchBackground', matchingBackground.name, themeLabel),
+            dict(
+              'PC.Layouts.Setting.ThemeSwitchPanel.autoSwitchBackground',
+              matchingBackground.name,
+              themeLabel,
+            ),
           );
           setHasUserSwitchThemeFlag();
         }
       }
     } catch (error) {
       console.error('切换导航主题失败:', error);
-      message.error(dict('NuwaxPC.Layouts.Setting.ThemeSwitchPanel.navThemeToggleFailed'));
+      message.error(
+        dict('PC.Layouts.Setting.ThemeSwitchPanel.navThemeToggleFailed'),
+      );
     }
   };
 
   return (
     <div className={cx(styles.container)}>
-      <div className={cx(styles.title)}>{dict('NuwaxPC.Layouts.Setting.ThemeSwitchPanel.title')}</div>
+      <div className={cx(styles.title)}>
+        {dict('PC.Layouts.Setting.ThemeSwitchPanel.title')}
+      </div>
       <div className={cx(styles.content, 'scroll-container')}>
         {/* 垂直布局的主题配置区域 */}
         <div className={cx(styles.configContainer)}>

@@ -65,79 +65,79 @@ export const asideList: StencilList[] = [
     key: 'group1',
     children: [
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeLlmName'),
+        name: t('PC.Pages.AntvX6Params.nodeLlmName'),
         icon: <ICON_WORKFLOW_LLM />,
         bgIcon: BG_ICON_WORKFLOW_LLM,
         type: NodeTypeEnum.LLM,
         shape: NodeShapeEnum.General,
-        description: t('NuwaxPC.Pages.AntvX6Params.nodeLlmDescription'),
+        description: t('PC.Pages.AntvX6Params.nodeLlmDescription'),
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodePluginName'),
+        name: t('PC.Pages.AntvX6Params.nodePluginName'),
         icon: <ICON_WORKFLOW_PLUGIN />,
         bgIcon: BG_ICON_WORKFLOW_PLUGIN,
         type: NodeTypeEnum.Plugin,
         shape: NodeShapeEnum.General,
-        description: t('NuwaxPC.Pages.AntvX6Params.nodePluginDescription'),
+        description: t('PC.Pages.AntvX6Params.nodePluginDescription'),
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeWorkflowName'),
+        name: t('PC.Pages.AntvX6Params.nodeWorkflowName'),
         icon: <ICON_WORKFLOW_WORKFLOW />,
         bgIcon: BG_ICON_WORKFLOW_WORKFLOW,
         type: NodeTypeEnum.Workflow,
         shape: NodeShapeEnum.General,
-        description: t('NuwaxPC.Pages.AntvX6Params.nodeWorkflowDescription'),
+        description: t('PC.Pages.AntvX6Params.nodeWorkflowDescription'),
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeMcpName'),
+        name: t('PC.Pages.AntvX6Params.nodeMcpName'),
         icon: <ICON_WORKFLOW_MCP />,
         bgIcon: BG_ICON_WORKFLOW_MCP,
         type: NodeTypeEnum.MCP,
         shape: NodeShapeEnum.General,
-        description: t('NuwaxPC.Pages.AntvX6Params.nodeMcpDescription'),
+        description: t('PC.Pages.AntvX6Params.nodeMcpDescription'),
       },
     ],
   },
   {
-    name: t('NuwaxPC.Pages.AntvX6Params.groupBusinessLogic'),
+    name: t('PC.Pages.AntvX6Params.groupBusinessLogic'),
     key: 'group2',
     children: [
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeCodeName'),
+        name: t('PC.Pages.AntvX6Params.nodeCodeName'),
         icon: <ICON_WORKFLOW_CODE />,
         bgIcon: BG_ICON_WORKFLOW_CODE,
         type: NodeTypeEnum.Code,
         shape: NodeShapeEnum.General,
-        description: t('NuwaxPC.Pages.AntvX6Params.nodeCodeDescription'),
+        description: t('PC.Pages.AntvX6Params.nodeCodeDescription'),
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeConditionName'),
+        name: t('PC.Pages.AntvX6Params.nodeConditionName'),
         icon: <ICON_WORKFLOW_CONDITION />,
         bgIcon: BG_ICON_WORKFLOW_CONDITION,
         type: NodeTypeEnum.Condition,
         shape: NodeShapeEnum.General,
-        description: t('NuwaxPC.Pages.AntvX6Params.nodeConditionDescription'),
+        description: t('PC.Pages.AntvX6Params.nodeConditionDescription'),
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeIntentRecognitionName'),
+        name: t('PC.Pages.AntvX6Params.nodeIntentRecognitionName'),
         icon: <ICON_WORKFLOW_INTENT_RECOGNITION />,
         bgIcon: BG_ICON_WORKFLOW_INTENT_RECOGNITION,
         type: NodeTypeEnum.IntentRecognition,
         shape: NodeShapeEnum.General,
         description: t(
-          'NuwaxPC.Pages.AntvX6Params.nodeIntentRecognitionDescription',
+          'PC.Pages.AntvX6Params.nodeIntentRecognitionDescription',
         ),
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeLoopName'),
+        name: t('PC.Pages.AntvX6Params.nodeLoopName'),
         icon: <ICON_WORKFLOW_LOOP />,
         bgIcon: BG_ICON_WORKFLOW_LOOP,
         type: NodeTypeEnum.Loop,
         shape: NodeShapeEnum.Loop,
-        description: t('NuwaxPC.Pages.AntvX6Params.nodeLoopDescription'),
+        description: t('PC.Pages.AntvX6Params.nodeLoopDescription'),
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeLoopContinueName'),
+        name: t('PC.Pages.AntvX6Params.nodeLoopContinueName'),
         icon: <ICON_WORKFLOW_LOOPCONTINUE />,
         bgIcon: BG_ICON_WORKFLOW_LOOPCONTINUE,
         type: NodeTypeEnum.LoopContinue,
@@ -145,7 +145,7 @@ export const asideList: StencilList[] = [
         description: '',
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeLoopBreakName'),
+        name: t('PC.Pages.AntvX6Params.nodeLoopBreakName'),
         icon: <ICON_WORKFLOW_LOOPBREAK />,
         bgIcon: BG_ICON_WORKFLOW_LOOPBREAK,
         type: NodeTypeEnum.LoopBreak,
@@ -155,149 +155,133 @@ export const asideList: StencilList[] = [
     ],
   },
   {
-    name: t('NuwaxPC.Pages.AntvX6Params.groupKnowledgeData'),
+    name: t('PC.Pages.AntvX6Params.groupKnowledgeData'),
     key: 'group3',
     children: [
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeKnowledgeBaseName'),
+        name: t('PC.Pages.AntvX6Params.nodeKnowledgeBaseName'),
         icon: <ICON_WORKFLOW_KNOWLEDGE_BASE />,
         bgIcon: BG_ICON_WORKFLOW_KNOWLEDGE_BASE,
         type: NodeTypeEnum.Knowledge,
         shape: NodeShapeEnum.General,
-        description: t(
-          'NuwaxPC.Pages.AntvX6Params.nodeKnowledgeBaseDescription',
-        ),
+        description: t('PC.Pages.AntvX6Params.nodeKnowledgeBaseDescription'),
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeVariableName'),
+        name: t('PC.Pages.AntvX6Params.nodeVariableName'),
         icon: <ICON_WORKFLOW_VARIABLE />,
         bgIcon: BG_ICON_WORKFLOW_VARIABLE,
         type: NodeTypeEnum.Variable,
         shape: NodeShapeEnum.General,
-        description: t('NuwaxPC.Pages.AntvX6Params.nodeVariableDescription'),
+        description: t('PC.Pages.AntvX6Params.nodeVariableDescription'),
       },
 
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeLongTermMemoryName'),
+        name: t('PC.Pages.AntvX6Params.nodeLongTermMemoryName'),
         icon: <ICON_WORKFLOW_LONG_TERM_MEMORY />,
         bgIcon: BG_ICON_WORKFLOW_LONG_TERM_MEMORY,
         type: NodeTypeEnum.LongTermMemory,
         shape: NodeShapeEnum.General,
-        description: t(
-          'NuwaxPC.Pages.AntvX6Params.nodeLongTermMemoryDescription',
-        ),
+        description: t('PC.Pages.AntvX6Params.nodeLongTermMemoryDescription'),
       },
     ],
   },
   {
-    name: t('NuwaxPC.Pages.AntvX6Params.groupDataTable'),
+    name: t('PC.Pages.AntvX6Params.groupDataTable'),
     key: 'group4',
     children: [
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeTableDataAddName'),
+        name: t('PC.Pages.AntvX6Params.nodeTableDataAddName'),
         icon: <ICON_WORKFLOW_DATABASEADD />,
         bgIcon: BG_ICON_WORKFLOW_DATABASEADD,
         type: NodeTypeEnum.TableDataAdd,
         shape: NodeShapeEnum.General,
-        description: t(
-          'NuwaxPC.Pages.AntvX6Params.nodeTableDataAddDescription',
-        ),
+        description: t('PC.Pages.AntvX6Params.nodeTableDataAddDescription'),
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeTableDataDeleteName'),
+        name: t('PC.Pages.AntvX6Params.nodeTableDataDeleteName'),
         icon: <ICON_WORKFLOW_DATABASEDELETE />,
         bgIcon: BG_ICON_WORKFLOW_DATABASEDELETE,
         type: NodeTypeEnum.TableDataDelete,
         shape: NodeShapeEnum.General,
-        description: t(
-          'NuwaxPC.Pages.AntvX6Params.nodeTableDataDeleteDescription',
-        ),
+        description: t('PC.Pages.AntvX6Params.nodeTableDataDeleteDescription'),
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeTableDataUpdateName'),
+        name: t('PC.Pages.AntvX6Params.nodeTableDataUpdateName'),
         icon: <ICON_WORKFLOW_DATABASEUPDATE />,
         bgIcon: BG_ICON_WORKFLOW_DATABASEUPDATE,
         type: NodeTypeEnum.TableDataUpdate,
         shape: NodeShapeEnum.General,
-        description: t(
-          'NuwaxPC.Pages.AntvX6Params.nodeTableDataUpdateDescription',
-        ),
+        description: t('PC.Pages.AntvX6Params.nodeTableDataUpdateDescription'),
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeTableDataQueryName'),
+        name: t('PC.Pages.AntvX6Params.nodeTableDataQueryName'),
         icon: <ICON_WORKFLOW_DATABASEQUERY />,
         bgIcon: BG_ICON_WORKFLOW_DATABASEQUERY,
         type: NodeTypeEnum.TableDataQuery,
         shape: NodeShapeEnum.General,
-        description: t(
-          'NuwaxPC.Pages.AntvX6Params.nodeTableDataQueryDescription',
-        ),
+        description: t('PC.Pages.AntvX6Params.nodeTableDataQueryDescription'),
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeTableSqlName'),
+        name: t('PC.Pages.AntvX6Params.nodeTableSqlName'),
         icon: <ICON_WORKFLOW_DATABASE />,
         bgIcon: BG_ICON_WORKFLOW_DATABASE,
         type: NodeTypeEnum.TableSQL,
         shape: NodeShapeEnum.General,
-        description: t('NuwaxPC.Pages.AntvX6Params.nodeTableSqlDescription'),
+        description: t('PC.Pages.AntvX6Params.nodeTableSqlDescription'),
       },
     ],
   },
   {
-    name: t('NuwaxPC.Pages.AntvX6Params.groupComponentTool'),
+    name: t('PC.Pages.AntvX6Params.groupComponentTool'),
     key: 'group5',
     children: [
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeQaName'),
+        name: t('PC.Pages.AntvX6Params.nodeQaName'),
         icon: <ICON_WORKFLOW_QA />,
         bgIcon: BG_ICON_WORKFLOW_QA,
         type: NodeTypeEnum.QA,
         shape: NodeShapeEnum.General,
-        description: t('NuwaxPC.Pages.AntvX6Params.nodeQaDescription'),
+        description: t('PC.Pages.AntvX6Params.nodeQaDescription'),
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeTextProcessingName'),
+        name: t('PC.Pages.AntvX6Params.nodeTextProcessingName'),
         icon: <ICON_WORKFLOW_TEXT_PROCESSING />,
         bgIcon: BG_ICON_WORKFLOW_TEXT_PROCESSING,
         type: NodeTypeEnum.TextProcessing,
         shape: NodeShapeEnum.General,
-        description: t(
-          'NuwaxPC.Pages.AntvX6Params.nodeTextProcessingDescription',
-        ),
+        description: t('PC.Pages.AntvX6Params.nodeTextProcessingDescription'),
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeDocumentExtractionName'),
+        name: t('PC.Pages.AntvX6Params.nodeDocumentExtractionName'),
         icon: <ICON_WORKFLOW_DOCUMENT_EXTRACTION />,
         bgIcon: BG_ICON_WORKFLOW_DOCUMENT_EXTRACTION,
         type: NodeTypeEnum.DocumentExtraction,
         shape: NodeShapeEnum.General,
         description: t(
-          'NuwaxPC.Pages.AntvX6Params.nodeDocumentExtractionDescription',
+          'PC.Pages.AntvX6Params.nodeDocumentExtractionDescription',
         ),
       },
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeHttpRequestName'),
+        name: t('PC.Pages.AntvX6Params.nodeHttpRequestName'),
         icon: <ICON_WORKFLOW_HTTP_REQUEST />,
         bgIcon: BG_ICON_WORKFLOW_HTTP_REQUEST,
         type: NodeTypeEnum.HTTPRequest,
         shape: NodeShapeEnum.General,
-        description: t('NuwaxPC.Pages.AntvX6Params.nodeHttpRequestDescription'),
+        description: t('PC.Pages.AntvX6Params.nodeHttpRequestDescription'),
       },
     ],
   },
   {
-    name: t('NuwaxPC.Pages.AntvX6Params.groupOutput'),
+    name: t('PC.Pages.AntvX6Params.groupOutput'),
     key: 'group6',
     children: [
       {
-        name: t('NuwaxPC.Pages.AntvX6Params.nodeProcessOutputName'),
+        name: t('PC.Pages.AntvX6Params.nodeProcessOutputName'),
         icon: <ICON_WORKFLOW_OUTPUT />,
         bgIcon: BG_ICON_WORKFLOW_OUTPUT,
         type: NodeTypeEnum.Output,
         shape: NodeShapeEnum.General,
-        description: t(
-          'NuwaxPC.Pages.AntvX6Params.nodeProcessOutputDescription',
-        ),
+        description: t('PC.Pages.AntvX6Params.nodeProcessOutputDescription'),
       },
     ],
   },
@@ -447,7 +431,7 @@ export const dataTypes = [
 // Mock model input schema.
 export const modelTypes = [
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.modelTypeTitleGeneration'),
+    label: t('PC.Pages.AntvX6Params.modelTypeTitleGeneration'),
     icon: <ICON_START />,
     key: 'titleGeneration',
     children: [
@@ -468,27 +452,27 @@ export const modelTypes = [
 // Loop mode options.
 export const cycleOption = [
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.cycleArrayLoop'),
+    label: t('PC.Pages.AntvX6Params.cycleArrayLoop'),
     value: 'ARRAY_LOOP',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.cycleSpecifyTimesLoop'),
+    label: t('PC.Pages.AntvX6Params.cycleSpecifyTimesLoop'),
     value: 'SPECIFY_TIMES_LOOP',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.cycleInfiniteLoop'),
+    label: t('PC.Pages.AntvX6Params.cycleInfiniteLoop'),
     value: 'INFINITE_LOOP',
   },
 ];
 export const InputConfigs = [
   {
     name: 'name',
-    placeholder: t('NuwaxPC.Pages.AntvX6Params.inputVariableName'),
-    label: t('NuwaxPC.Pages.AntvX6Params.inputVariableName'),
+    placeholder: t('PC.Pages.AntvX6Params.inputVariableName'),
+    label: t('PC.Pages.AntvX6Params.inputVariableName'),
     rules: [
       {
         required: true,
-        message: t('NuwaxPC.Pages.AntvX6Params.inputVariableNameRequired'),
+        message: t('PC.Pages.AntvX6Params.inputVariableNameRequired'),
       },
     ],
     component: Input,
@@ -496,12 +480,12 @@ export const InputConfigs = [
   },
   {
     name: 'dataType',
-    placeholder: t('NuwaxPC.Pages.AntvX6Params.selectType'),
-    label: t('NuwaxPC.Pages.AntvX6Params.inputVariableType'),
+    placeholder: t('PC.Pages.AntvX6Params.selectType'),
+    label: t('PC.Pages.AntvX6Params.inputVariableType'),
     rules: [
       {
         required: true,
-        message: t('NuwaxPC.Pages.AntvX6Params.inputVariableTypeRequired'),
+        message: t('PC.Pages.AntvX6Params.inputVariableTypeRequired'),
       },
     ],
     component: Cascader,
@@ -510,12 +494,12 @@ export const InputConfigs = [
   },
   {
     name: 'description',
-    placeholder: t('NuwaxPC.Pages.AntvX6Params.description'),
+    placeholder: t('PC.Pages.AntvX6Params.description'),
     label: '',
     rules: [
       {
         required: true,
-        message: t('NuwaxPC.Pages.AntvX6Params.descriptionRequired'),
+        message: t('PC.Pages.AntvX6Params.descriptionRequired'),
       },
     ],
     component: Checkbox,
@@ -523,12 +507,12 @@ export const InputConfigs = [
   },
   {
     name: 'require',
-    placeholder: t('NuwaxPC.Pages.AntvX6Params.inputVariableName'),
+    placeholder: t('PC.Pages.AntvX6Params.inputVariableName'),
     label: '',
     rules: [
       {
         required: true,
-        message: t('NuwaxPC.Pages.AntvX6Params.inputVariableNameRequired'),
+        message: t('PC.Pages.AntvX6Params.inputVariableNameRequired'),
       },
     ],
     component: Checkbox,
@@ -539,12 +523,12 @@ export const InputConfigs = [
 export const outPutConfigs = [
   {
     name: 'name',
-    placeholder: t('NuwaxPC.Pages.AntvX6Params.paramName'),
-    label: t('NuwaxPC.Pages.AntvX6Params.paramName'),
+    placeholder: t('PC.Pages.AntvX6Params.paramName'),
+    label: t('PC.Pages.AntvX6Params.paramName'),
     rules: [
       {
         required: true,
-        message: t('NuwaxPC.Pages.AntvX6Params.paramNameRequired'),
+        message: t('PC.Pages.AntvX6Params.paramNameRequired'),
       },
     ],
     component: Input,
@@ -552,12 +536,12 @@ export const outPutConfigs = [
   },
   {
     name: 'bindValue',
-    placeholder: t('NuwaxPC.Pages.AntvX6Params.inputOrReferenceParamValue'),
-    label: t('NuwaxPC.Pages.AntvX6Params.paramValue'),
+    placeholder: t('PC.Pages.AntvX6Params.inputOrReferenceParamValue'),
+    label: t('PC.Pages.AntvX6Params.paramValue'),
     rules: [
       {
         required: true,
-        message: t('NuwaxPC.Pages.AntvX6Params.paramValueRequired'),
+        message: t('PC.Pages.AntvX6Params.paramValueRequired'),
       },
     ],
     component: InputOrReference,
@@ -565,12 +549,12 @@ export const outPutConfigs = [
   },
   {
     name: 'description',
-    placeholder: t('NuwaxPC.Pages.AntvX6Params.description'),
+    placeholder: t('PC.Pages.AntvX6Params.description'),
     label: '',
     rules: [
       {
         required: true,
-        message: t('NuwaxPC.Pages.AntvX6Params.descriptionRequired'),
+        message: t('PC.Pages.AntvX6Params.descriptionRequired'),
       },
     ],
     component: Checkbox,
@@ -582,12 +566,12 @@ export const outPutConfigs = [
 export const intentionConfigs = [
   {
     name: 'intent',
-    placeholder: t('NuwaxPC.Pages.AntvX6Params.inputParamValue'),
+    placeholder: t('PC.Pages.AntvX6Params.inputParamValue'),
     label: '',
     rules: [
       {
         required: true,
-        message: t('NuwaxPC.Pages.AntvX6Params.intentDescriptionRequired'),
+        message: t('PC.Pages.AntvX6Params.intentDescriptionRequired'),
       },
     ],
     component: Input,
@@ -598,12 +582,12 @@ export const intentionConfigs = [
 export const modelConfigs = [
   {
     name: 'name',
-    placeholder: t('NuwaxPC.Pages.AntvX6Params.paramName'),
-    label: t('NuwaxPC.Pages.AntvX6Params.paramName'),
+    placeholder: t('PC.Pages.AntvX6Params.paramName'),
+    label: t('PC.Pages.AntvX6Params.paramName'),
     rules: [
       {
         required: true,
-        message: t('NuwaxPC.Pages.AntvX6Params.paramNameRequired'),
+        message: t('PC.Pages.AntvX6Params.paramNameRequired'),
       },
     ],
     component: Input,
@@ -611,12 +595,12 @@ export const modelConfigs = [
   },
   {
     name: 'paramsValue',
-    placeholder: t('NuwaxPC.Pages.AntvX6Params.inputOrReferenceVariableValue'),
-    label: t('NuwaxPC.Pages.AntvX6Params.variableValue'),
+    placeholder: t('PC.Pages.AntvX6Params.inputOrReferenceVariableValue'),
+    label: t('PC.Pages.AntvX6Params.variableValue'),
     rules: [
       {
         required: true,
-        message: t('NuwaxPC.Pages.AntvX6Params.variableValueRequired'),
+        message: t('PC.Pages.AntvX6Params.variableValueRequired'),
       },
     ],
     component: InputOrReference,
@@ -628,12 +612,12 @@ export const modelConfigs = [
 export const leftMenuList = [
   {
     icon: <SwitcherFilled />,
-    name: t('NuwaxPC.Pages.AntvX6Params.resourceWorkflow'),
+    name: t('PC.Pages.AntvX6Params.resourceWorkflow'),
     key: 'resources',
   },
   {
     icon: <SwitcherFilled />,
-    name: t('NuwaxPC.Pages.AntvX6Params.officialExample'),
+    name: t('PC.Pages.AntvX6Params.officialExample'),
     key: 'example',
   },
 ];
@@ -641,77 +625,77 @@ export const leftMenuList = [
 // Operators for condition branches and data filters.
 export const options = [
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorEqual'),
+    label: t('PC.Pages.AntvX6Params.operatorEqual'),
     value: 'EQUAL',
     displayValue: '=',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorNotEqual'),
+    label: t('PC.Pages.AntvX6Params.operatorNotEqual'),
     value: 'NOT_EQUAL',
     displayValue: '≠',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorGreaterThan'),
+    label: t('PC.Pages.AntvX6Params.operatorGreaterThan'),
     value: 'GREATER_THAN',
     displayValue: '>',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorGreaterThanOrEqual'),
+    label: t('PC.Pages.AntvX6Params.operatorGreaterThanOrEqual'),
     value: 'GREATER_THAN_OR_EQUAL',
     displayValue: '≥',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorLessThan'),
+    label: t('PC.Pages.AntvX6Params.operatorLessThan'),
     value: 'LESS_THAN',
     displayValue: '<',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorLessThanOrEqual'),
+    label: t('PC.Pages.AntvX6Params.operatorLessThanOrEqual'),
     value: 'LESS_THAN_OR_EQUAL',
     displayValue: '≤',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorLengthGreaterThan'),
+    label: t('PC.Pages.AntvX6Params.operatorLengthGreaterThan'),
     value: 'LENGTH_GREATER_THAN',
     displayValue: '>',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorLengthGreaterThanOrEqual'),
+    label: t('PC.Pages.AntvX6Params.operatorLengthGreaterThanOrEqual'),
     value: 'LENGTH_GREATER_THAN_OR_EQUAL',
     displayValue: '≥',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorLengthLessThan'),
+    label: t('PC.Pages.AntvX6Params.operatorLengthLessThan'),
     value: 'LENGTH_LESS_THAN',
     displayValue: '<',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorLengthLessThanOrEqual'),
+    label: t('PC.Pages.AntvX6Params.operatorLengthLessThanOrEqual'),
     value: 'LENGTH_LESS_THAN_OR_EQUAL',
     displayValue: '≤',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorContains'),
+    label: t('PC.Pages.AntvX6Params.operatorContains'),
     value: 'CONTAINS',
     displayValue: '⊃',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorNotContains'),
+    label: t('PC.Pages.AntvX6Params.operatorNotContains'),
     value: 'NOT_CONTAINS',
     displayValue: '⊅',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorMatchRegex'),
+    label: t('PC.Pages.AntvX6Params.operatorMatchRegex'),
     value: 'MATCH_REGEX',
     displayValue: '~',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorIsNull'),
+    label: t('PC.Pages.AntvX6Params.operatorIsNull'),
     value: 'IS_NULL',
     displayValue: '∅',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorNotNull'),
+    label: t('PC.Pages.AntvX6Params.operatorNotNull'),
     value: 'NOT_NULL',
     displayValue: '!∅',
   },
@@ -719,52 +703,52 @@ export const options = [
 
 export const tableOptions = [
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorEqual'),
+    label: t('PC.Pages.AntvX6Params.operatorEqual'),
     value: 'EQUAL',
     displayValue: '=',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorNotEqual'),
+    label: t('PC.Pages.AntvX6Params.operatorNotEqual'),
     value: 'NOT_EQUAL',
     displayValue: '≠',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorGreaterThan'),
+    label: t('PC.Pages.AntvX6Params.operatorGreaterThan'),
     value: 'GREATER_THAN',
     displayValue: '>',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorGreaterThanOrEqual'),
+    label: t('PC.Pages.AntvX6Params.operatorGreaterThanOrEqual'),
     value: 'GREATER_THAN_OR_EQUAL',
     displayValue: '≥',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorLessThan'),
+    label: t('PC.Pages.AntvX6Params.operatorLessThan'),
     value: 'LESS_THAN',
     displayValue: '<',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorLessThanOrEqual'),
+    label: t('PC.Pages.AntvX6Params.operatorLessThanOrEqual'),
     value: 'LESS_THAN_OR_EQUAL',
     displayValue: '≤',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorIn'),
+    label: t('PC.Pages.AntvX6Params.operatorIn'),
     value: 'IN',
     displayValue: '⊃',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorNotIn'),
+    label: t('PC.Pages.AntvX6Params.operatorNotIn'),
     value: 'NOT_IN',
     displayValue: '⊅',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorIsNull'),
+    label: t('PC.Pages.AntvX6Params.operatorIsNull'),
     value: 'IS_NULL',
     displayValue: '∅',
   },
   {
-    label: t('NuwaxPC.Pages.AntvX6Params.operatorNotNull'),
+    label: t('PC.Pages.AntvX6Params.operatorNotNull'),
     value: 'NOT_NULL',
     displayValue: '!∅',
   },

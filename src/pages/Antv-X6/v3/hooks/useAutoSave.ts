@@ -93,7 +93,7 @@ export function useAutoSave(
           // 自动保存遇到版本冲突时，通知用户但不自动强制提交
           workflowLogger.warn('useAutoSave version conflict, auto save failed');
           onSaveError?.(
-            new Error(t('NuwaxPC.Pages.AntvX6AutoSave.versionConflictMessage')),
+            new Error(t('PC.Pages.AntvX6AutoSave.versionConflictMessage')),
           );
           return false;
         } else {

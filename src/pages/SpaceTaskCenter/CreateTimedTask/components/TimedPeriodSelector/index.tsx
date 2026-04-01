@@ -80,7 +80,7 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
     }));
     // 注入“指定时间”选项
     _typeNameList.push({
-      label: t('NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.specificTime'),
+      label: t('PC.Pages.SpaceTaskTimedPeriodSelector.specificTime'),
       value: 'SpecificTime',
     });
     setTypeNameList(_typeNameList);
@@ -176,7 +176,7 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
         rules={[
           {
             required: true,
-            message: t('NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.enter'),
+            message: t('PC.Pages.SpaceTaskTimedPeriodSelector.enter'),
           },
         ]}
       >
@@ -193,7 +193,7 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
           rules={[
             {
               required: true,
-              message: t('NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.enter'),
+              message: t('PC.Pages.SpaceTaskTimedPeriodSelector.enter'),
             },
           ]}
         >
@@ -213,7 +213,7 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
             {
               required: true,
               message: t(
-                'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.selectSpecificTime',
+                'PC.Pages.SpaceTaskTimedPeriodSelector.selectSpecificTime',
               ),
             },
             {
@@ -222,7 +222,7 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
                   return Promise.reject(
                     new Error(
                       t(
-                        'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.specificTimeMustBeFuture',
+                        'PC.Pages.SpaceTaskTimedPeriodSelector.specificTimeMustBeFuture',
                       ),
                     ),
                   );
@@ -235,7 +235,7 @@ const TimedPeriodSelector: React.FC<TimedPeriodSelectorProps> = ({
           <DatePicker
             showTime
             placeholder={t(
-              'NuwaxPC.Pages.SpaceTaskTimedPeriodSelector.selectDateTime',
+              'PC.Pages.SpaceTaskTimedPeriodSelector.selectDateTime',
             )}
             style={{ width: 200 }}
           />

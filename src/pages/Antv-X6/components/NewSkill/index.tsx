@@ -174,7 +174,7 @@ export const SkillList: React.FC<SkillProps> = ({
                       </Popover>
                     )}
                   <Popover
-                    content={dict('NuwaxPC.Pages.AntvX6Skill.editParams')}
+                    content={dict('PC.Pages.AntvX6Skill.editParams')}
                     trigger="hover"
                   >
                     <SettingOutlined
@@ -187,7 +187,7 @@ export const SkillList: React.FC<SkillProps> = ({
                   </Popover>
                   {!disabled && (
                     <Popover
-                      content={dict('NuwaxPC.Pages.AntvX6Skill.remove')}
+                      content={dict('PC.Pages.AntvX6Skill.remove')}
                       trigger="hover"
                     >
                       <DeleteOutlined

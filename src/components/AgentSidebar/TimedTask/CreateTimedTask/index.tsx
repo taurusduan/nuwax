@@ -92,7 +92,7 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Components.CreateTimedTask.createSuccess'));
+      message.success(dict('PC.Components.CreateTimedTask.createSuccess'));
       onConfirm();
       // 重置定时周期
       handleTimedInfo(taskCronListRef.current);
@@ -104,7 +104,7 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Components.CreateTimedTask.updateSuccess'));
+      message.success(dict('PC.Components.CreateTimedTask.updateSuccess'));
       onConfirm();
       // 重置定时周期
       handleTimedInfo(taskCronListRef.current);
@@ -184,7 +184,9 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
       form={form}
       open={open}
       title={
-        mode === CreateUpdateModeEnum.Create ? dict('NuwaxPC.Components.CreateTimedTask.createTitle') : dict('NuwaxPC.Components.CreateTimedTask.updateTitle')
+        mode === CreateUpdateModeEnum.Create
+          ? dict('PC.Components.CreateTimedTask.createTitle')
+          : dict('PC.Components.CreateTimedTask.updateTitle')
       }
       onCancel={onCancelCreate}
       onConfirm={handlerConfirm}
@@ -197,9 +199,23 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
         onFinish={onFinish}
         autoComplete="off"
       >
-        <Form.Item label={<LabelStar label={dict('NuwaxPC.Components.CreateTimedTask.timedPeriod')} />}>
+        <Form.Item
+          label={
+            <LabelStar
+              label={dict('PC.Components.CreateTimedTask.timedPeriod')}
+            />
+          }
+        >
           <Space>
-            <Form.Item noStyle rules={[{ required: true, message: dict('NuwaxPC.Common.Global.pleaseInput') }]}>
+            <Form.Item
+              noStyle
+              rules={[
+                {
+                  required: true,
+                  message: dict('PC.Common.Global.pleaseInput'),
+                },
+              ]}
+            >
               <SelectList
                 className={cx(styles.select)}
                 options={typeNameList}
@@ -207,7 +223,15 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
                 onChange={handleChangeTypeName}
               />
             </Form.Item>
-            <Form.Item noStyle rules={[{ required: true, message: dict('NuwaxPC.Common.Global.pleaseInput') }]}>
+            <Form.Item
+              noStyle
+              rules={[
+                {
+                  required: true,
+                  message: dict('PC.Common.Global.pleaseInput'),
+                },
+              ]}
+            >
               <SelectList
                 className={cx(styles.select)}
                 options={typeCronList}
@@ -219,16 +243,38 @@ const CreateTimedTask: React.FC<CreateTimedTaskProps> = ({
         </Form.Item>
         <Form.Item
           name="topic"
-          label={dict('NuwaxPC.Components.CreateTimedTask.taskName')}
-          rules={[{ required: true, message: dict('NuwaxPC.Components.CreateTimedTask.pleaseInputTaskName') }]}
+          label={dict('PC.Components.CreateTimedTask.taskName')}
+          rules={[
+            {
+              required: true,
+              message: dict(
+                'PC.Components.CreateTimedTask.pleaseInputTaskName',
+              ),
+            },
+          ]}
         >
-          <Input placeholder={dict('NuwaxPC.Components.CreateTimedTask.pleaseInputTaskName')} showCount maxLength={100} />
+          <Input
+            placeholder={dict(
+              'PC.Components.CreateTimedTask.pleaseInputTaskName',
+            )}
+            showCount
+            maxLength={100}
+          />
         </Form.Item>
         <OverrideTextArea
           name="summary"
-          label={dict('NuwaxPC.Components.CreateTimedTask.taskContent')}
-          rules={[{ required: true, message: dict('NuwaxPC.Components.CreateTimedTask.pleaseInputTaskContent') }]}
-          placeholder={dict('NuwaxPC.Components.CreateTimedTask.taskContentPlaceholder')}
+          label={dict('PC.Components.CreateTimedTask.taskContent')}
+          rules={[
+            {
+              required: true,
+              message: dict(
+                'PC.Components.CreateTimedTask.pleaseInputTaskContent',
+              ),
+            },
+          ]}
+          placeholder={dict(
+            'PC.Components.CreateTimedTask.taskContentPlaceholder',
+          )}
           maxLength={2000}
         />
       </Form>

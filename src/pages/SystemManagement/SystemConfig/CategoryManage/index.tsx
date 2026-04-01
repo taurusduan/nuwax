@@ -56,15 +56,15 @@ const CategoryManage: React.FC = () => {
 
   const segmentedOptions = [
     {
-      label: t('NuwaxPC.Pages.SystemConfigCategoryManage.agent'),
+      label: t('PC.Pages.SystemConfigCategoryManage.agent'),
       value: CategoryTypeEnum.Agent,
     },
     {
-      label: t('NuwaxPC.Pages.SystemConfigCategoryManage.webApp'),
+      label: t('PC.Pages.SystemConfigCategoryManage.webApp'),
       value: CategoryTypeEnum.PageApp,
     },
     {
-      label: t('NuwaxPC.Pages.SystemConfigCategoryManage.component'),
+      label: t('PC.Pages.SystemConfigCategoryManage.component'),
       value: CategoryTypeEnum.Component,
     },
   ];
@@ -79,14 +79,14 @@ const CategoryManage: React.FC = () => {
     return (
       <Space align="baseline">
         <span style={{ fontSize: 14 }}>
-          {t('NuwaxPC.Pages.SystemConfigCategoryManage.categoryType', label)}
+          {t('PC.Pages.SystemConfigCategoryManage.categoryType', label)}
         </span>
         <span
           className="ant-pro-list-header-sub-title"
           style={{ fontSize: 14 }}
         >
           {t(
-            'NuwaxPC.Pages.SystemConfigCategoryManage.itemCount',
+            'PC.Pages.SystemConfigCategoryManage.itemCount',
             String(dataSource.length),
           )}
         </span>
@@ -111,25 +111,23 @@ const CategoryManage: React.FC = () => {
   // 删除分类
   const handleDelete = (record: CategoryItem) => {
     confirm({
-      title: t('NuwaxPC.Pages.SystemConfigCategoryManage.confirmDeleteTitle'),
+      title: t('PC.Pages.SystemConfigCategoryManage.confirmDeleteTitle'),
       icon: <ExclamationCircleOutlined />,
-      content: t(
-        'NuwaxPC.Pages.SystemConfigCategoryManage.confirmDeleteContent',
-      ),
-      okText: t('NuwaxPC.Common.Global.confirm'),
-      cancelText: t('NuwaxPC.Common.Global.cancel'),
+      content: t('PC.Pages.SystemConfigCategoryManage.confirmDeleteContent'),
+      okText: t('PC.Common.Global.confirm'),
+      cancelText: t('PC.Common.Global.cancel'),
       onOk: async () => {
         try {
           const res = await apiSystemCategoryDelete({ id: record.id });
           if (res.success) {
             message.success(
-              t('NuwaxPC.Pages.SystemConfigCategoryManage.deletedSuccessfully'),
+              t('PC.Pages.SystemConfigCategoryManage.deletedSuccessfully'),
             );
             refreshList();
           }
         } catch (error) {
           console.error(
-            t('NuwaxPC.Pages.SystemConfigCategoryManage.deleteFailed'),
+            t('PC.Pages.SystemConfigCategoryManage.deleteFailed'),
             error,
           );
         }
@@ -154,11 +152,11 @@ const CategoryManage: React.FC = () => {
         message.success(
           modalMode === 'add'
             ? t(
-                'NuwaxPC.Pages.SystemConfigCategoryManage.addSuccessWithType',
+                'PC.Pages.SystemConfigCategoryManage.addSuccessWithType',
                 getCurrentCategoryLabel(),
               )
             : t(
-                'NuwaxPC.Pages.SystemConfigCategoryManage.editSuccessWithType',
+                'PC.Pages.SystemConfigCategoryManage.editSuccessWithType',
                 getCurrentCategoryLabel(),
               ),
         );
@@ -167,17 +165,14 @@ const CategoryManage: React.FC = () => {
         return true;
       }
     } catch (error) {
-      console.error(
-        t('NuwaxPC.Pages.SystemConfigCategoryManage.saveFailed'),
-        error,
-      );
+      console.error(t('PC.Pages.SystemConfigCategoryManage.saveFailed'), error);
     }
     return false;
   };
 
   return (
     <WorkspaceLayout
-      title={t('NuwaxPC.Pages.SystemConfigCategoryManage.pageTitle')}
+      title={t('PC.Pages.SystemConfigCategoryManage.pageTitle')}
       leftSlot={
         <Segmented
           options={segmentedOptions}
@@ -202,7 +197,7 @@ const CategoryManage: React.FC = () => {
                   className={styles['add-btn']}
                   onClick={handleAdd}
                 >
-                  {t('NuwaxPC.Pages.SystemConfigCategoryManage.add')}
+                  {t('PC.Pages.SystemConfigCategoryManage.add')}
                 </Button>
               ),
             ]}

@@ -47,7 +47,7 @@ const FilePathHeader: React.FC<FilePathHeaderProps> = ({
         {isLoading && <Spin size="small" />}
         {isModified && !readOnly && (
           <span className={styles.modifiedIndicator}>
-            {dict('NuwaxPC.Pages.AppDevFilePathHeader.modified')}
+            {dict('PC.Pages.AppDevFilePathHeader.modified')}
           </span>
         )}
       </div>
@@ -63,7 +63,7 @@ const FilePathHeader: React.FC<FilePathHeaderProps> = ({
               disabled={!isModified || readOnly}
               style={{ marginRight: 8 }}
             >
-              {dict('NuwaxPC.Common.Global.save')}
+              {dict('PC.Common.Global.save')}
             </Button>
             <Button
               size="small"
@@ -71,11 +71,11 @@ const FilePathHeader: React.FC<FilePathHeaderProps> = ({
               disabled={!isModified || readOnly}
               style={{ marginRight: 8 }}
             >
-              {dict('NuwaxPC.Common.Global.cancel')}
+              {dict('PC.Common.Global.cancel')}
             </Button>
           </>
         )}
-        <Tooltip title={dict('NuwaxPC.Common.Global.refresh')}>
+        <Tooltip title={dict('PC.Common.Global.refresh')}>
           <Button
             size="small"
             type="text"

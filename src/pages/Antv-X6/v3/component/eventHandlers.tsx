@@ -51,7 +51,7 @@ const bindEventHandlers = ({
           nodeData.type === NodeTypeEnum.End
         ) {
           message.warning(
-            t('NuwaxPC.Pages.AntvX6EventHandlers.unsupportedCopyNodeType'),
+            t('PC.Pages.AntvX6EventHandlers.unsupportedCopyNodeType'),
           );
           // Clear cached node data to avoid invalid paste.
           copiedNodeData = null;
@@ -63,7 +63,7 @@ const bindEventHandlers = ({
         // Reset paste count.
         pasteCount = 0;
         graph.copy(cells);
-        message.success(t('NuwaxPC.Pages.AntvX6EventHandlers.nodeCopied'));
+        message.success(t('PC.Pages.AntvX6EventHandlers.nodeCopied'));
       }
     }
     return false;
@@ -86,27 +86,21 @@ const bindEventHandlers = ({
           node.type === NodeTypeEnum.LoopEnd ||
           node.type === NodeTypeEnum.Loop
         ) {
-          message.error(
-            t('NuwaxPC.Pages.AntvX6EventHandlers.cannotPasteLoopNode'),
-          );
+          message.error(t('PC.Pages.AntvX6EventHandlers.cannotPasteLoopNode'));
           return;
         }
         if (node.type === NodeTypeEnum.Start) {
-          message.error(
-            t('NuwaxPC.Pages.AntvX6EventHandlers.cannotPasteStartNode'),
-          );
+          message.error(t('PC.Pages.AntvX6EventHandlers.cannotPasteStartNode'));
           return;
         }
         if (node.type === NodeTypeEnum.End) {
-          message.error(
-            t('NuwaxPC.Pages.AntvX6EventHandlers.cannotPasteEndNode'),
-          );
+          message.error(t('PC.Pages.AntvX6EventHandlers.cannotPasteEndNode'));
           return;
         }
         copyNode(node);
       }
     } else {
-      message.warning(t('NuwaxPC.Pages.AntvX6EventHandlers.copyNodeFirst'));
+      message.warning(t('PC.Pages.AntvX6EventHandlers.copyNodeFirst'));
     }
     return false;
   });
@@ -204,7 +198,7 @@ const bindEventHandlers = ({
 
         if (!isEdgeDeletable(sourceNode, targetNode)) {
           message.warning(
-            t('NuwaxPC.Pages.AntvX6EventHandlers.cannotDeleteLoopEdge'),
+            t('PC.Pages.AntvX6EventHandlers.cannotDeleteLoopEdge'),
           );
           return;
         }
@@ -271,7 +265,7 @@ const bindEventHandlers = ({
       } else {
         if (isResistNodeType.includes(_cell.getData().type)) {
           message.warning(
-            t('NuwaxPC.Pages.AntvX6EventHandlers.cannotDeleteStartEndNodes'),
+            t('PC.Pages.AntvX6EventHandlers.cannotDeleteStartEndNodes'),
           );
           return;
         }
@@ -284,10 +278,10 @@ const bindEventHandlers = ({
           if (_cell.getData().type === NodeTypeEnum.Loop) {
             modal.confirm({
               title: t(
-                'NuwaxPC.Pages.AntvX6EventHandlers.deleteLoopNodeConfirmTitle',
+                'PC.Pages.AntvX6EventHandlers.deleteLoopNodeConfirmTitle',
               ),
-              okText: t('NuwaxPC.Pages.AntvX6EventHandlers.confirm'),
-              cancelText: t('NuwaxPC.Pages.AntvX6EventHandlers.cancel'),
+              okText: t('PC.Pages.AntvX6EventHandlers.confirm'),
+              cancelText: t('PC.Pages.AntvX6EventHandlers.cancel'),
               onOk: () => {
                 removeNode(_cell.id, _cell.getData());
                 graph.removeCells(cells);

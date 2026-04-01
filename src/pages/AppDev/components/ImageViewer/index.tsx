@@ -39,14 +39,14 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
       {imagePath && (
         <div className={styles.imagePreviewHeader}>
           <span>
-            {dict('NuwaxPC.Pages.AppDevImageViewer.previewPath', imagePath)}
+            {dict('PC.Pages.AppDevImageViewer.previewPath', imagePath)}
             {isBase64 && (
               <span className={styles.base64Indicator}>
-                {dict('NuwaxPC.Pages.AppDevImageViewer.base64Tag')}
+                {dict('PC.Pages.AppDevImageViewer.base64Tag')}
               </span>
             )}
           </span>
-          <Tooltip title={dict('NuwaxPC.Common.Global.refresh')}>
+          <Tooltip title={dict('PC.Common.Global.refresh')}>
             <Button
               size="small"
               type="text"

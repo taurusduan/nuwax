@@ -88,37 +88,37 @@ const SquareSection: React.FC<{
   // 菜单列表
   const dataSource = [
     {
-      name: dict('NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.agent'),
+      name: dict('PC.Layouts.DynamicMenusLayout.SquareSection.agent'),
       icon: <SvgIcon name="icons-nav-stars" />,
       list: agentInfoList,
       type: SquareAgentTypeEnum.Agent,
     },
     {
-      name: dict('NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.pageApp'),
+      name: dict('PC.Layouts.DynamicMenusLayout.SquareSection.pageApp'),
       icon: <SvgIcon name="icons-common-console" />,
       list: pageAppInfoList,
       type: SquareAgentTypeEnum.PageApp,
     },
     {
-      name: dict('NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.skill'),
+      name: dict('PC.Layouts.DynamicMenusLayout.SquareSection.skill'),
       icon: <SvgIcon name="icons-nav-skill" />,
       list: skillInfoList,
       type: SquareAgentTypeEnum.Skill,
     },
     {
-      name: dict('NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.plugin'),
+      name: dict('PC.Layouts.DynamicMenusLayout.SquareSection.plugin'),
       icon: <SvgIcon name="icons-nav-plugins" />,
       list: pluginInfoList,
       type: SquareAgentTypeEnum.Plugin,
     },
     {
-      name: dict('NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.workflow'),
+      name: dict('PC.Layouts.DynamicMenusLayout.SquareSection.workflow'),
       icon: <SvgIcon name="icons-nav-workflow" />,
       list: workflowInfoList,
       type: SquareAgentTypeEnum.Workflow,
     },
     {
-      name: dict('NuwaxPC.Layouts.DynamicMenusLayout.SquareSection.template'),
+      name: dict('PC.Layouts.DynamicMenusLayout.SquareSection.template'),
       icon: <SvgIcon name="icons-nav-template" />,
       list: templateListTabs,
       type: SquareAgentTypeEnum.Template,

@@ -197,21 +197,21 @@ const errorHandler = (error: any, opts: any) => {
   } else if (error.response) {
     // 处理HTTP错误
     // message.error(`Request error ${error.response.status}`);
-    const networkErrorMsg = dict('NuwaxPC.Toast.Global.networkError');
+    const networkErrorMsg = dict('PC.Toast.Global.networkError');
     if (shouldShowErrorMessage(networkErrorMsg)) {
       message.error(networkErrorMsg);
     }
     return Promise.reject();
   } else if (error.request) {
     // 处理请求超时
-    const timeoutErrorMsg = dict('NuwaxPC.Toast.Global.serverTimeout');
+    const timeoutErrorMsg = dict('PC.Toast.Global.serverTimeout');
     if (shouldShowErrorMessage(timeoutErrorMsg)) {
       message.error(timeoutErrorMsg);
     }
     return Promise.reject();
   } else {
     // 处理网络错误
-    const networkErrorMsg = dict('NuwaxPC.Toast.Global.serverUnreachable');
+    const networkErrorMsg = dict('PC.Toast.Global.serverUnreachable');
     if (shouldShowErrorMessage(networkErrorMsg)) {
       message.error(networkErrorMsg);
     }

@@ -203,7 +203,7 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
 
       if (!devServerUrl) {
         // No dev server URL available
-        setLoadError(t('NuwaxPC.Pages.AppDevPreview.devServerUrlUnavailable'));
+        setLoadError(t('PC.Pages.AppDevPreview.devServerUrlUnavailable'));
         return;
       }
 
@@ -233,12 +233,10 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
           // 如果没有开发服务器URL，调用启动开发服务器接口
           onStartDev();
         } else {
-          setLoadError(
-            t('NuwaxPC.Pages.AppDevPreview.devServerUrlUnavailable'),
-          );
+          setLoadError(t('PC.Pages.AppDevPreview.devServerUrlUnavailable'));
         }
       } catch (error) {
-        setLoadError(t('NuwaxPC.Pages.AppDevPreview.retryFailedCheckNetwork'));
+        setLoadError(t('PC.Pages.AppDevPreview.retryFailedCheckNetwork'));
       } finally {
         setRetrying(false);
       }
@@ -305,16 +303,16 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
       let title: string | undefined;
       if (hasServerError && serverErrorCode) {
         title = t(
-          'NuwaxPC.Pages.AppDevPreview.serverErrorWithCode',
+          'PC.Pages.AppDevPreview.serverErrorWithCode',
           formatErrorCode(serverErrorCode),
         );
       } else if (hasStartError && serverErrorCode) {
         title = t(
-          'NuwaxPC.Pages.AppDevPreview.serverStartFailedWithCode',
+          'PC.Pages.AppDevPreview.serverStartFailedWithCode',
           formatErrorCode(serverErrorCode),
         );
       } else if (isStarting) {
-        title = t('NuwaxPC.Pages.AppDevPreview.starting');
+        title = t('PC.Pages.AppDevPreview.starting');
       }
       // 其他情况使用组件默认标题
 
@@ -325,11 +323,11 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
       } else if (hasStartError && startError) {
         description = startError;
       } else if (isProjectUploading) {
-        description = t('NuwaxPC.Pages.AppDevPreview.importingAndRestarting');
+        description = t('PC.Pages.AppDevPreview.importingAndRestarting');
       } else if (isStarting) {
-        description = t('NuwaxPC.Pages.AppDevPreview.startingEnvironment');
+        description = t('PC.Pages.AppDevPreview.startingEnvironment');
       } else if (isDeveloping) {
-        description = t('NuwaxPC.Pages.AppDevPreview.developingPleaseWait');
+        description = t('PC.Pages.AppDevPreview.developingPleaseWait');
       }
       // 其他情况使用组件默认描述
 
@@ -352,8 +350,8 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
         buttons = [
           {
             text: retrying
-              ? t('NuwaxPC.Pages.AppDevPreview.refreshing')
-              : t('NuwaxPC.Pages.AppDevPreview.refresh'),
+              ? t('PC.Pages.AppDevPreview.refreshing')
+              : t('PC.Pages.AppDevPreview.refresh'),
             icon: <ReloadOutlined />,
             onClick: retryPreview,
             loading: retrying,
@@ -364,7 +362,7 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
         // 如果是服务器错误且有重启回调，添加重启服务器按钮
         if (hasServerError && onRestartDev) {
           buttons.push({
-            text: t('NuwaxPC.Pages.AppDevPreview.restartServer'),
+            text: t('PC.Pages.AppDevPreview.restartServer'),
             icon: <ThunderboltOutlined />,
             onClick: onRestartDev,
             type: 'primary',
@@ -378,8 +376,8 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
         buttons = [
           {
             text: retrying
-              ? t('NuwaxPC.Pages.AppDevPreview.restarting')
-              : t('NuwaxPC.Pages.AppDevPreview.restartService'),
+              ? t('PC.Pages.AppDevPreview.restarting')
+              : t('PC.Pages.AppDevPreview.restartService'),
             icon: <ReloadOutlined />,
             onClick: retryPreview,
             loading: retrying,
@@ -419,9 +417,7 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
      */
     const refreshPreview = useCallback(() => {
       if (pendingChanges?.length > 0) {
-        message.error(
-          t('NuwaxPC.Pages.AppDevPreview.saveOrResetBeforeRefresh'),
-        );
+        message.error(t('PC.Pages.AppDevPreview.saveOrResetBeforeRefresh'));
         return;
       }
       // 关闭设计模式
@@ -430,7 +426,7 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
       if (devServerUrl) {
         loadDevServerPreview();
       } else if (iframeRef.current) {
-        setLoadError(t('NuwaxPC.Pages.AppDevPreview.devServerUrlUnavailable'));
+        setLoadError(t('PC.Pages.AppDevPreview.devServerUrlUnavailable'));
         setLastRefreshed(new Date());
       } else {
         // iframeRef.current 为空，无法刷新
@@ -743,7 +739,7 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
     const handleIframeError = useCallback(() => {
       setIsLoading(false);
       setLoadError(
-        t('NuwaxPC.Pages.AppDevPreview.previewLoadFailedCheckServerNetwork'),
+        t('PC.Pages.AppDevPreview.previewLoadFailedCheckServerNetwork'),
       );
 
       // 统一通过 onWhiteScreenWithError 处理，指定错误类型为 iframe
@@ -751,7 +747,7 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
         onWhiteScreenOrIframeError(
           dayjs(Date.now()).format('YYYY/MM/DD HH:mm:ss') +
             ` ${t(
-              'NuwaxPC.Pages.AppDevPreview.previewLoadFailedCheckServerNetwork',
+              'PC.Pages.AppDevPreview.previewLoadFailedCheckServerNetwork',
             )}`,
           'iframe',
         );
@@ -1046,14 +1042,12 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
     const saveChanges = async () => {
       const projectId = projectInfo?.projectId || '';
       if (!projectId) {
-        message.error(
-          t('NuwaxPC.Pages.AppDevPreview.projectIdMissingCannotSave'),
-        );
+        message.error(t('PC.Pages.AppDevPreview.projectIdMissingCannotSave'));
         return;
       }
 
       if (pendingChanges.length === 0) {
-        message.warning(t('NuwaxPC.Pages.AppDevPreview.noPendingChanges'));
+        message.warning(t('PC.Pages.AppDevPreview.noPendingChanges'));
         return;
       }
 
@@ -1122,7 +1116,7 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
                 error,
               );
               message.error(
-                t('NuwaxPC.Pages.AppDevPreview.processFileError', filePath),
+                t('PC.Pages.AppDevPreview.processFileError', filePath),
               );
               // 出错时保留原内容，防止文件丢失？或者跳过？
               // 这里选择保留原内容，避免破坏
@@ -1148,7 +1142,7 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
         // 刷新文件树列表
         onRefreshFileTree?.(true, true);
         if (response.code === SUCCESS_CODE) {
-          message.success(t('NuwaxPC.Pages.AppDevPreview.saveSuccess'));
+          message.success(t('PC.Pages.AppDevPreview.saveSuccess'));
           // 方案一，保存后关闭设计模式
           // closeDesignMode();
           // 清空待保存列表
@@ -1156,7 +1150,7 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
         } else {
           message.error(
             response.message ||
-              t('NuwaxPC.Pages.AppDevPreview.saveFailedCheckConsole'),
+              t('PC.Pages.AppDevPreview.saveFailedCheckConsole'),
           );
         }
       } catch (error) {
@@ -1260,7 +1254,7 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
               maxLines={4} // 最多显示 4 行
               clickableDescription={true} // 启用点击查看完整内容
               viewFullTextButtonText={t(
-                'NuwaxPC.Pages.AppDevPreview.viewFullErrorInfo',
+                'PC.Pages.AppDevPreview.viewFullErrorInfo',
               )} // Custom button text
             />
           )}
@@ -1274,7 +1268,7 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
           >
             <WarningOutlined className={styles['warning-icon']} />
             <span className={styles['unsaved-text']}>
-              {t('NuwaxPC.Pages.AppDevPreview.unsavedChanges')}
+              {t('PC.Pages.AppDevPreview.unsavedChanges')}
             </span>
             <Button
               type="text"
@@ -1282,7 +1276,7 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
               onClick={onCancelEdit}
               disabled={isSaving}
             >
-              {t('NuwaxPC.Pages.AppDevPreview.reset')}
+              {t('PC.Pages.AppDevPreview.reset')}
             </Button>
             <Button
               type="primary"
@@ -1290,7 +1284,7 @@ const Preview = React.forwardRef<PreviewRef, PreviewProps>(
               onClick={saveChanges}
               loading={isSaving}
             >
-              {t('NuwaxPC.Pages.AppDevPreview.save')}
+              {t('PC.Pages.AppDevPreview.save')}
             </Button>
           </div>
         )}

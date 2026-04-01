@@ -2,9 +2,9 @@ import { dict } from '@/services/i18nRuntime';
 import { TableFieldTypeEnum, TableTabsEnum } from '@/types/enums/dataTable';
 
 // 短文本
-export const SHORT_TEXT_STRING = dict('NuwaxPC.Constants.DataTable.shortText');
+export const SHORT_TEXT_STRING = dict('PC.Constants.DataTable.shortText');
 // 长文本
-export const MEDIUM_TEXT_STRING = dict('NuwaxPC.Constants.DataTable.longText');
+export const MEDIUM_TEXT_STRING = dict('PC.Constants.DataTable.longText');
 
 // 数据表字段类型列表
 export const TABLE_FIELD_TYPE_LIST = [
@@ -29,8 +29,11 @@ export const BOOLEAN_LIST = [
 
 // 数据表tabs列表
 export const TABLE_TABS_LIST = [
-  { key: TableTabsEnum.Structure, label: dict('NuwaxPC.Constants.DataTable.tableStructure') },
-  { key: TableTabsEnum.Data, label: dict('NuwaxPC.Constants.DataTable.tableData') },
+  {
+    key: TableTabsEnum.Structure,
+    label: dict('PC.Constants.DataTable.tableStructure'),
+  },
+  { key: TableTabsEnum.Data, label: dict('PC.Constants.DataTable.tableData') },
 ];
 
 /**
@@ -50,16 +53,19 @@ export const COMMON_PRO_TABLE_PROPS = {
   pagination: {
     showSizeChanger: true,
     pageSizeOptions: [15, 30, 50, 100],
-    showTotal: (total: number) => `${dict('NuwaxPC.Constants.DataTable.totalPrefix')}${total}${dict('NuwaxPC.Constants.DataTable.totalSuffix')}`,
+    showTotal: (total: number) =>
+      `${dict('PC.Constants.DataTable.totalPrefix')}${total}${dict(
+        'PC.Constants.DataTable.totalSuffix',
+      )}`,
     defaultPageSize: 15,
     locale: {
-      items_per_page: dict('NuwaxPC.Constants.DataTable.itemsPerPage'),
+      items_per_page: dict('PC.Constants.DataTable.itemsPerPage'),
     },
   },
   search: {
     filterType: 'light' as any,
     defaultCollapsed: false,
-    searchText: dict('NuwaxPC.Constants.DataTable.search'),
-    resetText: dict('NuwaxPC.Constants.DataTable.reset'),
+    searchText: dict('PC.Constants.DataTable.search'),
+    resetText: dict('PC.Constants.DataTable.reset'),
   } as any,
 };

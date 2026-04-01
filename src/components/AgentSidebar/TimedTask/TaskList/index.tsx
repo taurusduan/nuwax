@@ -29,8 +29,8 @@ const TaskList: React.FC<TaskListProps> = ({
 }) => {
   const emptyDesc =
     taskStatus === TaskStatus.EXECUTING
-      ? dict('NuwaxPC.Components.TaskList.noInProgressTasks')
-      : dict('NuwaxPC.Components.TaskList.noCancelledTasks');
+      ? dict('PC.Components.TaskList.noInProgressTasks')
+      : dict('PC.Components.TaskList.noCancelledTasks');
   if (loading) {
     return (
       <div className={cx('flex', 'items-center', 'content-center', 'h-full')}>
@@ -52,12 +52,12 @@ const TaskList: React.FC<TaskListProps> = ({
   ) => {
     e.stopPropagation();
     confirm({
-      title: dict('NuwaxPC.Components.TaskList.confirmCancelTask'),
+      title: dict('PC.Components.TaskList.confirmCancelTask'),
       icon: <ExclamationCircleFilled />,
       content: info.topic,
-      okText: dict('NuwaxPC.Common.Global.confirm'),
+      okText: dict('PC.Common.Global.confirm'),
       maskClosable: true,
-      cancelText: dict('NuwaxPC.Common.Global.cancel'),
+      cancelText: dict('PC.Common.Global.cancel'),
       onOk() {
         onCancelTask?.(info);
       },

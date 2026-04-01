@@ -11,6 +11,7 @@ import HoverScrollbar from '@/components/base/HoverScrollbar';
 import ConditionRender from '@/components/ConditionRender';
 import { NAVIGATION_LAYOUT_SIZES } from '@/constants/layout.constants';
 import { useUnifiedTheme } from '@/hooks/useUnifiedTheme';
+import { dict } from '@/services/i18nRuntime';
 import type { MenuItemDto } from '@/types/interfaces/menu';
 import { theme, Typography } from 'antd';
 import classNames from 'classnames';
@@ -22,7 +23,6 @@ import React, {
   useState,
 } from 'react';
 import { history, useLocation, useModel, useParams } from 'umi';
-import { dict } from '@/services/i18nRuntime';
 import DynamicSecondMenu from './DynamicSecondMenu';
 import DynamicTabs from './DynamicTabs';
 // 复用原有组件
@@ -557,13 +557,13 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
    */
   const currentTitle = useMemo(() => {
     if (isClickNewConversation) {
-      return dict('NuwaxPC.Layouts.DynamicMenusLayout.newConversation');
+      return dict('PC.Layouts.DynamicMenusLayout.newConversation');
     }
     if (activeTab === 'my_computer' || activeTab === 'documents') {
-      return dict('NuwaxPC.Layouts.DynamicMenusLayout.home');
+      return dict('PC.Layouts.DynamicMenusLayout.home');
     }
     if (activeTab === 'more_page') {
-      return dict('NuwaxPC.Layouts.DynamicMenusLayout.more');
+      return dict('PC.Layouts.DynamicMenusLayout.more');
     }
     const current = firstLevelMenus.find(
       (m: MenuItemDto) => m.code === activeTab,

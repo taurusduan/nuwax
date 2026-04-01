@@ -1,5 +1,5 @@
-import { DeleteSureProps } from '@/types/interfaces/dataTable';
 import { dict } from '@/services/i18nRuntime';
+import { DeleteSureProps } from '@/types/interfaces/dataTable';
 import { WarningFilled } from '@ant-design/icons';
 import { Button, Form, Input, Modal, Space } from 'antd';
 import React, { useEffect, useState } from 'react';
@@ -42,12 +42,12 @@ const DeleteSure: React.FC<DeleteSureProps> = ({
       title={title}
       open={open}
       width={width}
-      okText={dict('NuwaxPC.Common.Global.submit')}
-      cancelText={dict('NuwaxPC.Common.Global.cancel')}
+      okText={dict('PC.Common.Global.submit')}
+      cancelText={dict('PC.Common.Global.cancel')}
       onCancel={onClose}
       footer={[
         <Button key="back" onClick={onClose}>
-          {dict('NuwaxPC.Common.Global.cancel')}
+          {dict('PC.Common.Global.cancel')}
         </Button>,
         <Button
           danger
@@ -56,7 +56,7 @@ const DeleteSure: React.FC<DeleteSureProps> = ({
           loading={loading}
           onClick={onFinish}
         >
-          {dict('NuwaxPC.Common.Global.confirm')}
+          {dict('PC.Common.Global.confirm')}
         </Button>,
       ]}
     >
@@ -69,11 +69,11 @@ const DeleteSure: React.FC<DeleteSureProps> = ({
         <Form.Item>
           <Space className="clear-box">
             <WarningFilled style={{ color: 'red' }} />
-            <p>{dict('NuwaxPC.Pages.SpaceTable.DeleteSure.warning')}</p>
+            <p>{dict('PC.Pages.SpaceTable.DeleteSure.warning')}</p>
           </Space>
         </Form.Item>
         <Form.Item
-          label={dict('NuwaxPC.Pages.SpaceTable.DeleteSure.confirmAgain')}
+          label={dict('PC.Pages.SpaceTable.DeleteSure.confirmAgain')}
           name="inputStr"
           rules={[
             {
@@ -81,12 +81,22 @@ const DeleteSure: React.FC<DeleteSureProps> = ({
                 value === sureText
                   ? Promise.resolve()
                   : Promise.reject(
-                      new Error(dict('NuwaxPC.Pages.SpaceTable.DeleteSure.matchValidation', sureText)),
+                      new Error(
+                        dict(
+                          'PC.Pages.SpaceTable.DeleteSure.matchValidation',
+                          sureText,
+                        ),
+                      ),
                     ),
             },
           ]}
         >
-          <Input placeholder={dict('NuwaxPC.Pages.SpaceTable.DeleteSure.inputPlaceholder', sureText)} />
+          <Input
+            placeholder={dict(
+              'PC.Pages.SpaceTable.DeleteSure.inputPlaceholder',
+              sureText,
+            )}
+          />
         </Form.Item>
       </Form>
     </Modal>

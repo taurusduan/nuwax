@@ -68,7 +68,7 @@ const TimedTask: React.FC<TimedTaskProps> = ({ agentId }) => {
     debounceInterval: 500,
     onSuccess: (_: null, params: number[]) => {
       const [id] = params;
-      message.success(dict('NuwaxPC.Components.TimedTask.taskCancelled'));
+      message.success(dict('PC.Components.TimedTask.taskCancelled'));
       setExecutingTaskList((prev) => {
         return prev.filter((item) => item.id !== id);
       });
@@ -117,7 +117,7 @@ const TimedTask: React.FC<TimedTaskProps> = ({ agentId }) => {
   const items: TabsProps['items'] = [
     {
       key: TaskStatus.EXECUTING,
-      label: dict('NuwaxPC.Components.TimedTask.inProgress'),
+      label: dict('PC.Components.TimedTask.inProgress'),
       children: (
         <TaskList
           loading={loading}
@@ -130,7 +130,7 @@ const TimedTask: React.FC<TimedTaskProps> = ({ agentId }) => {
     },
     {
       key: TaskStatus.CANCEL,
-      label: dict('NuwaxPC.Components.TimedTask.cancelled'),
+      label: dict('PC.Components.TimedTask.cancelled'),
       children: (
         <TaskList
           loading={loading}
@@ -167,7 +167,7 @@ const TimedTask: React.FC<TimedTaskProps> = ({ agentId }) => {
         )}
       >
         <Typography.Title className={cx(styles.title)} level={5}>
-          {dict('NuwaxPC.Components.TimedTask.timedTask')}
+          {dict('PC.Components.TimedTask.timedTask')}
         </Typography.Title>
         <Button
           size="small"
@@ -176,7 +176,7 @@ const TimedTask: React.FC<TimedTaskProps> = ({ agentId }) => {
           icon={<SvgIcon name="icons-common-plus" style={{ fontSize: 16 }} />}
           type="text"
         >
-          {dict('NuwaxPC.Components.TimedTask.addTask')}
+          {dict('PC.Components.TimedTask.addTask')}
         </Button>
       </div>
       {/* 定时任务tab */}

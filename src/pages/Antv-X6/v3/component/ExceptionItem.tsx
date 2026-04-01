@@ -39,15 +39,15 @@ export const ExceptionItem: React.FC<ExceptionItemProps> = memo(
     const exceptionHandleOptions = useMemo(
       () => [
         {
-          label: t('NuwaxPC.Pages.AntvX6ExceptionItem.interruptFlow'),
+          label: t('PC.Pages.AntvX6ExceptionItem.interruptFlow'),
           value: ExceptionHandleTypeEnum.INTERRUPT,
         },
         {
-          label: t('NuwaxPC.Pages.AntvX6ExceptionItem.returnSpecificContent'),
+          label: t('PC.Pages.AntvX6ExceptionItem.returnSpecificContent'),
           value: ExceptionHandleTypeEnum.SPECIFIC_CONTENT,
         },
         {
-          label: t('NuwaxPC.Pages.AntvX6ExceptionItem.executeExceptionFlow'),
+          label: t('PC.Pages.AntvX6ExceptionItem.executeExceptionFlow'),
           value: ExceptionHandleTypeEnum.EXECUTE_EXCEPTION_FLOW,
         },
       ],
@@ -58,19 +58,19 @@ export const ExceptionItem: React.FC<ExceptionItemProps> = memo(
     const retryOptions = useMemo(
       () => [
         {
-          label: t('NuwaxPC.Pages.AntvX6ExceptionItem.noRetry'),
+          label: t('PC.Pages.AntvX6ExceptionItem.noRetry'),
           value: 0,
         },
         {
-          label: t('NuwaxPC.Pages.AntvX6ExceptionItem.retryOnce'),
+          label: t('PC.Pages.AntvX6ExceptionItem.retryOnce'),
           value: 1,
         },
         {
-          label: t('NuwaxPC.Pages.AntvX6ExceptionItem.retryTwice'),
+          label: t('PC.Pages.AntvX6ExceptionItem.retryTwice'),
           value: 2,
         },
         {
-          label: t('NuwaxPC.Pages.AntvX6ExceptionItem.retryThrice'),
+          label: t('PC.Pages.AntvX6ExceptionItem.retryThrice'),
           value: 3,
         },
       ],
@@ -187,10 +187,10 @@ export const ExceptionItem: React.FC<ExceptionItemProps> = memo(
         {/* Header */}
         <div className={cx(styles.exceptionItemHeader)}>
           <span className={cx(styles.exceptionItemTitle)}>
-            {t('NuwaxPC.Pages.AntvX6ExceptionItem.title')}
+            {t('PC.Pages.AntvX6ExceptionItem.title')}
           </span>
           <TooltipIcon
-            title={t('NuwaxPC.Pages.AntvX6ExceptionItem.titleTooltip')}
+            title={t('PC.Pages.AntvX6ExceptionItem.titleTooltip')}
             icon={<InfoCircleOutlined />}
           />
         </div>
@@ -203,11 +203,9 @@ export const ExceptionItem: React.FC<ExceptionItemProps> = memo(
               name={[name, 'timeout']}
               label={
                 <span className="flex items-center">
-                  {t('NuwaxPC.Pages.AntvX6ExceptionItem.timeoutLabel')}
+                  {t('PC.Pages.AntvX6ExceptionItem.timeoutLabel')}
                   <TooltipIcon
-                    title={t(
-                      'NuwaxPC.Pages.AntvX6ExceptionItem.timeoutTooltip',
-                    )}
+                    title={t('PC.Pages.AntvX6ExceptionItem.timeoutTooltip')}
                     icon={<InfoCircleOutlined />}
                   />
                 </span>
@@ -216,9 +214,7 @@ export const ExceptionItem: React.FC<ExceptionItemProps> = memo(
               rules={[
                 {
                   required: true,
-                  message: t(
-                    'NuwaxPC.Pages.AntvX6ExceptionItem.timeoutRequired',
-                  ),
+                  message: t('PC.Pages.AntvX6ExceptionItem.timeoutRequired'),
                 },
               ]}
             >
@@ -233,7 +229,7 @@ export const ExceptionItem: React.FC<ExceptionItemProps> = memo(
             {/* Retry count - 30% width */}
             <Form.Item
               name={[name, 'retryCount']}
-              label={t('NuwaxPC.Pages.AntvX6ExceptionItem.retryCountLabel')}
+              label={t('PC.Pages.AntvX6ExceptionItem.retryCountLabel')}
               className={cx(styles.exceptionItemFormItem, styles.retryItem)}
             >
               <Select
@@ -243,14 +239,14 @@ export const ExceptionItem: React.FC<ExceptionItemProps> = memo(
                   [styles.disabled]: disabled,
                 })}
                 disabled={disabled}
-                placeholder={t('NuwaxPC.Pages.AntvX6ExceptionItem.noRetry')}
+                placeholder={t('PC.Pages.AntvX6ExceptionItem.noRetry')}
               />
             </Form.Item>
 
             {/* Exception handling mode - 40% width */}
             <Form.Item
               name={[name, 'exceptionHandleType']}
-              label={t('NuwaxPC.Pages.AntvX6ExceptionItem.handleTypeLabel')}
+              label={t('PC.Pages.AntvX6ExceptionItem.handleTypeLabel')}
               className={cx(
                 styles.exceptionItemFormItem,
                 styles.handleTypeItem,
@@ -263,9 +259,7 @@ export const ExceptionItem: React.FC<ExceptionItemProps> = memo(
                   [styles.disabled]: disabled,
                 })}
                 disabled={disabled}
-                placeholder={t(
-                  'NuwaxPC.Pages.AntvX6ExceptionItem.interruptFlow',
-                )}
+                placeholder={t('PC.Pages.AntvX6ExceptionItem.interruptFlow')}
                 onChange={handleExceptionTypeChange}
               />
             </Form.Item>
@@ -277,7 +271,7 @@ export const ExceptionItem: React.FC<ExceptionItemProps> = memo(
             <div className={cx(styles.exceptionItemContentWrapper)}>
               <div className={cx(styles.exceptionItemContentLabel)}>
                 <span>
-                  {t('NuwaxPC.Pages.AntvX6ExceptionItem.customReturnContent')}
+                  {t('PC.Pages.AntvX6ExceptionItem.customReturnContent')}
                 </span>
                 <Button
                   icon={<ExpandAltOutlined />}
@@ -296,7 +290,7 @@ export const ExceptionItem: React.FC<ExceptionItemProps> = memo(
                   {
                     required: true,
                     message: t(
-                      'NuwaxPC.Pages.AntvX6ExceptionItem.customReturnContentRequired',
+                      'PC.Pages.AntvX6ExceptionItem.customReturnContentRequired',
                     ),
                   },
                   {
@@ -308,9 +302,7 @@ export const ExceptionItem: React.FC<ExceptionItemProps> = memo(
                       } catch (error) {
                         return Promise.reject(
                           new Error(
-                            t(
-                              'NuwaxPC.Pages.AntvX6ExceptionItem.validJsonRequired',
-                            ),
+                            t('PC.Pages.AntvX6ExceptionItem.validJsonRequired'),
                           ),
                         );
                       }

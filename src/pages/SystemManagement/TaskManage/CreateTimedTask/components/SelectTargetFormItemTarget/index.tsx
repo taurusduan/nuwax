@@ -19,9 +19,7 @@ const SelectTargetFormItemTarget: React.FC<SelectTargetFormItemTargetProps> = ({
       extra={
         onDelete ? (
           <TooltipIcon
-            title={t(
-              'NuwaxPC.Pages.SystemTaskSelectTargetFormItemTarget.delete',
-            )}
+            title={t('PC.Pages.SystemTaskSelectTargetFormItemTarget.delete')}
             icon={<DeleteOutlined className={'cursor-pointer'} />}
             onClick={() => onDelete?.(value)}
           />

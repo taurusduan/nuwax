@@ -61,7 +61,7 @@ const ExceptionHanding: React.FC<ExceptionHandingProps> = ({
       <div className={cx('flex-1', styles.content)}>
         <header className={cx('flex', 'items-center', styles.header)}>
           <h3 className={cx('flex-1')}>
-            {t('NuwaxPC.Pages.AgentArrangeExceptionHandling.title')}
+            {t('PC.Pages.AgentArrangeExceptionHandling.title')}
           </h3>
           <Switch
             checked={selected === DefaultSelectedEnum.Yes}
@@ -69,12 +69,12 @@ const ExceptionHanding: React.FC<ExceptionHandingProps> = ({
           />
         </header>
         <p className={cx(styles.desc)}>
-          {t('NuwaxPC.Pages.AgentArrangeExceptionHandling.description')}
+          {t('PC.Pages.AgentArrangeExceptionHandling.description')}
         </p>
         <ConditionRender condition={selected}>
           <LabelStar
             className={cx(styles['reply-content'])}
-            label={t('NuwaxPC.Pages.AgentArrangeExceptionHandling.defaultInfo')}
+            label={t('PC.Pages.AgentArrangeExceptionHandling.defaultInfo')}
           />
           <Input.TextArea
             className={cx('dispose-textarea-count')}
@@ -82,7 +82,7 @@ const ExceptionHanding: React.FC<ExceptionHandingProps> = ({
               textarea: cx(styles.textarea),
             }}
             placeholder={t(
-              'NuwaxPC.Pages.AgentArrangeExceptionHandling.defaultInfoPlaceholder',
+              'PC.Pages.AgentArrangeExceptionHandling.defaultInfoPlaceholder',
             )}
             autoSize={{ minRows: 5, maxRows: 6 }}
             maxLength={1000}
@@ -100,7 +100,7 @@ const ExceptionHanding: React.FC<ExceptionHandingProps> = ({
           className={cx({ [styles['btn-disabled']]: disabled })}
           disabled={disabled}
         >
-          {t('NuwaxPC.Common.Global.save')}
+          {t('PC.Common.Global.save')}
         </Button>
       </footer>
     </div>

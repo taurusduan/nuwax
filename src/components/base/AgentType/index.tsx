@@ -27,42 +27,42 @@ const AgentTypeMap: Record<
 > = {
   [AgentComponentTypeEnum.Agent]: {
     icon: <ICON_AGENT />,
-    title: dict('NuwaxPC.Components.AgentType.agent'),
+    title: dict('PC.Components.AgentType.agent'),
     styleClassName: styles.agent,
   },
   [AgentComponentTypeEnum.Plugin]: {
     icon: <ICON_PLUGIN />,
-    title: dict('NuwaxPC.Components.AgentType.plugin'),
+    title: dict('PC.Components.AgentType.plugin'),
     styleClassName: styles.plugin,
   },
   [AgentComponentTypeEnum.Workflow]: {
     icon: <ICON_WORKFLOW />,
-    title: dict('NuwaxPC.Components.AgentType.workflow'),
+    title: dict('PC.Components.AgentType.workflow'),
     styleClassName: styles.workflow,
   },
   [AgentComponentTypeEnum.Knowledge]: {
     icon: <ICON_KNOWLEDGE />,
-    title: dict('NuwaxPC.Components.AgentType.knowledge'),
+    title: dict('PC.Components.AgentType.knowledge'),
     styleClassName: styles.knowledge,
   },
   [AgentComponentTypeEnum.Table]: {
     icon: <ICON_TABLE />,
-    title: dict('NuwaxPC.Components.AgentType.table'),
+    title: dict('PC.Components.AgentType.table'),
     styleClassName: styles.table,
   },
   [AgentComponentTypeEnum.Model]: {
     icon: <ICON_MODEL />,
-    title: dict('NuwaxPC.Components.AgentType.model'),
+    title: dict('PC.Components.AgentType.model'),
     styleClassName: styles.model,
   },
   [AgentComponentTypeEnum.Page]: {
     icon: <ICON_PAGE_APP />,
-    title: dict('NuwaxPC.Components.AgentType.pageApp'),
+    title: dict('PC.Components.AgentType.pageApp'),
     styleClassName: styles.page,
   },
   [AgentComponentTypeEnum.Skill]: {
     icon: <ICON_SKILL />,
-    title: dict('NuwaxPC.Components.AgentType.skill'),
+    title: dict('PC.Components.AgentType.skill'),
     styleClassName: styles.skill,
   },
 };

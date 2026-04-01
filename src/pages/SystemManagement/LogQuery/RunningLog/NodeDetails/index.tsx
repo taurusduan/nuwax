@@ -39,33 +39,25 @@ export const NodeDetails: React.FC<NodeDetailsProps> = ({ node }) => {
   const nodeTypeName = useMemo(() => {
     switch (node?.targetType) {
       case AgentComponentTypeEnum.Agent:
-        return t('NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeAgent');
+        return t('PC.Pages.SystemRunningLogNodeDetails.targetTypeAgent');
       case AgentComponentTypeEnum.Plugin:
-        return t('NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypePlugin');
+        return t('PC.Pages.SystemRunningLogNodeDetails.targetTypePlugin');
       case AgentComponentTypeEnum.Workflow:
-        return t(
-          'NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeWorkflow',
-        );
+        return t('PC.Pages.SystemRunningLogNodeDetails.targetTypeWorkflow');
       case AgentComponentTypeEnum.Knowledge:
-        return t(
-          'NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeKnowledge',
-        );
+        return t('PC.Pages.SystemRunningLogNodeDetails.targetTypeKnowledge');
       case AgentComponentTypeEnum.Variable:
-        return t(
-          'NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeVariable',
-        );
+        return t('PC.Pages.SystemRunningLogNodeDetails.targetTypeVariable');
       case AgentComponentTypeEnum.Table:
-        return t('NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeTable');
+        return t('PC.Pages.SystemRunningLogNodeDetails.targetTypeTable');
       case AgentComponentTypeEnum.Model:
-        return t('NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeModel');
+        return t('PC.Pages.SystemRunningLogNodeDetails.targetTypeModel');
       case AgentComponentTypeEnum.MCP:
         return 'MCP';
       case AgentComponentTypeEnum.ToolCall:
-        return t(
-          'NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypeToolCall',
-        );
+        return t('PC.Pages.SystemRunningLogNodeDetails.targetTypeToolCall');
       case AgentComponentTypeEnum.Plan:
-        return t('NuwaxPC.Pages.SystemRunningLogNodeDetails.targetTypePlan');
+        return t('PC.Pages.SystemRunningLogNodeDetails.targetTypePlan');
       default:
         return '--';
     }
@@ -75,24 +67,24 @@ export const NodeDetails: React.FC<NodeDetailsProps> = ({ node }) => {
     <>
       <div className={cx(styles.container)}>
         {renderDetailItem(
-          t('NuwaxPC.Pages.SystemRunningLogNodeDetails.labelType'),
+          t('PC.Pages.SystemRunningLogNodeDetails.labelType'),
           nodeTypeName,
         )}
         {renderDetailItem(
-          t('NuwaxPC.Pages.SystemRunningLogNodeDetails.labelStatus'),
-          t('NuwaxPC.Pages.SystemRunningLogNodeDetails.statusSuccess'),
+          t('PC.Pages.SystemRunningLogNodeDetails.labelStatus'),
+          t('PC.Pages.SystemRunningLogNodeDetails.statusSuccess'),
         )}
         {renderDetailItem(
-          t('NuwaxPC.Pages.SystemRunningLogNodeDetails.labelName'),
+          t('PC.Pages.SystemRunningLogNodeDetails.labelName'),
           node?.targetName as string,
         )}
         {renderDetailItem(
-          t('NuwaxPC.Pages.SystemRunningLogNodeDetails.labelElapsed'),
+          t('PC.Pages.SystemRunningLogNodeDetails.labelElapsed'),
           time,
         )}
       </div>
       {renderDetailItem(
-        t('NuwaxPC.Pages.SystemRunningLogNodeDetails.labelStartTime'),
+        t('PC.Pages.SystemRunningLogNodeDetails.labelStartTime'),
         node?.requestStartTime
           ? dayjs(node?.requestStartTime).format('YYYY-MM-DD HH:mm')
           : '',
@@ -100,7 +92,7 @@ export const NodeDetails: React.FC<NodeDetailsProps> = ({ node }) => {
       )}
       <div />
       {renderDetailItem(
-        t('NuwaxPC.Pages.SystemRunningLogNodeDetails.labelEndTime'),
+        t('PC.Pages.SystemRunningLogNodeDetails.labelEndTime'),
         node?.requestEndTime
           ? dayjs(node?.requestEndTime).format('YYYY-MM-DD HH:mm')
           : '',

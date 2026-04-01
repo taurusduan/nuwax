@@ -153,7 +153,9 @@ const PersonalSpaceContent: React.FC<PersonalSpaceContentType> = ({
       <div className={cx(styles['p-header'], 'flex')}>
         <CheckOutlined className={styles.icon} />
         <LimitedTooltip className={cx('flex-1', styles.title)}>
-          {currentSpaceName || currentSpaceInfo?.name || dict('NuwaxPC.Layouts.DynamicMenusLayout.SpaceSection.personalSpace')}
+          {currentSpaceName ||
+            currentSpaceInfo?.name ||
+            dict('PC.Layouts.DynamicMenusLayout.SpaceSection.personalSpace')}
         </LimitedTooltip>
       </div>
       <Divider className={styles['divider']} />
@@ -176,7 +178,9 @@ const PersonalSpaceContent: React.FC<PersonalSpaceContentType> = ({
         onClick={onCreateTeam}
       >
         <SvgIcon name="icons-common-plus" style={{ fontSize: 16 }} />
-        <span className={cx('flex-1', 'text-ellipsis')}>{dict('NuwaxPC.Layouts.DynamicMenusLayout.CreateNewTeam.createTeamSpace')}</span>
+        <span className={cx('flex-1', 'text-ellipsis')}>
+          {dict('PC.Layouts.DynamicMenusLayout.CreateNewTeam.createTeamSpace')}
+        </span>
       </div>
     </div>
   );

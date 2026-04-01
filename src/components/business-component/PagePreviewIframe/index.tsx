@@ -92,7 +92,7 @@ const PagePreviewIframe: React.FC<PagePreviewIframeProps> = ({
   showCopyButton = false,
   allowCopy = false,
   onCopyClick,
-  copyButtonText = t('NuwaxPC.Components.PagePreviewIframe.copyTemplate'),
+  copyButtonText = t('PC.Components.PagePreviewIframe.copyTemplate'),
   copyButtonClassName,
 }) => {
   const [iframeKey, setIframeKey] = useState(0);
@@ -352,7 +352,7 @@ const PagePreviewIframe: React.FC<PagePreviewIframeProps> = ({
 
           const title =
             iframeDoc.querySelector('head > title')?.textContent ||
-            t('NuwaxPC.Components.PagePreviewIframe.defaultPageTitle');
+            t('PC.Components.PagePreviewIframe.defaultPageTitle');
           setPreviewPageTitle(title);
 
           const html = iframeDoc.body.innerHTML;
@@ -365,9 +365,7 @@ const PagePreviewIframe: React.FC<PagePreviewIframeProps> = ({
             if (nginxWelcomeText === 'Welcome to nginx!') {
               const params = {
                 requestId: pagePreviewData?.request_id as string,
-                html: t(
-                  'NuwaxPC.Components.PagePreviewIframe.unableToReadData',
-                ),
+                html: t('PC.Components.PagePreviewIframe.unableToReadData'),
               };
               console.log('CHART1', params);
               await apiAgentComponentPageResultUpdate(params);
@@ -610,7 +608,7 @@ const PagePreviewIframe: React.FC<PagePreviewIframeProps> = ({
               </Button>
             )}
             <Tooltip
-              title={t('NuwaxPC.Components.PagePreviewIframe.tooltipRefresh')}
+              title={t('PC.Components.PagePreviewIframe.tooltipRefresh')}
             >
               <Button
                 type="text"
@@ -625,7 +623,7 @@ const PagePreviewIframe: React.FC<PagePreviewIframeProps> = ({
             </Tooltip>
 
             <Tooltip
-              title={t('NuwaxPC.Components.PagePreviewIframe.tooltipBack')}
+              title={t('PC.Components.PagePreviewIframe.tooltipBack')}
               open={canGoBack ? undefined : false}
             >
               <Button
@@ -642,7 +640,7 @@ const PagePreviewIframe: React.FC<PagePreviewIframeProps> = ({
             </Tooltip>
 
             <Tooltip
-              title={t('NuwaxPC.Components.PagePreviewIframe.tooltipForward')}
+              title={t('PC.Components.PagePreviewIframe.tooltipForward')}
               open={canGoForward ? undefined : false}
             >
               <Button
@@ -659,7 +657,7 @@ const PagePreviewIframe: React.FC<PagePreviewIframeProps> = ({
             </Tooltip>
 
             <Tooltip
-              title={t('NuwaxPC.Components.PagePreviewIframe.tooltipCopyLink')}
+              title={t('PC.Components.PagePreviewIframe.tooltipCopyLink')}
             >
               <Button
                 type="text"

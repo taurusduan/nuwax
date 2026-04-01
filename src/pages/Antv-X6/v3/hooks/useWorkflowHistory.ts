@@ -69,7 +69,7 @@ export const useWorkflowHistory = ({
             setHistoryProcessing(false);
           }, 200);
         } else {
-          message.warning(t('NuwaxPC.Pages.AntvX6History.noUndoAvailable'));
+          message.warning(t('PC.Pages.AntvX6History.noUndoAvailable'));
         }
       }
 
@@ -87,7 +87,7 @@ export const useWorkflowHistory = ({
             setHistoryProcessing(false);
           }, 200);
         } else {
-          message.warning(t('NuwaxPC.Pages.AntvX6History.noRedoAvailable'));
+          message.warning(t('PC.Pages.AntvX6History.noRedoAvailable'));
         }
       }
     };
@@ -184,7 +184,7 @@ export const useWorkflowHistory = ({
         setHistoryProcessing(false);
       }, 200);
     } else {
-      message.warning(t('NuwaxPC.Pages.AntvX6History.noUndoAvailable'));
+      message.warning(t('PC.Pages.AntvX6History.noUndoAvailable'));
     }
   };
 
@@ -198,7 +198,7 @@ export const useWorkflowHistory = ({
         setHistoryProcessing(false);
       }, 200);
     } else {
-      message.warning(t('NuwaxPC.Pages.AntvX6History.noRedoAvailable'));
+      message.warning(t('PC.Pages.AntvX6History.noRedoAvailable'));
     }
   };
 

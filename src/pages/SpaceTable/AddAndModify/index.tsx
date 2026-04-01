@@ -1,5 +1,6 @@
 import { EllipsisTooltip } from '@/components/custom/EllipsisTooltip';
 import { BOOLEAN_LIST } from '@/constants/dataTable.constants';
+import { dict } from '@/services/i18nRuntime';
 import { TableFieldTypeEnum } from '@/types/enums/dataTable';
 import {
   AddAndModifyProps,
@@ -8,7 +9,6 @@ import {
 } from '@/types/interfaces/dataTable';
 import { formatterNumber, parserNumber } from '@/utils/ant-custom';
 import { customizeRequiredMark } from '@/utils/form';
-import { dict } from '@/services/i18nRuntime';
 import { DatePicker, Form, Input, InputNumber, Modal, Radio } from 'antd';
 import dayjs, { Dayjs } from 'dayjs';
 import React, { useEffect } from 'react';
@@ -50,15 +50,30 @@ const AddAndModify: React.FC<AddAndModifyProps> = ({
     const { fieldType, fieldName } = item;
     switch (fieldType) {
       case TableFieldTypeEnum.Date:
-        return <DatePicker showTime placeholder={dict('NuwaxPC.Common.Global.selectTime')} />;
+        return (
+          <DatePicker
+            showTime
+            placeholder={dict('PC.Common.Global.selectTime')}
+          />
+        );
       case TableFieldTypeEnum.String:
         return (
-          <Input placeholder={dict('NuwaxPC.Pages.SpaceTable.AddAndModify.inputPlaceholder', fieldName)} showCount maxLength={255} />
+          <Input
+            placeholder={dict(
+              'PC.Pages.SpaceTable.AddAndModify.inputPlaceholder',
+              fieldName,
+            )}
+            showCount
+            maxLength={255}
+          />
         );
       case TableFieldTypeEnum.MEDIUMTEXT:
         return (
           <Input.TextArea
-            placeholder={dict('NuwaxPC.Pages.SpaceTable.AddAndModify.inputPlaceholder', fieldName)}
+            placeholder={dict(
+              'PC.Pages.SpaceTable.AddAndModify.inputPlaceholder',
+              fieldName,
+            )}
             className="dispose-textarea-count"
             showCount
             maxLength={4194304}
@@ -85,14 +100,21 @@ const AddAndModify: React.FC<AddAndModifyProps> = ({
               };
         const placeholder =
           fieldType === TableFieldTypeEnum.Integer
-            ? dict('NuwaxPC.Pages.SpaceTable.AddAndModify.integerRange')
-            : dict('NuwaxPC.Pages.SpaceTable.AddAndModify.numberPrecision');
+            ? dict('PC.Pages.SpaceTable.AddAndModify.integerRange')
+            : dict('PC.Pages.SpaceTable.AddAndModify.numberPrecision');
         return <InputNumber {...props} placeholder={placeholder} />;
       }
 
       default:
         return (
-          <Input placeholder={dict('NuwaxPC.Pages.SpaceTable.AddAndModify.inputPlaceholder', fieldName)} showCount maxLength={255} />
+          <Input
+            placeholder={dict(
+              'PC.Pages.SpaceTable.AddAndModify.inputPlaceholder',
+              fieldName,
+            )}
+            showCount
+            maxLength={255}
+          />
         );
     }
   };
@@ -110,8 +132,8 @@ const AddAndModify: React.FC<AddAndModifyProps> = ({
         form.submit();
       }}
       onCancel={onCancel}
-      okText={dict('NuwaxPC.Common.Global.submit')}
-      cancelText={dict('NuwaxPC.Common.Global.cancel')}
+      okText={dict('PC.Common.Global.submit')}
+      cancelText={dict('PC.Common.Global.cancel')}
       confirmLoading={loading}
       className="add-modal-style"
     >
@@ -128,8 +150,8 @@ const AddAndModify: React.FC<AddAndModifyProps> = ({
             TableFieldTypeEnum.Boolean,
             TableFieldTypeEnum.Date,
           ].includes(item.fieldType)
-            ? dict('NuwaxPC.Common.Global.pleaseSelect')
-            : dict('NuwaxPC.Common.Global.pleaseInput');
+            ? dict('PC.Common.Global.pleaseSelect')
+            : dict('PC.Common.Global.pleaseInput');
           const rules = !item.nullableFlag
             ? [{ required: true, message: `${inputDesc}${item.fieldName}` }]
             : [];

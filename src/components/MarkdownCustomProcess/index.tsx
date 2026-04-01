@@ -210,7 +210,7 @@ function MarkdownCustomProcess(props: MarkdownCustomProcessProps) {
     }
 
     if (!detailData) {
-      message.error(dict('NuwaxPC.Components.MarkdownCustomProcess.noData'));
+      message.error(dict('PC.Components.MarkdownCustomProcess.noData'));
       return;
     }
     setOpenModal(true);
@@ -351,12 +351,15 @@ function MarkdownCustomProcess(props: MarkdownCustomProcessProps) {
     >
       <div className={cx(styles['process-header'])}>
         <div className={cx(styles['process-title'])}>
-          {innerProcessing?.name || dict('NuwaxPC.Components.MarkdownCustomProcess.noName')}
+          {innerProcessing?.name ||
+            dict('PC.Components.MarkdownCustomProcess.noName')}
         </div>
         <div className={cx(styles['process-controls'])}>
           {genStatusDisplay()}
           <div className={cx(styles['process-controls-actions'])}>
-            <Tooltip title={dict('NuwaxPC.Components.MarkdownCustomProcess.viewDetail')}>
+            <Tooltip
+              title={dict('PC.Components.MarkdownCustomProcess.viewDetail')}
+            >
               <Button
                 size="small"
                 type="text"
@@ -367,7 +370,11 @@ function MarkdownCustomProcess(props: MarkdownCustomProcessProps) {
             </Tooltip>
             {isPageType ? (
               <Tooltip
-                title={pagePreviewData ? dict('NuwaxPC.Components.MarkdownCustomProcess.closePreview') : dict('NuwaxPC.Components.MarkdownCustomProcess.previewPage')}
+                title={
+                  pagePreviewData
+                    ? dict('PC.Components.MarkdownCustomProcess.closePreview')
+                    : dict('PC.Components.MarkdownCustomProcess.previewPage')
+                }
                 open={open}
                 onOpenChange={setOpen}
               >
@@ -386,7 +393,13 @@ function MarkdownCustomProcess(props: MarkdownCustomProcessProps) {
             ) : null}
             {/* 展开/收起 */}
             {isPlanType && (
-              <Tooltip title={isPlanExpanded ? dict('NuwaxPC.Components.MarkdownCustomProcess.collapse') : dict('NuwaxPC.Components.MarkdownCustomProcess.expand')}>
+              <Tooltip
+                title={
+                  isPlanExpanded
+                    ? dict('PC.Components.MarkdownCustomProcess.collapse')
+                    : dict('PC.Components.MarkdownCustomProcess.expand')
+                }
+              >
                 <Button
                   size="small"
                   type="text"
@@ -416,7 +429,10 @@ function MarkdownCustomProcess(props: MarkdownCustomProcessProps) {
       {/* 使用 SeeDetailModal 组件 */}
       <SeeDetailModal
         key={innerProcessing.executeId}
-        title={innerProcessing.name || dict('NuwaxPC.Components.MarkdownCustomProcess.noName')}
+        title={
+          innerProcessing.name ||
+          dict('PC.Components.MarkdownCustomProcess.noName')
+        }
         visible={openModal}
         onClose={() => setOpenModal(false)}
         data={detailData}

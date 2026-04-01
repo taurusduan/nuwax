@@ -21,14 +21,12 @@ const buildV3AsideList = (): StencilList[] => {
     .find((child) => child.type === NodeTypeEnum.Variable);
 
   const variableAggregationNode = {
-    name: t('NuwaxPC.Pages.AntvX6Params.nodeVariableAggregationName'),
+    name: t('PC.Pages.AntvX6Params.nodeVariableAggregationName'),
     icon: variableNode?.icon || null,
     bgIcon: variableNode?.bgIcon,
     type: NodeTypeEnum.VariableAggregation,
     shape: NodeShapeEnum.General,
-    description: t(
-      'NuwaxPC.Pages.AntvX6Params.nodeVariableAggregationDescription',
-    ),
+    description: t('PC.Pages.AntvX6Params.nodeVariableAggregationDescription'),
   };
 
   return baseAsideList.map((group) => {

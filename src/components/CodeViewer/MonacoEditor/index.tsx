@@ -908,9 +908,11 @@ const MonacoEditor: React.FC<MonacoEditorProps> = ({
       <div className={`${styles.monacoEditor} ${className || ''}`}>
         <div className={styles.emptyState}>
           <div className={styles.emptyIcon}>⏳</div>
-          <h3 className={styles.emptyTitle}>{dict('NuwaxPC.Components.MonacoEditor.loadingEditor')}</h3>
+          <h3 className={styles.emptyTitle}>
+            {dict('PC.Components.MonacoEditor.loadingEditor')}
+          </h3>
           <p className={styles.emptyDescription}>
-            {dict('NuwaxPC.Components.MonacoEditor.loadingEditorDesc')}
+            {dict('PC.Components.MonacoEditor.loadingEditorDesc')}
           </p>
         </div>
       </div>
@@ -922,9 +924,11 @@ const MonacoEditor: React.FC<MonacoEditorProps> = ({
       <div className={`${styles.monacoEditor} ${className || ''}`}>
         <div className={styles.emptyState}>
           <div className={styles.emptyIcon}>📄</div>
-          <h3 className={styles.emptyTitle}>{dict('NuwaxPC.Components.MonacoEditor.selectFileToEdit')}</h3>
+          <h3 className={styles.emptyTitle}>
+            {dict('PC.Components.MonacoEditor.selectFileToEdit')}
+          </h3>
           <p className={styles.emptyDescription}>
-            {dict('NuwaxPC.Components.MonacoEditor.selectFileToEditDesc')}
+            {dict('PC.Components.MonacoEditor.selectFileToEditDesc')}
           </p>
         </div>
       </div>

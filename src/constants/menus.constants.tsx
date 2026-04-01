@@ -14,32 +14,32 @@ import { PoweroffOutlined, UserOutlined } from '@ant-design/icons';
 export const TABS = [
   {
     icon: <SvgIcon name="icons-nav-new_chat" />,
-    text: dict('NuwaxPC.Constants.Menus.newChat'),
+    text: dict('PC.Constants.Menus.newChat'),
     type: TabsEnum.NewChat,
   },
   {
     icon: <SvgIcon name="icons-nav-home" />,
-    text: dict('NuwaxPC.Constants.Menus.home'),
+    text: dict('PC.Constants.Menus.home'),
     type: TabsEnum.Home,
   },
   {
     icon: <SvgIcon name="icons-nav-workspace" />,
-    text: dict('NuwaxPC.Constants.Menus.workspace'),
+    text: dict('PC.Constants.Menus.workspace'),
     type: TabsEnum.Space,
   },
   {
     icon: <SvgIcon name="icons-nav-square" />,
-    text: dict('NuwaxPC.Constants.Menus.square'),
+    text: dict('PC.Constants.Menus.square'),
     type: TabsEnum.Square,
   },
   {
     icon: <SvgIcon name="icons-nav-ecosystem" />,
-    text: dict('NuwaxPC.Constants.Menus.ecosystemMarket'),
+    text: dict('PC.Constants.Menus.ecosystemMarket'),
     type: TabsEnum.Ecosystem_Market,
   },
   {
     icon: <SvgIcon name="icons-nav-settings" />,
-    text: dict('NuwaxPC.Constants.Menus.systemManage'),
+    text: dict('PC.Constants.Menus.systemManage'),
     type: TabsEnum.System_Manage,
   },
 ];
@@ -47,17 +47,17 @@ export const TABS = [
 // 用户操作区域
 export const USER_OPERATE_AREA: UserOperateAreaItemType[] = [
   {
-    title: dict('NuwaxPC.Constants.Menus.document'),
+    title: dict('PC.Constants.Menus.document'),
     icon: <SvgIcon name="icons-nav-doc" />,
     type: UserOperatorAreaEnum.Document,
   },
   {
-    title: dict('NuwaxPC.Constants.Menus.noUnread'),
+    title: dict('PC.Constants.Menus.noUnread'),
     icon: <SvgIcon name="icons-nav-notification" />,
     type: UserOperatorAreaEnum.Message,
   },
   {
-    title: dict('NuwaxPC.Constants.Menus.myComputer'),
+    title: dict('PC.Constants.Menus.myComputer'),
     icon: <SvgIcon name="icons-nav-computer" />,
     type: UserOperatorAreaEnum.Computer,
   },
@@ -68,28 +68,28 @@ export const USER_AVATAR_LIST = [
   {
     type: UserAvatarEnum.User_Name,
     icon: <UserOutlined />,
-    text: dict('NuwaxPC.Constants.Menus.userName'),
+    text: dict('PC.Constants.Menus.userName'),
   },
   {
     type: UserAvatarEnum.Setting,
     icon: <SvgIcon name="icons-common-user_info" style={{ fontSize: 14 }} />,
-    text: dict('NuwaxPC.Constants.Menus.profile'),
+    text: dict('PC.Constants.Menus.profile'),
   },
   {
     type: UserAvatarEnum.Log_Out,
     icon: <PoweroffOutlined />,
-    text: dict('NuwaxPC.Constants.Menus.logout'),
+    text: dict('PC.Constants.Menus.logout'),
   },
 ];
 
 // 消息分段器选项
 export const MESSAGE_OPTIONS = [
   {
-    label: dict('NuwaxPC.Common.Global.all'),
+    label: dict('PC.Common.Global.all'),
     value: MessageReadStatusEnum.All,
   },
   {
-    label: dict('NuwaxPC.Constants.Menus.unread'),
+    label: dict('PC.Constants.Menus.unread'),
     value: MessageReadStatusEnum.Unread,
   },
 ];
@@ -98,23 +98,23 @@ export const MESSAGE_OPTIONS = [
 export const SETTING_ACTIONS = [
   {
     type: SettingActionEnum.Account,
-    label: dict('NuwaxPC.Constants.Menus.account'),
+    label: dict('PC.Constants.Menus.account'),
   },
   {
     type: SettingActionEnum.Email_Bind,
-    label: dict('NuwaxPC.Constants.Menus.emailBind'),
+    label: dict('PC.Constants.Menus.emailBind'),
   },
   {
     type: SettingActionEnum.Reset_Password,
-    label: dict('NuwaxPC.Constants.Menus.resetPassword'),
+    label: dict('PC.Constants.Menus.resetPassword'),
   },
   {
     type: SettingActionEnum.Theme_Switch,
-    label: dict('NuwaxPC.Constants.Menus.themeSwitch'),
+    label: dict('PC.Constants.Menus.themeSwitch'),
   },
   {
     type: SettingActionEnum.Usage_Statistics,
-    label: dict('NuwaxPC.Constants.Menus.usageStatistics'),
+    label: dict('PC.Constants.Menus.usageStatistics'),
   },
 ];
 

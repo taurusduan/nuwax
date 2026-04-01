@@ -81,7 +81,7 @@ export const useMessageEventDelegate = ({
           // 打开页面
           if (!eventConfig.pageUrl) {
             antdMessage.error(
-              dict('NuwaxPC.Hooks.UseMessageEventDelegate.pagePathConfigError'),
+              dict('PC.Hooks.UseMessageEventDelegate.pagePathConfigError'),
             );
             return;
           }
@@ -119,16 +119,14 @@ export const useMessageEventDelegate = ({
             showPagePreview({
               name:
                 eventConfig.pageName ||
-                dict('NuwaxPC.Hooks.UseMessageEventDelegate.page'),
+                dict('PC.Hooks.UseMessageEventDelegate.page'),
               uri: fullUri,
               params,
               executeId: `event-${Date.now()}`,
             });
           } else {
             antdMessage.error(
-              dict(
-                'NuwaxPC.Hooks.UseMessageEventDelegate.pagePathParamConfigError',
-              ),
+              dict('PC.Hooks.UseMessageEventDelegate.pagePathParamConfigError'),
             );
           }
           break;
@@ -138,7 +136,7 @@ export const useMessageEventDelegate = ({
           // 打开外链
           if (!eventConfig.url) {
             antdMessage.error(
-              dict('NuwaxPC.Hooks.UseMessageEventDelegate.linkUrlConfigError'),
+              dict('PC.Hooks.UseMessageEventDelegate.linkUrlConfigError'),
             );
             return;
           }

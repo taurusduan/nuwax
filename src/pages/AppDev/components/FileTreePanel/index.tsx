@@ -173,8 +173,8 @@ const FileTreePanel: React.FC<FileTreePanelProps> = ({
       <Tooltip
         title={
           isFileTreeCollapsed
-            ? t('NuwaxPC.Pages.AppDevFileTreePanel.expand')
-            : t('NuwaxPC.Pages.AppDevFileTreePanel.collapse')
+            ? t('PC.Pages.AppDevFileTreePanel.expand')
+            : t('PC.Pages.AppDevFileTreePanel.collapse')
         }
       >
         <Button
@@ -210,9 +210,9 @@ const FileTreePanel: React.FC<FileTreePanelProps> = ({
                 {isFileTreeInitializing ? (
                   <AppDevEmptyState
                     type="loading"
-                    title={t('NuwaxPC.Pages.AppDevFileTreePanel.loadingTitle')}
+                    title={t('PC.Pages.AppDevFileTreePanel.loadingTitle')}
                     description={t(
-                      'NuwaxPC.Pages.AppDevFileTreePanel.loadingDescription',
+                      'PC.Pages.AppDevFileTreePanel.loadingDescription',
                     )}
                   />
                 ) : files.length === 0 ? (
@@ -223,7 +223,7 @@ const FileTreePanel: React.FC<FileTreePanelProps> = ({
                         ? [
                             {
                               text: t(
-                                'NuwaxPC.Pages.AppDevFileTreePanel.importProject',
+                                'PC.Pages.AppDevFileTreePanel.importProject',
                               ),
                               icon: <ImportOutlined />,
                               onClick: onUploadProject,

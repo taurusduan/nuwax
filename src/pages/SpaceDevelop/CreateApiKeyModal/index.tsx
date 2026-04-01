@@ -68,7 +68,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Toast.Global.modifiedSuccessfully'));
+      message.success(dict('PC.Toast.Global.modifiedSuccessfully'));
     },
   });
 
@@ -77,12 +77,12 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
+      message.success(dict('PC.Toast.Global.deletedSuccessfully'));
     },
   });
 
   const handleCopy = () => {
-    message.success(dict('NuwaxPC.Toast.Global.copiedSuccessfully'));
+    message.success(dict('PC.Toast.Global.copiedSuccessfully'));
   };
 
   useEffect(() => {
@@ -129,12 +129,16 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
 
   // 删除确认
   const handleDelConfirm = (id: number, accessKey: string) => {
-    modalConfirm(dict('NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.deleteConfirmText'), accessKey, () => {
-      handleDel(id, accessKey);
-      return new Promise((resolve) => {
-        setTimeout(resolve, 1000);
-      });
-    });
+    modalConfirm(
+      dict('PC.Pages.SpaceDevelop.CreateApiKeyModal.deleteConfirmText'),
+      accessKey,
+      () => {
+        handleDel(id, accessKey);
+        return new Promise((resolve) => {
+          setTimeout(resolve, 1000);
+        });
+      },
+    );
   };
 
   // 入参配置columns
@@ -151,7 +155,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.creator'),
+      title: dict('PC.Pages.SpaceDevelop.CreateApiKeyModal.creator'),
       dataIndex: 'userName',
       key: 'userName',
       width: 100,
@@ -164,7 +168,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.createdTime'),
+      title: dict('PC.Pages.SpaceDevelop.CreateApiKeyModal.createdTime'),
       dataIndex: 'created',
       key: 'created',
       width: 160,
@@ -179,8 +183,12 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
     {
       title: (
         <div className={cx('h-full', 'flex', 'items-center', 'gap-6')}>
-          <span>{dict('NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.devMode')}</span>
-          <Tooltip title={dict('NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.devModeTooltip')}>
+          <span>{dict('PC.Pages.SpaceDevelop.CreateApiKeyModal.devMode')}</span>
+          <Tooltip
+            title={dict(
+              'PC.Pages.SpaceDevelop.CreateApiKeyModal.devModeTooltip',
+            )}
+          >
             <ExclamationCircleOutlined />
           </Tooltip>
         </div>
@@ -208,7 +216,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
       render: (_, record) => (
         <div className={cx('h-full', 'flex', 'items-center')}>
           <CopyToClipboard text={record.accessKey || ''} onCopy={handleCopy}>
-            <Tooltip title={dict('NuwaxPC.Common.Global.copy')}>
+            <Tooltip title={dict('PC.Common.Global.copy')}>
               <Button
                 type="text"
                 rootClassName={cx('h-full', 'flex', 'items-center')}
@@ -247,7 +255,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
       }}
       title={
         <div className={cx('text-ellipsis')} style={{ width: '400px' }}>
-          {dict('NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.modalTitle', name)}
+          {dict('PC.Pages.SpaceDevelop.CreateApiKeyModal.modalTitle', name)}
         </div>
       }
       open={open}
@@ -269,7 +277,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
           y: 450,
         }}
         locale={{
-          emptyText: <Empty description={dict('NuwaxPC.Common.Global.emptyData')} />,
+          emptyText: <Empty description={dict('PC.Common.Global.emptyData')} />,
         }}
         footer={() => (
           <Button
@@ -277,7 +285,7 @@ const CreateTempChatModal: React.FC<CreateTempChatModalProps> = ({
             loading={loading}
             icon={<PlusOutlined />}
           >
-            {dict('NuwaxPC.Pages.SpaceDevelop.CreateApiKeyModal.addApiKey')}
+            {dict('PC.Pages.SpaceDevelop.CreateApiKeyModal.addApiKey')}
           </Button>
         )}
       />

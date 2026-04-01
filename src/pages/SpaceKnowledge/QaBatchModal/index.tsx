@@ -75,7 +75,7 @@ const QaBatchModal: React.FC<QaBatchModalProps> = ({
         onError(
           res.message ||
             dict(
-              'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.uploadFailedCheckFormat',
+              'PC.Pages.SpaceKnowledge.QaBatchModal.uploadFailedCheckFormat',
             ),
         );
       }
@@ -103,9 +103,7 @@ const QaBatchModal: React.FC<QaBatchModalProps> = ({
         file.name.endsWith('.xls');
 
       if (!isExcel) {
-        message.error(
-          dict('NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.excelOnly'),
-        );
+        message.error(dict('PC.Pages.SpaceKnowledge.QaBatchModal.excelOnly'));
         return false;
       }
 
@@ -113,7 +111,7 @@ const QaBatchModal: React.FC<QaBatchModalProps> = ({
       const isLessThan10M = file.size / 1024 / 1024 < 10;
       if (!isLessThan10M) {
         message.error(
-          dict('NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.fileSizeLimit10MB'),
+          dict('PC.Pages.SpaceKnowledge.QaBatchModal.fileSizeLimit10MB'),
         );
         return false;
       }
@@ -133,7 +131,7 @@ const QaBatchModal: React.FC<QaBatchModalProps> = ({
   const handleConfirm = debounce(() => {
     if (fileList.length === 0) {
       message.warning(
-        dict('NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.pleaseUploadFile'),
+        dict('PC.Pages.SpaceKnowledge.QaBatchModal.pleaseUploadFile'),
       );
       return;
     }
@@ -144,7 +142,7 @@ const QaBatchModal: React.FC<QaBatchModalProps> = ({
       () => {
         setUploading(false);
         message.success(
-          dict('NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.batchImportSuccess'),
+          dict('PC.Pages.SpaceKnowledge.QaBatchModal.batchImportSuccess'),
         );
         setFileList([]);
         onConfirm();
@@ -172,7 +170,7 @@ const QaBatchModal: React.FC<QaBatchModalProps> = ({
         // 导出失败，显示错误信息
         const errorMessage =
           result.error?.message ||
-          dict('NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.exportFailed');
+          dict('PC.Pages.SpaceKnowledge.QaBatchModal.exportFailed');
         message.warning(errorMessage);
         return;
       }
@@ -182,23 +180,21 @@ const QaBatchModal: React.FC<QaBatchModalProps> = ({
       const a = document.createElement('a');
       a.href = url;
       a.download = dict(
-        'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.templateFileName',
+        'PC.Pages.SpaceKnowledge.QaBatchModal.templateFileName',
       );
       a.click();
       URL.revokeObjectURL(url);
     } catch (error) {
       console.error(error);
       message.error(
-        dict(
-          'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateFailed',
-        ),
+        dict('PC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateFailed'),
       );
     }
   };
 
   return (
     <Modal
-      title={dict('NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.qaBatchImport')}
+      title={dict('PC.Pages.SpaceKnowledge.QaBatchModal.qaBatchImport')}
       open={open}
       confirmLoading={uploading}
       onCancel={handleCancel}
@@ -206,7 +202,7 @@ const QaBatchModal: React.FC<QaBatchModalProps> = ({
         <Space>
           <Tooltip
             title={dict(
-              'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadExcelTemplate',
+              'PC.Pages.SpaceKnowledge.QaBatchModal.downloadExcelTemplate',
             )}
           >
             <Button
@@ -214,9 +210,7 @@ const QaBatchModal: React.FC<QaBatchModalProps> = ({
               type="link"
               onClick={handleDownloadQaTemplate}
             >
-              {dict(
-                'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplate',
-              )}
+              {dict('PC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplate')}
             </Button>
           </Tooltip>
           <Button
@@ -225,7 +219,7 @@ const QaBatchModal: React.FC<QaBatchModalProps> = ({
             onClick={handleConfirm}
             loading={uploading}
           >
-            {dict('NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.confirmUpload')}
+            {dict('PC.Pages.SpaceKnowledge.QaBatchModal.confirmUpload')}
           </Button>
         </Space>
       }
@@ -238,12 +232,10 @@ const QaBatchModal: React.FC<QaBatchModalProps> = ({
             <InboxOutlined />
           </p>
           <p className="ant-upload-text">
-            {dict(
-              'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.clickOrDragToUpload',
-            )}
+            {dict('PC.Pages.SpaceKnowledge.QaBatchModal.clickOrDragToUpload')}
           </p>
           <p className="ant-upload-hint">
-            {dict('NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.excelUploadHint')}
+            {dict('PC.Pages.SpaceKnowledge.QaBatchModal.excelUploadHint')}
           </p>
         </Dragger>
       </div>
@@ -251,9 +243,7 @@ const QaBatchModal: React.FC<QaBatchModalProps> = ({
       {fileList.length === 0 && (
         <div style={{ marginTop: 16, textAlign: 'center' }}>
           <Typography.Text type="secondary">
-            {dict(
-              'NuwaxPC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateHint',
-            )}
+            {dict('PC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateHint')}
           </Typography.Text>
         </div>
       )}

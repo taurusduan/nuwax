@@ -322,7 +322,9 @@ export const markStreamingMessageError = (
       (messages.find(
         (msg) => msg.requestId === requestId && msg.role === 'ASSISTANT',
       )?.text || '') +
-      '\n\n[' + dict('NuwaxPC.Utils.ChatUtils.errorOccurred') + '] ' +
+      '\n\n[' +
+      dict('PC.Utils.ChatUtils.errorOccurred') +
+      '] ' +
       errorMessage,
   });
 };
@@ -342,7 +344,10 @@ export const markStreamingMessageCancelled = (
     text:
       (messages.find(
         (msg) => msg.requestId === requestId && msg.role === 'ASSISTANT',
-      )?.text || '') + '\n\n[' + dict('NuwaxPC.Utils.ChatUtils.cancelled') + ']',
+      )?.text || '') +
+      '\n\n[' +
+      dict('PC.Utils.ChatUtils.cancelled') +
+      ']',
   });
 };
 
@@ -409,7 +414,9 @@ export const generateConversationTopic = (
   messages: AppDevChatMessage[],
 ): string => {
   const firstUserMessage = messages.find((msg) => msg.role === 'USER');
-  return firstUserMessage ? firstUserMessage.text.substring(0, 50) : dict('NuwaxPC.Utils.ChatUtils.newConversation');
+  return firstUserMessage
+    ? firstUserMessage.text.substring(0, 50)
+    : dict('PC.Utils.ChatUtils.newConversation');
 };
 
 /**

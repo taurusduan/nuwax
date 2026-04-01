@@ -89,7 +89,8 @@ const ComponentItem: React.FC<ComponentItemProps> = ({
       extra={
         <>
           <span className={cx('text-ellipsis', 'flex-1', styles.time)}>
-            {dict('NuwaxPC.Pages.SpaceLibrary.ComponentItem.lastEdited')} {dayjs(componentInfo.modified).format('MM-DD HH:mm')}
+            {dict('PC.Pages.SpaceLibrary.ComponentItem.lastEdited')}{' '}
+            {dayjs(componentInfo.modified).format('MM-DD HH:mm')}
           </span>
           {
             // 模型组件
@@ -100,10 +101,10 @@ const ComponentItem: React.FC<ComponentItemProps> = ({
                 {componentInfo?.enabled === ModelComponentStatusEnum.Enabled ? (
                   <>
                     <ICON_SUCCESS />
-                    {dict('NuwaxPC.Pages.SpaceLibrary.ComponentItem.enabled')}
+                    {dict('PC.Pages.SpaceLibrary.ComponentItem.enabled')}
                   </>
                 ) : (
-                  <>{dict('NuwaxPC.Pages.SpaceLibrary.ComponentItem.disabled')}</>
+                  <>{dict('PC.Pages.SpaceLibrary.ComponentItem.disabled')}</>
                 )}
               </span>
             ) : (
@@ -113,7 +114,7 @@ const ComponentItem: React.FC<ComponentItemProps> = ({
                   className={cx('flex', 'items-center', 'gap-4', styles.status)}
                 >
                   <ICON_SUCCESS />
-                  {dict('NuwaxPC.Pages.SpaceLibrary.ComponentItem.published')}
+                  {dict('PC.Pages.SpaceLibrary.ComponentItem.published')}
                 </span>
               )
             )

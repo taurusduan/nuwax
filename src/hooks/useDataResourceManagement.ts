@@ -55,7 +55,7 @@ export const useDataResourceManagement = () => {
       } catch (error) {
         console.error('Failed to fetch data resource list:', error);
         message.error(
-          t('NuwaxPC.Components.DataResourceManagement.fetchListFailed'),
+          t('PC.Components.DataResourceManagement.fetchListFailed'),
         );
       } finally {
         setLoading(false);
@@ -96,23 +96,21 @@ export const useDataResourceManagement = () => {
         setTotal((prev) => prev + 1);
 
         message.success(
-          t('NuwaxPC.Components.DataResourceManagement.createSuccess'),
+          t('PC.Components.DataResourceManagement.createSuccess'),
         );
 
         return {
           success: true,
-          message: t('NuwaxPC.Components.DataResourceManagement.createSuccess'),
+          message: t('PC.Components.DataResourceManagement.createSuccess'),
           data: newResource,
         };
       } catch (error) {
         console.error('Failed to create data resource:', error);
-        message.error(
-          t('NuwaxPC.Components.DataResourceManagement.createFailed'),
-        );
+        message.error(t('PC.Components.DataResourceManagement.createFailed'));
 
         return {
           success: false,
-          message: t('NuwaxPC.Components.DataResourceManagement.createFailed'),
+          message: t('PC.Components.DataResourceManagement.createFailed'),
         };
       } finally {
         setLoading(false);
@@ -149,22 +147,20 @@ export const useDataResourceManagement = () => {
         );
 
         message.success(
-          t('NuwaxPC.Components.DataResourceManagement.updateSuccess'),
+          t('PC.Components.DataResourceManagement.updateSuccess'),
         );
 
         return {
           success: true,
-          message: t('NuwaxPC.Components.DataResourceManagement.updateSuccess'),
+          message: t('PC.Components.DataResourceManagement.updateSuccess'),
         };
       } catch (error) {
         console.error('Failed to update data resource:', error);
-        message.error(
-          t('NuwaxPC.Components.DataResourceManagement.updateFailed'),
-        );
+        message.error(t('PC.Components.DataResourceManagement.updateFailed'));
 
         return {
           success: false,
-          message: t('NuwaxPC.Components.DataResourceManagement.updateFailed'),
+          message: t('PC.Components.DataResourceManagement.updateFailed'),
         };
       } finally {
         setLoading(false);
@@ -192,22 +188,20 @@ export const useDataResourceManagement = () => {
         setTotal((prev) => prev - 1);
 
         message.success(
-          t('NuwaxPC.Components.DataResourceManagement.deleteSuccess'),
+          t('PC.Components.DataResourceManagement.deleteSuccess'),
         );
 
         return {
           success: true,
-          message: t('NuwaxPC.Components.DataResourceManagement.deleteSuccess'),
+          message: t('PC.Components.DataResourceManagement.deleteSuccess'),
         };
       } catch (error) {
         console.error('Failed to delete data resource:', error);
-        message.error(
-          t('NuwaxPC.Components.DataResourceManagement.deleteFailed'),
-        );
+        message.error(t('PC.Components.DataResourceManagement.deleteFailed'));
 
         return {
           success: false,
-          message: t('NuwaxPC.Components.DataResourceManagement.deleteFailed'),
+          message: t('PC.Components.DataResourceManagement.deleteFailed'),
         };
       } finally {
         setLoading(false);
@@ -250,20 +244,18 @@ export const useDataResourceManagement = () => {
         return {
           success: true,
           message: enabled
-            ? t('NuwaxPC.Components.DataResourceManagement.enableSuccess')
-            : t('NuwaxPC.Components.DataResourceManagement.disableSuccess'),
+            ? t('PC.Components.DataResourceManagement.enableSuccess')
+            : t('PC.Components.DataResourceManagement.disableSuccess'),
         };
       } catch (error) {
         console.error('Failed to toggle data resource status:', error);
         message.error(
-          t('NuwaxPC.Components.DataResourceManagement.switchStatusFailed'),
+          t('PC.Components.DataResourceManagement.switchStatusFailed'),
         );
 
         return {
           success: false,
-          message: t(
-            'NuwaxPC.Components.DataResourceManagement.operationFailed',
-          ),
+          message: t('PC.Components.DataResourceManagement.operationFailed'),
         };
       } finally {
         setLoading(false);
@@ -290,36 +282,34 @@ export const useDataResourceManagement = () => {
 
         if (success) {
           message.success(
-            t(
-              'NuwaxPC.Components.DataResourceManagement.connectionTestSuccess',
-            ),
+            t('PC.Components.DataResourceManagement.connectionTestSuccess'),
           );
           return {
             success: true,
             message: t(
-              'NuwaxPC.Components.DataResourceManagement.connectionTestSuccess',
+              'PC.Components.DataResourceManagement.connectionTestSuccess',
             ),
           };
         } else {
           message.error(
-            t('NuwaxPC.Components.DataResourceManagement.connectionTestFailed'),
+            t('PC.Components.DataResourceManagement.connectionTestFailed'),
           );
           return {
             success: false,
             message: t(
-              'NuwaxPC.Components.DataResourceManagement.connectionTestFailed',
+              'PC.Components.DataResourceManagement.connectionTestFailed',
             ),
           };
         }
       } catch (error) {
         console.error('Failed to test data resource connection:', error);
         message.error(
-          t('NuwaxPC.Components.DataResourceManagement.connectionTestFailed'),
+          t('PC.Components.DataResourceManagement.connectionTestFailed'),
         );
 
         return {
           success: false,
-          message: t('NuwaxPC.Components.DataResourceManagement.testFailed'),
+          message: t('PC.Components.DataResourceManagement.testFailed'),
         };
       } finally {
         setLoading(false);

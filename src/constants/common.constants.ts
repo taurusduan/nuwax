@@ -106,11 +106,11 @@ export const DataTypeMap = {
 export const ParamsSettingDefaultOptions = [
   {
     value: BindValueType.Input,
-    label: dict('NuwaxPC.Constants.Common.input'),
+    label: dict('PC.Constants.Common.input'),
   },
   {
     value: BindValueType.Reference,
-    label: dict('NuwaxPC.Constants.Common.reference'),
+    label: dict('PC.Constants.Common.reference'),
   },
 ];
 
@@ -119,26 +119,41 @@ export const CREATED_TABS: {
   label: string;
   key: AgentComponentTypeEnum;
 }[] = [
-  { label: dict('NuwaxPC.Common.Global.plugin'), key: AgentComponentTypeEnum.Plugin },
-  { label: dict('NuwaxPC.Common.Global.workflow'), key: AgentComponentTypeEnum.Workflow },
-  { label: dict('NuwaxPC.Common.Global.knowledge'), key: AgentComponentTypeEnum.Knowledge },
-  { label: dict('NuwaxPC.Common.Global.dataTable'), key: AgentComponentTypeEnum.Table },
-  { label: dict('NuwaxPC.Common.Global.agent'), key: AgentComponentTypeEnum.Agent },
-  { label: dict('NuwaxPC.Constants.Common.mcpService'), key: AgentComponentTypeEnum.MCP },
-  { label: dict('NuwaxPC.Constants.Common.page'), key: AgentComponentTypeEnum.Page },
-  { label: dict('NuwaxPC.Common.Global.skill'), key: AgentComponentTypeEnum.Skill },
+  {
+    label: dict('PC.Common.Global.plugin'),
+    key: AgentComponentTypeEnum.Plugin,
+  },
+  {
+    label: dict('PC.Common.Global.workflow'),
+    key: AgentComponentTypeEnum.Workflow,
+  },
+  {
+    label: dict('PC.Common.Global.knowledge'),
+    key: AgentComponentTypeEnum.Knowledge,
+  },
+  {
+    label: dict('PC.Common.Global.dataTable'),
+    key: AgentComponentTypeEnum.Table,
+  },
+  { label: dict('PC.Common.Global.agent'), key: AgentComponentTypeEnum.Agent },
+  {
+    label: dict('PC.Constants.Common.mcpService'),
+    key: AgentComponentTypeEnum.MCP,
+  },
+  { label: dict('PC.Constants.Common.page'), key: AgentComponentTypeEnum.Page },
+  { label: dict('PC.Common.Global.skill'), key: AgentComponentTypeEnum.Skill },
 ];
 
 // 组件类型名称
 export const COMPONENT_TYPE_NAME_MAP = {
-  [AgentComponentTypeEnum.Agent]: dict('NuwaxPC.Common.Global.agent'),
-  [AgentComponentTypeEnum.Plugin]: dict('NuwaxPC.Common.Global.plugin'),
-  [AgentComponentTypeEnum.Workflow]: dict('NuwaxPC.Common.Global.workflow'),
-  [AgentComponentTypeEnum.Knowledge]: dict('NuwaxPC.Common.Global.knowledge'),
-  [AgentComponentTypeEnum.Variable]: dict('NuwaxPC.Constants.Common.variable'),
-  [AgentComponentTypeEnum.Table]: dict('NuwaxPC.Common.Global.dataTable'),
-  [AgentComponentTypeEnum.Model]: dict('NuwaxPC.Common.Global.model'),
-  [AgentComponentTypeEnum.MCP]: dict('NuwaxPC.Constants.Common.mcpService'),
+  [AgentComponentTypeEnum.Agent]: dict('PC.Common.Global.agent'),
+  [AgentComponentTypeEnum.Plugin]: dict('PC.Common.Global.plugin'),
+  [AgentComponentTypeEnum.Workflow]: dict('PC.Common.Global.workflow'),
+  [AgentComponentTypeEnum.Knowledge]: dict('PC.Common.Global.knowledge'),
+  [AgentComponentTypeEnum.Variable]: dict('PC.Constants.Common.variable'),
+  [AgentComponentTypeEnum.Table]: dict('PC.Common.Global.dataTable'),
+  [AgentComponentTypeEnum.Model]: dict('PC.Common.Global.model'),
+  [AgentComponentTypeEnum.MCP]: dict('PC.Constants.Common.mcpService'),
 };
 
 /**

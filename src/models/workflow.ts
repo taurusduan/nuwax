@@ -38,8 +38,8 @@ const useWorkflow = () => {
       inputArgs: [],
     },
     id: 0,
-    name: dict('NuwaxPC.Models.Workflow.defaultNodeName'),
-    description: dict('NuwaxPC.Models.Workflow.defaultNodeDescription'),
+    name: dict('PC.Models.Workflow.defaultNodeName'),
+    description: dict('PC.Models.Workflow.defaultNodeDescription'),
     workflowId: 0,
     icon: '',
   });

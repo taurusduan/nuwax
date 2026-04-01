@@ -17,7 +17,7 @@ interface PermissionMaskProps {
  * 用于覆盖在目标容器之上，显示无权限等提示信息
  */
 const PermissionMask: React.FC<PermissionMaskProps> = ({
-  text = dict('NuwaxPC.Components.PermissionMask.noAgentPermission'),
+  text = dict('PC.Components.PermissionMask.noAgentPermission'),
   className,
   visible = true,
 }) => {

@@ -146,7 +146,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
     }
   };
   const handleCopy = () => {
-    message.success(t('NuwaxPC.Toast.Global.copiedSuccessfully'));
+    message.success(t('PC.Toast.Global.copiedSuccessfully'));
   };
 
   // Resolve icon, fallback to default icon by component type.
@@ -178,7 +178,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
   return (
     <Drawer
       className={styles.drawer}
-      title={t('NuwaxPC.Pages.SystemRunningLogDetailDrawer.title')}
+      title={t('PC.Pages.SystemRunningLogDetailDrawer.title')}
       placement="right"
       open={open}
       onClose={onClose}
@@ -197,7 +197,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
             <div className={cx('flex', styles['time-box'])}>
               <div className={cx(styles.num, 'flex', 'items-center')}>
                 <span>
-                  {t('NuwaxPC.Pages.SystemRunningLogDetailDrawer.duration')}{' '}
+                  {t('PC.Pages.SystemRunningLogDetailDrawer.duration')}{' '}
                   {spaceLogInfoDetail.requestEndTime -
                     spaceLogInfoDetail.requestStartTime}{' '}
                   ms
@@ -212,7 +212,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
             </div>
             <div className={cx('flex', styles.box)}>
               <span>
-                {t('NuwaxPC.Pages.SystemRunningLogDetailDrawer.messageId')}
+                {t('PC.Pages.SystemRunningLogDetailDrawer.messageId')}
               </span>
               <span className={cx(styles.value, 'text-ellipsis')}>
                 {spaceLogInfoDetail.requestId}
@@ -229,9 +229,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
             !!componentExecuteResults?.length && (
               <div className={cx(styles.wrap)}>
                 <h5 className={cx(styles.title)}>
-                  {t(
-                    'NuwaxPC.Pages.SystemRunningLogDetailDrawer.calledComponents',
-                  )}
+                  {t('PC.Pages.SystemRunningLogDetailDrawer.calledComponents')}
                 </h5>
                 {componentExecuteResults?.map(
                   (info: ExecuteResultInfo, index: number) => (
@@ -274,13 +272,13 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
 
           <div className={cx(styles.wrap)}>
             <h5 className={cx(styles.title)}>
-              {t('NuwaxPC.Pages.SystemRunningLogDetailDrawer.nodeDetails')}
+              {t('PC.Pages.SystemRunningLogDetailDrawer.nodeDetails')}
             </h5>
             <NodeDetails node={finalResult} />
           </div>
           <div className={cx(styles.wrap, styles['render-container'])}>
             <h5 className={cx(styles.title)}>
-              {t('NuwaxPC.Pages.SystemRunningLogDetailDrawer.input')}&nbsp;
+              {t('PC.Pages.SystemRunningLogDetailDrawer.input')}&nbsp;
               <CopyToClipboard
                 text={finalResult?.input || ''}
                 onCopy={handleCopy}
@@ -292,7 +290,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
           </div>
           <div className={cx(styles.wrap, styles['render-container'])}>
             <h5 className={cx(styles.title)}>
-              {t('NuwaxPC.Pages.SystemRunningLogDetailDrawer.output')}&nbsp;
+              {t('PC.Pages.SystemRunningLogDetailDrawer.output')}&nbsp;
               <CopyToClipboard
                 text={finalResult?.output || ''}
                 onCopy={handleCopy}
@@ -305,9 +303,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
           {spaceLogInfoDetail?.targetType !== AgentComponentTypeEnum.Agent && (
             <div className={cx(styles.wrap, styles['render-container'])}>
               <h5 className={cx(styles.title)}>
-                {t(
-                  'NuwaxPC.Pages.SystemRunningLogDetailDrawer.executionProcess',
-                )}
+                {t('PC.Pages.SystemRunningLogDetailDrawer.executionProcess')}
                 &nbsp;
                 <CopyToClipboard
                   text={spaceLogInfoDetail.processData || ''}
@@ -323,7 +319,7 @@ const LogDetailDrawer: React.FC<LogDetailDrawerProps> = ({
       ) : (
         <div className={cx('flex', 'h-full', 'items-center', 'content-center')}>
           <Empty
-            description={t('NuwaxPC.Pages.SystemRunningLogDetailDrawer.empty')}
+            description={t('PC.Pages.SystemRunningLogDetailDrawer.empty')}
           />
         </div>
       )}

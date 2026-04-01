@@ -48,7 +48,7 @@ export default () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: (_: null, params: number[]) => {
-      message.success(dict('NuwaxPC.Models.DevCollectAgent.uncollectSuccess'));
+      message.success(dict('PC.Models.DevCollectAgent.uncollectSuccess'));
       const agentId = params[0];
       const list =
         devCollectAgentList?.filter((item) => item.agentId !== agentId) || [];

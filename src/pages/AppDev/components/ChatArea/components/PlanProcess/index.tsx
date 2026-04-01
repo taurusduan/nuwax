@@ -55,13 +55,13 @@ const PlanProcess: React.FC<PlanProcessProps> = ({
     const overallStatus = getOverallStatus();
     switch (overallStatus) {
       case 'completed':
-        return t('NuwaxPC.Pages.AppDevPlanProcess.completed');
+        return t('PC.Pages.AppDevPlanProcess.completed');
       case 'in_progress':
-        return t('NuwaxPC.Pages.AppDevPlanProcess.inProgress');
+        return t('PC.Pages.AppDevPlanProcess.inProgress');
       case 'failed':
-        return t('NuwaxPC.Pages.AppDevPlanProcess.partialFailed');
+        return t('PC.Pages.AppDevPlanProcess.partialFailed');
       default:
-        return t('NuwaxPC.Pages.AppDevPlanProcess.pending');
+        return t('PC.Pages.AppDevPlanProcess.pending');
     }
   };
 
@@ -121,7 +121,7 @@ const PlanProcess: React.FC<PlanProcessProps> = ({
   // 获取截取后的计划文本
   const getTruncatedPlanText = () => {
     const fullText = t(
-      'NuwaxPC.Pages.AppDevPlanProcess.executionPlanProgress',
+      'PC.Pages.AppDevPlanProcess.executionPlanProgress',
       String(stats.completed),
       String(stats.total),
     );
@@ -136,7 +136,7 @@ const PlanProcess: React.FC<PlanProcessProps> = ({
           <span className={styles[getStatusDotClass()]} />
           <Tooltip
             title={t(
-              'NuwaxPC.Pages.AppDevPlanProcess.executionPlanProgress',
+              'PC.Pages.AppDevPlanProcess.executionPlanProgress',
               String(stats.completed),
               String(stats.total),
             )}

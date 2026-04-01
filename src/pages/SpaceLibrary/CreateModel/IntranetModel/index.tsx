@@ -13,12 +13,16 @@ const cx = classNames.bind(styles);
 const IntranetModel: React.FC<IntranetModelProps> = ({ onOpen }) => {
   return (
     <div className={cx(styles['internal-network'])}>
-      <p>
-        {dict('NuwaxPC.Pages.SpaceLibrary.IntranetModel.description')}
-      </p>
-      <Button onClick={onOpen}>{dict('NuwaxPC.Pages.SpaceLibrary.IntranetModel.viewCommand')}</Button>
-      <span className={cx(styles.state)}>{dict('NuwaxPC.Pages.SpaceLibrary.IntranetModel.offlineStatus')}</span>
-      <Button type="link">{dict('NuwaxPC.Pages.SpaceLibrary.IntranetModel.refreshStatus')}</Button>
+      <p>{dict('PC.Pages.SpaceLibrary.IntranetModel.description')}</p>
+      <Button onClick={onOpen}>
+        {dict('PC.Pages.SpaceLibrary.IntranetModel.viewCommand')}
+      </Button>
+      <span className={cx(styles.state)}>
+        {dict('PC.Pages.SpaceLibrary.IntranetModel.offlineStatus')}
+      </span>
+      <Button type="link">
+        {dict('PC.Pages.SpaceLibrary.IntranetModel.refreshStatus')}
+      </Button>
     </div>
   );
 };

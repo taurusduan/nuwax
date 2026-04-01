@@ -50,20 +50,31 @@ const GlobalModelManage: React.FC = () => {
   >({});
 
   const selectOptions = [
-    { label: dict('NuwaxPC.Pages.GlobalModelManage.all'), value: '' },
-    { label: dict('NuwaxPC.Pages.GlobalModelManage.chatText'), value: ModelTypeEnum.Chat },
-    { label: dict('NuwaxPC.Pages.GlobalModelManage.embeddings'), value: ModelTypeEnum.Embeddings },
-    { label: dict('NuwaxPC.Pages.GlobalModelManage.chatMultiModal'), value: ModelTypeEnum.Multi },
+    { label: dict('PC.Pages.GlobalModelManage.all'), value: '' },
+    {
+      label: dict('PC.Pages.GlobalModelManage.chatText'),
+      value: ModelTypeEnum.Chat,
+    },
+    {
+      label: dict('PC.Pages.GlobalModelManage.embeddings'),
+      value: ModelTypeEnum.Embeddings,
+    },
+    {
+      label: dict('PC.Pages.GlobalModelManage.chatMultiModal'),
+      value: ModelTypeEnum.Multi,
+    },
   ];
 
   // 删除模型
   const handleConfirmDelete = async (id: number) => {
     const res = await apiSystemModelDelete({ id });
     if (res.code === SUCCESS_CODE) {
-      message.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
+      message.success(dict('PC.Toast.Global.deletedSuccessfully'));
       actionRef.current?.reload();
     } else {
-      message.error(res.message || dict('NuwaxPC.Pages.GlobalModelManage.deleteFailed'));
+      message.error(
+        res.message || dict('PC.Pages.GlobalModelManage.deleteFailed'),
+      );
     }
   };
 
@@ -87,7 +98,10 @@ const GlobalModelManage: React.FC = () => {
         if (response.code === SUCCESS_CODE) {
           actionRef.current?.reload();
         } else {
-          message.error(response.message || dict('NuwaxPC.Pages.GlobalModelManage.accessControlUpdateFailed'));
+          message.error(
+            response.message ||
+              dict('PC.Pages.GlobalModelManage.accessControlUpdateFailed'),
+          );
         }
       } finally {
         setAccessControlLoadingMap((prev) => ({
@@ -125,7 +139,7 @@ const GlobalModelManage: React.FC = () => {
       return [
         {
           key: 'edit',
-          label: dict('NuwaxPC.Pages.GlobalModelManage.edit'),
+          label: dict('PC.Pages.GlobalModelManage.edit'),
           disabled: !hasPermission('model_manage_modify'),
           onClick: () => {
             setModelId(record.id);
@@ -134,7 +148,7 @@ const GlobalModelManage: React.FC = () => {
         },
         {
           key: 'auth',
-          label: dict('NuwaxPC.Pages.GlobalModelManage.auth'),
+          label: dict('PC.Pages.GlobalModelManage.auth'),
           // 只有开启管控才显示授权按钮
           isShow: record.accessControl === AccessControlEnum.Filter,
           disabled: !hasPermission('model_manage_access_control'),
@@ -146,12 +160,15 @@ const GlobalModelManage: React.FC = () => {
         },
         {
           key: 'delete',
-          label: dict('NuwaxPC.Common.Global.delete'),
+          label: dict('PC.Common.Global.delete'),
           confirm: {
-            title: dict('NuwaxPC.Pages.GlobalModelManage.deleteModel'),
+            title: dict('PC.Pages.GlobalModelManage.deleteModel'),
             description: (
               <div>
-                {dict('NuwaxPC.Pages.GlobalModelManage.confirmDeleteModel', <span style={{ color: 'red' }}>{record.name}</span>)}
+                {dict(
+                  'PC.Pages.GlobalModelManage.confirmDeleteModel',
+                  <span style={{ color: 'red' }}>{record.name}</span>,
+                )}
               </div>
             ),
           },
@@ -165,71 +182,87 @@ const GlobalModelManage: React.FC = () => {
 
   const columns: ProColumns<ModelConfigDto>[] = [
     {
-      title: dict('NuwaxPC.Pages.GlobalModelManage.columnModelName'),
+      title: dict('PC.Pages.GlobalModelManage.columnModelName'),
       dataIndex: 'name',
       width: 200,
       fixed: 'left',
       hideInSearch: true,
     },
     {
-      title: dict('NuwaxPC.Pages.GlobalModelManage.columnType'),
+      title: dict('PC.Pages.GlobalModelManage.columnType'),
       dataIndex: 'type',
       width: 160,
       valueType: 'select',
       valueEnum: {
-        [ModelTypeEnum.Chat]: { text: dict('NuwaxPC.Pages.GlobalModelManage.chatText') },
-        [ModelTypeEnum.Embeddings]: { text: dict('NuwaxPC.Pages.GlobalModelManage.embeddings') },
-        [ModelTypeEnum.Multi]: { text: dict('NuwaxPC.Pages.GlobalModelManage.chatMultiModal') },
+        [ModelTypeEnum.Chat]: {
+          text: dict('PC.Pages.GlobalModelManage.chatText'),
+        },
+        [ModelTypeEnum.Embeddings]: {
+          text: dict('PC.Pages.GlobalModelManage.embeddings'),
+        },
+        [ModelTypeEnum.Multi]: {
+          text: dict('PC.Pages.GlobalModelManage.chatMultiModal'),
+        },
       },
       fieldProps: {
         options: selectOptions.filter((v) => v.value !== ''),
       },
     },
     {
-      title: dict('NuwaxPC.Pages.GlobalModelManage.columnModelId'),
+      title: dict('PC.Pages.GlobalModelManage.columnModelId'),
       dataIndex: 'model',
       width: 200,
       hideInSearch: true,
     },
     {
-      title: dict('NuwaxPC.Pages.GlobalModelManage.columnDescription'),
+      title: dict('PC.Pages.GlobalModelManage.columnDescription'),
       dataIndex: 'description',
       width: 260,
       hideInSearch: true,
     },
     {
-      title: dict('NuwaxPC.Pages.GlobalModelManage.columnStatus'),
+      title: dict('PC.Pages.GlobalModelManage.columnStatus'),
       dataIndex: 'enabled',
       width: 100,
       hideInSearch: true,
       valueEnum: {
-        [ModelComponentStatusEnum.Enabled]: { text: dict('NuwaxPC.Pages.GlobalModelManage.statusEnabled') },
-        [ModelComponentStatusEnum.Disabled]: { text: dict('NuwaxPC.Pages.GlobalModelManage.statusDisabled') },
+        [ModelComponentStatusEnum.Enabled]: {
+          text: dict('PC.Pages.GlobalModelManage.statusEnabled'),
+        },
+        [ModelComponentStatusEnum.Disabled]: {
+          text: dict('PC.Pages.GlobalModelManage.statusDisabled'),
+        },
       },
     },
     {
-      title: dict('NuwaxPC.Pages.GlobalModelManage.columnCreator'),
+      title: dict('PC.Pages.GlobalModelManage.columnCreator'),
       dataIndex: ['creator', 'nickName'],
       width: 160,
       hideInSearch: true,
     },
     {
-      title: dict('NuwaxPC.Pages.GlobalModelManage.columnUpdateTime'),
+      title: dict('PC.Pages.GlobalModelManage.columnUpdateTime'),
       dataIndex: 'created',
       width: 200,
       hideInSearch: true,
       valueType: 'dateTime',
     },
     {
-      title: dict('NuwaxPC.Pages.GlobalModelManage.columnAccessControl'),
-      tooltip: dict('NuwaxPC.Pages.GlobalModelManage.accessControlTooltip'),
+      title: dict('PC.Pages.GlobalModelManage.columnAccessControl'),
+      tooltip: dict('PC.Pages.GlobalModelManage.accessControlTooltip'),
       dataIndex: 'accessControl',
       align: 'center',
       width: 100,
       fixed: 'right',
       valueEnum: {
-        [AccessControlEnum.NoFilter]: { text: dict('NuwaxPC.Pages.GlobalModelManage.accessControlOff'), status: 'Default' },
-        [AccessControlEnum.Filter]: { text: dict('NuwaxPC.Pages.GlobalModelManage.accessControlOn'), status: 'Processing' },
+        [AccessControlEnum.NoFilter]: {
+          text: dict('PC.Pages.GlobalModelManage.accessControlOff'),
+          status: 'Default',
+        },
+        [AccessControlEnum.Filter]: {
+          text: dict('PC.Pages.GlobalModelManage.accessControlOn'),
+          status: 'Processing',
+        },
       },
       valueType: 'select',
       render: (_, record: ModelConfigDto) => (
@@ -241,7 +274,7 @@ const GlobalModelManage: React.FC = () => {
       ),
     },
     {
-      title: dict('NuwaxPC.Pages.GlobalModelManage.columnActions'),
+      title: dict('PC.Pages.GlobalModelManage.columnActions'),
       valueType: 'option',
       width: 180,
       align: 'center',
@@ -260,7 +293,9 @@ const GlobalModelManage: React.FC = () => {
     const res = await apiSystemModelList();
 
     if (res.code !== SUCCESS_CODE) {
-      message.error(res.message || dict('NuwaxPC.Pages.GlobalModelManage.fetchDataFailed'));
+      message.error(
+        res.message || dict('PC.Pages.GlobalModelManage.fetchDataFailed'),
+      );
       return { data: [], total: 0, success: false };
     }
 
@@ -282,7 +317,7 @@ const GlobalModelManage: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={dict('NuwaxPC.Pages.GlobalModelManage.pageTitle')}
+      title={dict('PC.Pages.GlobalModelManage.pageTitle')}
       hideScroll
       rightSlot={
         hasPermission('model_manage_add') && (
@@ -295,7 +330,7 @@ const GlobalModelManage: React.FC = () => {
               setVisible(true);
             }}
           >
-            {dict('NuwaxPC.Pages.GlobalModelManage.addModel')}
+            {dict('PC.Pages.GlobalModelManage.addModel')}
           </Button>
         )
       }

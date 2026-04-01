@@ -58,11 +58,11 @@ const Mcp: React.FC = () => {
   const handleDelete = useCallback(async (record: SystemMcpInfo) => {
     const response = await apiSystemResourceMcpDelete({ id: record.id });
     if (response.code === SUCCESS_CODE) {
-      message.success(t('NuwaxPC.Pages.SystemContentMcp.deleteSuccess'));
+      message.success(t('PC.Pages.SystemContentMcp.deleteSuccess'));
       actionRef.current?.reload();
     } else {
       message.error(
-        response.message || t('NuwaxPC.Pages.SystemContentMcp.deleteFailed'),
+        response.message || t('PC.Pages.SystemContentMcp.deleteFailed'),
       );
     }
   }, []);
@@ -74,21 +74,16 @@ const Mcp: React.FC = () => {
     (record: SystemMcpInfo): ActionItem<SystemMcpInfo>[] => [
       {
         key: 'view',
-        label: t('NuwaxPC.Pages.SystemContentMcp.view'),
+        label: t('PC.Pages.SystemContentMcp.view'),
         disabled: !hasPermission('content_mcp_query_detail'),
         onClick: handleView,
       },
       {
         key: 'delete',
-        label: t('NuwaxPC.Pages.SystemContentMcp.delete'),
+        label: t('PC.Pages.SystemContentMcp.delete'),
         confirm: {
-          title: t(
-            'NuwaxPC.Pages.SystemContentMcp.deleteConfirmTitle',
-            record.name,
-          ),
-          description: t(
-            'NuwaxPC.Pages.SystemContentMcp.deleteConfirmDescription',
-          ),
+          title: t('PC.Pages.SystemContentMcp.deleteConfirmTitle', record.name),
+          description: t('PC.Pages.SystemContentMcp.deleteConfirmDescription'),
         },
         disabled: !hasPermission('content_mcp_delete'),
         onClick: handleDelete,
@@ -102,31 +97,31 @@ const Mcp: React.FC = () => {
    */
   const columns: ProColumns<SystemMcpInfo>[] = [
     {
-      title: t('NuwaxPC.Pages.SystemContentMcp.columnName'),
+      title: t('PC.Pages.SystemContentMcp.columnName'),
       dataIndex: 'name',
       width: 180,
       ellipsis: true,
       fieldProps: {
-        placeholder: t('NuwaxPC.Pages.SystemContentMcp.searchName'),
+        placeholder: t('PC.Pages.SystemContentMcp.searchName'),
         allowClear: true,
       },
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentMcp.columnDescription'),
+      title: t('PC.Pages.SystemContentMcp.columnDescription'),
       dataIndex: 'description',
       width: 250,
       ellipsis: true,
       hideInSearch: true,
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentMcp.columnCreator'),
+      title: t('PC.Pages.SystemContentMcp.columnCreator'),
       dataIndex: 'creatorName',
       width: 120,
       ellipsis: true,
       hideInSearch: false,
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentMcp.columnCreated'),
+      title: t('PC.Pages.SystemContentMcp.columnCreated'),
       dataIndex: 'created',
       align: 'center',
       width: 170,
@@ -134,7 +129,7 @@ const Mcp: React.FC = () => {
       valueType: 'dateTime',
     },
     {
-      title: t('NuwaxPC.Pages.SystemContentMcp.columnAction'),
+      title: t('PC.Pages.SystemContentMcp.columnAction'),
       valueType: 'option',
       fixed: 'right',
       align: 'center',
@@ -173,7 +168,7 @@ const Mcp: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={t('NuwaxPC.Pages.SystemContentMcp.pageTitle')}
+      title={t('PC.Pages.SystemContentMcp.pageTitle')}
       hideScroll
     >
       <XProTable<SystemMcpInfo>

@@ -7,8 +7,8 @@ import {
   CLOUD_BASE_CODE_OPTIONS,
   PLUGIN_CREATE_TOOL,
 } from '@/constants/library.constants';
-import { apiPluginAdd, apiPluginHttpUpdate } from '@/services/plugin';
 import { dict } from '@/services/i18nRuntime';
+import { apiPluginAdd, apiPluginHttpUpdate } from '@/services/plugin';
 import { CreateUpdateModeEnum } from '@/types/enums/common';
 import { PluginTypeEnum } from '@/types/enums/plugin';
 import type { CreateNewPluginProps } from '@/types/interfaces/library';
@@ -75,7 +75,7 @@ const CreateNewPlugin: React.FC<CreateNewPluginProps> = ({
       // 跳转到插件配置页面
       const { type } = params[0];
       handlePluginUrl(result, type);
-      message.success(dict('NuwaxPC.Components.CreateNewPlugin.pluginCreated'));
+      message.success(dict('PC.Components.CreateNewPlugin.pluginCreated'));
       setLoading(false);
     },
     onError: () => {
@@ -91,7 +91,7 @@ const CreateNewPlugin: React.FC<CreateNewPluginProps> = ({
       setImageUrl('');
       const info = params[0];
       onConfirm?.(info);
-      message.success(dict('NuwaxPC.Components.CreateNewPlugin.pluginUpdated'));
+      message.success(dict('PC.Components.CreateNewPlugin.pluginUpdated'));
       setLoading(false);
     },
     onError: () => {
@@ -131,7 +131,11 @@ const CreateNewPlugin: React.FC<CreateNewPluginProps> = ({
   return (
     <CustomFormModal
       form={form}
-      title={mode === CreateUpdateModeEnum.Create ? dict('NuwaxPC.Components.CreateNewPlugin.createPlugin') : dict('NuwaxPC.Components.CreateNewPlugin.updatePlugin')}
+      title={
+        mode === CreateUpdateModeEnum.Create
+          ? dict('PC.Components.CreateNewPlugin.createPlugin')
+          : dict('PC.Components.CreateNewPlugin.updatePlugin')
+      }
       open={open}
       classNames={classNames}
       loading={loading}
@@ -156,43 +160,74 @@ const CreateNewPlugin: React.FC<CreateNewPluginProps> = ({
         >
           <Form.Item
             name="name"
-            label={dict('NuwaxPC.Components.CreateNewPlugin.pluginName')}
+            label={dict('PC.Components.CreateNewPlugin.pluginName')}
             rules={[
-              { required: true, message: dict('NuwaxPC.Components.CreateNewPlugin.pleaseInputPluginName') },
+              {
+                required: true,
+                message: dict(
+                  'PC.Components.CreateNewPlugin.pleaseInputPluginName',
+                ),
+              },
               {
                 validator(_, value) {
                   if (!value || value?.length <= 30) {
                     return Promise.resolve();
                   }
                   if (value?.length > 30) {
-                    return Promise.reject(new Error(dict('NuwaxPC.Components.CreateNewPlugin.nameMaxChars')));
+                    return Promise.reject(
+                      new Error(
+                        dict('PC.Components.CreateNewPlugin.nameMaxChars'),
+                      ),
+                    );
                   }
-                  return Promise.reject(new Error(dict('NuwaxPC.Components.CreateNewPlugin.pleaseInputPluginNameBang')));
+                  return Promise.reject(
+                    new Error(
+                      dict(
+                        'PC.Components.CreateNewPlugin.pleaseInputPluginNameBang',
+                      ),
+                    ),
+                  );
                 },
               },
             ]}
           >
             <Input
-              placeholder={dict('NuwaxPC.Components.CreateNewPlugin.placeholderPluginName')}
+              placeholder={dict(
+                'PC.Components.CreateNewPlugin.placeholderPluginName',
+              )}
               showCount
               maxLength={30}
             />
           </Form.Item>
           <OverrideTextArea
             name="description"
-            label={dict('NuwaxPC.Components.CreateNewPlugin.pluginDescription')}
+            label={dict('PC.Components.CreateNewPlugin.pluginDescription')}
             initialValue={description}
             rules={[
-              { required: true, message: dict('NuwaxPC.Components.CreateNewPlugin.pleaseInputPluginDesc') },
+              {
+                required: true,
+                message: dict(
+                  'PC.Components.CreateNewPlugin.pleaseInputPluginDesc',
+                ),
+              },
             ]}
-            placeholder={dict('NuwaxPC.Components.CreateNewPlugin.placeholderPluginDesc')}
+            placeholder={dict(
+              'PC.Components.CreateNewPlugin.placeholderPluginDesc',
+            )}
             maxLength={10000}
           />
           <ConditionRender condition={mode === CreateUpdateModeEnum.Create}>
             <Form.Item
               name="type"
-              label={dict('NuwaxPC.Components.CreateNewPlugin.pluginCreateTool')}
-              rules={[{ required: true, message: dict('NuwaxPC.Components.CreateNewPlugin.pleaseSelectPluginCreateTool') }]}
+              label={dict('PC.Components.CreateNewPlugin.pluginCreateTool')}
+              rules={[
+                {
+                  required: true,
+                  message: dict(
+                    'PC.Components.CreateNewPlugin.pleaseSelectPluginCreateTool',
+                  ),
+                },
+              ]}
             >
               <Radio.Group
                 options={PLUGIN_CREATE_TOOL}
@@ -203,8 +238,15 @@ const CreateNewPlugin: React.FC<CreateNewPluginProps> = ({
             <ConditionRender condition={pluginType === PluginTypeEnum.CODE}>
               <Form.Item
                 name="codeLang"
-                label={dict('NuwaxPC.Components.CreateNewPlugin.ideRuntime')}
-                rules={[{ required: true, message: dict('NuwaxPC.Components.CreateNewPlugin.pleaseSelectPluginMode') }]}
+                label={dict('PC.Components.CreateNewPlugin.ideRuntime')}
+                rules={[
+                  {
+                    required: true,
+                    message: dict(
+                      'PC.Components.CreateNewPlugin.pleaseSelectPluginMode',
+                    ),
+                  },
+                ]}
               >
                 <SelectList options={CLOUD_BASE_CODE_OPTIONS} />
               </Form.Item>

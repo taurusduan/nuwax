@@ -12,7 +12,7 @@ export interface NoMoreDividerProps {
 }
 
 const NoMoreDivider: React.FC<NoMoreDividerProps> = ({
-  text = dict('NuwaxPC.Components.NoMoreDivider.noMoreData'),
+  text = dict('PC.Components.NoMoreDivider.noMoreData'),
 }) => {
   return (
     <div className={cx(styles['no-more-divider'])}>

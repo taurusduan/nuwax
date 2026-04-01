@@ -259,7 +259,7 @@ const getLocalizedErrorMessage = (
     errorStr.includes('zip file') ||
     errorStr.includes('jszip')
   ) {
-    return t('NuwaxPC.Components.FilePreview.errorInvalidPptx');
+    return t('PC.Components.FilePreview.errorInvalidPptx');
   }
 
   // 网络相关错误
@@ -268,33 +268,33 @@ const getLocalizedErrorMessage = (
     errorStr.includes('fetch') ||
     errorStr.includes('failed to fetch')
   ) {
-    return t('NuwaxPC.Components.FilePreview.errorNetwork');
+    return t('PC.Components.FilePreview.errorNetwork');
   }
 
   // 文件加载错误
   if (errorStr.includes('load') || errorStr.includes('loading')) {
-    return t('NuwaxPC.Components.FilePreview.errorFileLoad');
+    return t('PC.Components.FilePreview.errorFileLoad');
   }
 
   // 解析错误
   if (errorStr.includes('parse') || errorStr.includes('parsing')) {
-    return t('NuwaxPC.Components.FilePreview.errorFileParse');
+    return t('PC.Components.FilePreview.errorFileParse');
   }
 
   // 根据文件类型返回默认错误
   switch (fileType) {
     case 'docx':
-      return t('NuwaxPC.Components.FilePreview.errorDocxPreview');
+      return t('PC.Components.FilePreview.errorDocxPreview');
     case 'xlsx':
-      return t('NuwaxPC.Components.FilePreview.errorXlsxPreview');
+      return t('PC.Components.FilePreview.errorXlsxPreview');
     case 'pdf':
-      return t('NuwaxPC.Components.FilePreview.errorPdfPreview');
+      return t('PC.Components.FilePreview.errorPdfPreview');
     case 'pptx':
-      return t('NuwaxPC.Components.FilePreview.errorPptxPreview');
+      return t('PC.Components.FilePreview.errorPptxPreview');
     case 'image':
-      return t('NuwaxPC.Components.FilePreview.errorImageLoad');
+      return t('PC.Components.FilePreview.errorImageLoad');
     default:
-      return t('NuwaxPC.Components.FilePreview.errorDefaultPreview');
+      return t('PC.Components.FilePreview.errorDefaultPreview');
   }
 };
 
@@ -453,9 +453,7 @@ const FilePreview: React.FC<FilePreviewProps> = ({
         onRendered?.();
       } catch (error: any) {
         setStatus('error');
-        setErrorMessage(
-          t('NuwaxPC.Components.FilePreview.errorLoadFileContent'),
-        );
+        setErrorMessage(t('PC.Components.FilePreview.errorLoadFileContent'));
         onError?.(error);
       }
       return;
@@ -483,9 +481,7 @@ const FilePreview: React.FC<FilePreviewProps> = ({
           onRendered?.();
         } catch (error: any) {
           setStatus('error');
-          setErrorMessage(
-            t('NuwaxPC.Components.FilePreview.errorLoadHtmlContent'),
-          );
+          setErrorMessage(t('PC.Components.FilePreview.errorLoadHtmlContent'));
           onError?.(error);
         }
       }
@@ -739,7 +735,7 @@ const FilePreview: React.FC<FilePreviewProps> = ({
               onError={() => {
                 setStatus('error');
                 setErrorMessage(
-                  t('NuwaxPC.Components.FilePreview.errorImageLoadCheckFile'),
+                  t('PC.Components.FilePreview.errorImageLoadCheckFile'),
                 );
               }}
             />
@@ -889,7 +885,7 @@ const FilePreview: React.FC<FilePreviewProps> = ({
       {(showRefresh || showDownload) && src && status === 'success' && (
         <div className={styles.toolbar}>
           {showRefresh && (
-            <Tooltip title={t('NuwaxPC.Components.FilePreview.tooltipRefresh')}>
+            <Tooltip title={t('PC.Components.FilePreview.tooltipRefresh')}>
               <Button
                 className={styles.toolbarBtn}
                 icon={<ReloadOutlined />}
@@ -899,9 +895,7 @@ const FilePreview: React.FC<FilePreviewProps> = ({
             </Tooltip>
           )}
           {showDownload && (
-            <Tooltip
-              title={t('NuwaxPC.Components.FilePreview.tooltipDownload')}
-            >
+            <Tooltip title={t('PC.Components.FilePreview.tooltipDownload')}>
               <Button
                 className={styles.toolbarBtn}
                 icon={<CloudDownloadOutlined />}
@@ -918,7 +912,7 @@ const FilePreview: React.FC<FilePreviewProps> = ({
           <FileOutlined
             style={{ fontSize: 48, color: '#bfbfbf', marginBottom: 16 }}
           />
-          <p>{t('NuwaxPC.Components.FilePreview.emptyNoFile')}</p>
+          <p>{t('PC.Components.FilePreview.emptyNoFile')}</p>
         </div>
       )}
 
@@ -927,7 +921,7 @@ const FilePreview: React.FC<FilePreviewProps> = ({
           {resolvedType && getFileIcon(resolvedType)}
           <Spin size="large" />
           <span className={styles.loadingText}>
-            {t('NuwaxPC.Components.FilePreview.loadingPreview')}
+            {t('PC.Components.FilePreview.loadingPreview')}
           </span>
         </div>
       )}
@@ -935,10 +929,9 @@ const FilePreview: React.FC<FilePreviewProps> = ({
       {status === 'error' && (
         <div className={styles.errorOverlay}>
           <Alert
-            message={t('NuwaxPC.Components.FilePreview.alertPreviewFailed')}
+            message={t('PC.Components.FilePreview.alertPreviewFailed')}
             description={
-              errorMessage ||
-              t('NuwaxPC.Components.FilePreview.alertCannotPreview')
+              errorMessage || t('PC.Components.FilePreview.alertCannotPreview')
             }
             type="error"
             showIcon
@@ -949,7 +942,7 @@ const FilePreview: React.FC<FilePreviewProps> = ({
                 icon={<ReloadOutlined />}
                 onClick={handleRetry}
               >
-                {t('NuwaxPC.Components.FilePreview.retry')}
+                {t('PC.Components.FilePreview.retry')}
               </Button>
             }
           />
@@ -960,11 +953,11 @@ const FilePreview: React.FC<FilePreviewProps> = ({
         <div className={styles.unsupportedOverlay}>
           {getFileIcon('unsupported', 64)}
           <p className={styles.unsupportedText}>
-            {t('NuwaxPC.Components.FilePreview.unsupportedType')}
+            {t('PC.Components.FilePreview.unsupportedType')}
           </p>
           <p className={styles.unsupportedHint}>
             {t(
-              'NuwaxPC.Components.FilePreview.fileTypeLabel',
+              'PC.Components.FilePreview.fileTypeLabel',
               getExtension(fileName),
             )}
           </p>
@@ -974,7 +967,7 @@ const FilePreview: React.FC<FilePreviewProps> = ({
               icon={<CloudDownloadOutlined />}
               onClick={handleDownload}
             >
-              {t('NuwaxPC.Components.FilePreview.downloadFile')}
+              {t('PC.Components.FilePreview.downloadFile')}
             </Button>
           )}
         </div>

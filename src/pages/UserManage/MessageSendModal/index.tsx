@@ -60,7 +60,7 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
     debounceWait: 300,
     onSuccess: () => {
       message.success(
-        dict('NuwaxPC.Pages.UserManage.MessageSendModal.messageSendSuccess'),
+        dict('PC.Pages.UserManage.MessageSendModal.messageSendSuccess'),
       );
       setLoading(false);
       onCancel?.();
@@ -76,7 +76,7 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
     onSuccess: (data: SearchUserInfo[]) => {
       if (!data?.length) {
         message.warning(
-          dict('NuwaxPC.Pages.UserManage.MessageSendModal.noUserFound'),
+          dict('PC.Pages.UserManage.MessageSendModal.noUserFound'),
         );
         setLeftColumnMembers([]);
         return;
@@ -101,7 +101,7 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
   const handlerSubmit = () => {
     if (!content) {
       message.warning(
-        dict('NuwaxPC.Pages.UserManage.MessageSendModal.pleaseInputMessage'),
+        dict('PC.Pages.UserManage.MessageSendModal.pleaseInputMessage'),
       );
       return;
     }
@@ -110,7 +110,7 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
       rightColumnMembers.length === 0
     ) {
       message.warning(
-        dict('NuwaxPC.Pages.UserManage.MessageSendModal.pleaseSelectMembers'),
+        dict('PC.Pages.UserManage.MessageSendModal.pleaseSelectMembers'),
       );
       return;
     }
@@ -181,12 +181,12 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
   return (
     <CustomFormModal
       form={form}
-      title={dict('NuwaxPC.Pages.UserManage.MessageSendModal.addMessageUser')}
+      title={dict('PC.Pages.UserManage.MessageSendModal.addMessageUser')}
       classNames={{
         content: cx(styles['add-member-modal-content']),
       }}
       open={open}
-      okText={dict('NuwaxPC.Pages.UserManage.MessageSendModal.sendMessage')}
+      okText={dict('PC.Pages.UserManage.MessageSendModal.sendMessage')}
       loading={loading}
       onCancel={onCancel}
       onConfirm={handlerSubmit}
@@ -197,8 +197,8 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
             ...opt,
             label:
               opt.value === MessageScopeEnum.Broadcast
-                ? dict('NuwaxPC.Pages.UserManage.MessageSendModal.broadcast')
-                : dict('NuwaxPC.Pages.UserManage.MessageSendModal.systemMessage'),
+                ? dict('PC.Pages.UserManage.MessageSendModal.broadcast')
+                : dict('PC.Pages.UserManage.MessageSendModal.systemMessage'),
           }))}
           value={messageScope}
           onChange={(e) => setMessageScope(e.target.value)}
@@ -206,7 +206,7 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
 
         <Input.TextArea
           placeholder={dict(
-            'NuwaxPC.Pages.UserManage.MessageSendModal.inputMessageContent',
+            'PC.Pages.UserManage.MessageSendModal.inputMessageContent',
           )}
           value={content}
           onChange={(e) => setContent(e.target.value)}
@@ -217,7 +217,7 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
             <div className={cx(styles['add-member-left-column'])}>
               <Input
                 placeholder={dict(
-                  'NuwaxPC.Pages.UserManage.MessageSendModal.searchUserPlaceholder',
+                  'PC.Pages.UserManage.MessageSendModal.searchUserPlaceholder',
                 )}
                 prefix={<SearchOutlined />}
                 onPressEnter={(event) => {
@@ -236,7 +236,7 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
                   leftColumnMembers.length > 0
                 }
               >
-                {dict('NuwaxPC.Pages.UserManage.MessageSendModal.selectAll')}
+                {dict('PC.Pages.UserManage.MessageSendModal.selectAll')}
               </Checkbox>
               <Checkbox.Group
                 style={{ display: 'block', marginTop: 10 }}
@@ -254,7 +254,7 @@ const MessageSendModal: React.FC<MessageSendModalProps> = ({
             <div style={{ width: '300px' }}>
               <h3 style={{ marginBottom: 15 }}>
                 {dict(
-                  'NuwaxPC.Pages.UserManage.MessageSendModal.selectedMembers',
+                  'PC.Pages.UserManage.MessageSendModal.selectedMembers',
                   String(rightColumnMembers.length),
                 )}
               </h3>

@@ -54,7 +54,7 @@ const AuthConfigModal: React.FC<AuthConfigModalProps> = ({
     const { projectId, name: projectName } = pageInfo || {};
     if (!projectId) {
       message.error(
-        dict('NuwaxPC.Pages.SpacePageDevelop.AuthConfigModal.pageIdNotExist'),
+        dict('PC.Pages.SpacePageDevelop.AuthConfigModal.pageIdNotExist'),
       );
       return;
     }
@@ -76,7 +76,7 @@ const AuthConfigModal: React.FC<AuthConfigModalProps> = ({
     <CustomFormModal
       form={form}
       open={open}
-      title={dict('NuwaxPC.Pages.SpacePageDevelop.AuthConfigModal.authConfig')}
+      title={dict('PC.Pages.SpacePageDevelop.AuthConfigModal.authConfig')}
       loading={loading}
       onCancel={onCancel}
       onConfirm={handlerConfirm}
@@ -92,7 +92,7 @@ const AuthConfigModal: React.FC<AuthConfigModalProps> = ({
         <Form.Item
           name="allowAccessWithoutLogin"
           label={dict(
-            'NuwaxPC.Pages.SpacePageDevelop.AuthConfigModal.allowAccessWithoutLogin',
+            'PC.Pages.SpacePageDevelop.AuthConfigModal.allowAccessWithoutLogin',
           )}
         >
           <Switch />

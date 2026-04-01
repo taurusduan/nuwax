@@ -321,7 +321,7 @@ const MenuPermissionTree: React.FC<MenuPermissionTreeProps> = ({
       title:
         resource.name ||
         t(
-          'NuwaxPC.Pages.SystemMenuPermissionModal.resourceLabelWithId',
+          'PC.Pages.SystemMenuPermissionModal.resourceLabelWithId',
           String(resource.id),
         ),
       key: resource.id, // 使用资源ID作为key，与extractResourceIds保持一致

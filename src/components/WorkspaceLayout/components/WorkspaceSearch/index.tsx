@@ -14,7 +14,7 @@ interface WorkspaceSearchProps {
   onClear?: () => void;
 }
 const WorkspaceSearch: React.FC<WorkspaceSearchProps> = ({
-  placeholder = dict('NuwaxPC.Components.WorkspaceSearch.placeholder'),
+  placeholder = dict('PC.Components.WorkspaceSearch.placeholder'),
   value = '',
   onChange = () => {},
   onClear = () => {},

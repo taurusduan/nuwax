@@ -95,30 +95,26 @@ export const InputAndOut: React.FC<NodeRenderProps> = ({
                   {index === 0 && (
                     <div className="font-color-gray07 font-12 mt-6">
                       <span>
-                        {t('NuwaxPC.Pages.AntvX6CommonNode.columnParamName')}
+                        {t('PC.Pages.AntvX6CommonNode.columnParamName')}
                       </span>
                       <span style={{ marginLeft: '22%' }}>
-                        {t(
-                          'NuwaxPC.Pages.AntvX6CommonNode.columnVariableValue',
-                        )}
+                        {t('PC.Pages.AntvX6CommonNode.columnVariableValue')}
                       </span>
                     </div>
                   )}
                   <Form.Item key={item.key}>
                     <div className="dis-left">
                       <Form.Item
-                        label={t(
-                          'NuwaxPC.Pages.AntvX6CommonNode.fieldParamName',
-                        )}
+                        label={t('PC.Pages.AntvX6CommonNode.fieldParamName')}
                         name={[item.name, 'name']}
                         noStyle
-                        // rules={[{ required: true, message: t('NuwaxPC.Pages.AntvX6Params.inputVariableNameRequired') }]}
+                        // rules={[{ required: true, message: t('PC.Pages.AntvX6Params.inputVariableNameRequired') }]}
                       >
                         <Input
                           size="small"
                           style={{ width: '30%', marginRight: '10px' }}
                           placeholder={t(
-                            'NuwaxPC.Pages.AntvX6CommonNode.placeholderParamName',
+                            'PC.Pages.AntvX6CommonNode.placeholderParamName',
                           )}
                           disabled={disabledInput}
                         />
@@ -127,7 +123,7 @@ export const InputAndOut: React.FC<NodeRenderProps> = ({
                         name={[item.name, 'bindValue']}
                         noStyle
                         // rules={[
-                        //   { required: true, message: t('NuwaxPC.Pages.AntvX6Params.inputOrReferenceVariableValue') },
+                        //   { required: true, message: t('PC.Pages.AntvX6Params.inputOrReferenceVariableValue') },
                         // ]}
                       >
                         <InputOrReference
@@ -230,47 +226,41 @@ export const OtherFormList: React.FC<NodeRenderProps> = ({
                   {index === 0 && (
                     <div className="font-color-gray07">
                       <span>
-                        {t('NuwaxPC.Pages.AntvX6CommonNode.columnParamName')}
+                        {t('PC.Pages.AntvX6CommonNode.columnParamName')}
                       </span>
                       <span style={{ marginLeft: '20%' }}>
-                        {t(
-                          'NuwaxPC.Pages.AntvX6CommonNode.columnVariableValue',
-                        )}
+                        {t('PC.Pages.AntvX6CommonNode.columnVariableValue')}
                       </span>
                     </div>
                   )}
                   <Form.Item key={item.key}>
                     <div className="dis-left">
                       <Form.Item
-                        label={t(
-                          'NuwaxPC.Pages.AntvX6CommonNode.fieldParamName',
-                        )}
+                        label={t('PC.Pages.AntvX6CommonNode.fieldParamName')}
                         name={[item.name, 'name']}
                         noStyle
-                        // rules={[{ required: true, message: t('NuwaxPC.Pages.AntvX6Params.inputVariableNameRequired') }]}
+                        // rules={[{ required: true, message: t('PC.Pages.AntvX6Params.inputVariableNameRequired') }]}
                       >
                         <Input
                           size="small"
                           style={{ width: '30%', marginRight: '10px' }}
                           placeholder={t(
-                            'NuwaxPC.Pages.AntvX6CommonNode.placeholderParamName',
+                            'PC.Pages.AntvX6CommonNode.placeholderParamName',
                           )}
                           disabled={disabledInput}
                         />
                       </Form.Item>
                       <Form.Item
-                        label={t(
-                          'NuwaxPC.Pages.AntvX6CommonNode.fieldVariableName',
-                        )}
+                        label={t('PC.Pages.AntvX6CommonNode.fieldVariableName')}
                         name={[item.name, 'bindValue']}
                         noStyle
                         // rules={[
-                        //   { required: true, message: t('NuwaxPC.Pages.AntvX6Params.inputOrReferenceVariableValue') },
+                        //   { required: true, message: t('PC.Pages.AntvX6Params.inputOrReferenceVariableValue') },
                         // ]}
                       >
                         <Input
                           placeholder={t(
-                            'NuwaxPC.Pages.AntvX6CommonNode.placeholderParamValue',
+                            'PC.Pages.AntvX6CommonNode.placeholderParamValue',
                           )}
                           size="small"
                           style={{ width: '55%', marginRight: '10px' }}
@@ -321,8 +311,7 @@ export const TreeOutput: React.FC<TreeOutputProps> = ({ treeData }) => {
           <span>{item.name}</span>
           <Popover
             content={
-              item.description ||
-              t('NuwaxPC.Pages.AntvX6CommonNode.noDescription')
+              item.description || t('PC.Pages.AntvX6CommonNode.noDescription')
             }
           >
             <InfoCircleOutlined
@@ -455,7 +444,7 @@ export const FormList: React.FC<FormListProps> = ({
             }
             if (
               form.getFieldValue([inputItemName, item.name, 'content']) ===
-              t('NuwaxPC.Pages.AntvX6CommonNode.otherBranchHint')
+              t('PC.Pages.AntvX6CommonNode.otherBranchHint')
             ) {
               fieldData = true;
             }
@@ -525,10 +514,10 @@ export const InputList: React.FC<InputListProps> = ({
                   {index === 0 && (
                     <>
                       <span>
-                        {t('NuwaxPC.Pages.AntvX6CommonNode.columnParamName')}
+                        {t('PC.Pages.AntvX6CommonNode.columnParamName')}
                       </span>
                       <span style={{ marginLeft: '25%' }}>
-                        {t('NuwaxPC.Pages.AntvX6CommonNode.columnParamValue')}
+                        {t('PC.Pages.AntvX6CommonNode.columnParamValue')}
                       </span>
                     </>
                   )}

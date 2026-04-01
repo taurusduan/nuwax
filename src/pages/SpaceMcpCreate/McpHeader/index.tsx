@@ -25,25 +25,27 @@ const McpHeader: React.FC<McpHeaderProps> = ({
         onClick={() => jumpBack(`/space/${spaceId}/mcp`)}
       >
         <LeftOutlined className={cx('hover-box', styles.icon)} />
-        <span className={styles.name}>{dict('NuwaxPC.Pages.SpaceMcpCreate.createMcpService')}</span>
+        <span className={styles.name}>
+          {dict('PC.Pages.SpaceMcpCreate.createMcpService')}
+        </span>
       </div>
 
       <div className={cx('flex-1')}></div>
       <div className={cx('flex', 'items-center', styles['extra-box'])}>
-        <Button onClick={onCancel}>{dict('NuwaxPC.Common.Global.cancel')}</Button>
+        <Button onClick={onCancel}>{dict('PC.Common.Global.cancel')}</Button>
         <Button
           className={cx(styles['save-btn'])}
           onClick={onSave}
           loading={saveLoading}
         >
-          {dict('NuwaxPC.Pages.SpaceMcpEdit.save')}
+          {dict('PC.Pages.SpaceMcpEdit.save')}
         </Button>
         <Button
           type="primary"
           onClick={onSaveAndDeploy}
           loading={saveDeployLoading}
         >
-          {dict('NuwaxPC.Pages.SpaceMcpEdit.saveAndDeploy')}
+          {dict('PC.Pages.SpaceMcpEdit.saveAndDeploy')}
         </Button>
       </div>
     </header>

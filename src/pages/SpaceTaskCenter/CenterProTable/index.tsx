@@ -4,6 +4,7 @@ import {
   XProTable,
 } from '@/components/ProComponents';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
+import { dict } from '@/services/i18nRuntime';
 import {
   apiTaskDelete,
   apiTaskDisable,
@@ -11,7 +12,6 @@ import {
   apiTaskExecute,
   apiTaskList,
 } from '@/services/library';
-import { dict } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import type { TaskInfo } from '@/types/interfaces/library';
 import type {
@@ -89,38 +89,44 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
         case 'EXECUTING':
           return {
             color: 'processing' as const,
-            text: dict('NuwaxPC.Pages.SystemTaskCenterProTable.statusExecuting'),
+            text: dict('PC.Pages.SystemTaskCenterProTable.statusExecuting'),
             isEnded: false,
           };
         case 'CREATE':
           return {
             color: 'warning' as const,
-            text: dict('NuwaxPC.Pages.SystemTaskCenterProTable.statusCreatedWaiting'),
+            text: dict(
+              'PC.Pages.SystemTaskCenterProTable.statusCreatedWaiting',
+            ),
             isEnded: false,
           };
         case 'CONTINUE':
           return {
             color: 'success' as const,
-            text: dict('NuwaxPC.Pages.SystemTaskCenterProTable.statusSuccessWaitingNext'),
+            text: dict(
+              'PC.Pages.SystemTaskCenterProTable.statusSuccessWaitingNext',
+            ),
             isEnded: false,
           };
         case 'FAIL':
           return {
             color: 'error' as const,
-            text: dict('NuwaxPC.Pages.SystemTaskCenterProTable.statusFailedWaitingNext'),
+            text: dict(
+              'PC.Pages.SystemTaskCenterProTable.statusFailedWaitingNext',
+            ),
             isEnded: false,
           };
         case 'CANCEL':
         case 'COMPLETE':
           return {
             color: 'default' as const,
-            text: dict('NuwaxPC.Pages.SystemTaskCenterProTable.statusEndedNoMore'),
+            text: dict('PC.Pages.SystemTaskCenterProTable.statusEndedNoMore'),
             isEnded: true,
           };
         case 'OVERFLOW_MAX_EXEC_TIMES':
           return {
             color: 'default' as const,
-            text: dict('NuwaxPC.Pages.SystemTaskCenterProTable.statusEndedNoMore'),
+            text: dict('PC.Pages.SystemTaskCenterProTable.statusEndedNoMore'),
             isEnded: false,
           };
         default:
@@ -280,7 +286,9 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
       async (id: number) => {
         const resp = await apiTaskExecute(id);
         if (resp?.code === SUCCESS_CODE) {
-          message.success(dict('NuwaxPC.Pages.SystemTaskCenterProTable.executeTaskSuccess'));
+          message.success(
+            dict('PC.Pages.SystemTaskCenterProTable.executeTaskSuccess'),
+          );
           refreshList();
         }
       },
@@ -294,7 +302,9 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
       async (id: number) => {
         const resp = await apiTaskEnable(id);
         if (resp?.code === SUCCESS_CODE) {
-          message.success(dict('NuwaxPC.Pages.SystemTaskCenterProTable.enableTaskSuccess'));
+          message.success(
+            dict('PC.Pages.SystemTaskCenterProTable.enableTaskSuccess'),
+          );
           refreshList();
         }
       },
@@ -308,7 +318,9 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
       async (id: number) => {
         const resp = await apiTaskDisable(id);
         if (resp?.code === SUCCESS_CODE) {
-          message.success(dict('NuwaxPC.Pages.SystemTaskCenterProTable.disableTaskSuccess'));
+          message.success(
+            dict('PC.Pages.SystemTaskCenterProTable.disableTaskSuccess'),
+          );
           refreshList();
         }
       },
@@ -322,7 +334,9 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
       async (id: number) => {
         const resp = await apiTaskDelete(id);
         if (resp?.code === SUCCESS_CODE) {
-          message.success(dict('NuwaxPC.Pages.SystemTaskCenterProTable.deleteTaskSuccess'));
+          message.success(
+            dict('PC.Pages.SystemTaskCenterProTable.deleteTaskSuccess'),
+          );
           refreshList();
         }
       },
@@ -332,41 +346,49 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
     const columns: ProColumns<TaskInfo>[] = useMemo(
       () => [
         {
-          title: dict('NuwaxPC.Pages.SystemTaskCenterProTable.taskType'),
+          title: dict('PC.Pages.SystemTaskCenterProTable.taskType'),
           dataIndex: 'targetType',
           width: 110,
           valueType: 'select',
           valueEnum: {
-            [AgentComponentTypeEnum.Agent]: { text: dict('NuwaxPC.Pages.SystemTaskCenterProTable.agent') },
-            [AgentComponentTypeEnum.Workflow]: { text: dict('NuwaxPC.Pages.SystemTaskCenterProTable.workflow') },
+            [AgentComponentTypeEnum.Agent]: {
+              text: dict('PC.Pages.SystemTaskCenterProTable.agent'),
+            },
+            [AgentComponentTypeEnum.Workflow]: {
+              text: dict('PC.Pages.SystemTaskCenterProTable.workflow'),
+            },
           },
           fieldProps: {
-            placeholder: dict('NuwaxPC.Pages.SystemTaskCenterProTable.selectTaskType'),
+            placeholder: dict(
+              'PC.Pages.SystemTaskCenterProTable.selectTaskType',
+            ),
             allowClear: true,
           },
           render: (_: any, record: TaskInfo) => {
             const type = record.targetType;
             const text =
               type === AgentComponentTypeEnum.Agent
-                ? dict('NuwaxPC.Pages.SystemTaskCenterProTable.agent')
+                ? dict('PC.Pages.SystemTaskCenterProTable.agent')
                 : type === AgentComponentTypeEnum.Workflow
-                ? dict('NuwaxPC.Pages.SystemTaskCenterProTable.workflow')
+                ? dict('PC.Pages.SystemTaskCenterProTable.workflow')
                 : type || '-';
             return text;
           },
         },
         {
-          title: dict('NuwaxPC.Pages.SystemTaskCenterProTable.taskName'),
+          title: dict('PC.Pages.SystemTaskCenterProTable.taskName'),
           dataIndex: 'taskName',
           width: 200,
           ellipsis: true,
           fieldProps: {
-            placeholder: dict('NuwaxPC.Pages.SystemTaskCenterProTable.enterTaskName'),
+            placeholder: dict(
+              'PC.Pages.SystemTaskCenterProTable.enterTaskName',
+            ),
             allowClear: true,
           },
         },
         {
-          title: dict('NuwaxPC.Pages.SystemTaskCenterProTable.taskTarget'),
+          title: dict('PC.Pages.SystemTaskCenterProTable.taskTarget'),
           dataIndex: 'targetName',
           hideInSearch: true,
           ellipsis: true,
@@ -381,7 +403,7 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
           },
         },
         {
-          title: dict('NuwaxPC.Pages.SystemTaskCenterProTable.taskStatus'),
+          title: dict('PC.Pages.SystemTaskCenterProTable.taskStatus'),
           dataIndex: 'status',
           width: 200,
           hideInSearch: true,
@@ -391,41 +413,41 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
           },
         },
         {
-          title: dict('NuwaxPC.Pages.SystemTaskCenterProTable.executionTimes'),
+          title: dict('PC.Pages.SystemTaskCenterProTable.executionTimes'),
           dataIndex: 'execTimes',
           width: 90,
           hideInSearch: true,
         },
         {
-          title: dict('NuwaxPC.Pages.SystemTaskCenterProTable.latestExecutionTime'),
+          title: dict('PC.Pages.SystemTaskCenterProTable.latestExecutionTime'),
           dataIndex: 'latestExecTime',
           width: 170,
           hideInSearch: true,
           valueType: 'dateTime',
         },
         {
-          title: dict('NuwaxPC.Pages.SystemTaskCenterProTable.nextExecutionTime'),
+          title: dict('PC.Pages.SystemTaskCenterProTable.nextExecutionTime'),
           dataIndex: 'lockTime',
           width: 170,
           hideInSearch: true,
           valueType: 'dateTime',
         },
         {
-          title: dict('NuwaxPC.Pages.SystemTaskCenterProTable.creator'),
+          title: dict('PC.Pages.SystemTaskCenterProTable.creator'),
           dataIndex: ['creator', 'userName'],
           ellipsis: true,
           width: 170,
           hideInSearch: true,
         },
         {
-          title: dict('NuwaxPC.Pages.SystemTaskCenterProTable.createdTime'),
+          title: dict('PC.Pages.SystemTaskCenterProTable.createdTime'),
           dataIndex: 'created',
           width: 170,
           hideInSearch: true,
           valueType: 'dateTime',
         },
         {
-          title: dict('NuwaxPC.Pages.SystemTaskCenterProTable.actions'),
+          title: dict('PC.Pages.SystemTaskCenterProTable.actions'),
           align: 'center',
           valueType: 'option',
           fixed: 'right',
@@ -437,26 +459,36 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
             const actions: ActionItem<TaskInfo>[] = [
               {
                 key: 'execute',
-                label: dict('NuwaxPC.Pages.SystemTaskCenterProTable.manualExecute'),
+                label: dict('PC.Pages.SystemTaskCenterProTable.manualExecute'),
                 onClick: (r: TaskInfo) => handleExecuteTask(r.id),
               },
               {
                 key: 'enable',
-                label: dict('NuwaxPC.Pages.SystemTaskCenterProTable.enable'),
+                label: dict('PC.Pages.SystemTaskCenterProTable.enable'),
                 visible: () => isEnded,
-                confirm: { title: dict('NuwaxPC.Pages.SystemTaskCenterProTable.confirmEnableTask') },
+                confirm: {
+                  title: dict(
+                    'PC.Pages.SystemTaskCenterProTable.confirmEnableTask',
+                  ),
+                },
                 onClick: (r: TaskInfo) => handleEnableTask(r.id),
               },
               {
                 key: 'disable',
-                label: dict('NuwaxPC.Pages.SystemTaskCenterProTable.disable'),
+                label: dict('PC.Pages.SystemTaskCenterProTable.disable'),
                 visible: () => !isEnded,
-                confirm: { title: dict('NuwaxPC.Pages.SystemTaskCenterProTable.confirmDisableTask') },
+                confirm: {
+                  title: dict(
+                    'PC.Pages.SystemTaskCenterProTable.confirmDisableTask',
+                  ),
+                },
                 onClick: (r: TaskInfo) => handleDisableTask(r.id),
               },
               {
                 key: 'record',
-                label: dict('NuwaxPC.Pages.SystemTaskCenterProTable.executionRecord'),
+                label: dict(
+                  'PC.Pages.SystemTaskCenterProTable.executionRecord',
+                ),
                 onClick: (r: TaskInfo) =>
                   history.push(
                     `/space/${r.spaceId}/library-log?targetType=${
@@ -466,13 +498,17 @@ const CenterProTable = forwardRef<CenterProTableRef, CenterProTableProps>(
               },
               {
                 key: 'edit',
-                label: dict('NuwaxPC.Pages.SystemTaskCenterProTable.edit'),
+                label: dict('PC.Pages.SystemTaskCenterProTable.edit'),
                 onClick: (r: TaskInfo) => onEdit(r),
               },
               {
                 key: 'delete',
-                label: dict('NuwaxPC.Pages.SystemTaskCenterProTable.delete'),
-                confirm: { title: dict('NuwaxPC.Pages.SystemTaskCenterProTable.confirmDeleteTask') },
+                label: dict('PC.Pages.SystemTaskCenterProTable.delete'),
+                confirm: {
+                  title: dict(
+                    'PC.Pages.SystemTaskCenterProTable.confirmDeleteTask',
+                  ),
+                },
                 onClick: (r: TaskInfo) => handleDeleteTask(r.id),
               },
             ];

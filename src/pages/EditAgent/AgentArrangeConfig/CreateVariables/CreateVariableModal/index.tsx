@@ -99,36 +99,30 @@ const CreateVariableModal: React.FC<CreateVariableModalProps> = ({
     () => [
       {
         value: InputTypeEnum.Text,
-        label: t('NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeText'),
+        label: t('PC.Pages.AgentArrangeCreateVariableModal.inputTypeText'),
       },
       {
         value: InputTypeEnum.Paragraph,
-        label: t(
-          'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeParagraph',
-        ),
+        label: t('PC.Pages.AgentArrangeCreateVariableModal.inputTypeParagraph'),
       },
       {
         value: InputTypeEnum.Number,
-        label: t(
-          'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeNumber',
-        ),
+        label: t('PC.Pages.AgentArrangeCreateVariableModal.inputTypeNumber'),
       },
       {
         value: InputTypeEnum.Select,
-        label: t(
-          'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeSelect',
-        ),
+        label: t('PC.Pages.AgentArrangeCreateVariableModal.inputTypeSelect'),
       },
       {
         value: InputTypeEnum.MultipleSelect,
         label: t(
-          'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeMultipleSelect',
+          'PC.Pages.AgentArrangeCreateVariableModal.inputTypeMultipleSelect',
         ),
       },
       {
         value: InputTypeEnum.AutoRecognition,
         label: t(
-          'NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputTypeAutoRecognition',
+          'PC.Pages.AgentArrangeCreateVariableModal.inputTypeAutoRecognition',
         ),
       },
     ],
@@ -277,7 +271,7 @@ const CreateVariableModal: React.FC<CreateVariableModalProps> = ({
   const items: TabsProps['items'] = [
     {
       key: OptionDataSourceEnum.MANUAL,
-      label: t('NuwaxPC.Pages.AgentArrangeCreateVariableModal.manualCreate'),
+      label: t('PC.Pages.AgentArrangeCreateVariableModal.manualCreate'),
       children: (
         <div className={cx('flex', 'flex-col', 'gap-10')}>
           <DndContext
@@ -307,14 +301,14 @@ const CreateVariableModal: React.FC<CreateVariableModalProps> = ({
           </DndContext>
           <div className={cx(styles['add-item-btn'])} onClick={handleAddItem}>
             <PlusOutlined />
-            {t('NuwaxPC.Pages.AgentArrangeCreateVariableModal.addOption')}
+            {t('PC.Pages.AgentArrangeCreateVariableModal.addOption')}
           </div>
         </div>
       ),
     },
     {
       key: OptionDataSourceEnum.BINDING,
-      label: t('NuwaxPC.Pages.AgentArrangeCreateVariableModal.dataBinding'),
+      label: t('PC.Pages.AgentArrangeCreateVariableModal.dataBinding'),
       children: (
         <VariableDataBinding
           selectConfig={currentVariable?.selectConfig}
@@ -334,7 +328,7 @@ const CreateVariableModal: React.FC<CreateVariableModalProps> = ({
       onSuccess: () => {
         setLoading(false);
         message.success(
-          t('NuwaxPC.Toast.AgentArrangeCreateVariableModal.updateSuccess'),
+          t('PC.Toast.AgentArrangeCreateVariableModal.updateSuccess'),
         );
         onConfirm(inputDataRef.current);
       },
@@ -357,16 +351,12 @@ const CreateVariableModal: React.FC<CreateVariableModalProps> = ({
       if (activeTabKey === OptionDataSourceEnum.MANUAL) {
         if (!dataSource?.length) {
           message.error(
-            t(
-              'NuwaxPC.Pages.AgentArrangeCreateVariableModal.addOptionRequired',
-            ),
+            t('PC.Pages.AgentArrangeCreateVariableModal.addOptionRequired'),
           );
           return;
         } else if (dataSource?.some((item) => !item.value)) {
           message.error(
-            t(
-              'NuwaxPC.Pages.AgentArrangeCreateVariableModal.optionValueRequired',
-            ),
+            t('PC.Pages.AgentArrangeCreateVariableModal.optionValueRequired'),
           );
           return;
         }
@@ -385,7 +375,7 @@ const CreateVariableModal: React.FC<CreateVariableModalProps> = ({
         if (!targetComponentInfo && !currentVariable?.selectConfig?.targetId) {
           message.error(
             t(
-              'NuwaxPC.Pages.AgentArrangeCreateVariableModal.selectBindingComponent',
+              'PC.Pages.AgentArrangeCreateVariableModal.selectBindingComponent',
             ),
           );
           return;
@@ -459,7 +449,7 @@ const CreateVariableModal: React.FC<CreateVariableModalProps> = ({
       open={open}
       loading={loading}
       classNames={{ body: cx(styles['modal-body-container']) }}
-      title={t('NuwaxPC.Pages.AgentArrangeCreateVariableModal.title')}
+      title={t('PC.Pages.AgentArrangeCreateVariableModal.title')}
       onCancel={onCancel}
       onConfirm={handleConfirm}
     >
@@ -473,19 +463,19 @@ const CreateVariableModal: React.FC<CreateVariableModalProps> = ({
       >
         <Form.Item
           name="name"
-          label={t('NuwaxPC.Pages.AgentArrangeCreateVariableModal.fieldName')}
+          label={t('PC.Pages.AgentArrangeCreateVariableModal.fieldName')}
           rules={[
             {
               required: true,
               message: t(
-                'NuwaxPC.Pages.AgentArrangeCreateVariableModal.fieldNameRequired',
+                'PC.Pages.AgentArrangeCreateVariableModal.fieldNameRequired',
               ),
             },
           ]}
         >
           <Input
             placeholder={t(
-              'NuwaxPC.Pages.AgentArrangeCreateVariableModal.fieldNamePlaceholder',
+              'PC.Pages.AgentArrangeCreateVariableModal.fieldNamePlaceholder',
             )}
             showCount
             maxLength={30}
@@ -493,19 +483,19 @@ const CreateVariableModal: React.FC<CreateVariableModalProps> = ({
         </Form.Item>
         <Form.Item
           name="displayName"
-          label={t('NuwaxPC.Pages.AgentArrangeCreateVariableModal.displayName')}
+          label={t('PC.Pages.AgentArrangeCreateVariableModal.displayName')}
           rules={[
             {
               required: true,
               message: t(
-                'NuwaxPC.Pages.AgentArrangeCreateVariableModal.displayNameRequired',
+                'PC.Pages.AgentArrangeCreateVariableModal.displayNameRequired',
               ),
             },
           ]}
         >
           <Input
             placeholder={t(
-              'NuwaxPC.Pages.AgentArrangeCreateVariableModal.displayNamePlaceholder',
+              'PC.Pages.AgentArrangeCreateVariableModal.displayNamePlaceholder',
             )}
             showCount
             maxLength={30}
@@ -513,12 +503,12 @@ const CreateVariableModal: React.FC<CreateVariableModalProps> = ({
         </Form.Item>
         <Form.Item
           name="description"
-          label={t('NuwaxPC.Pages.AgentArrangeCreateVariableModal.description')}
+          label={t('PC.Pages.AgentArrangeCreateVariableModal.description')}
         >
           <Input.TextArea
             className="dispose-textarea-count"
             placeholder={t(
-              'NuwaxPC.Pages.AgentArrangeCreateVariableModal.descriptionPlaceholder',
+              'PC.Pages.AgentArrangeCreateVariableModal.descriptionPlaceholder',
             )}
             showCount
             maxLength={200}
@@ -527,7 +517,7 @@ const CreateVariableModal: React.FC<CreateVariableModalProps> = ({
         </Form.Item>
         <Form.Item
           name="inputType"
-          label={t('NuwaxPC.Pages.AgentArrangeCreateVariableModal.inputType')}
+          label={t('PC.Pages.AgentArrangeCreateVariableModal.inputType')}
         >
           <Radio.Group
             className={cx(styles['radio-group'])}
@@ -549,15 +539,13 @@ const CreateVariableModal: React.FC<CreateVariableModalProps> = ({
         ) : (
           <Form.Item
             className={cx('mb-16')}
-            label={t(
-              'NuwaxPC.Pages.AgentArrangeCreateVariableModal.defaultValue',
-            )}
+            label={t('PC.Pages.AgentArrangeCreateVariableModal.defaultValue')}
           >
             <Input.TextArea
               value={bindValue}
               onChange={(e) => setBindValue(e.target.value)}
               placeholder={t(
-                'NuwaxPC.Pages.AgentArrangeCreateVariableModal.defaultValuePlaceholder',
+                'PC.Pages.AgentArrangeCreateVariableModal.defaultValuePlaceholder',
               )}
               autoSize={{ minRows: 3, maxRows: 5 }}
             />
@@ -565,7 +553,7 @@ const CreateVariableModal: React.FC<CreateVariableModalProps> = ({
         )}
         <Form.Item name="require" valuePropName="checked">
           <Checkbox>
-            {t('NuwaxPC.Pages.AgentArrangeCreateVariableModal.required')}
+            {t('PC.Pages.AgentArrangeCreateVariableModal.required')}
           </Checkbox>
         </Form.Item>
       </Form>

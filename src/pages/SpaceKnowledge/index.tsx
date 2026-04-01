@@ -148,9 +148,7 @@ const SpaceKnowledge: React.FC = () => {
     manual: true,
     debounceInterval: 300,
     onSuccess: () => {
-      message.success(
-        dict('NuwaxPC.Pages.SpaceKnowledge.Index.deleteDocSuccess'),
-      );
+      message.success(dict('PC.Pages.SpaceKnowledge.Index.deleteDocSuccess'));
       // 删除文档后，更新文档列表以及分段信息
       setLoadingDoc(true);
       handleDocList();
@@ -227,7 +225,7 @@ const SpaceKnowledge: React.FC = () => {
   const handleDocDel = useCallback(() => {
     const docId = currentDocumentInfo?.id;
     modalConfirm(
-      dict('NuwaxPC.Pages.SpaceKnowledge.Index.confirmDeleteDoc'),
+      dict('PC.Pages.SpaceKnowledge.Index.confirmDeleteDoc'),
       currentDocumentInfo?.name || '',
       () => {
         runDocDelete(docId);
@@ -326,9 +324,7 @@ const SpaceKnowledge: React.FC = () => {
         id: record.id,
       });
       if (code === SUCCESS_CODE) {
-        message.success(
-          dict('NuwaxPC.Pages.SpaceKnowledge.Index.deleteQaSuccess'),
-        );
+        message.success(dict('PC.Pages.SpaceKnowledge.Index.deleteQaSuccess'));
         handleQaList();
       }
     } catch {}
@@ -346,9 +342,7 @@ const SpaceKnowledge: React.FC = () => {
       <div className={cx('flex', 'flex-col', 'w-full')}>
         <div className={cx(styles.inputSearch)}>
           <Input.Search
-            placeholder={dict(
-              'NuwaxPC.Pages.SpaceKnowledge.Index.searchQuestion',
-            )}
+            placeholder={dict('PC.Pages.SpaceKnowledge.Index.searchQuestion')}
             allowClear
             style={{
               width: 240,
@@ -393,8 +387,8 @@ const SpaceKnowledge: React.FC = () => {
       if (res.code === SUCCESS_CODE) {
         message.success(
           values.id
-            ? dict('NuwaxPC.Pages.SpaceKnowledge.Index.qaUpdateSuccess')
-            : dict('NuwaxPC.Pages.SpaceKnowledge.Index.qaAddSuccess'),
+            ? dict('PC.Pages.SpaceKnowledge.Index.qaUpdateSuccess')
+            : dict('PC.Pages.SpaceKnowledge.Index.qaAddSuccess'),
         );
         // 添加成功后，查询文档列表
         handleQaList();

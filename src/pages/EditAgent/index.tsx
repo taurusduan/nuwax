@@ -17,6 +17,7 @@ import {
   apiAgentConfigInfo,
   apiAgentConfigUpdate,
 } from '@/services/agentConfig';
+import { dict } from '@/services/i18nRuntime';
 import { apiModelList } from '@/services/modelConfig';
 import {
   apiDownloadAllFiles,
@@ -57,7 +58,6 @@ import {
 } from '@/types/interfaces/vncDesktop';
 import { checkFileSizeExceedLimit } from '@/utils';
 import { modalConfirm } from '@/utils/ant-custom';
-import { dict } from '@/services/i18nRuntime';
 import { addBaseTarget } from '@/utils/common';
 import eventBus from '@/utils/eventBus';
 import {
@@ -539,7 +539,7 @@ const EditAgent: React.FC = () => {
     newName: string,
   ): Promise<boolean> => {
     if (!devConversationId) {
-      messageAntd.error(dict('NuwaxPC.Pages.EditAgent.convIdNotFoundCreateFile'));
+      messageAntd.error(dict('PC.Pages.EditAgent.convIdNotFoundCreateFile'));
       return false;
     }
 
@@ -581,12 +581,14 @@ const EditAgent: React.FC = () => {
   const handleDeleteFile = async (fileNode: FileNode): Promise<boolean> => {
     return new Promise((resolve) => {
       modalConfirm(
-        dict('NuwaxPC.Pages.EditAgent.deleteFileConfirmTitle'),
+        dict('PC.Pages.EditAgent.deleteFileConfirmTitle'),
         fileNode.name,
         async () => {
           try {
             if (!devConversationId) {
-              messageAntd.error(dict('NuwaxPC.Pages.EditAgent.convIdNotFoundDeleteFile'));
+              messageAntd.error(
+                dict('PC.Pages.EditAgent.convIdNotFoundDeleteFile'),
+              );
               resolve(false);
               return;
             }
@@ -608,7 +610,9 @@ const EditAgent: React.FC = () => {
                 (item: StaticFileInfo) => item.fileId === fileNode.id,
               );
               if (!currentFile) {
-                messageAntd.error(dict('NuwaxPC.Pages.EditAgent.fileNotFoundDelete'));
+                messageAntd.error(
+                  dict('PC.Pages.EditAgent.fileNotFoundDelete'),
+                );
                 resolve(false);
                 return;
               }
@@ -629,7 +633,7 @@ const EditAgent: React.FC = () => {
             const { code } = await apiUpdateStaticFile(newSkillInfo);
             if (code === SUCCESS_CODE) {
               handleRefreshFileList(devConversationId);
-              messageAntd.success(dict('NuwaxPC.Toast.Global.deletedSuccessfully'));
+              messageAntd.success(dict('PC.Toast.Global.deletedSuccessfully'));
               resolve(true);
             } else {
               resolve(false);
@@ -653,7 +657,7 @@ const EditAgent: React.FC = () => {
     newName: string,
   ) => {
     if (!devConversationId) {
-      messageAntd.error(dict('NuwaxPC.Pages.EditAgent.convIdNotFoundRenameFile'));
+      messageAntd.error(dict('PC.Pages.EditAgent.convIdNotFoundRenameFile'));
       return false;
     }
 
@@ -687,7 +691,7 @@ const EditAgent: React.FC = () => {
     }[],
   ) => {
     if (!devConversationId) {
-      messageAntd.error(dict('NuwaxPC.Pages.EditAgent.convIdNotFoundSaveFile'));
+      messageAntd.error(dict('PC.Pages.EditAgent.convIdNotFoundSaveFile'));
       return false;
     }
 
@@ -720,7 +724,7 @@ const EditAgent: React.FC = () => {
     filePaths: string[],
   ) => {
     if (!devConversationId) {
-      messageAntd.error(dict('NuwaxPC.Pages.EditAgent.convIdNotFoundUploadFile'));
+      messageAntd.error(dict('PC.Pages.EditAgent.convIdNotFoundUploadFile'));
       return;
     }
 
@@ -730,7 +734,12 @@ const EditAgent: React.FC = () => {
     );
     // 如果超过最大上传文件大小，则提示错误
     if (isExceedLimitSize) {
-      messageAntd.error(dict('NuwaxPC.Pages.EditAgent.uploadFileSizeExceed').replace('{0}', String(maxFileSize)));
+      messageAntd.error(
+        dict('PC.Pages.EditAgent.uploadFileSizeExceed').replace(
+          '{0}',
+          String(maxFileSize),
+        ),
+      );
       return;
     }
 
@@ -742,7 +751,7 @@ const EditAgent: React.FC = () => {
         filePaths,
       });
       if (code === SUCCESS_CODE && devConversationId) {
-        messageAntd.success(dict('NuwaxPC.Pages.EditAgent.uploadSuccess'));
+        messageAntd.success(dict('PC.Pages.EditAgent.uploadSuccess'));
         // 上传成功后，重新查询文件树列表
         await handleRefreshFileList(devConversationId);
       }
@@ -755,7 +764,7 @@ const EditAgent: React.FC = () => {
   const handleExportProject = async () => {
     // 检查项目ID是否有效
     if (!devConversationId) {
-      messageAntd.warning(dict('NuwaxPC.Pages.EditAgent.convIdNotFoundExport'));
+      messageAntd.warning(dict('PC.Pages.EditAgent.convIdNotFoundExport'));
       return;
     }
 
@@ -764,7 +773,8 @@ const EditAgent: React.FC = () => {
       // 判断是否成功
       if (!result.success) {
         // 导出失败，显示错误信息
-        const errorMessage = result.error?.message || dict('NuwaxPC.Pages.EditAgent.exportFailed');
+        const errorMessage =
+          result.error?.message || dict('PC.Pages.EditAgent.exportFailed');
         messageAntd.warning(errorMessage);
         return;
       }
@@ -772,7 +782,7 @@ const EditAgent: React.FC = () => {
       const filename = `agent-${agentId}-${devConversationId}.zip`;
       // 导出整个项目压缩包
       exportWholeProjectZip(result, filename);
-      messageAntd.success(dict('NuwaxPC.Pages.EditAgent.exportSuccess'));
+      messageAntd.success(dict('PC.Pages.EditAgent.exportSuccess'));
     } catch (error) {
       console.error('导出项目失败:', error);
     }
@@ -788,19 +798,19 @@ const EditAgent: React.FC = () => {
     } = agentInfo?.agentStatistics || {};
     const analyzeList = [
       {
-        label: dict('NuwaxPC.Pages.EditAgent.statUserCount'),
+        label: dict('PC.Pages.EditAgent.statUserCount'),
         value: userCount,
       },
       {
-        label: dict('NuwaxPC.Pages.EditAgent.statConvCount'),
+        label: dict('PC.Pages.EditAgent.statConvCount'),
         value: convCount,
       },
       {
-        label: dict('NuwaxPC.Pages.EditAgent.statCollectCount'),
+        label: dict('PC.Pages.EditAgent.statCollectCount'),
         value: collectCount,
       },
       {
-        label: dict('NuwaxPC.Pages.EditAgent.statLikeCount'),
+        label: dict('PC.Pages.EditAgent.statLikeCount'),
         value: likeCount,
       },
     ];
@@ -821,8 +831,11 @@ const EditAgent: React.FC = () => {
       // 导出配置
       case ApplicationMoreActionEnum.Export_Config:
         modalConfirm(
-          dict('NuwaxPC.Pages.EditAgent.exportConfigTitle').replace('{0}', agentConfigInfo?.name || ''),
-          dict('NuwaxPC.Pages.EditAgent.exportConfigContent'),
+          dict('PC.Pages.EditAgent.exportConfigTitle').replace(
+            '{0}',
+            agentConfigInfo?.name || '',
+          ),
+          dict('PC.Pages.EditAgent.exportConfigContent'),
           () => {
             exportConfigFile(
               agentConfigInfo?.id as number,
@@ -1220,7 +1233,7 @@ const EditAgent: React.FC = () => {
       <AnalyzeStatistics
         open={openAnalyze}
         onCancel={() => setOpenAnalyze(false)}
-        title={dict('NuwaxPC.Pages.EditAgent.agentOverview')}
+        title={dict('PC.Pages.EditAgent.agentOverview')}
         list={agentStatistics}
       />
       {/* 临时会话弹窗 */}

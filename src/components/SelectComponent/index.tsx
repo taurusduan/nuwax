@@ -348,7 +348,10 @@ const SelectComponent: React.FC<CreatedProp> = ({
   //   顶部的标题
   const title = (
     <div className={cx('dis-left', styles['created-title'])}>
-      <h3 className={styles['created-title-text']}>{dict('NuwaxPC.Components.SelectComponent.add')}{label}</h3>
+      <h3 className={styles['created-title-text']}>
+        {dict('PC.Components.SelectComponent.add')}
+        {label}
+      </h3>
     </div>
   );
 
@@ -398,11 +401,13 @@ const SelectComponent: React.FC<CreatedProp> = ({
                   require('@/assets/images/avatar.png')
                 }
                 style={{ borderRadius: '50%' }}
-                alt={dict('NuwaxPC.Components.SelectComponent.userAvatar')}
+                alt={dict('PC.Components.SelectComponent.userAvatar')}
               />
               <span>{item.publishUser?.nickName}</span>
               <Divider type="vertical" />
-              <span>{`${dict('NuwaxPC.Components.SelectComponent.publishedAt')}${getTime(item.created!)}`}</span>
+              <span>{`${dict(
+                'PC.Components.SelectComponent.publishedAt',
+              )}${getTime(item.created!)}`}</span>
               {![
                 AgentComponentTypeEnum.Knowledge,
                 AgentComponentTypeEnum.MCP,
@@ -443,7 +448,9 @@ const SelectComponent: React.FC<CreatedProp> = ({
           )}
           disabled={isAddedState ? false : isLoadingState}
         >
-          {isAddedState ? dict('NuwaxPC.Components.SelectComponent.added') : dict('NuwaxPC.Components.SelectComponent.addBtn')}
+          {isAddedState
+            ? dict('PC.Components.SelectComponent.added')
+            : dict('PC.Components.SelectComponent.addBtn')}
         </Button>
       </div>
     );
@@ -477,7 +484,7 @@ const SelectComponent: React.FC<CreatedProp> = ({
               allowClear
               variant="filled"
               value={search}
-              placeholder={dict('NuwaxPC.Components.SelectComponent.search')}
+              placeholder={dict('PC.Components.SelectComponent.search')}
               prefix={<SearchOutlined />}
               onChange={(e) => {
                 setSearch(e.target.value);
@@ -510,7 +517,7 @@ const SelectComponent: React.FC<CreatedProp> = ({
             <div
               className={cx('h-full', 'flex', 'items-center', 'content-center')}
             >
-              <Empty description={dict('NuwaxPC.Common.Global.emptyData')} />
+              <Empty description={dict('PC.Common.Global.emptyData')} />
             </div>
           )}
         </div>
