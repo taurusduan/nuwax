@@ -208,7 +208,7 @@ const ApiKeyPage: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title="API 密钥管理"
+      title="API Key"
       tips="管理您的API密钥与访问权限"
       rightSlot={
         <Button
@@ -220,7 +220,7 @@ const ApiKeyPage: React.FC = () => {
             setModalOpen(true);
           }}
         >
-          新增密钥
+          新增 API Key
         </Button>
       }
     >

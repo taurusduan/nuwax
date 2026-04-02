@@ -93,7 +93,7 @@ const ApiKeyStatsModal: React.FC<ApiKeyStatsModalProps> = ({
               onClick: () => {
                 onOpenChange(false);
                 history.push(
-                  `/more-page/api-key-logs?targetType=ApiKey&targetId=${record?.id}&requestId=${statsRecord.key}`,
+                  `/more-page/api-key-logs?targetId=${record?.id}&requestId=${statsRecord.key}`,
                 );
               },
             },
