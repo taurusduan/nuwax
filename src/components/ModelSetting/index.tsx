@@ -69,6 +69,8 @@ export const GroupedOptionSelect: React.FC<ModelSettingProp> = ({
       );
       setModelList(list);
       setGroupedOptionsData(groupModelsByApiProtocol(list));
+      console.log('list', list);
+      console.log('groupedOptionsData', groupModelsByApiProtocol(list));
     } catch (error) {
       console.error('Failed to fetch graph data:', error);
     } finally {

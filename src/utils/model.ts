@@ -9,6 +9,7 @@ export const groupModelsByApiProtocol = (
   const grouped: GroupModelItem[] = [
     { label: 'OpenAI', options: [] },
     { label: 'Ollama', options: [] },
+    { label: 'Anthropic', options: [] },
   ];
 
   // 将模型分配到对应的分组
