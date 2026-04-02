@@ -134,7 +134,7 @@ export const DATA_PERMISSION_TAB_ITEMS: TabsProps['items'] = [
     label: (
       <span>
         API权限
-        <Tooltip title="需授权才能使用API，可配置API接口调用频率限制（每分钟调用次数和每天调用次数，-1表示不限制，默认-1， 0表示无权限）">
+        <Tooltip title="开放API授权，可配置API接口调用频率限制，-1表示不限制">
           <InfoCircleOutlined
             style={{ marginLeft: 4, color: '#999', cursor: 'help' }}
           />
