@@ -15,7 +15,7 @@ import {
 import dayjs from 'dayjs';
 import React, { useEffect, useMemo, useState } from 'react';
 
-const { Title, Text } = Typography;
+const { Text, Title } = Typography;
 
 interface ApiKeyPermissionModalProps {
   /** 是否打开 */

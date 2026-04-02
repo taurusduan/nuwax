@@ -7,19 +7,12 @@ import { Button, Empty, Typography } from 'antd';
 import classNames from 'classnames';
 import React, { useCallback } from 'react';
 import { history, useModel } from 'umi';
-import HistoryConversation from './HistoryConversation';
 import styles from './index.less';
 
 const cx = classNames.bind(styles);
 
 // 智能体相关会话
 const AgentConversation: React.FC<AgentConversationProps> = ({ agentId }) => {
-  // 使用 model 中的历史会话弹窗状态，而不是本地状态
-  const {
-    isHistoryConversationOpen,
-    closeHistoryConversation,
-    // openHistoryConversation,
-  } = useModel('conversationInfo');
   const { conversationListItem, loadingHistoryItem } = useModel(
     'conversationHistory',
   );
@@ -31,7 +24,6 @@ const AgentConversation: React.FC<AgentConversationProps> = ({ agentId }) => {
   // 查看更多 打开历史会话弹窗 - 现在通过 model 状态管理
   const handleMore = useCallback(() => {
     // 这里不再需要设置本地状态，因为使用 model 中的状态
-    // openHistoryConversation();
     history.push(`/history-conversation?agentId=${agentId}`, {
       _t: Date.now(),
     });
@@ -90,11 +82,6 @@ const AgentConversation: React.FC<AgentConversationProps> = ({ agentId }) => {
           />
         )}
       </div>
-      <HistoryConversation
-        agentId={agentId}
-        isOpen={isHistoryConversationOpen}
-        onCancel={closeHistoryConversation}
-      />
     </div>
   );
 };

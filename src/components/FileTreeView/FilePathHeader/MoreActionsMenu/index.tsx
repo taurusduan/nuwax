@@ -19,6 +19,8 @@ interface MoreActionsProps {
   onRestartAgent?: () => void;
   // 导出项目
   onExportProject?: () => void;
+  // 是否是云电脑
+  isCloudComputer?: boolean;
 }
 
 /**

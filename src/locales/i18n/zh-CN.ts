@@ -5243,4 +5243,89 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.PreviewAndDebug.convIdNotFoundFilePreview':
     '会话ID不存在，无法打开文件预览',
   'PC.Pages.PreviewAndDebug.fillRequiredParams': '请填写必填参数',
+
+  // Components - ModelSelector
+  'PC.Components.ModelSelector.loadingModels': '加载模型中...',
+  'PC.Components.ModelSelector.noAvailableModels': '暂无可用自有模型',
+  'PC.Components.ModelSelector.loading': '加载中...',
+  'PC.Components.ModelSelector.selectModel': '选择模型',
+
+  // Pages - SystemManagement DataPermissionModal tabs
+  'PC.Pages.SystemMenuDataPermissionModal.tabApiPermission': 'API权限',
+  'PC.Pages.SystemMenuDataPermissionModal.tabApiPermissionTooltip':
+    '开放API授权，可配置API接口调用频率限制，-1表示不限制',
+
+  // Pages - DataPermissionModal AgentTabPanel
+  'PC.Pages.DataPermissionTabPanel.searchAgent': '搜索智能体',
+  'PC.Pages.DataPermissionTabPanel.noSelectedAgent': '暂无已选智能体',
+
+  // Pages - DataPermissionModal KnowledgeTabPanel
+  'PC.Pages.DataPermissionTabPanel.searchKnowledge': '搜索知识库',
+  'PC.Pages.DataPermissionTabPanel.noSelectedKnowledge': '暂无已选知识库',
+
+  // Pages - DataPermissionModal ModelTabPanel
+  'PC.Pages.DataPermissionTabPanel.noSelectedModel': '暂无已选模型',
+
+  // Pages - DataPermissionModal PageTabPanel
+  'PC.Pages.DataPermissionTabPanel.searchPage': '搜索网页应用',
+  'PC.Pages.DataPermissionTabPanel.noSelectedPage': '暂无已选网页应用',
+
+  // Pages - DataPermissionModal ApiPermissionTabPanel & UserOpenApiPermissionPanel
+  'PC.Pages.DataPermissionTabPanel.noApiPermission': '暂无 API 权限配置',
+  'PC.Pages.DataPermissionTabPanel.rpmLabel': '每分钟调用次数',
+  'PC.Pages.DataPermissionTabPanel.rpdLabel': '每天调用次数',
+
+  // Pages - DataPermissionModal DeveloperPermissionFormTab
+  'PC.Pages.DeveloperPermissionForm.dailyTokenLimit': '每日token限制',
+  'PC.Pages.DeveloperPermissionForm.dailyTokenLimitTooltip':
+    '每日 token 限制，-1 表示不限制',
+  'PC.Pages.DeveloperPermissionForm.dailyTokenLimitPlaceholder':
+    '请输入每日token限制数量',
+  'PC.Pages.DeveloperPermissionForm.maxSpaceCount': '可创建工作空间数量',
+  'PC.Pages.DeveloperPermissionForm.maxSpaceCountTooltip':
+    '可创建工作空间数量，-1 表示不限制',
+  'PC.Pages.DeveloperPermissionForm.maxAgentCount': '可创建智能体数量',
+  'PC.Pages.DeveloperPermissionForm.maxAgentCountTooltip':
+    '可创建智能体数量，-1 表示不限制',
+  'PC.Pages.DeveloperPermissionForm.maxPageAppCount': '可创建网页应用数量',
+  'PC.Pages.DeveloperPermissionForm.maxPageAppCountTooltip':
+    '可创建网页应用数量，-1 表示不限制',
+  'PC.Pages.DeveloperPermissionForm.maxKnowledgeCount': '可创建知识库数量',
+  'PC.Pages.DeveloperPermissionForm.maxKnowledgeCountTooltip':
+    '可创建知识库数量，-1 表示不限制',
+  'PC.Pages.DeveloperPermissionForm.knowledgeStorageLimitGb':
+    '知识库存储空间上限 (GB)',
+  'PC.Pages.DeveloperPermissionForm.knowledgeStorageLimitGbTooltip':
+    '-1表示不限制, 0表示无权限, 精度为0.001GB, 1GB=1024MB, 1MB=1024KB',
+  'PC.Pages.DeveloperPermissionForm.maxDataTableCount': '可创建数据表数量',
+  'PC.Pages.DeveloperPermissionForm.maxDataTableCountTooltip':
+    '可创建数据表数量，-1 表示不限制',
+  'PC.Pages.DeveloperPermissionForm.maxScheduledTaskCount':
+    '可创建定时任务数量',
+  'PC.Pages.DeveloperPermissionForm.maxScheduledTaskCountTooltip':
+    '可创建定时任务数量，-1 表示不限制',
+  'PC.Pages.DeveloperPermissionForm.agentComputerMemoryGb':
+    '智能体电脑内存(GB)',
+  'PC.Pages.DeveloperPermissionForm.agentComputerMemoryGbTooltip':
+    '智能体电脑内存 (GB，留空表示使用默认值4GB)',
+  'PC.Pages.DeveloperPermissionForm.agentComputerCpuCores':
+    '智能体电脑 CPU 核心数',
+  'PC.Pages.DeveloperPermissionForm.agentComputerCpuCoresTooltip':
+    '智能体电脑 CPU 核心数（留空表示使用默认值）',
+  'PC.Pages.DeveloperPermissionForm.agentDailyPromptLimit':
+    '通用智能体每天对话次数限制',
+  'PC.Pages.DeveloperPermissionForm.agentDailyPromptLimitTooltip':
+    '通用智能体每天对话次数，-1表示不限制',
+  'PC.Pages.DeveloperPermissionForm.pageDailyPromptLimit':
+    '网页应用开发每天对话次数',
+  'PC.Pages.DeveloperPermissionForm.pageDailyPromptLimitTooltip':
+    '网页应用开发每天对话次数，-1表示不限制',
+
+  // Pages - SystemManagement KnowledgeBase
+  'PC.Pages.SystemContentKnowledgeBase.accessControlTitle': '管控',
+  'PC.Pages.SystemContentKnowledgeBase.accessControlTooltip':
+    '若开启管控，需授权才能使用该知识库',
+  'PC.Pages.SystemContentKnowledgeBase.accessControlOn': '开启',
+  'PC.Pages.SystemContentKnowledgeBase.accessControlOff': '关闭',
+  'PC.Pages.SystemContentKnowledgeBase.grantAuth': '授权',
 };

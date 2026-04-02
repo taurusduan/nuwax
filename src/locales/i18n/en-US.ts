@@ -5774,4 +5774,92 @@ export const EN_US: SystemLangMap = {
     'Conversation ID not found, unable to open file preview',
   'PC.Pages.PreviewAndDebug.fillRequiredParams':
     'Please fill in the required parameters',
+
+  // Components - ModelSelector
+  'PC.Components.ModelSelector.loadingModels': 'Loading models...',
+  'PC.Components.ModelSelector.noAvailableModels': 'No available models',
+  'PC.Components.ModelSelector.loading': 'Loading...',
+  'PC.Components.ModelSelector.selectModel': 'Select Model',
+
+  // Pages - SystemManagement DataPermissionModal tabs
+  'PC.Pages.SystemMenuDataPermissionModal.tabApiPermission': 'API Permission',
+  'PC.Pages.SystemMenuDataPermissionModal.tabApiPermissionTooltip':
+    'Open API authorization, configure API call rate limits. -1 means unlimited.',
+
+  // Pages - DataPermissionModal AgentTabPanel
+  'PC.Pages.DataPermissionTabPanel.searchAgent': 'Search Agents',
+  'PC.Pages.DataPermissionTabPanel.noSelectedAgent': 'No agents selected',
+
+  // Pages - DataPermissionModal KnowledgeTabPanel
+  'PC.Pages.DataPermissionTabPanel.searchKnowledge': 'Search Knowledge Bases',
+  'PC.Pages.DataPermissionTabPanel.noSelectedKnowledge':
+    'No knowledge bases selected',
+
+  // Pages - DataPermissionModal ModelTabPanel
+  'PC.Pages.DataPermissionTabPanel.noSelectedModel': 'No models selected',
+
+  // Pages - DataPermissionModal PageTabPanel
+  'PC.Pages.DataPermissionTabPanel.searchPage': 'Search Web Apps',
+  'PC.Pages.DataPermissionTabPanel.noSelectedPage': 'No web apps selected',
+
+  // Pages - DataPermissionModal ApiPermissionTabPanel & UserOpenApiPermissionPanel
+  'PC.Pages.DataPermissionTabPanel.noApiPermission':
+    'No API permission configuration',
+  'PC.Pages.DataPermissionTabPanel.rpmLabel': 'Calls per minute',
+  'PC.Pages.DataPermissionTabPanel.rpdLabel': 'Calls per day',
+
+  // Pages - DataPermissionModal DeveloperPermissionFormTab
+  'PC.Pages.DeveloperPermissionForm.dailyTokenLimit': 'Daily Token Limit',
+  'PC.Pages.DeveloperPermissionForm.dailyTokenLimitTooltip':
+    'Daily token limit, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.dailyTokenLimitPlaceholder':
+    'Enter daily token limit',
+  'PC.Pages.DeveloperPermissionForm.maxSpaceCount': 'Max Workspace Count',
+  'PC.Pages.DeveloperPermissionForm.maxSpaceCountTooltip':
+    'Max workspace count, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.maxAgentCount': 'Max Agent Count',
+  'PC.Pages.DeveloperPermissionForm.maxAgentCountTooltip':
+    'Max agent count, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.maxPageAppCount': 'Max Web App Count',
+  'PC.Pages.DeveloperPermissionForm.maxPageAppCountTooltip':
+    'Max web app count, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.maxKnowledgeCount':
+    'Max Knowledge Base Count',
+  'PC.Pages.DeveloperPermissionForm.maxKnowledgeCountTooltip':
+    'Max knowledge base count, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.knowledgeStorageLimitGb':
+    'Knowledge Storage Limit (GB)',
+  'PC.Pages.DeveloperPermissionForm.knowledgeStorageLimitGbTooltip':
+    '-1 means unlimited, 0 means no permission, precision 0.001GB, 1GB=1024MB',
+  'PC.Pages.DeveloperPermissionForm.maxDataTableCount': 'Max Data Table Count',
+  'PC.Pages.DeveloperPermissionForm.maxDataTableCountTooltip':
+    'Max data table count, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.maxScheduledTaskCount':
+    'Max Scheduled Task Count',
+  'PC.Pages.DeveloperPermissionForm.maxScheduledTaskCountTooltip':
+    'Max scheduled task count, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.agentComputerMemoryGb':
+    'Agent Computer Memory (GB)',
+  'PC.Pages.DeveloperPermissionForm.agentComputerMemoryGbTooltip':
+    'Agent computer memory (GB, leave blank to use default 4GB)',
+  'PC.Pages.DeveloperPermissionForm.agentComputerCpuCores':
+    'Agent Computer CPU Cores',
+  'PC.Pages.DeveloperPermissionForm.agentComputerCpuCoresTooltip':
+    'Agent computer CPU cores (leave blank to use default)',
+  'PC.Pages.DeveloperPermissionForm.agentDailyPromptLimit':
+    'Agent Daily Conversation Limit',
+  'PC.Pages.DeveloperPermissionForm.agentDailyPromptLimitTooltip':
+    'Agent daily conversation limit, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.pageDailyPromptLimit':
+    'Web App Dev Daily Conversation Limit',
+  'PC.Pages.DeveloperPermissionForm.pageDailyPromptLimitTooltip':
+    'Web app dev daily conversation limit, -1 means unlimited',
+
+  // Pages - SystemManagement KnowledgeBase
+  'PC.Pages.SystemContentKnowledgeBase.accessControlTitle': 'Access Control',
+  'PC.Pages.SystemContentKnowledgeBase.accessControlTooltip':
+    'When enabled, authorization is required to use this knowledge base',
+  'PC.Pages.SystemContentKnowledgeBase.accessControlOn': 'On',
+  'PC.Pages.SystemContentKnowledgeBase.accessControlOff': 'Off',
+  'PC.Pages.SystemContentKnowledgeBase.grantAuth': 'Grant Auth',
 };

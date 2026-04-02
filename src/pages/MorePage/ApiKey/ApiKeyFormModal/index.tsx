@@ -109,11 +109,13 @@ const ApiKeyFormModal: React.FC<ApiKeyFormModalProps> = ({
         name="name"
         label={t('PC.Pages.ApiKeyFormModal.keyName')}
         placeholder={t('PC.Pages.ApiKeyFormModal.keyNamePlaceholder')}
+        fieldProps={{ maxLength: 50, showCount: true }}
         rules={[
           {
             required: true,
             message: t('PC.Pages.ApiKeyFormModal.enterKeyName'),
           },
+          { max: 50, message: t('PC.Pages.ApiKeyFormModal.enterKeyName') },
         ]}
       />
 

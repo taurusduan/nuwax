@@ -33,6 +33,7 @@ import {
 import {
   AgentComponentTypeEnum,
   AllowCopyEnum,
+  DefaultSelectedEnum,
   HideDesktopEnum,
   MessageTypeEnum,
   TaskStatus,
@@ -100,6 +101,10 @@ const Chat: React.FC = () => {
   const defaultAgentDetail = location.state?.defaultAgentDetail;
   // 用户填写的变量参数，此处用于第一次发送消息时，传递变量参数
   const firstVariableParams = location.state?.variableParams;
+  // 模型ID
+  const [selectedModelId, setSelectedModelId] = useState<number>(
+    location.state?.modelId,
+  );
 
   const [form] = Form.useForm();
   // 变量参数
@@ -522,6 +527,7 @@ const Chat: React.FC = () => {
             sandboxId: effectiveSandboxId,
             data,
             skillIds,
+            modelId: selectedModelId,
           };
 
           onMessageSend(sendParams);
@@ -533,7 +539,7 @@ const Chat: React.FC = () => {
 
   useEffect(() => {
     // 应用智能体模式下，不获取当前智能体的历史记录
-    if (isAppSidebarMode) {
+    if (location.pathname?.includes('/app/chat/')) {
       return;
     }
     // 获取当前智能体的历史记录
@@ -541,7 +547,7 @@ const Chat: React.FC = () => {
       agentId,
       limit: 20,
     });
-  }, [id, agentId, isAppSidebarMode]);
+  }, [id, agentId, location.pathname]);
 
   useEffect(() => {
     addBaseTarget();
@@ -715,6 +721,7 @@ const Chat: React.FC = () => {
     messageInfo: string,
     files: UploadFileInfo[] = [],
     skillIds: number[] = [],
+    modelId?: number,
   ) => {
     // 变量参数为空，不发送消息
     if (wholeDisabled) {
@@ -737,6 +744,7 @@ const Chat: React.FC = () => {
       variableParams: variableParams || undefined,
       sandboxId: effectiveSandboxId,
       skillIds,
+      modelId: modelId || selectedModelId,
     };
 
     onMessageSend(sendParams);
@@ -1076,10 +1084,10 @@ const Chat: React.FC = () => {
         <header className={cx(styles['title-box'])}>
           <div className={cx(styles['title-container'])}>
             <DropdownChangeName
+              agentId={agentId}
               conversationInfo={conversationInfo}
-              setConversationInfo={(value) => {
-                setConversationInfo(value);
-              }}
+              setConversationInfo={setConversationInfo}
+              isAppSidebarMode={isAppSidebarMode}
             />
             <div className={cx('flex', 'items-center', 'gap-4')}>
               {/* 应用智能体模式下，显示内容导航按钮 */}
@@ -1353,8 +1361,20 @@ const Chat: React.FC = () => {
               }
               isPersonalComputer={!!conversationInfo?.agent?.sandboxId}
               mentionPlacement="up"
+              readonly={
+                effectiveAgent?.allowPrivateSandbox === DefaultSelectedEnum.No
+              }
               /** 是否启用 @ 提及功能，默认启用 */
-              enableMention={effectiveAgent?.type === AgentTypeEnum.TaskAgent}
+              enableMention={
+                effectiveAgent?.type === AgentTypeEnum.TaskAgent &&
+                effectiveAgent?.allowAtSkill === DefaultSelectedEnum.Yes
+              }
+              // 模型选择相关
+              allowOtherModel={effectiveAgent?.allowOtherModel}
+              selectedModelId={selectedModelId}
+              onModelSelect={setSelectedModelId}
+              agentType={effectiveAgent?.type}
+              // 通用性智能体才有技能，所以技能信息存在时才显示提及项，其他类型智能体不显示提及项
             />
           </div>
 

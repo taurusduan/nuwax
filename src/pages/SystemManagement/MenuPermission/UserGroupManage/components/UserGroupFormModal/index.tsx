@@ -103,7 +103,6 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
       form.setFieldsValue({
         name: data.name,
         description: data.description,
-        maxUserCount: data.maxUserCount,
         sortIndex: data.sortIndex || 1,
         status: data.status === UserGroupStatusEnum.Enabled,
         source: data.source || UserGroupSourceEnum.UserDefined,
@@ -126,7 +125,6 @@ const UserGroupFormModal: React.FC<UserGroupFormModalProps> = ({
           source: UserGroupSourceEnum.UserDefined,
           sortIndex: defaultSortIndex || 1,
           status: true,
-          maxUserCount: 100,
         });
       }
     }

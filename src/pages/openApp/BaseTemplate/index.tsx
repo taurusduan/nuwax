@@ -8,12 +8,11 @@ import { useUnifiedTheme } from '@/hooks/useUnifiedTheme';
 import ConversationItem from '@/layouts/DynamicMenusLayout/HomeSection/ConversationItem';
 import User from '@/layouts/DynamicMenusLayout/User';
 import Setting from '@/layouts/Setting';
+import { dict } from '@/services/i18nRuntime';
 import { ConversationInfo } from '@/types/interfaces/conversationInfo';
 import {
-  ClockCircleOutlined,
   EllipsisOutlined,
   LoadingOutlined,
-  PlusCircleOutlined,
   RightOutlined,
 } from '@ant-design/icons';
 import classNames from 'classnames';
@@ -24,7 +23,6 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { dict } from '@/services/i18nRuntime';
 import { history, Outlet, useModel, useParams } from 'umi';
 import styles from './index.less';
 
@@ -250,7 +248,7 @@ const BaseTemplate: React.FC = () => {
           onClick={() => createAppNewConversation(agentId)}
         >
           <span className={styles.newSessionText}>
-            <PlusCircleOutlined />
+            <SvgIcon name="icons-nav-new_chat" style={{ fontSize: 16 }} />
             {dict('PC.Pages.OpenApp.newConversation')}
           </span>
           <div className={cx('flex', 'items-center', 'gap-4')}>
@@ -281,7 +279,6 @@ const BaseTemplate: React.FC = () => {
             <>
               <div className={cx(styles['history-title'])}>
                 <span className={cx(styles.title)}>
-                  <ClockCircleOutlined />
                   {dict('PC.Pages.OpenApp.historyConversation')}
                 </span>
 
@@ -316,7 +313,9 @@ const BaseTemplate: React.FC = () => {
                     )
                   : loadingHistoryEnd && (
                       <>
-                        <div className={cx(styles['no-used'])}>{dict('PC.Pages.OpenApp.lookRight')}</div>
+                        <div className={cx(styles['no-used'])}>
+                          {dict('PC.Pages.OpenApp.lookRight')}
+                        </div>
                         <div className={cx(styles['no-used'])}>
                           {dict('PC.Pages.OpenApp.firstConversationTip')}
                         </div>
@@ -349,7 +348,7 @@ const BaseTemplate: React.FC = () => {
           <span className={cx('flex-1', 'text-ellipsis', styles['user-name'])}>
             {userInfo?.nickName || userInfo?.userName}
           </span>
-          <User>
+          <User isAppDetails={true}>
             <EllipsisOutlined className={styles.moreIcon} />
           </User>
         </footer>

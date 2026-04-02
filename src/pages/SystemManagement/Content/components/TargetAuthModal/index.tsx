@@ -12,6 +12,8 @@ import {
   AccessibleUserGroupInfo,
   apiAgentBindRestrictionTargets,
   apiAgentRestrictionTargets,
+  apiKnowledgeBindRestrictionTargets,
+  apiKnowledgeRestrictionTargets,
   apiModelBindRestrictionTargets,
   apiModelRestrictionTargets,
   apiPageAgentBindRestrictionTargets,
@@ -28,9 +30,9 @@ interface TargetAuthModalProps {
   targetId: number;
   /** Target display name. */
   targetName?: string;
-  /** Target type. */
-  targetType: 'agent' | 'page' | 'model';
-  /** Cancel callback. */
+  /** 目标类型 */
+  targetType: 'agent' | 'page' | 'model' | 'knowledge';
+  /** 取消回调 */
   onCancel: () => void;
 }
 
@@ -61,6 +63,8 @@ const TargetAuthModal: React.FC<TargetAuthModalProps> = ({
       ? apiAgentRestrictionTargets
       : targetType === 'page'
       ? apiPageAgentRestrictionTargets
+      : targetType === 'knowledge'
+      ? apiKnowledgeRestrictionTargets
       : apiModelRestrictionTargets;
 
   // Bind restriction targets.
@@ -69,6 +73,8 @@ const TargetAuthModal: React.FC<TargetAuthModalProps> = ({
       ? apiAgentBindRestrictionTargets
       : targetType === 'page'
       ? apiPageAgentBindRestrictionTargets
+      : targetType === 'knowledge'
+      ? apiKnowledgeBindRestrictionTargets
       : apiModelBindRestrictionTargets;
 
   // Query all roles.

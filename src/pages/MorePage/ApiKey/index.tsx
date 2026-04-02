@@ -42,13 +42,9 @@ const ApiKeyPage: React.FC = () => {
     ApiKeyInfo | undefined
   >();
   const location: any = useLocation();
-  const [pageSize, setPageSize] = useState(15);
-  const [allData, setAllData] = useState<ApiKeyInfo[]>([]);
 
   useEffect(() => {
     if (location.state?._t) {
-      setPageSize(15);
-      setAllData([]); // 重置全量数据缓存
       actionRef.current?.reloadAndRest?.();
     }
   }, [location.state?._t]);
@@ -78,9 +74,10 @@ const ApiKeyPage: React.FC = () => {
       dataIndex: 'name',
       key: 'name',
       ellipsis: true,
+      width: 300,
     },
     {
-      title: 'API KEY',
+      title: 'API Key',
       dataIndex: 'accessKey',
       key: 'accessKey',
       search: false,
@@ -210,7 +207,6 @@ const ApiKeyPage: React.FC = () => {
               },
               onClick: async () => {
                 await apiApiKeyDelete(record.accessKey);
-                setAllData([]); // 重置缓存以重新获取最新数据
                 actionRef.current?.reload();
                 message.success(dict('PC.Pages.MorePage.ApiKey.deleteSuccess'));
               },
@@ -243,12 +239,9 @@ const ApiKeyPage: React.FC = () => {
         key={location.state?._t || 'api-key-table'}
         actionRef={actionRef}
         request={async (params) => {
-          let data = allData;
-          if (data.length === 0) {
-            const result = await apiApiKeyList();
-            data = result.data || [];
-            setAllData(data);
-          }
+          const { current = 1, pageSize = 15 } = params;
+          const result = await apiApiKeyList();
+          const data = result.data || [];
 
           // 本地检索逻辑
           const filteredData = data.filter((item) => {
@@ -258,17 +251,21 @@ const ApiKeyPage: React.FC = () => {
             return nameMatch;
           });
 
+          const total = filteredData.length;
+          const startIndex = (current - 1) * pageSize;
+          const slicedData = filteredData.slice(
+            startIndex,
+            startIndex + pageSize,
+          );
+
           return {
-            data: filteredData,
+            data: slicedData,
             success: true,
+            total,
           };
         }}
         columns={columns}
         rowKey="id"
-        pagination={{
-          pageSize,
-          onChange: (_, size) => setPageSize(size),
-        }}
       />
       <ApiKeyFormModal
         open={modalOpen}
@@ -276,7 +273,6 @@ const ApiKeyPage: React.FC = () => {
         record={currentRecord}
         onSuccess={() => {
           setModalOpen(false);
-          setAllData([]); // 重置缓存以获取最新数据
           actionRef.current?.reload();
         }}
       />
@@ -290,7 +286,6 @@ const ApiKeyPage: React.FC = () => {
         onOpenChange={setPermissionOpen}
         record={permissionRecord}
         onSuccess={() => {
-          setAllData([]); // 重置缓存以获取最新数据
           actionRef.current?.reload();
         }}
       />

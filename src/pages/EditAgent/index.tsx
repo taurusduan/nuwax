@@ -436,6 +436,9 @@ const EditAgent: React.FC = () => {
         expandPageArea,
         guidQuestionDtos,
         hideDesktop,
+        allowOtherModel,
+        allowAtSkill,
+        allowPrivateSandbox,
       } = _agentConfigInfo;
 
       const params = {
@@ -453,6 +456,9 @@ const EditAgent: React.FC = () => {
         expandPageArea,
         guidQuestionDtos,
         hideDesktop,
+        allowOtherModel,
+        allowAtSkill,
+        allowPrivateSandbox,
       } as AgentConfigUpdateParams;
 
       // 更新智能体信息

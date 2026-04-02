@@ -150,7 +150,7 @@ const GlobalModelManage: React.FC = () => {
           key: 'auth',
           label: dict('PC.Pages.GlobalModelManage.auth'),
           // 只有开启管控才显示授权按钮
-          isShow: record.accessControl === AccessControlEnum.Filter,
+          visible: record.accessControl === AccessControlEnum.Filter,
           disabled: !hasPermission('model_manage_access_control'),
           onClick: () => {
             setCurrentAuthModelId(record.id);

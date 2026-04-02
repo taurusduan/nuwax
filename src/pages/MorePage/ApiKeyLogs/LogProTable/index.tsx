@@ -12,7 +12,6 @@ import type {
   SpaceLogQueryFilter,
 } from '@/types/interfaces/agent';
 import type { RequestResponse } from '@/types/interfaces/request';
-// import { getIntegerOnlyFieldProps } from '@/utils/inputValidation';
 import type {
   ActionType,
   FormInstance,
@@ -44,12 +43,6 @@ const LogProTable: React.FC = () => {
 
   const [detailsVisible, setDetailsVisible] = useState<boolean>(false);
   const [currentId, setCurrentId] = useState<string>();
-
-  // 从 URL 查询参数中获取 targetType，用于初始化查询表单
-  const targetTypeFromUrl = useMemo(() => {
-    const searchParams = new URLSearchParams(location.search);
-    return searchParams.get('targetType') || undefined;
-  }, [location.search]);
 
   // 从 URL 查询参数中获取 targetId，用于初始化查询表单
   const targetIdFromUrl = useMemo(() => {
@@ -245,7 +238,6 @@ const LogProTable: React.FC = () => {
       const queryFilter: SpaceLogQueryFilter = {
         spaceId: Number.isFinite(spaceId) ? spaceId : undefined,
         targetId: tableParams.targetId || undefined,
-        targetType: tableParams.targetType || undefined,
         requestId: tableParams.requestId || undefined,
         userId: Number.isFinite(userIdNum as number)
           ? (userIdNum as number)
@@ -345,7 +337,6 @@ const LogProTable: React.FC = () => {
     isReset.current = true;
     // 显式重置表单到初始值 (URL 参数对应的默认值)
     formRef.current?.setFieldsValue({
-      targetType: targetTypeFromUrl,
       targetId: targetIdFromUrl,
       requestId: requestIdFromUrl,
       targetName: undefined,
