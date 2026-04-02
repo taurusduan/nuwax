@@ -4,11 +4,12 @@
  */
 
 import { getProjectInfo } from '@/services/appDev';
-import { dict } from '@/services/i18nRuntime';
+import { dict, getCurrentLang } from '@/services/i18nRuntime';
 import type {
   ProjectDetailData,
   VersionInfoItem,
 } from '@/types/interfaces/appDev';
+import { getJsLocale } from '@/utils/i18nAdapters';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 /**
@@ -211,7 +212,7 @@ export const useAppDevProjectInfo = (
   const formatVersionTime = useCallback((time: string): string => {
     try {
       const date = new Date(time);
-      return date.toLocaleString('zh-CN', {
+      return date.toLocaleString(getJsLocale(getCurrentLang()), {
         year: 'numeric',
         month: '2-digit',
         day: '2-digit',

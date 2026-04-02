@@ -1,6 +1,7 @@
-import { dict } from '@/services/i18nRuntime';
+import { dict, getCurrentLang } from '@/services/i18nRuntime';
 import { TableFieldTypeEnum } from '@/types/enums/dataTable';
 import { DataTableProp, TableFieldInfo } from '@/types/interfaces/dataTable';
+import { getJsLocale } from '@/utils/i18nAdapters';
 import {
   DeleteOutlined,
   EditOutlined,
@@ -101,10 +102,13 @@ const DataTable: React.FC<DataTableProp> = ({
                   return <Checkbox checked={value} disabled />;
                 case TableFieldTypeEnum.Date:
                   return value
-                    ? new Date(value).toLocaleString('zh-CN', {
-                        hour12: false,
-                      })
-                    : '--'; // 转换为 '2024-08-07 16:24:27' 格式
+                    ? new Date(value).toLocaleString(
+                        getJsLocale(getCurrentLang()),
+                        {
+                          hour12: false,
+                        },
+                      )
+                    : '--';
                 default:
                   return value || '--'; // 其他类型的单元格直接返回原始值，不做任何处理
               }

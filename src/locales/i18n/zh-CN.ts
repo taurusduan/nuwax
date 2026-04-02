@@ -4882,8 +4882,6 @@ export const ZH_CN: SystemLangMap = {
     '插件或工作流返回数据结构以及示例',
 
   // Pages - SpacePluginCloudTool
-    '请输入参数名称，确保含义清晰',
-    '请输入参数描述，确保描述详细便于大模型更好的理解',
   'PC.Pages.SpacePluginCloudTool.enterDefaultValue': '请输入默认值',
   'PC.Pages.SpacePluginCloudTool.requiredParamTooltip':
     '此参数是必填参数，填写默认值后，此开关可用',
@@ -4928,7 +4926,8 @@ export const ZH_CN: SystemLangMap = {
   'PC.Components.CreateAgent.createSuccess': '智能体已创建',
   'PC.Components.CreateAgent.createTitle': '创建智能体',
   'PC.Components.CreateAgent.descriptionLabel': '智能体功能介绍',
-  'PC.Components.CreateAgent.descriptionPlaceholder': '介绍智能体的功能，将会展示给智能体的用户',
+  'PC.Components.CreateAgent.descriptionPlaceholder':
+    '介绍智能体的功能，将会展示给智能体的用户',
   'PC.Components.CreateAgent.editSuccess': '智能体编辑成功',
   'PC.Components.CreateAgent.iconLabel': '图标',
   'PC.Components.CreateAgent.nameLabel': '智能体名称',
@@ -4965,19 +4964,24 @@ export const ZH_CN: SystemLangMap = {
   'PC.Components.MenuListItem.cancelCollect': '取消收藏',
   'PC.Components.PublishComponentModal.agent': '智能体',
   'PC.Components.PublishComponentModal.allowCopyTemplate': '允许复制（模板）',
-  'PC.Components.PublishComponentModal.allowCopyTemplateTip': '选中后将出现在广场模版中，用户可直接复制到自己的工作空间中去。复制可选的前提是发布已选。',
+  'PC.Components.PublishComponentModal.allowCopyTemplateTip':
+    '选中后将出现在广场模版中，用户可直接复制到自己的工作空间中去。复制可选的前提是发布已选。',
   'PC.Components.PublishComponentModal.categorySelect': '分类选择',
   'PC.Components.PublishComponentModal.onlyTemplate': '仅模板',
-  'PC.Components.PublishComponentModal.onlyTemplateTip': '选择后仅在模板广场展示，仅模板只有在允许复制选择后才可选',
+  'PC.Components.PublishComponentModal.onlyTemplateTip':
+    '选择后仅在模板广场展示，仅模板只有在允许复制选择后才可选',
   'PC.Components.PublishComponentModal.plugin': '插件',
   'PC.Components.PublishComponentModal.publishRecord': '发布记录',
   'PC.Components.PublishComponentModal.publishScope': '发布空间',
-  'PC.Components.PublishComponentModal.publishSubmitted': '发布申请已提交，等待审核中',
+  'PC.Components.PublishComponentModal.publishSubmitted':
+    '发布申请已提交，等待审核中',
   'PC.Components.PublishComponentModal.skill': '技能',
   'PC.Components.PublishComponentModal.space': '空间',
-  'PC.Components.PublishComponentModal.spaceSquareTip': '2. 空间广场：智能体将出现在选择的空间广场中。',
+  'PC.Components.PublishComponentModal.spaceSquareTip':
+    '2. 空间广场：智能体将出现在选择的空间广场中。',
   'PC.Components.PublishComponentModal.systemSquare': '系统广场',
-  'PC.Components.PublishComponentModal.systemSquareTip': '1. 系统广场：智能体将出现在系统广场中。',
+  'PC.Components.PublishComponentModal.systemSquareTip':
+    '1. 系统广场：智能体将出现在系统广场中。',
   'PC.Components.PublishComponentModal.workflow': '工作流',
   'PC.Components.RunOver.calling': '正在调用',
   'PC.Components.RunOver.runComplete': '运行完毕',
@@ -5000,36 +5004,42 @@ export const ZH_CN: SystemLangMap = {
   'PC.Constants.Agent.balancedMode': '平衡模式',
   'PC.Constants.Agent.creativeMode': '创意模式',
   'PC.Constants.Agent.default': '默认',
-  'PC.Constants.Agent.defaultEngineTooltip': '默认引擎比较成熟，效果最佳，仅支持部分指定厂商模型',
+  'PC.Constants.Agent.defaultEngineTooltip':
+    '默认引擎比较成熟，效果最佳，仅支持部分指定厂商模型',
   'PC.Constants.Agent.defaultRecall': '默认',
   'PC.Constants.Agent.extLinkRedirect': '外部链接跳转',
   'PC.Constants.Agent.extPageOpen': '扩展页面打开',
   'PC.Constants.Agent.extPagePath': '扩展页面路径',
   'PC.Constants.Agent.externalLink': '外链地址',
   'PC.Constants.Agent.fullText': '全文',
-  'PC.Constants.Agent.fullTextTooltip': '依赖于关键词的全文搜索,推荐在搜索具有特定名称、缩写词、短语或ID的场景使用。',
+  'PC.Constants.Agent.fullTextTooltip':
+    '依赖于关键词的全文搜索,推荐在搜索具有特定名称、缩写词、短语或ID的场景使用。',
   'PC.Constants.Agent.global': '全局',
   'PC.Constants.Agent.insertToPrompt': '插入到提示词',
   'PC.Constants.Agent.manualSelect': '手动选择',
   'PC.Constants.Agent.manualSelectOnDemand': '手动选择+按需调用',
   'PC.Constants.Agent.mixed': '混合',
-  'PC.Constants.Agent.mixedTooltip': '结合全文检索与语义检索的优势,并对结果进行综合排序',
+  'PC.Constants.Agent.mixedTooltip':
+    '结合全文检索与语义检索的优势,并对结果进行综合排序',
   'PC.Constants.Agent.multiSelect': '多选',
   'PC.Constants.Agent.number': '数字',
-  'PC.Constants.Agent.nuwaxCliEngineTooltip': 'NuwaxCli引擎在快速迭代阶段，部分场景可能有待提升，但支持几乎所有厂商模型',
+  'PC.Constants.Agent.nuwaxCliEngineTooltip':
+    'NuwaxCli引擎在快速迭代阶段，部分场景可能有待提升，但支持几乎所有厂商模型',
   'PC.Constants.Agent.onDemand': '按需调用',
   'PC.Constants.Agent.paragraph': '段落',
   'PC.Constants.Agent.precisionMode': '精确模式',
   'PC.Constants.Agent.questionGuide': '问题引导',
   'PC.Constants.Agent.semantic': '语义',
-  'PC.Constants.Agent.semanticTooltip': '基于向量的文本相关性查询,推荐在需要理解语义关联度和跨语言查询的场景使用。',
+  'PC.Constants.Agent.semanticTooltip':
+    '基于向量的文本相关性查询,推荐在需要理解语义关联度和跨语言查询的场景使用。',
   'PC.Constants.Agent.singleCard': '单张卡片',
   'PC.Constants.Agent.singleLineText': '单行文本',
   'PC.Constants.Agent.singleSelect': '单选',
   'PC.Constants.Agent.smartRecognition': '智能识别',
   'PC.Constants.Agent.verticalList': '竖向列表',
   'PC.Constants.Agent.workspace': '工作空间',
-  'PC.Constants.AppDev.defaultAiMessage': '你好！我是AI助手，可以帮你进行代码开发、问题解答等。有什么可以帮助你的吗？',
+  'PC.Constants.AppDev.defaultAiMessage':
+    '你好！我是AI助手，可以帮你进行代码开发、问题解答等。有什么可以帮助你的吗？',
   'PC.Constants.AppDev.errChatSendFailed': '发送消息失败',
   'PC.Constants.AppDev.errDevServerStartFailed': '开发环境启动失败',
   'PC.Constants.AppDev.errEmptyFilePath': '请输入文件路径',
@@ -5040,8 +5050,10 @@ export const ZH_CN: SystemLangMap = {
   'PC.Constants.AppDev.errUploadFailed': '上传失败',
   'PC.Constants.AppDev.loadingFileContent': '正在加载文件内容...',
   'PC.Constants.AppDev.loadingFileTree': '正在加载文件树...',
-  'PC.Constants.AppDev.previewDisabledMessage': '版本预览模式下无法查看页面预览',
-  'PC.Constants.AppDev.readOnlyMessage': '旧版本为只读模式。恢复或切换到最新版本以进行编辑。',
+  'PC.Constants.AppDev.previewDisabledMessage':
+    '版本预览模式下无法查看页面预览',
+  'PC.Constants.AppDev.readOnlyMessage':
+    '旧版本为只读模式。恢复或切换到最新版本以进行编辑。',
   'PC.Constants.AppDev.statusError': '开发环境启动失败',
   'PC.Constants.AppDev.statusRunning': '开发环境运行中',
   'PC.Constants.AppDev.statusStarting': '正在启动开发环境...',
@@ -5079,14 +5091,16 @@ export const ZH_CN: SystemLangMap = {
   'PC.Constants.Library.chatMultimodal': '聊天对话-多模态',
   'PC.Constants.Library.chatText': '聊天对话-纯文本',
   'PC.Constants.Library.code': '代码',
-  'PC.Constants.Library.createByCloudCode': '基于云端代码（nodejs、python）创建',
+  'PC.Constants.Library.createByCloudCode':
+    '基于云端代码（nodejs、python）创建',
   'PC.Constants.Library.createByHttp': '基于已有服务（http接口）创建',
   'PC.Constants.Library.createSettings': '创建设置',
   'PC.Constants.Library.dataProcess': '数据处理',
   'PC.Constants.Library.execRecord': '执行记录',
   'PC.Constants.Library.imageProcess': '图像处理',
   'PC.Constants.Library.localDoc': '本地文档',
-  'PC.Constants.Library.localDocDesc': '上传 PDF, TXT, MD, DOC, DOCX 格式的本地文件',
+  'PC.Constants.Library.localDocDesc':
+    '上传 PDF, TXT, MD, DOC, DOCX 格式的本地文件',
   'PC.Constants.Library.manualAdd': '手动添加',
   'PC.Constants.Library.manualExec': '手动执行',
   'PC.Constants.Library.metadata': '元数据',
@@ -5153,7 +5167,8 @@ export const ZH_CN: SystemLangMap = {
   'PC.Constants.Space.callMethod': '调用方式',
   'PC.Constants.Space.cardBind': '卡片绑定',
   'PC.Constants.Space.chatBotType': '问答型',
-  'PC.Constants.Space.chatBotTypeTooltip': '适合知识问答、智能客服等快问快答的场景。',
+  'PC.Constants.Space.chatBotTypeTooltip':
+    '适合知识问答、智能客服等快问快答的场景。',
   'PC.Constants.Space.copyToSpace': '复制到空间',
   'PC.Constants.Space.createSkill': '创建技能',
   'PC.Constants.Space.createdByMe': '由我创建',
@@ -5172,7 +5187,8 @@ export const ZH_CN: SystemLangMap = {
   'PC.Constants.Space.spaceSquare': '空间广场',
   'PC.Constants.Space.standardCreate': '标准创建',
   'PC.Constants.Space.taskAgentType': '通用型',
-  'PC.Constants.Space.taskAgentTypeTooltip': '为智能体分配独立的执行电脑，适合应用开发、深度调研、数据分析、演示文稿制作等复杂任务场景，比较消耗内存资源且输出结果较慢。',
+  'PC.Constants.Space.taskAgentTypeTooltip':
+    '为智能体分配独立的执行电脑，适合应用开发、深度调研、数据分析、演示文稿制作等复杂任务场景，比较消耗内存资源且输出结果较慢。',
   'PC.Constants.Space.taskCenter': '任务中心',
   'PC.Constants.Space.temporarySession': '临时会话',
   'PC.Constants.Space.visibleToModel': '模型可见',
@@ -5204,7 +5220,8 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.Chat.conversationNameNoSpaces': '会话名称不能只包含空格',
   'PC.Pages.Chat.conversationNameRequired': '会话名称不能为空',
   'PC.Pages.Chat.inputConversationName': '请输入会话名称',
-  'PC.Pages.Chat.permanentDeleteWarning': '本条会话数据将被永久删除,不可恢复及撤销。确定要删除吗?',
+  'PC.Pages.Chat.permanentDeleteWarning':
+    '本条会话数据将被永久删除,不可恢复及撤销。确定要删除吗?',
   'PC.Pages.Chat.permanentlyDeleteConversation': '永久删除会话',
   'PC.Pages.Chat.rename': '修改名称',
   'PC.Pages.ChatTemp.fillRequiredParams': '请填写必填参数',
@@ -5221,8 +5238,9 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.Login.privacyAgreement': '隐私协议',
   'PC.Pages.Login.readAndAgree': '已阅读并同意协议：',
   'PC.Pages.Login.serviceAgreement': '服务使用协议',
-  'PC.Pages.PreviewAndDebug.convIdNotFoundDesktop': '会话ID不存在，无法打开智能体电脑',
-  'PC.Pages.PreviewAndDebug.convIdNotFoundFilePreview': '会话ID不存在，无法打开文件预览',
+  'PC.Pages.PreviewAndDebug.convIdNotFoundDesktop':
+    '会话ID不存在，无法打开智能体电脑',
+  'PC.Pages.PreviewAndDebug.convIdNotFoundFilePreview':
+    '会话ID不存在，无法打开文件预览',
   'PC.Pages.PreviewAndDebug.fillRequiredParams': '请填写必填参数',
-
 };

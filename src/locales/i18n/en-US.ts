@@ -5392,8 +5392,6 @@ export const EN_US: SystemLangMap = {
     'Plugin or workflow return data structure and example',
 
   // Pages - SpacePluginCloudTool
-    'Enter parameter name with clear meaning',
-    'Enter parameter description for better model understanding',
   'PC.Pages.SpacePluginCloudTool.enterDefaultValue': 'Enter default value',
   'PC.Pages.SpacePluginCloudTool.requiredParamTooltip':
     'This is a required parameter. Available after setting a default value',
@@ -5439,28 +5437,34 @@ export const EN_US: SystemLangMap = {
   'PC.Components.CreateAgent.createSuccess': 'Agent created successfully',
   'PC.Components.CreateAgent.createTitle': 'Create Agent',
   'PC.Components.CreateAgent.descriptionLabel': 'Agent Description',
-  'PC.Components.CreateAgent.descriptionPlaceholder': 'Describe the agent\'s features, which will be shown to the agent\'s users',
+  'PC.Components.CreateAgent.descriptionPlaceholder':
+    "Describe the agent's features, which will be shown to the agent's users",
   'PC.Components.CreateAgent.editSuccess': 'Agent updated successfully',
   'PC.Components.CreateAgent.iconLabel': 'Icon',
   'PC.Components.CreateAgent.nameLabel': 'Agent Name',
-  'PC.Components.CreateAgent.nameMaxLength': 'Name cannot exceed 50 characters!',
+  'PC.Components.CreateAgent.nameMaxLength':
+    'Name cannot exceed 50 characters!',
   'PC.Components.CreateAgent.namePlaceholder': 'Give the agent a unique name',
   'PC.Components.CreateAgent.nameRequired': 'Please enter the agent name',
   'PC.Components.CreateAgent.typeChatBot': 'Chatbot',
   'PC.Components.CreateAgent.updateTitle': 'Update Agent',
-  'PC.Components.CreateKnowledge.createSuccess': 'Knowledge base created successfully',
+  'PC.Components.CreateKnowledge.createSuccess':
+    'Knowledge base created successfully',
   'PC.Components.CreateKnowledge.createTitle': 'Create Knowledge Base',
   'PC.Components.CreateKnowledge.customWorkflow': 'Custom Workflow',
-  'PC.Components.CreateKnowledge.dataParsingMethodLabel': 'Document Content Extraction Method',
+  'PC.Components.CreateKnowledge.dataParsingMethodLabel':
+    'Document Content Extraction Method',
   'PC.Components.CreateKnowledge.descriptionLabel': 'Description',
   'PC.Components.CreateKnowledge.embeddingModelLabel': 'Embedding Model',
   'PC.Components.CreateKnowledge.iconLabel': 'Icon',
   'PC.Components.CreateKnowledge.nameLabel': 'Name',
-  'PC.Components.CreateKnowledge.nameRequired': 'Please enter the knowledge base name',
+  'PC.Components.CreateKnowledge.nameRequired':
+    'Please enter the knowledge base name',
   'PC.Components.CreateKnowledge.remove': 'Remove',
   'PC.Components.CreateKnowledge.selectWorkflow': 'Select Workflow',
   'PC.Components.CreateKnowledge.systemDefault': 'System Default',
-  'PC.Components.CreateKnowledge.updateSuccess': 'Knowledge base updated successfully',
+  'PC.Components.CreateKnowledge.updateSuccess':
+    'Knowledge base updated successfully',
   'PC.Components.CreateKnowledge.updateTitle': 'Update Knowledge Base',
   'PC.Components.EcoShareStatus.draft': 'Draft',
   'PC.Components.EcoShareStatus.offline': 'Offline',
@@ -5475,32 +5479,40 @@ export const EN_US: SystemLangMap = {
   'PC.Components.McpStatus.stopped': 'Stopped',
   'PC.Components.MenuListItem.cancelCollect': 'Uncollect',
   'PC.Components.PublishComponentModal.agent': 'Agent',
-  'PC.Components.PublishComponentModal.allowCopyTemplate': 'Allow Copy (Template)',
-  'PC.Components.PublishComponentModal.allowCopyTemplateTip': 'Once selected, it will appear in the marketplace templates. Users can copy it directly to their workspace. Copy selection is available only after publishing is selected.',
+  'PC.Components.PublishComponentModal.allowCopyTemplate':
+    'Allow Copy (Template)',
+  'PC.Components.PublishComponentModal.allowCopyTemplateTip':
+    'Once selected, it will appear in the marketplace templates. Users can copy it directly to their workspace. Copy selection is available only after publishing is selected.',
   'PC.Components.PublishComponentModal.categorySelect': 'Category',
   'PC.Components.PublishComponentModal.onlyTemplate': 'Template Only',
-  'PC.Components.PublishComponentModal.onlyTemplateTip': 'When selected, it will only be displayed in the template marketplace. Template-only option is available only after allow copy is selected.',
+  'PC.Components.PublishComponentModal.onlyTemplateTip':
+    'When selected, it will only be displayed in the template marketplace. Template-only option is available only after allow copy is selected.',
   'PC.Components.PublishComponentModal.plugin': 'Plugin',
   'PC.Components.PublishComponentModal.publishRecord': 'Publish Record',
   'PC.Components.PublishComponentModal.publishScope': 'Publish Scope',
-  'PC.Components.PublishComponentModal.publishSubmitted': 'Publish request submitted, pending review',
+  'PC.Components.PublishComponentModal.publishSubmitted':
+    'Publish request submitted, pending review',
   'PC.Components.PublishComponentModal.skill': 'Skill',
   'PC.Components.PublishComponentModal.space': 'Space',
-  'PC.Components.PublishComponentModal.spaceSquareTip': '2. Space Square: The agent will appear in the selected space square.',
+  'PC.Components.PublishComponentModal.spaceSquareTip':
+    '2. Space Square: The agent will appear in the selected space square.',
   'PC.Components.PublishComponentModal.systemSquare': 'System Square',
-  'PC.Components.PublishComponentModal.systemSquareTip': '1. System Square: The agent will appear in the system square.',
+  'PC.Components.PublishComponentModal.systemSquareTip':
+    '1. System Square: The agent will appear in the system square.',
   'PC.Components.PublishComponentModal.workflow': 'Workflow',
   'PC.Components.RunOver.calling': 'Calling',
   'PC.Components.RunOver.runComplete': 'Run Complete',
   'PC.Components.RunOver.runError': 'Run Error',
   'PC.Components.RunOver.thinking': 'Thinking',
   'PC.Components.TestRun.input': 'Input',
-  'PC.Components.TestRun.noInputRequired': 'No input required for this test run',
+  'PC.Components.TestRun.noInputRequired':
+    'No input required for this test run',
   'PC.Components.TestRun.output': 'Output',
   'PC.Components.TestRun.pleaseInput': 'Please input',
   'PC.Components.TestRun.pleaseSelect': 'Please select',
   'PC.Components.TestRun.qa': 'Q&A',
-  'PC.Components.TestRun.replyToContinue': 'Reply to the following questions to continue the test run',
+  'PC.Components.TestRun.replyToContinue':
+    'Reply to the following questions to continue the test run',
   'PC.Components.TestRun.robot': 'Robot',
   'PC.Components.TestRun.run': 'Run',
   'PC.Components.TestRun.runResult': 'Run Result',
@@ -5511,57 +5523,69 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Agent.balancedMode': 'Balanced Mode',
   'PC.Constants.Agent.creativeMode': 'Creative Mode',
   'PC.Constants.Agent.default': 'Default',
-  'PC.Constants.Agent.defaultEngineTooltip': 'The default engine is more mature with the best results, supporting only selected vendor models',
+  'PC.Constants.Agent.defaultEngineTooltip':
+    'The default engine is more mature with the best results, supporting only selected vendor models',
   'PC.Constants.Agent.defaultRecall': 'Default',
   'PC.Constants.Agent.extLinkRedirect': 'External Link Redirect',
   'PC.Constants.Agent.extPageOpen': 'Extension Page Open',
   'PC.Constants.Agent.extPagePath': 'Extension Page Path',
   'PC.Constants.Agent.externalLink': 'External Link',
   'PC.Constants.Agent.fullText': 'Full Text',
-  'PC.Constants.Agent.fullTextTooltip': 'Keyword-based full-text search, recommended for scenarios requiring specific names, acronyms, phrases, or IDs.',
+  'PC.Constants.Agent.fullTextTooltip':
+    'Keyword-based full-text search, recommended for scenarios requiring specific names, acronyms, phrases, or IDs.',
   'PC.Constants.Agent.global': 'Global',
   'PC.Constants.Agent.insertToPrompt': 'Insert to Prompt',
   'PC.Constants.Agent.manualSelect': 'Manual Select',
   'PC.Constants.Agent.manualSelectOnDemand': 'Manual Select + On Demand',
   'PC.Constants.Agent.mixed': 'Mixed',
-  'PC.Constants.Agent.mixedTooltip': 'Combines the advantages of full-text and semantic retrieval with comprehensive ranking of results',
+  'PC.Constants.Agent.mixedTooltip':
+    'Combines the advantages of full-text and semantic retrieval with comprehensive ranking of results',
   'PC.Constants.Agent.multiSelect': 'Multi-Select',
   'PC.Constants.Agent.number': 'Number',
-  'PC.Constants.Agent.nuwaxCliEngineTooltip': 'The NuwaxCli engine is in rapid iteration. Some scenarios may need improvement, but it supports almost all vendor models',
+  'PC.Constants.Agent.nuwaxCliEngineTooltip':
+    'The NuwaxCli engine is in rapid iteration. Some scenarios may need improvement, but it supports almost all vendor models',
   'PC.Constants.Agent.onDemand': 'On Demand',
   'PC.Constants.Agent.paragraph': 'Paragraph',
   'PC.Constants.Agent.precisionMode': 'Precision Mode',
   'PC.Constants.Agent.questionGuide': 'Question Guide',
   'PC.Constants.Agent.semantic': 'Semantic',
-  'PC.Constants.Agent.semanticTooltip': 'Vector-based text relevance query, recommended for scenarios requiring semantic association and cross-language queries.',
+  'PC.Constants.Agent.semanticTooltip':
+    'Vector-based text relevance query, recommended for scenarios requiring semantic association and cross-language queries.',
   'PC.Constants.Agent.singleCard': 'Single Card',
   'PC.Constants.Agent.singleLineText': 'Single Line Text',
   'PC.Constants.Agent.singleSelect': 'Single Select',
   'PC.Constants.Agent.smartRecognition': 'Smart Recognition',
   'PC.Constants.Agent.verticalList': 'Vertical List',
   'PC.Constants.Agent.workspace': 'Workspace',
-  'PC.Constants.AppDev.defaultAiMessage': 'Hello! I am an AI assistant that can help you with code development, Q&A, and more. How can I help you?',
+  'PC.Constants.AppDev.defaultAiMessage':
+    'Hello! I am an AI assistant that can help you with code development, Q&A, and more. How can I help you?',
   'PC.Constants.AppDev.errChatSendFailed': 'Failed to send message',
-  'PC.Constants.AppDev.errDevServerStartFailed': 'Failed to start development environment',
+  'PC.Constants.AppDev.errDevServerStartFailed':
+    'Failed to start development environment',
   'PC.Constants.AppDev.errEmptyFilePath': 'Please enter the file path',
   'PC.Constants.AppDev.errLoadFileFailed': 'Failed to load file',
   'PC.Constants.AppDev.errNoFileSelected': 'Please select a file',
-  'PC.Constants.AppDev.errNoProjectId': 'Please create or select a project first',
+  'PC.Constants.AppDev.errNoProjectId':
+    'Please create or select a project first',
   'PC.Constants.AppDev.errSaveFileFailed': 'Failed to save file',
   'PC.Constants.AppDev.errUploadFailed': 'Upload failed',
   'PC.Constants.AppDev.loadingFileContent': 'Loading file content...',
   'PC.Constants.AppDev.loadingFileTree': 'Loading file tree...',
-  'PC.Constants.AppDev.previewDisabledMessage': 'Page preview is not available in version preview mode',
-  'PC.Constants.AppDev.readOnlyMessage': 'The old version is in read-only mode. Restore or switch to the latest version to edit.',
+  'PC.Constants.AppDev.previewDisabledMessage':
+    'Page preview is not available in version preview mode',
+  'PC.Constants.AppDev.readOnlyMessage':
+    'The old version is in read-only mode. Restore or switch to the latest version to edit.',
   'PC.Constants.AppDev.statusError': 'Failed to start development environment',
   'PC.Constants.AppDev.statusRunning': 'Development environment running',
   'PC.Constants.AppDev.statusStarting': 'Starting development environment...',
   'PC.Constants.AppDev.statusStopped': 'Development environment stopped',
   'PC.Constants.AppDev.successChatCancelled': 'AI task cancelled',
-  'PC.Constants.AppDev.successDevServerStarted': 'Development environment started successfully',
+  'PC.Constants.AppDev.successDevServerStarted':
+    'Development environment started successfully',
   'PC.Constants.AppDev.successFileSaved': 'File saved successfully',
   'PC.Constants.AppDev.successFileUploaded': 'File uploaded successfully',
-  'PC.Constants.AppDev.successProjectUploaded': 'Project uploaded and started successfully',
+  'PC.Constants.AppDev.successProjectUploaded':
+    'Project uploaded and started successfully',
   'PC.Constants.AppDev.uploadingFile': 'Uploading file...',
   'PC.Constants.DataTable.itemsPerPage': 'items/page',
   'PC.Constants.DataTable.longText': 'Long Text (0-16M)',
@@ -5590,14 +5614,17 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Library.chatMultimodal': 'Chat - Multimodal',
   'PC.Constants.Library.chatText': 'Chat - Text Only',
   'PC.Constants.Library.code': 'Code',
-  'PC.Constants.Library.createByCloudCode': 'Create from Cloud Code (Node.js, Python)',
-  'PC.Constants.Library.createByHttp': 'Create from Existing Service (HTTP API)',
+  'PC.Constants.Library.createByCloudCode':
+    'Create from Cloud Code (Node.js, Python)',
+  'PC.Constants.Library.createByHttp':
+    'Create from Existing Service (HTTP API)',
   'PC.Constants.Library.createSettings': 'Create Settings',
   'PC.Constants.Library.dataProcess': 'Data Processing',
   'PC.Constants.Library.execRecord': 'Execution Record',
   'PC.Constants.Library.imageProcess': 'Image Processing',
   'PC.Constants.Library.localDoc': 'Local Document',
-  'PC.Constants.Library.localDocDesc': 'Upload local files in PDF, TXT, MD, DOC, DOCX format',
+  'PC.Constants.Library.localDocDesc':
+    'Upload local files in PDF, TXT, MD, DOC, DOCX format',
   'PC.Constants.Library.manualAdd': 'Manual Add',
   'PC.Constants.Library.manualExec': 'Manual Execution',
   'PC.Constants.Library.metadata': 'Metadata',
@@ -5616,7 +5643,8 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Library.segTwoNewline': 'Double Newline (\\n\\n)',
   'PC.Constants.Library.segmentSettings': 'Segmentation Settings',
   'PC.Constants.Library.supportFuncCall': 'Supports Function Calling',
-  'PC.Constants.Library.supportStreamFuncCall': 'Supports Streaming Function Calling',
+  'PC.Constants.Library.supportStreamFuncCall':
+    'Supports Streaming Function Calling',
   'PC.Constants.Library.textCompletion': 'Text Completion',
   'PC.Constants.Library.textEdit': 'Text Editing',
   'PC.Constants.Library.textFill': 'Text Fill',
@@ -5664,7 +5692,8 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Space.callMethod': 'Call Method',
   'PC.Constants.Space.cardBind': 'Card Binding',
   'PC.Constants.Space.chatBotType': 'Chatbot',
-  'PC.Constants.Space.chatBotTypeTooltip': 'Suitable for knowledge Q&A, smart customer service, and quick Q&A scenarios.',
+  'PC.Constants.Space.chatBotTypeTooltip':
+    'Suitable for knowledge Q&A, smart customer service, and quick Q&A scenarios.',
   'PC.Constants.Space.copyToSpace': 'Copy to Space',
   'PC.Constants.Space.createSkill': 'Create Skill',
   'PC.Constants.Space.createdByMe': 'Created by Me',
@@ -5683,7 +5712,8 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Space.spaceSquare': 'Space Square',
   'PC.Constants.Space.standardCreate': 'Standard Create',
   'PC.Constants.Space.taskAgentType': 'Task Agent',
-  'PC.Constants.Space.taskAgentTypeTooltip': 'Assigns a dedicated execution computer to the agent, suitable for complex tasks such as app development, in-depth research, data analysis, and presentations. Consumes more memory and outputs are slower.',
+  'PC.Constants.Space.taskAgentTypeTooltip':
+    'Assigns a dedicated execution computer to the agent, suitable for complex tasks such as app development, in-depth research, data analysis, and presentations. Consumes more memory and outputs are slower.',
   'PC.Constants.Space.taskCenter': 'Task Center',
   'PC.Constants.Space.temporarySession': 'Temporary Session',
   'PC.Constants.Space.visibleToModel': 'Visible to Model',
@@ -5712,28 +5742,36 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.System.themeConfig': 'Theme Config',
   'PC.Constants.System.userGroupManage': 'User Group Management',
   'PC.Constants.System.userManage': 'User Management',
-  'PC.Pages.Chat.conversationNameNoSpaces': 'Conversation name cannot contain only spaces',
+  'PC.Pages.Chat.conversationNameNoSpaces':
+    'Conversation name cannot contain only spaces',
   'PC.Pages.Chat.conversationNameRequired': 'Conversation name is required',
   'PC.Pages.Chat.inputConversationName': 'Enter conversation name',
-  'PC.Pages.Chat.permanentDeleteWarning': 'This conversation data will be permanently deleted and cannot be recovered. Are you sure?',
-  'PC.Pages.Chat.permanentlyDeleteConversation': 'Permanently Delete Conversation',
+  'PC.Pages.Chat.permanentDeleteWarning':
+    'This conversation data will be permanently deleted and cannot be recovered. Are you sure?',
+  'PC.Pages.Chat.permanentlyDeleteConversation':
+    'Permanently Delete Conversation',
   'PC.Pages.Chat.rename': 'Rename',
-  'PC.Pages.ChatTemp.fillRequiredParams': 'Please fill in the required parameters',
+  'PC.Pages.ChatTemp.fillRequiredParams':
+    'Please fill in the required parameters',
   'PC.Pages.ChatTemp.inputPlaceholder': 'Please input',
-  'PC.Pages.ChatTemp.networkTimeout': 'Network timeout or service unavailable, please try again later',
+  'PC.Pages.ChatTemp.networkTimeout':
+    'Network timeout or service unavailable, please try again later',
   'PC.Pages.ChatTemp.startConversation': 'Start Conversation',
   'PC.Pages.Login.and': 'and',
   'PC.Pages.Login.captchaDefault': 'Drag right to complete the puzzle',
   'PC.Pages.Login.captchaError': 'Verification failed',
   'PC.Pages.Login.captchaLoading': 'Loading...',
   'PC.Pages.Login.captchaMoving': 'Drag right to the puzzle position',
-  'PC.Pages.Login.captchaTitle': 'Please complete the following verification to continue',
+  'PC.Pages.Login.captchaTitle':
+    'Please complete the following verification to continue',
   'PC.Pages.Login.captchaVerifying': 'Verifying...',
   'PC.Pages.Login.privacyAgreement': 'Privacy Agreement',
   'PC.Pages.Login.readAndAgree': 'I have read and agree to the agreements:',
   'PC.Pages.Login.serviceAgreement': 'Terms of Service',
-  'PC.Pages.PreviewAndDebug.convIdNotFoundDesktop': 'Conversation ID not found, unable to open agent computer',
-  'PC.Pages.PreviewAndDebug.convIdNotFoundFilePreview': 'Conversation ID not found, unable to open file preview',
-  'PC.Pages.PreviewAndDebug.fillRequiredParams': 'Please fill in the required parameters',
-
+  'PC.Pages.PreviewAndDebug.convIdNotFoundDesktop':
+    'Conversation ID not found, unable to open agent computer',
+  'PC.Pages.PreviewAndDebug.convIdNotFoundFilePreview':
+    'Conversation ID not found, unable to open file preview',
+  'PC.Pages.PreviewAndDebug.fillRequiredParams':
+    'Please fill in the required parameters',
 };

@@ -25,7 +25,12 @@ import 'dayjs/locale/zh-tw';
 // 1. 系统支持的业务语言
 // ---------------------------------------------------------------------------
 
-export const supportedAppLocales = ['zh-CN', 'zh-TW', 'zh-HK', 'en-US'] as const;
+export const supportedAppLocales = [
+  'zh-CN',
+  'zh-TW',
+  'zh-HK',
+  'en-US',
+] as const;
 export type AppLocale = (typeof supportedAppLocales)[number];
 
 // ---------------------------------------------------------------------------
@@ -184,4 +189,20 @@ export function syncAllLocaleSystems(lang: string): void {
     .catch(() => {
       // Umi 不可用时静默忽略
     });
+}
+
+// ---------------------------------------------------------------------------
+// 7. 通用工具：获取 JS 原生 toLocaleString 使用的 locale 标识
+// ---------------------------------------------------------------------------
+
+/** 将内部语言标识转换为 JS Intl / toLocaleString 使用的 BCP 47 locale */
+const jsLocaleMap: Record<string, string> = {
+  'zh-cn': 'zh-CN',
+  'zh-tw': 'zh-TW',
+  'zh-hk': 'zh-HK',
+  'en-us': 'en-US',
+};
+
+export function getJsLocale(lang: string): string {
+  return jsLocaleMap[(lang || '').toLowerCase()] || 'en-US';
 }
