@@ -538,7 +538,7 @@ const Chat: React.FC = () => {
 
   useEffect(() => {
     // 应用智能体模式下，不获取当前智能体的历史记录
-    if (location.pathname?.includes('/app/chat/')) {
+    if (isAppSidebarMode) {
       return;
     }
     // 获取当前智能体的历史记录
@@ -546,7 +546,7 @@ const Chat: React.FC = () => {
       agentId,
       limit: 20,
     });
-  }, [id, agentId, location.pathname]);
+  }, [id, agentId, isAppSidebarMode]);
 
   useEffect(() => {
     addBaseTarget();
@@ -595,11 +595,13 @@ const Chat: React.FC = () => {
 
         // 应用智能体模式下，查询当前智能体的会话记录，否则查询所有智能体的会话记录
         const _agentId = isAppSidebarMode ? agentId : null;
+        // 应用智能体模式下，查询当前智能体的8条会话记录，否则查询所有智能体的20条会话记录
+        const limit = isAppSidebarMode ? 8 : 20;
 
         // 重新查询会话记录
         runHistory({
           agentId: _agentId,
-          limit: 20,
+          limit,
         });
 
         // 取消监听会话状态更新事件
@@ -614,6 +616,7 @@ const Chat: React.FC = () => {
       eventBus.off(EVENT_TYPE.ChatFinished, listenConversationStatusUpdate);
     };
   }, [
+    id,
     conversationInfo?.taskStatus,
     conversationInfo?.id,
     isAppSidebarMode,
