@@ -5595,6 +5595,7 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.DataTable.tableData': 'Table Data',
   'PC.Constants.DataTable.tableStructure': 'Table Structure',
   'PC.Constants.DataTable.totalPrefix': 'Total ',
+  'PC.Constants.DataTable.totalSuffix': ' items',
   'PC.Constants.Ecosystem.catBusinessEfficiency': 'Business Efficiency',
   'PC.Constants.Ecosystem.catComputerOps': 'Computer Operations',
   'PC.Constants.Ecosystem.catEcommerce': 'E-Commerce',

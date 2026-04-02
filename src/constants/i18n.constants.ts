@@ -36,7 +36,13 @@ export const I18N_SCOPES = [
   'Toast',
   'Modal',
   'Common',
+  'Constants',
+  'Routes',
+  'Utils',
+  'Hooks',
+  'Layouts',
+  'Models',
 ] as const;
 
 export const I18N_KEY_REGEX =
-  /^(PC|Mobile|Claw)\.(Pages|Components|Toast|Modal|Common|Hooks|Layouts|Models)\.([A-Za-z0-9]+\.)+[a-z][A-Za-z0-9]*$/;
+  /^(PC|Mobile|Claw)\.(Pages|Components|Toast|Modal|Common|Hooks|Layouts|Models|Constants|Routes|Utils)\.([A-Za-z0-9]+\.)*[a-z][A-Za-z0-9]*$/;

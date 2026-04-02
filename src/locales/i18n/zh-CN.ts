@@ -5072,6 +5072,7 @@ export const ZH_CN: SystemLangMap = {
   'PC.Constants.DataTable.tableData': '表数据',
   'PC.Constants.DataTable.tableStructure': '表结构',
   'PC.Constants.DataTable.totalPrefix': '共 ',
+  'PC.Constants.DataTable.totalSuffix': ' 条',
   'PC.Constants.Ecosystem.catBusinessEfficiency': '商业效率',
   'PC.Constants.Ecosystem.catComputerOps': '电脑操作',
   'PC.Constants.Ecosystem.catEcommerce': '电商平台',
