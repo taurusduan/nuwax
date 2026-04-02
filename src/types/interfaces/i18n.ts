@@ -11,7 +11,7 @@ export interface I18nLangDto {
 
 export type SystemLangMap = Record<string, string>;
 
-export type I18nClient = 'NuwaxPC' | 'NuwaxMobile' | 'NuwaClaw';
+export type I18nClient = 'PC' | 'Mobile' | 'Claw';
 
 export type I18nScope = 'Pages' | 'Components' | 'Toast' | 'Modal' | 'Common';
 

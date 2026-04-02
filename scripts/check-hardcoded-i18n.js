@@ -7,7 +7,7 @@ const CHINESE_STRING_RE = /(['"`])([^'"`]*[\u4e00-\u9fa5][^'"`]*)\1/g;
 const LEGACY_SYSTEM_KEY_RE = /\bSystem\.[A-Za-z0-9_.]+\b/;
 const DICT_KEY_RE = /dict\(\s*(['"`])([^'"`]+)\1/g;
 const I18N_KEY_RE =
-  /^(NuwaxPC|NuwaxMobile|NuwaClaw)\.(Pages|Components|Toast|Modal|Common)\.[A-Z][A-Za-z0-9]*\.[a-z][A-Za-z0-9]*$/;
+  /^(PC|Mobile|Claw)\.(Pages|Components|Toast|Modal|Common|Hooks|Layouts|Models)\.([A-Za-z0-9]+\.)+[a-z][A-Za-z0-9]*$/;
 const LEGACY_KEY_ALLOW_FILES = new Set([
   'src/services/i18nRuntime.ts',
   'scripts/check-hardcoded-i18n.js',

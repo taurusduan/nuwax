@@ -4,8 +4,8 @@ import {
 } from '@/locales/i18n';
 import { EN_US } from '@/locales/i18n/en-US';
 import { ZH_CN } from '@/locales/i18n/zh-CN';
-import { ZH_TW } from '@/locales/i18n/zh-TW';
 import { ZH_HK } from '@/locales/i18n/zh-HK';
+import { ZH_TW } from '@/locales/i18n/zh-TW';
 
 export const DEFAULT_I18N_LANG = 'en-us';
 
@@ -28,7 +28,7 @@ export const LOCAL_DEFAULT_I18N_MAP = I18N_LOCAL_DEFAULT_MAP;
 // Platform defaults for i18n management import
 export const I18N_IMPORT_DEFAULTS = I18N_LOCAL_IMPORT_DEFAULTS;
 
-export const I18N_CLIENTS = ['NuwaxPC', 'NuwaxMobile', 'NuwaClaw'] as const;
+export const I18N_CLIENTS = ['PC', 'Mobile', 'Claw'] as const;
 
 export const I18N_SCOPES = [
   'Pages',
@@ -39,4 +39,4 @@ export const I18N_SCOPES = [
 ] as const;
 
 export const I18N_KEY_REGEX =
-  /^(NuwaxPC|NuwaxMobile|NuwaClaw)\.(Pages|Components|Toast|Modal|Common)\.[A-Z][A-Za-z0-9]*\.[a-z][A-Za-z0-9]*$/;
+  /^(PC|Mobile|Claw)\.(Pages|Components|Toast|Modal|Common|Hooks|Layouts|Models)\.([A-Za-z0-9]+\.)+[a-z][A-Za-z0-9]*$/;

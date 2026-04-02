@@ -1,7 +1,7 @@
 import Loading from '@/components/custom/Loading';
 import {
-  DATA_PERMISSION_TAB_ITEMS,
   DataPermissionTabKey,
+  getDataPermissionTabItems,
 } from '@/pages/SystemManagement/MenuPermission/components/DataPermissionModal';
 import { dict } from '@/services/i18nRuntime';
 import { apiSystemModelList } from '@/services/systemManage';
@@ -551,7 +551,7 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
         <Tabs
           activeKey={activeTab}
           onChange={handleTabChange}
-          items={DATA_PERMISSION_TAB_ITEMS}
+          items={getDataPermissionTabItems()}
         />
         <div className={cx(styles.tabContent)}>{renderTabContent()}</div>
       </div>

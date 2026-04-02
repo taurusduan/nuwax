@@ -12,7 +12,7 @@ export const I18N_LOCAL_DEFAULT_MAP: Record<string, SystemLangMap> = {
 };
 
 export const I18N_LOCAL_IMPORT_DEFAULTS = {
-  NuwaxPC: {
+  PC: {
     'en-us': EN_US,
     'zh-cn': ZH_CN,
     'zh-tw': ZH_TW,

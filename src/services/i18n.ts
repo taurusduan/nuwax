@@ -37,7 +37,7 @@ export async function saveUserLang(
 }
 
 export function getI18nImportDefaults(
-  client: I18nClient = 'NuwaxPC',
+  client: I18nClient = 'PC',
 ): Record<string, SystemLangMap> {
   const clientDefaults =
     (I18N_IMPORT_DEFAULTS as Record<string, Record<string, SystemLangMap>>)[
@@ -55,7 +55,7 @@ export function getI18nImportDefaults(
 
 export function getI18nImportDefaultMap(
   lang: string,
-  client: I18nClient = 'NuwaxPC',
+  client: I18nClient = 'PC',
 ): SystemLangMap {
   const defaults = getI18nImportDefaults(client);
   const normalizedLang = String(lang || '').toLowerCase();

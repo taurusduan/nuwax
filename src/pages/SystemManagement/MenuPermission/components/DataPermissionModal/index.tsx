@@ -65,7 +65,7 @@ export type DataPermissionTabKey =
   | 'page'
   | 'dataPermission';
 
-const getDataPermissionTabItems = (): TabsProps['items'] => [
+export const getDataPermissionTabItems = (): TabsProps['items'] => [
   {
     key: 'model',
     label: (
