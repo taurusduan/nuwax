@@ -59,8 +59,6 @@ export interface AccessibleUserGroupInfo {
   source: UserGroupSourceEnum;
   /** 状态,1:启用 0:禁用 */
   status: UserGroupStatusEnum;
-  /** 最大用户数，0表示不限制 */
-  maxUserCount: number;
   /** 排序 */
   sortIndex: number;
   /** 租户ID */
