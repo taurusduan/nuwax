@@ -890,6 +890,7 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
         body: 'collapse-body',
       },
     },
+    // 允许用户选择自有模型
     {
       key: AgentArrangeConfigEnum.Allow_Other_Model,
       label: '允许用户选择自有模型',
@@ -916,6 +917,8 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
         body: 'collapse-body',
       },
     },
+
+    // 允许用户@技能
     ...(agentConfigInfo?.type === AgentTypeEnum.TaskAgent
       ? [
           {
@@ -948,37 +951,44 @@ const AgentArrangeConfig: React.FC<AgentArrangeConfigProps> = ({
               body: 'collapse-body',
             },
           },
-          {
-            key: AgentArrangeConfigEnum.Allow_Private_Sandbox,
-            label: '允许用户选择个人电脑',
-            children: (
-              <p className={cx(styles.text)}>
-                开启后用户可以选择智能体在自己的Claw客户端中执行
-              </p>
-            ),
-            extra: (
-              <Switch
-                value={
-                  agentConfigInfo?.allowPrivateSandbox ===
-                  DefaultSelectedEnum.Yes
-                }
-                // 阻止冒泡事件
-                onClick={(_, e: any) => {
-                  e.stopPropagation();
-                }}
-                onChange={(value) =>
-                  onChangeAgent(
-                    value ? DefaultSelectedEnum.Yes : DefaultSelectedEnum.No,
-                    'allowPrivateSandbox',
-                  )
-                }
-              />
-            ),
-            classNames: {
-              header: 'collapse-header',
-              body: 'collapse-body',
-            },
-          },
+          // 允许用户选择个人电脑
+          ...(agentConfigInfo?.extra?.private === true
+            ? []
+            : [
+                {
+                  key: AgentArrangeConfigEnum.Allow_Private_Sandbox,
+                  label: '允许用户选择个人电脑',
+                  children: (
+                    <p className={cx(styles.text)}>
+                      开启后用户可以选择智能体在自己的Claw客户端中执行
+                    </p>
+                  ),
+                  extra: (
+                    <Switch
+                      value={
+                        agentConfigInfo?.allowPrivateSandbox ===
+                        DefaultSelectedEnum.Yes
+                      }
+                      // 阻止冒泡事件
+                      onClick={(_, e: any) => {
+                        e.stopPropagation();
+                      }}
+                      onChange={(value) =>
+                        onChangeAgent(
+                          value
+                            ? DefaultSelectedEnum.Yes
+                            : DefaultSelectedEnum.No,
+                          'allowPrivateSandbox',
+                        )
+                      }
+                    />
+                  ),
+                  classNames: {
+                    header: 'collapse-header',
+                    body: 'collapse-body',
+                  },
+                },
+              ]),
         ]
       : []),
   ];
