@@ -740,50 +740,49 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
     setActiveTab(tabKey);
 
     // 智能体 / 网页应用 / 知识库 / API 权限等 Tab 的按需加载
-    if (tabKey === 'agent') {
-      // 右侧：根据选中的ID列表查询已选择的智能体
-      if (selectedAgentIds.length > 0) {
-        runGetAgentListByIds({
-          agentIds: selectedAgentIds,
-        });
-      } else {
-        setSelectedAgentList([]);
-      }
-      // 首次切换到智能体 tab 时，加载第一页数据
-      if (agentList.length === 0 && !agentLoading) {
-        // 查询智能体列表
-        queryAgentList();
-      }
-    } else if (tabKey === 'page') {
-      // 右侧：根据选中的ID列表查询已选择的网页应用
-      if (selectedPageAgentIds.length > 0) {
-        runGetPageListByIds({
-          agentIds: selectedPageAgentIds,
-        });
-      } else {
-        setSelectedPageList([]);
-      }
-      // 首次切换到网页应用 tab 时，加载第一页数据
-      if (pageList.length === 0 && !pageLoading) {
-        // 查询网页应用列表
-        queryPageList();
-      }
-    } else if (tabKey === 'knowledge') {
-      if (selectedKnowledgeIds.length > 0) {
-        runGetKnowledgeListByIds({
-          knowledgeIds: selectedKnowledgeIds,
-        });
-      } else {
-        setSelectedKnowledgeList([]);
-      }
-      if (knowledgeList.length === 0 && !knowledgeLoading) {
-        queryKnowledgeList();
-      }
-    } else if (tabKey === 'apiPermission') {
-      // 首次进入且尚无树数据时拉取列表（避免重复请求）
-      if (openApiTreeData.length === 0 && !openApiListLoading) {
-        loadOpenApiTree();
-      }
+    switch (tabKey) {
+      case 'agent':
+        // 右侧：根据选中的ID列表查询已选择的智能体
+        if (selectedAgentIds.length > 0) {
+          runGetAgentListByIds({
+            agentIds: selectedAgentIds,
+          });
+        }
+        // 首次切换到智能体 tab 时，加载第一页数据
+        if (agentList.length === 0 && !agentLoading) {
+          queryAgentList();
+        }
+        break;
+      case 'page':
+        // 右侧：根据选中的ID列表查询已选择的网页应用
+        if (selectedPageAgentIds.length > 0) {
+          runGetPageListByIds({
+            agentIds: selectedPageAgentIds,
+          });
+        }
+        // 首次切换到网页应用 tab 时，加载第一页数据
+        if (pageList.length === 0 && !pageLoading) {
+          queryPageList();
+        }
+        break;
+      case 'knowledge':
+        if (selectedKnowledgeIds.length > 0) {
+          runGetKnowledgeListByIds({
+            knowledgeIds: selectedKnowledgeIds,
+          });
+        }
+        if (knowledgeList.length === 0 && !knowledgeLoading) {
+          queryKnowledgeList();
+        }
+        break;
+      case 'apiPermission':
+        // 首次进入且尚无树数据时拉取列表（避免重复请求）
+        if (openApiTreeData.length === 0 && !openApiListLoading) {
+          loadOpenApiTree();
+        }
+        break;
+      default:
+        break;
     }
   };
 
