@@ -249,7 +249,6 @@ const requestInterceptors = [
       localStorage.getItem(I18N_STORAGE_KEYS.ACTIVE_LANG) || browserLang;
     if (lang) {
       config.headers['Accept-Language'] = lang;
-      config.headers['X-Lang'] = lang;
     }
 
     return { ...config };
