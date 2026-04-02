@@ -1077,12 +1077,6 @@ const Chat: React.FC = () => {
         {/* 页面顶部: 标题区域 */}
         <header className={cx(styles['title-box'])}>
           <div className={cx(styles['title-container'])}>
-            <DropdownChangeName
-              agentId={agentId}
-              conversationInfo={conversationInfo}
-              setConversationInfo={setConversationInfo}
-              isAppSidebarMode={isAppSidebarMode}
-            />
             <div className={cx('flex', 'items-center', 'gap-4')}>
               {/* 应用智能体模式下，显示内容导航按钮 */}
               <ConditionRender
@@ -1113,7 +1107,15 @@ const Chat: React.FC = () => {
                   }
                 />
               </ConditionRender>
+              <DropdownChangeName
+                agentId={agentId}
+                conversationInfo={conversationInfo}
+                setConversationInfo={setConversationInfo}
+                isAppSidebarMode={isAppSidebarMode}
+              />
+            </div>
 
+            <div className={cx('flex', 'items-center', 'gap-4')}>
               {/* 这里放可以展开 AgentSidebar 的控制按钮 在AgentSidebar 展示的时候隐藏 反之显示 */}
               {/* 当文件树显示时，也显示这个按钮，用于关闭文件树并打开 AgentSidebar */}
               {!isAppSidebarMode && !isSidebarVisible && !isMobile && (
