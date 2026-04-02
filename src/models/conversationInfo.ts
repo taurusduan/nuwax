@@ -263,7 +263,7 @@ export default () => {
         // 查询文件列表
         await runGetStaticFileList(cId);
       },
-      3000,
+      5000,
       { leading: true, trailing: true },
     ),
     [runGetStaticFileList],
