@@ -436,6 +436,12 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
               return;
             }
 
+            // 先切到当前文件并清空内容，避免异步返回前继续显示上一个文件内容
+            setSelectedFileNode({
+              ...fileNode,
+              content: '',
+            });
+
             // 获取文件内容并更新文件树
             const newFileContent = await fetchFileContentUpdateFiles(
               fileProxyUrl,
@@ -1538,6 +1544,7 @@ const FileTreeView = forwardRef<FileTreeViewRef, FileTreeViewProps>(
       // 代码文件：使用代码查看器
       return (
         <CodeViewer
+          key={`code-viewer-${selectedFileId}`}
           isDynamicTheme={isDynamicTheme}
           fileId={selectedFileId}
           fileName={fileName}

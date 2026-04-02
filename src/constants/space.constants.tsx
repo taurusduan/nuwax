@@ -179,6 +179,11 @@ export const APPLICATION_MORE_ACTION = [
     type: ApplicationMoreActionEnum.Temporary_Session,
     label: dict('PC.Constants.Space.temporarySession'),
   },
+  // 独立会话（已发布的智能体可独立会话）
+  {
+    type: ApplicationMoreActionEnum.Independent_Session,
+    label: dict('PC.Constants.Space.independentSession', '独立会话'),
+  },
   { type: ApplicationMoreActionEnum.API_Key, label: 'API Key' },
   {
     type: ApplicationMoreActionEnum.Export_Config,

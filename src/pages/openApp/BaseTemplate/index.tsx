@@ -279,6 +279,7 @@ const BaseTemplate: React.FC = () => {
             <>
               <div className={cx(styles['history-title'])}>
                 <span className={cx(styles.title)}>
+                  <SvgIcon name="icons-nav-time" style={{ fontSize: 16 }} />
                   {dict('PC.Pages.OpenApp.historyConversation')}
                 </span>
 
@@ -295,7 +296,12 @@ const BaseTemplate: React.FC = () => {
               {/* 历史会话列表 */}
               <div
                 ref={historyListRef}
-                className={cx('flex-1', 'overflow-y')}
+                className={cx(
+                  'flex-1',
+                  'overflow-y',
+                  'scroll-container',
+                  styles['history-list'],
+                )}
                 onScroll={handleHistoryScroll}
               >
                 {conversationList?.length
