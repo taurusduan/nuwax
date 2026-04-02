@@ -3,7 +3,13 @@ import {
   DATA_PERMISSION_TAB_ITEMS,
   DataPermissionTabKey,
 } from '@/pages/SystemManagement/MenuPermission/components/DataPermissionModal';
+import type { OpenApiConfigInfo } from '@/pages/SystemManagement/MenuPermission/types/role-manage';
+import {
+  apiGetOpenApiList,
+  OpenApiPermissionTargetTypeEnum,
+} from '@/services/account';
 import { apiSystemModelList } from '@/services/systemManage';
+import type { OpenApiDefinition } from '@/types/interfaces/account';
 import { AgentConfigInfo } from '@/types/interfaces/agent';
 import { CustomPageDto } from '@/types/interfaces/pageDev';
 import type {
@@ -13,7 +19,7 @@ import type {
 import { InfoCircleOutlined } from '@ant-design/icons';
 import { Col, Empty, Form, InputNumber, Modal, Row, Tabs } from 'antd';
 import classNames from 'classnames';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useRequest } from 'umi';
 import {
   apiSystemResourceAgentListByIds,
@@ -23,6 +29,7 @@ import {
   UserDataPermission,
 } from '../../user-manage';
 import ResourceItem from './components/ResourceItem';
+import UserOpenApiPermissionPanel from './components/UserOpenApiPermissionPanel';
 import styles from './index.less';
 
 const cx = classNames.bind(styles);
@@ -83,6 +90,15 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
     [],
   );
 
+  // API 权限：用户数据权限接口返回的勾选与限流配置
+  const [userOpenApiConfigs, setUserOpenApiConfigs] = useState<
+    OpenApiConfigInfo[]
+  >([]);
+  const [openApiTreeData, setOpenApiTreeData] = useState<OpenApiDefinition[]>(
+    [],
+  );
+  const [openApiListLoading, setOpenApiListLoading] = useState(false);
+
   // 模型列表
   const {
     data: modelList,
@@ -122,8 +138,26 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
         setSelectedPageAgentIds(result.pageAgentIds || []);
         // 知识库ID列表
         setSelectedKnowledgeIds(result?.knowledgeIds || []);
+        // API 权限
+        setUserOpenApiConfigs(result.openApiConfigs || []);
       },
     });
+
+  /** 加载开放 API 树（与查看用户 API 权限一致，目标类型为 User） */
+  const loadOpenApiTree = useCallback(async () => {
+    setOpenApiListLoading(true);
+    try {
+      const res = await apiGetOpenApiList(OpenApiPermissionTargetTypeEnum.User);
+      if (res.success && res.data) {
+        setOpenApiTreeData(res.data);
+      }
+    } catch (e) {
+      console.error(e);
+      setOpenApiTreeData([]);
+    } finally {
+      setOpenApiListLoading(false);
+    }
+  }, []);
 
   // 根据ID列表查询智能体
   const { loading: agentLoading, run: runGetAgentListByIds } = useRequest(
@@ -197,6 +231,10 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
       setKnowledgeList([]);
       // 选中的知识库ID列表
       setSelectedKnowledgeIds([]);
+
+      // ======================================= API 权限 =======================================
+      setUserOpenApiConfigs([]);
+      setOpenApiTreeData([]);
     }
   }, [open, userId]);
 
@@ -220,28 +258,36 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
     const tabKey = key as DataPermissionTabKey;
     setActiveTab(tabKey);
 
-    // 只针对智能体和应用页面 tab 加载数据
-    if (tabKey === 'agent') {
-      if (selectedAgentIds.length > 0) {
-        // 切换到智能体 tab 时，根据权限 ID 列表查询智能体数据
-        runGetAgentListByIds({
-          agentIds: selectedAgentIds,
-        });
-      }
-    } else if (tabKey === 'page') {
-      if (selectedPageAgentIds.length > 0) {
-        // 切换到应用页面 tab 时，根据权限 ID 列表查询应用页面数据
-        runGetPageListByIds({
-          agentIds: selectedPageAgentIds,
-        });
-      }
-    } else if (tabKey === 'knowledge') {
-      if (selectedKnowledgeIds.length > 0) {
-        // 切换到知识库 tab 时，根据权限 ID 列表查询知识库数据
-        runGetKnowledgeListByIds({
-          knowledgeIds: selectedKnowledgeIds,
-        });
-      }
+    // 按需加载各 Tab 数据
+    switch (tabKey) {
+      case 'agent':
+        if (selectedAgentIds.length > 0) {
+          runGetAgentListByIds({
+            agentIds: selectedAgentIds,
+          });
+        }
+        break;
+      case 'page':
+        if (selectedPageAgentIds.length > 0) {
+          runGetPageListByIds({
+            agentIds: selectedPageAgentIds,
+          });
+        }
+        break;
+      case 'knowledge':
+        if (selectedKnowledgeIds.length > 0) {
+          runGetKnowledgeListByIds({
+            knowledgeIds: selectedKnowledgeIds,
+          });
+        }
+        break;
+      case 'apiPermission':
+        if (openApiTreeData.length === 0 && !openApiListLoading) {
+          loadOpenApiTree();
+        }
+        break;
+      default:
+        break;
     }
   };
 
@@ -529,6 +575,14 @@ const DataPermissionModal: React.FC<DataPermissionModalProps> = ({
               </Row>
             </Form>
           </div>
+        );
+      case 'apiPermission':
+        return (
+          <UserOpenApiPermissionPanel
+            openApiListLoading={openApiListLoading}
+            openApiTreeData={openApiTreeData}
+            openApiConfigs={userOpenApiConfigs}
+          />
         );
       default:
         return null;
