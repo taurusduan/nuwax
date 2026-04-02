@@ -192,8 +192,8 @@ const ApiKeyPage: React.FC = () => {
               icon: <DeleteOutlined />,
               danger: true,
               confirm: {
-                title: (r) => `确认删除密钥 "${r.name}" 吗？`,
-                description: '删除后将无法恢复，请谨慎操作。',
+                description: (r) =>
+                  `密钥 "${r.name}" 删除后将无法恢复，请谨慎操作。`,
               },
               onClick: async () => {
                 await apiApiKeyDelete(record.accessKey);
