@@ -292,7 +292,7 @@ const BaseTemplate: React.FC = () => {
               {/* 历史会话列表 */}
               <div
                 ref={historyListRef}
-                className={cx('flex-1', 'overflow-y')}
+                className={cx('flex-1', 'overflow-y', 'scroll-container')}
                 onScroll={handleHistoryScroll}
               >
                 {conversationList?.length
