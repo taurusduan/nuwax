@@ -73,9 +73,10 @@ const ApiKeyPage: React.FC = () => {
       dataIndex: 'name',
       key: 'name',
       ellipsis: true,
+      width: 360,
     },
     {
-      title: 'API KEY',
+      title: 'API Key',
       dataIndex: 'accessKey',
       key: 'accessKey',
       search: false,
