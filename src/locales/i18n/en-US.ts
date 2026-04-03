@@ -5447,7 +5447,10 @@ export const EN_US: SystemLangMap = {
   'PC.Components.CreateAgent.namePlaceholder': 'Give the agent a unique name',
   'PC.Components.CreateAgent.nameRequired': 'Please enter the agent name',
   'PC.Components.CreateAgent.typeChatBot': 'Chatbot',
+  'PC.Components.CreateAgent.typeTaskAgent': 'Task Agent',
   'PC.Components.CreateAgent.updateTitle': 'Update Agent',
+  'PC.Components.CreateAgent.createTypeTitle': 'Create {0}',
+  'PC.Components.CreateAgent.updateTypeTitle': 'Update {0}',
   'PC.Components.CreateKnowledge.createSuccess':
     'Knowledge base created successfully',
   'PC.Components.CreateKnowledge.createTitle': 'Create Knowledge Base',
@@ -5703,6 +5706,7 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Space.exceptionHandling': 'Exception Handling',
   'PC.Constants.Space.exportConfig': 'Export Config',
   'PC.Constants.Space.importSkill': 'Import Skill',
+  'PC.Constants.Space.independentSession': 'Independent Session',
   'PC.Constants.Space.logQuery': 'Log Query',
   'PC.Constants.Space.mcpManage': 'MCP Management',
   'PC.Constants.Space.memberAndSettings': 'Members & Settings',
