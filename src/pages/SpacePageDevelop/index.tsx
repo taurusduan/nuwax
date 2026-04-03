@@ -33,7 +33,6 @@ import {
   CustomPageDto,
 } from '@/types/interfaces/pageDev';
 import { modalConfirm } from '@/utils/ant-custom';
-import { exportWholeProjectZip } from '@/utils/exportImportFile';
 import { PlusOutlined, SearchOutlined } from '@ant-design/icons';
 import { Button, Empty, Input, message } from 'antd';
 import classNames from 'classnames';
@@ -329,29 +328,8 @@ const SpacePageDevelop: React.FC = () => {
       return;
     }
 
-    try {
-      const result = await exportProject(projectId);
-      // 判断是否成功
-      if (!result.success) {
-        // 导出失败，显示错误信息
-        const errorMessage = result.error?.message || '导出失败';
-        message.warning(errorMessage);
-        return;
-      }
-
-      const filename = `project-${projectId}.zip`;
-      // 导出整个项目压缩包
-      exportWholeProjectZip(result, filename);
-      message.success('项目导出成功！');
-    } catch (error) {
-      // 改进错误处理，兼容不同的错误格式
-      const errorMessage =
-        (error as any)?.message ||
-        (error as any)?.toString() ||
-        '导出过程中发生未知错误';
-
-      message.error(`导出失败: ${errorMessage}`);
-    }
+    // 导出整个项目压缩包
+    exportProject(projectId);
   }, []);
 
   // 域名绑定

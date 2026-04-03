@@ -22,6 +22,7 @@ import { apiAgentConfigInfo } from '@/services/agentConfig';
 import {
   bindDataSource,
   buildProject,
+  exportProject,
   stopAgentService,
   uploadAndStartProject,
 } from '@/services/appDev';
@@ -72,7 +73,6 @@ import FileTreePanel from './components/FileTreePanel';
 import PageEditModal from './components/PageEditModal';
 
 import { checkFileSizeExceedLimit } from '@/utils';
-import { exportFileViaBrowserDownload } from '@/utils/exportImportFile';
 import { type PreviewRef } from './components/Preview';
 import { useDevLogs } from './hooks/useDevLogs';
 import styles from './index.less';
@@ -732,26 +732,8 @@ const AppDev: React.FC = () => {
       return;
     }
 
-    try {
-      // 导出项目链接地址
-      const linkUrl =
-        process.env.BASE_URL +
-        `/api/custom-page/export-project?projectId=${encodeURIComponent(
-          projectId,
-        )}`;
-
-      // 通过浏览器下载文件
-      exportFileViaBrowserDownload(linkUrl);
-      message.success('项目导出成功！');
-    } catch (error) {
-      // 改进错误处理，兼容不同的错误格式
-      const errorMessage =
-        (error as any)?.message ||
-        (error as any)?.toString() ||
-        '导出过程中发生未知错误';
-
-      message.error(`导出失败: ${errorMessage}`);
-    }
+    // 导出整个项目压缩包
+    exportProject(projectId);
   }, [hasValidProjectId, projectId]);
 
   /**
