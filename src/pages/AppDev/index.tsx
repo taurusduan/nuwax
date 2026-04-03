@@ -22,7 +22,6 @@ import { apiAgentConfigInfo } from '@/services/agentConfig';
 import {
   bindDataSource,
   buildProject,
-  exportProject,
   stopAgentService,
   uploadAndStartProject,
 } from '@/services/appDev';
@@ -74,6 +73,7 @@ import FileTreePanel from './components/FileTreePanel';
 import PageEditModal from './components/PageEditModal';
 
 import { checkFileSizeExceedLimit } from '@/utils';
+import { exportFileViaBrowserDownload } from '@/utils/exportImportFile';
 import { type PreviewRef } from './components/Preview';
 import { useDevLogs } from './hooks/useDevLogs';
 import styles from './index.less';
@@ -740,47 +740,15 @@ const AppDev: React.FC = () => {
     }
 
     try {
-      // setIsExporting(true); // 暂时注释掉，后续可能需要
-      const result = await exportProject(projectId);
+      // 导出项目链接地址
+      const linkUrl =
+        process.env.BASE_URL +
+        `/api/custom-page/export-project?projectId=${encodeURIComponent(
+          projectId,
+        )}`;
 
-      // 判断是否成功
-      if (!result.success) {
-        // 导出失败，显示错误信息
-        const errorMessage =
-          result.error?.message || t('PC.Pages.AppDevIndex.exportFailed');
-        message.warning(errorMessage);
-        return;
-      }
-
-      // 从响应头中获取文件名
-      const contentDisposition = result.headers?.['content-disposition'];
-      let filename = `project-${projectId}.zip`;
-
-      if (contentDisposition) {
-        // 解析 Content-Disposition 头中的文件名
-        const filenameMatch = contentDisposition.match(
-          /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/,
-        );
-        if (filenameMatch && filenameMatch[1]) {
-          filename = filenameMatch[1].replace(/['"]/g, '');
-        }
-      }
-
-      // 创建下载链接
-      const blob = new Blob([result.data || ''], { type: 'application/zip' });
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = filename;
-
-      // 触发下载
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-
-      // 清理URL对象
-      window.URL.revokeObjectURL(url);
-
+      // 通过浏览器下载文件
+      exportFileViaBrowserDownload(linkUrl);
       message.success(t('PC.Pages.AppDevIndex.exportSuccess'));
     } catch (error) {
       // 改进错误处理，兼容不同的错误格式
@@ -792,8 +760,6 @@ const AppDev: React.FC = () => {
       message.error(
         t('PC.Pages.AppDevIndex.exportFailedWithError', errorMessage),
       );
-    } finally {
-      // setIsExporting(false); // 暂时注释掉，后续可能需要
     }
   }, [hasValidProjectId, projectId]);
 

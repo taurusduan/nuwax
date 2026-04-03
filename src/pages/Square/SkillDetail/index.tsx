@@ -3,12 +3,11 @@ import MoveCopyComponent from '@/components/MoveCopyComponent';
 import { dict } from '@/services/i18nRuntime';
 import { apiPublishedSkillInfo } from '@/services/plugin';
 import { apiPublishTemplateCopy } from '@/services/publish';
-import { apiSkillExportSquare } from '@/services/skill';
 import { AgentComponentTypeEnum, AllowCopyEnum } from '@/types/enums/agent';
 import { ApplicationMoreActionEnum } from '@/types/enums/space';
 import { SquareAgentTypeEnum } from '@/types/enums/square';
 import { PublishTemplateCopyParams } from '@/types/interfaces/publish';
-import { exportWholeProjectZip } from '@/utils/exportImportFile';
+import { exportFileViaBrowserDownload } from '@/utils/exportImportFile';
 import { jumpToSkill } from '@/utils/router';
 import { Button, message, Space } from 'antd';
 import classNames from 'classnames';
@@ -86,29 +85,17 @@ const SkillDetail: React.FC = ({}) => {
 
     try {
       setLoadingExportProject(true);
-      const result = await apiSkillExportSquare(skillId);
-
-      // 判断是否成功
-      if (!result.success) {
-        // 导出失败，显示错误信息
-        const errorMessage =
-          result.error?.message ||
-          dict('PC.Pages.Square.SkillDetail.exportFailed');
-        message.warning(errorMessage);
-        setLoadingExportProject(false);
-        return;
-      }
-
-      // 导出成功，处理文件下载
-      if (result.data) {
-        const filename = `skill-${skillId}.zip`;
-        // 导出整个项目压缩包
-        exportWholeProjectZip(result, filename);
-        message.success(dict('PC.Pages.Square.SkillDetail.exportSuccess'));
-      }
+      // 获取技能导出文件链接地址
+      const linkUrl = `${process.env.BASE_URL}/api/published/skill/export/${skillId}`;
+      // 通过浏览器下载文件
+      exportFileViaBrowserDownload(linkUrl);
+      message.success(dict('PC.Pages.Square.SkillDetail.exportSuccess'));
     } catch (error) {
       // 处理其他异常
-      console.error('导出项目失败:', error);
+      console.error(
+        dict('PC.Pages.Square.SkillDetail.exportFailedRetry'),
+        error,
+      );
       message.error(dict('PC.Pages.Square.SkillDetail.exportFailedRetry'));
     } finally {
       setLoadingExportProject(false);
