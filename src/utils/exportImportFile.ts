@@ -102,7 +102,10 @@ function handleExportError(error: any): ExportFileBlobResponse {
     error: {
       code: error?.info?.code || 'NETWORK_ERROR',
       displayCode: error?.info?.displayCode || 'NETWORK_ERROR',
-      message: error?.info?.message || error?.message || dict('PC.Utils.ExportImport.networkRequestFailed'),
+      message:
+        error?.info?.message ||
+        error?.message ||
+        dict('PC.Utils.ExportImport.networkRequestFailed'),
       data: null,
       success: false,
       tid: error?.info?.tid || '',
@@ -144,7 +147,8 @@ export const exportConfigFile = async (
     // 判断是否成功
     if (!res.success) {
       // 导出失败，显示错误信息
-      const errorMessage = res.error?.message || dict('PC.Utils.ExportImport.exportFailed');
+      const errorMessage =
+        res.error?.message || dict('PC.Utils.ExportImport.exportFailed');
       message.warning(errorMessage);
       return;
     }
@@ -169,6 +173,32 @@ export const exportConfigFile = async (
 };
 
 /**
+ * 通过浏览器下载文件
+ * @param linkUrl 文件链接地址
+ * @param fileName 文件名称
+ */
+export const exportFileViaBrowserDownload = (
+  linkUrl: string,
+  fileName?: string,
+) => {
+  // 创建一个 a 标签
+  const link = document.createElement('a');
+  // 设置链接地址
+  link.href = linkUrl;
+  link.target = '_blank';
+  // 设置下载文件的名称
+  link.download = fileName || '';
+  // 添加到 body 中
+  document.body.appendChild(link);
+  // 模拟点击下载
+  link.click();
+  // 移除 a 标签
+  document.body.removeChild(link);
+  // 释放 URL 对象
+  window.URL.revokeObjectURL(linkUrl);
+};
+
+/**
  * 导出业务表数据为Excel
  * @param tableId 业务表ID
  * @param fileName 文件名称
@@ -179,7 +209,8 @@ export const exportTableExcel = async (tableId: number, fileName: string) => {
     // 判断是否成功
     if (!res.success) {
       // 导出失败，显示错误信息
-      const errorMessage = res.error?.message || dict('PC.Utils.ExportImport.exportFailed');
+      const errorMessage =
+        res.error?.message || dict('PC.Utils.ExportImport.exportFailed');
       message.warning(errorMessage);
       return;
     }

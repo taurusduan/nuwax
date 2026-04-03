@@ -153,7 +153,6 @@ const BaseTemplate: React.FC = () => {
         styles[
           `xagi-layout-${isSecondMenuCollapsed ? 'collapsed' : 'expanded'}`
         ],
-        styles['page-container'],
         styles[`xagi-layout-${layoutStyle}`],
         styles[`xagi-nav-${navigationStyle}`],
       ),
@@ -355,10 +354,7 @@ const BaseTemplate: React.FC = () => {
       </div>
 
       {/* 主内容区 */}
-      <div
-        className={`${pageContainerClassName} scroll-container`}
-        id="page-container-selector"
-      >
+      <div className={`${pageContainerClassName}`}>
         <Outlet />
       </div>
 
