@@ -1,3 +1,4 @@
+import { t } from '@/services/i18nRuntime';
 import { RequestResponse } from '@/types/interfaces/request';
 import type {
   EnsurePodResponse,
@@ -93,9 +94,9 @@ export async function apiDownloadAllFiles(cId: number): Promise<void> {
     const linkUrl = `${process.env.BASE_URL}/api/computer/static/download-all-files?cId=${cId}`;
     // 通过浏览器下载文件
     exportFileViaBrowserDownload(linkUrl);
-    message.success('导出成功！');
+    message.success(t('PC.Pages.Chat.exportSuccess'));
   } catch (error) {
-    console.error('导出项目失败:', error);
+    console.error('Failed to export project:', error);
   }
 }
 
