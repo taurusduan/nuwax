@@ -53,6 +53,8 @@ const LanguageSwitchPanel: React.FC = () => {
       title: dict('PC.Pages.Setting.confirmTitle'),
       content: dict('PC.Pages.Setting.confirmContent'),
       centered: true,
+      okText: dict('PC.Common.Global.confirm'),
+      cancelText: dict('PC.Common.Global.cancel'),
       onOk: async () => {
         setSaving(true);
         try {
