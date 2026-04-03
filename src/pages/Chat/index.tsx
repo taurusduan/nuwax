@@ -539,7 +539,7 @@ const Chat: React.FC = () => {
 
   useEffect(() => {
     // 应用智能体模式下，不获取当前智能体的历史记录
-    if (location.pathname?.includes('/app/chat/')) {
+    if (isAppSidebarMode) {
       return;
     }
     // 获取当前智能体的历史记录
@@ -547,7 +547,7 @@ const Chat: React.FC = () => {
       agentId,
       limit: 20,
     });
-  }, [id, agentId, location.pathname]);
+  }, [id, agentId, isAppSidebarMode]);
 
   useEffect(() => {
     addBaseTarget();
@@ -562,6 +562,54 @@ const Chat: React.FC = () => {
       setSelectedComponentList(infos || []);
     }
   }, [infos, messageSourceType, manualComponents]);
+
+  useEffect(() => {
+    if (!conversationInfo?.id) {
+      return;
+    }
+
+    // 监听会话状态更新事件
+    const listenConversationStatusUpdate = (data: {
+      conversationId: string;
+    }) => {
+      const { conversationId } = data;
+      // 如果会话ID和当前会话ID相同，并且会话状态为已完成，则显示成功提示
+      if (conversationId === conversationInfo?.id?.toString()) {
+        // 如果会话状态为执行中，则重新查询会话信息
+        if (conversationInfo?.taskStatus === TaskStatus.EXECUTING) {
+          // 重新查询会话信息
+          runAsync(id);
+        }
+
+        // 应用智能体模式下，查询当前智能体的会话记录，否则查询所有智能体的会话记录
+        const _agentId = isAppSidebarMode ? agentId : null;
+        // 应用智能体模式下，查询当前智能体的8条会话记录，否则查询所有智能体的20条会话记录
+        const limit = isAppSidebarMode ? 8 : 5;
+
+        // 重新查询会话记录
+        runHistory({
+          agentId: _agentId,
+          limit,
+        });
+
+        // 取消监听会话状态更新事件
+        eventBus.off(EVENT_TYPE.ChatFinished, listenConversationStatusUpdate);
+      }
+    };
+
+    // 监听会话状态更新事件
+    eventBus.on(EVENT_TYPE.ChatFinished, listenConversationStatusUpdate);
+
+    return () => {
+      eventBus.off(EVENT_TYPE.ChatFinished, listenConversationStatusUpdate);
+    };
+  }, [
+    id,
+    conversationInfo?.taskStatus,
+    conversationInfo?.id,
+    isAppSidebarMode,
+    agentId,
+  ]);
 
   // 监听会话更新事件，更新会话记录
   const handleConversationUpdate = (data: {
@@ -578,48 +626,6 @@ const Chat: React.FC = () => {
       }
     }
   };
-
-  useEffect(() => {
-    if (conversationInfo?.taskStatus !== TaskStatus.EXECUTING) {
-      return;
-    }
-
-    // 监听会话状态更新事件
-    const listenConversationStatusUpdate = (data: {
-      conversationId: string;
-    }) => {
-      const { conversationId } = data;
-      // 如果会话ID和当前会话ID相同，并且会话状态为已完成，则显示成功提示
-      if (conversationId === conversationInfo?.id?.toString()) {
-        // 重新查询会话信息
-        runAsync(id);
-
-        // 应用智能体模式下，查询当前智能体的会话记录，否则查询所有智能体的会话记录
-        const _agentId = isAppSidebarMode ? agentId : null;
-
-        // 重新查询会话记录
-        runHistory({
-          agentId: _agentId,
-          limit: 20,
-        });
-
-        // 取消监听会话状态更新事件
-        eventBus.off(EVENT_TYPE.ChatFinished, listenConversationStatusUpdate);
-      }
-    };
-
-    // 监听会话状态更新事件
-    eventBus.on(EVENT_TYPE.ChatFinished, listenConversationStatusUpdate);
-
-    return () => {
-      eventBus.off(EVENT_TYPE.ChatFinished, listenConversationStatusUpdate);
-    };
-  }, [
-    conversationInfo?.taskStatus,
-    conversationInfo?.id,
-    isAppSidebarMode,
-    agentId,
-  ]);
 
   useEffect(() => {
     // 切换会话时立即隐藏预览，防止旧数据重新打开导致闪烁

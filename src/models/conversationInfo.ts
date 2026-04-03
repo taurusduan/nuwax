@@ -476,13 +476,13 @@ export default () => {
             // 如果是会话聊天页（chat页），同步更新会话记录
             runHistory({
               agentId: currentInfo.agentId,
-              limit: 20,
+              limit: 8,
             });
           } else {
             // 如果是会话聊天页（chat页），同步更新会话记录
             runHistory({
               agentId: null,
-              limit: 20,
+              limit: 5,
             });
 
             // 获取当前智能体的历史记录

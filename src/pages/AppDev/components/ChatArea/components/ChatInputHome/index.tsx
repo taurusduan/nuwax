@@ -1078,7 +1078,9 @@ const ChatInputHome: React.FC<ChatInputProps> = ({
                     styles['model-selector'],
                   )}
                 >
-                  <span>{modelSelector?.selectedModel?.name}</span>
+                  <span className={cx(styles['model-name'], 'text-ellipsis')}>
+                    {modelSelector?.selectedModel?.name}
+                  </span>
                   <DownOutlined className={cx(styles['model-arrow'])} />
                 </div>
               </Popover>

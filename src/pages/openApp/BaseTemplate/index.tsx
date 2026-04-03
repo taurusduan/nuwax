@@ -49,7 +49,6 @@ const BaseTemplate: React.FC = () => {
   const {
     isAppSidebarVisible,
     toggleAppSidebarVisible,
-    setIsAppSidebarMode,
     appAgentDetail,
     createAppNewConversation,
   } = useModel('useOpenApp');
@@ -102,7 +101,7 @@ const BaseTemplate: React.FC = () => {
     // 查询会话记录
     runHistory({
       agentId,
-      limit: 20,
+      limit: 8,
     });
   }, [agentId]);
 
@@ -170,11 +169,6 @@ const BaseTemplate: React.FC = () => {
   const handleLink = (id: number, agentId: number) => {
     history.push(`/app/chat/${id}/${agentId}`);
   };
-
-  // 设置为初始化应用侧边栏模式（默认是关闭的）
-  useEffect(() => {
-    setIsAppSidebarMode(true);
-  }, []);
 
   /**
    * 监听新建会话快捷键：
