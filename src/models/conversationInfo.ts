@@ -1121,7 +1121,7 @@ export default () => {
                 lastMessage.processingList = updatedProcessingList;
 
                 // ✨ 关键：同时更新全局的 processingList，这样 MarkdownCustomProcess 组件才能正确更新
-                handleChatProcessingList(updatedProcessingList);
+                // handleChatProcessingList(updatedProcessingList); // 暂时不需要，通过对象引用已经修改了最后一条数据的状态
               }
             }
 
