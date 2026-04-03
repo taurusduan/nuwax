@@ -8,6 +8,7 @@ export const ZH_TW: SystemLangMap = {
   'PC.Common.Global.copy': '複製',
   'PC.Common.Global.refresh': '刷新',
   'PC.Common.Global.emptyData': '暫無數據',
+  'PC.Common.Global.error': '錯誤',
   'PC.Common.Global.pleaseSelect': '請選擇',
   'PC.Common.Global.backHome': '返回首頁',
   'PC.Common.Global.pending': '處理中',
@@ -2791,6 +2792,7 @@ export const ZH_TW: SystemLangMap = {
 
   // Common - additional keys
   'PC.Common.Global.submit': '提交',
+  'PC.Common.Global.syncFailed': '同步失敗',
   'PC.Common.Global.operation': '操作',
   'PC.Common.Global.edit': '編輯',
   'PC.Common.Global.delete': '刪除',
@@ -4542,7 +4544,50 @@ export const ZH_TW: SystemLangMap = {
   'PC.Components.SelectList.pleaseSelect': '請選擇',
 
   // Components - PublishComponentModal
+  'PC.Components.PublishComponentModal.agent': '智能體',
+  'PC.Components.PublishComponentModal.allowCopyTemplate': '允許複製（模板）',
+  'PC.Components.PublishComponentModal.allowCopyTemplateTip':
+    '選中後將出現在廣場模板中，用戶可直接複製到自己的工作空間中去。複製可選的前提是發佈已選。',
+  'PC.Components.PublishComponentModal.categorySelect': '分類選擇',
+  'PC.Components.PublishComponentModal.onlyTemplate': '僅模板',
+  'PC.Components.PublishComponentModal.onlyTemplateTip':
+    '選擇後僅在模板廣場展示，僅模板只有在允許複製選擇後才可選',
+  'PC.Components.PublishComponentModal.plugin': '插件',
+  'PC.Components.PublishComponentModal.publishRecord': '發佈記錄',
+  'PC.Components.PublishComponentModal.publishRecordPlaceholder':
+    '請輸入發佈記錄',
+  'PC.Components.PublishComponentModal.publishScope': '發佈空間',
+  'PC.Components.PublishComponentModal.publishSubmitted':
+    '發佈申請已提交，等待審核中',
+  'PC.Components.PublishComponentModal.publishTitle': '發佈{0}',
   'PC.Components.PublishComponentModal.selectPublishScope': '選擇發佈範圍',
+  'PC.Components.PublishComponentModal.skill': '技能',
+  'PC.Components.PublishComponentModal.space': '空間',
+  'PC.Components.PublishComponentModal.spaceSquareTip':
+    '2. 空間廣場：智能體將出現在選擇的空間廣場中。',
+  'PC.Components.PublishComponentModal.systemSquare': '系統廣場',
+  'PC.Components.PublishComponentModal.systemSquareTip':
+    '1. 系統廣場：智能體將出现在系統廣場中。',
+  'PC.Components.PublishComponentModal.workflow': '工作流',
+  'PC.Components.RunOver.calling': '正在調用',
+  'PC.Components.RunOver.called': '已調用 {0}',
+  'PC.Components.RunOver.runComplete': '運行完畢',
+  'PC.Components.RunOver.runError': '運行錯誤',
+  'PC.Components.RunOver.thinking': '正在思考',
+  'PC.Components.TestRun.input': '輸入',
+  'PC.Components.TestRun.noInputRequired': '本次試運行無需輸入',
+  'PC.Components.TestRun.output': '輸出',
+  'PC.Components.TestRun.pleaseInput': '請輸入',
+  'PC.Components.TestRun.pleaseSelect': '請選擇',
+  'PC.Components.TestRun.qa': '問答',
+  'PC.Components.TestRun.replyToContinue': '回覆以下問題後繼續試運行',
+  'PC.Components.TestRun.robot': '機器人',
+  'PC.Components.TestRun.run': '運行',
+  'PC.Components.TestRun.runResult': '運行結果',
+  'PC.Components.TestRun.testRun': '試運行',
+  'PC.Components.TestRun.testRunInput': '試運行輸入',
+  'PC.Components.TestRun.uploadFile': '上傳文件',
+  'PC.Components.TestRun.uploadFailed': '上傳失敗: {0}',
 
   // Layouts - HistoryConversation
   'PC.Layouts.HistoryConversation.title': '歷史會話',

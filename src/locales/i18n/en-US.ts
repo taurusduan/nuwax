@@ -8,6 +8,7 @@ export const EN_US: SystemLangMap = {
   'PC.Common.Global.copy': 'Copy',
   'PC.Common.Global.refresh': 'Refresh',
   'PC.Common.Global.emptyData': 'No data',
+  'PC.Common.Global.error': 'Error',
   'PC.Common.Global.pleaseSelect': 'Please select',
   'PC.Common.Global.backHome': 'Back to Home',
   'PC.Common.Global.pending': 'Pending',
@@ -5229,6 +5230,7 @@ export const EN_US: SystemLangMap = {
   'PC.Common.Global.other': 'Other',
   'PC.Common.Global.plugin': 'Plugin',
   'PC.Common.Global.published': 'Published',
+  'PC.Common.Global.syncFailed': 'Sync Failed',
   'PC.Common.Global.skill': 'Skill',
   'PC.Common.Global.template': 'Template',
   'PC.Common.Global.unpublished': 'Unpublished',
@@ -5499,9 +5501,12 @@ export const EN_US: SystemLangMap = {
     'When selected, it will only be displayed in the template marketplace. Template-only option is available only after allow copy is selected.',
   'PC.Components.PublishComponentModal.plugin': 'Plugin',
   'PC.Components.PublishComponentModal.publishRecord': 'Publish Record',
+  'PC.Components.PublishComponentModal.publishRecordPlaceholder':
+    'Please enter publish record',
   'PC.Components.PublishComponentModal.publishScope': 'Publish Scope',
   'PC.Components.PublishComponentModal.publishSubmitted':
     'Publish request submitted, pending review',
+  'PC.Components.PublishComponentModal.publishTitle': 'Publish {0}',
   'PC.Components.PublishComponentModal.skill': 'Skill',
   'PC.Components.PublishComponentModal.space': 'Space',
   'PC.Components.PublishComponentModal.spaceSquareTip':
@@ -5511,10 +5516,12 @@ export const EN_US: SystemLangMap = {
     '1. System Square: The agent will appear in the system square.',
   'PC.Components.PublishComponentModal.workflow': 'Workflow',
   'PC.Components.RunOver.calling': 'Calling',
+  'PC.Components.RunOver.called': 'Called {0}',
   'PC.Components.RunOver.runComplete': 'Run Complete',
   'PC.Components.RunOver.runError': 'Run Error',
   'PC.Components.RunOver.thinking': 'Thinking',
   'PC.Components.TestRun.input': 'Input',
+  'PC.Components.TestRun.uploadFailed': 'Upload Failed: {0}',
   'PC.Components.TestRun.noInputRequired':
     'No input required for this test run',
   'PC.Components.TestRun.output': 'Output',

@@ -8,6 +8,7 @@ export const ZH_CN: SystemLangMap = {
   'PC.Common.Global.copy': '复制',
   'PC.Common.Global.refresh': '刷新',
   'PC.Common.Global.emptyData': '暂无数据',
+  'PC.Common.Global.error': '错误',
   'PC.Common.Global.pleaseSelect': '请选择',
   'PC.Common.Global.backHome': '返回首页',
   'PC.Common.Global.pending': '处理中',
@@ -2798,6 +2799,7 @@ export const ZH_CN: SystemLangMap = {
 
   // Common - additional keys
   'PC.Common.Global.submit': '提交',
+  'PC.Common.Global.syncFailed': '同步失败',
   'PC.Common.Global.operation': '操作',
   'PC.Common.Global.edit': '编辑',
   'PC.Common.Global.delete': '删除',
@@ -4982,9 +4984,12 @@ export const ZH_CN: SystemLangMap = {
     '选择后仅在模板广场展示，仅模板只有在允许复制选择后才可选',
   'PC.Components.PublishComponentModal.plugin': '插件',
   'PC.Components.PublishComponentModal.publishRecord': '发布记录',
+  'PC.Components.PublishComponentModal.publishRecordPlaceholder':
+    '请输入发布记录',
   'PC.Components.PublishComponentModal.publishScope': '发布空间',
   'PC.Components.PublishComponentModal.publishSubmitted':
     '发布申请已提交，等待审核中',
+  'PC.Components.PublishComponentModal.publishTitle': '发布{0}',
   'PC.Components.PublishComponentModal.skill': '技能',
   'PC.Components.PublishComponentModal.space': '空间',
   'PC.Components.PublishComponentModal.spaceSquareTip':
@@ -4994,6 +4999,7 @@ export const ZH_CN: SystemLangMap = {
     '1. 系统广场：智能体将出现在系统广场中。',
   'PC.Components.PublishComponentModal.workflow': '工作流',
   'PC.Components.RunOver.calling': '正在调用',
+  'PC.Components.RunOver.called': '已调用 {0}',
   'PC.Components.RunOver.runComplete': '运行完毕',
   'PC.Components.RunOver.runError': '运行错误',
   'PC.Components.RunOver.thinking': '正在思考',
@@ -5010,6 +5016,7 @@ export const ZH_CN: SystemLangMap = {
   'PC.Components.TestRun.testRun': '试运行',
   'PC.Components.TestRun.testRunInput': '试运行输入',
   'PC.Components.TestRun.uploadFile': '上传文件',
+  'PC.Components.TestRun.uploadFailed': '上传失败: {0}',
   'PC.Constants.Agent.autoInvoke': '自动调用',
   'PC.Constants.Agent.balancedMode': '平衡模式',
   'PC.Constants.Agent.creativeMode': '创意模式',
