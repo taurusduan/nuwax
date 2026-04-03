@@ -76,14 +76,15 @@ const getBrowserLang = (): string => {
   return normalizeLang(navigator.language);
 };
 
-const formatText = (template: string, values: string[]): string => {
+const formatText = (template: string, values: (string | number)[]): string => {
   if (!values.length) return template;
   let text = template;
   values.forEach((value, index) => {
-    text = text.replace(new RegExp(`\\{${index}\\}`, 'g'), value);
+    const stringValue = String(value ?? '');
+    text = text.replace(new RegExp(`\\{${index}\\}`, 'g'), stringValue);
   });
   let cursor = 0;
-  text = text.replace(/\{\}/g, () => values[cursor++] ?? '');
+  text = text.replace(/\{\}/g, () => String(values[cursor++] ?? ''));
   return text;
 };
 
@@ -229,7 +230,7 @@ export const syncLangFromUserInfo = async (user?: {
   initialized = true;
 };
 
-export const dict = (key: string, ...values: string[]): string => {
+export const dict = (key: string, ...values: (string | number)[]): string => {
   const normalizedKey = String(key || '').trim();
   if (!normalizedKey) return '';
 
@@ -265,7 +266,7 @@ export const dict = (key: string, ...values: string[]): string => {
   return formatText(template, values);
 };
 
-export const t = (key: string, ...values: string[]): string =>
+export const t = (key: string, ...values: (string | number)[]): string =>
   dict(key, ...values);
 
 export const translateLiteralText = (rawText: string): string => {
