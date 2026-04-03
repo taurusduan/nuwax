@@ -9,6 +9,7 @@ import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 import { useModel } from 'umi';
 import styles from './index.less';
+import LanguageSwitchPanel from './LanguageSwitchPanel';
 import ResetPassword from './ResetPassword';
 import SettingAccount from './SettingAccount';
 import SettingEmail from './SettingEmail';
@@ -73,6 +74,8 @@ const Setting: React.FC = () => {
           );
         }
         return <ThemeSwitchPanel tenantThemeConfig={tenantThemeConfig} />;
+      case SettingActionEnum.Language_Switch:
+        return <LanguageSwitchPanel />;
       case SettingActionEnum.Usage_Statistics:
         return <UsageStatistics />;
       default:
@@ -94,6 +97,8 @@ const Setting: React.FC = () => {
         return dict('PC.Pages.Setting.resetPassword');
       case SettingActionEnum.Theme_Switch:
         return dict('PC.Pages.Setting.themeSwitch');
+      case SettingActionEnum.Language_Switch:
+        return dict('PC.Pages.Setting.language');
       case SettingActionEnum.Usage_Statistics:
         return dict('PC.Pages.Setting.usageStatistics');
       default:

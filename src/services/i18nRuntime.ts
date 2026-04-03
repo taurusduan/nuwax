@@ -126,6 +126,17 @@ const parseLangMapResult = (result: any): SystemLangMap | null => {
   return resultData as SystemLangMap;
 };
 
+export const getCurrentLang = (): string => currentLang;
+
+export const getCurrentLangMap = (): SystemLangMap => ({ ...langMap });
+
+export const setCurrentLang = (lang?: string | null): void => {
+  const resolvedLang = normalizeLang(lang || getBrowserLang());
+  currentLang = resolvedLang;
+  safeSetItem(I18N_STORAGE_KEYS.ACTIVE_LANG, resolvedLang);
+  syncLocaleSystems(resolvedLang);
+};
+
 const buildZhValueToKeyMap = (map: SystemLangMap): void => {
   const nextMap: Record<string, string> = {};
   Object.entries(map).forEach(([key, value]) => {
@@ -138,61 +149,79 @@ const buildZhValueToKeyMap = (map: SystemLangMap): void => {
   zhValueToKeyMap = nextMap;
 };
 
-const fetchAndApplyLangMap = async (lang?: string): Promise<boolean> => {
-  const targetLang = normalizeLang(lang || currentLang);
+export const fetchAndApplyLangMap = async (
+  lang?: string,
+  side?: string,
+): Promise<boolean> => {
+  const isInitialCall = !lang;
   try {
-    const result = await apiI18nQuery(lang);
+    const result = await apiI18nQuery(lang, side);
     const parsedMap = parseLangMapResult(result);
-    if (!parsedMap) return false;
+    if (!parsedMap) {
+      if (isInitialCall) {
+        // 首屏请求失败，启用本地英语兜底
+        langMap = { ...MIN_EN_I18N_MAP };
+        setCurrentLang('en-us');
+      }
+      return false;
+    }
+
+    // --- 基于字典内容自动识别语种 ---
+    let detectedLang = lang; // 如果是手动切换，使用传入的 lang
+    if (!detectedLang) {
+      // 首次加载或未传参数，通过内容判定
+      const testValue = parsedMap['PC.man.user.add'];
+      if (testValue === '增加用户') {
+        detectedLang = 'zh-cn';
+      } else if (testValue === 'add user') {
+        detectedLang = 'en-us';
+      }
+    }
+
+    const finalLang = normalizeLang(detectedLang || currentLang);
+    // 同步全局语种状态（确保 antd 等受控组件识别到正确语种）
+    setCurrentLang(finalLang);
+
     langMap = {
-      ...getLocalDefaultMapByLang(targetLang),
+      ...getLocalDefaultMapByLang(finalLang),
       ...parsedMap,
     };
-    persistMapCache(targetLang, langMap);
+    persistMapCache(finalLang, langMap);
     return true;
   } catch {
+    if (isInitialCall) {
+      // 捕获异常：应用本地英语兜底
+      langMap = { ...MIN_EN_I18N_MAP };
+      setCurrentLang('en-us');
+    }
     return false;
   }
 };
 
-const fetchZhBaseMap = async (): Promise<void> => {
-  zhBaseMap = { ...MIN_ZH_I18N_MAP };
-  try {
-    const result = await apiI18nQuery('zh-cn');
-    const parsedMap = parseLangMapResult(result);
-    if (parsedMap) {
-      zhBaseMap = {
-        ...MIN_ZH_I18N_MAP,
-        ...parsedMap,
-      };
-    }
-  } catch {
-    // ignore zh fallback fetch errors
-  }
-  buildZhValueToKeyMap(zhBaseMap);
-};
-
-export const getCurrentLang = (): string => currentLang;
-
-export const getCurrentLangMap = (): SystemLangMap => ({ ...langMap });
-
-export const setCurrentLang = (lang?: string | null): void => {
-  const resolvedLang = normalizeLang(lang || getBrowserLang());
-  currentLang = resolvedLang;
-  safeSetItem(I18N_STORAGE_KEYS.ACTIVE_LANG, resolvedLang);
-  syncLocaleSystems(resolvedLang);
-};
+// const fetchZhBaseMap = async (): Promise<void> => {
+//   zhBaseMap = { ...MIN_ZH_I18N_MAP };
+//   try {
+//     const result = await apiI18nQuery('zh-cn');
+//     const parsedMap = parseLangMapResult(result);
+//     if (parsedMap) {
+//       zhBaseMap = {
+//         ...MIN_ZH_I18N_MAP,
+//         ...parsedMap,
+//       };
+//     }
+//   } catch {
+//     // ignore zh fallback fetch errors
+//   }
+//   buildZhValueToKeyMap(zhBaseMap);
+// };
 
 export const syncLangFromUserInfo = async (user?: {
   lang?: string | null;
 }): Promise<void> => {
   if (!user?.lang) return;
   const targetLang = normalizeLang(user.lang);
+  // 只同步本地状态，不再发起网络请求，相信 initI18n 的第一次请求结果
   setCurrentLang(targetLang);
-  const fetched = await fetchAndApplyLangMap(targetLang);
-  if (!fetched) {
-    langMap = { ...getLocalDefaultMapByLang(targetLang) };
-  }
   if (isZhLang(targetLang)) {
     zhBaseMap = { ...MIN_ZH_I18N_MAP };
     buildZhValueToKeyMap(zhBaseMap);
@@ -284,20 +313,17 @@ export const initI18n = async (): Promise<void> => {
     };
   }
 
-  const fetched = await fetchAndApplyLangMap();
+  // 首屏仅发起一次不带参数的请求，由后端自动识别
+  await fetchAndApplyLangMap();
+
   if (isZhLang(getCurrentLang())) {
     zhBaseMap = { ...langMap };
     buildZhValueToKeyMap(zhBaseMap);
   } else {
-    await fetchZhBaseMap();
-  }
-
-  if (!Object.keys(zhValueToKeyMap).length) {
+    // 移除 init 时的额外基准包请求，严格遵守一次请求原则
+    // 如果需要中文反向翻译，使用本地默认提供的中文包作为备选
     buildZhValueToKeyMap(MIN_ZH_I18N_MAP);
   }
 
-  if (!fetched && !cachedMap) {
-    langMap = { ...getLocalDefaultMapByLang(resolvedLang) };
-  }
   initialized = true;
 };

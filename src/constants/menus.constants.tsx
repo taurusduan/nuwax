@@ -113,6 +113,10 @@ export const SETTING_ACTIONS = [
     label: dict('PC.Constants.Menus.themeSwitch'),
   },
   {
+    type: SettingActionEnum.Language_Switch,
+    label: dict('PC.Constants.Menus.languageSwitch'),
+  },
+  {
     type: SettingActionEnum.Usage_Statistics,
     label: dict('PC.Constants.Menus.usageStatistics'),
   },

@@ -11,10 +11,15 @@ import { request } from 'umi';
 
 export async function apiI18nQuery(
   lang?: string,
+  side?: string,
 ): Promise<RequestResponse<SystemLangMap>> {
+  const params: Record<string, string> = {};
+  if (lang) params.lang = lang;
+  if (side) params.side = side;
+
   return request('/api/i18n/query', {
     method: 'GET',
-    params: lang ? { lang } : undefined,
+    params,
     skipErrorHandler: true,
   });
 }
