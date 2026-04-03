@@ -1,4 +1,5 @@
 import { parseLogEntry } from '@/pages/AppDev/utils/devLogParser';
+import { t } from '@/services/i18nRuntime';
 import { PageDevelopPublishTypeEnum } from '@/types/enums/pageDev';
 import type {
   BuildResponse,
@@ -458,15 +459,17 @@ export async function exportProject(projectId: string): Promise<void> {
 
     // 通过浏览器下载文件
     exportFileViaBrowserDownload(linkUrl);
-    message.success('项目导出成功！');
+    message.success(t('PC.Pages.AppDevIndex.exportSuccess'));
   } catch (error) {
     // 改进错误处理，兼容不同的错误格式
     const errorMessage =
       (error as any)?.message ||
       (error as any)?.toString() ||
-      '导出过程中发生未知错误';
+      t('PC.Pages.AppDevIndex.exportUnknownError');
 
-    message.error(`导出失败: ${errorMessage}`);
+    message.error(
+      t('PC.Pages.AppDevIndex.exportFailedWithError', errorMessage),
+    );
   }
 }
 
