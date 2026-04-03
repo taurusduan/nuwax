@@ -8,6 +8,7 @@ import { useUnifiedTheme } from '@/hooks/useUnifiedTheme';
 import ConversationItem from '@/layouts/DynamicMenusLayout/HomeSection/ConversationItem';
 import User from '@/layouts/DynamicMenusLayout/User';
 import Setting from '@/layouts/Setting';
+import { dict } from '@/services/i18nRuntime';
 import { ConversationInfo } from '@/types/interfaces/conversationInfo';
 import {
   EllipsisOutlined,
@@ -220,7 +221,7 @@ const BaseTemplate: React.FC = () => {
           </ConditionRender>
           {/* 收起导航按钮 */}
           <TooltipIcon
-            title="收起导航"
+            title={dict('PC.Pages.OpenApp.collapseNav')}
             className={styles.collapseBtn}
             icon={
               <SvgIcon
@@ -241,7 +242,7 @@ const BaseTemplate: React.FC = () => {
         >
           <span className={styles.newSessionText}>
             <SvgIcon name="icons-nav-new_chat" style={{ fontSize: 16 }} />
-            新建会话
+            {dict('PC.Pages.OpenApp.newConversation')}
           </span>
           <div className={cx('flex', 'items-center', 'gap-4')}>
             <span className={styles.shortcutTag}>
@@ -272,7 +273,7 @@ const BaseTemplate: React.FC = () => {
               <div className={cx(styles['history-title'])}>
                 <span className={cx(styles.title)}>
                   <SvgIcon name="icons-nav-time" style={{ fontSize: 16 }} />
-                  历史会话
+                  {dict('PC.Pages.OpenApp.historyConversation')}
                 </span>
 
                 <ConditionRender condition={conversationList?.length}>
@@ -280,7 +281,7 @@ const BaseTemplate: React.FC = () => {
                     className={cx(styles['more-conversation'])}
                     onClick={handleViewAllHistory}
                   >
-                    查看全部 <RightOutlined />
+                    {dict('PC.Pages.OpenApp.viewAll')} <RightOutlined />
                   </span>
                 </ConditionRender>
               </div>
@@ -311,9 +312,11 @@ const BaseTemplate: React.FC = () => {
                     )
                   : loadingHistoryEnd && (
                       <>
-                        <div className={cx(styles['no-used'])}>右边看👉</div>
                         <div className={cx(styles['no-used'])}>
-                          在会话框中输入指令开始你的第一次会话吧～
+                          {dict('PC.Pages.OpenApp.lookRight')}
+                        </div>
+                        <div className={cx(styles['no-used'])}>
+                          {dict('PC.Pages.OpenApp.firstConversationTip')}
                         </div>
                       </>
                     )}

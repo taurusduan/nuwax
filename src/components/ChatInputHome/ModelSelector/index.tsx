@@ -1,6 +1,7 @@
 import { SvgIcon } from '@/components/base';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
 import { apiAgentConversationModelOptions } from '@/services/agentConfig';
+import { dict } from '@/services/i18nRuntime';
 import { ModelOptionDto } from '@/types/interfaces/agent';
 import { CheckOutlined } from '@ant-design/icons';
 import { Dropdown, MenuProps, Spin } from 'antd';
@@ -121,7 +122,9 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({
           label: (
             <div className={cx(styles['menu-item'])}>
               <Spin size="small" />
-              <span style={{ marginLeft: 8 }}>加载模型中...</span>
+              <span style={{ marginLeft: 8 }}>
+                {dict('PC.Components.ModelSelector.loadingModels')}
+              </span>
             </div>
           ),
           disabled: true,
@@ -135,7 +138,9 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({
           key: 'empty',
           label: (
             <div className={cx(styles['menu-item'])}>
-              <span className={cx(styles['item-name'])}>暂无可用自有模型</span>
+              <span className={cx(styles['item-name'])}>
+                {dict('PC.Components.ModelSelector.noAvailableModels')}
+              </span>
             </div>
           ),
           disabled: true,
@@ -190,7 +195,10 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({
             })}
           >
             <span>
-              {selectedModel?.name || (loading ? '加载中...' : '选择模型')}
+              {selectedModel?.name ||
+                (loading
+                  ? dict('PC.Components.ModelSelector.loading')
+                  : dict('PC.Components.ModelSelector.selectModel'))}
             </span>
             <SvgIcon
               name="icons-common-caret_down"
