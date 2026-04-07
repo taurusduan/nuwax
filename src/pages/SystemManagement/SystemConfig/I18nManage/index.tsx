@@ -1,3 +1,4 @@
+import { DragHandle, Row } from '@/components/base/DraggableTableRow';
 import WorkspaceLayout from '@/components/WorkspaceLayout';
 import {
   apiI18nAllLangList,
@@ -22,14 +23,11 @@ import {
   SortableContext,
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
-import { Button, message, Space, Switch, Table, Tooltip } from 'antd';
+import { Button, Space, Switch, Table, Tooltip } from 'antd';
 import { ColumnType } from 'antd/lib/table';
+import dayjs from 'dayjs';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useRequest } from 'umi';
-import {
-  DragHandle,
-  Row,
-} from '../../MenuPermission/components/DraggableTableRow';
 import AddLangModal from './AddLangModal';
 
 /**
@@ -44,6 +42,14 @@ const I18nManage: React.FC = () => {
   const [defaultLoadingId, setDefaultLoadingId] = useState<number | null>(null);
   // 设置启用状态的loading id
   const [statusLoadingId, setStatusLoadingId] = useState<number | null>(null);
+
+  // 格式化日期时间
+  const formatDateTime = (value?: string) => {
+    if (!value) return '-';
+    const date = dayjs(value);
+    if (!date.isValid()) return '-';
+    return date.format('YYYY-MM-DD HH:mm:ss');
+  };
 
   // 查看语言
   const handleView = (record: I18nLangDto) => {
@@ -101,7 +107,6 @@ const I18nManage: React.FC = () => {
     manual: true,
     debounceWait: 300,
     onSuccess: () => {
-      message.success(dict('PC.Pages.SystemConfigI18n.setLangDefaultSuccess'));
       setDefaultLoadingId(null);
       runQuery();
     },
@@ -235,12 +240,12 @@ const I18nManage: React.FC = () => {
     {
       title: dict('PC.Pages.SystemConfigI18n.columnModified'),
       dataIndex: 'modified',
-      render: (modified) => new Date(modified).toLocaleString(),
+      render: (modified) => formatDateTime(modified),
     },
     {
       title: dict('PC.Pages.SystemConfigI18n.columnCreated'),
       dataIndex: 'created',
-      render: (created) => new Date(created).toLocaleString(),
+      render: (created) => formatDateTime(created),
     },
     {
       title: dict('PC.Pages.SystemConfigI18n.columnAction'),
