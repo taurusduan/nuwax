@@ -2,7 +2,8 @@ import WorkspaceLayout from '@/components/WorkspaceLayout';
 import { apiI18nLangList } from '@/services/i18n';
 import { dict } from '@/services/i18nRuntime';
 import type { I18nLangDto } from '@/types/interfaces/i18n';
-import { Button, Table, Tag } from 'antd';
+import { DeleteOutlined, EditOutlined, EyeOutlined } from '@ant-design/icons';
+import { Button, Space, Table, Tag } from 'antd';
 import { ColumnType } from 'antd/lib/table';
 import React from 'react';
 import { useRequest } from 'umi';
@@ -11,6 +12,21 @@ import { useRequest } from 'umi';
  * 语言列表管理页面
  */
 const I18nManage: React.FC = () => {
+  const handleView = (record: I18nLangDto) => {
+    // TODO: 查看详情逻辑
+    console.log('view', record);
+  };
+
+  const handleEdit = (record: I18nLangDto) => {
+    // TODO: 编辑逻辑
+    console.log('edit', record);
+  };
+
+  const handleDelete = (record: I18nLangDto) => {
+    // TODO: 删除逻辑
+    console.log('delete', record);
+  };
+
   // 查询语言列表
   const {
     data: langList = [],
@@ -67,6 +83,18 @@ const I18nManage: React.FC = () => {
       title: dict('PC.Pages.SystemConfigI18n.columnCreated'),
       dataIndex: 'created',
       render: (created) => new Date(created).toLocaleString(),
+    },
+    {
+      title: dict('PC.Pages.SystemConfigI18n.columnAction'),
+      key: 'actions',
+      width: 140,
+      render: (_value, record) => (
+        <Space size="middle">
+          <EyeOutlined onClick={() => handleView(record)} />
+          <EditOutlined onClick={() => handleEdit(record)} />
+          <DeleteOutlined onClick={() => handleDelete(record)} />
+        </Space>
+      ),
     },
   ];
 

@@ -52,6 +52,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemConfigI18n.columnSort': 'Sort',
   'PC.Pages.SystemConfigI18n.columnModified': 'Modified Time',
   'PC.Pages.SystemConfigI18n.columnCreated': 'Created Time',
+  'PC.Pages.SystemConfigI18n.columnAction': 'Actions',
   'PC.Pages.SystemConfigI18n.defaultYes': 'Yes',
   'PC.Pages.SystemConfigI18n.defaultNo': 'No',
   'PC.Pages.SystemConfigI18n.statusEnabled': 'Enabled',
