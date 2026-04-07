@@ -27,7 +27,7 @@ import { Button, Space, Switch, Table, Tooltip } from 'antd';
 import { ColumnType } from 'antd/lib/table';
 import dayjs from 'dayjs';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { useRequest } from 'umi';
+import { history, useRequest } from 'umi';
 import AddLangModal from './AddLangModal';
 
 /**
@@ -53,8 +53,7 @@ const I18nManage: React.FC = () => {
 
   // 查看语言
   const handleView = (record: I18nLangDto) => {
-    // TODO: 查看详情逻辑
-    console.log('view', record);
+    history.push(`/system/config/lang-content/${record.lang}`);
   };
 
   // 编辑语言
@@ -250,6 +249,7 @@ const I18nManage: React.FC = () => {
     {
       title: dict('PC.Pages.SystemConfigI18n.columnAction'),
       key: 'actions',
+      align: 'center',
       width: 140,
       render: (_value, record) => {
         const isDefaultLang = record.isDefault === I18nLangIsDefaultEnum.Yes;
