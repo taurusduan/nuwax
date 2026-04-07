@@ -24,7 +24,7 @@ import {
 } from '@dnd-kit/sortable';
 import { Button, message, Space, Switch, Table, Tooltip } from 'antd';
 import { ColumnType } from 'antd/lib/table';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useRequest } from 'umi';
 import {
   DragHandle,
@@ -36,7 +36,7 @@ import AddLangModal from './AddLangModal';
  * 语言列表管理页面
  */
 const I18nManage: React.FC = () => {
-  const [addModalOpen, setAddModalOpen] = useState(false);
+  const [addModalOpen, setAddModalOpen] = useState<boolean>(false);
   const [langInfo, setLangInfo] = useState<I18nLangDto | null>(null);
   const [langList, setLangList] = useState<I18nLangDto[]>([]);
   const originalDragDataRef = useRef<I18nLangDto[] | null>(null);
@@ -142,6 +142,18 @@ const I18nManage: React.FC = () => {
         : I18nLangStatusEnum.Disabled,
     });
   };
+
+  // 新增语言默认排序值：优先使用当前最大 sort + 1，否则使用列表长度 + 1
+  const addSortIndex = useMemo(() => {
+    if (!langList.length) return 1;
+    const maxSort = Math.max(
+      ...langList.map((item) =>
+        typeof item.sort === 'number' ? item.sort : 0,
+      ),
+    );
+    if (maxSort > 0) return maxSort + 1;
+    return langList.length + 1;
+  }, [langList]);
 
   // 拖拽排序
   const { run: runUpdateLangSort } = useRequest(apiI18nUpdateLangSort, {
@@ -304,6 +316,7 @@ const I18nManage: React.FC = () => {
       <AddLangModal
         open={addModalOpen}
         langInfo={langInfo}
+        sortIndex={addSortIndex}
         onCancel={() => {
           setAddModalOpen(false);
           setLangInfo(null);
