@@ -9,6 +9,7 @@ import type { UserUpdateParams } from '@/types/interfaces/login';
 import type { RequestResponse } from '@/types/interfaces/request';
 import { request } from 'umi';
 
+// 查询指定语言信息
 export async function apiI18nQuery(
   lang?: string,
   side?: string,
@@ -24,6 +25,7 @@ export async function apiI18nQuery(
   });
 }
 
+// 查询语言列表
 export async function apiI18nLangList(): Promise<
   RequestResponse<I18nLangDto[]>
 > {

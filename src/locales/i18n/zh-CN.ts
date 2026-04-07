@@ -51,6 +51,7 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.SystemConfigI18n.columnStatus': '状态',
   'PC.Pages.SystemConfigI18n.columnSort': '排序',
   'PC.Pages.SystemConfigI18n.columnModified': '更新时间',
+  'PC.Pages.SystemConfigI18n.columnCreated': '创建时间',
   'PC.Pages.SystemConfigI18n.defaultYes': '是',
   'PC.Pages.SystemConfigI18n.defaultNo': '否',
   'PC.Pages.SystemConfigI18n.statusEnabled': '启用',

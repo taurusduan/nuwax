@@ -1,11 +1,42 @@
+/**
+ * 语言状态，0 停用；1 启用
+ */
+export enum I18nLangStatusEnum {
+  /** 停用 */
+  Disabled = 0,
+  /** 启用 */
+  Enabled = 1,
+}
+
+/**
+ * 是否为默认语言，0 否；1 是
+ */
+export enum I18nLangIsDefaultEnum {
+  /** 否 */
+  No = 0,
+  /** 是 */
+  Yes = 1,
+}
+
+/**
+ * 语言信息
+ */
 export interface I18nLangDto {
+  // 语言 ID
   id: number;
+  /** 语言名称，例如 简体中文 */
   name: string;
+  /** 语言标识，中文：zh-cn，英文：en-us 等等 */
   lang: string;
-  status: number;
-  isDefault: number;
+  /** 语言状态，0 停用；1 启用 */
+  status: I18nLangStatusEnum;
+  /** 是否为默认语言，0 否；1 是 */
+  isDefault: I18nLangIsDefaultEnum;
+  /** 排序，值越小越靠前 */
   sort: number;
+  /** 更新时间 */
   modified: string;
+  /** 创建时间 */
   created: string;
 }
 
