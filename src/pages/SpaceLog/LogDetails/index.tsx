@@ -14,6 +14,11 @@ import type {
   ExecuteResultInfo,
 } from '@/types/interfaces/conversationInfo';
 import { LogDetailsProps } from '@/types/interfaces/space';
+import {
+  parseConversationFinalResultJson,
+  safeElapsedMsForDict,
+  stringifyExecutePayloadForPre,
+} from '@/utils/conversationFinalResult';
 import { CopyOutlined } from '@ant-design/icons';
 import { Empty, message } from 'antd';
 import classNames from 'classnames';
@@ -45,32 +50,32 @@ const LogDetails: React.FC<LogDetailsProps> = ({
   // 输出参数
   const [outputData, setOutputData] = useState<string>('');
 
-  // 处理输入、输出参数数据
-  const handleData = (data: string | object) => {
-    return typeof data === 'string' ? data : JSON.stringify(data, null, 2);
-  };
-
   useEffect(() => {
-    if (!executeResult) {
+    const _finalResult = parseConversationFinalResultJson(executeResult);
+    setFinalResult(_finalResult);
+
+    if (!_finalResult) {
+      setExecuteInfo(undefined);
+      setInputData('');
+      setOutputData('');
       return;
     }
-    const _finalResult = JSON.parse(executeResult);
-    setFinalResult(_finalResult);
-    // 执行结果列表
-    const result = _finalResult?.componentExecuteResults || [];
-    if (result?.length > 0) {
-      // 当前执行结果
+
+    const result = _finalResult.componentExecuteResults || [];
+    if (result.length > 0) {
       const _executeInfo = result[currentIndex];
       setExecuteInfo(_executeInfo);
-      // 当前执行结果不为空
-      if (!!_executeInfo) {
-        // 输入参数
-        let _inputData = handleData(_executeInfo.input);
-        setInputData(_inputData);
-        // 输出参数
-        const _outputData = handleData(_executeInfo.data);
-        setOutputData(_outputData);
+      if (_executeInfo) {
+        setInputData(stringifyExecutePayloadForPre(_executeInfo.input));
+        setOutputData(stringifyExecutePayloadForPre(_executeInfo.data));
+      } else {
+        setInputData('');
+        setOutputData('');
       }
+    } else {
+      setExecuteInfo(undefined);
+      setInputData('');
+      setOutputData('');
     }
   }, [executeResult, currentIndex]);
 
@@ -126,11 +131,11 @@ const LogDetails: React.FC<LogDetailsProps> = ({
                 <span>
                   {dict(
                     'PC.Pages.SpaceLog.LogDetails.elapsedTime',
-                    finalResult.endTime - finalResult.startTime,
+                    safeElapsedMsForDict(finalResult),
                   )}
                 </span>
                 <span className={cx(styles['vertical-line'])} />
-                <span>{finalResult.totalTokens} Tokens</span>
+                <span>{finalResult.totalTokens ?? '--'} Tokens</span>
               </div>
             </div>
             <div className={cx('flex', styles.box)}>

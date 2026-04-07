@@ -42,6 +42,7 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.Setting.confirmTitle': '确认切换语言',
   'PC.Pages.Setting.confirmContent':
     '切换语言将更新系统所有界面文字，是否确认？',
+  'PC.Pages.Setting.alreadyDefault': '当前已选中该语言',
   'PC.Pages.Setting.saveSuccess': '语言设置更新成功',
   'PC.Pages.Setting.bindPending': '待绑定',
   'PC.Pages.SystemConfigI18n.manageTitle': '多语言管理',
@@ -890,6 +891,10 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.Chat.openAgentDesktop': '打开智能体电脑',
   'PC.Pages.Chat.loadingHistoryConversation': '正在加载历史会话',
   'PC.Pages.Chat.agentExecutingWait': '智能体正在执行，请稍等',
+  'PC.Pages.Chat.taskExecuting': '任务执行中',
+  'PC.Pages.Chat.leaveTaskWarning':
+    '当前有任务正在执行，离开页面可能会中断任务，确定要离开吗？',
+  'PC.Pages.Chat.confirmLeave': '仍要离开',
   'PC.Pages.Chat.noAgentPermission': '您无该智能体权限',
   'PC.Pages.Chat.copyTemplate': '复制模板',
   'PC.Toast.UploadAvatar.invalidType': '请上传 JPG、JPEG 或 PNG 图片文件',
@@ -5273,6 +5278,7 @@ export const ZH_CN: SystemLangMap = {
   'PC.Components.ModelSelector.noAvailableModels': '暂无可用自有模型',
   'PC.Components.ModelSelector.loading': '加载中...',
   'PC.Components.ModelSelector.selectModel': '选择模型',
+  'PC.Components.ModelSelector.addModel': '模型',
 
   // Pages - SystemManagement DataPermissionModal tabs
   'PC.Pages.SystemMenuDataPermissionModal.tabApiPermission': 'API权限',

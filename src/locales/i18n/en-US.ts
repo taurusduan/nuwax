@@ -42,6 +42,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.Setting.confirmTitle': 'Confirm Language Switch',
   'PC.Pages.Setting.confirmContent':
     'Switching languages will update all UI text. Are you sure?',
+  'PC.Pages.Setting.alreadyDefault':
+    'The current language is already selected.',
   'PC.Pages.Setting.saveSuccess': 'Language setting updated successfully',
   'PC.Pages.Setting.bindPending': 'Pending binding',
   'PC.Pages.SystemConfigI18n.manageTitle': 'Language Management',
@@ -1002,6 +1004,10 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.Chat.openAgentDesktop': 'Open agent desktop',
   'PC.Pages.Chat.loadingHistoryConversation': 'Loading conversation history',
   'PC.Pages.Chat.agentExecutingWait': 'Agent is executing, please wait',
+  'PC.Pages.Chat.taskExecuting': 'Task in progress',
+  'PC.Pages.Chat.leaveTaskWarning':
+    'A task is still running. Leaving this page may interrupt it. Are you sure you want to leave?',
+  'PC.Pages.Chat.confirmLeave': 'Leave anyway',
   'PC.Pages.Chat.noAgentPermission':
     'You do not have permission for this agent',
   'PC.Pages.Chat.copyTemplate': 'Copy template',
@@ -5804,6 +5810,7 @@ export const EN_US: SystemLangMap = {
   'PC.Components.ModelSelector.noAvailableModels': 'No available models',
   'PC.Components.ModelSelector.loading': 'Loading...',
   'PC.Components.ModelSelector.selectModel': 'Select Model',
+  'PC.Components.ModelSelector.addModel': 'Model',
 
   // Pages - SystemManagement DataPermissionModal tabs
   'PC.Pages.SystemMenuDataPermissionModal.tabApiPermission': 'API Permission',
