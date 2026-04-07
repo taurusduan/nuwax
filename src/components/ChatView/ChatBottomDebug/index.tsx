@@ -5,6 +5,7 @@ import { dict } from '@/services/i18nRuntime';
 import { TooltipTitleTypeEnum } from '@/types/enums/common';
 import { EditAgentShowType } from '@/types/enums/space';
 import { ChatBottomDebugProps } from '@/types/interfaces/common';
+import { formatFinalResultElapsedSeconds } from '@/utils/conversationFinalResult';
 import classNames from 'classnames';
 import React, { useMemo } from 'react';
 import { useModel } from 'umi';
@@ -27,15 +28,10 @@ const ChatBottomDebug: React.FC<ChatBottomDebugProps> = ({ messageInfo }) => {
     handleDebug(messageInfo);
   };
 
-  // 运行时间
-  const runTime = useMemo(() => {
-    if (!!finalResult) {
-      return ((finalResult?.endTime - finalResult?.startTime) / 1000).toFixed(
-        1,
-      );
-    }
-    return 0;
-  }, [finalResult]);
+  const runTime = useMemo(
+    () => formatFinalResultElapsedSeconds(finalResult ?? null),
+    [finalResult],
+  );
 
   return (
     <div
