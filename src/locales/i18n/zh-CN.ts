@@ -42,6 +42,7 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.Setting.confirmTitle': '确认切换语言',
   'PC.Pages.Setting.confirmContent':
     '切换语言将更新系统所有界面文字，是否确认？',
+  'PC.Pages.Setting.alreadyDefault': '当前已选中该语言',
   'PC.Pages.Setting.saveSuccess': '语言设置更新成功',
   'PC.Pages.Setting.bindPending': '待绑定',
   'PC.Pages.SystemConfigI18n.manageTitle': '多语言管理',

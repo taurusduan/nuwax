@@ -42,6 +42,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.Setting.confirmTitle': 'Confirm Language Switch',
   'PC.Pages.Setting.confirmContent':
     'Switching languages will update all UI text. Are you sure?',
+  'PC.Pages.Setting.alreadyDefault':
+    'The current language is already selected.',
   'PC.Pages.Setting.saveSuccess': 'Language setting updated successfully',
   'PC.Pages.Setting.bindPending': 'Pending binding',
   'PC.Pages.SystemConfigI18n.manageTitle': 'Language Management',

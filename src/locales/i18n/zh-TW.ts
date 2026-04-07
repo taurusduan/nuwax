@@ -34,6 +34,8 @@ export const ZH_TW: SystemLangMap = {
   'PC.Pages.Setting.email': '郵箱',
   'PC.Pages.Setting.dynamicCode': '動態口令',
   'PC.Pages.Setting.expiresAt': '{0}過期',
+  'PC.Pages.Setting.alreadyDefault': '當前已選中該語言',
+  'PC.Pages.Setting.saveSuccess': '語言設置更新成功',
   'PC.Pages.Setting.language': '語言',
   'PC.Pages.Setting.selectLanguage': '請選擇語言',
   'PC.Pages.Setting.bindPending': '待綁定',
