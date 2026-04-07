@@ -29,7 +29,7 @@ export async function apiI18nQuery(
   });
 }
 
-// 查询语言列表
+// 查询语言列表 (用户端)
 export async function apiI18nLangList(): Promise<
   RequestResponse<I18nLangDto[]>
 > {

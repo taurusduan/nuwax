@@ -1,7 +1,7 @@
 import WorkspaceLayout from '@/components/WorkspaceLayout';
 import {
+  apiI18nAllLangList,
   apiI18nDeleteLang,
-  apiI18nLangList,
   apiI18nLangUpdate,
   apiI18nSetLangDefault,
   apiI18nUpdateLangSort,
@@ -64,11 +64,11 @@ const I18nManage: React.FC = () => {
   };
 
   // 查询语言列表
-  const { loading, run: runQuery } = useRequest(apiI18nLangList, {
+  const { loading, run: runQuery } = useRequest(apiI18nAllLangList, {
     manual: true,
     onSuccess: (list: I18nLangDto[]) => {
-      const nextList = list || [];
-      setLangList(nextList);
+      const _langList = list || [];
+      setLangList(_langList);
     },
   });
 
