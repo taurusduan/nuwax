@@ -146,7 +146,7 @@ const AddLangModal: React.FC<AddLangModalProps> = ({
           rules={[
             {
               required: true,
-              message: dict('PC.Common.Form.pleaseInput') || '请输入语言名称',
+              message: dict('PC.Pages.SystemConfigI18n.inputLangName'),
             },
           ]}
         >
@@ -158,7 +158,7 @@ const AddLangModal: React.FC<AddLangModalProps> = ({
           rules={[
             {
               required: true,
-              message: dict('PC.Common.Form.pleaseInput') || '请输入语言标识',
+              message: dict('PC.Pages.SystemConfigI18n.inputLangCode'),
             },
           ]}
           tooltip="code格式：语言代码 - 国家代码"

@@ -56,6 +56,8 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.SystemConfigI18n.columnAction': '操作',
   'PC.Pages.SystemConfigI18n.addLang': '新增语言',
   'PC.Pages.SystemConfigI18n.editLang': '编辑语言',
+  'PC.Pages.SystemConfigI18n.inputLangName': '请输入语言名称',
+  'PC.Pages.SystemConfigI18n.inputLangCode': '请输入语言标识',
   'PC.Pages.SystemConfigI18n.defaultYes': '是',
   'PC.Pages.SystemConfigI18n.defaultNo': '否',
   'PC.Pages.SystemConfigI18n.statusEnabled': '启用',
