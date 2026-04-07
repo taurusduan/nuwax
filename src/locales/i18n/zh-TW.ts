@@ -46,6 +46,8 @@ export const ZH_TW: SystemLangMap = {
   'PC.Pages.SystemConfigI18n.columnModified': '更新時間',
   'PC.Pages.SystemConfigI18n.columnCreated': '創建時間',
   'PC.Pages.SystemConfigI18n.columnAction': '操作',
+  'PC.Pages.SystemConfigI18n.addLang': '新增語言',
+  'PC.Pages.SystemConfigI18n.editLang': '編輯語言',
   'PC.Pages.SystemConfigI18n.defaultYes': '是',
   'PC.Pages.SystemConfigI18n.defaultNo': '否',
   'PC.Pages.SystemConfigI18n.statusEnabled': '啟用',
