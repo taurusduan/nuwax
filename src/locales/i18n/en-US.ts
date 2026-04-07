@@ -5806,6 +5806,7 @@ export const EN_US: SystemLangMap = {
   'PC.Components.ModelSelector.noAvailableModels': 'No available models',
   'PC.Components.ModelSelector.loading': 'Loading...',
   'PC.Components.ModelSelector.selectModel': 'Select Model',
+  'PC.Components.ModelSelector.addModel': 'Model',
 
   // Pages - SystemManagement DataPermissionModal tabs
   'PC.Pages.SystemMenuDataPermissionModal.tabApiPermission': 'API Permission',

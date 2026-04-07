@@ -3,8 +3,13 @@ import { SUCCESS_CODE } from '@/constants/codes.constants';
 import { apiAgentConversationModelOptions } from '@/services/agentConfig';
 import { dict } from '@/services/i18nRuntime';
 import { ModelOptionDto } from '@/types/interfaces/agent';
-import { CheckOutlined } from '@ant-design/icons';
-import { Dropdown, MenuProps, Spin } from 'antd';
+import {
+  CheckOutlined,
+  DeleteOutlined,
+  EditOutlined,
+  PlusOutlined,
+} from '@ant-design/icons';
+import { Button, Dropdown, MenuProps, Spin } from 'antd';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -113,6 +118,11 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({
     [onModelSelect, selectedModelId],
   );
 
+  // 处理添加模型
+  const handleAddModel = useCallback(() => {
+    console.log('Add model clicked');
+  }, []);
+
   // 构建菜单项
   const menuItems: MenuProps['items'] = useMemo(() => {
     if (loading) {
@@ -150,6 +160,7 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({
 
     return modelList.map((model) => {
       const isSelected = model.id === selectedModelId;
+      const isSpaceModel = model.spaceId !== -1;
       return {
         key: model.id,
         label: (
@@ -162,6 +173,24 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({
                 </span>
               )}
             </div>
+            {isSpaceModel && (
+              <div className={cx(styles['item-actions'])}>
+                <EditOutlined
+                  className={cx(styles['action-icon'])}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    console.log('Edit model:', model.id);
+                  }}
+                />
+                <DeleteOutlined
+                  className={cx(styles['action-icon'])}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    console.log('Delete model:', model.id);
+                  }}
+                />
+              </div>
+            )}
             {isSelected && (
               <CheckOutlined className={cx(styles['item-check'])} />
             )}
@@ -187,6 +216,21 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({
         open={open}
         onOpenChange={setOpen}
         overlayClassName={styles['model-menu']}
+        popupRender={(menu) => (
+          <div className={styles['model-dropdown-container']}>
+            {menu}
+            <div className={styles['add-button-wrap']}>
+              <Button
+                block
+                type="dashed"
+                icon={<PlusOutlined />}
+                onClick={handleAddModel}
+              >
+                {dict('PC.Components.ModelSelector.addModel')}
+              </Button>
+            </div>
+          </div>
+        )}
       >
         <span className={cx(styles['model-selector'])}>
           <span

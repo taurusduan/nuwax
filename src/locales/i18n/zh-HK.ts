@@ -4723,6 +4723,13 @@ export const ZH_HK: SystemLangMap = {
   // Components - ModelBox
   'PC.Components.ModelBox.search': '搜索',
 
+  // Components - ModelSelector
+  'PC.Components.ModelSelector.loadingModels': '加載模型中...',
+  'PC.Components.ModelSelector.noAvailableModels': '暫無可用自有模型',
+  'PC.Components.ModelSelector.loading': '加載中...',
+  'PC.Components.ModelSelector.selectModel': '選擇模型',
+  'PC.Components.ModelSelector.addModel': '模型',
+
   // Components - SkillCopy
   'PC.Components.SkillCopy.editParams': '編輯參數',
 

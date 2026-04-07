@@ -5274,6 +5274,7 @@ export const ZH_CN: SystemLangMap = {
   'PC.Components.ModelSelector.noAvailableModels': '暂无可用自有模型',
   'PC.Components.ModelSelector.loading': '加载中...',
   'PC.Components.ModelSelector.selectModel': '选择模型',
+  'PC.Components.ModelSelector.addModel': '模型',
 
   // Pages - SystemManagement DataPermissionModal tabs
   'PC.Pages.SystemMenuDataPermissionModal.tabApiPermission': 'API权限',
