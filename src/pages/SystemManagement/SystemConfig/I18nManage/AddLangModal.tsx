@@ -124,14 +124,14 @@ const AddLangModal: React.FC<AddLangModalProps> = ({
     <Modal
       title={
         isEdit
-          ? dict('PC.Pages.SystemConfigI18n.editLang') || '编辑语言'
+          ? dict('PC.Pages.SystemConfigI18n.editLang')
           : dict('PC.Pages.SystemConfigI18n.addLang')
       }
       open={open}
       onCancel={onCancel}
       onOk={handleOk}
-      okText={dict('PC.Common.Global.save') || '保存'}
-      cancelText={dict('PC.Common.Global.cancel') || '取消'}
+      okText={dict('PC.Common.Global.confirm')}
+      cancelText={dict('PC.Common.Global.cancel')}
       confirmLoading={addingLang || updatingLang}
       destroyOnHidden
     >
