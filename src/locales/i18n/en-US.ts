@@ -998,6 +998,10 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.Chat.openAgentDesktop': 'Open agent desktop',
   'PC.Pages.Chat.loadingHistoryConversation': 'Loading conversation history',
   'PC.Pages.Chat.agentExecutingWait': 'Agent is executing, please wait',
+  'PC.Pages.Chat.taskExecuting': 'Task in progress',
+  'PC.Pages.Chat.leaveTaskWarning':
+    'A task is still running. Leaving this page may interrupt it. Are you sure you want to leave?',
+  'PC.Pages.Chat.confirmLeave': 'Leave anyway',
   'PC.Pages.Chat.noAgentPermission':
     'You do not have permission for this agent',
   'PC.Pages.Chat.copyTemplate': 'Copy template',

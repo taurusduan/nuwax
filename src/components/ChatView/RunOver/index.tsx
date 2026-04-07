@@ -2,6 +2,10 @@ import { dict } from '@/services/i18nRuntime';
 import { MessageStatusEnum, ProcessingEnum } from '@/types/enums/common';
 import type { RunOverProps } from '@/types/interfaces/common';
 import {
+  formatFinalResultElapsedSeconds,
+  formatProcessingStepDurationLabel,
+} from '@/utils/conversationFinalResult';
+import {
   DownOutlined,
   LoadingOutlined,
   SolutionOutlined,
@@ -29,32 +33,10 @@ const RunOver: React.FC<RunOverProps> = ({
   // 是否正在思考
   const isThinking = hasThinking && !isThinkingFinished;
 
-  // 运行时间
-  const runTime = useMemo(() => {
-    if (finalResult) {
-      return ((finalResult?.endTime - finalResult?.startTime) / 1000).toFixed(
-        1,
-      );
-    }
-    return 0;
-  }, [finalResult]);
-
-  const getTime = (endTime: number, startTime: number) => {
-    // Safety check: ensure both timestamps are valid numbers
-    if (!endTime || !startTime || endTime <= 0 || startTime <= 0) {
-      return '';
-    }
-    const time = endTime - startTime;
-    // Handle negative time (invalid data)
-    if (time < 0) {
-      return '';
-    }
-    if (time < 1000) {
-      return `${time}ms`;
-    } else {
-      return `${(time / 1000).toFixed(1)}s`;
-    }
-  };
+  const runTime = useMemo(
+    () => formatFinalResultElapsedSeconds(finalResult ?? null),
+    [finalResult],
+  );
 
   // 查询过程信息 - 最后一个
   const lastProcessInfo = useMemo(() => {
@@ -86,7 +68,13 @@ const RunOver: React.FC<RunOverProps> = ({
             <span className={cx('flex-1', 'text-ellipsis')}>
               {dict('PC.Components.RunOver.called', info.name)}
             </span>
-            <span>{getTime(info.result.endTime, info.result.startTime)}</span>
+            {/* result 在流式推送或异常数据时可能为 null，必须可选链避免读取 null.endTime */}
+            <span>
+              {formatProcessingStepDurationLabel(
+                info.result?.endTime,
+                info.result?.startTime,
+              )}
+            </span>
           </div>
         ))}
 
