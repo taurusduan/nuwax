@@ -39,8 +39,8 @@ import {
   type UpdateResourceParams,
   type UpdateResourceSortItem,
 } from '../types/permission-resources';
-import ResourceFormModal from './components/ResourceFormModal';
 import styles from './index.less';
+import ResourceFormModal from './ResourceFormModal';
 
 const cx = classNames.bind(styles);
 
@@ -217,7 +217,7 @@ const PermissionResources: React.FC = () => {
       t('PC.Pages.SystemPermissionResources.deleteResourceTitle'),
       t(
         'PC.Pages.SystemPermissionResources.deleteResourceConfirm',
-        resource.name,
+        resource.name || '',
       ),
       () => {
         runDelete(resource?.id);

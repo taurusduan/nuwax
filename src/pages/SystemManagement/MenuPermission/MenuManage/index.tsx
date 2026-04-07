@@ -37,8 +37,8 @@ import {
   type UpdateMenuParams,
   type UpdateMenuSortItem,
 } from '../types/menu-manage';
-import MenuFormModal from './components/MenuFormModal';
 import styles from './index.less';
+import MenuFormModal from './MenuFormModal';
 
 const cx = classNames.bind(styles);
 

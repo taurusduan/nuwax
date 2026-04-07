@@ -46,8 +46,8 @@ import {
   type UpdateRoleParams,
   type UpdateRoleSortItem,
 } from '../types/role-manage';
-import RoleFormModal from './components/RoleFormModal';
 import styles from './index.less';
+import RoleFormModal from './RoleFormModal';
 
 const cx = classNames.bind(styles);
 
