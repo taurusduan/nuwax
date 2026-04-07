@@ -880,6 +880,10 @@ export const ZH_HK: SystemLangMap = {
   'PC.Pages.Chat.openAgentDesktop': '打開智能體電腦',
   'PC.Pages.Chat.loadingHistoryConversation': '正在加載歷史會話',
   'PC.Pages.Chat.agentExecutingWait': '智能體正在執行，請稍等',
+  'PC.Pages.Chat.taskExecuting': '任務執行中',
+  'PC.Pages.Chat.leaveTaskWarning':
+    '目前有任務正在執行，離開頁面可能會中斷任務，確定要離開嗎？',
+  'PC.Pages.Chat.confirmLeave': '仍要離開',
   'PC.Pages.Chat.noAgentPermission': '您無該智能體權限',
   'PC.Pages.Chat.copyTemplate': '複製模板',
   'PC.Toast.UploadAvatar.invalidType': '請上傳 JPG、JPEG 或 PNG 圖片文件',

@@ -10,6 +10,7 @@ import { dict } from '@/services/i18nRuntime';
 import { AgentComponentTypeEnum } from '@/types/enums/agent';
 import type { DebugDetailsProps } from '@/types/interfaces/agentConfig';
 import type { ExecuteResultInfo } from '@/types/interfaces/conversationInfo';
+import { safeElapsedMsForDict } from '@/utils/conversationFinalResult';
 import { CopyOutlined } from '@ant-design/icons';
 import { Empty, message } from 'antd';
 import classNames from 'classnames';
@@ -113,11 +114,11 @@ const DebugDetails: React.FC<DebugDetailsProps> = ({ visible, onClose }) => {
                 <span>
                   {dict(
                     'PC.Pages.EditAgent.DebugDetails.elapsedTime',
-                    finalResult.endTime - finalResult.startTime,
+                    safeElapsedMsForDict(finalResult),
                   )}
                 </span>
                 <span className={cx(styles['vertical-line'])} />
-                <span>{finalResult.totalTokens} Tokens</span>
+                <span>{finalResult.totalTokens ?? '--'} Tokens</span>
               </div>
             </div>
             <div className={cx('flex', styles.box)}>
