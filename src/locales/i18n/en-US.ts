@@ -4067,6 +4067,7 @@ export const EN_US: SystemLangMap = {
     'Skill updated successfully',
   'PC.Pages.SpaceSkillManage.CreateSkill.createSkill': 'Create Skill',
   'PC.Pages.SpaceSkillManage.CreateSkill.updateSkill': 'Update Skill',
+  'PC.Pages.SpaceSkillManage.CreateSkill.iconLabel': 'Icon',
   'PC.Pages.SpaceSkillManage.CreateSkill.nameLabel': 'Name',
   'PC.Pages.SpaceSkillManage.CreateSkill.pleaseInputSkillName':
     'Please enter skill name',

@@ -3659,6 +3659,7 @@ export const ZH_CN: SystemLangMap = {
     '技能更新成功',
   'PC.Pages.SpaceSkillManage.CreateSkill.createSkill': '创建技能',
   'PC.Pages.SpaceSkillManage.CreateSkill.updateSkill': '更新技能',
+  'PC.Pages.SpaceSkillManage.CreateSkill.iconLabel': '图标',
   'PC.Pages.SpaceSkillManage.CreateSkill.nameLabel': '名称',
   'PC.Pages.SpaceSkillManage.CreateSkill.pleaseInputSkillName':
     '请输入技能名称',
