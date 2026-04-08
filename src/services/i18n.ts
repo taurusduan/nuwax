@@ -162,6 +162,18 @@ export async function apiI18nConfigTranslateAll(
 }
 
 /**
+ * 批量删除多语言配置
+ */
+export async function apiI18nConfigBatchDelete(
+  data: I18nSlideLangInfo[],
+): Promise<RequestResponse<I18nSlideLangInfo>> {
+  return request('/api/system/i18n/config/batchDelete', {
+    method: 'POST',
+    data,
+  });
+}
+
+/**
  * 批量新增或更新多语言配置
  */
 export async function apiI18nConfigBatchAddOrUpdate(

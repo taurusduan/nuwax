@@ -4,6 +4,7 @@ import { XProTable } from '@/components/ProComponents';
 import WorkspaceLayout from '@/components/WorkspaceLayout';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
 import {
+  apiI18nConfigBatchDelete,
   apiI18nConfigList,
   apiI18nConfigTranslate,
   apiI18nConfigTranslateAll,
@@ -11,7 +12,7 @@ import {
 import type { I18nSlideLangInfo } from '@/types/interfaces/i18n';
 import type { Page } from '@/types/interfaces/request';
 import { modalConfirm } from '@/utils/ant-custom';
-import { EditOutlined } from '@ant-design/icons';
+import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
 import type {
   ActionType,
   FormInstance,
@@ -109,6 +110,16 @@ const LangContent: React.FC = () => {
     );
   };
 
+  // 删除单个键值对（二次确认）
+  const handleDeleteWithConfirm = (record: I18nSlideLangInfo) => {
+    modalConfirm('确认删除', '是否删除当前键值对？', async () => {
+      await apiI18nConfigBatchDelete([record]);
+      message.success('删除成功');
+      actionRef.current?.reload();
+      return Promise.resolve();
+    });
+  };
+
   // 列配置（使用表格内置搜索）
   const columns: ProColumns<I18nSlideLangInfo>[] = [
     {
@@ -184,7 +195,11 @@ const LangContent: React.FC = () => {
               />
             }
           ></TooltipIcon>
-          {/* <Button type="text" icon={<DeleteOutlined />} /> */}
+          <Button
+            type="text"
+            icon={<DeleteOutlined />}
+            onClick={() => handleDeleteWithConfirm(record)}
+          />
         </Space>
       ),
     },
