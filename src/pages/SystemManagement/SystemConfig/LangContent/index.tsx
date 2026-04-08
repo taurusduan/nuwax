@@ -227,14 +227,6 @@ const LangContent: React.FC = () => {
         rowKey={(record) => `${record.key || ''}-${record.lang || ''}`}
         columns={columns}
         request={request}
-        pagination={{
-          pageSize: 15,
-          showSizeChanger: true,
-          pageSizeOptions: [15, 30, 50, 100],
-        }}
-        showIndex={false}
-        options={false}
-        toolBarRender={false}
       />
 
       {/* 添加键值对弹窗 */}
