@@ -26,7 +26,7 @@ interface AddKeyValueFormValues {
 }
 
 /**
- * 添加键值对弹窗
+ * 新增或编辑键值对弹窗
  */
 const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
   open,
@@ -81,7 +81,7 @@ const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
 
   return (
     <Modal
-      title={isEdit ? '编辑键值对' : '添加键值对'}
+      title={isEdit ? '编辑键值对' : '新增键值对'}
       open={open}
       onCancel={onCancel}
       onOk={handleOk}

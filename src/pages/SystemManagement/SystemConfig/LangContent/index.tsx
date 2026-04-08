@@ -3,15 +3,16 @@ import TooltipIcon from '@/components/custom/TooltipIcon';
 import { XProTable } from '@/components/ProComponents';
 import WorkspaceLayout from '@/components/WorkspaceLayout';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
+import { ACCESS_TOKEN } from '@/constants/home.constants';
 import {
   apiI18nConfigBatchDelete,
   apiI18nConfigList,
   apiI18nConfigTranslate,
-  apiI18nConfigTranslateAll,
 } from '@/services/i18n';
 import type { I18nSlideLangInfo } from '@/types/interfaces/i18n';
 import type { Page } from '@/types/interfaces/request';
 import { modalConfirm } from '@/utils/ant-custom';
+import { createSSEConnection } from '@/utils/fetchEventSourceConversationInfo';
 import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
 import type {
   ActionType,
@@ -19,8 +20,8 @@ import type {
   ProColumns,
 } from '@ant-design/pro-components';
 import { Button, Space, Tag, message } from 'antd';
-import React, { useRef, useState } from 'react';
-import { history, useParams } from 'umi';
+import React, { useEffect, useRef, useState } from 'react';
+import { history, useParams, useSearchParams } from 'umi';
 import AddKeyValueModal from './AddKeyValueModal';
 import BatchKeyValueModal from './BatchKeyValueModal';
 import styles from './index.less';
@@ -31,6 +32,9 @@ import styles from './index.less';
 const LangContent: React.FC = () => {
   // ====================== 语言 ======================
   const { lang } = useParams();
+  const [searchParams] = useSearchParams();
+  // 默认语言, 如果存在，则翻译时需要将默认语言的值翻译成当前语言的值
+  const defaultLang = searchParams.get('defaultLang') || '';
 
   // ====================== 添加键值对弹窗 ======================
   const [addModalOpen, setAddModalOpen] = useState<boolean>(false);
@@ -46,12 +50,22 @@ const LangContent: React.FC = () => {
   // 翻译全部 loading 状态
   const [translateAllLoading, setTranslateAllLoading] =
     useState<boolean>(false);
+  // 翻译全部 SSE 连接中断函数
+  const translateAllAbortRef = useRef<(() => void) | null>(null);
 
   // ====================== 批量新增或更新键值对弹窗 ======================
   const [batchModalOpen, setBatchModalOpen] = useState<boolean>(false);
 
   // ====================== 多语言端 ======================
   const side = String(history.location.query?.side || 'PC');
+
+  // 组件卸载时主动中断 SSE，避免内存泄漏和状态更新异常
+  useEffect(() => {
+    return () => {
+      translateAllAbortRef.current?.();
+      translateAllAbortRef.current = null;
+    };
+  }, []);
 
   // 打开添加键值对弹窗
   const handleOpenAddModal = () => {
@@ -90,19 +104,43 @@ const LangContent: React.FC = () => {
   // 翻译全部
   const handleTranslateAll = async () => {
     setTranslateAllLoading(true);
-    try {
-      await apiI18nConfigTranslateAll(lang);
-      message.success('翻译成功');
-      actionRef.current?.reload();
-    } finally {
-      setTranslateAllLoading(false);
-    }
+    const token = localStorage.getItem(ACCESS_TOKEN) ?? '';
+
+    // 避免重复点击导致并发 SSE
+    translateAllAbortRef.current?.();
+
+    translateAllAbortRef.current = createSSEConnection({
+      url: `${process.env.BASE_URL}/api/system/i18n/config/translateAll?sourceLang=${defaultLang}&targetLang=${lang}`,
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: 'application/json, text/plain, */* ',
+      },
+      onMessage: (res: any) => {
+        console.log('res', res);
+        // message.success('翻译成功');
+        // actionRef.current?.reload();
+      },
+      onClose: () => {
+        translateAllAbortRef.current = null;
+        setTranslateAllLoading(false);
+      },
+      onError: () => {
+        translateAllAbortRef.current = null;
+        setTranslateAllLoading(false);
+      },
+    });
   };
 
+  // 翻译全部（二次确认）
   const handleTranslateAllWithConfirm = () => {
     modalConfirm(
-      '确认翻译全部',
-      '翻译将会消耗您的token，确认全部翻译吗？',
+      '翻译全部',
+      '翻译将会消耗您的token，您确认将默认语言(' +
+        defaultLang +
+        ')全部的键值对翻译成当前语言(' +
+        lang +
+        ')吗？',
       async () => {
         await handleTranslateAll();
         return Promise.resolve();
@@ -177,24 +215,26 @@ const LangContent: React.FC = () => {
             icon={<EditOutlined />}
             onClick={() => handleEdit(record)}
           />
-          <TooltipIcon
-            title={record.value ? '翻译' : '文本内容为空，不能翻译'}
-            icon={
-              <Button
-                type="text"
-                disabled={!record.value}
-                icon={
-                  <SvgIcon
-                    name="icons-common-icon_translate"
-                    className={styles['lang-content-translate-icon']}
-                    style={{ fontSize: 16 }}
-                  />
-                }
-                loading={translateLoadingMap[record.key] || false}
-                onClick={() => handleTranslate(record)}
-              />
-            }
-          ></TooltipIcon>
+          {defaultLang && (
+            <TooltipIcon
+              title={record.value ? '翻译' : '文本内容为空，不能翻译'}
+              icon={
+                <Button
+                  type="text"
+                  disabled={!record.value}
+                  icon={
+                    <SvgIcon
+                      name="icons-common-icon_translate"
+                      className={styles['lang-content-translate-icon']}
+                      style={{ fontSize: 16 }}
+                    />
+                  }
+                  loading={translateLoadingMap[record.key] || false}
+                  onClick={() => handleTranslate(record)}
+                />
+              }
+            ></TooltipIcon>
+          )}
           <Button
             type="text"
             icon={<DeleteOutlined />}
@@ -243,17 +283,19 @@ const LangContent: React.FC = () => {
       back={true}
       rightSlot={
         <>
-          <Button
-            loading={translateAllLoading}
-            onClick={handleTranslateAllWithConfirm}
-          >
-            翻译全部
-          </Button>
+          {defaultLang && (
+            <Button
+              loading={translateAllLoading}
+              onClick={handleTranslateAllWithConfirm}
+            >
+              翻译全部
+            </Button>
+          )}
           <Button type="primary" onClick={() => setBatchModalOpen(true)}>
-            批量新增或更新键值对
+            批量新增或更新
           </Button>
           <Button type="primary" onClick={handleOpenAddModal}>
-            添加键值对
+            新增
           </Button>
         </>
       }
@@ -266,7 +308,7 @@ const LangContent: React.FC = () => {
         request={request}
       />
 
-      {/* 添加键值对弹窗 */}
+      {/* 新增或编辑键值对弹窗 */}
       <AddKeyValueModal
         open={addModalOpen}
         currentItem={currentItem}

@@ -151,12 +151,14 @@ export async function apiI18nConfigTranslate(
  * 翻译所有key
  */
 export async function apiI18nConfigTranslateAll(
-  lang: string,
-): Promise<RequestResponse<I18nSlideLangInfo>> {
+  sourceLang: string,
+  targetLang: string,
+): Promise<RequestResponse<null>> {
   return request('/api/system/i18n/config/translateAll', {
     method: 'POST',
     params: {
-      lang,
+      sourceLang,
+      targetLang,
     },
   });
 }
