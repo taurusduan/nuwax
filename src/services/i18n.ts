@@ -4,6 +4,7 @@ import type {
   I18nAddLangParams,
   I18nClient,
   I18nConfigBatchAddOrUpdateParams,
+  I18nConfigTranslateParams,
   I18nLangDto,
   I18nSlideLangInfo,
   I18nUpdateLangParams,
@@ -139,12 +140,16 @@ export async function apiI18nLangAdd(
  * 翻译单个key
  */
 export async function apiI18nConfigTranslate(
-  data: I18nSlideLangInfo,
+  data: I18nConfigTranslateParams,
 ): Promise<RequestResponse<null>> {
-  return request('/api/system/i18n/config/translateKey', {
-    method: 'POST',
-    data,
-  });
+  const { sourceLang, targetLang, i18nConfigDto } = data;
+  return request(
+    `/api/system/i18n/config/translateKey?sourceLang=${sourceLang}&targetLang=${targetLang}`,
+    {
+      method: 'POST',
+      data: i18nConfigDto,
+    },
+  );
 }
 
 /**

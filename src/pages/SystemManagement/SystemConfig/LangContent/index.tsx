@@ -84,12 +84,12 @@ const LangContent: React.FC = () => {
     const rowKey = record.key;
     setTranslateLoadingMap((prev) => ({ ...prev, [rowKey]: true }));
     try {
-      await apiI18nConfigTranslate({
-        side,
-        lang,
-        value: record.value,
-        key: record.key,
-      });
+      const data = {
+        sourceLang: defaultLang,
+        targetLang: lang,
+        i18nConfigDto: record,
+      };
+      await apiI18nConfigTranslate(data);
       message.success('翻译成功');
       actionRef.current?.reload();
     } finally {
@@ -217,11 +217,16 @@ const LangContent: React.FC = () => {
           />
           {defaultLang && (
             <TooltipIcon
-              title={record.value ? '翻译' : '文本内容为空，不能翻译'}
+              title={
+                '将默认语言(' +
+                defaultLang +
+                ')的键值对翻译成当前语言(' +
+                lang +
+                ')'
+              }
               icon={
                 <Button
                   type="text"
-                  disabled={!record.value}
                   icon={
                     <SvgIcon
                       name="icons-common-icon_translate"
