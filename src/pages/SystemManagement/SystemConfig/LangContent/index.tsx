@@ -1,61 +1,69 @@
+import { XProTable } from '@/components/ProComponents';
 import WorkspaceLayout from '@/components/WorkspaceLayout';
+import { SUCCESS_CODE } from '@/constants/codes.constants';
 import { apiI18nConfigList } from '@/services/i18n';
 import type { I18nSlideLangInfo } from '@/types/interfaces/i18n';
+import type { Page } from '@/types/interfaces/request';
 import {
-  CloseOutlined,
   DeleteOutlined,
   DownOutlined,
   EditOutlined,
   PlusOutlined,
   TranslationOutlined,
 } from '@ant-design/icons';
-import { Button, Input, Space, Table, Tag } from 'antd';
-import type { ColumnsType } from 'antd/es/table';
-import React, { useMemo, useState } from 'react';
-import { history, useParams, useRequest } from 'umi';
+import type {
+  ActionType,
+  FormInstance,
+  ProColumns,
+} from '@ant-design/pro-components';
+import { Button, Space, Tag } from 'antd';
+import React, { useRef, useState } from 'react';
+import { history, useParams } from 'umi';
+import AddKeyValueModal from './AddKeyValueModal';
 
 /**
  * 语言内容页面
  */
 const LangContent: React.FC = () => {
+  // ====================== 语言 ======================
   const { lang } = useParams();
-  const [moduleKeyword, setModuleKeyword] = useState<string>('');
-  const [keyKeyword, setKeyKeyword] = useState<string>('');
-  const [valueKeyword, setValueKeyword] = useState<string>('');
 
+  // ====================== 添加键值对弹窗 ======================
+  const [addModalOpen, setAddModalOpen] = useState<boolean>(false);
+  const [currentItem, setCurrentItem] = useState<I18nSlideLangInfo | null>(
+    null,
+  );
+  const actionRef = useRef<ActionType>();
+  const formRef = useRef<FormInstance>();
+
+  // ====================== 多语言端 ======================
   const side = String(history.location.query?.side || 'PC');
-  const langName = String(
-    history.location.query?.langName || lang.toUpperCase(),
-  );
 
-  const { data: configList = [], loading } = useRequest(
-    () => apiI18nConfigList(side, lang),
-    {
-      refreshDeps: [side, lang],
-    },
-  );
+  // 打开添加键值对弹窗
+  const handleOpenAddModal = () => {
+    setCurrentItem(null);
+    setAddModalOpen(true);
+  };
 
-  const filteredData = useMemo(() => {
-    return (configList || []).filter((item: I18nSlideLangInfo) => {
-      const moduleText = String(item.key || '').split('.')[0] || '-';
-      const matchModule = moduleText
-        .toLowerCase()
-        .includes(moduleKeyword.trim().toLowerCase());
-      const matchKey = String(item.key || '')
-        .toLowerCase()
-        .includes(keyKeyword.trim().toLowerCase());
-      const matchValue = String(item.value || '')
-        .toLowerCase()
-        .includes(valueKeyword.trim().toLowerCase());
-      return matchModule && matchKey && matchValue;
-    });
-  }, [configList, moduleKeyword, keyKeyword, valueKeyword]);
+  // 编辑
+  const handleEdit = (record: I18nSlideLangInfo) => {
+    setCurrentItem(record);
+    setAddModalOpen(true);
+  };
 
-  const columns: ColumnsType<I18nSlideLangInfo> = [
+  // 列配置（使用表格内置搜索）
+  const columns: ProColumns<I18nSlideLangInfo>[] = [
     {
       title: '模块',
-      key: 'module',
+      dataIndex: 'module',
       width: 120,
+      fieldProps: {
+        placeholder: '搜索模块...',
+        allowClear: true,
+      },
+      search: {
+        transform: (value: string) => ({ module: value }),
+      },
       render: (_, record) => {
         const moduleText = String(record.key || '').split('.')[0] || '-';
         return <Tag>{moduleText}</Tag>;
@@ -66,25 +74,40 @@ const LangContent: React.FC = () => {
       dataIndex: 'key',
       key: 'key',
       width: 220,
+      fieldProps: {
+        placeholder: '搜索 Key...',
+        allowClear: true,
+      },
     },
     {
       title: '文本内容',
       dataIndex: 'value',
       key: 'value',
+      fieldProps: {
+        placeholder: '搜索文本内容...',
+        allowClear: true,
+      },
     },
     {
       title: '备注',
       dataIndex: 'remark',
       key: 'remark',
       width: 200,
+      hideInSearch: true,
     },
     {
       title: '操作',
       key: 'actions',
       width: 140,
-      render: () => (
+      hideInSearch: true,
+      valueType: 'option',
+      render: (_value, record) => (
         <Space size="small">
-          <Button type="text" icon={<EditOutlined />} />
+          <Button
+            type="text"
+            icon={<EditOutlined />}
+            onClick={() => handleEdit(record)}
+          />
           <Button type="text" icon={<TranslationOutlined />} />
           <Button type="text" danger icon={<DeleteOutlined />} />
         </Space>
@@ -92,48 +115,85 @@ const LangContent: React.FC = () => {
     },
   ];
 
+  const request = async (params: {
+    current?: number;
+    pageSize?: number;
+    module?: string;
+    key?: string;
+    value?: string;
+  }) => {
+    const response = await apiI18nConfigList({
+      side,
+      lang,
+      module: params.module,
+      key: params.key,
+      pageNo: params.current || 1,
+      pageSize: params.pageSize || 15,
+    });
+    const data = response.data;
+    if (Array.isArray(data)) {
+      return {
+        data,
+        total: data.length,
+        success: response.code === SUCCESS_CODE,
+      };
+    }
+    const pageData = data as Page<I18nSlideLangInfo>;
+    return {
+      data: pageData.records || [],
+      total: pageData.total || 0,
+      success: response.code === SUCCESS_CODE,
+    };
+  };
+
   return (
     <WorkspaceLayout
-      title={`${langName} (${lang}) - 键值对管理`}
+      title={`${lang} - 键值对管理`}
+      back={true}
       rightSlot={
         <>
           <Button icon={<DownOutlined />}>翻译全部</Button>
-          <Button type="primary" icon={<PlusOutlined />}>
+          <Button
+            type="primary"
+            icon={<PlusOutlined />}
+            onClick={handleOpenAddModal}
+          >
             添加键值对
-          </Button>
-          <Button icon={<CloseOutlined />} onClick={() => history.back()}>
-            关闭
           </Button>
         </>
       }
     >
-      <Space style={{ width: '100%', marginBottom: 12 }} size="middle">
-        <Input
-          allowClear
-          placeholder="搜索模块..."
-          value={moduleKeyword}
-          onChange={(e) => setModuleKeyword(e.target.value)}
-        />
-        <Input
-          allowClear
-          placeholder="搜索 Key..."
-          value={keyKeyword}
-          onChange={(e) => setKeyKeyword(e.target.value)}
-        />
-        <Input
-          allowClear
-          placeholder="搜索文本内容..."
-          value={valueKeyword}
-          onChange={(e) => setValueKeyword(e.target.value)}
-        />
-      </Space>
-
-      <Table<I18nSlideLangInfo>
+      <XProTable<I18nSlideLangInfo>
+        actionRef={actionRef}
+        formRef={formRef}
         rowKey={(record) => `${record.key || ''}-${record.lang || ''}`}
-        loading={loading}
-        dataSource={filteredData}
-        pagination={false}
         columns={columns}
+        request={request}
+        pagination={{
+          pageSize: 15,
+          showSizeChanger: true,
+          pageSizeOptions: [15, 30, 50, 100],
+        }}
+        showIndex={false}
+        options={false}
+        toolBarRender={false}
+      />
+
+      {/* 添加键值对弹窗 */}
+      <AddKeyValueModal
+        open={addModalOpen}
+        currentItem={currentItem}
+        lang={lang}
+        side={side}
+        onCancel={() => {
+          setAddModalOpen(false);
+          setCurrentItem(null);
+        }}
+        onSuccess={() => {
+          setAddModalOpen(false);
+          setCurrentItem(null);
+          actionRef.current?.reload();
+        }}
       />
     </WorkspaceLayout>
   );
