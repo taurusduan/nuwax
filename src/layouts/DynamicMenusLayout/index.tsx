@@ -385,12 +385,7 @@ const DynamicMenusLayout: React.FC<DynamicMenusLayoutProps> = ({
     runEdit({
       size: 5,
     });
-    // 开发收藏
-    // runDevCollect({
-    //   page: 1,
-    //   size: 5,
-    // });
-  }, [runEdit]);
+  }, []);
 
   /**
    * 递归查找第一个有 path 的子菜单
