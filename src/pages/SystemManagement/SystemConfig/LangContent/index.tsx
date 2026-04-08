@@ -1,3 +1,5 @@
+import SvgIcon from '@/components/base/SvgIcon';
+import TooltipIcon from '@/components/custom/TooltipIcon';
 import { XProTable } from '@/components/ProComponents';
 import WorkspaceLayout from '@/components/WorkspaceLayout';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
@@ -8,12 +10,8 @@ import {
 } from '@/services/i18n';
 import type { I18nSlideLangInfo } from '@/types/interfaces/i18n';
 import type { Page } from '@/types/interfaces/request';
-import {
-  DeleteOutlined,
-  DownOutlined,
-  EditOutlined,
-  TranslationOutlined,
-} from '@ant-design/icons';
+import { modalConfirm } from '@/utils/ant-custom';
+import { EditOutlined } from '@ant-design/icons';
 import type {
   ActionType,
   FormInstance,
@@ -24,6 +22,7 @@ import React, { useRef, useState } from 'react';
 import { history, useParams } from 'umi';
 import AddKeyValueModal from './AddKeyValueModal';
 import BatchKeyValueModal from './BatchKeyValueModal';
+import styles from './index.less';
 
 /**
  * 语言内容页面
@@ -99,6 +98,17 @@ const LangContent: React.FC = () => {
     }
   };
 
+  const handleTranslateAllWithConfirm = () => {
+    modalConfirm(
+      '确认翻译全部',
+      '翻译将会消耗您的token，确认全部翻译吗？',
+      async () => {
+        await handleTranslateAll();
+        return Promise.resolve();
+      },
+    );
+  };
+
   // 列配置（使用表格内置搜索）
   const columns: ProColumns<I18nSlideLangInfo>[] = [
     {
@@ -121,7 +131,6 @@ const LangContent: React.FC = () => {
       title: 'Key',
       dataIndex: 'key',
       key: 'key',
-      width: 220,
       fieldProps: {
         placeholder: '搜索 Key...',
         allowClear: true,
@@ -140,7 +149,7 @@ const LangContent: React.FC = () => {
       title: '备注',
       dataIndex: 'remark',
       key: 'remark',
-      width: 200,
+      width: 300,
       hideInSearch: true,
     },
     {
@@ -157,13 +166,25 @@ const LangContent: React.FC = () => {
             icon={<EditOutlined />}
             onClick={() => handleEdit(record)}
           />
-          <Button
-            type="text"
-            icon={<TranslationOutlined />}
-            loading={translateLoadingMap[record.key] || false}
-            onClick={() => handleTranslate(record)}
-          />
-          <Button type="text" danger icon={<DeleteOutlined />} />
+          <TooltipIcon
+            title={record.value ? '翻译' : '文本内容为空，不能翻译'}
+            icon={
+              <Button
+                type="text"
+                disabled={!record.value}
+                icon={
+                  <SvgIcon
+                    name="icons-common-icon_translate"
+                    className={styles['lang-content-translate-icon']}
+                    style={{ fontSize: 16 }}
+                  />
+                }
+                loading={translateLoadingMap[record.key] || false}
+                onClick={() => handleTranslate(record)}
+              />
+            }
+          ></TooltipIcon>
+          {/* <Button type="text" icon={<DeleteOutlined />} /> */}
         </Space>
       ),
     },
@@ -208,9 +229,8 @@ const LangContent: React.FC = () => {
       rightSlot={
         <>
           <Button
-            icon={<DownOutlined />}
             loading={translateAllLoading}
-            onClick={handleTranslateAll}
+            onClick={handleTranslateAllWithConfirm}
           >
             翻译全部
           </Button>
