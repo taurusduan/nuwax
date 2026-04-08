@@ -4768,4 +4768,8 @@ export const ZH_HK: SystemLangMap = {
   'PC.Constants.Theme.bgNightCityDesc': '都市夜景，適合深色佈局風格',
   'PC.Constants.Theme.bgFreshBlueSky': '清新藍天',
   'PC.Constants.Theme.bgFreshBlueSkyDesc': '清新明亮，適合淺色佈局風格',
+
+  // Routes
+  'PC.Routes.i18nLangManagement': '語言管理',
+  'PC.Routes.i18nLangContent': '語言內容',
 };

@@ -4823,6 +4823,8 @@ export const ZH_CN: SystemLangMap = {
   'PC.Routes.themeConfig': '主题配置',
   'PC.Routes.sandboxConfig': '沙盒配置',
   'PC.Routes.categoryManagement': '分类管理',
+  'PC.Routes.i18nLangManagement': '语言管理',
+  'PC.Routes.i18nLangContent': '语言内容',
   'PC.Routes.contentManagement': '内容管理',
   'PC.Routes.contentSpace': '空间',
   'PC.Routes.contentAgent': '智能体',

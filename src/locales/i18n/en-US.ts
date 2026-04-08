@@ -5332,6 +5332,8 @@ export const EN_US: SystemLangMap = {
   'PC.Routes.themeConfig': 'Theme Configuration',
   'PC.Routes.sandboxConfig': 'Sandbox Configuration',
   'PC.Routes.categoryManagement': 'Category Management',
+  'PC.Routes.i18nLangManagement': 'Language Management',
+  'PC.Routes.i18nLangContent': 'Language Content',
   'PC.Routes.contentManagement': 'Content Management',
   'PC.Routes.contentSpace': 'Space',
   'PC.Routes.contentAgent': 'Agent',
