@@ -1130,11 +1130,6 @@ export const ZH_HK: SystemLangMap = {
   'PC.Pages.SystemUserGroupFormModal.name': '用户組名稱',
   'PC.Pages.SystemUserGroupFormModal.nameRequired': '請輸入用户組名稱',
   'PC.Pages.SystemUserGroupFormModal.namePlaceholder': '請輸入用户組名稱',
-  'PC.Pages.SystemUserGroupFormModal.maxUserCount': '最大用户數',
-  'PC.Pages.SystemUserGroupFormModal.maxUserCountRequired': '請輸入最大用户數',
-  'PC.Pages.SystemUserGroupFormModal.maxValueTip': '最大值為2147483647',
-  'PC.Pages.SystemUserGroupFormModal.maxUserCountPlaceholder':
-    '请输入最大用户数',
   'PC.Pages.SystemUserGroupFormModal.source': '來源',
   'PC.Pages.SystemUserGroupFormModal.sourcePlaceholder': '請選擇來源',
   'PC.Pages.SystemUserGroupFormModal.sort': '排序',

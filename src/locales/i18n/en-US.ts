@@ -1298,13 +1298,6 @@ export const EN_US: SystemLangMap = {
     'Please enter user group name',
   'PC.Pages.SystemUserGroupFormModal.namePlaceholder':
     'Please enter user group name',
-  'PC.Pages.SystemUserGroupFormModal.maxUserCount': 'Max User Count',
-  'PC.Pages.SystemUserGroupFormModal.maxUserCountRequired':
-    'Please enter max user count',
-  'PC.Pages.SystemUserGroupFormModal.maxValueTip':
-    'Maximum value is 2147483647',
-  'PC.Pages.SystemUserGroupFormModal.maxUserCountPlaceholder':
-    'Please enter max user count',
   'PC.Pages.SystemUserGroupFormModal.source': 'Source',
   'PC.Pages.SystemUserGroupFormModal.sourcePlaceholder': 'Please select source',
   'PC.Pages.SystemUserGroupFormModal.sort': 'Sort',
