@@ -155,7 +155,7 @@ export async function apiI18nConfigTranslateAll(
 ): Promise<RequestResponse<I18nSlideLangInfo>> {
   return request('/api/system/i18n/config/translateAll', {
     method: 'POST',
-    data: {
+    params: {
       lang,
     },
   });

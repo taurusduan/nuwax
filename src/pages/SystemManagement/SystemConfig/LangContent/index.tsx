@@ -1,7 +1,11 @@
 import { XProTable } from '@/components/ProComponents';
 import WorkspaceLayout from '@/components/WorkspaceLayout';
 import { SUCCESS_CODE } from '@/constants/codes.constants';
-import { apiI18nConfigList } from '@/services/i18n';
+import {
+  apiI18nConfigList,
+  apiI18nConfigTranslate,
+  apiI18nConfigTranslateAll,
+} from '@/services/i18n';
 import type { I18nSlideLangInfo } from '@/types/interfaces/i18n';
 import type { Page } from '@/types/interfaces/request';
 import {
@@ -16,7 +20,7 @@ import type {
   FormInstance,
   ProColumns,
 } from '@ant-design/pro-components';
-import { Button, Space, Tag } from 'antd';
+import { Button, Space, Tag, message } from 'antd';
 import React, { useRef, useState } from 'react';
 import { history, useParams } from 'umi';
 import AddKeyValueModal from './AddKeyValueModal';
@@ -35,6 +39,13 @@ const LangContent: React.FC = () => {
   );
   const actionRef = useRef<ActionType>();
   const formRef = useRef<FormInstance>();
+  // 单个翻译 key 的 loading 状态
+  const [translateLoadingMap, setTranslateLoadingMap] = useState<
+    Record<string, boolean>
+  >({});
+  // 翻译全部 loading 状态
+  const [translateAllLoading, setTranslateAllLoading] =
+    useState<boolean>(false);
 
   // ====================== 多语言端 ======================
   const side = String(history.location.query?.side || 'PC');
@@ -49,6 +60,40 @@ const LangContent: React.FC = () => {
   const handleEdit = (record: I18nSlideLangInfo) => {
     setCurrentItem(record);
     setAddModalOpen(true);
+  };
+
+  // 翻译单个key
+  const handleTranslate = async (record: I18nSlideLangInfo) => {
+    const rowKey = record.key;
+    setTranslateLoadingMap((prev) => ({ ...prev, [rowKey]: true }));
+    try {
+      await apiI18nConfigTranslate({
+        side,
+        lang,
+        value: record.value,
+        key: record.key,
+      });
+      message.success('翻译成功');
+      actionRef.current?.reload();
+    } finally {
+      setTranslateLoadingMap((prev) => {
+        const next = { ...prev };
+        delete next[rowKey];
+        return next;
+      });
+    }
+  };
+
+  // 翻译全部
+  const handleTranslateAll = async () => {
+    setTranslateAllLoading(true);
+    try {
+      await apiI18nConfigTranslateAll(lang);
+      message.success('翻译成功');
+      actionRef.current?.reload();
+    } finally {
+      setTranslateAllLoading(false);
+    }
   };
 
   // 列配置（使用表格内置搜索）
@@ -100,6 +145,7 @@ const LangContent: React.FC = () => {
       key: 'actions',
       width: 140,
       hideInSearch: true,
+      align: 'center',
       valueType: 'option',
       render: (_value, record) => (
         <Space size="small">
@@ -108,13 +154,19 @@ const LangContent: React.FC = () => {
             icon={<EditOutlined />}
             onClick={() => handleEdit(record)}
           />
-          <Button type="text" icon={<TranslationOutlined />} />
+          <Button
+            type="text"
+            icon={<TranslationOutlined />}
+            loading={translateLoadingMap[record.key] || false}
+            onClick={() => handleTranslate(record)}
+          />
           <Button type="text" danger icon={<DeleteOutlined />} />
         </Space>
       ),
     },
   ];
 
+  // 查询多语言配置列表
   const request = async (params: {
     current?: number;
     pageSize?: number;
@@ -152,7 +204,13 @@ const LangContent: React.FC = () => {
       back={true}
       rightSlot={
         <>
-          <Button icon={<DownOutlined />}>翻译全部</Button>
+          <Button
+            icon={<DownOutlined />}
+            loading={translateAllLoading}
+            onClick={handleTranslateAll}
+          >
+            翻译全部
+          </Button>
           <Button
             type="primary"
             icon={<PlusOutlined />}

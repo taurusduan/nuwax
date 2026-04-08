@@ -94,7 +94,7 @@ export interface I18nSlideLangInfo {
   lang?: string;
 
   /*键 */
-  key?: string;
+  key: string;
 
   /*值 */
   value?: string;
