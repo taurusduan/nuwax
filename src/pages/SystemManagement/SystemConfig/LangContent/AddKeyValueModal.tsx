@@ -1,5 +1,6 @@
 import CustomFormModal from '@/components/CustomFormModal';
 import { apiI18nConfigAddOrUpdate } from '@/services/i18n';
+import { dict } from '@/services/i18nRuntime';
 import type { I18nSlideLangInfo } from '@/types/interfaces/i18n';
 import { customizeRequiredMark } from '@/utils/form';
 import { Form, Input, Select, Space, message } from 'antd';
@@ -56,7 +57,11 @@ const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
     {
       manual: true,
       onSuccess: () => {
-        message.success(isEdit ? '更新成功' : '添加成功');
+        message.success(
+          isEdit
+            ? dict('PC.Pages.SystemConfig.LangContent.updateSuccess')
+            : dict('PC.Pages.SystemConfig.LangContent.addSuccess'),
+        );
         form.resetFields();
         onSuccess();
       },
@@ -102,11 +107,19 @@ const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
   return (
     <CustomFormModal
       form={form}
-      title={isEdit ? '编辑键值对' : '新增键值对'}
+      title={
+        isEdit
+          ? dict('PC.Pages.SystemConfig.LangContent.editKeyValTitle')
+          : dict('PC.Pages.SystemConfig.LangContent.addKeyValTitle')
+      }
       open={open}
       onCancel={onCancel}
       onConfirm={handleOk}
-      okText={isEdit ? '更新' : '添加'}
+      okText={
+        isEdit
+          ? dict('PC.Pages.SystemConfig.LangContent.updateBtn')
+          : dict('PC.Pages.SystemConfig.LangContent.addBtn')
+      }
       loading={loading}
     >
       <Form form={form} layout="vertical" requiredMark={customizeRequiredMark}>
@@ -115,13 +128,22 @@ const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
             <Form.Item
               name="side"
               noStyle
-              rules={[{ required: true, message: '请选择端' }]}
+              rules={[
+                {
+                  required: true,
+                  message: dict(
+                    'PC.Pages.SystemConfig.LangContent.keyRequired',
+                  ),
+                },
+              ]}
             >
               <Select
                 style={{ width: 140 }}
                 options={sideSelectOptions}
                 disabled={isEdit}
-                placeholder="请选择端"
+                placeholder={dict(
+                  'PC.Pages.SystemConfig.LangContent.keyRequired',
+                )}
               />
             </Form.Item>
             <Form.Item
@@ -140,20 +162,41 @@ const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
                 },
               ]}
             >
-              <Input placeholder="例如：User.submit" disabled={isEdit} />
+              <Input
+                placeholder={dict(
+                  'PC.Pages.SystemConfig.LangContent.keyPlaceholder',
+                )}
+                disabled={isEdit}
+              />
             </Form.Item>
           </Space.Compact>
         </Form.Item>
         <Form.Item
-          label="文本内容"
+          label={dict('PC.Pages.SystemConfig.LangContent.textContentLabel')}
           name="value"
-          rules={[{ required: true, message: '请输入文本内容' }]}
+          rules={[
+            {
+              required: true,
+              message: dict(
+                'PC.Pages.SystemConfig.LangContent.textContentRequired',
+              ),
+            },
+          ]}
         >
-          <Input placeholder="例如：提交" />
+          <Input
+            placeholder={dict(
+              'PC.Pages.SystemConfig.LangContent.textContentPlaceholder',
+            )}
+          />
         </Form.Item>
-        <Form.Item label="备注" name="remark">
+        <Form.Item
+          label={dict('PC.Pages.SystemConfig.LangContent.remarkLabel')}
+          name="remark"
+        >
           <Input.TextArea
-            placeholder="例如：Submit Button"
+            placeholder={dict(
+              'PC.Pages.SystemConfig.LangContent.remarkPlaceholder',
+            )}
             autoSize={{ minRows: 3, maxRows: 4 }}
           />
         </Form.Item>
