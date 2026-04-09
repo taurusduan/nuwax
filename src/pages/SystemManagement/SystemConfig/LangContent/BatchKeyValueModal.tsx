@@ -7,7 +7,6 @@ import React, { useEffect, useState } from 'react';
 import { useRequest } from 'umi';
 
 interface BatchKeyValueModalProps {
-  side: string;
   lang: string;
   open: boolean;
   onCancel: () => void;
@@ -34,7 +33,6 @@ const DefaultBatchCode = `
  * 批量新增或更新键值对弹窗
  */
 const BatchKeyValueModal: React.FC<BatchKeyValueModalProps> = ({
-  side,
   lang,
   open,
   onCancel,
@@ -95,7 +93,6 @@ const BatchKeyValueModal: React.FC<BatchKeyValueModalProps> = ({
     const payload = Object.entries(parsed as Record<string, string>).map(
       ([key, value]) =>
         ({
-          side,
           lang,
           key,
           value: typeof value === 'string' ? value : JSON.stringify(value),
