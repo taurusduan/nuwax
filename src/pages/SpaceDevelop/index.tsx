@@ -373,8 +373,10 @@ const SpaceDevelop: React.FC = () => {
       case ApplicationMoreActionEnum.Independent_Session:
         // 之所以使用try catch，是因为navigator.clipboard.writeText在某些浏览器或NuwaClaw中可能不支持
         try {
+          const origin = location.origin || window.location.origin;
           // 这里实现复制路径到浏览器地址栏
-          const path = `${location.origin}/app/${agentInfo.id}`;
+          const path = `${origin}/app/${agentInfo.id}`;
+          console.log('这里实现复制路径到浏览器地址栏', path, location);
           navigator.clipboard.writeText(path);
           message.success(
             dict('PC.Pages.SpaceDevelop.copyIndependentSessionSuccess'),
