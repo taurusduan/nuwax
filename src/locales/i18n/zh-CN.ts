@@ -5440,7 +5440,6 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.translateSuccess': '翻译成功',
   'PC.Pages.SystemConfig.LangContent.moduleColumn': '端',
   'PC.Pages.SystemConfig.LangContent.searchKey': '搜索 Key...',
-  'PC.Pages.SystemConfig.LangContent.searchTextContent': '搜索文本内容...',
   'PC.Pages.SystemConfig.LangContent.translateAllBtn': '翻译全部',
   'PC.Pages.SystemConfig.LangContent.keyValMng': '键值管理',
   'PC.Pages.SpaceDevelop.copyIndependentSessionSuccess': '已复制独立会话路径',

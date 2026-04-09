@@ -5984,8 +5984,6 @@ export const EN_US: SystemLangMap = {
     'Translate Successfully',
   'PC.Pages.SystemConfig.LangContent.moduleColumn': 'Side',
   'PC.Pages.SystemConfig.LangContent.searchKey': 'Search Key...',
-  'PC.Pages.SystemConfig.LangContent.searchTextContent':
-    'Search Text Content...',
   'PC.Pages.SystemConfig.LangContent.translateAllBtn': 'Translate All',
   'PC.Pages.SystemConfig.LangContent.keyValMng': 'Key-Value Management',
   'PC.Pages.SpaceDevelop.copyIndependentSessionSuccess':

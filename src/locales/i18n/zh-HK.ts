@@ -5002,7 +5002,6 @@ export const ZH_HK: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.translateSuccess': '翻譯成功',
   'PC.Pages.SystemConfig.LangContent.moduleColumn': '端',
   'PC.Pages.SystemConfig.LangContent.searchKey': '搜索 Key...',
-  'PC.Pages.SystemConfig.LangContent.searchTextContent': '搜索文本內容...',
   'PC.Pages.SystemConfig.LangContent.translateAllBtn': '翻譯全部',
   'PC.Pages.SystemConfig.LangContent.keyValMng': '鍵值管理',
   'PC.Pages.SpaceDevelop.copyIndependentSessionSuccess': '已複製獨立會話路徑',

@@ -210,12 +210,7 @@ const LangContent: React.FC = () => {
       title: dict('PC.Pages.SystemConfig.LangContent.textContentLabel'),
       dataIndex: 'value',
       key: 'value',
-      fieldProps: {
-        placeholder: dict(
-          'PC.Pages.SystemConfig.LangContent.searchTextContent',
-        ),
-        allowClear: true,
-      },
+      hideInSearch: true,
     },
     {
       title: dict('PC.Pages.SystemConfig.LangContent.remarkLabel'),
