@@ -2706,6 +2706,8 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.UserManage.UserFormModal.inputEmailAddress': '请输入邮箱地址',
   'PC.Pages.UserManage.UserFormModal.loginPassword': '登录密码',
   'PC.Pages.UserManage.UserFormModal.inputLoginPassword': '请输入登录密码',
+  'PC.Pages.UserManage.UserFormModal.inputCorrectPassword':
+    '密码不正确，至少6位数！',
   'PC.Pages.UserManage.UserFormModal.userType': '用户类型',
   'PC.Pages.UserManage.UserFormModal.admin': '管理员',
   'PC.Pages.UserManage.UserFormModal.normalUser': '普通用户',
@@ -2750,13 +2752,14 @@ export const ZH_CN: SystemLangMap = {
   'PC.Layouts.Setting.ResetPassword.newPassword': '新密码',
   'PC.Layouts.Setting.ResetPassword.inputNewPassword': '请输入新密码!',
   'PC.Layouts.Setting.ResetPassword.inputCorrectPassword':
-    '请输入正确的新密码!',
+    '新密码格式不正确，至少6位数！',
   'PC.Layouts.Setting.ResetPassword.confirmPassword': '确认密码',
   'PC.Layouts.Setting.ResetPassword.inputConfirmPassword': '请再次输入新密码!',
   'PC.Layouts.Setting.ResetPassword.passwordMismatch': '两次密码不一致!',
   'PC.Layouts.Setting.ResetPassword.inputCorrectNewPassword':
     '请输入正确的密码!',
-  'PC.Layouts.Setting.ResetPassword.placeholderNewPassword': '请输入新密码',
+  'PC.Layouts.Setting.ResetPassword.placeholderNewPassword':
+    '请输入新密码，至少6位数',
   'PC.Layouts.Setting.ResetPassword.placeholderConfirmPassword':
     '请再次输入新密码',
   'PC.Layouts.Setting.ResetPassword.verificationCode': '验证码',

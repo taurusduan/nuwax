@@ -3020,6 +3020,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.UserManage.UserFormModal.loginPassword': 'Login Password',
   'PC.Pages.UserManage.UserFormModal.inputLoginPassword':
     'Please enter login password',
+  'PC.Pages.UserManage.UserFormModal.inputCorrectPassword':
+    'Invalid password, at least 6 characters!',
   'PC.Pages.UserManage.UserFormModal.userType': 'User Type',
   'PC.Pages.UserManage.UserFormModal.admin': 'Admin',
   'PC.Pages.UserManage.UserFormModal.normalUser': 'Normal User',
@@ -3067,7 +3069,7 @@ export const EN_US: SystemLangMap = {
   'PC.Layouts.Setting.ResetPassword.inputNewPassword':
     'Please enter new password!',
   'PC.Layouts.Setting.ResetPassword.inputCorrectPassword':
-    'Please enter a valid password!',
+    'Invalid new password format, at least 6 characters!',
   'PC.Layouts.Setting.ResetPassword.confirmPassword': 'Confirm Password',
   'PC.Layouts.Setting.ResetPassword.inputConfirmPassword':
     'Please enter the password again!',
@@ -3076,7 +3078,7 @@ export const EN_US: SystemLangMap = {
   'PC.Layouts.Setting.ResetPassword.inputCorrectNewPassword':
     'Please enter a valid new password!',
   'PC.Layouts.Setting.ResetPassword.placeholderNewPassword':
-    'Please enter new password',
+    'Please enter a new password (at least 6 characters)',
   'PC.Layouts.Setting.ResetPassword.placeholderConfirmPassword':
     'Please enter the password again',
   'PC.Layouts.Setting.ResetPassword.verificationCode': 'Verification Code',

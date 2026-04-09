@@ -2684,6 +2684,8 @@ export const ZH_HK: SystemLangMap = {
   'PC.Pages.UserManage.UserFormModal.inputEmailAddress': '請輸入郵箱地址',
   'PC.Pages.UserManage.UserFormModal.loginPassword': '登錄密碼',
   'PC.Pages.UserManage.UserFormModal.inputLoginPassword': '請輸入登錄密碼',
+  'PC.Pages.UserManage.UserFormModal.inputCorrectPassword':
+    '密碼不正確，至少6位數！',
   'PC.Pages.UserManage.UserFormModal.userType': '用户類型',
   'PC.Pages.UserManage.UserFormModal.admin': '管理員',
   'PC.Pages.UserManage.UserFormModal.normalUser': '普通用户',
@@ -2721,13 +2723,14 @@ export const ZH_HK: SystemLangMap = {
   'PC.Layouts.Setting.ResetPassword.newPassword': '新密碼',
   'PC.Layouts.Setting.ResetPassword.inputNewPassword': '請輸入新密碼!',
   'PC.Layouts.Setting.ResetPassword.inputCorrectPassword':
-    '請輸入正確的新密碼!',
+    '新密碼格式不正確，至少6位數！',
   'PC.Layouts.Setting.ResetPassword.confirmPassword': '確認密碼',
   'PC.Layouts.Setting.ResetPassword.inputConfirmPassword': '請再次輸入新密碼!',
   'PC.Layouts.Setting.ResetPassword.passwordMismatch': '兩次密碼不一致!',
   'PC.Layouts.Setting.ResetPassword.inputCorrectNewPassword':
     '請輸入正確的密碼!',
-  'PC.Layouts.Setting.ResetPassword.placeholderNewPassword': '請輸入新密碼',
+  'PC.Layouts.Setting.ResetPassword.placeholderNewPassword':
+    '請輸入新密碼，至少6位數',
   'PC.Layouts.Setting.ResetPassword.placeholderConfirmPassword':
     '請再次輸入新密碼',
   'PC.Layouts.Setting.ResetPassword.verificationCode': '驗證碼',
