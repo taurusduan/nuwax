@@ -1,8 +1,9 @@
+import CustomFormModal from '@/components/CustomFormModal';
 import { apiI18nConfigAddOrUpdate } from '@/services/i18n';
 import { dict } from '@/services/i18nRuntime';
 import type { I18nSlideLangInfo } from '@/types/interfaces/i18n';
 import { customizeRequiredMark } from '@/utils/form';
-import { Form, Input, Modal, message } from 'antd';
+import { Form, Input, message } from 'antd';
 import React, { useEffect } from 'react';
 import { useRequest } from 'umi';
 
@@ -13,8 +14,6 @@ interface AddKeyValueModalProps {
   currentItem?: I18nSlideLangInfo | null;
   // 语言
   lang: string;
-  // 端
-  side: string;
   // 取消回调
   onCancel: () => void;
   onSuccess: () => void;
@@ -27,13 +26,12 @@ interface AddKeyValueFormValues {
 }
 
 /**
- * 添加键值对弹窗
+ * 新增或编辑键值对弹窗
  */
 const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
   open,
   currentItem,
   lang,
-  side,
   onCancel,
   onSuccess,
 }) => {
@@ -78,14 +76,14 @@ const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
     const keyText = values.key.trim();
     await runAddOrUpdate({
       ...values,
-      side,
       lang,
       key: keyText,
     });
   };
 
   return (
-    <Modal
+    <CustomFormModal
+      form={form}
       title={
         isEdit
           ? dict('PC.Pages.SystemConfig.LangContent.editKeyValTitle')
@@ -93,15 +91,13 @@ const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
       }
       open={open}
       onCancel={onCancel}
-      onOk={handleOk}
+      onConfirm={handleOk}
       okText={
         isEdit
           ? dict('PC.Pages.SystemConfig.LangContent.updateBtn')
           : dict('PC.Pages.SystemConfig.LangContent.addBtn')
       }
-      cancelText={dict('PC.Common.Global.cancel')}
-      confirmLoading={loading}
-      destroyOnHidden
+      loading={loading}
     >
       <Form form={form} layout="vertical" requiredMark={customizeRequiredMark}>
         <Form.Item
@@ -118,6 +114,7 @@ const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
             placeholder={dict(
               'PC.Pages.SystemConfig.LangContent.keyPlaceholder',
             )}
+            disabled={isEdit}
           />
         </Form.Item>
         <Form.Item
@@ -150,7 +147,7 @@ const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
           />
         </Form.Item>
       </Form>
-    </Modal>
+    </CustomFormModal>
   );
 };
 
