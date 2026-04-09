@@ -138,19 +138,24 @@ const LangContent: React.FC = () => {
         Authorization: `Bearer ${token}`,
         Accept: 'application/json, text/plain, */* ',
       },
-      onMessage: (res: any) => {
-        console.log('res', res);
+      onMessage: (res) => {
+        // 翻译失败
+        if (res?.code !== SUCCESS_CODE) {
+          message.warning(res.message);
+          return;
+        }
         // message.success(
         //   dict('PC.Pages.SystemConfig.LangContent.translateSuccess'),
         // );
-        // message.success('翻译成功');
         // actionRef.current?.reload();
       },
       onClose: () => {
+        translateAllAbortRef.current?.();
         translateAllAbortRef.current = null;
         setTranslateAllLoading(false);
       },
       onError: () => {
+        translateAllAbortRef.current?.();
         translateAllAbortRef.current = null;
         setTranslateAllLoading(false);
       },

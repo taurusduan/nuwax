@@ -86,12 +86,14 @@ const BatchKeyValueModal: React.FC<BatchKeyValueModalProps> = ({
 
       parsed = JSON.parse(normalizedJsonText);
     } catch {
-      message.error(dict('PC.Pages.SystemConfig.LangContent.jsonFormatError'));
+      message.warning(
+        dict('PC.Pages.SystemConfig.LangContent.jsonFormatError'),
+      );
       return;
     }
 
     if (!parsed || Array.isArray(parsed) || typeof parsed !== 'object') {
-      message.error(
+      message.warning(
         dict('PC.Pages.SystemConfig.LangContent.jsonObjectRequired'),
       );
       return;
@@ -104,13 +106,13 @@ const BatchKeyValueModal: React.FC<BatchKeyValueModalProps> = ({
     for (const [key, value] of entries) {
       const firstDotIndex = key.indexOf('.');
       if (firstDotIndex <= 0) {
-        message.error(`Key 格式错误：${key}，必须包含端前缀，如 PC.xxx`);
+        message.warning(`Key 格式错误：${key}，必须包含端前缀，如 PC.xxx`);
         return;
       }
 
       const side = key.slice(0, firstDotIndex);
       if (!sideList.includes(side)) {
-        message.error(
+        message.warning(
           `Key 格式错误：${key}，端前缀必须是以下之一：${sideList.join(', ')}`,
         );
         return;
@@ -125,7 +127,7 @@ const BatchKeyValueModal: React.FC<BatchKeyValueModalProps> = ({
     }
 
     if (!payload.length) {
-      message.error(dict('PC.Pages.SystemConfig.LangContent.atLeastOnePair'));
+      message.warning(dict('PC.Pages.SystemConfig.LangContent.atLeastOnePair'));
       return;
     }
 
