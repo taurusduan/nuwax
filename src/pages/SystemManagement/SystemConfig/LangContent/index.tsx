@@ -59,6 +59,7 @@ const LangContent: React.FC = () => {
   const [batchModalOpen, setBatchModalOpen] = useState<boolean>(false);
 
   // ====================== 多语言端 ======================
+  const [sideList, setSideList] = useState<string[]>([]);
   const [sideSelectOptions, setSideSelectOptions] = useState<
     { label: string; value: string }[]
   >([]);
@@ -68,6 +69,7 @@ const LangContent: React.FC = () => {
     manual: true,
     onSuccess: (list: string[]) => {
       const arr = Array.isArray(list) ? list : [];
+      setSideList(arr);
       setSideSelectOptions(
         arr.map((s) => ({ label: String(s), value: String(s) })),
       );
@@ -321,6 +323,7 @@ const LangContent: React.FC = () => {
         open={addModalOpen}
         currentItem={currentItem}
         lang={lang}
+        sideSelectOptions={sideSelectOptions}
         onCancel={() => {
           setAddModalOpen(false);
           setCurrentItem(null);
@@ -335,6 +338,7 @@ const LangContent: React.FC = () => {
       {/* 批量新增或更新键值对弹窗 */}
       <BatchKeyValueModal
         lang={lang}
+        sideList={sideList}
         open={batchModalOpen}
         onCancel={() => setBatchModalOpen(false)}
         onSuccess={() => {

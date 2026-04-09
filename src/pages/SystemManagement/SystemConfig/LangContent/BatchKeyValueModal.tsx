@@ -9,6 +9,7 @@ import { useRequest } from 'umi';
 interface BatchKeyValueModalProps {
   lang: string;
   open: boolean;
+  sideList?: string[];
   onCancel: () => void;
   onSuccess: () => void;
 }
@@ -29,6 +30,9 @@ const DefaultBatchCode = `
   "key": "value"
 }`;
 
+// 默认端列表
+const DefaultSideList: string[] = ['PC', 'Mobile', 'Claw', 'Backend'];
+
 /**
  * 批量新增或更新键值对弹窗
  */
@@ -36,6 +40,7 @@ const BatchKeyValueModal: React.FC<BatchKeyValueModalProps> = ({
   lang,
   open,
   onCancel,
+  sideList = DefaultSideList,
   onSuccess,
 }) => {
   // JSON 代码
@@ -90,14 +95,31 @@ const BatchKeyValueModal: React.FC<BatchKeyValueModalProps> = ({
     }
 
     // 构建批量新增或更新多语言配置的请求参数
-    const payload = Object.entries(parsed as Record<string, string>).map(
-      ([key, value]) =>
-        ({
-          lang,
-          key,
-          value: typeof value === 'string' ? value : JSON.stringify(value),
-        } as I18nConfigBatchAddOrUpdateParams),
-    );
+    const entries = Object.entries(parsed as Record<string, string>);
+    const payload: I18nConfigBatchAddOrUpdateParams[] = [];
+
+    for (const [key, value] of entries) {
+      const firstDotIndex = key.indexOf('.');
+      if (firstDotIndex <= 0) {
+        message.error(`Key 格式错误：${key}，必须包含端前缀，如 PC.xxx`);
+        return;
+      }
+
+      const side = key.slice(0, firstDotIndex);
+      if (!sideList.includes(side)) {
+        message.error(
+          `Key 格式错误：${key}，端前缀必须是以下之一：${sideList.join(', ')}`,
+        );
+        return;
+      }
+
+      payload.push({
+        lang,
+        side,
+        key,
+        value: typeof value === 'string' ? value : JSON.stringify(value),
+      });
+    }
 
     if (!payload.length) {
       message.error('请至少填写一条键值对');
