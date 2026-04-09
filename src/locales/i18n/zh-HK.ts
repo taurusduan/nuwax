@@ -4947,4 +4947,8 @@ export const ZH_HK: SystemLangMap = {
   'PC.Pages.SystemContentKnowledgeBase.accessControlOn': '開啓',
   'PC.Pages.SystemContentKnowledgeBase.accessControlOff': '關閉',
   'PC.Pages.SystemContentKnowledgeBase.grantAuth': '授權',
+  'PC.Pages.AntvX6RunResult.onlyError': '只看錯誤',
+  'PC.Pages.Chat.clearAndCreateFailed': '清除並建立失敗',
+  'PC.Pages.Chat.createConversationFailed': '建立會話失敗',
+  'PC.Pages.Chat.pagePreview': '頁面預覽',
 };

@@ -5923,4 +5923,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemContentKnowledgeBase.accessControlOn': 'On',
   'PC.Pages.SystemContentKnowledgeBase.accessControlOff': 'Off',
   'PC.Pages.SystemContentKnowledgeBase.grantAuth': 'Grant Auth',
+  'PC.Pages.AntvX6RunResult.onlyError': 'Only Errors',
+  'PC.Pages.Chat.clearAndCreateFailed': 'Failed to clear and create',
+  'PC.Pages.Chat.createConversationFailed': 'Failed to create conversation',
+  'PC.Pages.Chat.pagePreview': 'Page Preview',
 };

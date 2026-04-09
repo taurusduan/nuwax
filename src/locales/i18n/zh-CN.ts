@@ -5385,4 +5385,8 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.SystemContentKnowledgeBase.accessControlOn': '开启',
   'PC.Pages.SystemContentKnowledgeBase.accessControlOff': '关闭',
   'PC.Pages.SystemContentKnowledgeBase.grantAuth': '授权',
+  'PC.Pages.AntvX6RunResult.onlyError': '只看错误',
+  'PC.Pages.Chat.clearAndCreateFailed': '清除并创建失败',
+  'PC.Pages.Chat.createConversationFailed': '创建会话失败',
+  'PC.Pages.Chat.pagePreview': '页面预览',
 };
