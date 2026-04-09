@@ -5987,6 +5987,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.searchTextContent':
     'Search Text Content...',
   'PC.Pages.SystemConfig.LangContent.translateAllBtn': 'Translate All',
+  'PC.Pages.SystemConfig.LangContent.keyValMng': 'Key-Value Management',
   'PC.Pages.SpaceDevelop.copyIndependentSessionSuccess':
     'Independent session path copied',
   'PC.Pages.AntvX6.systemPrompt': 'System Prompt',
