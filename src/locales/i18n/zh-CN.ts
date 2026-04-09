@@ -2426,6 +2426,9 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.SpaceKnowledge.CreateSet.autoSegmentClean': '自动分段与清洗',
   'PC.Pages.SpaceKnowledge.CreateSet.autoSegmentCleanDesc':
     '自动分段与预处理规则',
+  'PC.Pages.SpaceKnowledge.CreateSet.isAiSegment': '智能分段',
+  'PC.Pages.SpaceKnowledge.CreateSet.aiSegmentDesc':
+    '基于AI模型智能识别文档结构，自动优化分段效果',
   'PC.Pages.SpaceKnowledge.CreateSet.custom': '自定义',
   'PC.Pages.SpaceKnowledge.CreateSet.customDesc':
     '自定义分段规则，分段长度及预处理规则',
@@ -3654,6 +3657,7 @@ export const ZH_CN: SystemLangMap = {
     '技能更新成功',
   'PC.Pages.SpaceSkillManage.CreateSkill.createSkill': '创建技能',
   'PC.Pages.SpaceSkillManage.CreateSkill.updateSkill': '更新技能',
+  'PC.Pages.SpaceSkillManage.CreateSkill.iconLabel': '图标',
   'PC.Pages.SpaceSkillManage.CreateSkill.nameLabel': '名称',
   'PC.Pages.SpaceSkillManage.CreateSkill.pleaseInputSkillName':
     '请输入技能名称',
@@ -4480,6 +4484,8 @@ export const ZH_CN: SystemLangMap = {
   'PC.Components.VariableList.tabVariables': '变量',
   'PC.Components.VariableList.tabTools': '工具',
   'PC.Components.VariableList.tabSkills': '技能',
+  'PC.Components.VariableList.description':
+    '用于保存用户个人信息，让智能体记住用户的特征，使回复更加个性化。',
 
   // Components - MarkdownCustomProcess
   'PC.Components.MarkdownCustomProcess.noData': '暂无数据',
@@ -4981,6 +4987,17 @@ export const ZH_CN: SystemLangMap = {
   'PC.Components.CreateKnowledge.systemDefault': '系统默认',
   'PC.Components.CreateKnowledge.updateSuccess': '知识库更新成功',
   'PC.Components.CreateKnowledge.updateTitle': '更新知识库',
+  'PC.Components.CreateKnowledge.namePlaceholder': '给知识库起一个清晰的名字',
+  'PC.Components.CreateKnowledge.descriptionPlaceholder':
+    '对该知识库的内容进行描述，以便于大模型更好的理解其用途',
+  'PC.Components.CreateKnowledge.embeddingModelRequired': '请选择向量模型',
+  'PC.Components.CreateKnowledge.embeddingModelTooltip':
+    '向量模型用于将文本转换为向量，是检索的基础',
+  'PC.Components.CreateKnowledge.embeddingModelPlaceholder': '请选择向量模型',
+  'PC.Components.CreateKnowledge.dataParsingMethodTooltip':
+    '选择如何从文档中提取内容，支持系统默认或自定义工作流',
+  'PC.Components.CreateKnowledge.dataParsingMethodPlaceholder':
+    '请选择数据解析方式',
   'PC.Components.EcoShareStatus.draft': '草稿',
   'PC.Components.EcoShareStatus.offline': '已下线',
   'PC.Components.EcoShareStatus.published': '已发布',
@@ -5368,4 +5385,8 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.SystemContentKnowledgeBase.accessControlOn': '开启',
   'PC.Pages.SystemContentKnowledgeBase.accessControlOff': '关闭',
   'PC.Pages.SystemContentKnowledgeBase.grantAuth': '授权',
+  'PC.Pages.AntvX6RunResult.onlyError': '只看错误',
+  'PC.Pages.Chat.clearAndCreateFailed': '清除并创建失败',
+  'PC.Pages.Chat.createConversationFailed': '创建会话失败',
+  'PC.Pages.Chat.pagePreview': '页面预览',
 };

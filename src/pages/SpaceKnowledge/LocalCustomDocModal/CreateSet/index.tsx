@@ -5,7 +5,6 @@ import { KNOWLEDGE_SEGMENT_IDENTIFIER_LIST } from '@/constants/library.constants
 import { dict } from '@/services/i18nRuntime';
 import { KnowledgeSegmentIdentifierEnum } from '@/types/enums/library';
 import type { CreateSetProps } from '@/types/interfaces/knowledge';
-import { isNumber } from '@/utils/common';
 import { customizeRequiredMark } from '@/utils/form';
 import { Form, Input } from 'antd';
 import classNames from 'classnames';
@@ -21,6 +20,8 @@ const CreateSet: React.FC<CreateSetProps> = ({
   form,
   autoSegmentConfigFlag,
   onChoose,
+  isAiSegment = false,
+  onAiSegmentChoose,
 }) => {
   const [segmentDelimiter, setSegmentDelimiter] =
     useState<KnowledgeSegmentIdentifierEnum>(
@@ -31,6 +32,8 @@ const CreateSet: React.FC<CreateSetProps> = ({
     const _value = value as KnowledgeSegmentIdentifierEnum;
     setSegmentDelimiter(_value);
   };
+
+  //console.log("2===autoSegmentConfigFlag:" + autoSegmentConfigFlag+",isAiSegment:" + isAiSegment);
 
   return (
     <>
@@ -45,22 +48,50 @@ const CreateSet: React.FC<CreateSetProps> = ({
           },
           styles['mt-50'],
         )}
-        onClick={() => onChoose(true)}
+        onClick={() => {
+          // console.log("1===autoSegmentConfigFlag:" + autoSegmentConfigFlag+",isAiSegment:" + isAiSegment);
+          onChoose(true);
+          onAiSegmentChoose?.(false);
+        }}
       >
-        <h3>{dict('PC.Pages.SpaceKnowledge.CreateSet.autoSegmentClean')}</h3>
-        <p>{dict('PC.Pages.SpaceKnowledge.CreateSet.autoSegmentCleanDesc')}</p>
+        <div className={cx(styles.header)}>
+          <h3>{dict('PC.Pages.SpaceKnowledge.CreateSet.autoSegmentClean')}</h3>
+          <p>
+            {dict('PC.Pages.SpaceKnowledge.CreateSet.autoSegmentCleanDesc')}
+          </p>
+        </div>
       </div>
       <div
         className={cx(styles['set-box'], 'px-16', 'py-16', 'cursor-pointer', {
-          [styles.active]: !autoSegmentConfigFlag,
+          [styles.active]: isAiSegment,
         })}
-        onClick={() => onChoose(false)}
+        onClick={() => {
+          onChoose(false);
+          onAiSegmentChoose?.(true);
+        }}
       >
-        <h3>{dict('PC.Pages.SpaceKnowledge.CreateSet.custom')}</h3>
-        <p>{dict('PC.Pages.SpaceKnowledge.CreateSet.customDesc')}</p>
+        <div className={cx(styles.title)}>
+          <h3>{dict('PC.Pages.SpaceKnowledge.CreateSet.isAiSegment')}</h3>
+          <p>{dict('PC.Pages.SpaceKnowledge.CreateSet.aiSegmentDesc')}</p>
+        </div>
+      </div>
+      <div
+        className={cx(styles['set-box'], 'px-16', 'py-16', 'cursor-pointer', {
+          [styles.active]: !autoSegmentConfigFlag && !isAiSegment,
+        })}
+        onClick={() => {
+          // console.log("3===autoSegmentConfigFlag:" + autoSegmentConfigFlag+",isAiSegment:" + isAiSegment);
+          onChoose(false);
+          onAiSegmentChoose?.(false);
+        }}
+      >
+        <div className={cx(styles.title)}>
+          <h3>{dict('PC.Pages.SpaceKnowledge.CreateSet.custom')}</h3>
+          <p>{dict('PC.Pages.SpaceKnowledge.CreateSet.customDesc')}</p>
+        </div>
         <div
           className={cx({
-            [styles['custom-set-hide']]: autoSegmentConfigFlag,
+            [styles['custom-set-hide']]: autoSegmentConfigFlag || isAiSegment,
           })}
         >
           <div className={cx(styles['divider-horizontal'])} />
@@ -131,29 +162,24 @@ const CreateSet: React.FC<CreateSetProps> = ({
                   ),
                 },
                 {
-                  validator(_, value) {
+                  pattern: /^[0-9]*$/,
+                  message: dict(
+                    'PC.Pages.SpaceKnowledge.CreateSet.inputValidNumber',
+                  ),
+                },
+                {
+                  validator: (_, value) => {
                     if (
-                      !value ||
-                      (Number(value) >= 100 && Number(value) <= 5000)
+                      value &&
+                      (Number(value) < 100 || Number(value) > 5000)
                     ) {
-                      return Promise.resolve();
-                    }
-                    if (value && !isNumber(value)) {
                       return Promise.reject(
-                        new Error(
-                          dict(
-                            'PC.Pages.SpaceKnowledge.CreateSet.inputValidNumber',
-                          ),
-                        ),
-                      );
-                    }
-                    return Promise.reject(
-                      new Error(
                         dict(
                           'PC.Pages.SpaceKnowledge.CreateSet.segmentMaxLengthRange',
                         ),
-                      ),
-                    );
+                      );
+                    }
+                    return Promise.resolve();
                   },
                 },
               ]}
@@ -177,29 +203,21 @@ const CreateSet: React.FC<CreateSetProps> = ({
                   ),
                 },
                 {
-                  validator(_, value) {
-                    if (
-                      !value ||
-                      (Number(value) >= 0 && Number(value) <= 100)
-                    ) {
-                      return Promise.resolve();
-                    }
-                    if (value && !isNumber(value)) {
+                  pattern: /^[0-9]*$/,
+                  message: dict(
+                    'PC.Pages.SpaceKnowledge.CreateSet.inputValidNumber',
+                  ),
+                },
+                {
+                  validator: (_, value) => {
+                    if (value && (Number(value) < 0 || Number(value) > 100)) {
                       return Promise.reject(
-                        new Error(
-                          dict(
-                            'PC.Pages.SpaceKnowledge.CreateSet.inputValidNumber',
-                          ),
-                        ),
-                      );
-                    }
-                    return Promise.reject(
-                      new Error(
                         dict(
                           'PC.Pages.SpaceKnowledge.CreateSet.segmentOverlapRange',
                         ),
-                      ),
-                    );
+                      );
+                    }
+                    return Promise.resolve();
                   },
                 },
               ]}

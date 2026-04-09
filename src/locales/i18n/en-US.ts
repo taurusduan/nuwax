@@ -1893,7 +1893,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AntvX6ExceptionItem.retryOnce': '1 time',
   'PC.Pages.AntvX6ExceptionItem.retryTwice': '2 times',
   'PC.Pages.AntvX6ExceptionItem.retryThrice': '3 times',
-  'PC.Pages.AntvX6ExceptionItem.handleTypeLabel': 'Exception Handling Mode',
+  'PC.Pages.AntvX6ExceptionItem.handleTypeLabel': 'Exception Handling',
   'PC.Pages.AntvX6ExceptionItem.interruptFlow': 'Interrupt Flow',
   'PC.Pages.AntvX6ExceptionItem.returnSpecificContent':
     'Return Specific Content',
@@ -2688,7 +2688,10 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpaceKnowledge.KnowledgeHeader.addQa': 'Add QA',
   'PC.Pages.SpaceKnowledge.CreateSet.autoSegmentClean': 'Auto Segment & Clean',
   'PC.Pages.SpaceKnowledge.CreateSet.autoSegmentCleanDesc':
-    'Auto segmentation and preprocessing rules',
+    'Automatic segmentation and preprocessing rules',
+  'PC.Pages.SpaceKnowledge.CreateSet.isAiSegment': 'Intelligent Segmentation',
+  'PC.Pages.SpaceKnowledge.CreateSet.aiSegmentDesc':
+    'Intelligently identify document structure based on AI model, automatically optimize segmentation effect',
   'PC.Pages.SpaceKnowledge.CreateSet.custom': 'Custom',
   'PC.Pages.SpaceKnowledge.CreateSet.customDesc':
     'Custom segmentation rules, segment length and preprocessing rules',
@@ -4060,6 +4063,7 @@ export const EN_US: SystemLangMap = {
     'Skill updated successfully',
   'PC.Pages.SpaceSkillManage.CreateSkill.createSkill': 'Create Skill',
   'PC.Pages.SpaceSkillManage.CreateSkill.updateSkill': 'Update Skill',
+  'PC.Pages.SpaceSkillManage.CreateSkill.iconLabel': 'Icon',
   'PC.Pages.SpaceSkillManage.CreateSkill.nameLabel': 'Name',
   'PC.Pages.SpaceSkillManage.CreateSkill.pleaseInputSkillName':
     'Please enter skill name',
@@ -4969,6 +4973,8 @@ export const EN_US: SystemLangMap = {
   'PC.Components.VariableList.tabVariables': 'Variables',
   'PC.Components.VariableList.tabTools': 'Tools',
   'PC.Components.VariableList.tabSkills': 'Skills',
+  'PC.Components.VariableList.description':
+    'Used to save user personal information, allowing the agent to remember user characteristics and make responses more personalized.',
 
   // Components - MarkdownCustomProcess
   'PC.Components.MarkdownCustomProcess.noData': 'No data available',
@@ -5496,8 +5502,22 @@ export const EN_US: SystemLangMap = {
   'PC.Components.CreateKnowledge.selectWorkflow': 'Select Workflow',
   'PC.Components.CreateKnowledge.systemDefault': 'System Default',
   'PC.Components.CreateKnowledge.updateSuccess':
-    'Knowledge base updated successfully',
+    'Knowledge Base updated successful',
   'PC.Components.CreateKnowledge.updateTitle': 'Update Knowledge Base',
+  'PC.Components.CreateKnowledge.namePlaceholder':
+    'Give the knowledge base a clear name',
+  'PC.Components.CreateKnowledge.descriptionPlaceholder':
+    'Describe the content of the knowledge base to help the model better understand its purpose',
+  'PC.Components.CreateKnowledge.embeddingModelRequired':
+    'Please select an embedding model',
+  'PC.Components.CreateKnowledge.embeddingModelTooltip':
+    'Embedding models are used to convert text to vectors, which is the basis for retrieval',
+  'PC.Components.CreateKnowledge.embeddingModelPlaceholder':
+    'Please select an embedding model',
+  'PC.Components.CreateKnowledge.dataParsingMethodTooltip':
+    'Choose how to extract content from documents, supporting system default or custom workflows',
+  'PC.Components.CreateKnowledge.dataParsingMethodPlaceholder':
+    'Please select a data parsing method',
   'PC.Components.EcoShareStatus.draft': 'Draft',
   'PC.Components.EcoShareStatus.offline': 'Offline',
   'PC.Components.EcoShareStatus.published': 'Published',
@@ -5903,4 +5923,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemContentKnowledgeBase.accessControlOn': 'On',
   'PC.Pages.SystemContentKnowledgeBase.accessControlOff': 'Off',
   'PC.Pages.SystemContentKnowledgeBase.grantAuth': 'Grant Auth',
+  'PC.Pages.AntvX6RunResult.onlyError': 'Only Errors',
+  'PC.Pages.Chat.clearAndCreateFailed': 'Failed to clear and create',
+  'PC.Pages.Chat.createConversationFailed': 'Failed to create conversation',
+  'PC.Pages.Chat.pagePreview': 'Page Preview',
 };

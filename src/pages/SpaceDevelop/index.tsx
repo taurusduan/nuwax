@@ -378,7 +378,7 @@ const SpaceDevelop: React.FC = () => {
           navigator.clipboard.writeText(path);
           message.success('已复制独立会话路径');
         } catch (error) {
-          console.error('复制独立会话路径失败:', error);
+          console.error('Failed to copy independent session path:', error);
           message.error('复制独立会话路径失败');
         }
         break;
