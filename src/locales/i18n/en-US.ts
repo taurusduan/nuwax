@@ -5982,8 +5982,7 @@ export const EN_US: SystemLangMap = {
     'Batch Add or Update Key-Value Pairs',
   'PC.Pages.SystemConfig.LangContent.translateSuccess':
     'Translate Successfully',
-  'PC.Pages.SystemConfig.LangContent.moduleColumn': 'Module',
-  'PC.Pages.SystemConfig.LangContent.searchModule': 'Search Module...',
+  'PC.Pages.SystemConfig.LangContent.moduleColumn': 'Side',
   'PC.Pages.SystemConfig.LangContent.searchKey': 'Search Key...',
   'PC.Pages.SystemConfig.LangContent.searchTextContent':
     'Search Text Content...',

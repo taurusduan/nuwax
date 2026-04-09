@@ -5001,8 +5001,7 @@ export const ZH_HK: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.batchAddOrUpdateTitle':
     '批量新增或更新鍵值對',
   'PC.Pages.SystemConfig.LangContent.translateSuccess': '翻譯成功',
-  'PC.Pages.SystemConfig.LangContent.moduleColumn': '模組',
-  'PC.Pages.SystemConfig.LangContent.searchModule': '搜索模組...',
+  'PC.Pages.SystemConfig.LangContent.moduleColumn': '端',
   'PC.Pages.SystemConfig.LangContent.searchKey': '搜索 Key...',
   'PC.Pages.SystemConfig.LangContent.searchTextContent': '搜索文本內容...',
   'PC.Pages.SystemConfig.LangContent.translateAllBtn': '翻譯全部',
