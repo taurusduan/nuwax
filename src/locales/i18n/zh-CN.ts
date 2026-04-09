@@ -5443,6 +5443,7 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.searchKey': '搜索 Key...',
   'PC.Pages.SystemConfig.LangContent.searchTextContent': '搜索文本内容...',
   'PC.Pages.SystemConfig.LangContent.translateAllBtn': '翻译全部',
+  'PC.Pages.SystemConfig.LangContent.keyValMng': '键值管理',
   'PC.Pages.SpaceDevelop.copyIndependentSessionSuccess': '已复制独立会话路径',
   'PC.Pages.AntvX6.systemPrompt': '系统提示词',
   'PC.Pages.AntvX6.userPrompt': '用户提示词',
