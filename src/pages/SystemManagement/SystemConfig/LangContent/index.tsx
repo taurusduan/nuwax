@@ -6,6 +6,7 @@ import {
   apiI18nConfigTranslate,
   apiI18nConfigTranslateAll,
 } from '@/services/i18n';
+import { dict } from '@/services/i18nRuntime';
 import type { I18nSlideLangInfo } from '@/types/interfaces/i18n';
 import type { Page } from '@/types/interfaces/request';
 import {
@@ -76,7 +77,9 @@ const LangContent: React.FC = () => {
         value: record.value,
         key: record.key,
       });
-      message.success('翻译成功');
+      message.success(
+        dict('PC.Pages.SystemConfig.LangContent.translateSuccess'),
+      );
       actionRef.current?.reload();
     } finally {
       setTranslateLoadingMap((prev) => {
@@ -92,7 +95,9 @@ const LangContent: React.FC = () => {
     setTranslateAllLoading(true);
     try {
       await apiI18nConfigTranslateAll(lang);
-      message.success('翻译成功');
+      message.success(
+        dict('PC.Pages.SystemConfig.LangContent.translateSuccess'),
+      );
       actionRef.current?.reload();
     } finally {
       setTranslateAllLoading(false);
@@ -102,11 +107,11 @@ const LangContent: React.FC = () => {
   // 列配置（使用表格内置搜索）
   const columns: ProColumns<I18nSlideLangInfo>[] = [
     {
-      title: '模块',
+      title: dict('PC.Pages.SystemConfig.LangContent.moduleColumn'),
       dataIndex: 'module',
       width: 120,
       fieldProps: {
-        placeholder: '搜索模块...',
+        placeholder: dict('PC.Pages.SystemConfig.LangContent.searchModule'),
         allowClear: true,
       },
       search: {
@@ -123,28 +128,30 @@ const LangContent: React.FC = () => {
       key: 'key',
       width: 220,
       fieldProps: {
-        placeholder: '搜索 Key...',
+        placeholder: dict('PC.Pages.SystemConfig.LangContent.searchKey'),
         allowClear: true,
       },
     },
     {
-      title: '文本内容',
+      title: dict('PC.Pages.SystemConfig.LangContent.textContentLabel'),
       dataIndex: 'value',
       key: 'value',
       fieldProps: {
-        placeholder: '搜索文本内容...',
+        placeholder: dict(
+          'PC.Pages.SystemConfig.LangContent.searchTextContent',
+        ),
         allowClear: true,
       },
     },
     {
-      title: '备注',
+      title: dict('PC.Pages.SystemConfig.LangContent.remarkLabel'),
       dataIndex: 'remark',
       key: 'remark',
       width: 200,
       hideInSearch: true,
     },
     {
-      title: '操作',
+      title: dict('PC.Common.Global.action'),
       key: 'actions',
       width: 140,
       hideInSearch: true,
@@ -203,7 +210,7 @@ const LangContent: React.FC = () => {
 
   return (
     <WorkspaceLayout
-      title={`${lang} - 键值对管理`}
+      title={`${lang} - ${dict('PC.Pages.SystemConfig.LangContent.keyValMng')}`}
       back={true}
       rightSlot={
         <>
@@ -212,13 +219,13 @@ const LangContent: React.FC = () => {
             loading={translateAllLoading}
             onClick={handleTranslateAll}
           >
-            翻译全部
+            {dict('PC.Pages.SystemConfig.LangContent.translateAllBtn')}
           </Button>
           <Button type="primary" onClick={() => setBatchModalOpen(true)}>
-            批量新增或更新键值对
+            {dict('PC.Pages.SystemConfig.LangContent.batchAddOrUpdateTitle')}
           </Button>
           <Button type="primary" onClick={handleOpenAddModal}>
-            添加键值对
+            {dict('PC.Pages.SystemConfig.LangContent.addKeyValTitle')}
           </Button>
         </>
       }

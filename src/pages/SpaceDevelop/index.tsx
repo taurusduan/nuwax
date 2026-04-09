@@ -376,10 +376,14 @@ const SpaceDevelop: React.FC = () => {
           // 这里实现复制路径到浏览器地址栏
           const path = `${location.origin}/app/details/${agentInfo.id}`;
           navigator.clipboard.writeText(path);
-          message.success('已复制独立会话路径');
+          message.success(
+            dict('PC.Pages.SpaceDevelop.copyIndependentSessionSuccess'),
+          );
         } catch (error) {
           console.error('Failed to copy independent session path:', error);
-          message.error('复制独立会话路径失败');
+          message.error(
+            dict('PC.Pages.SpaceDevelop.copyIndependentSessionFailed'),
+          );
         }
         break;
       // API Key

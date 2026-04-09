@@ -1,4 +1,5 @@
 import { apiI18nConfigAddOrUpdate } from '@/services/i18n';
+import { dict } from '@/services/i18nRuntime';
 import type { I18nSlideLangInfo } from '@/types/interfaces/i18n';
 import { customizeRequiredMark } from '@/utils/form';
 import { Form, Input, Modal, message } from 'antd';
@@ -46,7 +47,11 @@ const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
     {
       manual: true,
       onSuccess: () => {
-        message.success(isEdit ? '更新成功' : '添加成功');
+        message.success(
+          isEdit
+            ? dict('PC.Pages.SystemConfig.LangContent.updateSuccess')
+            : dict('PC.Pages.SystemConfig.LangContent.addSuccess'),
+        );
         form.resetFields();
         onSuccess();
       },
@@ -81,12 +86,20 @@ const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
 
   return (
     <Modal
-      title={isEdit ? '编辑键值对' : '添加键值对'}
+      title={
+        isEdit
+          ? dict('PC.Pages.SystemConfig.LangContent.editKeyValTitle')
+          : dict('PC.Pages.SystemConfig.LangContent.addKeyValTitle')
+      }
       open={open}
       onCancel={onCancel}
       onOk={handleOk}
-      okText={isEdit ? '更新' : '添加'}
-      cancelText="取消"
+      okText={
+        isEdit
+          ? dict('PC.Pages.SystemConfig.LangContent.updateBtn')
+          : dict('PC.Pages.SystemConfig.LangContent.addBtn')
+      }
+      cancelText={dict('PC.Common.Global.cancel')}
       confirmLoading={loading}
       destroyOnHidden
     >
@@ -94,20 +107,45 @@ const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
         <Form.Item
           label="Key"
           name="key"
-          rules={[{ required: true, message: '请输入 Key' }]}
+          rules={[
+            {
+              required: true,
+              message: dict('PC.Pages.SystemConfig.LangContent.keyRequired'),
+            },
+          ]}
         >
-          <Input placeholder="例如：PC.User.submit" />
+          <Input
+            placeholder={dict(
+              'PC.Pages.SystemConfig.LangContent.keyPlaceholder',
+            )}
+          />
         </Form.Item>
         <Form.Item
-          label="文本内容"
+          label={dict('PC.Pages.SystemConfig.LangContent.textContentLabel')}
           name="value"
-          rules={[{ required: true, message: '请输入文本内容' }]}
+          rules={[
+            {
+              required: true,
+              message: dict(
+                'PC.Pages.SystemConfig.LangContent.textContentRequired',
+              ),
+            },
+          ]}
         >
-          <Input placeholder="例如：提交" />
+          <Input
+            placeholder={dict(
+              'PC.Pages.SystemConfig.LangContent.textContentPlaceholder',
+            )}
+          />
         </Form.Item>
-        <Form.Item label="备注" name="remark">
+        <Form.Item
+          label={dict('PC.Pages.SystemConfig.LangContent.remarkLabel')}
+          name="remark"
+        >
           <Input.TextArea
-            placeholder="例如：Submit Button"
+            placeholder={dict(
+              'PC.Pages.SystemConfig.LangContent.remarkPlaceholder',
+            )}
             autoSize={{ minRows: 3, maxRows: 4 }}
           />
         </Form.Item>

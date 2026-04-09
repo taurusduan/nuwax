@@ -1,5 +1,6 @@
 import CodeEditor from '@/components/CodeEditor';
 import { apiI18nConfigBatchAddOrUpdate } from '@/services/i18n';
+import { dict } from '@/services/i18nRuntime';
 import { CodeLangEnum } from '@/types/enums/plugin';
 import type { I18nConfigBatchAddOrUpdateParams } from '@/types/interfaces/i18n';
 import { Modal, message } from 'antd';
@@ -82,12 +83,14 @@ const BatchKeyValueModal: React.FC<BatchKeyValueModalProps> = ({
 
       parsed = JSON.parse(normalizedJsonText);
     } catch {
-      message.error('JSON 格式错误，请检查后重试');
+      message.error(dict('PC.Pages.SystemConfig.LangContent.jsonFormatError'));
       return;
     }
 
     if (!parsed || Array.isArray(parsed) || typeof parsed !== 'object') {
-      message.error('请输入对象格式的键值对 JSON');
+      message.error(
+        dict('PC.Pages.SystemConfig.LangContent.jsonObjectRequired'),
+      );
       return;
     }
 
@@ -103,23 +106,25 @@ const BatchKeyValueModal: React.FC<BatchKeyValueModalProps> = ({
     );
 
     if (!payload.length) {
-      message.error('请至少填写一条键值对');
+      message.error(dict('PC.Pages.SystemConfig.LangContent.atLeastOnePair'));
       return;
     }
 
     await runBatchAddOrUpdate(payload);
-    message.success('批量处理成功');
+    message.success(
+      dict('PC.Pages.SystemConfig.LangContent.batchProcessSuccess'),
+    );
     onSuccess();
   };
 
   return (
     <Modal
-      title="批量新增或更新键值对"
+      title={dict('PC.Pages.SystemConfig.LangContent.batchAddOrUpdateTitle')}
       open={open}
       onCancel={onCancel}
       onOk={handleOk}
-      okText="确定"
-      cancelText="取消"
+      okText={dict('PC.Common.Global.confirm')}
+      cancelText={dict('PC.Common.Global.cancel')}
       confirmLoading={loading}
       width={820}
       destroyOnHidden
