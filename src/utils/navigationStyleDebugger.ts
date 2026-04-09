@@ -15,7 +15,7 @@ export class NavigationStyleDebugger {
     const currentStyle = currentData.navigationStyle;
     const currentConfigKey = `${currentData.layoutStyle}-${currentData.navigationStyle}`;
 
-    console.group('🔍 NavigationStyle 调试信息');
+    console.group('🔍 NavigationStyle Debug Info');
     console.log('Current navigation style:', currentStyle);
     console.log('Current config key:', currentConfigKey);
     console.log('Is STYLE1:', currentStyle === ThemeNavigationStyleType.STYLE1);
@@ -31,7 +31,7 @@ export class NavigationStyleDebugger {
    * 切换导航风格并打印状态
    */
   static async toggleAndDebug(): Promise<void> {
-    console.group('🔄 切换导航风格');
+    console.group('🔄 Switch Navigation Style');
     console.log('State before switch:');
     this.printCurrentState();
 
@@ -52,7 +52,7 @@ export class NavigationStyleDebugger {
    * 检查 DOM 元素状态
    */
   static checkDOMElements(): void {
-    console.group('🌐 DOM 元素检查');
+    console.group('🌐 DOM Element Check');
 
     // 检查所有 TabItem 元素
     const tabItems = document.querySelectorAll('[class*="box"]');
@@ -82,7 +82,7 @@ export class NavigationStyleDebugger {
    * 完整的诊断报告
    */
   static fullDiagnosis(): void {
-    console.group('📊 NavigationStyle 完整诊断');
+    console.group('📊 NavigationStyle Full Diagnosis');
     this.printCurrentState();
     this.checkDOMElements();
     console.groupEnd();

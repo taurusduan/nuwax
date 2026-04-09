@@ -158,7 +158,7 @@ export async function createSSEConnection<T = any>(
 
       onopen: async (response) => {
         if (response.status >= 400) {
-          throw new Error(`SSE连接失败: ${response.statusText}`);
+          throw new Error(`SSE connection failed: ${response.statusText}`);
         }
         console.log('✅ [SSE Utils] SSE connection established');
         // 连接建立时初始化时间戳并启动超时检查
