@@ -5963,7 +5963,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.updateBtn': 'Update',
   'PC.Pages.SystemConfig.LangContent.addBtn': 'Add',
   'PC.Pages.SystemConfig.LangContent.keyRequired': 'Please enter a Key',
-  'PC.Pages.SystemConfig.LangContent.keyPlaceholder': 'e.g., PC.User.submit',
+  'PC.Pages.SystemConfig.LangContent.keyPlaceholder': 'e.g., User.submit',
   'PC.Pages.SystemConfig.LangContent.textContentLabel': 'Text Content',
   'PC.Pages.SystemConfig.LangContent.textContentRequired':
     'Please enter text content',
@@ -5979,7 +5979,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.batchProcessSuccess':
     'Batch processing successfully',
   'PC.Pages.SystemConfig.LangContent.batchAddOrUpdateTitle':
-    'Batch Add or Update Key-Value Pairs',
+    'Batch Add or Update',
   'PC.Pages.SystemConfig.LangContent.translateSuccess':
     'Translate Successfully',
   'PC.Pages.SystemConfig.LangContent.moduleColumn': 'Side',

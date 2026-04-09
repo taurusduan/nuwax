@@ -5424,7 +5424,7 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.updateBtn': '更新',
   'PC.Pages.SystemConfig.LangContent.addBtn': '添加',
   'PC.Pages.SystemConfig.LangContent.keyRequired': '请输入 Key',
-  'PC.Pages.SystemConfig.LangContent.keyPlaceholder': '例如：PC.User.submit',
+  'PC.Pages.SystemConfig.LangContent.keyPlaceholder': '例如：User.submit',
   'PC.Pages.SystemConfig.LangContent.textContentLabel': '文本内容',
   'PC.Pages.SystemConfig.LangContent.textContentRequired': '请输入文本内容',
   'PC.Pages.SystemConfig.LangContent.textContentPlaceholder': '例如：提交',
@@ -5436,8 +5436,7 @@ export const ZH_CN: SystemLangMap = {
     '请输入对象格式的键值对 JSON',
   'PC.Pages.SystemConfig.LangContent.atLeastOnePair': '请至少填写一条键值对',
   'PC.Pages.SystemConfig.LangContent.batchProcessSuccess': '批量处理成功',
-  'PC.Pages.SystemConfig.LangContent.batchAddOrUpdateTitle':
-    '批量新增或更新键值对',
+  'PC.Pages.SystemConfig.LangContent.batchAddOrUpdateTitle': '批量新增或更新',
   'PC.Pages.SystemConfig.LangContent.translateSuccess': '翻译成功',
   'PC.Pages.SystemConfig.LangContent.moduleColumn': '端',
   'PC.Pages.SystemConfig.LangContent.searchKey': '搜索 Key...',
