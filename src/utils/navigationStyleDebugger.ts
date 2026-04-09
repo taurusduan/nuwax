@@ -16,18 +16,12 @@ export class NavigationStyleDebugger {
     const currentConfigKey = `${currentData.layoutStyle}-${currentData.navigationStyle}`;
 
     console.group('🔍 NavigationStyle 调试信息');
-    console.log('当前导航风格:', currentStyle);
-    console.log('当前配置键:', currentConfigKey);
+    console.log('Current navigation style:', currentStyle);
+    console.log('Current config key:', currentConfigKey);
+    console.log('Is STYLE1:', currentStyle === ThemeNavigationStyleType.STYLE1);
+    console.log('Is STYLE2:', currentStyle === ThemeNavigationStyleType.STYLE2);
     console.log(
-      '是否为 STYLE1:',
-      currentStyle === ThemeNavigationStyleType.STYLE1,
-    );
-    console.log(
-      '是否为 STYLE2:',
-      currentStyle === ThemeNavigationStyleType.STYLE2,
-    );
-    console.log(
-      '应该显示文字:',
+      'Text to display:',
       currentStyle === ThemeNavigationStyleType.STYLE2,
     );
     console.groupEnd();
@@ -38,7 +32,7 @@ export class NavigationStyleDebugger {
    */
   static async toggleAndDebug(): Promise<void> {
     console.group('🔄 切换导航风格');
-    console.log('切换前状态:');
+    console.log('State before switch:');
     this.printCurrentState();
 
     // 使用统一主题服务切换导航风格
@@ -49,7 +43,7 @@ export class NavigationStyleDebugger {
         : ThemeNavigationStyleType.STYLE1;
     await unifiedThemeService.updateNavigationStyle(newStyle);
 
-    console.log('切换后状态:');
+    console.log('State after switch:');
     this.printCurrentState();
     console.groupEnd();
   }
@@ -62,7 +56,7 @@ export class NavigationStyleDebugger {
 
     // 检查所有 TabItem 元素
     const tabItems = document.querySelectorAll('[class*="box"]');
-    console.log('找到的 TabItem 元素数量:', tabItems.length);
+    console.log('Number of TabItem elements found:', tabItems.length);
 
     tabItems.forEach((item, index) => {
       const textElement = item.querySelector('[class*="text"]');
