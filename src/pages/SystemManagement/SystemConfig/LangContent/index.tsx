@@ -227,6 +227,7 @@ const LangContent: React.FC = () => {
         placeholder: dict('PC.Pages.SystemConfig.LangContent.searchKey'),
         allowClear: true,
       },
+      render: (_, record) => <span translate="no">{record.key}</span>,
     },
     {
       title: dict('PC.Pages.SystemConfig.LangContent.textContentLabel'),
