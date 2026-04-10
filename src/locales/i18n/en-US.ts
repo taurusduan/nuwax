@@ -4437,6 +4437,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.MorePage.ApiKey.unknownStatus': 'Unknown',
   'PC.Pages.MorePage.ApiKey.actions': 'Actions',
   'PC.Pages.MorePage.ApiKey.callStats': 'Call Statistics',
+  'PC.Pages.MorePage.ApiKey.viewLogs': 'View Logs',
   'PC.Pages.MorePage.ApiKey.permissionConfig': 'Permission Config',
   'PC.Pages.MorePage.ApiKey.edit': 'Edit',
   'PC.Pages.MorePage.ApiKey.delete': 'Delete',
