@@ -176,8 +176,8 @@ export const ZH_CN: SystemLangMap = {
   'PC.Components.VncIdleWarningModal.confirmText': '继续使用',
   'PC.Components.VncIdleWarningModal.countdownAutoClose': '{0} 秒后自动关闭',
   'PC.Components.VncIdleWarningModal.hintAction': '任意键鼠操作将{0}',
-  'PC.Components.FilePreview.errorInvalidPptx':
-    '文件格式无效或已损坏，请确认是否为有效的 PPTX 文件',
+  'PC.Components.FilePreview.errorInvalid':
+    '文件格式不支持预览或文件已损坏，请确认是否为有效的文件',
   'PC.Components.FilePreview.errorNetwork':
     '网络请求失败，请检查网络连接后重试',
   'PC.Components.FilePreview.errorFileLoad': '文件加载失败，请重试',
