@@ -211,16 +211,19 @@ const I18nManage: React.FC = () => {
     {
       title: '',
       key: 'dragSort',
-      width: 56,
+      width: 60,
+      fixed: 'left',
       render: () => <DragHandle />,
     },
     {
       title: dict('PC.Pages.SystemConfigI18n.columnName'),
       dataIndex: 'name',
+      ellipsis: true,
     },
     {
       title: dict('PC.Pages.SystemConfigI18n.columnLang'),
       dataIndex: 'lang',
+      ellipsis: true,
     },
     {
       title: dict('PC.Pages.SystemConfigI18n.columnDefault'),
@@ -256,11 +259,13 @@ const I18nManage: React.FC = () => {
     {
       title: dict('PC.Pages.SystemConfigI18n.columnModified'),
       dataIndex: 'modified',
+      width: 200,
       render: (modified) => formatDateTime(modified),
     },
     {
       title: dict('PC.Pages.SystemConfigI18n.columnCreated'),
       dataIndex: 'created',
+      width: 200,
       render: (created) => formatDateTime(created),
     },
     {
@@ -268,6 +273,7 @@ const I18nManage: React.FC = () => {
       key: 'actions',
       align: 'center',
       width: 140,
+      fixed: 'right',
       render: (_value, record) => {
         const isDefaultLang = record.isDefault === I18nLangIsDefaultEnum.Yes;
         return (
@@ -332,6 +338,7 @@ const I18nManage: React.FC = () => {
             loading={loading}
             dataSource={langList}
             pagination={false}
+            scroll={{ x: 1090 }}
             columns={columns}
             components={{
               body: {
