@@ -163,6 +163,8 @@ const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
               ]}
             >
               <Input
+                maxLength={100}
+                showCount
                 placeholder={dict(
                   'PC.Pages.SystemConfig.LangContent.keyPlaceholder',
                 )}
@@ -184,6 +186,8 @@ const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
           ]}
         >
           <Input
+            maxLength={100}
+            showCount
             placeholder={dict(
               'PC.Pages.SystemConfig.LangContent.textContentPlaceholder',
             )}
@@ -194,6 +198,9 @@ const AddKeyValueModal: React.FC<AddKeyValueModalProps> = ({
           name="remark"
         >
           <Input.TextArea
+            maxLength={200}
+            showCount
+            className="dispose-textarea-count"
             placeholder={dict(
               'PC.Pages.SystemConfig.LangContent.remarkPlaceholder',
             )}

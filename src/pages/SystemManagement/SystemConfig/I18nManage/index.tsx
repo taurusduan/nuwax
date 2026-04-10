@@ -75,7 +75,7 @@ const I18nManage: React.FC = () => {
         );
       }
     } else {
-      message.warning('当前没有默认语言，请先设置默认语言');
+      message.warning(dict('PC.Pages.SystemConfigI18n.noDefaultLang'));
     }
   };
 

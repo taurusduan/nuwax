@@ -65,6 +65,8 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.SystemConfigI18n.defaultNo': '否',
   'PC.Pages.SystemConfigI18n.statusEnabled': '启用',
   'PC.Pages.SystemConfigI18n.statusDisabled': '停用',
+  'PC.Pages.SystemConfigI18n.noDefaultLang':
+    '当前没有默认语言，请先设置默认语言',
   'PC.Components.UserMenu.defaultUserName': '用户名',
   'PC.Components.UserMenu.profile': '个人中心',
   'PC.Components.UserMenu.logout': '退出登录',

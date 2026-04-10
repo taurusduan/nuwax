@@ -66,6 +66,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemConfigI18n.defaultNo': 'No',
   'PC.Pages.SystemConfigI18n.statusEnabled': 'Enabled',
   'PC.Pages.SystemConfigI18n.statusDisabled': 'Disabled',
+  'PC.Pages.SystemConfigI18n.noDefaultLang':
+    'There is currently no default language. Please set one first.',
   'PC.Components.UserMenu.defaultUserName': 'User Name',
   'PC.Components.UserMenu.profile': 'Profile',
   'PC.Components.UserMenu.logout': 'Logout',
