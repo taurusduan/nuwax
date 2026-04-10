@@ -340,7 +340,12 @@ export default () => {
         // 切换到智能体电脑 tab
         openDesktopView(cId);
       }
-      return await apiRestartPod(cId);
+      const result = await apiRestartPod(cId);
+      if (result.code === SUCCESS_CODE) {
+        message.success(
+          dict('PC.Models.ConversationInfo.restartVncPodSuccess'),
+        );
+      }
     },
     [viewMode],
   );
