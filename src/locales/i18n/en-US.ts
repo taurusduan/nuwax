@@ -5998,7 +5998,9 @@ export const EN_US: SystemLangMap = {
     'Batch Add or Update',
   'PC.Pages.SystemConfig.LangContent.translateSuccess':
     'Translate Successfully',
-  'PC.Pages.SystemConfig.LangContent.moduleColumn': 'Side',
+  'PC.Pages.SystemConfig.LangContent.moduleColumn': 'Module',
+  'PC.Pages.SystemConfig.LangContent.sideColumn': 'Side',
+  'PC.Pages.SystemConfig.LangContent.searchModule': 'Search module...',
   'PC.Pages.SystemConfig.LangContent.searchKey': 'Search Key...',
   'PC.Pages.SystemConfig.LangContent.translateAllBtn': 'Translate All',
   'PC.Pages.SystemConfig.LangContent.keyValMng': 'Key-Value Management',

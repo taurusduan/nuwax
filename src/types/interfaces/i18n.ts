@@ -97,6 +97,9 @@ export interface I18nAddLangParams {
 
 // 端语言信息
 export interface I18nSlideLangInfo {
+  /*模块，精确匹配 */
+  module?: string;
+
   /*端 */
   side?: string;
 
@@ -138,6 +141,9 @@ export interface LangConfigListParams {
 
   /*业务模块，精确匹配 */
   module?: string;
+
+  /*值，模糊匹配 */
+  value?: string;
 
   /*配置键 fieldKey，模糊匹配 */
   key?: string;
