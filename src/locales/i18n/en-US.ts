@@ -2104,6 +2104,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemMenuDataPermissionModal.contentMgmtTip':
     'Enable access control in content management and publish to system square before authorizing here',
   'PC.Pages.SystemMenuDataPermissionModal.tabWebApp': 'Web Application',
+  'PC.Pages.SystemMenuDataPermissionModal.tabKnowledgeBase': 'Knowledge Base',
   'PC.Pages.SystemMenuDataPermissionModal.tabDevPermission':
     'Development Permissions',
   'PC.Pages.SystemMenuDataPermissionModal.saveSuccess':

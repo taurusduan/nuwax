@@ -1889,6 +1889,7 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.SystemMenuDataPermissionModal.contentMgmtTip':
     '在内容管理中开启管控并发布到系统广场后可在此处进行授权',
   'PC.Pages.SystemMenuDataPermissionModal.tabWebApp': '网页应用',
+  'PC.Pages.SystemMenuDataPermissionModal.tabKnowledgeBase': '知识库',
   'PC.Pages.SystemMenuDataPermissionModal.tabDevPermission': '开发权限',
   'PC.Pages.SystemMenuDataPermissionModal.saveSuccess': '数据权限保存成功',
   'PC.Pages.SystemMenuDataPermissionModal.missingTargetId':
