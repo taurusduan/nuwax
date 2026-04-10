@@ -5430,6 +5430,8 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.updateBtn': '更新',
   'PC.Pages.SystemConfig.LangContent.addBtn': '添加',
   'PC.Pages.SystemConfig.LangContent.keyRequired': '请输入 Key',
+  'PC.Pages.SystemConfig.LangContent.keyMustContainDot':
+    'Key 必须包含点号（.）',
   'PC.Pages.SystemConfig.LangContent.keyPlaceholder': '例如：User.submit',
   'PC.Pages.SystemConfig.LangContent.textContentLabel': '文本内容',
   'PC.Pages.SystemConfig.LangContent.textContentRequired': '请输入文本内容',

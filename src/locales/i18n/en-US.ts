@@ -5969,6 +5969,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.addBtn': 'Add',
   'PC.Pages.SystemConfig.LangContent.keyRequired': 'Please enter a Key',
   'PC.Pages.SystemConfig.LangContent.keyPlaceholder': 'e.g., User.submit',
+  'PC.Pages.SystemConfig.LangContent.keyMustContainDot':
+    'Key must contain a dot (.)',
   'PC.Pages.SystemConfig.LangContent.textContentLabel': 'Text Content',
   'PC.Pages.SystemConfig.LangContent.textContentRequired':
     'Please enter text content',

@@ -4992,6 +4992,8 @@ export const ZH_HK: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.updateBtn': '更新',
   'PC.Pages.SystemConfig.LangContent.addBtn': '添加',
   'PC.Pages.SystemConfig.LangContent.keyRequired': '請輸入 Key',
+  'PC.Pages.SystemConfig.LangContent.keyMustContainDot':
+    'Key 必須包含點號（.）',
   'PC.Pages.SystemConfig.LangContent.keyPlaceholder': '例如：User.submit',
   'PC.Pages.SystemConfig.LangContent.textContentLabel': '文本內容',
   'PC.Pages.SystemConfig.LangContent.textContentRequired': '請輸入文本內容',
