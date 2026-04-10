@@ -47,6 +47,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.Setting.saveSuccess': 'Language setting updated successfully',
   'PC.Pages.Setting.bindPending': 'Pending binding',
   'PC.Pages.SystemConfigI18n.manageTitle': 'Language Management',
+  'PC.Pages.SystemConfigI18n.empty': 'No data',
   'PC.Pages.SystemConfigI18n.columnName': 'Language Name',
   'PC.Pages.SystemConfigI18n.columnLang': 'Language Code',
   'PC.Pages.SystemConfigI18n.columnDefault': 'Default',

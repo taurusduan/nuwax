@@ -46,6 +46,7 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.Setting.saveSuccess': '语言设置更新成功',
   'PC.Pages.Setting.bindPending': '待绑定',
   'PC.Pages.SystemConfigI18n.manageTitle': '多语言管理',
+  'PC.Pages.SystemConfigI18n.empty': '暂无数据',
   'PC.Pages.SystemConfigI18n.columnName': '语言名称',
   'PC.Pages.SystemConfigI18n.columnLang': '语言标识',
   'PC.Pages.SystemConfigI18n.columnDefault': '默认语言',
