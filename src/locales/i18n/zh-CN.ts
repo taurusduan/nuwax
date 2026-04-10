@@ -5414,6 +5414,10 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.SystemConfig.I18nManage.codeTooltip':
     'code格式：语言代码 - 国家代码',
   'PC.Pages.SystemConfig.I18nManage.codePlaceholder': '例如：en-US、ja-JP',
+  'PC.Pages.SystemConfig.I18nManage.selectLangLabel': '语言',
+  'PC.Pages.SystemConfig.I18nManage.selectLangRequired': '请选择语言',
+  'PC.Pages.SystemConfig.I18nManage.switchToCustom': '没有想要的语言？手动新建',
+  'PC.Pages.SystemConfig.I18nManage.backToSelectLang': '返回语言选择',
   'PC.Pages.SystemConfig.I18nManage.orderTooltip': '值越小越靠前',
   'PC.Pages.SystemConfig.I18nManage.orderPlaceholder': '例如：1',
   'PC.Pages.SystemConfig.I18nManage.setDefaultLang': '设为默认语言',
