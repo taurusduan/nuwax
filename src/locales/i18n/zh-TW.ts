@@ -4986,6 +4986,10 @@ export const ZH_TW: SystemLangMap = {
   'PC.Pages.SystemConfig.I18nManage.codeTooltip':
     'code格式：語言代碼 - 國家代碼',
   'PC.Pages.SystemConfig.I18nManage.codePlaceholder': '例如：en-US、ja-JP',
+  'PC.Pages.SystemConfig.I18nManage.selectLangLabel': '語言',
+  'PC.Pages.SystemConfig.I18nManage.selectLangRequired': '請選擇語言',
+  'PC.Pages.SystemConfig.I18nManage.switchToCustom': '沒有想要的語言？手動新增',
+  'PC.Pages.SystemConfig.I18nManage.backToSelectLang': '返回語言選擇',
   'PC.Pages.SystemConfig.I18nManage.orderTooltip': '值越小越靠前',
   'PC.Pages.SystemConfig.I18nManage.orderPlaceholder': '例如：1',
   'PC.Pages.SystemConfig.I18nManage.setDefaultLang': '設為預設語言',

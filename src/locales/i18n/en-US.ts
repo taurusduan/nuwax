@@ -5952,6 +5952,13 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemConfig.I18nManage.codeTooltip':
     'Code format: language code - country code',
   'PC.Pages.SystemConfig.I18nManage.codePlaceholder': 'e.g., en-US, ja-JP',
+  'PC.Pages.SystemConfig.I18nManage.selectLangLabel': 'Language',
+  'PC.Pages.SystemConfig.I18nManage.selectLangRequired':
+    'Please select a language',
+  'PC.Pages.SystemConfig.I18nManage.switchToCustom':
+    'Language not listed? Create manually',
+  'PC.Pages.SystemConfig.I18nManage.backToSelectLang':
+    'Back to language selection',
   'PC.Pages.SystemConfig.I18nManage.orderTooltip': 'Smaller value comes first',
   'PC.Pages.SystemConfig.I18nManage.orderPlaceholder': 'e.g., 1',
   'PC.Pages.SystemConfig.I18nManage.setDefaultLang': 'Set as Default Language',

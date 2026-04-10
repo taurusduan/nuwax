@@ -19,6 +19,16 @@ export enum I18nLangIsDefaultEnum {
 }
 
 /**
+ * 可选语言信息
+ */
+export interface I18nBootstrapLangDto {
+  /** BCP 47 语言标识，如 zh-CN、en-US */
+  tag: string;
+  // 根据 tag 自动生成的展示名
+  name: string;
+}
+
+/**
  * 语言信息
  */
 export interface I18nLangDto {
