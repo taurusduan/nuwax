@@ -620,8 +620,14 @@ const Chat: React.FC = () => {
       setMessageList((list: MessageInfo[]) => [...list, message]);
       // 当用户手动滚动时，暂停自动滚动
       if (allowAutoScrollRef.current) {
-        // 滚动到底部
-        messageViewScrollToBottom();
+        // 在流式输出/高频更新时，使用强制即时置底，避免 smooth 滚动的堆积和抖动
+        const element = messageViewRef.current;
+        if (element) {
+          element.scrollTo({
+            top: element.scrollHeight,
+            behavior: 'instant',
+          });
+        }
       }
     }
   };
@@ -1177,7 +1183,8 @@ const Chat: React.FC = () => {
                   {/* 智能体电脑视图 */}
                   <ConditionRender
                     condition={
-                      conversationInfo?.agent.hideDesktop === HideDesktopEnum.No
+                      conversationInfo?.agent.hideDesktop ===
+                        HideDesktopEnum.No && selectedComputerId === '-1'
                     }
                   >
                     <TooltipIcon
