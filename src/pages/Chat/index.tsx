@@ -1069,7 +1069,7 @@ const Chat: React.FC = () => {
         <header className={cx(styles['title-box'])}>
           <div
             className={cx(styles['title-container'], {
-              [styles['title-container-collapsed']]: !isAppSidebarVisible,
+              [styles['title-container-collapsed']]: isAppSidebarMode,
             })}
           >
             <div className={cx('flex', 'items-center', 'gap-4')}>
