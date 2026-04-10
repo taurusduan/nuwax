@@ -3808,6 +3808,7 @@ export const ZH_TW: SystemLangMap = {
   'PC.Pages.MorePage.ApiKey.unknownStatus': '未知',
   'PC.Pages.MorePage.ApiKey.actions': '操作',
   'PC.Pages.MorePage.ApiKey.callStats': '呼叫統計',
+  'PC.Pages.MorePage.ApiKey.viewLogs': '查看日誌',
   'PC.Pages.MorePage.ApiKey.permissionConfig': '許可權配置',
   'PC.Pages.MorePage.ApiKey.edit': '編輯',
   'PC.Pages.MorePage.ApiKey.delete': '刪除',
