@@ -1085,8 +1085,19 @@ export default () => {
 
         // 现在逻辑已重构为同步，按序处理所有包，包括带有 finished: true 的结束包。
         handleChangeMessageList(params, res, currentMessageId);
-        // 滚动到底部
-        handleScrollBottom();
+        // 滚动到底部：在流式输出期间，使用 'instant' 以避免抖动，且只有在允许自动滚动时才触发
+        if (allowAutoScrollRef.current) {
+          // 使用 raf 确保在 DOM 更新后立即执行，且不带平滑动画以防指令堆积
+          requestAnimationFrame(() => {
+            const element = messageViewRef?.current;
+            if (element) {
+              element.scrollTo({
+                top: element.scrollHeight,
+                behavior: 'instant',
+              });
+            }
+          });
+        }
       },
       onClose: async () => {
         // 将当前会话的loading状态的消息改为Stopped状态，并将所有正在执行的 processing 状态更新为 FAILED
