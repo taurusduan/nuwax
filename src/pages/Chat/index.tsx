@@ -1067,7 +1067,11 @@ const Chat: React.FC = () => {
       <div className={cx('flex-1', 'flex', 'flex-col', styles['main-content'])}>
         {/* 页面顶部: 标题区域 */}
         <header className={cx(styles['title-box'])}>
-          <div className={cx(styles['title-container'])}>
+          <div
+            className={cx(styles['title-container'], {
+              [styles['title-container-collapsed']]: !isAppSidebarVisible,
+            })}
+          >
             <div className={cx('flex', 'items-center', 'gap-4')}>
               {/* 应用智能体模式下，显示内容导航按钮 */}
               <ConditionRender
