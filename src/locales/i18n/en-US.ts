@@ -3383,6 +3383,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.jsonObjectRequired': 'Please enter key-value pair JSON in object format',
   'PC.Pages.SystemConfig.LangContent.keyMustContainDot': 'Key must contain a dot (.)',
   'PC.Pages.SystemConfig.LangContent.keyPlaceholder': 'e.g., User.submit',
+  'PC.Pages.SystemConfig.LangContent.keyPrefixInvalidError': 'Key format error: {0}, side prefix must be one of the following: {1}',
+  'PC.Pages.SystemConfig.LangContent.keyPrefixMissingError': 'Key format error: {0}, must contain a side prefix, e.g., PC.xxx',
   'PC.Pages.SystemConfig.LangContent.keyRequired': 'Please enter a Key',
   'PC.Pages.SystemConfig.LangContent.keyValMng': 'Key-Value Management',
   'PC.Pages.SystemConfig.LangContent.moduleColumn': 'Module',
@@ -4366,5 +4368,5 @@ export const EN_US: SystemLangMap = {
   'PC.Utils.PptxFallbackRenderer.coverPreview': 'Presentation Cover Preview',
   'PC.Utils.PptxFallbackRenderer.parseFailed': 'PPTX file parse failed',
   'PC.Utils.PptxFallbackRenderer.previewAlt': 'Presentation Preview',
-  'PC.Utils.PptxFallbackRenderer.slideCount': '{0} slides in total',
+  'PC.Utils.PptxFallbackRenderer.slideCount': '{0} slides in total'
 };

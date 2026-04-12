@@ -3383,6 +3383,8 @@ export const ZH_HK: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.jsonObjectRequired': '請輸入對象格式的鍵值對 JSON',
   'PC.Pages.SystemConfig.LangContent.keyMustContainDot': 'Key 必須包含點號（.）',
   'PC.Pages.SystemConfig.LangContent.keyPlaceholder': '例如：User.submit',
+  'PC.Pages.SystemConfig.LangContent.keyPrefixInvalidError': 'Key 格式錯誤：{0}，端前缀必須是以下之一：{1}',
+  'PC.Pages.SystemConfig.LangContent.keyPrefixMissingError': 'Key 格式錯誤：{0}，必須包含端前缀，如 PC.xxx',
   'PC.Pages.SystemConfig.LangContent.keyRequired': '請輸入 Key',
   'PC.Pages.SystemConfig.LangContent.keyValMng': '鍵值管理',
   'PC.Pages.SystemConfig.LangContent.moduleColumn': '模塊',
@@ -4366,5 +4368,5 @@ export const ZH_HK: SystemLangMap = {
   'PC.Utils.PptxFallbackRenderer.coverPreview': '演示文稿封面預覽',
   'PC.Utils.PptxFallbackRenderer.parseFailed': 'PPTX 文件解析失敗',
   'PC.Utils.PptxFallbackRenderer.previewAlt': '演示文稿預覽',
-  'PC.Utils.PptxFallbackRenderer.slideCount': '共 {0} 張幻燈片',
+  'PC.Utils.PptxFallbackRenderer.slideCount': '共 {0} 張幻燈片'
 };
