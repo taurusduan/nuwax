@@ -3387,7 +3387,6 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.keyPrefixInvalidError': 'Key format error: {0}, side prefix must be one of the following: {1}',
   'PC.Pages.SystemConfig.LangContent.keyPrefixMissingError': 'Key format error: {0}, must contain a side prefix, e.g., PC.xxx',
   'PC.Pages.SystemConfig.LangContent.keyRequired': 'Please enter a Key',
-  'PC.Pages.SystemConfig.LangContent.keyValMng': 'Key-Value Management',
   'PC.Pages.SystemConfig.LangContent.moduleColumn': 'Module',
   'PC.Pages.SystemConfig.LangContent.remarkLabel': 'Remark',
   'PC.Pages.SystemConfig.LangContent.remarkPlaceholder': 'e.g., Submit Button',
