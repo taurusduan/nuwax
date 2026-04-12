@@ -287,7 +287,9 @@ const Layout: React.FC = () => {
 
       {/* 主内容区 */}
       <div
-        className={`${pageContainerClassName} scroll-container`}
+        className={cx(pageContainerClassName, [
+          { 'scroll-container': !isMobile },
+        ])}
         id="page-container-selector"
       >
         <Outlet />
