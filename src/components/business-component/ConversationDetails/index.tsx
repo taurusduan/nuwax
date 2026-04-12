@@ -252,6 +252,7 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
       try {
         const parsed = JSON.parse(paramsFromUrl) as Record<string, unknown>;
         if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+          // 删除用户自带的url参数中的conversationId字段
           const urlPayload = omit(parsed, 'conversationId') as Record<
             string,
             unknown
@@ -323,7 +324,6 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
             }
           } else {
             const { variableParams: vpRaw, ...otherParams } = urlPayload;
-            // const vpRaw = urlPayload.variableParams;
             if (
               vpRaw !== null &&
               typeof vpRaw === 'object' &&
@@ -462,12 +462,14 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
     // 用户自带的url参数中的附件文件列表
     const otherFiles = (urlOtherParams?.files || []) as UploadFileInfo[];
     // 用户自带的url参数中的组件列表
-    const otherInfos = (urlOtherParams?.infos ||
+    const _selectedComponents = (urlOtherParams?.selectedComponents ||
       []) as AgentSelectedComponentInfo[];
     // 用户自带的url参数中的技能ID列表
     const otherSkillIds = (urlOtherParams?.skillIds || []) as number[];
     // 用户自带的url参数中的模型ID
     const otherModelId = urlOtherParams?.modelId;
+    // 用户自带的url参数中的沙盒ID
+    const otherSandboxId = urlOtherParams?.sandboxId;
 
     // 传递的参数
     const attach = {
@@ -475,7 +477,7 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
       // 附件文件列表
       files: [...otherFiles, ...(files || [])],
       // 组件列表
-      infos: [...selectedComponentList, ...otherInfos],
+      infos: [...selectedComponentList, ..._selectedComponents],
       // 默认智能体详情
       defaultAgentDetail: agentDetail,
       // 变量参数
@@ -483,7 +485,7 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
       // 消息来源
       messageSourceType: 'agent' as MessageSourceType,
       // 智能体电脑ID
-      selectedComputerId,
+      selectedComputerId: selectedComputerId || otherSandboxId,
       // 技能ID列表
       skillIds: [...otherSkillIds, ...(skillIds || [])],
       // 模型ID
