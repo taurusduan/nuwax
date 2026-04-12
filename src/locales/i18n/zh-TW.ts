@@ -690,6 +690,7 @@ export const ZH_TW: SystemLangMap = {
   'PC.Components.SharedIcon.rejected': '已駁回',
   'PC.Components.SharedIcon.reviewing': '審核中',
   'PC.Components.ShowStand.title': '展示臺',
+  'PC.Components.SiteFooter.poweredBy': 'Powered by nuwax',
   'PC.Components.Skill.configInputParams': '配置輸入引數',
   'PC.Components.Skill.database.collapse': '收起',
   'PC.Components.Skill.defaultValue': '預設值',
