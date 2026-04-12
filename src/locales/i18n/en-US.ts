@@ -62,102 +62,68 @@ export const EN_US: SystemLangMap = {
   'PC.Components.AgentType.skill': 'Skill',
   'PC.Components.AgentType.table': 'Data Table',
   'PC.Components.AgentType.workflow': 'Workflow',
-  'PC.Components.AppDevEmptyState.addDataDescription':
-    'Click "+" to add data resources',
+  'PC.Components.AppDevEmptyState.addDataDescription': 'Click "+" to add data resources',
   'PC.Components.AppDevEmptyState.close': 'Close',
-  'PC.Components.AppDevEmptyState.conversationEmptyDescription':
-    'Ask the AI assistant to start your project development.',
-  'PC.Components.AppDevEmptyState.conversationEmptyTitle':
-    'Start a new conversation',
-  'PC.Components.AppDevEmptyState.developingDescription':
-    'Starting development server, please wait...',
+  'PC.Components.AppDevEmptyState.conversationEmptyDescription': 'Ask the AI assistant to start your project development.',
+  'PC.Components.AppDevEmptyState.conversationEmptyTitle': 'Start a new conversation',
+  'PC.Components.AppDevEmptyState.developingDescription': 'Starting development server, please wait...',
   'PC.Components.AppDevEmptyState.developingTitle': 'Developing',
-  'PC.Components.AppDevEmptyState.emptyDescription':
-    'There is no content to display.',
+  'PC.Components.AppDevEmptyState.emptyDescription': 'There is no content to display.',
   'PC.Components.AppDevEmptyState.emptyTitle': 'No content',
-  'PC.Components.AppDevEmptyState.errorDescription':
-    'An error occurred during loading. Please retry.',
+  'PC.Components.AppDevEmptyState.errorDescription': 'An error occurred during loading. Please retry.',
   'PC.Components.AppDevEmptyState.errorTitle': 'Error occurred',
-  'PC.Components.AppDevEmptyState.importingProjectDescription':
-    'Starting development server, please wait...',
+  'PC.Components.AppDevEmptyState.importingProjectDescription': 'Starting development server, please wait...',
   'PC.Components.AppDevEmptyState.importingProjectTitle': 'Importing project',
-  'PC.Components.AppDevEmptyState.loadingDescription':
-    'Loading, please wait...',
+  'PC.Components.AppDevEmptyState.loadingDescription': 'Loading, please wait...',
   'PC.Components.AppDevEmptyState.loadingTitle': 'Loading...',
-  'PC.Components.AppDevEmptyState.networkErrorDescription':
-    'Network issue detected. Check settings and retry.',
-  'PC.Components.AppDevEmptyState.networkErrorTitle':
-    'Network connection failed',
-  'PC.Components.AppDevEmptyState.noDataDescription':
-    'There is no available data.',
+  'PC.Components.AppDevEmptyState.networkErrorDescription': 'Network issue detected. Check settings and retry.',
+  'PC.Components.AppDevEmptyState.networkErrorTitle': 'Network connection failed',
+  'PC.Components.AppDevEmptyState.noDataDescription': 'There is no available data.',
   'PC.Components.AppDevEmptyState.noDataTitle': 'No data',
-  'PC.Components.AppDevEmptyState.noFileDescription':
-    'No files in the current directory.',
+  'PC.Components.AppDevEmptyState.noFileDescription': 'No files in the current directory.',
   'PC.Components.AppDevEmptyState.noFileTitle': 'No files',
-  'PC.Components.AppDevEmptyState.noPreviewUrlDescription':
-    'Starting development server, please wait...',
-  'PC.Components.AppDevEmptyState.noPreviewUrlTitle':
-    'No preview URL available',
-  'PC.Components.AppDevEmptyState.permissionDeniedDescription':
-    'You do not have permission to access this resource.',
+  'PC.Components.AppDevEmptyState.noPreviewUrlDescription': 'Starting development server, please wait...',
+  'PC.Components.AppDevEmptyState.noPreviewUrlTitle': 'No preview URL available',
+  'PC.Components.AppDevEmptyState.permissionDeniedDescription': 'You do not have permission to access this resource.',
   'PC.Components.AppDevEmptyState.permissionDeniedTitle': 'Permission denied',
-  'PC.Components.AppDevEmptyState.previewLoadFailedDescription':
-    'Preview failed to load. Check server status or network.',
-  'PC.Components.AppDevEmptyState.previewLoadFailedTitle':
-    'Preview load failed',
-  'PC.Components.AppDevEmptyState.serverErrorDescription':
-    'Preview failed to load. Check server status or network.',
+  'PC.Components.AppDevEmptyState.previewLoadFailedDescription': 'Preview failed to load. Check server status or network.',
+  'PC.Components.AppDevEmptyState.previewLoadFailedTitle': 'Preview load failed',
+  'PC.Components.AppDevEmptyState.serverErrorDescription': 'Preview failed to load. Check server status or network.',
   'PC.Components.AppDevEmptyState.serverErrorTitle': 'Server error',
-  'PC.Components.AppDevEmptyState.serverRestartingDescription':
-    'Restarting development server, please wait...',
+  'PC.Components.AppDevEmptyState.serverRestartingDescription': 'Restarting development server, please wait...',
   'PC.Components.AppDevEmptyState.serverRestartingTitle': 'Restarting',
-  'PC.Components.AppDevEmptyState.serverStartFailedDescription':
-    'Starting development server, please wait...',
-  'PC.Components.AppDevEmptyState.serverStartFailedTitle':
-    'Development server failed to start',
-  'PC.Components.AppDevEmptyState.serverStartingDescription':
-    'Starting development server, please wait...',
-  'PC.Components.AppDevEmptyState.serverStartingTitle':
-    'Waiting for dev server startup',
+  'PC.Components.AppDevEmptyState.serverStartFailedDescription': 'Starting development server, please wait...',
+  'PC.Components.AppDevEmptyState.serverStartFailedTitle': 'Development server failed to start',
+  'PC.Components.AppDevEmptyState.serverStartingDescription': 'Starting development server, please wait...',
+  'PC.Components.AppDevEmptyState.serverStartingTitle': 'Waiting for dev server startup',
   'PC.Components.AppDevEmptyState.viewFullText': 'View full text',
   'PC.Components.ChatBottomDebug.debug': 'Debug',
-  'PC.Components.ChatInputHome.agentComputerUnavailable':
-    'The agent computer for this conversation is unavailable',
+  'PC.Components.ChatInputHome.agentComputerUnavailable': 'The agent computer for this conversation is unavailable',
   'PC.Components.ChatInputHome.clearRecord': 'Clear conversation history',
   'PC.Components.ChatInputHome.clickSendMessage': 'Click to send message',
   'PC.Components.ChatInputHome.clickStopAgentTask': 'Click to stop agent task',
-  'PC.Components.ChatInputHome.clickStopConversation':
-    'Click to stop current conversation',
-  'PC.Components.ChatInputHome.conversationDisabled':
-    'Conversation is disabled',
+  'PC.Components.ChatInputHome.clickStopConversation': 'Click to stop current conversation',
+  'PC.Components.ChatInputHome.conversationDisabled': 'Conversation is disabled',
   'PC.Components.ChatInputHome.enterQuestion': 'Please enter your question',
-  'PC.Components.ChatInputHome.generatedByAiNotice':
-    'Content is generated by AI, please review carefully',
+  'PC.Components.ChatInputHome.generatedByAiNotice': 'Content is generated by AI, please review carefully',
   'PC.Components.ChatInputHome.noActiveConversation': 'No active conversation',
   'PC.Components.ChatInputHome.noAgentPermission': 'No permission to use agent',
   'PC.Components.ChatInputHome.pastedImageFileName': 'pasted-image-{0}-{1}.png',
-  'PC.Components.ChatInputHome.stoppingConversation':
-    'Stopping conversation...',
+  'PC.Components.ChatInputHome.stoppingConversation': 'Stopping conversation...',
   'PC.Components.ChatInputHome.stoppingTask': 'Stopping task...',
   'PC.Components.ChatInputHome.switchToNormalMode': 'Switch to normal mode',
   'PC.Components.ChatInputHome.uploadAttachment': 'Upload attachment',
   'PC.Components.ChatInputHome.uploadFailedWithName': '{0} upload failed',
-  'PC.Components.ChatInputHome.useAgentComputerTask':
-    'Use my agent computer to execute tasks',
-  'PC.Components.ChatInputHomeAtMentionIcon.tryMentionSkill':
-    'Try @ to mention skills',
+  'PC.Components.ChatInputHome.useAgentComputerTask': 'Use my agent computer to execute tasks',
+  'PC.Components.ChatInputHomeAtMentionIcon.tryMentionSkill': 'Try @ to mention skills',
   'PC.Components.ChatInputHomeManualComponentItem.keywordNetwork': 'Network',
-  'PC.Components.ChatInputHomeManualComponentItem.keywordReasoning':
-    'Reasoning',
+  'PC.Components.ChatInputHomeManualComponentItem.keywordReasoning': 'Reasoning',
   'PC.Components.ChatInputHomeManualComponentItem.keywordSearch': 'Search',
   'PC.Components.ChatInputHomeManualComponentItem.keywordThinking': 'Thinking',
-  'PC.Components.ChatInputHomeMentionEditor.placeholderWithMention':
-    'Type commands directly, use Shift+Enter for a new line and Enter to send; supports @ to mention skills and image paste.',
-  'PC.Components.ChatInputHomeMentionEditor.placeholderWithoutMention':
-    'Type commands directly, use Shift+Enter for a new line and Enter to send; supports image paste.',
+  'PC.Components.ChatInputHomeMentionEditor.placeholderWithMention': 'Type commands directly, use Shift+Enter for a new line and Enter to send; supports @ to mention skills and image paste.',
+  'PC.Components.ChatInputHomeMentionEditor.placeholderWithoutMention': 'Type commands directly, use Shift+Enter for a new line and Enter to send; supports image paste.',
   'PC.Components.ChatInputHomeMentionPopup.emptyFavorite': 'No favorites yet',
-  'PC.Components.ChatInputHomeMentionPopup.emptyNotFound':
-    'No matching items found',
+  'PC.Components.ChatInputHomeMentionPopup.emptyNotFound': 'No matching items found',
   'PC.Components.ChatInputHomeMentionPopup.loading': 'Loading...',
   'PC.Components.ChatInputHomeMentionPopup.loadingMore': 'Loading more...',
   'PC.Components.ChatInputHomeMentionPopup.searchSkill': 'Search skills',
@@ -168,72 +134,51 @@ export const EN_US: SystemLangMap = {
   'PC.Components.ChatTitleActions.collected': 'Added to favorites',
   'PC.Components.ChatTitleActions.collectFailed': 'Failed to add to favorites',
   'PC.Components.ChatTitleActions.copyTemplate': 'Copy Template',
-  'PC.Components.ChatTitleActions.incompleteAgentInfo':
-    'Agent information is incomplete',
+  'PC.Components.ChatTitleActions.incompleteAgentInfo': 'Agent information is incomplete',
   'PC.Components.ChatTitleActions.noShareLink': 'No share link available',
   'PC.Components.ChatTitleActions.share': 'Share',
-  'PC.Components.ChatTitleActions.shareLinkCopied':
-    'Share link copied to clipboard',
-  'PC.Components.ChatTitleActions.templateCopySuccess':
-    'Template copied successfully',
+  'PC.Components.ChatTitleActions.shareLinkCopied': 'Share link copied to clipboard',
+  'PC.Components.ChatTitleActions.templateCopySuccess': 'Template copied successfully',
   'PC.Components.ChatTitleActions.uncollected': 'Removed from favorites',
-  'PC.Components.ChatTitleActions.uncollectFailed':
-    'Failed to remove from favorites',
+  'PC.Components.ChatTitleActions.uncollectFailed': 'Failed to remove from favorites',
   'PC.Components.ChatView.copy': 'Copy',
   'PC.Components.ChatView.guest': 'Guest',
   'PC.Components.CodeEditor.codeAssistant': 'Code Assistant',
   'PC.Components.CodeEditor.loadingEditor': 'Loading editor...',
   'PC.Components.CodeOptimizeModal.exit': 'Exit',
-  'PC.Components.CodeOptimizeModal.placeholder':
-    'Please describe your specific business requirements in detail',
+  'PC.Components.CodeOptimizeModal.placeholder': 'Please describe your specific business requirements in detail',
   'PC.Components.CodeOptimizeModal.replace': 'Replace',
   'PC.Components.CollapseComponentList.delete': 'Delete',
-  'PC.Components.CollapseComponentList.mcpDesc':
-    'The agent can connect to various service APIs through the standardized protocol (MCP) and initiate calls.',
-  'PC.Components.CollapseComponentList.pageDesc':
-    'Pages are the visual interface of the agent, through which users can interact with the agent.',
-  'PC.Components.CollapseComponentList.pluginDesc':
-    "Plugins enable the agent to call external APIs, such as searching information, browsing web pages, generating images, etc., expanding the agent's capabilities and use cases.",
+  'PC.Components.CollapseComponentList.mcpDesc': 'The agent can connect to various service APIs through the standardized protocol (MCP) and initiate calls.',
+  'PC.Components.CollapseComponentList.pageDesc': 'Pages are the visual interface of the agent, through which users can interact with the agent.',
+  'PC.Components.CollapseComponentList.pluginDesc': "Plugins enable the agent to call external APIs, such as searching information, browsing web pages, generating images, etc., expanding the agent's capabilities and use cases.",
   'PC.Components.CollapseComponentList.settings': 'Settings',
-  'PC.Components.CollapseComponentList.skillDesc':
-    "Skills are the agent's capabilities, through which users can interact with the agent.",
-  'PC.Components.CollapseComponentList.tableDesc':
-    'Organize data in a table structure to implement functions such as bookmarks and book management.',
-  'PC.Components.CollapseComponentList.workflowDesc':
-    'Workflows support combining plugins, large language models, code blocks, and other functions in a visual way to achieve complex and stable business process orchestration, such as travel planning, report analysis, etc.',
-  'PC.Components.ComputerTypeSelector.computerUnavailable':
-    'Computer unavailable',
-  'PC.Components.ComputerTypeSelector.noComputerAvailable':
-    'No computer available',
-  'PC.Components.ComputerTypeSelector.personalComputerUnavailable':
-    'Personal computer unavailable',
+  'PC.Components.CollapseComponentList.skillDesc': "Skills are the agent's capabilities, through which users can interact with the agent.",
+  'PC.Components.CollapseComponentList.tableDesc': 'Organize data in a table structure to implement functions such as bookmarks and book management.',
+  'PC.Components.CollapseComponentList.workflowDesc': 'Workflows support combining plugins, large language models, code blocks, and other functions in a visual way to achieve complex and stable business process orchestration, such as travel planning, report analysis, etc.',
+  'PC.Components.ComputerTypeSelector.computerUnavailable': 'Computer unavailable',
+  'PC.Components.ComputerTypeSelector.noComputerAvailable': 'No computer available',
+  'PC.Components.ComputerTypeSelector.personalComputerUnavailable': 'Personal computer unavailable',
   'PC.Components.ComputerTypeSelector.selectComputer': 'Select computer',
   'PC.Components.ConversationDetails.expandNavigation': 'Expand navigation',
-  'PC.Components.ConversationDetails.noAgentPermission':
-    'You do not have permission for this agent',
+  'PC.Components.ConversationDetails.noAgentPermission': 'You do not have permission for this agent',
   'PC.Components.ConversationDetails.openPreviewPage': 'Open preview page',
   'PC.Components.ConversationDetails.pagePreviewName': 'Page Preview',
-  'PC.Components.ConversationDetails.requiredParamsWarning':
-    'Please fill in required parameters',
-  'PC.Components.ConversationDetails.startConversationWithAgent':
-    'Start a conversation with {0}',
+  'PC.Components.ConversationDetails.requiredParamsWarning': 'Please fill in required parameters',
+  'PC.Components.ConversationDetails.startConversationWithAgent': 'Start a conversation with {0}',
   'PC.Components.ConversationDetails.viewAgentDetails': 'View agent details',
   'PC.Components.CopyIconButton.copy': 'Copy',
-  'PC.Components.CopyToSpaceComponent.pageCopySuccess':
-    'Page copied successfully',
-  'PC.Components.CopyToSpaceComponent.templateCopySuccess':
-    'Template copied successfully',
+  'PC.Components.CopyToSpaceComponent.pageCopySuccess': 'Page copied successfully',
+  'PC.Components.CopyToSpaceComponent.templateCopySuccess': 'Template copied successfully',
   'PC.Components.CreateAgent.createSuccess': 'Agent created successfully',
   'PC.Components.CreateAgent.createTitle': 'Create Agent',
   'PC.Components.CreateAgent.createTypeTitle': 'Create {0}',
   'PC.Components.CreateAgent.descriptionLabel': 'Agent Description',
-  'PC.Components.CreateAgent.descriptionPlaceholder':
-    "Describe the agent's features, which will be shown to the agent's users",
+  'PC.Components.CreateAgent.descriptionPlaceholder': "Describe the agent's features, which will be shown to the agent's users",
   'PC.Components.CreateAgent.editSuccess': 'Agent updated successfully',
   'PC.Components.CreateAgent.iconLabel': 'Icon',
   'PC.Components.CreateAgent.nameLabel': 'Agent Name',
-  'PC.Components.CreateAgent.nameMaxLength':
-    'Name cannot exceed 50 characters!',
+  'PC.Components.CreateAgent.nameMaxLength': 'Name cannot exceed 50 characters!',
   'PC.Components.CreateAgent.namePlaceholder': 'Give the agent a unique name',
   'PC.Components.CreateAgent.nameRequired': 'Please enter the agent name',
   'PC.Components.CreateAgent.typeChatBot': 'Chatbot',
@@ -289,116 +234,81 @@ export const EN_US: SystemLangMap = {
   'PC.Components.CreatedPageItem.added': 'Added',
   'PC.Components.CreatedPageItem.avatarAlt': 'User avatar',
   'PC.Components.CreatedPageItem.createdAt': 'Created at {0}',
-  'PC.Components.CreateKnowledge.createSuccess':
-    'Knowledge base created successfully',
+  'PC.Components.CreateKnowledge.createSuccess': 'Knowledge base created successfully',
   'PC.Components.CreateKnowledge.createTitle': 'Create Knowledge Base',
   'PC.Components.CreateKnowledge.customWorkflow': 'Custom Workflow',
-  'PC.Components.CreateKnowledge.dataParsingMethodLabel':
-    'Document Content Extraction Method',
-  'PC.Components.CreateKnowledge.dataParsingMethodPlaceholder':
-    'Please select a data parsing method',
-  'PC.Components.CreateKnowledge.dataParsingMethodTooltip':
-    'Choose how to extract content from documents, supporting system default or custom workflows',
+  'PC.Components.CreateKnowledge.dataParsingMethodLabel': 'Document Content Extraction Method',
+  'PC.Components.CreateKnowledge.dataParsingMethodPlaceholder': 'Please select a data parsing method',
+  'PC.Components.CreateKnowledge.dataParsingMethodTooltip': 'Choose how to extract content from documents, supporting system default or custom workflows',
   'PC.Components.CreateKnowledge.descriptionLabel': 'Description',
-  'PC.Components.CreateKnowledge.descriptionPlaceholder':
-    'Describe the content of the knowledge base to help the model better understand its purpose',
+  'PC.Components.CreateKnowledge.descriptionPlaceholder': 'Describe the content of the knowledge base to help the model better understand its purpose',
   'PC.Components.CreateKnowledge.embeddingModelLabel': 'Embedding Model',
-  'PC.Components.CreateKnowledge.embeddingModelPlaceholder':
-    'Please select an embedding model',
-  'PC.Components.CreateKnowledge.embeddingModelRequired':
-    'Please select an embedding model',
-  'PC.Components.CreateKnowledge.embeddingModelTooltip':
-    'Embedding models are used to convert text to vectors, which is the basis for retrieval',
+  'PC.Components.CreateKnowledge.embeddingModelPlaceholder': 'Please select an embedding model',
+  'PC.Components.CreateKnowledge.embeddingModelRequired': 'Please select an embedding model',
+  'PC.Components.CreateKnowledge.embeddingModelTooltip': 'Embedding models are used to convert text to vectors, which is the basis for retrieval',
   'PC.Components.CreateKnowledge.iconLabel': 'Icon',
   'PC.Components.CreateKnowledge.nameLabel': 'Name',
-  'PC.Components.CreateKnowledge.namePlaceholder':
-    'Give the knowledge base a clear name',
-  'PC.Components.CreateKnowledge.nameRequired':
-    'Please enter the knowledge base name',
+  'PC.Components.CreateKnowledge.namePlaceholder': 'Give the knowledge base a clear name',
+  'PC.Components.CreateKnowledge.nameRequired': 'Please enter the knowledge base name',
   'PC.Components.CreateKnowledge.remove': 'Remove',
   'PC.Components.CreateKnowledge.selectWorkflow': 'Select Workflow',
   'PC.Components.CreateKnowledge.systemDefault': 'System Default',
-  'PC.Components.CreateKnowledge.updateSuccess':
-    'Knowledge Base updated successful',
+  'PC.Components.CreateKnowledge.updateSuccess': 'Knowledge Base updated successful',
   'PC.Components.CreateKnowledge.updateTitle': 'Update Knowledge Base',
   'PC.Components.CreateNewPlugin.createPlugin': 'Create Plugin',
   'PC.Components.CreateNewPlugin.ideRuntime': 'IDE Runtime',
-  'PC.Components.CreateNewPlugin.nameMaxChars':
-    'Name cannot exceed 30 characters!',
-  'PC.Components.CreateNewPlugin.placeholderPluginDesc':
-    'Please input the main features and usage scenarios of the plugin, ensuring the content complies with platform guidelines. This helps users/models better understand',
-  'PC.Components.CreateNewPlugin.placeholderPluginName':
-    'Please input a plugin name that is clear and complies with platform guidelines',
-  'PC.Components.CreateNewPlugin.pleaseInputPluginDesc':
-    'Please input the main features and usage scenarios of the plugin',
-  'PC.Components.CreateNewPlugin.pleaseInputPluginName':
-    'Please input plugin name',
-  'PC.Components.CreateNewPlugin.pleaseInputPluginNameBang':
-    'Please input plugin name!',
-  'PC.Components.CreateNewPlugin.pleaseSelectPluginCreateTool':
-    'Please select a plugin tool creation method',
-  'PC.Components.CreateNewPlugin.pleaseSelectPluginMode':
-    'Please select plugin mode',
+  'PC.Components.CreateNewPlugin.nameMaxChars': 'Name cannot exceed 30 characters!',
+  'PC.Components.CreateNewPlugin.placeholderPluginDesc': 'Please input the main features and usage scenarios of the plugin, ensuring the content complies with platform guidelines. This helps users/models better understand',
+  'PC.Components.CreateNewPlugin.placeholderPluginName': 'Please input a plugin name that is clear and complies with platform guidelines',
+  'PC.Components.CreateNewPlugin.pleaseInputPluginDesc': 'Please input the main features and usage scenarios of the plugin',
+  'PC.Components.CreateNewPlugin.pleaseInputPluginName': 'Please input plugin name',
+  'PC.Components.CreateNewPlugin.pleaseInputPluginNameBang': 'Please input plugin name!',
+  'PC.Components.CreateNewPlugin.pleaseSelectPluginCreateTool': 'Please select a plugin tool creation method',
+  'PC.Components.CreateNewPlugin.pleaseSelectPluginMode': 'Please select plugin mode',
   'PC.Components.CreateNewPlugin.pluginCreated': 'Plugin created',
-  'PC.Components.CreateNewPlugin.pluginCreateTool':
-    'Plugin Tool Creation Method',
+  'PC.Components.CreateNewPlugin.pluginCreateTool': 'Plugin Tool Creation Method',
   'PC.Components.CreateNewPlugin.pluginDescription': 'Plugin Description',
   'PC.Components.CreateNewPlugin.pluginName': 'Plugin Name',
   'PC.Components.CreateNewPlugin.pluginUpdated': 'Plugin updated successfully',
   'PC.Components.CreateNewPlugin.updatePlugin': 'Update Plugin',
-  'PC.Components.CreateTimedTask.createSuccess':
-    'Timed task created successfully',
+  'PC.Components.CreateTimedTask.createSuccess': 'Timed task created successfully',
   'PC.Components.CreateTimedTask.createTitle': 'Create Timed Task',
-  'PC.Components.CreateTimedTask.pleaseInputTaskContent':
-    'Please input task content',
+  'PC.Components.CreateTimedTask.pleaseInputTaskContent': 'Please input task content',
   'PC.Components.CreateTimedTask.pleaseInputTaskName': 'Please input task name',
   'PC.Components.CreateTimedTask.taskContent': 'Task Content',
-  'PC.Components.CreateTimedTask.taskContentPlaceholder':
-    'Please input the task information to execute. The more detailed the information, the higher the success rate',
+  'PC.Components.CreateTimedTask.taskContentPlaceholder': 'Please input the task information to execute. The more detailed the information, the higher the success rate',
   'PC.Components.CreateTimedTask.taskName': 'Task Name',
   'PC.Components.CreateTimedTask.timedPeriod': 'Timed Period',
-  'PC.Components.CreateTimedTask.updateSuccess':
-    'Timed task updated successfully',
+  'PC.Components.CreateTimedTask.updateSuccess': 'Timed task updated successfully',
   'PC.Components.CreateTimedTask.updateTitle': 'Update Timed Task',
   'PC.Components.CreateWorkflow.createWorkflow': 'Create Workflow',
   'PC.Components.CreateWorkflow.description': 'Description',
   'PC.Components.CreateWorkflow.icon': 'Icon',
   'PC.Components.CreateWorkflow.name': 'Name',
-  'PC.Components.CreateWorkflow.nameMaxChars':
-    'Name cannot exceed 30 characters!',
-  'PC.Components.CreateWorkflow.placeholderWorkflowDesc':
-    'Please input a description so the model understands when to invoke this workflow',
+  'PC.Components.CreateWorkflow.nameMaxChars': 'Name cannot exceed 30 characters!',
+  'PC.Components.CreateWorkflow.placeholderWorkflowDesc': 'Please input a description so the model understands when to invoke this workflow',
   'PC.Components.CreateWorkflow.placeholderWorkflowName': 'Input workflow name',
-  'PC.Components.CreateWorkflow.pleaseInputWorkflowName':
-    'Please input workflow name',
-  'PC.Components.CreateWorkflow.pleaseInputWorkflowNameBang':
-    'Please input workflow name!',
+  'PC.Components.CreateWorkflow.pleaseInputWorkflowName': 'Please input workflow name',
+  'PC.Components.CreateWorkflow.pleaseInputWorkflowNameBang': 'Please input workflow name!',
   'PC.Components.CreateWorkflow.updateWorkflow': 'Update Workflow',
-  'PC.Components.CreateWorkflow.workflowCreated':
-    'Workflow created successfully',
-  'PC.Components.CreateWorkflow.workflowUpdated':
-    'Workflow updated successfully',
+  'PC.Components.CreateWorkflow.workflowCreated': 'Workflow created successfully',
+  'PC.Components.CreateWorkflow.workflowUpdated': 'Workflow updated successfully',
   'PC.Components.CurrentPublishItem.hasBeenOffShelf': 'Off Shelf',
   'PC.Components.CurrentPublishItem.offShelf': 'Off Shelf',
   'PC.Components.CurrentPublishItem.publishedAt': 'Published at',
   'PC.Components.CurrentPublishItem.reviewing': 'Under Review',
   'PC.Components.CustomFormModal.cancel': 'Cancel',
-  'PC.Components.DataResourceManagement.connectionTestFailed':
-    'Connection test failed',
-  'PC.Components.DataResourceManagement.connectionTestSuccess':
-    'Connection test succeeded',
+  'PC.Components.DataResourceManagement.connectionTestFailed': 'Connection test failed',
+  'PC.Components.DataResourceManagement.connectionTestSuccess': 'Connection test succeeded',
   'PC.Components.DataResourceManagement.createFailed': 'Create failed',
   'PC.Components.DataResourceManagement.createSuccess': 'Created successfully',
   'PC.Components.DataResourceManagement.deleteFailed': 'Delete failed',
   'PC.Components.DataResourceManagement.deleteSuccess': 'Deleted successfully',
-  'PC.Components.DataResourceManagement.disableSuccess':
-    'Disabled successfully',
+  'PC.Components.DataResourceManagement.disableSuccess': 'Disabled successfully',
   'PC.Components.DataResourceManagement.enableSuccess': 'Enabled successfully',
-  'PC.Components.DataResourceManagement.fetchListFailed':
-    'Failed to fetch data resource list',
+  'PC.Components.DataResourceManagement.fetchListFailed': 'Failed to fetch data resource list',
   'PC.Components.DataResourceManagement.operationFailed': 'Operation failed',
-  'PC.Components.DataResourceManagement.switchStatusFailed':
-    'Failed to switch resource status',
+  'PC.Components.DataResourceManagement.switchStatusFailed': 'Failed to switch resource status',
   'PC.Components.DataResourceManagement.testFailed': 'Test failed',
   'PC.Components.DataResourceManagement.updateFailed': 'Update failed',
   'PC.Components.DataResourceManagement.updateSuccess': 'Updated successfully',
@@ -410,28 +320,21 @@ export const EN_US: SystemLangMap = {
   'PC.Components.EcosystemCard.enabled': 'Enabled',
   'PC.Components.EcosystemCard.versionUpdate': 'New version available',
   'PC.Components.EcosystemDetailDrawer.disable': 'Disable',
-  'PC.Components.EcosystemDetailDrawer.disableOfficialTip':
-    'After disabling, it will no longer be visible in the official service list',
-  'PC.Components.EcosystemDetailDrawer.disableSquareTip':
-    'After disabling, it will no longer be visible in the marketplace {0}',
+  'PC.Components.EcosystemDetailDrawer.disableOfficialTip': 'After disabling, it will no longer be visible in the official service list',
+  'PC.Components.EcosystemDetailDrawer.disableSquareTip': 'After disabling, it will no longer be visible in the marketplace {0}',
   'PC.Components.EcosystemDetailDrawer.enable': 'Enable',
-  'PC.Components.EcosystemDetailDrawer.enablePublishOfficialTip':
-    'After enabling, it will be published to the official service list',
-  'PC.Components.EcosystemDetailDrawer.enablePublishSquareTip':
-    'After enabling, it will be published to the system marketplace',
+  'PC.Components.EcosystemDetailDrawer.enablePublishOfficialTip': 'After enabling, it will be published to the official service list',
+  'PC.Components.EcosystemDetailDrawer.enablePublishSquareTip': 'After enabling, it will be published to the system marketplace',
   'PC.Components.EcosystemDetailDrawer.fromAuthor': 'From {0}',
-  'PC.Components.EcosystemDetailDrawer.newVersionUpdate':
-    'New version available',
+  'PC.Components.EcosystemDetailDrawer.newVersionUpdate': 'New version available',
   'PC.Components.EcosystemDetailDrawer.pleaseInput': 'Please input {0}',
   'PC.Components.EcosystemDetailDrawer.plugin': 'Plugin',
-  'PC.Components.EcosystemDetailDrawer.saveConfigAndEnable':
-    'Save Config & Enable',
+  'PC.Components.EcosystemDetailDrawer.saveConfigAndEnable': 'Save Config & Enable',
   'PC.Components.EcosystemDetailDrawer.update': 'Update',
   'PC.Components.EcosystemDetailDrawer.updateConfig': 'Update Config',
   'PC.Components.EcosystemDetailDrawer.usageDoc': 'Documentation',
   'PC.Components.EcosystemSelectCategory.all': 'All',
-  'PC.Components.EcosystemSelectCategory.pleaseSelectCategory':
-    'Please select a category',
+  'PC.Components.EcosystemSelectCategory.pleaseSelectCategory': 'Please select a category',
   'PC.Components.EcosystemShareModal.addComponent': 'Add {0}',
   'PC.Components.EcosystemShareModal.componentInfo': '{0} Info',
   'PC.Components.EcosystemShareModal.createShare': 'Create Share',
@@ -439,33 +342,26 @@ export const EN_US: SystemLangMap = {
   'PC.Components.EcosystemShareModal.offline': 'Offline',
   'PC.Components.EcosystemShareModal.paramDesc': 'Parameter Description',
   'PC.Components.EcosystemShareModal.paramName': 'Parameter Name',
-  'PC.Components.EcosystemShareModal.pleaseInputPublisherInfo':
-    'Please input publisher info',
-  'PC.Components.EcosystemShareModal.pleaseInputUsageDoc':
-    'Please input documentation',
-  'PC.Components.EcosystemShareModal.pleaseSelectComponent':
-    'Please select {0}',
-  'PC.Components.EcosystemShareModal.pleaseSelectComponentFirst':
-    'Please select {0} first',
+  'PC.Components.EcosystemShareModal.pleaseInputPublisherInfo': 'Please input publisher info',
+  'PC.Components.EcosystemShareModal.pleaseInputUsageDoc': 'Please input documentation',
+  'PC.Components.EcosystemShareModal.pleaseSelectComponent': 'Please select {0}',
+  'PC.Components.EcosystemShareModal.pleaseSelectComponentFirst': 'Please select {0} first',
   'PC.Components.EcosystemShareModal.plugin': 'Plugin',
   'PC.Components.EcosystemShareModal.pluginParams': 'Plugin Parameters',
   'PC.Components.EcosystemShareModal.publisherInfo': 'Publisher Info',
-  'PC.Components.EcosystemShareModal.publisherInfoPlaceholder':
-    'Please input publisher info, e.g. Nuwa Official',
+  'PC.Components.EcosystemShareModal.publisherInfoPlaceholder': 'Please input publisher info, e.g. Nuwa Official',
   'PC.Components.EcosystemShareModal.required': 'Required',
   'PC.Components.EcosystemShareModal.saveAndPublish': 'Save & Publish',
   'PC.Components.EcosystemShareModal.saveDraft': 'Save Draft',
   'PC.Components.EcosystemShareModal.usageDoc': 'Documentation',
-  'PC.Components.EcosystemShareModal.usageDocPlaceholder':
-    'Please input documentation (Markdown supported)',
+  'PC.Components.EcosystemShareModal.usageDocPlaceholder': 'Please input documentation (Markdown supported)',
   'PC.Components.EcosystemShareModal.withdrawPublish': 'Withdraw',
   'PC.Components.ExampleNavigation.antdShowcase': 'Ant Design Showcase',
   'PC.Components.ExampleNavigation.back': 'Back',
   'PC.Components.ExampleNavigation.backgroundStyle': 'Background Style Switch',
   'PC.Components.ExampleNavigation.exampleCenter': 'Example Center',
   'PC.Components.ExampleNavigation.home': 'Home',
-  'PC.Components.ExampleNavigation.navigationTokenGuide':
-    'Navigation Token Guide',
+  'PC.Components.ExampleNavigation.navigationTokenGuide': 'Navigation Token Guide',
   'PC.Components.FileContextMenu.delete': 'Delete',
   'PC.Components.FileContextMenu.download': 'Download',
   'PC.Components.FileContextMenu.exportPdf': 'Export as PDF',
@@ -477,8 +373,7 @@ export const EN_US: SystemLangMap = {
   'PC.Components.FilePathHeader.agentComputerSuffix': "'s Agent Computer",
   'PC.Components.FilePathHeader.close': 'Close',
   'PC.Components.FilePathHeader.code': 'Code',
-  'PC.Components.FilePathHeader.collapseFileTree':
-    'Click to collapse file tree',
+  'PC.Components.FilePathHeader.collapseFileTree': 'Click to collapse file tree',
   'PC.Components.FilePathHeader.copy': 'Copy',
   'PC.Components.FilePathHeader.download': 'Download',
   'PC.Components.FilePathHeader.downloading': 'Downloading...',
@@ -495,70 +390,45 @@ export const EN_US: SystemLangMap = {
   'PC.Components.FilePreview.alertPreviewFailed': 'Preview failed',
   'PC.Components.FilePreview.downloadFile': 'Download file',
   'PC.Components.FilePreview.emptyNoFile': 'No file available for preview',
-  'PC.Components.FilePreview.errorDefaultPreview':
-    'File preview failed. Please retry.',
-  'PC.Components.FilePreview.errorDocxPreview':
-    'Document preview failed. Please verify the file format.',
-  'PC.Components.FilePreview.errorFileLoad':
-    'Failed to load file. Please retry.',
-  'PC.Components.FilePreview.errorFileParse':
-    'Failed to parse file. The file may be corrupted or unsupported.',
+  'PC.Components.FilePreview.errorDefaultPreview': 'File preview failed. Please retry.',
+  'PC.Components.FilePreview.errorDocxPreview': 'Document preview failed. Please verify the file format.',
+  'PC.Components.FilePreview.errorFileLoad': 'Failed to load file. Please retry.',
+  'PC.Components.FilePreview.errorFileParse': 'Failed to parse file. The file may be corrupted or unsupported.',
   'PC.Components.FilePreview.errorImageLoad': 'Failed to load image.',
-  'PC.Components.FilePreview.errorImageLoadCheckFile':
-    'Image load failed. Please verify the file is valid.',
-  'PC.Components.FilePreview.errorInvalid':
-    'The file format is not supported for preview or the file is corrupted. Please verify it is a valid file.',
-  'PC.Components.FilePreview.errorLoadFileContent':
-    'Failed to load file content. Please retry.',
-  'PC.Components.FilePreview.errorLoadHtmlContent':
-    'Failed to load HTML content. Please retry.',
-  'PC.Components.FilePreview.errorNetwork':
-    'Network request failed. Check your network and retry.',
-  'PC.Components.FilePreview.errorPdfPreview':
-    'PDF preview failed. Please verify the file format.',
-  'PC.Components.FilePreview.errorPptxPreview':
-    'Presentation preview failed. Please verify the file format.',
-  'PC.Components.FilePreview.errorXlsxPreview':
-    'Spreadsheet preview failed. Please verify the file format.',
+  'PC.Components.FilePreview.errorImageLoadCheckFile': 'Image load failed. Please verify the file is valid.',
+  'PC.Components.FilePreview.errorInvalid': 'The file format is not supported for preview or the file is corrupted. Please verify it is a valid file.',
+  'PC.Components.FilePreview.errorLoadFileContent': 'Failed to load file content. Please retry.',
+  'PC.Components.FilePreview.errorLoadHtmlContent': 'Failed to load HTML content. Please retry.',
+  'PC.Components.FilePreview.errorNetwork': 'Network request failed. Check your network and retry.',
+  'PC.Components.FilePreview.errorPdfPreview': 'PDF preview failed. Please verify the file format.',
+  'PC.Components.FilePreview.errorPptxPreview': 'Presentation preview failed. Please verify the file format.',
+  'PC.Components.FilePreview.errorXlsxPreview': 'Spreadsheet preview failed. Please verify the file format.',
   'PC.Components.FilePreview.fileTypeLabel': 'File type: .{0}',
   'PC.Components.FilePreview.loadingPreview': 'Loading preview...',
   'PC.Components.FilePreview.retry': 'Retry',
   'PC.Components.FilePreview.tooltipDownload': 'Download',
   'PC.Components.FilePreview.tooltipRefresh': 'Refresh',
-  'PC.Components.FilePreview.unsupportedType':
-    'This file type is not supported for preview',
+  'PC.Components.FilePreview.unsupportedType': 'This file type is not supported for preview',
   'PC.Components.FileTree.noFiles': 'No files',
-  'PC.Components.FileTreeView.cannotPreviewType':
-    'Cannot preview this file type',
+  'PC.Components.FileTreeView.cannotPreviewType': 'Cannot preview this file type',
   'PC.Components.FileTreeView.downloading': 'Downloading',
   'PC.Components.FileTreeView.exporting': 'Exporting',
-  'PC.Components.FileTreeView.fileRenaming':
-    'File is being renamed, please try later',
+  'PC.Components.FileTreeView.fileRenaming': 'File is being renamed, please try later',
   'PC.Components.FileTreeView.files': 'Files',
   'PC.Components.FileTreeView.importing': 'Importing',
-  'PC.Components.FileTreeView.noFilesToPreview':
-    'No files available for preview',
-  'PC.Components.FileTreeView.noMatchingFile':
-    'No matching file found. Please select a file from the file tree',
+  'PC.Components.FileTreeView.noFilesToPreview': 'No files available for preview',
+  'PC.Components.FileTreeView.noMatchingFile': 'No matching file found. Please select a file from the file tree',
   'PC.Components.FileTreeView.refreshFileTree': 'Refresh File Tree',
   'PC.Components.FileTreeView.refreshing': 'Refreshing...',
   'PC.Components.FileTreeView.restarting': 'Restarting...',
-  'PC.Components.FileTreeView.selectFileToPreview':
-    'Please select a file from the file tree to preview',
-  'PC.Components.FileTreeView.unsavedChangesCreateFile':
-    'You have unsaved changes. Please save before creating a file',
-  'PC.Components.FileTreeView.unsavedChangesCreateFolder':
-    'You have unsaved changes. Please save before creating a folder',
-  'PC.Components.FileTreeView.unsavedChangesDelete':
-    'You have unsaved changes. Please save before deleting',
-  'PC.Components.FileTreeView.unsavedChangesRename':
-    'You have unsaved changes. Please save before renaming',
-  'PC.Components.FileTreeView.unsavedChangesSwitchFile':
-    'You have unsaved changes. Please save before switching files',
-  'PC.Components.FileTreeView.unsavedChangesUpload':
-    'You have unsaved changes. Please save before uploading',
-  'PC.Components.FileTreeView.unsupportedFormat':
-    'Preview is not supported for .{0} format',
+  'PC.Components.FileTreeView.selectFileToPreview': 'Please select a file from the file tree to preview',
+  'PC.Components.FileTreeView.unsavedChangesCreateFile': 'You have unsaved changes. Please save before creating a file',
+  'PC.Components.FileTreeView.unsavedChangesCreateFolder': 'You have unsaved changes. Please save before creating a folder',
+  'PC.Components.FileTreeView.unsavedChangesDelete': 'You have unsaved changes. Please save before deleting',
+  'PC.Components.FileTreeView.unsavedChangesRename': 'You have unsaved changes. Please save before renaming',
+  'PC.Components.FileTreeView.unsavedChangesSwitchFile': 'You have unsaved changes. Please save before switching files',
+  'PC.Components.FileTreeView.unsavedChangesUpload': 'You have unsaved changes. Please save before uploading',
+  'PC.Components.FileTreeView.unsupportedFormat': 'Preview is not supported for .{0} format',
   'PC.Components.FileTreeView.uploading': 'Uploading',
   'PC.Components.FoldWrap.noContent': 'No content',
   'PC.Components.FoldWrap.pleaseInputNodeDesc': 'Please enter node description',
@@ -568,39 +438,29 @@ export const EN_US: SystemLangMap = {
   'PC.Components.FormListItem.conditionContains': 'Contains',
   'PC.Components.FormListItem.conditionEqual': 'Equal to',
   'PC.Components.FormListItem.conditionGreaterThan': 'Greater than',
-  'PC.Components.FormListItem.conditionGreaterThanOrEqual':
-    'Greater than or equal to',
+  'PC.Components.FormListItem.conditionGreaterThanOrEqual': 'Greater than or equal to',
   'PC.Components.FormListItem.conditionIsNull': 'Is empty',
-  'PC.Components.FormListItem.conditionLengthGreaterThan':
-    'Length greater than',
-  'PC.Components.FormListItem.conditionLengthGreaterThanOrEqual':
-    'Length greater than or equal to',
+  'PC.Components.FormListItem.conditionLengthGreaterThan': 'Length greater than',
+  'PC.Components.FormListItem.conditionLengthGreaterThanOrEqual': 'Length greater than or equal to',
   'PC.Components.FormListItem.conditionLengthLessThan': 'Length less than',
-  'PC.Components.FormListItem.conditionLengthLessThanOrEqual':
-    'Length less than or equal to',
+  'PC.Components.FormListItem.conditionLengthLessThanOrEqual': 'Length less than or equal to',
   'PC.Components.FormListItem.conditionLessThan': 'Less than',
-  'PC.Components.FormListItem.conditionLessThanOrEqual':
-    'Less than or equal to',
+  'PC.Components.FormListItem.conditionLessThanOrEqual': 'Less than or equal to',
   'PC.Components.FormListItem.conditionMatchRegex': 'Matches regex',
   'PC.Components.FormListItem.conditionNotContains': 'Does not contain',
   'PC.Components.FormListItem.conditionNotEqual': 'Not equal to',
   'PC.Components.FormListItem.conditionNotNull': 'Is not empty',
   'PC.Components.FormListItem.dataTypePlaceholder': 'Select data type',
   'PC.Components.FormListItem.descriptionPlaceholder': 'Enter description',
-  'PC.Components.FormListItem.inputOrReferenceParam':
-    'Enter or reference parameter',
+  'PC.Components.FormListItem.inputOrReferenceParam': 'Enter or reference parameter',
   'PC.Components.FormListItem.isRequired': 'Required',
   'PC.Components.FormListItem.noDescription': 'No description',
-  'PC.Components.FormListItem.noPreviousNodesOrParams':
-    'No upstream node connected or upstream node has no parameters',
+  'PC.Components.FormListItem.noPreviousNodesOrParams': 'No upstream node connected or upstream node has no parameters',
   'PC.Components.FormListItem.outputFormat': 'Output Format',
-  'PC.Components.FormListItem.outputFormatJsonDesc':
-    'JSON: Will guide the model to output in JSON format',
-  'PC.Components.FormListItem.outputFormatMarkdownDesc':
-    'Markdown: Will guide the model to output in Markdown format',
+  'PC.Components.FormListItem.outputFormatJsonDesc': 'JSON: Will guide the model to output in JSON format',
+  'PC.Components.FormListItem.outputFormatMarkdownDesc': 'Markdown: Will guide the model to output in Markdown format',
   'PC.Components.FormListItem.outputFormatText': 'Text',
-  'PC.Components.FormListItem.outputFormatTextDesc':
-    'Text: Use plain text format for response',
+  'PC.Components.FormListItem.outputFormatTextDesc': 'Text: Use plain text format for response',
   'PC.Components.FormListItem.outputResult': 'Output result',
   'PC.Components.FormListItem.paramNamePlaceholder': 'Enter parameter name',
   'PC.Components.FormListItem.variableName': 'Variable Name',
@@ -609,10 +469,8 @@ export const EN_US: SystemLangMap = {
   'PC.Components.HistoryConversation.title': 'History Conversations',
   'PC.Components.HistoryConversationList.agentFallback': 'Agent',
   'PC.Components.HistoryConversationList.dateTimeFormat': 'YYYY-MM-DD HH:mm:ss',
-  'PC.Components.HistoryConversationList.deleteModalContent':
-    'This conversation will be permanently deleted and cannot be recovered. Are you sure you want to delete it?',
-  'PC.Components.HistoryConversationList.deleteModalTitle':
-    'Delete conversation permanently',
+  'PC.Components.HistoryConversationList.deleteModalContent': 'This conversation will be permanently deleted and cannot be recovered. Are you sure you want to delete it?',
+  'PC.Components.HistoryConversationList.deleteModalTitle': 'Delete conversation permanently',
   'PC.Components.HistoryConversationList.deleteSuccess': 'Deleted successfully',
   'PC.Components.HistoryConversationList.deleteTooltip': 'Delete',
   'PC.Components.HistoryConversationList.editTitleTooltip': 'Edit title',
@@ -621,18 +479,14 @@ export const EN_US: SystemLangMap = {
   'PC.Components.HistoryConversationList.renameModalTitle': 'Rename',
   'PC.Components.HistoryConversationList.renamePlaceholder': 'Enter new name',
   'PC.Components.HistoryConversationList.renameSuccess': 'Updated successfully',
-  'PC.Components.HistoryConversationList.renameTitleEmpty':
-    'Title cannot be empty',
-  'PC.Components.HistoryConversationList.renameTitleTooLong':
-    'Title length cannot exceed 50 characters',
-  'PC.Components.HistoryConversationList.searchPlaceholder':
-    'Search conversation history',
+  'PC.Components.HistoryConversationList.renameTitleEmpty': 'Title cannot be empty',
+  'PC.Components.HistoryConversationList.renameTitleTooLong': 'Title length cannot exceed 50 characters',
+  'PC.Components.HistoryConversationList.searchPlaceholder': 'Search conversation history',
   'PC.Components.HistoryConversationList.summaryEmpty': 'No summary available',
   'PC.Components.MarkdownCustomProcess.closePreview': 'Close preview',
   'PC.Components.MarkdownCustomProcess.collapse': 'Collapse',
   'PC.Components.MarkdownCustomProcess.copyDetailData': 'Copy detail data',
-  'PC.Components.MarkdownCustomProcess.copyFailedRetry':
-    'Failed to copy detail data, please retry',
+  'PC.Components.MarkdownCustomProcess.copyFailedRetry': 'Failed to copy detail data, please retry',
   'PC.Components.MarkdownCustomProcess.expand': 'Expand',
   'PC.Components.MarkdownCustomProcess.noData': 'No data available',
   'PC.Components.MarkdownCustomProcess.noName': 'No name',
@@ -641,17 +495,12 @@ export const EN_US: SystemLangMap = {
   'PC.Components.MarkdownRenderer.tableCodeBlock': 'Table',
   'PC.Components.MarkdownRenderer.thinking': 'Thinking',
   'PC.Components.MarkdownRenderer.thought': 'Thought',
-  'PC.Components.McpCollapseComponentList.agentDesc':
-    'The agent is responsible for receiving user task requests, performing intelligent analysis and decision-making, coordinating the collaborative work of various modules, and ultimately providing response results.',
+  'PC.Components.McpCollapseComponentList.agentDesc': 'The agent is responsible for receiving user task requests, performing intelligent analysis and decision-making, coordinating the collaborative work of various modules, and ultimately providing response results.',
   'PC.Components.McpCollapseComponentList.delete': 'Delete',
-  'PC.Components.McpCollapseComponentList.knowledgeDesc':
-    'After uploading documents, URLs, and third-party data sources as text knowledge bases, when users send messages, the agent can reference the content in the text knowledge to answer user questions.',
-  'PC.Components.McpCollapseComponentList.pluginDesc':
-    "Plugins enable the agent to call external APIs, such as searching information, browsing web pages, generating images, etc., expanding the agent's capabilities and use cases.",
-  'PC.Components.McpCollapseComponentList.tableDesc':
-    'Organize data in a table structure to implement functions such as bookmarks and book management.',
-  'PC.Components.McpCollapseComponentList.workflowDesc':
-    'Workflows support combining plugins, large language models, code blocks, and other functions in a visual way to achieve complex and stable business process orchestration, such as travel planning, report analysis, etc.',
+  'PC.Components.McpCollapseComponentList.knowledgeDesc': 'After uploading documents, URLs, and third-party data sources as text knowledge bases, when users send messages, the agent can reference the content in the text knowledge to answer user questions.',
+  'PC.Components.McpCollapseComponentList.pluginDesc': "Plugins enable the agent to call external APIs, such as searching information, browsing web pages, generating images, etc., expanding the agent's capabilities and use cases.",
+  'PC.Components.McpCollapseComponentList.tableDesc': 'Organize data in a table structure to implement functions such as bookmarks and book management.',
+  'PC.Components.McpCollapseComponentList.workflowDesc': 'Workflows support combining plugins, large language models, code blocks, and other functions in a visual way to achieve complex and stable business process orchestration, such as travel planning, report analysis, etc.',
   'PC.Components.McpInstallType.componentLibrary': 'Component Library',
   'PC.Components.McpStatus.deployed': 'Deployed',
   'PC.Components.McpStatus.deployFailed': 'Deploy Failed',
@@ -674,57 +523,45 @@ export const EN_US: SystemLangMap = {
   'PC.Components.ModelSetting.generateRandomness': 'Randomness',
   'PC.Components.ModelSetting.inputOutputSettings': 'Input & Output Settings',
   'PC.Components.ModelSetting.maxReplyLength': 'Max Reply Length',
-  'PC.Components.ModelSetting.maxTokensDesc':
-    'Controls the upper limit of the model output Tokens length. Typically, 100 Tokens is approximately equal to 150 Chinese characters.',
+  'PC.Components.ModelSetting.maxTokensDesc': 'Controls the upper limit of the model output Tokens length. Typically, 100 Tokens is approximately equal to 150 Chinese characters.',
   'PC.Components.ModelSetting.model': 'Model',
   'PC.Components.ModelSetting.pleaseSelectModel': 'Please select a model',
   'PC.Components.ModelSetting.precisionMode': 'Precision',
-  'PC.Components.ModelSetting.temperatureDesc':
-    "Temperature: Raising the temperature makes the model's output more diverse and creative. Conversely, lowering the temperature makes the output more instruction-following but less diverse. It is recommended not to adjust it together with 'Top p'.",
-  'PC.Components.ModelSetting.topPDesc':
-    "Top p is the cumulative probability: When generating output, the model selects from the highest probability words until the cumulative probability reaches the Top p value. This limits the model to only select these high-probability words, thus controlling output diversity. It is recommended not to adjust it together with 'Randomness'.",
+  'PC.Components.ModelSetting.temperatureDesc': "Temperature: Raising the temperature makes the model's output more diverse and creative. Conversely, lowering the temperature makes the output more instruction-following but less diverse. It is recommended not to adjust it together with 'Top p'.",
+  'PC.Components.ModelSetting.topPDesc': "Top p is the cumulative probability: When generating output, the model selects from the highest probability words until the cumulative probability reaches the Top p value. This limits the model to only select these high-probability words, thus controlling output diversity. It is recommended not to adjust it together with 'Randomness'.",
   'PC.Components.Monaco.code': 'Code',
   'PC.Components.Monaco.pleaseSelectLanguage': 'Please select language',
   'PC.Components.MonacoEditor.loadingEditor': 'Loading editor...',
-  'PC.Components.MonacoEditor.loadingEditorDesc':
-    'Please wait, Monaco Editor is initializing',
+  'PC.Components.MonacoEditor.loadingEditorDesc': 'Please wait, Monaco Editor is initializing',
   'PC.Components.MonacoEditor.selectFileToEdit': 'Select a file to edit',
-  'PC.Components.MonacoEditor.selectFileToEditDesc':
-    'Select a file from the file tree on the left, or create a new file to start editing',
+  'PC.Components.MonacoEditor.selectFileToEditDesc': 'Select a file from the file tree on the left, or create a new file to start editing',
   'PC.Components.MoreActionsMenu.exportResult': 'Export Result',
   'PC.Components.MoreActionsMenu.importProject': 'Import Project',
   'PC.Components.MoreActionsMenu.restartAgent': 'Restart Agent',
-  'PC.Components.MoreActionsMenu.restartAgentTooltip':
-    'Current agent will restart',
+  'PC.Components.MoreActionsMenu.restartAgentTooltip': 'Current agent will restart',
   'PC.Components.MoreActionsMenu.restartClient': 'Restart Client',
   'PC.Components.MoreActionsMenu.restartComputer': 'Restart Agent Computer',
-  'PC.Components.MoreActionsMenu.restartComputerTooltip':
-    'All running agents will be restarted',
+  'PC.Components.MoreActionsMenu.restartComputerTooltip': 'All running agents will be restarted',
   'PC.Components.MoveCopyComponent.agent': 'Agent',
   'PC.Components.MoveCopyComponent.component': 'Component',
   'PC.Components.MoveCopyComponent.copy': 'Copy',
   'PC.Components.MoveCopyComponent.move': 'Move',
   'PC.Components.MoveCopyComponent.page': 'Page',
   'PC.Components.MoveCopyComponent.plugin': 'Plugin',
-  'PC.Components.MoveCopyComponent.selectTargetSpace':
-    'Select target space to ',
+  'PC.Components.MoveCopyComponent.selectTargetSpace': 'Select target space to ',
   'PC.Components.MoveCopyComponent.skill': 'Skill',
   'PC.Components.MoveCopyComponent.workflow': 'Workflow',
-  'PC.Components.NewConversationSet.conversationSettings':
-    'Conversation Settings',
+  'PC.Components.NewConversationSet.conversationSettings': 'Conversation Settings',
   'PC.Components.NewConversationSet.pleaseInputField': 'Please enter {0}',
   'PC.Components.NewConversationSet.pleaseSelectField': 'Please select {0}',
-  'PC.Components.NewConversationSet.settingsLockedHint':
-    'Once the conversation starts, the settings cannot be modified.',
+  'PC.Components.NewConversationSet.settingsLockedHint': 'Once the conversation starts, the settings cannot be modified.',
   'PC.Components.NewConversationSet.startConversation': 'Start Conversation',
   'PC.Components.NewMonaco.code': 'Code',
   'PC.Components.NewMonaco.pleaseSelectLanguage': 'Please select language',
   'PC.Components.NoMoreDivider.noMoreData': 'No more data',
   'PC.Components.OperationBtn.confirmAction': 'Confirm Action',
-  'PC.Components.OperationBtn.confirmActionDesc':
-    'Are you sure you want to perform this action?',
-  'PC.Components.OtherAction.confirmDeleteLoopNode':
-    'Are you sure you want to delete the loop node?',
+  'PC.Components.OperationBtn.confirmActionDesc': 'Are you sure you want to perform this action?',
+  'PC.Components.OtherAction.confirmDeleteLoopNode': 'Are you sure you want to delete the loop node?',
   'PC.Components.OtherAction.createCopy': 'Create Copy',
   'PC.Components.OtherAction.rename': 'Rename',
   'PC.Components.OtherAction.testNode': 'Test this node',
@@ -742,22 +579,19 @@ export const EN_US: SystemLangMap = {
   'PC.Components.PagePreviewIframe.unableToReadData': 'Unable to read data',
   'PC.Components.ParamsSetting.defaultValue': 'Default Value',
   'PC.Components.ParamsSetting.enable': 'Enable',
-  'PC.Components.ParamsSetting.enableTooltip':
-    'When a parameter is disabled, the model will not be able to see it. If the parameter has a default value and is invisible, the agent will only use the set value when called.',
+  'PC.Components.ParamsSetting.enableTooltip': 'When a parameter is disabled, the model will not be able to see it. If the parameter has a default value and is invisible, the agent will only use the set value when called.',
   'PC.Components.ParamsSetting.notRequired': 'Optional',
   'PC.Components.ParamsSetting.paramName': 'Parameter Name',
   'PC.Components.ParamsSetting.paramType': 'Parameter Type',
   'PC.Components.ParamsSetting.pleaseFill': 'Please fill in',
   'PC.Components.ParamsSetting.required': 'Required',
-  'PC.Components.ParamsSetting.requiredParamTooltip':
-    'This is a required parameter. The switch will be available after filling in a default value.',
+  'PC.Components.ParamsSetting.requiredParamTooltip': 'This is a required parameter. The switch will be available after filling in a default value.',
   'PC.Components.PermissionMask.noAgentPermission': 'No agent usage permission',
   'PC.Components.PluginAutoAnalysis.autoAnalysis': 'Auto Analysis',
   'PC.Components.PluginAutoAnalysis.inputParams': 'Input Parameters',
   'PC.Components.PluginAutoAnalysis.paramName': 'Parameter Name',
   'PC.Components.PluginAutoAnalysis.paramValue': 'Parameter Value',
-  'PC.Components.PluginAutoAnalysis.pleaseInputParamValue':
-    'Please enter parameter value',
+  'PC.Components.PluginAutoAnalysis.pleaseInputParamValue': 'Please enter parameter value',
   'PC.Components.PluginCardDetail.author': 'Author',
   'PC.Components.PluginCardDetail.back': 'Back',
   'PC.Components.PluginCardDetail.detailedInfo': 'Detailed Information',
@@ -771,55 +605,40 @@ export const EN_US: SystemLangMap = {
   'PC.Components.PluginCardDetail.version': 'Version',
   'PC.Components.PluginConfigTitle.addParam': 'Add Parameter',
   'PC.Components.PluginTryRunModal.debugResult': 'Debug Result',
-  'PC.Components.PluginTryRunModal.debugResultPlaceholder':
-    'Debug results will be displayed here',
+  'PC.Components.PluginTryRunModal.debugResultPlaceholder': 'Debug results will be displayed here',
   'PC.Components.PluginTryRunModal.inputParams': 'Input Parameters',
   'PC.Components.PluginTryRunModal.paramName': 'Parameter Name',
   'PC.Components.PluginTryRunModal.paramValue': 'Parameter Value',
-  'PC.Components.PluginTryRunModal.pleaseInputParamValue':
-    'Please enter parameter value',
+  'PC.Components.PluginTryRunModal.pleaseInputParamValue': 'Please enter parameter value',
   'PC.Components.PluginTryRunModal.run': 'Run',
   'PC.Components.PluginTryRunModal.tryRun': 'Try Run',
   'PC.Components.PromptOptimizeModal.autoOptimize': 'Auto Optimize',
-  'PC.Components.PromptOptimizeModal.defaultOptimizePrompt':
-    'A smart robot that can provide work help and suggestions',
+  'PC.Components.PromptOptimizeModal.defaultOptimizePrompt': 'A smart robot that can provide work help and suggestions',
   'PC.Components.PromptOptimizeModal.exit': 'Exit',
-  'PC.Components.PromptOptimizeModal.promptPlaceholder':
-    'Please describe your prompt requirements, such as role definition, skill requirements, etc.',
+  'PC.Components.PromptOptimizeModal.promptPlaceholder': 'Please describe your prompt requirements, such as role definition, skill requirements, etc.',
   'PC.Components.PromptOptimizeModal.replace': 'Replace',
   'PC.Components.PublishComponentModal.agent': 'Agent',
-  'PC.Components.PublishComponentModal.allowCopyTemplate':
-    'Allow Copy (Template)',
-  'PC.Components.PublishComponentModal.allowCopyTemplateTip':
-    'Once selected, it will appear in the marketplace templates. Users can copy it directly to their workspace. Copy selection is available only after publishing is selected.',
+  'PC.Components.PublishComponentModal.allowCopyTemplate': 'Allow Copy (Template)',
+  'PC.Components.PublishComponentModal.allowCopyTemplateTip': 'Once selected, it will appear in the marketplace templates. Users can copy it directly to their workspace. Copy selection is available only after publishing is selected.',
   'PC.Components.PublishComponentModal.categorySelect': 'Category',
   'PC.Components.PublishComponentModal.onlyTemplate': 'Template Only',
-  'PC.Components.PublishComponentModal.onlyTemplateTip':
-    'When selected, it will only be displayed in the template marketplace. Template-only option is available only after allow copy is selected.',
+  'PC.Components.PublishComponentModal.onlyTemplateTip': 'When selected, it will only be displayed in the template marketplace. Template-only option is available only after allow copy is selected.',
   'PC.Components.PublishComponentModal.plugin': 'Plugin',
   'PC.Components.PublishComponentModal.publishRecord': 'Publish Record',
-  'PC.Components.PublishComponentModal.publishRecordPlaceholder':
-    'Please enter publish record',
+  'PC.Components.PublishComponentModal.publishRecordPlaceholder': 'Please enter publish record',
   'PC.Components.PublishComponentModal.publishScope': 'Publish Scope',
-  'PC.Components.PublishComponentModal.publishSubmitted':
-    'Publish request submitted, pending review',
+  'PC.Components.PublishComponentModal.publishSubmitted': 'Publish request submitted, pending review',
   'PC.Components.PublishComponentModal.publishTitle': 'Publish {0}',
-  'PC.Components.PublishComponentModal.selectPublishScope':
-    'Select publish scope',
+  'PC.Components.PublishComponentModal.selectPublishScope': 'Select publish scope',
   'PC.Components.PublishComponentModal.skill': 'Skill',
   'PC.Components.PublishComponentModal.space': 'Space',
-  'PC.Components.PublishComponentModal.spaceSquareTip':
-    '2. Space Square: The agent will appear in the selected space square.',
+  'PC.Components.PublishComponentModal.spaceSquareTip': '2. Space Square: The agent will appear in the selected space square.',
   'PC.Components.PublishComponentModal.systemSquare': 'System Square',
-  'PC.Components.PublishComponentModal.systemSquareTip':
-    '1. System Square: The agent will appear in the system square.',
+  'PC.Components.PublishComponentModal.systemSquareTip': '1. System Square: The agent will appear in the system square.',
   'PC.Components.PublishComponentModal.workflow': 'Workflow',
-  'PC.Components.RecommendList.linkAddressConfigError':
-    'Link address configuration error',
-  'PC.Components.RecommendList.pagePathConfigError':
-    'Page path configuration error',
-  'PC.Components.RecommendList.pagePathParamError':
-    'Page path parameter configuration error',
+  'PC.Components.RecommendList.linkAddressConfigError': 'Link address configuration error',
+  'PC.Components.RecommendList.pagePathConfigError': 'Page path configuration error',
+  'PC.Components.RecommendList.pagePathParamError': 'Page path parameter configuration error',
   'PC.Components.RecommendList.pagePreview': 'Page Preview',
   'PC.Components.RunOver.called': 'Called {0}',
   'PC.Components.RunOver.calling': 'Calling',
@@ -836,15 +655,11 @@ export const EN_US: SystemLangMap = {
   'PC.Components.SelectComponent.userAvatar': 'User avatar',
   'PC.Components.SelectList.pleaseSelect': 'Please select',
   'PC.Components.ShareDesktopModal.allowDownload': 'Allow Download',
-  'PC.Components.ShareDesktopModal.allowDownloadTooltip':
-    'When enabled, users with the share link can download the original file on the preview page',
-  'PC.Components.ShareDesktopModal.conversationIdMissing':
-    'Conversation ID missing, unable to share',
+  'PC.Components.ShareDesktopModal.allowDownloadTooltip': 'When enabled, users with the share link can download the original file on the preview page',
+  'PC.Components.ShareDesktopModal.conversationIdMissing': 'Conversation ID missing, unable to share',
   'PC.Components.ShareDesktopModal.day1': '1 day',
-  'PC.Components.ShareDesktopModal.desktopShareSuccess':
-    'Desktop share successful, link copied to clipboard',
-  'PC.Components.ShareDesktopModal.fileShareSuccess':
-    'Share successful, link copied to clipboard',
+  'PC.Components.ShareDesktopModal.desktopShareSuccess': 'Desktop share successful, link copied to clipboard',
+  'PC.Components.ShareDesktopModal.fileShareSuccess': 'Share successful, link copied to clipboard',
   'PC.Components.ShareDesktopModal.generateShareLink': 'Generate Share Link',
   'PC.Components.ShareDesktopModal.hour1': '1 hour',
   'PC.Components.ShareDesktopModal.hour16': '16 hours',
@@ -860,15 +675,12 @@ export const EN_US: SystemLangMap = {
   'PC.Components.ShareDesktopModal.minute40': '40 min',
   'PC.Components.ShareDesktopModal.minute5': '5 min',
   'PC.Components.ShareDesktopModal.minute50': '50 min',
-  'PC.Components.ShareDesktopModal.noticeDescription':
-    'The share link will be automatically copied to clipboard. Anyone with this link can access it. Share carefully and be aware of data risks.',
+  'PC.Components.ShareDesktopModal.noticeDescription': 'The share link will be automatically copied to clipboard. Anyone with this link can access it. Share carefully and be aware of data risks.',
   'PC.Components.ShareDesktopModal.noticeTitle': 'Notice:',
   'PC.Components.ShareDesktopModal.permanent': 'Permanent',
   'PC.Components.ShareDesktopModal.secondsUnit': '{0}s',
-  'PC.Components.ShareDesktopModal.selectValidDuration':
-    'Please select valid duration',
-  'PC.Components.ShareDesktopModal.shareFailedRetry':
-    'Share failed, please retry later',
+  'PC.Components.ShareDesktopModal.selectValidDuration': 'Please select valid duration',
+  'PC.Components.ShareDesktopModal.shareFailedRetry': 'Share failed, please retry later',
   'PC.Components.ShareDesktopModal.titleDesktop': 'Share Desktop',
   'PC.Components.ShareDesktopModal.titleFile': 'Share File',
   'PC.Components.ShareDesktopModal.validDuration': 'Valid Duration',
@@ -882,8 +694,7 @@ export const EN_US: SystemLangMap = {
   'PC.Components.Skill.database.collapse': 'Collapse',
   'PC.Components.Skill.defaultValue': 'Default Value',
   'PC.Components.Skill.enable': 'Enable',
-  'PC.Components.Skill.enableDesc':
-    'When a parameter is set to invisible, the model will not be able to see it. If the parameter has a default value and is invisible, the agent will only use this set value by default when calling the plugin',
+  'PC.Components.Skill.enableDesc': 'When a parameter is set to invisible, the model will not be able to see it. If the parameter has a default value and is invisible, the agent will only use this set value by default when calling the plugin',
   'PC.Components.Skill.paramName': 'Parameter Name',
   'PC.Components.Skill.remove': 'Remove',
   'PC.Components.Skill.settings': 'Settings',
@@ -891,24 +702,20 @@ export const EN_US: SystemLangMap = {
   'PC.Components.SlateVariableEditor.placeholder': 'Please enter content...',
   'PC.Components.SlateVariableEditor.variable': 'Variable',
   'PC.Components.SqlOptimizeModal.exit': 'Exit',
-  'PC.Components.SqlOptimizeModal.placeholder':
-    'Please describe your SQL query requirements in detail',
+  'PC.Components.SqlOptimizeModal.placeholder': 'Please describe your SQL query requirements in detail',
   'PC.Components.SqlOptimizeModal.replace': 'Replace',
   'PC.Components.SubmitButton.confirm': 'Confirm',
-  'PC.Components.TaskList.confirmCancelTask':
-    'Are you sure you want to cancel this timed task?',
+  'PC.Components.TaskList.confirmCancelTask': 'Are you sure you want to cancel this timed task?',
   'PC.Components.TaskList.noCancelledTasks': 'No cancelled tasks',
   'PC.Components.TaskList.noInProgressTasks': 'No in-progress tasks',
   'PC.Components.TestRun.fieldRequired': '{0} is required',
   'PC.Components.TestRun.input': 'Input',
-  'PC.Components.TestRun.noInputRequired':
-    'No input required for this test run',
+  'PC.Components.TestRun.noInputRequired': 'No input required for this test run',
   'PC.Components.TestRun.output': 'Output',
   'PC.Components.TestRun.pleaseInput': 'Please input',
   'PC.Components.TestRun.pleaseSelect': 'Please select',
   'PC.Components.TestRun.qa': 'Q&A',
-  'PC.Components.TestRun.replyToContinue':
-    'Reply to the following questions to continue the test run',
+  'PC.Components.TestRun.replyToContinue': 'Reply to the following questions to continue the test run',
   'PC.Components.TestRun.robot': 'Robot',
   'PC.Components.TestRun.run': 'Run',
   'PC.Components.TestRun.runResult': 'Run Result',
@@ -916,25 +723,18 @@ export const EN_US: SystemLangMap = {
   'PC.Components.TestRun.testRunInput': 'Test Run Input',
   'PC.Components.TestRun.uploadFailed': 'Upload Failed: {0}',
   'PC.Components.TestRun.uploadFile': 'Upload File',
-  'PC.Components.ThemeConfigBackgroundImagePanel.customSectionTitle':
-    'Custom Background Images',
-  'PC.Components.ThemeConfigBackgroundImagePanel.emptyAvailable':
-    'No available background image',
-  'PC.Components.ThemeConfigBackgroundImagePanel.panelTitle':
-    'Background Image',
-  'PC.Components.ThemeConfigBackgroundImagePanel.systemSectionTitle':
-    'System Background Images',
+  'PC.Components.ThemeConfigBackgroundImagePanel.customSectionTitle': 'Custom Background Images',
+  'PC.Components.ThemeConfigBackgroundImagePanel.emptyAvailable': 'No available background image',
+  'PC.Components.ThemeConfigBackgroundImagePanel.panelTitle': 'Background Image',
+  'PC.Components.ThemeConfigBackgroundImagePanel.systemSectionTitle': 'System Background Images',
   'PC.Components.ThemeConfigBackgroundImagePanel.uploadImage': 'Upload Image',
-  'PC.Components.ThemeConfigNavigationStylePanel.colorSectionTitle':
-    'Light/Dark',
+  'PC.Components.ThemeConfigNavigationStylePanel.colorSectionTitle': 'Light/Dark',
   'PC.Components.ThemeConfigNavigationStylePanel.darkMode': 'Dark',
   'PC.Components.ThemeConfigNavigationStylePanel.lightMode': 'Light',
   'PC.Components.ThemeConfigNavigationStylePanel.panelTitle': 'Navigation Bar',
-  'PC.Components.ThemeConfigNavigationStylePanel.style1Description':
-    'Compact mode: 60px width, no text, container with margin and rounded corners.',
+  'PC.Components.ThemeConfigNavigationStylePanel.style1Description': 'Compact mode: 60px width, no text, container with margin and rounded corners.',
   'PC.Components.ThemeConfigNavigationStylePanel.style1Name': 'Style 1',
-  'PC.Components.ThemeConfigNavigationStylePanel.style2Description':
-    'Expanded mode: 88px width with text, container without margin or rounded corners.',
+  'PC.Components.ThemeConfigNavigationStylePanel.style2Description': 'Expanded mode: 88px width with text, container without margin or rounded corners.',
   'PC.Components.ThemeConfigNavigationStylePanel.style2Name': 'Style 2',
   'PC.Components.ThemeConfigNavigationStylePanel.styleSectionTitle': 'Style',
   'PC.Components.ThemeConfigThemeColorPanel.customName': 'Custom',
@@ -947,13 +747,10 @@ export const EN_US: SystemLangMap = {
   'PC.Components.TiptapVariableInput.placeholder': 'Type @ or { to get started',
   'PC.Components.TiptapVariableInput.skills': 'Skills',
   'PC.Components.TiptapVariableInput.tools': 'Tools',
-  'PC.Components.UploadImportConfig.checkConfigHint':
-    'If the configuration contains plugins or MCP, please check the related configuration after import to ensure correct operation.',
+  'PC.Components.UploadImportConfig.checkConfigHint': 'If the configuration contains plugins or MCP, please check the related configuration after import to ensure correct operation.',
   'PC.Components.UploadImportConfig.importConfig': 'Import Configuration',
-  'PC.Components.UploadImportConfig.importSuccess':
-    'Configuration imported successfully',
-  'PC.Components.UploadImportConfig.invalidFileType':
-    'Please upload a .table, .workflow or .plugin file!',
+  'PC.Components.UploadImportConfig.importSuccess': 'Configuration imported successfully',
+  'PC.Components.UploadImportConfig.invalidFileType': 'Please upload a .table, .workflow or .plugin file!',
   'PC.Components.UploadImportConfig.notice': 'Notice',
   'PC.Components.UploadImportConfig.uploadFailed': '{0} upload failed',
   'PC.Components.UserMenu.defaultUserName': 'User Name',
@@ -965,60 +762,43 @@ export const EN_US: SystemLangMap = {
   'PC.Components.UserOperate.unreadMessageCount': '{0} unread messages',
   'PC.Components.useVariableTree.skills': 'Skills',
   'PC.Components.useVariableTree.tools': 'Tools',
-  'PC.Components.VariableList.description':
-    'Used to save user personal information, allowing the agent to remember user characteristics and make responses more personalized.',
+  'PC.Components.VariableList.description': 'Used to save user personal information, allowing the agent to remember user characteristics and make responses more personalized.',
   'PC.Components.VariableList.noMatchingVariable': 'No matching variable found',
   'PC.Components.VariableList.tabSkills': 'Skills',
   'PC.Components.VariableList.tabTools': 'Tools',
   'PC.Components.VariableList.tabVariables': 'Variables',
   'PC.Components.VersionHistory.agent': 'Agent',
-  'PC.Components.VersionHistory.arrangeAndPublishRecord':
-    'Arrangement & Publish Records',
-  'PC.Components.VersionHistory.confirmOffShelf':
-    'Are you sure you want to take this {0} off shelf?',
+  'PC.Components.VersionHistory.arrangeAndPublishRecord': 'Arrangement & Publish Records',
+  'PC.Components.VersionHistory.confirmOffShelf': 'Are you sure you want to take this {0} off shelf?',
   'PC.Components.VersionHistory.currentPublish': 'Current Publish',
   'PC.Components.VersionHistory.noVersionHistory': 'No version history',
-  'PC.Components.VersionHistory.offShelfSuccess':
-    'Successfully taken off shelf',
+  'PC.Components.VersionHistory.offShelfSuccess': 'Successfully taken off shelf',
   'PC.Components.VersionHistory.plugin': 'Plugin',
   'PC.Components.VersionHistory.versionHistory': 'Version History',
-  'PC.Components.VersionHistory.versionHistoryTip':
-    'Version history is automatically saved when you modify the project',
+  'PC.Components.VersionHistory.versionHistoryTip': 'Version history is automatically saved when you modify the project',
   'PC.Components.VersionHistory.workflow': 'Workflow',
   'PC.Components.VncIdleWarningModal.confirmText': 'Continue',
   'PC.Components.VncIdleWarningModal.countdownAutoClose': 'Auto close in {0}s',
-  'PC.Components.VncIdleWarningModal.description':
-    'The system will automatically close the agent desktop connection to save resources.',
-  'PC.Components.VncIdleWarningModal.hintAction':
-    'Any keyboard or mouse action will {0}',
-  'PC.Components.VncIdleWarningModal.title':
-    'You have been inactive for a while',
-  'PC.Components.VncPreview.autoCloseCanceled':
-    'Automatic close has been canceled',
-  'PC.Components.VncPreview.autoClosedByIdleTimeout':
-    'Agent desktop connection was closed automatically due to inactivity',
-  'PC.Components.VncPreview.cannotConnectDesktop':
-    'Unable to connect to agent desktop',
+  'PC.Components.VncIdleWarningModal.description': 'The system will automatically close the agent desktop connection to save resources.',
+  'PC.Components.VncIdleWarningModal.hintAction': 'Any keyboard or mouse action will {0}',
+  'PC.Components.VncIdleWarningModal.title': 'You have been inactive for a while',
+  'PC.Components.VncPreview.autoCloseCanceled': 'Automatic close has been canceled',
+  'PC.Components.VncPreview.autoClosedByIdleTimeout': 'Agent desktop connection was closed automatically due to inactivity',
+  'PC.Components.VncPreview.cannotConnectDesktop': 'Unable to connect to agent desktop',
   'PC.Components.VncPreview.cannotEstablish': 'Unable to establish connection',
   'PC.Components.VncPreview.connected': 'Connected',
   'PC.Components.VncPreview.connecting': 'Connecting...',
   'PC.Components.VncPreview.connectionClosed': 'Connection closed',
   'PC.Components.VncPreview.connectionError': 'Connection error',
-  'PC.Components.VncPreview.desktopConnecting':
-    'Connecting to agent desktop...',
-  'PC.Components.VncPreview.desktopUnavailable':
-    'Agent desktop is temporarily unavailable. Please retry later.',
+  'PC.Components.VncPreview.desktopConnecting': 'Connecting to agent desktop...',
+  'PC.Components.VncPreview.desktopUnavailable': 'Agent desktop is temporarily unavailable. Please retry later.',
   'PC.Components.VncPreview.disconnected': 'Disconnected',
-  'PC.Components.VncPreview.forbidden':
-    'Access denied (403 Forbidden). Check permission settings.',
-  'PC.Components.VncPreview.missingConfig':
-    'Missing required configuration (service URL or container ID).',
+  'PC.Components.VncPreview.forbidden': 'Access denied (403 Forbidden). Check permission settings.',
+  'PC.Components.VncPreview.missingConfig': 'Missing required configuration (service URL or container ID).',
   'PC.Components.VncPreview.preparingConnection': 'Preparing connection',
-  'PC.Components.VncPreview.requestFailedWithStatus':
-    'Request failed (HTTP {0}). Check service status.',
+  'PC.Components.VncPreview.requestFailedWithStatus': 'Request failed (HTTP {0}). Check service status.',
   'PC.Components.VncPreview.retry': 'Retry',
-  'PC.Components.VncPreview.serviceUnavailableWithStatus':
-    'Service is temporarily unavailable ({0}). Please retry later.',
+  'PC.Components.VncPreview.serviceUnavailableWithStatus': 'Service is temporarily unavailable ({0}). Please retry later.',
   'PC.Components.VncPreview.shareExpired': 'Share has expired',
   'PC.Components.WorkspaceSearch.placeholder': 'Please input search content',
   'PC.Components.XProTable.index': 'Index',
@@ -1028,78 +808,64 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Agent.balancedMode': 'Balanced Mode',
   'PC.Constants.Agent.creativeMode': 'Creative Mode',
   'PC.Constants.Agent.default': 'Default',
-  'PC.Constants.Agent.defaultEngineTooltip':
-    'The default engine is more mature with the best results, supporting only selected vendor models',
+  'PC.Constants.Agent.defaultEngineTooltip': 'The default engine is more mature with the best results, supporting only selected vendor models',
   'PC.Constants.Agent.defaultRecall': 'Default',
   'PC.Constants.Agent.externalLink': 'External Link',
   'PC.Constants.Agent.extLinkRedirect': 'External Link Redirect',
   'PC.Constants.Agent.extPageOpen': 'Extension Page Open',
   'PC.Constants.Agent.extPagePath': 'Extension Page Path',
   'PC.Constants.Agent.fullText': 'Full Text',
-  'PC.Constants.Agent.fullTextTooltip':
-    'Keyword-based full-text search, recommended for scenarios requiring specific names, acronyms, phrases, or IDs.',
+  'PC.Constants.Agent.fullTextTooltip': 'Keyword-based full-text search, recommended for scenarios requiring specific names, acronyms, phrases, or IDs.',
   'PC.Constants.Agent.global': 'Global',
   'PC.Constants.Agent.insertToPrompt': 'Insert to Prompt',
   'PC.Constants.Agent.manualSelect': 'Manual Select',
   'PC.Constants.Agent.manualSelectOnDemand': 'Manual Select + On Demand',
   'PC.Constants.Agent.mixed': 'Mixed',
-  'PC.Constants.Agent.mixedTooltip':
-    'Combines the advantages of full-text and semantic retrieval with comprehensive ranking of results',
+  'PC.Constants.Agent.mixedTooltip': 'Combines the advantages of full-text and semantic retrieval with comprehensive ranking of results',
   'PC.Constants.Agent.multiSelect': 'Multi-Select',
   'PC.Constants.Agent.number': 'Number',
-  'PC.Constants.Agent.nuwaxCliEngineTooltip':
-    'The NuwaxCli engine is in rapid iteration. Some scenarios may need improvement, but it supports almost all vendor models',
+  'PC.Constants.Agent.nuwaxCliEngineTooltip': 'The NuwaxCli engine is in rapid iteration. Some scenarios may need improvement, but it supports almost all vendor models',
   'PC.Constants.Agent.onDemand': 'On Demand',
   'PC.Constants.Agent.paragraph': 'Paragraph',
   'PC.Constants.Agent.precisionMode': 'Precision Mode',
   'PC.Constants.Agent.questionGuide': 'Question Guide',
   'PC.Constants.Agent.semantic': 'Semantic',
-  'PC.Constants.Agent.semanticTooltip':
-    'Vector-based text relevance query, recommended for scenarios requiring semantic association and cross-language queries.',
+  'PC.Constants.Agent.semanticTooltip': 'Vector-based text relevance query, recommended for scenarios requiring semantic association and cross-language queries.',
   'PC.Constants.Agent.singleCard': 'Single Card',
   'PC.Constants.Agent.singleLineText': 'Single Line Text',
   'PC.Constants.Agent.singleSelect': 'Single Select',
   'PC.Constants.Agent.smartRecognition': 'Smart Recognition',
   'PC.Constants.Agent.verticalList': 'Vertical List',
   'PC.Constants.Agent.workspace': 'Workspace',
-  'PC.Constants.AppDev.defaultAiMessage':
-    'Hello! I am an AI assistant that can help you with code development, Q&A, and more. How can I help you?',
+  'PC.Constants.AppDev.defaultAiMessage': 'Hello! I am an AI assistant that can help you with code development, Q&A, and more. How can I help you?',
   'PC.Constants.AppDev.errChatSendFailed': 'Failed to send message',
-  'PC.Constants.AppDev.errDevServerStartFailed':
-    'Failed to start development environment',
+  'PC.Constants.AppDev.errDevServerStartFailed': 'Failed to start development environment',
   'PC.Constants.AppDev.errEmptyFilePath': 'Please enter the file path',
   'PC.Constants.AppDev.errLoadFileFailed': 'Failed to load file',
   'PC.Constants.AppDev.errNoFileSelected': 'Please select a file',
-  'PC.Constants.AppDev.errNoProjectId':
-    'Please create or select a project first',
+  'PC.Constants.AppDev.errNoProjectId': 'Please create or select a project first',
   'PC.Constants.AppDev.errSaveFileFailed': 'Failed to save file',
   'PC.Constants.AppDev.errUploadFailed': 'Upload failed',
   'PC.Constants.AppDev.loadingFileContent': 'Loading file content...',
   'PC.Constants.AppDev.loadingFileTree': 'Loading file tree...',
-  'PC.Constants.AppDev.previewDisabledMessage':
-    'Page preview is not available in version preview mode',
-  'PC.Constants.AppDev.readOnlyMessage':
-    'The old version is in read-only mode. Restore or switch to the latest version to edit.',
+  'PC.Constants.AppDev.previewDisabledMessage': 'Page preview is not available in version preview mode',
+  'PC.Constants.AppDev.readOnlyMessage': 'The old version is in read-only mode. Restore or switch to the latest version to edit.',
   'PC.Constants.AppDev.statusError': 'Failed to start development environment',
   'PC.Constants.AppDev.statusRunning': 'Development environment running',
   'PC.Constants.AppDev.statusStarting': 'Starting development environment...',
   'PC.Constants.AppDev.statusStopped': 'Development environment stopped',
   'PC.Constants.AppDev.successChatCancelled': 'AI task cancelled',
-  'PC.Constants.AppDev.successDevServerStarted':
-    'Development environment started successfully',
+  'PC.Constants.AppDev.successDevServerStarted': 'Development environment started successfully',
   'PC.Constants.AppDev.successFileSaved': 'File saved successfully',
   'PC.Constants.AppDev.successFileUploaded': 'File uploaded successfully',
-  'PC.Constants.AppDev.successProjectUploaded':
-    'Project uploaded and started successfully',
+  'PC.Constants.AppDev.successProjectUploaded': 'Project uploaded and started successfully',
   'PC.Constants.AppDev.uploadingFile': 'Uploading file...',
   'PC.Constants.Common.input': 'Input',
   'PC.Constants.Common.mcpService': 'MCP Service',
   'PC.Constants.Common.page': 'Page',
   'PC.Constants.Common.reference': 'Reference',
-  'PC.Constants.Common.subAgentTemplateBody':
-    'Your sub-agent system prompt is displayed here. This prompt can contain multiple paragraphs,\nYou need to clearly define the role, capabilities, and approach to problem-solving for the sub-agent.\n\nIncludes specific instructions, best practices, and any limitations that the sub-agent should follow.',
-  'PC.Constants.Common.subAgentTemplateDesc':
-    'Description of when the sub-agent should be invoked',
+  'PC.Constants.Common.subAgentTemplateBody': 'Your sub-agent system prompt is displayed here. This prompt can contain multiple paragraphs,\nYou need to clearly define the role, capabilities, and approach to problem-solving for the sub-agent.\n\nIncludes specific instructions, best practices, and any limitations that the sub-agent should follow.',
+  'PC.Constants.Common.subAgentTemplateDesc': 'Description of when the sub-agent should be invoked',
   'PC.Constants.Common.subAgentTemplateName': 'Your sub-agent name',
   'PC.Constants.Common.variable': 'Variable',
   'PC.Constants.DataTable.itemsPerPage': 'items/page',
@@ -1124,14 +890,11 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Ecosystem.offline': 'Offline',
   'PC.Constants.Ecosystem.underReview': 'Under Review',
   'PC.Constants.Ecosystem.webApp': 'Web App',
-  'PC.Constants.Home.exampleQ1':
-    'Overview of Nuwa Agent Design Platform features',
+  'PC.Constants.Home.exampleQ1': 'Overview of Nuwa Agent Design Platform features',
   'PC.Constants.Home.exampleQ2': 'Recommended NLP textbook recommendations',
   'PC.Constants.Home.exampleQ3': 'Nuwa Agent Design Platform user manual',
-  'PC.Constants.Home.exampleQ4':
-    'What should I start preparing in my sophomore year for grad school?',
-  'PC.Constants.Home.exampleQ5':
-    'What should I start preparing in my sophomore year for grad school?',
+  'PC.Constants.Home.exampleQ4': 'What should I start preparing in my sophomore year for grad school?',
+  'PC.Constants.Home.exampleQ5': 'What should I start preparing in my sophomore year for grad school?',
   'PC.Constants.ImChannel.platformDingtalk': 'DingTalk',
   'PC.Constants.ImChannel.platformFeishu': 'Feishu',
   'PC.Constants.ImChannel.platformWechat': 'WeChat',
@@ -1142,10 +905,8 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Library.chatMultimodal': 'Chat - Multimodal',
   'PC.Constants.Library.chatText': 'Chat - Text Only',
   'PC.Constants.Library.code': 'Code',
-  'PC.Constants.Library.createByCloudCode':
-    'Create from Cloud Code (Node.js, Python)',
-  'PC.Constants.Library.createByHttp':
-    'Create from Existing Service (HTTP API)',
+  'PC.Constants.Library.createByCloudCode': 'Create from Cloud Code (Node.js, Python)',
+  'PC.Constants.Library.createByHttp': 'Create from Existing Service (HTTP API)',
   'PC.Constants.Library.createSettings': 'Create Settings',
   'PC.Constants.Library.dataProcess': 'Data Processing',
   'PC.Constants.Library.execRecord': 'Execution Record',
@@ -1153,8 +914,7 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Library.generalAgent': 'General Agent',
   'PC.Constants.Library.imageProcess': 'Image Processing',
   'PC.Constants.Library.localDoc': 'Local Document',
-  'PC.Constants.Library.localDocDesc':
-    'Upload local files in PDF, TXT, MD, DOC, DOCX format',
+  'PC.Constants.Library.localDocDesc': 'Upload local files in PDF, TXT, MD, DOC, DOCX format',
   'PC.Constants.Library.manualAdd': 'Manual Add',
   'PC.Constants.Library.manualExec': 'Manual Execution',
   'PC.Constants.Library.metadata': 'Metadata',
@@ -1174,8 +934,7 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Library.segNewline': 'Newline (\\n)',
   'PC.Constants.Library.segTwoNewline': 'Double Newline (\\n\\n)',
   'PC.Constants.Library.supportFuncCall': 'Supports Function Calling',
-  'PC.Constants.Library.supportStreamFuncCall':
-    'Supports Streaming Function Calling',
+  'PC.Constants.Library.supportStreamFuncCall': 'Supports Streaming Function Calling',
   'PC.Constants.Library.textCompletion': 'Text Completion',
   'PC.Constants.Library.textEdit': 'Text Editing',
   'PC.Constants.Library.textFill': 'Text Fill',
@@ -1256,8 +1015,7 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Space.callMethod': 'Call Method',
   'PC.Constants.Space.cardBind': 'Card Binding',
   'PC.Constants.Space.chatBotType': 'Chatbot',
-  'PC.Constants.Space.chatBotTypeTooltip':
-    'Suitable for knowledge Q&A, smart customer service, and quick Q&A scenarios.',
+  'PC.Constants.Space.chatBotTypeTooltip': 'Suitable for knowledge Q&A, smart customer service, and quick Q&A scenarios.',
   'PC.Constants.Space.componentLibrary': 'Component Library',
   'PC.Constants.Space.copyToSpace': 'Copy to Space',
   'PC.Constants.Space.createdByMe': 'Created by Me',
@@ -1278,8 +1036,7 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.Space.spaceSquare': 'Space Square',
   'PC.Constants.Space.standardCreate': 'Standard Create',
   'PC.Constants.Space.taskAgentType': 'Task Agent',
-  'PC.Constants.Space.taskAgentTypeTooltip':
-    'Assigns a dedicated execution computer to the agent, suitable for complex tasks such as app development, in-depth research, data analysis, and presentations. Consumes more memory and outputs are slower.',
+  'PC.Constants.Space.taskAgentTypeTooltip': 'Assigns a dedicated execution computer to the agent, suitable for complex tasks such as app development, in-depth research, data analysis, and presentations. Consumes more memory and outputs are slower.',
   'PC.Constants.Space.taskCenter': 'Task Center',
   'PC.Constants.Space.temporarySession': 'Temporary Session',
   'PC.Constants.Space.visibleToModel': 'Visible to Model',
@@ -1309,29 +1066,21 @@ export const EN_US: SystemLangMap = {
   'PC.Constants.System.userGroupManage': 'User Group Management',
   'PC.Constants.System.userManage': 'User Management',
   'PC.Constants.Theme.bgCloudyDay': 'Cloudy Day',
-  'PC.Constants.Theme.bgCloudyDayDesc':
-    'Light background, suitable for light layout',
+  'PC.Constants.Theme.bgCloudyDayDesc': 'Light background, suitable for light layout',
   'PC.Constants.Theme.bgDeepSeaNight': 'Deep Sea Night',
-  'PC.Constants.Theme.bgDeepSeaNightDesc':
-    'Dark background, suitable for dark layout',
+  'PC.Constants.Theme.bgDeepSeaNightDesc': 'Dark background, suitable for dark layout',
   'PC.Constants.Theme.bgDreamyPurple': 'Dreamy Purple',
-  'PC.Constants.Theme.bgDreamyPurpleDesc':
-    'Dark tone background, suitable for dark layout',
+  'PC.Constants.Theme.bgDreamyPurpleDesc': 'Dark tone background, suitable for dark layout',
   'PC.Constants.Theme.bgForestDawn': 'Forest Dawn',
-  'PC.Constants.Theme.bgForestDawnDesc':
-    'Bright background, suitable for light layout',
+  'PC.Constants.Theme.bgForestDawnDesc': 'Bright background, suitable for light layout',
   'PC.Constants.Theme.bgFreshBlueSky': 'Fresh Blue Sky',
-  'PC.Constants.Theme.bgFreshBlueSkyDesc':
-    'Fresh and bright, suitable for light layout',
+  'PC.Constants.Theme.bgFreshBlueSkyDesc': 'Fresh and bright, suitable for light layout',
   'PC.Constants.Theme.bgNightCity': 'Night City',
-  'PC.Constants.Theme.bgNightCityDesc':
-    'City night view, suitable for dark layout',
+  'PC.Constants.Theme.bgNightCityDesc': 'City night view, suitable for dark layout',
   'PC.Constants.Theme.bgStarryNight': 'Starry Night',
-  'PC.Constants.Theme.bgStarryNightDesc':
-    'Dark background, suitable for dark layout',
+  'PC.Constants.Theme.bgStarryNightDesc': 'Dark background, suitable for dark layout',
   'PC.Constants.Theme.bgWarmSunshine': 'Warm Sunshine',
-  'PC.Constants.Theme.bgWarmSunshineDesc':
-    'Warm tones, suitable for light layout',
+  'PC.Constants.Theme.bgWarmSunshineDesc': 'Warm tones, suitable for light layout',
   'PC.Constants.Theme.colorBlue': 'Blue',
   'PC.Constants.Theme.colorGreen': 'Green',
   'PC.Constants.Theme.colorOrange': 'Orange',
@@ -1341,12 +1090,9 @@ export const EN_US: SystemLangMap = {
   'PC.Hooks.UseAppDevFileManagement.editCanceled': 'Edit canceled',
   'PC.Hooks.UseAppDevFileManagement.loadFileFailed': 'Failed to load file {0}',
   'PC.Hooks.UseAppDevFileManagement.renameFailed': 'Rename failed',
-  'PC.Hooks.UseAppDevFileManagement.renameFailedWithError':
-    'Rename failed: {0}',
-  'PC.Hooks.UseAppDevModelSelector.configCodingModel':
-    'Please configure a coding model in system management or component library. Select a model that supports the Anthropic protocol. Recommended: Zhipu Coding Solution https://bigmodel.cn/glm-coding',
-  'PC.Hooks.UseAppDevModelSelector.loadModelListFailed':
-    'Failed to load model list, please refresh and try again',
+  'PC.Hooks.UseAppDevFileManagement.renameFailedWithError': 'Rename failed: {0}',
+  'PC.Hooks.UseAppDevModelSelector.configCodingModel': 'Please configure a coding model in system management or component library. Select a model that supports the Anthropic protocol. Recommended: Zhipu Coding Solution https://bigmodel.cn/glm-coding',
+  'PC.Hooks.UseAppDevModelSelector.loadModelListFailed': 'Failed to load model list, please refresh and try again',
   'PC.Hooks.UseAppDevModelSelector.notice': 'Notice',
   'PC.Hooks.UseAppDevProjectInfo.actionBuild': 'Build',
   'PC.Hooks.UseAppDevProjectInfo.actionChat': 'AI Chat',
@@ -1357,107 +1103,69 @@ export const EN_US: SystemLangMap = {
   'PC.Hooks.UseAppDevProjectInfo.actionUploadProject': 'Upload Project',
   'PC.Hooks.UseAppDevProjectInfo.actionUploadSingleFile': 'Upload Single File',
   'PC.Hooks.UseAppDevProjectInfo.actionVersionRollback': 'Version Rollback',
-  'PC.Hooks.UseAppDevProjectInfo.fetchProjectFailed':
-    'Unknown error occurred while fetching project details',
-  'PC.Hooks.UseAppDevProjectInfo.noPermission':
-    'You do not have permission to access this project',
-  'PC.Hooks.UseAppDevServer.devEnvStarted':
-    'Development environment started successfully',
-  'PC.Hooks.UseAppDevServer.devServerRestarted':
-    'Development server restarted successfully',
+  'PC.Hooks.UseAppDevProjectInfo.fetchProjectFailed': 'Unknown error occurred while fetching project details',
+  'PC.Hooks.UseAppDevProjectInfo.noPermission': 'You do not have permission to access this project',
+  'PC.Hooks.UseAppDevServer.devEnvStarted': 'Development environment started successfully',
+  'PC.Hooks.UseAppDevServer.devServerRestarted': 'Development server restarted successfully',
   'PC.Hooks.UseAppDevServer.keepaliveFailed': 'Keepalive request failed',
-  'PC.Hooks.UseAppDevServer.projectIdMissing':
-    'Project ID is missing or invalid, cannot restart',
-  'PC.Hooks.UseAppDevServer.restartDevServerFailed':
-    'Failed to restart development server',
-  'PC.Hooks.UseAppDevServer.startDevEnvFailed':
-    'Failed to start development environment',
-  'PC.Hooks.UseAppDevVersionCompare.projectIdNotExist':
-    'Project ID does not exist',
-  'PC.Hooks.UseAppDevVersionCompare.projectIdOrVersionNotExist':
-    'Project ID or target version does not exist',
-  'PC.Hooks.UseAppDevVersionCompare.versionCompareFailed':
-    'Version comparison failed: {0}',
-  'PC.Hooks.UseAppDevVersionCompare.versionSwitchFailed':
-    'Version switch failed: {0}',
-  'PC.Hooks.UseAppDevVersionCompare.versionSwitchSuccess':
-    'Version switched successfully',
-  'PC.Hooks.UseAutoErrorHandling.continueAutoHandling':
-    'Continue auto-handling this issue?',
-  'PC.Hooks.UseAutoErrorHandling.iframeError':
-    'Preview page failed to load, please analyze and fix the error:\n\n```\n{0}\n```',
-  'PC.Hooks.UseAutoErrorHandling.limitReached':
-    'Auto error handling limit reached',
-  'PC.Hooks.UseAutoErrorHandling.logError':
-    'Please analyze the following logs and fix the errors:\n\n```\n{0}\n```',
-  'PC.Hooks.UseAutoErrorHandling.whiteScreenError':
-    'White screen detected in preview, please analyze and fix the following error:\n\n```\n{0}\n```',
+  'PC.Hooks.UseAppDevServer.projectIdMissing': 'Project ID is missing or invalid, cannot restart',
+  'PC.Hooks.UseAppDevServer.restartDevServerFailed': 'Failed to restart development server',
+  'PC.Hooks.UseAppDevServer.startDevEnvFailed': 'Failed to start development environment',
+  'PC.Hooks.UseAppDevVersionCompare.projectIdNotExist': 'Project ID does not exist',
+  'PC.Hooks.UseAppDevVersionCompare.projectIdOrVersionNotExist': 'Project ID or target version does not exist',
+  'PC.Hooks.UseAppDevVersionCompare.versionCompareFailed': 'Version comparison failed: {0}',
+  'PC.Hooks.UseAppDevVersionCompare.versionSwitchFailed': 'Version switch failed: {0}',
+  'PC.Hooks.UseAppDevVersionCompare.versionSwitchSuccess': 'Version switched successfully',
+  'PC.Hooks.UseAutoErrorHandling.continueAutoHandling': 'Continue auto-handling this issue?',
+  'PC.Hooks.UseAutoErrorHandling.iframeError': 'Preview page failed to load, please analyze and fix the error:\n\n```\n{0}\n```',
+  'PC.Hooks.UseAutoErrorHandling.limitReached': 'Auto error handling limit reached',
+  'PC.Hooks.UseAutoErrorHandling.logError': 'Please analyze the following logs and fix the errors:\n\n```\n{0}\n```',
+  'PC.Hooks.UseAutoErrorHandling.whiteScreenError': 'White screen detected in preview, please analyze and fix the following error:\n\n```\n{0}\n```',
   'PC.Hooks.UseCopyTemplate.copySuccess': 'Template copied successfully',
-  'PC.Hooks.UseEcoMarket.confirmDelete':
-    'Are you sure you want to delete this share?',
+  'PC.Hooks.UseEcoMarket.confirmDelete': 'Are you sure you want to delete this share?',
   'PC.Hooks.UseEventPolling.newVersionFound': 'New Version Available',
   'PC.Hooks.UseEventPolling.update': 'Update',
-  'PC.Hooks.UseEventPolling.updatePrompt':
-    'New version {0} detected. Update now?',
+  'PC.Hooks.UseEventPolling.updatePrompt': 'New version {0} detected. Update now?',
   'PC.Hooks.UseFileImport.importFailed': 'Import failed',
   'PC.Hooks.UseFileImport.importSuccess': 'Import successful',
-  'PC.Hooks.UseFileImport.unsupportedFileType':
-    'Only .zip, .skill files or SKILL.md files are supported',
+  'PC.Hooks.UseFileImport.unsupportedFileType': 'Only .zip, .skill files or SKILL.md files are supported',
   'PC.Hooks.UseMcp.addItem': 'Add {0}',
-  'PC.Hooks.UseMessageEventDelegate.linkUrlConfigError':
-    'Link URL configuration error',
+  'PC.Hooks.UseMessageEventDelegate.linkUrlConfigError': 'Link URL configuration error',
   'PC.Hooks.UseMessageEventDelegate.page': 'Page',
-  'PC.Hooks.UseMessageEventDelegate.pagePathConfigError':
-    'Page path configuration error',
-  'PC.Hooks.UseMessageEventDelegate.pagePathParamConfigError':
-    'Page path parameter configuration error',
+  'PC.Hooks.UseMessageEventDelegate.pagePathConfigError': 'Page path configuration error',
+  'PC.Hooks.UseMessageEventDelegate.pagePathParamConfigError': 'Page path parameter configuration error',
   'PC.Hooks.UseNavigationGuard.confirmLeave': 'Confirm Leave',
-  'PC.Hooks.UseNavigationGuard.confirmLeaveMessage':
-    'Are you sure you want to leave the current page?',
+  'PC.Hooks.UseNavigationGuard.confirmLeaveMessage': 'Are you sure you want to leave the current page?',
   'PC.Hooks.UseNavigationGuard.discard': 'Discard',
   'PC.Hooks.UsePluginConfig.saveSuccess': 'Plugin saved successfully',
-  'PC.Hooks.UseRestartDevServer.invalidProjectId':
-    'Project ID is missing or invalid, unable to restart',
-  'PC.Hooks.UseRestartDevServer.restartFailed':
-    'Failed to restart development server',
+  'PC.Hooks.UseRestartDevServer.invalidProjectId': 'Project ID is missing or invalid, unable to restart',
+  'PC.Hooks.UseRestartDevServer.restartFailed': 'Failed to restart development server',
   'PC.Hooks.UseSendCode.codeSent': 'Verification code sent',
-  'PC.Hooks.UseTryRun.reconfigureParams':
-    'Please reconfigure input parameters and add sub-level',
+  'PC.Hooks.UseTryRun.reconfigureParams': 'Please reconfigure input parameters and add sub-level',
   'PC.Layouts.DynamicMenusLayout.CollapseButton.collapseMenu': 'Collapse Menu',
   'PC.Layouts.DynamicMenusLayout.CollapseButton.expandMenu': 'Expand Menu',
   'PC.Layouts.DynamicMenusLayout.ConversationItem.executing': 'Executing',
-  'PC.Layouts.DynamicMenusLayout.CreateNewTeam.createSuccess':
-    'Created successfully',
-  'PC.Layouts.DynamicMenusLayout.CreateNewTeam.createTeamSpace':
-    'Create Team Space',
+  'PC.Layouts.DynamicMenusLayout.CreateNewTeam.createSuccess': 'Created successfully',
+  'PC.Layouts.DynamicMenusLayout.CreateNewTeam.createTeamSpace': 'Create Team Space',
   'PC.Layouts.DynamicMenusLayout.CreateNewTeam.description': 'Description',
-  'PC.Layouts.DynamicMenusLayout.CreateNewTeam.pleaseInputTeamName':
-    'Please enter a team name',
+  'PC.Layouts.DynamicMenusLayout.CreateNewTeam.pleaseInputTeamName': 'Please enter a team name',
   'PC.Layouts.DynamicMenusLayout.CreateNewTeam.teamName': 'Team Name',
-  'PC.Layouts.DynamicMenusLayout.CreateNewTeam.teamSpaceTips':
-    'By creating a team space, projects, agents, plugins, workflows, and knowledge bases can be collaborated and shared within the team.',
-  'PC.Layouts.DynamicMenusLayout.DevCollect.addByStar':
-    'Click the ⭐️ button to add content here~',
+  'PC.Layouts.DynamicMenusLayout.CreateNewTeam.teamSpaceTips': 'By creating a team space, projects, agents, plugins, workflows, and knowledge bases can be collaborated and shared within the team.',
+  'PC.Layouts.DynamicMenusLayout.DevCollect.addByStar': 'Click the ⭐️ button to add content here~',
   'PC.Layouts.DynamicMenusLayout.DevCollect.noCollection': 'No favorites yet',
-  'PC.Layouts.DynamicMenusLayout.DynamicSecondMenu.pathResolveFailed':
-    'Failed to resolve path navigation, please check if the menu path exists',
+  'PC.Layouts.DynamicMenusLayout.DynamicSecondMenu.pathResolveFailed': 'Failed to resolve path navigation, please check if the menu path exists',
   'PC.Layouts.DynamicMenusLayout.home': 'Home',
-  'PC.Layouts.DynamicMenusLayout.HomeSection.conversationHistory':
-    'Conversation History',
-  'PC.Layouts.DynamicMenusLayout.HomeSection.exploreSquare':
-    'Go to the square and start your exploration journey~',
+  'PC.Layouts.DynamicMenusLayout.HomeSection.conversationHistory': 'Conversation History',
+  'PC.Layouts.DynamicMenusLayout.HomeSection.exploreSquare': 'Go to the square and start your exploration journey~',
   'PC.Layouts.DynamicMenusLayout.HomeSection.lookRight': 'Look right 👉',
-  'PC.Layouts.DynamicMenusLayout.HomeSection.noAgentUsed':
-    "You haven't used any agents yet",
+  'PC.Layouts.DynamicMenusLayout.HomeSection.noAgentUsed': "You haven't used any agents yet",
   'PC.Layouts.DynamicMenusLayout.HomeSection.recentlyUsed': 'Recently Used',
-  'PC.Layouts.DynamicMenusLayout.HomeSection.startFirstConversation':
-    'Enter instructions in the chat box to start your first conversation~',
+  'PC.Layouts.DynamicMenusLayout.HomeSection.startFirstConversation': 'Enter instructions in the chat box to start your first conversation~',
   'PC.Layouts.DynamicMenusLayout.HomeSection.viewAll': 'View All',
   'PC.Layouts.DynamicMenusLayout.more': 'More',
   'PC.Layouts.DynamicMenusLayout.newConversation': 'New Conversation',
   'PC.Layouts.DynamicMenusLayout.SpaceSection.personalSpace': 'Personal Space',
-  'PC.Layouts.DynamicMenusLayout.SpaceSection.recentlyEdited':
-    'Recently Edited',
+  'PC.Layouts.DynamicMenusLayout.SpaceSection.recentlyEdited': 'Recently Edited',
   'PC.Layouts.DynamicMenusLayout.SquareSection.agent': 'Agent',
   'PC.Layouts.DynamicMenusLayout.SquareSection.pageApp': 'Web App',
   'PC.Layouts.DynamicMenusLayout.SquareSection.plugin': 'Plugin',
@@ -1469,27 +1177,17 @@ export const EN_US: SystemLangMap = {
   'PC.Layouts.Message.noMessages': 'No messages',
   'PC.Layouts.MobileMenu.menuMask': 'Menu Mask',
   'PC.Layouts.Setting.ResetPassword.confirmPassword': 'Confirm Password',
-  'PC.Layouts.Setting.ResetPassword.inputConfirmPassword':
-    'Please enter the password again!',
-  'PC.Layouts.Setting.ResetPassword.inputCorrectCode':
-    'Please enter a valid verification code!',
-  'PC.Layouts.Setting.ResetPassword.inputCorrectNewPassword':
-    'Please enter a valid new password!',
-  'PC.Layouts.Setting.ResetPassword.inputCorrectPassword':
-    'Invalid new password format, at least 6 characters!',
-  'PC.Layouts.Setting.ResetPassword.inputNewPassword':
-    'Please enter new password!',
-  'PC.Layouts.Setting.ResetPassword.inputVerificationCode':
-    'Please enter verification code',
+  'PC.Layouts.Setting.ResetPassword.inputConfirmPassword': 'Please enter the password again!',
+  'PC.Layouts.Setting.ResetPassword.inputCorrectCode': 'Please enter a valid verification code!',
+  'PC.Layouts.Setting.ResetPassword.inputCorrectNewPassword': 'Please enter a valid new password!',
+  'PC.Layouts.Setting.ResetPassword.inputCorrectPassword': 'Invalid new password format, at least 6 characters!',
+  'PC.Layouts.Setting.ResetPassword.inputNewPassword': 'Please enter new password!',
+  'PC.Layouts.Setting.ResetPassword.inputVerificationCode': 'Please enter verification code',
   'PC.Layouts.Setting.ResetPassword.newPassword': 'New Password',
-  'PC.Layouts.Setting.ResetPassword.passwordMismatch':
-    'Passwords do not match!',
-  'PC.Layouts.Setting.ResetPassword.placeholderCode':
-    'Please enter verification code',
-  'PC.Layouts.Setting.ResetPassword.placeholderConfirmPassword':
-    'Please enter the password again',
-  'PC.Layouts.Setting.ResetPassword.placeholderNewPassword':
-    'Please enter a new password (at least 6 characters)',
+  'PC.Layouts.Setting.ResetPassword.passwordMismatch': 'Passwords do not match!',
+  'PC.Layouts.Setting.ResetPassword.placeholderCode': 'Please enter verification code',
+  'PC.Layouts.Setting.ResetPassword.placeholderConfirmPassword': 'Please enter the password again',
+  'PC.Layouts.Setting.ResetPassword.placeholderNewPassword': 'Please enter a new password (at least 6 characters)',
   'PC.Layouts.Setting.ResetPassword.resetSuccess': 'Reset successful',
   'PC.Layouts.Setting.ResetPassword.sendCode': 'Send Code',
   'PC.Layouts.Setting.ResetPassword.submit': 'Confirm Change',
@@ -1499,66 +1197,46 @@ export const EN_US: SystemLangMap = {
   'PC.Layouts.Setting.SettingEmail.bindSuccess': 'Binding successful',
   'PC.Layouts.Setting.SettingEmail.emailAddress': 'Email Address',
   'PC.Layouts.Setting.SettingEmail.emailBindTitle': 'Email Binding',
-  'PC.Layouts.Setting.SettingEmail.inputCorrectCode':
-    'Please enter a valid verification code!',
-  'PC.Layouts.Setting.SettingEmail.inputCorrectEmail':
-    'Please enter a valid email address!',
-  'PC.Layouts.Setting.SettingEmail.inputCorrectPhone':
-    'Please enter a valid phone number!',
-  'PC.Layouts.Setting.SettingEmail.inputEmailAddress':
-    'Please enter email address',
-  'PC.Layouts.Setting.SettingEmail.inputPhoneNumber':
-    'Please enter phone number',
-  'PC.Layouts.Setting.SettingEmail.inputVerificationCode':
-    'Please enter verification code',
+  'PC.Layouts.Setting.SettingEmail.inputCorrectCode': 'Please enter a valid verification code!',
+  'PC.Layouts.Setting.SettingEmail.inputCorrectEmail': 'Please enter a valid email address!',
+  'PC.Layouts.Setting.SettingEmail.inputCorrectPhone': 'Please enter a valid phone number!',
+  'PC.Layouts.Setting.SettingEmail.inputEmailAddress': 'Please enter email address',
+  'PC.Layouts.Setting.SettingEmail.inputPhoneNumber': 'Please enter phone number',
+  'PC.Layouts.Setting.SettingEmail.inputVerificationCode': 'Please enter verification code',
   'PC.Layouts.Setting.SettingEmail.phoneBindTitle': 'Phone Binding',
   'PC.Layouts.Setting.SettingEmail.phoneNumber': 'Phone Number',
-  'PC.Layouts.Setting.SettingEmail.placeholderCode':
-    'Please enter verification code',
+  'PC.Layouts.Setting.SettingEmail.placeholderCode': 'Please enter verification code',
   'PC.Layouts.Setting.SettingEmail.sendCode': 'Send Code',
   'PC.Layouts.Setting.SettingEmail.verificationCode': 'Verification Code',
-  'PC.Layouts.Setting.ThemeSwitchPanel.autoSwitchBackground':
-    'Automatically switched to {0} to match {1} navigation bar',
-  'PC.Layouts.Setting.ThemeSwitchPanel.autoSwitchNav':
-    'Automatically switched to {0} navigation bar',
-  'PC.Layouts.Setting.ThemeSwitchPanel.backgroundUpdateFailed':
-    'Failed to update background image',
-  'PC.Layouts.Setting.ThemeSwitchPanel.colorUpdateFailed':
-    'Failed to update theme color',
+  'PC.Layouts.Setting.ThemeSwitchPanel.autoSwitchBackground': 'Automatically switched to {0} to match {1} navigation bar',
+  'PC.Layouts.Setting.ThemeSwitchPanel.autoSwitchNav': 'Automatically switched to {0} navigation bar',
+  'PC.Layouts.Setting.ThemeSwitchPanel.backgroundUpdateFailed': 'Failed to update background image',
+  'PC.Layouts.Setting.ThemeSwitchPanel.colorUpdateFailed': 'Failed to update theme color',
   'PC.Layouts.Setting.ThemeSwitchPanel.dark': 'dark',
   'PC.Layouts.Setting.ThemeSwitchPanel.light': 'light',
-  'PC.Layouts.Setting.ThemeSwitchPanel.navStyleUpdateFailed':
-    'Failed to update navigation style',
-  'PC.Layouts.Setting.ThemeSwitchPanel.navThemeToggleFailed':
-    'Failed to toggle navigation theme',
+  'PC.Layouts.Setting.ThemeSwitchPanel.navStyleUpdateFailed': 'Failed to update navigation style',
+  'PC.Layouts.Setting.ThemeSwitchPanel.navThemeToggleFailed': 'Failed to toggle navigation theme',
   'PC.Layouts.Setting.ThemeSwitchPanel.title': 'Theme Switch',
   'PC.Layouts.Setting.UsageStatistics.agent': 'Agent Creation Limit',
   'PC.Layouts.Setting.UsageStatistics.agentPrompt': 'Agent Chat Count',
   'PC.Layouts.Setting.UsageStatistics.columnDaily': 'Daily',
   'PC.Layouts.Setting.UsageStatistics.columnOther': 'Other',
   'PC.Layouts.Setting.UsageStatistics.columnType': 'Type',
-  'PC.Layouts.Setting.UsageStatistics.kbStorage':
-    'Knowledge Base Storage Limit',
-  'PC.Layouts.Setting.UsageStatistics.knowledgeBase':
-    'Knowledge Base Creation Limit',
+  'PC.Layouts.Setting.UsageStatistics.kbStorage': 'Knowledge Base Storage Limit',
+  'PC.Layouts.Setting.UsageStatistics.knowledgeBase': 'Knowledge Base Creation Limit',
   'PC.Layouts.Setting.UsageStatistics.pageApp': 'Web App Creation Limit',
   'PC.Layouts.Setting.UsageStatistics.pagePrompt': 'Web App Dev Chat Count',
   'PC.Layouts.Setting.UsageStatistics.query': 'Query',
-  'PC.Layouts.Setting.UsageStatistics.sandboxMemory':
-    'Agent Computer Max Memory',
+  'PC.Layouts.Setting.UsageStatistics.sandboxMemory': 'Agent Computer Max Memory',
   'PC.Layouts.Setting.UsageStatistics.table': 'Data Table Creation Limit',
   'PC.Layouts.Setting.UsageStatistics.task': 'Scheduled Task Creation Limit',
   'PC.Layouts.Setting.UsageStatistics.title': 'Usage Statistics',
   'PC.Layouts.Setting.UsageStatistics.tokenLimit': 'Token Usage Limit',
   'PC.Layouts.Setting.UsageStatistics.workspace': 'Workspace Creation Limit',
-  'PC.Models.ConversationInfo.networkTimeoutError':
-    'Network timeout or service unavailable, please try again later',
-  'PC.Models.ConversationInfo.restartAgentSuccess':
-    'Agent restarted successfully',
-  'PC.Models.ConversationInfo.restartVncPodSuccess':
-    'Agent computer restarted successfully',
-  'PC.Models.ConversationInfo.taskConflictContent':
-    'The agent is currently executing a task. Do you want to pause the current task before sending a new request. Do you want to pause?',
+  'PC.Models.ConversationInfo.networkTimeoutError': 'Network timeout or service unavailable, please try again later',
+  'PC.Models.ConversationInfo.restartAgentSuccess': 'Agent restarted successfully',
+  'PC.Models.ConversationInfo.restartVncPodSuccess': 'Agent computer restarted successfully',
+  'PC.Models.ConversationInfo.taskConflictContent': 'The agent is currently executing a task. Do you want to pause the current task before sending a new request. Do you want to pause?',
   'PC.Models.ConversationInfo.taskConflictTitle': 'Notice',
   'PC.Models.DevCollectAgent.uncollectSuccess': 'Uncollected successfully',
   'PC.Models.UserInfo.getUserInfoFailed': 'Failed to get user info',
@@ -1567,35 +1245,23 @@ export const EN_US: SystemLangMap = {
   'PC.Models.Workflow.defaultNodeName': 'Test',
   'PC.Models.WorkflowV3.defaultNodeDescription': 'Test',
   'PC.Models.WorkflowV3.defaultNodeName': 'Test',
-  'PC.Pages.AgentArrangeAsyncRun.defaultReplyContent':
-    'Processing has started. Please wait for the result.',
-  'PC.Pages.AgentArrangeAsyncRun.description':
-    'When the task enters async mode, a default reply is returned. Users can continue chatting, and they are notified after background completion.',
+  'PC.Pages.AgentArrangeAsyncRun.defaultReplyContent': 'Processing has started. Please wait for the result.',
+  'PC.Pages.AgentArrangeAsyncRun.description': 'When the task enters async mode, a default reply is returned. Users can continue chatting, and they are notified after background completion.',
   'PC.Pages.AgentArrangeAsyncRun.replyContent': 'Reply Content',
-  'PC.Pages.AgentArrangeAsyncRun.replyContentPlaceholder':
-    'You can set an automatic reply here, for example: The task is in progress. I will notify you as soon as it is done. Is there anything else I can help with?',
-  'PC.Pages.AgentArrangeAsyncRun.replyContentRequired':
-    'Reply content is required',
+  'PC.Pages.AgentArrangeAsyncRun.replyContentPlaceholder': 'You can set an automatic reply here, for example: The task is in progress. I will notify you as soon as it is done. Is there anything else I can help with?',
+  'PC.Pages.AgentArrangeAsyncRun.replyContentRequired': 'Reply content is required',
   'PC.Pages.AgentArrangeAsyncRun.title': 'Async Run',
-  'PC.Pages.AgentArrangeCardBindDataSource.bindArray':
-    'Bind an Array for the Whole Card',
-  'PC.Pages.AgentArrangeCardBindDataSource.bindArrayPlaceholder':
-    'Please bind an array for the whole card',
-  'PC.Pages.AgentArrangeCardBindDataSource.bindListItemData':
-    'Bind Data for Card List Items',
-  'PC.Pages.AgentArrangeCardBindDataSource.cardClickJump':
-    'Card Click Redirect',
-  'PC.Pages.AgentArrangeCardBindDataSource.cardClickJumpTooltip':
-    'After binding, users can click the card in the agent conversation flow to navigate to another page.',
-  'PC.Pages.AgentArrangeCardBindDataSource.cardListMaxLength':
-    'Max Card List Length',
-  'PC.Pages.AgentArrangeCardBindDataSource.cardListMaxLengthPlaceholder':
-    'Please enter max card list length',
+  'PC.Pages.AgentArrangeCardBindDataSource.bindArray': 'Bind an Array for the Whole Card',
+  'PC.Pages.AgentArrangeCardBindDataSource.bindArrayPlaceholder': 'Please bind an array for the whole card',
+  'PC.Pages.AgentArrangeCardBindDataSource.bindListItemData': 'Bind Data for Card List Items',
+  'PC.Pages.AgentArrangeCardBindDataSource.cardClickJump': 'Card Click Redirect',
+  'PC.Pages.AgentArrangeCardBindDataSource.cardClickJumpTooltip': 'After binding, users can click the card in the agent conversation flow to navigate to another page.',
+  'PC.Pages.AgentArrangeCardBindDataSource.cardListMaxLength': 'Max Card List Length',
+  'PC.Pages.AgentArrangeCardBindDataSource.cardListMaxLengthPlaceholder': 'Please enter max card list length',
   'PC.Pages.AgentArrangeCardBindDataSource.optionList': 'Vertical List',
   'PC.Pages.AgentArrangeCardBindDataSource.optionSingle': 'Single Card',
   'PC.Pages.AgentArrangeCardBindDataSource.selectStyle': 'Select Card Style',
-  'PC.Pages.AgentArrangeCardBindDataSource.urlDataSourcePlaceholder':
-    'Select data source for URL',
+  'PC.Pages.AgentArrangeCardBindDataSource.urlDataSourcePlaceholder': 'Select data source for URL',
   'PC.Pages.AgentArrangeComponentSetting.title': 'Settings',
   'PC.Pages.AgentArrangeConfig.addEventBinding': 'Add Event Binding',
   'PC.Pages.AgentArrangeConfig.addKnowledge': 'Add Knowledge Base',
@@ -1610,48 +1276,32 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AgentArrangeConfig.addVariable': 'Add Variable',
   'PC.Pages.AgentArrangeConfig.addWorkflow': 'Add Workflow',
   'PC.Pages.AgentArrangeConfig.allowAtSkill': 'Allow users to @ skills',
-  'PC.Pages.AgentArrangeConfig.allowAtSkillDesc':
-    'When enabled, users can add any skills in the session',
-  'PC.Pages.AgentArrangeConfig.allowOtherModel':
-    'Allow users to select their own models',
-  'PC.Pages.AgentArrangeConfig.allowOtherModelDesc':
-    'When enabled, users can select their own models in the session',
-  'PC.Pages.AgentArrangeConfig.allowPrivateSandbox':
-    'Allow users to select private computer',
-  'PC.Pages.AgentArrangeConfig.allowPrivateSandboxDesc':
-    'When enabled, users can choose to execute the agent in their own Claw client',
-  'PC.Pages.AgentArrangeConfig.appendReferenceInfo':
-    'Append reference information after the returned content as follows',
+  'PC.Pages.AgentArrangeConfig.allowAtSkillDesc': 'When enabled, users can add any skills in the session',
+  'PC.Pages.AgentArrangeConfig.allowOtherModel': 'Allow users to select their own models',
+  'PC.Pages.AgentArrangeConfig.allowOtherModelDesc': 'When enabled, users can select their own models in the session',
+  'PC.Pages.AgentArrangeConfig.allowPrivateSandbox': 'Allow users to select private computer',
+  'PC.Pages.AgentArrangeConfig.allowPrivateSandboxDesc': 'When enabled, users can choose to execute the agent in their own Claw client',
+  'PC.Pages.AgentArrangeConfig.appendReferenceInfo': 'Append reference information after the returned content as follows',
   'PC.Pages.AgentArrangeConfig.conversation': 'Conversation',
-  'PC.Pages.AgentArrangeConfig.conversationExperience':
-    'Conversation Experience',
-  'PC.Pages.AgentArrangeConfig.createSubAgentFailed':
-    'Failed to create sub-agent component',
-  'PC.Pages.AgentArrangeConfig.defaultExpandPageArea':
-    'Default Expanded Page Area',
-  'PC.Pages.AgentArrangeConfig.defaultExpandPageAreaDesc':
-    'After a page is bound to the agent, enabling this option expands the page by default beside the agent chat area.',
+  'PC.Pages.AgentArrangeConfig.conversationExperience': 'Conversation Experience',
+  'PC.Pages.AgentArrangeConfig.createSubAgentFailed': 'Failed to create sub-agent component',
+  'PC.Pages.AgentArrangeConfig.defaultExpandPageArea': 'Default Expanded Page Area',
+  'PC.Pages.AgentArrangeConfig.defaultExpandPageAreaDesc': 'After a page is bound to the agent, enabling this option expands the page by default beside the agent chat area.',
   'PC.Pages.AgentArrangeConfig.deleteSuccess': 'Deleted successfully',
   'PC.Pages.AgentArrangeConfig.deleteSuccessSimple': 'Delete successful',
   'PC.Pages.AgentArrangeConfig.dynamicJsonParameter': 'Dynamic JSON Params',
-  'PC.Pages.AgentArrangeConfig.dynamicJsonSchemaPrefix':
-    'Dynamic JSON parameter JsonSchema for {0} is as follows',
+  'PC.Pages.AgentArrangeConfig.dynamicJsonSchemaPrefix': 'Dynamic JSON parameter JsonSchema for {0} is as follows',
   'PC.Pages.AgentArrangeConfig.eventBinding': 'Event Binding',
   'PC.Pages.AgentArrangeConfig.hideRemoteDesktop': 'Hide Remote Desktop',
-  'PC.Pages.AgentArrangeConfig.hideRemoteDesktopDisabled':
-    'Show the remote desktop on the right side of the agent chat area',
-  'PC.Pages.AgentArrangeConfig.hideRemoteDesktopEnabled':
-    'Hide the remote desktop on the right side of the agent chat area',
-  'PC.Pages.AgentArrangeConfig.insertPromptSuccess':
-    'Inserted into system prompt',
-  'PC.Pages.AgentArrangeConfig.insertPromptUnavailable':
-    'Insert into system prompt is unavailable',
+  'PC.Pages.AgentArrangeConfig.hideRemoteDesktopDisabled': 'Show the remote desktop on the right side of the agent chat area',
+  'PC.Pages.AgentArrangeConfig.hideRemoteDesktopEnabled': 'Hide the remote desktop on the right side of the agent chat area',
+  'PC.Pages.AgentArrangeConfig.insertPromptSuccess': 'Inserted into system prompt',
+  'PC.Pages.AgentArrangeConfig.insertPromptUnavailable': 'Insert into system prompt is unavailable',
   'PC.Pages.AgentArrangeConfig.interface': 'Interface',
   'PC.Pages.AgentArrangeConfig.interfaceConfig': 'Interface Config',
   'PC.Pages.AgentArrangeConfig.knowledge': 'Knowledge',
   'PC.Pages.AgentArrangeConfig.longMemory': 'Long-term Memory',
-  'PC.Pages.AgentArrangeConfig.mcpDescription':
-    'The agent can connect to service APIs through the standardized MCP protocol and invoke them.',
+  'PC.Pages.AgentArrangeConfig.mcpDescription': 'The agent can connect to service APIs through the standardized MCP protocol and invoke them.',
   'PC.Pages.AgentArrangeConfig.memory': 'Memory',
   'PC.Pages.AgentArrangeConfig.openingRemarks': 'Opening Remarks',
   'PC.Pages.AgentArrangeConfig.page': 'Page',
@@ -1659,57 +1309,42 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AgentArrangeConfig.plugin': 'Plugin',
   'PC.Pages.AgentArrangeConfig.referenceNumber': '#Reference Number',
   'PC.Pages.AgentArrangeConfig.scheduledTask': 'Scheduled Task',
-  'PC.Pages.AgentArrangeConfig.scheduledTaskDescription':
-    'When enabled, users can run tasks via scheduled task settings.',
+  'PC.Pages.AgentArrangeConfig.scheduledTaskDescription': 'When enabled, users can run tasks via scheduled task settings.',
   'PC.Pages.AgentArrangeConfig.skill': 'Skill',
   'PC.Pages.AgentArrangeConfig.skills': 'Skills',
   'PC.Pages.AgentArrangeConfig.subAgent': 'Sub-agent',
   'PC.Pages.AgentArrangeConfig.table': 'Data Table',
   'PC.Pages.AgentArrangeConfig.text': 'Text',
   'PC.Pages.AgentArrangeConfig.tools': 'Tools',
-  'PC.Pages.AgentArrangeConfig.userQuestionSuggestion':
-    'User Question Suggestions',
-  'PC.Pages.AgentArrangeConfig.userQuestionSuggestionDisabled':
-    'After each agent reply, do not provide suggested user questions.',
-  'PC.Pages.AgentArrangeConfig.userQuestionSuggestionEnabled':
-    'After each agent reply, provide multiple suggested user questions based on the prompt.',
+  'PC.Pages.AgentArrangeConfig.userQuestionSuggestion': 'User Question Suggestions',
+  'PC.Pages.AgentArrangeConfig.userQuestionSuggestionDisabled': 'After each agent reply, do not provide suggested user questions.',
+  'PC.Pages.AgentArrangeConfig.userQuestionSuggestionEnabled': 'After each agent reply, provide multiple suggested user questions based on the prompt.',
   'PC.Pages.AgentArrangeConfig.variable': 'Variable',
   'PC.Pages.AgentArrangeConfig.workflow': 'Workflow',
   'PC.Pages.AgentArrangeCreateVariableModal.addOption': 'Add Option',
-  'PC.Pages.AgentArrangeCreateVariableModal.addOptionRequired':
-    'Please add options',
+  'PC.Pages.AgentArrangeCreateVariableModal.addOptionRequired': 'Please add options',
   'PC.Pages.AgentArrangeCreateVariableModal.dataBinding': 'Data Binding',
   'PC.Pages.AgentArrangeCreateVariableModal.defaultValue': 'Default Value',
-  'PC.Pages.AgentArrangeCreateVariableModal.defaultValuePlaceholder':
-    'Please enter default value',
+  'PC.Pages.AgentArrangeCreateVariableModal.defaultValuePlaceholder': 'Please enter default value',
   'PC.Pages.AgentArrangeCreateVariableModal.description': 'Description',
-  'PC.Pages.AgentArrangeCreateVariableModal.descriptionPlaceholder':
-    'Please enter field description',
+  'PC.Pages.AgentArrangeCreateVariableModal.descriptionPlaceholder': 'Please enter field description',
   'PC.Pages.AgentArrangeCreateVariableModal.displayName': 'Display Name',
-  'PC.Pages.AgentArrangeCreateVariableModal.displayNamePlaceholder':
-    'Please enter display name for frontend rendering',
-  'PC.Pages.AgentArrangeCreateVariableModal.displayNameRequired':
-    'Please enter display name',
+  'PC.Pages.AgentArrangeCreateVariableModal.displayNamePlaceholder': 'Please enter display name for frontend rendering',
+  'PC.Pages.AgentArrangeCreateVariableModal.displayNameRequired': 'Please enter display name',
   'PC.Pages.AgentArrangeCreateVariableModal.fieldName': 'Field Name',
-  'PC.Pages.AgentArrangeCreateVariableModal.fieldNamePlaceholder':
-    'Please enter field name following naming rules',
-  'PC.Pages.AgentArrangeCreateVariableModal.fieldNameRequired':
-    'Please enter field name',
+  'PC.Pages.AgentArrangeCreateVariableModal.fieldNamePlaceholder': 'Please enter field name following naming rules',
+  'PC.Pages.AgentArrangeCreateVariableModal.fieldNameRequired': 'Please enter field name',
   'PC.Pages.AgentArrangeCreateVariableModal.inputType': 'Input Type',
-  'PC.Pages.AgentArrangeCreateVariableModal.inputTypeAutoRecognition':
-    'Auto Recognition',
-  'PC.Pages.AgentArrangeCreateVariableModal.inputTypeMultipleSelect':
-    'Multiple',
+  'PC.Pages.AgentArrangeCreateVariableModal.inputTypeAutoRecognition': 'Auto Recognition',
+  'PC.Pages.AgentArrangeCreateVariableModal.inputTypeMultipleSelect': 'Multiple',
   'PC.Pages.AgentArrangeCreateVariableModal.inputTypeNumber': 'Number',
   'PC.Pages.AgentArrangeCreateVariableModal.inputTypeParagraph': 'Paragraph',
   'PC.Pages.AgentArrangeCreateVariableModal.inputTypeSelect': 'Single',
   'PC.Pages.AgentArrangeCreateVariableModal.inputTypeText': 'Single-line Text',
   'PC.Pages.AgentArrangeCreateVariableModal.manualCreate': 'Manual Create',
-  'PC.Pages.AgentArrangeCreateVariableModal.optionValueRequired':
-    'Please fill option values',
+  'PC.Pages.AgentArrangeCreateVariableModal.optionValueRequired': 'Please fill option values',
   'PC.Pages.AgentArrangeCreateVariableModal.required': 'Required',
-  'PC.Pages.AgentArrangeCreateVariableModal.selectBindingComponent':
-    'Please select a binding component',
+  'PC.Pages.AgentArrangeCreateVariableModal.selectBindingComponent': 'Please select a binding component',
   'PC.Pages.AgentArrangeCreateVariableModal.title': 'Edit or Add Variable',
   'PC.Pages.AgentArrangeCreateVariables.add': 'Add',
   'PC.Pages.AgentArrangeCreateVariables.customVariable': 'Custom Variable',
@@ -1725,226 +1360,159 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AgentArrangeCreateVariables.updateSuccess': 'Updated successfully',
   'PC.Pages.AgentArrangeCreateVariables.yes': 'Yes',
   'PC.Pages.AgentArrangeEventBindModal.agentIdVariable': 'Agent ID',
-  'PC.Pages.AgentArrangeEventBindModal.configInputArgs':
-    'Configure Input Parameters',
-  'PC.Pages.AgentArrangeEventBindModal.eventCode':
-    'Event Identifier (for event distinction)',
-  'PC.Pages.AgentArrangeEventBindModal.eventCodeInvalid':
-    'Event identifier can only contain letters, numbers, and underscores, and must start with a letter or underscore.',
-  'PC.Pages.AgentArrangeEventBindModal.eventCodePlaceholder':
-    'Please enter event identifier, only letters, numbers, and underscores are allowed',
-  'PC.Pages.AgentArrangeEventBindModal.eventCodeRequired':
-    'Please enter event identifier',
+  'PC.Pages.AgentArrangeEventBindModal.configInputArgs': 'Configure Input Parameters',
+  'PC.Pages.AgentArrangeEventBindModal.eventCode': 'Event Identifier (for event distinction)',
+  'PC.Pages.AgentArrangeEventBindModal.eventCodeInvalid': 'Event identifier can only contain letters, numbers, and underscores, and must start with a letter or underscore.',
+  'PC.Pages.AgentArrangeEventBindModal.eventCodePlaceholder': 'Please enter event identifier, only letters, numbers, and underscores are allowed',
+  'PC.Pages.AgentArrangeEventBindModal.eventCodeRequired': 'Please enter event identifier',
   'PC.Pages.AgentArrangeEventBindModal.eventName': 'Event Name',
-  'PC.Pages.AgentArrangeEventBindModal.eventNamePlaceholder':
-    'Please enter event name',
-  'PC.Pages.AgentArrangeEventBindModal.eventNameRequired':
-    'Please enter event name',
+  'PC.Pages.AgentArrangeEventBindModal.eventNamePlaceholder': 'Please enter event name',
+  'PC.Pages.AgentArrangeEventBindModal.eventNameRequired': 'Please enter event name',
   'PC.Pages.AgentArrangeEventBindModal.input': 'Input',
   'PC.Pages.AgentArrangeEventBindModal.linkUrl': 'Link URL',
-  'PC.Pages.AgentArrangeEventBindModal.linkUrlInvalid':
-    'Please enter a valid URL starting with http:// or https://',
-  'PC.Pages.AgentArrangeEventBindModal.linkUrlRequired':
-    'Please enter link URL',
+  'PC.Pages.AgentArrangeEventBindModal.linkUrlInvalid': 'Please enter a valid URL starting with http:// or https://',
+  'PC.Pages.AgentArrangeEventBindModal.linkUrlRequired': 'Please enter link URL',
   'PC.Pages.AgentArrangeEventBindModal.pagePath': 'Page Path',
-  'PC.Pages.AgentArrangeEventBindModal.pagePathPlaceholder':
-    'Please select page path',
-  'PC.Pages.AgentArrangeEventBindModal.pagePathRequired':
-    'Please select page path',
+  'PC.Pages.AgentArrangeEventBindModal.pagePathPlaceholder': 'Please select page path',
+  'PC.Pages.AgentArrangeEventBindModal.pagePathRequired': 'Please select page path',
   'PC.Pages.AgentArrangeEventBindModal.paramName': 'Parameter Name',
-  'PC.Pages.AgentArrangeEventBindModal.paramValue':
-    'Parameter Value (Optional)',
-  'PC.Pages.AgentArrangeEventBindModal.paramValuePlaceholder':
-    'Please enter {0}',
-  'PC.Pages.AgentArrangeEventBindModal.paramValueTip':
-    'The following parameters are optional. If empty, the model fills them automatically. You can also reference parameters dynamically in the input box.',
+  'PC.Pages.AgentArrangeEventBindModal.paramValue': 'Parameter Value (Optional)',
+  'PC.Pages.AgentArrangeEventBindModal.paramValuePlaceholder': 'Please enter {0}',
+  'PC.Pages.AgentArrangeEventBindModal.paramValueTip': 'The following parameters are optional. If empty, the model fills them automatically. You can also reference parameters dynamically in the input box.',
   'PC.Pages.AgentArrangeEventBindModal.responseAction': 'Response Action',
-  'PC.Pages.AgentArrangeEventBindModal.responseActionLink':
-    'Open External Link',
-  'PC.Pages.AgentArrangeEventBindModal.responseActionPage':
-    'Open Extended Page',
-  'PC.Pages.AgentArrangeEventBindModal.responseActionPlaceholder':
-    'Please select response action',
+  'PC.Pages.AgentArrangeEventBindModal.responseActionLink': 'Open External Link',
+  'PC.Pages.AgentArrangeEventBindModal.responseActionPage': 'Open Extended Page',
+  'PC.Pages.AgentArrangeEventBindModal.responseActionPlaceholder': 'Please select response action',
   'PC.Pages.AgentArrangeEventBindModal.systemUserIdVariable': 'System User ID',
   'PC.Pages.AgentArrangeEventBindModal.title': 'Event Binding',
   'PC.Pages.AgentArrangeEventBindModal.updateSuccess': 'Updated successfully',
   'PC.Pages.AgentArrangeEventBindModal.userNameVariable': 'User Name',
   'PC.Pages.AgentArrangeEventBindModal.userUidVariable': 'User UID',
   'PC.Pages.AgentArrangeExceptionHandling.defaultInfo': 'Default Message',
-  'PC.Pages.AgentArrangeExceptionHandling.defaultInfoPlaceholder':
-    'Please enter the default message sent to the LLM on exception',
-  'PC.Pages.AgentArrangeExceptionHandling.description':
-    'Default message sent to the LLM when an exception occurs',
+  'PC.Pages.AgentArrangeExceptionHandling.defaultInfoPlaceholder': 'Please enter the default message sent to the LLM on exception',
+  'PC.Pages.AgentArrangeExceptionHandling.description': 'Default message sent to the LLM when an exception occurs',
   'PC.Pages.AgentArrangeExceptionHandling.title': 'Interrupt on Exception',
   'PC.Pages.AgentArrangeGuidQuestionSetModal.agentIdVariable': 'Agent ID',
-  'PC.Pages.AgentArrangeGuidQuestionSetModal.configInputArgs':
-    'Configure Input Parameters',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.configInputArgs': 'Configure Input Parameters',
   'PC.Pages.AgentArrangeGuidQuestionSetModal.displayInfo': 'Display Info',
-  'PC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoPlaceholder':
-    'Question content',
-  'PC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoRequired':
-    'Please enter display info',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoPlaceholder': 'Question content',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.displayInfoRequired': 'Please enter display info',
   'PC.Pages.AgentArrangeGuidQuestionSetModal.icon': 'Icon',
   'PC.Pages.AgentArrangeGuidQuestionSetModal.input': 'Input',
   'PC.Pages.AgentArrangeGuidQuestionSetModal.linkUrl': 'Link URL',
-  'PC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlInvalid':
-    'Please enter a valid URL starting with http:// or https://',
-  'PC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlRequired':
-    'Please enter link URL',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlInvalid': 'Please enter a valid URL starting with http:// or https://',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.linkUrlRequired': 'Please enter link URL',
   'PC.Pages.AgentArrangeGuidQuestionSetModal.pagePath': 'Page Path',
-  'PC.Pages.AgentArrangeGuidQuestionSetModal.pagePathPlaceholder':
-    'Please select page path',
-  'PC.Pages.AgentArrangeGuidQuestionSetModal.pagePathRequired':
-    'Please select page path',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.pagePathPlaceholder': 'Please select page path',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.pagePathRequired': 'Please select page path',
   'PC.Pages.AgentArrangeGuidQuestionSetModal.paramName': 'Parameter Name',
   'PC.Pages.AgentArrangeGuidQuestionSetModal.paramValue': 'Parameter Value',
-  'PC.Pages.AgentArrangeGuidQuestionSetModal.paramValuePlaceholder':
-    'Please enter {0}',
-  'PC.Pages.AgentArrangeGuidQuestionSetModal.paramValueTip':
-    'You can dynamically reference parameters in the input. Empty values are auto-completed by the model.',
-  'PC.Pages.AgentArrangeGuidQuestionSetModal.requiredParamEmpty':
-    'Parameter "{0}" is required and cannot be empty.',
-  'PC.Pages.AgentArrangeGuidQuestionSetModal.systemUserIdVariable':
-    'System User ID',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.paramValuePlaceholder': 'Please enter {0}',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.paramValueTip': 'You can dynamically reference parameters in the input. Empty values are auto-completed by the model.',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.requiredParamEmpty': 'Parameter "{0}" is required and cannot be empty.',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.systemUserIdVariable': 'System User ID',
   'PC.Pages.AgentArrangeGuidQuestionSetModal.title': 'Preset Question Settings',
   'PC.Pages.AgentArrangeGuidQuestionSetModal.type': 'Type',
   'PC.Pages.AgentArrangeGuidQuestionSetModal.typeLink': 'External Link',
   'PC.Pages.AgentArrangeGuidQuestionSetModal.typePage': 'Extended Page Path',
-  'PC.Pages.AgentArrangeGuidQuestionSetModal.typePlaceholder':
-    'Please select type',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.typePlaceholder': 'Please select type',
   'PC.Pages.AgentArrangeGuidQuestionSetModal.typeQuestion': 'Question Guide',
-  'PC.Pages.AgentArrangeGuidQuestionSetModal.updateSuccess':
-    'Updated successfully',
+  'PC.Pages.AgentArrangeGuidQuestionSetModal.updateSuccess': 'Updated successfully',
   'PC.Pages.AgentArrangeGuidQuestionSetModal.userNameVariable': 'User Name',
   'PC.Pages.AgentArrangeGuidQuestionSetModal.userUidVariable': 'User UID',
   'PC.Pages.AgentArrangeInvokeType.alias': 'Display Alias',
-  'PC.Pages.AgentArrangeInvokeType.aliasPlaceholder':
-    'Please enter display alias',
-  'PC.Pages.AgentArrangeInvokeType.aliasTooltip':
-    'Optional. If set, the frontend prioritizes this name.',
-  'PC.Pages.AgentArrangeInvokeType.autoDescription':
-    'Auto: triggered every time the user sends a message.',
+  'PC.Pages.AgentArrangeInvokeType.aliasPlaceholder': 'Please enter display alias',
+  'PC.Pages.AgentArrangeInvokeType.aliasTooltip': 'Optional. If set, the frontend prioritizes this name.',
+  'PC.Pages.AgentArrangeInvokeType.autoDescription': 'Auto: triggered every time the user sends a message.',
   'PC.Pages.AgentArrangeInvokeType.defaultSelected': 'Default Selected',
-  'PC.Pages.AgentArrangeInvokeType.manualDescription':
-    'Manual: the user decides whether to use the tool; behavior matches Auto after selection.',
-  'PC.Pages.AgentArrangeInvokeType.manualOnDemandDescription':
-    'Manual + On demand: after user selection, the model decides whether to invoke; no selection means no invocation.',
-  'PC.Pages.AgentArrangeInvokeType.onDemandDescription':
-    'On demand: the model decides whether to invoke based on the task.',
+  'PC.Pages.AgentArrangeInvokeType.manualDescription': 'Manual: the user decides whether to use the tool; behavior matches Auto after selection.',
+  'PC.Pages.AgentArrangeInvokeType.manualOnDemandDescription': 'Manual + On demand: after user selection, the model decides whether to invoke; no selection means no invocation.',
+  'PC.Pages.AgentArrangeInvokeType.onDemandDescription': 'On demand: the model decides whether to invoke based on the task.',
   'PC.Pages.AgentArrangeInvokeType.optionAuto': 'Auto',
   'PC.Pages.AgentArrangeInvokeType.optionManual': 'Manual',
   'PC.Pages.AgentArrangeInvokeType.optionManualOnDemand': 'Manual + On demand',
   'PC.Pages.AgentArrangeInvokeType.optionNo': 'No',
   'PC.Pages.AgentArrangeInvokeType.optionOnDemand': 'On demand',
   'PC.Pages.AgentArrangeInvokeType.optionYes': 'Yes',
-  'PC.Pages.AgentArrangeInvokeType.skillManualDescription':
-    'Manual: users can choose this skill in chat and the model will prioritize it.',
+  'PC.Pages.AgentArrangeInvokeType.skillManualDescription': 'Manual: users can choose this skill in chat and the model will prioritize it.',
   'PC.Pages.AgentArrangeInvokeType.title': 'Invoke Type',
   'PC.Pages.AgentArrangeKnowledgeSetting.invokeType': 'Invoke Type',
-  'PC.Pages.AgentArrangeKnowledgeSetting.invokeTypeTip':
-    'Choose whether to auto recall each round or recall from a specific knowledge base on demand.',
-  'PC.Pages.AgentArrangeKnowledgeSetting.maxRecallCount':
-    'Maximum Recall Count',
-  'PC.Pages.AgentArrangeKnowledgeSetting.maxRecallCountTip':
-    'Maximum number of passages returned from the knowledge base to the LLM. Larger values return more content.',
-  'PC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegree':
-    'Minimum Match Degree',
-  'PC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegreeTip':
-    'Only passages above the configured match degree are recalled and returned to the LLM.',
+  'PC.Pages.AgentArrangeKnowledgeSetting.invokeTypeTip': 'Choose whether to auto recall each round or recall from a specific knowledge base on demand.',
+  'PC.Pages.AgentArrangeKnowledgeSetting.maxRecallCount': 'Maximum Recall Count',
+  'PC.Pages.AgentArrangeKnowledgeSetting.maxRecallCountTip': 'Maximum number of passages returned from the knowledge base to the LLM. Larger values return more content.',
+  'PC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegree': 'Minimum Match Degree',
+  'PC.Pages.AgentArrangeKnowledgeSetting.minMatchingDegreeTip': 'Only passages above the configured match degree are recalled and returned to the LLM.',
   'PC.Pages.AgentArrangeKnowledgeSetting.noRecallCustom': 'Custom',
   'PC.Pages.AgentArrangeKnowledgeSetting.noRecallDefault': 'Default',
   'PC.Pages.AgentArrangeKnowledgeSetting.noRecallReply': 'No-recall Reply',
-  'PC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyPlaceholder':
-    'Please enter',
-  'PC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyTip':
-    'Reply text used when no valid chunks are recalled from the knowledge base.',
+  'PC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyPlaceholder': 'Please enter',
+  'PC.Pages.AgentArrangeKnowledgeSetting.noRecallReplyTip': 'Reply text used when no valid chunks are recalled from the knowledge base.',
   'PC.Pages.AgentArrangeKnowledgeSetting.recallSection': 'Recall',
   'PC.Pages.AgentArrangeKnowledgeSetting.replySection': 'Reply',
   'PC.Pages.AgentArrangeKnowledgeSetting.searchFullText': 'Full Text',
   'PC.Pages.AgentArrangeKnowledgeSetting.searchMixed': 'Mixed',
   'PC.Pages.AgentArrangeKnowledgeSetting.searchSemantic': 'Semantic',
   'PC.Pages.AgentArrangeKnowledgeSetting.searchStrategy': 'Search Strategy',
-  'PC.Pages.AgentArrangeKnowledgeSetting.searchStrategyTip':
-    'This strategy defines how knowledge is retrieved. Different strategies improve answer accuracy and usability in different scenarios.',
+  'PC.Pages.AgentArrangeKnowledgeSetting.searchStrategyTip': 'This strategy defines how knowledge is retrieved. Different strategies improve answer accuracy and usability in different scenarios.',
   'PC.Pages.AgentArrangeKnowledgeSetting.title': 'Knowledge Base Settings',
-  'PC.Pages.AgentArrangeKnowledgeTextList.emptyDescription':
-    'After uploading documents, URLs, or third-party data sources as text knowledge bases, the agent can answer user questions with referenced knowledge content.',
+  'PC.Pages.AgentArrangeKnowledgeTextList.emptyDescription': 'After uploading documents, URLs, or third-party data sources as text knowledge bases, the agent can answer user questions with referenced knowledge content.',
   'PC.Pages.AgentArrangeKnowledgeTextList.remove': 'Remove Knowledge Base',
-  'PC.Pages.AgentArrangeLongMemoryContent.description':
-    'Summarize chat conversations to improve responses to user messages.',
+  'PC.Pages.AgentArrangeLongMemoryContent.description': 'Summarize chat conversations to improve responses to user messages.',
   'PC.Pages.AgentArrangeMcpGroupComponentItem.toolsWithCount': 'Tools ({0})',
   'PC.Pages.AgentArrangeOpenRemarks.addGuidQuestion': 'Add Preset Question',
-  'PC.Pages.AgentArrangeOpenRemarks.deleteGuidQuestion':
-    'Delete Preset Question',
-  'PC.Pages.AgentArrangeOpenRemarks.guidQuestionPlaceholder':
-    'Enter a guided opening question',
-  'PC.Pages.AgentArrangeOpenRemarks.guidQuestionTitle':
-    'Preset Opening Questions',
+  'PC.Pages.AgentArrangeOpenRemarks.deleteGuidQuestion': 'Delete Preset Question',
+  'PC.Pages.AgentArrangeOpenRemarks.guidQuestionPlaceholder': 'Enter a guided opening question',
+  'PC.Pages.AgentArrangeOpenRemarks.guidQuestionTitle': 'Preset Opening Questions',
   'PC.Pages.AgentArrangeOpenRemarks.headerTitle': 'Opening Remarks Copy',
-  'PC.Pages.AgentArrangeOpenRemarks.placeholder':
-    'Please enter opening remarks',
+  'PC.Pages.AgentArrangeOpenRemarks.placeholder': 'Please enter opening remarks',
   'PC.Pages.AgentArrangeOpenRemarks.settings': 'Settings',
   'PC.Pages.AgentArrangeOutputWay.optionNo': 'No',
   'PC.Pages.AgentArrangeOutputWay.optionYes': 'Yes',
   'PC.Pages.AgentArrangeOutputWay.title': 'Direct Output',
-  'PC.Pages.AgentArrangeOutputWay.tooltip':
-    'If set to "Yes", the workflow result is sent directly to the chat box without LLM summarization.',
+  'PC.Pages.AgentArrangeOutputWay.tooltip': 'If set to "Yes", the workflow result is sent directly to the chat box without LLM summarization.',
   'PC.Pages.AgentArrangePageSettingModal.homeIndex': 'Default Home Page',
-  'PC.Pages.AgentArrangePageSettingModal.saveConfigFailed':
-    'Failed to save page settings:',
-  'PC.Pages.AgentArrangePageSettingModal.saveFailed':
-    'Save failed, please retry',
+  'PC.Pages.AgentArrangePageSettingModal.saveConfigFailed': 'Failed to save page settings:',
+  'PC.Pages.AgentArrangePageSettingModal.saveFailed': 'Save failed, please retry',
   'PC.Pages.AgentArrangePageSettingModal.title': 'Settings',
-  'PC.Pages.AgentArrangePageSettingModal.updateOtherPageFailed':
-    'Failed to update other pages:',
+  'PC.Pages.AgentArrangePageSettingModal.updateOtherPageFailed': 'Failed to update other pages:',
   'PC.Pages.AgentArrangePageSettingModal.visibleToLlm': 'Visible to LLM',
   'PC.Pages.AgentArrangeSubAgentConfig.defaultNameWithIndex': 'Sub-agent {0}',
   'PC.Pages.AgentArrangeSubAgentConfig.delete': 'Delete',
   'PC.Pages.AgentArrangeSubAgentConfig.edit': 'Edit',
-  'PC.Pages.AgentArrangeSubAgentConfig.empty':
-    'No sub-agent configured. Click the top-right button to add one.',
+  'PC.Pages.AgentArrangeSubAgentConfig.empty': 'No sub-agent configured. Click the top-right button to add one.',
   'PC.Pages.AgentArrangeSubAgentEditModal.cancelConfirm': 'Confirm Cancel',
-  'PC.Pages.AgentArrangeSubAgentEditModal.cancelContent':
-    'You have unsaved changes. Are you sure you want to cancel?',
+  'PC.Pages.AgentArrangeSubAgentEditModal.cancelContent': 'You have unsaved changes. Are you sure you want to cancel?',
   'PC.Pages.AgentArrangeSubAgentEditModal.cancelTitle': 'Confirm Cancel',
   'PC.Pages.AgentArrangeSubAgentEditModal.createTitle': 'Create Sub-agent',
   'PC.Pages.AgentArrangeSubAgentEditModal.editTitle': 'Edit Sub-agent',
   'PC.Pages.AgentArrangeSubAgentEditModal.enterFullscreen': 'Fullscreen Edit',
   'PC.Pages.AgentArrangeSubAgentEditModal.exitFullscreen': 'Exit Fullscreen',
   'PC.Pages.AgentArrangeSubAgentEditModal.keepEditing': 'Keep Editing',
-  'PC.Pages.AgentArrangeSubAgentEditModal.promptPlaceholder':
-    'Please enter sub-agent prompt',
+  'PC.Pages.AgentArrangeSubAgentEditModal.promptPlaceholder': 'Please enter sub-agent prompt',
   'PC.Pages.AgentArrangeSubAgentEditModal.viewDoc': 'View Docs',
   'PC.Pages.AgentEdit.draftAutoSavedAt': 'Draft auto-saved at {0}',
   'PC.Pages.AgentEdit.publish': 'Publish',
   'PC.Pages.AgentEdit.showStand': 'Showroom',
   'PC.Pages.AgentEdit.unpublishedChanges': 'Unpublished changes',
   'PC.Pages.AgentEdit.versionHistory': 'Version History',
-  'PC.Pages.AntvX6.loopBreakDesc':
-    'Immediately terminate current loop and break out of loop body',
-  'PC.Pages.AntvX6.loopContinueDesc':
-    'Terminate current loop and continue to next iteration',
+  'PC.Pages.AntvX6.loopBreakDesc': 'Immediately terminate current loop and break out of loop body',
+  'PC.Pages.AntvX6.loopContinueDesc': 'Terminate current loop and continue to next iteration',
   'PC.Pages.AntvX6.systemPrompt': 'System Prompt',
   'PC.Pages.AntvX6.userPrompt': 'User Prompt',
-  'PC.Pages.AntvX6AutoSave.versionConflictMessage':
-    'Version conflict: workflow was modified in another window',
+  'PC.Pages.AntvX6AutoSave.versionConflictMessage': 'Version conflict: workflow was modified in another window',
   'PC.Pages.AntvX6CommonNode.columnParamName': 'Parameter Name',
   'PC.Pages.AntvX6CommonNode.columnParamValue': 'Parameter Value',
   'PC.Pages.AntvX6CommonNode.columnVariableValue': 'Variable Value',
   'PC.Pages.AntvX6CommonNode.fieldParamName': 'Parameter Name',
   'PC.Pages.AntvX6CommonNode.fieldVariableName': 'Variable Name',
   'PC.Pages.AntvX6CommonNode.noDescription': 'No description',
-  'PC.Pages.AntvX6CommonNode.otherBranchHint':
-    'This option is hidden from users and is used when user replies are unrelated',
-  'PC.Pages.AntvX6CommonNode.placeholderParamName':
-    'Please enter parameter name',
-  'PC.Pages.AntvX6CommonNode.placeholderParamValue':
-    'Please enter parameter value',
+  'PC.Pages.AntvX6CommonNode.otherBranchHint': 'This option is hidden from users and is used when user replies are unrelated',
+  'PC.Pages.AntvX6CommonNode.placeholderParamName': 'Please enter parameter name',
+  'PC.Pages.AntvX6CommonNode.placeholderParamValue': 'Please enter parameter value',
   'PC.Pages.AntvX6ComplexNode.answerTypeLabel': 'Answer Type',
   'PC.Pages.AntvX6ComplexNode.answerTypeSelect': 'Option Answer',
   'PC.Pages.AntvX6ComplexNode.answerTypeText': 'Direct Answer',
-  'PC.Pages.AntvX6ComplexNode.extraPromptPlaceholder':
-    'Support additional system prompts, for example, adding detailed examples for intent options to improve matching success.',
+  'PC.Pages.AntvX6ComplexNode.extraPromptPlaceholder': 'Support additional system prompts, for example, adding detailed examples for intent options to improve matching success.',
   'PC.Pages.AntvX6ComplexNode.extraPromptTitle': 'Extra Prompt',
   'PC.Pages.AntvX6ComplexNode.input': 'Input',
   'PC.Pages.AntvX6ComplexNode.inputParams': 'Input Params',
@@ -1954,27 +1522,21 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AntvX6ComplexNode.output': 'Output',
   'PC.Pages.AntvX6ComplexNode.outputParams': 'Output Params',
   'PC.Pages.AntvX6ComplexNode.promptOptimizeTitle': 'Prompt Optimization',
-  'PC.Pages.AntvX6ComplexNode.questionPlaceholder':
-    'You can reference input variables with {{var}}.',
+  'PC.Pages.AntvX6ComplexNode.questionPlaceholder': 'You can reference input variables with {{var}}.',
   'PC.Pages.AntvX6ComplexNode.questionTitle': 'Question',
   'PC.Pages.AntvX6ComplexNode.requestContentTypeLabel': 'Request Content Type',
   'PC.Pages.AntvX6ComplexNode.requestMethodAndPath': 'Request Method and Path',
   'PC.Pages.AntvX6ComplexNode.requestMethodPlaceholder': 'Request Method',
   'PC.Pages.AntvX6ComplexNode.requestTimeoutLabel': 'Request Timeout',
-  'PC.Pages.AntvX6ComplexNode.requestTimeoutPlaceholder':
-    'Please enter timeout duration',
+  'PC.Pages.AntvX6ComplexNode.requestTimeoutPlaceholder': 'Please enter timeout duration',
   'PC.Pages.AntvX6ComplexNode.skills': 'Skills',
-  'PC.Pages.AntvX6ComplexNode.systemPromptPlaceholder':
-    'System prompt can reference input variables with {{var}}, {{var.child}}, or {{var[index]}}.',
+  'PC.Pages.AntvX6ComplexNode.systemPromptPlaceholder': 'System prompt can reference input variables with {{var}}, {{var.child}}, or {{var[index]}}.',
   'PC.Pages.AntvX6ComplexNode.systemPromptTitle': 'System Prompt',
-  'PC.Pages.AntvX6ComplexNode.systemPromptTooltip':
-    'Provide system-level instructions for the conversation, such as role setting and response logic.',
+  'PC.Pages.AntvX6ComplexNode.systemPromptTooltip': 'Provide system-level instructions for the conversation, such as role setting and response logic.',
   'PC.Pages.AntvX6ComplexNode.urlPlaceholder': 'Please enter URL',
-  'PC.Pages.AntvX6ComplexNode.userPromptPlaceholder':
-    'User prompt can reference input variables with {{var}}, {{var.child}}, or {{var[index]}}.',
+  'PC.Pages.AntvX6ComplexNode.userPromptPlaceholder': 'User prompt can reference input variables with {{var}}, {{var.child}}, or {{var[index]}}.',
   'PC.Pages.AntvX6ComplexNode.userPromptTitle': 'User Prompt',
-  'PC.Pages.AntvX6ComplexNode.userPromptTooltip':
-    'Provide user instructions to the model, such as queries or text-based questions.',
+  'PC.Pages.AntvX6ComplexNode.userPromptTooltip': 'Provide user instructions to the model, such as queries or text-based questions.',
   'PC.Pages.AntvX6Condition.add': 'Add',
   'PC.Pages.AntvX6Condition.and': 'AND',
   'PC.Pages.AntvX6Condition.branchTitle': 'Conditional Branch',
@@ -1983,8 +1545,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AntvX6Condition.if': 'If',
   'PC.Pages.AntvX6Condition.or': 'OR',
   'PC.Pages.AntvX6Condition.priority': 'Priority {0}',
-  'PC.Pages.AntvX6Condition.referencePlaceholder':
-    'Please reference a parameter',
+  'PC.Pages.AntvX6Condition.referencePlaceholder': 'Please reference a parameter',
   'PC.Pages.AntvX6ControlPanel.addNode': 'Add Node',
   'PC.Pages.AntvX6ControlPanel.debug': 'Debug',
   'PC.Pages.AntvX6ControlPanel.fitCanvas': 'Fit to Canvas',
@@ -2008,34 +1569,25 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AntvX6Database.queryLimitPlaceholder': 'Please enter query limit',
   'PC.Pages.AntvX6Database.selectPlaceholder': 'Please select',
   'PC.Pages.AntvX6Database.selectUpdateFields': 'Select Update Fields',
-  'PC.Pages.AntvX6Database.sqlPlaceholder':
-    'You can reference output variables with {{var}}, {{var.child}}, and {{var[index]}}.',
+  'PC.Pages.AntvX6Database.sqlPlaceholder': 'You can reference output variables with {{var}}, {{var.child}}, and {{var[index]}}.',
   'PC.Pages.AntvX6Database.table': 'Data Table',
   'PC.Pages.AntvX6Database.updateCondition': 'Update Condition',
   'PC.Pages.AntvX6Database.variableValue': 'Variable Value',
   'PC.Pages.AntvX6ErrorList.empty': 'N/A',
   'PC.Pages.AntvX6ErrorList.title': 'Error List',
   'PC.Pages.AntvX6EventHandlers.cancel': 'Cancel',
-  'PC.Pages.AntvX6EventHandlers.cannotDeleteLoopEdge':
-    'Loop node edges cannot be deleted',
-  'PC.Pages.AntvX6EventHandlers.cannotDeleteStartEndNodes':
-    'Start and end nodes cannot be deleted',
-  'PC.Pages.AntvX6EventHandlers.cannotPasteEndNode':
-    'End node cannot be pasted',
-  'PC.Pages.AntvX6EventHandlers.cannotPasteLoopNode':
-    'Loop nodes cannot be pasted',
-  'PC.Pages.AntvX6EventHandlers.cannotPasteStartNode':
-    'Start node cannot be pasted',
+  'PC.Pages.AntvX6EventHandlers.cannotDeleteLoopEdge': 'Loop node edges cannot be deleted',
+  'PC.Pages.AntvX6EventHandlers.cannotDeleteStartEndNodes': 'Start and end nodes cannot be deleted',
+  'PC.Pages.AntvX6EventHandlers.cannotPasteEndNode': 'End node cannot be pasted',
+  'PC.Pages.AntvX6EventHandlers.cannotPasteLoopNode': 'Loop nodes cannot be pasted',
+  'PC.Pages.AntvX6EventHandlers.cannotPasteStartNode': 'Start node cannot be pasted',
   'PC.Pages.AntvX6EventHandlers.confirm': 'Confirm',
   'PC.Pages.AntvX6EventHandlers.copyNodeFirst': 'Please copy a node first',
-  'PC.Pages.AntvX6EventHandlers.deleteLoopNodeConfirmTitle':
-    'Are you sure you want to delete the loop node?',
+  'PC.Pages.AntvX6EventHandlers.deleteLoopNodeConfirmTitle': 'Are you sure you want to delete the loop node?',
   'PC.Pages.AntvX6EventHandlers.nodeCopied': 'Node copied',
-  'PC.Pages.AntvX6EventHandlers.unsupportedCopyNodeType':
-    'This node type does not support copy',
+  'PC.Pages.AntvX6EventHandlers.unsupportedCopyNodeType': 'This node type does not support copy',
   'PC.Pages.AntvX6ExceptionItem.customReturnContent': 'Custom Return Content',
-  'PC.Pages.AntvX6ExceptionItem.customReturnContentRequired':
-    'Please enter custom return content',
+  'PC.Pages.AntvX6ExceptionItem.customReturnContentRequired': 'Please enter custom return content',
   'PC.Pages.AntvX6ExceptionItem.executeExceptionFlow': 'Execute Exception Flow',
   'PC.Pages.AntvX6ExceptionItem.handleTypeLabel': 'Exception Handling',
   'PC.Pages.AntvX6ExceptionItem.interruptFlow': 'Interrupt Flow',
@@ -2044,26 +1596,21 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AntvX6ExceptionItem.retryOnce': '1 time',
   'PC.Pages.AntvX6ExceptionItem.retryThrice': '3 times',
   'PC.Pages.AntvX6ExceptionItem.retryTwice': '2 times',
-  'PC.Pages.AntvX6ExceptionItem.returnSpecificContent':
-    'Return Specific Content',
+  'PC.Pages.AntvX6ExceptionItem.returnSpecificContent': 'Return Specific Content',
   'PC.Pages.AntvX6ExceptionItem.timeoutLabel': 'Timeout',
   'PC.Pages.AntvX6ExceptionItem.timeoutRequired': 'Please enter timeout',
-  'PC.Pages.AntvX6ExceptionItem.timeoutTooltip':
-    'Set the maximum waiting time for node execution',
+  'PC.Pages.AntvX6ExceptionItem.timeoutTooltip': 'Set the maximum waiting time for node execution',
   'PC.Pages.AntvX6ExceptionItem.title': 'Exception Handling',
-  'PC.Pages.AntvX6ExceptionItem.titleTooltip':
-    'Configure timeout, retries, and exception handling mode. After streaming output starts, exceptions cannot trigger retries or jump to exception branches.',
+  'PC.Pages.AntvX6ExceptionItem.titleTooltip': 'Configure timeout, retries, and exception handling mode. After streaming output starts, exceptions cannot trigger retries or jump to exception branches.',
   'PC.Pages.AntvX6ExceptionItem.validJsonRequired': 'Please enter valid JSON',
-  'PC.Pages.AntvX6Graph.cannotQuickAddNodeForLoopBoundary':
-    'Loop start and end nodes do not support quick add for downstream nodes',
+  'PC.Pages.AntvX6Graph.cannotQuickAddNodeForLoopBoundary': 'Loop start and end nodes do not support quick add for downstream nodes',
   'PC.Pages.AntvX6Header.autoSavedAt': 'Auto-saved {0}',
   'PC.Pages.AntvX6Header.publish': 'Publish',
   'PC.Pages.AntvX6Header.published': 'Published',
   'PC.Pages.AntvX6Header.redoWithShortcut': 'Redo ({0})',
   'PC.Pages.AntvX6Header.retrySave': 'Retry save',
   'PC.Pages.AntvX6Header.saveFailed': 'Save failed',
-  'PC.Pages.AntvX6Header.saveFailedCheckNetwork':
-    'Save failed, please check network connection',
+  'PC.Pages.AntvX6Header.saveFailedCheckNetwork': 'Save failed, please check network connection',
   'PC.Pages.AntvX6Header.saveNow': 'Save now',
   'PC.Pages.AntvX6Header.saving': 'Saving...',
   'PC.Pages.AntvX6Header.undoWithShortcut': 'Undo ({0})',
@@ -2076,55 +1623,43 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AntvX6Library.defaultInputArgsDesc': 'Retrieval Keyword',
   'PC.Pages.AntvX6Library.knowledgeBase': 'Knowledge Base',
   'PC.Pages.AntvX6Library.maxRecallCount': 'Max Recall Count',
-  'PC.Pages.AntvX6Library.maxRecallCountTooltip':
-    'Maximum number of paragraphs returned from the knowledge base to the model. Higher values return more content.',
+  'PC.Pages.AntvX6Library.maxRecallCountTooltip': 'Maximum number of paragraphs returned from the knowledge base to the model. Higher values return more content.',
   'PC.Pages.AntvX6Library.minMatchScore': 'Min Match Score',
-  'PC.Pages.AntvX6Library.minMatchScoreTooltip':
-    'Paragraphs are returned based on the configured matching score. Content below threshold is not recalled.',
+  'PC.Pages.AntvX6Library.minMatchScoreTooltip': 'Paragraphs are returned based on the configured matching score. Content below threshold is not recalled.',
   'PC.Pages.AntvX6Library.searchStrategy': 'Search Strategy',
   'PC.Pages.AntvX6Library.searchStrategyFullText': 'Full Text',
   'PC.Pages.AntvX6Library.searchStrategyMixed': 'Mixed',
   'PC.Pages.AntvX6Library.searchStrategySemantic': 'Semantic',
-  'PC.Pages.AntvX6Library.searchStrategyTooltip':
-    'Retrieval strategy for obtaining knowledge from the knowledge base. Different strategies can improve answer accuracy and usability.',
+  'PC.Pages.AntvX6Library.searchStrategyTooltip': 'Retrieval strategy for obtaining knowledge from the knowledge base. Different strategies can improve answer accuracy and usability.',
   'PC.Pages.AntvX6NodeConstants.defaultNodeDescription': 'Test',
   'PC.Pages.AntvX6NodeConstants.defaultNodeName': 'Test',
   'PC.Pages.AntvX6NodeItem.add': 'Add',
   'PC.Pages.AntvX6NodeItem.addGroup': 'Add Group',
   'PC.Pages.AntvX6NodeItem.aggregationStrategy': 'Aggregation Strategy',
-  'PC.Pages.AntvX6NodeItem.arrayJoinSymbolDescription':
-    'Use symbols below to auto-join each item in an array.',
-  'PC.Pages.AntvX6NodeItem.arrayJoinSymbolSetting':
-    'Array Join Symbol Settings',
+  'PC.Pages.AntvX6NodeItem.arrayJoinSymbolDescription': 'Use symbols below to auto-join each item in an array.',
+  'PC.Pages.AntvX6NodeItem.arrayJoinSymbolSetting': 'Array Join Symbol Settings',
   'PC.Pages.AntvX6NodeItem.code': 'Code',
   'PC.Pages.AntvX6NodeItem.comma': 'Comma (,)',
   'PC.Pages.AntvX6NodeItem.delimiter': 'Delimiter',
-  'PC.Pages.AntvX6NodeItem.firstNonNullOfEachGroup':
-    'Return the first non-null value in each group',
+  'PC.Pages.AntvX6NodeItem.firstNonNullOfEachGroup': 'Return the first non-null value in each group',
   'PC.Pages.AntvX6NodeItem.fullStop': 'Full Stop (.)',
   'PC.Pages.AntvX6NodeItem.getVariable': 'Get Variable',
   'PC.Pages.AntvX6NodeItem.groupConfig': 'Group Configuration',
-  'PC.Pages.AntvX6NodeItem.inputVariablePlaceholder':
-    'You can reference input variables with {{var}}.',
+  'PC.Pages.AntvX6NodeItem.inputVariablePlaceholder': 'You can reference input variables with {{var}}.',
   'PC.Pages.AntvX6NodeItem.intermediateVariable': 'Intermediate Variable',
-  'PC.Pages.AntvX6NodeItem.intermediateVariableTooltip':
-    'Variables can be shared across loop iterations and used to pass values between iterations.',
+  'PC.Pages.AntvX6NodeItem.intermediateVariableTooltip': 'Variables can be shared across loop iterations and used to pass values between iterations.',
   'PC.Pages.AntvX6NodeItem.joinSymbol': 'Join Symbol',
   'PC.Pages.AntvX6NodeItem.loopArray': 'Loop Array',
   'PC.Pages.AntvX6NodeItem.loopSetting': 'Loop Settings',
-  'PC.Pages.AntvX6NodeItem.loopSettingTooltip':
-    'If an array is referenced, loop count equals the array length; if a fixed count is set, it uses that count; for infinite loop, combine with the "Break Loop" node.',
+  'PC.Pages.AntvX6NodeItem.loopSettingTooltip': 'If an array is referenced, loop count equals the array length; if a fixed count is set, it uses that count; for infinite loop, combine with the "Break Loop" node.',
   'PC.Pages.AntvX6NodeItem.loopTimes': 'Loop Times',
-  'PC.Pages.AntvX6NodeItem.loopTimesPlaceholder':
-    'Please enter loop times as a positive integer',
+  'PC.Pages.AntvX6NodeItem.loopTimesPlaceholder': 'Please enter loop times as a positive integer',
   'PC.Pages.AntvX6NodeItem.newline': 'Newline (\\n)',
   'PC.Pages.AntvX6NodeItem.optionNamePlaceholder': 'Option Name',
   'PC.Pages.AntvX6NodeItem.optionValuePlaceholder': 'Option Value',
   'PC.Pages.AntvX6NodeItem.outputContent': 'Output Content',
-  'PC.Pages.AntvX6NodeItem.outputContentPlaceholder':
-    'You can reference output variables with {{var}}, {{var.child}}, and {{var[index]}}.',
-  'PC.Pages.AntvX6NodeItem.outputContentTooltip':
-    'You can reorganize output content in the input below. The model will prioritize this content.',
+  'PC.Pages.AntvX6NodeItem.outputContentPlaceholder': 'You can reference output variables with {{var}}, {{var.child}}, and {{var[index]}}.',
+  'PC.Pages.AntvX6NodeItem.outputContentTooltip': 'You can reorganize output content in the input below. The model will prioritize this content.',
   'PC.Pages.AntvX6NodeItem.outputVariable': 'Output Variable',
   'PC.Pages.AntvX6NodeItem.returnText': 'Return Text',
   'PC.Pages.AntvX6NodeItem.returnVariable': 'Return Variable',
@@ -2137,16 +1672,12 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AntvX6NodeItem.stringSplit': 'String Split',
   'PC.Pages.AntvX6NodeItem.tab': 'Tab (\\t)',
   'PC.Pages.AntvX6NodeOperations.addNodeFailed': 'Failed to add node',
-  'PC.Pages.AntvX6NodeOperations.addNodeNetworkError':
-    'Network error, failed to add node',
+  'PC.Pages.AntvX6NodeOperations.addNodeNetworkError': 'Network error, failed to add node',
   'PC.Pages.AntvX6NodeOperations.copyNodeFailed': 'Failed to copy node',
-  'PC.Pages.AntvX6NodeOperations.copyNodeNetworkError':
-    'Network error, failed to copy node',
+  'PC.Pages.AntvX6NodeOperations.copyNodeNetworkError': 'Network error, failed to copy node',
   'PC.Pages.AntvX6NodeOperations.deleteNodeFailed': 'Failed to delete node',
-  'PC.Pages.AntvX6NodePanel.loopBreakDescription':
-    'Immediately terminate current loop and exit loop body',
-  'PC.Pages.AntvX6NodePanel.loopContinueDescription':
-    'Terminate current loop iteration and continue next iteration',
+  'PC.Pages.AntvX6NodePanel.loopBreakDescription': 'Immediately terminate current loop and exit loop body',
+  'PC.Pages.AntvX6NodePanel.loopContinueDescription': 'Terminate current loop iteration and continue next iteration',
   'PC.Pages.AntvX6Params.cycleArrayLoop': 'Loop by Array',
   'PC.Pages.AntvX6Params.cycleInfiniteLoop': 'Infinite Loop',
   'PC.Pages.AntvX6Params.cycleSpecifyTimesLoop': 'Loop by Count',
@@ -2157,86 +1688,60 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AntvX6Params.groupDataTable': 'Data Table',
   'PC.Pages.AntvX6Params.groupKnowledgeData': 'Knowledge & Data',
   'PC.Pages.AntvX6Params.groupOutput': 'Output',
-  'PC.Pages.AntvX6Params.inputOrReferenceParamValue':
-    'Input or reference parameter value',
-  'PC.Pages.AntvX6Params.inputOrReferenceVariableValue':
-    'Input or reference variable value',
+  'PC.Pages.AntvX6Params.inputOrReferenceParamValue': 'Input or reference parameter value',
+  'PC.Pages.AntvX6Params.inputOrReferenceVariableValue': 'Input or reference variable value',
   'PC.Pages.AntvX6Params.inputParamValue': 'Input Parameter Value',
   'PC.Pages.AntvX6Params.inputVariableName': 'Variable Name',
-  'PC.Pages.AntvX6Params.inputVariableNameRequired':
-    'Please enter variable name',
+  'PC.Pages.AntvX6Params.inputVariableNameRequired': 'Please enter variable name',
   'PC.Pages.AntvX6Params.inputVariableType': 'Variable Type',
-  'PC.Pages.AntvX6Params.inputVariableTypeRequired':
-    'Please select variable type',
-  'PC.Pages.AntvX6Params.intentDescriptionRequired':
-    'Please enter user intent description',
+  'PC.Pages.AntvX6Params.inputVariableTypeRequired': 'Please select variable type',
+  'PC.Pages.AntvX6Params.intentDescriptionRequired': 'Please enter user intent description',
   'PC.Pages.AntvX6Params.modelTypeTitleGeneration': 'Title Generation',
-  'PC.Pages.AntvX6Params.nodeCodeDescription':
-    'Write code to process input variables and generate return values',
+  'PC.Pages.AntvX6Params.nodeCodeDescription': 'Write code to process input variables and generate return values',
   'PC.Pages.AntvX6Params.nodeCodeName': 'Code',
-  'PC.Pages.AntvX6Params.nodeConditionDescription':
-    'Connect multiple downstream branches. Run only the branch whose condition is met. If none are met, run only the “Else” branch.',
+  'PC.Pages.AntvX6Params.nodeConditionDescription': 'Connect multiple downstream branches. Run only the branch whose condition is met. If none are met, run only the “Else” branch.',
   'PC.Pages.AntvX6Params.nodeConditionName': 'Condition Branch',
-  'PC.Pages.AntvX6Params.nodeDocumentExtractionDescription':
-    'Extract document content. Supported file types: txt, markdown, pdf, html, xlsx, xls, docx, csv, md, htm',
+  'PC.Pages.AntvX6Params.nodeDocumentExtractionDescription': 'Extract document content. Supported file types: txt, markdown, pdf, html, xlsx, xls, docx, csv, md, htm',
   'PC.Pages.AntvX6Params.nodeDocumentExtractionName': 'Document Extraction',
-  'PC.Pages.AntvX6Params.nodeHttpRequestDescription':
-    'Configure HTTP requests to call existing services',
+  'PC.Pages.AntvX6Params.nodeHttpRequestDescription': 'Configure HTTP requests to call existing services',
   'PC.Pages.AntvX6Params.nodeHttpRequestName': 'HTTP Request',
-  'PC.Pages.AntvX6Params.nodeIntentRecognitionDescription':
-    'Recognize user intent and match it to preset intent options.',
+  'PC.Pages.AntvX6Params.nodeIntentRecognitionDescription': 'Recognize user intent and match it to preset intent options.',
   'PC.Pages.AntvX6Params.nodeIntentRecognitionName': 'Intent Recognition',
-  'PC.Pages.AntvX6Params.nodeKnowledgeBaseDescription':
-    'Recall the best matched information from selected knowledge sources based on input variables',
+  'PC.Pages.AntvX6Params.nodeKnowledgeBaseDescription': 'Recall the best matched information from selected knowledge sources based on input variables',
   'PC.Pages.AntvX6Params.nodeKnowledgeBaseName': 'Knowledge Base',
-  'PC.Pages.AntvX6Params.nodeLlmDescription':
-    'Call the large language model and generate responses with variables and prompts',
+  'PC.Pages.AntvX6Params.nodeLlmDescription': 'Call the large language model and generate responses with variables and prompts',
   'PC.Pages.AntvX6Params.nodeLlmName': 'Large Language Model',
-  'PC.Pages.AntvX6Params.nodeLongTermMemoryDescription':
-    'Call long-term memory to retrieve user personalization data',
+  'PC.Pages.AntvX6Params.nodeLongTermMemoryDescription': 'Call long-term memory to retrieve user personalization data',
   'PC.Pages.AntvX6Params.nodeLongTermMemoryName': 'Long-Term Memory',
   'PC.Pages.AntvX6Params.nodeLoopBreakName': 'Break Loop',
   'PC.Pages.AntvX6Params.nodeLoopContinueName': 'Continue Loop',
-  'PC.Pages.AntvX6Params.nodeLoopDescription':
-    'Repeat tasks by configured loop count and loop logic.',
+  'PC.Pages.AntvX6Params.nodeLoopDescription': 'Repeat tasks by configured loop count and loop logic.',
   'PC.Pages.AntvX6Params.nodeLoopName': 'Loop',
   'PC.Pages.AntvX6Params.nodeMcpDescription': 'MCP component',
   'PC.Pages.AntvX6Params.nodeMcpName': 'MCP',
-  'PC.Pages.AntvX6Params.nodePluginDescription':
-    'Bing search engine. Use it when you need unknown information, such as weather...',
+  'PC.Pages.AntvX6Params.nodePluginDescription': 'Bing search engine. Use it when you need unknown information, such as weather...',
   'PC.Pages.AntvX6Params.nodePluginName': 'Plugin',
-  'PC.Pages.AntvX6Params.nodeProcessOutputDescription':
-    'Support intermediate message output in both stream and non-stream modes',
+  'PC.Pages.AntvX6Params.nodeProcessOutputDescription': 'Support intermediate message output in both stream and non-stream modes',
   'PC.Pages.AntvX6Params.nodeProcessOutputName': 'Process Output',
-  'PC.Pages.AntvX6Params.nodeQaDescription':
-    'Support asking users questions in intermediate steps',
+  'PC.Pages.AntvX6Params.nodeQaDescription': 'Support asking users questions in intermediate steps',
   'PC.Pages.AntvX6Params.nodeQaName': 'Q&A',
-  'PC.Pages.AntvX6Params.nodeTableDataAddDescription':
-    'Write data to the selected data table',
+  'PC.Pages.AntvX6Params.nodeTableDataAddDescription': 'Write data to the selected data table',
   'PC.Pages.AntvX6Params.nodeTableDataAddName': 'Add Data',
-  'PC.Pages.AntvX6Params.nodeTableDataDeleteDescription':
-    'Delete data from the selected data table by specified ID',
+  'PC.Pages.AntvX6Params.nodeTableDataDeleteDescription': 'Delete data from the selected data table by specified ID',
   'PC.Pages.AntvX6Params.nodeTableDataDeleteName': 'Delete Data',
-  'PC.Pages.AntvX6Params.nodeTableDataQueryDescription':
-    'Query data in the selected data table by specified conditions',
+  'PC.Pages.AntvX6Params.nodeTableDataQueryDescription': 'Query data in the selected data table by specified conditions',
   'PC.Pages.AntvX6Params.nodeTableDataQueryName': 'Query Data',
-  'PC.Pages.AntvX6Params.nodeTableDataUpdateDescription':
-    'Update data in the selected data table by specified conditions',
+  'PC.Pages.AntvX6Params.nodeTableDataUpdateDescription': 'Update data in the selected data table by specified conditions',
   'PC.Pages.AntvX6Params.nodeTableDataUpdateName': 'Update Data',
-  'PC.Pages.AntvX6Params.nodeTableSqlDescription':
-    'Supports query control on data tables. Users can query data submitted by other users, controlled by developers.',
+  'PC.Pages.AntvX6Params.nodeTableSqlDescription': 'Supports query control on data tables. Users can query data submitted by other users, controlled by developers.',
   'PC.Pages.AntvX6Params.nodeTableSqlName': 'Custom SQL',
-  'PC.Pages.AntvX6Params.nodeTextProcessingDescription':
-    'Process formats of multiple string-type variables',
+  'PC.Pages.AntvX6Params.nodeTextProcessingDescription': 'Process formats of multiple string-type variables',
   'PC.Pages.AntvX6Params.nodeTextProcessingName': 'Text Processing',
-  'PC.Pages.AntvX6Params.nodeVariableAggregationDescription':
-    'Aggregate multiple branches or variables into grouped outputs',
+  'PC.Pages.AntvX6Params.nodeVariableAggregationDescription': 'Aggregate multiple branches or variables into grouped outputs',
   'PC.Pages.AntvX6Params.nodeVariableAggregationName': 'Variable Aggregation',
-  'PC.Pages.AntvX6Params.nodeVariableDescription':
-    'Read and write variables in the project. Variable names must match project variables.',
+  'PC.Pages.AntvX6Params.nodeVariableDescription': 'Read and write variables in the project. Variable names must match project variables.',
   'PC.Pages.AntvX6Params.nodeVariableName': 'Variable',
-  'PC.Pages.AntvX6Params.nodeWorkflowDescription':
-    'Bing search engine. Use it when you need unknown information, such as weather...',
+  'PC.Pages.AntvX6Params.nodeWorkflowDescription': 'Bing search engine. Use it when you need unknown information, such as weather...',
   'PC.Pages.AntvX6Params.nodeWorkflowName': 'Workflow',
   'PC.Pages.AntvX6Params.officialExample': 'Official Examples',
   'PC.Pages.AntvX6Params.operatorContains': 'Contains',
@@ -2246,11 +1751,9 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AntvX6Params.operatorIn': 'In',
   'PC.Pages.AntvX6Params.operatorIsNull': 'Is Null',
   'PC.Pages.AntvX6Params.operatorLengthGreaterThan': 'Length Greater Than',
-  'PC.Pages.AntvX6Params.operatorLengthGreaterThanOrEqual':
-    'Length Greater Than or Equal',
+  'PC.Pages.AntvX6Params.operatorLengthGreaterThanOrEqual': 'Length Greater Than or Equal',
   'PC.Pages.AntvX6Params.operatorLengthLessThan': 'Length Less Than',
-  'PC.Pages.AntvX6Params.operatorLengthLessThanOrEqual':
-    'Length Less Than or Equal',
+  'PC.Pages.AntvX6Params.operatorLengthLessThanOrEqual': 'Length Less Than or Equal',
   'PC.Pages.AntvX6Params.operatorLessThan': 'Less Than',
   'PC.Pages.AntvX6Params.operatorLessThanOrEqual': 'Less Than or Equal',
   'PC.Pages.AntvX6Params.operatorMatchRegex': 'Regex Match',
@@ -2271,12 +1774,10 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AntvX6Persistence.networkSaveFailed': 'Network error, save failed',
   'PC.Pages.AntvX6Persistence.saveFailed': 'Save failed',
   'PC.Pages.AntvX6Persistence.versionConflict': 'Version conflict',
-  'PC.Pages.AntvX6Persistence.versionConflictContent':
-    'Workflow was updated in another window. Force overwrite?',
+  'PC.Pages.AntvX6Persistence.versionConflictContent': 'Workflow was updated in another window. Force overwrite?',
   'PC.Pages.AntvX6Persistence.versionConflictTitle': 'Version conflict',
   'PC.Pages.AntvX6Published.releaseNote': 'Release Note',
-  'PC.Pages.AntvX6Published.releaseNotePlaceholder':
-    'Describe the release details. If global scope is selected, this workflow can be referenced by all workspaces after approval.',
+  'PC.Pages.AntvX6Published.releaseNotePlaceholder': 'Describe the release details. If global scope is selected, this workflow can be referenced by all workspaces after approval.',
   'PC.Pages.AntvX6Published.scope': 'Publish Scope',
   'PC.Pages.AntvX6Published.title': 'Publish Workflow',
   'PC.Pages.AntvX6RegisterNodes.exceptionWhen': 'On Exception',
@@ -2291,8 +1792,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AntvX6RegisterNodes.unconfiguredContent': 'Content not configured',
   'PC.Pages.AntvX6RegisterNodes.unconfiguredInput': 'Input not configured',
   'PC.Pages.AntvX6RegisterNodes.unconfiguredIntent': 'Intent not configured',
-  'PC.Pages.AntvX6RegisterNodes.unconfiguredQuestion':
-    'Question not configured',
+  'PC.Pages.AntvX6RegisterNodes.unconfiguredQuestion': 'Question not configured',
   'PC.Pages.AntvX6RunResult.batchVariables': 'Batch variables in this run',
   'PC.Pages.AntvX6RunResult.onlyError': 'Only Errors',
   'PC.Pages.AntvX6RunResult.onlyShowErrors': 'Only show errors',
@@ -2301,26 +1801,20 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AntvX6Skill.remove': 'Remove',
   'PC.Pages.AntvX6Stencil.nodeSelectorTitle': 'Node Selector',
   'PC.Pages.AntvX6VariableAggregation.emptyGroupHint': 'Click + to add group',
-  'PC.Pages.AntvX6VariableAggregation.emptyGroupInputHint':
-    'Click + to add variable reference',
+  'PC.Pages.AntvX6VariableAggregation.emptyGroupInputHint': 'Click + to add variable reference',
   'PC.Pages.AntvX6VariableAggregation.groupConfigTitle': 'Group Configuration',
   'PC.Pages.AntvX6VariableAggregation.groupNamePlaceholder': 'Group name',
   'PC.Pages.AntvX6VariableAggregation.noDescription': 'No description',
-  'PC.Pages.AntvX6VariableAggregation.noUpstreamNodeOrParams':
-    'No upstream node linked or upstream node has no parameters',
+  'PC.Pages.AntvX6VariableAggregation.noUpstreamNodeOrParams': 'No upstream node linked or upstream node has no parameters',
   'PC.Pages.AntvX6VariableAggregation.outputTitle': 'Output',
   'PC.Pages.AntvX6VariableAggregation.selectVariable': 'Select variable',
-  'PC.Pages.AntvX6VariableAggregation.strategyFirstNonNull':
-    'Return the first non-null value in each group',
+  'PC.Pages.AntvX6VariableAggregation.strategyFirstNonNull': 'Return the first non-null value in each group',
   'PC.Pages.AntvX6VariableAggregation.strategyTitle': 'Aggregation Strategy',
   'PC.Pages.AntvX6VersionAction.restore': 'Restore',
-  'PC.Pages.AntvX6VersionAction.restoreSuccess':
-    'Version restored successfully',
-  'PC.Pages.AntvX6Workflow.cannotNestLoop':
-    'Do not add nested loop nodes inside a loop body',
+  'PC.Pages.AntvX6VersionAction.restoreSuccess': 'Version restored successfully',
+  'PC.Pages.AntvX6Workflow.cannotNestLoop': 'Do not add nested loop nodes inside a loop body',
   'PC.Pages.AntvX6Workflow.loadingV3Version': 'Loading V3 version...',
-  'PC.Pages.AntvX6Workflow.unsupportedComponentType':
-    'This component type is not supported yet',
+  'PC.Pages.AntvX6Workflow.unsupportedComponentType': 'This component type is not supported yet',
   'PC.Pages.ApiKeyFormModal.apiKey': 'API Key',
   'PC.Pages.ApiKeyFormModal.autoGenerated': 'Auto generated',
   'PC.Pages.ApiKeyFormModal.createSuccess': 'Created successfully',
@@ -2330,8 +1824,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.ApiKeyFormModal.expireTime': 'Expire Time',
   'PC.Pages.ApiKeyFormModal.expireTimeTooltip': 'Leave blank for no expiration',
   'PC.Pages.ApiKeyFormModal.keyName': 'Key Name',
-  'PC.Pages.ApiKeyFormModal.keyNamePlaceholder':
-    'e.g. production-environment-api',
+  'PC.Pages.ApiKeyFormModal.keyNamePlaceholder': 'e.g. production-environment-api',
   'PC.Pages.ApiKeyFormModal.status': 'Status',
   'PC.Pages.ApiKeyFormModal.statusDisabled': 'Disabled',
   'PC.Pages.ApiKeyFormModal.statusEnabled': 'Enabled',
@@ -2339,10 +1832,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.ApiKeyLogsLogProTable.actions': 'Actions',
   'PC.Pages.ApiKeyLogsLogProTable.conversationId': 'Conversation ID',
   'PC.Pages.ApiKeyLogsLogProTable.detail': 'Detail',
-  'PC.Pages.ApiKeyLogsLogProTable.enterContentByKeywords':
-    'Separate multiple keywords with spaces, then enter content',
-  'PC.Pages.ApiKeyLogsLogProTable.enterConversationId':
-    'Please enter conversation ID',
+  'PC.Pages.ApiKeyLogsLogProTable.enterContentByKeywords': 'Separate multiple keywords with spaces, then enter content',
+  'PC.Pages.ApiKeyLogsLogProTable.enterConversationId': 'Please enter conversation ID',
   'PC.Pages.ApiKeyLogsLogProTable.enterRequestId': 'Please enter request ID',
   'PC.Pages.ApiKeyLogsLogProTable.enterTargetId': 'Please enter target ID',
   'PC.Pages.ApiKeyLogsLogProTable.enterTargetName': 'Please enter target name',
@@ -2351,8 +1842,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.ApiKeyLogsLogProTable.outputContent': 'Output Content',
   'PC.Pages.ApiKeyLogsLogProTable.outputToken': 'Output Token',
   'PC.Pages.ApiKeyLogsLogProTable.queryFailed': 'Query failed',
-  'PC.Pages.ApiKeyLogsLogProTable.recordMissingRequestId':
-    'This record is missing requestId, details are unavailable',
+  'PC.Pages.ApiKeyLogsLogProTable.recordMissingRequestId': 'This record is missing requestId, details are unavailable',
   'PC.Pages.ApiKeyLogsLogProTable.requestId': 'Request ID',
   'PC.Pages.ApiKeyLogsLogProTable.requestTime': 'Request Time',
   'PC.Pages.ApiKeyLogsLogProTable.selectType': 'Please select type',
@@ -2386,38 +1876,29 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AppDev.DesignViewer.margin': 'Margin',
   'PC.Pages.AppDev.DesignViewer.opacity': 'Opacity',
   'PC.Pages.AppDev.DesignViewer.padding': 'Padding',
-  'PC.Pages.AppDev.DesignViewer.selectElementTip':
-    'Select a page element on the right to edit',
+  'PC.Pages.AppDev.DesignViewer.selectElementTip': 'Select a page element on the right to edit',
   'PC.Pages.AppDev.DesignViewer.shadow': 'Shadow',
   'PC.Pages.AppDev.DesignViewer.textAlign': 'Text Align',
   'PC.Pages.AppDev.DesignViewer.textColor': 'Text Color',
   'PC.Pages.AppDev.DesignViewer.textContent': 'Text Content',
-  'PC.Pages.AppDevChat.agentServiceRunningDetected':
-    'A background Agent service is running',
+  'PC.Pages.AppDevChat.agentServiceRunningDetected': 'A background Agent service is running',
   'PC.Pages.AppDevChat.agentServiceStopped': 'Agent service stopped',
-  'PC.Pages.AppDevChat.aiAssistantConnectionFailed':
-    'AI assistant connection failed',
+  'PC.Pages.AppDevChat.aiAssistantConnectionFailed': 'AI assistant connection failed',
   'PC.Pages.AppDevChat.errorMessageTitle': 'Error',
   'PC.Pages.AppDevChat.inputMessageRequired': 'Please enter a message',
   'PC.Pages.AppDevChat.sendCancelled': 'Send cancelled',
-  'PC.Pages.AppDevChat.serviceExceptionTryLater':
-    'Service exception, please try again later',
-  'PC.Pages.AppDevChat.stopAgentAndRestartDialog':
-    'Service exception. Stop Agent service and restart the conversation.',
+  'PC.Pages.AppDevChat.serviceExceptionTryLater': 'Service exception, please try again later',
+  'PC.Pages.AppDevChat.stopAgentAndRestartDialog': 'Service exception. Stop Agent service and restart the conversation.',
   'PC.Pages.AppDevChat.stopAgentServiceFailed': 'Failed to stop Agent service',
-  'PC.Pages.AppDevChat.stopAgentServiceFailedWithReason':
-    'Failed to stop Agent service: {0}',
-  'PC.Pages.AppDevChat.stopRunningAgentServiceConfirm':
-    'Stop the currently running Agent service?',
+  'PC.Pages.AppDevChat.stopAgentServiceFailedWithReason': 'Failed to stop Agent service: {0}',
+  'PC.Pages.AppDevChat.stopRunningAgentServiceConfirm': 'Stop the currently running Agent service?',
   'PC.Pages.AppDevChat.toolCall': 'Tool call',
   'PC.Pages.AppDevChat.toolCallUpdate': 'Tool call update',
   'PC.Pages.AppDevChatArea.addDataResource': 'Add Data Resource',
   'PC.Pages.AppDevChatArea.agentTaskCancelled': 'Agent task cancelled',
   'PC.Pages.AppDevChatArea.aiThinkingProcess': 'AI Thinking Process',
-  'PC.Pages.AppDevChatArea.autoFixingProgress':
-    '({0}/{1}) Trying automatic fixes...',
-  'PC.Pages.AppDevChatArea.cancelAgentTaskFailed':
-    'Failed to cancel Agent task: {0}',
+  'PC.Pages.AppDevChatArea.autoFixingProgress': '({0}/{1}) Trying automatic fixes...',
+  'PC.Pages.AppDevChatArea.cancelAgentTaskFailed': 'Failed to cancel Agent task: {0}',
   'PC.Pages.AppDevChatArea.chatTab': 'Chat',
   'PC.Pages.AppDevChatArea.dataResources': 'Data Resources',
   'PC.Pages.AppDevChatArea.dataTab': 'Data',
@@ -2425,61 +1906,45 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AppDevChatArea.loadingDescription': 'Please wait...',
   'PC.Pages.AppDevChatArea.loadingHistorySessions': 'Loading history sessions',
   'PC.Pages.AppDevChatArea.messageSendFailed': 'Message send failed',
-  'PC.Pages.AppDevChatArea.noPermissionForAiChat':
-    'You do not have permission to use AI chat',
+  'PC.Pages.AppDevChatArea.noPermissionForAiChat': 'You do not have permission to use AI chat',
   'PC.Pages.AppDevChatArea.sendMessageFailed': 'Failed to send message',
   'PC.Pages.AppDevChatArea.startNewConversation': 'Start a New Conversation',
-  'PC.Pages.AppDevChatArea.startNewConversationDescription':
-    'Ask the AI assistant to start your project development',
+  'PC.Pages.AppDevChatArea.startNewConversationDescription': 'Ask the AI assistant to start your project development',
   'PC.Pages.AppDevChatArea.thinking': 'Thinking...',
   'PC.Pages.AppDevChatArea.unknownError': 'Unknown error',
   'PC.Pages.AppDevChatInput.attachmentFiles': 'Attachments',
   'PC.Pages.AppDevChatInput.cancelAiTask': 'Cancel AI Task',
   'PC.Pages.AppDevChatInput.codingModel': 'Coding Model',
-  'PC.Pages.AppDevChatInput.maxPrototypeImageWarning':
-    'You can upload at most {0} prototype images. Currently {1} images exist, and up to {2} more can be uploaded.',
+  'PC.Pages.AppDevChatInput.maxPrototypeImageWarning': 'You can upload at most {0} prototype images. Currently {1} images exist, and up to {2} more can be uploaded.',
   'PC.Pages.AppDevChatInput.mentionsTitle': '@ Mentions',
   'PC.Pages.AppDevChatInput.model': 'Model',
   'PC.Pages.AppDevChatInput.pasteImageFileName': 'PastedImage-{0}-{1}.png',
-  'PC.Pages.AppDevChatInput.pendingChangesError':
-    'Please save or reset changes before sending a message',
-  'PC.Pages.AppDevChatInput.placeholderAbility1':
-    'Build websites, apps, and productivity tools in one sentence. You can extend capabilities with workflows, plugins, and other data resources.',
-  'PC.Pages.AppDevChatInput.placeholderAbility2':
-    'Use @ to mention files, folders, and data resources to improve prompt accuracy.',
+  'PC.Pages.AppDevChatInput.pendingChangesError': 'Please save or reset changes before sending a message',
+  'PC.Pages.AppDevChatInput.placeholderAbility1': 'Build websites, apps, and productivity tools in one sentence. You can extend capabilities with workflows, plugins, and other data resources.',
+  'PC.Pages.AppDevChatInput.placeholderAbility2': 'Use @ to mention files, folders, and data resources to improve prompt accuracy.',
   'PC.Pages.AppDevChatInput.prototypeImages': 'Prototype Images',
   'PC.Pages.AppDevChatInput.stopping': 'Stopping...',
   'PC.Pages.AppDevChatInput.uploadFile': 'Upload Attachment',
   'PC.Pages.AppDevChatInput.uploadPrototypeImage': 'Upload Prototype Image',
-  'PC.Pages.AppDevChatInput.uploadResultSummary':
-    '{0} images uploaded successfully, {1} failed',
+  'PC.Pages.AppDevChatInput.uploadResultSummary': '{0} images uploaded successfully, {1} failed',
   'PC.Pages.AppDevChatInput.visionModelOptional': 'Vision Model (Optional)',
   'PC.Pages.AppDevContentViewer.loadFileFailedTitle': 'Failed to load file',
   'PC.Pages.AppDevContentViewer.loadingDescription': 'Please wait...',
-  'PC.Pages.AppDevContentViewer.loadingFileContentTitle':
-    'Loading file content',
-  'PC.Pages.AppDevContentViewer.noSelectedFileDescription':
-    'Please select a file from the left file tree to preview',
+  'PC.Pages.AppDevContentViewer.loadingFileContentTitle': 'Loading file content',
+  'PC.Pages.AppDevContentViewer.noSelectedFileDescription': 'Please select a file from the left file tree to preview',
   'PC.Pages.AppDevContentViewer.noSelectedFileTitle': 'No file selected',
-  'PC.Pages.AppDevContentViewer.previewDisabledDescription':
-    'Please restore or switch to the latest version to preview',
+  'PC.Pages.AppDevContentViewer.previewDisabledDescription': 'Please restore or switch to the latest version to preview',
   'PC.Pages.AppDevContentViewer.retry': 'Retry',
-  'PC.Pages.AppDevContentViewer.unsupportedFileTypeDescription':
-    'Preview is not supported for {0} files.',
-  'PC.Pages.AppDevContentViewer.unsupportedFileTypeTitle':
-    'Cannot preview this file type',
+  'PC.Pages.AppDevContentViewer.unsupportedFileTypeDescription': 'Preview is not supported for {0} files.',
+  'PC.Pages.AppDevContentViewer.unsupportedFileTypeTitle': 'Cannot preview this file type',
   'PC.Pages.AppDevDataResourceList.cancel': 'Cancel',
   'PC.Pages.AppDevDataResourceList.confirmDelete': 'Confirm Delete',
   'PC.Pages.AppDevDataResourceList.defaultDescDataSource': 'Data source',
-  'PC.Pages.AppDevDataResourceList.defaultDescPlugin':
-    'Plugin resource for specific functions and services',
-  'PC.Pages.AppDevDataResourceList.defaultDescWorkflow':
-    'Workflow resource for complex business orchestration',
+  'PC.Pages.AppDevDataResourceList.defaultDescPlugin': 'Plugin resource for specific functions and services',
+  'PC.Pages.AppDevDataResourceList.defaultDescWorkflow': 'Workflow resource for complex business orchestration',
   'PC.Pages.AppDevDataResourceList.delete': 'Delete',
-  'PC.Pages.AppDevDataResourceList.deleteConfirmContent':
-    'Once deleted, this page will lose access to the data resource.',
-  'PC.Pages.AppDevDataResourceList.deleteTargetNotFound':
-    'Data source to delete was not found',
+  'PC.Pages.AppDevDataResourceList.deleteConfirmContent': 'Once deleted, this page will lose access to the data resource.',
+  'PC.Pages.AppDevDataResourceList.deleteTargetNotFound': 'Data source to delete was not found',
   'PC.Pages.AppDevDesignViewer.alignment': 'Alignment',
   'PC.Pages.AppDevDesignViewer.appearance': 'Appearance',
   'PC.Pages.AppDevDesignViewer.background': 'Background',
@@ -2497,10 +1962,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AppDevDesignViewer.margin': 'Margin',
   'PC.Pages.AppDevDesignViewer.opacity': 'Opacity',
   'PC.Pages.AppDevDesignViewer.padding': 'Padding',
-  'PC.Pages.AppDevDesignViewer.saveOrResetBeforeAddToChat':
-    'Please save or reset changes before adding selected elements to chat',
-  'PC.Pages.AppDevDesignViewer.selectElementToEdit':
-    'Select a page element on the right to edit',
+  'PC.Pages.AppDevDesignViewer.saveOrResetBeforeAddToChat': 'Please save or reset changes before adding selected elements to chat',
+  'PC.Pages.AppDevDesignViewer.selectElementToEdit': 'Select a page element on the right to edit',
   'PC.Pages.AppDevDesignViewer.shadow': 'Shadow',
   'PC.Pages.AppDevDesignViewer.textColor': 'Text Color',
   'PC.Pages.AppDevDesignViewer.textContent': 'Text Content',
@@ -2513,8 +1976,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AppDevDevLogConsole.clickToAddToChat': 'Click to add to chat',
   'PC.Pages.AppDevDevLogConsole.closeLogConsole': 'Close log console',
   'PC.Pages.AppDevDevLogConsole.headerTitle': 'Dev Server Logs',
-  'PC.Pages.AppDevDevLogConsole.latestLogsContainErrors':
-    'Latest logs contain errors',
+  'PC.Pages.AppDevDevLogConsole.latestLogsContainErrors': 'Latest logs contain errors',
   'PC.Pages.AppDevDevLogConsole.loadingLogs': 'Loading logs...',
   'PC.Pages.AppDevDevLogConsole.noLogData': 'No log data',
   'PC.Pages.AppDevDevLogConsole.quickIssueFix': 'Quick issue fix',
@@ -2522,14 +1984,12 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AppDevEditorHeaderRight.cancel': 'Cancel',
   'PC.Pages.AppDevEditorHeaderRight.closeLog': 'Close log',
   'PC.Pages.AppDevEditorHeaderRight.currentTag': 'Current',
-  'PC.Pages.AppDevEditorHeaderRight.devServerConnected':
-    'Development server connected',
+  'PC.Pages.AppDevEditorHeaderRight.devServerConnected': 'Development server connected',
   'PC.Pages.AppDevEditorHeaderRight.importing': 'Importing...',
   'PC.Pages.AppDevEditorHeaderRight.lastUpdated': 'Last updated: {0}',
   'PC.Pages.AppDevEditorHeaderRight.loading': 'Loading...',
   'PC.Pages.AppDevEditorHeaderRight.menuExportProject': 'Export Project',
-  'PC.Pages.AppDevEditorHeaderRight.menuFullscreenPreview':
-    'Fullscreen Preview',
+  'PC.Pages.AppDevEditorHeaderRight.menuFullscreenPreview': 'Fullscreen Preview',
   'PC.Pages.AppDevEditorHeaderRight.menuImportProject': 'Import Project',
   'PC.Pages.AppDevEditorHeaderRight.menuRestartServer': 'Restart Server',
   'PC.Pages.AppDevEditorHeaderRight.refreshPreview': 'Refresh Preview',
@@ -2537,8 +1997,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AppDevEditorHeaderRight.starting': 'Starting...',
   'PC.Pages.AppDevEditorHeaderRight.switchVersionButton': 'Switch to v{0}',
   'PC.Pages.AppDevEditorHeaderRight.viewLog': 'View log',
-  'PC.Pages.AppDevFileOperatingMask.defaultTip':
-    'File operation in progress, please wait...',
+  'PC.Pages.AppDevFileOperatingMask.defaultTip': 'File operation in progress, please wait...',
   'PC.Pages.AppDevFilePathHeader.modified': 'Modified',
   'PC.Pages.AppDevFileTreeContextMenu.delete': 'Delete',
   'PC.Pages.AppDevFileTreeContextMenu.importProject': 'Import Project',
@@ -2562,35 +2021,27 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AppDevIndex.application': 'Application',
   'PC.Pages.AppDevIndex.back': 'Back',
   'PC.Pages.AppDevIndex.bindDataSourceFailed': 'Failed to bind data source',
-  'PC.Pages.AppDevIndex.bindDataSourceSuccess':
-    'Data source bound successfully',
-  'PC.Pages.AppDevIndex.bindDataSourceUnknownError':
-    'Unknown error occurred while binding data source',
+  'PC.Pages.AppDevIndex.bindDataSourceSuccess': 'Data source bound successfully',
+  'PC.Pages.AppDevIndex.bindDataSourceUnknownError': 'Unknown error occurred while binding data source',
   'PC.Pages.AppDevIndex.clear': 'Clear',
   'PC.Pages.AppDevIndex.clickToPreview': 'Click to Preview',
   'PC.Pages.AppDevIndex.code': 'Code',
-  'PC.Pages.AppDevIndex.confirmDeleteContent':
-    'Are you sure you want to delete {0} "{1}"?',
+  'PC.Pages.AppDevIndex.confirmDeleteContent': 'Are you sure you want to delete {0} "{1}"?',
   'PC.Pages.AppDevIndex.confirmDeleteTitle': 'Confirm Deletion',
   'PC.Pages.AppDevIndex.confirmImport': 'Confirm Import',
   'PC.Pages.AppDevIndex.currentProjectId': 'Current Project ID',
   'PC.Pages.AppDevIndex.delete': 'Delete',
-  'PC.Pages.AppDevIndex.deleteFolderWarning':
-    'Warning: Deleting a folder will also delete all files and subfolders inside. This action cannot be undone.',
+  'PC.Pages.AppDevIndex.deleteFolderWarning': 'Warning: Deleting a folder will also delete all files and subfolders inside. This action cannot be undone.',
   'PC.Pages.AppDevIndex.deleteSuccessWithType': 'Successfully deleted {0}: {1}',
-  'PC.Pages.AppDevIndex.deployingSubtitle':
-    'Please wait, this mask will close automatically after publishing completes',
+  'PC.Pages.AppDevIndex.deployingSubtitle': 'Please wait, this mask will close automatically after publishing completes',
   'PC.Pages.AppDevIndex.deployingTip': 'Publishing project...',
   'PC.Pages.AppDevIndex.exportFailed': 'Export failed',
   'PC.Pages.AppDevIndex.exportFailedWithError': 'Export failed: {0}',
   'PC.Pages.AppDevIndex.exportSuccess': 'Project exported successfully!',
-  'PC.Pages.AppDevIndex.exportUnknownError':
-    'Unknown error occurred during export',
+  'PC.Pages.AppDevIndex.exportUnknownError': 'Unknown error occurred during export',
   'PC.Pages.AppDevIndex.filePath': 'File Path',
-  'PC.Pages.AppDevIndex.filePathPlaceholder':
-    'e.g. src/components/NewComponent.tsx',
-  'PC.Pages.AppDevIndex.filePathTip':
-    'Enter a full file path including file name and extension, for example: src/components/NewComponent.tsx',
+  'PC.Pages.AppDevIndex.filePathPlaceholder': 'e.g. src/components/NewComponent.tsx',
+  'PC.Pages.AppDevIndex.filePathTip': 'Enter a full file path including file name and extension, for example: src/components/NewComponent.tsx',
   'PC.Pages.AppDevIndex.fileSize': 'File Size',
   'PC.Pages.AppDevIndex.fileTypeFile': 'file',
   'PC.Pages.AppDevIndex.fileTypeFolder': 'folder',
@@ -2600,48 +2051,34 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AppDevIndex.importProjectSuccess': 'Project imported successfully',
   'PC.Pages.AppDevIndex.importProjectTitle': 'Import Project',
   'PC.Pages.AppDevIndex.inputContentEmpty': 'Input content is empty',
-  'PC.Pages.AppDevIndex.invalidProjectIdCannotBindDataSource':
-    'Project ID is missing or invalid. Unable to bind data source.',
-  'PC.Pages.AppDevIndex.invalidProjectIdCannotDeploy':
-    'Project ID is missing or invalid. Unable to deploy.',
-  'PC.Pages.AppDevIndex.invalidProjectIdCannotExport':
-    'Project ID is missing or invalid. Unable to export.',
-  'PC.Pages.AppDevIndex.logAddedWaitingSend':
-    'Log has been added, waiting to send',
-  'PC.Pages.AppDevIndex.missingProjectIdDesc':
-    'Please append a projectId parameter in URL, for example:',
-  'PC.Pages.AppDevIndex.missingProjectIdExample':
-    '/space/your-space-id/app-dev/your-project-id',
+  'PC.Pages.AppDevIndex.invalidProjectIdCannotBindDataSource': 'Project ID is missing or invalid. Unable to bind data source.',
+  'PC.Pages.AppDevIndex.invalidProjectIdCannotDeploy': 'Project ID is missing or invalid. Unable to deploy.',
+  'PC.Pages.AppDevIndex.invalidProjectIdCannotExport': 'Project ID is missing or invalid. Unable to export.',
+  'PC.Pages.AppDevIndex.logAddedWaitingSend': 'Log has been added, waiting to send',
+  'PC.Pages.AppDevIndex.missingProjectIdDesc': 'Please append a projectId parameter in URL, for example:',
+  'PC.Pages.AppDevIndex.missingProjectIdExample': '/space/your-space-id/app-dev/your-project-id',
   'PC.Pages.AppDevIndex.missingProjectIdMessage': 'Missing projectId parameter',
   'PC.Pages.AppDevIndex.notSet': 'Not set',
-  'PC.Pages.AppDevIndex.onlyPluginWorkflowSupported':
-    'Only plugin and workflow data sources are supported',
+  'PC.Pages.AppDevIndex.onlyPluginWorkflowSupported': 'Only plugin and workflow data sources are supported',
   'PC.Pages.AppDevIndex.preview': 'Preview',
-  'PC.Pages.AppDevIndex.publishComponentSuccessDesc':
-    'Project has been built and published successfully!',
-  'PC.Pages.AppDevIndex.publishComponentSuccessTitle':
-    'Published as Component Successfully',
+  'PC.Pages.AppDevIndex.publishComponentSuccessDesc': 'Project has been built and published successfully!',
+  'PC.Pages.AppDevIndex.publishComponentSuccessTitle': 'Published as Component Successfully',
   'PC.Pages.AppDevIndex.publishFailed': 'Publish failed',
-  'PC.Pages.AppDevIndex.publishFailedRetryAfterFix':
-    'Publish failed. Please resolve errors and retry.',
+  'PC.Pages.AppDevIndex.publishFailedRetryAfterFix': 'Publish failed. Please resolve errors and retry.',
   'PC.Pages.AppDevIndex.selectedFile': 'Selected File',
   'PC.Pages.AppDevIndex.selectedFileWithName': 'Selected file: {0}',
   'PC.Pages.AppDevIndex.selectFile': 'Select File',
   'PC.Pages.AppDevIndex.selectFileFirst': 'Please select a file first',
-  'PC.Pages.AppDevIndex.singleFileUploadHint':
-    'Any file format is supported. The file will be added to the specified path.',
+  'PC.Pages.AppDevIndex.singleFileUploadHint': 'Any file format is supported. The file will be added to the specified path.',
   'PC.Pages.AppDevIndex.singleFileUploadTitle': 'Upload Single File',
   'PC.Pages.AppDevIndex.targetPathRequired': 'Target path cannot be empty',
   'PC.Pages.AppDevIndex.unknownError': 'Unknown error',
   'PC.Pages.AppDevIndex.unnamedProject': 'Unnamed Project',
   'PC.Pages.AppDevIndex.upload': 'Upload',
-  'PC.Pages.AppDevIndex.uploadDragText':
-    'Click or drag file to this area to select',
+  'PC.Pages.AppDevIndex.uploadDragText': 'Click or drag file to this area to select',
   'PC.Pages.AppDevIndex.uploadProject': 'Upload Project',
-  'PC.Pages.AppDevIndex.uploadSizeLimitExceeded':
-    'The total upload file size cannot exceed {0}MB',
-  'PC.Pages.AppDevIndex.uploadZipHint':
-    'Only .zip archives are supported (will update current project)',
+  'PC.Pages.AppDevIndex.uploadSizeLimitExceeded': 'The total upload file size cannot exceed {0}MB',
+  'PC.Pages.AppDevIndex.uploadZipHint': 'Only .zip archives are supported (will update current project)',
   'PC.Pages.AppDevIndex.zipOnly': 'Only .zip archive format is supported',
   'PC.Pages.AppDevMentionSelector.back': '← Back',
   'PC.Pages.AppDevMentionSelector.browseProjectFiles': 'Browse project files',
@@ -2651,24 +2088,19 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AppDevMentionSelector.dataSourceTypeReverseProxy': 'Reverse Proxy',
   'PC.Pages.AppDevMentionSelector.dataSourceTypeWorkflow': 'Workflow',
   'PC.Pages.AppDevMentionSelector.defaultDescDataSource': 'Data source',
-  'PC.Pages.AppDevMentionSelector.defaultDescPlugin':
-    'Plugin resource for specific functions and services',
-  'PC.Pages.AppDevMentionSelector.defaultDescReverseProxy':
-    'Reverse proxy resource for network proxy services',
-  'PC.Pages.AppDevMentionSelector.defaultDescWorkflow':
-    'Workflow resource for complex business orchestration',
+  'PC.Pages.AppDevMentionSelector.defaultDescPlugin': 'Plugin resource for specific functions and services',
+  'PC.Pages.AppDevMentionSelector.defaultDescReverseProxy': 'Reverse proxy resource for network proxy services',
+  'PC.Pages.AppDevMentionSelector.defaultDescWorkflow': 'Workflow resource for complex business orchestration',
   'PC.Pages.AppDevMentionSelector.fileList': 'File List',
   'PC.Pages.AppDevMentionSelector.files': 'Files',
   'PC.Pages.AppDevMentionSelector.filesAndFolders': 'Files/Folders',
   'PC.Pages.AppDevMentionSelector.folders': 'Folders',
   'PC.Pages.AppDevMentionSelector.noDataSourcesFound': 'No data source found',
-  'PC.Pages.AppDevMentionSelector.noMatchedFileOrFolder':
-    'No matching file or folder found',
+  'PC.Pages.AppDevMentionSelector.noMatchedFileOrFolder': 'No matching file or folder found',
   'PC.Pages.AppDevMentionSelector.noMatchedResult': 'No matching result found',
   'PC.Pages.AppDevMentionSelector.recent': 'Recent',
   'PC.Pages.AppDevMentionSelector.recommended': 'Recommended',
-  'PC.Pages.AppDevMentionSelector.workflowPluginEtc':
-    'Workflows, plugins, etc.',
+  'PC.Pages.AppDevMentionSelector.workflowPluginEtc': 'Workflows, plugins, etc.',
   'PC.Pages.AppDevMessageAttachment.dataSourceDefault': 'Data source',
   'PC.Pages.AppDevMessageAttachment.dataSourcePlugin': 'Plugin',
   'PC.Pages.AppDevMessageAttachment.dataSourceWorkflow': 'Workflow',
@@ -2678,11 +2110,9 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AppDevMessageAttachment.fileTypeText': 'Text file',
   'PC.Pages.AppDevMessageAttachment.imageAlt': 'Image',
   'PC.Pages.AppDevPageEditModal.coverImage': 'Cover Image',
-  'PC.Pages.AppDevPageEditModal.coverImageTip':
-    'Recommended size 356px * 200px, ratio 16:9',
+  'PC.Pages.AppDevPageEditModal.coverImageTip': 'Recommended size 356px * 200px, ratio 16:9',
   'PC.Pages.AppDevPageEditModal.description': 'Description',
-  'PC.Pages.AppDevPageEditModal.descriptionPlaceholder':
-    'Please enter description',
+  'PC.Pages.AppDevPageEditModal.descriptionPlaceholder': 'Please enter description',
   'PC.Pages.AppDevPageEditModal.editSuccess': 'Edited successfully',
   'PC.Pages.AppDevPageEditModal.icon': 'Icon',
   'PC.Pages.AppDevPageEditModal.modalTitle': 'Edit Application',
@@ -2690,42 +2120,32 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.AppDevPageEditModal.namePlaceholder': 'Please enter name',
   'PC.Pages.AppDevPageEditModal.nameRequired': 'Please enter name',
   'PC.Pages.AppDevPlanProcess.completed': 'Completed',
-  'PC.Pages.AppDevPlanProcess.executionPlanProgress':
-    'Execution Plan ({0}/{1} completed)',
+  'PC.Pages.AppDevPlanProcess.executionPlanProgress': 'Execution Plan ({0}/{1} completed)',
   'PC.Pages.AppDevPlanProcess.inProgress': 'In Progress',
   'PC.Pages.AppDevPlanProcess.partialFailed': 'Partially Failed',
   'PC.Pages.AppDevPlanProcess.pending': 'Pending',
   'PC.Pages.AppDevPreview.developingPleaseWait': 'Generating, please wait...',
-  'PC.Pages.AppDevPreview.devServerUrlUnavailable':
-    'Development server URL is unavailable',
-  'PC.Pages.AppDevPreview.importingAndRestarting':
-    'Importing project and restarting development server, please wait...',
+  'PC.Pages.AppDevPreview.devServerUrlUnavailable': 'Development server URL is unavailable',
+  'PC.Pages.AppDevPreview.importingAndRestarting': 'Importing project and restarting development server, please wait...',
   'PC.Pages.AppDevPreview.noPendingChanges': 'No pending changes',
-  'PC.Pages.AppDevPreview.previewLoadFailedCheckServerNetwork':
-    'Preview failed to load, please check development server status or network connection',
+  'PC.Pages.AppDevPreview.previewLoadFailedCheckServerNetwork': 'Preview failed to load, please check development server status or network connection',
   'PC.Pages.AppDevPreview.processFileError': 'Error processing file {0}',
-  'PC.Pages.AppDevPreview.projectIdMissingCannotSave':
-    'Missing project ID, unable to save',
+  'PC.Pages.AppDevPreview.projectIdMissingCannotSave': 'Missing project ID, unable to save',
   'PC.Pages.AppDevPreview.refresh': 'Refresh',
   'PC.Pages.AppDevPreview.refreshing': 'Refreshing...',
   'PC.Pages.AppDevPreview.reset': 'Reset',
   'PC.Pages.AppDevPreview.restarting': 'Restarting...',
   'PC.Pages.AppDevPreview.restartServer': 'Restart Server',
   'PC.Pages.AppDevPreview.restartService': 'Restart Service',
-  'PC.Pages.AppDevPreview.retryFailedCheckNetwork':
-    'Retry failed, please check network connection',
+  'PC.Pages.AppDevPreview.retryFailedCheckNetwork': 'Retry failed, please check network connection',
   'PC.Pages.AppDevPreview.save': 'Save',
-  'PC.Pages.AppDevPreview.saveFailedCheckConsole':
-    'Save failed, please check console error messages',
-  'PC.Pages.AppDevPreview.saveOrResetBeforeRefresh':
-    'Please save or reset changes before refreshing preview',
+  'PC.Pages.AppDevPreview.saveFailedCheckConsole': 'Save failed, please check console error messages',
+  'PC.Pages.AppDevPreview.saveOrResetBeforeRefresh': 'Please save or reset changes before refreshing preview',
   'PC.Pages.AppDevPreview.saveSuccess': 'Saved successfully',
   'PC.Pages.AppDevPreview.serverErrorWithCode': 'Server Error ({0})',
-  'PC.Pages.AppDevPreview.serverStartFailedWithCode':
-    'Development server start failed ({0})',
+  'PC.Pages.AppDevPreview.serverStartFailedWithCode': 'Development server start failed ({0})',
   'PC.Pages.AppDevPreview.starting': 'Starting',
-  'PC.Pages.AppDevPreview.startingEnvironment':
-    'Starting development environment, please wait...',
+  'PC.Pages.AppDevPreview.startingEnvironment': 'Starting development environment, please wait...',
   'PC.Pages.AppDevPreview.unsavedChanges': 'Unsaved changes',
   'PC.Pages.AppDevPreview.viewFullErrorInfo': 'View full error details',
   'PC.Pages.AppDevToolCallProcess.createFile': 'Create file {0}',
@@ -2748,15 +2168,11 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.Chat.clearAndCreateFailed': 'Failed to clear and create',
   'PC.Pages.Chat.closeAgentDesktop': 'Close agent desktop',
   'PC.Pages.Chat.closeFilePreview': 'Close file preview',
-  'PC.Pages.Chat.confirmDeleteFile':
-    'Are you sure you want to delete this file?',
+  'PC.Pages.Chat.confirmDeleteFile': 'Are you sure you want to delete this file?',
   'PC.Pages.Chat.confirmLeave': 'Leave anyway',
-  'PC.Pages.Chat.conversationIdMissingCreateFile':
-    'Conversation ID is missing, cannot create file',
-  'PC.Pages.Chat.conversationIdMissingUpload':
-    'Conversation ID is missing, cannot upload files',
-  'PC.Pages.Chat.conversationNameNoSpaces':
-    'Conversation name cannot contain only spaces',
+  'PC.Pages.Chat.conversationIdMissingCreateFile': 'Conversation ID is missing, cannot create file',
+  'PC.Pages.Chat.conversationIdMissingUpload': 'Conversation ID is missing, cannot upload files',
+  'PC.Pages.Chat.conversationNameNoSpaces': 'Conversation name cannot contain only spaces',
   'PC.Pages.Chat.conversationNameRequired': 'Conversation name is required',
   'PC.Pages.Chat.copyTemplate': 'Copy template',
   'PC.Pages.Chat.createConversationFailed': 'Failed to create conversation',
@@ -2764,46 +2180,34 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.Chat.expandNavigation': 'Expand navigation',
   'PC.Pages.Chat.exportFailed': 'Export failed',
   'PC.Pages.Chat.exportSuccess': 'Export successful!',
-  'PC.Pages.Chat.fileNotFoundDelete':
-    'File does not exist and cannot be deleted',
+  'PC.Pages.Chat.fileNotFoundDelete': 'File does not exist and cannot be deleted',
   'PC.Pages.Chat.inputConversationName': 'Enter conversation name',
-  'PC.Pages.Chat.invalidConversationIdExport':
-    'Conversation ID is missing or invalid, cannot export',
-  'PC.Pages.Chat.leaveTaskWarning':
-    'A task is still running. Leaving this page may interrupt it. Are you sure you want to leave?',
+  'PC.Pages.Chat.invalidConversationIdExport': 'Conversation ID is missing or invalid, cannot export',
+  'PC.Pages.Chat.leaveTaskWarning': 'A task is still running. Leaving this page may interrupt it. Are you sure you want to leave?',
   'PC.Pages.Chat.loadingHistoryConversation': 'Loading conversation history',
   'PC.Pages.Chat.newConversation': 'New conversation',
-  'PC.Pages.Chat.noAgentPermission':
-    'You do not have permission for this agent',
+  'PC.Pages.Chat.noAgentPermission': 'You do not have permission for this agent',
   'PC.Pages.Chat.openAgentDesktop': 'Open agent desktop',
   'PC.Pages.Chat.openFilePreview': 'Open file preview',
   'PC.Pages.Chat.openPreviewPage': 'Open preview page',
   'PC.Pages.Chat.pagePreview': 'Page Preview',
-  'PC.Pages.Chat.permanentDeleteWarning':
-    'This conversation data will be permanently deleted and cannot be recovered. Are you sure?',
-  'PC.Pages.Chat.permanentlyDeleteConversation':
-    'Permanently Delete Conversation',
+  'PC.Pages.Chat.permanentDeleteWarning': 'This conversation data will be permanently deleted and cannot be recovered. Are you sure?',
+  'PC.Pages.Chat.permanentlyDeleteConversation': 'Permanently Delete Conversation',
   'PC.Pages.Chat.rename': 'Rename',
   'PC.Pages.Chat.taskExecuting': 'Task in progress',
-  'PC.Pages.Chat.uploadSizeLimitExceeded':
-    'The total upload file size cannot exceed {0}MB',
+  'PC.Pages.Chat.uploadSizeLimitExceeded': 'The total upload file size cannot exceed {0}MB',
   'PC.Pages.Chat.uploadSuccess': 'Uploaded successfully',
   'PC.Pages.Chat.viewAgentDetails': 'View agent details',
-  'PC.Pages.ChatTemp.enterInstruction':
-    'Enter instructions directly; press Enter for new line',
-  'PC.Pages.ChatTemp.fillRequiredParams':
-    'Please fill in the required parameters',
+  'PC.Pages.ChatTemp.enterInstruction': 'Enter instructions directly; press Enter for new line',
+  'PC.Pages.ChatTemp.fillRequiredParams': 'Please fill in the required parameters',
   'PC.Pages.ChatTemp.inputPlaceholder': 'Please input',
-  'PC.Pages.ChatTemp.networkTimeout':
-    'Network timeout or service unavailable, please try again later',
+  'PC.Pages.ChatTemp.networkTimeout': 'Network timeout or service unavailable, please try again later',
   'PC.Pages.ChatTemp.startConversation': 'Start Conversation',
   'PC.Pages.ChatTemp.startConversationWithName': 'Start conversation with {0}',
   'PC.Pages.ChatTemp.welcomeText': 'Welcome to {0}',
-  'PC.Pages.DataPermissionTabPanel.noApiPermission':
-    'No API permission configuration',
+  'PC.Pages.DataPermissionTabPanel.noApiPermission': 'No API permission configuration',
   'PC.Pages.DataPermissionTabPanel.noSelectedAgent': 'No agents selected',
-  'PC.Pages.DataPermissionTabPanel.noSelectedKnowledge':
-    'No knowledge bases selected',
+  'PC.Pages.DataPermissionTabPanel.noSelectedKnowledge': 'No knowledge bases selected',
   'PC.Pages.DataPermissionTabPanel.noSelectedModel': 'No models selected',
   'PC.Pages.DataPermissionTabPanel.noSelectedPage': 'No web apps selected',
   'PC.Pages.DataPermissionTabPanel.rpdLabel': 'Calls per day',
@@ -2811,51 +2215,31 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.DataPermissionTabPanel.searchAgent': 'Search Agents',
   'PC.Pages.DataPermissionTabPanel.searchKnowledge': 'Search Knowledge Bases',
   'PC.Pages.DataPermissionTabPanel.searchPage': 'Search Web Apps',
-  'PC.Pages.DeveloperPermissionForm.agentComputerCpuCores':
-    'Agent Computer CPU Cores',
-  'PC.Pages.DeveloperPermissionForm.agentComputerCpuCoresTooltip':
-    'Agent computer CPU cores (leave blank to use default)',
-  'PC.Pages.DeveloperPermissionForm.agentComputerMemoryGb':
-    'Agent Computer Memory (GB)',
-  'PC.Pages.DeveloperPermissionForm.agentComputerMemoryGbTooltip':
-    'Agent computer memory (GB, leave blank to use default 4GB)',
-  'PC.Pages.DeveloperPermissionForm.agentDailyPromptLimit':
-    'Agent Daily Conversation Limit',
-  'PC.Pages.DeveloperPermissionForm.agentDailyPromptLimitTooltip':
-    'Agent daily conversation limit, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.agentComputerCpuCores': 'Agent Computer CPU Cores',
+  'PC.Pages.DeveloperPermissionForm.agentComputerCpuCoresTooltip': 'Agent computer CPU cores (leave blank to use default)',
+  'PC.Pages.DeveloperPermissionForm.agentComputerMemoryGb': 'Agent Computer Memory (GB)',
+  'PC.Pages.DeveloperPermissionForm.agentComputerMemoryGbTooltip': 'Agent computer memory (GB, leave blank to use default 4GB)',
+  'PC.Pages.DeveloperPermissionForm.agentDailyPromptLimit': 'Agent Daily Conversation Limit',
+  'PC.Pages.DeveloperPermissionForm.agentDailyPromptLimitTooltip': 'Agent daily conversation limit, -1 means unlimited',
   'PC.Pages.DeveloperPermissionForm.dailyTokenLimit': 'Daily Token Limit',
-  'PC.Pages.DeveloperPermissionForm.dailyTokenLimitPlaceholder':
-    'Enter daily token limit',
-  'PC.Pages.DeveloperPermissionForm.dailyTokenLimitTooltip':
-    'Daily token limit, -1 means unlimited',
-  'PC.Pages.DeveloperPermissionForm.knowledgeStorageLimitGb':
-    'Knowledge Storage Limit (GB)',
-  'PC.Pages.DeveloperPermissionForm.knowledgeStorageLimitGbTooltip':
-    '-1 means unlimited, 0 means no permission, precision 0.001GB, 1GB=1024MB',
+  'PC.Pages.DeveloperPermissionForm.dailyTokenLimitPlaceholder': 'Enter daily token limit',
+  'PC.Pages.DeveloperPermissionForm.dailyTokenLimitTooltip': 'Daily token limit, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.knowledgeStorageLimitGb': 'Knowledge Storage Limit (GB)',
+  'PC.Pages.DeveloperPermissionForm.knowledgeStorageLimitGbTooltip': '-1 means unlimited, 0 means no permission, precision 0.001GB, 1GB=1024MB',
   'PC.Pages.DeveloperPermissionForm.maxAgentCount': 'Max Agent Count',
-  'PC.Pages.DeveloperPermissionForm.maxAgentCountTooltip':
-    'Max agent count, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.maxAgentCountTooltip': 'Max agent count, -1 means unlimited',
   'PC.Pages.DeveloperPermissionForm.maxDataTableCount': 'Max Data Table Count',
-  'PC.Pages.DeveloperPermissionForm.maxDataTableCountTooltip':
-    'Max data table count, -1 means unlimited',
-  'PC.Pages.DeveloperPermissionForm.maxKnowledgeCount':
-    'Max Knowledge Base Count',
-  'PC.Pages.DeveloperPermissionForm.maxKnowledgeCountTooltip':
-    'Max knowledge base count, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.maxDataTableCountTooltip': 'Max data table count, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.maxKnowledgeCount': 'Max Knowledge Base Count',
+  'PC.Pages.DeveloperPermissionForm.maxKnowledgeCountTooltip': 'Max knowledge base count, -1 means unlimited',
   'PC.Pages.DeveloperPermissionForm.maxPageAppCount': 'Max Web App Count',
-  'PC.Pages.DeveloperPermissionForm.maxPageAppCountTooltip':
-    'Max web app count, -1 means unlimited',
-  'PC.Pages.DeveloperPermissionForm.maxScheduledTaskCount':
-    'Max Scheduled Task Count',
-  'PC.Pages.DeveloperPermissionForm.maxScheduledTaskCountTooltip':
-    'Max scheduled task count, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.maxPageAppCountTooltip': 'Max web app count, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.maxScheduledTaskCount': 'Max Scheduled Task Count',
+  'PC.Pages.DeveloperPermissionForm.maxScheduledTaskCountTooltip': 'Max scheduled task count, -1 means unlimited',
   'PC.Pages.DeveloperPermissionForm.maxSpaceCount': 'Max Workspace Count',
-  'PC.Pages.DeveloperPermissionForm.maxSpaceCountTooltip':
-    'Max workspace count, -1 means unlimited',
-  'PC.Pages.DeveloperPermissionForm.pageDailyPromptLimit':
-    'Web App Dev Daily Conversation Limit',
-  'PC.Pages.DeveloperPermissionForm.pageDailyPromptLimitTooltip':
-    'Web app dev daily conversation limit, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.maxSpaceCountTooltip': 'Max workspace count, -1 means unlimited',
+  'PC.Pages.DeveloperPermissionForm.pageDailyPromptLimit': 'Web App Dev Daily Conversation Limit',
+  'PC.Pages.DeveloperPermissionForm.pageDailyPromptLimitTooltip': 'Web app dev daily conversation limit, -1 means unlimited',
   'PC.Pages.EcosystemMcp.disableFailed': 'Disable failed',
   'PC.Pages.EcosystemMcp.disableSuccess': 'Disabled successfully',
   'PC.Pages.EcosystemMcp.enableSuccess': 'Enabled successfully',
@@ -2868,8 +2252,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.EcosystemPlugin.createShare': 'Create Share',
   'PC.Pages.EcosystemPlugin.createSuccess': 'Created successfully',
   'PC.Pages.EcosystemPlugin.fetchDataFailed': 'Failed to fetch data',
-  'PC.Pages.EcosystemPlugin.fetchDetailFailed':
-    'Failed to fetch plugin details',
+  'PC.Pages.EcosystemPlugin.fetchDetailFailed': 'Failed to fetch plugin details',
   'PC.Pages.EcosystemPlugin.fetchListFailed': 'Failed to fetch plugin list',
   'PC.Pages.EcosystemPlugin.noDescription': 'No description',
   'PC.Pages.EcosystemPlugin.offlineFailed': 'Offline failed',
@@ -2894,89 +2277,58 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.EcosystemTemplate.pageApp': 'Web App',
   'PC.Pages.EcosystemTemplate.searchPlaceholder': 'Search templates',
   'PC.Pages.EcosystemTemplate.templateOffline': 'Template taken offline',
-  'PC.Pages.EcosystemTemplate.templateWithdrawn':
-    'Template publication withdrawn',
+  'PC.Pages.EcosystemTemplate.templateWithdrawn': 'Template publication withdrawn',
   'PC.Pages.EcosystemTemplate.title': 'Templates',
   'PC.Pages.EcosystemTemplate.unnamedTemplate': 'Unnamed Template',
   'PC.Pages.EcosystemTemplate.updateFailed': 'Update failed',
   'PC.Pages.EcosystemTemplate.updateSuccess': 'Updated successfully',
   'PC.Pages.EcosystemTemplate.viewDetail': 'View Details',
   'PC.Pages.EcosystemTemplate.workflow': 'Workflow',
-  'PC.Pages.EditAgent.AgentModelSetting.balanceModeDesc1':
-    'Seeks balance between creativity and precision',
-  'PC.Pages.EditAgent.AgentModelSetting.balanceModeDesc2':
-    'Suitable for most daily applications, generating interesting yet rigorous content',
+  'PC.Pages.EditAgent.AgentModelSetting.balanceModeDesc1': 'Seeks balance between creativity and precision',
+  'PC.Pages.EditAgent.AgentModelSetting.balanceModeDesc2': 'Suitable for most daily applications, generating interesting yet rigorous content',
   'PC.Pages.EditAgent.AgentModelSetting.balanceModeTitle': 'Balance Mode:',
   'PC.Pages.EditAgent.AgentModelSetting.chatModel': 'Chat Model',
   'PC.Pages.EditAgent.AgentModelSetting.contextRoundsLabel': 'Context Rounds',
-  'PC.Pages.EditAgent.AgentModelSetting.contextRoundsTooltip':
-    'Set the number of conversation history rounds included in the model context. More rounds improve multi-turn dialogue relevance but consume more tokens.',
-  'PC.Pages.EditAgent.AgentModelSetting.creativeModeDesc1':
-    'Inspires creativity and provides novel and unique ideas',
-  'PC.Pages.EditAgent.AgentModelSetting.creativeModeDesc2':
-    'Suitable for scenarios requiring inspiration and unique perspectives, such as brainstorming, creative writing, etc.',
+  'PC.Pages.EditAgent.AgentModelSetting.contextRoundsTooltip': 'Set the number of conversation history rounds included in the model context. More rounds improve multi-turn dialogue relevance but consume more tokens.',
+  'PC.Pages.EditAgent.AgentModelSetting.creativeModeDesc1': 'Inspires creativity and provides novel and unique ideas',
+  'PC.Pages.EditAgent.AgentModelSetting.creativeModeDesc2': 'Suitable for scenarios requiring inspiration and unique perspectives, such as brainstorming, creative writing, etc.',
   'PC.Pages.EditAgent.AgentModelSetting.creativeModeTitle': 'Creative Mode:',
-  'PC.Pages.EditAgent.AgentModelSetting.customModeDesc1':
-    'Customize generation through advanced settings',
-  'PC.Pages.EditAgent.AgentModelSetting.customModeDesc2':
-    'Fine-tune according to needs for personalized optimization',
+  'PC.Pages.EditAgent.AgentModelSetting.customModeDesc1': 'Customize generation through advanced settings',
+  'PC.Pages.EditAgent.AgentModelSetting.customModeDesc2': 'Fine-tune according to needs for personalized optimization',
   'PC.Pages.EditAgent.AgentModelSetting.customModeTitle': 'Custom Mode:',
-  'PC.Pages.EditAgent.AgentModelSetting.generateDiversity':
-    'Generation Diversity',
-  'PC.Pages.EditAgent.AgentModelSetting.generateRandomness':
-    'Generation Randomness',
-  'PC.Pages.EditAgent.AgentModelSetting.generateRandomnessTooltip':
-    'Temperature: Increasing temperature makes the model output more diverse and creative, while decreasing temperature makes the output follow instructions more closely but reduces diversity. It is recommended not to adjust together with "Top p"',
-  'PC.Pages.EditAgent.AgentModelSetting.inputOutputSettings':
-    'Input & Output Settings',
-  'PC.Pages.EditAgent.AgentModelSetting.maxReplyLengthLabel':
-    'Max Reply Length',
-  'PC.Pages.EditAgent.AgentModelSetting.maxReplyLengthTooltip':
-    'Control the maximum token length of model output. Typically, 100 tokens equals approximately 150 Chinese characters.',
+  'PC.Pages.EditAgent.AgentModelSetting.generateDiversity': 'Generation Diversity',
+  'PC.Pages.EditAgent.AgentModelSetting.generateRandomness': 'Generation Randomness',
+  'PC.Pages.EditAgent.AgentModelSetting.generateRandomnessTooltip': 'Temperature: Increasing temperature makes the model output more diverse and creative, while decreasing temperature makes the output follow instructions more closely but reduces diversity. It is recommended not to adjust together with "Top p"',
+  'PC.Pages.EditAgent.AgentModelSetting.inputOutputSettings': 'Input & Output Settings',
+  'PC.Pages.EditAgent.AgentModelSetting.maxReplyLengthLabel': 'Max Reply Length',
+  'PC.Pages.EditAgent.AgentModelSetting.maxReplyLengthTooltip': 'Control the maximum token length of model output. Typically, 100 tokens equals approximately 150 Chinese characters.',
   'PC.Pages.EditAgent.AgentModelSetting.modelSetting': 'Model Settings',
-  'PC.Pages.EditAgent.AgentModelSetting.precisionModeDesc1':
-    'Strictly follows instructions to generate content',
-  'PC.Pages.EditAgent.AgentModelSetting.precisionModeDesc2':
-    'Suitable for scenarios requiring accuracy, such as formal documents, code, etc.',
+  'PC.Pages.EditAgent.AgentModelSetting.precisionModeDesc1': 'Strictly follows instructions to generate content',
+  'PC.Pages.EditAgent.AgentModelSetting.precisionModeDesc2': 'Suitable for scenarios requiring accuracy, such as formal documents, code, etc.',
   'PC.Pages.EditAgent.AgentModelSetting.precisionModeTitle': 'Precision Mode:',
-  'PC.Pages.EditAgent.AgentModelSetting.reasoningModelOptional':
-    'Reasoning Model (Optional)',
-  'PC.Pages.EditAgent.AgentModelSetting.selectChatModel':
-    'Please select a chat model',
-  'PC.Pages.EditAgent.AgentModelSetting.selectReasoningModel':
-    'Please select a reasoning model',
-  'PC.Pages.EditAgent.AgentModelSetting.topPTooltip':
-    'Top p is the cumulative probability: The model selects from the highest probability words when generating output until the total probability of these words reaches the Top p value. This limits the model to only select high-probability words, thereby controlling output diversity. It is recommended not to adjust together with "Generation Randomness".',
+  'PC.Pages.EditAgent.AgentModelSetting.reasoningModelOptional': 'Reasoning Model (Optional)',
+  'PC.Pages.EditAgent.AgentModelSetting.selectChatModel': 'Please select a chat model',
+  'PC.Pages.EditAgent.AgentModelSetting.selectReasoningModel': 'Please select a reasoning model',
+  'PC.Pages.EditAgent.AgentModelSetting.topPTooltip': 'Top p is the cumulative probability: The model selects from the highest probability words when generating output until the total probability of these words reaches the Top p value. This limits the model to only select high-probability words, thereby controlling output diversity. It is recommended not to adjust together with "Generation Randomness".',
   'PC.Pages.EditAgent.agentOverview': 'Agent Overview',
   'PC.Pages.EditAgent.ArrangeTitle.arrange': 'Arrange',
-  'PC.Pages.EditAgent.ArrangeTitle.selectChatModel':
-    'Please select a chat model',
+  'PC.Pages.EditAgent.ArrangeTitle.selectChatModel': 'Please select a chat model',
   'PC.Pages.EditAgent.bindCardDataSource': 'Bind data source for card',
   'PC.Pages.EditAgent.codeExampleOptionsComment': '//options Option list;',
-  'PC.Pages.EditAgent.codeExampleValueComment':
-    '//value: Option value; label: Option name; children: Sub-options',
-  'PC.Pages.EditAgent.convIdNotFoundCreateFile':
-    'Conversation ID does not exist, unable to create file',
-  'PC.Pages.EditAgent.convIdNotFoundDeleteFile':
-    'Conversation ID does not exist, unable to delete file',
-  'PC.Pages.EditAgent.convIdNotFoundExport':
-    'Development session ID does not exist or is invalid, unable to export',
-  'PC.Pages.EditAgent.convIdNotFoundRenameFile':
-    'Conversation ID does not exist, unable to rename file',
-  'PC.Pages.EditAgent.convIdNotFoundSaveFile':
-    'Conversation ID does not exist, unable to save file',
-  'PC.Pages.EditAgent.convIdNotFoundUploadFile':
-    'Conversation ID does not exist, unable to upload file',
+  'PC.Pages.EditAgent.codeExampleValueComment': '//value: Option value; label: Option name; children: Sub-options',
+  'PC.Pages.EditAgent.convIdNotFoundCreateFile': 'Conversation ID does not exist, unable to create file',
+  'PC.Pages.EditAgent.convIdNotFoundDeleteFile': 'Conversation ID does not exist, unable to delete file',
+  'PC.Pages.EditAgent.convIdNotFoundExport': 'Development session ID does not exist or is invalid, unable to export',
+  'PC.Pages.EditAgent.convIdNotFoundRenameFile': 'Conversation ID does not exist, unable to rename file',
+  'PC.Pages.EditAgent.convIdNotFoundSaveFile': 'Conversation ID does not exist, unable to save file',
+  'PC.Pages.EditAgent.convIdNotFoundUploadFile': 'Conversation ID does not exist, unable to upload file',
   'PC.Pages.EditAgent.DebugDetails.calledComponents': 'Called Components',
   'PC.Pages.EditAgent.DebugDetails.elapsedTime': 'Elapsed {0} ms',
   'PC.Pages.EditAgent.DebugDetails.output': 'Output',
   'PC.Pages.EditAgent.DebugDetails.title': 'Debug Details',
-  'PC.Pages.EditAgent.deleteFileConfirmTitle':
-    'Are you sure you want to delete this file?',
-  'PC.Pages.EditAgent.EventList.emptyDescription':
-    'Content returned by clicking on event binding can be sent to the model',
-  'PC.Pages.EditAgent.exportConfigContent':
-    'If it contains data tables or knowledge bases, the data itself will not be exported',
+  'PC.Pages.EditAgent.deleteFileConfirmTitle': 'Are you sure you want to delete this file?',
+  'PC.Pages.EditAgent.EventList.emptyDescription': 'Content returned by clicking on event binding can be sent to the model',
+  'PC.Pages.EditAgent.exportConfigContent': 'If it contains data tables or knowledge bases, the data itself will not be exported',
   'PC.Pages.EditAgent.exportConfigTitle': 'Export Config - {0}',
   'PC.Pages.EditAgent.exportFailed': 'Export failed',
   'PC.Pages.EditAgent.exportSuccess': 'Exported successfully!',
@@ -2997,59 +2349,40 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.EditAgent.NodeDetails.typeTable': 'Data Table',
   'PC.Pages.EditAgent.NodeDetails.typeVariable': 'Variable',
   'PC.Pages.EditAgent.NodeDetails.typeWorkflow': 'Workflow',
-  'PC.Pages.EditAgent.pluginWorkflowDataStructure':
-    'Plugin or workflow return data structure and example',
-  'PC.Pages.EditAgent.PreviewAndDebug.convIdNotFoundDesktop':
-    'Conversation ID does not exist, unable to open agent computer',
-  'PC.Pages.EditAgent.PreviewAndDebug.convIdNotFoundFilePreview':
-    'Conversation ID does not exist, unable to open file preview',
-  'PC.Pages.EditAgent.PreviewAndDebug.fillRequiredParams':
-    'Please fill in the required parameters',
-  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.closeAgentDesktop':
-    'Close Agent Desktop',
-  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.closeFilePreview':
-    'Close File Preview',
+  'PC.Pages.EditAgent.pluginWorkflowDataStructure': 'Plugin or workflow return data structure and example',
+  'PC.Pages.EditAgent.PreviewAndDebug.convIdNotFoundDesktop': 'Conversation ID does not exist, unable to open agent computer',
+  'PC.Pages.EditAgent.PreviewAndDebug.convIdNotFoundFilePreview': 'Conversation ID does not exist, unable to open file preview',
+  'PC.Pages.EditAgent.PreviewAndDebug.fillRequiredParams': 'Please fill in the required parameters',
+  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.closeAgentDesktop': 'Close Agent Desktop',
+  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.closeFilePreview': 'Close File Preview',
   'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.debug': 'Debug',
-  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openAgentDesktop':
-    'Open Agent Desktop',
-  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openFilePreview':
-    'Open File Preview',
-  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openPreviewPage':
-    'Open Preview Page',
-  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.previewAndDebug':
-    'Preview & Debug',
+  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openAgentDesktop': 'Open Agent Desktop',
+  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openFilePreview': 'Open File Preview',
+  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.openPreviewPage': 'Open Preview Page',
+  'PC.Pages.EditAgent.PreviewAndDebug.PreviewAndDebugHeader.previewAndDebug': 'Preview & Debug',
   'PC.Pages.EditAgent.save': 'Save',
   'PC.Pages.EditAgent.selectCardStyle': 'Select card style',
   'PC.Pages.EditAgent.statCollectCount': 'Favorite Users',
   'PC.Pages.EditAgent.statConvCount': 'Chat Count',
   'PC.Pages.EditAgent.statLikeCount': 'Likes',
   'PC.Pages.EditAgent.statUserCount': 'Chat Users',
-  'PC.Pages.EditAgent.SystemTipsWord.autoOptimizeTooltip':
-    'Auto-optimize prompt',
+  'PC.Pages.EditAgent.SystemTipsWord.autoOptimizeTooltip': 'Auto-optimize prompt',
   'PC.Pages.EditAgent.SystemTipsWord.exitFullscreen': 'Exit Fullscreen',
   'PC.Pages.EditAgent.SystemTipsWord.fullscreenEdit': 'Fullscreen Edit',
   'PC.Pages.EditAgent.SystemTipsWord.optimize': 'Optimize',
   'PC.Pages.EditAgent.SystemTipsWord.systemPrompt': 'System Prompt',
-  'PC.Pages.EditAgent.SystemTipsWord.systemPromptPlaceholder':
-    'Enter system prompt to shape the model role',
+  'PC.Pages.EditAgent.SystemTipsWord.systemPromptPlaceholder': 'Enter system prompt to shape the model role',
   'PC.Pages.EditAgent.SystemTipsWord.userPrompt': 'User Prompt',
-  'PC.Pages.EditAgent.SystemTipsWord.userPromptPlaceholder':
-    'Enter user prompt, preset instructions, questions or requests',
-  'PC.Pages.EditAgent.uploadFileSizeExceed':
-    'Total upload file size cannot exceed {0}MB',
+  'PC.Pages.EditAgent.SystemTipsWord.userPromptPlaceholder': 'Enter user prompt, preset instructions, questions or requests',
+  'PC.Pages.EditAgent.uploadFileSizeExceed': 'Total upload file size cannot exceed {0}MB',
   'PC.Pages.EditAgent.uploadSuccess': 'Uploaded successfully',
-  'PC.Pages.EditAgent.VariableDataBinding.pluginOrWorkflowRequired':
-    'Please select a plugin or workflow that meets the standard',
-  'PC.Pages.Error403.licenseExpired':
-    'Sorry, your license authorization has expired',
-  'PC.Pages.Error404.pageNotFound':
-    'Sorry, the page you visited does not exist',
+  'PC.Pages.EditAgent.VariableDataBinding.pluginOrWorkflowRequired': 'Please select a plugin or workflow that meets the standard',
+  'PC.Pages.Error403.licenseExpired': 'Sorry, your license authorization has expired',
+  'PC.Pages.Error404.pageNotFound': 'Sorry, the page you visited does not exist',
   'PC.Pages.GlobalModelManage.accessControlOff': 'Off',
   'PC.Pages.GlobalModelManage.accessControlOn': 'On',
-  'PC.Pages.GlobalModelManage.accessControlTooltip':
-    'If enabled, authorization is required to use',
-  'PC.Pages.GlobalModelManage.accessControlUpdateFailed':
-    'Failed to update access control status',
+  'PC.Pages.GlobalModelManage.accessControlTooltip': 'If enabled, authorization is required to use',
+  'PC.Pages.GlobalModelManage.accessControlUpdateFailed': 'Failed to update access control status',
   'PC.Pages.GlobalModelManage.addModel': 'Add Model',
   'PC.Pages.GlobalModelManage.all': 'All',
   'PC.Pages.GlobalModelManage.auth': 'Authorize',
@@ -3064,8 +2397,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.GlobalModelManage.columnStatus': 'Status',
   'PC.Pages.GlobalModelManage.columnType': 'Type',
   'PC.Pages.GlobalModelManage.columnUpdateTime': 'Update Time',
-  'PC.Pages.GlobalModelManage.confirmDeleteModel':
-    'Are you sure you want to delete model {0}?',
+  'PC.Pages.GlobalModelManage.confirmDeleteModel': 'Are you sure you want to delete model {0}?',
   'PC.Pages.GlobalModelManage.deleteFailed': 'Delete failed',
   'PC.Pages.GlobalModelManage.deleteModel': 'Delete Model',
   'PC.Pages.GlobalModelManage.edit': 'Edit',
@@ -3100,24 +2432,20 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.IMChannel.CardList.confirmDelete': 'Confirm delete {0} {1}?',
   'PC.Pages.IMChannel.CardList.defaultPlatformName': 'this ',
   'PC.Pages.IMChannel.CardList.delete': 'Delete',
-  'PC.Pages.IMChannel.CardList.deleteContent':
-    'This action cannot be undone. Please proceed with caution.',
+  'PC.Pages.IMChannel.CardList.deleteContent': 'This action cannot be undone. Please proceed with caution.',
   'PC.Pages.IMChannel.CardList.edit': 'Edit',
   'PC.Pages.IMChannel.CardList.enterpriseApp': 'Enterprise App',
   'PC.Pages.IMChannel.CardList.lastEdited': 'Last edited',
-  'PC.Pages.IMChannel.CardList.noKeywordResults':
-    'No bots or configurations found containing "{0}"',
+  'PC.Pages.IMChannel.CardList.noKeywordResults': 'No bots or configurations found containing "{0}"',
   'PC.Pages.IMChannel.CardList.noMatchingResults': 'No matching results found',
   'PC.Pages.IMChannel.CardList.noResultsFound': 'No relevant results found',
-  'PC.Pages.IMChannel.CardList.noRobotsDesc':
-    'No bots under the current platform. Click the "Add Bot" button above to start creating',
+  'PC.Pages.IMChannel.CardList.noRobotsDesc': 'No bots under the current platform. Click the "Add Bot" button above to start creating',
   'PC.Pages.IMChannel.CardList.smartBot': 'Smart Bot',
   'PC.Pages.IMChannel.CardList.unboundAgent': 'No agent bound',
   'PC.Pages.IMChannel.CreateIMChannel.add': 'Add',
   'PC.Pages.IMChannel.CreateIMChannel.addSuccess': 'Added successfully',
   'PC.Pages.IMChannel.CreateIMChannel.agent': 'Agent',
-  'PC.Pages.IMChannel.CreateIMChannel.agentTooltip':
-    'General agents will use your sandbox (computer) environment to execute tasks. Do not share the corresponding bot with others.',
+  'PC.Pages.IMChannel.CreateIMChannel.agentTooltip': 'General agents will use your sandbox (computer) environment to execute tasks. Do not share the corresponding bot with others.',
   'PC.Pages.IMChannel.CreateIMChannel.app': 'App',
   'PC.Pages.IMChannel.CreateIMChannel.bot': 'Bot',
   'PC.Pages.IMChannel.CreateIMChannel.edit': 'Edit',
@@ -3125,15 +2453,11 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.IMChannel.CreateIMChannel.enabledStatus': 'Enabled Status',
   'PC.Pages.IMChannel.CreateIMChannel.onceOutput': 'One-time output',
   'PC.Pages.IMChannel.CreateIMChannel.outputMode': 'Output Mode',
-  'PC.Pages.IMChannel.CreateIMChannel.outputModeTooltip':
-    'When the bot replies to a message, whether to display text character by character or all at once.',
-  'PC.Pages.IMChannel.CreateIMChannel.streamOutput':
-    'Stream output (typewriter effect)',
-  'PC.Pages.IMChannel.CreateIMChannel.testConnectionSuccess':
-    'Test connection successful',
+  'PC.Pages.IMChannel.CreateIMChannel.outputModeTooltip': 'When the bot replies to a message, whether to display text character by character or all at once.',
+  'PC.Pages.IMChannel.CreateIMChannel.streamOutput': 'Stream output (typewriter effect)',
+  'PC.Pages.IMChannel.CreateIMChannel.testConnectionSuccess': 'Test connection successful',
   'PC.Pages.IMChannel.CreateIMChannel.testConnectivity': 'Test Connectivity',
-  'PC.Pages.IMChannel.DynamicChannelForm.requiredField':
-    'This field is required',
+  'PC.Pages.IMChannel.DynamicChannelForm.requiredField': 'This field is required',
   'PC.Pages.IMChannel.Index.add': 'Add',
   'PC.Pages.IMChannel.Index.addApp': 'Add App',
   'PC.Pages.IMChannel.Index.addBot': 'Add Bot',
@@ -3141,52 +2465,39 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.IMChannel.Index.title': 'IM Bots',
   'PC.Pages.IMChannel.PlatformList.platformList': 'Platform List',
   'PC.Pages.IMChannel.PlatformList.robotCount': '{0} bots',
-  'PC.Pages.IMChannel.WechatIlinkForm.clickConfirmToSave':
-    "Please click the 'Confirm' button below to save",
-  'PC.Pages.IMChannel.WechatIlinkForm.clickToGetQr':
-    'Please click the button below to get the QR code',
-  'PC.Pages.IMChannel.WechatIlinkForm.connectionSuccess':
-    'Connection successful',
+  'PC.Pages.IMChannel.WechatIlinkForm.clickConfirmToSave': "Please click the 'Confirm' button below to save",
+  'PC.Pages.IMChannel.WechatIlinkForm.clickToGetQr': 'Please click the button below to get the QR code',
+  'PC.Pages.IMChannel.WechatIlinkForm.connectionSuccess': 'Connection successful',
   'PC.Pages.IMChannel.WechatIlinkForm.fetchingQr': 'Fetching QR code...',
   'PC.Pages.IMChannel.WechatIlinkForm.getQr': 'Get QR Code',
-  'PC.Pages.IMChannel.WechatIlinkForm.getQrSuccess':
-    'QR code obtained successfully',
+  'PC.Pages.IMChannel.WechatIlinkForm.getQrSuccess': 'QR code obtained successfully',
   'PC.Pages.IMChannel.WechatIlinkForm.importantNotice': 'Important Notice',
-  'PC.Pages.IMChannel.WechatIlinkForm.importantNoticeDesc':
-    'After scanning and confirming with the same WeChat account for the second time, the original bot connection will be immediately invalidated. Please be sure to click the "Confirm" button below to save and activate the current configuration.',
-  'PC.Pages.IMChannel.WechatIlinkForm.qrExpired':
-    'QR code has expired, please get a new one',
-  'PC.Pages.IMChannel.WechatIlinkForm.qrExpiredRefresh':
-    'QR code expired, click to refresh',
-  'PC.Pages.IMChannel.WechatIlinkForm.qrTimeoutWarning':
-    'QR scan has stopped due to timeout, please get a new QR code',
+  'PC.Pages.IMChannel.WechatIlinkForm.importantNoticeDesc': 'After scanning and confirming with the same WeChat account for the second time, the original bot connection will be immediately invalidated. Please be sure to click the "Confirm" button below to save and activate the current configuration.',
+  'PC.Pages.IMChannel.WechatIlinkForm.qrExpired': 'QR code has expired, please get a new one',
+  'PC.Pages.IMChannel.WechatIlinkForm.qrExpiredRefresh': 'QR code expired, click to refresh',
+  'PC.Pages.IMChannel.WechatIlinkForm.qrTimeoutWarning': 'QR scan has stopped due to timeout, please get a new QR code',
   'PC.Pages.IMChannel.WechatIlinkForm.reGetQr': 'Get QR Code Again',
-  'PC.Pages.IMChannel.WechatIlinkForm.scanConfirmSuccess':
-    'Scan confirmation successful',
+  'PC.Pages.IMChannel.WechatIlinkForm.scanConfirmSuccess': 'Scan confirmation successful',
   'PC.Pages.IMChannel.WechatIlinkForm.scanSuccess': 'Scan successful',
   'PC.Pages.IMChannel.WechatIlinkForm.scanToConnect': 'Scan to Connect',
-  'PC.Pages.IMChannel.WechatIlinkForm.scanTooltip':
-    'Click to get the QR code and scan it with WeChat on your phone.',
+  'PC.Pages.IMChannel.WechatIlinkForm.scanTooltip': 'Click to get the QR code and scan it with WeChat on your phone.',
   'PC.Pages.IMChannel.WechatIlinkForm.status': 'Status',
   'PC.Pages.IMChannel.WechatIlinkForm.statusConnected': 'Connected',
   'PC.Pages.IMChannel.WechatIlinkForm.statusExpired': 'Expired',
   'PC.Pages.IMChannel.WechatIlinkForm.statusNone': 'Not started',
-  'PC.Pages.IMChannel.WechatIlinkForm.statusScanned':
-    'Scanned, please confirm on your phone',
+  'PC.Pages.IMChannel.WechatIlinkForm.statusScanned': 'Scanned, please confirm on your phone',
   'PC.Pages.IMChannel.WechatIlinkForm.statusWait': 'Waiting to scan',
   'PC.Pages.Login.and': 'and',
   'PC.Pages.Login.captchaDefault': 'Drag right to complete the puzzle',
   'PC.Pages.Login.captchaError': 'Verification failed',
   'PC.Pages.Login.captchaLoading': 'Loading...',
   'PC.Pages.Login.captchaMoving': 'Drag right to the puzzle position',
-  'PC.Pages.Login.captchaTitle':
-    'Please complete the following verification to continue',
+  'PC.Pages.Login.captchaTitle': 'Please complete the following verification to continue',
   'PC.Pages.Login.captchaVerifying': 'Verifying...',
   'PC.Pages.Login.codeLoginOrRegister': 'Code Login / Register',
   'PC.Pages.Login.inputEmailPlaceholder': 'Please input email',
   'PC.Pages.Login.inputEmailRequired': 'Please input email',
-  'PC.Pages.Login.inputPasswordPlaceholder':
-    'Please input password with 6+ characters',
+  'PC.Pages.Login.inputPasswordPlaceholder': 'Please input password with 6+ characters',
   'PC.Pages.Login.inputPhonePlaceholder': 'Please input phone number',
   'PC.Pages.Login.inputPhoneRequired': 'Please input phone number',
   'PC.Pages.Login.invalidEmail': 'Please input a valid email',
@@ -3201,28 +2512,24 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.Login.serviceAgreement': 'Terms of Service',
   'PC.Pages.Login.serviceAgreementAgree': 'Agree',
   'PC.Pages.Login.serviceAgreementDisagree': 'Disagree',
-  'PC.Pages.Login.serviceAgreementTitle':
-    'Service Agreement and Privacy Protection',
+  'PC.Pages.Login.serviceAgreementTitle': 'Service Agreement and Privacy Protection',
   'PC.Pages.Login.welcome': 'Welcome to {0}',
   'PC.Pages.MorePage.ApiKey.actions': 'Actions',
   'PC.Pages.MorePage.ApiKey.callStats': 'Call Statistics',
-  'PC.Pages.MorePage.ApiKey.confirmDeleteKey':
-    'Are you sure to delete key "{0}"?',
+  'PC.Pages.MorePage.ApiKey.confirmDeleteKey': 'Are you sure to delete key "{0}"?',
   'PC.Pages.MorePage.ApiKey.copiedToClipboard': 'API KEY copied to clipboard',
   'PC.Pages.MorePage.ApiKey.createdTime': 'Created Time',
   'PC.Pages.MorePage.ApiKey.createKey': 'Create Key',
   'PC.Pages.MorePage.ApiKey.delete': 'Delete',
   'PC.Pages.MorePage.ApiKey.deleteSuccess': 'Deleted successfully',
-  'PC.Pages.MorePage.ApiKey.deleteWarning':
-    'This action cannot be undone. Please proceed with caution.',
+  'PC.Pages.MorePage.ApiKey.deleteWarning': 'This action cannot be undone. Please proceed with caution.',
   'PC.Pages.MorePage.ApiKey.edit': 'Edit',
   'PC.Pages.MorePage.ApiKey.expireTime': 'Expiration Time',
   'PC.Pages.MorePage.ApiKey.hide': 'Hide',
   'PC.Pages.MorePage.ApiKey.keyName': 'Key Name',
   'PC.Pages.MorePage.ApiKey.neverExpire': 'Never expires',
   'PC.Pages.MorePage.ApiKey.neverExpires': 'Never Expires',
-  'PC.Pages.MorePage.ApiKey.pageTips':
-    'Manage your API keys and access permissions',
+  'PC.Pages.MorePage.ApiKey.pageTips': 'Manage your API keys and access permissions',
   'PC.Pages.MorePage.ApiKey.pageTitle': 'API Key Management',
   'PC.Pages.MorePage.ApiKey.permissionConfig': 'Permission Config',
   'PC.Pages.MorePage.ApiKey.show': 'Show',
@@ -3234,43 +2541,28 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.MorePage.ApiKeyLogs.pageTitle': 'API Call Logs',
   'PC.Pages.MorePage.ApiKeyPermission.collapseAll': 'Collapse All',
   'PC.Pages.MorePage.ApiKeyPermission.expandAll': 'Expand All',
-  'PC.Pages.MorePage.ApiKeyPermission.noPermissionDefs':
-    'No permission definitions',
-  'PC.Pages.MorePage.ApiKeyPermission.permissionSaved':
-    'Permission configuration saved successfully',
+  'PC.Pages.MorePage.ApiKeyPermission.noPermissionDefs': 'No permission definitions',
+  'PC.Pages.MorePage.ApiKeyPermission.permissionSaved': 'Permission configuration saved successfully',
   'PC.Pages.MorePage.ApiKeyPermission.selectAll': 'Select All Permissions',
   'PC.Pages.MorePage.ApiKeyPermission.title': 'Permission Config - {0}',
   'PC.Pages.MyComputerManage.addComputer': 'Add Computer',
-  'PC.Pages.MyComputerManage.connectionKeyTooltip':
-    'Connection key for standalone client container deployment, click to copy',
-  'PC.Pages.MyComputerManage.deactivateTooltip':
-    'Once deactivated, the computer cannot be controlled by agents',
-  'PC.Pages.MyComputerManage.deleteConfirmContent':
-    'This action cannot be undone. Please proceed with caution.',
-  'PC.Pages.MyComputerManage.deleteConfirmTitle':
-    'Confirm delete this computer?',
+  'PC.Pages.MyComputerManage.connectionKeyTooltip': 'Connection key for standalone client container deployment, click to copy',
+  'PC.Pages.MyComputerManage.deactivateTooltip': 'Once deactivated, the computer cannot be controlled by agents',
+  'PC.Pages.MyComputerManage.deleteConfirmContent': 'This action cannot be undone. Please proceed with caution.',
+  'PC.Pages.MyComputerManage.deleteConfirmTitle': 'Confirm delete this computer?',
   'PC.Pages.MyComputerManage.EditComputerModal.addTitle': 'Add Computer',
   'PC.Pages.MyComputerManage.EditComputerModal.descriptionLabel': 'Description',
-  'PC.Pages.MyComputerManage.EditComputerModal.descriptionPlaceholder':
-    'Please enter description',
+  'PC.Pages.MyComputerManage.EditComputerModal.descriptionPlaceholder': 'Please enter description',
   'PC.Pages.MyComputerManage.EditComputerModal.editTitle': 'Edit Computer Name',
-  'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountLabel':
-    'Max Active Agent Sessions',
-  'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountPlaceholder':
-    'Please enter',
-  'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountRange':
-    'Value range is 1 to 99999999',
-  'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountRequired':
-    'Please enter the max active agent sessions',
-  'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountTooltip':
-    'Each agent session consumes hundreds of megabytes of memory. Please adjust according to the actual memory of the computer. When the configured limit is exceeded, the system will automatically stop idle sessions (sending a message to a stopped session will reactivate it).',
+  'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountLabel': 'Max Active Agent Sessions',
+  'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountPlaceholder': 'Please enter',
+  'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountRange': 'Value range is 1 to 99999999',
+  'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountRequired': 'Please enter the max active agent sessions',
+  'PC.Pages.MyComputerManage.EditComputerModal.maxAgentCountTooltip': 'Each agent session consumes hundreds of megabytes of memory. Please adjust according to the actual memory of the computer. When the configured limit is exceeded, the system will automatically stop idle sessions (sending a message to a stopped session will reactivate it).',
   'PC.Pages.MyComputerManage.EditComputerModal.nameLabel': 'Computer Name',
-  'PC.Pages.MyComputerManage.EditComputerModal.nameMaxLength':
-    'Name cannot exceed 100 characters',
-  'PC.Pages.MyComputerManage.EditComputerModal.namePlaceholder':
-    'Please enter computer name',
-  'PC.Pages.MyComputerManage.EditComputerModal.nameRequired':
-    'Please enter computer name',
+  'PC.Pages.MyComputerManage.EditComputerModal.nameMaxLength': 'Name cannot exceed 100 characters',
+  'PC.Pages.MyComputerManage.EditComputerModal.namePlaceholder': 'Please enter computer name',
+  'PC.Pages.MyComputerManage.EditComputerModal.nameRequired': 'Please enter computer name',
   'PC.Pages.MyComputerManage.editTooltip': 'Edit',
   'PC.Pages.MyComputerManage.emptyComputerConfig': 'No computer configurations',
   'PC.Pages.MyComputerManage.filterAll': 'All',
@@ -3283,18 +2575,14 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.MyComputerManage.statusOffline': 'Offline',
   'PC.Pages.MyComputerManage.statusOnline': 'Online',
   'PC.Pages.OpenApp.collapseNav': 'Collapse Navigation',
-  'PC.Pages.OpenApp.firstConversationTip':
-    'Enter instructions in the chat to start your first conversation~',
+  'PC.Pages.OpenApp.firstConversationTip': 'Enter instructions in the chat to start your first conversation~',
   'PC.Pages.OpenApp.historyConversation': 'History',
   'PC.Pages.OpenApp.lookRight': 'See Right >',
   'PC.Pages.OpenApp.newConversation': 'New Conversation',
   'PC.Pages.OpenApp.viewAll': 'View All',
-  'PC.Pages.PreviewAndDebug.convIdNotFoundDesktop':
-    'Conversation ID not found, unable to open agent computer',
-  'PC.Pages.PreviewAndDebug.convIdNotFoundFilePreview':
-    'Conversation ID not found, unable to open file preview',
-  'PC.Pages.PreviewAndDebug.fillRequiredParams':
-    'Please fill in the required parameters',
+  'PC.Pages.PreviewAndDebug.convIdNotFoundDesktop': 'Conversation ID not found, unable to open agent computer',
+  'PC.Pages.PreviewAndDebug.convIdNotFoundFilePreview': 'Conversation ID not found, unable to open file preview',
+  'PC.Pages.PreviewAndDebug.fillRequiredParams': 'Please fill in the required parameters',
   'PC.Pages.PublishAudit.actionPass': 'Approve',
   'PC.Pages.PublishAudit.actionReject': 'Reject',
   'PC.Pages.PublishAudit.actionView': 'View',
@@ -3302,22 +2590,17 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.PublishAudit.colDescription': 'Description',
   'PC.Pages.PublishAudit.colPublisher': 'Publisher',
   'PC.Pages.PublishAudit.colPublishName': 'Publish Name',
-  'PC.Pages.PublishAudit.colPublishNamePlaceholder':
-    'Enter plugin, workflow, or agent name',
+  'PC.Pages.PublishAudit.colPublishNamePlaceholder': 'Enter plugin, workflow, or agent name',
   'PC.Pages.PublishAudit.colPublishTime': 'Publish Time',
   'PC.Pages.PublishAudit.colStatus': 'Status',
   'PC.Pages.PublishAudit.colType': 'Type',
   'PC.Pages.PublishAudit.colVersionInfo': 'Version Info',
   'PC.Pages.PublishAudit.pageTitle': 'Publish Audit',
   'PC.Pages.PublishAudit.passAuditSuccess': 'Audit approved successfully',
-  'PC.Pages.PublishAudit.RejectAuditModal.reasonLabel':
-    'Please enter the rejection reason',
-  'PC.Pages.PublishAudit.RejectAuditModal.reasonPlaceholder':
-    'Please enter the rejection reason',
-  'PC.Pages.PublishAudit.RejectAuditModal.reasonRequired':
-    'Please enter the rejection reason',
-  'PC.Pages.PublishAudit.RejectAuditModal.rejectSuccess':
-    'Audit rejected successfully',
+  'PC.Pages.PublishAudit.RejectAuditModal.reasonLabel': 'Please enter the rejection reason',
+  'PC.Pages.PublishAudit.RejectAuditModal.reasonPlaceholder': 'Please enter the rejection reason',
+  'PC.Pages.PublishAudit.RejectAuditModal.reasonRequired': 'Please enter the rejection reason',
+  'PC.Pages.PublishAudit.RejectAuditModal.rejectSuccess': 'Audit rejected successfully',
   'PC.Pages.PublishAudit.RejectAuditModal.title': 'Reject Audit',
   'PC.Pages.PublishAudit.statusApplying': 'Pending Review',
   'PC.Pages.PublishAudit.statusPassed': 'Approved',
@@ -3330,21 +2613,16 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.PublishedManage.description': 'Description',
   'PC.Pages.PublishedManage.fetchDataFailed': 'Failed to fetch data',
   'PC.Pages.PublishedManage.offShelf': 'Unpublish',
-  'PC.Pages.PublishedManage.OffshelfModal.offShelfSuccess':
-    'Unpublished successfully',
-  'PC.Pages.PublishedManage.OffshelfModal.reasonLabel':
-    'Please enter the reason for unpublishing',
-  'PC.Pages.PublishedManage.OffshelfModal.reasonPlaceholder':
-    'Please enter the reason for unpublishing',
-  'PC.Pages.PublishedManage.OffshelfModal.reasonRequired':
-    'Please enter the reason for unpublishing',
+  'PC.Pages.PublishedManage.OffshelfModal.offShelfSuccess': 'Unpublished successfully',
+  'PC.Pages.PublishedManage.OffshelfModal.reasonLabel': 'Please enter the reason for unpublishing',
+  'PC.Pages.PublishedManage.OffshelfModal.reasonPlaceholder': 'Please enter the reason for unpublishing',
+  'PC.Pages.PublishedManage.OffshelfModal.reasonRequired': 'Please enter the reason for unpublishing',
   'PC.Pages.PublishedManage.OffshelfModal.title': 'Unpublish',
   'PC.Pages.PublishedManage.pageTitle': 'Published Management',
   'PC.Pages.PublishedManage.publisher': 'Publisher',
   'PC.Pages.PublishedManage.publishName': 'Publish Name',
   'PC.Pages.PublishedManage.publishTime': 'Publish Time',
-  'PC.Pages.PublishedManage.searchNamePlaceholder':
-    'Enter plugin, workflow or agent name',
+  'PC.Pages.PublishedManage.searchNamePlaceholder': 'Enter plugin, workflow or agent name',
   'PC.Pages.PublishedManage.type': 'Type',
   'PC.Pages.PublishedManage.typeAgent': 'Agent',
   'PC.Pages.PublishedManage.typePlugin': 'Plugin',
@@ -3352,27 +2630,19 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.PublishedManage.typeWorkflow': 'Workflow',
   'PC.Pages.PublishedManage.versionInfo': 'Version Info',
   'PC.Pages.PublishedManage.view': 'View',
-  'PC.Pages.SetPassword.confirmPasswordInvalid':
-    'Please input a valid password',
-  'PC.Pages.SetPassword.confirmPasswordPlaceholder':
-    'Please confirm your password',
-  'PC.Pages.SetPassword.confirmPasswordRequired':
-    'Please confirm your password',
-  'PC.Pages.SetPassword.description':
-    'Please use at least 6 characters. Avoid passwords reused on other sites.',
+  'PC.Pages.SetPassword.confirmPasswordInvalid': 'Please input a valid password',
+  'PC.Pages.SetPassword.confirmPasswordPlaceholder': 'Please confirm your password',
+  'PC.Pages.SetPassword.confirmPasswordRequired': 'Please confirm your password',
+  'PC.Pages.SetPassword.description': 'Please use at least 6 characters. Avoid passwords reused on other sites.',
   'PC.Pages.SetPassword.invalidPassword': 'Please input a valid password',
   'PC.Pages.SetPassword.passwordMismatch': 'The two passwords do not match',
-  'PC.Pages.SetPassword.passwordPlaceholder':
-    'Please input password with 6+ characters',
-  'PC.Pages.SetPassword.passwordRequired':
-    'Please input password with 6+ characters',
+  'PC.Pages.SetPassword.passwordPlaceholder': 'Please input password with 6+ characters',
+  'PC.Pages.SetPassword.passwordRequired': 'Please input password with 6+ characters',
   'PC.Pages.SetPassword.title': 'Set Password',
   'PC.Pages.Setting.accountTitle': 'Account',
-  'PC.Pages.Setting.alreadyDefault':
-    'The current language is already selected.',
+  'PC.Pages.Setting.alreadyDefault': 'The current language is already selected.',
   'PC.Pages.Setting.bindPending': 'Pending binding',
-  'PC.Pages.Setting.confirmContent':
-    'Switching languages will update all UI text. Are you sure?',
+  'PC.Pages.Setting.confirmContent': 'Switching languages will update all UI text. Are you sure?',
   'PC.Pages.Setting.confirmTitle': 'Confirm Language Switch',
   'PC.Pages.Setting.defaultTag': 'Default',
   'PC.Pages.Setting.dynamicCode': 'Dynamic Code',
@@ -3397,38 +2667,30 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.Setting.userName': 'User Name',
   'PC.Pages.SkillDetails.actionEdit': 'Edit skill',
   'PC.Pages.SkillDetails.actionPublish': 'Publish',
-  'PC.Pages.SkillDetails.confirmDeleteFile':
-    'Are you sure you want to delete this file?',
+  'PC.Pages.SkillDetails.confirmDeleteFile': 'Are you sure you want to delete this file?',
   'PC.Pages.SkillDetails.deleteSuccess': 'Deleted successfully',
   'PC.Pages.SkillDetails.exportFailed': 'Export failed',
   'PC.Pages.SkillDetails.exporting': 'Exporting',
   'PC.Pages.SkillDetails.exportSuccess': 'Export successful!',
-  'PC.Pages.SkillDetails.fileNotFound':
-    'File does not exist and cannot be deleted',
+  'PC.Pages.SkillDetails.fileNotFound': 'File does not exist and cannot be deleted',
   'PC.Pages.SkillDetails.importSuccess': 'Imported successfully',
-  'PC.Pages.SkillDetails.invalidSkillIdForExport':
-    'Skill ID is missing or invalid, cannot export',
+  'PC.Pages.SkillDetails.invalidSkillIdForExport': 'Skill ID is missing or invalid, cannot export',
   'PC.Pages.SkillDetails.leaveWithoutSaving': 'Leave Without Saving',
   'PC.Pages.SkillDetails.saveAndLeave': 'Save and Leave',
-  'PC.Pages.SkillDetails.saveBeforeAction':
-    'You have unsaved file changes. Please save before {0}.',
+  'PC.Pages.SkillDetails.saveBeforeAction': 'You have unsaved file changes. Please save before {0}.',
   'PC.Pages.SkillDetails.saveSuccess': 'Saved successfully',
   'PC.Pages.SkillDetails.skillIdRequired': 'Skill ID is required',
-  'PC.Pages.SkillDetails.skillInfoMissing':
-    'Skill information is missing, cannot create file',
+  'PC.Pages.SkillDetails.skillInfoMissing': 'Skill information is missing, cannot create file',
   'PC.Pages.SkillDetails.spaceIdRequired': 'Space ID is required',
-  'PC.Pages.SkillDetails.unsavedLeaveMessage':
-    'You have unsaved file changes. Save before leaving?',
+  'PC.Pages.SkillDetails.unsavedLeaveMessage': 'You have unsaved file changes. Save before leaving?',
   'PC.Pages.SkillDetails.unsavedTitle': 'Unsaved file changes',
-  'PC.Pages.SkillDetails.uploadSizeLimitExceeded':
-    'The total upload file size cannot exceed 20MB',
+  'PC.Pages.SkillDetails.uploadSizeLimitExceeded': 'The total upload file size cannot exceed 20MB',
   'PC.Pages.SkillDetails.uploadSuccess': 'Uploaded successfully',
   'PC.Pages.SkillDetailsHeader.publish': 'Publish',
   'PC.Pages.SkillDetailsHeader.published': 'Published',
   'PC.Pages.SkillDetailsHeader.updatesNotPublished': 'Updates not published',
   'PC.Pages.SkillDetailsMoreActionsMenu.exportSkill': 'Export Skill',
-  'PC.Pages.SkillDetailsMoreActionsMenu.fullscreenPreview':
-    'Fullscreen Preview',
+  'PC.Pages.SkillDetailsMoreActionsMenu.fullscreenPreview': 'Fullscreen Preview',
   'PC.Pages.SkillDetailsMoreActionsMenu.importSkill': 'Import Skill',
   'PC.Pages.SpaceDevelop.ApplicationItem.chatType': 'Q&A',
   'PC.Pages.SpaceDevelop.ApplicationItem.lastEdited': 'Last edited',
@@ -3436,29 +2698,22 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpaceDevelop.ApplicationItem.published': 'Published',
   'PC.Pages.SpaceDevelop.ApplicationItem.taskType': 'General',
   'PC.Pages.SpaceDevelop.CopyChatWidgetCode.copyCode': 'Copy code',
-  'PC.Pages.SpaceDevelop.CopyChatWidgetCode.copySuccess':
-    'iframe code copied successfully',
+  'PC.Pages.SpaceDevelop.CopyChatWidgetCode.copySuccess': 'iframe code copied successfully',
   'PC.Pages.SpaceDevelop.CopyChatWidgetCode.iframeCodeCopy': 'iframe code copy',
-  'PC.Pages.SpaceDevelop.copyIndependentSessionFailed':
-    'Failed to copy independent session link',
-  'PC.Pages.SpaceDevelop.copyIndependentSessionSuccess':
-    'Independent session path copied',
+  'PC.Pages.SpaceDevelop.copyIndependentSessionFailed': 'Failed to copy independent session link',
+  'PC.Pages.SpaceDevelop.copyIndependentSessionSuccess': 'Independent session path copied',
   'PC.Pages.SpaceDevelop.CreateApiKeyModal.addApiKey': 'Add API Key',
   'PC.Pages.SpaceDevelop.CreateApiKeyModal.createdTime': 'Created Time',
   'PC.Pages.SpaceDevelop.CreateApiKeyModal.creator': 'Creator',
-  'PC.Pages.SpaceDevelop.CreateApiKeyModal.deleteConfirmText':
-    'Are you sure you want to delete this API Key?',
+  'PC.Pages.SpaceDevelop.CreateApiKeyModal.deleteConfirmText': 'Are you sure you want to delete this API Key?',
   'PC.Pages.SpaceDevelop.CreateApiKeyModal.devMode': 'Dev Mode',
-  'PC.Pages.SpaceDevelop.CreateApiKeyModal.devModeTooltip':
-    'When dev mode is enabled, unpublished changes will be reflected in real time.',
+  'PC.Pages.SpaceDevelop.CreateApiKeyModal.devModeTooltip': 'When dev mode is enabled, unpublished changes will be reflected in real time.',
   'PC.Pages.SpaceDevelop.CreateApiKeyModal.modalTitle': '{0} - API Key',
   'PC.Pages.SpaceDevelop.CreateTempChatModal.addLink': 'Add Link',
-  'PC.Pages.SpaceDevelop.CreateTempChatModal.deleteConfirmText':
-    'Are you sure you want to delete this link?',
+  'PC.Pages.SpaceDevelop.CreateTempChatModal.deleteConfirmText': 'Are you sure you want to delete this link?',
   'PC.Pages.SpaceDevelop.CreateTempChatModal.linkAddress': 'Link Address',
   'PC.Pages.SpaceDevelop.CreateTempChatModal.loginRequired': 'Login Required',
-  'PC.Pages.SpaceDevelop.CreateTempChatModal.modalTitle':
-    '{0} - Temporary Chat Link Management',
+  'PC.Pages.SpaceDevelop.CreateTempChatModal.modalTitle': '{0} - Temporary Chat Link Management',
   'PC.Pages.SpaceDevelop.CreateTempChatModal.qrCode': 'QR Code',
   'PC.Pages.SpaceDevelop.CreateTempChatModal.validity': 'Validity',
   'PC.Pages.SpaceDevelop.Index.agentDevelop': 'Agent Development',
@@ -3466,11 +2721,9 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpaceDevelop.Index.agentOverview': 'Agent Overview',
   'PC.Pages.SpaceDevelop.Index.copySuccess': 'Copy created successfully',
   'PC.Pages.SpaceDevelop.Index.createAgent': 'Create Agent',
-  'PC.Pages.SpaceDevelop.Index.deleteConfirmText':
-    'Are you sure you want to delete this agent?',
+  'PC.Pages.SpaceDevelop.Index.deleteConfirmText': 'Are you sure you want to delete this agent?',
   'PC.Pages.SpaceDevelop.Index.deleteSuccess': 'Deleted successfully',
-  'PC.Pages.SpaceDevelop.Index.exportConfigContent':
-    'If it contains data tables or knowledge bases, the data itself will not be exported',
+  'PC.Pages.SpaceDevelop.Index.exportConfigContent': 'If it contains data tables or knowledge bases, the data itself will not be exported',
   'PC.Pages.SpaceDevelop.Index.exportConfigTitle': 'Export Config - {0}',
   'PC.Pages.SpaceDevelop.Index.noResults': 'No relevant results found',
   'PC.Pages.SpaceDevelop.Index.searchAgent': 'Search agents',
@@ -3479,50 +2732,35 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpaceDevelop.Index.statLikeCount': 'Likes',
   'PC.Pages.SpaceDevelop.Index.statUserCount': 'Chat Users',
   'PC.Pages.SpaceDevelop.Index.transferSuccess': 'Transferred successfully',
-  'PC.Pages.SpaceKnowledge.CreateSet.aiSegmentDesc':
-    'Intelligently identify document structure based on AI model, automatically optimize segmentation effect',
+  'PC.Pages.SpaceKnowledge.CreateSet.aiSegmentDesc': 'Intelligently identify document structure based on AI model, automatically optimize segmentation effect',
   'PC.Pages.SpaceKnowledge.CreateSet.autoSegmentClean': 'Auto Segment & Clean',
-  'PC.Pages.SpaceKnowledge.CreateSet.autoSegmentCleanDesc':
-    'Automatic segmentation and preprocessing rules',
+  'PC.Pages.SpaceKnowledge.CreateSet.autoSegmentCleanDesc': 'Automatic segmentation and preprocessing rules',
   'PC.Pages.SpaceKnowledge.CreateSet.custom': 'Custom',
-  'PC.Pages.SpaceKnowledge.CreateSet.customDesc':
-    'Custom segmentation rules, segment length and preprocessing rules',
-  'PC.Pages.SpaceKnowledge.CreateSet.inputRange0To100':
-    'Please enter a value between 0-100',
-  'PC.Pages.SpaceKnowledge.CreateSet.inputRange100To5000':
-    'Please enter a value between 100-5000',
-  'PC.Pages.SpaceKnowledge.CreateSet.inputSegmentDelimiter':
-    'Enter segment delimiter',
-  'PC.Pages.SpaceKnowledge.CreateSet.inputValidNumber':
-    'Please enter a valid number!',
+  'PC.Pages.SpaceKnowledge.CreateSet.customDesc': 'Custom segmentation rules, segment length and preprocessing rules',
+  'PC.Pages.SpaceKnowledge.CreateSet.inputRange0To100': 'Please enter a value between 0-100',
+  'PC.Pages.SpaceKnowledge.CreateSet.inputRange100To5000': 'Please enter a value between 100-5000',
+  'PC.Pages.SpaceKnowledge.CreateSet.inputSegmentDelimiter': 'Enter segment delimiter',
+  'PC.Pages.SpaceKnowledge.CreateSet.inputValidNumber': 'Please enter a valid number!',
   'PC.Pages.SpaceKnowledge.CreateSet.isAiSegment': 'Intelligent Segmentation',
   'PC.Pages.SpaceKnowledge.CreateSet.segmentDelimiter': 'Segment Delimiter',
-  'PC.Pages.SpaceKnowledge.CreateSet.segmentDelimiterPlaceholder':
-    'Enter segment delimiter, e.g. \\n for line break',
+  'PC.Pages.SpaceKnowledge.CreateSet.segmentDelimiterPlaceholder': 'Enter segment delimiter, e.g. \\n for line break',
   'PC.Pages.SpaceKnowledge.CreateSet.segmentMaxLength': 'Max Segment Length',
-  'PC.Pages.SpaceKnowledge.CreateSet.segmentMaxLengthRange':
-    'Max segment length must be between 100 and 5000!',
-  'PC.Pages.SpaceKnowledge.CreateSet.segmentOverlapPercent':
-    'Segment Overlap %',
-  'PC.Pages.SpaceKnowledge.CreateSet.segmentOverlapRange':
-    'Segment overlap must be between 0 and 100!',
+  'PC.Pages.SpaceKnowledge.CreateSet.segmentMaxLengthRange': 'Max segment length must be between 100 and 5000!',
+  'PC.Pages.SpaceKnowledge.CreateSet.segmentOverlapPercent': 'Segment Overlap %',
+  'PC.Pages.SpaceKnowledge.CreateSet.segmentOverlapRange': 'Segment overlap must be between 0 and 100!',
   'PC.Pages.SpaceKnowledge.DocItem.analyzing': 'Analyzing',
   'PC.Pages.SpaceKnowledge.DocItem.buildFailedRetry': 'Build failed, retry',
   'PC.Pages.SpaceKnowledge.DocItem.building': 'Building',
   'PC.Pages.SpaceKnowledge.DocItem.buildSuccess': 'Build success',
   'PC.Pages.SpaceKnowledge.DocItem.segmentGenerating': 'Segment generating',
-  'PC.Pages.SpaceKnowledge.DocRename.docNameRequired':
-    'Document name cannot be empty',
-  'PC.Pages.SpaceKnowledge.DocRename.inputDocName':
-    'Please enter document name',
+  'PC.Pages.SpaceKnowledge.DocRename.docNameRequired': 'Document name cannot be empty',
+  'PC.Pages.SpaceKnowledge.DocRename.inputDocName': 'Please enter document name',
   'PC.Pages.SpaceKnowledge.DocRename.rename': 'Rename',
   'PC.Pages.SpaceKnowledge.DocRename.updateSuccess': 'Updated successfully',
   'PC.Pages.SpaceKnowledge.DocWrap.documentList': 'Document List',
   'PC.Pages.SpaceKnowledge.DocWrap.search': 'Search',
-  'PC.Pages.SpaceKnowledge.Index.confirmDeleteDoc':
-    'Are you sure you want to delete this document?',
-  'PC.Pages.SpaceKnowledge.Index.deleteDocSuccess':
-    'Document deleted successfully',
+  'PC.Pages.SpaceKnowledge.Index.confirmDeleteDoc': 'Are you sure you want to delete this document?',
+  'PC.Pages.SpaceKnowledge.Index.deleteDocSuccess': 'Document deleted successfully',
   'PC.Pages.SpaceKnowledge.Index.deleteQaSuccess': 'QA deleted successfully',
   'PC.Pages.SpaceKnowledge.Index.qaAddSuccess': 'QA added successfully',
   'PC.Pages.SpaceKnowledge.Index.qaUpdateSuccess': 'QA updated successfully',
@@ -3533,86 +2771,58 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpaceKnowledge.KnowledgeHeader.docCount': '{0} documents',
   'PC.Pages.SpaceKnowledge.KnowledgeHeader.qa': 'QA',
   'PC.Pages.SpaceKnowledge.LocalCustomDocModal.addContent': 'Add Content',
-  'PC.Pages.SpaceKnowledge.LocalCustomDocModal.docAddSuccess':
-    'Document added successfully',
+  'PC.Pages.SpaceKnowledge.LocalCustomDocModal.docAddSuccess': 'Document added successfully',
   'PC.Pages.SpaceKnowledge.LocalCustomDocModal.nextStep': 'Next',
   'PC.Pages.SpaceKnowledge.LocalCustomDocModal.prevStep': 'Previous',
-  'PC.Pages.SpaceKnowledge.QaBatchModal.batchImportSuccess':
-    'Batch import successful',
-  'PC.Pages.SpaceKnowledge.QaBatchModal.clickOrDragToUpload':
-    'Click or drag files to this area to upload',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.batchImportSuccess': 'Batch import successful',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.clickOrDragToUpload': 'Click or drag files to this area to upload',
   'PC.Pages.SpaceKnowledge.QaBatchModal.confirmUpload': 'Confirm Upload',
-  'PC.Pages.SpaceKnowledge.QaBatchModal.downloadExcelTemplate':
-    'Download Excel Import Template',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.downloadExcelTemplate': 'Download Excel Import Template',
   'PC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplate': 'Download Template',
-  'PC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateFailed':
-    'Failed to download QA batch Excel template',
-  'PC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateHint':
-    'Please download the import template first, fill in according to the format and then upload',
-  'PC.Pages.SpaceKnowledge.QaBatchModal.excelOnly':
-    'Only Excel files (.xlsx/.xls) are supported',
-  'PC.Pages.SpaceKnowledge.QaBatchModal.excelUploadHint':
-    'Only Excel files (.xlsx/.xls), size not exceeding 10MB',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateFailed': 'Failed to download QA batch Excel template',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.downloadTemplateHint': 'Please download the import template first, fill in according to the format and then upload',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.excelOnly': 'Only Excel files (.xlsx/.xls) are supported',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.excelUploadHint': 'Only Excel files (.xlsx/.xls), size not exceeding 10MB',
   'PC.Pages.SpaceKnowledge.QaBatchModal.exportFailed': 'Export failed',
-  'PC.Pages.SpaceKnowledge.QaBatchModal.fileSizeLimit10MB':
-    'File size cannot exceed 10MB',
-  'PC.Pages.SpaceKnowledge.QaBatchModal.pleaseUploadFile':
-    'Please upload a file',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.fileSizeLimit10MB': 'File size cannot exceed 10MB',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.pleaseUploadFile': 'Please upload a file',
   'PC.Pages.SpaceKnowledge.QaBatchModal.qaBatchImport': 'QA Batch Import',
-  'PC.Pages.SpaceKnowledge.QaBatchModal.templateFileName':
-    'QA_Batch_Excel_Template.xlsx',
-  'PC.Pages.SpaceKnowledge.QaBatchModal.uploadFailedCheckFormat':
-    'Upload failed, please check the file format',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.templateFileName': 'QA_Batch_Excel_Template.xlsx',
+  'PC.Pages.SpaceKnowledge.QaBatchModal.uploadFailedCheckFormat': 'Upload failed, please check the file format',
   'PC.Pages.SpaceKnowledge.QaModal.addQa': 'Add QA',
   'PC.Pages.SpaceKnowledge.QaModal.answer': 'Answer',
   'PC.Pages.SpaceKnowledge.QaModal.editQa': 'Edit QA',
   'PC.Pages.SpaceKnowledge.QaModal.inputAnswer': 'Please enter an answer',
-  'PC.Pages.SpaceKnowledge.QaModal.inputAnswerContent':
-    'Please enter answer content',
+  'PC.Pages.SpaceKnowledge.QaModal.inputAnswerContent': 'Please enter answer content',
   'PC.Pages.SpaceKnowledge.QaModal.inputQuestion': 'Please enter a question',
-  'PC.Pages.SpaceKnowledge.QaModal.inputQuestionContent':
-    'Please enter question content',
+  'PC.Pages.SpaceKnowledge.QaModal.inputQuestionContent': 'Please enter question content',
   'PC.Pages.SpaceKnowledge.QaModal.question': 'Question',
   'PC.Pages.SpaceKnowledge.QaTableList.action': 'Action',
   'PC.Pages.SpaceKnowledge.QaTableList.answer': 'Answer',
   'PC.Pages.SpaceKnowledge.QaTableList.building': 'Building',
   'PC.Pages.SpaceKnowledge.QaTableList.completed': 'Completed',
-  'PC.Pages.SpaceKnowledge.QaTableList.confirmDeleteQa':
-    'Are you sure you want to delete this QA?',
+  'PC.Pages.SpaceKnowledge.QaTableList.confirmDeleteQa': 'Are you sure you want to delete this QA?',
   'PC.Pages.SpaceKnowledge.QaTableList.question': 'Question',
   'PC.Pages.SpaceKnowledge.QaTableList.vectorized': 'Vectorized',
-  'PC.Pages.SpaceKnowledge.RawSegmentEditModal.editRawSegment':
-    'Edit Raw Segment',
-  'PC.Pages.SpaceKnowledge.RawSegmentEditModal.inputSegmentContent':
-    'Please enter segment content',
-  'PC.Pages.SpaceKnowledge.RawSegmentEditModal.segmentContent':
-    'Segment Content',
+  'PC.Pages.SpaceKnowledge.RawSegmentEditModal.editRawSegment': 'Edit Raw Segment',
+  'PC.Pages.SpaceKnowledge.RawSegmentEditModal.inputSegmentContent': 'Please enter segment content',
+  'PC.Pages.SpaceKnowledge.RawSegmentEditModal.segmentContent': 'Segment Content',
   'PC.Pages.SpaceKnowledge.RawSegmentInfo.edit': 'Edit',
-  'PC.Pages.SpaceKnowledge.RawSegmentInfo.modifySuccess':
-    'Modified successfully',
+  'PC.Pages.SpaceKnowledge.RawSegmentInfo.modifySuccess': 'Modified successfully',
   'PC.Pages.SpaceKnowledge.RawSegmentInfo.noSegment': 'No segments',
-  'PC.Pages.SpaceKnowledge.RawSegmentInfo.previewRawDoc':
-    'Preview Raw Document',
-  'PC.Pages.SpaceKnowledge.RawSegmentInfo.segmentProcessing':
-    'Segments are being processed',
+  'PC.Pages.SpaceKnowledge.RawSegmentInfo.previewRawDoc': 'Preview Raw Document',
+  'PC.Pages.SpaceKnowledge.RawSegmentInfo.segmentProcessing': 'Segments are being processed',
   'PC.Pages.SpaceKnowledge.TextFill.docContent': 'Document Content',
-  'PC.Pages.SpaceKnowledge.TextFill.docContentPlaceholder':
-    'Enter document content',
+  'PC.Pages.SpaceKnowledge.TextFill.docContentPlaceholder': 'Enter document content',
   'PC.Pages.SpaceKnowledge.TextFill.docName': 'Document Name',
   'PC.Pages.SpaceKnowledge.TextFill.docNamePlaceholder': 'Enter document name',
-  'PC.Pages.SpaceKnowledge.TextFill.inputDocContent':
-    'Please enter document content',
+  'PC.Pages.SpaceKnowledge.TextFill.inputDocContent': 'Please enter document content',
   'PC.Pages.SpaceKnowledge.TextFill.inputDocName': 'Please enter document name',
-  'PC.Pages.SpaceKnowledge.UploadFile.clickOrDragToUpload':
-    'Click to upload or drag documents here',
-  'PC.Pages.SpaceKnowledge.UploadFile.correctFileType':
-    'Please upload a valid file type',
-  'PC.Pages.SpaceKnowledge.UploadFile.fileSizeLimit100MB':
-    'File size cannot exceed 100MB!',
-  'PC.Pages.SpaceKnowledge.UploadFile.supportedFileTypes':
-    'Please upload PDF, TXT, DOC, DOCX, MD, JSON, JPG, PNG, GIF, WEBP, SVG, HEIC, MP4, MKV, MOV, WEBM, MP3, AAC, WAV, FLAC, OGG, OPUS files!',
-  'PC.Pages.SpaceKnowledge.UploadFile.uploadHint':
-    'Supports PDF, TXT, DOC, DOCX, MD, JSON, JPG, PNG, GIF, WEBP, SVG, HEIC, MP4, MKV, MOV, WEBM, MP3, AAC, WAV, FLAC, OGG, OPUS. Up to 300 files, each no larger than 100MB, PDF max 500 pages',
+  'PC.Pages.SpaceKnowledge.UploadFile.clickOrDragToUpload': 'Click to upload or drag documents here',
+  'PC.Pages.SpaceKnowledge.UploadFile.correctFileType': 'Please upload a valid file type',
+  'PC.Pages.SpaceKnowledge.UploadFile.fileSizeLimit100MB': 'File size cannot exceed 100MB!',
+  'PC.Pages.SpaceKnowledge.UploadFile.supportedFileTypes': 'Please upload PDF, TXT, DOC, DOCX, MD, JSON, JPG, PNG, GIF, WEBP, SVG, HEIC, MP4, MKV, MOV, WEBM, MP3, AAC, WAV, FLAC, OGG, OPUS files!',
+  'PC.Pages.SpaceKnowledge.UploadFile.uploadHint': 'Supports PDF, TXT, DOC, DOCX, MD, JSON, JPG, PNG, GIF, WEBP, SVG, HEIC, MP4, MKV, MOV, WEBM, MP3, AAC, WAV, FLAC, OGG, OPUS. Up to 300 files, each no larger than 100MB, PDF max 500 pages',
   'PC.Pages.SpaceLibrary.availableScope': 'Available Scope',
   'PC.Pages.SpaceLibrary.ComponentItem.disabled': 'Disabled',
   'PC.Pages.SpaceLibrary.ComponentItem.enabled': 'Enabled',
@@ -3623,106 +2833,71 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpaceLibrary.CreateModel.apiProtocol': 'API Protocol',
   'PC.Pages.SpaceLibrary.CreateModel.callStrategy': 'Call Strategy',
   'PC.Pages.SpaceLibrary.CreateModel.disable': 'Disable',
-  'PC.Pages.SpaceLibrary.CreateModel.disableTooltip':
-    'Once disabled, it can no longer be selected. Agents currently using it will not be affected',
+  'PC.Pages.SpaceLibrary.CreateModel.disableTooltip': 'Once disabled, it can no longer be selected. Agents currently using it will not be affected',
   'PC.Pages.SpaceLibrary.CreateModel.enable': 'Enable',
   'PC.Pages.SpaceLibrary.CreateModel.enableModel': 'Enable',
-  'PC.Pages.SpaceLibrary.CreateModel.functionCallSupport':
-    'Function Call Support',
+  'PC.Pages.SpaceLibrary.CreateModel.functionCallSupport': 'Function Call Support',
   'PC.Pages.SpaceLibrary.CreateModel.inputApiKey': 'Enter API KEY',
-  'PC.Pages.SpaceLibrary.CreateModel.inputMaxContextLength':
-    'Enter max context length',
-  'PC.Pages.SpaceLibrary.CreateModel.inputMaxOutputTokens':
-    'Enter max output tokens',
-  'PC.Pages.SpaceLibrary.CreateModel.inputModelDescription':
-    'Enter model description',
-  'PC.Pages.SpaceLibrary.CreateModel.inputModelIdentifier':
-    'Enter model identifier',
+  'PC.Pages.SpaceLibrary.CreateModel.inputMaxContextLength': 'Enter max context length',
+  'PC.Pages.SpaceLibrary.CreateModel.inputMaxOutputTokens': 'Enter max output tokens',
+  'PC.Pages.SpaceLibrary.CreateModel.inputModelDescription': 'Enter model description',
+  'PC.Pages.SpaceLibrary.CreateModel.inputModelIdentifier': 'Enter model identifier',
   'PC.Pages.SpaceLibrary.CreateModel.inputModelName': 'Enter model name',
   'PC.Pages.SpaceLibrary.CreateModel.inputUrl': 'Enter URL',
-  'PC.Pages.SpaceLibrary.CreateModel.inputVectorDimension':
-    'Enter vector dimension',
+  'PC.Pages.SpaceLibrary.CreateModel.inputVectorDimension': 'Enter vector dimension',
   'PC.Pages.SpaceLibrary.CreateModel.inputWeight': 'Enter weight value',
   'PC.Pages.SpaceLibrary.CreateModel.maxContextLength': 'Max Context Length',
   'PC.Pages.SpaceLibrary.CreateModel.maxOutputTokens': 'Max Output Tokens',
-  'PC.Pages.SpaceLibrary.CreateModel.modelCreateSuccess':
-    'Model created successfully',
+  'PC.Pages.SpaceLibrary.CreateModel.modelCreateSuccess': 'Model created successfully',
   'PC.Pages.SpaceLibrary.CreateModel.modelDescription': 'Model Description',
   'PC.Pages.SpaceLibrary.CreateModel.modelIdentifier': 'Model Identifier',
   'PC.Pages.SpaceLibrary.CreateModel.modelName': 'Model Name',
   'PC.Pages.SpaceLibrary.CreateModel.modelType': 'Model Type',
-  'PC.Pages.SpaceLibrary.CreateModel.modelUpdateSuccess':
-    'Model updated successfully',
+  'PC.Pages.SpaceLibrary.CreateModel.modelUpdateSuccess': 'Model updated successfully',
   'PC.Pages.SpaceLibrary.CreateModel.no': 'No',
   'PC.Pages.SpaceLibrary.CreateModel.reasoningModel': 'Reasoning Model',
   'PC.Pages.SpaceLibrary.CreateModel.selectApiProtocol': 'Select API protocol',
-  'PC.Pages.SpaceLibrary.CreateModel.selectCallStrategy':
-    'Select call strategy',
-  'PC.Pages.SpaceLibrary.CreateModel.selectFunctionCallSupport':
-    'Select function call support',
-  'PC.Pages.SpaceLibrary.CreateModel.selectModelType':
-    'Please select model type',
+  'PC.Pages.SpaceLibrary.CreateModel.selectCallStrategy': 'Select call strategy',
+  'PC.Pages.SpaceLibrary.CreateModel.selectFunctionCallSupport': 'Select function call support',
+  'PC.Pages.SpaceLibrary.CreateModel.selectModelType': 'Please select model type',
   'PC.Pages.SpaceLibrary.CreateModel.testConnection': 'Test Connectivity',
-  'PC.Pages.SpaceLibrary.CreateModel.testConnectionSuccess':
-    'Model connection test successful',
+  'PC.Pages.SpaceLibrary.CreateModel.testConnectionSuccess': 'Model connection test successful',
   'PC.Pages.SpaceLibrary.CreateModel.updateModel': 'Update Model',
   'PC.Pages.SpaceLibrary.CreateModel.vectorDimension': 'Vector Dimension',
   'PC.Pages.SpaceLibrary.CreateModel.weight': 'Weight',
   'PC.Pages.SpaceLibrary.CreateModel.yes': 'Yes',
   'PC.Pages.SpaceLibrary.Index.addComponent': 'Component',
-  'PC.Pages.SpaceLibrary.Index.confirmDeleteComponent':
-    'Are you sure you want to delete this component?',
+  'PC.Pages.SpaceLibrary.Index.confirmDeleteComponent': 'Are you sure you want to delete this component?',
   'PC.Pages.SpaceLibrary.Index.exportConfigTitle': 'Export Config - {0}',
-  'PC.Pages.SpaceLibrary.Index.exportTableConfigDesc':
-    'Only the data table structure will be exported, the data itself will not be exported',
-  'PC.Pages.SpaceLibrary.Index.exportWorkflowConfigDesc':
-    'If it contains data tables or knowledge bases, the data itself will not be exported',
-  'PC.Pages.SpaceLibrary.Index.knowledgeDeleteSuccess':
-    'Knowledge base deleted successfully',
-  'PC.Pages.SpaceLibrary.Index.modelDeleteSuccess':
-    'Model deleted successfully',
+  'PC.Pages.SpaceLibrary.Index.exportTableConfigDesc': 'Only the data table structure will be exported, the data itself will not be exported',
+  'PC.Pages.SpaceLibrary.Index.exportWorkflowConfigDesc': 'If it contains data tables or knowledge bases, the data itself will not be exported',
+  'PC.Pages.SpaceLibrary.Index.knowledgeDeleteSuccess': 'Knowledge base deleted successfully',
+  'PC.Pages.SpaceLibrary.Index.modelDeleteSuccess': 'Model deleted successfully',
   'PC.Pages.SpaceLibrary.Index.noResults': 'No results found',
   'PC.Pages.SpaceLibrary.Index.pageTitle': 'Component Library',
   'PC.Pages.SpaceLibrary.Index.pluginCopySuccess': 'Plugin copied successfully',
-  'PC.Pages.SpaceLibrary.Index.pluginDeleteSuccess':
-    'Plugin deleted successfully',
+  'PC.Pages.SpaceLibrary.Index.pluginDeleteSuccess': 'Plugin deleted successfully',
   'PC.Pages.SpaceLibrary.Index.searchComponent': 'Search components',
-  'PC.Pages.SpaceLibrary.Index.tableCopySuccess':
-    'Data table copied successfully',
-  'PC.Pages.SpaceLibrary.Index.tableDeleteSuccess':
-    'Data table deleted successfully',
-  'PC.Pages.SpaceLibrary.Index.workflowCopySuccess':
-    'Workflow copied successfully',
-  'PC.Pages.SpaceLibrary.Index.workflowDeleteSuccess':
-    'Workflow deleted successfully',
-  'PC.Pages.SpaceLibrary.IntranetModel.description':
-    'Select "Intranet Model" to expose models on your local network to the platform. You only need to execute one command on your intranet server, and then you can configure your intranet address in the API URL configuration below',
-  'PC.Pages.SpaceLibrary.IntranetModel.offlineStatus':
-    'Current status: Offline',
+  'PC.Pages.SpaceLibrary.Index.tableCopySuccess': 'Data table copied successfully',
+  'PC.Pages.SpaceLibrary.Index.tableDeleteSuccess': 'Data table deleted successfully',
+  'PC.Pages.SpaceLibrary.Index.workflowCopySuccess': 'Workflow copied successfully',
+  'PC.Pages.SpaceLibrary.Index.workflowDeleteSuccess': 'Workflow deleted successfully',
+  'PC.Pages.SpaceLibrary.IntranetModel.description': 'Select "Intranet Model" to expose models on your local network to the platform. You only need to execute one command on your intranet server, and then you can configure your intranet address in the API URL configuration below',
+  'PC.Pages.SpaceLibrary.IntranetModel.offlineStatus': 'Current status: Offline',
   'PC.Pages.SpaceLibrary.IntranetModel.refreshStatus': 'Refresh Status',
-  'PC.Pages.SpaceLibrary.IntranetModel.viewCommand':
-    'View Intranet Server Command',
-  'PC.Pages.SpaceLibrary.IntranetServerCommand.linuxDownload':
-    'Linux 64-bit Client Download',
-  'PC.Pages.SpaceLibrary.IntranetServerCommand.linuxTitle':
-    'Linux (Execute in Terminal)',
-  'PC.Pages.SpaceLibrary.IntranetServerCommand.macDownload':
-    'Mac OS 64-bit Client Download',
-  'PC.Pages.SpaceLibrary.IntranetServerCommand.macTitle':
-    'Mac (Execute in Terminal)',
-  'PC.Pages.SpaceLibrary.IntranetServerCommand.modalTitle':
-    'Intranet Server Command',
-  'PC.Pages.SpaceLibrary.IntranetServerCommand.windowsDownload':
-    'Windows 64-bit Client Download',
-  'PC.Pages.SpaceLibrary.IntranetServerCommand.windowsTitle':
-    'Windows (Execute in CMD window)',
+  'PC.Pages.SpaceLibrary.IntranetModel.viewCommand': 'View Intranet Server Command',
+  'PC.Pages.SpaceLibrary.IntranetServerCommand.linuxDownload': 'Linux 64-bit Client Download',
+  'PC.Pages.SpaceLibrary.IntranetServerCommand.linuxTitle': 'Linux (Execute in Terminal)',
+  'PC.Pages.SpaceLibrary.IntranetServerCommand.macDownload': 'Mac OS 64-bit Client Download',
+  'PC.Pages.SpaceLibrary.IntranetServerCommand.macTitle': 'Mac (Execute in Terminal)',
+  'PC.Pages.SpaceLibrary.IntranetServerCommand.modalTitle': 'Intranet Server Command',
+  'PC.Pages.SpaceLibrary.IntranetServerCommand.windowsDownload': 'Windows 64-bit Client Download',
+  'PC.Pages.SpaceLibrary.IntranetServerCommand.windowsTitle': 'Windows (Execute in CMD window)',
   'PC.Pages.SpaceLibrary.selectAvailableScope': 'Please select available scope',
   'PC.Pages.SpaceLibraryLog.Index.pageTitle': 'Log Query',
-  'PC.Pages.SpaceLibraryLog.LogDetailDrawer.calledComponents':
-    'Called Components',
+  'PC.Pages.SpaceLibraryLog.LogDetailDrawer.calledComponents': 'Called Components',
   'PC.Pages.SpaceLibraryLog.LogDetailDrawer.elapsedTime': 'Elapsed {0} ms',
-  'PC.Pages.SpaceLibraryLog.LogDetailDrawer.executionProcess':
-    'Execution Process',
+  'PC.Pages.SpaceLibraryLog.LogDetailDrawer.executionProcess': 'Execution Process',
   'PC.Pages.SpaceLibraryLog.LogDetailDrawer.input': 'Input',
   'PC.Pages.SpaceLibraryLog.LogDetailDrawer.messageId': 'Message ID:',
   'PC.Pages.SpaceLibraryLog.LogDetailDrawer.nodeDetails': 'Node Details',
@@ -3745,25 +2920,18 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpaceLibraryLog.LogProTable.colType': 'Type',
   'PC.Pages.SpaceLibraryLog.LogProTable.colUserId': 'User ID',
   'PC.Pages.SpaceLibraryLog.LogProTable.colUserName': 'Username',
-  'PC.Pages.SpaceLibraryLog.LogProTable.noRequestIdWarning':
-    'This record is missing requestId and cannot view details',
-  'PC.Pages.SpaceLibraryLog.LogProTable.phConversationId':
-    'Please enter conversation ID',
-  'PC.Pages.SpaceLibraryLog.LogProTable.phInputContent':
-    'Multiple keywords separated by spaces, please enter content',
-  'PC.Pages.SpaceLibraryLog.LogProTable.phOutputContent':
-    'Multiple keywords separated by spaces, please enter content',
+  'PC.Pages.SpaceLibraryLog.LogProTable.noRequestIdWarning': 'This record is missing requestId and cannot view details',
+  'PC.Pages.SpaceLibraryLog.LogProTable.phConversationId': 'Please enter conversation ID',
+  'PC.Pages.SpaceLibraryLog.LogProTable.phInputContent': 'Multiple keywords separated by spaces, please enter content',
+  'PC.Pages.SpaceLibraryLog.LogProTable.phOutputContent': 'Multiple keywords separated by spaces, please enter content',
   'PC.Pages.SpaceLibraryLog.LogProTable.phRequestId': 'Please enter request ID',
   'PC.Pages.SpaceLibraryLog.LogProTable.phSelectType': 'Please select type',
   'PC.Pages.SpaceLibraryLog.LogProTable.phTargetId': 'Please enter target ID',
-  'PC.Pages.SpaceLibraryLog.LogProTable.phTargetName':
-    'Please enter target name',
-  'PC.Pages.SpaceLibraryLog.LogProTable.phUserId':
-    'Please enter user ID (integers only)',
+  'PC.Pages.SpaceLibraryLog.LogProTable.phTargetName': 'Please enter target name',
+  'PC.Pages.SpaceLibraryLog.LogProTable.phUserId': 'Please enter user ID (integers only)',
   'PC.Pages.SpaceLibraryLog.LogProTable.phUserName': 'Please enter username',
   'PC.Pages.SpaceLibraryLog.LogProTable.queryFailed': 'Query failed',
-  'PC.Pages.SpaceLibraryLog.LogProTable.viewConversationDetail':
-    'View conversation details',
+  'PC.Pages.SpaceLibraryLog.LogProTable.viewConversationDetail': 'View conversation details',
   'PC.Pages.SpaceLibraryLog.NodeDetails.labelElapsedTime': 'Elapsed Time',
   'PC.Pages.SpaceLibraryLog.NodeDetails.labelEndTime': 'End Time',
   'PC.Pages.SpaceLibraryLog.NodeDetails.labelName': 'Name',
@@ -3824,29 +2992,24 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpaceLog.paginationTotal': 'Total {0} items',
   'PC.Pages.SpaceLog.phConversationId': 'Enter conversation ID',
   'PC.Pages.SpaceLog.phMessageId': 'Enter message ID',
-  'PC.Pages.SpaceLog.phOutput':
-    'Separate multiple keywords with spaces, enter output message to search',
-  'PC.Pages.SpaceLog.phUserInput':
-    'Separate multiple keywords with spaces, enter user message',
+  'PC.Pages.SpaceLog.phOutput': 'Separate multiple keywords with spaces, enter output message to search',
+  'PC.Pages.SpaceLog.phUserInput': 'Separate multiple keywords with spaces, enter user message',
   'PC.Pages.SpaceLog.phUserUid': 'Enter user UID',
   'PC.Pages.SpaceMcpCreate.createMcpService': 'Create MCP Service',
   'PC.Pages.SpaceMcpEdit.componentSelect': 'Component Selection',
   'PC.Pages.SpaceMcpEdit.debugResult': 'Debug Result',
-  'PC.Pages.SpaceMcpEdit.debugResultPlaceholder':
-    'Debug results will be displayed here',
+  'PC.Pages.SpaceMcpEdit.debugResultPlaceholder': 'Debug results will be displayed here',
   'PC.Pages.SpaceMcpEdit.description': 'Description',
   'PC.Pages.SpaceMcpEdit.descriptionPlaceholder': 'Describe your MCP service',
   'PC.Pages.SpaceMcpEdit.editMcpService': 'Edit MCP Service',
   'PC.Pages.SpaceMcpEdit.inputDescription': 'Please describe your MCP service',
   'PC.Pages.SpaceMcpEdit.inputParams': 'Input Parameters',
   'PC.Pages.SpaceMcpEdit.inputParamValue': 'Please enter parameter value',
-  'PC.Pages.SpaceMcpEdit.inputServerConfig':
-    'Please enter MCP service configuration',
+  'PC.Pages.SpaceMcpEdit.inputServerConfig': 'Please enter MCP service configuration',
   'PC.Pages.SpaceMcpEdit.inputServiceName': 'Please enter MCP service name',
   'PC.Pages.SpaceMcpEdit.installMethod': 'Installation Method',
   'PC.Pages.SpaceMcpEdit.invalidJsonFormat': 'Please enter valid JSON format',
-  'PC.Pages.SpaceMcpEdit.mcpConfigJsonTip':
-    'MCP service uses JSON configuration, ensure correct format before submitting',
+  'PC.Pages.SpaceMcpEdit.mcpConfigJsonTip': 'MCP service uses JSON configuration, ensure correct format before submitting',
   'PC.Pages.SpaceMcpEdit.mcpServiceConfig': 'MCP Service Configuration',
   'PC.Pages.SpaceMcpEdit.operation': 'Action',
   'PC.Pages.SpaceMcpEdit.paramName': 'Parameter Name',
@@ -3854,25 +3017,19 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpaceMcpEdit.run': 'Run',
   'PC.Pages.SpaceMcpEdit.save': 'Save',
   'PC.Pages.SpaceMcpEdit.saveAndDeploy': 'Save & Deploy',
-  'PC.Pages.SpaceMcpEdit.saveAndDeploySuccess':
-    'Saved and deployment submitted',
+  'PC.Pages.SpaceMcpEdit.saveAndDeploySuccess': 'Saved and deployment submitted',
   'PC.Pages.SpaceMcpEdit.saveSuccess': 'MCP service saved successfully',
   'PC.Pages.SpaceMcpEdit.selectComponent': 'Please select a component',
-  'PC.Pages.SpaceMcpEdit.selectInstallMethod':
-    'Please select installation method',
+  'PC.Pages.SpaceMcpEdit.selectInstallMethod': 'Please select installation method',
   'PC.Pages.SpaceMcpEdit.serviceName': 'Service Name',
   'PC.Pages.SpaceMcpEdit.serviceNamePlaceholder': 'MCP service name',
   'PC.Pages.SpaceMcpEdit.tryRun': 'Try Run',
   'PC.Pages.SpaceMcpEdit.updateNotDeployed': 'Updates not deployed',
-  'PC.Pages.SpaceMcpManage.configCopyTip':
-    'Copy the configuration below to use in any MCP-compatible client. If needed, click',
+  'PC.Pages.SpaceMcpManage.configCopyTip': 'Copy the configuration below to use in any MCP-compatible client. If needed, click',
   'PC.Pages.SpaceMcpManage.configService': 'Service Configuration',
-  'PC.Pages.SpaceMcpManage.confirmDeleteService':
-    'Are you sure you want to delete this service?',
-  'PC.Pages.SpaceMcpManage.confirmRebuildConfig':
-    'Are you sure you want to regenerate the configuration?',
-  'PC.Pages.SpaceMcpManage.confirmStopService':
-    'Are you sure you want to stop this service?',
+  'PC.Pages.SpaceMcpManage.confirmDeleteService': 'Are you sure you want to delete this service?',
+  'PC.Pages.SpaceMcpManage.confirmRebuildConfig': 'Are you sure you want to regenerate the configuration?',
+  'PC.Pages.SpaceMcpManage.confirmStopService': 'Are you sure you want to stop this service?',
   'PC.Pages.SpaceMcpManage.createdAt': 'Created at',
   'PC.Pages.SpaceMcpManage.createMcpService': 'Create MCP Service',
   'PC.Pages.SpaceMcpManage.noResults': 'No matching results found',
@@ -3886,66 +3043,40 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpacePageDevelop.AddPathModal.addPath': 'Add Path',
   'PC.Pages.SpacePageDevelop.AddPathModal.editPath': 'Edit Path',
   'PC.Pages.SpacePageDevelop.AddPathModal.pathDescription': 'Path Description',
-  'PC.Pages.SpacePageDevelop.AddPathModal.pathDescriptionPlaceholder':
-    'Path description, e.g. Get detail information',
+  'PC.Pages.SpacePageDevelop.AddPathModal.pathDescriptionPlaceholder': 'Path description, e.g. Get detail information',
   'PC.Pages.SpacePageDevelop.AddPathModal.pathName': 'Path Name',
   'PC.Pages.SpacePageDevelop.AddPathModal.pathUri': 'Path URI',
-  'PC.Pages.SpacePageDevelop.AddPathModal.pathUriFormatError':
-    'Please enter a valid path URI, must start with /',
-  'PC.Pages.SpacePageDevelop.AddPathModal.pathUriPlaceholder':
-    'Path URI, e.g. /detail/view or /detail/view/{id}',
-  'PC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathName':
-    'Please enter path name',
-  'PC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathUri':
-    'Please enter path URI',
-  'PC.Pages.SpacePageDevelop.AuthConfigModal.allowAccessWithoutLogin':
-    'Allow Access Without Login',
+  'PC.Pages.SpacePageDevelop.AddPathModal.pathUriFormatError': 'Please enter a valid path URI, must start with /',
+  'PC.Pages.SpacePageDevelop.AddPathModal.pathUriPlaceholder': 'Path URI, e.g. /detail/view or /detail/view/{id}',
+  'PC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathName': 'Please enter path name',
+  'PC.Pages.SpacePageDevelop.AddPathModal.pleaseEnterPathUri': 'Please enter path URI',
+  'PC.Pages.SpacePageDevelop.AuthConfigModal.allowAccessWithoutLogin': 'Allow Access Without Login',
   'PC.Pages.SpacePageDevelop.AuthConfigModal.authConfig': 'Auth Configuration',
-  'PC.Pages.SpacePageDevelop.AuthConfigModal.pageIdNotExist':
-    'Page ID does not exist',
+  'PC.Pages.SpacePageDevelop.AuthConfigModal.pageIdNotExist': 'Page ID does not exist',
   'PC.Pages.SpacePageDevelop.DomainBindingModal.addDomain': 'Add New Domain',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.addSuccess':
-    'Added successfully',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.addSuccess': 'Added successfully',
   'PC.Pages.SpacePageDevelop.DomainBindingModal.boundDomains': 'Bound Domains',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameCnDesc':
-    'For users in China, ICP filing is required',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameCnValue':
-    'cn-cname.nuwax.com',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameEnDesc':
-    'For overseas users, please comply with local laws and regulations',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameEnValue':
-    'en-cname.nuwax.com',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameResolveHint':
-    'Please ensure the domain has completed CNAME resolution',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameTitle':
-    'Please resolve the domain to one of the following CNAME addresses',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.confirmRemove':
-    'Confirm Removal',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.deleteSuccess':
-    'Deleted successfully',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameCnDesc': 'For users in China, ICP filing is required',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameCnValue': 'cn-cname.nuwax.com',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameEnDesc': 'For overseas users, please comply with local laws and regulations',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameEnValue': 'en-cname.nuwax.com',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameResolveHint': 'Please ensure the domain has completed CNAME resolution',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.cnameTitle': 'Please resolve the domain to one of the following CNAME addresses',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.confirmRemove': 'Confirm Removal',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.deleteSuccess': 'Deleted successfully',
   'PC.Pages.SpacePageDevelop.DomainBindingModal.domainCount': '{0} domains',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.domainInputPlaceholder':
-    'Please enter domain, e.g. example.com',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.domainInputPlaceholder': 'Please enter domain, e.g. example.com',
   'PC.Pages.SpacePageDevelop.DomainBindingModal.editDomain': 'Edit Domain',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.invalidDomainFormat':
-    'Please enter a valid domain format',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.modifySuccess':
-    'Modified successfully',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.pleaseEnterDomain':
-    'Please enter a domain',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainContent':
-    'Are you sure you want to remove domain',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainHint':
-    'After removal, users will not be able to access this project via this domain. Re-binding and resolution required.',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainTitle':
-    'Remove Domain Binding',
-  'PC.Pages.SpacePageDevelop.DomainBindingModal.title':
-    'Domain Binding Management',
-  'PC.Pages.SpacePageDevelop.Index.confirmDeletePage':
-    'Are you sure you want to delete this page?',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.invalidDomainFormat': 'Please enter a valid domain format',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.modifySuccess': 'Modified successfully',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.pleaseEnterDomain': 'Please enter a domain',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainContent': 'Are you sure you want to remove domain',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainHint': 'After removal, users will not be able to access this project via this domain. Re-binding and resolution required.',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.removeDomainTitle': 'Remove Domain Binding',
+  'PC.Pages.SpacePageDevelop.DomainBindingModal.title': 'Domain Binding Management',
+  'PC.Pages.SpacePageDevelop.Index.confirmDeletePage': 'Are you sure you want to delete this page?',
   'PC.Pages.SpacePageDevelop.Index.create': 'Create',
-  'PC.Pages.SpacePageDevelop.Index.domainBindingConditionWarning':
-    'Domain binding is only available when the publish type is "App" and "Allow Access Without Login" is enabled',
+  'PC.Pages.SpacePageDevelop.Index.domainBindingConditionWarning': 'Domain binding is only available when the publish type is "App" and "Allow Access Without Login" is enabled',
   'PC.Pages.SpacePageDevelop.Index.exportFailed': 'Export failed',
   'PC.Pages.SpacePageDevelop.Index.exportFailedWithError': 'Export failed: {0}',
   'PC.Pages.SpacePageDevelop.Index.exportSuccess': 'Exported successfully',
@@ -3953,8 +3084,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpacePageDevelop.Index.noResultsFound': 'No results found',
   'PC.Pages.SpacePageDevelop.Index.pageTitle': 'Page Development',
   'PC.Pages.SpacePageDevelop.Index.pageUrlNotExist': 'Page URL does not exist',
-  'PC.Pages.SpacePageDevelop.Index.projectIdInvalidCannotExport':
-    'Invalid project ID, cannot export',
+  'PC.Pages.SpacePageDevelop.Index.projectIdInvalidCannotExport': 'Invalid project ID, cannot export',
   'PC.Pages.SpacePageDevelop.Index.published': 'Published',
   'PC.Pages.SpacePageDevelop.Index.searchPlaceholder': 'Search page name',
   'PC.Pages.SpacePageDevelop.Index.unpublished': 'Unpublished',
@@ -3963,49 +3093,33 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpacePageDevelop.PageCreateModal.description': 'Description',
   'PC.Pages.SpacePageDevelop.PageCreateModal.icon': 'Icon',
   'PC.Pages.SpacePageDevelop.PageCreateModal.name': 'Name',
-  'PC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterDescription':
-    'Please enter description',
-  'PC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterName':
-    'Please enter name',
-  'PC.Pages.SpacePageDevelop.PageCreateModal.pleaseUploadZip':
-    'Please upload a project zip file',
-  'PC.Pages.SpacePageDevelop.PageCreateModal.uploadDragText':
-    'Click or drag file to this area to upload',
+  'PC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterDescription': 'Please enter description',
+  'PC.Pages.SpacePageDevelop.PageCreateModal.pleaseEnterName': 'Please enter name',
+  'PC.Pages.SpacePageDevelop.PageCreateModal.pleaseUploadZip': 'Please upload a project zip file',
+  'PC.Pages.SpacePageDevelop.PageCreateModal.uploadDragText': 'Click or drag file to this area to upload',
   'PC.Pages.SpacePageDevelop.PageCreateModal.zipOnly': 'ZIP files only',
   'PC.Pages.SpacePageDevelop.PathParamsConfigContent.action': 'Action',
   'PC.Pages.SpacePageDevelop.PathParamsConfigContent.addParam': 'Add Param',
-  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValue':
-    'Default Value',
-  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValuePlaceholder':
-    'Please enter default value',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValue': 'Default Value',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.defaultValuePlaceholder': 'Please enter default value',
   'PC.Pages.SpacePageDevelop.PathParamsConfigContent.enable': 'Enable',
   'PC.Pages.SpacePageDevelop.PathParamsConfigContent.inputType': 'Input Type',
   'PC.Pages.SpacePageDevelop.PathParamsConfigContent.isRequired': 'Required',
-  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.noPathParams':
-    'No path params',
-  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescription':
-    'Param Description',
-  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescriptionPlaceholder':
-    'Please enter param description',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.noPathParams': 'No path params',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescription': 'Param Description',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.paramDescriptionPlaceholder': 'Please enter param description',
   'PC.Pages.SpacePageDevelop.PathParamsConfigContent.paramName': 'Param Name',
-  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.paramNamePlaceholder':
-    'Please enter param name',
+  'PC.Pages.SpacePageDevelop.PathParamsConfigContent.paramNamePlaceholder': 'Please enter param name',
   'PC.Pages.SpacePageDevelop.PathParamsConfigModal.addPath': 'Add Path',
   'PC.Pages.SpacePageDevelop.PathParamsConfigModal.title': 'Path Params Config',
   'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.addConfig': 'Add Config',
-  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.backendAddress':
-    'Backend Address',
-  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.backendAddressPlaceholder':
-    'Please enter backend address',
-  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.duplicatePathError':
-    'Paths cannot be the same',
+  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.backendAddress': 'Backend Address',
+  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.backendAddressPlaceholder': 'Please enter backend address',
+  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.duplicatePathError': 'Paths cannot be the same',
   'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.path': 'Path',
-  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.pathPlaceholder':
-    'Please enter path',
-  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.rootPathError':
-    'Root path / is built-in, no configuration needed',
-  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.savedSuccessfully':
-    'Saved successfully',
+  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.pathPlaceholder': 'Please enter path',
+  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.rootPathError': 'Root path / is built-in, no configuration needed',
+  'PC.Pages.SpacePageDevelop.ReverseProxyContentConfig.savedSuccessfully': 'Saved successfully',
   'PC.Pages.SpacePageDevelop.ReverseProxyModal.title': 'Reverse Proxy',
   'PC.Pages.SpacePluginCloudTool.autoAnalysis': 'Auto Analysis',
   'PC.Pages.SpacePluginCloudTool.autoAnalyze': 'Auto Analyze',
@@ -4019,18 +3133,14 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpacePluginCloudTool.operation': 'Operation',
   'PC.Pages.SpacePluginCloudTool.outputConfig': 'Output Config',
   'PC.Pages.SpacePluginCloudTool.paramDesc': 'Parameter Description',
-  'PC.Pages.SpacePluginCloudTool.paramDescPlaceholder':
-    'Enter parameter description, ensure detail for better AI understanding',
+  'PC.Pages.SpacePluginCloudTool.paramDescPlaceholder': 'Enter parameter description, ensure detail for better AI understanding',
   'PC.Pages.SpacePluginCloudTool.paramName': 'Parameter Name',
-  'PC.Pages.SpacePluginCloudTool.paramNamePlaceholder':
-    'Enter parameter name, ensure clarity',
+  'PC.Pages.SpacePluginCloudTool.paramNamePlaceholder': 'Enter parameter name, ensure clarity',
   'PC.Pages.SpacePluginCloudTool.paramType': 'Parameter Type',
   'PC.Pages.SpacePluginCloudTool.publish': 'Publish',
   'PC.Pages.SpacePluginCloudTool.published': 'Published',
-  'PC.Pages.SpacePluginCloudTool.requiredParamTip':
-    'This is a required parameter, the switch is available after filling in the default value',
-  'PC.Pages.SpacePluginCloudTool.requiredParamTooltip':
-    'This is a required parameter. Available after setting a default value',
+  'PC.Pages.SpacePluginCloudTool.requiredParamTip': 'This is a required parameter, the switch is available after filling in the default value',
+  'PC.Pages.SpacePluginCloudTool.requiredParamTooltip': 'This is a required parameter. Available after setting a default value',
   'PC.Pages.SpacePluginCloudTool.save': 'Save',
   'PC.Pages.SpacePluginCloudTool.savedAt': 'Config saved at',
   'PC.Pages.SpacePluginCloudTool.selectDataType': 'Select data type',
@@ -4044,10 +3154,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpacePluginTool.inputConfig': 'Input Configuration',
   'PC.Pages.SpacePluginTool.inputDefaultValue': 'Enter default value',
   'PC.Pages.SpacePluginTool.inputMode': 'Input Mode',
-  'PC.Pages.SpacePluginTool.inputParamDescription':
-    'Enter parameter description for better AI understanding',
-  'PC.Pages.SpacePluginTool.inputParamName':
-    'Enter parameter name, ensure clear meaning',
+  'PC.Pages.SpacePluginTool.inputParamDescription': 'Enter parameter description for better AI understanding',
+  'PC.Pages.SpacePluginTool.inputParamName': 'Enter parameter name, ensure clear meaning',
   'PC.Pages.SpacePluginTool.inputRequestPath': 'Enter request path',
   'PC.Pages.SpacePluginTool.inputTimeoutConfig': 'Enter timeout configuration',
   'PC.Pages.SpacePluginTool.outputConfig': 'Output Configuration',
@@ -4060,76 +3168,53 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpacePluginTool.PluginHeader.published': 'Published',
   'PC.Pages.SpacePluginTool.PluginHeader.tryRun': 'Try Run',
   'PC.Pages.SpacePluginTool.PluginHeader.unpublished': 'Unpublished',
-  'PC.Pages.SpacePluginTool.PluginHeader.updateUnpublished':
-    'Updates unpublished',
+  'PC.Pages.SpacePluginTool.PluginHeader.updateUnpublished': 'Updates unpublished',
   'PC.Pages.SpacePluginTool.requestConfig': 'Request Configuration',
   'PC.Pages.SpacePluginTool.requestContentFormat': 'Request Content Format',
   'PC.Pages.SpacePluginTool.requestMethodAndPath': 'Request Method & Path',
   'PC.Pages.SpacePluginTool.requestTimeoutConfig': 'Request Timeout',
-  'PC.Pages.SpacePluginTool.requestTimeoutPlaceholder':
-    'Request timeout in seconds',
+  'PC.Pages.SpacePluginTool.requestTimeoutPlaceholder': 'Request timeout in seconds',
   'PC.Pages.SpacePluginTool.required': 'Required',
-  'PC.Pages.SpacePluginTool.requiredParamTooltip':
-    'This parameter is required. Fill in a default value to enable this toggle',
+  'PC.Pages.SpacePluginTool.requiredParamTooltip': 'This parameter is required. Fill in a default value to enable this toggle',
   'PC.Pages.SpacePluginTool.selectDataType': 'Select data type',
-  'PC.Pages.SpacePluginTool.selectRequestContentFormat':
-    'Select request content format',
+  'PC.Pages.SpacePluginTool.selectRequestContentFormat': 'Select request content format',
   'PC.Pages.SpacePluginTool.selectRequestMethod': 'Select request method',
   'PC.Pages.SpaceSkillManage.ComponentItem.lastEdited': 'Last edited',
   'PC.Pages.SpaceSkillManage.CreateSkill.createSkill': 'Create Skill',
   'PC.Pages.SpaceSkillManage.CreateSkill.descriptionLabel': 'Description',
-  'PC.Pages.SpaceSkillManage.CreateSkill.descriptionPlaceholder':
-    'Enter a description to help the model understand when to invoke this skill',
+  'PC.Pages.SpaceSkillManage.CreateSkill.descriptionPlaceholder': 'Enter a description to help the model understand when to invoke this skill',
   'PC.Pages.SpaceSkillManage.CreateSkill.iconLabel': 'Icon',
   'PC.Pages.SpaceSkillManage.CreateSkill.inputSkillName': 'Enter skill name!',
-  'PC.Pages.SpaceSkillManage.CreateSkill.inputSkillNamePlaceholder':
-    'Enter skill name',
+  'PC.Pages.SpaceSkillManage.CreateSkill.inputSkillNamePlaceholder': 'Enter skill name',
   'PC.Pages.SpaceSkillManage.CreateSkill.nameLabel': 'Name',
-  'PC.Pages.SpaceSkillManage.CreateSkill.nameMaxLength':
-    'Name cannot exceed 30 characters!',
-  'PC.Pages.SpaceSkillManage.CreateSkill.pleaseInputSkillName':
-    'Please enter skill name',
-  'PC.Pages.SpaceSkillManage.CreateSkill.skillCreatedSuccessfully':
-    'Skill created successfully',
-  'PC.Pages.SpaceSkillManage.CreateSkill.skillUpdatedSuccessfully':
-    'Skill updated successfully',
+  'PC.Pages.SpaceSkillManage.CreateSkill.nameMaxLength': 'Name cannot exceed 30 characters!',
+  'PC.Pages.SpaceSkillManage.CreateSkill.pleaseInputSkillName': 'Please enter skill name',
+  'PC.Pages.SpaceSkillManage.CreateSkill.skillCreatedSuccessfully': 'Skill created successfully',
+  'PC.Pages.SpaceSkillManage.CreateSkill.skillUpdatedSuccessfully': 'Skill updated successfully',
   'PC.Pages.SpaceSkillManage.CreateSkill.updateSkill': 'Update Skill',
-  'PC.Pages.SpaceSkillManage.deleteConfirmText':
-    'Are you sure you want to delete this skill?',
+  'PC.Pages.SpaceSkillManage.deleteConfirmText': 'Are you sure you want to delete this skill?',
   'PC.Pages.SpaceSkillManage.exportFailed': 'Export failed',
   'PC.Pages.SpaceSkillManage.exportFailedRetry': 'Export failed, please retry',
   'PC.Pages.SpaceSkillManage.exporting': 'Exporting',
   'PC.Pages.SpaceSkillManage.exportSucceeded': 'Export successful!',
   'PC.Pages.SpaceSkillManage.HeaderRightSlot.skill': 'Skill',
   'PC.Pages.SpaceSkillManage.importFailed': 'Import failed',
-  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.confirmImport':
-    'Confirm Import',
-  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.dragOrClickToSelect':
-    'Click or drag file to this area to select',
-  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileGetFailed':
-    'Failed to get file, please select again',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.confirmImport': 'Confirm Import',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.dragOrClickToSelect': 'Click or drag file to this area to select',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileGetFailed': 'Failed to get file, please select again',
   'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSize': 'File size: ',
-  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSizeExceeded':
-    'File size cannot exceed 20MB',
-  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSizeHint':
-    'File size cannot exceed 20MB',
-  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileTypeUnsupported':
-    'Only .zip, .skill compressed file formats or SKILL.md file are supported',
-  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.importSkill':
-    'Import Skill',
-  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.pleaseSelectFile':
-    'Please select a file to import',
-  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.selectedFile':
-    'Selected file: ',
-  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.uploadHint':
-    'Only .zip, .skill compressed file formats or SKILL.md file are supported',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSizeExceeded': 'File size cannot exceed 20MB',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileSizeHint': 'File size cannot exceed 20MB',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.fileTypeUnsupported': 'Only .zip, .skill compressed file formats or SKILL.md file are supported',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.importSkill': 'Import Skill',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.pleaseSelectFile': 'Please select a file to import',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.selectedFile': 'Selected file: ',
+  'PC.Pages.SpaceSkillManage.ImportSkillProjectModal.uploadHint': 'Only .zip, .skill compressed file formats or SKILL.md file are supported',
   'PC.Pages.SpaceSkillManage.importSucceeded': 'Import successful',
   'PC.Pages.SpaceSkillManage.MainContent.noResultsFound': 'No results found',
   'PC.Pages.SpaceSkillManage.pageTitle': 'Skill Management',
-  'PC.Pages.SpaceSkillManage.skillCopiedSuccessfully':
-    'Skill copied successfully',
-  'PC.Pages.SpaceSkillManage.skillIdInvalidForExport':
-    'Skill ID is invalid or missing, cannot export',
+  'PC.Pages.SpaceSkillManage.skillCopiedSuccessfully': 'Skill copied successfully',
+  'PC.Pages.SpaceSkillManage.skillIdInvalidForExport': 'Skill ID is invalid or missing, cannot export',
   'PC.Pages.SpaceSkillManage.skillInfoNotFound': 'Skill information not found',
   'PC.Pages.SpaceSkillManage.SkillStatus.developing': 'In Development',
   'PC.Pages.SpaceSkillManage.SkillStatus.published': 'Published',
@@ -4138,54 +3223,42 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpaceSkillManage.type.copyToSpace': 'Copy to Space',
   'PC.Pages.SpaceSkillManage.type.exportSkill': 'Export Skill',
   'PC.Pages.SpaceSquare.agent': 'Agent',
-  'PC.Pages.SpaceSquare.confirmOffShelf':
-    'Are you sure you want to unpublish this {0}?',
+  'PC.Pages.SpaceSquare.confirmOffShelf': 'Are you sure you want to unpublish this {0}?',
   'PC.Pages.SpaceSquare.offShelf': 'Unpublish',
   'PC.Pages.SpaceSquare.plugin': 'Plugin',
   'PC.Pages.SpaceSquare.skill': 'Skill',
   'PC.Pages.SpaceSquare.template': 'Template',
   'PC.Pages.SpaceSquare.title': 'Space Square',
   'PC.Pages.SpaceSquare.workflow': 'Workflow',
-  'PC.Pages.SpaceTable.AddAndModify.defaultPlaceholder':
-    'Please enter default value for {0}',
+  'PC.Pages.SpaceTable.AddAndModify.defaultPlaceholder': 'Please enter default value for {0}',
   'PC.Pages.SpaceTable.AddAndModify.inputPlaceholder': 'Please enter {0}',
-  'PC.Pages.SpaceTable.AddAndModify.integerRange':
-    'Range: [-2147483648, 2147483647]',
-  'PC.Pages.SpaceTable.AddAndModify.numberPrecision':
-    'Precision 20 digits, max 14 integer digits, max 6 decimal digits',
-  'PC.Pages.SpaceTable.ClearDataTooltip.clearDataToModify':
-    'Can be modified after clearing table data',
+  'PC.Pages.SpaceTable.AddAndModify.integerRange': 'Range: [-2147483648, 2147483647]',
+  'PC.Pages.SpaceTable.AddAndModify.numberPrecision': 'Precision 20 digits, max 14 integer digits, max 6 decimal digits',
+  'PC.Pages.SpaceTable.ClearDataTooltip.clearDataToModify': 'Can be modified after clearing table data',
   'PC.Pages.SpaceTable.DataTable.itemsPerPage': ' / page',
   'PC.Pages.SpaceTable.DataTable.tabData': 'Data',
   'PC.Pages.SpaceTable.DataTable.tabStructure': 'Structure',
   'PC.Pages.SpaceTable.DataTable.totalCount': 'Total {0} records',
   'PC.Pages.SpaceTable.DeleteSure.confirmAgain': 'Please confirm again',
-  'PC.Pages.SpaceTable.DeleteSure.inputPlaceholder':
-    'Please enter "{0}" to confirm deletion',
-  'PC.Pages.SpaceTable.DeleteSure.matchValidation':
-    'Input must exactly match "{0}"',
-  'PC.Pages.SpaceTable.DeleteSure.warning':
-    'Please delete carefully. All data will be lost after confirmation!',
+  'PC.Pages.SpaceTable.DeleteSure.inputPlaceholder': 'Please enter "{0}" to confirm deletion',
+  'PC.Pages.SpaceTable.DeleteSure.matchValidation': 'Input must exactly match "{0}"',
+  'PC.Pages.SpaceTable.DeleteSure.warning': 'Please delete carefully. All data will be lost after confirmation!',
   'PC.Pages.SpaceTable.Index.addData': 'Add Data',
   'PC.Pages.SpaceTable.Index.clearConfirm': 'Clear Confirmation',
   'PC.Pages.SpaceTable.Index.confirmSave': 'Save',
   'PC.Pages.SpaceTable.Index.discardChanges': 'Discard Changes',
-  'PC.Pages.SpaceTable.Index.fieldNameValidate':
-    'Field name can only contain letters, numbers, underscores, and must start with a letter',
+  'PC.Pages.SpaceTable.Index.fieldNameValidate': 'Field name can only contain letters, numbers, underscores, and must start with a letter',
   'PC.Pages.SpaceTable.Index.hint': 'Hint',
   'PC.Pages.SpaceTable.Index.modifyData': 'Edit Data',
-  'PC.Pages.SpaceTable.Index.structureModified':
-    'Current table structure has been modified. Save changes?',
+  'PC.Pages.SpaceTable.Index.structureModified': 'Current table structure has been modified. Save changes?',
   'PC.Pages.SpaceTable.StructureTable.dataLength': 'Data Length',
   'PC.Pages.SpaceTable.StructureTable.defaultValue': 'Default Value',
   'PC.Pages.SpaceTable.StructureTable.enabled': 'Enabled',
   'PC.Pages.SpaceTable.StructureTable.fieldDescription': 'Field Description',
   'PC.Pages.SpaceTable.StructureTable.fieldName': 'Field Name',
   'PC.Pages.SpaceTable.StructureTable.fieldType': 'Field Type',
-  'PC.Pages.SpaceTable.StructureTable.inputFieldDescription':
-    'Please enter field description',
-  'PC.Pages.SpaceTable.StructureTable.inputFieldName':
-    'Please enter field name',
+  'PC.Pages.SpaceTable.StructureTable.inputFieldDescription': 'Please enter field description',
+  'PC.Pages.SpaceTable.StructureTable.inputFieldName': 'Please enter field name',
   'PC.Pages.SpaceTable.StructureTable.mediumText': 'Long Text (0-16M)',
   'PC.Pages.SpaceTable.StructureTable.required': 'Required',
   'PC.Pages.SpaceTable.StructureTable.serial': 'No.',
@@ -4195,51 +3268,37 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SpaceTable.TableHeader.recordCount': '{0} records',
   'PC.Pages.SpaceTable.TableOperationBar.addField': 'Add Field',
   'PC.Pages.SpaceTable.TableOperationBar.clearAllData': 'Clear All Data',
-  'PC.Pages.SpaceTable.TableOperationBar.excelFileOnly':
-    'Please upload an Excel file (.xlsx or .xls format)',
-  'PC.Pages.SpaceTable.TableOperationBar.fileSizeLimit':
-    'File size cannot exceed 100MB',
+  'PC.Pages.SpaceTable.TableOperationBar.excelFileOnly': 'Please upload an Excel file (.xlsx or .xls format)',
+  'PC.Pages.SpaceTable.TableOperationBar.fileSizeLimit': 'File size cannot exceed 100MB',
   'PC.Pages.SpaceTaskCenter.createTask': 'Create Task',
   'PC.Pages.SpaceTaskCenter.title': 'Task Center',
-  'PC.Pages.SpaceTaskCreateTimedTask.createSuccess':
-    'Timed task created successfully',
+  'PC.Pages.SpaceTaskCreateTimedTask.createSuccess': 'Timed task created successfully',
   'PC.Pages.SpaceTaskCreateTimedTask.createTitle': 'Create Timed Task',
-  'PC.Pages.SpaceTaskCreateTimedTask.enterTaskContent':
-    'Please enter task content',
+  'PC.Pages.SpaceTaskCreateTimedTask.enterTaskContent': 'Please enter task content',
   'PC.Pages.SpaceTaskCreateTimedTask.enterTaskName': 'Please enter task name',
-  'PC.Pages.SpaceTaskCreateTimedTask.fillParameterConfig':
-    'Please fill in parameter configuration',
+  'PC.Pages.SpaceTaskCreateTimedTask.fillParameterConfig': 'Please fill in parameter configuration',
   'PC.Pages.SpaceTaskCreateTimedTask.keepConversation': 'Keep Conversation',
-  'PC.Pages.SpaceTaskCreateTimedTask.keepConversationTooltip':
-    'When selecting "No", a brand-new conversation is created for each task run',
+  'PC.Pages.SpaceTaskCreateTimedTask.keepConversationTooltip': 'When selecting "No", a brand-new conversation is created for each task run',
   'PC.Pages.SpaceTaskCreateTimedTask.no': 'No',
-  'PC.Pages.SpaceTaskCreateTimedTask.parameterConfig':
-    'Parameter Configuration',
-  'PC.Pages.SpaceTaskCreateTimedTask.selectKeepConversation':
-    'Please select whether to keep conversation',
-  'PC.Pages.SpaceTaskCreateTimedTask.specificTimeMustBeFuture':
-    'The specific time must be later than the current time',
+  'PC.Pages.SpaceTaskCreateTimedTask.parameterConfig': 'Parameter Configuration',
+  'PC.Pages.SpaceTaskCreateTimedTask.selectKeepConversation': 'Please select whether to keep conversation',
+  'PC.Pages.SpaceTaskCreateTimedTask.specificTimeMustBeFuture': 'The specific time must be later than the current time',
   'PC.Pages.SpaceTaskCreateTimedTask.taskContent': 'Task Content',
-  'PC.Pages.SpaceTaskCreateTimedTask.taskContentPlaceholder':
-    'Please enter the task information to execute. More details improve execution success rate.',
+  'PC.Pages.SpaceTaskCreateTimedTask.taskContentPlaceholder': 'Please enter the task information to execute. More details improve execution success rate.',
   'PC.Pages.SpaceTaskCreateTimedTask.taskName': 'Task Name',
   'PC.Pages.SpaceTaskCreateTimedTask.taskTarget': 'Task Target',
   'PC.Pages.SpaceTaskCreateTimedTask.timedPeriod': 'Timed Period',
-  'PC.Pages.SpaceTaskCreateTimedTask.updateSuccess':
-    'Timed task updated successfully',
+  'PC.Pages.SpaceTaskCreateTimedTask.updateSuccess': 'Timed task updated successfully',
   'PC.Pages.SpaceTaskCreateTimedTask.updateTitle': 'Update Timed Task',
   'PC.Pages.SpaceTaskCreateTimedTask.yes': 'Yes',
   'PC.Pages.SpaceTaskSelectTarget.addItem': 'Add {0}',
   'PC.Pages.SpaceTaskSelectTargetFormItem.selectLabel': 'Please select {0}',
   'PC.Pages.SpaceTaskSelectTargetFormItemTarget.delete': 'Delete',
   'PC.Pages.SpaceTaskTimedPeriodSelector.enter': 'Please enter',
-  'PC.Pages.SpaceTaskTimedPeriodSelector.selectDateTime':
-    'Please select date and time',
-  'PC.Pages.SpaceTaskTimedPeriodSelector.selectSpecificTime':
-    'Please select specific time',
+  'PC.Pages.SpaceTaskTimedPeriodSelector.selectDateTime': 'Please select date and time',
+  'PC.Pages.SpaceTaskTimedPeriodSelector.selectSpecificTime': 'Please select specific time',
   'PC.Pages.SpaceTaskTimedPeriodSelector.specificTime': 'Specific Time',
-  'PC.Pages.SpaceTaskTimedPeriodSelector.specificTimeMustBeFuture':
-    'The specific time must be later than the current time',
+  'PC.Pages.SpaceTaskTimedPeriodSelector.specificTimeMustBeFuture': 'The specific time must be later than the current time',
   'PC.Pages.Square.PluginDetail.defaultValue': 'Default Value',
   'PC.Pages.Square.PluginDetail.enabled': 'Enabled',
   'PC.Pages.Square.PluginDetail.inputConfig': 'Input Configuration',
@@ -4252,8 +3311,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.Square.PluginDetail.pluginDescription': 'Plugin Description',
   'PC.Pages.Square.PluginDetail.required': 'Required',
   'PC.Pages.Square.PluginDetail.yes': 'Yes',
-  'PC.Pages.Square.PluginHeader.cancelCollectSuccess':
-    'Uncollected successfully',
+  'PC.Pages.Square.PluginHeader.cancelCollectSuccess': 'Uncollected successfully',
   'PC.Pages.Square.PluginHeader.collectCount': 'Collect ({0})',
   'PC.Pages.Square.PluginHeader.collectSuccess': 'Collected successfully',
   'PC.Pages.Square.PluginHeader.publishedAt': 'Published on {0}',
@@ -4261,20 +3319,15 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.Square.SkillDetail.copyTemplate': 'Copy Template',
   'PC.Pages.Square.SkillDetail.downloadExport': 'Download Export',
   'PC.Pages.Square.SkillDetail.exportFailed': 'Export failed',
-  'PC.Pages.Square.SkillDetail.exportFailedRetry':
-    'Export failed, please try again',
+  'PC.Pages.Square.SkillDetail.exportFailedRetry': 'Export failed, please try again',
   'PC.Pages.Square.SkillDetail.exportSuccess': 'Export successful!',
-  'PC.Pages.Square.SkillDetail.skillIdInvalid':
-    'Skill ID is missing or invalid, cannot export',
-  'PC.Pages.Square.SkillDetail.templateCopySuccess':
-    'Template copied successfully',
+  'PC.Pages.Square.SkillDetail.skillIdInvalid': 'Skill ID is missing or invalid, cannot export',
+  'PC.Pages.Square.SkillDetail.templateCopySuccess': 'Template copied successfully',
   'PC.Pages.Square.Square.agent': 'Agent',
   'PC.Pages.Square.Square.all': 'All',
-  'PC.Pages.Square.Square.bannerSubtitle':
-    'Next-gen AI application design, development, and practice platform \n No code needed, easy creation, suitable for all users, supports multi-platform publishing and API',
+  'PC.Pages.Square.Square.bannerSubtitle': 'Next-gen AI application design, development, and practice platform \n No code needed, easy creation, suitable for all users, supports multi-platform publishing and API',
   'PC.Pages.Square.Square.bannerTitle': 'Everyone is an AI Designer',
-  'PC.Pages.Square.Square.defaultAgentNotConfigured':
-    'Default general agent is not configured for this site',
+  'PC.Pages.Square.Square.defaultAgentNotConfigured': 'Default general agent is not configured for this site',
   'PC.Pages.Square.Square.onlyOfficial': 'Official {0} only',
   'PC.Pages.Square.Square.pageApp': 'Web App',
   'PC.Pages.Square.Square.plugin': 'Plugin',
@@ -4296,58 +3349,39 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.Square.WorkflowIdDetail.paramName': 'Parameter Name',
   'PC.Pages.Square.WorkflowIdDetail.paramType': 'Parameter Type',
   'PC.Pages.Square.WorkflowIdDetail.required': 'Required',
-  'PC.Pages.Square.WorkflowIdDetail.templateCopySuccess':
-    'Template copied successfully',
-  'PC.Pages.Square.WorkflowIdDetail.workflowDescription':
-    'Workflow Description',
+  'PC.Pages.Square.WorkflowIdDetail.templateCopySuccess': 'Template copied successfully',
+  'PC.Pages.Square.WorkflowIdDetail.workflowDescription': 'Workflow Description',
   'PC.Pages.Square.WorkflowIdDetail.yes': 'Yes',
-  'PC.Pages.SystemConfig.I18nManage.backToSelectLang':
-    'Back to language selection',
+  'PC.Pages.SystemConfig.I18nManage.backToSelectLang': 'Back to language selection',
   'PC.Pages.SystemConfig.I18nManage.codeLabel': 'Language Code',
   'PC.Pages.SystemConfig.I18nManage.codePlaceholder': 'e.g., en-US, ja-JP',
-  'PC.Pages.SystemConfig.I18nManage.codeTooltip':
-    'Code format: language code - country code',
-  'PC.Pages.SystemConfig.I18nManage.defaultLangDeleteTip':
-    'Default language cannot be deleted',
-  'PC.Pages.SystemConfig.I18nManage.defaultLangTip':
-    'When editing a language, if the current language is the default language, you need to set another language as default in the language list to cancel the current default.',
-  'PC.Pages.SystemConfig.I18nManage.deleteLangConfirm':
-    'Are you sure you want to delete the language "{0}"? This cannot be undone.',
+  'PC.Pages.SystemConfig.I18nManage.codeTooltip': 'Code format: language code - country code',
+  'PC.Pages.SystemConfig.I18nManage.defaultLangDeleteTip': 'Default language cannot be deleted',
+  'PC.Pages.SystemConfig.I18nManage.defaultLangTip': 'When editing a language, if the current language is the default language, you need to set another language as default in the language list to cancel the current default.',
+  'PC.Pages.SystemConfig.I18nManage.deleteLangConfirm': 'Are you sure you want to delete the language "{0}"? This cannot be undone.',
   'PC.Pages.SystemConfig.I18nManage.deleteLangTitle': 'Delete Language',
   'PC.Pages.SystemConfig.I18nManage.namePlaceholder': 'e.g., English, Japanese',
   'PC.Pages.SystemConfig.I18nManage.orderPlaceholder': 'e.g., 1',
   'PC.Pages.SystemConfig.I18nManage.orderTooltip': 'Smaller value comes first',
   'PC.Pages.SystemConfig.I18nManage.selectLangLabel': 'Language',
-  'PC.Pages.SystemConfig.I18nManage.selectLangRequired':
-    'Please select a language',
+  'PC.Pages.SystemConfig.I18nManage.selectLangRequired': 'Please select a language',
   'PC.Pages.SystemConfig.I18nManage.setDefaultLang': 'Set as Default Language',
   'PC.Pages.SystemConfig.I18nManage.statusLabel': 'Status',
-  'PC.Pages.SystemConfig.I18nManage.switchToCustom':
-    'Language not listed? Create manually',
+  'PC.Pages.SystemConfig.I18nManage.switchToCustom': 'Language not listed? Create manually',
   'PC.Pages.SystemConfig.LangContent.addBtn': 'Add',
   'PC.Pages.SystemConfig.LangContent.addKeyValTitle': 'Add Key-Value Pair',
   'PC.Pages.SystemConfig.LangContent.addSuccess': 'Add Successfully',
-  'PC.Pages.SystemConfig.LangContent.atLeastOnePair':
-    'Please enter at least one key-value pair',
-  'PC.Pages.SystemConfig.LangContent.batchAddOrUpdateTitle':
-    'Batch Add or Update',
-  'PC.Pages.SystemConfig.LangContent.batchProcessSuccess':
-    'Batch processing successfully',
-  'PC.Pages.SystemConfig.LangContent.deleteKeyValConfirmContent':
-    'Are you sure you want to delete this key-value pair?',
-  'PC.Pages.SystemConfig.LangContent.deleteKeyValConfirmTitle':
-    'Confirm Delete',
-  'PC.Pages.SystemConfig.LangContent.deleteKeyValSuccess':
-    'Deleted successfully',
+  'PC.Pages.SystemConfig.LangContent.atLeastOnePair': 'Please enter at least one key-value pair',
+  'PC.Pages.SystemConfig.LangContent.batchAddOrUpdateTitle': 'Batch Add or Update',
+  'PC.Pages.SystemConfig.LangContent.batchProcessSuccess': 'Batch processing successfully',
+  'PC.Pages.SystemConfig.LangContent.deleteKeyValConfirmContent': 'Are you sure you want to delete this key-value pair?',
+  'PC.Pages.SystemConfig.LangContent.deleteKeyValConfirmTitle': 'Confirm Delete',
+  'PC.Pages.SystemConfig.LangContent.deleteKeyValSuccess': 'Deleted successfully',
   'PC.Pages.SystemConfig.LangContent.editKeyValTitle': 'Edit Key-Value Pair',
-  'PC.Pages.SystemConfig.LangContent.exportLangBtn':
-    'Export configuration items',
-  'PC.Pages.SystemConfig.LangContent.jsonFormatError':
-    'JSON format error, please check and try again',
-  'PC.Pages.SystemConfig.LangContent.jsonObjectRequired':
-    'Please enter key-value pair JSON in object format',
-  'PC.Pages.SystemConfig.LangContent.keyMustContainDot':
-    'Key must contain a dot (.)',
+  'PC.Pages.SystemConfig.LangContent.exportLangBtn': 'Export configuration items',
+  'PC.Pages.SystemConfig.LangContent.jsonFormatError': 'JSON format error, please check and try again',
+  'PC.Pages.SystemConfig.LangContent.jsonObjectRequired': 'Please enter key-value pair JSON in object format',
+  'PC.Pages.SystemConfig.LangContent.keyMustContainDot': 'Key must contain a dot (.)',
   'PC.Pages.SystemConfig.LangContent.keyPlaceholder': 'e.g., User.submit',
   'PC.Pages.SystemConfig.LangContent.keyRequired': 'Please enter a Key',
   'PC.Pages.SystemConfig.LangContent.keyValMng': 'Key-Value Management',
@@ -4359,63 +3393,45 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.sideColumn': 'Side',
   'PC.Pages.SystemConfig.LangContent.textContentLabel': 'Text Content',
   'PC.Pages.SystemConfig.LangContent.textContentPlaceholder': 'e.g., Submit',
-  'PC.Pages.SystemConfig.LangContent.textContentRequired':
-    'Please enter text content',
+  'PC.Pages.SystemConfig.LangContent.textContentRequired': 'Please enter text content',
   'PC.Pages.SystemConfig.LangContent.title': 'I18n Configuration',
   'PC.Pages.SystemConfig.LangContent.translateAllBtn': 'Translate All',
-  'PC.Pages.SystemConfig.LangContent.translateAllConfirmContent':
-    'Are you sure you want to translate all key-value pairs from the default language ({0}) to the current language ({1})? Entries that already have content will not be translated.',
-  'PC.Pages.SystemConfig.LangContent.translateKeyTooltip':
-    'Translate key-value pairs from default language ({0}) to current language ({1})',
-  'PC.Pages.SystemConfig.LangContent.translateSuccess':
-    'Translate Successfully',
+  'PC.Pages.SystemConfig.LangContent.translateAllConfirmContent': 'Are you sure you want to translate all key-value pairs from the default language ({0}) to the current language ({1})? Entries that already have content will not be translated.',
+  'PC.Pages.SystemConfig.LangContent.translateKeyTooltip': 'Translate key-value pairs from default language ({0}) to current language ({1})',
+  'PC.Pages.SystemConfig.LangContent.translateSuccess': 'Translate Successfully',
   'PC.Pages.SystemConfig.LangContent.updateBtn': 'Update',
   'PC.Pages.SystemConfig.LangContent.updateSuccess': 'Update Successfully',
   'PC.Pages.SystemConfig.pageTitle': 'System Settings',
   'PC.Pages.SystemConfig.saveSuccess': 'Saved successfully',
   'PC.Pages.SystemConfigBaseFormItem.enterDomain': 'Please enter domain',
   'PC.Pages.SystemConfigCategoryManage.add': 'Add',
-  'PC.Pages.SystemConfigCategoryManage.addSuccessWithType':
-    '{0} category added successfully',
+  'PC.Pages.SystemConfigCategoryManage.addSuccessWithType': '{0} category added successfully',
   'PC.Pages.SystemConfigCategoryManage.agent': 'Agent',
   'PC.Pages.SystemConfigCategoryManage.categoryType': '{0} Category',
   'PC.Pages.SystemConfigCategoryManage.component': 'Component',
-  'PC.Pages.SystemConfigCategoryManage.confirmDeleteContent':
-    'Are you sure you want to delete this category? This action cannot be undone.',
+  'PC.Pages.SystemConfigCategoryManage.confirmDeleteContent': 'Are you sure you want to delete this category? This action cannot be undone.',
   'PC.Pages.SystemConfigCategoryManage.confirmDeleteTitle': 'Confirm Delete',
-  'PC.Pages.SystemConfigCategoryManage.deletedSuccessfully':
-    'Category deleted successfully',
-  'PC.Pages.SystemConfigCategoryManage.deleteFailed':
-    'Failed to delete category:',
-  'PC.Pages.SystemConfigCategoryManage.editSuccessWithType':
-    '{0} category updated successfully',
+  'PC.Pages.SystemConfigCategoryManage.deletedSuccessfully': 'Category deleted successfully',
+  'PC.Pages.SystemConfigCategoryManage.deleteFailed': 'Failed to delete category:',
+  'PC.Pages.SystemConfigCategoryManage.editSuccessWithType': '{0} category updated successfully',
   'PC.Pages.SystemConfigCategoryManage.itemCount': '{0} items',
   'PC.Pages.SystemConfigCategoryManage.pageTitle': 'Category Management',
   'PC.Pages.SystemConfigCategoryManage.saveFailed': 'Failed to save category:',
   'PC.Pages.SystemConfigCategoryManage.webApp': 'Web App',
   'PC.Pages.SystemConfigCategoryModal.addTitle': 'Add {0} Category',
   'PC.Pages.SystemConfigCategoryModal.code': 'Category Code',
-  'PC.Pages.SystemConfigCategoryModal.codeMaxLength':
-    'Category code cannot exceed 100 characters',
-  'PC.Pages.SystemConfigCategoryModal.codePatternInvalid':
-    'Category code can only contain letters, numbers, underscores (_), or dollar signs ($), and cannot start with a number',
-  'PC.Pages.SystemConfigCategoryModal.codePlaceholder':
-    'Please enter category code',
-  'PC.Pages.SystemConfigCategoryModal.codeRequired':
-    'Please enter category code',
+  'PC.Pages.SystemConfigCategoryModal.codeMaxLength': 'Category code cannot exceed 100 characters',
+  'PC.Pages.SystemConfigCategoryModal.codePatternInvalid': 'Category code can only contain letters, numbers, underscores (_), or dollar signs ($), and cannot start with a number',
+  'PC.Pages.SystemConfigCategoryModal.codePlaceholder': 'Please enter category code',
+  'PC.Pages.SystemConfigCategoryModal.codeRequired': 'Please enter category code',
   'PC.Pages.SystemConfigCategoryModal.description': 'Description',
-  'PC.Pages.SystemConfigCategoryModal.descriptionMaxLength':
-    'Description cannot exceed 100 characters',
-  'PC.Pages.SystemConfigCategoryModal.descriptionPlaceholder':
-    'Please enter category description (optional)',
+  'PC.Pages.SystemConfigCategoryModal.descriptionMaxLength': 'Description cannot exceed 100 characters',
+  'PC.Pages.SystemConfigCategoryModal.descriptionPlaceholder': 'Please enter category description (optional)',
   'PC.Pages.SystemConfigCategoryModal.editTitle': 'Edit {0} Category',
   'PC.Pages.SystemConfigCategoryModal.name': 'Category Name',
-  'PC.Pages.SystemConfigCategoryModal.nameMaxLength':
-    'Category name cannot exceed 100 characters',
-  'PC.Pages.SystemConfigCategoryModal.namePlaceholder':
-    'Please enter category name',
-  'PC.Pages.SystemConfigCategoryModal.nameRequired':
-    'Please enter category name',
+  'PC.Pages.SystemConfigCategoryModal.nameMaxLength': 'Category name cannot exceed 100 characters',
+  'PC.Pages.SystemConfigCategoryModal.namePlaceholder': 'Please enter category name',
+  'PC.Pages.SystemConfigCategoryModal.nameRequired': 'Please enter category name',
   'PC.Pages.SystemConfigI18n.addLang': 'Add Language',
   'PC.Pages.SystemConfigI18n.addLangSuccess': 'Added successfully',
   'PC.Pages.SystemConfigI18n.columnAction': 'Actions',
@@ -4434,8 +3450,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemConfigI18n.inputLangCode': 'Please enter language code',
   'PC.Pages.SystemConfigI18n.inputLangName': 'Please enter language name',
   'PC.Pages.SystemConfigI18n.manageTitle': 'Language Management',
-  'PC.Pages.SystemConfigI18n.noDefaultLang':
-    'There is currently no default language. Please set one first.',
+  'PC.Pages.SystemConfigI18n.noDefaultLang': 'There is currently no default language. Please set one first.',
   'PC.Pages.SystemConfigI18n.statusDisabled': 'Disabled',
   'PC.Pages.SystemConfigI18n.statusEnabled': 'Enabled',
   'PC.Pages.SystemConfigSandboxConfig.addSandbox': 'Add Sandbox',
@@ -4445,16 +3460,12 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemConfigSandboxConfig.columnName': 'Sandbox Name',
   'PC.Pages.SystemConfigSandboxConfig.columnOnlineStatus': 'Online Status',
   'PC.Pages.SystemConfigSandboxConfig.columnUsage': 'Usage',
-  'PC.Pages.SystemConfigSandboxConfig.connectionException':
-    'Connection exception',
-  'PC.Pages.SystemConfigSandboxConfig.connectivityFailed':
-    'Connectivity test failed: {0}',
-  'PC.Pages.SystemConfigSandboxConfig.connectivitySuccess':
-    'Connectivity test passed, sandbox is reachable',
+  'PC.Pages.SystemConfigSandboxConfig.connectionException': 'Connection exception',
+  'PC.Pages.SystemConfigSandboxConfig.connectivityFailed': 'Connectivity test failed: {0}',
+  'PC.Pages.SystemConfigSandboxConfig.connectivitySuccess': 'Connectivity test passed, sandbox is reachable',
   'PC.Pages.SystemConfigSandboxConfig.connectivityTest': 'Connectivity Test',
   'PC.Pages.SystemConfigSandboxConfig.delete': 'Delete',
-  'PC.Pages.SystemConfigSandboxConfig.deleteConfirmContent':
-    'Are you sure you want to delete this sandbox?',
+  'PC.Pages.SystemConfigSandboxConfig.deleteConfirmContent': 'Are you sure you want to delete this sandbox?',
   'PC.Pages.SystemConfigSandboxConfig.deleteConfirmTitle': 'Confirm Delete',
   'PC.Pages.SystemConfigSandboxConfig.deleteSuccess': 'Deleted successfully',
   'PC.Pages.SystemConfigSandboxConfig.disable': 'Disable',
@@ -4469,8 +3480,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemConfigSandboxConfig.pageTitle': 'Sandbox Configuration',
   'PC.Pages.SystemConfigSandboxConfig.perUserCpu': 'Per-user CPU Cores',
   'PC.Pages.SystemConfigSandboxConfig.perUserMemory': 'Per-user Memory',
-  'PC.Pages.SystemConfigSandboxConfig.toggleConfirmContent':
-    'Are you sure you want to {0} sandbox {1}?',
+  'PC.Pages.SystemConfigSandboxConfig.toggleConfirmContent': 'Are you sure you want to {0} sandbox {1}?',
   'PC.Pages.SystemConfigSandboxConfig.toggleConfirmTitle': 'Confirm {0}',
   'PC.Pages.SystemConfigSandboxConfig.toggleSuccess': '{0} succeeded',
   'PC.Pages.SystemConfigSandboxConfig.totalSandboxCount': '{0} sandboxes total',
@@ -4479,40 +3489,29 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemConfigSandboxConfig.usagePercentInUse': '{0}% in use',
   'PC.Pages.SystemConfigSandboxModal.addTitle': 'Add Sandbox',
   'PC.Pages.SystemConfigSandboxModal.agentPort': 'Agent Port',
-  'PC.Pages.SystemConfigSandboxModal.agentPortRequired':
-    'Please enter Agent port',
+  'PC.Pages.SystemConfigSandboxModal.agentPortRequired': 'Please enter Agent port',
   'PC.Pages.SystemConfigSandboxModal.apiKey': 'Communication Key (Optional)',
-  'PC.Pages.SystemConfigSandboxModal.apiKeyPlaceholder':
-    'Leave blank to disable communication key',
+  'PC.Pages.SystemConfigSandboxModal.apiKeyPlaceholder': 'Leave blank to disable communication key',
   'PC.Pages.SystemConfigSandboxModal.editTitle': 'Edit Sandbox',
   'PC.Pages.SystemConfigSandboxModal.fileServerPort': 'File Service Port',
-  'PC.Pages.SystemConfigSandboxModal.fileServerPortRequired':
-    'Please enter file service port',
+  'PC.Pages.SystemConfigSandboxModal.fileServerPortRequired': 'Please enter file service port',
   'PC.Pages.SystemConfigSandboxModal.host': 'Sandbox Base URL',
-  'PC.Pages.SystemConfigSandboxModal.hostInvalid':
-    'Please enter a valid URL including http:// or https://',
-  'PC.Pages.SystemConfigSandboxModal.hostMaxLength':
-    'URL length cannot exceed 255 characters',
-  'PC.Pages.SystemConfigSandboxModal.hostPlaceholder':
-    'e.g. http://192.168.1.21',
-  'PC.Pages.SystemConfigSandboxModal.hostRequired':
-    'Please enter sandbox base URL',
+  'PC.Pages.SystemConfigSandboxModal.hostInvalid': 'Please enter a valid URL including http:// or https://',
+  'PC.Pages.SystemConfigSandboxModal.hostMaxLength': 'URL length cannot exceed 255 characters',
+  'PC.Pages.SystemConfigSandboxModal.hostPlaceholder': 'e.g. http://192.168.1.21',
+  'PC.Pages.SystemConfigSandboxModal.hostRequired': 'Please enter sandbox base URL',
   'PC.Pages.SystemConfigSandboxModal.maxUsers': 'Maximum Concurrent Users',
-  'PC.Pages.SystemConfigSandboxModal.maxUsersMax':
-    'Maximum concurrent users cannot exceed 9999',
-  'PC.Pages.SystemConfigSandboxModal.maxUsersRequired':
-    'Please enter maximum concurrent users',
+  'PC.Pages.SystemConfigSandboxModal.maxUsersMax': 'Maximum concurrent users cannot exceed 9999',
+  'PC.Pages.SystemConfigSandboxModal.maxUsersRequired': 'Please enter maximum concurrent users',
   'PC.Pages.SystemConfigSandboxModal.name': 'Sandbox Name',
-  'PC.Pages.SystemConfigSandboxModal.nameMaxLength':
-    'Sandbox name cannot exceed 100 characters',
+  'PC.Pages.SystemConfigSandboxModal.nameMaxLength': 'Sandbox name cannot exceed 100 characters',
   'PC.Pages.SystemConfigSandboxModal.namePlaceholder': 'e.g. AGENT Sandbox',
   'PC.Pages.SystemConfigSandboxModal.nameRequired': 'Please enter sandbox name',
   'PC.Pages.SystemConfigSandboxModal.vncPort': 'VNC Port',
   'PC.Pages.SystemConfigSandboxModal.vncPortRequired': 'Please enter VNC port',
   'PC.Pages.SystemContentAgent.accessControlOff': 'Off',
   'PC.Pages.SystemContentAgent.accessControlOn': 'On',
-  'PC.Pages.SystemContentAgent.accessControlTooltip':
-    'When enabled, agents published to the system square require authorization before use.',
+  'PC.Pages.SystemContentAgent.accessControlTooltip': 'When enabled, agents published to the system square require authorization before use.',
   'PC.Pages.SystemContentAgent.authorize': 'Authorize',
   'PC.Pages.SystemContentAgent.columnAccessControl': 'Access Control',
   'PC.Pages.SystemContentAgent.columnAction': 'Action',
@@ -4522,10 +3521,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemContentAgent.columnName': 'Name',
   'PC.Pages.SystemContentAgent.columnPublishStatus': 'Publish Status',
   'PC.Pages.SystemContentAgent.delete': 'Delete',
-  'PC.Pages.SystemContentAgent.deleteConfirmDescription':
-    'This action cannot be undone and all related data will be permanently deleted.',
-  'PC.Pages.SystemContentAgent.deleteConfirmTitle':
-    'Are you sure you want to delete {0}?',
+  'PC.Pages.SystemContentAgent.deleteConfirmDescription': 'This action cannot be undone and all related data will be permanently deleted.',
+  'PC.Pages.SystemContentAgent.deleteConfirmTitle': 'Are you sure you want to delete {0}?',
   'PC.Pages.SystemContentAgent.deleteFailed': 'Delete failed',
   'PC.Pages.SystemContentAgent.deleteSuccess': 'Deleted successfully',
   'PC.Pages.SystemContentAgent.pageTitle': 'Agent Management',
@@ -4541,10 +3538,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemContentDataTable.columnDescription': 'Description',
   'PC.Pages.SystemContentDataTable.columnName': 'Name',
   'PC.Pages.SystemContentDataTable.delete': 'Delete',
-  'PC.Pages.SystemContentDataTable.deleteConfirmDescription':
-    'This action cannot be undone and all related data will be permanently deleted.',
-  'PC.Pages.SystemContentDataTable.deleteConfirmTitle':
-    'Are you sure you want to delete {0}?',
+  'PC.Pages.SystemContentDataTable.deleteConfirmDescription': 'This action cannot be undone and all related data will be permanently deleted.',
+  'PC.Pages.SystemContentDataTable.deleteConfirmTitle': 'Are you sure you want to delete {0}?',
   'PC.Pages.SystemContentDataTable.deleteFailed': 'Delete failed',
   'PC.Pages.SystemContentDataTable.deleteSuccess': 'Deleted successfully',
   'PC.Pages.SystemContentDataTable.pageTitle': 'Data Table Management',
@@ -4553,24 +3548,20 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemContentKnowledgeBase.accessControlOff': 'Off',
   'PC.Pages.SystemContentKnowledgeBase.accessControlOn': 'On',
   'PC.Pages.SystemContentKnowledgeBase.accessControlTitle': 'Access Control',
-  'PC.Pages.SystemContentKnowledgeBase.accessControlTooltip':
-    'When enabled, authorization is required to use this knowledge base',
+  'PC.Pages.SystemContentKnowledgeBase.accessControlTooltip': 'When enabled, authorization is required to use this knowledge base',
   'PC.Pages.SystemContentKnowledgeBase.columnAction': 'Action',
   'PC.Pages.SystemContentKnowledgeBase.columnCreated': 'Created Time',
   'PC.Pages.SystemContentKnowledgeBase.columnCreator': 'Creator',
   'PC.Pages.SystemContentKnowledgeBase.columnDescription': 'Description',
   'PC.Pages.SystemContentKnowledgeBase.columnName': 'Name',
   'PC.Pages.SystemContentKnowledgeBase.delete': 'Delete',
-  'PC.Pages.SystemContentKnowledgeBase.deleteConfirmDescription':
-    'This action cannot be undone and all related data will be permanently deleted.',
-  'PC.Pages.SystemContentKnowledgeBase.deleteConfirmTitle':
-    'Are you sure you want to delete {0}?',
+  'PC.Pages.SystemContentKnowledgeBase.deleteConfirmDescription': 'This action cannot be undone and all related data will be permanently deleted.',
+  'PC.Pages.SystemContentKnowledgeBase.deleteConfirmTitle': 'Are you sure you want to delete {0}?',
   'PC.Pages.SystemContentKnowledgeBase.deleteFailed': 'Delete failed',
   'PC.Pages.SystemContentKnowledgeBase.deleteSuccess': 'Deleted successfully',
   'PC.Pages.SystemContentKnowledgeBase.grantAuth': 'Grant Auth',
   'PC.Pages.SystemContentKnowledgeBase.pageTitle': 'Knowledge Base Management',
-  'PC.Pages.SystemContentKnowledgeBase.searchName':
-    'Please enter knowledge base name',
+  'PC.Pages.SystemContentKnowledgeBase.searchName': 'Please enter knowledge base name',
   'PC.Pages.SystemContentKnowledgeBase.view': 'View',
   'PC.Pages.SystemContentMcp.columnAction': 'Action',
   'PC.Pages.SystemContentMcp.columnCreated': 'Created Time',
@@ -4578,10 +3569,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemContentMcp.columnDescription': 'Description',
   'PC.Pages.SystemContentMcp.columnName': 'Name',
   'PC.Pages.SystemContentMcp.delete': 'Delete',
-  'PC.Pages.SystemContentMcp.deleteConfirmDescription':
-    'This action cannot be undone and all related data will be permanently deleted.',
-  'PC.Pages.SystemContentMcp.deleteConfirmTitle':
-    'Are you sure you want to delete {0}?',
+  'PC.Pages.SystemContentMcp.deleteConfirmDescription': 'This action cannot be undone and all related data will be permanently deleted.',
+  'PC.Pages.SystemContentMcp.deleteConfirmTitle': 'Are you sure you want to delete {0}?',
   'PC.Pages.SystemContentMcp.deleteFailed': 'Delete failed',
   'PC.Pages.SystemContentMcp.deleteSuccess': 'Deleted successfully',
   'PC.Pages.SystemContentMcp.pageTitle': 'MCP Management',
@@ -4593,10 +3582,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemContentPlugin.columnDescription': 'Description',
   'PC.Pages.SystemContentPlugin.columnName': 'Name',
   'PC.Pages.SystemContentPlugin.delete': 'Delete',
-  'PC.Pages.SystemContentPlugin.deleteConfirmDescription':
-    'This action cannot be undone and all related data will be permanently deleted.',
-  'PC.Pages.SystemContentPlugin.deleteConfirmTitle':
-    'Are you sure you want to delete {0}?',
+  'PC.Pages.SystemContentPlugin.deleteConfirmDescription': 'This action cannot be undone and all related data will be permanently deleted.',
+  'PC.Pages.SystemContentPlugin.deleteConfirmTitle': 'Are you sure you want to delete {0}?',
   'PC.Pages.SystemContentPlugin.deleteFailed': 'Delete failed',
   'PC.Pages.SystemContentPlugin.deleteSuccess': 'Deleted successfully',
   'PC.Pages.SystemContentPlugin.pageTitle': 'Plugin Management',
@@ -4608,10 +3595,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemContentSkill.columnDescription': 'Description',
   'PC.Pages.SystemContentSkill.columnName': 'Name',
   'PC.Pages.SystemContentSkill.delete': 'Delete',
-  'PC.Pages.SystemContentSkill.deleteConfirmDescription':
-    'This action cannot be undone and all related data will be permanently deleted.',
-  'PC.Pages.SystemContentSkill.deleteConfirmTitle':
-    'Are you sure you want to delete {0}?',
+  'PC.Pages.SystemContentSkill.deleteConfirmDescription': 'This action cannot be undone and all related data will be permanently deleted.',
+  'PC.Pages.SystemContentSkill.deleteConfirmTitle': 'Are you sure you want to delete {0}?',
   'PC.Pages.SystemContentSkill.deleteFailed': 'Delete failed',
   'PC.Pages.SystemContentSkill.deleteSuccess': 'Deleted successfully',
   'PC.Pages.SystemContentSkill.pageTitle': 'Skill Management',
@@ -4623,10 +3608,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemContentSpace.columnDescription': 'Description',
   'PC.Pages.SystemContentSpace.columnName': 'Name',
   'PC.Pages.SystemContentSpace.delete': 'Delete',
-  'PC.Pages.SystemContentSpace.deleteConfirmDescription':
-    'This action cannot be undone and all related data will be permanently deleted.',
-  'PC.Pages.SystemContentSpace.deleteConfirmTitle':
-    'Are you sure you want to delete {0}?',
+  'PC.Pages.SystemContentSpace.deleteConfirmDescription': 'This action cannot be undone and all related data will be permanently deleted.',
+  'PC.Pages.SystemContentSpace.deleteConfirmTitle': 'Are you sure you want to delete {0}?',
   'PC.Pages.SystemContentSpace.deleteFailed': 'Delete failed',
   'PC.Pages.SystemContentSpace.deleteSuccess': 'Deleted successfully',
   'PC.Pages.SystemContentSpace.pageTitle': 'Space Management',
@@ -4634,8 +3617,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemContentSpace.view': 'View',
   'PC.Pages.SystemContentWebApplication.accessControlOff': 'Off',
   'PC.Pages.SystemContentWebApplication.accessControlOn': 'On',
-  'PC.Pages.SystemContentWebApplication.accessControlTooltip':
-    'When enabled, web applications published to the system square require authorization before use.',
+  'PC.Pages.SystemContentWebApplication.accessControlTooltip': 'When enabled, web applications published to the system square require authorization before use.',
   'PC.Pages.SystemContentWebApplication.authorize': 'Authorize',
   'PC.Pages.SystemContentWebApplication.columnAccessControl': 'Access Control',
   'PC.Pages.SystemContentWebApplication.columnAction': 'Action',
@@ -4645,16 +3627,12 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemContentWebApplication.columnName': 'Name',
   'PC.Pages.SystemContentWebApplication.columnPublishStatus': 'Publish Status',
   'PC.Pages.SystemContentWebApplication.delete': 'Delete',
-  'PC.Pages.SystemContentWebApplication.deleteConfirmDescription':
-    'This action cannot be undone and all related data will be permanently deleted.',
-  'PC.Pages.SystemContentWebApplication.deleteConfirmTitle':
-    'Are you sure you want to delete {0}?',
+  'PC.Pages.SystemContentWebApplication.deleteConfirmDescription': 'This action cannot be undone and all related data will be permanently deleted.',
+  'PC.Pages.SystemContentWebApplication.deleteConfirmTitle': 'Are you sure you want to delete {0}?',
   'PC.Pages.SystemContentWebApplication.deleteFailed': 'Delete failed',
   'PC.Pages.SystemContentWebApplication.deleteSuccess': 'Deleted successfully',
-  'PC.Pages.SystemContentWebApplication.pageTitle':
-    'Web Application Management',
-  'PC.Pages.SystemContentWebApplication.searchName':
-    'Please enter web application name',
+  'PC.Pages.SystemContentWebApplication.pageTitle': 'Web Application Management',
+  'PC.Pages.SystemContentWebApplication.searchName': 'Please enter web application name',
   'PC.Pages.SystemContentWebApplication.statusApplying': 'Pending Review',
   'PC.Pages.SystemContentWebApplication.statusDeveloping': 'To Publish',
   'PC.Pages.SystemContentWebApplication.statusPublished': 'Published',
@@ -4666,10 +3644,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemContentWorkflow.columnDescription': 'Description',
   'PC.Pages.SystemContentWorkflow.columnName': 'Name',
   'PC.Pages.SystemContentWorkflow.delete': 'Delete',
-  'PC.Pages.SystemContentWorkflow.deleteConfirmDescription':
-    'This action cannot be undone and all related data will be permanently deleted.',
-  'PC.Pages.SystemContentWorkflow.deleteConfirmTitle':
-    'Are you sure you want to delete {0}?',
+  'PC.Pages.SystemContentWorkflow.deleteConfirmDescription': 'This action cannot be undone and all related data will be permanently deleted.',
+  'PC.Pages.SystemContentWorkflow.deleteConfirmTitle': 'Are you sure you want to delete {0}?',
   'PC.Pages.SystemContentWorkflow.deleteFailed': 'Delete failed',
   'PC.Pages.SystemContentWorkflow.deleteSuccess': 'Deleted successfully',
   'PC.Pages.SystemContentWorkflow.pageTitle': 'Workflow Management',
@@ -4706,103 +3682,64 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemLog.operationLog': 'Operation Log',
   'PC.Pages.SystemLog.runningLog': 'Running Log',
   'PC.Pages.SystemManagement.DataPermission.knowledgeBase': 'Knowledge Base',
-  'PC.Pages.SystemManagement.DataPermission.knowledgeBaseTooltip':
-    'You can grant authorization here after enabling access control in content management. If access control is enabled, authorization is required to use this knowledge base.',
+  'PC.Pages.SystemManagement.DataPermission.knowledgeBaseTooltip': 'You can grant authorization here after enabling access control in content management. If access control is enabled, authorization is required to use this knowledge base.',
   'PC.Pages.SystemMenuBindUser.bindUserWithName': 'Bind User - {0}',
   'PC.Pages.SystemMenuBindUser.close': 'Close',
-  'PC.Pages.SystemMenuBindUser.leftSearchPlaceholder':
-    'Enter username, email, or phone number and press Enter to search',
-  'PC.Pages.SystemMenuBindUser.rightSearchPlaceholder':
-    'Search bound members by keyword',
+  'PC.Pages.SystemMenuBindUser.leftSearchPlaceholder': 'Enter username, email, or phone number and press Enter to search',
+  'PC.Pages.SystemMenuBindUser.rightSearchPlaceholder': 'Search bound members by keyword',
   'PC.Pages.SystemMenuBindUser.userNotFoundBySearch': 'No matching user found',
-  'PC.Pages.SystemMenuDataPermissionModal.agentCpuCoresLabel':
-    'Agent CPU cores',
-  'PC.Pages.SystemMenuDataPermissionModal.agentCpuCoresTip':
-    'Agent CPU cores (leave empty to use default value)',
-  'PC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitLabel':
-    'General agent daily conversation limit',
-  'PC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitTip':
-    'General agent daily conversations. -1 means no limit',
-  'PC.Pages.SystemMenuDataPermissionModal.agentMemoryGbLabel':
-    'Agent memory (GB)',
-  'PC.Pages.SystemMenuDataPermissionModal.agentMemoryGbTip':
-    'Agent memory (GB). Leave empty to use default 4GB',
-  'PC.Pages.SystemMenuDataPermissionModal.contentMgmtTip':
-    'Enable access control in content management and publish to system square before authorizing here',
-  'PC.Pages.SystemMenuDataPermissionModal.emptySelectedAgent':
-    'No selected agents',
-  'PC.Pages.SystemMenuDataPermissionModal.emptySelectedModel':
-    'No selected models',
-  'PC.Pages.SystemMenuDataPermissionModal.emptySelectedWebApp':
-    'No selected web applications',
+  'PC.Pages.SystemMenuDataPermissionModal.agentCpuCoresLabel': 'Agent CPU cores',
+  'PC.Pages.SystemMenuDataPermissionModal.agentCpuCoresTip': 'Agent CPU cores (leave empty to use default value)',
+  'PC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitLabel': 'General agent daily conversation limit',
+  'PC.Pages.SystemMenuDataPermissionModal.agentDailyPromptLimitTip': 'General agent daily conversations. -1 means no limit',
+  'PC.Pages.SystemMenuDataPermissionModal.agentMemoryGbLabel': 'Agent memory (GB)',
+  'PC.Pages.SystemMenuDataPermissionModal.agentMemoryGbTip': 'Agent memory (GB). Leave empty to use default 4GB',
+  'PC.Pages.SystemMenuDataPermissionModal.contentMgmtTip': 'Enable access control in content management and publish to system square before authorizing here',
+  'PC.Pages.SystemMenuDataPermissionModal.emptySelectedAgent': 'No selected agents',
+  'PC.Pages.SystemMenuDataPermissionModal.emptySelectedModel': 'No selected models',
+  'PC.Pages.SystemMenuDataPermissionModal.emptySelectedWebApp': 'No selected web applications',
   'PC.Pages.SystemMenuDataPermissionModal.itemAdd': 'Add',
   'PC.Pages.SystemMenuDataPermissionModal.itemAdded': 'Added',
   'PC.Pages.SystemMenuDataPermissionModal.itemRemove': 'Remove',
-  'PC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbLabel':
-    'Knowledge storage limit (GB)',
-  'PC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbTip':
-    '-1 means no limit, 0 means no permission, precision is 0.001GB, 1GB=1024MB, 1MB=1024KB',
+  'PC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbLabel': 'Knowledge storage limit (GB)',
+  'PC.Pages.SystemMenuDataPermissionModal.knowledgeStorageLimitGbTip': '-1 means no limit, 0 means no permission, precision is 0.001GB, 1GB=1024MB, 1MB=1024KB',
   'PC.Pages.SystemMenuDataPermissionModal.maxAgentCountLabel': 'Max agents',
-  'PC.Pages.SystemMenuDataPermissionModal.maxAgentCountTip':
-    'Maximum number of agents. -1 means no limit',
-  'PC.Pages.SystemMenuDataPermissionModal.maxDataTableCountLabel':
-    'Max data tables',
-  'PC.Pages.SystemMenuDataPermissionModal.maxDataTableCountTip':
-    'Maximum number of data tables. -1 means no limit',
-  'PC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountLabel':
-    'Max knowledge bases',
-  'PC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountTip':
-    'Maximum number of knowledge bases. -1 means no limit',
-  'PC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountLabel':
-    'Max scheduled tasks',
-  'PC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountTip':
-    'Maximum number of scheduled tasks. -1 means no limit',
+  'PC.Pages.SystemMenuDataPermissionModal.maxAgentCountTip': 'Maximum number of agents. -1 means no limit',
+  'PC.Pages.SystemMenuDataPermissionModal.maxDataTableCountLabel': 'Max data tables',
+  'PC.Pages.SystemMenuDataPermissionModal.maxDataTableCountTip': 'Maximum number of data tables. -1 means no limit',
+  'PC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountLabel': 'Max knowledge bases',
+  'PC.Pages.SystemMenuDataPermissionModal.maxKnowledgeCountTip': 'Maximum number of knowledge bases. -1 means no limit',
+  'PC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountLabel': 'Max scheduled tasks',
+  'PC.Pages.SystemMenuDataPermissionModal.maxScheduledTaskCountTip': 'Maximum number of scheduled tasks. -1 means no limit',
   'PC.Pages.SystemMenuDataPermissionModal.maxSpaceCountLabel': 'Max workspaces',
-  'PC.Pages.SystemMenuDataPermissionModal.maxSpaceCountTip':
-    'Maximum number of workspaces. -1 means no limit',
-  'PC.Pages.SystemMenuDataPermissionModal.maxWebAppCountLabel':
-    'Max web applications',
-  'PC.Pages.SystemMenuDataPermissionModal.maxWebAppCountTip':
-    'Maximum number of web applications. -1 means no limit',
-  'PC.Pages.SystemMenuDataPermissionModal.missingTargetId':
-    'Missing ID. Unable to save data permissions',
-  'PC.Pages.SystemMenuDataPermissionModal.saveSuccess':
-    'Data permissions saved successfully',
-  'PC.Pages.SystemMenuDataPermissionModal.searchAgentPlaceholder':
-    'Search agents',
-  'PC.Pages.SystemMenuDataPermissionModal.searchWebAppPlaceholder':
-    'Search web applications',
+  'PC.Pages.SystemMenuDataPermissionModal.maxSpaceCountTip': 'Maximum number of workspaces. -1 means no limit',
+  'PC.Pages.SystemMenuDataPermissionModal.maxWebAppCountLabel': 'Max web applications',
+  'PC.Pages.SystemMenuDataPermissionModal.maxWebAppCountTip': 'Maximum number of web applications. -1 means no limit',
+  'PC.Pages.SystemMenuDataPermissionModal.missingTargetId': 'Missing ID. Unable to save data permissions',
+  'PC.Pages.SystemMenuDataPermissionModal.saveSuccess': 'Data permissions saved successfully',
+  'PC.Pages.SystemMenuDataPermissionModal.searchAgentPlaceholder': 'Search agents',
+  'PC.Pages.SystemMenuDataPermissionModal.searchWebAppPlaceholder': 'Search web applications',
   'PC.Pages.SystemMenuDataPermissionModal.tabAgent': 'Agent',
   'PC.Pages.SystemMenuDataPermissionModal.tabApiPermission': 'API Permission',
-  'PC.Pages.SystemMenuDataPermissionModal.tabApiPermissionTooltip':
-    'Open API authorization, configure API call rate limits. -1 means unlimited.',
-  'PC.Pages.SystemMenuDataPermissionModal.tabDevPermission':
-    'Development Permissions',
+  'PC.Pages.SystemMenuDataPermissionModal.tabApiPermissionTooltip': 'Open API authorization, configure API call rate limits. -1 means unlimited.',
+  'PC.Pages.SystemMenuDataPermissionModal.tabDevPermission': 'Development Permissions',
   'PC.Pages.SystemMenuDataPermissionModal.tabKnowledgeBase': 'Knowledge Base',
   'PC.Pages.SystemMenuDataPermissionModal.tabModel': 'Model',
-  'PC.Pages.SystemMenuDataPermissionModal.tabModelTip':
-    'Models require authorization before use',
+  'PC.Pages.SystemMenuDataPermissionModal.tabModelTip': 'Models require authorization before use',
   'PC.Pages.SystemMenuDataPermissionModal.tabWebApp': 'Web Application',
-  'PC.Pages.SystemMenuDataPermissionModal.titleWithName':
-    'Data Permission Settings - {0}',
+  'PC.Pages.SystemMenuDataPermissionModal.titleWithName': 'Data Permission Settings - {0}',
   'PC.Pages.SystemMenuDataPermissionModal.tokenLimitLabel': 'Daily token limit',
-  'PC.Pages.SystemMenuDataPermissionModal.tokenLimitPlaceholder':
-    'Enter daily token limit',
-  'PC.Pages.SystemMenuDataPermissionModal.tokenLimitTip':
-    'Daily token limit. -1 means no limit',
-  'PC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitLabel':
-    'Web app development daily conversation limit',
-  'PC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitTip':
-    'Web app development daily conversations. -1 means no limit',
+  'PC.Pages.SystemMenuDataPermissionModal.tokenLimitPlaceholder': 'Enter daily token limit',
+  'PC.Pages.SystemMenuDataPermissionModal.tokenLimitTip': 'Daily token limit. -1 means no limit',
+  'PC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitLabel': 'Web app development daily conversation limit',
+  'PC.Pages.SystemMenuDataPermissionModal.webAppDailyPromptLimitTip': 'Web app development daily conversations. -1 means no limit',
   'PC.Pages.SystemMenuFormModal.addSuccess': 'Menu created successfully',
   'PC.Pages.SystemMenuFormModal.bindResourceCode': 'Bind Resource Codes',
-  'PC.Pages.SystemMenuFormModal.bindResourceCodeTooltip':
-    'Select resource permissions accessible by this menu',
+  'PC.Pages.SystemMenuFormModal.bindResourceCodeTooltip': 'Select resource permissions accessible by this menu',
   'PC.Pages.SystemMenuFormModal.create': 'Create',
   'PC.Pages.SystemMenuFormModal.createTitle': 'Create Menu',
   'PC.Pages.SystemMenuFormModal.description': 'Description',
-  'PC.Pages.SystemMenuFormModal.descriptionPlaceholder':
-    'Please enter description',
+  'PC.Pages.SystemMenuFormModal.descriptionPlaceholder': 'Please enter description',
   'PC.Pages.SystemMenuFormModal.disabled': 'Disabled',
   'PC.Pages.SystemMenuFormModal.editTitle': 'Edit Menu',
   'PC.Pages.SystemMenuFormModal.enable': 'Enable',
@@ -4810,10 +3747,8 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemMenuFormModal.enableTooltip': 'Enable or disable this menu',
   'PC.Pages.SystemMenuFormModal.externalOpenType': 'External Link Open Type',
   'PC.Pages.SystemMenuFormModal.icon': 'Icon',
-  'PC.Pages.SystemMenuFormModal.imageSizeInvalid':
-    'Image size cannot exceed 2MB',
-  'PC.Pages.SystemMenuFormModal.imageTypeInvalid':
-    'Please upload JPG, JPEG, PNG, or SVG image files',
+  'PC.Pages.SystemMenuFormModal.imageSizeInvalid': 'Image size cannot exceed 2MB',
+  'PC.Pages.SystemMenuFormModal.imageTypeInvalid': 'Please upload JPG, JPEG, PNG, or SVG image files',
   'PC.Pages.SystemMenuFormModal.menuName': 'Menu Name',
   'PC.Pages.SystemMenuFormModal.menuNamePlaceholder': 'Please enter menu name',
   'PC.Pages.SystemMenuFormModal.menuNameRequired': 'Please enter menu name',
@@ -4821,21 +3756,14 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemMenuFormModal.openInNewTab': 'Open in New Tab',
   'PC.Pages.SystemMenuFormModal.openTypePlaceholder': 'Please select open type',
   'PC.Pages.SystemMenuFormModal.parentMenu': 'Parent Menu',
-  'PC.Pages.SystemMenuFormModal.parentMenuPlaceholder':
-    'Please select parent menu (None)',
+  'PC.Pages.SystemMenuFormModal.parentMenuPlaceholder': 'Please select parent menu (None)',
   'PC.Pages.SystemMenuFormModal.routePath': 'Route Path',
-  'PC.Pages.SystemMenuFormModal.routePathLengthInvalid':
-    'Route path length cannot exceed 500 characters',
-  'PC.Pages.SystemMenuFormModal.routePathPatternInvalid':
-    'Route path/URL can only contain letters, numbers, slashes, and common URL symbols (? # & = . _ - : % @ + space), e.g. /system/menu or https://example.com',
-  'PC.Pages.SystemMenuFormModal.routePathPlaceholder':
-    'Please enter route path, e.g. /system/menu',
-  'PC.Pages.SystemMenuFormModal.routePathTipDynamic':
-    'Dynamic route, e.g. /space/:spaceId/develop',
-  'PC.Pages.SystemMenuFormModal.routePathTipExternal':
-    'External URL, e.g. https://example.com',
-  'PC.Pages.SystemMenuFormModal.routePathTipStatic':
-    'Static route, e.g. /system/menu',
+  'PC.Pages.SystemMenuFormModal.routePathLengthInvalid': 'Route path length cannot exceed 500 characters',
+  'PC.Pages.SystemMenuFormModal.routePathPatternInvalid': 'Route path/URL can only contain letters, numbers, slashes, and common URL symbols (? # & = . _ - : % @ + space), e.g. /system/menu or https://example.com',
+  'PC.Pages.SystemMenuFormModal.routePathPlaceholder': 'Please enter route path, e.g. /system/menu',
+  'PC.Pages.SystemMenuFormModal.routePathTipDynamic': 'Dynamic route, e.g. /space/:spaceId/develop',
+  'PC.Pages.SystemMenuFormModal.routePathTipExternal': 'External URL, e.g. https://example.com',
+  'PC.Pages.SystemMenuFormModal.routePathTipStatic': 'Static route, e.g. /system/menu',
   'PC.Pages.SystemMenuFormModal.save': 'Save',
   'PC.Pages.SystemMenuFormModal.sort': 'Sort',
   'PC.Pages.SystemMenuFormModal.sortPlaceholder': 'Please enter sort',
@@ -4855,8 +3783,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemMenuManage.columnMenuName': 'Menu Name',
   'PC.Pages.SystemMenuManage.columnRoutePath': 'Route Path',
   'PC.Pages.SystemMenuManage.columnSort': 'Sort',
-  'PC.Pages.SystemMenuManage.deleteMenuConfirm':
-    'Are you sure to delete menu "{0}"?',
+  'PC.Pages.SystemMenuManage.deleteMenuConfirm': 'Are you sure to delete menu "{0}"?',
   'PC.Pages.SystemMenuManage.deleteMenuTitle': 'Delete Menu',
   'PC.Pages.SystemMenuManage.deleteSuccess': 'Deleted successfully',
   'PC.Pages.SystemMenuManage.disabled': 'Disable',
@@ -4866,14 +3793,11 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemMenuManage.noPermission': 'No permission',
   'PC.Pages.SystemMenuManage.pageTitle': 'Menu Management',
   'PC.Pages.SystemMenuManage.sortUpdateSuccess': 'Sort updated successfully',
-  'PC.Pages.SystemMenuManage.systemBuiltinDeleteDisabled':
-    'System built-in menus cannot be deleted',
+  'PC.Pages.SystemMenuManage.systemBuiltinDeleteDisabled': 'System built-in menus cannot be deleted',
   'PC.Pages.SystemMenuPermissionModal.emptyMenuData': 'No menu data',
   'PC.Pages.SystemMenuPermissionModal.resourceLabelWithId': 'Resource {0}',
-  'PC.Pages.SystemMenuPermissionModal.saveSuccess':
-    'Menu permissions saved successfully',
-  'PC.Pages.SystemMenuPermissionModal.titleWithName':
-    'Menu Permission Config - {0}',
+  'PC.Pages.SystemMenuPermissionModal.saveSuccess': 'Menu permissions saved successfully',
+  'PC.Pages.SystemMenuPermissionModal.titleWithName': 'Menu Permission Config - {0}',
   'PC.Pages.SystemOperationLog.basicInfo': 'Basic Information',
   'PC.Pages.SystemOperationLog.columnAction': 'Action',
   'PC.Pages.SystemOperationLog.columnActionType': 'Action Type',
@@ -4887,77 +3811,52 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemOperationLog.copySuccess': 'Copied successfully',
   'PC.Pages.SystemOperationLog.detail': 'Detail',
   'PC.Pages.SystemOperationLog.detailTitle': 'Log Detail',
-  'PC.Pages.SystemOperationLog.missingRequestIdForDetail':
-    'The record has no requestId. Details cannot be viewed.',
+  'PC.Pages.SystemOperationLog.missingRequestIdForDetail': 'The record has no requestId. Details cannot be viewed.',
   'PC.Pages.SystemOperationLog.noData': 'No data',
-  'PC.Pages.SystemOperationLog.placeholderActionType':
-    'Please select action type',
+  'PC.Pages.SystemOperationLog.placeholderActionType': 'Please select action type',
   'PC.Pages.SystemOperationLog.placeholderCreator': 'Please enter username',
-  'PC.Pages.SystemOperationLog.placeholderObjectName':
-    'Please enter object name',
-  'PC.Pages.SystemOperationLog.placeholderObjectSubtype':
-    'Please enter object subtype',
-  'PC.Pages.SystemOperationLog.placeholderRequestParams':
-    'Separate keywords with spaces',
+  'PC.Pages.SystemOperationLog.placeholderObjectName': 'Please enter object name',
+  'PC.Pages.SystemOperationLog.placeholderObjectSubtype': 'Please enter object subtype',
+  'PC.Pages.SystemOperationLog.placeholderRequestParams': 'Separate keywords with spaces',
   'PC.Pages.SystemOperationLog.placeholderType': 'Please select type',
   'PC.Pages.SystemOperationLog.queryFailed': 'Query failed',
-  'PC.Pages.SystemPermissionResourceFormModal.addSuccess':
-    'Resource created successfully',
+  'PC.Pages.SystemPermissionResourceFormModal.addSuccess': 'Resource created successfully',
   'PC.Pages.SystemPermissionResourceFormModal.code': 'Resource Code',
-  'PC.Pages.SystemPermissionResourceFormModal.codePatternInvalid':
-    'Resource code must start with a letter and can only contain letters, numbers, and underscores',
-  'PC.Pages.SystemPermissionResourceFormModal.codePlaceholder':
-    'Please enter resource code',
-  'PC.Pages.SystemPermissionResourceFormModal.codeTooltip':
-    'Resource code identifies a resource. It can be empty and will be auto-generated by system. Only letters, numbers, and underscores are allowed.',
+  'PC.Pages.SystemPermissionResourceFormModal.codePatternInvalid': 'Resource code must start with a letter and can only contain letters, numbers, and underscores',
+  'PC.Pages.SystemPermissionResourceFormModal.codePlaceholder': 'Please enter resource code',
+  'PC.Pages.SystemPermissionResourceFormModal.codeTooltip': 'Resource code identifies a resource. It can be empty and will be auto-generated by system. Only letters, numbers, and underscores are allowed.',
   'PC.Pages.SystemPermissionResourceFormModal.create': 'Create',
   'PC.Pages.SystemPermissionResourceFormModal.createTitle': 'Create Resource',
   'PC.Pages.SystemPermissionResourceFormModal.description': 'Description',
-  'PC.Pages.SystemPermissionResourceFormModal.descriptionPlaceholder':
-    'Please enter description',
+  'PC.Pages.SystemPermissionResourceFormModal.descriptionPlaceholder': 'Please enter description',
   'PC.Pages.SystemPermissionResourceFormModal.editTitle': 'Edit Resource',
   'PC.Pages.SystemPermissionResourceFormModal.enabled': 'Enabled',
-  'PC.Pages.SystemPermissionResourceFormModal.enabledTooltip':
-    'Whether to enable this resource',
+  'PC.Pages.SystemPermissionResourceFormModal.enabledTooltip': 'Whether to enable this resource',
   'PC.Pages.SystemPermissionResourceFormModal.name': 'Resource Name',
-  'PC.Pages.SystemPermissionResourceFormModal.namePlaceholder':
-    'Please enter resource name',
-  'PC.Pages.SystemPermissionResourceFormModal.nameRequired':
-    'Please enter resource name',
+  'PC.Pages.SystemPermissionResourceFormModal.namePlaceholder': 'Please enter resource name',
+  'PC.Pages.SystemPermissionResourceFormModal.nameRequired': 'Please enter resource name',
   'PC.Pages.SystemPermissionResourceFormModal.parentNode': 'Parent Node',
-  'PC.Pages.SystemPermissionResourceFormModal.parentNodePlaceholder':
-    'Please select parent node (None)',
+  'PC.Pages.SystemPermissionResourceFormModal.parentNodePlaceholder': 'Please select parent node (None)',
   'PC.Pages.SystemPermissionResourceFormModal.routePath': 'Route Path',
-  'PC.Pages.SystemPermissionResourceFormModal.routePathLengthInvalid':
-    'Route path length cannot exceed 500 characters',
-  'PC.Pages.SystemPermissionResourceFormModal.routePathPatternInvalid':
-    'Route path must start with a slash and can only contain letters, numbers, slashes, and common URL special characters (? # & = . _ - : % @ + space)',
-  'PC.Pages.SystemPermissionResourceFormModal.routePathPlaceholder':
-    'Please enter route path, e.g. /system/menu',
-  'PC.Pages.SystemPermissionResourceFormModal.routePathTooltip':
-    'Static route e.g. /system/menu; dynamic route e.g. /system/menu/:id',
+  'PC.Pages.SystemPermissionResourceFormModal.routePathLengthInvalid': 'Route path length cannot exceed 500 characters',
+  'PC.Pages.SystemPermissionResourceFormModal.routePathPatternInvalid': 'Route path must start with a slash and can only contain letters, numbers, slashes, and common URL special characters (? # & = . _ - : % @ + space)',
+  'PC.Pages.SystemPermissionResourceFormModal.routePathPlaceholder': 'Please enter route path, e.g. /system/menu',
+  'PC.Pages.SystemPermissionResourceFormModal.routePathTooltip': 'Static route e.g. /system/menu; dynamic route e.g. /system/menu/:id',
   'PC.Pages.SystemPermissionResourceFormModal.save': 'Save',
   'PC.Pages.SystemPermissionResourceFormModal.sort': 'Sort',
-  'PC.Pages.SystemPermissionResourceFormModal.sortPlaceholder':
-    'Please enter sort',
+  'PC.Pages.SystemPermissionResourceFormModal.sortPlaceholder': 'Please enter sort',
   'PC.Pages.SystemPermissionResourceFormModal.source': 'Source',
-  'PC.Pages.SystemPermissionResourceFormModal.sourcePlaceholder':
-    'Please select source',
-  'PC.Pages.SystemPermissionResourceFormModal.sourceSystemBuiltIn':
-    'System Built-in',
-  'PC.Pages.SystemPermissionResourceFormModal.sourceUserDefined':
-    'User Defined',
+  'PC.Pages.SystemPermissionResourceFormModal.sourcePlaceholder': 'Please select source',
+  'PC.Pages.SystemPermissionResourceFormModal.sourceSystemBuiltIn': 'System Built-in',
+  'PC.Pages.SystemPermissionResourceFormModal.sourceUserDefined': 'User Defined',
   'PC.Pages.SystemPermissionResourceFormModal.switchDisabled': 'Disabled',
   'PC.Pages.SystemPermissionResourceFormModal.switchEnabled': 'Enabled',
   'PC.Pages.SystemPermissionResourceFormModal.type': 'Resource Type',
   'PC.Pages.SystemPermissionResourceFormModal.typeComponent': 'Component',
   'PC.Pages.SystemPermissionResourceFormModal.typeModule': 'Module',
-  'PC.Pages.SystemPermissionResourceFormModal.typePlaceholder':
-    'Please select resource type',
-  'PC.Pages.SystemPermissionResourceFormModal.typeRequired':
-    'Please select resource type',
-  'PC.Pages.SystemPermissionResourceFormModal.updateSuccess':
-    'Resource updated successfully',
+  'PC.Pages.SystemPermissionResourceFormModal.typePlaceholder': 'Please select resource type',
+  'PC.Pages.SystemPermissionResourceFormModal.typeRequired': 'Please select resource type',
+  'PC.Pages.SystemPermissionResourceFormModal.updateSuccess': 'Resource updated successfully',
   'PC.Pages.SystemPermissionResources.actionAdd': 'Add',
   'PC.Pages.SystemPermissionResources.actionDelete': 'Delete',
   'PC.Pages.SystemPermissionResources.actionEdit': 'Edit',
@@ -4970,33 +3869,25 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemPermissionResources.columnRoutePath': 'Route Path',
   'PC.Pages.SystemPermissionResources.columnSort': 'Sort',
   'PC.Pages.SystemPermissionResources.columnType': 'Type',
-  'PC.Pages.SystemPermissionResources.deleteResourceConfirm':
-    'Are you sure to delete resource "{0}"?',
+  'PC.Pages.SystemPermissionResources.deleteResourceConfirm': 'Are you sure to delete resource "{0}"?',
   'PC.Pages.SystemPermissionResources.deleteResourceTitle': 'Delete Resource',
   'PC.Pages.SystemPermissionResources.deleteSuccess': 'Deleted successfully',
   'PC.Pages.SystemPermissionResources.disabled': 'Disable',
-  'PC.Pages.SystemPermissionResources.dragFailedRetry':
-    'Drag failed, please retry',
+  'PC.Pages.SystemPermissionResources.dragFailedRetry': 'Drag failed, please retry',
   'PC.Pages.SystemPermissionResources.enabled': 'Enable',
   'PC.Pages.SystemPermissionResources.noPermission': 'No permission',
   'PC.Pages.SystemPermissionResources.noResourceData': 'No resource data',
-  'PC.Pages.SystemPermissionResources.pageTitle':
-    'Permission Resource Management',
-  'PC.Pages.SystemPermissionResources.sortUpdateSuccess':
-    'Sort updated successfully',
-  'PC.Pages.SystemPermissionResources.systemBuiltinDeleteDenied':
-    'System built-in resources cannot be deleted',
-  'PC.Pages.SystemPermissionResources.systemBuiltinDisableDenied':
-    'System built-in resources cannot be disabled',
-  'PC.Pages.SystemPermissionResources.systemBuiltinEditDenied':
-    'System built-in resources cannot be edited',
+  'PC.Pages.SystemPermissionResources.pageTitle': 'Permission Resource Management',
+  'PC.Pages.SystemPermissionResources.sortUpdateSuccess': 'Sort updated successfully',
+  'PC.Pages.SystemPermissionResources.systemBuiltinDeleteDenied': 'System built-in resources cannot be deleted',
+  'PC.Pages.SystemPermissionResources.systemBuiltinDisableDenied': 'System built-in resources cannot be disabled',
+  'PC.Pages.SystemPermissionResources.systemBuiltinEditDenied': 'System built-in resources cannot be edited',
   'PC.Pages.SystemPermissionResources.typeComponent': 'Component',
   'PC.Pages.SystemPermissionResources.typeModule': 'Module',
   'PC.Pages.SystemRoleFormModal.create': 'Create',
   'PC.Pages.SystemRoleFormModal.createTitle': 'Create Role',
   'PC.Pages.SystemRoleFormModal.description': 'Description',
-  'PC.Pages.SystemRoleFormModal.descriptionPlaceholder':
-    'Please enter role description',
+  'PC.Pages.SystemRoleFormModal.descriptionPlaceholder': 'Please enter role description',
   'PC.Pages.SystemRoleFormModal.disabled': 'Disabled',
   'PC.Pages.SystemRoleFormModal.editTitle': 'Edit Role',
   'PC.Pages.SystemRoleFormModal.enabled': 'Enabled',
@@ -5015,12 +3906,9 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemRoleFormModal.statusTooltip': 'Enable or disable role',
   'PC.Pages.SystemRoleManage.addRole': 'Add Role',
   'PC.Pages.SystemRoleManage.bindUser': 'Bind User',
-  'PC.Pages.SystemRoleManage.builtInCannotDelete':
-    'System built-in roles cannot be deleted',
-  'PC.Pages.SystemRoleManage.builtInCannotDisable':
-    'System built-in roles cannot be disabled',
-  'PC.Pages.SystemRoleManage.builtInCannotEdit':
-    'System built-in roles cannot be edited',
+  'PC.Pages.SystemRoleManage.builtInCannotDelete': 'System built-in roles cannot be deleted',
+  'PC.Pages.SystemRoleManage.builtInCannotDisable': 'System built-in roles cannot be disabled',
+  'PC.Pages.SystemRoleManage.builtInCannotEdit': 'System built-in roles cannot be edited',
   'PC.Pages.SystemRoleManage.columnAction': 'Action',
   'PC.Pages.SystemRoleManage.columnCode': 'Code',
   'PC.Pages.SystemRoleManage.columnDescription': 'Description',
@@ -5029,8 +3917,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemRoleManage.columnStatus': 'Status',
   'PC.Pages.SystemRoleManage.dataPermission': 'Data Permission',
   'PC.Pages.SystemRoleManage.delete': 'Delete',
-  'PC.Pages.SystemRoleManage.deleteRoleConfirm':
-    'Are you sure to delete role "{0}"?',
+  'PC.Pages.SystemRoleManage.deleteRoleConfirm': 'Are you sure to delete role "{0}"?',
   'PC.Pages.SystemRoleManage.deleteRoleTitle': 'Delete Role',
   'PC.Pages.SystemRoleManage.deleteSuccess': 'Deleted successfully',
   'PC.Pages.SystemRoleManage.disabled': 'Disabled',
@@ -5083,21 +3970,14 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemRunningLogTable.columnUserId': 'User ID',
   'PC.Pages.SystemRunningLogTable.columnUserName': 'User Name',
   'PC.Pages.SystemRunningLogTable.detail': 'Detail',
-  'PC.Pages.SystemRunningLogTable.missingRequestIdForDetail':
-    'The record has no requestId. Details cannot be viewed.',
-  'PC.Pages.SystemRunningLogTable.placeholderConversationId':
-    'Please enter conversation ID',
-  'PC.Pages.SystemRunningLogTable.placeholderKeywords':
-    'Separate keywords with spaces',
-  'PC.Pages.SystemRunningLogTable.placeholderObjectId':
-    'Please enter object ID',
-  'PC.Pages.SystemRunningLogTable.placeholderObjectName':
-    'Please enter object name',
-  'PC.Pages.SystemRunningLogTable.placeholderRequestId':
-    'Please enter request ID',
+  'PC.Pages.SystemRunningLogTable.missingRequestIdForDetail': 'The record has no requestId. Details cannot be viewed.',
+  'PC.Pages.SystemRunningLogTable.placeholderConversationId': 'Please enter conversation ID',
+  'PC.Pages.SystemRunningLogTable.placeholderKeywords': 'Separate keywords with spaces',
+  'PC.Pages.SystemRunningLogTable.placeholderObjectId': 'Please enter object ID',
+  'PC.Pages.SystemRunningLogTable.placeholderObjectName': 'Please enter object name',
+  'PC.Pages.SystemRunningLogTable.placeholderRequestId': 'Please enter request ID',
   'PC.Pages.SystemRunningLogTable.placeholderType': 'Please select type',
-  'PC.Pages.SystemRunningLogTable.placeholderUserIdIntegerOnly':
-    'Please enter user ID. Only integers are supported',
+  'PC.Pages.SystemRunningLogTable.placeholderUserIdIntegerOnly': 'Please enter user ID. Only integers are supported',
   'PC.Pages.SystemRunningLogTable.placeholderUserName': 'Please enter username',
   'PC.Pages.SystemRunningLogTable.queryFailed': 'Query failed',
   'PC.Pages.SystemRunningLogTable.targetTypeAgent': 'Agent',
@@ -5116,75 +3996,54 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemTargetAuthModal.userGroupTab': 'User Group',
   'PC.Pages.SystemTaskCenterProTable.actions': 'Actions',
   'PC.Pages.SystemTaskCenterProTable.agent': 'Agent',
-  'PC.Pages.SystemTaskCenterProTable.confirmDeleteTask':
-    'Confirm deleting this task?',
-  'PC.Pages.SystemTaskCenterProTable.confirmDisableTask':
-    'Confirm disabling this task?',
-  'PC.Pages.SystemTaskCenterProTable.confirmEnableTask':
-    'Confirm enabling this task?',
+  'PC.Pages.SystemTaskCenterProTable.confirmDeleteTask': 'Confirm deleting this task?',
+  'PC.Pages.SystemTaskCenterProTable.confirmDisableTask': 'Confirm disabling this task?',
+  'PC.Pages.SystemTaskCenterProTable.confirmEnableTask': 'Confirm enabling this task?',
   'PC.Pages.SystemTaskCenterProTable.createdTime': 'Created Time',
   'PC.Pages.SystemTaskCenterProTable.creator': 'Creator',
   'PC.Pages.SystemTaskCenterProTable.delete': 'Delete',
-  'PC.Pages.SystemTaskCenterProTable.deleteTaskSuccess':
-    'Task deleted successfully',
+  'PC.Pages.SystemTaskCenterProTable.deleteTaskSuccess': 'Task deleted successfully',
   'PC.Pages.SystemTaskCenterProTable.disable': 'Disable',
-  'PC.Pages.SystemTaskCenterProTable.disableTaskSuccess':
-    'Task disabled successfully',
+  'PC.Pages.SystemTaskCenterProTable.disableTaskSuccess': 'Task disabled successfully',
   'PC.Pages.SystemTaskCenterProTable.edit': 'Edit',
   'PC.Pages.SystemTaskCenterProTable.enable': 'Enable',
-  'PC.Pages.SystemTaskCenterProTable.enableTaskSuccess':
-    'Task enabled successfully',
+  'PC.Pages.SystemTaskCenterProTable.enableTaskSuccess': 'Task enabled successfully',
   'PC.Pages.SystemTaskCenterProTable.enterCreator': 'Please enter creator',
   'PC.Pages.SystemTaskCenterProTable.enterTaskName': 'Please enter task name',
-  'PC.Pages.SystemTaskCenterProTable.executeTaskSuccess':
-    'Task executed successfully',
+  'PC.Pages.SystemTaskCenterProTable.executeTaskSuccess': 'Task executed successfully',
   'PC.Pages.SystemTaskCenterProTable.executionRecord': 'Execution Record',
   'PC.Pages.SystemTaskCenterProTable.executionTimes': 'Execution Count',
-  'PC.Pages.SystemTaskCenterProTable.latestExecutionTime':
-    'Latest Execution Time',
+  'PC.Pages.SystemTaskCenterProTable.latestExecutionTime': 'Latest Execution Time',
   'PC.Pages.SystemTaskCenterProTable.manualExecute': 'Run Manually',
   'PC.Pages.SystemTaskCenterProTable.nextExecutionTime': 'Next Execution Time',
   'PC.Pages.SystemTaskCenterProTable.selectTaskType': 'Please select task type',
-  'PC.Pages.SystemTaskCenterProTable.statusCreatedWaiting':
-    'Task created, waiting for execution',
-  'PC.Pages.SystemTaskCenterProTable.statusEndedNoMore':
-    'Ended, no further execution',
+  'PC.Pages.SystemTaskCenterProTable.statusCreatedWaiting': 'Task created, waiting for execution',
+  'PC.Pages.SystemTaskCenterProTable.statusEndedNoMore': 'Ended, no further execution',
   'PC.Pages.SystemTaskCenterProTable.statusExecuting': 'Executing',
-  'PC.Pages.SystemTaskCenterProTable.statusFailedWaitingNext':
-    'Execution failed, waiting for next run',
-  'PC.Pages.SystemTaskCenterProTable.statusSuccessWaitingNext':
-    'Executed successfully, waiting for next run',
+  'PC.Pages.SystemTaskCenterProTable.statusFailedWaitingNext': 'Execution failed, waiting for next run',
+  'PC.Pages.SystemTaskCenterProTable.statusSuccessWaitingNext': 'Executed successfully, waiting for next run',
   'PC.Pages.SystemTaskCenterProTable.taskName': 'Task Name',
   'PC.Pages.SystemTaskCenterProTable.taskStatus': 'Task Status',
   'PC.Pages.SystemTaskCenterProTable.taskTarget': 'Task Target',
   'PC.Pages.SystemTaskCenterProTable.taskType': 'Task Type',
   'PC.Pages.SystemTaskCenterProTable.workflow': 'Workflow',
-  'PC.Pages.SystemTaskCreateTimedTask.createSuccess':
-    'Timed task created successfully',
+  'PC.Pages.SystemTaskCreateTimedTask.createSuccess': 'Timed task created successfully',
   'PC.Pages.SystemTaskCreateTimedTask.createTitle': 'Create Timed Task',
-  'PC.Pages.SystemTaskCreateTimedTask.enterTaskContent':
-    'Please enter task content',
+  'PC.Pages.SystemTaskCreateTimedTask.enterTaskContent': 'Please enter task content',
   'PC.Pages.SystemTaskCreateTimedTask.enterTaskName': 'Please enter task name',
-  'PC.Pages.SystemTaskCreateTimedTask.fillParameterConfig':
-    'Please fill in parameter configuration',
+  'PC.Pages.SystemTaskCreateTimedTask.fillParameterConfig': 'Please fill in parameter configuration',
   'PC.Pages.SystemTaskCreateTimedTask.keepConversation': 'Keep Conversation',
-  'PC.Pages.SystemTaskCreateTimedTask.keepConversationTooltip':
-    'When selecting "No", a brand-new conversation is created for each task run',
+  'PC.Pages.SystemTaskCreateTimedTask.keepConversationTooltip': 'When selecting "No", a brand-new conversation is created for each task run',
   'PC.Pages.SystemTaskCreateTimedTask.no': 'No',
-  'PC.Pages.SystemTaskCreateTimedTask.parameterConfig':
-    'Parameter Configuration',
-  'PC.Pages.SystemTaskCreateTimedTask.selectKeepConversation':
-    'Please select whether to keep conversation',
-  'PC.Pages.SystemTaskCreateTimedTask.specificTimeMustBeFuture':
-    'The specific time must be later than the current time',
+  'PC.Pages.SystemTaskCreateTimedTask.parameterConfig': 'Parameter Configuration',
+  'PC.Pages.SystemTaskCreateTimedTask.selectKeepConversation': 'Please select whether to keep conversation',
+  'PC.Pages.SystemTaskCreateTimedTask.specificTimeMustBeFuture': 'The specific time must be later than the current time',
   'PC.Pages.SystemTaskCreateTimedTask.taskContent': 'Task Content',
-  'PC.Pages.SystemTaskCreateTimedTask.taskContentPlaceholder':
-    'Please enter the task information to execute. More details improve execution success rate.',
+  'PC.Pages.SystemTaskCreateTimedTask.taskContentPlaceholder': 'Please enter the task information to execute. More details improve execution success rate.',
   'PC.Pages.SystemTaskCreateTimedTask.taskName': 'Task Name',
   'PC.Pages.SystemTaskCreateTimedTask.taskTarget': 'Task Target',
   'PC.Pages.SystemTaskCreateTimedTask.timedPeriod': 'Timed Period',
-  'PC.Pages.SystemTaskCreateTimedTask.updateSuccess':
-    'Timed task updated successfully',
+  'PC.Pages.SystemTaskCreateTimedTask.updateSuccess': 'Timed task updated successfully',
   'PC.Pages.SystemTaskCreateTimedTask.updateTitle': 'Update Timed Task',
   'PC.Pages.SystemTaskCreateTimedTask.yes': 'Yes',
   'PC.Pages.SystemTaskManage.pageTitle': 'Task Management',
@@ -5193,60 +4052,44 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemTaskSelectTargetFormItem.selectLabel': 'Please select {0}',
   'PC.Pages.SystemTaskSelectTargetFormItemTarget.delete': 'Delete',
   'PC.Pages.SystemTaskTimedPeriodSelector.enter': 'Please enter',
-  'PC.Pages.SystemTaskTimedPeriodSelector.selectDateTime':
-    'Please select date and time',
-  'PC.Pages.SystemTaskTimedPeriodSelector.selectSpecificTime':
-    'Please select specific time',
+  'PC.Pages.SystemTaskTimedPeriodSelector.selectDateTime': 'Please select date and time',
+  'PC.Pages.SystemTaskTimedPeriodSelector.selectSpecificTime': 'Please select specific time',
   'PC.Pages.SystemTaskTimedPeriodSelector.specificTime': 'Specific Time',
-  'PC.Pages.SystemTaskTimedPeriodSelector.specificTimeMustBeFuture':
-    'The specific time must be later than the current time',
-  'PC.Pages.SystemThemeConfig.autoSwitchedBackgroundPreview':
-    'Automatically switched to {0} to match {1} navigation (preview)',
-  'PC.Pages.SystemThemeConfig.autoSwitchedNavModePreview':
-    'Automatically switched to {0} navigation (preview)',
+  'PC.Pages.SystemTaskTimedPeriodSelector.specificTimeMustBeFuture': 'The specific time must be later than the current time',
+  'PC.Pages.SystemThemeConfig.autoSwitchedBackgroundPreview': 'Automatically switched to {0} to match {1} navigation (preview)',
+  'PC.Pages.SystemThemeConfig.autoSwitchedNavModePreview': 'Automatically switched to {0} navigation (preview)',
   'PC.Pages.SystemThemeConfig.darkMode': 'Dark',
   'PC.Pages.SystemThemeConfig.lightMode': 'Light',
   'PC.Pages.SystemThemeConfig.pageTitle': 'Theme Configuration',
   'PC.Pages.SystemThemeConfig.resetDefault': 'Reset Default',
-  'PC.Pages.SystemThemeConfig.resetPreview':
-    'Reset to default configuration (preview)',
+  'PC.Pages.SystemThemeConfig.resetPreview': 'Reset to default configuration (preview)',
   'PC.Pages.SystemThemeConfig.saveConfig': 'Save Configuration',
-  'PC.Pages.SystemThemeConfig.saveSuccess':
-    'Theme configuration saved successfully',
+  'PC.Pages.SystemThemeConfig.saveSuccess': 'Theme configuration saved successfully',
   'PC.Pages.SystemUserGroupFormModal.create': 'Create',
   'PC.Pages.SystemUserGroupFormModal.createTitle': 'Create User Group',
   'PC.Pages.SystemUserGroupFormModal.description': 'Description',
-  'PC.Pages.SystemUserGroupFormModal.descriptionPlaceholder':
-    'Please enter user group description',
+  'PC.Pages.SystemUserGroupFormModal.descriptionPlaceholder': 'Please enter user group description',
   'PC.Pages.SystemUserGroupFormModal.disabled': 'Disabled',
   'PC.Pages.SystemUserGroupFormModal.editTitle': 'Edit User Group',
   'PC.Pages.SystemUserGroupFormModal.enabled': 'Enabled',
-  'PC.Pages.SystemUserGroupFormModal.formValidateFailed':
-    'Form validation failed',
+  'PC.Pages.SystemUserGroupFormModal.formValidateFailed': 'Form validation failed',
   'PC.Pages.SystemUserGroupFormModal.name': 'User Group Name',
-  'PC.Pages.SystemUserGroupFormModal.namePlaceholder':
-    'Please enter user group name',
-  'PC.Pages.SystemUserGroupFormModal.nameRequired':
-    'Please enter user group name',
+  'PC.Pages.SystemUserGroupFormModal.namePlaceholder': 'Please enter user group name',
+  'PC.Pages.SystemUserGroupFormModal.nameRequired': 'Please enter user group name',
   'PC.Pages.SystemUserGroupFormModal.save': 'Save',
   'PC.Pages.SystemUserGroupFormModal.sort': 'Sort',
-  'PC.Pages.SystemUserGroupFormModal.sortPlaceholder':
-    'Please enter sort order',
+  'PC.Pages.SystemUserGroupFormModal.sortPlaceholder': 'Please enter sort order',
   'PC.Pages.SystemUserGroupFormModal.source': 'Source',
   'PC.Pages.SystemUserGroupFormModal.sourcePlaceholder': 'Please select source',
   'PC.Pages.SystemUserGroupFormModal.sourceSystemBuiltIn': 'System Built-in',
   'PC.Pages.SystemUserGroupFormModal.sourceUserDefined': 'User Defined',
   'PC.Pages.SystemUserGroupFormModal.status': 'Status',
-  'PC.Pages.SystemUserGroupFormModal.statusTip':
-    'Enable or disable this user group',
+  'PC.Pages.SystemUserGroupFormModal.statusTip': 'Enable or disable this user group',
   'PC.Pages.SystemUserGroupManage.add': 'Add User Group',
   'PC.Pages.SystemUserGroupManage.bindUser': 'Bind User',
-  'PC.Pages.SystemUserGroupManage.builtInCannotDelete':
-    'System built-in user groups cannot be deleted',
-  'PC.Pages.SystemUserGroupManage.builtInCannotDisable':
-    'System built-in user groups cannot be disabled',
-  'PC.Pages.SystemUserGroupManage.builtInCannotEdit':
-    'System built-in user groups cannot be edited',
+  'PC.Pages.SystemUserGroupManage.builtInCannotDelete': 'System built-in user groups cannot be deleted',
+  'PC.Pages.SystemUserGroupManage.builtInCannotDisable': 'System built-in user groups cannot be disabled',
+  'PC.Pages.SystemUserGroupManage.builtInCannotEdit': 'System built-in user groups cannot be edited',
   'PC.Pages.SystemUserGroupManage.columnAction': 'Action',
   'PC.Pages.SystemUserGroupManage.columnCode': 'Code',
   'PC.Pages.SystemUserGroupManage.columnDescription': 'Description',
@@ -5255,8 +4098,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemUserGroupManage.columnStatus': 'Status',
   'PC.Pages.SystemUserGroupManage.dataPermission': 'Data Permission',
   'PC.Pages.SystemUserGroupManage.delete': 'Delete',
-  'PC.Pages.SystemUserGroupManage.deleteConfirm':
-    'Are you sure to delete user group "{0}"?',
+  'PC.Pages.SystemUserGroupManage.deleteConfirm': 'Are you sure to delete user group "{0}"?',
   'PC.Pages.SystemUserGroupManage.deleteSuccess': 'Deleted successfully',
   'PC.Pages.SystemUserGroupManage.deleteTitle': 'Delete User Group',
   'PC.Pages.SystemUserGroupManage.disabled': 'Disabled',
@@ -5264,28 +4106,22 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemUserGroupManage.empty': 'No user-group data',
   'PC.Pages.SystemUserGroupManage.enabled': 'Enabled',
   'PC.Pages.SystemUserGroupManage.menuPermission': 'Menu Permission',
-  'PC.Pages.SystemUserGroupManage.noPermission':
-    'No permission for this resource',
+  'PC.Pages.SystemUserGroupManage.noPermission': 'No permission for this resource',
   'PC.Pages.SystemUserGroupManage.pageTitle': 'User Group Management',
-  'PC.Pages.SystemUserGroupManage.sortUpdated':
-    'Sort order updated successfully',
-  'PC.Pages.SystemUserGroupManage.statusTip':
-    'Enable or disable this user group',
+  'PC.Pages.SystemUserGroupManage.sortUpdated': 'Sort order updated successfully',
+  'PC.Pages.SystemUserGroupManage.statusTip': 'Enable or disable this user group',
   'PC.Pages.TeamSetting.AddMember.addNewMember': 'Add New Member',
   'PC.Pages.TeamSetting.AddMember.addSuccess': 'Added successfully',
   'PC.Pages.TeamSetting.AddMember.all': 'All',
   'PC.Pages.TeamSetting.AddMember.noUserFound': 'No matching users found',
-  'PC.Pages.TeamSetting.AddMember.searchPlaceholder':
-    'Enter username, email, or phone number and press Enter to search',
+  'PC.Pages.TeamSetting.AddMember.searchPlaceholder': 'Enter username, email, or phone number and press Enter to search',
   'PC.Pages.TeamSetting.AddMember.selectedMembers': 'Selected ({0})',
-  'PC.Pages.TeamSetting.AddMember.selectMemberWarning':
-    'Please select members to add',
+  'PC.Pages.TeamSetting.AddMember.selectMemberWarning': 'Please select members to add',
   'PC.Pages.TeamSetting.memberManagement': 'Member Management',
   'PC.Pages.TeamSetting.MemberManageTab.action': 'Action',
   'PC.Pages.TeamSetting.MemberManageTab.addMember': 'Add Member',
   'PC.Pages.TeamSetting.MemberManageTab.confirmDelete': 'Confirm Delete',
-  'PC.Pages.TeamSetting.MemberManageTab.confirmDeleteUser':
-    'Are you sure you want to delete this user?',
+  'PC.Pages.TeamSetting.MemberManageTab.confirmDeleteUser': 'Are you sure you want to delete this user?',
   'PC.Pages.TeamSetting.MemberManageTab.delete': 'Delete',
   'PC.Pages.TeamSetting.MemberManageTab.joinTime': 'Join Time',
   'PC.Pages.TeamSetting.MemberManageTab.keyword': 'Keyword',
@@ -5296,101 +4132,61 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.TeamSetting.ModifyTeam.descriptionLabel': 'Description',
   'PC.Pages.TeamSetting.ModifyTeam.descriptionPlaceholder': 'Describe the team',
   'PC.Pages.TeamSetting.ModifyTeam.editTeamProfile': 'Edit Team Profile',
-  'PC.Pages.TeamSetting.ModifyTeam.teamDescription':
-    'By creating a team space, you can support collaboration and sharing of agents, plugins, workflows, large models, and knowledge bases within the team.',
+  'PC.Pages.TeamSetting.ModifyTeam.teamDescription': 'By creating a team space, you can support collaboration and sharing of agents, plugins, workflows, large models, and knowledge bases within the team.',
   'PC.Pages.TeamSetting.ModifyTeam.teamNameLabel': 'Team Name',
   'PC.Pages.TeamSetting.ModifyTeam.teamNameRequired': 'Please enter team name',
   'PC.Pages.TeamSetting.myStatus': 'My Status: {0}',
   'PC.Pages.TeamSetting.RemoveSpace.deleteTeamTitle': 'Delete Team',
-  'PC.Pages.TeamSetting.RemoveSpace.deleteWarning':
-    'Please delete with caution. After deletion, all data in the team will be lost.',
-  'PC.Pages.TeamSetting.RemoveSpace.enterTeamNameLabel':
-    'Enter the team name to delete',
-  'PC.Pages.TeamSetting.RemoveSpace.enterTeamNameRequired':
-    'Please enter the team name to delete',
-  'PC.Pages.TeamSetting.RemoveSpace.teamNameMismatch':
-    'The entered team name does not match the team name to delete',
-  'PC.Pages.TeamSetting.RemoveSpace.teamNamePlaceholder':
-    'Please enter team name',
+  'PC.Pages.TeamSetting.RemoveSpace.deleteWarning': 'Please delete with caution. After deletion, all data in the team will be lost.',
+  'PC.Pages.TeamSetting.RemoveSpace.enterTeamNameLabel': 'Enter the team name to delete',
+  'PC.Pages.TeamSetting.RemoveSpace.enterTeamNameRequired': 'Please enter the team name to delete',
+  'PC.Pages.TeamSetting.RemoveSpace.teamNameMismatch': 'The entered team name does not match the team name to delete',
+  'PC.Pages.TeamSetting.RemoveSpace.teamNamePlaceholder': 'Please enter team name',
   'PC.Pages.TeamSetting.roleAdmin': 'Admin',
   'PC.Pages.TeamSetting.roleMember': 'Member',
   'PC.Pages.TeamSetting.roleOwner': 'Owner',
   'PC.Pages.TeamSetting.spaceSetting': 'Space Settings',
   'PC.Pages.TeamSetting.SpaceSettingTab.deleteSpace': 'Delete Space',
   'PC.Pages.TeamSetting.SpaceSettingTab.deleteSpaceBtn': 'Delete Space',
-  'PC.Pages.TeamSetting.SpaceSettingTab.deleteSpaceDescription':
-    'Once the space is deleted, all assets cannot be recovered. Please proceed with caution.',
-  'PC.Pages.TeamSetting.SpaceSettingTab.developerFeatures':
-    'Developer Features',
-  'PC.Pages.TeamSetting.SpaceSettingTab.developerFeaturesTooltip':
-    'When disabled, users will not be able to see "Agent Development" and "Component Library". Creators and admins are not affected.',
-  'PC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublish':
-    'Receive External Space Publications',
-  'PC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublishTooltip':
-    "When enabled, users with permission to this space can publish agents, plugins, and workflows developed in other spaces to this space's marketplace.",
+  'PC.Pages.TeamSetting.SpaceSettingTab.deleteSpaceDescription': 'Once the space is deleted, all assets cannot be recovered. Please proceed with caution.',
+  'PC.Pages.TeamSetting.SpaceSettingTab.developerFeatures': 'Developer Features',
+  'PC.Pages.TeamSetting.SpaceSettingTab.developerFeaturesTooltip': 'When disabled, users will not be able to see "Agent Development" and "Component Library". Creators and admins are not affected.',
+  'PC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublish': 'Receive External Space Publications',
+  'PC.Pages.TeamSetting.SpaceSettingTab.receiveExternalPublishTooltip': "When enabled, users with permission to this space can publish agents, plugins, and workflows developed in other spaces to this space's marketplace.",
   'PC.Pages.TeamSetting.SpaceSettingTab.transferSpace': 'Transfer Space',
   'PC.Pages.TeamSetting.SpaceSettingTab.transferSpaceBtn': 'Transfer Space',
-  'PC.Pages.TeamSetting.SpaceSettingTab.transferSpaceDescription':
-    'Transfer space ownership to another member. You will become an Admin after the transfer.',
-  'PC.Pages.TeamSetting.TransferSpace.selectTeamMember':
-    'Please select a team member',
-  'PC.Pages.TeamSetting.TransferSpace.transferDescription':
-    'After transferring ownership, your status will change to Admin.',
-  'PC.Pages.TeamSetting.TransferSpace.transferOwnershipTitle':
-    'Transfer Team Ownership',
+  'PC.Pages.TeamSetting.SpaceSettingTab.transferSpaceDescription': 'Transfer space ownership to another member. You will become an Admin after the transfer.',
+  'PC.Pages.TeamSetting.TransferSpace.selectTeamMember': 'Please select a team member',
+  'PC.Pages.TeamSetting.TransferSpace.transferDescription': 'After transferring ownership, your status will change to Admin.',
+  'PC.Pages.TeamSetting.TransferSpace.transferOwnershipTitle': 'Transfer Team Ownership',
   'PC.Pages.TeamSetting.TransferSpace.transferSuccess': 'Transfer successful',
   'PC.Pages.TeamSetting.TransferSpace.transferToLabel': 'Transfer ownership to',
-  'PC.Pages.UserManage.DataPermissionModal.agentComputerCpuCores':
-    'Agent Computer CPU Cores',
-  'PC.Pages.UserManage.DataPermissionModal.agentComputerCpuCoresTooltip':
-    'Agent computer CPU cores (leave empty for default value)',
-  'PC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGb':
-    'Agent Computer Memory (GB)',
-  'PC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGbTooltip':
-    'Agent computer memory (GB, leave empty for default 4GB)',
-  'PC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimit':
-    'Daily Agent Chat Limit',
-  'PC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimitTooltip':
-    'Daily agent chat limit, -1 means unlimited',
-  'PC.Pages.UserManage.DataPermissionModal.dailyTokenLimit':
-    'Daily Token Limit',
-  'PC.Pages.UserManage.DataPermissionModal.dailyTokenLimitPlaceholder':
-    'Enter daily token limit',
-  'PC.Pages.UserManage.DataPermissionModal.dailyTokenLimitTooltip':
-    'Daily token limit, -1 means unlimited',
-  'PC.Pages.UserManage.DataPermissionModal.dataPermissionTitle':
-    'Data Permissions - {0}',
-  'PC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGb':
-    'Knowledge Storage Limit (GB)',
-  'PC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGbTooltip':
-    'Knowledge storage limit (GB), -1 means unlimited',
+  'PC.Pages.UserManage.DataPermissionModal.agentComputerCpuCores': 'Agent Computer CPU Cores',
+  'PC.Pages.UserManage.DataPermissionModal.agentComputerCpuCoresTooltip': 'Agent computer CPU cores (leave empty for default value)',
+  'PC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGb': 'Agent Computer Memory (GB)',
+  'PC.Pages.UserManage.DataPermissionModal.agentComputerMemoryGbTooltip': 'Agent computer memory (GB, leave empty for default 4GB)',
+  'PC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimit': 'Daily Agent Chat Limit',
+  'PC.Pages.UserManage.DataPermissionModal.agentDailyPromptLimitTooltip': 'Daily agent chat limit, -1 means unlimited',
+  'PC.Pages.UserManage.DataPermissionModal.dailyTokenLimit': 'Daily Token Limit',
+  'PC.Pages.UserManage.DataPermissionModal.dailyTokenLimitPlaceholder': 'Enter daily token limit',
+  'PC.Pages.UserManage.DataPermissionModal.dailyTokenLimitTooltip': 'Daily token limit, -1 means unlimited',
+  'PC.Pages.UserManage.DataPermissionModal.dataPermissionTitle': 'Data Permissions - {0}',
+  'PC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGb': 'Knowledge Storage Limit (GB)',
+  'PC.Pages.UserManage.DataPermissionModal.knowledgeStorageLimitGbTooltip': 'Knowledge storage limit (GB), -1 means unlimited',
   'PC.Pages.UserManage.DataPermissionModal.maxAgentCount': 'Max Agent Count',
-  'PC.Pages.UserManage.DataPermissionModal.maxAgentCountTooltip':
-    'Max agent count, -1 means unlimited',
-  'PC.Pages.UserManage.DataPermissionModal.maxDataTableCount':
-    'Max Data Table Count',
-  'PC.Pages.UserManage.DataPermissionModal.maxDataTableCountTooltip':
-    'Max data table count, -1 means unlimited',
-  'PC.Pages.UserManage.DataPermissionModal.maxKnowledgeCount':
-    'Max Knowledge Base Count',
-  'PC.Pages.UserManage.DataPermissionModal.maxKnowledgeCountTooltip':
-    'Max knowledge base count, -1 means unlimited',
-  'PC.Pages.UserManage.DataPermissionModal.maxPageAppCount':
-    'Max Web App Count',
-  'PC.Pages.UserManage.DataPermissionModal.maxPageAppCountTooltip':
-    'Max web app count, -1 means unlimited',
-  'PC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCount':
-    'Max Scheduled Task Count',
-  'PC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCountTooltip':
-    'Max scheduled task count, -1 means unlimited',
-  'PC.Pages.UserManage.DataPermissionModal.maxSpaceCount':
-    'Max Workspace Count',
-  'PC.Pages.UserManage.DataPermissionModal.maxSpaceCountTooltip':
-    'Max workspace count, -1 means unlimited',
-  'PC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimit':
-    'Daily Web App Chat Limit',
-  'PC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimitTooltip':
-    'Daily web app chat limit, -1 means unlimited',
+  'PC.Pages.UserManage.DataPermissionModal.maxAgentCountTooltip': 'Max agent count, -1 means unlimited',
+  'PC.Pages.UserManage.DataPermissionModal.maxDataTableCount': 'Max Data Table Count',
+  'PC.Pages.UserManage.DataPermissionModal.maxDataTableCountTooltip': 'Max data table count, -1 means unlimited',
+  'PC.Pages.UserManage.DataPermissionModal.maxKnowledgeCount': 'Max Knowledge Base Count',
+  'PC.Pages.UserManage.DataPermissionModal.maxKnowledgeCountTooltip': 'Max knowledge base count, -1 means unlimited',
+  'PC.Pages.UserManage.DataPermissionModal.maxPageAppCount': 'Max Web App Count',
+  'PC.Pages.UserManage.DataPermissionModal.maxPageAppCountTooltip': 'Max web app count, -1 means unlimited',
+  'PC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCount': 'Max Scheduled Task Count',
+  'PC.Pages.UserManage.DataPermissionModal.maxScheduledTaskCountTooltip': 'Max scheduled task count, -1 means unlimited',
+  'PC.Pages.UserManage.DataPermissionModal.maxSpaceCount': 'Max Workspace Count',
+  'PC.Pages.UserManage.DataPermissionModal.maxSpaceCountTooltip': 'Max workspace count, -1 means unlimited',
+  'PC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimit': 'Daily Web App Chat Limit',
+  'PC.Pages.UserManage.DataPermissionModal.pageDailyPromptLimitTooltip': 'Daily web app chat limit, -1 means unlimited',
   'PC.Pages.UserManage.Index.action': 'Action',
   'PC.Pages.UserManage.Index.addUser': 'Add User',
   'PC.Pages.UserManage.Index.admin': 'Admin',
@@ -5414,28 +4210,19 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.UserManage.Index.userManage': 'User Management',
   'PC.Pages.UserManage.Index.userName': 'Username',
   'PC.Pages.UserManage.Index.viewDataPermission': 'View Data Permissions',
-  'PC.Pages.UserManage.Index.viewMenuResourcePermission':
-    'View Menu Permissions',
-  'PC.Pages.UserManage.MessageSendModal.addMessageUser':
-    'Add Message Recipients',
+  'PC.Pages.UserManage.Index.viewMenuResourcePermission': 'View Menu Permissions',
+  'PC.Pages.UserManage.MessageSendModal.addMessageUser': 'Add Message Recipients',
   'PC.Pages.UserManage.MessageSendModal.broadcast': 'Send to specified users',
-  'PC.Pages.UserManage.MessageSendModal.inputMessageContent':
-    'Enter message content',
-  'PC.Pages.UserManage.MessageSendModal.messageSendSuccess':
-    'Message sent successfully',
+  'PC.Pages.UserManage.MessageSendModal.inputMessageContent': 'Enter message content',
+  'PC.Pages.UserManage.MessageSendModal.messageSendSuccess': 'Message sent successfully',
   'PC.Pages.UserManage.MessageSendModal.noUserFound': 'No matching users found',
-  'PC.Pages.UserManage.MessageSendModal.pleaseInputMessage':
-    'Please enter message content',
-  'PC.Pages.UserManage.MessageSendModal.pleaseSelectMembers':
-    'Please select members to add',
-  'PC.Pages.UserManage.MessageSendModal.searchUserPlaceholder':
-    'Enter username, email or phone number, press Enter to search',
+  'PC.Pages.UserManage.MessageSendModal.pleaseInputMessage': 'Please enter message content',
+  'PC.Pages.UserManage.MessageSendModal.pleaseSelectMembers': 'Please select members to add',
+  'PC.Pages.UserManage.MessageSendModal.searchUserPlaceholder': 'Enter username, email or phone number, press Enter to search',
   'PC.Pages.UserManage.MessageSendModal.selectAll': 'All',
-  'PC.Pages.UserManage.MessageSendModal.selectedMembers':
-    'Selected Members ({0})',
+  'PC.Pages.UserManage.MessageSendModal.selectedMembers': 'Selected Members ({0})',
   'PC.Pages.UserManage.MessageSendModal.sendMessage': 'Send Message',
-  'PC.Pages.UserManage.MessageSendModal.systemMessage':
-    'System message (all users)',
+  'PC.Pages.UserManage.MessageSendModal.systemMessage': 'System message (all users)',
   'PC.Pages.UserManage.UserAuthModal.authTitle': 'Authorization - {0}',
   'PC.Pages.UserManage.UserAuthModal.deselectAll': 'Deselect All',
   'PC.Pages.UserManage.UserAuthModal.role': 'Role',
@@ -5445,16 +4232,11 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.UserManage.UserFormModal.admin': 'Admin',
   'PC.Pages.UserManage.UserFormModal.editUser': 'Edit User',
   'PC.Pages.UserManage.UserFormModal.emailAddress': 'Email Address',
-  'PC.Pages.UserManage.UserFormModal.inputCorrectPassword':
-    'Invalid password, at least 6 characters!',
-  'PC.Pages.UserManage.UserFormModal.inputEmailAddress':
-    'Please enter email address',
-  'PC.Pages.UserManage.UserFormModal.inputLoginPassword':
-    'Please enter login password',
-  'PC.Pages.UserManage.UserFormModal.inputNickName':
-    'Please enter nickname (full name)',
-  'PC.Pages.UserManage.UserFormModal.inputPhoneNumber':
-    'Please enter phone number',
+  'PC.Pages.UserManage.UserFormModal.inputCorrectPassword': 'Invalid password, at least 6 characters!',
+  'PC.Pages.UserManage.UserFormModal.inputEmailAddress': 'Please enter email address',
+  'PC.Pages.UserManage.UserFormModal.inputLoginPassword': 'Please enter login password',
+  'PC.Pages.UserManage.UserFormModal.inputNickName': 'Please enter nickname (full name)',
+  'PC.Pages.UserManage.UserFormModal.inputPhoneNumber': 'Please enter phone number',
   'PC.Pages.UserManage.UserFormModal.inputUserName': 'Please enter username',
   'PC.Pages.UserManage.UserFormModal.loginPassword': 'Login Password',
   'PC.Pages.UserManage.UserFormModal.nickName': 'Nickname',
@@ -5464,8 +4246,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.UserManage.UserFormModal.userType': 'User Type',
   'PC.Pages.UserManage.UserViewMenuModal.menuId': 'Menu {0}',
   'PC.Pages.UserManage.UserViewMenuModal.resourceId': 'Resource {0}',
-  'PC.Pages.UserManage.UserViewMenuModal.viewMenuResourcePermission':
-    'View Menu Resource Permissions',
+  'PC.Pages.UserManage.UserViewMenuModal.viewMenuResourcePermission': 'View Menu Resource Permissions',
   'PC.Pages.VerifyCode.codeSentTo': 'Verification code sent to {0}{1}',
   'PC.Pages.VerifyCode.countdownSuffix': 's later',
   'PC.Pages.VerifyCode.inputEmailCode': 'Enter email verification code',
@@ -5507,8 +4288,7 @@ export const EN_US: SystemLangMap = {
   'PC.Routes.themeConfig': 'Theme Configuration',
   'PC.Routes.userGroupManage': 'User Group Management',
   'PC.Routes.userManagement': 'User Management',
-  'PC.Toast.AgentArrangeCreateVariableModal.updateSuccess':
-    'Variable updated successfully',
+  'PC.Toast.AgentArrangeCreateVariableModal.updateSuccess': 'Variable updated successfully',
   'PC.Toast.Global.clearedSuccessfully': 'Cleared successfully',
   'PC.Toast.Global.copiedSuccessfully': 'Copied successfully',
   'PC.Toast.Global.deletedSuccessfully': 'Deleted successfully',
@@ -5521,8 +4301,7 @@ export const EN_US: SystemLangMap = {
   'PC.Toast.Global.savedSuccessfully': 'Saved successfully',
   'PC.Toast.Global.serverTimeout': 'Server timeout, please retry',
   'PC.Toast.Global.serverUnreachable': 'Network error, unable to connect',
-  'PC.Toast.MyComputerManage.connectionKeyCopied':
-    'Client connection key copied',
+  'PC.Toast.MyComputerManage.connectionKeyCopied': 'Client connection key copied',
   'PC.Toast.MyComputerManage.createdSuccessfully': 'Created successfully',
   'PC.Toast.MyComputerManage.createFailed': 'Creation failed',
   'PC.Toast.MyComputerManage.disabled': 'Disabled',
@@ -5533,13 +4312,10 @@ export const EN_US: SystemLangMap = {
   'PC.Toast.SystemRoleFormModal.createSuccess': 'Role created successfully',
   'PC.Toast.SystemRoleFormModal.editSuccess': 'Role updated successfully',
   'PC.Toast.SystemTargetAuthModal.authorized': 'Authorized successfully',
-  'PC.Toast.SystemUserGroupFormModal.createSuccess':
-    'User group created successfully',
-  'PC.Toast.SystemUserGroupFormModal.updateSuccess':
-    'User group updated successfully',
+  'PC.Toast.SystemUserGroupFormModal.createSuccess': 'User group created successfully',
+  'PC.Toast.SystemUserGroupFormModal.updateSuccess': 'User group updated successfully',
   'PC.Toast.UploadAvatar.invalidSize': 'Image size cannot exceed 2MB',
-  'PC.Toast.UploadAvatar.invalidType':
-    'Please upload JPG, JPEG, or PNG image files',
+  'PC.Toast.UploadAvatar.invalidType': 'Please upload JPG, JPEG, or PNG image files',
   'PC.Utils.AntCustom.cancelText': 'Cancel',
   'PC.Utils.AntCustom.okText': 'OK',
   'PC.Utils.ChatUtils.cancelled': 'Cancelled',
@@ -5565,20 +4341,15 @@ export const EN_US: SystemLangMap = {
   'PC.Utils.FetchEventSource.sseConnectionFailed': 'SSE connection failed',
   'PC.Utils.FileTree.downloadFailed': 'Download failed',
   'PC.Utils.FileTree.downloadFailedRetry': 'Download failed, please retry',
-  'PC.Utils.FileTree.emptyFileCannotExportPdf':
-    'File content is empty, cannot export PDF',
+  'PC.Utils.FileTree.emptyFileCannotExportPdf': 'File content is empty, cannot export PDF',
   'PC.Utils.FileTree.pdfExportSuccess': 'PDF exported successfully',
   'PC.Utils.Graph.cannotConnectExternalNode': 'Cannot connect external node',
   'PC.Utils.Graph.cannotConnectOutsideNode': 'Cannot connect outside node',
   'PC.Utils.Graph.duplicateEdgeNotAllowed': 'Cannot create duplicate edge',
-  'PC.Utils.Graph.loopExitAlreadyExists':
-    'Loop exit already exists for child node, please delete the edge first',
-  'PC.Utils.Graph.loopExitNodeInvalid':
-    'Condition branch, intent recognition, Q&A cannot be used as loop exit connection node',
-  'PC.Utils.Graph.loopInnerEdgeAlreadyExists':
-    'Loop already has inner edge, please delete it first',
-  'PC.Utils.Graph.portConnectionWarning':
-    'Left port can only be used as input, right port can only be used as output',
+  'PC.Utils.Graph.loopExitAlreadyExists': 'Loop exit already exists for child node, please delete the edge first',
+  'PC.Utils.Graph.loopExitNodeInvalid': 'Condition branch, intent recognition, Q&A cannot be used as loop exit connection node',
+  'PC.Utils.Graph.loopInnerEdgeAlreadyExists': 'Loop already has inner edge, please delete it first',
+  'PC.Utils.Graph.portConnectionWarning': 'Left port can only be used as input, right port can only be used as output',
   'PC.Utils.HtmlToPdf.cannotAccessIframeDoc': 'Cannot access iframe document',
   'PC.Utils.HtmlToPdf.cannotCreatePrintEnv': 'Cannot create print environment',
   'PC.Utils.InputValidation.enterNumber': 'Please enter a number',
@@ -5591,8 +4362,7 @@ export const EN_US: SystemLangMap = {
   'PC.Utils.MermaidExporter.pngExportSuccess': 'PNG exported successfully',
   'PC.Utils.MermaidExporter.svgExportFailed': 'SVG export failed',
   'PC.Utils.MermaidExporter.svgExportSuccess': 'SVG exported successfully',
-  'PC.Utils.PptxFallbackRenderer.complexFormatNotice':
-    'This PPTX file has a complex format and full preview is not supported.<br>It is recommended to download and view in PowerPoint.',
+  'PC.Utils.PptxFallbackRenderer.complexFormatNotice': 'This PPTX file has a complex format and full preview is not supported.<br>It is recommended to download and view in PowerPoint.',
   'PC.Utils.PptxFallbackRenderer.coverPreview': 'Presentation Cover Preview',
   'PC.Utils.PptxFallbackRenderer.parseFailed': 'PPTX file parse failed',
   'PC.Utils.PptxFallbackRenderer.previewAlt': 'Presentation Preview',
