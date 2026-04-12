@@ -5477,4 +5477,10 @@ export const ZH_CN: SystemLangMap = {
   'PC.Pages.MorePage.ApiKey.neverExpires': '永不过期',
   'PC.Pages.EditAgent.VariableDataBinding.pluginOrWorkflowRequired':
     '请选择符合数据规范的插件或工作流',
+  'PC.Common.Global.processing': '处理中',
+  'PC.Components.TestRun.fieldRequired': '{0} 是必填项',
+  'PC.Pages.ChatTemp.startConversationWithName': '与 {0} 开始会话',
+  'PC.Pages.ChatTemp.welcomeText': '欢迎来到 {0}',
+  'PC.Pages.SpaceDevelop.copyIndependentSessionFailed': '复制独立会话链接失败',
+  'PC.Pages.SystemConfig.LangContent.title': '多语言配置',
 };

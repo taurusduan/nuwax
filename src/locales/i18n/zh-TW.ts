@@ -5048,4 +5048,10 @@ export const ZH_TW: SystemLangMap = {
   'PC.Pages.MorePage.ApiKey.neverExpires': '永不過期',
   'PC.Pages.EditAgent.VariableDataBinding.pluginOrWorkflowRequired':
     '請選擇符合數據規範的外掛程式或工作流',
+  'PC.Common.Global.processing': '處理中',
+  'PC.Components.TestRun.fieldRequired': '{0} 是必填項',
+  'PC.Pages.ChatTemp.startConversationWithName': '與 {0} 開始會話',
+  'PC.Pages.ChatTemp.welcomeText': '歡迎來到 {0}',
+  'PC.Pages.SpaceDevelop.copyIndependentSessionFailed': '複製獨立會話連結失敗',
+  'PC.Pages.SystemConfig.LangContent.title': '多語言配置',
 };

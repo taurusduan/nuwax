@@ -6028,4 +6028,11 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.MorePage.ApiKey.neverExpires': 'Never Expires',
   'PC.Pages.EditAgent.VariableDataBinding.pluginOrWorkflowRequired':
     'Please select a plugin or workflow that meets the standard',
+  'PC.Common.Global.processing': 'Processing...',
+  'PC.Components.TestRun.fieldRequired': '{0} is required',
+  'PC.Pages.ChatTemp.startConversationWithName': 'Start conversation with {0}',
+  'PC.Pages.ChatTemp.welcomeText': 'Welcome to {0}',
+  'PC.Pages.SpaceDevelop.copyIndependentSessionFailed':
+    'Failed to copy independent session link',
+  'PC.Pages.SystemConfig.LangContent.title': 'I18n Configuration',
 };
