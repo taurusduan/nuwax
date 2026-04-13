@@ -12,6 +12,7 @@ import styles from './index.less';
 const cx = classNames.bind(styles);
 
 export interface DynamicTabsProps {
+  isStyleOne?: boolean;
   /** 一级菜单列表 */
   menus: MenuItemDto[];
   /** 当前激活的菜单 code */
@@ -25,12 +26,32 @@ export interface DynamicTabsProps {
  * 复用现有的 TabItem 组件实现，保持 UI 样式一致
  */
 const DynamicTabs: React.FC<DynamicTabsProps> = ({
+  isStyleOne = false,
   menus,
   activeTab,
   onClick,
 }) => {
   const { handleShowHoverMenu, handleHideHoverMenu, isSecondMenuCollapsed } =
     useModel('layout');
+
+  /**
+   * 判断是否是Safari浏览器
+   * 因为Safari浏览器不支持scrollbar-gutter: stable，所以需要特殊处理
+   */
+  const isSafariBrowser = useMemo(() => {
+    if (typeof navigator === 'undefined') {
+      return false;
+    }
+    const ua = navigator.userAgent.toLowerCase();
+    const isSafari = ua.includes('safari');
+    const isOtherWebkitBrowser =
+      ua.includes('chrome') ||
+      ua.includes('crios') ||
+      ua.includes('android') ||
+      ua.includes('edg') ||
+      ua.includes('fxios');
+    return isSafari && !isOtherWebkitBrowser;
+  }, []);
 
   // 将 MenuItemDto 转换为 TabItem 所需的格式
   const tabItems = useMemo(() => {
@@ -46,14 +67,14 @@ const DynamicTabs: React.FC<DynamicTabsProps> = ({
   return (
     <div
       className={cx(
-        styles['dynamic-tabs-container'],
+        isStyleOne ? styles['dynamic-tabs-container'] : styles['style-two'],
         'flex',
         'flex-col',
         'flex-1',
         'overflow-y',
         'w-full',
         'py-8',
-        'scroll-container',
+        !isSafariBrowser && 'scroll-container',
       )}
     >
       {tabItems.map((item) => (
