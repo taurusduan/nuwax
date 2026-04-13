@@ -661,6 +661,7 @@ const ConversationDetails: React.FC<ConversationDetailsProps> = ({
                   form={form}
                   isFilled
                   variables={variables}
+                  userFillVariables={variableParams}
                 />
                 {messageList?.length > 0 ? (
                   <>
