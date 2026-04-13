@@ -403,12 +403,21 @@ const Login: React.FC = () => {
                   className={cx('mb-16')}
                   style={{ marginTop: '-10px' }}
                 >
-                  <Checkbox
-                    checked={checked}
-                    onChange={(e) => setChecked(e.target.checked)}
+                  <div
+                    className={cx(
+                      'flex',
+                      'flex-row',
+                      'items-start',
+                      styles['protocol-wrapper'],
+                    )}
                   >
-                    <SiteProtocol />
-                  </Checkbox>
+                    <Checkbox
+                      checked={checked}
+                      style={{ marginRight: 5 }}
+                      onChange={(e) => setChecked(e.target.checked)}
+                    />
+                    <SiteProtocol onToggle={() => setChecked(!checked)} />
+                  </div>
                 </Form.Item>
               </Form>
 
