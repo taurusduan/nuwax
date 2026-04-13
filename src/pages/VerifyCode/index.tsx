@@ -36,7 +36,6 @@ const VerifyCode: React.FC = () => {
   const location = useLocation();
   const [searchParams] = useSearchParams();
   const { countDown, handleCount } = useCountDown();
-  const { runSendCode, sendLoading } = useSendCode();
   const [codeString, setCodeString] = useState<string>('');
   const [errorString, setErrorString] = useState<string>('');
   const inputRef = useRef<InputRef | null>(null);
@@ -45,6 +44,8 @@ const VerifyCode: React.FC = () => {
 
   const { tenantConfigInfo, setTitle } = useModel('tenantConfigInfo');
   const { loadMenus } = useModel('menuModel');
+
+  const { runSendCode, sendLoading } = useSendCode();
 
   const handleClick = () => {
     inputRef.current!.focus({
@@ -136,7 +137,8 @@ const VerifyCode: React.FC = () => {
       [isPhone ? 'phone' : 'email']: phoneOrEmail,
       ...(captchaVerifyParam && { captchaVerifyParam }),
     };
-    runSendCode(_params);
+    // 返回 Promise，让验证码组件在请求结束后再刷新实例
+    return runSendCode(_params);
   };
 
   const isNeedAliyunCaptcha = () => {
@@ -152,7 +154,7 @@ const VerifyCode: React.FC = () => {
   };
 
   const handlerSuccess = (value: string = '') => {
-    handleSendCode(value);
+    return handleSendCode(value);
   };
 
   useEffect(() => {

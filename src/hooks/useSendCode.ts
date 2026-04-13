@@ -1,16 +1,17 @@
+import useRequestPromiseBridge from '@/hooks/useRequestPromiseBridge';
 import { apiSendCode } from '@/services/account';
 import { message } from 'antd';
-import { useRequest } from 'umi';
 
 const useSendCode = () => {
   // 发送验证码
-  const { run: runSendCode, loading: sendLoading } = useRequest(apiSendCode, {
-    manual: true,
-    debounceInterval: 300,
-    onSuccess: () => {
-      message.success('验证码已发送');
-    },
-  });
+  const { runWithPromise: runSendCode, loading: sendLoading } =
+    useRequestPromiseBridge(apiSendCode, {
+      manual: true,
+      debounceInterval: 300,
+      onSuccess: () => {
+        message.success('验证码已发送');
+      },
+    });
 
   return {
     runSendCode,
