@@ -454,9 +454,12 @@ export interface SubmitButtonProps {
 
 // 上传文件信息
 export interface UploadFileInfo {
+  // 文件URL (必填)
   url: string;
   name: string;
+  // 文件类型 (必填)
   type: string;
+  // 文件key
   key?: string;
   size: number;
   width?: number;
