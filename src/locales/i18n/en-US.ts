@@ -3395,6 +3395,7 @@ export const EN_US: SystemLangMap = {
   'PC.Pages.SystemConfig.LangContent.remarkPlaceholder': 'e.g., Submit Button',
   'PC.Pages.SystemConfig.LangContent.searchKey': 'Search Key...',
   'PC.Pages.SystemConfig.LangContent.searchModule': 'Search module...',
+  'PC.Pages.SystemConfig.LangContent.searchValue': 'Search text content',
   'PC.Pages.SystemConfig.LangContent.sideColumn': 'Side',
   'PC.Pages.SystemConfig.LangContent.textContentLabel': 'Text Content',
   'PC.Pages.SystemConfig.LangContent.textContentPlaceholder': 'e.g., Submit',
