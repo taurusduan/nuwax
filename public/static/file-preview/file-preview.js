@@ -9,6 +9,7 @@
 let currentPreviewer = null;
 let fileUrl = '';
 let fileType = '';
+let originalFileType = ''; // 记录原始文件扩展名，用于精准提示
 let downloadUrl = ''; // 下载接口地址
 let fileName = ''; // 文件名
 const params = getQueryParams();
@@ -34,7 +35,7 @@ async function renderDocx(url, container) {
         await currentPreviewer.preview(url);
     } catch (error) {
         console.error('[FilePreview] Docx core error:', error);
-        throw new Error(`无法预览此文件类型，当前不支持预览【doc/docx】格式的文件。`);
+        throw new Error(`无法预览此文件类型，当前不支持预览【${originalFileType}】格式的文件。`);
     }
 }
 
@@ -346,7 +347,10 @@ async function startPreview() {
         }
     }
 
-    // Normalize file types
+    // 保存原始文件类型，用于后续精准提示
+    originalFileType = fileType;
+
+    // Normalize file types for renderer distribution
     if (fileType === 'xls') fileType = 'xlsx';
     if (fileType === 'ppt') fileType = 'pptx';
     if (fileType === 'doc') fileType = 'docx';
