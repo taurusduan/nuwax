@@ -14,10 +14,10 @@ let fileName = ''; // 文件名
 const params = getQueryParams();
 
 // 开发环境本地调试使用（不要删除）！！
-// const baseUrl = getBaseUrl('https://testagent.xspaceagi.com');
+const baseUrl = getBaseUrl('https://testagent.xspaceagi.com');
 
 // 正式环境动态获取地址！！
-const baseUrl = getBaseUrl(params.fileUrl);
+// const baseUrl = getBaseUrl(params.fileUrl);
 
 // ============================================
 // Preview Renderers (using local libraries)
@@ -30,7 +30,12 @@ async function renderDocx(url, container) {
     }
 
     currentPreviewer = jsPreviewDocx.init(container);
-    await currentPreviewer.preview(url);
+    try {
+        await currentPreviewer.preview(url);
+    } catch (error) {
+        console.error('[FilePreview] Docx core error:', error);
+        throw new Error(`无法预览此文件类型，当前不支持预览【doc/docx】格式的文件。`);
+    }
 }
 
 async function renderXlsx(url, container) {
